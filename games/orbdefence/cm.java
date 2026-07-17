@@ -109,6 +109,7 @@ final class cm {
           if (var2 >= 10) {
             ((cm) this).field_a = param0.j(98203176);
             ((cm) this).field_c = param0.j(98203176);
+            return;
           } else {
             var3 = param0.b((byte) 90);
             if (var3 != 0) {

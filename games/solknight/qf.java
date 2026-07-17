@@ -18,14 +18,7 @@ final class qf {
         field_c = null;
         field_d = null;
         field_a = null;
-        if (param0 != 10351) {
-          qf.a(27, 20);
-          field_f = null;
-          return;
-        } else {
-          field_f = null;
-          return;
-        }
+        field_f = null;
     }
 
     public final String toString() {
@@ -34,7 +27,6 @@ final class qf {
 
     final static void a(int param0, int param1) {
         try {
-            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (null == lf.field_d) {
@@ -65,18 +57,11 @@ final class qf {
                 }
                 L3: {
                   if (id.field_c.field_m > 0) {
-                    try {
+                    {
                       L4: {
                         lf.field_d.a(-28748, 0, id.field_c.field_m, id.field_c.field_l);
                         gf.field_Y = je.a(1);
                         break L4;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        je.a(false);
-                        break L5;
                       }
                     }
                     id.field_c.field_m = 0;

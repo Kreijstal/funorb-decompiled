@@ -16,7 +16,7 @@ final class fe {
         field_e = null;
         field_f = null;
         field_c = null;
-        int var1 = -68 % ((85 - param0) / 34);
+        int var1 = 0;
         field_b = null;
         field_a = null;
     }

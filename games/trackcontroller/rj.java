@@ -36,11 +36,27 @@ final class rj implements Iterable {
     final static void a(java.applet.Applet param0, byte param1) {
         try {
             Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             java.net.URL var4 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-              L0: {
+              try {
                 if (param1 < -52) {
                   var4 = param0.getCodeBase();
                   var3 = of.a(param0, var4, false).getFile();
@@ -50,17 +66,44 @@ final class rj implements Iterable {
                   Object discarded$9 = sj.a(param0, new Object[2], 7648, "updatelinks");
                   Object discarded$10 = sj.a(param0, new Object[2], 7648, "updatelinks");
                   Object discarded$11 = sj.a(param0, new Object[2], 7648, "updatelinks");
-                  break L0;
+                  return;
                 } else {
                   return;
                 }
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = decompiledCaughtException;
-                break L1;
+                return;
               }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L0: {
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref;
+                stackOut_6_1 = new StringBuilder().append("rj.D(");
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param0 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L0;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L0;
+                }
+              }
+              throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -78,34 +121,20 @@ final class rj implements Iterable {
     }
 
     final void a(gb param0, int param1) {
-        Object var4 = null;
-        if (null == param0.field_j) {
-          param0.field_j = ((rj) this).field_e.field_j;
-          param0.field_k = ((rj) this).field_e;
-          param0.field_j.field_k = param0;
-          if (param1 != 8466) {
-            var4 = null;
-            rj.a((java.applet.Applet) null, (byte) -6);
+        try {
+            if (null != param0.field_j) {
+                param0.e(0);
+            }
+            param0.field_j = ((rj) this).field_e.field_j;
+            param0.field_k = ((rj) this).field_e;
+            param0.field_j.field_k = param0;
+            if (param1 != 8466) {
+                Object var4 = null;
+                rj.a((java.applet.Applet) null, (byte) -6);
+            }
             param0.field_k.field_j = param0;
-            return;
-          } else {
-            param0.field_k.field_j = param0;
-            return;
-          }
-        } else {
-          param0.e(0);
-          param0.field_j = ((rj) this).field_e.field_j;
-          param0.field_k = ((rj) this).field_e;
-          param0.field_j.field_k = param0;
-          if (param1 == 8466) {
-            param0.field_k.field_j = param0;
-            return;
-          } else {
-            var4 = null;
-            rj.a((java.applet.Applet) null, (byte) -6);
-            param0.field_k.field_j = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "rj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -120,49 +149,18 @@ final class rj implements Iterable {
     }
 
     final static boolean a(char param0, int param1) {
-        if (param1 == 122) {
-          if (param0 < 65) {
-            if (param0 >= 97) {
-              if (param0 > 122) {
-                return false;
-              } else {
-                return true;
-              }
+        if (param0 < 65) {
+          if (param0 >= 97) {
+            if (param0 <= 122) {
+              return true;
             } else {
               return false;
             }
           } else {
-            if (param0 > 90) {
-              if (param0 >= 97) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
+            return false;
           }
         } else {
-          rj.a((byte) -18);
-          if (param0 >= 65) {
-            if (param0 > 90) {
-              if (param0 >= 97) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (param0 > 90) {
             if (param0 >= 97) {
               if (param0 > 122) {
                 return false;
@@ -172,6 +170,8 @@ final class rj implements Iterable {
             } else {
               return false;
             }
+          } else {
+            return true;
           }
         }
     }

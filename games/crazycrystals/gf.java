@@ -10,9 +10,6 @@ final class gf {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 < 5) {
-            return;
-        }
         field_d = null;
         field_c = null;
     }

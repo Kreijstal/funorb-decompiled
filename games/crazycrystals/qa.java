@@ -21,6 +21,7 @@ final class qa {
 
     final void a(byte param0, byte[] param1, int param2, int param3) throws IOException {
         IOException var5 = null;
+        RuntimeException var5_ref = null;
         long var5_long = 0L;
         int var7 = 0;
         int var8 = 0;
@@ -29,16 +30,31 @@ final class qa {
         long var11 = 0L;
         int var13 = 0;
         int var14 = 0;
+        RuntimeException stackIn_62_0 = null;
+        StringBuilder stackIn_62_1 = null;
+        RuntimeException stackIn_63_0 = null;
+        StringBuilder stackIn_63_1 = null;
+        RuntimeException stackIn_64_0 = null;
+        StringBuilder stackIn_64_1 = null;
+        String stackIn_64_2 = null;
         Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_61_0 = null;
+        StringBuilder stackOut_61_1 = null;
+        RuntimeException stackOut_63_0 = null;
+        StringBuilder stackOut_63_1 = null;
+        String stackOut_63_2 = null;
+        RuntimeException stackOut_62_0 = null;
+        StringBuilder stackOut_62_1 = null;
+        String stackOut_62_2 = null;
         var14 = CrazyCrystals.field_B;
         try {
           L0: {
             if (param1.length >= param3 + param2) {
               L1: {
-                if (0L == (((qa) this).field_n ^ -1L)) {
+                if (((qa) this).field_n == -1L) {
                   break L1;
                 } else {
-                  if ((((qa) this).field_g ^ -1L) > (((qa) this).field_n ^ -1L)) {
+                  if (~((qa) this).field_g > ~((qa) this).field_n) {
                     break L1;
                   } else {
                     if ((long)((qa) this).field_e + ((qa) this).field_n >= ((qa) this).field_g + (long)param3) {
@@ -55,10 +71,10 @@ final class qa {
                 var5_long = ((qa) this).field_g;
                 var7 = param2;
                 var8 = param3;
-                if ((((qa) this).field_g ^ -1L) > (((qa) this).field_k ^ -1L)) {
+                if (~((qa) this).field_g > ~((qa) this).field_k) {
                   break L2;
                 } else {
-                  if ((((qa) this).field_g ^ -1L) <= (((qa) this).field_k - -(long)((qa) this).field_f ^ -1L)) {
+                  if (~((qa) this).field_g <= ~(((qa) this).field_k - -(long)((qa) this).field_f)) {
                     break L2;
                   } else {
                     L3: {
@@ -103,7 +119,7 @@ final class qa {
                   ((qa) this).field_m.a(((qa) this).field_g, param0 + -224);
                   ((qa) this).field_l = ((qa) this).field_g;
                   L6: while (true) {
-                    if ((param3 ^ -1) >= -1) {
+                    if (param3 <= 0) {
                       break L4;
                     } else {
                       var9_int = ((qa) this).field_m.a(param1, param2, param3, (byte) -68);
@@ -156,7 +172,7 @@ final class qa {
                   L11: {
                     L12: {
                       var9 = -1L;
-                      if ((((qa) this).field_n ^ -1L) > (var5_long ^ -1L)) {
+                      if (~((qa) this).field_n > ~var5_long) {
                         break L12;
                       } else {
                         if (((qa) this).field_n < (long)var8 + var5_long) {
@@ -167,7 +183,7 @@ final class qa {
                         }
                       }
                     }
-                    if ((((qa) this).field_n ^ -1L) < (var5_long ^ -1L)) {
+                    if (~((qa) this).field_n < ~var5_long) {
                       break L11;
                     } else {
                       if (var5_long >= ((qa) this).field_n + (long)((qa) this).field_e) {
@@ -181,10 +197,10 @@ final class qa {
                   L13: {
                     L14: {
                       var11 = -1L;
-                      if ((var5_long ^ -1L) <= ((long)((qa) this).field_e + ((qa) this).field_n ^ -1L)) {
+                      if (~var5_long <= ~((long)((qa) this).field_e + ((qa) this).field_n)) {
                         break L14;
                       } else {
-                        if (((long)((qa) this).field_e + ((qa) this).field_n ^ -1L) < (var5_long - -(long)var8 ^ -1L)) {
+                        if (~((long)((qa) this).field_e + ((qa) this).field_n) < ~(var5_long - -(long)var8)) {
                           break L14;
                         } else {
                           var11 = ((qa) this).field_n - -(long)((qa) this).field_e;
@@ -203,10 +219,10 @@ final class qa {
                       }
                     }
                   }
-                  if (0L <= (var9 ^ -1L)) {
+                  if (var9 <= -1L) {
                     break L7;
                   } else {
-                    if ((var11 ^ -1L) >= (var9 ^ -1L)) {
+                    if (~var11 >= ~var9) {
                       break L7;
                     } else {
                       var13 = (int)(var11 + -var9);
@@ -231,7 +247,11 @@ final class qa {
                   break L15;
                 }
               }
-              break L0;
+              if (param3 > 0) {
+                throw new EOFException();
+              } else {
+                break L0;
+              }
             } else {
               throw new ArrayIndexOutOfBoundsException(-param1.length + param3 + param2);
             }
@@ -241,11 +261,35 @@ final class qa {
           var5 = (IOException) (Object) decompiledCaughtException;
           ((qa) this).field_l = -1L;
           throw var5;
-        }
-        if (-1 > (param3 ^ -1)) {
-          throw new EOFException();
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L16: {
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_61_0 = (RuntimeException) var5_ref;
+            stackOut_61_1 = new StringBuilder().append("qa.F(").append(param0).append(44);
+            stackIn_63_0 = stackOut_61_0;
+            stackIn_63_1 = stackOut_61_1;
+            stackIn_62_0 = stackOut_61_0;
+            stackIn_62_1 = stackOut_61_1;
+            if (param1 == null) {
+              stackOut_63_0 = (RuntimeException) (Object) stackIn_63_0;
+              stackOut_63_1 = (StringBuilder) (Object) stackIn_63_1;
+              stackOut_63_2 = "null";
+              stackIn_64_0 = stackOut_63_0;
+              stackIn_64_1 = stackOut_63_1;
+              stackIn_64_2 = stackOut_63_2;
+              break L16;
+            } else {
+              stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
+              stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
+              stackOut_62_2 = "{...}";
+              stackIn_64_0 = stackOut_62_0;
+              stackIn_64_1 = stackOut_62_1;
+              stackIn_64_2 = stackOut_62_2;
+              break L16;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_64_0, stackIn_64_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -259,7 +303,7 @@ final class qa {
           return;
         } else {
           L0: {
-            if ((((qa) this).field_n ^ -1L) == 0L) {
+            if (((qa) this).field_n == -1L) {
               break L0;
             } else {
               L1: {
@@ -274,7 +318,7 @@ final class qa {
               L2: {
                 ((qa) this).field_m.a(120, 0, ((qa) this).field_e, ((qa) this).field_a);
                 ((qa) this).field_l = ((qa) this).field_l + (long)((qa) this).field_e;
-                if ((((qa) this).field_l ^ -1L) >= (((qa) this).field_c ^ -1L)) {
+                if (~((qa) this).field_l >= ~((qa) this).field_c) {
                   break L2;
                 } else {
                   ((qa) this).field_c = ((qa) this).field_l;
@@ -298,7 +342,7 @@ final class qa {
                 if (((qa) this).field_k < ((qa) this).field_n) {
                   break L3;
                 } else {
-                  if ((((qa) this).field_k ^ -1L) > (((qa) this).field_n + (long)((qa) this).field_e ^ -1L)) {
+                  if (~((qa) this).field_k > ~(((qa) this).field_n + (long)((qa) this).field_e)) {
                     var2 = ((qa) this).field_k;
                     break L3;
                   } else {
@@ -332,7 +376,7 @@ final class qa {
                 }
               }
               L7: {
-                if ((var2 ^ -1L) >= 0L) {
+                if (var2 <= -1L) {
                   break L7;
                 } else {
                   if (var2 >= var4) {
@@ -357,7 +401,11 @@ final class qa {
         if (param1 > -69) {
             return;
         }
-        ((qa) this).a((byte) 106, param0, 0, param0.length);
+        try {
+            ((qa) this).a((byte) 106, param0, 0, param0.length);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "qa.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void a(long param0, int param1) throws IOException {
@@ -373,48 +421,24 @@ final class qa {
     private final void c(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
-        int var4 = 0;
-        L0: {
-          var4 = CrazyCrystals.field_B;
-          ((qa) this).field_f = 0;
-          if (((qa) this).field_g != ((qa) this).field_l) {
-            ((qa) this).field_m.a(((qa) this).field_g, param0 + -89);
+        int var4 = CrazyCrystals.field_B;
+        ((qa) this).field_f = 0;
+        if (!(((qa) this).field_g == ((qa) this).field_l)) {
+            ((qa) this).field_m.a(((qa) this).field_g, -90);
             ((qa) this).field_l = ((qa) this).field_g;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param0 != -1) {
-          return;
-        } else {
-          ((qa) this).field_k = ((qa) this).field_g;
-          L1: while (true) {
-            L2: {
-              if (((qa) this).field_f >= ((qa) this).field_b.length) {
-                break L2;
-              } else {
-                L3: {
-                  var2 = -((qa) this).field_f + ((qa) this).field_b.length;
-                  if (-200000001 <= (var2 ^ -1)) {
-                    break L3;
-                  } else {
-                    var2 = 200000000;
-                    break L3;
-                  }
-                }
-                var3 = ((qa) this).field_m.a(((qa) this).field_b, ((qa) this).field_f, var2, (byte) -63);
-                if ((var3 ^ -1) != 0) {
-                  ((qa) this).field_f = ((qa) this).field_f + var3;
-                  ((qa) this).field_l = ((qa) this).field_l + (long)var3;
-                  continue L1;
-                } else {
-                  break L2;
-                }
-              }
+        ((qa) this).field_k = ((qa) this).field_g;
+        while (((qa) this).field_f < ((qa) this).field_b.length) {
+            var2 = -((qa) this).field_f + ((qa) this).field_b.length;
+            if (var2 > 200000000) {
+                var2 = 200000000;
             }
-            return;
-          }
+            var3 = ((qa) this).field_m.a(((qa) this).field_b, ((qa) this).field_f, var2, (byte) -63);
+            if (var3 == -1) {
+                break;
+            }
+            ((qa) this).field_f = ((qa) this).field_f + var3;
+            ((qa) this).field_l = ((qa) this).field_l + (long)var3;
         }
     }
 
@@ -447,29 +471,48 @@ final class qa {
         ((qa) this).field_n = -1L;
         ((qa) this).field_e = 0;
         ((qa) this).field_k = -1L;
-        ((qa) this).field_m = param0;
-        long dupTemp$0 = param0.a(48);
-        ((qa) this).field_c = dupTemp$0;
-        ((qa) this).field_d = dupTemp$0;
-        ((qa) this).field_a = new byte[param2];
-        ((qa) this).field_b = new byte[param1];
-        ((qa) this).field_g = 0L;
+        try {
+            ((qa) this).field_m = param0;
+            long dupTemp$0 = param0.a(48);
+            ((qa) this).field_c = dupTemp$0;
+            ((qa) this).field_d = dupTemp$0;
+            ((qa) this).field_a = new byte[param2];
+            ((qa) this).field_b = new byte[param1];
+            ((qa) this).field_g = 0L;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "qa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
         IOException var5 = null;
+        RuntimeException var5_ref = null;
         int var5_int = 0;
         long var6 = 0L;
         long var8 = 0L;
         int var10 = 0;
         int var11 = 0;
-        int decompiledRegionSelector0 = 0;
+        RuntimeException stackIn_52_0 = null;
+        StringBuilder stackIn_52_1 = null;
+        RuntimeException stackIn_53_0 = null;
+        StringBuilder stackIn_53_1 = null;
+        RuntimeException stackIn_54_0 = null;
+        StringBuilder stackIn_54_1 = null;
+        String stackIn_54_2 = null;
         Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_51_0 = null;
+        StringBuilder stackOut_51_1 = null;
+        RuntimeException stackOut_53_0 = null;
+        StringBuilder stackOut_53_1 = null;
+        String stackOut_53_2 = null;
+        RuntimeException stackOut_52_0 = null;
+        StringBuilder stackOut_52_1 = null;
+        String stackOut_52_2 = null;
         var11 = CrazyCrystals.field_B;
         try {
           L0: {
             L1: {
-              if ((((qa) this).field_g - -(long)param3 ^ -1L) < (((qa) this).field_d ^ -1L)) {
+              if (~(((qa) this).field_g - -(long)param3) < ~((qa) this).field_d) {
                 ((qa) this).field_d = ((qa) this).field_g - -(long)param3;
                 break L1;
               } else {
@@ -481,7 +524,7 @@ final class qa {
                 break L2;
               } else {
                 L3: {
-                  if ((((qa) this).field_n ^ -1L) < (((qa) this).field_g ^ -1L)) {
+                  if (~((qa) this).field_n < ~((qa) this).field_g) {
                     break L3;
                   } else {
                     if (((qa) this).field_g > (long)((qa) this).field_e + ((qa) this).field_n) {
@@ -496,10 +539,10 @@ final class qa {
               }
             }
             L4: {
-              if ((((qa) this).field_n ^ -1L) == 0L) {
+              if (((qa) this).field_n == -1L) {
                 break L4;
               } else {
-                if ((((qa) this).field_g - -(long)param3 ^ -1L) < (((qa) this).field_n + (long)((qa) this).field_a.length ^ -1L)) {
+                if (~(((qa) this).field_g - -(long)param3) < ~(((qa) this).field_n + (long)((qa) this).field_a.length)) {
                   var5_int = (int)(-((qa) this).field_g + ((qa) this).field_n + (long)((qa) this).field_a.length);
                   eg.a(param1, param2, ((qa) this).field_a, (int)(((qa) this).field_g - ((qa) this).field_n), var5_int);
                   ((qa) this).field_g = ((qa) this).field_g + (long)var5_int;
@@ -516,7 +559,6 @@ final class qa {
             var5_int = 7 / ((82 - param0) / 36);
             if (param3 <= ((qa) this).field_a.length) {
               if (0 >= param3) {
-                decompiledRegionSelector0 = 0;
                 break L0;
               } else {
                 L5: {
@@ -530,19 +572,18 @@ final class qa {
                 L6: {
                   eg.a(param1, param2, ((qa) this).field_a, (int)(-((qa) this).field_n + ((qa) this).field_g), param3);
                   ((qa) this).field_g = ((qa) this).field_g + (long)param3;
-                  if (((long)((qa) this).field_e ^ -1L) <= (-((qa) this).field_n + ((qa) this).field_g ^ -1L)) {
+                  if (~(long)((qa) this).field_e <= ~(-((qa) this).field_n + ((qa) this).field_g)) {
                     break L6;
                   } else {
                     ((qa) this).field_e = (int)(-((qa) this).field_n + ((qa) this).field_g);
                     break L6;
                   }
                 }
-                decompiledRegionSelector0 = 1;
-                break L0;
+                return;
               }
             } else {
               L7: {
-                if ((((qa) this).field_l ^ -1L) != (((qa) this).field_g ^ -1L)) {
+                if (~((qa) this).field_l != ~((qa) this).field_g) {
                   ((qa) this).field_m.a(((qa) this).field_g, -99);
                   ((qa) this).field_l = ((qa) this).field_g;
                   break L7;
@@ -564,10 +605,10 @@ final class qa {
                 L10: {
                   var6 = -1L;
                   var8 = -1L;
-                  if ((((qa) this).field_g ^ -1L) > (((qa) this).field_k ^ -1L)) {
+                  if (~((qa) this).field_g > ~((qa) this).field_k) {
                     break L10;
                   } else {
-                    if (((long)((qa) this).field_f + ((qa) this).field_k ^ -1L) < (((qa) this).field_g ^ -1L)) {
+                    if (~((long)((qa) this).field_f + ((qa) this).field_k) < ~((qa) this).field_g) {
                       var6 = ((qa) this).field_g;
                       break L9;
                     } else {
@@ -575,7 +616,7 @@ final class qa {
                     }
                   }
                 }
-                if ((((qa) this).field_k ^ -1L) > (((qa) this).field_g ^ -1L)) {
+                if (~((qa) this).field_k > ~((qa) this).field_g) {
                   break L9;
                 } else {
                   if (((qa) this).field_k < (long)param3 + ((qa) this).field_g) {
@@ -588,7 +629,7 @@ final class qa {
               }
               L11: {
                 L12: {
-                  if ((((qa) this).field_g - -(long)param3 ^ -1L) >= (((qa) this).field_k ^ -1L)) {
+                  if (~(((qa) this).field_g - -(long)param3) >= ~((qa) this).field_k) {
                     break L12;
                   } else {
                     if (((qa) this).field_g + (long)param3 <= (long)((qa) this).field_f + ((qa) this).field_k) {
@@ -614,7 +655,7 @@ final class qa {
                 if (var6 <= -1L) {
                   break L13;
                 } else {
-                  if ((var8 ^ -1L) < (var6 ^ -1L)) {
+                  if (~var8 < ~var6) {
                     var10 = (int)(var8 + -var6);
                     eg.a(param1, (int)(-((qa) this).field_g + ((long)param2 + var6)), ((qa) this).field_b, (int)(-((qa) this).field_k + var6), var10);
                     break L13;
@@ -632,11 +673,35 @@ final class qa {
           var5 = (IOException) (Object) decompiledCaughtException;
           ((qa) this).field_l = -1L;
           throw var5;
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L14: {
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_51_0 = (RuntimeException) var5_ref;
+            stackOut_51_1 = new StringBuilder().append("qa.C(").append(param0).append(44);
+            stackIn_53_0 = stackOut_51_0;
+            stackIn_53_1 = stackOut_51_1;
+            stackIn_52_0 = stackOut_51_0;
+            stackIn_52_1 = stackOut_51_1;
+            if (param1 == null) {
+              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
+              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
+              stackOut_53_2 = "null";
+              stackIn_54_0 = stackOut_53_0;
+              stackIn_54_1 = stackOut_53_1;
+              stackIn_54_2 = stackOut_53_2;
+              break L14;
+            } else {
+              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
+              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_2 = "{...}";
+              stackIn_54_0 = stackOut_52_0;
+              stackIn_54_1 = stackOut_52_1;
+              stackIn_54_2 = stackOut_52_2;
+              break L14;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

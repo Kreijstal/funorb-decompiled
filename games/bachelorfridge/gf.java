@@ -14,19 +14,83 @@ final class gf extends kj {
 
     gf(gj param0, int param1, int param2) {
         super(param0, param1, param2);
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ((gf) this).field_j = new eaa();
-        ((gf) this).field_f = 300;
-        int var4 = aw.field_v.length;
-        ((gf) this).field_g = new kv[var4][];
-        for (var5 = 0; var5 < var4; var5++) {
-            var6 = aw.field_v[var5].length;
-            ((gf) this).field_g[var5] = new kv[var6];
-            for (var7 = 0; var6 > var7; var7++) {
-                ((gf) this).field_g[var5][var7] = aw.field_v[var5][var7].a();
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            ((gf) this).field_j = new eaa();
+            ((gf) this).field_f = 300;
+            var4_int = aw.field_v.length;
+            ((gf) this).field_g = new kv[var4_int][];
+            var5 = 0;
+            L1: while (true) {
+              if (var5 >= var4_int) {
+                break L0;
+              } else {
+                var6 = aw.field_v[var5].length;
+                ((gf) this).field_g[var5] = new kv[var6];
+                var7 = 0;
+                L2: while (true) {
+                  if (var6 <= var7) {
+                    var5++;
+                    continue L1;
+                  } else {
+                    ((gf) this).field_g[var5][var7] = aw.field_v[var5][var7].a();
+                    var7++;
+                    continue L2;
+                  }
+                }
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("gf.<init>(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -37,9 +101,9 @@ final class gf extends kj {
             ((gf) this).a(114, true, -46);
         }
         int var4 = var3 + var2;
-        int var5 = -var3 + var2 >> -434400095;
+        int var5 = -var3 + var2 >> 1;
         int var6 = 200;
-        mia var7 = new mia(var4, var6 << 578621636, var5, kla.a(aw.field_v.length, sma.field_I, -2147483648), kla.a(20, sma.field_I, -2147483648) + 5);
+        mia var7 = new mia(var4, var6 << 4, var5, kla.a(aw.field_v.length, sma.field_I, -2147483648), kla.a(20, sma.field_I, -2147483648) + 5);
         ((gf) this).field_j.a((bw) (Object) var7, true);
     }
 
@@ -52,9 +116,6 @@ final class gf extends kj {
     public static void a(boolean param0) {
         field_h = null;
         field_i = null;
-        if (param0) {
-            field_h = null;
-        }
     }
 
     final boolean b(int param0) {
@@ -74,7 +135,7 @@ final class gf extends kj {
           var2 = null;
           var3 = BachelorFridge.field_y;
           ((gf) this).field_f = ((gf) this).field_f - 1;
-          if (-271 == (((gf) this).field_f ^ -1)) {
+          if (((gf) this).field_f == 270) {
             wf.a(14, (byte) 126);
             break L0;
           } else {
@@ -86,11 +147,11 @@ final class gf extends kj {
             if (50 >= ((gf) this).field_f) {
               break L1;
             } else {
-              if (((gf) this).field_f <= -271) {
+              if (((gf) this).field_f >= 270) {
                 break L1;
               } else {
                 L2: {
-                  if (-1 != ((gf) this).field_f % 79) {
+                  if (((gf) this).field_f % 79 != 0) {
                     break L2;
                   } else {
                     wf.a(14, (byte) 127);
@@ -117,7 +178,7 @@ final class gf extends kj {
           L4: {
             if (50 <= ((gf) this).field_f) {
               L5: {
-                if ((((gf) this).field_f ^ -1) <= -76) {
+                if (((gf) this).field_f >= 75) {
                   if (100 > ((gf) this).field_f) {
                     stackOut_22_0 = 15;
                     stackIn_23_0 = stackOut_22_0;
@@ -151,7 +212,7 @@ final class gf extends kj {
             }
           }
           L6: {
-            if (-1 != (((gf) this).field_f ^ -1)) {
+            if (((gf) this).field_f != 0) {
               break L6;
             } else {
               var2_ref = (mia) (Object) ((gf) this).field_j.b((byte) 90);
@@ -171,7 +232,7 @@ final class gf extends kj {
             if (var2_ref == null) {
               L9: {
                 L10: {
-                  if (-1 >= (((gf) this).field_f ^ -1)) {
+                  if (((gf) this).field_f >= 0) {
                     break L10;
                   } else {
                     if (!((gf) this).field_j.e(12917)) {
@@ -191,7 +252,7 @@ final class gf extends kj {
             } else {
               L11: {
                 boolean discarded$1 = var2_ref.b(true);
-                if (-1 >= (var2_ref.field_h ^ -1)) {
+                if (var2_ref.field_h >= 0) {
                   break L11;
                 } else {
                   var2_ref.field_k = 0;
@@ -221,21 +282,18 @@ final class gf extends kj {
         }
         mia var4 = (mia) (Object) ((gf) this).field_j.b((byte) 90);
         while (var4 != null) {
-            var5 = param2 - -(var4.field_i >> -1724990108);
-            var6 = (var4.field_q >> -1691169788) + (-(var4.field_h >> 1408549732) + param0);
+            var5 = param2 - -(var4.field_i >> 4);
+            var6 = (var4.field_q >> 4) + (-(var4.field_h >> 4) + param0);
             var7 = vr.field_b / var4.field_s % 3;
             var8 = ((gf) this).field_g[var4.field_r][var7];
-            var9 = var8.field_n >> 1544719649;
-            var10 = var8.field_o >> 737599681;
-            var8.c(-(var9 >> 1622739585) + var5, -(var10 >> -144106399) + (var6 - -30), var9, var10, var4.field_o);
+            var9 = var8.field_n >> 1;
+            var10 = var8.field_o >> 1;
+            var8.c(-(var9 >> 1) + var5, -(var10 >> 1) + (var6 - -30), var9, var10, var4.field_o);
             var4 = (mia) (Object) ((gf) this).field_j.c(0);
         }
     }
 
     final static ema a(long param0, boolean param1) {
-        if (param1) {
-            field_k = 23;
-        }
         return (ema) (Object) iga.field_c.a(param0, (byte) -87);
     }
 

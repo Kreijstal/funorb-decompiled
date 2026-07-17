@@ -36,9 +36,6 @@ final class vg {
 
     public static void b(int param0) {
         field_a = null;
-        if (param0 < 12) {
-            return;
-        }
         field_b = null;
         field_c = null;
     }

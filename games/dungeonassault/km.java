@@ -57,7 +57,7 @@ final class km {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((km) this).field_a[var6] = var3 ^ -1;
+                      ((km) this).field_a[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -185,7 +185,7 @@ final class km {
         while (((km) this).field_a[var1] >= 0) {
             var1 = jp.b() != 0 ? ((km) this).field_a[var1] : var1 + 1;
         }
-        return ((km) this).field_a[var1] ^ -1;
+        return ~((km) this).field_a[var1];
     }
 
     km() {
@@ -216,7 +216,7 @@ final class km {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = jp.a(24);
+          int discarded$2 = jp.a(24);
           ((km) this).field_c = jp.a(16);
           ((km) this).field_e = jp.a(24);
           ((km) this).field_b = new int[((km) this).field_e];
@@ -283,8 +283,9 @@ final class km {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((km) this).field_b[var2] = var3_int;
+                    ((km) this).field_b[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

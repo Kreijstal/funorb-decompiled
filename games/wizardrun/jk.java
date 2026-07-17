@@ -110,8 +110,8 @@ final class jk {
                 return;
               } else {
                 if (1 != var2) {
-                  if ((var2 ^ -1) != -3) {
-                    if (-4 != (var2 ^ -1)) {
+                  if (var2 != 2) {
+                    if (var2 != 3) {
                       if (var2 != 4) {
                         rg.a((Throwable) null, "F1: " + ni.c(6), -562);
                         ql.a(-91);
@@ -126,7 +126,7 @@ final class jk {
                       }
                     } else {
                       L7: {
-                        if ((jg.field_k ^ -1) != -3) {
+                        if (jg.field_k != 2) {
                           break L7;
                         } else {
                           jg.field_k = 1;

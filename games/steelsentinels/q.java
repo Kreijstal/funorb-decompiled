@@ -20,24 +20,12 @@ final class q implements Iterable {
 
     public static void a(byte param0) {
         field_d = null;
-        if (param0 >= -126) {
-          field_f = null;
-          field_f = null;
-          field_m = null;
-          field_a = null;
-          field_c = null;
-          field_k = null;
-          field_g = null;
-          return;
-        } else {
-          field_f = null;
-          field_m = null;
-          field_a = null;
-          field_c = null;
-          field_k = null;
-          field_g = null;
-          return;
-        }
+        field_f = null;
+        field_m = null;
+        field_a = null;
+        field_c = null;
+        field_k = null;
+        field_g = null;
     }
 
     final static boolean a(byte param0, int param1, int param2, boolean param3) {
@@ -129,53 +117,21 @@ final class q implements Iterable {
 
     final void a(ck param0, long param1, boolean param2) {
         ck var5 = null;
-        ck var6 = null;
-        ck var7 = null;
-        ck var8 = null;
-        ck var9 = null;
-        if (!param2) {
-          if (param0.field_i != null) {
-            param0.b(4);
-            var8 = ((q) this).field_j[(int)((long)(((q) this).field_e - 1) & param1)];
-            var5 = var8;
-            param0.field_i = var8.field_i;
+        try {
+            if (param2) {
+                field_a = null;
+            }
+            if (param0.field_i != null) {
+                param0.b(4);
+            }
+            var5 = ((q) this).field_j[(int)((long)(((q) this).field_e - 1) & param1)];
+            param0.field_i = var5.field_i;
             param0.field_k = var5;
             param0.field_i.field_k = param0;
             param0.field_k.field_i = param0;
             param0.field_j = param1;
-            return;
-          } else {
-            var9 = ((q) this).field_j[(int)((long)(((q) this).field_e - 1) & param1)];
-            var5 = var9;
-            param0.field_i = var9.field_i;
-            param0.field_k = var5;
-            param0.field_i.field_k = param0;
-            param0.field_k.field_i = param0;
-            param0.field_j = param1;
-            return;
-          }
-        } else {
-          field_a = null;
-          if (param0.field_i == null) {
-            var6 = ((q) this).field_j[(int)((long)(((q) this).field_e - 1) & param1)];
-            var5 = var6;
-            param0.field_i = var6.field_i;
-            param0.field_k = var5;
-            param0.field_i.field_k = param0;
-            param0.field_k.field_i = param0;
-            param0.field_j = param1;
-            return;
-          } else {
-            param0.b(4);
-            var7 = ((q) this).field_j[(int)((long)(((q) this).field_e - 1) & param1)];
-            var5 = var7;
-            param0.field_i = var7.field_i;
-            param0.field_k = var5;
-            param0.field_i.field_k = param0;
-            param0.field_k.field_i = param0;
-            param0.field_j = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "q.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -189,7 +145,7 @@ final class q implements Iterable {
         if (param1 <= -118) {
           L0: while (true) {
             if (var4 != ((q) this).field_b) {
-              if ((((q) this).field_b.field_j ^ -1L) == (param0 ^ -1L)) {
+              if (~((q) this).field_b.field_j == ~param0) {
                 var5 = ((q) this).field_b;
                 ((q) this).field_b = ((q) this).field_b.field_k;
                 return var5;
@@ -208,14 +164,14 @@ final class q implements Iterable {
     }
 
     final static void a(wk param0, byte param1) {
-        jl.a(false);
-        if (param1 >= -60) {
-          field_g = null;
-          pb.a(param0.field_E, param0.field_z, param0.field_B);
-          return;
-        } else {
-          pb.a(param0.field_E, param0.field_z, param0.field_B);
-          return;
+        try {
+            jl.a(false);
+            if (param1 >= -60) {
+                field_g = null;
+            }
+            pb.a(param0.field_E, param0.field_z, param0.field_B);
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "q.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -227,13 +183,15 @@ final class q implements Iterable {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new ck();
-            ((q) this).field_j[var2] = new ck();
+            ck dupTemp$2 = new ck();
+            var3 = dupTemp$2;
+            ((q) this).field_j[var2] = dupTemp$2;
             var3.field_k = var3;
             var3.field_i = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }
@@ -242,7 +200,7 @@ final class q implements Iterable {
         int var4 = 0;
         L0: {
           gh.field_Jb = param3;
-          if ((vb.field_g ^ -1) != param2) {
+          if (~vb.field_g != param2) {
             break L0;
           } else {
             if (qj.field_q[98] != null) {
@@ -251,7 +209,7 @@ final class q implements Iterable {
             } else {
               vb.field_g = param0;
               pm.field_U = 0;
-              if (d.a(vb.field_g, param2 ^ -1)) {
+              if (d.a(vb.field_g, ~param2)) {
                 L1: {
                   var4 = 0;
                   if (12 != vb.field_g) {
@@ -312,7 +270,7 @@ final class q implements Iterable {
         }
         vb.field_g = param0;
         pm.field_U = 0;
-        if (d.a(vb.field_g, param2 ^ -1)) {
+        if (d.a(vb.field_g, ~param2)) {
           L5: {
             var4 = 0;
             if (12 != vb.field_g) {

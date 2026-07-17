@@ -102,28 +102,37 @@ final class sfa extends ha {
                         if (var3 >= var1) {
                           return;
                         } else {
+                          int incrementValue$9 = var3;
                           var3++;
-                          ((sfa) this).field_n[var3] = 2147483648.0f;
+                          ((sfa) this).field_n[incrementValue$9] = 2147483648.0f;
                           continue L2;
                         }
                       }
                     } else {
+                      int incrementValue$10 = var3;
                       var3++;
-                      ((sfa) this).field_n[var3] = 2147483648.0f;
+                      ((sfa) this).field_n[incrementValue$10] = 2147483648.0f;
+                      int incrementValue$11 = var3;
                       var3++;
-                      ((sfa) this).field_n[var3] = 2147483648.0f;
+                      ((sfa) this).field_n[incrementValue$11] = 2147483648.0f;
+                      int incrementValue$12 = var3;
                       var3++;
-                      ((sfa) this).field_n[var3] = 2147483648.0f;
+                      ((sfa) this).field_n[incrementValue$12] = 2147483648.0f;
+                      int incrementValue$13 = var3;
                       var3++;
-                      ((sfa) this).field_n[var3] = 2147483648.0f;
+                      ((sfa) this).field_n[incrementValue$13] = 2147483648.0f;
+                      int incrementValue$14 = var3;
                       var3++;
-                      ((sfa) this).field_n[var3] = 2147483648.0f;
+                      ((sfa) this).field_n[incrementValue$14] = 2147483648.0f;
+                      int incrementValue$15 = var3;
                       var3++;
-                      ((sfa) this).field_n[var3] = 2147483648.0f;
+                      ((sfa) this).field_n[incrementValue$15] = 2147483648.0f;
+                      int incrementValue$16 = var3;
                       var3++;
-                      ((sfa) this).field_n[var3] = 2147483648.0f;
+                      ((sfa) this).field_n[incrementValue$16] = 2147483648.0f;
+                      int incrementValue$17 = var3;
                       var3++;
-                      ((sfa) this).field_n[var3] = 2147483648.0f;
+                      ((sfa) this).field_n[incrementValue$17] = 2147483648.0f;
                       continue L1;
                     }
                   }
@@ -311,15 +320,25 @@ final class sfa extends ha {
     }
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
-        ija var7 = null;
         java.awt.Dimension var5 = null;
-        ija var6 = (ija) (Object) ((sfa) this).field_G.a((byte) -112, (long)((Object) (Object) param0).hashCode());
-        if (var6 != null) {
+        ija var6 = null;
+        ija var7 = null;
+        var6 = (ija) (Object) ((sfa) this).field_G.a((byte) -112, (long)((Object) (Object) param0).hashCode());
+        if (var6 == null) {
+          return;
+        } else {
+          L0: {
             var6.p(30);
             var7 = tfa.a(param2, param1, param0, 0);
             ((sfa) this).field_G.a((long)((Object) (Object) param0).hashCode(), 116, (vg) (Object) var7);
-            if (((sfa) this).field_t == param0) {
-                if (((sfa) this).field_D == null) {
+            if (((sfa) this).field_t != param0) {
+              break L0;
+            } else {
+              if (((sfa) this).field_D != null) {
+                break L0;
+              } else {
+                L1: {
+                  L2: {
                     var5 = param0.getSize();
                     ((sfa) this).field_m = var5.width;
                     ((sfa) this).field_O = var5.height;
@@ -327,19 +346,30 @@ final class sfa extends ha {
                     ((sfa) this).field_r = var7.field_g;
                     ((sfa) this).field_K = var7.field_h;
                     ((sfa) this).field_h = var7.field_f;
-                    if (((sfa) this).field_K == ((sfa) this).field_y) {
-                        // if_icmpeq L217
+                    if (((sfa) this).field_K != ((sfa) this).field_y) {
+                      break L2;
+                    } else {
+                      if (((sfa) this).field_h == ((sfa) this).field_s) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
                     }
-                    ((sfa) this).field_y = ((sfa) this).field_K;
-                    ((sfa) this).field_i = ((sfa) this).field_K;
-                    ((sfa) this).field_s = ((sfa) this).field_h;
-                    ((sfa) this).field_B = ((sfa) this).field_h;
-                    ((sfa) this).field_n = new float[((sfa) this).field_y * ((sfa) this).field_s];
-                    ((sfa) this).field_H = new float[((sfa) this).field_y * ((sfa) this).field_s];
-                    this.m();
+                  }
+                  ((sfa) this).field_y = ((sfa) this).field_K;
+                  ((sfa) this).field_i = ((sfa) this).field_K;
+                  ((sfa) this).field_s = ((sfa) this).field_h;
+                  ((sfa) this).field_B = ((sfa) this).field_h;
+                  ((sfa) this).field_n = new float[((sfa) this).field_y * ((sfa) this).field_s];
+                  ((sfa) this).field_H = new float[((sfa) this).field_y * ((sfa) this).field_s];
+                  break L1;
                 }
+                this.m();
+                break L0;
+              }
             }
-            return;
+          }
+          return;
         }
     }
 
@@ -450,7 +480,7 @@ final class sfa extends ha {
     }
 
     private final void g(int param0) {
-        ((sfa) this).field_Y[param0].a((Runnable) (Object) Thread.currentThread(), (byte) 100);
+        ((sfa) this).field_Y[0].a((Runnable) (Object) Thread.currentThread(), (byte) 100);
     }
 
     final void a(gda param0) {
@@ -532,13 +562,20 @@ final class sfa extends ha {
           } else {
             if (((sfa) this).field_T != null) {
               try {
-                var3 = ((sfa) this).field_t.getGraphics();
-                ((sfa) this).field_T.a(((sfa) this).field_O, 0, param0, 108, param1, 0, var3, ((sfa) this).field_m);
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
+                L1: {
+                  var3 = ((sfa) this).field_t.getGraphics();
+                  ((sfa) this).field_T.a(((sfa) this).field_O, 0, param0, 108, param1, 0, var3, ((sfa) this).field_m);
+                  break L1;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L2: {
+                  exception = (Exception) (Object) decompiledCaughtException;
+                  ((sfa) this).field_t.repaint();
+                  break L2;
+                }
               }
-              exception = (Exception) (Object) decompiledCaughtException;
-              ((sfa) this).field_t.repaint();
+              return;
             } else {
               break L0;
             }
@@ -567,7 +604,6 @@ final class sfa extends ha {
 
     final int[] h(int param0) {
         qq var2 = null;
-        qq var2_ref = null;
         Object var3 = null;
         dw var4 = null;
         int var5 = 0;
@@ -590,264 +626,117 @@ final class sfa extends ha {
         int stackIn_13_3 = 0;
         int[] stackIn_13_4 = null;
         int stackIn_13_5 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_8_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
         qq stackOut_10_0 = null;
         qq stackOut_10_1 = null;
         int stackOut_10_2 = 0;
         int stackOut_10_3 = 0;
         int[] stackOut_10_4 = null;
-        qq stackOut_11_0 = null;
-        qq stackOut_11_1 = null;
-        int stackOut_11_2 = 0;
-        int stackOut_11_3 = 0;
-        int[] stackOut_11_4 = null;
-        int stackOut_11_5 = 0;
         qq stackOut_12_0 = null;
         qq stackOut_12_1 = null;
         int stackOut_12_2 = 0;
         int stackOut_12_3 = 0;
         int[] stackOut_12_4 = null;
         int stackOut_12_5 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = (Object) (Object) ((sfa) this).field_F;
-                    // monitorenter ((sfa) this).field_F
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var2 = (qq) ((sfa) this).field_F.a((byte) 92, (long)param0 | -9223372036854775808L);
-                        if (var2 != null) {
-                            statePc = 14;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (((sfa) this).field_c.a(param0, (byte) 41)) {
-                            statePc = 5;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        // monitorexit var3
-                        stackOut_3_0 = null;
-                        stackIn_4_0 = stackOut_3_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    return (int[]) (Object) stackIn_4_0;
-                }
-                case 5: {
-                    try {
-                        var4 = ((sfa) this).field_c.a((byte) -124, param0);
-                        if (var4.field_g) {
-                            statePc = 8;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
+        qq stackOut_11_0 = null;
+        qq stackOut_11_1 = null;
+        int stackOut_11_2 = 0;
+        int stackOut_11_3 = 0;
+        int[] stackOut_11_4 = null;
+        int stackOut_11_5 = 0;
+        Object stackOut_3_0 = null;
+        var3 = (Object) (Object) ((sfa) this).field_F;
+        synchronized (var3) {
+          L0: {
+            L1: {
+              var2 = (qq) ((sfa) this).field_F.a((byte) 92, (long)param0 | -9223372036854775808L);
+              if (var2 != null) {
+                break L1;
+              } else {
+                if (((sfa) this).field_c.a(param0, (byte) 41)) {
+                  L2: {
+                    L3: {
+                      var4 = ((sfa) this).field_c.a((byte) -124, param0);
+                      if (var4.field_g) {
+                        break L3;
+                      } else {
                         if (!((sfa) this).field_e) {
-                            statePc = 9;
+                          stackOut_9_0 = ((sfa) this).field_I;
+                          stackIn_10_0 = stackOut_9_0;
+                          break L2;
                         } else {
-                            statePc = 7;
+                          break L3;
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 16;
-                        continue stateLoop;
+                      }
                     }
-                }
-                case 7: {
-                    try {
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 16;
-                        continue stateLoop;
+                    stackOut_8_0 = 64;
+                    stackIn_10_0 = stackOut_8_0;
+                    break L2;
+                  }
+                  L4: {
+                    var5 = stackIn_10_0;
+                    stackOut_10_0 = null;
+                    stackOut_10_1 = null;
+                    stackOut_10_2 = param0;
+                    stackOut_10_3 = var5;
+                    stackOut_10_4 = ((sfa) this).field_c.a((byte) 40, var5, 0.699999988079071f, param0, true, var5);
+                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_1 = stackOut_10_1;
+                    stackIn_12_2 = stackOut_10_2;
+                    stackIn_12_3 = stackOut_10_3;
+                    stackIn_12_4 = stackOut_10_4;
+                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_1 = stackOut_10_1;
+                    stackIn_11_2 = stackOut_10_2;
+                    stackIn_11_3 = stackOut_10_3;
+                    stackIn_11_4 = stackOut_10_4;
+                    if (var4.field_d == 1) {
+                      stackOut_12_0 = null;
+                      stackOut_12_1 = null;
+                      stackOut_12_2 = stackIn_12_2;
+                      stackOut_12_3 = stackIn_12_3;
+                      stackOut_12_4 = (int[]) (Object) stackIn_12_4;
+                      stackOut_12_5 = 0;
+                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_13_1 = stackOut_12_1;
+                      stackIn_13_2 = stackOut_12_2;
+                      stackIn_13_3 = stackOut_12_3;
+                      stackIn_13_4 = stackOut_12_4;
+                      stackIn_13_5 = stackOut_12_5;
+                      break L4;
+                    } else {
+                      stackOut_11_0 = null;
+                      stackOut_11_1 = null;
+                      stackOut_11_2 = stackIn_11_2;
+                      stackOut_11_3 = stackIn_11_3;
+                      stackOut_11_4 = (int[]) (Object) stackIn_11_4;
+                      stackOut_11_5 = 1;
+                      stackIn_13_0 = stackOut_11_0;
+                      stackIn_13_1 = stackOut_11_1;
+                      stackIn_13_2 = stackOut_11_2;
+                      stackIn_13_3 = stackOut_11_3;
+                      stackIn_13_4 = stackOut_11_4;
+                      stackIn_13_5 = stackOut_11_5;
+                      break L4;
                     }
+                  }
+                  var2 = new qq(stackIn_13_2, stackIn_13_3, stackIn_13_4, stackIn_13_5 != 0);
+                  ((sfa) this).field_F.a(29166, (Object) (Object) var2, (long)param0 | -9223372036854775808L);
+                  break L1;
+                } else {
+                  stackOut_3_0 = null;
+                  stackIn_4_0 = stackOut_3_0;
+                  return (int[]) (Object) stackIn_4_0;
                 }
-                case 8: {
-                    try {
-                        stackOut_8_0 = 64;
-                        stackIn_10_0 = stackOut_8_0;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        stackOut_9_0 = ((sfa) this).field_I;
-                        stackIn_10_0 = stackOut_9_0;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var5 = stackIn_10_0;
-                        stackOut_10_0 = null;
-                        stackOut_10_1 = null;
-                        stackOut_10_2 = param0;
-                        stackOut_10_3 = var5;
-                        stackOut_10_4 = ((sfa) this).field_c.a((byte) 40, var5, 0.699999988079071f, param0, true, var5);
-                        stackIn_12_0 = stackOut_10_0;
-                        stackIn_12_1 = stackOut_10_1;
-                        stackIn_12_2 = stackOut_10_2;
-                        stackIn_12_3 = stackOut_10_3;
-                        stackIn_12_4 = stackOut_10_4;
-                        stackIn_11_0 = stackOut_10_0;
-                        stackIn_11_1 = stackOut_10_1;
-                        stackIn_11_2 = stackOut_10_2;
-                        stackIn_11_3 = stackOut_10_3;
-                        stackIn_11_4 = stackOut_10_4;
-                        if (var4.field_d == 1) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        stackOut_11_0 = null;
-                        stackOut_11_1 = null;
-                        stackOut_11_2 = stackIn_11_2;
-                        stackOut_11_3 = stackIn_11_3;
-                        stackOut_11_4 = (int[]) (Object) stackIn_11_4;
-                        stackOut_11_5 = 1;
-                        stackIn_13_0 = stackOut_11_0;
-                        stackIn_13_1 = stackOut_11_1;
-                        stackIn_13_2 = stackOut_11_2;
-                        stackIn_13_3 = stackOut_11_3;
-                        stackIn_13_4 = stackOut_11_4;
-                        stackIn_13_5 = stackOut_11_5;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        stackOut_12_0 = null;
-                        stackOut_12_1 = null;
-                        stackOut_12_2 = stackIn_12_2;
-                        stackOut_12_3 = stackIn_12_3;
-                        stackOut_12_4 = (int[]) (Object) stackIn_12_4;
-                        stackOut_12_5 = 0;
-                        stackIn_13_0 = stackOut_12_0;
-                        stackIn_13_1 = stackOut_12_1;
-                        stackIn_13_2 = stackOut_12_2;
-                        stackIn_13_3 = stackOut_12_3;
-                        stackIn_13_4 = stackOut_12_4;
-                        stackIn_13_5 = stackOut_12_5;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        new qq(stackIn_13_2, stackIn_13_3, stackIn_13_4, stackIn_13_5 != 0);
-                        var2_ref = stackIn_13_0;
-                        ((sfa) this).field_F.a(29166, (Object) (Object) var2_ref, (long)param0 | -9223372036854775808L);
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        // monitorexit var3
-                        statePc = 18;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        var6 = caughtException;
-                        // monitorexit var3
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    throw (RuntimeException) (Object) var6;
-                }
-                case 18: {
-                    var2_ref.field_g = true;
-                    return var2_ref.b();
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            break L0;
+          }
         }
+        var2.field_g = true;
+        return var2.b();
     }
 
     final void KA(int param0, int param1, int param2, int param3) {
@@ -1377,8 +1266,9 @@ final class sfa extends ha {
                                 if (var13 <= var10) {
                                   break L10;
                                 } else {
+                                  int incrementValue$12 = var11;
                                   var11--;
-                                  var14 = var14 - (var11 + var11);
+                                  var14 = var14 - (incrementValue$12 + var11);
                                   var13 = var13 - (var11 + var11);
                                   continue L9;
                                 }
@@ -1408,8 +1298,9 @@ final class sfa extends ha {
                               if (var19 > var17) {
                                 var9++;
                                 var14 = var14 + (var12 + var12);
+                                int incrementValue$13 = var12;
                                 var12++;
-                                var13 = var13 + (var12 + var12);
+                                var13 = var13 + (incrementValue$13 + var12);
                                 continue L8;
                               } else {
                                 if ((float)param2 < ((sfa) this).field_n[var18]) {
@@ -1461,8 +1352,9 @@ final class sfa extends ha {
                               L18: while (true) {
                                 if (var19 >= var17) {
                                   var9++;
+                                  int incrementValue$14 = var12;
                                   var12--;
-                                  var13 = var13 - (var12 + var12);
+                                  var13 = var13 - (incrementValue$14 + var12);
                                   var14 = var14 - (var12 + var12);
                                   continue L7;
                                 } else {
@@ -1488,8 +1380,9 @@ final class sfa extends ha {
                           }
                         }
                         var13 = var13 + (var11 + var11);
+                        int incrementValue$15 = var11;
                         var11++;
-                        var14 = var14 + (var11 + var11);
+                        var14 = var14 + (incrementValue$15 + var11);
                         continue L14;
                       }
                     }
@@ -1517,8 +1410,9 @@ final class sfa extends ha {
                               if (var13 <= var10) {
                                 break L22;
                               } else {
+                                int incrementValue$16 = var11;
                                 var11--;
-                                var14 = var14 - (var11 + var11);
+                                var14 = var14 - (incrementValue$16 + var11);
                                 var13 = var13 - (var11 + var11);
                                 continue L21;
                               }
@@ -1548,8 +1442,9 @@ final class sfa extends ha {
                             if (var20 > var18) {
                               var9++;
                               var14 = var14 + (var12 + var12);
+                              int incrementValue$17 = var12;
                               var12++;
-                              var13 = var13 + (var12 + var12);
+                              var13 = var13 + (incrementValue$17 + var12);
                               continue L20;
                             } else {
                               if ((float)param2 < ((sfa) this).field_n[var19]) {
@@ -1599,8 +1494,9 @@ final class sfa extends ha {
                             L30: while (true) {
                               if (var20 >= var18) {
                                 var9++;
+                                int incrementValue$18 = var12;
                                 var12--;
-                                var13 = var13 - (var12 + var12);
+                                var13 = var13 - (incrementValue$18 + var12);
                                 var14 = var14 - (var12 + var12);
                                 continue L19;
                               } else {
@@ -1624,8 +1520,9 @@ final class sfa extends ha {
                         }
                       }
                       var13 = var13 + (var11 + var11);
+                      int incrementValue$19 = var11;
                       var11++;
-                      var14 = var14 + (var11 + var11);
+                      var14 = var14 + (incrementValue$19 + var11);
                       continue L26;
                     }
                   }
@@ -1654,8 +1551,9 @@ final class sfa extends ha {
                       if (var13 <= var10) {
                         break L34;
                       } else {
+                        int incrementValue$20 = var11;
                         var11--;
-                        var14 = var14 - (var11 + var11);
+                        var14 = var14 - (incrementValue$20 + var11);
                         var13 = var13 - (var11 + var11);
                         continue L33;
                       }
@@ -1685,8 +1583,9 @@ final class sfa extends ha {
                     if (var19 > var17) {
                       var9++;
                       var14 = var14 + (var12 + var12);
+                      int incrementValue$21 = var12;
                       var12++;
-                      var13 = var13 + (var12 + var12);
+                      var13 = var13 + (incrementValue$21 + var12);
                       continue L32;
                     } else {
                       if ((float)param2 < ((sfa) this).field_n[var18]) {
@@ -1734,8 +1633,9 @@ final class sfa extends ha {
                     L42: while (true) {
                       if (var19 >= var17) {
                         var9++;
+                        int incrementValue$22 = var12;
                         var12--;
-                        var13 = var13 - (var12 + var12);
+                        var13 = var13 - (incrementValue$22 + var12);
                         var14 = var14 - (var12 + var12);
                         continue L31;
                       } else {
@@ -1757,8 +1657,9 @@ final class sfa extends ha {
                 }
               }
               var13 = var13 + (var11 + var11);
+              int incrementValue$23 = var11;
               var11++;
-              var14 = var14 + (var11 + var11);
+              var14 = var14 + (incrementValue$23 + var11);
               continue L38;
             }
           }
@@ -1771,87 +1672,161 @@ final class sfa extends ha {
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         nh var11 = null;
-        int[] var18 = null;
-        int[] var17 = null;
-        int[] var16 = null;
-        int[] var14 = null;
         int[] var12 = null;
         int var13 = 0;
+        int[] var14 = null;
         nh var15 = null;
-        nh var11_ref = null;
-        if (param3 != 0) {
-            if (param4 == 0) {
-                return;
-            }
-            if (param6 != 65535) {
-                // ifne L204
-                if (((sfa) this).field_v != param6) {
-                    var11 = (nh) ((sfa) this).field_X.a((byte) 75, (long)param6);
-                    if (var11 == null) {
-                        var18 = ((sfa) this).h(param6);
-                        var17 = var18;
-                        var16 = var17;
-                        var14 = var16;
-                        var12 = var14;
-                        if (var12 == null) {
-                            return;
+        int[] var16 = null;
+        int[] var17 = null;
+        int[] var18 = null;
+        int stackIn_12_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        if (param3 == 0) {
+          return;
+        } else {
+          if (param4 != 0) {
+            L0: {
+              L1: {
+                if (param6 == 65535) {
+                  break L1;
+                } else {
+                  if (((sfa) this).field_c.a((byte) -7, param6).field_p) {
+                    break L1;
+                  } else {
+                    L2: {
+                      if (((sfa) this).field_v == param6) {
+                        break L2;
+                      } else {
+                        L3: {
+                          var11 = (nh) ((sfa) this).field_X.a((byte) 75, (long)param6);
+                          if (var11 != null) {
+                            break L3;
+                          } else {
+                            var18 = ((sfa) this).h(param6);
+                            var17 = var18;
+                            var16 = var17;
+                            var14 = var16;
+                            var12 = var14;
+                            if (var12 != null) {
+                              L4: {
+                                if (!((sfa) this).j(param6)) {
+                                  stackOut_11_0 = ((sfa) this).field_I;
+                                  stackIn_12_0 = stackOut_11_0;
+                                  break L4;
+                                } else {
+                                  stackOut_10_0 = 64;
+                                  stackIn_12_0 = stackOut_10_0;
+                                  break L4;
+                                }
+                              }
+                              var13 = stackIn_12_0;
+                              var15 = ((sfa) this).a(var18, var13, 79, var13, var13, 0);
+                              var11 = var15;
+                              ((sfa) this).field_X.a(29166, (Object) (Object) var15, (long)param6);
+                              break L3;
+                            } else {
+                              return;
+                            }
+                          }
                         }
-                        var13 = ((sfa) this).j(param6) ? 64 : ((sfa) this).field_I;
-                        var15 = ((sfa) this).a(var18, var13, 79, var13, var13, 0);
-                        var11_ref = var15;
-                        ((sfa) this).field_X.a(29166, (Object) (Object) var15, (long)param6);
+                        ((sfa) this).field_v = param6;
+                        ((sfa) this).field_R = var11;
+                        break L2;
+                      }
                     }
-                    ((sfa) this).field_v = param6;
-                    ((sfa) this).field_R = var11_ref;
+                    ((pf) (Object) ((sfa) this).field_R).b(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
+                    break L0;
+                  }
                 }
-                ((pf) (Object) ((sfa) this).field_R).b(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
-            } else {
-                this.e(param0, param1, param2, param3, param7, param9);
+              }
+              this.e(param0, param1, param2, param3, param7, param9);
+              break L0;
             }
             return;
+          } else {
+            return;
+          }
         }
     }
 
     final void c(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         nh var11 = null;
-        int[] var18 = null;
-        int[] var17 = null;
-        int[] var16 = null;
-        int[] var14 = null;
         int[] var12 = null;
         int var13 = 0;
+        int[] var14 = null;
         nh var15 = null;
-        nh var11_ref = null;
-        if (param3 != 0) {
-            if (param4 == 0) {
-                return;
-            }
-            if (param6 != 65535) {
-                // ifne L203
-                if (((sfa) this).field_v != param6) {
-                    var11 = (nh) ((sfa) this).field_X.a((byte) 55, (long)param6);
-                    if (var11 == null) {
-                        var18 = ((sfa) this).h(param6);
-                        var17 = var18;
-                        var16 = var17;
-                        var14 = var16;
-                        var12 = var14;
-                        if (var12 == null) {
-                            return;
+        int[] var16 = null;
+        int[] var17 = null;
+        int[] var18 = null;
+        int stackIn_12_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        if (param3 == 0) {
+          return;
+        } else {
+          if (param4 != 0) {
+            L0: {
+              L1: {
+                if (param6 == 65535) {
+                  break L1;
+                } else {
+                  if (((sfa) this).field_c.a((byte) 5, param6).field_p) {
+                    break L1;
+                  } else {
+                    L2: {
+                      if (((sfa) this).field_v == param6) {
+                        break L2;
+                      } else {
+                        L3: {
+                          var11 = (nh) ((sfa) this).field_X.a((byte) 55, (long)param6);
+                          if (var11 != null) {
+                            break L3;
+                          } else {
+                            var18 = ((sfa) this).h(param6);
+                            var17 = var18;
+                            var16 = var17;
+                            var14 = var16;
+                            var12 = var14;
+                            if (var12 != null) {
+                              L4: {
+                                if (!((sfa) this).j(param6)) {
+                                  stackOut_11_0 = ((sfa) this).field_I;
+                                  stackIn_12_0 = stackOut_11_0;
+                                  break L4;
+                                } else {
+                                  stackOut_10_0 = 64;
+                                  stackIn_12_0 = stackOut_10_0;
+                                  break L4;
+                                }
+                              }
+                              var13 = stackIn_12_0;
+                              var15 = ((sfa) this).a(var18, var13, 80, var13, var13, 0);
+                              var11 = var15;
+                              ((sfa) this).field_X.a(29166, (Object) (Object) var15, (long)param6);
+                              break L3;
+                            } else {
+                              return;
+                            }
+                          }
                         }
-                        var13 = ((sfa) this).j(param6) ? 64 : ((sfa) this).field_I;
-                        var15 = ((sfa) this).a(var18, var13, 80, var13, var13, 0);
-                        var11_ref = var15;
-                        ((sfa) this).field_X.a(29166, (Object) (Object) var15, (long)param6);
+                        ((sfa) this).field_v = param6;
+                        ((sfa) this).field_R = var11;
+                        break L2;
+                      }
                     }
-                    ((sfa) this).field_v = param6;
-                    ((sfa) this).field_R = var11_ref;
+                    ((pf) (Object) ((sfa) this).field_R).a(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
+                    break L0;
+                  }
                 }
-                ((pf) (Object) ((sfa) this).field_R).a(param0 - param3, param1 - param4, param2, param3 << 1, param4 << 1, param8, param7, param9, 1);
-            } else {
-                this.e(param0, param1, param2, param3, param7, param9);
+              }
+              this.e(param0, param1, param2, param3, param7, param9);
+              break L0;
             }
             return;
+          } else {
+            return;
+          }
         }
     }
 
@@ -1993,18 +1968,29 @@ final class sfa extends ha {
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
-        ija var4_ref = null;
-        ija var4 = (ija) (Object) ((sfa) this).field_G.a((byte) -104, (long)((Object) (Object) param0).hashCode());
-        if (var4 == null) {
-            var4_ref = tfa.a(param2, param1, param0, 0);
-            ((sfa) this).field_G.a((long)((Object) (Object) param0).hashCode(), 125, (vg) (Object) var4_ref);
-        } else {
-            if (var4_ref.field_h == param1) {
-                // if_icmpeq L90
+        ija var4 = null;
+        L0: {
+          var4 = (ija) (Object) ((sfa) this).field_G.a((byte) -104, (long)((Object) (Object) param0).hashCode());
+          if (var4 != null) {
+            L1: {
+              if (var4.field_h != param1) {
+                break L1;
+              } else {
+                if (var4.field_f == param2) {
+                  return;
+                } else {
+                  break L1;
+                }
+              }
             }
             this.b(param0, param1, param2);
+            break L0;
+          } else {
+            var4 = tfa.a(param2, param1, param0, 0);
+            ((sfa) this).field_G.a((long)((Object) (Object) param0).hashCode(), 125, (vg) (Object) var4);
+            break L0;
+          }
         }
-        return;
     }
 
     final void a(int param0, ob[] param1) {
@@ -2015,7 +2001,7 @@ final class sfa extends ha {
         byte[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        raa var7 = null;
+        Object var7 = null;
         int[] var8 = null;
         byte[] var9 = null;
         int var10 = 0;
@@ -2088,7 +2074,7 @@ final class sfa extends ha {
                     var10 = 0;
                     L3: while (true) {
                       if (var10 >= var28.length) {
-                        var7 = (raa) (Object) new kf((sfa) this, var29, var30, var5, var6);
+                        var7 = (Object) (Object) new kf((sfa) this, var29, var30, var5, var6);
                         break L0;
                       } else {
                         var8[var10] = var28[var10];
@@ -2124,7 +2110,7 @@ final class sfa extends ha {
             var10 = 0;
             L5: while (true) {
               if (var10 >= var6) {
-                var7 = new raa((sfa) this, var31, var5, var6);
+                var7 = (Object) (Object) new raa((sfa) this, var31, var5, var6);
                 break L0;
               } else {
                 var11 = var10 * var5;
@@ -2171,7 +2157,7 @@ final class sfa extends ha {
             var10 = 0;
             L8: while (true) {
               if (var10 >= var6) {
-                var7 = (raa) (Object) new vqa((sfa) this, var31, var5, var6);
+                var7 = (Object) (Object) new vqa((sfa) this, var31, var5, var6);
                 break L0;
               } else {
                 var11 = var10 * var5;
@@ -2190,8 +2176,8 @@ final class sfa extends ha {
             }
           }
         }
-        ((nh) (Object) var7).b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
-        return (nh) (Object) var7;
+        ((nh) var7).b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
+        return (nh) var7;
     }
 
     private sfa(d param0) {
@@ -2408,7 +2394,7 @@ final class sfa extends ha {
 
     private final void g() {
         int var1 = 0;
-        iua var2_ref = null;
+        iua var2_ref_iua = null;
         int var2 = 0;
         int var3 = 0;
         ((sfa) this).field_p = ((sfa) this).field_J - ((sfa) this).field_L;
@@ -2416,11 +2402,11 @@ final class sfa extends ha {
         ((sfa) this).field_k = ((sfa) this).field_d - ((sfa) this).field_w;
         ((sfa) this).field_o = ((sfa) this).field_P - ((sfa) this).field_w;
         for (var1 = 0; var1 < ((sfa) this).field_u; var1++) {
-            var2_ref = ((sfa) this).field_Y[var1].field_v;
-            var2_ref.field_e = ((sfa) this).field_L - ((sfa) this).field_J;
-            var2_ref.field_n = ((sfa) this).field_w - ((sfa) this).field_d;
-            var2_ref.field_h = ((sfa) this).field_W - ((sfa) this).field_J;
-            var2_ref.field_v = ((sfa) this).field_P - ((sfa) this).field_d;
+            var2_ref_iua = ((sfa) this).field_Y[var1].field_v;
+            var2_ref_iua.field_e = ((sfa) this).field_L - ((sfa) this).field_J;
+            var2_ref_iua.field_n = ((sfa) this).field_w - ((sfa) this).field_d;
+            var2_ref_iua.field_h = ((sfa) this).field_W - ((sfa) this).field_J;
+            var2_ref_iua.field_v = ((sfa) this).field_P - ((sfa) this).field_d;
         }
         var1 = ((sfa) this).field_d * ((sfa) this).field_K + ((sfa) this).field_J;
         for (var2 = ((sfa) this).field_d; var2 < ((sfa) this).field_P; var2++) {
@@ -2478,8 +2464,9 @@ final class sfa extends ha {
         for (var8 = 0; var8 < param3; var8++) {
             var9 = (param1 + var8) * ((sfa) this).field_K + param0;
             for (var10 = 0; var10 < param2; var10++) {
+                int incrementValue$0 = param5;
                 param5++;
-                ((sfa) this).field_r[var9 + var10] = param4[param5];
+                ((sfa) this).field_r[var9 + var10] = param4[incrementValue$0];
             }
             param5 = param5 + param6;
         }
@@ -2489,41 +2476,64 @@ final class sfa extends ha {
     }
 
     private final void a(java.awt.Canvas param0) {
-        java.awt.Dimension var3 = null;
         ija var2 = null;
-        if (param0 != null) {
-            var2 = (ija) (Object) ((sfa) this).field_G.a((byte) -116, (long)((Object) (Object) param0).hashCode());
-            // ifnull L233
-            ((sfa) this).field_t = param0;
-            var3 = param0.getSize();
-            ((sfa) this).field_m = var3.width;
-            ((sfa) this).field_O = var3.height;
-            ((sfa) this).field_T = var2;
-            // ifnonnull L233
-            ((sfa) this).field_r = var2.field_g;
-            ((sfa) this).field_K = var2.field_h;
-            ((sfa) this).field_h = var2.field_f;
-            if (((sfa) this).field_K == ((sfa) this).field_y) {
-                // if_icmpeq L177
-            }
-            ((sfa) this).field_y = ((sfa) this).field_K;
-            ((sfa) this).field_i = ((sfa) this).field_K;
-            ((sfa) this).field_s = ((sfa) this).field_h;
-            ((sfa) this).field_B = ((sfa) this).field_h;
-            ((sfa) this).field_n = new float[((sfa) this).field_y * ((sfa) this).field_s];
-            ((sfa) this).field_H = new float[((sfa) this).field_y * ((sfa) this).field_s];
-            this.m();
-        } else {
+        java.awt.Dimension var3 = null;
+        L0: {
+          if (param0 == null) {
             ((sfa) this).field_t = null;
             ((sfa) this).field_T = null;
-            if (((sfa) this).field_D == null) {
-                ((sfa) this).field_r = null;
-                ((sfa) this).field_h = 1;
-                ((sfa) this).field_K = 1;
-                ((sfa) this).field_s = 1;
-                ((sfa) this).field_y = 1;
-                this.m();
+            if (((sfa) this).field_D != null) {
+              break L0;
+            } else {
+              ((sfa) this).field_r = null;
+              ((sfa) this).field_h = 1;
+              ((sfa) this).field_K = 1;
+              ((sfa) this).field_s = 1;
+              ((sfa) this).field_y = 1;
+              this.m();
+              break L0;
             }
+          } else {
+            var2 = (ija) (Object) ((sfa) this).field_G.a((byte) -116, (long)((Object) (Object) param0).hashCode());
+            if (var2 == null) {
+              break L0;
+            } else {
+              ((sfa) this).field_t = param0;
+              var3 = param0.getSize();
+              ((sfa) this).field_m = var3.width;
+              ((sfa) this).field_O = var3.height;
+              ((sfa) this).field_T = var2;
+              if (((sfa) this).field_D != null) {
+                break L0;
+              } else {
+                L1: {
+                  L2: {
+                    ((sfa) this).field_r = var2.field_g;
+                    ((sfa) this).field_K = var2.field_h;
+                    ((sfa) this).field_h = var2.field_f;
+                    if (((sfa) this).field_K != ((sfa) this).field_y) {
+                      break L2;
+                    } else {
+                      if (((sfa) this).field_h == ((sfa) this).field_s) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  ((sfa) this).field_y = ((sfa) this).field_K;
+                  ((sfa) this).field_i = ((sfa) this).field_K;
+                  ((sfa) this).field_s = ((sfa) this).field_h;
+                  ((sfa) this).field_B = ((sfa) this).field_h;
+                  ((sfa) this).field_n = new float[((sfa) this).field_y * ((sfa) this).field_s];
+                  ((sfa) this).field_H = new float[((sfa) this).field_y * ((sfa) this).field_s];
+                  break L1;
+                }
+                this.m();
+                break L0;
+              }
+            }
+          }
         }
     }
 
@@ -2636,8 +2646,9 @@ final class sfa extends ha {
                                               ((sfa) this).field_r[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                               L7: while (true) {
                                                 L8: {
+                                                  int incrementValue$5 = var11;
                                                   var11++;
-                                                  var12 = var12 + (var11 + var11);
+                                                  var12 = var12 + (incrementValue$5 + var11);
                                                   var6 = var6 - ((sfa) this).field_K;
                                                   var7 = var7 + ((sfa) this).field_K;
                                                   if (var12 <= param2) {
@@ -2809,8 +2820,9 @@ final class sfa extends ha {
                                     }
                                     L13: while (true) {
                                       L14: {
+                                        int incrementValue$6 = var11;
                                         var11++;
-                                        var12 = var12 + (var11 + var11);
+                                        var12 = var12 + (incrementValue$6 + var11);
                                         var6 = var6 - ((sfa) this).field_K;
                                         var7 = var7 + ((sfa) this).field_K;
                                         if (var12 <= param2) {
@@ -3049,8 +3061,9 @@ final class sfa extends ha {
                                             ((sfa) this).field_r[var14] = var15 + var18;
                                             L23: while (true) {
                                               L24: {
+                                                int incrementValue$7 = var11;
                                                 var11++;
-                                                var12 = var12 + (var11 + var11);
+                                                var12 = var12 + (incrementValue$7 + var11);
                                                 var6 = var6 - ((sfa) this).field_K;
                                                 var7 = var7 + ((sfa) this).field_K;
                                                 if (var12 <= param2) {
@@ -3234,8 +3247,9 @@ final class sfa extends ha {
                                   }
                                   L29: while (true) {
                                     L30: {
+                                      int incrementValue$8 = var11;
                                       var11++;
-                                      var12 = var12 + (var11 + var11);
+                                      var12 = var12 + (incrementValue$8 + var11);
                                       var6 = var6 - ((sfa) this).field_K;
                                       var7 = var7 + ((sfa) this).field_K;
                                       if (var12 <= param2) {
@@ -3583,8 +3597,9 @@ final class sfa extends ha {
                             }
                             L41: while (true) {
                               L42: {
+                                int incrementValue$9 = var11;
                                 var11++;
-                                var12 = var12 + (var11 + var11);
+                                var12 = var12 + (incrementValue$9 + var11);
                                 var6 = var6 - ((sfa) this).field_K;
                                 var7 = var7 + ((sfa) this).field_K;
                                 if (var12 <= param2) {
@@ -3925,8 +3940,9 @@ final class sfa extends ha {
                                 if (var12 <= var9) {
                                   break L10;
                                 } else {
+                                  int incrementValue$18 = var10;
                                   var10--;
-                                  var13 = var13 - (var10 + var10);
+                                  var13 = var13 - (incrementValue$18 + var10);
                                   var12 = var12 - (var10 + var10);
                                   continue L9;
                                 }
@@ -3956,16 +3972,18 @@ final class sfa extends ha {
                               if (var18 > var16) {
                                 var8++;
                                 var13 = var13 + (var11 + var11);
+                                int incrementValue$19 = var11;
                                 var11++;
-                                var12 = var12 + (var11 + var11);
+                                var12 = var12 + (incrementValue$19 + var11);
                                 continue L8;
                               } else {
                                 var19 = ((sfa) this).field_r[var17];
                                 var20 = param3 + var19;
                                 var21 = (param3 & 16711935) + (var19 & 16711935);
                                 var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                                int incrementValue$20 = var17;
                                 var17++;
-                                ((sfa) this).field_r[var17] = var20 - var19 | var19 - (var19 >>> 8);
+                                ((sfa) this).field_r[incrementValue$20] = var20 - var19 | var19 - (var19 >>> 8);
                                 var18++;
                                 continue L13;
                               }
@@ -4003,8 +4021,9 @@ final class sfa extends ha {
                               L18: while (true) {
                                 if (var18 >= var16) {
                                   var8++;
+                                  int incrementValue$21 = var11;
                                   var11--;
-                                  var12 = var12 - (var11 + var11);
+                                  var12 = var12 - (incrementValue$21 + var11);
                                   var13 = var13 - (var11 + var11);
                                   continue L7;
                                 } else {
@@ -4012,8 +4031,9 @@ final class sfa extends ha {
                                   var20 = param3 + var19;
                                   var21 = (param3 & 16711935) + (var19 & 16711935);
                                   var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                                  int incrementValue$22 = var17;
                                   var17++;
-                                  ((sfa) this).field_r[var17] = var20 - var19 | var19 - (var19 >>> 8);
+                                  ((sfa) this).field_r[incrementValue$22] = var20 - var19 | var19 - (var19 >>> 8);
                                   var18++;
                                   continue L18;
                                 }
@@ -4024,8 +4044,9 @@ final class sfa extends ha {
                           }
                         }
                         var12 = var12 + (var10 + var10);
+                        int incrementValue$23 = var10;
                         var10++;
-                        var13 = var13 + (var10 + var10);
+                        var13 = var13 + (incrementValue$23 + var10);
                         continue L14;
                       }
                     }
@@ -4053,8 +4074,9 @@ final class sfa extends ha {
                               if (var12 <= var9) {
                                 break L22;
                               } else {
+                                int incrementValue$24 = var10;
                                 var10--;
-                                var13 = var13 - (var10 + var10);
+                                var13 = var13 - (incrementValue$24 + var10);
                                 var12 = var12 - (var10 + var10);
                                 continue L21;
                               }
@@ -4084,14 +4106,16 @@ final class sfa extends ha {
                             if (var19 > var17) {
                               var8++;
                               var13 = var13 + (var11 + var11);
+                              int incrementValue$25 = var11;
                               var11++;
-                              var12 = var12 + (var11 + var11);
+                              var12 = var12 + (incrementValue$25 + var11);
                               continue L20;
                             } else {
                               var20 = ((sfa) this).field_r[var18];
                               var20 = ((var20 & 16711935) * var15 >> 8 & 16711935) + ((var20 & 65280) * var15 >> 8 & 65280);
+                              int incrementValue$26 = var18;
                               var18++;
-                              ((sfa) this).field_r[var18] = param3 + var20;
+                              ((sfa) this).field_r[incrementValue$26] = param3 + var20;
                               var19++;
                               continue L25;
                             }
@@ -4129,15 +4153,17 @@ final class sfa extends ha {
                             L30: while (true) {
                               if (var19 >= var17) {
                                 var8++;
+                                int incrementValue$27 = var11;
                                 var11--;
-                                var12 = var12 - (var11 + var11);
+                                var12 = var12 - (incrementValue$27 + var11);
                                 var13 = var13 - (var11 + var11);
                                 continue L19;
                               } else {
                                 var20 = ((sfa) this).field_r[var18];
                                 var20 = ((var20 & 16711935) * var15 >> 8 & 16711935) + ((var20 & 65280) * var15 >> 8 & 65280);
+                                int incrementValue$28 = var18;
                                 var18++;
-                                ((sfa) this).field_r[var18] = param3 + var20;
+                                ((sfa) this).field_r[incrementValue$28] = param3 + var20;
                                 var19++;
                                 continue L30;
                               }
@@ -4148,8 +4174,9 @@ final class sfa extends ha {
                         }
                       }
                       var12 = var12 + (var10 + var10);
+                      int incrementValue$29 = var10;
                       var10++;
-                      var13 = var13 + (var10 + var10);
+                      var13 = var13 + (incrementValue$29 + var10);
                       continue L26;
                     }
                   }
@@ -4178,8 +4205,9 @@ final class sfa extends ha {
                       if (var12 <= var9) {
                         break L34;
                       } else {
+                        int incrementValue$30 = var10;
                         var10--;
-                        var13 = var13 - (var10 + var10);
+                        var13 = var13 - (incrementValue$30 + var10);
                         var12 = var12 - (var10 + var10);
                         continue L33;
                       }
@@ -4209,12 +4237,14 @@ final class sfa extends ha {
                     if (var18 > var16) {
                       var8++;
                       var13 = var13 + (var11 + var11);
+                      int incrementValue$31 = var11;
                       var11++;
-                      var12 = var12 + (var11 + var11);
+                      var12 = var12 + (incrementValue$31 + var11);
                       continue L32;
                     } else {
+                      int incrementValue$32 = var17;
                       var17++;
-                      ((sfa) this).field_r[var17] = param3;
+                      ((sfa) this).field_r[incrementValue$32] = param3;
                       var18++;
                       continue L37;
                     }
@@ -4252,13 +4282,15 @@ final class sfa extends ha {
                     L42: while (true) {
                       if (var18 >= var16) {
                         var8++;
+                        int incrementValue$33 = var11;
                         var11--;
-                        var12 = var12 - (var11 + var11);
+                        var12 = var12 - (incrementValue$33 + var11);
                         var13 = var13 - (var11 + var11);
                         continue L31;
                       } else {
+                        int incrementValue$34 = var17;
                         var17++;
-                        ((sfa) this).field_r[var17] = param3;
+                        ((sfa) this).field_r[incrementValue$34] = param3;
                         var18++;
                         continue L42;
                       }
@@ -4269,8 +4301,9 @@ final class sfa extends ha {
                 }
               }
               var12 = var12 + (var10 + var10);
+              int incrementValue$35 = var10;
               var10++;
-              var13 = var13 + (var10 + var10);
+              var13 = var13 + (incrementValue$35 + var10);
               continue L38;
             }
           }
@@ -4381,8 +4414,9 @@ final class sfa extends ha {
                                       var13 = param4 + var12;
                                       var14 = (param4 & 16711935) + (var12 & 16711935);
                                       var12 = (var14 & 16777472) + (var13 - var14 & 65536);
+                                      int incrementValue$2 = var8;
                                       var8++;
-                                      ((sfa) this).field_r[var8] = var13 - var12 | var12 - (var12 >>> 8);
+                                      ((sfa) this).field_r[incrementValue$2] = var13 - var12 | var12 - (var12 >>> 8);
                                       var11++;
                                       continue L10;
                                     }
@@ -4407,8 +4441,9 @@ final class sfa extends ha {
                                   } else {
                                     var13 = ((sfa) this).field_r[var8];
                                     var13 = ((var13 & 16711935) * var10 >> 8 & 16711935) + (((var13 & -16711936) >>> 8) * var10 & -16711936);
+                                    int incrementValue$3 = var8;
                                     var8++;
-                                    ((sfa) this).field_r[var8] = param4 + var13;
+                                    ((sfa) this).field_r[incrementValue$3] = param4 + var13;
                                     var12++;
                                     continue L12;
                                   }
@@ -4661,8 +4696,9 @@ final class sfa extends ha {
                   var9++;
                   continue L0;
                 } else {
+                  int incrementValue$21 = var8;
                   var8++;
-                  var11 = param0[var8] >>> 24;
+                  var11 = param0[incrementValue$21] >>> 24;
                   if (var11 != 0) {
                     if (var11 != 255) {
                       var7 = 1;

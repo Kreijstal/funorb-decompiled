@@ -6,11 +6,6 @@ final class sg {
     static u field_b;
 
     public static void a(boolean param0) {
-        if (!param0) {
-            sg.a(120);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

@@ -11,9 +11,6 @@ final class je extends ec {
     static String field_H;
 
     final static uh h(boolean param0) {
-        if (!param0) {
-            field_I = null;
-        }
         String var1 = ne.a((byte) -52);
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
@@ -42,41 +39,91 @@ final class je extends ec {
 
     final static void a(lk param0, byte param1) {
         lk var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
-        L0: {
-          var3 = Virogrid.field_F ? 1 : 0;
-          if (param1 > 87) {
-            break L0;
-          } else {
-            field_J = null;
-            break L0;
-          }
-        }
-        param0.a(false);
-        var2 = (lk) (Object) ci.field_o.a((byte) -64);
-        L1: while (true) {
-          L2: {
-            if (var2 == null) {
-              break L2;
-            } else {
-              if (!var2.a(37, param0)) {
-                break L2;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var3 = Virogrid.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param1 > 87) {
+                break L1;
               } else {
-                var2 = (lk) (Object) ci.field_o.a(16213);
-                continue L1;
+                field_J = null;
+                break L1;
               }
             }
-          }
-          L3: {
-            if (var2 != null) {
-              td.a((l) (Object) var2, (byte) -73, (l) (Object) param0);
-              break L3;
-            } else {
-              ci.field_o.a((l) (Object) param0, (byte) -91);
-              break L3;
+            param0.a(false);
+            var2 = (lk) (Object) ci.field_o.a((byte) -64);
+            L2: while (true) {
+              L3: {
+                if (var2 == null) {
+                  break L3;
+                } else {
+                  if (!var2.a(37, param0)) {
+                    break L3;
+                  } else {
+                    var2 = (lk) (Object) ci.field_o.a(16213);
+                    continue L2;
+                  }
+                }
+              }
+              L4: {
+                if (var2 != null) {
+                  td.a((l) (Object) var2, (byte) -73, (l) (Object) param0);
+                  break L4;
+                } else {
+                  ci.field_o.a((l) (Object) param0, (byte) -91);
+                  break L4;
+                }
+              }
+              break L0;
             }
           }
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var2_ref = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var2_ref;
+            stackOut_11_1 = new StringBuilder().append("je.B(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L5;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L5;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
         }
     }
 
@@ -148,16 +195,21 @@ final class je extends ec {
     }
 
     final void a(int param0, fi param1) {
-        if (!(param1 instanceof gg)) {
-            throw new IllegalArgumentException();
+        gg var3 = null;
+        try {
+            if (!(param1 instanceof gg)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (gg) (Object) param1;
+            if (param0 != 0) {
+                je.h(112);
+            }
+            ((je) this).field_F.b((l) (Object) var3, (byte) -45);
+            var3.field_G = true;
+            boolean discarded$0 = var3.a((fi) this, param0 ^ -8515);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "je.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        gg var3 = (gg) (Object) param1;
-        if (param0 != 0) {
-            je.h(112);
-        }
-        ((je) this).field_F.b((l) (Object) var3, (byte) -45);
-        var3.field_G = true;
-        boolean discarded$0 = var3.a((fi) this, param0 ^ -8515);
     }
 
     final void a(byte param0) {

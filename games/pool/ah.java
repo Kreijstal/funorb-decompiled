@@ -19,19 +19,20 @@ final class ah {
         field_c = null;
         field_h = null;
         field_b = null;
-        if (param0) {
-            field_g = null;
-        }
     }
 
     ah() {
     }
 
     ah(ah param0) {
-        ((ah) this).field_a = param0.field_a;
-        ((ah) this).field_j = param0.field_j;
-        ((ah) this).field_f = param0.field_f;
-        ((ah) this).field_d = param0.field_d;
+        try {
+            ((ah) this).field_a = param0.field_a;
+            ((ah) this).field_j = param0.field_j;
+            ((ah) this).field_f = param0.field_f;
+            ((ah) this).field_d = param0.field_d;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "ah.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

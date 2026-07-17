@@ -17,7 +17,7 @@ final class tk {
     final static void b(int param0, int param1) {
         qf.field_c = 0;
         pj.field_f = new int[3];
-        int var2 = -114 / ((param1 - -25) / 36);
+        int var2 = -38;
         ik.field_i = new ld[param0 * 15];
         fh.field_b = param0;
     }
@@ -84,26 +84,13 @@ final class tk {
     }
 
     public static void b(byte param0) {
-        if (param0 != 77) {
-          tk.a(-49);
-          field_h = null;
-          field_f = null;
-          field_c = null;
-          field_g = null;
-          field_a = null;
-          field_i = null;
-          field_d = null;
-          return;
-        } else {
-          field_h = null;
-          field_f = null;
-          field_c = null;
-          field_g = null;
-          field_a = null;
-          field_i = null;
-          field_d = null;
-          return;
-        }
+        field_h = null;
+        field_f = null;
+        field_c = null;
+        field_g = null;
+        field_a = null;
+        field_i = null;
+        field_d = null;
     }
 
     final static boolean a(int param0, int param1) {
@@ -129,15 +116,12 @@ final class tk {
                 field_h.field_l = 0;
                 return true;
             }
-            try {
-                if (false) throw (IOException) null;
+            {
                 if (0 <= var2_int) {
-                    if (-30001L <= (ea.i((byte) -128) ^ -1L)) {
+                    if (ea.i((byte) -128) <= 30000L) {
                         return false;
                     }
                 }
-                si.d(65280);
-            } catch (IOException iOException) {
                 si.d(65280);
             }
             return false;

@@ -13,12 +13,12 @@ final class ra {
         int var5 = 0;
         int var6 = 0;
         var6 = DungeonAssault.field_K;
-        var3 = -1 + (((ra) this).field_d.length >> 95952545);
+        var3 = -1 + (((ra) this).field_d.length >> 1);
         var4 = var3 & param0;
         if (param1 <= -115) {
           L0: while (true) {
             var5 = ((ra) this).field_d[1 + var4 + var4];
-            if (0 != (var5 ^ -1)) {
+            if (var5 != -1) {
               if (((ra) this).field_d[var4 - -var4] != param0) {
                 var4 = var3 & var4 + 1;
                 continue L0;
@@ -37,9 +37,6 @@ final class ra {
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
-        if (param0 > -38) {
-            ra.a(-90);
-        }
         field_c = null;
     }
 
@@ -80,7 +77,7 @@ final class ra {
               kg.field_f = -1;
               break L2;
             } else {
-              if (0 != (var2 ^ -1)) {
+              if (var2 != -1) {
                 kg.field_f = var2;
                 um.field_g = new rh(0, 0, 40, 80, 16711680, 768, 224);
                 break L2;
@@ -95,69 +92,175 @@ final class ra {
     }
 
     final static void c(int param0) {
-        int var1 = 0;
+        RuntimeException var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int var6 = DungeonAssault.field_K;
-        jh.c();
-        if (!(im.field_e != null)) {
-            im.field_e = new cn(394, 296);
-            im.field_e.field_A = -8;
-            im.field_e.field_w = -8;
-        }
-        im.field_e.e();
-        gf.a();
-        for (var1 = 0; var1 < 7; var1++) {
-            var2 = -19 + (-(var1 * 27) + 189);
-            var3 = 20 * var1 + 8;
-            var4 = -var1 + 6;
-            var5 = 0;
-            while (var5 < 1 + var1) {
-                jm.a(var3, var4, 3, var2);
-                var5++;
-                var4 += 8;
-                var2 += 54;
+        int var6 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var6 = DungeonAssault.field_K;
+        try {
+          L0: {
+            L1: {
+              jh.c();
+              if (im.field_e == null) {
+                im.field_e = new cn(394, 296);
+                im.field_e.field_A = -8;
+                im.field_e.field_w = -8;
+                break L1;
+              } else {
+                break L1;
+              }
             }
-        }
-        for (var1 = 7; (var1 ^ -1) > -14; var1++) {
-            var2 = 27 * (-6 + var1) + 8;
-            var3 = var1 * 20 + 8;
-            var4 = var1 * 7 - 42;
-            var5 = 0;
-            while (13 + -var1 > var5) {
-                jm.a(var3, var4, 3, var2);
-                var5++;
-                var2 += 54;
-                var4 += 8;
+            im.field_e.e();
+            gf.a();
+            var1_int = 0;
+            L2: while (true) {
+              if (var1_int >= 7) {
+                var1_int = 7;
+                L3: while (true) {
+                  if (var1_int >= 13) {
+                    gf.d(2, 2, 0, 0, im.field_e.field_y, im.field_e.field_v);
+                    jh.b();
+                    break L0;
+                  } else {
+                    var2 = 27 * (-6 + var1_int) + 8;
+                    var3 = var1_int * 20 + 8;
+                    var4 = var1_int * 7 - 42;
+                    var5 = 0;
+                    L4: while (true) {
+                      if (13 + -var1_int <= var5) {
+                        var1_int++;
+                        continue L3;
+                      } else {
+                        jm.a(var3, var4, 3, var2);
+                        var5++;
+                        var2 += 54;
+                        var4 += 8;
+                        continue L4;
+                      }
+                    }
+                  }
+                }
+              } else {
+                var2 = -19 + (-(var1_int * 27) + 189);
+                var3 = 20 * var1_int + 8;
+                var4 = -var1_int + 6;
+                var5 = 0;
+                L5: while (true) {
+                  if (var5 >= 1 + var1_int) {
+                    var1_int++;
+                    continue L2;
+                  } else {
+                    jm.a(var3, var4, 3, var2);
+                    var5++;
+                    var4 += 8;
+                    var2 += 54;
+                    continue L5;
+                  }
+                }
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw vk.a((Throwable) (Object) var1, "ra.A(" + 8 + 41);
         }
-        gf.d(2, 2, 0, 0, im.field_e.field_y, im.field_e.field_v);
-        if (param0 != 8) {
-            return;
-        }
-        jh.b();
     }
 
     ra(int[] param0) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int var2 = 1;
-        while (var2 <= param0.length - -(param0.length >> -690493279)) {
-            var2 = var2 << 1;
-        }
-        ((ra) this).field_d = new int[var2 - -var2];
-        for (var3 = 0; var3 < var2 + var2; var3++) {
-            ((ra) this).field_d[var3] = -1;
-        }
-        for (var3 = 0; param0.length > var3; var3++) {
-            var4 = var2 + -1 & param0[var3];
-            while ((((ra) this).field_d[var4 + (var4 - -1)] ^ -1) != 0) {
-                var4 = -1 + var2 & 1 + var4;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            var2_int = 1;
+            L1: while (true) {
+              if (var2_int > param0.length - -(param0.length >> 1)) {
+                ((ra) this).field_d = new int[var2_int - -var2_int];
+                var3 = 0;
+                L2: while (true) {
+                  if (var3 >= var2_int + var2_int) {
+                    var3 = 0;
+                    L3: while (true) {
+                      if (param0.length <= var3) {
+                        break L0;
+                      } else {
+                        var4 = var2_int + -1 & param0[var3];
+                        L4: while (true) {
+                          if (((ra) this).field_d[var4 + (var4 - -1)] == -1) {
+                            ((ra) this).field_d[var4 + var4] = param0[var3];
+                            ((ra) this).field_d[var4 + (var4 + 1)] = var3;
+                            var3++;
+                            continue L3;
+                          } else {
+                            var4 = -1 + var2_int & 1 + var4;
+                            continue L4;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    ((ra) this).field_d[var3] = -1;
+                    var3++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2_int = var2_int << 1;
+                continue L1;
+              }
             }
-            ((ra) this).field_d[var4 + var4] = param0[var3];
-            ((ra) this).field_d[var4 + (var4 + 1)] = var3;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var2 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_1 = new StringBuilder().append("ra.<init>(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
+            }
+          }
+          throw vk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 

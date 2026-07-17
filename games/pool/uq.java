@@ -41,97 +41,75 @@ final class uq {
     int field_z;
 
     final static void a(long param0, byte param1) {
-        InterruptedException var3 = null;
-        Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            Thread.sleep(param0);
-            if (param1 == 104) {
-              break L0;
-            } else {
-              uq.a(-92);
+            InterruptedException var3 = null;
+            Throwable decompiledCaughtException = null;
+            {
+              Thread.sleep(param0);
               return;
             }
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = (InterruptedException) (Object) decompiledCaughtException;
-            break L1;
-          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static void a(byte param0) {
+        RuntimeException runtimeException = null;
         kf var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = Pool.field_O;
-        ib.field_s.d();
-        kk.field_D.d();
-        if (param0 < -79) {
-          kh.field_Pb = kh.field_Pb - 1;
-          if (kh.field_Pb == 0) {
-            kh.field_Pb = 200;
-            var1 = (kf) (Object) oj.field_o.c((byte) 116);
-            L0: while (true) {
-              if (var1 == null) {
-                if (mp.field_R == null) {
-                  L1: {
-                    if (null == tl.field_N) {
-                      break L1;
-                    } else {
-                      if (!tl.field_N.d(-11414)) {
-                        break L1;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  }
-                  return;
-                } else {
-                  var1 = (kf) (Object) mp.field_R.c((byte) -84);
-                  L2: while (true) {
-                    if (var1 == null) {
-                      L3: {
-                        if (null == tl.field_N) {
-                          break L3;
+        try {
+          L0: {
+            L1: {
+              ib.field_s.d();
+              kk.field_D.d();
+              kh.field_Pb = kh.field_Pb - 1;
+              if (kh.field_Pb == 0) {
+                kh.field_Pb = 200;
+                var1 = (kf) (Object) oj.field_o.c((byte) 116);
+                L2: while (true) {
+                  if (var1 == null) {
+                    if (mp.field_R != null) {
+                      var1 = (kf) (Object) mp.field_R.c((byte) -84);
+                      L3: while (true) {
+                        if (var1 == null) {
+                          break L1;
                         } else {
-                          if (!tl.field_N.d(-11414)) {
-                            break L3;
-                          } else {
-                            break L3;
+                          L4: {
+                            if (!var1.field_m.b(-117)) {
+                              var1.a((byte) -117);
+                              break L4;
+                            } else {
+                              break L4;
+                            }
                           }
+                          var1 = (kf) (Object) mp.field_R.f((byte) -5);
+                          continue L3;
                         }
                       }
-                      return;
                     } else {
-                      L4: {
-                        if (!var1.field_m.b(-117)) {
-                          var1.a((byte) -117);
-                          break L4;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      var1 = (kf) (Object) mp.field_R.f((byte) -5);
-                      continue L2;
+                      break L1;
                     }
+                  } else {
+                    L5: {
+                      if (!var1.field_m.b(-126)) {
+                        var1.a((byte) -117);
+                        break L5;
+                      } else {
+                        break L5;
+                      }
+                    }
+                    var1 = (kf) (Object) oj.field_o.f((byte) -5);
+                    continue L2;
                   }
                 }
               } else {
-                L5: {
-                  if (!var1.field_m.b(-126)) {
-                    var1.a((byte) -117);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                var1 = (kf) (Object) oj.field_o.f((byte) -5);
-                continue L0;
+                break L1;
               }
             }
-          } else {
             L6: {
               if (null == tl.field_N) {
                 break L6;
@@ -143,86 +121,12 @@ final class uq {
                 }
               }
             }
-            return;
+            break L0;
           }
-        } else {
-          field_K = null;
-          kh.field_Pb = kh.field_Pb - 1;
-          if (kh.field_Pb == 0) {
-            kh.field_Pb = 200;
-            var1 = (kf) (Object) oj.field_o.c((byte) 116);
-            L7: while (true) {
-              if (var1 == null) {
-                if (mp.field_R != null) {
-                  var1 = (kf) (Object) mp.field_R.c((byte) -84);
-                  L8: while (true) {
-                    if (var1 != null) {
-                      L9: {
-                        if (!var1.field_m.b(-117)) {
-                          var1.a((byte) -117);
-                          break L9;
-                        } else {
-                          break L9;
-                        }
-                      }
-                      var1 = (kf) (Object) mp.field_R.f((byte) -5);
-                      continue L8;
-                    } else {
-                      L10: {
-                        if (null == tl.field_N) {
-                          break L10;
-                        } else {
-                          if (!tl.field_N.d(-11414)) {
-                            break L10;
-                          } else {
-                            break L10;
-                          }
-                        }
-                      }
-                      return;
-                    }
-                  }
-                } else {
-                  L11: {
-                    if (null == tl.field_N) {
-                      break L11;
-                    } else {
-                      if (!tl.field_N.d(-11414)) {
-                        break L11;
-                      } else {
-                        break L11;
-                      }
-                    }
-                  }
-                  return;
-                }
-              } else {
-                L12: {
-                  if (!var1.field_m.b(-126)) {
-                    var1.a((byte) -117);
-                    break L12;
-                  } else {
-                    break L12;
-                  }
-                }
-                var1 = (kf) (Object) oj.field_o.f((byte) -5);
-                continue L7;
-              }
-            }
-          } else {
-            L13: {
-              if (null == tl.field_N) {
-                break L13;
-              } else {
-                if (!tl.field_N.d(-11414)) {
-                  break L13;
-                } else {
-                  break L13;
-                }
-              }
-            }
-            return;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) runtimeException, "uq.B(" + -92 + 41);
         }
     }
 
@@ -237,21 +141,17 @@ final class uq {
     }
 
     final static void a(int param0, String param1, int param2, byte param3, long param4) {
-        if (param3 > -52) {
-          field_i = null;
-          hj.field_c = param4;
-          nr.field_T = true;
-          ie.field_e = param1;
-          uh.field_x = param0;
-          tq.field_t = param2;
-          return;
-        } else {
-          hj.field_c = param4;
-          nr.field_T = true;
-          ie.field_e = param1;
-          uh.field_x = param0;
-          tq.field_t = param2;
-          return;
+        try {
+            if (param3 > -52) {
+                field_i = null;
+            }
+            hj.field_c = param4;
+            nr.field_T = true;
+            ie.field_e = param1;
+            uh.field_x = param0;
+            tq.field_t = param2;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "uq.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

@@ -47,89 +47,66 @@ final class vdb extends uj {
     }
 
     final static int d(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_13_0 = 0;
         var3 = VoidHunters.field_G;
-        var1 = 0;
-        if (param0 != -31515) {
-          field_d = 3;
-          L0: while (true) {
-            if (!ata.e(127)) {
-              L1: {
-                ei.field_c.a(rkb.a(qs.field_a, param0 ^ -29724, oq.field_H), 5620, rkb.a(uia.field_b, 3841, kc.field_b));
-                if (!ei.field_c.e((byte) -126)) {
-                  break L1;
-                } else {
-                  var1 = 1;
-                  break L1;
-                }
-              }
-              var2 = 0;
-              if (var1 != 0) {
-                if (0 <= ei.field_c.field_j) {
-                  var2 = kc.field_e[ei.field_c.field_j];
-                  if (-3 == var2) {
-                    ek.b(false);
-                    return var2;
+        try {
+          L0: {
+            var1_int = 0;
+            L1: while (true) {
+              if (!ata.e(127)) {
+                L2: {
+                  ei.field_c.a(rkb.a(qs.field_a, 3841, oq.field_H), 5620, rkb.a(uia.field_b, 3841, kc.field_b));
+                  if (!ei.field_c.e((byte) -126)) {
+                    break L2;
                   } else {
-                    return var2;
+                    var1_int = 1;
+                    break L2;
                   }
-                } else {
-                  return var2;
                 }
+                L3: {
+                  var2 = 0;
+                  if (var1_int == 0) {
+                    break L3;
+                  } else {
+                    if (0 <= ei.field_c.field_j) {
+                      var2 = kc.field_e[ei.field_c.field_j];
+                      if (var2 != 2) {
+                        break L3;
+                      } else {
+                        ek.b(false);
+                        break L3;
+                      }
+                    } else {
+                      break L3;
+                    }
+                  }
+                }
+                stackOut_13_0 = var2;
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
               } else {
-                return var2;
-              }
-            } else {
-              ei.field_c.a((byte) -94);
-              if (ei.field_c.e((byte) -96)) {
-                var1 = 1;
-                continue L0;
-              } else {
-                continue L0;
+                ei.field_c.a((byte) -94);
+                if (ei.field_c.e((byte) -96)) {
+                  var1_int = 1;
+                  continue L1;
+                } else {
+                  continue L1;
+                }
               }
             }
           }
-        } else {
-          L2: while (true) {
-            if (!ata.e(127)) {
-              L3: {
-                ei.field_c.a(rkb.a(qs.field_a, param0 ^ -29724, oq.field_H), 5620, rkb.a(uia.field_b, 3841, kc.field_b));
-                if (!ei.field_c.e((byte) -126)) {
-                  break L3;
-                } else {
-                  var1 = 1;
-                  break L3;
-                }
-              }
-              var2 = 0;
-              if (var1 != 0) {
-                if (0 <= ei.field_c.field_j) {
-                  var2 = kc.field_e[ei.field_c.field_j];
-                  if (-3 == (var2 ^ -1)) {
-                    ek.b(false);
-                    return var2;
-                  } else {
-                    return var2;
-                  }
-                } else {
-                  return var2;
-                }
-              } else {
-                return var2;
-              }
-            } else {
-              ei.field_c.a((byte) -94);
-              if (ei.field_c.e((byte) -96)) {
-                var1 = 1;
-                continue L2;
-              } else {
-                continue L2;
-              }
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var1, "vdb.C(" + -31515 + 41);
         }
+        return stackIn_14_0;
     }
 
     static {

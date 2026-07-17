@@ -22,7 +22,7 @@ abstract class lc {
         var3.field_n = 1;
         var3.field_c[param1] = (byte)((lb.a(8, param2) != 0 ? 24 : 16) + lb.a(param2, 7));
         param2 = param2 >> 4;
-        var3.field_c[1] = (byte)(lb.a(7, param2) + (-1 == (lb.a(8, param2) ^ -1) ? 16 : 24));
+        var3.field_c[1] = (byte)(lb.a(7, param2) + (lb.a(8, param2) == 0 ? 16 : 24));
         return var3;
     }
 
@@ -40,9 +40,6 @@ abstract class lc {
     public static void a(int param0) {
         field_h = null;
         field_e = null;
-        if (param0 != -27983) {
-            lc.a(40, false);
-        }
     }
 
     static {

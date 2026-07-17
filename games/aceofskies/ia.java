@@ -7,14 +7,14 @@ final class ia {
     final static int a(int param0, int param1) {
         if (param0 != 6407) {
           if (34843 != param0) {
-            if (-34838 == (param0 ^ -1)) {
+            if (param0 == 34837) {
               return 6407;
             } else {
               if (param0 != 6408) {
                 if (param0 != 34842) {
                   if (34836 != param0) {
                     L0: {
-                      if (-6407 == (param0 ^ -1)) {
+                      if (param0 == 6406) {
                         break L0;
                       } else {
                         if (34844 == param0) {
@@ -25,14 +25,14 @@ final class ia {
                               if (6409 == param0) {
                                 break L1;
                               } else {
-                                if ((param0 ^ -1) == -34847) {
+                                if (param0 == 34846) {
                                   break L1;
                                 } else {
-                                  if ((param0 ^ -1) == -6411) {
+                                  if (param0 == 6410) {
                                     return 6410;
                                   } else {
                                     if (34847 != param0) {
-                                      if (-6403 == (param0 ^ -1)) {
+                                      if (param0 == 6402) {
                                         return 6402;
                                       } else {
                                         throw new IllegalArgumentException("");
@@ -75,12 +75,7 @@ final class ia {
     }
 
     public static void a(int param0) {
-        if (param0 != -6411) {
-            int discarded$0 = ia.a(-120, -128);
-            field_a = (int[][]) null;
-            return;
-        }
-        field_a = (int[][]) null;
+        field_a = null;
     }
 
     static {

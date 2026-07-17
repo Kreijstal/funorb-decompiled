@@ -11,10 +11,6 @@ final class cn extends RuntimeException {
     static String field_b;
 
     final static hl a(int param0) {
-        if (param0 != 12) {
-            cn.a(false);
-            return qj.b(0);
-        }
         return qj.b(0);
     }
 
@@ -382,7 +378,7 @@ final class cn extends RuntimeException {
             L6: {
               ((hl) (Object) stackIn_65_0).a(stackIn_65_1, stackIn_65_2 != 0);
               gg.field_j.field_g.c(true);
-              if ((gg.field_i.field_F ^ -1) == -1) {
+              if (gg.field_i.field_F == 0) {
                 break L6;
               } else {
                 bh.field_p = true;
@@ -390,9 +386,9 @@ final class cn extends RuntimeException {
               }
             }
             L7: {
-              if (-1 != (ei.field_q.field_F ^ -1)) {
+              if (ei.field_q.field_F != 0) {
                 if (!oa.field_r) {
-                  if ((mb.field_C ^ -1) >= -1) {
+                  if (mb.field_C <= 0) {
                     if (2 > dd.field_c) {
                       break L7;
                     } else {
@@ -695,7 +691,7 @@ final class cn extends RuntimeException {
             L23: {
               ((hl) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_22_2 != 0);
               gg.field_j.field_g.c(true);
-              if ((gg.field_i.field_F ^ -1) == -1) {
+              if (gg.field_i.field_F == 0) {
                 break L23;
               } else {
                 bh.field_p = true;
@@ -703,12 +699,12 @@ final class cn extends RuntimeException {
               }
             }
             L24: {
-              if (-1 != (ei.field_q.field_F ^ -1)) {
+              if (ei.field_q.field_F != 0) {
                 if (oa.field_r) {
                   gg.a(param1, 0);
                   break L24;
                 } else {
-                  if ((mb.field_C ^ -1) < -1) {
+                  if (mb.field_C > 0) {
                     gg.a(param1, 0);
                     break L24;
                   } else {

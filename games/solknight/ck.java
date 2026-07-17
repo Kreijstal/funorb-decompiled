@@ -115,31 +115,89 @@ final class ck {
 
     final gg a(gg param0, int param1) {
         gg var3 = null;
-        if (param1 <= 108) {
-            ck.a(false, (byte) -115);
-            if (param0 == null) {
-                var3 = ((ck) this).field_b.field_e.field_a;
-            } else {
+        RuntimeException var3_ref = null;
+        Object stackIn_8_0 = null;
+        gg stackIn_10_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_7_0 = null;
+        gg stackOut_9_0 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 > 108) {
+                break L1;
+              } else {
+                ck.a(false, (byte) -115);
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 != null) {
                 var3 = param0;
+                break L2;
+              } else {
+                var3 = ((ck) this).field_b.field_e.field_a;
+                break L2;
+              }
             }
-            if (!(((ck) this).field_b.field_e != var3)) {
-                ((ck) this).field_a = null;
-                return null;
+            if (((ck) this).field_b.field_e == var3) {
+              ((ck) this).field_a = null;
+              stackOut_7_0 = null;
+              stackIn_8_0 = stackOut_7_0;
+              return (gg) (Object) stackIn_8_0;
+            } else {
+              ((ck) this).field_a = var3.field_a;
+              stackOut_9_0 = (gg) var3;
+              stackIn_10_0 = stackOut_9_0;
+              break L0;
             }
-            ((ck) this).field_a = var3.field_a;
-            return var3;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3_ref = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var3_ref;
+            stackOut_11_1 = new StringBuilder().append("ck.A(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
+          }
+          throw fc.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
         }
-        if (param0 == null) {
-            var3 = ((ck) this).field_b.field_e.field_a;
-        } else {
-            var3 = param0;
-        }
-        if (!(((ck) this).field_b.field_e != var3)) {
-            ((ck) this).field_a = null;
-            return null;
-        }
-        ((ck) this).field_a = var3.field_a;
-        return var3;
+        return stackIn_10_0;
     }
 
     final gg a(byte param0) {
@@ -175,27 +233,89 @@ final class ck {
 
     final gg a(int param0, gg param1) {
         gg var3 = null;
-        L0: {
-          if (param1 == null) {
-            var3 = ((ck) this).field_b.field_e.field_d;
-            break L0;
-          } else {
-            var3 = param1;
-            break L0;
+        RuntimeException var3_ref = null;
+        Object stackIn_6_0 = null;
+        gg stackIn_10_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_5_0 = null;
+        gg stackOut_9_0 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == null) {
+                var3 = ((ck) this).field_b.field_e.field_d;
+                break L1;
+              } else {
+                var3 = param1;
+                break L1;
+              }
+            }
+            if (var3 == ((ck) this).field_b.field_e) {
+              ((ck) this).field_a = null;
+              stackOut_5_0 = null;
+              stackIn_6_0 = stackOut_5_0;
+              return (gg) (Object) stackIn_6_0;
+            } else {
+              L2: {
+                ((ck) this).field_a = var3.field_d;
+                if (param0 == 26229) {
+                  break L2;
+                } else {
+                  ((ck) this).field_a = null;
+                  break L2;
+                }
+              }
+              stackOut_9_0 = (gg) var3;
+              stackIn_10_0 = stackOut_9_0;
+              break L0;
+            }
           }
-        }
-        if (var3 == ((ck) this).field_b.field_e) {
-          ((ck) this).field_a = null;
-          return null;
-        } else {
-          ((ck) this).field_a = var3.field_d;
-          if (param0 != 26229) {
-            ((ck) this).field_a = null;
-            return var3;
-          } else {
-            return var3;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3_ref = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var3_ref;
+            stackOut_11_1 = new StringBuilder().append("ck.D(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
           }
+          throw fc.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
+        return stackIn_10_0;
     }
 
     final gg a(int param0) {
@@ -220,56 +340,35 @@ final class ck {
     }
 
     final static boolean a(char param0, boolean param1) {
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_6_0 = 0;
-        if (param1) {
-          if (160 != param0) {
-            if (param0 != 32) {
-              if (param0 != 95) {
-                if (param0 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
+        int stackIn_7_0 = 0;
+        int stackOut_5_0 = 0;
+        if (160 != param0) {
+          if (param0 != 32) {
+            if (param0 != 95) {
+              if (param0 == 45) {
+                return true;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
-                return stackIn_20_0 != 0;
+                return false;
               }
             } else {
-              return true;
+              stackOut_5_0 = 1;
+              stackIn_7_0 = stackOut_5_0;
+              return stackIn_7_0 != 0;
             }
           } else {
             return true;
           }
         } else {
-          boolean discarded$6 = ck.a('=', true);
-          if (160 != param0) {
-            if (param0 != 32) {
-              if (param0 != 95) {
-                if (param0 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                return stackIn_8_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
+          return true;
         }
     }
 
     ck(nc param0) {
-        ((ck) this).field_b = param0;
+        try {
+            ((ck) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "ck.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final gg c(int param0) {

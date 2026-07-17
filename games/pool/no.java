@@ -119,10 +119,10 @@ abstract class no {
         L0: {
           var12 = param2 + -param4;
           var13 = param0 + -param6;
-          if (param11 != (var12 ^ -1)) {
+          if (var12 != 0) {
             break L0;
           } else {
-            if ((var13 ^ -1) != -1) {
+            if (var13 != 0) {
               break L0;
             } else {
               return -1;
@@ -134,7 +134,7 @@ abstract class no {
         if (aj.a(var14, false, var12) - -aj.a(var15, false, var13) > 0) {
           return -1;
         } else {
-          if ((param3 ^ -1) < (param1 ^ -1)) {
+          if (~param3 < ~param1) {
             param9 = param9 + aj.a(-param1 + param3, false, param4);
             param10 = param10 + aj.a(param3 + -param1, false, param6);
             param1 = param3;
@@ -142,33 +142,33 @@ abstract class no {
             var14 = param7 + -param9;
             var16 = param8 * param8 * 4;
             var17 = aj.a(var12, false, var12) - -aj.a(var13, false, var13);
-            if (-1 != (var17 ^ -1)) {
+            if (var17 != 0) {
               L1: {
                 var18 = 2L * (od.a((long)var14, (long)var12, false) - -od.a((long)var15, (long)var13, false));
-                if (-2147483648L > (var18 ^ -1L)) {
+                if (var18 > 2147483647L) {
                   break L1;
                 } else {
                   if (-2147483648L > var18) {
                     break L1;
                   } else {
                     L2: {
-                      if (-2147483648 > ((var14 >> 1735056272) * (var14 >> 375424144) ^ -1)) {
+                      if ((var14 >> 16) * (var14 >> 16) > 2147483647) {
                         break L2;
                       } else {
-                        if (2147483647 < (var15 >> -216528912) * (var15 >> -281838928)) {
+                        if (2147483647 < (var15 >> 16) * (var15 >> 16)) {
                           break L2;
                         } else {
-                          var20 = od.a((long)var14, (long)var14, false) - -od.a((long)var15, (long)var15, false) + -(long)(var16 << -2135714352);
+                          var20 = od.a((long)var14, (long)var14, false) - -od.a((long)var15, (long)var15, false) + -(long)(var16 << 16);
                           var22 = od.a(var18, var18, false) + -(4L * od.a((long)var17, var20, false));
                           if (0L <= var22) {
-                            var24 = bm.a(param11 ^ 106, var22);
+                            var24 = bm.a(-107, var22);
                             if (var24 > 2147483647L) {
                               throw new IllegalStateException("Out of range: 0x" + Long.toString(var24, 16));
                             } else {
-                              if (2147483647L >= (var24 ^ -1L)) {
+                              if (var24 >= -2147483648L) {
                                 L3: {
-                                  var26 = (int)((-var18 - -var24 << -1881319729) / (long)var17);
-                                  var27 = (int)((-var18 + -var24 << 1159382351) / (long)var17);
+                                  var26 = (int)((-var18 - -var24 << 15) / (long)var17);
+                                  var27 = (int)((-var18 + -var24 << 15) / (long)var17);
                                   if (var26 <= 0) {
                                     break L3;
                                   } else {
@@ -183,13 +183,13 @@ abstract class no {
                                     }
                                   }
                                 }
-                                if ((var27 ^ -1) >= -1) {
-                                  if (-1 > (var26 ^ -1)) {
+                                if (var27 <= 0) {
+                                  if (var26 > 0) {
                                     L4: {
-                                      if ((var27 ^ -1) < -1) {
+                                      if (var27 > 0) {
                                         break L4;
                                       } else {
-                                        if ((var26 ^ -1) >= -1) {
+                                        if (var26 <= 0) {
                                           break L4;
                                         } else {
                                           return 1 + param1;
@@ -202,10 +202,10 @@ abstract class no {
                                       return 1 + param1;
                                     } else {
                                       L5: {
-                                        if ((var27 ^ -1) < -1) {
+                                        if (var27 > 0) {
                                           break L5;
                                         } else {
-                                          if ((var26 ^ -1) >= -1) {
+                                          if (var26 <= 0) {
                                             break L5;
                                           } else {
                                             return 1 + param1;
@@ -219,12 +219,12 @@ abstract class no {
                                   if (65536 - param1 >= var27) {
                                     return param1 + var27;
                                   } else {
-                                    if (-1 > (var26 ^ -1)) {
+                                    if (var26 > 0) {
                                       L6: {
-                                        if ((var27 ^ -1) < -1) {
+                                        if (var27 > 0) {
                                           break L6;
                                         } else {
-                                          if ((var26 ^ -1) >= -1) {
+                                          if (var26 <= 0) {
                                             break L6;
                                           } else {
                                             return 1 + param1;
@@ -237,10 +237,10 @@ abstract class no {
                                         return 1 + param1;
                                       } else {
                                         L7: {
-                                          if ((var27 ^ -1) < -1) {
+                                          if (var27 > 0) {
                                             break L7;
                                           } else {
-                                            if ((var26 ^ -1) >= -1) {
+                                            if (var26 <= 0) {
                                               break L7;
                                             } else {
                                               return 1 + param1;
@@ -279,30 +279,30 @@ abstract class no {
               var15 = param5 + -param10;
               var16 = param8 * param8 * 4;
               var17 = aj.a(var12, false, var12) - -aj.a(var13, false, var13);
-              if (-1 != (var17 ^ -1)) {
+              if (var17 != 0) {
                 L8: {
                   var18 = 2L * (od.a((long)var14, (long)var12, false) - -od.a((long)var15, (long)var13, false));
-                  if (-2147483648L > (var18 ^ -1L)) {
+                  if (var18 > 2147483647L) {
                     break L8;
                   } else {
                     if (-2147483648L > var18) {
                       break L8;
                     } else {
                       L9: {
-                        if (-2147483648 > ((var14 >> 1735056272) * (var14 >> 375424144) ^ -1)) {
+                        if ((var14 >> 16) * (var14 >> 16) > 2147483647) {
                           break L9;
                         } else {
-                          if (2147483647 < (var15 >> -216528912) * (var15 >> -281838928)) {
+                          if (2147483647 < (var15 >> 16) * (var15 >> 16)) {
                             break L9;
                           } else {
-                            var20 = od.a((long)var14, (long)var14, false) - -od.a((long)var15, (long)var15, false) + -(long)(var16 << -2135714352);
+                            var20 = od.a((long)var14, (long)var14, false) - -od.a((long)var15, (long)var15, false) + -(long)(var16 << 16);
                             var22 = od.a(var18, var18, false) + -(4L * od.a((long)var17, var20, false));
                             if (0L <= var22) {
-                              var24 = bm.a(param11 ^ 106, var22);
+                              var24 = bm.a(-107, var22);
                               if (var24 <= 2147483647L) {
-                                if (2147483647L >= (var24 ^ -1L)) {
-                                  var26 = (int)((-var18 - -var24 << -1881319729) / (long)var17);
-                                  var27 = (int)((-var18 + -var24 << 1159382351) / (long)var17);
+                                if (var24 >= -2147483648L) {
+                                  var26 = (int)((-var18 - -var24 << 15) / (long)var17);
+                                  var27 = (int)((-var18 + -var24 << 15) / (long)var17);
                                   if (var26 > 0) {
                                     L10: {
                                       if (65536 + -param1 < var26) {
@@ -316,7 +316,7 @@ abstract class no {
                                       }
                                     }
                                     L11: {
-                                      if ((var27 ^ -1) >= -1) {
+                                      if (var27 <= 0) {
                                         break L11;
                                       } else {
                                         if (65536 - param1 >= var27) {
@@ -327,7 +327,7 @@ abstract class no {
                                       }
                                     }
                                     L12: {
-                                      if (-1 > (var26 ^ -1)) {
+                                      if (var26 > 0) {
                                         break L12;
                                       } else {
                                         if (0 < var27) {
@@ -338,10 +338,10 @@ abstract class no {
                                       }
                                     }
                                     L13: {
-                                      if ((var27 ^ -1) < -1) {
+                                      if (var27 > 0) {
                                         break L13;
                                       } else {
-                                        if ((var26 ^ -1) >= -1) {
+                                        if (var26 <= 0) {
                                           break L13;
                                         } else {
                                           return 1 + param1;
@@ -351,7 +351,7 @@ abstract class no {
                                     return -1;
                                   } else {
                                     L14: {
-                                      if ((var27 ^ -1) >= -1) {
+                                      if (var27 <= 0) {
                                         break L14;
                                       } else {
                                         if (65536 - param1 >= var27) {
@@ -363,7 +363,7 @@ abstract class no {
                                     }
                                     L15: {
                                       L16: {
-                                        if (-1 > (var26 ^ -1)) {
+                                        if (var26 > 0) {
                                           break L16;
                                         } else {
                                           if (0 < var27) {
@@ -374,10 +374,10 @@ abstract class no {
                                         }
                                       }
                                       L17: {
-                                        if ((var27 ^ -1) < -1) {
+                                        if (var27 > 0) {
                                           break L17;
                                         } else {
-                                          if ((var26 ^ -1) >= -1) {
+                                          if (var26 <= 0) {
                                             break L17;
                                           } else {
                                             break L15;
@@ -411,34 +411,34 @@ abstract class no {
             } else {
               var16 = param8 * param8 * 4;
               var17 = aj.a(var12, false, var12) - -aj.a(var13, false, var13);
-              if (-1 != (var17 ^ -1)) {
+              if (var17 != 0) {
                 L18: {
                   var18 = 2L * (od.a((long)var14, (long)var12, false) - -od.a((long)var15, (long)var13, false));
-                  if (-2147483648L > (var18 ^ -1L)) {
+                  if (var18 > 2147483647L) {
                     break L18;
                   } else {
                     if (-2147483648L > var18) {
                       break L18;
                     } else {
                       L19: {
-                        if (-2147483648 > ((var14 >> 1735056272) * (var14 >> 375424144) ^ -1)) {
+                        if ((var14 >> 16) * (var14 >> 16) > 2147483647) {
                           break L19;
                         } else {
-                          if (2147483647 < (var15 >> -216528912) * (var15 >> -281838928)) {
+                          if (2147483647 < (var15 >> 16) * (var15 >> 16)) {
                             break L19;
                           } else {
-                            var20 = od.a((long)var14, (long)var14, false) - -od.a((long)var15, (long)var15, false) + -(long)(var16 << -2135714352);
+                            var20 = od.a((long)var14, (long)var14, false) - -od.a((long)var15, (long)var15, false) + -(long)(var16 << 16);
                             var22 = od.a(var18, var18, false) + -(4L * od.a((long)var17, var20, false));
                             if (0L <= var22) {
                               L20: {
-                                var24 = bm.a(param11 ^ 106, var22);
+                                var24 = bm.a(-107, var22);
                                 if (var24 > 2147483647L) {
                                   break L20;
                                 } else {
-                                  if (2147483647L >= (var24 ^ -1L)) {
+                                  if (var24 >= -2147483648L) {
                                     L21: {
-                                      var26 = (int)((-var18 - -var24 << -1881319729) / (long)var17);
-                                      var27 = (int)((-var18 + -var24 << 1159382351) / (long)var17);
+                                      var26 = (int)((-var18 - -var24 << 15) / (long)var17);
+                                      var27 = (int)((-var18 + -var24 << 15) / (long)var17);
                                       if (var26 <= 0) {
                                         break L21;
                                       } else {
@@ -454,7 +454,7 @@ abstract class no {
                                       }
                                     }
                                     L22: {
-                                      if ((var27 ^ -1) >= -1) {
+                                      if (var27 <= 0) {
                                         break L22;
                                       } else {
                                         if (65536 - param1 >= var27) {
@@ -466,7 +466,7 @@ abstract class no {
                                     }
                                     L23: {
                                       L24: {
-                                        if (-1 > (var26 ^ -1)) {
+                                        if (var26 > 0) {
                                           break L24;
                                         } else {
                                           if (0 < var27) {
@@ -477,10 +477,10 @@ abstract class no {
                                         }
                                       }
                                       L25: {
-                                        if ((var27 ^ -1) < -1) {
+                                        if (var27 > 0) {
                                           break L25;
                                         } else {
-                                          if ((var26 ^ -1) >= -1) {
+                                          if (var26 <= 0) {
                                             break L25;
                                           } else {
                                             break L23;
@@ -531,12 +531,7 @@ abstract class no {
         field_q = null;
         field_n = null;
         field_h = null;
-        if (param0 <= 116) {
-          return;
-        } else {
-          field_g = null;
-          return;
-        }
+        field_g = null;
     }
 
     abstract void c(byte param0);
@@ -545,7 +540,7 @@ abstract class no {
         if (param4 != -154018400) {
             return null;
         }
-        long var6 = (long)param0 + ((long)param1 << -154018400);
+        long var6 = (long)param0 + ((long)param1 << 32);
         sp var8 = new sp();
         var8.field_x = param3 ? true : false;
         var8.field_L = param2;
@@ -556,7 +551,7 @@ abstract class no {
             }
             ((no) this).field_t.a((rg) (Object) var8, false);
         } else {
-            if (!((((no) this).c(4609) ^ -1) > -21)) {
+            if (!(((no) this).c(4609) < 20)) {
                 throw new RuntimeException();
             }
             ((no) this).field_j.a((rg) (Object) var8, false);

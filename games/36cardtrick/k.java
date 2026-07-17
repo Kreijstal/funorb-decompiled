@@ -219,14 +219,14 @@ abstract class k implements ba {
     public final String b(int param0) {
         if (!((k) this).a((byte) -60)) {
           if (param0 == 26766) {
-            if ((id.a(46) ^ -1L) > (350L + ((k) this).field_d ^ -1L)) {
+            if (~id.a(46) > ~(350L + ((k) this).field_d)) {
               return null;
             } else {
               return ((k) this).d(-5777);
             }
           } else {
             ((k) this).field_d = 5L;
-            if ((id.a(46) ^ -1L) > (350L + ((k) this).field_d ^ -1L)) {
+            if (~id.a(46) > ~(350L + ((k) this).field_d)) {
               return null;
             } else {
               return ((k) this).d(-5777);

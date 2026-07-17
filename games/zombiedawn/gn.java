@@ -10,9 +10,6 @@ final class gn {
     public static void a(int param0) {
         field_c = null;
         field_a = null;
-        if (param0 <= 7) {
-            field_c = null;
-        }
     }
 
     static {

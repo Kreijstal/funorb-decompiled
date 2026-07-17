@@ -27,20 +27,19 @@ final class bt implements fo {
     }
 
     public final void a(int param0, iq param1) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
         ka var5 = null;
-        var3 = ((bt) this).field_e.d(2);
-        var4 = dfa.a(-(im.a(ne.field_f[var3][1], ne.field_f[var3][0], 1) >> 1790290338) + 512, 2048, 73);
-        if (param0 < 103) {
-          int discarded$1 = bt.a((byte) 44, -55, -63, 37);
-          var5 = ((bt) this).field_d.b((byte) 74);
-          gqa.a(var4, -83584144, ((bt) this).c((byte) 120), ((bt) this).b((byte) -89), var5, ((bt) this).e((byte) -95));
-          return;
-        } else {
-          var5 = ((bt) this).field_d.b((byte) 74);
-          gqa.a(var4, -83584144, ((bt) this).c((byte) 120), ((bt) this).b((byte) -89), var5, ((bt) this).e((byte) -95));
-          return;
+        try {
+            var3_int = ((bt) this).field_e.d(2);
+            var4 = dfa.a(-(im.a(ne.field_f[var3_int][1], ne.field_f[var3_int][0], 1) >> 2) + 512, 2048, 73);
+            if (param0 < 103) {
+                int discarded$0 = bt.a((byte) 44, -55, -63, 37);
+            }
+            var5 = ((bt) this).field_d.b((byte) 74);
+            gqa.a(var4, -83584144, ((bt) this).c((byte) 120), ((bt) this).b((byte) -89), var5, ((bt) this).e((byte) -95));
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "bt.DB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -77,14 +76,14 @@ final class bt implements fo {
     final static int a(byte param0, int param1, int param2, int param3) {
         if (bea.field_g < param3 + param1) {
           if (param0 == -8) {
-            if (-1 >= (-param1 + param3 + param2 ^ -1)) {
+            if (-param1 + param3 + param2 >= 0) {
               return -param1 + param2 + param3;
             } else {
               return -param1 + bea.field_g;
             }
           } else {
             int discarded$8 = bt.a((byte) 51, -70, 71, 100);
-            if (-1 >= (-param1 + param3 + param2 ^ -1)) {
+            if (-param1 + param3 + param2 >= 0) {
               return -param1 + param2 + param3;
             } else {
               return -param1 + bea.field_g;

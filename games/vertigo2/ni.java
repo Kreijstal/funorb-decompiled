@@ -16,56 +16,30 @@ final class ni {
         if (param0 <= 105) {
             return;
         }
-        td.field_a = param5;
-        vo.field_y = param2;
-        hc.field_a = param3;
-        od.field_Jb = param4;
+        try {
+            td.field_a = param5;
+            vo.field_y = param2;
+            hc.field_a = param3;
+            od.field_Jb = param4;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "ni.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static va a(boolean param0) {
-        if (param0) {
-          L0: {
-            field_g = null;
-            if (ek.field_F == null) {
-              ek.field_F = new va(bl.field_N, 20, 0, 0, 0, 11579568, -1, 0, 0, bl.field_N.field_z, -1, 2147483647, true);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return ek.field_F;
-        } else {
-          L1: {
-            if (ek.field_F == null) {
-              ek.field_F = new va(bl.field_N, 20, 0, 0, 0, 11579568, -1, 0, 0, bl.field_N.field_z, -1, 2147483647, true);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return ek.field_F;
+        if (!(ek.field_F != null)) {
+            ek.field_F = new va(bl.field_N, 20, 0, 0, 0, 11579568, -1, 0, 0, bl.field_N.field_z, -1, 2147483647, true);
         }
+        return ek.field_F;
     }
 
     public static void b(boolean param0) {
-        if (param0) {
-          field_g = null;
-          field_b = null;
-          field_d = null;
-          field_c = null;
-          field_e = null;
-          field_g = null;
-          field_h = null;
-          return;
-        } else {
-          field_b = null;
-          field_d = null;
-          field_c = null;
-          field_e = null;
-          field_g = null;
-          field_h = null;
-          return;
-        }
+        field_b = null;
+        field_d = null;
+        field_c = null;
+        field_e = null;
+        field_g = null;
+        field_h = null;
     }
 
     static {

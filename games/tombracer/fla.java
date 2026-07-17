@@ -13,188 +13,72 @@ final class fla extends vg {
     static vna field_f;
 
     final void a(w param0, byte param1) {
-        if (param1 > -32) {
-          L0: {
-            ((fla) this).field_l = 53;
-            if (0 < param0.field_i[((fla) this).field_l]) {
-              param0.field_i[((fla) this).field_l] = param0.field_i[((fla) this).field_l] - 1;
-              break L0;
-            } else {
-              break L0;
+        try {
+            if (param1 > -32) {
+                ((fla) this).field_l = 53;
             }
-          }
-          ((fla) this).p(25);
-          rs.a((fla) this, -110);
-          return;
-        } else {
-          L1: {
-            if (0 < param0.field_i[((fla) this).field_l]) {
-              param0.field_i[((fla) this).field_l] = param0.field_i[((fla) this).field_l] - 1;
-              break L1;
-            } else {
-              break L1;
+            if (!(0 >= param0.field_i[((fla) this).field_l])) {
+                param0.field_i[((fla) this).field_l] = param0.field_i[((fla) this).field_l] - 1;
             }
-          }
-          ((fla) this).p(25);
-          rs.a((fla) this, -110);
-          return;
+            ((fla) this).p(25);
+            rs.a((fla) this, -110);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fla.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     final void a(int param0, w param1, boolean param2) {
-        if (param0 != 564550600) {
+        RuntimeException var4 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        try {
           L0: {
-            ((fla) this).a(0, -104, 21, 61, -117);
-            if (!param2) {
-              break L0;
-            } else {
-              if (((fla) this).field_h > 0) {
-                ((fla) this).c(-90);
-                break L0;
-              } else {
-                if (((fla) this).field_i == null) {
-                  ((fla) this).a(-91, param1);
-                  return;
-                } else {
-                  if (((fla) this).field_i.field_f == null) {
-                    ((fla) this).a(-91, param1);
-                    return;
-                  } else {
-                    if (((fla) this).field_i.field_f.e()) {
-                      ((fla) this).a(-91, param1);
-                      return;
-                    } else {
-                      if (((fla) this).field_i.l((byte) 103)) {
-                        return;
-                      } else {
-                        ((fla) this).a(-91, param1);
-                        return;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-          if (!param2) {
-            if (((fla) this).field_j >> 564550600 != ((fla) this).field_h) {
-              this.b(4216);
-              if (((fla) this).field_i == null) {
-                ((fla) this).a(-91, param1);
-                return;
-              } else {
-                if (((fla) this).field_i.field_f == null) {
-                  ((fla) this).a(-91, param1);
-                  return;
-                } else {
-                  if (((fla) this).field_i.field_f.e()) {
-                    ((fla) this).a(-91, param1);
-                    return;
-                  } else {
-                    if (((fla) this).field_i.l((byte) 103)) {
-                      return;
-                    } else {
-                      ((fla) this).a(-91, param1);
-                      return;
-                    }
-                  }
-                }
-              }
-            } else {
-              if (((fla) this).field_i == null) {
-                ((fla) this).a(-91, param1);
-                return;
-              } else {
-                if (((fla) this).field_i.field_f == null) {
-                  ((fla) this).a(-91, param1);
-                  return;
-                } else {
-                  if (((fla) this).field_i.field_f.e()) {
-                    ((fla) this).a(-91, param1);
-                    return;
-                  } else {
-                    if (((fla) this).field_i.l((byte) 103)) {
-                      return;
-                    } else {
-                      ((fla) this).a(-91, param1);
-                      return;
-                    }
-                  }
-                }
-              }
-            }
-          } else {
-            if (((fla) this).field_i == null) {
-              ((fla) this).a(-91, param1);
-              return;
-            } else {
-              if (((fla) this).field_i.field_f == null) {
-                ((fla) this).a(-91, param1);
-                return;
-              } else {
-                if (((fla) this).field_i.field_f.e()) {
-                  ((fla) this).a(-91, param1);
-                  return;
-                } else {
-                  if (((fla) this).field_i.l((byte) 103)) {
-                    return;
-                  } else {
-                    ((fla) this).a(-91, param1);
-                    return;
-                  }
-                }
-              }
-            }
-          }
-        } else {
-          L1: {
-            if (!param2) {
-              break L1;
-            } else {
-              if (((fla) this).field_h > 0) {
-                ((fla) this).c(-90);
+            L1: {
+              if (param0 == 564550600) {
                 break L1;
               } else {
-                L2: {
-                  if (param2) {
-                    break L2;
-                  } else {
-                    if (((fla) this).field_j >> 564550600 == ((fla) this).field_h) {
-                      break L2;
-                    } else {
-                      this.b(4216);
-                      break L2;
-                    }
-                  }
-                }
-                L3: {
-                  if (((fla) this).field_i == null) {
-                    ((fla) this).a(-91, param1);
-                    break L3;
-                  } else {
-                    if (((fla) this).field_i.field_f == null) {
-                      ((fla) this).a(-91, param1);
-                      break L3;
-                    } else {
-                      if (((fla) this).field_i.field_f.e()) {
-                        ((fla) this).a(-91, param1);
-                        break L3;
-                      } else {
-                        if (((fla) this).field_i.l((byte) 103)) {
-                          break L3;
-                        } else {
-                          ((fla) this).a(-91, param1);
-                          break L3;
-                        }
-                      }
-                    }
-                  }
-                }
-                return;
+                ((fla) this).a(0, -104, 21, 61, -117);
+                break L1;
               }
             }
-          }
-          if (param2) {
+            L2: {
+              if (!param2) {
+                break L2;
+              } else {
+                if (((fla) this).field_h > 0) {
+                  ((fla) this).c(-90);
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              if (param2) {
+                break L3;
+              } else {
+                if (((fla) this).field_j >> 8 == ((fla) this).field_h) {
+                  break L3;
+                } else {
+                  this.b(4216);
+                  break L3;
+                }
+              }
+            }
             if (((fla) this).field_i == null) {
               ((fla) this).a(-91, param1);
               return;
@@ -208,53 +92,49 @@ final class fla extends vg {
                   return;
                 } else {
                   if (((fla) this).field_i.l((byte) 103)) {
-                    return;
+                    break L0;
                   } else {
                     ((fla) this).a(-91, param1);
                     return;
                   }
                 }
               }
-            }
-          } else {
-            L4: {
-              if (((fla) this).field_j >> 564550600 == ((fla) this).field_h) {
-                break L4;
-              } else {
-                this.b(4216);
-                break L4;
-              }
-            }
-            if (((fla) this).field_i != null) {
-              if (((fla) this).field_i.field_f != null) {
-                if (!((fla) this).field_i.field_f.e()) {
-                  if (!((fla) this).field_i.l((byte) 103)) {
-                    ((fla) this).a(-91, param1);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  ((fla) this).a(-91, param1);
-                  return;
-                }
-              } else {
-                ((fla) this).a(-91, param1);
-                return;
-              }
-            } else {
-              ((fla) this).a(-91, param1);
-              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var4;
+            stackOut_19_1 = new StringBuilder().append("fla.E(").append(param0).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param1 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L4;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param2 + 41);
         }
     }
 
     public static void a(int param0) {
         field_f = null;
-        if (param0 != 0) {
-            field_f = null;
-        }
     }
 
     final void c(int param0) {
@@ -263,11 +143,11 @@ final class fla extends vg {
         var2 = -91 % ((param0 - -18) / 36);
         if (0 > ((fla) this).field_g) {
           ((fla) this).field_g = 0;
-          ((fla) this).field_h = ((fla) this).field_g >> 707099336;
+          ((fla) this).field_h = ((fla) this).field_g >> 8;
           ((fla) this).field_i.a(((fla) this).field_m, ((fla) this).field_h, (byte) -21);
           return;
         } else {
-          ((fla) this).field_h = ((fla) this).field_g >> 707099336;
+          ((fla) this).field_h = ((fla) this).field_g >> 8;
           ((fla) this).field_i.a(((fla) this).field_m, ((fla) this).field_h, (byte) -21);
           return;
         }
@@ -290,27 +170,39 @@ final class fla extends vg {
     }
 
     final void a(int param0, w param1) {
-        int var3 = 54 % ((-44 - param0) / 44);
-        if (!(0 >= param1.field_i[((fla) this).field_l])) {
-            param1.field_i[((fla) this).field_l] = param1.field_i[((fla) this).field_l] - 1;
+        try {
+            int var3_int = 54 % ((-44 - param0) / 44);
+            if (!(0 >= param1.field_i[((fla) this).field_l])) {
+                param1.field_i[((fla) this).field_l] = param1.field_i[((fla) this).field_l] - 1;
+            }
+            ((fla) this).p(18);
+            rs.a((fla) this, -77);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fla.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((fla) this).p(18);
-        rs.a((fla) this, -77);
     }
 
     fla(vb param0, int param1, boolean param2, int param3, int param4, int param5) {
         this(param0, param4, param5);
-        ((fla) this).field_l = param1;
+        try {
+            ((fla) this).field_l = param1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     fla(vb param0, int param1, int param2) {
-        ((fla) this).field_i = param0;
-        ((fla) this).field_h = param1;
-        ((fla) this).field_m = param2;
-        ((fla) this).field_g = ((fla) this).field_h << -476091736;
-        ((fla) this).field_j = ((fla) this).field_g;
-        ((fla) this).field_k = 50;
-        ((fla) this).field_n = ((fla) this).field_g / ((fla) this).field_k;
+        try {
+            ((fla) this).field_i = param0;
+            ((fla) this).field_h = param1;
+            ((fla) this).field_m = param2;
+            ((fla) this).field_g = ((fla) this).field_h << 8;
+            ((fla) this).field_j = ((fla) this).field_g;
+            ((fla) this).field_k = 50;
+            ((fla) this).field_n = ((fla) this).field_g / ((fla) this).field_k;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     private final void b(int param0) {
@@ -325,11 +217,11 @@ final class fla extends vg {
         }
         if (param0 != 4216) {
           this.b(22);
-          ((fla) this).field_h = ((fla) this).field_g >> 425758888;
+          ((fla) this).field_h = ((fla) this).field_g >> 8;
           ((fla) this).field_i.a(((fla) this).field_m, ((fla) this).field_h, (byte) -21);
           return;
         } else {
-          ((fla) this).field_h = ((fla) this).field_g >> 425758888;
+          ((fla) this).field_h = ((fla) this).field_g >> 8;
           ((fla) this).field_i.a(((fla) this).field_m, ((fla) this).field_h, (byte) -21);
           return;
         }

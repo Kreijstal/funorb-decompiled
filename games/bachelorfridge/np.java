@@ -17,8 +17,10 @@ final class np implements Iterator {
         if (((np) this).field_b == ((np) this).field_a.field_c[((np) this).field_c + -1]) {
           L0: while (true) {
             if (((np) this).field_a.field_f > ((np) this).field_c) {
+              bw[] fieldTemp$4 = ((np) this).field_a.field_c;
+              int fieldTemp$5 = ((np) this).field_c;
               ((np) this).field_c = ((np) this).field_c + 1;
-              var3 = ((np) this).field_a.field_c[((np) this).field_c].field_b;
+              var3 = fieldTemp$4[fieldTemp$5].field_b;
               if (((np) this).field_a.field_c[((np) this).field_c + -1] != var3) {
                 ((np) this).field_d = var3;
                 ((np) this).field_b = var3.field_b;
@@ -41,14 +43,7 @@ final class np implements Iterator {
     private final void a(int param0) {
         ((np) this).field_b = ((np) this).field_a.field_c[0].field_b;
         ((np) this).field_c = 1;
-        if (param0 > -34) {
-          ((np) this).field_c = -99;
-          ((np) this).field_d = null;
-          return;
-        } else {
-          ((np) this).field_d = null;
-          return;
-        }
+        ((np) this).field_d = null;
     }
 
     public final void remove() {
@@ -65,8 +60,10 @@ final class np implements Iterator {
         if (((np) this).field_a.field_c[((np) this).field_c + -1] == ((np) this).field_b) {
           L0: while (true) {
             if (((np) this).field_c < ((np) this).field_a.field_f) {
+              bw[] fieldTemp$2 = ((np) this).field_a.field_c;
+              int fieldTemp$3 = ((np) this).field_c;
               ((np) this).field_c = ((np) this).field_c + 1;
-              if (((np) this).field_a.field_c[((np) this).field_c].field_b != ((np) this).field_a.field_c[((np) this).field_c - 1]) {
+              if (fieldTemp$2[fieldTemp$3].field_b != ((np) this).field_a.field_c[((np) this).field_c - 1]) {
                 ((np) this).field_b = ((np) this).field_a.field_c[((np) this).field_c + -1].field_b;
                 return true;
               } else {
@@ -84,8 +81,12 @@ final class np implements Iterator {
 
     np(wha param0) {
         ((np) this).field_d = null;
-        ((np) this).field_a = param0;
-        this.a(-87);
+        try {
+            ((np) this).field_a = param0;
+            this.a(-87);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "np.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

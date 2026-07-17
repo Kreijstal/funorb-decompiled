@@ -28,40 +28,89 @@ final class rb extends ue {
 
     final static void a(java.applet.Applet param0, byte param1) {
         String var2 = null;
+        RuntimeException var2_ref = null;
         CharSequence var3 = null;
-        CharSequence var4 = null;
-        if (param1 == 126) {
-          var2 = param0.getParameter("username");
-          if (var2 != null) {
-            var4 = (CharSequence) (Object) var2;
-            if (-1L == (ck.a((byte) -29, var4) ^ -1L)) {
-              return;
-            } else {
-              return;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2 = param0.getParameter("username");
+              if (var2 == null) {
+                break L1;
+              } else {
+                var3 = (CharSequence) (Object) var2;
+                if (ck.a((byte) -29, var3) != 0L) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
-          } else {
-            return;
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2_ref;
+            stackOut_4_1 = new StringBuilder().append("rb.C(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 126 + 41);
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
         } else {
-          rb.c((byte) -62);
-          var2 = param0.getParameter("username");
-          if (var2 != null) {
-            var3 = (CharSequence) (Object) var2;
-            if (-1L == (ck.a((byte) -29, var3) ^ -1L)) {
-              return;
-            } else {
-              return;
-            }
-          } else {
-            return;
-          }
+          return;
         }
     }
 
     rb(re param0, boolean param1) {
         super(0);
-        ((rb) this).field_f = param0;
-        ip.a(0, param1);
+        try {
+            ((rb) this).field_f = param0;
+            ip.a(0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "rb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void b(int param0) {
@@ -215,7 +264,7 @@ final class rb extends ue {
           }
         } else {
           ((rb) this).field_f.b(param0);
-          if (-1 != (((rb) this).field_f.field_f ^ -1)) {
+          if (((rb) this).field_f.field_f != 0) {
             return;
           } else {
             la.b(-79);
@@ -238,7 +287,7 @@ final class rb extends ue {
           var2 = da.a(true, true);
           if (3 != var2) {
             if (var2 != 1) {
-              if ((var2 ^ -1) != -3) {
+              if (var2 != 2) {
                 if (!param0) {
                   return;
                 } else {
@@ -258,7 +307,7 @@ final class rb extends ue {
             } else {
               a.field_b = (ue) (Object) ((rb) this).field_f;
               ((rb) this).field_f.a(false, -13880);
-              if ((var2 ^ -1) != -3) {
+              if (var2 != 2) {
                 if (param0) {
                   boolean discarded$11 = ((rb) this).a(96);
                   return;
@@ -282,7 +331,7 @@ final class rb extends ue {
             if (var2 == 1) {
               a.field_b = (ue) (Object) ((rb) this).field_f;
               ((rb) this).field_f.a(false, -13880);
-              if ((var2 ^ -1) != -3) {
+              if (var2 != 2) {
                 if (param0) {
                   boolean discarded$13 = ((rb) this).a(96);
                   return;
@@ -300,7 +349,7 @@ final class rb extends ue {
                 }
               }
             } else {
-              if ((var2 ^ -1) == -3) {
+              if (var2 == 2) {
                 a.field_b = (ue) (Object) ((rb) this).field_f;
                 ((rb) this).field_f.a(true, -13880);
                 if (!param0) {

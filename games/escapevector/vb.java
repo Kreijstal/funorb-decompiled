@@ -31,35 +31,19 @@ final class vb implements Iterable {
     }
 
     final void a(boolean param0, fl param1) {
-        if (param0) {
-          L0: {
-            Iterator discarded$1 = ((vb) this).iterator();
-            if (param1.field_i != null) {
-              param1.d(96);
-              break L0;
-            } else {
-              break L0;
+        try {
+            if (param0) {
+                Iterator discarded$0 = ((vb) this).iterator();
             }
-          }
-          param1.field_i = ((vb) this).field_c.field_i;
-          param1.field_j = ((vb) this).field_c;
-          param1.field_i.field_j = param1;
-          param1.field_j.field_i = param1;
-          return;
-        } else {
-          L1: {
-            if (param1.field_i != null) {
-              param1.d(96);
-              break L1;
-            } else {
-              break L1;
+            if (!(param1.field_i == null)) {
+                param1.d(96);
             }
-          }
-          param1.field_i = ((vb) this).field_c.field_i;
-          param1.field_j = ((vb) this).field_c;
-          param1.field_i.field_j = param1;
-          param1.field_j.field_i = param1;
-          return;
+            param1.field_i = ((vb) this).field_c.field_i;
+            param1.field_j = ((vb) this).field_c;
+            param1.field_i.field_j = param1;
+            param1.field_j.field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "vb.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

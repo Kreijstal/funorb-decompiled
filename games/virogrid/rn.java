@@ -34,20 +34,9 @@ abstract class rn {
     }
 
     final static void a(int param0) {
-        L0: {
-          if (ac.field_e) {
+        if (!(!ac.field_e)) {
             df.g(df.field_i, df.field_g, df.field_k + -df.field_i, -df.field_g + df.field_h);
             cm.field_h.a(false, 24960);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param0 != -26808) {
-          field_g = null;
-          return;
-        } else {
-          return;
         }
     }
 

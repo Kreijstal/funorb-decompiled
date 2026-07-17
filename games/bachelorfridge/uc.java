@@ -9,40 +9,37 @@ final class uc extends pv {
 
     private final void d(byte param0) {
         ((uc) this).field_f.field_y = -1;
-        if (param0 <= 95) {
-            uc.c((byte) -111);
-        }
     }
 
     final static void d(int param0) {
         fj var1 = null;
-        fj var1_ref = null;
         L0: {
           var1 = (fj) (Object) ii.field_m.a((byte) -124);
           if (var1 != null) {
             break L0;
           } else {
-            var1_ref = new fj();
+            var1 = new fj();
             break L0;
           }
         }
         if (param0 < 9) {
           uc.c((byte) -24);
-          var1_ref.a(dg.field_f, dg.field_c, dg.field_k, dg.field_j, dg.field_h, dg.field_e, (byte) -92, dg.field_i);
-          kma.field_o.a((bw) (Object) var1_ref, true);
+          var1.a(dg.field_f, dg.field_c, dg.field_k, dg.field_j, dg.field_h, dg.field_e, (byte) -92, dg.field_i);
+          kma.field_o.a((bw) (Object) var1, true);
           return;
         } else {
-          var1_ref.a(dg.field_f, dg.field_c, dg.field_k, dg.field_j, dg.field_h, dg.field_e, (byte) -92, dg.field_i);
-          kma.field_o.a((bw) (Object) var1_ref, true);
+          var1.a(dg.field_f, dg.field_c, dg.field_k, dg.field_j, dg.field_h, dg.field_e, (byte) -92, dg.field_i);
+          kma.field_o.a((bw) (Object) var1, true);
           return;
         }
     }
 
     final boolean b(boolean param0) {
         if (param0) {
+          int fieldTemp$2 = ((uc) this).field_g + 1;
           ((uc) this).field_g = ((uc) this).field_g + 1;
-          if (((uc) this).field_g + 1 <= this.c(-31460)) {
-            if ((((uc) this).field_g ^ -1) == -2) {
+          if (fieldTemp$2 <= this.c(-31460)) {
+            if (((uc) this).field_g == 1) {
               ((uc) this).field_f.field_v.a((byte) 107, ((uc) this).field_f.field_g.field_o.field_b, 2);
               c.a(1220394217, ((uc) this).field_f.field_g.field_o.field_e);
               return false;
@@ -59,9 +56,6 @@ final class uc extends pv {
     }
 
     final static void b(int param0) {
-        if (param0 >= -4) {
-            field_j = null;
-        }
     }
 
     public static void c(byte param0) {
@@ -73,13 +67,14 @@ final class uc extends pv {
     }
 
     uc(jfa param0) {
-        ((uc) this).field_f = param0;
+        try {
+            ((uc) this).field_f = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "uc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final int c(int param0) {
-        if (param0 != -31460) {
-            return 70;
-        }
         return 240;
     }
 

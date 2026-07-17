@@ -16,40 +16,71 @@ final class jd {
     }
 
     final static void a(java.awt.Canvas param0, int param1) {
-        L0: {
+        RuntimeException var2 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
           r.a((java.awt.Component) (Object) param0, 20);
           ph.a((java.awt.Component) (Object) param0, 123);
           if (null != rk.field_c) {
             rk.field_c.a(3, (java.awt.Component) (Object) param0);
-            break L0;
+            return;
           } else {
-            break L0;
+            return;
           }
-        }
-        if (param1 != 160) {
-          field_d = null;
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L0: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("jd.C(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L0;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L0;
+            }
+          }
+          throw ld.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 160 + 41);
         }
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
         Object var4 = null;
-        if (param2 != 37) {
-          jd.a((byte) 55);
-          var4 = null;
-          rb.a((String) null, param1, param0, 14635);
-          return;
-        } else {
-          var4 = null;
-          rb.a((String) null, param1, param0, 14635);
-          return;
-        }
+        rb.a((String) null, param1, param0, 14635);
     }
 
     final static java.awt.Container a(int param0) {
-        int var1 = 68 / ((-25 - param0) / 41);
+        int var1 = 68;
         if (ck.field_d != null) {
             return (java.awt.Container) (Object) ck.field_d;
         }
@@ -149,18 +180,18 @@ final class jd {
         int var10 = 0;
         int var11 = 0;
         var11 = Lexicominos.field_L ? 1 : 0;
-        if (-1L > (param0 ^ -1L)) {
-          if ((param0 ^ -1L) > -6582952005840035282L) {
-            if ((param0 % (long)param1 ^ -1L) == -1L) {
+        if (param0 > 0L) {
+          if (param0 < 6582952005840035281L) {
+            if (param0 % (long)param1 == 0L) {
               return null;
             } else {
               var3 = 0;
               var4 = param0;
               L0: while (true) {
-                if ((var4 ^ -1L) == -1L) {
+                if (var4 == 0L) {
                   var6 = new StringBuilder(var3);
                   L1: while (true) {
-                    if (-1L == (param0 ^ -1L)) {
+                    if (param0 == 0L) {
                       StringBuilder discarded$2 = var6.reverse();
                       var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                       return var6.toString();

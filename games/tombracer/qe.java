@@ -9,13 +9,14 @@ abstract class qe {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != -18318) {
-            field_b = null;
-        }
     }
 
     qe(cka param0) {
-        ((qe) this).field_a = param0;
+        try {
+            ((qe) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qe.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     abstract void a(boolean param0);

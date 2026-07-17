@@ -24,7 +24,11 @@ final class lc {
     private long field_b;
 
     final void a(int param0, byte[] param1) throws IOException {
-        ((lc) this).a(param1, -19616, param0, param1.length);
+        try {
+            ((lc) this).a(param1, -19616, param0, param1.length);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "lc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void b(int param0) throws IOException {
@@ -35,11 +39,11 @@ final class lc {
         var7 = Chess.field_G;
         if (param0 == 17357) {
           L0: {
-            if (0L == (((lc) this).field_h ^ -1L)) {
+            if (((lc) this).field_h == -1L) {
               break L0;
             } else {
               L1: {
-                if ((((lc) this).field_p ^ -1L) != (((lc) this).field_h ^ -1L)) {
+                if (~((lc) this).field_p != ~((lc) this).field_h) {
                   ((lc) this).field_c.a(((lc) this).field_h, -11526);
                   ((lc) this).field_p = ((lc) this).field_h;
                   break L1;
@@ -50,7 +54,7 @@ final class lc {
               L2: {
                 ((lc) this).field_c.a(0, -1036, ((lc) this).field_o, ((lc) this).field_k);
                 ((lc) this).field_p = ((lc) this).field_p + (long)((lc) this).field_k;
-                if ((((lc) this).field_p ^ -1L) >= (((lc) this).field_b ^ -1L)) {
+                if (~((lc) this).field_p >= ~((lc) this).field_b) {
                   break L2;
                 } else {
                   ((lc) this).field_b = ((lc) this).field_p;
@@ -61,10 +65,10 @@ final class lc {
                 L4: {
                   var2 = -1L;
                   var4 = -1L;
-                  if ((((lc) this).field_h ^ -1L) > (((lc) this).field_d ^ -1L)) {
+                  if (~((lc) this).field_h > ~((lc) this).field_d) {
                     break L4;
                   } else {
-                    if ((((lc) this).field_d + (long)((lc) this).field_j ^ -1L) >= (((lc) this).field_h ^ -1L)) {
+                    if (~(((lc) this).field_d + (long)((lc) this).field_j) >= ~((lc) this).field_h) {
                       break L4;
                     } else {
                       var2 = ((lc) this).field_h;
@@ -72,7 +76,7 @@ final class lc {
                     }
                   }
                 }
-                if ((((lc) this).field_h ^ -1L) < (((lc) this).field_d ^ -1L)) {
+                if (~((lc) this).field_h < ~((lc) this).field_d) {
                   break L3;
                 } else {
                   if ((long)((lc) this).field_k + ((lc) this).field_h > ((lc) this).field_d) {
@@ -96,10 +100,10 @@ final class lc {
                     }
                   }
                 }
-                if ((((lc) this).field_h ^ -1L) <= ((long)((lc) this).field_j + ((lc) this).field_d ^ -1L)) {
+                if (~((lc) this).field_h <= ~((long)((lc) this).field_j + ((lc) this).field_d)) {
                   break L5;
                 } else {
-                  if (((long)((lc) this).field_j + ((lc) this).field_d ^ -1L) >= ((long)((lc) this).field_k + ((lc) this).field_h ^ -1L)) {
+                  if (~((long)((lc) this).field_j + ((lc) this).field_d) >= ~((long)((lc) this).field_k + ((lc) this).field_h)) {
                     var4 = (long)((lc) this).field_j + ((lc) this).field_d;
                     break L5;
                   } else {
@@ -108,7 +112,7 @@ final class lc {
                 }
               }
               L7: {
-                if (0L <= (var2 ^ -1L)) {
+                if (var2 <= -1L) {
                   break L7;
                 } else {
                   if (var4 <= var2) {
@@ -157,18 +161,33 @@ final class lc {
 
     final static void a(int param0) {
         cd.field_x = new w(ki.field_P, dc.field_s, gd.field_b, qn.field_P, (ci) (Object) kj.field_g, sj.field_k);
-        int var1 = -28 % ((param0 - 15) / 59);
+        int var1 = 0;
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
         IOException var5 = null;
+        RuntimeException var5_ref = null;
         int var5_int = 0;
         long var5_long = 0L;
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
-        int decompiledRegionSelector0 = 0;
+        RuntimeException stackIn_50_0 = null;
+        StringBuilder stackIn_50_1 = null;
+        RuntimeException stackIn_51_0 = null;
+        StringBuilder stackIn_51_1 = null;
+        RuntimeException stackIn_52_0 = null;
+        StringBuilder stackIn_52_1 = null;
+        String stackIn_52_2 = null;
         Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_49_0 = null;
+        StringBuilder stackOut_49_1 = null;
+        RuntimeException stackOut_51_0 = null;
+        StringBuilder stackOut_51_1 = null;
+        String stackOut_51_2 = null;
+        RuntimeException stackOut_50_0 = null;
+        StringBuilder stackOut_50_1 = null;
+        String stackOut_50_2 = null;
         var10 = Chess.field_G;
         try {
           L0: {
@@ -181,7 +200,7 @@ final class lc {
               }
             }
             L2: {
-              if (0L == (((lc) this).field_h ^ -1L)) {
+              if (((lc) this).field_h == -1L) {
                 break L2;
               } else {
                 L3: {
@@ -203,7 +222,7 @@ final class lc {
               if ((long)param2 == ((lc) this).field_h) {
                 break L4;
               } else {
-                if (((long)param1 + ((lc) this).field_a ^ -1L) >= ((long)((lc) this).field_o.length + ((lc) this).field_h ^ -1L)) {
+                if (~((long)param1 + ((lc) this).field_a) >= ~((long)((lc) this).field_o.length + ((lc) this).field_h)) {
                   break L4;
                 } else {
                   var5_int = (int)(((lc) this).field_h - (((lc) this).field_a - (long)((lc) this).field_o.length));
@@ -219,7 +238,7 @@ final class lc {
             }
             if (((lc) this).field_o.length < param1) {
               L5: {
-                if ((((lc) this).field_p ^ -1L) == (((lc) this).field_a ^ -1L)) {
+                if (~((lc) this).field_p == ~((lc) this).field_a) {
                   break L5;
                 } else {
                   ((lc) this).field_c.a(((lc) this).field_a, -11526);
@@ -240,10 +259,10 @@ final class lc {
               L7: {
                 L8: {
                   var5_long = -1L;
-                  if ((((lc) this).field_a ^ -1L) > (((lc) this).field_d ^ -1L)) {
+                  if (~((lc) this).field_a > ~((lc) this).field_d) {
                     break L8;
                   } else {
-                    if (((long)((lc) this).field_j + ((lc) this).field_d ^ -1L) >= (((lc) this).field_a ^ -1L)) {
+                    if (~((long)((lc) this).field_j + ((lc) this).field_d) >= ~((lc) this).field_a) {
                       break L8;
                     } else {
                       var5_long = ((lc) this).field_a;
@@ -251,7 +270,7 @@ final class lc {
                     }
                   }
                 }
-                if ((((lc) this).field_d ^ -1L) > (((lc) this).field_a ^ -1L)) {
+                if (~((lc) this).field_d > ~((lc) this).field_a) {
                   break L7;
                 } else {
                   if (((lc) this).field_d >= ((lc) this).field_a + (long)param1) {
@@ -268,7 +287,7 @@ final class lc {
                   if (((lc) this).field_d >= ((lc) this).field_a - -(long)param1) {
                     break L10;
                   } else {
-                    if (((long)param1 + ((lc) this).field_a ^ -1L) >= (((lc) this).field_d - -(long)((lc) this).field_j ^ -1L)) {
+                    if (~((long)param1 + ((lc) this).field_a) >= ~(((lc) this).field_d - -(long)((lc) this).field_j)) {
                       var7 = ((lc) this).field_a - -(long)param1;
                       break L9;
                     } else {
@@ -279,7 +298,7 @@ final class lc {
                 if (((lc) this).field_a >= (long)((lc) this).field_j + ((lc) this).field_d) {
                   break L9;
                 } else {
-                  if ((((lc) this).field_a - -(long)param1 ^ -1L) <= (((lc) this).field_d + (long)((lc) this).field_j ^ -1L)) {
+                  if (~(((lc) this).field_a - -(long)param1) <= ~(((lc) this).field_d + (long)((lc) this).field_j)) {
                     var7 = ((lc) this).field_d - -(long)((lc) this).field_j;
                     break L9;
                   } else {
@@ -304,7 +323,6 @@ final class lc {
               return;
             } else {
               if (param1 <= 0) {
-                decompiledRegionSelector0 = 0;
                 break L0;
               } else {
                 L12: {
@@ -325,8 +343,7 @@ final class lc {
                     break L13;
                   }
                 }
-                decompiledRegionSelector0 = 1;
-                break L0;
+                return;
               }
             }
           }
@@ -335,20 +352,46 @@ final class lc {
           var5 = (IOException) (Object) decompiledCaughtException;
           ((lc) this).field_p = -1L;
           throw var5;
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L14: {
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_49_0 = (RuntimeException) var5_ref;
+            stackOut_49_1 = new StringBuilder().append("lc.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_51_0 = stackOut_49_0;
+            stackIn_51_1 = stackOut_49_1;
+            stackIn_50_0 = stackOut_49_0;
+            stackIn_50_1 = stackOut_49_1;
+            if (param3 == null) {
+              stackOut_51_0 = (RuntimeException) (Object) stackIn_51_0;
+              stackOut_51_1 = (StringBuilder) (Object) stackIn_51_1;
+              stackOut_51_2 = "null";
+              stackIn_52_0 = stackOut_51_0;
+              stackIn_52_1 = stackOut_51_1;
+              stackIn_52_2 = stackOut_51_2;
+              break L14;
+            } else {
+              stackOut_50_0 = (RuntimeException) (Object) stackIn_50_0;
+              stackOut_50_1 = (StringBuilder) (Object) stackIn_50_1;
+              stackOut_50_2 = "{...}";
+              stackIn_52_0 = stackOut_50_0;
+              stackIn_52_1 = stackOut_50_1;
+              stackIn_52_2 = stackOut_50_2;
+              break L14;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + 41);
         }
     }
 
     final static void a(String param0, String param1, int param2, int param3, String param4, boolean param5) {
-        ld var6 = new ld(param2, param0, param3, param1, param4);
-        if (param5) {
-            field_n = null;
+        ld var6 = null;
+        try {
+            var6 = new ld(param2, param0, param3, param1, param4);
+            ml.a((byte) 29, var6);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "lc.K(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
-        ml.a((byte) 29, var6);
     }
 
     final long c(byte param0) {
@@ -360,6 +403,7 @@ final class lc {
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
         IOException var5 = null;
+        RuntimeException var5_ref = null;
         long var5_long = 0L;
         int var7 = 0;
         int var8 = 0;
@@ -368,7 +412,22 @@ final class lc {
         long var11 = 0L;
         int var13 = 0;
         int var14 = 0;
+        RuntimeException stackIn_59_0 = null;
+        StringBuilder stackIn_59_1 = null;
+        RuntimeException stackIn_60_0 = null;
+        StringBuilder stackIn_60_1 = null;
+        RuntimeException stackIn_61_0 = null;
+        StringBuilder stackIn_61_1 = null;
+        String stackIn_61_2 = null;
         Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_58_0 = null;
+        StringBuilder stackOut_58_1 = null;
+        RuntimeException stackOut_60_0 = null;
+        StringBuilder stackOut_60_1 = null;
+        String stackOut_60_2 = null;
+        RuntimeException stackOut_59_0 = null;
+        StringBuilder stackOut_59_1 = null;
+        String stackOut_59_2 = null;
         var14 = Chess.field_G;
         try {
           L0: {
@@ -395,10 +454,10 @@ final class lc {
                   var5_long = ((lc) this).field_a;
                   var7 = param2;
                   var8 = param3;
-                  if ((((lc) this).field_a ^ -1L) > (((lc) this).field_d ^ -1L)) {
+                  if (~((lc) this).field_a > ~((lc) this).field_d) {
                     break L2;
                   } else {
-                    if (((long)((lc) this).field_j + ((lc) this).field_d ^ -1L) >= (((lc) this).field_a ^ -1L)) {
+                    if (~((long)((lc) this).field_j + ((lc) this).field_d) >= ~((lc) this).field_a) {
                       break L2;
                     } else {
                       L3: {
@@ -443,7 +502,7 @@ final class lc {
                     ((lc) this).field_c.a(((lc) this).field_a, -11526);
                     ((lc) this).field_p = ((lc) this).field_a;
                     L6: while (true) {
-                      if ((param3 ^ -1) >= -1) {
+                      if (param3 <= 0) {
                         break L4;
                       } else {
                         var9_int = ((lc) this).field_c.a(param2, param0, param3, (byte) 104);
@@ -463,10 +522,10 @@ final class lc {
                 L7: {
                   if (-1L != ((lc) this).field_h) {
                     L8: {
-                      if ((((lc) this).field_h ^ -1L) >= (((lc) this).field_a ^ -1L)) {
+                      if (~((lc) this).field_h >= ~((lc) this).field_a) {
                         break L8;
                       } else {
-                        if ((param3 ^ -1) >= -1) {
+                        if (param3 <= 0) {
                           break L8;
                         } else {
                           L9: {
@@ -496,10 +555,10 @@ final class lc {
                     L11: {
                       L12: {
                         var9 = -1L;
-                        if ((var5_long ^ -1L) < (((lc) this).field_h ^ -1L)) {
+                        if (~var5_long < ~((lc) this).field_h) {
                           break L12;
                         } else {
-                          if (((long)var8 + var5_long ^ -1L) < (((lc) this).field_h ^ -1L)) {
+                          if (~((long)var8 + var5_long) < ~((lc) this).field_h) {
                             var9 = ((lc) this).field_h;
                             break L11;
                           } else {
@@ -532,7 +591,7 @@ final class lc {
                           }
                         }
                       }
-                      if ((((lc) this).field_h ^ -1L) <= (var5_long + (long)var8 ^ -1L)) {
+                      if (~((lc) this).field_h <= ~(var5_long + (long)var8)) {
                         break L13;
                       } else {
                         if ((long)var8 + var5_long > (long)((lc) this).field_k + ((lc) this).field_h) {
@@ -543,10 +602,10 @@ final class lc {
                         }
                       }
                     }
-                    if (0L <= (var9 ^ -1L)) {
+                    if (var9 <= -1L) {
                       break L7;
                     } else {
-                      if ((var11 ^ -1L) >= (var9 ^ -1L)) {
+                      if (~var11 >= ~var9) {
                         break L7;
                       } else {
                         var13 = (int)(var11 - var9);
@@ -564,7 +623,11 @@ final class lc {
                     break L7;
                   }
                 }
-                break L0;
+                if (0 < param3) {
+                  throw new EOFException();
+                } else {
+                  break L0;
+                }
               } else {
                 return;
               }
@@ -577,20 +640,41 @@ final class lc {
           var5 = (IOException) (Object) decompiledCaughtException;
           ((lc) this).field_p = -1L;
           throw var5;
-        }
-        if (0 < param3) {
-          throw new EOFException();
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L15: {
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_58_0 = (RuntimeException) var5_ref;
+            stackOut_58_1 = new StringBuilder().append("lc.L(");
+            stackIn_60_0 = stackOut_58_0;
+            stackIn_60_1 = stackOut_58_1;
+            stackIn_59_0 = stackOut_58_0;
+            stackIn_59_1 = stackOut_58_1;
+            if (param0 == null) {
+              stackOut_60_0 = (RuntimeException) (Object) stackIn_60_0;
+              stackOut_60_1 = (StringBuilder) (Object) stackIn_60_1;
+              stackOut_60_2 = "null";
+              stackIn_61_0 = stackOut_60_0;
+              stackIn_61_1 = stackOut_60_1;
+              stackIn_61_2 = stackOut_60_2;
+              break L15;
+            } else {
+              stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
+              stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
+              stackOut_59_2 = "{...}";
+              stackIn_61_0 = stackOut_59_0;
+              stackIn_61_1 = stackOut_59_1;
+              stackIn_61_2 = stackOut_59_2;
+              break L15;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
     public static void b(byte param0) {
         field_n = null;
         field_g = null;
-        if (param0 != -9) {
-            field_q = false;
-        }
         field_l = null;
         field_e = null;
         field_m = null;
@@ -603,8 +687,8 @@ final class lc {
         int var4 = 0;
         L0: {
           var4 = Chess.field_G;
-          ((lc) this).field_j = param0;
-          if ((((lc) this).field_p ^ -1L) != (((lc) this).field_a ^ -1L)) {
+          ((lc) this).field_j = 0;
+          if (~((lc) this).field_p != ~((lc) this).field_a) {
             ((lc) this).field_c.a(((lc) this).field_a, -11526);
             ((lc) this).field_p = ((lc) this).field_a;
             break L0;
@@ -660,13 +744,17 @@ final class lc {
         ((lc) this).field_d = -1L;
         ((lc) this).field_k = 0;
         ((lc) this).field_h = -1L;
-        ((lc) this).field_c = param0;
-        long dupTemp$0 = param0.a((byte) -89);
-        ((lc) this).field_b = dupTemp$0;
-        ((lc) this).field_r = dupTemp$0;
-        ((lc) this).field_o = new byte[param2];
-        ((lc) this).field_a = 0L;
-        ((lc) this).field_i = new byte[param1];
+        try {
+            ((lc) this).field_c = param0;
+            long dupTemp$0 = param0.a((byte) -89);
+            ((lc) this).field_b = dupTemp$0;
+            ((lc) this).field_r = dupTemp$0;
+            ((lc) this).field_o = new byte[param2];
+            ((lc) this).field_a = 0L;
+            ((lc) this).field_i = new byte[param1];
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "lc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

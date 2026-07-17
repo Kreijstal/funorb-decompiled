@@ -17,34 +17,89 @@ final class sd {
         try {
             Class var4 = null;
             Throwable var4_ref = null;
+            RuntimeException var4_ref2 = null;
             ov var5 = null;
             fh var5_ref = null;
             Object stackIn_2_0 = null;
             ov stackIn_4_0 = null;
+            fh stackIn_6_0 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            RuntimeException stackIn_10_0 = null;
+            StringBuilder stackIn_10_1 = null;
+            String stackIn_10_2 = null;
             Throwable decompiledCaughtException = null;
-            Object stackOut_1_0 = null;
             ov stackOut_3_0 = null;
+            Object stackOut_1_0 = null;
+            fh stackOut_5_0 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            RuntimeException stackOut_9_0 = null;
+            StringBuilder stackOut_9_1 = null;
+            String stackOut_9_2 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
             try {
-              var4 = Class.forName("rk");
-              var5 = (ov) var4.newInstance();
-              if (param2 == 0) {
-                return (ov) (Object) stackIn_2_0;
-              } else {
-                stackOut_1_0 = null;
-                stackIn_2_0 = stackOut_1_0;
+              try {
+                var4 = Class.forName("rk");
+                var5 = (ov) var4.newInstance();
+                if (param2 == 0) {
+                  var5.a(param3, param0, param1, param2 + -119);
+                  stackOut_3_0 = (ov) var5;
+                  stackIn_4_0 = stackOut_3_0;
+                  return stackIn_4_0;
+                } else {
+                  stackOut_1_0 = null;
+                  stackIn_2_0 = stackOut_1_0;
+                  return (ov) (Object) stackIn_2_0;
+                }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var4_ref = decompiledCaughtException;
+                var5_ref = new fh();
+                ((ov) (Object) var5_ref).a(param3, param0, param1, -125);
+                stackOut_5_0 = (fh) var5_ref;
+                stackIn_6_0 = stackOut_5_0;
+                return (ov) (Object) stackIn_6_0;
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              var5.a(param3, param0, param1, param2 + -119);
-              stackOut_3_0 = (ov) var5;
-              stackIn_4_0 = stackOut_3_0;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L0: {
+                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_7_0 = (RuntimeException) var4_ref2;
+                stackOut_7_1 = new StringBuilder().append("sd.I(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_1 = stackOut_7_1;
+                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_1 = stackOut_7_1;
+                if (param3 == null) {
+                  stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+                  stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+                  stackOut_9_2 = "null";
+                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_1 = stackOut_9_1;
+                  stackIn_10_2 = stackOut_9_2;
+                  break L0;
+                } else {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "{...}";
+                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_1 = stackOut_8_1;
+                  stackIn_10_2 = stackOut_8_2;
+                  break L0;
+                }
+              }
+              throw qo.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final Object a(byte param0) {
@@ -132,8 +187,9 @@ final class sd {
                     break L1;
                   }
                 } else {
+                  long fieldTemp$53 = var3.field_l + 1L;
                   var3.field_l = var3.field_l + 1L;
-                  if ((var3.field_l + 1L ^ -1L) < ((long)param0 ^ -1L)) {
+                  if (~fieldTemp$53 < ~(long)param0) {
                     var4 = new kl(var3.c((byte) -102), var3.field_z);
                     ((sd) this).field_c.a(param1 ^ -2104, (ms) (Object) var4, var3.field_h);
                     pt.a((pj) (Object) var3, 2066481250, (pj) (Object) var4);
@@ -161,6 +217,7 @@ final class sd {
 
     final static void a(pl param0, int param1) {
         try {
+            RuntimeException var2 = null;
             int var3 = 0;
             int var4 = 0;
             int var5 = 0;
@@ -196,522 +253,272 @@ final class sd {
             java.lang.reflect.Field var26 = null;
             java.lang.reflect.Method var27 = null;
             java.lang.reflect.Method var28 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var18 = null;
-                        var16 = null;
-                        var20 = null;
-                        var22 = null;
-                        var12 = Sumoblitz.field_L ? 1 : 0;
-                        if (param1 > 126) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        return;
-                    }
-                    case 2: {
-                        var13 = (rd) (Object) qr.field_c.b(-77);
-                        var17 = var13;
-                        if (var17 != null) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        return;
-                    }
-                    case 4: {
-                        var3 = 0;
-                        var4 = 0;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        if (var17.field_p <= var4) {
-                            statePc = 19;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (var13.field_o[var4] == null) {
-                            statePc = 12;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        if (2 == var13.field_o[var4].field_c) {
-                            statePc = 9;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        var13.field_k[var4] = -5;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        if (0 != var13.field_o[var4].field_c) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        var3 = 1;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        if (null != var13.field_s[var4]) {
-                            statePc = 14;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        var4++;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (2 != var13.field_s[var4].field_c) {
-                            statePc = 16;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        var13.field_k[var4] = -6;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        if (-1 == (var13.field_s[var4].field_c ^ -1)) {
-                            statePc = 18;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        var4++;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        var3 = 1;
-                        var4++;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 19: {
+            RuntimeException stackIn_63_0 = null;
+            StringBuilder stackIn_63_1 = null;
+            RuntimeException stackIn_64_0 = null;
+            StringBuilder stackIn_64_1 = null;
+            RuntimeException stackIn_65_0 = null;
+            StringBuilder stackIn_65_1 = null;
+            String stackIn_65_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_62_0 = null;
+            StringBuilder stackOut_62_1 = null;
+            RuntimeException stackOut_64_0 = null;
+            StringBuilder stackOut_64_1 = null;
+            String stackOut_64_2 = null;
+            RuntimeException stackOut_63_0 = null;
+            StringBuilder stackOut_63_1 = null;
+            String stackOut_63_2 = null;
+            var18 = null;
+            var16 = null;
+            var20 = null;
+            var22 = null;
+            var12 = Sumoblitz.field_L ? 1 : 0;
+            try {
+              L0: {
+                if (param1 > 126) {
+                  var13 = (rd) (Object) qr.field_c.b(-77);
+                  var17 = var13;
+                  if (var17 != null) {
+                    var3 = 0;
+                    var4 = 0;
+                    L1: while (true) {
+                      if (var17.field_p <= var4) {
                         if (var3 == 0) {
-                            statePc = 21;
+                          var4 = param0.field_p;
+                          param0.e(48, var17.field_t);
+                          var5 = 0;
+                          L2: while (true) {
+                            if (~var17.field_p >= ~var5) {
+                              int discarded$1 = param0.a(var4, false);
+                              var17.b(false);
+                              break L0;
+                            } else {
+                              L3: {
+                                if (var17.field_k[var5] == 0) {
+                                  try {
+                                    L4: {
+                                      L5: {
+                                        var6_int = var17.field_r[var5];
+                                        if (var6_int == 0) {
+                                          var15 = (java.lang.reflect.Field) var17.field_o[var5].field_d;
+                                          var8 = var15.getInt((Object) null);
+                                          param0.b((byte) 106, 0);
+                                          param0.e(48, var8);
+                                          break L5;
+                                        } else {
+                                          if (1 == var6_int) {
+                                            var16_ref = (java.lang.reflect.Field) var17.field_o[var5].field_d;
+                                            var19 = var16_ref;
+                                            var19.setInt((Object) null, var17.field_n[var5]);
+                                            param0.b((byte) 92, 0);
+                                            break L5;
+                                          } else {
+                                            if (var6_int == 2) {
+                                              var26 = (java.lang.reflect.Field) var17.field_o[var5].field_d;
+                                              var8 = var26.getModifiers();
+                                              param0.b((byte) 88, 0);
+                                              param0.e(48, var8);
+                                              break L5;
+                                            } else {
+                                              break L5;
+                                            }
+                                          }
+                                        }
+                                      }
+                                      L6: {
+                                        if (var6_int == 3) {
+                                          var28 = (java.lang.reflect.Method) var17.field_s[var5].field_d;
+                                          var25 = var17.field_u[var5];
+                                          var9 = new Object[var25.length];
+                                          var10_int = 0;
+                                          L7: while (true) {
+                                            if (var10_int >= var25.length) {
+                                              var10 = var28.invoke((Object) null, var9);
+                                              if (var10 == null) {
+                                                param0.b((byte) 39, 0);
+                                                break L6;
+                                              } else {
+                                                if (var10 instanceof Number) {
+                                                  param0.b((byte) 56, 1);
+                                                  param0.a(false, ((Number) var10).longValue());
+                                                  break L6;
+                                                } else {
+                                                  if (!(var10 instanceof String)) {
+                                                    param0.b((byte) 49, 4);
+                                                    break L6;
+                                                  } else {
+                                                    param0.b((byte) 34, 2);
+                                                    param0.a((String) var10, (byte) -104);
+                                                    break L6;
+                                                  }
+                                                }
+                                              }
+                                            } else {
+                                              var11 = new ObjectInputStream((InputStream) (Object) new ByteArrayInputStream(var25[var10_int]));
+                                              var9[var10_int] = var11.readObject();
+                                              var10_int++;
+                                              continue L7;
+                                            }
+                                          }
+                                        } else {
+                                          if (4 != var6_int) {
+                                            break L6;
+                                          } else {
+                                            var27 = (java.lang.reflect.Method) var17.field_s[var5].field_d;
+                                            var8 = var27.getModifiers();
+                                            param0.b((byte) 93, 0);
+                                            param0.e(48, var8);
+                                            break L6;
+                                          }
+                                        }
+                                      }
+                                      break L4;
+                                    }
+                                  } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
+                                    decompiledCaughtException = decompiledCaughtParameter4;
+                                    L12: {
+                                      var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
+                                      param0.b((byte) 53, -14);
+                                      break L12;
+                                    }
+                                  } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
+                                    decompiledCaughtException = decompiledCaughtParameter5;
+                                    L13: {
+                                      var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
+                                      param0.b((byte) 86, -15);
+                                      break L13;
+                                    }
+                                  } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
+                                    decompiledCaughtException = decompiledCaughtParameter6;
+                                    L14: {
+                                      var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
+                                      param0.b((byte) 106, -16);
+                                      break L14;
+                                    }
+                                  } catch (java.io.IOException decompiledCaughtParameter8) {
+                                    decompiledCaughtException = decompiledCaughtParameter8;
+                                    L16: {
+                                      var6_ref8 = (IOException) (Object) decompiledCaughtException;
+                                      param0.b((byte) 18, -18);
+                                      break L16;
+                                    }
+                                  } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
+                                    decompiledCaughtException = decompiledCaughtParameter9;
+                                    L17: {
+                                      var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
+                                      param0.b((byte) 48, -19);
+                                      break L17;
+                                    }
+                                  } catch (java.lang.Exception decompiledCaughtParameter10) {
+                                    decompiledCaughtException = decompiledCaughtParameter10;
+                                    L18: {
+                                      var6_ref10 = (Exception) (Object) decompiledCaughtException;
+                                      param0.b((byte) 125, -20);
+                                      break L18;
+                                    }
+                                  } catch (java.lang.Throwable decompiledCaughtParameter11) {
+                                    decompiledCaughtException = decompiledCaughtParameter11;
+                                    L19: {
+                                      var6_ref11 = decompiledCaughtException;
+                                      param0.b((byte) 86, -21);
+                                      break L19;
+                                    }
+                                  }
+                                  break L3;
+                                } else {
+                                  param0.b((byte) 118, var17.field_k[var5]);
+                                  break L3;
+                                }
+                              }
+                              var5++;
+                              continue L2;
+                            }
+                          }
                         } else {
-                            statePc = 20;
+                          return;
                         }
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        return;
-                    }
-                    case 21: {
-                        var4 = param0.field_p;
-                        param0.e(48, var17.field_t);
-                        var5 = 0;
-                        statePc = 22;
-                        continue stateLoop;
-                    }
-                    case 22: {
-                        if (var17.field_p <= var5) {
-                            statePc = 59;
-                        } else {
-                            statePc = 23;
-                        }
-                        continue stateLoop;
-                    }
-                    case 23: {
-                        if (var17.field_k[var5] == 0) {
-                            statePc = 25;
-                        } else {
-                            statePc = 24;
-                        }
-                        continue stateLoop;
-                    }
-                    case 24: {
-                        param0.b((byte) 118, var17.field_k[var5]);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 25: {
-                        try {
-                            var6_int = var17.field_r[var5];
-                            if (var6_int == -1) {
-                                statePc = 31;
-                            } else {
-                                statePc = 26;
+                      } else {
+                        L20: {
+                          if (var13.field_o[var4] == null) {
+                            break L20;
+                          } else {
+                            L21: {
+                              if (2 == var13.field_o[var4].field_c) {
+                                var13.field_k[var4] = -5;
+                                break L21;
+                              } else {
+                                break L21;
+                              }
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_25) {
-                            caughtException = stateCaught_25;
-                            statePc = (stateCaught_25 instanceof ClassNotFoundException ? 46 : (stateCaught_25 instanceof InvalidClassException ? 47 : (stateCaught_25 instanceof StreamCorruptedException ? 48 : (stateCaught_25 instanceof OptionalDataException ? 49 : (stateCaught_25 instanceof IllegalAccessException ? 50 : (stateCaught_25 instanceof IllegalArgumentException ? 51 : (stateCaught_25 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_25 instanceof SecurityException ? 53 : (stateCaught_25 instanceof IOException ? 54 : (stateCaught_25 instanceof NullPointerException ? 55 : (stateCaught_25 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 26: {
-                        try {
-                            if (1 == var6_int) {
-                                statePc = 30;
+                            if (0 != var13.field_o[var4].field_c) {
+                              break L20;
                             } else {
-                                statePc = 27;
+                              var3 = 1;
+                              break L20;
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_26) {
-                            caughtException = stateCaught_26;
-                            statePc = (stateCaught_26 instanceof ClassNotFoundException ? 46 : (stateCaught_26 instanceof InvalidClassException ? 47 : (stateCaught_26 instanceof StreamCorruptedException ? 48 : (stateCaught_26 instanceof OptionalDataException ? 49 : (stateCaught_26 instanceof IllegalAccessException ? 50 : (stateCaught_26 instanceof IllegalArgumentException ? 51 : (stateCaught_26 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_26 instanceof SecurityException ? 53 : (stateCaught_26 instanceof IOException ? 54 : (stateCaught_26 instanceof NullPointerException ? 55 : (stateCaught_26 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
+                          }
                         }
-                    }
-                    case 27: {
-                        try {
-                            if (-3 == var6_int) {
-                                statePc = 29;
+                        L22: {
+                          if (null == var13.field_s[var4]) {
+                            break L22;
+                          } else {
+                            L23: {
+                              if (2 != var13.field_s[var4].field_c) {
+                                break L23;
+                              } else {
+                                var13.field_k[var4] = -6;
+                                break L23;
+                              }
+                            }
+                            if (var13.field_s[var4].field_c == 0) {
+                              var3 = 1;
+                              break L22;
                             } else {
-                                statePc = 28;
+                              break L22;
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_27) {
-                            caughtException = stateCaught_27;
-                            statePc = (stateCaught_27 instanceof ClassNotFoundException ? 46 : (stateCaught_27 instanceof InvalidClassException ? 47 : (stateCaught_27 instanceof StreamCorruptedException ? 48 : (stateCaught_27 instanceof OptionalDataException ? 49 : (stateCaught_27 instanceof IllegalAccessException ? 50 : (stateCaught_27 instanceof IllegalArgumentException ? 51 : (stateCaught_27 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_27 instanceof SecurityException ? 53 : (stateCaught_27 instanceof IOException ? 54 : (stateCaught_27 instanceof NullPointerException ? 55 : (stateCaught_27 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
+                          }
                         }
+                        var4++;
+                        continue L1;
+                      }
                     }
-                    case 28: {
-                        try {
-                            statePc = 32;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_28) {
-                            caughtException = stateCaught_28;
-                            statePc = (stateCaught_28 instanceof ClassNotFoundException ? 46 : (stateCaught_28 instanceof InvalidClassException ? 47 : (stateCaught_28 instanceof StreamCorruptedException ? 48 : (stateCaught_28 instanceof OptionalDataException ? 49 : (stateCaught_28 instanceof IllegalAccessException ? 50 : (stateCaught_28 instanceof IllegalArgumentException ? 51 : (stateCaught_28 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_28 instanceof SecurityException ? 53 : (stateCaught_28 instanceof IOException ? 54 : (stateCaught_28 instanceof NullPointerException ? 55 : (stateCaught_28 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 29: {
-                        try {
-                            var26 = (java.lang.reflect.Field) var17.field_o[var5].field_d;
-                            var8 = var26.getModifiers();
-                            param0.b((byte) 88, 0);
-                            param0.e(48, var8);
-                            statePc = 32;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_29) {
-                            caughtException = stateCaught_29;
-                            statePc = (stateCaught_29 instanceof ClassNotFoundException ? 46 : (stateCaught_29 instanceof InvalidClassException ? 47 : (stateCaught_29 instanceof StreamCorruptedException ? 48 : (stateCaught_29 instanceof OptionalDataException ? 49 : (stateCaught_29 instanceof IllegalAccessException ? 50 : (stateCaught_29 instanceof IllegalArgumentException ? 51 : (stateCaught_29 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_29 instanceof SecurityException ? 53 : (stateCaught_29 instanceof IOException ? 54 : (stateCaught_29 instanceof NullPointerException ? 55 : (stateCaught_29 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 30: {
-                        try {
-                            var16_ref = (java.lang.reflect.Field) var17.field_o[var5].field_d;
-                            var19 = var16_ref;
-                            var19.setInt((Object) null, var17.field_n[var5]);
-                            param0.b((byte) 92, 0);
-                            statePc = 32;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_30) {
-                            caughtException = stateCaught_30;
-                            statePc = (stateCaught_30 instanceof ClassNotFoundException ? 46 : (stateCaught_30 instanceof InvalidClassException ? 47 : (stateCaught_30 instanceof StreamCorruptedException ? 48 : (stateCaught_30 instanceof OptionalDataException ? 49 : (stateCaught_30 instanceof IllegalAccessException ? 50 : (stateCaught_30 instanceof IllegalArgumentException ? 51 : (stateCaught_30 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_30 instanceof SecurityException ? 53 : (stateCaught_30 instanceof IOException ? 54 : (stateCaught_30 instanceof NullPointerException ? 55 : (stateCaught_30 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 31: {
-                        try {
-                            var15 = (java.lang.reflect.Field) var17.field_o[var5].field_d;
-                            var8 = var15.getInt((Object) null);
-                            param0.b((byte) 106, 0);
-                            param0.e(48, var8);
-                            statePc = 32;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_31) {
-                            caughtException = stateCaught_31;
-                            statePc = (stateCaught_31 instanceof ClassNotFoundException ? 46 : (stateCaught_31 instanceof InvalidClassException ? 47 : (stateCaught_31 instanceof StreamCorruptedException ? 48 : (stateCaught_31 instanceof OptionalDataException ? 49 : (stateCaught_31 instanceof IllegalAccessException ? 50 : (stateCaught_31 instanceof IllegalArgumentException ? 51 : (stateCaught_31 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_31 instanceof SecurityException ? 53 : (stateCaught_31 instanceof IOException ? 54 : (stateCaught_31 instanceof NullPointerException ? 55 : (stateCaught_31 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 32: {
-                        try {
-                            if (-4 == (var6_int ^ -1)) {
-                                statePc = 35;
-                            } else {
-                                statePc = 33;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_32) {
-                            caughtException = stateCaught_32;
-                            statePc = (stateCaught_32 instanceof ClassNotFoundException ? 46 : (stateCaught_32 instanceof InvalidClassException ? 47 : (stateCaught_32 instanceof StreamCorruptedException ? 48 : (stateCaught_32 instanceof OptionalDataException ? 49 : (stateCaught_32 instanceof IllegalAccessException ? 50 : (stateCaught_32 instanceof IllegalArgumentException ? 51 : (stateCaught_32 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_32 instanceof SecurityException ? 53 : (stateCaught_32 instanceof IOException ? 54 : (stateCaught_32 instanceof NullPointerException ? 55 : (stateCaught_32 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 33: {
-                        try {
-                            if (4 != var6_int) {
-                                statePc = 58;
-                            } else {
-                                statePc = 34;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_33) {
-                            caughtException = stateCaught_33;
-                            statePc = (stateCaught_33 instanceof ClassNotFoundException ? 46 : (stateCaught_33 instanceof InvalidClassException ? 47 : (stateCaught_33 instanceof StreamCorruptedException ? 48 : (stateCaught_33 instanceof OptionalDataException ? 49 : (stateCaught_33 instanceof IllegalAccessException ? 50 : (stateCaught_33 instanceof IllegalArgumentException ? 51 : (stateCaught_33 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_33 instanceof SecurityException ? 53 : (stateCaught_33 instanceof IOException ? 54 : (stateCaught_33 instanceof NullPointerException ? 55 : (stateCaught_33 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 34: {
-                        try {
-                            var27 = (java.lang.reflect.Method) var17.field_s[var5].field_d;
-                            var8 = var27.getModifiers();
-                            param0.b((byte) 93, 0);
-                            param0.e(48, var8);
-                            statePc = 58;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_34) {
-                            caughtException = stateCaught_34;
-                            statePc = (stateCaught_34 instanceof ClassNotFoundException ? 46 : (stateCaught_34 instanceof InvalidClassException ? 47 : (stateCaught_34 instanceof StreamCorruptedException ? 48 : (stateCaught_34 instanceof OptionalDataException ? 49 : (stateCaught_34 instanceof IllegalAccessException ? 50 : (stateCaught_34 instanceof IllegalArgumentException ? 51 : (stateCaught_34 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_34 instanceof SecurityException ? 53 : (stateCaught_34 instanceof IOException ? 54 : (stateCaught_34 instanceof NullPointerException ? 55 : (stateCaught_34 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 35: {
-                        try {
-                            var28 = (java.lang.reflect.Method) var17.field_s[var5].field_d;
-                            var25 = var17.field_u[var5];
-                            var9 = new Object[var25.length];
-                            var10_int = 0;
-                            statePc = 36;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_35) {
-                            caughtException = stateCaught_35;
-                            statePc = (stateCaught_35 instanceof ClassNotFoundException ? 46 : (stateCaught_35 instanceof InvalidClassException ? 47 : (stateCaught_35 instanceof StreamCorruptedException ? 48 : (stateCaught_35 instanceof OptionalDataException ? 49 : (stateCaught_35 instanceof IllegalAccessException ? 50 : (stateCaught_35 instanceof IllegalArgumentException ? 51 : (stateCaught_35 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_35 instanceof SecurityException ? 53 : (stateCaught_35 instanceof IOException ? 54 : (stateCaught_35 instanceof NullPointerException ? 55 : (stateCaught_35 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 36: {
-                        try {
-                            if (var10_int >= var25.length) {
-                                statePc = 38;
-                            } else {
-                                statePc = 37;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_36) {
-                            caughtException = stateCaught_36;
-                            statePc = (stateCaught_36 instanceof ClassNotFoundException ? 46 : (stateCaught_36 instanceof InvalidClassException ? 47 : (stateCaught_36 instanceof StreamCorruptedException ? 48 : (stateCaught_36 instanceof OptionalDataException ? 49 : (stateCaught_36 instanceof IllegalAccessException ? 50 : (stateCaught_36 instanceof IllegalArgumentException ? 51 : (stateCaught_36 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_36 instanceof SecurityException ? 53 : (stateCaught_36 instanceof IOException ? 54 : (stateCaught_36 instanceof NullPointerException ? 55 : (stateCaught_36 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 37: {
-                        try {
-                            var11 = new ObjectInputStream((InputStream) (Object) new ByteArrayInputStream(var25[var10_int]));
-                            var9[var10_int] = var11.readObject();
-                            var10_int++;
-                            statePc = 36;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_37) {
-                            caughtException = stateCaught_37;
-                            statePc = (stateCaught_37 instanceof ClassNotFoundException ? 46 : (stateCaught_37 instanceof InvalidClassException ? 47 : (stateCaught_37 instanceof StreamCorruptedException ? 48 : (stateCaught_37 instanceof OptionalDataException ? 49 : (stateCaught_37 instanceof IllegalAccessException ? 50 : (stateCaught_37 instanceof IllegalArgumentException ? 51 : (stateCaught_37 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_37 instanceof SecurityException ? 53 : (stateCaught_37 instanceof IOException ? 54 : (stateCaught_37 instanceof NullPointerException ? 55 : (stateCaught_37 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 38: {
-                        try {
-                            var10 = var28.invoke((Object) null, var9);
-                            if (var10 == null) {
-                                statePc = 44;
-                            } else {
-                                statePc = 39;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_38) {
-                            caughtException = stateCaught_38;
-                            statePc = (stateCaught_38 instanceof ClassNotFoundException ? 46 : (stateCaught_38 instanceof InvalidClassException ? 47 : (stateCaught_38 instanceof StreamCorruptedException ? 48 : (stateCaught_38 instanceof OptionalDataException ? 49 : (stateCaught_38 instanceof IllegalAccessException ? 50 : (stateCaught_38 instanceof IllegalArgumentException ? 51 : (stateCaught_38 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_38 instanceof SecurityException ? 53 : (stateCaught_38 instanceof IOException ? 54 : (stateCaught_38 instanceof NullPointerException ? 55 : (stateCaught_38 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 39: {
-                        try {
-                            if (var10 instanceof Number) {
-                                statePc = 43;
-                            } else {
-                                statePc = 40;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_39) {
-                            caughtException = stateCaught_39;
-                            statePc = (stateCaught_39 instanceof ClassNotFoundException ? 46 : (stateCaught_39 instanceof InvalidClassException ? 47 : (stateCaught_39 instanceof StreamCorruptedException ? 48 : (stateCaught_39 instanceof OptionalDataException ? 49 : (stateCaught_39 instanceof IllegalAccessException ? 50 : (stateCaught_39 instanceof IllegalArgumentException ? 51 : (stateCaught_39 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_39 instanceof SecurityException ? 53 : (stateCaught_39 instanceof IOException ? 54 : (stateCaught_39 instanceof NullPointerException ? 55 : (stateCaught_39 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 40: {
-                        try {
-                            if (!(var10 instanceof String)) {
-                                statePc = 42;
-                            } else {
-                                statePc = 41;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_40) {
-                            caughtException = stateCaught_40;
-                            statePc = (stateCaught_40 instanceof ClassNotFoundException ? 46 : (stateCaught_40 instanceof InvalidClassException ? 47 : (stateCaught_40 instanceof StreamCorruptedException ? 48 : (stateCaught_40 instanceof OptionalDataException ? 49 : (stateCaught_40 instanceof IllegalAccessException ? 50 : (stateCaught_40 instanceof IllegalArgumentException ? 51 : (stateCaught_40 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_40 instanceof SecurityException ? 53 : (stateCaught_40 instanceof IOException ? 54 : (stateCaught_40 instanceof NullPointerException ? 55 : (stateCaught_40 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 41: {
-                        try {
-                            param0.b((byte) 34, 2);
-                            param0.a((String) var10, (byte) -104);
-                            statePc = 58;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_41) {
-                            caughtException = stateCaught_41;
-                            statePc = (stateCaught_41 instanceof ClassNotFoundException ? 46 : (stateCaught_41 instanceof InvalidClassException ? 47 : (stateCaught_41 instanceof StreamCorruptedException ? 48 : (stateCaught_41 instanceof OptionalDataException ? 49 : (stateCaught_41 instanceof IllegalAccessException ? 50 : (stateCaught_41 instanceof IllegalArgumentException ? 51 : (stateCaught_41 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_41 instanceof SecurityException ? 53 : (stateCaught_41 instanceof IOException ? 54 : (stateCaught_41 instanceof NullPointerException ? 55 : (stateCaught_41 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 42: {
-                        try {
-                            param0.b((byte) 49, 4);
-                            statePc = 58;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_42) {
-                            caughtException = stateCaught_42;
-                            statePc = (stateCaught_42 instanceof ClassNotFoundException ? 46 : (stateCaught_42 instanceof InvalidClassException ? 47 : (stateCaught_42 instanceof StreamCorruptedException ? 48 : (stateCaught_42 instanceof OptionalDataException ? 49 : (stateCaught_42 instanceof IllegalAccessException ? 50 : (stateCaught_42 instanceof IllegalArgumentException ? 51 : (stateCaught_42 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_42 instanceof SecurityException ? 53 : (stateCaught_42 instanceof IOException ? 54 : (stateCaught_42 instanceof NullPointerException ? 55 : (stateCaught_42 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 43: {
-                        try {
-                            param0.b((byte) 56, 1);
-                            param0.a(false, ((Number) var10).longValue());
-                            statePc = 58;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_43) {
-                            caughtException = stateCaught_43;
-                            statePc = (stateCaught_43 instanceof ClassNotFoundException ? 46 : (stateCaught_43 instanceof InvalidClassException ? 47 : (stateCaught_43 instanceof StreamCorruptedException ? 48 : (stateCaught_43 instanceof OptionalDataException ? 49 : (stateCaught_43 instanceof IllegalAccessException ? 50 : (stateCaught_43 instanceof IllegalArgumentException ? 51 : (stateCaught_43 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_43 instanceof SecurityException ? 53 : (stateCaught_43 instanceof IOException ? 54 : (stateCaught_43 instanceof NullPointerException ? 55 : (stateCaught_43 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 44: {
-                        try {
-                            param0.b((byte) 39, 0);
-                            statePc = 58;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_44) {
-                            caughtException = stateCaught_44;
-                            statePc = (stateCaught_44 instanceof ClassNotFoundException ? 46 : (stateCaught_44 instanceof InvalidClassException ? 47 : (stateCaught_44 instanceof StreamCorruptedException ? 48 : (stateCaught_44 instanceof OptionalDataException ? 49 : (stateCaught_44 instanceof IllegalAccessException ? 50 : (stateCaught_44 instanceof IllegalArgumentException ? 51 : (stateCaught_44 instanceof java.lang.reflect.InvocationTargetException ? 52 : (stateCaught_44 instanceof SecurityException ? 53 : (stateCaught_44 instanceof IOException ? 54 : (stateCaught_44 instanceof NullPointerException ? 55 : (stateCaught_44 instanceof Exception ? 56 : 57)))))))))));
-                            continue stateLoop;
-                        }
-                    }
-                    case 46: {
-                        var6 = (ClassNotFoundException) (Object) caughtException;
-                        param0.b((byte) 93, -10);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 47: {
-                        var6_ref = (InvalidClassException) (Object) caughtException;
-                        param0.b((byte) 41, -11);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 48: {
-                        var6_ref2 = (StreamCorruptedException) (Object) caughtException;
-                        param0.b((byte) 108, -12);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 49: {
-                        var6_ref3 = (OptionalDataException) (Object) caughtException;
-                        param0.b((byte) 42, -13);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 50: {
-                        var6_ref4 = (IllegalAccessException) (Object) caughtException;
-                        param0.b((byte) 53, -14);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 51: {
-                        var6_ref5 = (IllegalArgumentException) (Object) caughtException;
-                        param0.b((byte) 86, -15);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 52: {
-                        var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) caughtException;
-                        param0.b((byte) 106, -16);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 53: {
-                        var6_ref7 = (SecurityException) (Object) caughtException;
-                        param0.b((byte) 33, -17);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 54: {
-                        var6_ref8 = (IOException) (Object) caughtException;
-                        param0.b((byte) 18, -18);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 55: {
-                        var6_ref9 = (NullPointerException) (Object) caughtException;
-                        param0.b((byte) 48, -19);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 56: {
-                        var6_ref10 = (Exception) (Object) caughtException;
-                        param0.b((byte) 125, -20);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 57: {
-                        var6_ref11 = caughtException;
-                        param0.b((byte) 86, -21);
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                    case 58: {
-                        var5++;
-                        statePc = 22;
-                        continue stateLoop;
-                    }
-                    case 59: {
-                        int discarded$1 = param0.a(var4, false);
-                        var17.b(false);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  } else {
+                    return;
+                  }
+                } else {
+                  return;
                 }
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
+              decompiledCaughtException = decompiledCaughtParameter12;
+              L24: {
+                var2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_62_0 = (RuntimeException) var2;
+                stackOut_62_1 = new StringBuilder().append("sd.G(");
+                stackIn_64_0 = stackOut_62_0;
+                stackIn_64_1 = stackOut_62_1;
+                stackIn_63_0 = stackOut_62_0;
+                stackIn_63_1 = stackOut_62_1;
+                if (param0 == null) {
+                  stackOut_64_0 = (RuntimeException) (Object) stackIn_64_0;
+                  stackOut_64_1 = (StringBuilder) (Object) stackIn_64_1;
+                  stackOut_64_2 = "null";
+                  stackIn_65_0 = stackOut_64_0;
+                  stackIn_65_1 = stackOut_64_1;
+                  stackIn_65_2 = stackOut_64_2;
+                  break L24;
+                } else {
+                  stackOut_63_0 = (RuntimeException) (Object) stackIn_63_0;
+                  stackOut_63_1 = (StringBuilder) (Object) stackIn_63_1;
+                  stackOut_63_2 = "{...}";
+                  stackIn_65_0 = stackOut_63_0;
+                  stackIn_65_1 = stackOut_63_1;
+                  stackIn_65_2 = stackOut_63_2;
+                  break L24;
+                }
+              }
+              throw qo.a((Throwable) (Object) stackIn_65_0, stackIn_65_2 + 44 + param1 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -767,20 +574,129 @@ final class sd {
     }
 
     private final void a(jt param0, byte param1) {
-        if (!(param0 == null)) {
-            param0.b(false);
-            param0.c(-5106);
-            ((sd) this).field_d = ((sd) this).field_d + param0.field_z;
-        }
-        if (param1 != -124) {
-            field_a = null;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 != null) {
+                param0.b(false);
+                param0.c(-5106);
+                ((sd) this).field_d = ((sd) this).field_d + param0.field_z;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("sd.M(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -124 + 41);
         }
     }
 
     final void a(long param0, Object param1, byte param2) {
-        this.a(1, (byte) -95, param1, param0);
-        if (param2 != 19) {
-            this.a(-95L, false);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              this.a(1, (byte) -95, param1, param0);
+              if (param2 == 19) {
+                break L1;
+              } else {
+                this.a(-95L, false);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("sd.J(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 41);
         }
     }
 
@@ -816,6 +732,7 @@ final class sd {
 
     final static String a(byte[] param0, int param1, int param2, int param3) {
         char[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -823,67 +740,126 @@ final class sd {
         int var9 = 0;
         char[] var10 = null;
         char[] var11 = null;
+        char[] var12 = null;
+        char[] var13 = null;
+        Object stackIn_3_0 = null;
+        String stackIn_18_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_17_0 = null;
+        Object stackOut_2_0 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
-        var11 = new char[param2];
-        var10 = var11;
-        var4 = var10;
-        if (param3 == 26564) {
-          var5 = 0;
-          var6 = 0;
-          L0: while (true) {
-            if (var6 >= param2) {
-              return new String(var11, 0, var5);
-            } else {
-              var7 = 255 & param0[param1 - -var6];
-              if (0 != var7) {
-                L1: {
-                  if (-129 < (var7 ^ -1)) {
-                    break L1;
-                  } else {
-                    if (var7 < 160) {
-                      L2: {
-                        var8 = uk.field_lb[var7 + -128];
-                        if (var8 == 0) {
-                          var8 = 63;
-                          break L2;
+        try {
+          L0: {
+            var13 = new char[param2];
+            var12 = var13;
+            var11 = var12;
+            var10 = var11;
+            var4 = var10;
+            if (param3 == 26564) {
+              var5 = 0;
+              var6 = 0;
+              L1: while (true) {
+                if (var6 >= param2) {
+                  stackOut_17_0 = new String(var13, 0, var5);
+                  stackIn_18_0 = stackOut_17_0;
+                  break L0;
+                } else {
+                  L2: {
+                    var7 = 255 & param0[param1 - -var6];
+                    if (0 != var7) {
+                      L3: {
+                        if (var7 < 128) {
+                          break L3;
                         } else {
-                          break L2;
+                          if (var7 < 160) {
+                            L4: {
+                              var8 = uk.field_lb[var7 + -128];
+                              if (var8 == 0) {
+                                var8 = 63;
+                                break L4;
+                              } else {
+                                break L4;
+                              }
+                            }
+                            var7 = var8;
+                            break L3;
+                          } else {
+                            break L3;
+                          }
                         }
                       }
-                      var7 = var8;
-                      break L1;
+                      int incrementValue$2 = var5;
+                      var5++;
+                      var4[incrementValue$2] = (char)var7;
+                      break L2;
                     } else {
-                      break L1;
+                      break L2;
                     }
                   }
+                  var6++;
+                  continue L1;
                 }
-                var5++;
-                var4[var5] = (char)var7;
-                var6++;
-                continue L0;
-              } else {
-                var6++;
-                continue L0;
               }
+            } else {
+              stackOut_2_0 = null;
+              stackIn_3_0 = stackOut_2_0;
+              return (String) (Object) stackIn_3_0;
             }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var4_ref = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var4_ref;
+            stackOut_19_1 = new StringBuilder().append("sd.H(");
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param0 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L5;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L5;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_18_0;
     }
 
     private final void a(long param0, boolean param1) {
         jt var4 = (jt) (Object) ((sd) this).field_c.a(575, param0);
-        if (param1) {
-            this.a(-43, (byte) -104, (Object) null, -101L);
-        }
         this.a(var4, (byte) -124);
     }
 
     public static void a(int param0) {
-        if (param0 != 1) {
-            field_a = null;
-        }
         field_a = null;
         field_b = null;
         field_e = null;
@@ -891,33 +867,50 @@ final class sd {
 
     private final void a(int param0, byte param1, Object param2, long param3) {
         jt var6 = null;
+        av var6_ref = null;
         int var8 = Sumoblitz.field_L ? 1 : 0;
-        if (!(((sd) this).field_g >= param0)) {
-            throw new IllegalStateException();
+        try {
+            if (!(((sd) this).field_g >= param0)) {
+                throw new IllegalStateException();
+            }
+            this.a(param3, false);
+            ((sd) this).field_d = ((sd) this).field_d - param0;
+            while (0 > ((sd) this).field_d) {
+                var6 = (jt) (Object) ((sd) this).field_h.b((byte) -61);
+                this.a(var6, (byte) -124);
+            }
+            var6_ref = new av(param2, param0);
+            ((sd) this).field_c.a(-20657, (ms) (Object) var6_ref, param3);
+            int var7 = 2 % ((12 - param1) / 33);
+            ((sd) this).field_h.a((pj) (Object) var6_ref, (byte) -122);
+            ((jt) (Object) var6_ref).field_l = 0L;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "sd.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
-        this.a(param3, false);
-        ((sd) this).field_d = ((sd) this).field_d - param0;
-        while (0 > ((sd) this).field_d) {
-            var6 = (jt) (Object) ((sd) this).field_h.b((byte) -61);
-            this.a(var6, (byte) -124);
-        }
-        av var6_ref = new av(param2, param0);
-        ((sd) this).field_c.a(-20657, (ms) (Object) var6_ref, param3);
-        int var7 = 2 % ((12 - param1) / 33);
-        ((sd) this).field_h.a((pj) (Object) var6_ref, (byte) -122);
-        ((jt) (Object) var6_ref).field_l = 0L;
     }
 
     private sd(int param0, int param1) {
+        int var3 = 0;
         ((sd) this).field_h = new hl();
         ((sd) this).field_d = param0;
         ((sd) this).field_g = param0;
-        int var3 = 1;
-        while (var3 + var3 < param0) {
-            // if_icmple L46
-            var3 = var3 + var3;
+        var3 = 1;
+        L0: while (true) {
+          L1: {
+            if (var3 + var3 >= param0) {
+              break L1;
+            } else {
+              if (param1 <= var3) {
+                break L1;
+              } else {
+                var3 = var3 + var3;
+                continue L0;
+              }
+            }
+          }
+          ((sd) this).field_c = new um(var3);
+          return;
         }
-        ((sd) this).field_c = new um(var3);
     }
 
     static {

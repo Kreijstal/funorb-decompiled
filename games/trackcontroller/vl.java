@@ -155,7 +155,8 @@ final class vl extends ok {
     }
 
     final static void a(int param0, String param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -164,63 +165,113 @@ final class vl extends ok {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        L0: {
-          if (param0 == -21173) {
-            break L0;
-          } else {
-            field_E = null;
-            break L0;
-          }
-        }
-        L1: {
-          var2 = g.g(1);
-          if ((var2 ^ -1) <= -1) {
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -21173) {
+                break L1;
+              } else {
+                field_E = null;
+                break L1;
+              }
+            }
             L2: {
-              var3 = 3158064;
-              var4 = 16777120;
-              var5 = re.field_c.a(param1);
-              var6 = re.field_c.field_H + re.field_c.field_u;
-              var7 = 1;
-              var8 = var6;
-              if (200 >= var5) {
+              var2_int = g.g(1);
+              if (var2_int >= 0) {
+                L3: {
+                  var3 = 3158064;
+                  var4 = 16777120;
+                  var5 = re.field_c.a(param1);
+                  var6 = re.field_c.field_H + re.field_c.field_u;
+                  var7 = 1;
+                  var8 = var6;
+                  if (200 >= var5) {
+                    break L3;
+                  } else {
+                    var7 = (199 + var5) / 200;
+                    var5 = jh.a(re.field_c, param1, var5 / var7, false);
+                    var6 = var6 * var7;
+                    break L3;
+                  }
+                }
+                L4: {
+                  var9 = ha.field_z;
+                  if (var5 + var9 - -6 <= ll.field_d) {
+                    break L4;
+                  } else {
+                    var9 = -6 + -var5 + ll.field_d;
+                    break L4;
+                  }
+                }
+                L5: {
+                  var10 = 32 + (-re.field_c.field_H + kj.field_o);
+                  if (ll.field_k < var6 + var10 + 6) {
+                    var10 = kj.field_o - (var6 - -6);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                ll.f(var9, var10, 6 + var5, var6 - -6, var3);
+                ll.c(1 + var9, 1 + var10, var5 + 4, var6 + 4, var4);
+                if (1 < var7) {
+                  int discarded$1 = re.field_c.a(param1, var9 - -3, re.field_c.field_H + (var10 - (-3 + re.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
+                  break L2;
+                } else {
+                  re.field_c.c(param1, var9 - -3, var10 + (3 + re.field_c.field_H), var3, -1);
+                  break L2;
+                }
+              } else {
                 break L2;
-              } else {
-                var7 = (199 + var5) / 200;
-                var5 = jh.a(re.field_c, param1, var5 / var7, false);
-                var6 = var6 * var7;
-                break L2;
               }
             }
-            L3: {
-              var9 = ha.field_z;
-              if (var5 + var9 - -6 <= ll.field_d) {
-                break L3;
-              } else {
-                var9 = -6 + -var5 + ll.field_d;
-                break L3;
-              }
-            }
-            L4: {
-              var10 = 32 + (-re.field_c.field_H + kj.field_o);
-              if (ll.field_k < var6 + var10 + 6) {
-                var10 = kj.field_o - (var6 - -6);
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            ll.f(var9, var10, 6 + var5, var6 - -6, var3);
-            ll.c(1 + var9, 1 + var10, var5 + 4, var6 + 4, var4);
-            if (1 < var7) {
-              int discarded$1 = re.field_c.a(param1, var9 - -3, re.field_c.field_H + (var10 - (-3 + re.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
-              break L1;
-            } else {
-              re.field_c.c(param1, var9 - -3, var10 + (3 + re.field_c.field_H), var3, -1);
-              break L1;
-            }
-          } else {
-            break L1;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var2 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var2;
+            stackOut_15_1 = new StringBuilder().append("vl.S(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L6;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L6;
+            }
+          }
+          throw sl.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
         }
     }
 
@@ -265,21 +316,26 @@ final class vl extends ok {
     }
 
     final void d(byte param0, al param1) {
-        if (!(param1 instanceof hl)) {
-            throw new IllegalArgumentException();
+        hl var3 = null;
+        try {
+            if (!(param1 instanceof hl)) {
+                throw new IllegalArgumentException();
+            }
+            if (param0 > -55) {
+                field_K = null;
+            }
+            var3 = (hl) (Object) param1;
+            ((vl) this).field_L.a((fc) (Object) var3, (byte) 112);
+            var3.field_E = true;
+            boolean discarded$0 = var3.a((byte) -106, (al) this);
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "vl.O(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        if (param0 > -55) {
-            field_K = null;
-        }
-        hl var3 = (hl) (Object) param1;
-        ((vl) this).field_L.a((fc) (Object) var3, (byte) 112);
-        var3.field_E = true;
-        boolean discarded$0 = var3.a((byte) -106, (al) this);
     }
 
     public static void e(byte param0) {
         field_E = null;
-        int var1 = -79 / ((-66 - param0) / 52);
+        int var1 = 79;
         field_J = null;
         field_K = null;
     }

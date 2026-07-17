@@ -13,73 +13,62 @@ final class eu extends o {
     }
 
     final void a(int param0, int param1, double param2, md param3) {
-        ((eu) this).field_i = param3;
-        ((eu) this).field_d.a(((eu) this).field_i.field_d, true);
-        ((eu) this).field_b = 20.0;
-        ((eu) this).field_h = 64;
-        ((eu) this).field_f = param1;
-        ((eu) this).field_e = ((eu) this).field_i.field_e;
-        ((eu) this).a((byte) 111, (double)param0);
-        ((eu) this).a(param2, (byte) 25);
-        ((eu) this).b(24.0, 128);
+        try {
+            ((eu) this).field_i = param3;
+            ((eu) this).field_d.a(((eu) this).field_i.field_d, true);
+            ((eu) this).field_b = 20.0;
+            ((eu) this).field_h = 64;
+            ((eu) this).field_f = param1;
+            ((eu) this).field_e = ((eu) this).field_i.field_e;
+            ((eu) this).a((byte) 111, (double)param0);
+            ((eu) this).a(param2, (byte) 25);
+            ((eu) this).b(24.0, 128);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "eu.M(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void b(int param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (param0 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        field_g = -18;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (null == vs.field_g) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        try {
-                            vs.field_g.a(true, 0L);
-                            vs.field_g.a(24, nm.field_c.field_f, nm.field_c.field_g, -105);
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        nm.field_c.field_g = nm.field_c.field_g + 24;
-                        return;
-                    }
-                    case 5: {
-                        var1 = (Exception) (Object) caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        nm.field_c.field_g = nm.field_c.field_g + 24;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
-                }
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (param0 == 0) {
+                break L0;
+              } else {
+                field_g = -18;
+                break L0;
+              }
             }
+            L1: {
+              if (null == vs.field_g) {
+                break L1;
+              } else {
+                try {
+                  L2: {
+                    vs.field_g.a(true, 0L);
+                    vs.field_g.a(24, nm.field_c.field_f, nm.field_c.field_g, -105);
+                    decompiledRegionSelector0 = 0;
+                    break L2;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L3: {
+                    var1 = (Exception) (Object) decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
+                    break L3;
+                  }
+                }
+                if (decompiledRegionSelector0 == 0) {
+                  nm.field_c.field_g = nm.field_c.field_g + 24;
+                  return;
+                } else {
+                  break L1;
+                }
+              }
+            }
+            nm.field_c.field_g = nm.field_c.field_g + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -108,33 +97,101 @@ final class eu extends o {
     }
 
     final static byte[] a(byte[] param0, int param1, byte param2, int param3) {
-        byte[] var6 = new byte[param1];
-        byte[] var4 = var6;
-        int var5 = -115 / ((param2 - -94) / 32);
-        au.a(param0, param3, var6, 0, param1);
-        return var6;
+        byte[] var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        byte[] var6 = null;
+        byte[] stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var6 = new byte[param1];
+            var4 = var6;
+            var5 = -115 / ((param2 - -94) / 32);
+            au.a(param0, param3, var6, 0, param1);
+            stackOut_0_0 = (byte[]) var6;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4_ref = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var4_ref;
+            stackOut_2_1 = new StringBuilder().append("eu.I(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
+        return stackIn_1_0;
     }
 
     final static void a(int param0, boolean param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = AceOfSkies.field_G ? 1 : 0;
-        qm.a(ft.field_o, (byte) -31, op.field_a, param1, param0, os.field_w, 0);
-        var2 = 0;
-        L0: while (true) {
-          if (os.field_w <= var2) {
-            qm.a(fj.field_d, (byte) -52, nh.field_a, false, param0 + param0, os.field_w + param0, param0);
-            if (param0 < os.field_w) {
-              os.field_w = param0;
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            qm.a(ft.field_o, (byte) -31, op.field_a, true, param0, os.field_w, 0);
+            var2_int = 0;
+            L1: while (true) {
+              if (os.field_w <= var2_int) {
+                qm.a(fj.field_d, (byte) -52, nh.field_a, false, param0 + param0, os.field_w + param0, param0);
+                if (param0 >= os.field_w) {
+                  break L0;
+                } else {
+                  os.field_w = param0;
+                  return;
+                }
+              } else {
+                uf.field_d[param0 + var2_int] = var2_int;
+                var2_int++;
+                continue L1;
+              }
             }
-          } else {
-            uf.field_d[param0 + var2] = var2;
-            var2++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw pn.a((Throwable) (Object) var2, "eu.J(" + param0 + 44 + 1 + 41);
         }
     }
 

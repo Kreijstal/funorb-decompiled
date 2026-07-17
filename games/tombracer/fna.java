@@ -23,24 +23,29 @@ final class fna {
     }
 
     final static void a(int param0, int param1, ik param2) {
-        if (param1 != -23814) {
-            field_j = null;
+        kh var3 = null;
+        try {
+            if (param1 != -23814) {
+                field_j = null;
+            }
+            var3 = ql.field_k;
+            var3.k(param0, -2988);
+            var3.i(2, 0);
+            var3.i(0, 0);
+            var3.i(param2.field_g, 0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fna.K(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        kh var3 = ql.field_k;
-        var3.k(param0, -2988);
-        var3.i(2, 0);
-        var3.i(0, 0);
-        var3.i(param2.field_g, 0);
     }
 
     final int d(int param0) {
         nh var2 = null;
         int var3 = 0;
         L0: {
-          if (-6 == (((fna) this).field_g ^ -1)) {
+          if (((fna) this).field_g == 5) {
             break L0;
           } else {
-            if (-7 != (((fna) this).field_g ^ -1)) {
+            if (((fna) this).field_g != 6) {
               L1: {
                 if (param0 == 11919) {
                   break L1;
@@ -56,7 +61,7 @@ final class fna {
                   if (1 == ((fna) this).field_g) {
                     break L3;
                   } else {
-                    if ((((fna) this).field_g ^ -1) == -4) {
+                    if (((fna) this).field_g == 3) {
                       break L3;
                     } else {
                       break L2;
@@ -76,9 +81,6 @@ final class fna {
     }
 
     public static void a(int param0) {
-        if (param0 != 1) {
-            field_j = null;
-        }
         field_k = null;
         field_j = null;
     }
@@ -96,7 +98,7 @@ final class fna {
             }
         }
         if (!param1) {
-            if (-1 > (((fna) this).field_d ^ -1)) {
+            if (((fna) this).field_d > 0) {
                 ((fna) this).field_d = ((fna) this).field_d - 1;
             }
         }
@@ -119,9 +121,12 @@ final class fna {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        kea var20_ref = null;
+        kea var20_ref_kea = null;
+        kia var20_ref_kia = null;
         int var21_int = 0;
         kea var21 = null;
+        nh var21_ref = null;
+        String var21_ref2 = null;
         int var22_int = 0;
         String var22 = null;
         int var24 = 0;
@@ -178,7 +183,7 @@ final class fna {
               if (36 == ((fna) this).field_g) {
                 break L2;
               } else {
-                if (-38 == (((fna) this).field_g ^ -1)) {
+                if (((fna) this).field_g == 37) {
                   break L2;
                 } else {
                   if (38 != ((fna) this).field_g) {
@@ -201,7 +206,7 @@ final class fna {
               if (39 == ((fna) this).field_g) {
                 break L4;
               } else {
-                if (-41 != (((fna) this).field_g ^ -1)) {
+                if (((fna) this).field_g != 40) {
                   stackOut_15_0 = 0;
                   stackIn_16_0 = stackOut_15_0;
                   break L3;
@@ -243,7 +248,7 @@ final class fna {
           }
           L6: {
             L7: {
-              if (-6 == (((fna) this).field_g ^ -1)) {
+              if (((fna) this).field_g == 5) {
                 break L7;
               } else {
                 if (6 == ((fna) this).field_g) {
@@ -253,29 +258,29 @@ final class fna {
                     L8: {
                       var18 = 300;
                       var19 = 120;
-                      if (-37 != (((fna) this).field_g ^ -1)) {
+                      if (((fna) this).field_g != 36) {
                         break L8;
                       } else {
-                        ng.field_k[5].a(-63 + ((fna) this).field_b, var9 - (var19 >> -522518271) - 16, var18, var19, 0, -4144960, 1);
-                        oka.a(dna.field_I, var5, var6, -1, 25 + (-(var19 >> 398467809) + var9), -65 + (((fna) this).field_b + (var18 >> -1834489247)), var15);
+                        ng.field_k[5].a(-63 + ((fna) this).field_b, var9 - (var19 >> 1) - 16, var18, var19, 0, -4144960, 1);
+                        oka.a(dna.field_I, var5, var6, -1, 25 + (-(var19 >> 1) + var9), -65 + (((fna) this).field_b + (var18 >> 1)), var15);
                         break L8;
                       }
                     }
                     L9: {
                       var29 = tga.field_a;
                       var21_int = ((fna) this).field_b - 8;
-                      var22_int = var9 - 8 + -16;
+                      var22_int = var9 - 24;
                       var28 = dr.field_a;
                       tra.a(1, var28, (byte) -109, var21_int, var29, 16, 1, 16, var22_int, 0);
-                      if ((((fna) this).field_g ^ -1) == -37) {
-                        var20_ref = baa.field_e;
+                      if (((fna) this).field_g == 36) {
+                        var20_ref_kea = baa.field_e;
                         break L9;
                       } else {
                         if (37 != ((fna) this).field_g) {
-                          var20_ref = kva.field_s;
+                          var20_ref_kea = kva.field_s;
                           break L9;
                         } else {
-                          var20_ref = tia.field_d;
+                          var20_ref_kea = tia.field_d;
                           break L9;
                         }
                       }
@@ -291,7 +296,7 @@ final class fna {
                     }
                     L11: {
                       var21 = dna.A(36);
-                      if (var20_ref != var21) {
+                      if (var20_ref_kea != var21) {
                         break L11;
                       } else {
                         var15 = 2236962;
@@ -302,7 +307,7 @@ final class fna {
                     }
                     L12: {
                       var22 = ((fna) this).field_e;
-                      if (ipa.a(var20_ref, true, vja.b(30000))) {
+                      if (ipa.a(var20_ref_kea, true, vja.b(30000))) {
                         break L12;
                       } else {
                         var15 = -1;
@@ -319,8 +324,8 @@ final class fna {
                         var18 = 300;
                         var19 = 120;
                         if (39 == ((fna) this).field_g) {
-                          ng.field_k[4].a(-89 + ((fna) this).field_b, -16 + (-(var19 >> -1331862303) + var9), var18, var19, 0, -4144960, 1);
-                          oka.a(bc.field_a, var5, var6, -1, var9 + (-(var19 >> -1281634943) + 25), -94 + (var18 >> 770940129) + ((fna) this).field_b, var15);
+                          ng.field_k[4].a(-89 + ((fna) this).field_b, -16 + (-(var19 >> 1) + var9), var18, var19, 0, -4144960, 1);
+                          oka.a(bc.field_a, var5, var6, -1, var9 + (-(var19 >> 1) + 25), -94 + (var18 >> 1) + ((fna) this).field_b, var15);
                           break L13;
                         } else {
                           break L13;
@@ -329,7 +334,7 @@ final class fna {
                       L14: {
                         var26 = tga.field_a;
                         var21_int = ((fna) this).field_b + -8;
-                        var22_int = var9 + -8 + -16;
+                        var22_int = var9 - 24;
                         var25 = dr.field_a;
                         tra.a(1, var25, (byte) -68, var21_int, var26, 16, 1, 16, var22_int, 0);
                         if (param3) {
@@ -341,7 +346,7 @@ final class fna {
                         }
                       }
                       L15: {
-                        if (-40 != (((fna) this).field_g ^ -1)) {
+                        if (((fna) this).field_g != 39) {
                           stackOut_44_0 = vk.field_d;
                           stackIn_45_0 = stackOut_44_0;
                           break L15;
@@ -353,7 +358,7 @@ final class fna {
                       }
                       L16: {
                         var27 = stackIn_45_0;
-                        var20_ref = (kea) (Object) var27;
+                        var20_ref_kia = var27;
                         if (vja.b(30000) == var27) {
                           var15 = 2236962;
                           var5 = 10827264;
@@ -364,17 +369,17 @@ final class fna {
                         }
                       }
                       L17: {
-                        var21 = (kea) (Object) ((fna) this).field_e;
+                        var21_ref2 = ((fna) this).field_e;
                         if (ipa.a(dna.A(param2 + 124), true, var27)) {
                           break L17;
                         } else {
                           var5 = 2431750;
-                          var21 = (kea) (Object) ("<str=010101>" + ((fna) this).field_e + "</str>");
+                          var21_ref2 = "<str=010101>" + ((fna) this).field_e + "</str>";
                           var15 = -1;
                           break L17;
                         }
                       }
-                      oka.a((String) (Object) var21, var5, var6, -1, 10 + var9, ((fna) this).field_b, var15);
+                      oka.a(var21_ref2, var5, var6, -1, 10 + var9, ((fna) this).field_b, var15);
                       break L6;
                     } else {
                       L18: {
@@ -407,7 +412,7 @@ final class fna {
               var18 = 300;
               var19 = 100;
               if (((fna) this).field_g == 5) {
-                ng.field_k[5].a(((fna) this).field_b + (-(var18 >> -1462975583) + 10), var9 + -(var19 >> 644658177) - -13, var18, var19, 0, -4144960, 1);
+                ng.field_k[5].a(((fna) this).field_b + (-(var18 >> 1) + 10), var9 + -(var19 >> 1) - -13, var18, var19, 0, -4144960, 1);
                 break L19;
               } else {
                 break L19;
@@ -415,7 +420,7 @@ final class fna {
             }
             L20: {
               oka.a(((fna) this).field_e, var5, var6, param2 + -2, var9, -64 + ((fna) this).field_b, var15);
-              if (-6 != (((fna) this).field_g ^ -1)) {
+              if (((fna) this).field_g != 5) {
                 stackOut_71_0 = jg.a((byte) -103);
                 stackIn_72_0 = stackOut_71_0;
                 break L20;
@@ -436,7 +441,7 @@ final class fna {
               }
             }
             L22: {
-              tga.field_a.KA(((fna) this).field_b - 35, -17 + var9, (var20 >> -1269344863) + -35 + ((fna) this).field_b, var9);
+              tga.field_a.KA(((fna) this).field_b - 35, -17 + var9, (var20 >> 1) + -35 + ((fna) this).field_b, var9);
               if (param3) {
                 ep.field_n.a(-34 + ((fna) this).field_b, -16 + var9);
                 break L22;
@@ -458,12 +463,12 @@ final class fna {
               }
             }
             var30 = stackIn_81_0;
-            var21 = (kea) (Object) var30;
+            var21_ref = var30;
             if (!param3) {
-              var30.a((var20 >> 1025141217) + (-35 + ((fna) this).field_b) - 12, -6 + -(var30.c() >> 1701110401) + var9, 0, -4144960, 1);
+              var30.a((var20 >> 1) + (-35 + ((fna) this).field_b) - 12, -6 + -(var30.c() >> 1) + var9, 0, -4144960, 1);
               break L6;
             } else {
-              var30.a(-12 + ((var20 >> 1961730465) + -35) + ((fna) this).field_b, var9 + -(var30.c() >> 1805656001) - 6);
+              var30.a(-12 + ((var20 >> 1) + -35) + ((fna) this).field_b, var9 + -(var30.c() >> 1) - 6);
               break L6;
             }
           }
@@ -490,36 +495,99 @@ final class fna {
     }
 
     final static hra a(int param0, String param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         String var3 = null;
         String var4 = null;
         hra var5 = null;
         int var6 = 0;
-        L0: {
-          if (param1 == null) {
-            break L0;
-          } else {
-            if (0 != param1.length()) {
-              var2 = param1.indexOf('@');
-              if (var2 == -1) {
-                return is.field_wb;
+        hra stackIn_4_0 = null;
+        hra stackIn_8_0 = null;
+        hra stackIn_12_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        hra stackOut_7_0 = null;
+        hra stackOut_11_0 = null;
+        hra stackOut_3_0 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == null) {
+                break L1;
               } else {
-                var3 = param1.substring(0, var2);
-                var4 = param1.substring(var2 + 1);
-                var6 = 77 % ((param0 - -25) / 63);
-                var5 = bd.a(-1, var3);
-                if (var5 != null) {
-                  return var5;
+                if (0 != param1.length()) {
+                  var2_int = param1.indexOf('@');
+                  if (var2_int == -1) {
+                    stackOut_7_0 = is.field_wb;
+                    stackIn_8_0 = stackOut_7_0;
+                    return stackIn_8_0;
+                  } else {
+                    var3 = param1.substring(0, var2_int);
+                    var4 = param1.substring(var2_int + 1);
+                    var6 = 77 % ((param0 - -25) / 63);
+                    var5 = bd.a(-1, var3);
+                    if (var5 != null) {
+                      stackOut_11_0 = (hra) var5;
+                      stackIn_12_0 = stackOut_11_0;
+                      break L0;
+                    } else {
+                      return wn.a(76, var4);
+                    }
+                  }
                 } else {
-                  return wn.a(76, var4);
+                  break L1;
                 }
               }
+            }
+            stackOut_3_0 = mma.field_d;
+            stackIn_4_0 = stackOut_3_0;
+            return stackIn_4_0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var2;
+            stackOut_13_1 = new StringBuilder().append("fna.I(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L2;
             } else {
-              break L0;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L2;
             }
           }
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
-        return mma.field_d;
+        return stackIn_12_0;
     }
 
     final static void a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5, int param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, int param13) {
@@ -546,7 +614,7 @@ final class fna {
           return false;
         } else {
           L0: {
-            if ((((fna) this).field_g ^ -1) == -2) {
+            if (((fna) this).field_g == 1) {
               break L0;
             } else {
               if (3 != ((fna) this).field_g) {
@@ -584,7 +652,7 @@ final class fna {
         if (!(((fna) this).field_g != 1)) {
             return fra.field_q;
         }
-        if (!(-4 != (((fna) this).field_g ^ -1))) {
+        if (!(((fna) this).field_g != 3)) {
             return ij.field_X;
         }
         if (param0 != -28425) {
@@ -595,10 +663,14 @@ final class fna {
 
     fna(int param0, String param1, int param2, boolean param3) {
         ((fna) this).field_c = new dea();
-        ((fna) this).field_g = param0;
-        ((fna) this).field_l = param3 ? true : false;
-        ((fna) this).field_f = param2;
-        ((fna) this).field_e = param1.toUpperCase();
+        try {
+            ((fna) this).field_g = param0;
+            ((fna) this).field_l = param3 ? true : false;
+            ((fna) this).field_f = param2;
+            ((fna) this).field_e = param1.toUpperCase();
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fna.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     static {

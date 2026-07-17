@@ -97,9 +97,6 @@ final class uc {
 
     public static void b(int param0) {
         field_e = null;
-        if (param0 != -2355) {
-            field_f = null;
-        }
         field_f = null;
         field_a = null;
         field_c = null;
@@ -203,70 +200,124 @@ final class uc {
     }
 
     final static void a(java.applet.Applet param0, int param1) {
-        if (param1 != 0) {
-            field_a = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
+        CharSequence var3 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2 = param0.getParameter("username");
+              if (var2 == null) {
+                break L1;
+              } else {
+                var3 = (CharSequence) (Object) var2;
+                if (sd.a(37, var3) != 0L) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
+            }
+            decompiledRegionSelector0 = 0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2_ref;
+            stackOut_4_1 = new StringBuilder().append("uc.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 41);
         }
-        String var2 = param0.getParameter("username");
-        if (var2 != null) {
-            CharSequence var3 = (CharSequence) (Object) var2;
-            // ifne L51
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
-        return;
     }
 
     final static boolean a(char param0, boolean param1) {
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         L0: {
-          if (!param1) {
-            break L0;
-          } else {
-            uc.a(64, -115, 108, 7, 0, -16, -44, (int[]) null);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            L3: {
+          L1: {
+            L2: {
               if (65 > param0) {
-                break L3;
+                break L2;
               } else {
                 if (param0 <= 90) {
-                  break L2;
+                  break L1;
                 } else {
-                  break L3;
+                  break L2;
                 }
               }
             }
-            L4: {
+            L3: {
               if (97 > param0) {
-                break L4;
+                break L3;
               } else {
                 if (param0 > 122) {
-                  break L4;
+                  break L3;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
             }
-            stackOut_9_0 = 0;
-            stackIn_10_0 = stackOut_9_0;
-            break L1;
+            stackOut_7_0 = 0;
+            stackIn_8_0 = stackOut_7_0;
+            break L0;
           }
-          stackOut_8_0 = 1;
-          stackIn_10_0 = stackOut_8_0;
-          break L1;
+          stackOut_6_0 = 1;
+          stackIn_8_0 = stackOut_6_0;
+          break L0;
         }
-        return stackIn_10_0 != 0;
+        return stackIn_8_0 != 0;
     }
 
     final static void a(int param0) {
-        if (param0 <= 5) {
-            boolean discarded$0 = uc.a('', false);
-        }
         rh.field_B = false;
-        int discarded$1 = MonkeyPuzzle2.field_D.a((byte) 114);
+        int discarded$0 = MonkeyPuzzle2.field_D.a((byte) 114);
     }
 
     static {
@@ -285,12 +336,13 @@ final class uc {
         field_d = "Unfortunately your configuration doesn't support fullscreen mode.";
         var2 = 0;
         L0: while (true) {
-          if (-257 >= (var2 ^ -1)) {
+          if (var2 >= 256) {
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;
             L1: while (true) {
-              if ((var3 ^ -1) <= -9) {
+              if (var3 >= 8) {
                 field_c[var2] = var0;
                 var2++;
                 continue L0;
@@ -300,7 +352,7 @@ final class uc {
                   var3++;
                   continue L1;
                 } else {
-                  var0 = -3932672073523589310L ^ var0 >>> 2028372225;
+                  var0 = -3932672073523589310L ^ var0 >>> 1;
                   var3++;
                   continue L1;
                 }

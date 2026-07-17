@@ -361,7 +361,7 @@ final class nh extends hl {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if ((param2.field_s ^ -1) >= (var8 ^ -1)) {
+                    if (~param2.field_s >= ~var8) {
                       break L4;
                     } else {
                       var9 = param2.field_K[var8];
@@ -396,12 +396,12 @@ final class nh extends hl {
                             }
                           }
                           var12 = nc.field_b[var9];
-                          if ((var12 ^ -1) == 2147483647) {
+                          if (var12 == -2147483648) {
                             break L5;
                           } else {
                             L7: {
                               var13 = nc.field_b[var10];
-                              if ((var13 ^ -1) != 2147483647) {
+                              if (var13 != -2147483648) {
                                 break L7;
                               } else {
                                 if (var19 == 0) {
@@ -420,7 +420,7 @@ final class nh extends hl {
                                 stackOut_27_0 = -1 + ug.field_bb.length;
                                 stackIn_30_0 = stackOut_27_0;
                                 stackIn_28_0 = stackOut_27_0;
-                                if ((var7 ^ -1) > -1) {
+                                if (var7 < 0) {
                                   stackOut_30_0 = stackIn_30_0;
                                   stackOut_30_1 = var15 << -var7;
                                   stackIn_31_0 = stackOut_30_0;
@@ -439,7 +439,7 @@ final class nh extends hl {
                               L9: while (true) {
                                 L10: {
                                   L11: {
-                                    if (0 == var17 >> -1353349692) {
+                                    if (0 == var17 >> 4) {
                                       break L11;
                                     } else {
                                       var16--;
@@ -470,7 +470,7 @@ final class nh extends hl {
                                       }
                                     }
                                   }
-                                  stackOut_40_0 = var17 + (var16 << 1935390468);
+                                  stackOut_40_0 = var17 + (var16 << 4);
                                   stackIn_41_0 = stackOut_40_0;
                                   break L10;
                                 }
@@ -478,7 +478,7 @@ final class nh extends hl {
                                   var18 = stackIn_41_0;
                                   lg.field_ab[var18] = var8;
                                   ug.field_bb[var16] = 1 + var17;
-                                  if ((param2.field_Q ^ -1) >= -1) {
+                                  if (param2.field_Q <= 0) {
                                     break L13;
                                   } else {
                                     if (param2.field_u == null) {
@@ -510,7 +510,7 @@ final class nh extends hl {
                 }
                 L14: {
                   L15: {
-                    if (stackIn_50_0 <= (param2.field_Q ^ -1)) {
+                    if (stackIn_50_0 <= ~param2.field_Q) {
                       break L15;
                     } else {
                       if (null == param2.field_u) {
@@ -616,7 +616,7 @@ final class nh extends hl {
               }
             }
             L4: {
-              if ((var6 ^ -1) >= (((nh) this).field_Hb ^ -1)) {
+              if (~var6 >= ~((nh) this).field_Hb) {
                 break L4;
               } else {
                 var5 = var5 + (((nh) this).field_Hb - var6);
@@ -633,7 +633,7 @@ final class nh extends hl {
               }
             }
             L6: {
-              if ((((nh) this).field_xb ^ -1) == -3) {
+              if (((nh) this).field_xb == 2) {
                 param1 = param1 + (((nh) this).field_Hb - var6);
                 break L6;
               } else {

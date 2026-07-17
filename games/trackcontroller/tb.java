@@ -32,7 +32,7 @@ final class tb extends com.ms.dll.Callback {
         } else {
           if (32 == param1) {
             var5 = 65535 & param3;
-            if (-2 != (var5 ^ -1)) {
+            if (var5 != 1) {
               if (param1 == 101024) {
                 L0: {
                   if (!((tb) this).field_e) {

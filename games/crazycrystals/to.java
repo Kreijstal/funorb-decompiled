@@ -10,18 +10,19 @@ final class to {
     static String field_f;
 
     final static void a(int param0, java.awt.Canvas param1) {
-        if (!(11 != hp.field_s)) {
-            fg.c((byte) 95);
+        try {
+            if (!(11 != hp.field_s)) {
+                fg.c((byte) 95);
+            }
+            tg.a(pj.field_p, ta.field_i, (byte) -41, nf.field_f);
+            bq.a(param1, param0, 0, 4);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "to.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        tg.a(pj.field_p, ta.field_i, (byte) -41, nf.field_f);
-        bq.a(param1, param0, 0, 4);
     }
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 >= -51) {
-            return;
-        }
         field_f = null;
         field_e = null;
     }

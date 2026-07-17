@@ -10,11 +10,6 @@ final class bca implements dja {
     }
 
     public static void a(int param0) {
-        if (param0 > -73) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

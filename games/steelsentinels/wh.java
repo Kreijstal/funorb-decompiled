@@ -17,7 +17,9 @@ final class wh implements Iterator {
 
     final static void a(boolean param0) {
         int var1 = 0;
-        if (null != g.field_c) {
+        if (null == g.field_c) {
+          return;
+        } else {
           L0: {
             if (!g.field_c.g()) {
               break L0;
@@ -36,13 +38,6 @@ final class wh implements Iterator {
               break L0;
             }
           }
-          if (param0) {
-            field_i = null;
-            return;
-          } else {
-            return;
-          }
-        } else {
           return;
         }
     }
@@ -52,23 +47,28 @@ final class wh implements Iterator {
     }
 
     final static void a(int param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         jm var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.field_G;
-        var4 = (jm) (Object) ri.field_c.e(13058);
-        L0: while (true) {
-          if (var4 == null) {
-            if (param1 != -26077) {
-              field_h = null;
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            var4 = (jm) (Object) ri.field_c.e(13058);
+            L1: while (true) {
+              if (var4 == null) {
+                break L0;
+              } else {
+                rh.a(param0, 0, var4);
+                var4 = (jm) (Object) ri.field_c.a((byte) -45);
+                continue L1;
+              }
             }
-          } else {
-            rh.a(param0, 0, var4);
-            var4 = (jm) (Object) ri.field_c.a((byte) -45);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var2, "wh.A(" + param0 + 44 + -26077 + 41);
         }
     }
 
@@ -93,24 +93,12 @@ final class wh implements Iterator {
     }
 
     public static void a(byte param0) {
-        if (param0 != 46) {
-          field_d = -36;
-          field_a = null;
-          field_i = null;
-          field_h = null;
-          field_e = null;
-          field_j = null;
-          field_b = null;
-          return;
-        } else {
-          field_a = null;
-          field_i = null;
-          field_h = null;
-          field_e = null;
-          field_j = null;
-          field_b = null;
-          return;
-        }
+        field_a = null;
+        field_i = null;
+        field_h = null;
+        field_e = null;
+        field_j = null;
+        field_b = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
@@ -178,19 +166,81 @@ final class wh implements Iterator {
 
     wh(hb param0) {
         ((wh) this).field_f = null;
-        ((wh) this).field_c = param0;
-        ((wh) this).field_f = null;
-        ((wh) this).field_g = ((wh) this).field_c.field_a.field_o;
+        try {
+            ((wh) this).field_c = param0;
+            ((wh) this).field_f = null;
+            ((wh) this).field_g = ((wh) this).field_c.field_a.field_o;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static nk a(int param0, nk param1) {
-        int var2 = param1.field_G;
-        int var3 = param1.field_E;
-        param1.field_E = param1.field_E - 64;
-        nk var4 = new nk(na.field_a, 1, var2, var3, 0, param0, new qd[1]);
-        var4.field_N = param1.field_N;
-        param1.field_N = -1;
-        return var4;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        nk var4 = null;
+        nk stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nk stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var2_int = param1.field_G;
+            var3 = param1.field_E;
+            param1.field_E = param1.field_E - 64;
+            var4 = new nk(na.field_a, 1, var2_int, var3, 0, param0, new qd[1]);
+            var4.field_N = param1.field_N;
+            param1.field_N = -1;
+            stackOut_0_0 = (nk) var4;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("wh.C(").append(param0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param1 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+        }
+        return stackIn_1_0;
     }
 
     static {

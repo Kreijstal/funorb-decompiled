@@ -20,9 +20,13 @@ final class lu {
     }
 
     lu(int param0, ml param1, int param2) {
-        ((lu) this).field_g = param2;
-        ((lu) this).field_e = param0;
-        ((lu) this).field_b = param1;
+        try {
+            ((lu) this).field_g = param2;
+            ((lu) this).field_e = param0;
+            ((lu) this).field_b = param1;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "lu.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

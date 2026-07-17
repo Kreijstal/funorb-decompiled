@@ -33,10 +33,6 @@ final class ue {
         } else {
             vb.c();
         }
-        if (param2 != -102) {
-            return;
-        }
-        pi.a(param1, false);
     }
 
     final int a(int param0, int param1) {
@@ -80,6 +76,7 @@ final class ue {
           var4 = 0;
           L0: while (true) {
             if (param0 <= var4) {
+              return;
             } else {
               L1: {
                 var5 = ((ue) this).field_a[var4];
@@ -94,7 +91,7 @@ final class ue {
               }
               L2: {
                 var9 = (int)Math.ceil(var6 + 7.0);
-                if ((var9 ^ -1) >= -15) {
+                if (var9 <= 14) {
                   break L2;
                 } else {
                   var9 = 14;
@@ -133,11 +130,13 @@ final class ue {
             }
           }
         } else {
+          return;
         }
     }
 
     final byte[] a(int param0, byte[] param1) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int[] var5 = null;
         int var6 = 0;
@@ -151,70 +150,125 @@ final class ue {
         int[] var18 = null;
         int[] var19 = null;
         int[] var20 = null;
-        L0: {
-          var3 = -6 / ((param0 - -18) / 49);
-          if (((ue) this).field_a == null) {
-            break L0;
-          } else {
-            var4 = (int)((long)param1.length * (long)((ue) this).field_h / (long)((ue) this).field_i) + 14;
-            var20 = new int[var4];
-            var18 = var20;
-            var16 = var18;
-            var14 = var16;
-            var5 = var14;
-            var6 = 0;
-            var7 = 0;
-            var8 = 0;
-            L1: while (true) {
-              if (param1.length <= var8) {
-                param1 = new byte[var4];
-                var12 = 0;
-                var8 = var12;
+        byte[] stackIn_16_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_15_0 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        try {
+          L0: {
+            L1: {
+              var3_int = -6 / ((param0 - -18) / 49);
+              if (((ue) this).field_a == null) {
+                break L1;
+              } else {
+                var4 = (int)((long)param1.length * (long)((ue) this).field_h / (long)((ue) this).field_i) + 14;
+                var20 = new int[var4];
+                var18 = var20;
+                var16 = var18;
+                var14 = var16;
+                var5 = var14;
+                var6 = 0;
+                var7 = 0;
+                var8 = 0;
                 L2: while (true) {
-                  if (var12 >= var4) {
-                    break L0;
-                  } else {
-                    var9 = var20[var12] - -32768 >> 1873540176;
-                    if (-128 > var9) {
-                      param1[var12] = (byte)-128;
-                      var12++;
-                      continue L2;
-                    } else {
-                      if (-128 <= (var9 ^ -1)) {
-                        param1[var12] = (byte)var9;
+                  if (param1.length <= var8) {
+                    param1 = new byte[var4];
+                    var12 = 0;
+                    var8 = var12;
+                    L3: while (true) {
+                      if (var12 >= var4) {
+                        break L1;
+                      } else {
+                        L4: {
+                          var9 = var20[var12] - -32768 >> 16;
+                          if (-128 > var9) {
+                            param1[var12] = (byte) -128;
+                            break L4;
+                          } else {
+                            if (var9 <= 127) {
+                              param1[var12] = (byte)var9;
+                              break L4;
+                            } else {
+                              param1[var12] = (byte) 127;
+                              break L4;
+                            }
+                          }
+                        }
                         var12++;
+                        continue L3;
+                      }
+                    }
+                  } else {
+                    var9 = param1[var8];
+                    var19 = ((ue) this).field_a[var7];
+                    var11 = 0;
+                    L5: while (true) {
+                      if (var11 >= 14) {
+                        var7 = var7 + ((ue) this).field_h;
+                        var11 = var7 / ((ue) this).field_i;
+                        var6 = var6 + var11;
+                        var7 = var7 - ((ue) this).field_i * var11;
+                        var8++;
                         continue L2;
                       } else {
-                        param1[var12] = (byte)127;
-                        var12++;
-                        continue L2;
+                        var5[var6 + var11] = var5[var6 + var11] + var9 * var19[var11];
+                        var11++;
+                        continue L5;
                       }
                     }
                   }
                 }
-              } else {
-                var9 = param1[var8];
-                var19 = ((ue) this).field_a[var7];
-                var11 = 0;
-                L3: while (true) {
-                  if (-15 >= (var11 ^ -1)) {
-                    var7 = var7 + ((ue) this).field_h;
-                    var11 = var7 / ((ue) this).field_i;
-                    var6 = var6 + var11;
-                    var7 = var7 - ((ue) this).field_i * var11;
-                    var8++;
-                    continue L1;
-                  } else {
-                    var5[var6 + var11] = var5[var6 + var11] + var9 * var19[var11];
-                    var11++;
-                    continue L3;
-                  }
-                }
               }
             }
+            stackOut_15_0 = (byte[]) param1;
+            stackIn_16_0 = stackOut_15_0;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var3 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_1 = new StringBuilder().append("ue.E(").append(param0).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param1 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L6;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L6;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
         }
-        return param1;
+        return stackIn_16_0;
     }
 
     static {

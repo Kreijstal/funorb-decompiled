@@ -27,9 +27,6 @@ final class rba implements Iterator {
         field_b = null;
         field_e = null;
         field_a = null;
-        if (param0 >= -47) {
-            field_e = null;
-        }
     }
 
     public final void remove() {
@@ -53,9 +50,13 @@ final class rba implements Iterator {
 
     rba(hma param0) {
         ((rba) this).field_f = null;
-        ((rba) this).field_d = param0;
-        ((rba) this).field_c = ((rba) this).field_d.field_d.field_g;
-        ((rba) this).field_f = null;
+        try {
+            ((rba) this).field_d = param0;
+            ((rba) this).field_c = ((rba) this).field_d.field_d.field_g;
+            ((rba) this).field_f = null;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "rba.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

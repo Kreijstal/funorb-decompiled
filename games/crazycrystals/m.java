@@ -23,17 +23,21 @@ final class m extends ue {
 
     m(re param0, int param1, String param2, int param3, int param4, boolean param5) {
         super(5);
-        if (!(a.field_b instanceof m)) {
-            gh.field_B = 0;
+        try {
+            if (!(a.field_b instanceof m)) {
+                gh.field_B = 0;
+            }
+            ((m) this).field_t = param4;
+            ((m) this).field_q = param5 ? true : false;
+            ((m) this).field_i = param3;
+            ((m) this).field_j = param2;
+            ((m) this).field_g = param0;
+            ((m) this).field_b.field_c = -1;
+            ((m) this).field_h = param1;
+            ((m) this).d(136);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "m.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
-        ((m) this).field_t = param4;
-        ((m) this).field_q = param5 ? true : false;
-        ((m) this).field_i = param3;
-        ((m) this).field_j = param2;
-        ((m) this).field_g = param0;
-        ((m) this).field_b.field_c = -1;
-        ((m) this).field_h = param1;
-        ((m) this).d(136);
     }
 
     final void a(boolean param0) {
@@ -84,7 +88,7 @@ final class m extends ue {
                   }
                 }
                 ((m) this).field_g.c(2, 40, 180);
-                if ((((m) this).field_g.field_f ^ -1) <= -41) {
+                if (((m) this).field_g.field_f >= 40) {
                   if (!((m) this).field_o) {
                     rk.a(0);
                     ((m) this).field_b.a(-1, true, -1);
@@ -106,7 +110,7 @@ final class m extends ue {
               }
             }
             L5: {
-              if ((gh.field_B ^ -1) > -21) {
+              if (gh.field_B < 20) {
                 gh.field_B = gh.field_B + 1;
                 break L5;
               } else {
@@ -130,8 +134,8 @@ final class m extends ue {
                 L8: {
                   if (!rc.a(-93)) {
                     L9: {
-                      if (-97 == (pj.field_q ^ -1)) {
-                        al.field_c = (al.field_c + 3 - 1) % 3;
+                      if (pj.field_q == 96) {
+                        al.field_c = (al.field_c + 2) % 3;
                         ((m) this).field_b.field_c = al.field_c;
                         ((m) this).field_b.field_i = false;
                         break L9;
@@ -150,7 +154,7 @@ final class m extends ue {
                       }
                     }
                     L11: {
-                      if ((pj.field_q ^ -1) == -99) {
+                      if (pj.field_q == 98) {
                         L12: {
                           if (4 != ((m) this).field_b.field_c) {
                             ((m) this).field_b.field_c = 4;
@@ -166,7 +170,7 @@ final class m extends ue {
                         break L11;
                       }
                     }
-                    if (-100 == (pj.field_q ^ -1)) {
+                    if (pj.field_q == 99) {
                       L13: {
                         if (al.field_c == ((m) this).field_b.field_c) {
                           ((m) this).field_b.field_c = 4;
@@ -219,7 +223,7 @@ final class m extends ue {
                 ((m) this).field_b.a((byte) 57);
                 if (!((m) this).a(106)) {
                   L17: {
-                    if ((pj.field_q ^ -1) == -14) {
+                    if (pj.field_q == 13) {
                       break L17;
                     } else {
                       if (!((m) this).field_b.a(true)) {
@@ -289,10 +293,6 @@ final class m extends ue {
     }
 
     final static void c(int param0) {
-        if (param0 != 29537) {
-            Object var2 = null;
-            boolean discarded$0 = m.a((byte) 17, (String) null);
-        }
     }
 
     final boolean a(int param0) {
@@ -300,7 +300,7 @@ final class m extends ue {
           if (((m) this).field_b.field_c < 0) {
             break L0;
           } else {
-            if (-3 > (((m) this).field_b.field_c ^ -1)) {
+            if (((m) this).field_b.field_c > 2) {
               break L0;
             } else {
               if (!((m) this).field_b.a(true)) {
@@ -313,7 +313,7 @@ final class m extends ue {
           }
         }
         L1: {
-          if ((((m) this).field_b.field_c ^ -1) != -4) {
+          if (((m) this).field_b.field_c != 3) {
             break L1;
           } else {
             if (!((m) this).field_b.a(true)) {
@@ -368,10 +368,80 @@ final class m extends ue {
     }
 
     final static boolean a(byte param0, String param1) {
-        if (param0 > -72) {
-            return true;
+        RuntimeException var2 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            if (param0 <= -72) {
+              L1: {
+                if (null == rg.a(param1, (byte) 120)) {
+                  stackOut_5_0 = 0;
+                  stackIn_6_0 = stackOut_5_0;
+                  break L1;
+                } else {
+                  stackOut_4_0 = 1;
+                  stackIn_6_0 = stackOut_4_0;
+                  break L1;
+                }
+              }
+              break L0;
+            } else {
+              stackOut_1_0 = 1;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_1 = new StringBuilder().append("m.C(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
-        return null != rg.a(param1, (byte) 120) ? true : false;
+        return stackIn_6_0 != 0;
     }
 
     final void b(int param0) {
@@ -479,7 +549,7 @@ final class m extends ue {
         }
         var3 = stackIn_6_0;
         wi.a(30, jn.field_o, var3, -var3 + 407, (byte) -71, -30 + var2);
-        kh.d(38, param0 + var3, var2 - 46, -var3 + 407 + -16, 0, 192);
+        kh.d(38, param0 + var3, var2 - 46, -var3 + 391, 0, 192);
         if (((m) this).field_g.field_f == 0) {
           L2: {
             stackOut_8_0 = ((m) this).field_g;
@@ -500,7 +570,7 @@ final class m extends ue {
             }
           }
           ((re) (Object) stackIn_11_0).a(stackIn_11_1, false);
-          if ((gh.field_B ^ -1) != -21) {
+          if (gh.field_B != 20) {
             return;
           } else {
             L3: {
@@ -529,7 +599,7 @@ final class m extends ue {
                           var19 = ((m) this).field_k.field_l[al.field_c];
                           var8 = 0;
                           L7: while (true) {
-                            if (-11 >= (var8 ^ -1)) {
+                            if (var8 >= 10) {
                               break L6;
                             } else {
                               if (null != var6_ref_String__[var8]) {
@@ -584,7 +654,7 @@ final class m extends ue {
                           break L6;
                         }
                       }
-                      if (-1 >= (var5 ^ -1)) {
+                      if (var5 >= 0) {
                         break L5;
                       } else {
                         if (null == lo.field_b) {

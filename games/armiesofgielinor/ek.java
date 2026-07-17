@@ -10,27 +10,15 @@ final class ek {
     static je field_a;
 
     final static void a(byte param0) {
-        if (qc.field_a == null) {
-          tj.field_C = new na();
-          if (param0 > -22) {
-            ek.a(-112);
-            lt.field_g.a((kb) (Object) tj.field_C, (byte) -88);
-            return;
-          } else {
-            lt.field_g.a((kb) (Object) tj.field_C, (byte) -88);
-            return;
-          }
-        } else {
+        if (qc.field_a != null) {
           qc.field_a.b(true);
           tj.field_C = new na();
-          if (param0 <= -22) {
-            lt.field_g.a((kb) (Object) tj.field_C, (byte) -88);
-            return;
-          } else {
-            ek.a(-112);
-            lt.field_g.a((kb) (Object) tj.field_C, (byte) -88);
-            return;
-          }
+          lt.field_g.a((kb) (Object) tj.field_C, (byte) -88);
+          return;
+        } else {
+          tj.field_C = new na();
+          lt.field_g.a((kb) (Object) tj.field_C, (byte) -88);
+          return;
         }
     }
 
@@ -47,17 +35,17 @@ final class ek {
         var4 = g.a(-1, param1);
         var5 = ae.b(param2, 100);
         var6 = g.a(-1, param2);
-        var7 = (int)((long)var3 * (long)var5 >> 236611664);
+        var7 = (int)((long)var3 * (long)var5 >> 16);
         if (param0 > -114) {
           field_b = null;
-          var8 = (int)((long)var6 * (long)var3 >> -1612209264);
-          var9 = (int)((long)var4 * (long)var5 >> 852523472);
-          var10 = (int)((long)var6 * (long)var4 >> 1602676944);
+          var8 = (int)((long)var6 * (long)var3 >> 16);
+          var9 = (int)((long)var4 * (long)var5 >> 16);
+          var10 = (int)((long)var6 * (long)var4 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         } else {
-          var8 = (int)((long)var6 * (long)var3 >> -1612209264);
-          var9 = (int)((long)var4 * (long)var5 >> 852523472);
-          var10 = (int)((long)var6 * (long)var4 >> 1602676944);
+          var8 = (int)((long)var6 * (long)var3 >> 16);
+          var9 = (int)((long)var4 * (long)var5 >> 16);
+          var10 = (int)((long)var6 * (long)var4 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
     }

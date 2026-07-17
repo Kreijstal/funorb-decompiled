@@ -53,20 +53,20 @@ abstract class jb extends gn {
         hd stackIn_128_0 = null;
         hd stackIn_129_0 = null;
         int stackIn_129_1 = 0;
-        int stackIn_148_0 = 0;
-        hd stackIn_149_0 = null;
+        int stackIn_149_0 = 0;
         hd stackIn_150_0 = null;
         hd stackIn_151_0 = null;
         hd stackIn_152_0 = null;
-        int stackIn_152_1 = 0;
+        hd stackIn_153_0 = null;
+        int stackIn_153_1 = 0;
+        int stackOut_148_0 = 0;
         int stackOut_147_0 = 0;
-        int stackOut_146_0 = 0;
-        hd stackOut_148_0 = null;
         hd stackOut_149_0 = null;
         hd stackOut_150_0 = null;
-        int stackOut_150_1 = 0;
         hd stackOut_151_0 = null;
         int stackOut_151_1 = 0;
+        hd stackOut_152_0 = null;
+        int stackOut_152_1 = 0;
         int stackOut_124_0 = 0;
         int stackOut_123_0 = 0;
         hd stackOut_125_0 = null;
@@ -149,98 +149,102 @@ abstract class jb extends gn {
                       break L2;
                     }
                   }
-                  ((jb) this).field_q = (((jb) this).field_m << 1827437548) / kh.field_q.length;
-                  var3 = 0;
-                  L3: while (true) {
-                    L4: {
-                      L5: {
-                        if (((jb) this).field_i.length <= var3) {
-                          break L5;
-                        } else {
-                          if (var5 != 0) {
-                            break L4;
+                  L3: {
+                    ((jb) this).field_q = (((jb) this).field_m << 12) / kh.field_q.length;
+                    if (var5 == 0) {
+                      break L3;
+                    } else {
+                      var3 = 0;
+                      L4: while (true) {
+                        L5: {
+                          if (((jb) this).field_i.length <= var3) {
+                            break L5;
                           } else {
-                            L6: {
-                              if (var3 != ((jb) this).field_j.field_e) {
-                                stackOut_147_0 = 0;
-                                stackIn_148_0 = stackOut_147_0;
-                                break L6;
-                              } else {
-                                stackOut_146_0 = 1;
-                                stackIn_148_0 = stackOut_146_0;
-                                break L6;
-                              }
-                            }
-                            L7: {
-                              L8: {
-                                var4 = stackIn_148_0;
-                                ((jb) this).field_i[var3].b(0, param1);
-                                stackOut_148_0 = ((jb) this).field_i[var3];
-                                stackIn_151_0 = stackOut_148_0;
-                                stackIn_149_0 = stackOut_148_0;
-                                if (!((jb) this).field_i[var3].field_lb) {
-                                  break L8;
+                            if (var5 != 0) {
+                              break L3;
+                            } else {
+                              L6: {
+                                if (var3 != ((jb) this).field_j.field_e) {
+                                  stackOut_148_0 = 0;
+                                  stackIn_149_0 = stackOut_148_0;
+                                  break L6;
                                 } else {
-                                  stackOut_149_0 = (hd) (Object) stackIn_149_0;
-                                  stackIn_151_0 = stackOut_149_0;
+                                  stackOut_147_0 = 1;
+                                  stackIn_149_0 = stackOut_147_0;
+                                  break L6;
+                                }
+                              }
+                              L7: {
+                                L8: {
+                                  var4 = stackIn_149_0;
+                                  ((jb) this).field_i[var3].b(0, param1);
+                                  stackOut_149_0 = ((jb) this).field_i[var3];
+                                  stackIn_152_0 = stackOut_149_0;
                                   stackIn_150_0 = stackOut_149_0;
-                                  if (var4 == 0) {
+                                  if (!((jb) this).field_i[var3].field_lb) {
                                     break L8;
                                   } else {
                                     stackOut_150_0 = (hd) (Object) stackIn_150_0;
-                                    stackOut_150_1 = 1;
                                     stackIn_152_0 = stackOut_150_0;
-                                    stackIn_152_1 = stackOut_150_1;
-                                    break L7;
+                                    stackIn_151_0 = stackOut_150_0;
+                                    if (var4 == 0) {
+                                      break L8;
+                                    } else {
+                                      stackOut_151_0 = (hd) (Object) stackIn_151_0;
+                                      stackOut_151_1 = 1;
+                                      stackIn_153_0 = stackOut_151_0;
+                                      stackIn_153_1 = stackOut_151_1;
+                                      break L7;
+                                    }
                                   }
                                 }
+                                stackOut_152_0 = (hd) (Object) stackIn_152_0;
+                                stackOut_152_1 = 0;
+                                stackIn_153_0 = stackOut_152_0;
+                                stackIn_153_1 = stackOut_152_1;
+                                break L7;
                               }
-                              stackOut_151_0 = (hd) (Object) stackIn_151_0;
-                              stackOut_151_1 = 0;
-                              stackIn_152_0 = stackOut_151_0;
-                              stackIn_152_1 = stackOut_151_1;
-                              break L7;
-                            }
-                            L9: {
-                              stackIn_152_0.field_gb = stackIn_152_1 != 0;
-                              if (1 != ((jb) this).field_i[var3].field_sb) {
-                                break L9;
-                              } else {
-                                ((jb) this).a(118, var3);
-                                ((jb) this).e(param0 ^ -3410);
-                                break L9;
+                              L9: {
+                                stackIn_153_0.field_gb = stackIn_153_1 != 0;
+                                if (1 != ((jb) this).field_i[var3].field_sb) {
+                                  break L9;
+                                } else {
+                                  ((jb) this).a(118, var3);
+                                  ((jb) this).e(param0 ^ -3410);
+                                  break L9;
+                                }
                               }
-                            }
-                            L10: {
-                              if (null == ((jb) this).field_o) {
-                                break L10;
-                              } else {
-                                if (null == ((jb) this).field_o[var3]) {
+                              L10: {
+                                if (null == ((jb) this).field_o) {
                                   break L10;
                                 } else {
-                                  if (!((jb) this).field_i[var3].field_gb) {
+                                  if (null == ((jb) this).field_o[var3]) {
                                     break L10;
                                   } else {
-                                    qd.a((byte) -67, ((jb) this).field_o[var3]);
-                                    break L10;
+                                    if (!((jb) this).field_i[var3].field_gb) {
+                                      break L10;
+                                    } else {
+                                      qd.a((byte) -67, ((jb) this).field_o[var3]);
+                                      break L10;
+                                    }
                                   }
                                 }
                               }
-                            }
-                            var3++;
-                            if (var5 == 0) {
-                              continue L3;
-                            } else {
-                              break L5;
+                              var3++;
+                              if (var5 == 0) {
+                                continue L4;
+                              } else {
+                                break L5;
+                              }
                             }
                           }
                         }
+                        ((jb) this).field_q = 4096;
+                        break L3;
                       }
-                      ((jb) this).field_q = 4096;
-                      break L4;
                     }
-                    return;
                   }
+                  return;
                 }
               } else {
                 var3 = 0;
@@ -369,7 +373,7 @@ abstract class jb extends gn {
                       break L21;
                     }
                   }
-                  ((jb) this).field_q = (((jb) this).field_m << 1827437548) / kh.field_q.length;
+                  ((jb) this).field_q = (((jb) this).field_m << 12) / kh.field_q.length;
                   if (var5 != 0) {
                     var3 = 0;
                     L22: while (true) {
@@ -599,7 +603,7 @@ abstract class jb extends gn {
                   }
                 }
                 L41: {
-                  ((jb) this).field_q = (((jb) this).field_m << 1827437548) / kh.field_q.length;
+                  ((jb) this).field_q = (((jb) this).field_m << 12) / kh.field_q.length;
                   if (var5 == 0) {
                     break L41;
                   } else {
@@ -835,6 +839,13 @@ abstract class jb extends gn {
         hd var29 = null;
         hd var32 = null;
         hd var33 = null;
+        hd var34 = null;
+        hd var35 = null;
+        hd var36 = null;
+        hd var37 = null;
+        hd var38 = null;
+        hd var39 = null;
+        hd var40 = null;
         hd var49 = null;
         hd var50 = null;
         hd var51 = null;
@@ -846,8 +857,8 @@ abstract class jb extends gn {
         hd var57 = null;
         L0: {
           var11 = Kickabout.field_G;
-          var2 = ((jb) this).field_m << -1379118556;
-          if (-101 > (var2 ^ -1)) {
+          var2 = ((jb) this).field_m << 4;
+          if (var2 > 100) {
             var2 = 100;
             break L0;
           } else {
@@ -877,18 +888,18 @@ abstract class jb extends gn {
               }
             }
           } else {
-            var3 = ((jb) this).field_e * ((jb) this).field_q >> -495378324;
-            var4 = ((jb) this).field_r * ((jb) this).field_q >> 1054928844;
-            var5 = -var3 + 640 >> 263412481;
+            var3 = ((jb) this).field_e * ((jb) this).field_q >> 12;
+            var4 = ((jb) this).field_r * ((jb) this).field_q >> 12;
+            var5 = -var3 + 640 >> 1;
             iw.a(73, ((jb) this).field_l);
-            var6 = -var4 + 480 >> -102734239;
+            var6 = -var4 + 480 >> 1;
             this.a(32, 0, 0);
             var7 = 0;
             L2: while (true) {
               if (var7 >= ((jb) this).field_i.length) {
                 L3: {
                   ta.e(119);
-                  var7 = (((jb) this).field_m << 1665782282) / kh.field_q.length;
+                  var7 = (((jb) this).field_m << 10) / kh.field_q.length;
                   if (var7 > 256) {
                     var7 = 256;
                     break L3;
@@ -897,7 +908,33 @@ abstract class jb extends gn {
                   }
                 }
                 ((jb) this).field_l.d(var5, var6, var3, var4, var7);
-                return;
+                if (var11 != 0) {
+                  this.a(32, ((jb) this).field_p, ((jb) this).field_k);
+                  var3 = 0;
+                  L4: while (true) {
+                    if (((jb) this).field_i.length > var3) {
+                      var34 = ((jb) this).field_i[var3];
+                      var35 = var34;
+                      var36 = var35;
+                      var37 = var36;
+                      var38 = var37;
+                      var39 = var38;
+                      var40 = var39;
+                      var35 = var34;
+                      var34.a(100, false);
+                      var3++;
+                      if (var11 == 0) {
+                        continue L4;
+                      } else {
+                        return;
+                      }
+                    } else {
+                      return;
+                    }
+                  }
+                } else {
+                  return;
+                }
               } else {
                 var33 = ((jb) this).field_i[var7];
                 var55 = var33;
@@ -914,19 +951,19 @@ abstract class jb extends gn {
                 var33.field_s = var9;
                 var7++;
                 if (var11 != 0) {
-                  L4: {
+                  L5: {
                     if (var7 > 256) {
                       var7 = 256;
-                      break L4;
+                      break L5;
                     } else {
-                      break L4;
+                      break L5;
                     }
                   }
                   ((jb) this).field_l.d(var5, var6, var3, var4, var7);
                   if (var11 != 0) {
                     this.a(32, ((jb) this).field_p, ((jb) this).field_k);
                     var3 = 0;
-                    L5: while (true) {
+                    L6: while (true) {
                       if (((jb) this).field_i.length <= var3) {
                         return;
                       } else {
@@ -936,7 +973,7 @@ abstract class jb extends gn {
                         var56.a(100, false);
                         var3++;
                         if (var11 == 0) {
-                          continue L5;
+                          continue L6;
                         } else {
                           return;
                         }
@@ -949,21 +986,21 @@ abstract class jb extends gn {
                   if (var11 == 0) {
                     continue L2;
                   } else {
-                    L6: {
+                    L7: {
                       ta.e(119);
-                      var7 = (((jb) this).field_m << 1665782282) / kh.field_q.length;
+                      var7 = (((jb) this).field_m << 10) / kh.field_q.length;
                       if (var7 > 256) {
                         var7 = 256;
-                        break L6;
+                        break L7;
                       } else {
-                        break L6;
+                        break L7;
                       }
                     }
                     ((jb) this).field_l.d(var5, var6, var3, var4, var7);
                     if (var11 != 0) {
                       this.a(32, ((jb) this).field_p, ((jb) this).field_k);
                       var3 = 0;
-                      L7: while (true) {
+                      L8: while (true) {
                         if (((jb) this).field_i.length <= var3) {
                           return;
                         } else {
@@ -978,7 +1015,7 @@ abstract class jb extends gn {
                           var49.a(100, false);
                           var3++;
                           if (var11 == 0) {
-                            continue L7;
+                            continue L8;
                           } else {
                             return;
                           }
@@ -996,30 +1033,30 @@ abstract class jb extends gn {
           ((jb) this).field_r = 11;
           on.a(0, 0, 640, 480, 0, var2);
           if (((jb) this).field_q != 4096) {
-            var3 = ((jb) this).field_e * ((jb) this).field_q >> -495378324;
-            var4 = ((jb) this).field_r * ((jb) this).field_q >> 1054928844;
-            var5 = -var3 + 640 >> 263412481;
+            var3 = ((jb) this).field_e * ((jb) this).field_q >> 12;
+            var4 = ((jb) this).field_r * ((jb) this).field_q >> 12;
+            var5 = -var3 + 640 >> 1;
             iw.a(73, ((jb) this).field_l);
-            var6 = -var4 + 480 >> -102734239;
+            var6 = -var4 + 480 >> 1;
             this.a(32, 0, 0);
             var7 = 0;
-            L8: while (true) {
+            L9: while (true) {
               if (var7 >= ((jb) this).field_i.length) {
                 ta.e(119);
-                var7 = (((jb) this).field_m << 1665782282) / kh.field_q.length;
-                L9: {
+                var7 = (((jb) this).field_m << 10) / kh.field_q.length;
+                L10: {
                   if (var7 > 256) {
                     var7 = 256;
-                    break L9;
+                    break L10;
                   } else {
-                    break L9;
+                    break L10;
                   }
                 }
                 ((jb) this).field_l.d(var5, var6, var3, var4, var7);
                 if (var11 != 0) {
                   this.a(32, ((jb) this).field_p, ((jb) this).field_k);
                   var3 = 0;
-                  L10: while (true) {
+                  L11: while (true) {
                     if (((jb) this).field_i.length > var3) {
                       var28 = ((jb) this).field_i[var3];
                       var29 = var28;
@@ -1028,7 +1065,7 @@ abstract class jb extends gn {
                       var28.a(100, false);
                       var3++;
                       if (var11 == 0) {
-                        continue L10;
+                        continue L11;
                       } else {
                         return;
                       }
@@ -1055,30 +1092,36 @@ abstract class jb extends gn {
                 var17.field_s = var9;
                 var7++;
                 if (var11 == 0) {
-                  continue L8;
+                  continue L9;
                 } else {
-                  L11: {
+                  L12: {
                     if (var7 > 256) {
                       var7 = 256;
-                      break L11;
+                      break L12;
                     } else {
-                      break L11;
+                      break L12;
                     }
                   }
                   ((jb) this).field_l.d(var5, var6, var3, var4, var7);
                   if (var11 != 0) {
                     this.a(32, ((jb) this).field_p, ((jb) this).field_k);
                     var3 = 0;
-                    if (((jb) this).field_i.length > var3) {
-                      var18 = ((jb) this).field_i[var3];
-                      var19 = var18;
-                      var22 = var19;
-                      var19 = var18;
-                      var18.a(100, false);
-                      var3++;
-                      return;
-                    } else {
-                      return;
+                    L13: while (true) {
+                      if (((jb) this).field_i.length > var3) {
+                        var18 = ((jb) this).field_i[var3];
+                        var19 = var18;
+                        var22 = var19;
+                        var19 = var18;
+                        var18.a(100, false);
+                        var3++;
+                        if (var11 == 0) {
+                          continue L13;
+                        } else {
+                          return;
+                        }
+                      } else {
+                        return;
+                      }
                     }
                   } else {
                     return;
@@ -1089,7 +1132,7 @@ abstract class jb extends gn {
           } else {
             this.a(32, ((jb) this).field_p, ((jb) this).field_k);
             var3 = 0;
-            L12: while (true) {
+            L14: while (true) {
               if (((jb) this).field_i.length > var3) {
                 var12 = ((jb) this).field_i[var3];
                 var13 = var12;
@@ -1098,7 +1141,7 @@ abstract class jb extends gn {
                 var12.a(100, false);
                 var3++;
                 if (var11 == 0) {
-                  continue L12;
+                  continue L14;
                 } else {
                   return;
                 }
@@ -1115,18 +1158,73 @@ abstract class jb extends gn {
     abstract int a(byte param0);
 
     final void a(String[] param0, byte param1) {
-        ((jb) this).field_o = param0;
-        if (param1 == 90) {
-            return;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((jb) this).field_o = param0;
+              if (param1 == 90) {
+                break L1;
+              } else {
+                ((jb) this).field_p = -12;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("jb.IA(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
         }
-        ((jb) this).field_p = -12;
     }
 
     boolean a(int param0, byte param1, char param2) {
         int var5 = 0;
         var5 = Kickabout.field_G;
         if (1 == ((jb) this).field_n) {
-          if (-14 == (param0 ^ -1)) {
+          if (param0 == 13) {
             ((jb) this).e(19910);
             if (param1 == -21) {
               return true;
@@ -1136,7 +1234,7 @@ abstract class jb extends gn {
             }
           } else {
             ((jb) this).field_j.a(0, true);
-            if ((((jb) this).field_j.field_e ^ -1) == 0) {
+            if (((jb) this).field_j.field_e == -1) {
               if (((jb) this).field_j.field_e >= 0) {
                 L0: {
                   if (((jb) this).field_j.c(-1)) {
@@ -1352,49 +1450,109 @@ abstract class jb extends gn {
     }
 
     final void a(int param0, String[] param1, int param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var8 = Kickabout.field_G;
-          ((jb) this).field_n = 0;
-          if (param2 == 1054928844) {
-            break L0;
-          } else {
-            ((jb) this).a(46, true);
-            break L0;
-          }
-        }
-        ((jb) this).field_q = 0;
-        ((jb) this).field_e = ((jb) this).b(-1379118556);
-        ((jb) this).field_r = ((jb) this).a((byte) 115);
-        ((jb) this).field_k = 480 + -((jb) this).field_r >> 1655863937;
-        ((jb) this).field_p = -((jb) this).field_e + 640 >> 5157505;
-        ((jb) this).field_l = new ut(((jb) this).field_e, ((jb) this).field_r);
-        ((jb) this).field_i = new hd[param1.length];
-        var4 = ((jb) this).field_i.length;
-        var5 = -(95 * var4) - 5 * (var4 + -1) + 640 >> -926467135;
-        var6 = 0;
-        L1: while (true) {
-          if (((jb) this).field_i.length > var6) {
-            param1[var6] = param1[var6].toLowerCase();
-            ((jb) this).field_i[var6] = eo.a(param1[var6], 7126504, (hu) (Object) un.field_d, 90, false);
-            var7 = ((jb) this).field_k + ((jb) this).field_r + (-((jb) this).field_i[var6].field_mb + -10);
-            ((jb) this).field_i[var6].field_s = 100 * var6 + var5;
-            ((jb) this).field_i[var6].field_J = var7;
-            var6++;
-            if (var8 == 0) {
-              continue L1;
-            } else {
-              return;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var8 = Kickabout.field_G;
+        try {
+          L0: {
+            L1: {
+              ((jb) this).field_n = 0;
+              if (param2 == 1054928844) {
+                break L1;
+              } else {
+                ((jb) this).a(46, true);
+                break L1;
+              }
             }
-          } else {
-            ((jb) this).field_j = new ko(((jb) this).field_i.length);
-            ((jb) this).field_j.field_e = param0;
-            return;
+            ((jb) this).field_q = 0;
+            ((jb) this).field_e = ((jb) this).b(-1379118556);
+            ((jb) this).field_r = ((jb) this).a((byte) 115);
+            ((jb) this).field_k = 480 + -((jb) this).field_r >> 1;
+            ((jb) this).field_p = -((jb) this).field_e + 640 >> 1;
+            ((jb) this).field_l = new ut(((jb) this).field_e, ((jb) this).field_r);
+            ((jb) this).field_i = new hd[param1.length];
+            var4_int = ((jb) this).field_i.length;
+            var5 = -(95 * var4_int) - 5 * (var4_int + -1) + 640 >> 1;
+            var6 = 0;
+            L2: while (true) {
+              L3: {
+                L4: {
+                  if (((jb) this).field_i.length <= var6) {
+                    break L4;
+                  } else {
+                    param1[var6] = param1[var6].toLowerCase();
+                    ((jb) this).field_i[var6] = eo.a(param1[var6], 7126504, (hu) (Object) un.field_d, 90, false);
+                    var7 = ((jb) this).field_k + ((jb) this).field_r + (-((jb) this).field_i[var6].field_mb + -10);
+                    ((jb) this).field_i[var6].field_s = 100 * var6 + var5;
+                    ((jb) this).field_i[var6].field_J = var7;
+                    var6++;
+                    if (var8 != 0) {
+                      break L3;
+                    } else {
+                      if (var8 == 0) {
+                        continue L2;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                }
+                ((jb) this).field_j = new ko(((jb) this).field_i.length);
+                ((jb) this).field_j.field_e = param0;
+                break L3;
+              }
+              break L0;
+            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var4 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var4;
+            stackOut_10_1 = new StringBuilder().append("jb.GA(").append(param0).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param1 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L5;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L5;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 41);
         }
     }
 

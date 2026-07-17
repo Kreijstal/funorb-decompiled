@@ -37,7 +37,7 @@ final class jn extends we {
         int var5 = 0;
         int var6 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
-        if ((param2 ^ -1) > -1) {
+        if (param2 < 0) {
           return;
         } else {
           if (((jn) this).field_m.length <= param2) {
@@ -48,7 +48,7 @@ final class jn extends we {
                 super.b(param0, param1, param2);
                 var4 = ((jn) this).field_m[param2].field_g;
                 var5 = var4;
-                if ((var5 ^ -1) != -11) {
+                if (var5 != 10) {
                   if (11 != var5) {
                     break L0;
                   } else {
@@ -237,7 +237,7 @@ final class jn extends we {
                     if (var8 >= no.field_m[td.field_r].length) {
                       break L9;
                     } else {
-                      if (1 != (no.field_m[td.field_r][var8] ^ -1)) {
+                      if (no.field_m[td.field_r][var8] != -2) {
                         break L9;
                       } else {
                         var11 -= 60;
@@ -261,7 +261,7 @@ final class jn extends we {
                   if (0 > no.field_m[td.field_r][var8]) {
                     break L10;
                   } else {
-                    if ((no.field_p[td.field_r][var8] ^ -1) == -4) {
+                    if (no.field_p[td.field_r][var8] == 3) {
                       break L10;
                     } else {
                       L11: {
@@ -280,7 +280,7 @@ final class jn extends we {
                           L12: {
                             var12 = -4;
                             var13 = var11;
-                            if (-2 == (no.field_p[td.field_r][var8] ^ -1)) {
+                            if (no.field_p[td.field_r][var8] == 1) {
                               stackOut_25_0 = 1;
                               stackIn_26_0 = stackOut_25_0;
                               break L12;
@@ -315,7 +315,7 @@ final class jn extends we {
               }
               L14: {
                 var11 = kn.field_p.a((aa) null, var10, 15, 0, var7, fm.a(false, -1), wca.field_l, 0, fm.a(false, 65793), var5[var8], (byte) 99, 640, 0, id.field_h, var9, 0);
-                if ((td.field_r ^ -1) >= -1) {
+                if (td.field_r <= 0) {
                   break L14;
                 } else {
                   var11 = Math.max(var11, 3);
@@ -357,40 +357,102 @@ final class jn extends we {
     }
 
     final boolean a(int param0, char param1, int param2) {
-        int var6 = TombRacer.field_G ? 1 : 0;
-        int var4 = !((jn) this).c(0, 0) ? 1 : 0;
-        int var5 = !((jn) this).c(2, 0) ? 1 : 2;
-        if (13 == param0) {
-            ((jn) this).c(-6);
-        } else {
-            if (!((jn) this).field_k.a((byte) -127)) {
-                do {
-                    if (-98 != (param0 ^ -1)) {
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        L0: {
+          var6 = TombRacer.field_G ? 1 : 0;
+          if (((jn) this).c(0, 0)) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
+        }
+        L1: {
+          var4 = stackIn_3_0;
+          if (((jn) this).c(2, 0)) {
+            stackOut_5_0 = 2;
+            stackIn_6_0 = stackOut_5_0;
+            break L1;
+          } else {
+            stackOut_4_0 = 1;
+            stackIn_6_0 = stackOut_4_0;
+            break L1;
+          }
+        }
+        L2: {
+          var5 = stackIn_6_0;
+          if (13 != param0) {
+            L3: {
+              if (((jn) this).field_k.a((byte) -127)) {
+                break L3;
+              } else {
+                L4: while (true) {
+                  L5: {
+                    if (param0 == 97) {
+                      if (var4 < ((jn) this).field_k.field_h) {
+                        ((jn) this).field_k.b(((jn) this).field_k.field_h - 1, -115);
+                        break L5;
+                      } else {
+                        ((jn) this).field_k.b(var5, 89);
+                        break L5;
+                      }
                     } else {
-                        if (var4 >= ((jn) this).field_k.field_h) {
-                            ((jn) this).field_k.b(var5, 89);
-                        } else {
-                            ((jn) this).field_k.b(((jn) this).field_k.field_h - 1, -115);
-                        }
+                      break L5;
                     }
-                    if ((param0 ^ -1) == -97) {
-                        if (((jn) this).field_k.field_h >= 0) {
-                            // if_icmple L176
+                  }
+                  L6: {
+                    if (param0 != 96) {
+                      break L6;
+                    } else {
+                      L7: {
+                        if (((jn) this).field_k.field_h < 0) {
+                          break L7;
+                        } else {
+                          if (var5 <= ((jn) this).field_k.field_h) {
+                            break L7;
+                          } else {
                             ((jn) this).field_k.b(1 + ((jn) this).field_k.field_h, 80);
-                        } else {
-                            ((jn) this).field_k.b(var4, param2 + 94);
+                            break L6;
+                          }
                         }
+                      }
+                      ((jn) this).field_k.b(var4, param2 + 94);
+                      break L6;
                     }
-                } while (!((jn) this).b(((jn) this).field_k.field_h, -30487));
+                  }
+                  if (!((jn) this).b(((jn) this).field_k.field_h, -30487)) {
+                    continue L4;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
             }
             ((jn) this).field_k.b((byte) -50);
             ((jn) this).b(false, false, ((jn) this).field_k.field_h);
+            break L2;
+          } else {
+            ((jn) this).c(-6);
+            break L2;
+          }
         }
-        if (param2 != 1) {
-            boolean discarded$0 = ((jn) this).a(116, '￟', -90);
-            return true;
+        if (param2 == 1) {
+          return true;
+        } else {
+          boolean discarded$2 = ((jn) this).a(116, '￟', -90);
+          return true;
         }
-        return true;
     }
 
     final int a(byte param0, int param1) {
@@ -401,10 +463,10 @@ final class jn extends we {
         if (!(param1 != 1)) {
             return 0;
         }
-        if (-3 == (param1 ^ -1)) {
+        if (param1 == 2) {
             return 640 + -var3;
         }
-        return -(var3 >> 1230261409) + 320;
+        return -(var3 >> 1) + 320;
     }
 
     private final void b(int param0, boolean param1) {
@@ -431,12 +493,12 @@ final class jn extends we {
         if (param1 != 0) {
             this.b(57, true);
         }
-        if (param0 == -2) {
-            if (!(-1 != td.field_r)) {
+        if (param0 == 1) {
+            if (!(td.field_r != 0)) {
                 return false;
             }
         }
-        if (-3 == (param0 ^ -1)) {
+        if (param0 == 2) {
             if (!(10 != td.field_r)) {
                 return false;
             }

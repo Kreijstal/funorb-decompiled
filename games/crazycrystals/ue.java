@@ -36,14 +36,36 @@ abstract class ue {
     }
 
     final static void a(int param0, int param1) {
-        int var3 = CrazyCrystals.field_B;
-        sc var2 = (sc) (Object) hd.field_c.g(32073);
-        if (param1 > -81) {
-            ue.a(106, 48);
-        }
-        while (var2 != null) {
-            ed.a((byte) 105, param0, var2);
-            var2 = (sc) (Object) hd.field_c.a(false);
+        RuntimeException var2 = null;
+        int var3 = 0;
+        sc var4 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = CrazyCrystals.field_B;
+        try {
+          L0: {
+            L1: {
+              var4 = (sc) (Object) hd.field_c.g(32073);
+              if (param1 <= -81) {
+                break L1;
+              } else {
+                ue.a(106, 48);
+                break L1;
+              }
+            }
+            L2: while (true) {
+              if (var4 == null) {
+                break L0;
+              } else {
+                ed.a((byte) 105, param0, var4);
+                var4 = (sc) (Object) hd.field_c.a(false);
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw dn.a((Throwable) (Object) var2, "ue.U(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -59,7 +81,7 @@ abstract class ue {
     }
 
     final static void b(byte param0) {
-        int var1 = -92 / ((param0 - -58) / 41);
+        int var1 = 92;
         no.e((byte) -23);
         if (null != jd.field_D) {
             fq.a(-65, jd.field_D);
@@ -112,9 +134,9 @@ abstract class ue {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = -1 + param0 & param1 >> 94991391;
+        int var3 = -1 + param0 & param1 >> 31;
         int var4 = 54 / ((param2 - 42) / 39);
-        return ((param1 >>> 1256634879) + param1) % param0 + var3;
+        return ((param1 >>> 31) + param1) % param0 + var3;
     }
 
     final void a(byte param0) {

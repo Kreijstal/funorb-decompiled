@@ -8,22 +8,47 @@ final class mf {
     private vn[] field_b;
 
     final static void a(byte param0) {
-        int var1 = 0;
-        int var2 = ZombieDawn.field_J;
-        for (var1 = 0; var1 < wf.field_P.length; var1++) {
-            wf.field_P[var1] = true;
-        }
-        if (param0 != -67) {
-            field_d = -62;
-        }
-        if (!fj.a(0, 121)) {
-            wf.field_P[12] = false;
-        }
-        int var3 = 14;
-        var1 = var3;
-        while (var3 < uc.field_a.length) {
-            uc.field_a[var3] = true;
-            var3++;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var2 = ZombieDawn.field_J;
+        try {
+          L0: {
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= wf.field_P.length) {
+                L2: {
+                  if (fj.a(0, 121)) {
+                    break L2;
+                  } else {
+                    wf.field_P[12] = false;
+                    break L2;
+                  }
+                }
+                var3 = 14;
+                var1_int = var3;
+                L3: while (true) {
+                  if (var3 >= uc.field_a.length) {
+                    break L0;
+                  } else {
+                    uc.field_a[var3] = true;
+                    var3++;
+                    continue L3;
+                  }
+                }
+              } else {
+                wf.field_P[var1_int] = true;
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw sh.a((Throwable) (Object) var1, "mf.D(" + -67 + 41);
         }
     }
 
@@ -37,16 +62,16 @@ final class mf {
           if (0 > param1) {
             break L0;
           } else {
-            if (-1 < (param0 ^ -1)) {
+            if (param0 < 0) {
               break L0;
             } else {
-              if (vm.field_u[param2].length <= param1) {
+              if (vm.field_u[0].length <= param1) {
                 return false;
               } else {
                 if (param0 < vm.field_u.length) {
                   L1: {
                     L2: {
-                      if (0 == (vm.field_u[param0][param1] ^ -1)) {
+                      if (vm.field_u[param0][param1] == -1) {
                         break L2;
                       } else {
                         if (vm.field_u[param0][param1] >= 1) {
@@ -81,14 +106,15 @@ final class mf {
     }
 
     public static void a(int param0) {
-        if (param0 <= 122) {
-            return;
-        }
         field_a = null;
     }
 
     mf(vn[] param0) {
-        ((mf) this).field_b = param0;
+        try {
+            ((mf) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "mf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

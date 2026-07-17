@@ -58,7 +58,7 @@ final class lw extends IOException {
         field_a = null;
         field_e = null;
         field_c = null;
-        int var1 = -47 % ((-82 - param0) / 38);
+        int var1 = 0;
         field_f = null;
         field_b = null;
         field_g = null;

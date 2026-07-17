@@ -12,8 +12,9 @@ final class gp extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
+        int fieldTemp$2 = ((gp) this).field_l - 1;
         ((gp) this).field_l = ((gp) this).field_l - 1;
-        if (-1 >= ((gp) this).field_l - 1) {
+        if (-1 >= fieldTemp$2) {
           if (-26 == ((gp) this).field_l) {
             jja.a(256, -1, 52);
             this.e(44);
@@ -42,9 +43,6 @@ final class gp extends ana {
     private final void e(int param0) {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
-        if (param0 != 44) {
-            return;
-        }
         aga var2 = ((gp) this).field_w.field_l.a(76, ((gp) this).field_q.field_h);
         if (!(!var2.i(69))) {
             return;
@@ -56,47 +54,48 @@ final class gp extends ana {
             var4 = var3.field_h.a(-27449, ((gp) this).field_q);
             var4.b(-1, 18);
             var4.a(24831, 110, kna.field_g[44]);
-            var3 = (iv) (Object) ((gp) this).field_w.field_o.c(param0 ^ 44);
+            var3 = (iv) (Object) ((gp) this).field_w.field_o.c(0);
         }
     }
 
     final static void b(int param0, String param1) {
-        int var2 = 0;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        var2 = mk.field_p;
-        var3 = gd.field_m;
-        var4 = qs.field_m.field_jb.b(param1, 500);
-        var5 = 6 + qs.field_m.field_jb.c(param1, 500);
-        var6 = 2 + rg.field_h * var4;
-        var7 = oi.a(12, var5, var2, -21264);
-        if (param0 != -25942) {
-          gp.d(20);
-          var8 = nga.a(var6, var3, (byte) 126, 20);
-          dg.a(var7, var8, var5, var6, 0);
-          dg.c(1 + var7, 1 + var8, var5 - 2, var6 - 2, 16777088);
-          int discarded$2 = qs.field_m.field_jb.a(param1, 3 + var7, -qs.field_m.field_jb.field_u + (df.field_r + 1 + var8), 500, 1000, 0, -1, 0, 0, rg.field_h);
-          return;
-        } else {
-          var8 = nga.a(var6, var3, (byte) 126, 20);
-          dg.a(var7, var8, var5, var6, 0);
-          dg.c(1 + var7, 1 + var8, var5 - 2, var6 - 2, 16777088);
-          int discarded$3 = qs.field_m.field_jb.a(param1, 3 + var7, -qs.field_m.field_jb.field_u + (df.field_r + 1 + var8), 500, 1000, 0, -1, 0, 0, rg.field_h);
-          return;
+        try {
+            var2_int = mk.field_p;
+            var3 = gd.field_m;
+            var4 = qs.field_m.field_jb.b(param1, 500);
+            var5 = 6 + qs.field_m.field_jb.c(param1, 500);
+            var6 = 2 + rg.field_h * var4;
+            var7 = oi.a(12, var5, var2_int, -21264);
+            if (param0 != -25942) {
+                gp.d(20);
+            }
+            var8 = nga.a(var6, var3, (byte) 126, 20);
+            dg.a(var7, var8, var5, var6, 0);
+            dg.c(1 + var7, 1 + var8, var5 - 2, var6 - 2, 16777088);
+            int discarded$0 = qs.field_m.field_jb.a(param1, 3 + var7, -qs.field_m.field_jb.field_u + (df.field_r + 1 + var8), 500, 1000, 0, -1, 0, 0, rg.field_h);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "gp.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     gp(gj param0, bt param1) {
         super(param0, (bca) (Object) param1);
-        ((gp) this).field_w = param1;
+        try {
+            ((gp) this).field_w = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "gp.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void f(int param0) {
-        int var2 = -38 % ((-11 - param0) / 52);
+        int var2 = 0;
     }
 
     final static void a(boolean param0, int param1) {

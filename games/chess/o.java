@@ -15,16 +15,8 @@ class o {
     public static void a(byte param0) {
         field_g = null;
         field_d = null;
-        if (param0 > -85) {
-          ci discarded$2 = o.b((byte) 36);
-          field_i = null;
-          field_a = null;
-          return;
-        } else {
-          field_i = null;
-          field_a = null;
-          return;
-        }
+        field_i = null;
+        field_a = null;
     }
 
     final static ci b(byte param0) {

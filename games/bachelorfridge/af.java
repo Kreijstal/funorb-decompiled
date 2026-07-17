@@ -7,11 +7,6 @@ final class af {
     static int field_c;
 
     public static void a(int param0) {
-        if (param0 != 9680) {
-            int discarded$0 = af.a(73, 86);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
@@ -33,7 +28,7 @@ final class af {
             }
           }
           L1: {
-            if ((param0 ^ -1) != -2) {
+            if (param0 != 1) {
               break L1;
             } else {
               var2 = ri.field_c;
@@ -60,7 +55,7 @@ final class af {
             }
           }
           L4: {
-            if ((param0 ^ -1) != -2) {
+            if (param0 != 1) {
               break L4;
             } else {
               var2 = ri.field_c;

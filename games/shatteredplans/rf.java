@@ -18,9 +18,6 @@ final class rf extends oh {
         var2.c(2, (byte) -99);
         var2.a(0, id.field_c.length, id.field_c, 22186);
         var2.c(qj.field_b, (byte) -114);
-        if (param1 <= 64) {
-            return;
-        }
         var2.c(rj.field_q, (byte) -58);
         var2.a(0, qj.field_f.length, qj.field_f, 22186);
         var2.b(var2.field_j + -var3, (byte) 126);
@@ -32,9 +29,6 @@ final class rf extends oh {
     public static void c(boolean param0) {
         field_m = null;
         field_l = null;
-        if (!param0) {
-            return;
-        }
         field_h = null;
         field_k = null;
         field_j = null;

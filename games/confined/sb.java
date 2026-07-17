@@ -48,7 +48,8 @@ final class sb implements Runnable {
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, boolean param6) {
-        int var7 = 0;
+        RuntimeException var7 = null;
+        int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -57,100 +58,112 @@ final class sb implements Runnable {
         int var13 = 0;
         int var14 = 0;
         int stackIn_23_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         var14 = Confined.field_J ? 1 : 0;
-        if (param0 < param5) {
-          if (1 + param0 >= param3) {
-            return;
-          } else {
-            L0: {
-              if (5 + param0 >= param3) {
-                break L0;
-              } else {
-                if (param1 != param2) {
-                  var7 = (param2 & param1 & 1) + ((param2 >> -2032674431) + (param1 >> -1887026655));
-                  var8 = param0;
-                  var9 = param2;
-                  var10 = param1;
-                  var11 = param0;
-                  L1: while (true) {
-                    if (var11 >= param3) {
-                      sb.a(param0, var9, param2, var8, param4, param5, param6);
-                      sb.a(var8, param1, var10, param3, (byte) 92, param5, param6);
-                      return;
-                    } else {
-                      L2: {
-                        var12 = sj.field_rb[var11];
-                        if (!param6) {
-                          stackOut_22_0 = ik.field_cb[var12];
-                          stackIn_23_0 = stackOut_22_0;
-                          break L2;
-                        } else {
-                          stackOut_21_0 = an.field_n[var12];
-                          stackIn_23_0 = stackOut_21_0;
-                          break L2;
-                        }
-                      }
-                      var13 = stackIn_23_0;
-                      if (var7 < var13) {
-                        sj.field_rb[var11] = sj.field_rb[var8];
-                        var8++;
-                        sj.field_rb[var8] = var12;
-                        if (var9 > var13) {
-                          var9 = var13;
-                          var11++;
-                          continue L1;
-                        } else {
-                          var11++;
-                          continue L1;
-                        }
-                      } else {
-                        if (var13 > var10) {
-                          var10 = var13;
-                          var11++;
-                          continue L1;
-                        } else {
-                          var11++;
-                          continue L1;
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  break L0;
-                }
-              }
-            }
-            var7 = param3 - 1;
-            L3: while (true) {
-              if (param0 >= var7) {
+        try {
+          L0: {
+            if (param0 < param5) {
+              if (1 + param0 >= param3) {
                 return;
               } else {
-                var8 = param0;
-                L4: while (true) {
-                  if (var8 >= var7) {
-                    var7--;
-                    continue L3;
+                L1: {
+                  if (5 + param0 >= param3) {
+                    break L1;
                   } else {
-                    var9 = sj.field_rb[var8];
-                    var10 = sj.field_rb[var8 - -1];
-                    if (ek.a(-124, var10, param6, var9)) {
-                      sj.field_rb[var8] = var10;
-                      sj.field_rb[1 + var8] = var9;
-                      var8++;
-                      continue L4;
+                    if (param1 != param2) {
+                      var7_int = (param2 & param1 & 1) + ((param2 >> 1) + (param1 >> 1));
+                      var8 = param0;
+                      var9 = param2;
+                      var10 = param1;
+                      var11 = param0;
+                      L2: while (true) {
+                        if (var11 >= param3) {
+                          sb.a(param0, var9, param2, var8, param4, param5, param6);
+                          sb.a(var8, param1, var10, param3, (byte) 92, param5, param6);
+                          break L0;
+                        } else {
+                          L3: {
+                            var12 = sj.field_rb[var11];
+                            if (!param6) {
+                              stackOut_22_0 = ik.field_cb[var12];
+                              stackIn_23_0 = stackOut_22_0;
+                              break L3;
+                            } else {
+                              stackOut_21_0 = an.field_n[var12];
+                              stackIn_23_0 = stackOut_21_0;
+                              break L3;
+                            }
+                          }
+                          L4: {
+                            var13 = stackIn_23_0;
+                            if (var7_int < var13) {
+                              sj.field_rb[var11] = sj.field_rb[var8];
+                              int incrementValue$1 = var8;
+                              var8++;
+                              sj.field_rb[incrementValue$1] = var12;
+                              if (var9 > var13) {
+                                var9 = var13;
+                                break L4;
+                              } else {
+                                break L4;
+                              }
+                            } else {
+                              if (var13 > var10) {
+                                var10 = var13;
+                                break L4;
+                              } else {
+                                break L4;
+                              }
+                            }
+                          }
+                          var11++;
+                          continue L2;
+                        }
+                      }
                     } else {
-                      var8++;
-                      continue L4;
+                      break L1;
+                    }
+                  }
+                }
+                var7_int = param3 - 1;
+                L5: while (true) {
+                  if (param0 >= var7_int) {
+                    return;
+                  } else {
+                    var8 = param0;
+                    L6: while (true) {
+                      if (var8 >= var7_int) {
+                        var7_int--;
+                        continue L5;
+                      } else {
+                        L7: {
+                          var9 = sj.field_rb[var8];
+                          var10 = sj.field_rb[var8 - -1];
+                          if (!ek.a(-124, var10, param6, var9)) {
+                            break L7;
+                          } else {
+                            sj.field_rb[var8] = var10;
+                            sj.field_rb[1 + var8] = var9;
+                            break L7;
+                          }
+                        }
+                        var8++;
+                        continue L6;
+                      }
                     }
                   }
                 }
               }
+            } else {
+              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var7, "sb.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

@@ -31,29 +31,29 @@ final class un {
     }
 
     final static int a(int param0) {
-        if (param0 != 1) {
-          un.a(false);
-          return 1900 + new Date().getYear();
-        } else {
-          return 1900 + new Date().getYear();
-        }
+        return 1900 + new Date().getYear();
     }
 
     final static void a(byte param0, wq param1) {
-        vh.field_U = param1.i(65280) << -1093759739;
-        int var2 = param1.l(255);
-        fh.field_c = 1835008 & var2 << 1232216530;
-        int var3 = -32 % ((param0 - -69) / 37);
-        vh.field_U = vh.field_U + (var2 >> -698822653);
-        fh.field_c = fh.field_c + (param1.i(65280) << -1896671006);
-        var2 = param1.l(255);
-        sf.field_Z = 2064384 & var2 << 1485979023;
-        fh.field_c = fh.field_c + (var2 >> 1281514982);
-        sf.field_Z = sf.field_Z + (param1.l(255) << 527496135);
-        var2 = param1.l(255);
-        sf.field_Z = sf.field_Z + (var2 >> 1761990561);
-        vj.field_c = 65536 & var2 << -1447884240;
-        vj.field_c = vj.field_c + param1.i(65280);
+        int var2_int = 0;
+        try {
+            vh.field_U = param1.i(65280) << 5;
+            var2_int = param1.l(255);
+            fh.field_c = 1835008 & var2_int << 18;
+            int var3 = -32 % ((param0 - -69) / 37);
+            vh.field_U = vh.field_U + (var2_int >> 3);
+            fh.field_c = fh.field_c + (param1.i(65280) << 2);
+            var2_int = param1.l(255);
+            sf.field_Z = 2064384 & var2_int << 15;
+            fh.field_c = fh.field_c + (var2_int >> 6);
+            sf.field_Z = sf.field_Z + (param1.l(255) << 7);
+            var2_int = param1.l(255);
+            sf.field_Z = sf.field_Z + (var2_int >> 1);
+            vj.field_c = 65536 & var2_int << 16;
+            vj.field_c = vj.field_c + param1.i(65280);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "un.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

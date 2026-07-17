@@ -362,8 +362,9 @@ final class qa {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((qa) this).field_d[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_b[var5] = var13 >= 0 ? nj.field_x[var13].b() : 0;
+                field_b[incrementValue$0] = var13 >= 0 ? nj.field_x[var13].b() : 0;
             }
         }
         return true;
@@ -454,6 +455,7 @@ final class qa {
                             field_k = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((qa) this).field_c[var6];
                           var8 = 0;
@@ -462,8 +464,9 @@ final class qa {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((qa) this).field_g[var5] = nj.c(var4);
+                              ((qa) this).field_g[incrementValue$2] = nj.c(var4);
                               var8++;
                               continue L6;
                             }
@@ -479,8 +482,9 @@ final class qa {
                 } else {
                   L7: {
                     ((qa) this).field_h[var4] = nj.c(3) + 1;
-                    ((qa) this).field_f[var4] = nj.c(2);
-                    var5 = nj.c(2);
+                    int dupTemp$3 = nj.c(2);
+                    ((qa) this).field_f[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {

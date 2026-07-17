@@ -171,7 +171,7 @@ final class id {
               rc.d(-20);
               s.field_b.a(0, 40, fd.field_y.field_K, (byte) -55, fd.field_y.field_ub - 40);
               ng.field_Z.a(0, 30, hg.field_p.field_K, (byte) -44, 0);
-              nk.field_I.a(0, hg.field_p.field_ub - 40 - 32, hg.field_p.field_K, (byte) -116, 30);
+              nk.field_I.a(0, hg.field_p.field_ub - 72, hg.field_p.field_K, (byte) -116, 30);
               f.field_c.a(5, 30, 68, (byte) -69, 5);
               qn.field_H.a(75, 30, 78, (byte) -46, 5);
               fn.field_d.a(155, 30, 48, (byte) -126, 5);
@@ -189,7 +189,7 @@ final class id {
             L5: {
               var2 = stackIn_15_0;
               ec.field_C.a(5 - -var2, 30, 363 + -var2, (byte) -69, 5);
-              qn.field_J.a(370, 30, hg.field_p.field_K + -5 - 370, (byte) -114, 5);
+              qn.field_J.a(370, 30, hg.field_p.field_K - 375, (byte) -114, 5);
               ch.field_a.a(37, -123, -5 + nk.field_I.field_K - 5, 2, -32 + (nk.field_I.field_ub + -10), 5, oc.field_k);
               var3 = (hg.field_p.field_K + 2) / 2;
               nd.field_a.a(0, 40, var3 + -2, (byte) -59, hg.field_p.field_ub + -40);
@@ -511,7 +511,7 @@ final class id {
                         var4 = oi.a(new String[1], lm.field_c, 2);
                         var8 = oi.a(new String[1], mf.field_d, param0 + -3061);
                         var7 = wa.field_I.field_K + di.field_n.field_K - (485 - hk.field_Ob.a(var8) - -hk.field_Ob.a(var4));
-                        if (-1 < (var7 ^ -1)) {
+                        if (var7 < 0) {
                           var7 = 0;
                           break L10;
                         } else {
@@ -526,7 +526,7 @@ final class id {
                     }
                   }
                   L11: {
-                    if (-1 != (var6 ^ -1)) {
+                    if (var6 != 0) {
                       break L11;
                     } else {
                       L12: {
@@ -691,9 +691,9 @@ final class id {
               }
             }
             param0 = param0 & 8191;
-            if (-4097 < (param0 ^ -1)) {
+            if (param0 < 4096) {
               L2: {
-                if (-2049 < (param0 ^ -1)) {
+                if (param0 < 2048) {
                   stackOut_14_0 = af.field_h[param0];
                   stackIn_15_0 = stackOut_14_0;
                   break L2;
@@ -706,7 +706,7 @@ final class id {
               break L0;
             } else {
               L3: {
-                if (-6145 < (param0 ^ -1)) {
+                if (param0 < 6144) {
                   stackOut_9_0 = -af.field_h[param0 - 4096];
                   stackIn_10_0 = stackOut_9_0;
                   break L3;
@@ -753,7 +753,7 @@ final class id {
               }
             }
             L3: {
-              if ((param0 ^ -1) != -2) {
+              if (param0 != 1) {
                 break L3;
               } else {
                 var2_int = qe.field_m;
@@ -761,7 +761,7 @@ final class id {
               }
             }
             L4: {
-              if (-3 != (param0 ^ -1)) {
+              if (param0 != 2) {
                 break L4;
               } else {
                 var2_int = el.field_t;
@@ -996,14 +996,14 @@ final class id {
               L2: {
                 L3: {
                   L4: {
-                    var8 = df.field_e >> 1437236386;
+                    var8 = df.field_e >> 2;
                     var9 = ((id) this).field_o.a(param2);
                     var10 = ((id) this).field_o.field_G + ((id) this).field_o.field_H;
                     var11 = 1;
-                    if ((var9 ^ -1) < (var8 ^ -1)) {
+                    if (~var9 < ~var8) {
                       break L4;
                     } else {
-                      if ((param2.indexOf("<br>") ^ -1) == 0) {
+                      if (param2.indexOf("<br>") == -1) {
                         break L3;
                       } else {
                         break L4;
@@ -1040,12 +1040,12 @@ final class id {
                   var10 = var10 + var7 * (var11 - 1);
                   var13 = 0;
                   L8: while (true) {
-                    if ((var13 ^ -1) <= (var11 ^ -1)) {
+                    if (~var13 <= ~var11) {
                       break L3;
                     } else {
                       var14 = ((id) this).field_o.a(nh.field_d[var13]);
-                      stackOut_22_0 = var9 ^ -1;
-                      stackOut_22_1 = var14 ^ -1;
+                      stackOut_22_0 = ~var9;
+                      stackOut_22_1 = ~var14;
                       stackIn_29_0 = stackOut_22_0;
                       stackIn_29_1 = stackOut_22_1;
                       stackIn_23_0 = stackOut_22_0;
@@ -1072,8 +1072,8 @@ final class id {
                   }
                 }
                 var12 = param3;
-                stackOut_28_0 = df.field_e ^ -1;
-                stackOut_28_1 = var9 + var12 - -var5_int ^ -1;
+                stackOut_28_0 = ~df.field_e;
+                stackOut_28_1 = ~(var9 + var12 - -var5_int);
                 stackIn_29_0 = stackOut_28_0;
                 stackIn_29_1 = stackOut_28_1;
                 break L2;
@@ -1088,7 +1088,7 @@ final class id {
               }
               L11: {
                 var13 = 32 + -((id) this).field_o.field_A + param1;
-                if ((df.field_f ^ -1) <= (var6 + var10 + var13 ^ -1)) {
+                if (~df.field_f <= ~(var6 + var10 + var13)) {
                   break L11;
                 } else {
                   var13 = -var6 + param1 - var10;

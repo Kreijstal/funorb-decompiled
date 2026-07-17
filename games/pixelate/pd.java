@@ -56,15 +56,19 @@ final class pd extends ak {
 
     pd(long param0, ak param1, ak param2, vp param3, ak param4, String param5, String param6) {
         super(param0, param1);
-        ((pd) this).field_Fb = new ak(0L, (ak) null);
-        ((pd) this).field_Gb = new gp(0L, ((pd) this).field_Fb, param2, param3);
-        ((pd) this).field_Ib = new ak(0L, param4);
-        ((pd) this).field_Hb = new ak(0L, param4);
-        ((pd) this).field_Ib.field_cb = param5;
-        ((pd) this).field_Hb.field_cb = param6;
-        ((pd) this).a((ak) (Object) ((pd) this).field_Gb, (byte) 26);
-        ((pd) this).a(((pd) this).field_Ib, (byte) 26);
-        ((pd) this).a(((pd) this).field_Hb, (byte) 26);
+        try {
+            ((pd) this).field_Fb = new ak(0L, (ak) null);
+            ((pd) this).field_Gb = new gp(0L, ((pd) this).field_Fb, param2, param3);
+            ((pd) this).field_Ib = new ak(0L, param4);
+            ((pd) this).field_Hb = new ak(0L, param4);
+            ((pd) this).field_Ib.field_cb = param5;
+            ((pd) this).field_Hb.field_cb = param6;
+            ((pd) this).a((ak) (Object) ((pd) this).field_Gb, (byte) 26);
+            ((pd) this).a(((pd) this).field_Ib, (byte) 26);
+            ((pd) this).a(((pd) this).field_Hb, (byte) 26);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "pd.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static boolean k(int param0) {

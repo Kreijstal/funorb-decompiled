@@ -82,7 +82,7 @@ abstract class uk {
         if (param0 != 27301) {
           L0: {
             field_a = null;
-            if ((tk.field_e ^ -1) >= -251) {
+            if (tk.field_e <= 250) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -95,7 +95,7 @@ abstract class uk {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((tk.field_e ^ -1) >= -251) {
+            if (tk.field_e <= 250) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -112,35 +112,94 @@ abstract class uk {
     final static bd[] a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 < 126) {
           boolean discarded$2 = uk.a(-106);
-          return od.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
+          return od.a(3, 105, 1, param0, 1, 0, param3, 1, param1);
         } else {
-          return od.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
+          return od.a(3, 105, 1, param0, 1, 0, param3, 1, param1);
         }
     }
 
     final static boolean a(int[] param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_8_0 = 0;
+        int stackOut_5_0 = 0;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
-        var2 = param1;
-        L0: while (true) {
-          if (8 > var2) {
-            if (param0[var2] != 0) {
-              return true;
-            } else {
-              var2++;
-              continue L0;
+        try {
+          L0: {
+            var2_int = 0;
+            L1: while (true) {
+              if (8 <= var2_int) {
+                stackOut_8_0 = 0;
+                stackIn_9_0 = stackOut_8_0;
+                break L0;
+              } else {
+                if (param0[var2_int] != 0) {
+                  stackOut_5_0 = 1;
+                  stackIn_6_0 = stackOut_5_0;
+                  return stackIn_6_0 != 0;
+                } else {
+                  var2_int++;
+                  continue L1;
+                }
+              }
             }
-          } else {
-            return false;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_1 = new StringBuilder().append("uk.A(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param0 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L2;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L2;
+            }
+          }
+          throw wg.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 0 + 41);
         }
+        return stackIn_9_0 != 0;
     }
 
     final static String a(int param0, int param1) {
         if (param1 != 9) {
           if (param0 == 9394) {
-            if ((param1 ^ -1) == -11) {
+            if (param1 == 10) {
               return "levelf2.dat";
             } else {
               if (11 == param1) {
@@ -149,20 +208,20 @@ abstract class uk {
                 if (param1 == 1) {
                   return "level01.dat";
                 } else {
-                  if (-3 == (param1 ^ -1)) {
+                  if (param1 == 2) {
                     return "level02.dat";
                   } else {
                     if (param1 != 3) {
-                      if ((param1 ^ -1) == -5) {
+                      if (param1 == 4) {
                         return "level04.dat";
                       } else {
-                        if ((param1 ^ -1) == -6) {
+                        if (param1 == 5) {
                           return "level05.dat";
                         } else {
                           if (6 == param1) {
                             return "level06.dat";
                           } else {
-                            if ((param1 ^ -1) == -8) {
+                            if (param1 == 7) {
                               return "level07.dat";
                             } else {
                               return "level00.dat";
@@ -179,7 +238,7 @@ abstract class uk {
             }
           } else {
             bd[] discarded$1 = uk.a(43, -82, (byte) -21, -101, 0);
-            if ((param1 ^ -1) == -11) {
+            if (param1 == 10) {
               return "levelf2.dat";
             } else {
               if (11 == param1) {
@@ -188,20 +247,20 @@ abstract class uk {
                 if (param1 == 1) {
                   return "level01.dat";
                 } else {
-                  if (-3 == (param1 ^ -1)) {
+                  if (param1 == 2) {
                     return "level02.dat";
                   } else {
                     if (param1 != 3) {
-                      if ((param1 ^ -1) == -5) {
+                      if (param1 == 4) {
                         return "level04.dat";
                       } else {
-                        if ((param1 ^ -1) == -6) {
+                        if (param1 == 5) {
                           return "level05.dat";
                         } else {
                           if (6 == param1) {
                             return "level06.dat";
                           } else {
-                            if ((param1 ^ -1) == -8) {
+                            if (param1 == 7) {
                               return "level07.dat";
                             } else {
                               return "level00.dat";

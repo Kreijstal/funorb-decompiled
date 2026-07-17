@@ -7,14 +7,11 @@ final class fk extends tb {
     static String field_d;
 
     public static void a(byte param0) {
-        if (param0 < 15) {
-            return;
-        }
         field_d = null;
     }
 
     final static int b(int param0) {
-        int var1 = 95 % ((-69 - param0) / 48);
+        int var1 = 0;
         return klb.field_r.i(-101);
     }
 

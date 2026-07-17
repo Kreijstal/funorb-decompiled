@@ -16,11 +16,6 @@ final class qba {
 
     public static void a(boolean param0) {
         field_d = null;
-        if (param0) {
-            field_c = 45;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

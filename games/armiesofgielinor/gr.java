@@ -31,8 +31,9 @@ final class gr {
 
     final int a(int param0) {
         if (((gr) this).field_f >= ((gr) this).field_b) {
+            int fieldTemp$0 = ((gr) this).field_h;
             ((gr) this).field_h = ((gr) this).field_h + 1;
-            ((gr) this).field_a = ((gr) this).field_i[((gr) this).field_h] << 15;
+            ((gr) this).field_a = ((gr) this).field_i[fieldTemp$0] << 15;
             if (((gr) this).field_h >= ((gr) this).field_g) {
                 ((gr) this).field_h = ((gr) this).field_g - 1;
             }

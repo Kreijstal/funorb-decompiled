@@ -9,13 +9,13 @@ final class pc implements com.ms.directX.IEnumModesCallback {
     public final void callbackEnumModes(com.ms.directX.DDSurfaceDesc param0, com.ms.com.IUnknown param1) {
         if (field_a != null) {
             field_b = field_b + 1;
-            field_a[field_b] = ((com.ms.directX.DDSurfaceDesc) param0).width;
+            field_a[field_b] = param0.width;
             field_b = field_b + 1;
-            field_a[field_b] = ((com.ms.directX.DDSurfaceDesc) param0).height;
+            field_a[field_b] = param0.height;
             field_b = field_b + 1;
-            field_a[field_b] = ((com.ms.directX.DDSurfaceDesc) param0).rgbBitCount;
+            field_a[field_b] = param0.rgbBitCount;
             field_b = field_b + 1;
-            field_a[field_b] = ((com.ms.directX.DDSurfaceDesc) param0).refreshRate;
+            field_a[field_b] = param0.refreshRate;
         } else {
             field_b = field_b + 4;
         }
@@ -23,7 +23,7 @@ final class pc implements com.ms.directX.IEnumModesCallback {
 
     final void a(int param0, int param1, java.awt.Frame param2, int param3, int param4, int param5) {
         param2.setVisible(true);
-        com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
+        com.ms.awt.WComponentPeer var7 = null;
         int var8 = var7.getHwnd();
         int discarded$0 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
         int discarded$1 = com.ms.win32.User32.SetWindowLong(var8, -20, 8);
@@ -35,9 +35,9 @@ final class pc implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(java.awt.Frame param0, int param1) {
-        java.awt.Frame var4 = null;
+        Object var4 = null;
         if (param1 > -51) {
-          var4 = (java.awt.Frame) null;
+          var4 = null;
           ((pc) this).a(57, -53, (java.awt.Frame) null, -3, -105, -9);
           ((pc) this).field_c.restoreDisplayMode();
           ((pc) this).field_c.setCooperativeLevel((java.awt.Component) (Object) param0, 8);
@@ -60,7 +60,7 @@ final class pc implements com.ms.directX.IEnumModesCallback {
         var2 = var3;
         field_b = 0;
         if (param0 > -111) {
-          return (int[]) null;
+          return null;
         } else {
           field_a = null;
           return var3;

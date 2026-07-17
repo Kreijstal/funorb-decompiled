@@ -48,7 +48,7 @@ final class lk extends jj {
         if (!param0) {
           var2 = ((lk) this).field_m;
           if (var2 <= 512) {
-            if ((var2 ^ -1) < -257) {
+            if (var2 > 256) {
               var2 = 512 - var2;
               return;
             } else {

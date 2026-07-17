@@ -50,7 +50,11 @@ final class og extends rk implements jl {
         if (param1 != -5362) {
             return;
         }
-        ((og) this).field_fb = param0;
+        try {
+            ((og) this).field_fb = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "og.S(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
@@ -83,21 +87,18 @@ final class og extends rk implements jl {
 
     public static void i(byte param0) {
         field_gb = null;
-        if (param0 <= 106) {
-            field_gb = null;
-            field_hb = null;
-            return;
-        }
         field_hb = null;
     }
 
     final void a(ce param0, int param1, int param2, int param3) {
         super.a(param0, 50, param2, param3);
         if (param1 < 38) {
-          return;
-        } else {
-          ((og) this).field_db = bh.field_g - ((og) this).field_u + -param3;
-          return;
+            return;
+        }
+        try {
+            ((og) this).field_db = bh.field_g - ((og) this).field_u + -param3;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "og.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

@@ -8,47 +8,21 @@ final class lh extends pc {
 
     private final void f(int param0) {
         try {
-            IOException iOException = null;
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
-            if (param0 <= -54) {
-              if (null == ((lh) this).field_n) {
-                return;
-              } else {
-                try {
-                  L0: {
-                    ((lh) this).field_b.field_j = 0;
-                    ((lh) this).field_b.i(6, 13);
-                    ((lh) this).field_b.c(3, -105);
-                    ((lh) this).field_b.a(0, (byte) 105);
-                    ((lh) this).field_n.a(((lh) this).field_b.field_h.length, true, 0, ((lh) this).field_b.field_h);
-                    break L0;
-                  }
-                } catch (java.io.IOException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L1: {
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    try {
-                      L2: {
-                        ((lh) this).field_n.a(100);
-                        break L2;
-                      }
-                    } catch (java.lang.Exception decompiledCaughtParameter1) {
-                      decompiledCaughtException = decompiledCaughtParameter1;
-                      L3: {
-                        var3 = (Exception) (Object) decompiledCaughtException;
-                        break L3;
-                      }
-                    }
-                    ((lh) this).field_e = -2;
-                    ((lh) this).field_h = ((lh) this).field_h + 1;
-                    ((lh) this).field_n = null;
-                    break L1;
-                  }
-                }
-                return;
-              }
+            if (null == ((lh) this).field_n) {
+              return;
             } else {
+              {
+                L0: {
+                  ((lh) this).field_b.field_j = 0;
+                  ((lh) this).field_b.i(6, 13);
+                  ((lh) this).field_b.c(3, -105);
+                  ((lh) this).field_b.a(0, (byte) 105);
+                  ((lh) this).field_n.a(((lh) this).field_b.field_h.length, true, 0, ((lh) this).field_b.field_h);
+                  break L0;
+                }
+              }
               return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -97,7 +71,7 @@ final class lh extends pc {
                 L1: {
                   var2_long = pd.a(param0 + -22805);
                   var4 = (int)(var2_long + -((lh) this).field_g);
-                  if (-201 > (var4 ^ -1)) {
+                  if (var4 > 200) {
                     var4 = 200;
                     break L1;
                   } else {
@@ -106,7 +80,7 @@ final class lh extends pc {
                 }
                 ((lh) this).field_g = var2_long;
                 ((lh) this).field_i = ((lh) this).field_i + var4;
-                if (-30001 > (((lh) this).field_i ^ -1)) {
+                if (((lh) this).field_i > 30000) {
                   try {
                     L2: {
                       ((lh) this).field_n.a(-59);
@@ -150,12 +124,12 @@ final class lh extends pc {
                             var2_int = 0;
                             L7: while (true) {
                               L8: {
-                                if ((var2_int ^ -1) <= -101) {
+                                if (var2_int >= 100) {
                                   break L8;
                                 } else {
                                   var3_int = ((lh) this).field_n.b((byte) -59);
                                   if (var3_int >= 0) {
-                                    if (-1 != (var3_int ^ -1)) {
+                                    if (var3_int != 0) {
                                       L9: {
                                         ((lh) this).field_i = 0;
                                         var4 = 0;
@@ -172,7 +146,7 @@ final class lh extends pc {
                                         }
                                       }
                                       L10: {
-                                        if (-1 > (var4 ^ -1)) {
+                                        if (var4 > 0) {
                                           L11: {
                                             var5 = -((lh) this).field_j.field_j + var4;
                                             if (var5 > var3_int) {
@@ -184,7 +158,7 @@ final class lh extends pc {
                                           }
                                           L12: {
                                             ((lh) this).field_n.a(((lh) this).field_j.field_j, var5, ((lh) this).field_j.field_h, 0);
-                                            if ((((lh) this).field_c ^ -1) != -1) {
+                                            if (((lh) this).field_c != 0) {
                                               var6 = 0;
                                               L13: while (true) {
                                                 if (var6 >= var5) {
@@ -200,9 +174,9 @@ final class lh extends pc {
                                             }
                                           }
                                           ((lh) this).field_j.field_j = ((lh) this).field_j.field_j + var5;
-                                          if ((((lh) this).field_j.field_j ^ -1) <= (var4 ^ -1)) {
+                                          if (~((lh) this).field_j.field_j <= ~var4) {
                                             if (null != ((lh) this).field_d) {
-                                              if ((((lh) this).field_d.field_v ^ -1) == -1) {
+                                              if (((lh) this).field_d.field_v == 0) {
                                                 if (((lh) this).field_j.field_h[0] == -1) {
                                                   ((lh) this).field_j.field_j = 0;
                                                   ((lh) this).field_d.field_v = 1;
@@ -234,7 +208,7 @@ final class lh extends pc {
                                               }
                                               L15: {
                                                 var11 = stackIn_65_0;
-                                                var12 = (long)var7 + ((long)var6 << -772763744);
+                                                var12 = (long)var7 + ((long)var6 << 32);
                                                 var14 = null;
                                                 if (var11 != 0) {
                                                   var14_ref = (og) (Object) ((lh) this).field_m.c((byte) 34);
@@ -256,7 +230,7 @@ final class lh extends pc {
                                                     if (var14_ref == null) {
                                                       break L15;
                                                     } else {
-                                                      if ((var12 ^ -1L) != (var14_ref.field_n ^ -1L)) {
+                                                      if (~var12 != ~var14_ref.field_n) {
                                                         var14_ref = (og) (Object) ((lh) this).field_l.a((byte) 125);
                                                         continue L17;
                                                       } else {
@@ -319,7 +293,7 @@ final class lh extends pc {
                                             } else {
                                               var7 = 0;
                                               L22: while (true) {
-                                                if ((var6 ^ -1) >= (var7 ^ -1)) {
+                                                if (~var6 >= ~var7) {
                                                   break L21;
                                                 } else {
                                                   ((lh) this).field_d.field_w.field_h[var7 + ((lh) this).field_d.field_w.field_j] = (byte)rd.b((int) ((lh) this).field_d.field_w.field_h[var7 + ((lh) this).field_d.field_w.field_j], (int) ((lh) this).field_c);
@@ -403,7 +377,7 @@ final class lh extends pc {
                     if (((lh) this).e(param0 + -1216122763) != 0) {
                       break L25;
                     } else {
-                      if ((((lh) this).a(true) ^ -1) == -1) {
+                      if (((lh) this).a(true) == 0) {
                         return true;
                       } else {
                         break L25;
@@ -508,96 +482,124 @@ final class lh extends pc {
 
     final void a(boolean param0, Object param1, int param2) {
         try {
-            Exception var4_ref_Exception = null;
-            IOException var4_ref_IOException = null;
-            og var4_ref_og = null;
-            int var4 = 0;
+            Exception var4 = null;
+            IOException var4_ref = null;
+            RuntimeException var4_ref2 = null;
+            int var4_int = 0;
+            og var4_ref3 = null;
             Exception var5 = null;
             int var6 = 0;
+            RuntimeException stackIn_24_0 = null;
+            StringBuilder stackIn_24_1 = null;
+            RuntimeException stackIn_25_0 = null;
+            StringBuilder stackIn_25_1 = null;
+            RuntimeException stackIn_26_0 = null;
+            StringBuilder stackIn_26_1 = null;
+            String stackIn_26_2 = null;
             Throwable decompiledCaughtException = null;
-            L0: {
-              var6 = ZombieDawn.field_J;
-              if (((lh) this).field_n == null) {
-                break L0;
-              } else {
-                try {
-                  L1: {
-                    ((lh) this).field_n.a(100);
+            RuntimeException stackOut_23_0 = null;
+            StringBuilder stackOut_23_1 = null;
+            RuntimeException stackOut_25_0 = null;
+            StringBuilder stackOut_25_1 = null;
+            String stackOut_25_2 = null;
+            RuntimeException stackOut_24_0 = null;
+            StringBuilder stackOut_24_1 = null;
+            String stackOut_24_2 = null;
+            var6 = ZombieDawn.field_J;
+            try {
+              L0: {
+                L1: {
+                  if (((lh) this).field_n == null) {
                     break L1;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
-                    var4_ref_Exception = (Exception) (Object) decompiledCaughtException;
-                    break L2;
-                  }
-                }
-                ((lh) this).field_n = null;
-                break L0;
-              }
-            }
-            ((lh) this).field_n = (gm) param1;
-            this.f(-87);
-            this.a(67, param0);
-            ((lh) this).field_j.field_j = 0;
-            ((lh) this).field_d = null;
-            L3: while (true) {
-              var4_ref_og = (og) (Object) ((lh) this).field_l.a(116);
-              if (var4_ref_og != null) {
-                ((lh) this).field_a.a((nb) (Object) var4_ref_og, (byte) -120);
-                continue L3;
-              } else {
-                L4: while (true) {
-                  var4_ref_og = (og) (Object) ((lh) this).field_m.a(-61);
-                  if (var4_ref_og != null) {
-                    ((lh) this).field_f.a((nb) (Object) var4_ref_og, (byte) -97);
-                    continue L4;
                   } else {
-                    L5: {
-                      if (0 == ((lh) this).field_c) {
-                        break L5;
-                      } else {
-                        try {
-                          L6: {
-                            ((lh) this).field_b.field_j = 0;
-                            ((lh) this).field_b.i(4, 29);
-                            ((lh) this).field_b.i((int) ((lh) this).field_c, -112);
-                            ((lh) this).field_b.h(-104, 0);
-                            ((lh) this).field_n.a(((lh) this).field_b.field_h.length, true, 0, ((lh) this).field_b.field_h);
-                            break L6;
-                          }
-                        } catch (java.io.IOException decompiledCaughtParameter1) {
-                          decompiledCaughtException = decompiledCaughtParameter1;
-                          L7: {
-                            var4_ref_IOException = (IOException) (Object) decompiledCaughtException;
-                            try {
-                              L8: {
-                                ((lh) this).field_n.a(69);
-                                break L8;
-                              }
-                            } catch (java.lang.Exception decompiledCaughtParameter2) {
-                              decompiledCaughtException = decompiledCaughtParameter2;
-                              L9: {
-                                var5 = (Exception) (Object) decompiledCaughtException;
-                                break L9;
-                              }
-                            }
-                            ((lh) this).field_n = null;
-                            ((lh) this).field_e = -2;
-                            ((lh) this).field_h = ((lh) this).field_h + 1;
-                            break L7;
-                          }
-                        }
-                        break L5;
+                    try {
+                      L2: {
+                        ((lh) this).field_n.a(100);
+                        break L2;
+                      }
+                    } catch (java.lang.Exception decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var4 = (Exception) (Object) decompiledCaughtException;
+                        break L3;
                       }
                     }
-                    var4 = -50 % ((-1 - param2) / 63);
-                    ((lh) this).field_i = 0;
-                    ((lh) this).field_g = pd.a(-22826);
-                    return;
+                    ((lh) this).field_n = null;
+                    break L1;
+                  }
+                }
+                ((lh) this).field_n = (gm) param1;
+                this.f(-87);
+                this.a(67, param0);
+                ((lh) this).field_j.field_j = 0;
+                ((lh) this).field_d = null;
+                L4: while (true) {
+                  var4_ref3 = (og) (Object) ((lh) this).field_l.a(116);
+                  if (var4_ref3 != null) {
+                    ((lh) this).field_a.a((nb) (Object) var4_ref3, (byte) -120);
+                    continue L4;
+                  } else {
+                    L5: while (true) {
+                      var4_ref3 = (og) (Object) ((lh) this).field_m.a(-61);
+                      if (var4_ref3 != null) {
+                        ((lh) this).field_f.a((nb) (Object) var4_ref3, (byte) -97);
+                        continue L5;
+                      } else {
+                        L6: {
+                          if (0 == ((lh) this).field_c) {
+                            break L6;
+                          } else {
+                            {
+                              L7: {
+                                ((lh) this).field_b.field_j = 0;
+                                ((lh) this).field_b.i(4, 29);
+                                ((lh) this).field_b.i((int) ((lh) this).field_c, -112);
+                                ((lh) this).field_b.h(-104, 0);
+                                ((lh) this).field_n.a(((lh) this).field_b.field_h.length, true, 0, ((lh) this).field_b.field_h);
+                                break L7;
+                              }
+                            }
+                            break L6;
+                          }
+                        }
+                        var4_int = -50 % ((-1 - param2) / 63);
+                        ((lh) this).field_i = 0;
+                        ((lh) this).field_g = pd.a(-22826);
+                        break L0;
+                      }
+                    }
                   }
                 }
               }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
+              decompiledCaughtException = decompiledCaughtParameter3;
+              L11: {
+                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_23_0 = (RuntimeException) var4_ref2;
+                stackOut_23_1 = new StringBuilder().append("lh.E(").append(param0).append(44);
+                stackIn_25_0 = stackOut_23_0;
+                stackIn_25_1 = stackOut_23_1;
+                stackIn_24_0 = stackOut_23_0;
+                stackIn_24_1 = stackOut_23_1;
+                if (param1 == null) {
+                  stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+                  stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+                  stackOut_25_2 = "null";
+                  stackIn_26_0 = stackOut_25_0;
+                  stackIn_26_1 = stackOut_25_1;
+                  stackIn_26_2 = stackOut_25_2;
+                  break L11;
+                } else {
+                  stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+                  stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+                  stackOut_24_2 = "{...}";
+                  stackIn_26_0 = stackOut_24_0;
+                  stackIn_26_1 = stackOut_24_1;
+                  stackIn_26_2 = stackOut_24_2;
+                  break L11;
+                }
+              }
+              throw sh.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

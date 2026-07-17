@@ -19,7 +19,7 @@ class ck {
 
     final static ll a(int param0) {
         int var1 = 0;
-        var1 = -105 / ((param0 - 83) / 42);
+        var1 = -105;
         if (kh.field_w == null) {
           kh.field_w = new ll();
           kh.field_w.a(111, tj.field_e);

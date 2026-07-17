@@ -36,7 +36,7 @@ final class hk extends fb {
         L1: {
           int fieldTemp$3 = ((hk) this).field_N;
           ((hk) this).field_N = ((hk) this).field_N - 1;
-          if ((fieldTemp$3 ^ -1) <= -1) {
+          if (fieldTemp$3 >= 0) {
             break L1;
           } else {
             if (((hk) this).field_D) {
@@ -106,7 +106,7 @@ final class hk extends fb {
                           }
                           ((kd) (Object) var2).z(0);
                           ((kd) (Object) var2).q((byte) -108);
-                          ((kd) (Object) var2).field_Gb = ((hk) this).field_I * 7 >> -669176062;
+                          ((kd) (Object) var2).field_Gb = ((hk) this).field_I * 7 >> 2;
                           break L4;
                         }
                       }
@@ -178,7 +178,7 @@ final class hk extends fb {
           stackOut_3_0 = this;
           stackIn_5_0 = stackOut_3_0;
           stackIn_4_0 = stackOut_3_0;
-          if (-2 != (pb.a(so.field_a, 2, 1) ^ -1)) {
+          if (pb.a(so.field_a, 2, 1) != 1) {
             stackOut_5_0 = this;
             stackOut_5_1 = 0;
             stackIn_6_0 = stackOut_5_0;
@@ -194,7 +194,7 @@ final class hk extends fb {
         }
         L2: {
           ((hk) this).field_M = stackIn_6_1 != 0;
-          if ((pb.a(so.field_a, 15, 1) ^ -1) == -2) {
+          if (pb.a(so.field_a, 15, 1) == 1) {
             ((hk) this).field_G = 7 + pb.a(so.field_a, 2, 1);
             break L2;
           } else {
@@ -284,9 +284,9 @@ final class hk extends fb {
           L10: {
             ((hk) this).field_E = ((hk) this).field_E * 72;
             ((hk) this).field_E = ((hk) this).field_E + 254;
-            ((hk) this).field_y = ((hk) this).field_O << 1893752144;
+            ((hk) this).field_y = ((hk) this).field_O << 16;
             ((hk) this).field_t = ((hk) this).field_G;
-            ((hk) this).field_x = ((hk) this).field_E << -279527504;
+            ((hk) this).field_x = ((hk) this).field_E << 16;
             stackOut_27_0 = this;
             stackIn_29_0 = stackOut_27_0;
             stackIn_28_0 = stackOut_27_0;
@@ -296,7 +296,7 @@ final class hk extends fb {
               stackOut_28_0 = this;
               stackIn_30_0 = stackOut_28_0;
               stackIn_29_0 = stackOut_28_0;
-              if (-2 != (((hk) this).field_G ^ -1)) {
+              if (((hk) this).field_G != 1) {
                 stackOut_30_0 = this;
                 stackOut_30_1 = 0;
                 stackIn_31_0 = stackOut_30_0;
@@ -335,7 +335,7 @@ final class hk extends fb {
         }
         L12: {
           ((hk) this).field_D = false;
-          if (-1 != (pb.a(so.field_a, 5, 1) ^ -1)) {
+          if (pb.a(so.field_a, 5, 1) != 0) {
             ((hk) this).field_N = 2147483647;
             break L12;
           } else {
@@ -346,7 +346,8 @@ final class hk extends fb {
     }
 
     final void a(byte param0, wk param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -357,83 +358,139 @@ final class hk extends fb {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        L0: {
-          var12 = ZombieDawn.field_J;
-          var3 = param1.a(((hk) this).field_O, (byte) -75);
-          var4 = param1.a(((hk) this).field_E, 0);
-          if (param0 <= -76) {
-            break L0;
-          } else {
-            field_J = null;
-            break L0;
-          }
-        }
-        L1: {
-          var5 = -12 + tm.field_l[((hk) this).field_G] * 24;
-          var6 = 24 * tm.field_i[((hk) this).field_G];
-          if (((hk) this).field_M) {
-            jc.field_t[0].b(var3 + -280, -60 + (-tm.field_k[((hk) this).field_G] + var4), 128);
-            jc.field_t[1].b(-280 + var3, var4 - tm.field_k[((hk) this).field_G], 128);
-            var7 = 0;
-            L2: while (true) {
-              if (tm.field_i[((hk) this).field_G] <= var7) {
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        var12 = ZombieDawn.field_J;
+        try {
+          L0: {
+            L1: {
+              var3_int = param1.a(((hk) this).field_O, (byte) -75);
+              var4 = param1.a(((hk) this).field_E, 0);
+              if (param0 <= -76) {
                 break L1;
               } else {
-                var13 = 0;
-                var8 = var13;
+                field_J = null;
+                break L1;
+              }
+            }
+            L2: {
+              var5 = -12 + tm.field_l[((hk) this).field_G] * 24;
+              var6 = 24 * tm.field_i[((hk) this).field_G];
+              if (((hk) this).field_M) {
+                jc.field_t[0].b(var3_int + -280, -60 + (-tm.field_k[((hk) this).field_G] + var4), 128);
+                jc.field_t[1].b(-280 + var3_int, var4 - tm.field_k[((hk) this).field_G], 128);
+                var7 = 0;
                 L3: while (true) {
-                  if (tm.field_l[((hk) this).field_G] <= var13) {
-                    var7++;
-                    continue L2;
+                  if (tm.field_i[((hk) this).field_G] <= var7) {
+                    break L2;
                   } else {
-                    tm.field_h[8 * var13 + (tm.field_n[((hk) this).field_G] - -var7)].b(var3 - -(var7 * 24), var13 * 24 + var4 - var5);
-                    var13++;
-                    continue L3;
+                    var13 = 0;
+                    var8 = var13;
+                    L4: while (true) {
+                      if (tm.field_l[((hk) this).field_G] <= var13) {
+                        var7++;
+                        continue L3;
+                      } else {
+                        tm.field_h[8 * var13 + (tm.field_n[((hk) this).field_G] - -var7)].b(var3_int - -(var7 * 24), var13 * 24 + var4 - var5);
+                        var13++;
+                        continue L4;
+                      }
+                    }
+                  }
+                }
+              } else {
+                jc.field_t[2].b(var3_int - 20, -60 + (-tm.field_k[((hk) this).field_G] + var4), 128);
+                jc.field_t[3].b(var3_int + -20, -tm.field_k[((hk) this).field_G] + var4, 128);
+                var7 = 0;
+                L5: while (true) {
+                  if (var7 >= tm.field_i[((hk) this).field_G]) {
+                    break L2;
+                  } else {
+                    var8 = 0;
+                    L6: while (true) {
+                      if (var8 >= tm.field_l[((hk) this).field_G]) {
+                        var7++;
+                        continue L5;
+                      } else {
+                        var9 = tm.field_n[((hk) this).field_G];
+                        var10 = tm.field_i[((hk) this).field_G];
+                        var11 = 8 * var8 + -var7 + (var10 + (var9 - 1));
+                        tm.field_h[var11].c(-var6 + (var3_int - -(24 * var7)), var4 - (var5 + -(24 * var8)));
+                        var8++;
+                        continue L6;
+                      }
+                    }
                   }
                 }
               }
             }
-          } else {
-            jc.field_t[2].b(var3 - 20, -60 + (-tm.field_k[((hk) this).field_G] + var4), 128);
-            jc.field_t[3].b(var3 + -20, -tm.field_k[((hk) this).field_G] + var4, 128);
-            var7 = 0;
-            L4: while (true) {
-              if (var7 >= tm.field_i[((hk) this).field_G]) {
-                break L1;
-              } else {
-                var8 = 0;
-                L5: while (true) {
-                  if (var8 >= tm.field_l[((hk) this).field_G]) {
-                    var7++;
-                    continue L4;
-                  } else {
-                    var9 = tm.field_n[((hk) this).field_G];
-                    var10 = tm.field_i[((hk) this).field_G];
-                    var11 = 8 * var8 + -var7 + (var10 + (var9 - 1));
-                    tm.field_h[var11].c(-var6 + (var3 - -(24 * var7)), var4 - (var5 + -(24 * var8)));
-                    var8++;
-                    continue L5;
-                  }
-                }
-              }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var3 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_1 = new StringBuilder().append("hk.B(").append(param0).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param1 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L7;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L7;
             }
           }
+          throw sh.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
         }
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+        va[] var10 = null;
+        va[] var7 = null;
         int var8 = 0;
         int var9 = ZombieDawn.field_J;
-        va[] var10 = new va[pa.field_x.length - -1];
-        va[] var7 = var10;
-        for (var8 = 0; pa.field_x.length > var8; var8++) {
-            var10[var8] = pa.field_x[var8];
+        try {
+            var10 = new va[pa.field_x.length - -1];
+            var7 = var10;
+            for (var8 = 0; pa.field_x.length > var8; var8++) {
+                var10[var8] = pa.field_x[var8];
+            }
+            if (param1 != -23) {
+                hk.b(false);
+            }
+            var7[var7.length + -1] = new va(param6, param0, param4, param2, param3, param5);
+            pa.field_x = var7;
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "hk.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
-        if (param1 != -23) {
-            hk.b(false);
-        }
-        var7[var7.length + -1] = new va(param6, param0, param4, param2, param3, param5);
-        pa.field_x = var7;
     }
 
     public static void b(boolean param0) {
@@ -447,12 +504,12 @@ final class hk extends fb {
     }
 
     final static void i(int param0) {
-        uf var1 = (uf) (Object) ad.field_h.a(param0 + -1584);
+        uf var1 = (uf) (Object) ad.field_h.a(0);
         if (!(var1 != null)) {
             var1 = new uf();
         }
         var1.a(bi.field_l, (byte) -29, bi.field_f, bi.field_b, bi.field_d, bi.field_c, bi.field_g, bi.field_a);
-        rm.field_d.a(param0 ^ param0, (le) (Object) var1);
+        rm.field_d.a(0, (le) (Object) var1);
     }
 
     static {

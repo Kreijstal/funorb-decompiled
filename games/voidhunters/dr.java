@@ -8,9 +8,6 @@ final class dr {
     final static void a(int param0) {
         awa.field_p.setLength(0);
         ow.field_b = 0;
-        if (param0 != 26718) {
-            field_a = 106;
-        }
     }
 
     static {

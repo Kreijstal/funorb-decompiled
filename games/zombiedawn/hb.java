@@ -21,12 +21,12 @@ final class hb extends ga {
         ((hb) this).field_L = new vn[]{this.b(((hb) this).field_y, ((hb) this).field_A, -69), this.b(((hb) this).field_z, ((hb) this).field_x, -105)};
         ((hb) this).field_K = this.a(-108);
         ((hb) this).field_J = ((hb) this).field_K.d();
-        ((hb) this).field_B = new vn(((hb) this).field_n >> -116787551, ((hb) this).field_n);
+        ((hb) this).field_B = new vn(((hb) this).field_n >> 1, ((hb) this).field_n);
         int var2 = -77 / ((param0 - 88) / 33);
     }
 
     hb(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1719230081, param6 >> 962913793 & 8355711);
+        this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, param6 >> 1 & 8355711);
     }
 
     private final vn b(int param0, int param1, int param2) {
@@ -50,7 +50,7 @@ final class hb extends ga {
         var14 = ZombieDawn.field_J;
         var15 = new vn(((hb) this).field_E * 2, ((hb) this).field_n);
         ki.a((byte) -99, var15);
-        var5 = ((hb) this).field_n >> 115498145;
+        var5 = ((hb) this).field_n >> 1;
         var6 = -39 / ((34 - param2) / 50);
         var7 = 0;
         L0: while (true) {
@@ -59,13 +59,13 @@ final class hb extends ga {
             return var15;
           } else {
             L1: {
-              var8 = (var7 >> 570689921) * (((hb) this).field_E * 2 + -1) % (2 * ((hb) this).field_E);
+              var8 = (var7 >> 1) * (((hb) this).field_E * 2 + -1) % (2 * ((hb) this).field_E);
               var9 = 16711935 & param0;
               var10 = param0 & 65280;
               var11 = var7 + -var5;
               var12 = (int)(128.0 * (Math.sqrt((double)(var5 * var5 + -(var11 * var11))) / (double)var5)) + 128;
-              if ((var12 ^ -1) > -257) {
-                stackOut_4_0 = (var12 * var9 & -16711936 | 16711680 & var12 * var10) >>> 29749576;
+              if (var12 < 256) {
+                stackOut_4_0 = (var12 * var9 & -16711936 | 16711680 & var12 * var10) >>> 8;
                 stackIn_5_0 = stackOut_4_0;
                 break L1;
               } else {
@@ -85,7 +85,7 @@ final class hb extends ga {
                 stackIn_8_0 = stackOut_7_0;
                 break L2;
               } else {
-                stackOut_6_0 = (16711680 & var12 * var10 | -16711936 & var9 * var12) >>> -850366776;
+                stackOut_6_0 = (16711680 & var12 * var10 | -16711936 & var9 * var12) >>> 8;
                 stackIn_8_0 = stackOut_6_0;
                 break L2;
               }
@@ -100,58 +100,108 @@ final class hb extends ga {
     }
 
     private final void a(int param0, vn param1, byte param2, int param3) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var8 = ZombieDawn.field_J;
-        var5 = ((hb) this).field_i + param3;
-        g.a(param0, (byte) 99, -((hb) this).field_K.field_w + var5, ((hb) this).field_n + param0, ((hb) this).field_K.field_w + param3);
-        var6 = param3 + -((hb) this).field_H;
-        L0: while (true) {
-          if (var5 <= var6) {
-            L1: {
-              var7 = -32 / ((param2 - 34) / 50);
-              pa.a(-21189);
-              if (bi.field_g > ((hb) this).field_K.field_w + param3) {
-                break L1;
-              } else {
-                ki.a((byte) -118, ((hb) this).field_B);
-                param1.b(-((hb) this).field_H, 0);
-                param1.b(-((hb) this).field_H + 2 * ((hb) this).field_E, 0);
-                ((hb) this).field_J.a(0, 0);
-                pa.a(-21189);
-                ((hb) this).field_B.b(param3, param0);
-                break L1;
-              }
-            }
-            L2: {
-              if (-((hb) this).field_K.field_w + var5 <= bi.field_b) {
-                ki.a((byte) -107, ((hb) this).field_B);
-                var7 = -((hb) this).field_K.field_w + (((hb) this).field_i + ((hb) this).field_H);
-                L3: while (true) {
-                  if (((hb) this).field_E * 2 >= var7) {
-                    param1.b(-var7, 0);
-                    param1.b(-var7 + 2 * ((hb) this).field_E, 0);
-                    ((hb) this).field_K.a(0, 0);
-                    pa.a(-21189);
-                    ((hb) this).field_B.b(var5 - ((hb) this).field_K.field_w, param0);
+        try {
+          L0: {
+            var5_int = ((hb) this).field_i + param3;
+            g.a(param0, (byte) 99, -((hb) this).field_K.field_w + var5_int, ((hb) this).field_n + param0, ((hb) this).field_K.field_w + param3);
+            var6 = param3 + -((hb) this).field_H;
+            L1: while (true) {
+              if (var5_int <= var6) {
+                L2: {
+                  var7 = -32 / ((param2 - 34) / 50);
+                  pa.a(-21189);
+                  if (bi.field_g > ((hb) this).field_K.field_w + param3) {
                     break L2;
                   } else {
-                    var7 = var7 - ((hb) this).field_E * 2;
-                    continue L3;
+                    ki.a((byte) -118, ((hb) this).field_B);
+                    param1.b(-((hb) this).field_H, 0);
+                    param1.b(-((hb) this).field_H + 2 * ((hb) this).field_E, 0);
+                    ((hb) this).field_J.a(0, 0);
+                    pa.a(-21189);
+                    ((hb) this).field_B.b(param3, param0);
+                    break L2;
                   }
                 }
+                L3: {
+                  if (-((hb) this).field_K.field_w + var5_int <= bi.field_b) {
+                    ki.a((byte) -107, ((hb) this).field_B);
+                    var7 = -((hb) this).field_K.field_w + (((hb) this).field_i + ((hb) this).field_H);
+                    L4: while (true) {
+                      if (((hb) this).field_E * 2 >= var7) {
+                        param1.b(-var7, 0);
+                        param1.b(-var7 + 2 * ((hb) this).field_E, 0);
+                        ((hb) this).field_K.a(0, 0);
+                        pa.a(-21189);
+                        ((hb) this).field_B.b(var5_int - ((hb) this).field_K.field_w, param0);
+                        break L3;
+                      } else {
+                        var7 = var7 - ((hb) this).field_E * 2;
+                        continue L4;
+                      }
+                    }
+                  } else {
+                    break L3;
+                  }
+                }
+                break L0;
               } else {
-                break L2;
+                param1.b(var6, param0);
+                var6 = var6 + param1.field_w;
+                continue L1;
               }
             }
-            return;
-          } else {
-            param1.b(var6, param0);
-            var6 = var6 + param1.field_w;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var5 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var5;
+            stackOut_13_1 = new StringBuilder().append("hb.IA(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -159,9 +209,9 @@ final class hb extends ga {
         if (param0 >= 0) {
             return;
         }
-        ((hb) this).field_z = 8355711 & param2 >> 1491906017;
+        ((hb) this).field_z = 8355711 & param2 >> 1;
         ((hb) this).field_A = param1;
-        ((hb) this).field_x = 8355711 & param1 >> -1923347167;
+        ((hb) this).field_x = 8355711 & param1 >> 1;
         ((hb) this).field_y = param2;
         this.g(52);
     }
@@ -169,9 +219,6 @@ final class hb extends ga {
     public static void f(int param0) {
         field_G = null;
         field_D = null;
-        if (param0 > -83) {
-            field_D = null;
-        }
     }
 
     private final vn a(int param0) {
@@ -180,7 +227,7 @@ final class hb extends ga {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = ZombieDawn.field_J;
-        int var2 = ((hb) this).field_n >> 1810055425;
+        int var2 = ((hb) this).field_n >> 1;
         vn var3 = new vn(var2, ((hb) this).field_n);
         ki.a((byte) -118, var3);
         for (var4 = 0; var4 < ((hb) this).field_n; var4++) {
@@ -191,35 +238,36 @@ final class hb extends ga {
                     var6 = Math.sqrt(1.0 - var6);
                     var8 = 1.0 <= var6 ? 255 : (int)(var6 * 255.0);
                 }
-                bi.a(var5, var4, var8 << 1746294320 | (var8 | var8 << 1068007784));
+                bi.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
             }
-        }
-        if (param0 >= -81) {
-            ((hb) this).field_H = 42;
         }
         pa.a(-21189);
         return var3;
     }
 
     final void a(ga param0, byte param1, int param2, int param3) {
-        if (((hb) this).field_F) {
-            ((hb) this).field_H = ((hb) this).field_H + 1;
-            if (!(2 * ((hb) this).field_E >= ((hb) this).field_H)) {
-                ((hb) this).field_H = ((hb) this).field_H - 2 * ((hb) this).field_E;
+        try {
+            if (((hb) this).field_F) {
+                ((hb) this).field_H = ((hb) this).field_H + 1;
+                if (!(2 * ((hb) this).field_E >= ((hb) this).field_H)) {
+                    ((hb) this).field_H = ((hb) this).field_H - 2 * ((hb) this).field_E;
+                }
             }
+            int var5_int = 20 / ((46 - param1) / 42);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "hb.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
-        int var5 = 20 / ((46 - param1) / 42);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (-1 != (param1 ^ -1)) {
+        if (param1 != 0) {
             return;
         }
         int var5 = ((hb) this).field_k + param2;
         int var6 = ((hb) this).field_j + param0;
         this.a(var6, ((hb) this).field_L[param3], (byte) -52, var5);
         if (((hb) this).field_C < 65536) {
-            g.a(var6, (byte) 99, var5 + ((hb) this).field_i, var6 - -((hb) this).field_n, (((hb) this).field_i * ((hb) this).field_C >> 1889691696) + var5);
+            g.a(var6, (byte) 99, var5 + ((hb) this).field_i, var6 - -((hb) this).field_n, (((hb) this).field_i * ((hb) this).field_C >> 16) + var5);
             this.a(var6, ((hb) this).field_L[1], (byte) -104, var5);
             pa.a(-21189);
         }

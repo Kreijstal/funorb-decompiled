@@ -20,7 +20,7 @@ final class db {
         int stackOut_5_0 = 0;
         if (param0 == -60) {
           if (((db) this).field_e == 0) {
-            if ((((db) this).field_h ^ -1) != -85) {
+            if (((db) this).field_h != 84) {
               if (83 == ((db) this).field_h) {
                 return true;
               } else {
@@ -35,7 +35,7 @@ final class db {
         } else {
           boolean discarded$7 = ((db) this).d((byte) 26);
           if (((db) this).field_e == 0) {
-            if ((((db) this).field_h ^ -1) == -85) {
+            if (((db) this).field_h == 84) {
               return true;
             } else {
               L0: {
@@ -61,7 +61,7 @@ final class db {
         ((db) this).field_e = param0;
         ((db) this).field_h = 0;
         ((db) this).field_c = 0;
-        if (-1 == (((db) this).field_b ^ -1)) {
+        if (((db) this).field_b == 0) {
           if (98 == e.field_f) {
             L0: {
               if (0 >= ((db) this).field_g) {
@@ -188,7 +188,7 @@ final class db {
     }
 
     final void a(int param0, int param1) {
-        if (!(param1 != (((db) this).field_b ^ -1))) {
+        if (!(param1 != ~((db) this).field_b)) {
             ((db) this).field_k = false;
             ((db) this).field_g = param0;
         }
@@ -200,7 +200,7 @@ final class db {
           L0: {
             ((db) this).field_c = 0;
             ((db) this).field_h = 0;
-            if (-1 == (((db) this).field_b ^ -1)) {
+            if (((db) this).field_b == 0) {
               ((db) this).field_h = e.field_f;
               break L0;
             } else {
@@ -211,9 +211,9 @@ final class db {
             if (0 != ((db) this).field_b) {
               break L1;
             } else {
-              if ((e.field_f ^ -1) == -97) {
+              if (e.field_f == 96) {
                 L2: {
-                  if (-1 <= (((db) this).field_g ^ -1)) {
+                  if (((db) this).field_g <= 0) {
                     ((db) this).field_g = ((db) this).field_i;
                     break L2;
                   } else {
@@ -225,7 +225,7 @@ final class db {
                 break L1;
               } else {
                 if (((db) this).field_b == 0) {
-                  if ((e.field_f ^ -1) == -98) {
+                  if (e.field_f == 97) {
                     ((db) this).field_g = ((db) this).field_g + 1;
                     ((db) this).field_k = false;
                     if (((db) this).field_i > ((db) this).field_g) {
@@ -244,7 +244,7 @@ final class db {
             }
           }
           if (((db) this).field_b == 0) {
-            if ((e.field_f ^ -1) == -98) {
+            if (e.field_f == 97) {
               ((db) this).field_g = ((db) this).field_g + 1;
               ((db) this).field_k = false;
               if (((db) this).field_i > ((db) this).field_g) {
@@ -267,18 +267,18 @@ final class db {
     final boolean c(int param0) {
         if (param0 != -97) {
             boolean discarded$6 = ((db) this).f((byte) -87);
-            if ((((db) this).field_c ^ -1) != -1) {
+            if (((db) this).field_c != 0) {
                 return true;
             }
-            if (-85 == (((db) this).field_h ^ -1)) {
+            if (((db) this).field_h == 84) {
                 return true;
             }
             return ((db) this).field_h == 83 ? true : false;
         }
-        if ((((db) this).field_c ^ -1) != -1) {
+        if (((db) this).field_c != 0) {
             return true;
         }
-        if (-85 == (((db) this).field_h ^ -1)) {
+        if (((db) this).field_h == 84) {
             return true;
         }
         if (((db) this).field_h == 83) {
@@ -293,8 +293,8 @@ final class db {
         ((db) this).field_e = 0;
         if (-1 == ((db) this).field_b) {
           L0: {
-            if ((e.field_f ^ -1) == -97) {
-              if ((((db) this).field_g ^ -1) < -1) {
+            if (e.field_f == 96) {
+              if (((db) this).field_g > 0) {
                 ((db) this).field_k = false;
                 ((db) this).field_g = ((db) this).field_g - 1;
                 break L0;
@@ -308,12 +308,12 @@ final class db {
               break L0;
             }
           }
-          if (-1 != (((db) this).field_b ^ -1)) {
+          if (((db) this).field_b != 0) {
             L1: {
               if (0 != ((db) this).field_b) {
                 break L1;
               } else {
-                if (-98 == (e.field_f ^ -1)) {
+                if (e.field_f == 97) {
                   ((db) this).field_g = ((db) this).field_g + 1;
                   if (((db) this).field_g < ((db) this).field_i) {
                     ((db) this).field_k = false;
@@ -323,7 +323,7 @@ final class db {
                     ((db) this).field_k = false;
                     if (param0 > 44) {
                       if (((db) this).field_b == 0) {
-                        if ((e.field_f ^ -1) == -99) {
+                        if (e.field_f == 98) {
                           ((db) this).field_k = false;
                           if (((db) this).field_g < 0) {
                             ((db) this).field_g = param1;
@@ -354,7 +354,7 @@ final class db {
                           break L2;
                         } else {
                           L3: {
-                            if ((e.field_f ^ -1) == -99) {
+                            if (e.field_f == 98) {
                               break L3;
                             } else {
                               if (99 != e.field_f) {
@@ -390,7 +390,7 @@ final class db {
                       break L5;
                     } else {
                       L6: {
-                        if ((e.field_f ^ -1) == -99) {
+                        if (e.field_f == 98) {
                           break L6;
                         } else {
                           if (99 != e.field_f) {
@@ -415,7 +415,7 @@ final class db {
             }
             if (param0 > 44) {
               if (((db) this).field_b == 0) {
-                if ((e.field_f ^ -1) == -99) {
+                if (e.field_f == 98) {
                   ((db) this).field_k = false;
                   if (((db) this).field_g >= 0) {
                     return;
@@ -442,7 +442,7 @@ final class db {
             } else {
               boolean discarded$12 = ((db) this).d((byte) -58);
               if (((db) this).field_b == 0) {
-                if ((e.field_f ^ -1) == -99) {
+                if (e.field_f == 98) {
                   ((db) this).field_k = false;
                   if (((db) this).field_g >= 0) {
                     return;
@@ -471,7 +471,7 @@ final class db {
             ((db) this).field_h = e.field_f;
             if (0 == ((db) this).field_b) {
               L7: {
-                if (-98 == (e.field_f ^ -1)) {
+                if (e.field_f == 97) {
                   ((db) this).field_g = ((db) this).field_g + 1;
                   if (((db) this).field_g >= ((db) this).field_i) {
                     ((db) this).field_g = 0;
@@ -492,7 +492,7 @@ final class db {
                         break L9;
                       } else {
                         L10: {
-                          if ((e.field_f ^ -1) == -99) {
+                          if (e.field_f == 98) {
                             break L10;
                           } else {
                             if (99 != e.field_f) {
@@ -523,7 +523,7 @@ final class db {
                     break L11;
                   } else {
                     L12: {
-                      if ((e.field_f ^ -1) == -99) {
+                      if (e.field_f == 98) {
                         break L12;
                       } else {
                         if (99 != e.field_f) {
@@ -550,7 +550,7 @@ final class db {
                     break L13;
                   } else {
                     L14: {
-                      if ((e.field_f ^ -1) == -99) {
+                      if (e.field_f == 98) {
                         break L14;
                       } else {
                         if (99 != e.field_f) {
@@ -585,7 +585,7 @@ final class db {
                   break L16;
                 } else {
                   L17: {
-                    if ((e.field_f ^ -1) == -99) {
+                    if (e.field_f == 98) {
                       break L17;
                     } else {
                       if (99 != e.field_f) {
@@ -613,7 +613,7 @@ final class db {
               if (0 != ((db) this).field_b) {
                 break L18;
               } else {
-                if (-98 == (e.field_f ^ -1)) {
+                if (e.field_f == 97) {
                   ((db) this).field_g = ((db) this).field_g + 1;
                   if (((db) this).field_g < ((db) this).field_i) {
                     ((db) this).field_k = false;
@@ -634,7 +634,7 @@ final class db {
                         break L20;
                       } else {
                         L21: {
-                          if ((e.field_f ^ -1) == -99) {
+                          if (e.field_f == 98) {
                             break L21;
                           } else {
                             if (99 != e.field_f) {
@@ -669,7 +669,7 @@ final class db {
                       break L23;
                     } else {
                       L24: {
-                        if ((e.field_f ^ -1) == -99) {
+                        if (e.field_f == 98) {
                           break L24;
                         } else {
                           if (99 != e.field_f) {
@@ -694,7 +694,7 @@ final class db {
             }
             if (param0 > 44) {
               if (((db) this).field_b == 0) {
-                if ((e.field_f ^ -1) == -99) {
+                if (e.field_f == 98) {
                   ((db) this).field_k = false;
                   if (((db) this).field_g < 0) {
                     ((db) this).field_g = param1;
@@ -728,7 +728,7 @@ final class db {
                   break L26;
                 } else {
                   L27: {
-                    if ((e.field_f ^ -1) == -99) {
+                    if (e.field_f == 98) {
                       break L27;
                     } else {
                       if (99 != e.field_f) {
@@ -755,7 +755,7 @@ final class db {
               if (0 != ((db) this).field_b) {
                 break L28;
               } else {
-                if (-98 == (e.field_f ^ -1)) {
+                if (e.field_f == 97) {
                   ((db) this).field_g = ((db) this).field_g + 1;
                   if (((db) this).field_g < ((db) this).field_i) {
                     ((db) this).field_k = false;
@@ -783,7 +783,7 @@ final class db {
                 break L30;
               } else {
                 L31: {
-                  if ((e.field_f ^ -1) == -99) {
+                  if (e.field_f == 98) {
                     break L31;
                   } else {
                     if (99 != e.field_f) {
@@ -809,7 +809,7 @@ final class db {
 
     final boolean e(byte param0) {
         int var2 = -109 % ((-67 - param0) / 33);
-        return (((db) this).field_h ^ -1) == -103 ? true : false;
+        return ((db) this).field_h == 102 ? true : false;
     }
 
     final boolean b(byte param0) {
@@ -821,12 +821,12 @@ final class db {
         int stackOut_4_0 = 0;
         if (param0 == -108) {
           L0: {
-            if (-3 == (((db) this).field_c ^ -1)) {
+            if (((db) this).field_c == 2) {
               stackOut_10_0 = 1;
               stackIn_12_0 = stackOut_10_0;
               break L0;
             } else {
-              if ((((db) this).field_h ^ -1) != -97) {
+              if (((db) this).field_h != 96) {
                 stackOut_11_0 = 0;
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
@@ -838,9 +838,9 @@ final class db {
           return stackIn_12_0 != 0;
         } else {
           ((db) this).field_i = -104;
-          if (-3 != (((db) this).field_c ^ -1)) {
+          if (((db) this).field_c != 2) {
             L1: {
-              if ((((db) this).field_h ^ -1) != -97) {
+              if (((db) this).field_h != 96) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
                 break L1;
@@ -886,7 +886,7 @@ final class db {
         if (param0 >= 81) {
           if (1 != ((db) this).field_c) {
             if (((db) this).field_h != 97) {
-              if (-85 != (((db) this).field_h ^ -1)) {
+              if (((db) this).field_h != 84) {
                 if (((db) this).field_h == 83) {
                   return true;
                 } else {
@@ -950,10 +950,6 @@ final class db {
     public static void d(int param0) {
         field_d = null;
         field_a = null;
-        if (param0 != -98) {
-            Object var2 = null;
-            String discarded$0 = db.a((String) null, 63);
-        }
     }
 
     final boolean d(byte param0) {
@@ -1040,7 +1036,7 @@ final class db {
             ((db) this).field_h = 0;
             ((db) this).field_e = 0;
             ((db) this).field_c = 0;
-            if (-1 != (ta.field_o ^ -1)) {
+            if (ta.field_o != 0) {
               L0: {
                 ((db) this).field_b = ta.field_o;
                 ((db) this).field_c = ta.field_o;
@@ -1053,7 +1049,7 @@ final class db {
                 } else {
                   if (ul.field_d != 0) {
                     L1: {
-                      if (-1 <= (((db) this).field_f ^ -1)) {
+                      if (((db) this).field_f <= 0) {
                         ((db) this).field_f = bp.field_d;
                         ((db) this).field_c = ((db) this).field_b;
                         break L1;
@@ -1077,7 +1073,7 @@ final class db {
                         if (0 == ((db) this).field_b) {
                           if (((db) this).field_k) {
                             L3: {
-                              if ((param1 ^ -1) > -1) {
+                              if (param1 < 0) {
                                 if (((db) this).field_k) {
                                   ((db) this).field_g = -1;
                                   break L3;
@@ -1102,7 +1098,7 @@ final class db {
                               if (!he.field_a) {
                                 break L4;
                               } else {
-                                if ((param1 ^ -1) > -1) {
+                                if (param1 < 0) {
                                   if (((db) this).field_k) {
                                     ((db) this).field_g = -1;
                                     break L4;
@@ -1149,7 +1145,7 @@ final class db {
                                 }
                               }
                             }
-                            if ((param1 ^ -1) > -1) {
+                            if (param1 < 0) {
                               if (((db) this).field_k) {
                                 ((db) this).field_g = -1;
                                 break L5;
@@ -1196,7 +1192,7 @@ final class db {
                             }
                           }
                         }
-                        if ((param1 ^ -1) > -1) {
+                        if (param1 < 0) {
                           if (((db) this).field_k) {
                             ((db) this).field_g = -1;
                             return;
@@ -1227,7 +1223,7 @@ final class db {
                 if (0 == ((db) this).field_b) {
                   L9: {
                     if (((db) this).field_k) {
-                      if ((param1 ^ -1) > -1) {
+                      if (param1 < 0) {
                         if (((db) this).field_k) {
                           ((db) this).field_g = -1;
                           break L9;
@@ -1249,7 +1245,7 @@ final class db {
                       if (!he.field_a) {
                         break L9;
                       } else {
-                        if ((param1 ^ -1) > -1) {
+                        if (param1 < 0) {
                           if (((db) this).field_k) {
                             ((db) this).field_g = -1;
                             return;
@@ -1284,7 +1280,7 @@ final class db {
                 } else {
                   if (ul.field_d != 0) {
                     L11: {
-                      if (-1 <= (((db) this).field_f ^ -1)) {
+                      if (((db) this).field_f <= 0) {
                         ((db) this).field_f = bp.field_d;
                         ((db) this).field_c = ((db) this).field_b;
                         break L11;
@@ -1325,7 +1321,7 @@ final class db {
                               }
                             }
                           }
-                          if ((param1 ^ -1) > -1) {
+                          if (param1 < 0) {
                             if (((db) this).field_k) {
                               ((db) this).field_g = -1;
                               break L13;
@@ -1376,7 +1372,7 @@ final class db {
                               }
                             }
                           }
-                          if ((param1 ^ -1) > -1) {
+                          if (param1 < 0) {
                             if (((db) this).field_k) {
                               ((db) this).field_g = -1;
                               break L16;
@@ -1404,7 +1400,7 @@ final class db {
               if (param0) {
                 if (0 == ((db) this).field_b) {
                   if (((db) this).field_k) {
-                    if ((param1 ^ -1) > -1) {
+                    if (param1 < 0) {
                       if (!((db) this).field_k) {
                         return;
                       } else {
@@ -1425,7 +1421,7 @@ final class db {
                   } else {
                     if (he.field_a) {
                       L18: {
-                        if ((param1 ^ -1) > -1) {
+                        if (param1 < 0) {
                           if (((db) this).field_k) {
                             ((db) this).field_g = -1;
                             break L18;
@@ -1461,27 +1457,86 @@ final class db {
     }
 
     final static String a(String param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
+        Object stackIn_3_0 = null;
+        String stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_7_0 = null;
+        Object stackOut_2_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var5 = Torquing.field_u;
-        var2 = param0.length();
-        var3 = new char[var2];
-        if (param1 != 31108) {
-          return null;
-        } else {
-          var4 = 0;
-          L0: while (true) {
-            if (var2 <= var4) {
-              return new String(var3);
+        try {
+          L0: {
+            var2_int = param0.length();
+            var3 = new char[var2_int];
+            if (param1 == 31108) {
+              var4 = 0;
+              L1: while (true) {
+                if (var2_int <= var4) {
+                  stackOut_7_0 = new String(var3);
+                  stackIn_8_0 = stackOut_7_0;
+                  break L0;
+                } else {
+                  var3[-var4 + -1 + var2_int] = param0.charAt(var4);
+                  var4++;
+                  continue L1;
+                }
+              }
             } else {
-              var3[-var4 + -1 + var2] = param0.charAt(var4);
-              var4++;
-              continue L0;
+              stackOut_2_0 = null;
+              stackIn_3_0 = stackOut_2_0;
+              return (String) (Object) stackIn_3_0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var2;
+            stackOut_9_1 = new StringBuilder().append("db.D(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L2;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L2;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
         }
+        return stackIn_8_0;
     }
 
     final void a(int param0, byte param1, boolean param2, int param3) {
@@ -1535,7 +1590,7 @@ final class db {
         if (param0 <= 31) {
           L0: {
             ((db) this).a(81);
-            if ((((db) this).field_h ^ -1) != -97) {
+            if (((db) this).field_h != 96) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -1548,7 +1603,7 @@ final class db {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((db) this).field_h ^ -1) != -97) {
+            if (((db) this).field_h != 96) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;

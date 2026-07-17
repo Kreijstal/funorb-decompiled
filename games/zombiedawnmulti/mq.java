@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.Class;
+
 final class mq extends nc {
     static cj field_l;
     static String field_q;
@@ -26,7 +28,7 @@ final class mq extends nc {
             break L1;
           } else {
             if (((mq) this).field_d != 6) {
-              if (-1 != (param1 ^ -1)) {
+              if (param1 != 0) {
                 return 100 + ((mq) this).a((byte) -118, param1);
               } else {
                 return 350 + ((mq) this).a((byte) -118, param1);
@@ -51,7 +53,7 @@ final class mq extends nc {
         ri var10 = null;
         int var11 = 0;
         int var12 = 0;
-        ri var12_ref = null;
+        ri var12_ref_ri = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -116,7 +118,7 @@ final class mq extends nc {
                   if (ra.field_n[var9] <= var17) {
                     break L3;
                   } else {
-                    of.field_k.g(var17 * (of.field_k.field_z >> -873579583) + var11, 2 + -of.field_k.field_u + var12);
+                    of.field_k.g(var17 * (of.field_k.field_z >> 1) + var11, 2 + -of.field_k.field_u + var12);
                     var17++;
                     continue L4;
                   }
@@ -158,8 +160,8 @@ final class mq extends nc {
                   break L7;
                 }
               }
-              var12_ref = this.g(0, var9);
-              var12_ref.b(var10_int, var11);
+              var12_ref_ri = this.g(0, var9);
+              var12_ref_ri.b(var10_int, var11);
               var9++;
               continue L1;
             } else {
@@ -199,12 +201,12 @@ final class mq extends nc {
               if (var8 >= sf.field_b) {
                 return;
               } else {
-                if (this.f(param0 ^ -1, var8)) {
+                if (this.f(~param0, var8)) {
                   L2: {
                     var9 = var5;
                     var10 = var6;
                     ((mq) this).field_m[var8] = var9;
-                    if ((var7 % 2 ^ -1) != -2) {
+                    if (var7 % 2 != 1) {
                       break L2;
                     } else {
                       var10 += 24;
@@ -240,8 +242,8 @@ final class mq extends nc {
     }
 
     final int a(byte param0, int param1) {
-        if (!(-7 != ((mq) this).field_d)) {
-            return -1 != param1 ? 350 : 100;
+        if (!(((mq) this).field_d != 6)) {
+            return param1 != 0 ? 350 : 100;
         }
         if (param0 != -118) {
             return 51;
@@ -249,38 +251,138 @@ final class mq extends nc {
         if (wc.j(108)) {
             return 0 == param1 ? 50 : 470;
         }
-        return 320 - (((mq) this).field_k >> 186654753);
+        return 320 - (((mq) this).field_k >> 1);
     }
 
     final static Class a(String param0, byte param1) throws ClassNotFoundException {
-        if (param0.equals((Object) (Object) "B")) {
-            return Byte.TYPE;
+        RuntimeException var2 = null;
+        Class stackIn_2_0 = null;
+        Class stackIn_6_0 = null;
+        Class stackIn_10_0 = null;
+        Class stackIn_14_0 = null;
+        Class stackIn_17_0 = null;
+        Class stackIn_21_0 = null;
+        Class stackIn_26_0 = null;
+        Class stackIn_29_0 = null;
+        Class stackIn_31_0 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_35_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Class stackOut_5_0 = null;
+        Class stackOut_9_0 = null;
+        Class stackOut_13_0 = null;
+        Class stackOut_20_0 = null;
+        Class stackOut_30_0 = null;
+        Class stackOut_28_0 = null;
+        Class stackOut_25_0 = null;
+        Class stackOut_16_0 = null;
+        Class stackOut_1_0 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        RuntimeException stackOut_34_0 = null;
+        StringBuilder stackOut_34_1 = null;
+        String stackOut_34_2 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
+        try {
+          L0: {
+            if (!param0.equals((Object) (Object) "B")) {
+              if (param0.equals((Object) (Object) "I")) {
+                stackOut_5_0 = Integer.TYPE;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0;
+              } else {
+                if (param0.equals((Object) (Object) "S")) {
+                  stackOut_9_0 = Short.TYPE;
+                  stackIn_10_0 = stackOut_9_0;
+                  return stackIn_10_0;
+                } else {
+                  if (param0.equals((Object) (Object) "J")) {
+                    stackOut_13_0 = Long.TYPE;
+                    stackIn_14_0 = stackOut_13_0;
+                    return stackIn_14_0;
+                  } else {
+                    if (!param0.equals((Object) (Object) "Z")) {
+                      if (param0.equals((Object) (Object) "F")) {
+                        stackOut_20_0 = Float.TYPE;
+                        stackIn_21_0 = stackOut_20_0;
+                        return stackIn_21_0;
+                      } else {
+                        L1: {
+                          if (param1 < -16) {
+                            break L1;
+                          } else {
+                            mq.e(-4);
+                            break L1;
+                          }
+                        }
+                        if (!param0.equals((Object) (Object) "D")) {
+                          if (!param0.equals((Object) (Object) "C")) {
+                            stackOut_30_0 = Class.forName(param0);
+                            stackIn_31_0 = stackOut_30_0;
+                            break L0;
+                          } else {
+                            stackOut_28_0 = Character.TYPE;
+                            stackIn_29_0 = stackOut_28_0;
+                            return stackIn_29_0;
+                          }
+                        } else {
+                          stackOut_25_0 = Double.TYPE;
+                          stackIn_26_0 = stackOut_25_0;
+                          return stackIn_26_0;
+                        }
+                      }
+                    } else {
+                      stackOut_16_0 = Boolean.TYPE;
+                      stackIn_17_0 = stackOut_16_0;
+                      return stackIn_17_0;
+                    }
+                  }
+                }
+              }
+            } else {
+              stackOut_1_0 = Byte.TYPE;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_32_0 = (RuntimeException) var2;
+            stackOut_32_1 = new StringBuilder().append("mq.A(");
+            stackIn_34_0 = stackOut_32_0;
+            stackIn_34_1 = stackOut_32_1;
+            stackIn_33_0 = stackOut_32_0;
+            stackIn_33_1 = stackOut_32_1;
+            if (param0 == null) {
+              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
+              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_2 = "null";
+              stackIn_35_0 = stackOut_34_0;
+              stackIn_35_1 = stackOut_34_1;
+              stackIn_35_2 = stackOut_34_2;
+              break L2;
+            } else {
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "{...}";
+              stackIn_35_0 = stackOut_33_0;
+              stackIn_35_1 = stackOut_33_1;
+              stackIn_35_2 = stackOut_33_2;
+              break L2;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + param1 + 41);
         }
-        if (!(!param0.equals((Object) (Object) "I"))) {
-            return Integer.TYPE;
-        }
-        if (!(!param0.equals((Object) (Object) "S"))) {
-            return Short.TYPE;
-        }
-        if (!(!param0.equals((Object) (Object) "J"))) {
-            return Long.TYPE;
-        }
-        if (param0.equals((Object) (Object) "Z")) {
-            return Boolean.TYPE;
-        }
-        if (!(!param0.equals((Object) (Object) "F"))) {
-            return Float.TYPE;
-        }
-        if (param1 >= -16) {
-            mq.e(-4);
-        }
-        if (param0.equals((Object) (Object) "D")) {
-            return Double.TYPE;
-        }
-        if (param0.equals((Object) (Object) "C")) {
-            return Character.TYPE;
-        }
-        return Class.forName(param0);
+        return stackIn_31_0;
     }
 
     public static void e(int param0) {
@@ -332,11 +434,11 @@ final class mq extends nc {
         }
         L1: {
           L2: {
-            if (-14 == (param1 ^ -1)) {
+            if (param1 == 13) {
               break L2;
             } else {
               L3: {
-                if ((param1 ^ -1) != -17) {
+                if (param1 != 16) {
                   break L3;
                 } else {
                   if (le.b(0, (byte) -70)) {
@@ -400,11 +502,11 @@ final class mq extends nc {
           var5 = ZombieDawnMulti.field_E ? 1 : 0;
           super.a(param0);
           ((mq) this).field_n = -1;
-          var2 = sf.field_e - sf.field_g >> 39186209;
+          var2 = sf.field_e - sf.field_g >> 1;
           if (ng.field_e >= bo.field_d) {
             break L0;
           } else {
-            if (ng.field_e - -(2 * sf.field_g) <= bo.field_d) {
+            if (~(ng.field_e - -(2 * sf.field_g)) >= ~bo.field_d) {
               break L0;
             } else {
               if (sf.field_a + -var2 >= bd.field_g) {
@@ -417,39 +519,39 @@ final class mq extends nc {
                     if (var4 >= sf.field_b) {
                       break L2;
                     } else {
-                      if (((mq) this).field_m[var4] <= bd.field_g) {
-                        if (sf.field_g + ((mq) this).field_m[var4] > bd.field_g) {
-                          if (bo.field_d >= ((mq) this).field_s[var4]) {
-                            if (bo.field_d < sf.field_g + ((mq) this).field_s[var4]) {
-                              var3 = var4;
-                              break L2;
-                            } else {
-                              var4++;
-                              continue L1;
-                            }
-                          } else {
-                            var4++;
-                            continue L1;
-                          }
+                      L3: {
+                        if (~((mq) this).field_m[var4] < ~bd.field_g) {
+                          break L3;
                         } else {
-                          var4++;
-                          continue L1;
+                          if (~(sf.field_g + ((mq) this).field_m[var4]) >= ~bd.field_g) {
+                            break L3;
+                          } else {
+                            if (bo.field_d < ((mq) this).field_s[var4]) {
+                              break L3;
+                            } else {
+                              if (bo.field_d >= sf.field_g + ((mq) this).field_s[var4]) {
+                                break L3;
+                              } else {
+                                var3 = var4;
+                                break L2;
+                              }
+                            }
+                          }
                         }
-                      } else {
-                        var4++;
-                        continue L1;
                       }
+                      var4++;
+                      continue L1;
                     }
                   }
-                  L3: {
-                    if (sf.field_b <= var3) {
-                      break L3;
+                  L4: {
+                    if (~sf.field_b >= ~var3) {
+                      break L4;
                     } else {
                       ((mq) this).field_n = var3;
-                      break L3;
+                      break L4;
                     }
                   }
-                  if (-7 != ((mq) this).field_d) {
+                  if (((mq) this).field_d != 6) {
                     break L0;
                   } else {
                     if (((mq) this).field_n < 0) {
@@ -468,21 +570,21 @@ final class mq extends nc {
             }
           }
         }
-        L4: {
-          if (-1 != kd.field_b) {
+        L5: {
+          if (kd.field_b != 0) {
             if (((mq) this).field_t != ((mq) this).field_n) {
               if (-1 != ((mq) this).field_n) {
                 ((mq) this).field_t = ((mq) this).field_n;
-                break L4;
+                break L5;
               } else {
-                break L4;
+                break L5;
               }
             } else {
               ((mq) this).field_t = -1;
-              break L4;
+              break L5;
             }
           } else {
-            break L4;
+            break L5;
           }
         }
     }

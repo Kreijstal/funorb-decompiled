@@ -18,9 +18,6 @@ abstract class kc extends qd {
 
     boolean i(int param0) {
         ((kc) this).j(-126);
-        if (param0 >= -121) {
-            return false;
-        }
         return super.i(-125);
     }
 
@@ -43,9 +40,6 @@ abstract class kc extends qd {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            kc.a(false);
-        }
         field_P = null;
         field_U = null;
         field_N = null;
@@ -96,7 +90,7 @@ abstract class kc extends qd {
                     return;
                   } else {
                     var9 = var7 * (-var5 + var6) / var4 + var5;
-                    var9 = var9 | (var9 << 772155696 | var9 << -435085080);
+                    var9 = var9 | (var9 << 16 | var9 << 8);
                     ki.b(param0, var8, 6, var9);
                     ki.b(((kc) this).field_i + param0 - 6, var8, 6, var9);
                     var7++;
@@ -106,7 +100,7 @@ abstract class kc extends qd {
                 }
               } else {
                 var10 = var5 + (-var5 + var6) * var7 / var4;
-                var10 = var10 | (var10 << 630877840 | var10 << -921811256);
+                var10 = var10 | (var10 << 16 | var10 << 8);
                 ki.b(param0, var9, 6, var10);
                 ki.b(((kc) this).field_i + param0 + -6, var9, 6, var10);
                 var9++;
@@ -125,14 +119,14 @@ abstract class kc extends qd {
                     break L3;
                   } else {
                     L4: while (true) {
-                      if (-21 > (var10 ^ -1)) {
+                      if (var10 > 20) {
                         break L3;
                       } else {
                         var12 = (-var7 + 20) * (20 + -var7) - -((20 - var10) * (-var10 + 20));
                         if (var12 <= 462) {
-                          if (-421 >= (var12 ^ -1)) {
+                          if (var12 >= 420) {
                             var13 = var9 * (-var12 + 462) / 42;
-                            var13 = var13 | (var13 << -1118282736 | var13 << -191605208);
+                            var13 = var13 | (var13 << 16 | var13 << 8);
                             ki.field_a[param0 + (ki.field_j * var8 - -var10)] = var13;
                             var10++;
                             continue L4;
@@ -148,7 +142,7 @@ abstract class kc extends qd {
                   }
                 }
                 L5: {
-                  if ((var7 ^ -1) >= -21) {
+                  if (var7 <= 20) {
                     var12 = var11;
                     var11 -= 21;
                     var13 = 0;
@@ -161,9 +155,9 @@ abstract class kc extends qd {
                           if (var14 > 462) {
                             break L7;
                           } else {
-                            if (-421 >= (var14 ^ -1)) {
+                            if (var14 >= 420) {
                               var15 = (462 + -var14) * var9 / 42;
-                              var15 = var15 | (var15 << 1303633616 | var15 << -1979388888);
+                              var15 = var15 | (var15 << 16 | var15 << 8);
                               ki.field_a[var11 + param0 + var8 * ki.field_j] = var15;
                               var11++;
                               var13++;
@@ -184,7 +178,7 @@ abstract class kc extends qd {
                     break L5;
                   }
                 }
-                var9 = var9 | (var9 << 218242128 | var9 << -1795774296);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 ki.b(var10 + param0, var8, -var10 + var11, var9);
                 var7++;
                 var8++;
@@ -204,7 +198,7 @@ abstract class kc extends qd {
     }
 
     final void b(int param0, int param1, byte param2, int param3) {
-        if ((param3 ^ -1) >= -1) {
+        if (param3 <= 0) {
             ((kc) this).b(param0, (byte) 57, param1);
             return;
         }
@@ -233,11 +227,12 @@ abstract class kc extends qd {
         if (param0 != -124) {
             boolean discarded$0 = ((kc) this).g((byte) -68);
         }
-        if (-1 > (((kc) this).field_K ^ -1)) {
+        if (((kc) this).field_K > 0) {
             var2 = ((kc) this).field_J;
             var3 = ((kc) this).field_L;
+            int fieldTemp$1 = ((kc) this).field_I + 1;
             ((kc) this).field_I = ((kc) this).field_I + 1;
-            if (((kc) this).field_K <= ((kc) this).field_I + 1) {
+            if (((kc) this).field_K <= fieldTemp$1) {
                 ((kc) this).field_K = 0;
                 ((kc) this).k(-101);
             } else {

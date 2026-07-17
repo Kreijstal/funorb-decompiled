@@ -37,11 +37,11 @@ final class be {
                 if (0 == ((be) this).field_h) {
                   break L1;
                 } else {
-                  if (-1 == (ig.field_L ^ -1)) {
+                  if (ig.field_L == 0) {
                     break L1;
                   } else {
                     L2: {
-                      if ((((be) this).field_j ^ -1) >= -1) {
+                      if (((be) this).field_j <= 0) {
                         ((be) this).field_j = pk.field_l;
                         break L2;
                       } else {
@@ -169,9 +169,9 @@ final class be {
                 }
               }
               if (0 != ((be) this).field_h) {
-                if (-1 != (ig.field_L ^ -1)) {
+                if (ig.field_L != 0) {
                   L6: {
-                    if ((((be) this).field_j ^ -1) >= -1) {
+                    if (((be) this).field_j <= 0) {
                       ((be) this).field_j = pk.field_l;
                       break L6;
                     } else {
@@ -403,7 +403,7 @@ final class be {
         L0: {
           ((be) this).field_d = 0;
           ((be) this).field_a = param0;
-          if (-1 == (((be) this).field_h ^ -1)) {
+          if (((be) this).field_h == 0) {
             ((be) this).field_a = pj.field_e;
             break L0;
           } else {
@@ -428,7 +428,7 @@ final class be {
             return;
           }
         } else {
-          if ((pj.field_e ^ -1) == -99) {
+          if (pj.field_e == 98) {
             if (0 < ((be) this).field_f) {
               ((be) this).field_c = false;
               ((be) this).field_f = ((be) this).field_f - 1;

@@ -60,124 +60,50 @@ final class ej {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
+        RuntimeException var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
         var4 = fleas.field_A ? 1 : 0;
-        j.field_f = wi.field_p.field_b;
-        if (-1 == (fleas.field_E ^ -1)) {
-          if (tj.field_a >= 15) {
-            if (!qh.c((byte) 55)) {
-              if (-1 > (wc.field_q ^ -1)) {
-                L0: {
-                  var1 = tj.field_a;
-                  if (tj.field_a >= nl.field_c[fleas.field_E].length) {
-                    var1 = -1 + nl.field_c[fleas.field_E].length;
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                var2 = hf.field_e.length * var1 / ia.field_m[fleas.field_E].length;
-                if (param0 != -39) {
-                  return;
+        try {
+          L0: {
+            L1: {
+              j.field_f = wi.field_p.field_b;
+              if (fleas.field_E != 0) {
+                break L1;
+              } else {
+                if (tj.field_a < 15) {
+                  break L1;
                 } else {
-                  k.a(0, hf.field_e[var2]);
-                  lk.field_D.field_k = false;
-                  si.field_y.field_k = true;
-                  c.field_U = false;
-                  uc.b((byte) 84);
-                  rg.b(4);
-                  em.field_b = 6000;
-                  fb.field_e = new int[100];
-                  oa.field_n = true;
-                  pg.field_f = -60;
-                  qh.field_y = -250;
-                  jk.field_l = 0;
-                  lj.field_c = new int[100];
-                  mg.field_d = -1;
-                  nc.field_a = new int[100];
-                  uf.field_h = 0;
-                  mh.field_u = 1;
-                  var3 = 0;
-                  L1: while (true) {
-                    if (100 <= var3) {
-                      return;
+                  L2: {
+                    if (qh.c((byte) 55)) {
+                      break L2;
                     } else {
-                      nc.field_a[var3] = -1000;
-                      var3++;
-                      continue L1;
+                      if (wc.field_q > 0) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
                     }
                   }
-                }
-              } else {
-                bj.field_m = bc.field_V;
-                oa.a(7, false, -72);
-                return;
-              }
-            } else {
-              bj.field_m = bc.field_V;
-              oa.a(7, false, -72);
-              return;
-            }
-          } else {
-            L2: {
-              var1 = tj.field_a;
-              if (tj.field_a >= nl.field_c[fleas.field_E].length) {
-                var1 = -1 + nl.field_c[fleas.field_E].length;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            var2 = hf.field_e.length * var1 / ia.field_m[fleas.field_E].length;
-            if (param0 != -39) {
-              return;
-            } else {
-              k.a(0, hf.field_e[var2]);
-              lk.field_D.field_k = false;
-              si.field_y.field_k = true;
-              c.field_U = false;
-              uc.b((byte) 84);
-              rg.b(4);
-              em.field_b = 6000;
-              fb.field_e = new int[100];
-              oa.field_n = true;
-              pg.field_f = -60;
-              qh.field_y = -250;
-              jk.field_l = 0;
-              lj.field_c = new int[100];
-              mg.field_d = -1;
-              nc.field_a = new int[100];
-              uf.field_h = 0;
-              mh.field_u = 1;
-              var3 = 0;
-              L3: while (true) {
-                if (100 <= var3) {
+                  bj.field_m = bc.field_V;
+                  oa.a(7, false, -72);
                   return;
-                } else {
-                  nc.field_a[var3] = -1000;
-                  var3++;
-                  continue L3;
                 }
               }
             }
-          }
-        } else {
-          L4: {
-            var1 = tj.field_a;
-            if (tj.field_a >= nl.field_c[fleas.field_E].length) {
-              var1 = -1 + nl.field_c[fleas.field_E].length;
-              break L4;
-            } else {
-              break L4;
+            L3: {
+              var1_int = tj.field_a;
+              if (~tj.field_a <= ~nl.field_c[fleas.field_E].length) {
+                var1_int = -1 + nl.field_c[fleas.field_E].length;
+                break L3;
+              } else {
+                break L3;
+              }
             }
-          }
-          var2 = hf.field_e.length * var1 / ia.field_m[fleas.field_E].length;
-          if (param0 != -39) {
-            return;
-          } else {
+            var2 = hf.field_e.length * var1_int / ia.field_m[fleas.field_E].length;
             k.a(0, hf.field_e[var2]);
             lk.field_D.field_k = false;
             si.field_y.field_k = true;
@@ -196,16 +122,20 @@ final class ej {
             uf.field_h = 0;
             mh.field_u = 1;
             var3 = 0;
-            L5: while (true) {
+            L4: while (true) {
               if (100 <= var3) {
-                return;
+                break L0;
               } else {
                 nc.field_a[var3] = -1000;
                 var3++;
-                continue L5;
+                continue L4;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var1, "ej.A(" + -39 + 41);
         }
     }
 
@@ -219,9 +149,6 @@ final class ej {
     public static void b(int param0) {
         field_b = null;
         field_a = null;
-        if (param0 != 1) {
-            return;
-        }
         field_c = null;
     }
 

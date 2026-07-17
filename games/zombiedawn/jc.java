@@ -21,19 +21,17 @@ final class jc extends le {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
-        nm.field_a = true;
-        var2 = "tuhstatbut";
-        if (param0 <= 11) {
-          jc.a(-108, (byte) -75);
-          var3 = "rvnadlm";
-          var4 = -1L;
-          pg.a(true, param1, var4, var2, var3);
-          return;
-        } else {
-          var3 = "rvnadlm";
-          var4 = -1L;
-          pg.a(true, param1, var4, var2, var3);
-          return;
+        try {
+            nm.field_a = true;
+            var2 = "tuhstatbut";
+            if (param0 <= 11) {
+                jc.a(-108, (byte) -75);
+            }
+            var3 = "rvnadlm";
+            var4 = -1L;
+            pg.a(true, param1, var4, var2, var3);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "jc.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -51,7 +49,7 @@ final class jc extends le {
 
     final static void a(int param0, byte param1) {
         ch.field_b = param0;
-        int var2 = -32 % ((25 - param1) / 34);
+        int var2 = 0;
     }
 
     jc() {

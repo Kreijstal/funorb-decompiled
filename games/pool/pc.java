@@ -10,9 +10,6 @@ final class pc {
     public static void a(int param0) {
         field_c = null;
         field_a = null;
-        if (param0 != -24420) {
-            field_b = 0;
-        }
     }
 
     static {

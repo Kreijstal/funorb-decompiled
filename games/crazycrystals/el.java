@@ -16,7 +16,7 @@ class el extends fb {
           }
         }
         if (param1 == 24) {
-          if ((param2 ^ -1) != -25) {
+          if (param2 != 24) {
             ((el) this).field_a.h(-80).b(param5, -param2 + param6, param1 * 2, param2 * 3, ek.field_f[((el) this).field_a.field_u]);
             return;
           } else {
@@ -31,7 +31,11 @@ class el extends fb {
 
     el(fq param0, int param1) {
         super(param0);
-        param0.d(param1, hp.field_m[param1], -9634);
+        try {
+            param0.d(param1, hp.field_m[param1], -9634);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "el.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void b(int param0) {
@@ -45,7 +49,7 @@ class el extends fb {
 
     fb a(int param0) {
         int var2 = 98 % ((36 - param0) / 62);
-        return (fb) (((el) this).field_a.i(12555) ? null : this);
+        return ((el) this).field_a.i(12555) ? null : (fb) this;
     }
 
     static {

@@ -61,7 +61,7 @@ final class un {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((un) this).field_f[var6] = var3 ^ -1;
+                      ((un) this).field_f[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -185,7 +185,7 @@ final class un {
         while (((un) this).field_f[var1] >= 0) {
             var1 = ai.a() != 0 ? ((un) this).field_f[var1] : var1 + 1;
         }
-        return ((un) this).field_f[var1] ^ -1;
+        return ~((un) this).field_f[var1];
     }
 
     un() {
@@ -216,7 +216,7 @@ final class un {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = ai.d(24);
+          int discarded$2 = ai.d(24);
           ((un) this).field_a = ai.d(16);
           ((un) this).field_b = ai.d(24);
           ((un) this).field_c = new int[((un) this).field_b];
@@ -283,8 +283,9 @@ final class un {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((un) this).field_c[var2] = var3_int;
+                    ((un) this).field_c[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

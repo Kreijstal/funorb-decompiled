@@ -10,33 +10,23 @@ final class sf {
     static be field_c;
 
     public static void a(boolean param0) {
-        if (param0) {
-          field_f = null;
-          field_c = null;
-          field_f = null;
-          field_d = null;
-          field_e = null;
-          field_a = null;
-          return;
-        } else {
-          field_c = null;
-          field_f = null;
-          field_d = null;
-          field_e = null;
-          field_a = null;
-          return;
-        }
+        field_c = null;
+        field_f = null;
+        field_d = null;
+        field_e = null;
+        field_a = null;
     }
 
     final static void a(String param0, int param1) {
-        kl.field_o = param0;
-        rh.a(param1, (byte) -72);
+        try {
+            kl.field_o = param0;
+            rh.a(param1, (byte) -72);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "sf.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final static boolean b(boolean param0) {
-        if (param0) {
-            return true;
-        }
         if (dg.field_z == null) {
             return false;
         }

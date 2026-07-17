@@ -13,26 +13,76 @@ final class hk {
     static String field_c;
 
     private final void a(int param0, bl param1) {
-        if (param0 >= -47) {
-          return;
-        } else {
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
           L0: {
-            if (param1 == null) {
+            if (param0 < -47) {
+              L1: {
+                if (param1 == null) {
+                  break L1;
+                } else {
+                  param1.b(34);
+                  param1.a((byte) -120);
+                  ((hk) this).field_b = ((hk) this).field_b + param1.field_y;
+                  break L1;
+                }
+              }
               break L0;
             } else {
-              param1.b(34);
-              param1.a((byte) -120);
-              ((hk) this).field_b = ((hk) this).field_b + param1.field_y;
-              break L0;
+              return;
             }
           }
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) runtimeException;
+            stackOut_5_1 = new StringBuilder().append("hk.D(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
     public static void d(int param0) {
         field_c = null;
-        int var1 = -41 / ((param0 - 63) / 61);
+        int var1 = -41;
         field_d = null;
         field_a = null;
         field_i = null;
@@ -51,99 +101,92 @@ final class hk {
         tm var3 = null;
         tm var4 = null;
         tm var5 = null;
-        if (param0 == 27) {
-          var1 = null;
-          var2 = 0;
-          if (ec.field_c.e((byte) 123)) {
-            L0: {
-              if (ok.field_b.e((byte) 123)) {
-                break L0;
-              } else {
-                L1: {
-                  var4 = (tm) (Object) ok.field_b.b(120);
-                  if (var4.a(param0 + -19)) {
-                    pi discarded$2 = ok.field_b.e(63854);
-                    var2 = 1;
-                    vc.a(109, cm.field_o, var4.field_s);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
+        var1 = null;
+        var2 = 0;
+        if (ec.field_c.e((byte) 123)) {
+          L0: {
+            if (ok.field_b.e((byte) 123)) {
+              break L0;
+            } else {
+              L1: {
+                var4 = (tm) (Object) ok.field_b.b(120);
+                if (var4.a(8)) {
+                  pi discarded$2 = ok.field_b.e(63854);
+                  var2 = 1;
+                  vc.a(109, cm.field_o, var4.field_s);
+                  break L1;
+                } else {
+                  break L1;
                 }
-                var1 = (Object) (Object) (tm) (Object) ok.field_b.b(96);
-                break L0;
               }
+              var1 = (Object) (Object) (tm) (Object) ok.field_b.b(96);
+              break L0;
             }
-            L2: {
-              if (var1 == null) {
+          }
+          L2: {
+            if (var1 == null) {
+              break L2;
+            } else {
+              if (var2 != 0) {
+                ((tm) var1).a(false);
                 break L2;
               } else {
-                if (var2 != 0) {
-                  ((tm) var1).a(false);
-                  break L2;
+                if (fm.a((byte) 95)) {
+                  fn.a(27, 228, 3);
+                  return ak.a(-92);
                 } else {
-                  if (fm.a((byte) 95)) {
-                    fn.a(27, 228, 3);
-                    return ak.a(-92);
-                  } else {
-                    return ak.a(-92);
-                  }
+                  return ak.a(-92);
                 }
               }
             }
+          }
+          if (fm.a((byte) 95)) {
+            fn.a(27, 228, 3);
+            return ak.a(-92);
+          } else {
+            return ak.a(-92);
+          }
+        } else {
+          L3: {
+            var3 = (tm) (Object) ec.field_c.b(81);
+            if (var3.a(8)) {
+              pi discarded$3 = ec.field_c.e(63854);
+              vc.a(-8, cm.field_o, var3.field_s);
+              var2 = 1;
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          var5 = (tm) (Object) ec.field_c.b(119);
+          if (var5 != null) {
+            L4: {
+              if (var2 != 0) {
+                var5.a(false);
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            if (!fm.a((byte) 95)) {
+              return ak.a(-92);
+            } else {
+              fn.a(27, 228, 3);
+              return ak.a(-92);
+            }
+          } else {
             if (fm.a((byte) 95)) {
               fn.a(27, 228, 3);
               return ak.a(-92);
             } else {
               return ak.a(-92);
             }
-          } else {
-            L3: {
-              var3 = (tm) (Object) ec.field_c.b(81);
-              if (var3.a(param0 ^ 19)) {
-                pi discarded$3 = ec.field_c.e(63854);
-                vc.a(-8, cm.field_o, var3.field_s);
-                var2 = 1;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            var5 = (tm) (Object) ec.field_c.b(param0 + 92);
-            if (var5 != null) {
-              L4: {
-                if (var2 != 0) {
-                  var5.a(false);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              if (!fm.a((byte) 95)) {
-                return ak.a(-92);
-              } else {
-                fn.a(27, 228, 3);
-                return ak.a(-92);
-              }
-            } else {
-              if (fm.a((byte) 95)) {
-                fn.a(27, 228, 3);
-                return ak.a(-92);
-              } else {
-                return ak.a(-92);
-              }
-            }
           }
-        } else {
-          return true;
         }
     }
 
     final static void a(byte param0) {
         nb.field_i[oj.field_J].c(-1, mc.field_w);
-        if (param0 >= -117) {
-            field_e = 125;
-        }
     }
 
     final Object a(long param0, byte param1) {
@@ -205,28 +248,25 @@ final class hk {
     }
 
     private final void a(Object param0, int param1, int param2, long param3) {
-        oh var6 = null;
-        bl var6_ref = null;
-        int var7 = 0;
-        var7 = MinerDisturbance.field_ab;
-        if (((hk) this).field_f < param1) {
-          throw new IllegalStateException();
-        } else {
-          this.a(-4924, param3);
-          ((hk) this).field_b = ((hk) this).field_b - param1;
-          L0: while (true) {
-            if (-1 >= (((hk) this).field_b ^ -1)) {
-              var6 = new oh(param0, param1);
-              ((hk) this).field_g.a(param3, true, (pi) (Object) var6);
-              ((hk) this).field_h.a((byte) -37, (al) (Object) var6);
-              ((bl) (Object) var6).field_p = (long)param2;
-              return;
-            } else {
-              var6_ref = (bl) (Object) ((hk) this).field_h.a(609);
-              this.a(-127, var6_ref);
-              continue L0;
+        bl var6 = null;
+        oh var6_ref = null;
+        int var7 = MinerDisturbance.field_ab;
+        try {
+            if (((hk) this).field_f < param1) {
+                throw new IllegalStateException();
             }
-          }
+            this.a(-4924, param3);
+            ((hk) this).field_b = ((hk) this).field_b - param1;
+            while (((hk) this).field_b < 0) {
+                var6 = (bl) (Object) ((hk) this).field_h.a(609);
+                this.a(-127, var6);
+            }
+            var6_ref = new oh(param0, param1);
+            ((hk) this).field_g.a(param3, true, (pi) (Object) var6_ref);
+            ((hk) this).field_h.a((byte) -37, (al) (Object) var6_ref);
+            ((bl) (Object) var6_ref).field_p = (long)param2;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "hk.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -265,7 +305,11 @@ final class hk {
         if (param0 != 6565) {
             return;
         }
-        this.a(param2, 1, 0, param1);
+        try {
+            this.a(param2, 1, 0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "hk.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

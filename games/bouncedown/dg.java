@@ -27,7 +27,7 @@ final class dg {
           var9 = Bounce.field_N;
           var4 = ((dg) this).field_d;
           if (var4 == 0) {
-            if ((((dg) this).field_b ^ -1) != -1) {
+            if (((dg) this).field_b != 0) {
               kc.field_c.a((int)((double)param1 + ((dg) this).field_c - 64.0), (int)((dg) this).field_h - od.field_f.field_s * (((dg) this).field_b + 2));
               var4 = param1 + (int)((dg) this).field_c;
               var5_int = -(od.field_f.field_s * (2 + ((dg) this).field_b)) + (16 + ((int)((dg) this).field_h + 16));
@@ -43,22 +43,22 @@ final class dg {
             }
           } else {
             if (var4 != 1) {
-              if ((var4 ^ -1) != -3) {
+              if (var4 != 2) {
                 L1: {
-                  if ((var4 ^ -1) != -4) {
-                    if (-5 == (var4 ^ -1)) {
+                  if (var4 != 3) {
+                    if (var4 == 4) {
                       break L1;
                     } else {
                       if (5 == var4) {
                         L2: {
-                          if ((((dg) this).field_b ^ -1) != -3) {
+                          if (((dg) this).field_b != 2) {
                             break L2;
                           } else {
                             L3: {
                               var3 = ((dg) this).field_g * 4 / 256;
                               nk.field_h[var3].a((int)(-64.0 + (((dg) this).field_c + (double)param1)), (int)((dg) this).field_h);
                               var3 = ((dg) this).field_g * 16 / 256 % 20;
-                              if ((var3 ^ -1) < -2) {
+                              if (var3 > 1) {
                                 var3 = 0;
                                 break L3;
                               } else {
@@ -78,7 +78,7 @@ final class dg {
                             break L4;
                           }
                         }
-                        if ((((dg) this).field_b ^ -1) != -2) {
+                        if (((dg) this).field_b != 1) {
                           break L0;
                         } else {
                           var3 = ((dg) this).field_g * 3 / 256;
@@ -86,7 +86,7 @@ final class dg {
                           break L0;
                         }
                       } else {
-                        if (-7 == (var4 ^ -1)) {
+                        if (var4 == 6) {
                           break L0;
                         } else {
                           break L0;
@@ -158,9 +158,6 @@ final class dg {
         field_f = null;
         field_k = null;
         field_a = null;
-        if (param0 != 64) {
-            return;
-        }
         field_e = null;
     }
 
@@ -170,11 +167,11 @@ final class dg {
         L0: {
           var3 = Bounce.field_N;
           var2 = ((dg) this).field_d;
-          if ((var2 ^ -1) != -1) {
+          if (var2 != 0) {
             if (1 != var2) {
-              if ((var2 ^ -1) == -3) {
+              if (var2 == 2) {
                 ((dg) this).field_j = ((dg) this).field_h;
-                if (-1 <= (((dg) this).field_b ^ -1)) {
+                if (((dg) this).field_b <= 0) {
                   break L0;
                 } else {
                   L1: {
@@ -194,14 +191,14 @@ final class dg {
                     if (5 == var2) {
                       ((dg) this).field_j = ((dg) this).field_h;
                       ((dg) this).field_g = ((dg) this).field_g + 10;
-                      if (-257 >= (((dg) this).field_g ^ -1)) {
+                      if (((dg) this).field_g >= 256) {
                         ((dg) this).field_g = ((dg) this).field_g - 256;
                         break L0;
                       } else {
                         break L0;
                       }
                     } else {
-                      if ((var2 ^ -1) == -7) {
+                      if (var2 == 6) {
                         ((dg) this).field_j = ((dg) this).field_h;
                         break L0;
                       } else {
@@ -236,7 +233,7 @@ final class dg {
               } else {
                 ((dg) this).field_b = ((dg) this).field_b + 1;
                 ((dg) this).field_j = (double)(-re.field_a.field_q) + (((dg) this).field_h + (double)a.field_f.field_q);
-                if (-25 < (((dg) this).field_b ^ -1)) {
+                if (((dg) this).field_b < 24) {
                   break L0;
                 } else {
                   ((dg) this).field_b = 0;
@@ -246,7 +243,7 @@ final class dg {
             }
           } else {
             ((dg) this).field_j = ((dg) this).field_h;
-            if (-1 <= (((dg) this).field_b ^ -1)) {
+            if (((dg) this).field_b <= 0) {
               break L0;
             } else {
               ((dg) this).field_j = ((dg) this).field_j - (double)((2 + ((dg) this).field_b) * od.field_f.field_s);
@@ -296,17 +293,14 @@ final class dg {
     }
 
     final static String a(int param0, char param1, int param2) {
-        int var5 = Bounce.field_N;
-        char[] var3 = new char[param0];
         int var4 = 0;
-        if (param2 != -13810) {
-            dg.b(32);
+        int var5 = Bounce.field_N;
+        char[] var6 = new char[param0];
+        char[] var3 = var6;
+        for (var4 = 0; var4 < param0; var4++) {
+            var6[var4] = param1;
         }
-        while (var4 < param0) {
-            var3[var4] = param1;
-            var4++;
-        }
-        return new String(var3);
+        return new String(var6);
     }
 
     static {

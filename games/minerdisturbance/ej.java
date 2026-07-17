@@ -17,7 +17,7 @@ final class ej {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
             this.a(param0, 8865);
-            if (-1 == (param4 ^ -1)) {
+            if (param4 == 0) {
               var6 = ((ej) this).field_a.getRefreshRate();
               var7 = ((ej) this).field_b.getDisplayModes();
               var8 = 0;
@@ -77,12 +77,7 @@ final class ej {
     }
 
     private final void a(java.awt.Frame param0, int param1) {
-        if (param1 == 8865) {
-          ((ej) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param0);
-          return;
-        } else {
-          return;
-        }
+        ((ej) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
     public final void exit() {
@@ -100,12 +95,12 @@ final class ej {
         int var3 = 0;
         java.awt.DisplayMode[] var4 = ((ej) this).field_b.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << -1214396894];
+        int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var4.length > var3; var3++) {
-            var2[var3 << 871464258] = var4[var3].getWidth();
-            var2[(var3 << 1044870882) - -1] = var4[var3].getHeight();
-            var2[(var3 << 2113187394) + 2] = var4[var3].getBitDepth();
-            var2[(var3 << 1244156514) + 3] = var4[var3].getRefreshRate();
+            var2[var3 << 2] = var4[var3].getWidth();
+            var2[(var3 << 2) - -1] = var4[var3].getHeight();
+            var2[(var3 << 2) + 2] = var4[var3].getBitDepth();
+            var2[(var3 << 2) + 3] = var4[var3].getRefreshRate();
         }
         return var2;
     }

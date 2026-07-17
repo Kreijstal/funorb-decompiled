@@ -18,7 +18,7 @@ final class mi {
         int var4 = 0;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (null != ((mi) this).field_a) {
-          if (-1 != (((mi) this).field_a.length ^ -1)) {
+          if (((mi) this).field_a.length != 0) {
             var3 = 1;
             if (param0 != -21878) {
               int discarded$7 = ((mi) this).a(84, -16);
@@ -26,7 +26,7 @@ final class mi {
                 if (((mi) this).field_a.length <= var3) {
                   return -1 + ((mi) this).field_a.length;
                 } else {
-                  if (((mi) this).field_a[var3] + ((mi) this).field_a[-1 + var3] >> -1235001183 > param1) {
+                  if (((mi) this).field_a[var3] + ((mi) this).field_a[-1 + var3] >> 1 > param1) {
                     return var3 - 1;
                   } else {
                     var3++;
@@ -39,7 +39,7 @@ final class mi {
                 if (((mi) this).field_a.length <= var3) {
                   return -1 + ((mi) this).field_a.length;
                 } else {
-                  if (((mi) this).field_a[var3] + ((mi) this).field_a[-1 + var3] >> -1235001183 > param1) {
+                  if (((mi) this).field_a[var3] + ((mi) this).field_a[-1 + var3] >> 1 > param1) {
                     return var3 - 1;
                   } else {
                     var3++;

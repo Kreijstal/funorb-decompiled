@@ -14,8 +14,8 @@ final class mu extends da {
         float var12 = 0.0f;
         L0: {
           L1: {
-            var9 = (dc) param5;
-            var10 = ((dc) var9).field_e;
+            var9 = (dc) (Object) param5;
+            var10 = var9.field_e;
             ((mu) this).field_f.a((byte) 10);
             ((mu) this).field_f.a((rt) (Object) ((mu) this).field_h, 1);
             if (((mu) this).field_e) {
@@ -41,8 +41,8 @@ final class mu extends da {
             ((mu) this).field_f.a(34168, 768, 34176, 0);
             jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
             jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
-            var11 = ((el) var10).field_r / (float)((el) var10).field_q;
-            var12 = ((el) var10).field_p / (float)((el) var10).field_o;
+            var11 = var10.field_r / (float)var10.field_q;
+            var12 = var10.field_p / (float)var10.field_o;
             jaggl.OpenGL.glTexGenfv(8192, 9474, new float[4], 0);
             jaggl.OpenGL.glTexGenfv(8193, 9474, new float[4], 0);
             jaggl.OpenGL.glEnable(3168);
@@ -201,19 +201,19 @@ final class mu extends da {
                     break L1;
                   } else {
                     var25 = param2[var8_int];
-                    var10 = ((vd) var25).field_f;
-                    var39 = ((vd) var25).field_e;
+                    var10 = var25.field_f;
+                    var39 = var25.field_e;
                     var35 = var39;
                     var31 = var35;
                     var26 = var31;
                     var11_ref_byte__ = var26;
-                    var40 = ((vd) var25).field_d;
+                    var40 = var25.field_d;
                     var36 = var40;
                     var32 = var36;
                     var27 = var32;
                     var12_ref_byte__ = var27;
-                    var13 = ((vd) var25).field_c;
-                    var14 = ((vd) var25).field_h;
+                    var13 = var25.field_c;
+                    var14 = var25.field_h;
                     var15_int = var8_int % 16 * var5;
                     var16_int = var8_int / 16 * var5;
                     var17_int = var16_int * var6 + var15_int;
@@ -229,15 +229,17 @@ final class mu extends da {
                               var19_int++;
                               continue L3;
                             } else {
+                              int incrementValue$7 = var18_int;
                               var18_int++;
-                              var21 = var12_ref_byte__[var18_int];
-                              if (var12_ref_byte__[var18_int] == 0) {
+                              var21 = var12_ref_byte__[incrementValue$7];
+                              if (var12_ref_byte__[incrementValue$7] == 0) {
                                 var17_int++;
                                 var20_int++;
                                 continue L4;
                               } else {
+                                int incrementValue$8 = var17_int;
                                 var17_int++;
-                                var7_ref_int__[var17_int] = -16777216 | var10[var21 & 255];
+                                var7_ref_int__[incrementValue$8] = -16777216 | var10[var21 & 255];
                                 var20_int++;
                                 continue L4;
                               }
@@ -259,8 +261,9 @@ final class mu extends da {
                               var19_int++;
                               continue L5;
                             } else {
+                              int incrementValue$9 = var17_int;
                               var17_int++;
-                              var7_ref_int__[var17_int] = var39[var18_int] << 24 | var10[var40[var18_int] & 255];
+                              var7_ref_int__[incrementValue$9] = var39[var18_int] << 24 | var10[var40[var18_int] & 255];
                               var18_int++;
                               var20_int++;
                               continue L6;
@@ -288,14 +291,14 @@ final class mu extends da {
                     break L1;
                   } else {
                     var23 = param2[var8_int];
-                    var10_int = ((vd) var23).field_c;
-                    var11 = ((vd) var23).field_h;
+                    var10_int = var23.field_c;
+                    var11 = var23.field_h;
                     var12 = var8_int % 16 * var5;
                     var13 = var8_int / 16 * var5;
                     var14 = var13 * var6 + var12;
                     var15_int = 0;
-                    if (((vd) var23).field_e != null) {
-                      var16_ref_byte__ = ((vd) var23).field_e;
+                    if (var23.field_e != null) {
+                      var16_ref_byte__ = var23.field_e;
                       var17_int = 0;
                       L8: while (true) {
                         if (var17_int < var10_int) {
@@ -306,9 +309,11 @@ final class mu extends da {
                               var17_int++;
                               continue L8;
                             } else {
+                              int incrementValue$10 = var14;
                               var14++;
+                              int incrementValue$11 = var15_int;
                               var15_int++;
-                              var7_ref_byte__[var14] = var16_ref_byte__[var15_int];
+                              var7_ref_byte__[incrementValue$10] = var16_ref_byte__[incrementValue$11];
                               var18_int++;
                               continue L9;
                             }
@@ -319,7 +324,7 @@ final class mu extends da {
                         }
                       }
                     } else {
-                      var16_ref_byte__ = ((vd) var23).field_d;
+                      var16_ref_byte__ = var23.field_d;
                       var17_int = 0;
                       L10: while (true) {
                         if (var17_int < var10_int) {
@@ -331,15 +336,17 @@ final class mu extends da {
                               continue L10;
                             } else {
                               L12: {
+                                int incrementValue$12 = var14;
                                 var14++;
+                                int incrementValue$13 = var15_int;
                                 var15_int++;
                                 stackOut_16_0 = (byte[]) var7_ref_byte__;
-                                stackOut_16_1 = var14;
+                                stackOut_16_1 = incrementValue$12;
                                 stackIn_18_0 = stackOut_16_0;
                                 stackIn_18_1 = stackOut_16_1;
                                 stackIn_17_0 = stackOut_16_0;
                                 stackIn_17_1 = stackOut_16_1;
-                                if (var16_ref_byte__[var15_int] != 0) {
+                                if (var16_ref_byte__[incrementValue$13] != 0) {
                                   stackOut_18_0 = (byte[]) (Object) stackIn_18_0;
                                   stackOut_18_1 = stackIn_18_1;
                                   stackOut_18_2 = -1;
@@ -379,12 +386,13 @@ final class mu extends da {
             var9 = 0;
             L13: while (true) {
               if (var9 >= 256) {
+                return;
               } else {
                 var29 = param2[var9];
-                var11 = ((vd) var29).field_c;
-                var12 = ((vd) var29).field_h;
-                var13 = ((vd) var29).field_i;
-                var14 = ((vd) var29).field_a;
+                var11 = var29.field_c;
+                var12 = var29.field_h;
+                var13 = var29.field_i;
+                var14 = var29.field_a;
                 var15 = (float)(var9 % 16 * var5);
                 var16 = (float)(var9 / 16 * var5);
                 var17 = var15 * var7;
@@ -410,15 +418,15 @@ final class mu extends da {
           } else {
             L14: {
               var22 = param2[var6];
-              if (((vd) var22).field_c <= var5) {
+              if (var22.field_c <= var5) {
                 break L14;
               } else {
-                var5 = ((vd) var22).field_c;
+                var5 = var22.field_c;
                 break L14;
               }
             }
-            if (((vd) var22).field_h > var5) {
-              var5 = ((vd) var22).field_h;
+            if (var22.field_h > var5) {
+              var5 = var22.field_h;
               var6++;
               continue L0;
             } else {

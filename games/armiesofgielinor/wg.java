@@ -68,26 +68,19 @@ final class wg implements Iterable {
     }
 
     final void a(int param0, ms param1) {
-        L0: {
-          if (null != param1.field_l) {
-            param1.c((byte) -76);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        param1.field_l = ((wg) this).field_f.field_l;
-        if (param0 != -96) {
-          field_a = null;
-          param1.field_s = ((wg) this).field_f;
-          param1.field_l.field_s = param1;
-          param1.field_s.field_l = param1;
-          return;
-        } else {
-          param1.field_s = ((wg) this).field_f;
-          param1.field_l.field_s = param1;
-          param1.field_s.field_l = param1;
-          return;
+        try {
+            if (!(null == param1.field_l)) {
+                param1.c((byte) -76);
+            }
+            param1.field_l = ((wg) this).field_f.field_l;
+            if (param0 != -96) {
+                field_a = null;
+            }
+            param1.field_s = ((wg) this).field_f;
+            param1.field_l.field_s = param1;
+            param1.field_s.field_l = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "wg.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

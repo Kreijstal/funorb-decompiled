@@ -69,25 +69,21 @@ final class ci {
     }
 
     final void a(long param0, int param1, pj param2) {
-        pj var5 = null;
-        L0: {
-          if (null != param2.field_o) {
+        if (!(null == param2.field_o)) {
             param2.c(-5106);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        var5 = ((ci) this).field_a[(int)((long)(((ci) this).field_f - 1) & param0)];
+        pj var5 = ((ci) this).field_a[(int)((long)(((ci) this).field_f - 1) & param0)];
         param2.field_o = var5.field_o;
         if (param1 != -8156) {
-          return;
-        } else {
-          param2.field_m = var5;
-          param2.field_o.field_m = param2;
-          param2.field_m.field_o = param2;
-          param2.field_l = param0;
-          return;
+            return;
+        }
+        try {
+            param2.field_m = var5;
+            param2.field_o.field_m = param2;
+            param2.field_m.field_o = param2;
+            param2.field_l = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "ci.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -124,8 +120,9 @@ final class ci {
         ((ci) this).field_a = new pj[param0];
         ((ci) this).field_f = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new pj();
-            ((ci) this).field_a[var2] = new pj();
+            pj dupTemp$0 = new pj();
+            var3 = dupTemp$0;
+            ((ci) this).field_a[var2] = dupTemp$0;
             var3.field_o = var3;
             var3.field_m = var3;
         }

@@ -16,29 +16,22 @@ final class ng extends nk {
     static int field_P;
 
     public static void g(boolean param0) {
-        if (param0) {
-          field_N = null;
-          field_N = null;
-          field_T = null;
-          field_Z = null;
-          field_O = null;
-          field_Y = null;
-          return;
-        } else {
-          field_N = null;
-          field_T = null;
-          field_Z = null;
-          field_O = null;
-          field_Y = null;
-          return;
-        }
+        field_N = null;
+        field_T = null;
+        field_Z = null;
+        field_O = null;
+        field_Y = null;
     }
 
     ng(le param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, (ol) (Object) md.a((byte) -108));
-        ((ng) this).field_R = param0;
-        ((ng) this).field_W = param1;
-        ((ng) this).a(param5, true, param3, param2, param4);
+        try {
+            ((ng) this).field_R = param0;
+            ((ng) this).field_W = param1;
+            ((ng) this).a(param5, true, param3, param2, param4);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "ng.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -95,7 +88,7 @@ final class ng extends nk {
               var6 = ((ng) this).field_R.a(param0 + -22280);
               var33 = (gm) (Object) ((ng) this).field_w;
               var9 = ((ng) this).field_l + param1;
-              var10 = var33.b(-587719039, (fi) this, param2) + (var33.a((fi) this, (byte) -123).a((byte) 20) >> -43842047);
+              var10 = var33.b(-587719039, (fi) this, param2) + (var33.a((fi) this, (byte) -123).a((byte) 20) >> 1);
               if (gd.field_r == var6) {
                 break L1;
               } else {
@@ -107,51 +100,51 @@ final class ng extends nk {
                       return;
                     } else {
                       var28 = bf.field_p[1];
-                      var28.e(var9, var10 - (var28.field_p >> 2125725985), 256);
+                      var28.e(var9, var10 - (var28.field_p >> 1), 256);
                       return;
                     }
                   } else {
                     var29 = bf.field_p[2];
-                    var29.e(var9, var10 + -(var29.field_p >> 899381985), 256);
+                    var29.e(var9, var10 + -(var29.field_p >> 1), 256);
                     return;
                   }
                 }
               }
             }
             var30 = bf.field_p[0];
-            var11 = var30.field_u << -5697663;
-            var12 = var30.field_z << -1759717407;
+            var11 = var30.field_u << 1;
+            var12 = var30.field_z << 1;
             if (((ng) this).field_S != null) {
               if (((ng) this).field_S.field_w < var11) {
                 ((ng) this).field_S = new mg(var11, var12);
                 kb.a(((ng) this).field_S, 16865);
-                var30.a(112, 144, var30.field_u << -1040172092, var30.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                var30.a(112, 144, var30.field_u << 4, var30.field_z << 4, -((ng) this).field_U << 10, 4096);
                 ai.a(true);
-                ((ng) this).field_S.e(var9 + -(var30.field_u >> -1857178367), -var30.field_z + var10, 256);
+                ((ng) this).field_S.e(var9 + -(var30.field_u >> 1), -var30.field_z + var10, 256);
                 return;
               } else {
                 if (var12 <= ((ng) this).field_S.field_p) {
                   kb.a(((ng) this).field_S, 16865);
                   df.c();
-                  var30.a(112, 144, var30.field_u << -1040172092, var30.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                  var30.a(112, 144, var30.field_u << 4, var30.field_z << 4, -((ng) this).field_U << 10, 4096);
                   ai.a(true);
-                  ((ng) this).field_S.e(var9 + -(var30.field_u >> -1857178367), -var30.field_z + var10, 256);
+                  ((ng) this).field_S.e(var9 + -(var30.field_u >> 1), -var30.field_z + var10, 256);
                   return;
                 } else {
                   ((ng) this).field_S = new mg(var11, var12);
                   kb.a(((ng) this).field_S, 16865);
-                  var30.a(112, 144, var30.field_u << -1040172092, var30.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                  var30.a(112, 144, var30.field_u << 4, var30.field_z << 4, -((ng) this).field_U << 10, 4096);
                   ai.a(true);
-                  ((ng) this).field_S.e(var9 + -(var30.field_u >> -1857178367), -var30.field_z + var10, 256);
+                  ((ng) this).field_S.e(var9 + -(var30.field_u >> 1), -var30.field_z + var10, 256);
                   return;
                 }
               }
             } else {
               ((ng) this).field_S = new mg(var11, var12);
               kb.a(((ng) this).field_S, 16865);
-              var30.a(112, 144, var30.field_u << -1040172092, var30.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+              var30.a(112, 144, var30.field_u << 4, var30.field_z << 4, -((ng) this).field_U << 10, 4096);
               ai.a(true);
-              ((ng) this).field_S.e(var9 + -(var30.field_u >> -1857178367), -var30.field_z + var10, 256);
+              ((ng) this).field_S.e(var9 + -(var30.field_u >> 1), -var30.field_z + var10, 256);
               return;
             }
           } else {
@@ -159,96 +152,96 @@ final class ng extends nk {
             var6 = ((ng) this).field_R.a(param0 + -22280);
             var32 = (gm) (Object) ((ng) this).field_w;
             var9 = ((ng) this).field_l + param1;
-            var10 = var32.b(-587719039, (fi) this, param2) + (var32.a((fi) this, (byte) -123).a((byte) 20) >> -43842047);
+            var10 = var32.b(-587719039, (fi) this, param2) + (var32.a((fi) this, (byte) -123).a((byte) 20) >> 1);
             if (gd.field_r != var6) {
               if (te.field_d != var6) {
                 if (var6 != ee.field_c) {
                   if (bm.field_i == var6) {
                     var25 = bf.field_p[1];
-                    var25.e(var9, var10 - (var25.field_p >> 2125725985), 256);
+                    var25.e(var9, var10 - (var25.field_p >> 1), 256);
                     return;
                   } else {
                     return;
                   }
                 } else {
                   var26 = bf.field_p[2];
-                  var26.e(var9, var10 + -(var26.field_p >> 899381985), 256);
+                  var26.e(var9, var10 + -(var26.field_p >> 1), 256);
                   return;
                 }
               } else {
                 var24 = bf.field_p[0];
                 var16 = var24;
-                var11 = var24.field_u << -5697663;
-                var12 = var24.field_z << -1759717407;
+                var11 = var24.field_u << 1;
+                var12 = var24.field_z << 1;
                 if (((ng) this).field_S != null) {
                   if (((ng) this).field_S.field_w >= var11) {
                     if (var12 <= ((ng) this).field_S.field_p) {
                       kb.a(((ng) this).field_S, 16865);
                       df.c();
-                      var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                      var24.a(112, 144, var24.field_u << 4, var24.field_z << 4, -((ng) this).field_U << 10, 4096);
                       ai.a(true);
-                      ((ng) this).field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
+                      ((ng) this).field_S.e(var9 + -(var24.field_u >> 1), -var24.field_z + var10, 256);
                       return;
                     } else {
                       ((ng) this).field_S = new mg(var11, var12);
                       kb.a(((ng) this).field_S, 16865);
-                      var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                      var24.a(112, 144, var24.field_u << 4, var24.field_z << 4, -((ng) this).field_U << 10, 4096);
                       ai.a(true);
-                      ((ng) this).field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
+                      ((ng) this).field_S.e(var9 + -(var24.field_u >> 1), -var24.field_z + var10, 256);
                       return;
                     }
                   } else {
                     ((ng) this).field_S = new mg(var11, var12);
                     kb.a(((ng) this).field_S, 16865);
-                    var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                    var24.a(112, 144, var24.field_u << 4, var24.field_z << 4, -((ng) this).field_U << 10, 4096);
                     ai.a(true);
-                    ((ng) this).field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
+                    ((ng) this).field_S.e(var9 + -(var24.field_u >> 1), -var24.field_z + var10, 256);
                     return;
                   }
                 } else {
                   ((ng) this).field_S = new mg(var11, var12);
                   kb.a(((ng) this).field_S, 16865);
-                  var24.a(112, 144, var24.field_u << -1040172092, var24.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                  var24.a(112, 144, var24.field_u << 4, var24.field_z << 4, -((ng) this).field_U << 10, 4096);
                   ai.a(true);
-                  ((ng) this).field_S.e(var9 + -(var24.field_u >> -1857178367), -var24.field_z + var10, 256);
+                  ((ng) this).field_S.e(var9 + -(var24.field_u >> 1), -var24.field_z + var10, 256);
                   return;
                 }
               }
             } else {
               var23 = bf.field_p[0];
-              var11 = var23.field_u << -5697663;
-              var12 = var23.field_z << -1759717407;
+              var11 = var23.field_u << 1;
+              var12 = var23.field_z << 1;
               if (((ng) this).field_S != null) {
                 if (((ng) this).field_S.field_w >= var11) {
                   if (var12 > ((ng) this).field_S.field_p) {
                     ((ng) this).field_S = new mg(var11, var12);
                     kb.a(((ng) this).field_S, 16865);
-                    var23.a(112, 144, var23.field_u << -1040172092, var23.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                    var23.a(112, 144, var23.field_u << 4, var23.field_z << 4, -((ng) this).field_U << 10, 4096);
                     ai.a(true);
-                    ((ng) this).field_S.e(var9 + -(var23.field_u >> -1857178367), -var23.field_z + var10, 256);
+                    ((ng) this).field_S.e(var9 + -(var23.field_u >> 1), -var23.field_z + var10, 256);
                     return;
                   } else {
                     kb.a(((ng) this).field_S, 16865);
                     df.c();
-                    var23.a(112, 144, var23.field_u << -1040172092, var23.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                    var23.a(112, 144, var23.field_u << 4, var23.field_z << 4, -((ng) this).field_U << 10, 4096);
                     ai.a(true);
-                    ((ng) this).field_S.e(var9 + -(var23.field_u >> -1857178367), -var23.field_z + var10, 256);
+                    ((ng) this).field_S.e(var9 + -(var23.field_u >> 1), -var23.field_z + var10, 256);
                     return;
                   }
                 } else {
                   ((ng) this).field_S = new mg(var11, var12);
                   kb.a(((ng) this).field_S, 16865);
-                  var23.a(112, 144, var23.field_u << -1040172092, var23.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                  var23.a(112, 144, var23.field_u << 4, var23.field_z << 4, -((ng) this).field_U << 10, 4096);
                   ai.a(true);
-                  ((ng) this).field_S.e(var9 + -(var23.field_u >> -1857178367), -var23.field_z + var10, 256);
+                  ((ng) this).field_S.e(var9 + -(var23.field_u >> 1), -var23.field_z + var10, 256);
                   return;
                 }
               } else {
                 ((ng) this).field_S = new mg(var11, var12);
                 kb.a(((ng) this).field_S, 16865);
-                var23.a(112, 144, var23.field_u << -1040172092, var23.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                var23.a(112, 144, var23.field_u << 4, var23.field_z << 4, -((ng) this).field_U << 10, 4096);
                 ai.a(true);
-                ((ng) this).field_S.e(var9 + -(var23.field_u >> -1857178367), -var23.field_z + var10, 256);
+                ((ng) this).field_S.e(var9 + -(var23.field_u >> 1), -var23.field_z + var10, 256);
                 return;
               }
             }
@@ -269,7 +262,7 @@ final class ng extends nk {
             var6 = ((ng) this).field_R.a(param0 + -22280);
             var31 = (gm) (Object) ((ng) this).field_w;
             var9 = ((ng) this).field_l + param1;
-            var10 = var31.b(-587719039, (fi) this, param2) + (var31.a((fi) this, (byte) -123).a((byte) 20) >> -43842047);
+            var10 = var31.b(-587719039, (fi) this, param2) + (var31.a((fi) this, (byte) -123).a((byte) 20) >> 1);
             if (gd.field_r == var6) {
               break L3;
             } else {
@@ -281,70 +274,186 @@ final class ng extends nk {
                     return;
                   } else {
                     var19 = bf.field_p[1];
-                    var19.e(var9, var10 - (var19.field_p >> 2125725985), 256);
+                    var19.e(var9, var10 - (var19.field_p >> 1), 256);
                     return;
                   }
                 } else {
                   var20 = bf.field_p[2];
-                  var20.e(var9, var10 + -(var20.field_p >> 899381985), 256);
+                  var20.e(var9, var10 + -(var20.field_p >> 1), 256);
                   return;
                 }
               }
             }
           }
           var21 = bf.field_p[0];
-          var11 = var21.field_u << -5697663;
-          var12 = var21.field_z << -1759717407;
+          var11 = var21.field_u << 1;
+          var12 = var21.field_z << 1;
           if (((ng) this).field_S != null) {
             if (((ng) this).field_S.field_w >= var11) {
               if (var12 > ((ng) this).field_S.field_p) {
                 ((ng) this).field_S = new mg(var11, var12);
                 kb.a(((ng) this).field_S, 16865);
-                var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                var21.a(112, 144, var21.field_u << 4, var21.field_z << 4, -((ng) this).field_U << 10, 4096);
                 ai.a(true);
-                ((ng) this).field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
+                ((ng) this).field_S.e(var9 + -(var21.field_u >> 1), -var21.field_z + var10, 256);
                 return;
               } else {
                 kb.a(((ng) this).field_S, 16865);
                 df.c();
-                var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+                var21.a(112, 144, var21.field_u << 4, var21.field_z << 4, -((ng) this).field_U << 10, 4096);
                 ai.a(true);
-                ((ng) this).field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
+                ((ng) this).field_S.e(var9 + -(var21.field_u >> 1), -var21.field_z + var10, 256);
                 return;
               }
             } else {
               ((ng) this).field_S = new mg(var11, var12);
               kb.a(((ng) this).field_S, 16865);
-              var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+              var21.a(112, 144, var21.field_u << 4, var21.field_z << 4, -((ng) this).field_U << 10, 4096);
               ai.a(true);
-              ((ng) this).field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
+              ((ng) this).field_S.e(var9 + -(var21.field_u >> 1), -var21.field_z + var10, 256);
               return;
             }
           } else {
             ((ng) this).field_S = new mg(var11, var12);
             kb.a(((ng) this).field_S, 16865);
-            var21.a(112, 144, var21.field_u << -1040172092, var21.field_z << -1359129436, -((ng) this).field_U << -1147490198, 4096);
+            var21.a(112, 144, var21.field_u << 4, var21.field_z << 4, -((ng) this).field_U << 10, 4096);
             ai.a(true);
-            ((ng) this).field_S.e(var9 + -(var21.field_u >> -1857178367), -var21.field_z + var10, 256);
+            ((ng) this).field_S.e(var9 + -(var21.field_u >> 1), -var21.field_z + var10, 256);
             return;
           }
         }
     }
 
     final boolean a(fi param0, int param1) {
-        if (param1 != -8515) {
-            Object var4 = null;
-            ((ng) this).a(-119, 56, (fi) null, -7);
-            return false;
+        RuntimeException var3 = null;
+        Object var4 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == -8515) {
+                break L1;
+              } else {
+                var4 = null;
+                ((ng) this).a(-119, 56, (fi) null, -7);
+                break L1;
+              }
+            }
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("ng.G(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
-        return false;
+        return stackIn_3_0 != 0;
     }
 
     final void a(int param0, int param1, fi param2, int param3) {
-        ((ng) this).field_U = ((ng) this).field_U + 1;
-        super.a(param0, 114, param2, param3);
-        if (param1 < 113) {
-            ((ng) this).a((byte) -92, -86, 85, 41);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((ng) this).field_U = ((ng) this).field_U + 1;
+              super.a(param0, 114, param2, param3);
+              if (param1 >= 113) {
+                break L1;
+              } else {
+                ((ng) this).a((byte) -92, -86, 85, 41);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ng.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param2 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param3 + 41);
         }
     }
 

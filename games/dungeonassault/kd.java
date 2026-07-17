@@ -72,99 +72,105 @@ final class kd {
     }
 
     final static void a(int param0, nh param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
+        qh var5 = null;
+        int[] var6 = null;
         int var7 = 0;
         wj var8 = null;
         int var9 = 0;
         wj var10 = null;
-        wj var11 = null;
-        wj var12 = null;
-        qh var13 = null;
-        int[] var14 = null;
-        wj var15 = null;
-        wj var16 = null;
-        qh var17 = null;
-        qh var17_ref = null;
-        int[] var18 = null;
-        qh var19 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var7 = DungeonAssault.field_K;
-        if (param0 == 31913) {
-          var12 = new wj(param1.a("logo.fo3d", "", (byte) -113));
-          var11 = var12;
-          var3 = var11.c(true);
-          var11.e(false);
-          ch.field_n = lo.a(var11, (byte) -128);
-          ih.field_w = new qh[var3];
-          lk.field_R = new int[var3][];
-          var4 = 0;
-          L0: while (true) {
-            if (var3 <= var4) {
-              var11.f((byte) 32);
-              var9 = 0;
-              var4 = var9;
-              L1: while (true) {
-                if (var9 >= var3) {
-                  return;
-                } else {
-                  var13 = ih.field_w[var9];
-                  var17 = var13;
-                  var19 = var17;
-                  var17 = var13;
-                  var13.a(1, false, 6, 6, 6);
-                  var13.a((byte) -127);
-                  var14 = new int[]{var13.field_H - -var13.field_i >> -1481761759, var13.field_p - -var13.field_M >> -702008991, var13.field_a + var13.field_b >> -622637407};
-                  lk.field_R[var9] = var14;
-                  var13.a(0, -var14[0], -var14[2], -var14[1]);
-                  var9++;
-                  continue L1;
-                }
+        try {
+          L0: {
+            L1: {
+              if (param0 == 31913) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
               }
-            } else {
-              ih.field_w[var4] = df.a(false, var12);
-              var4++;
-              continue L0;
+            }
+            var8 = new wj(param1.a("logo.fo3d", "", (byte) -113));
+            var10 = var8;
+            var3 = var10.c(true);
+            var10.e(false);
+            ch.field_n = lo.a(var10, (byte) -128);
+            ih.field_w = new qh[var3];
+            lk.field_R = new int[var3][];
+            var4 = 0;
+            L2: while (true) {
+              if (var3 <= var4) {
+                var10.f((byte) 32);
+                var9 = 0;
+                var4 = var9;
+                L3: while (true) {
+                  if (var9 >= var3) {
+                    break L0;
+                  } else {
+                    var5 = ih.field_w[var9];
+                    var5.a(1, false, 6, 6, 6);
+                    var5.a((byte) -127);
+                    var6 = new int[]{var5.field_H - -var5.field_i >> 1, var5.field_p - -var5.field_M >> 1, var5.field_a + var5.field_b >> 1};
+                    lk.field_R[var9] = var6;
+                    var5.a(0, -var6[0], -var6[2], -var6[1]);
+                    var9++;
+                    continue L3;
+                  }
+                }
+              } else {
+                ih.field_w[var4] = df.a(false, var8);
+                var4++;
+                continue L2;
+              }
             }
           }
-        } else {
-          field_b = null;
-          var16 = new wj(param1.a("logo.fo3d", "", (byte) -113));
-          var8 = var16;
-          var15 = var16;
-          var10 = var15;
-          var3 = var15.c(true);
-          var15.e(false);
-          ch.field_n = lo.a(var15, (byte) -128);
-          ih.field_w = new qh[var3];
-          lk.field_R = new int[var3][];
-          var4 = 0;
-          L2: while (true) {
-            if (var3 <= var4) {
-              var15.f((byte) 32);
-              var9 = 0;
-              var4 = var9;
-              L3: while (true) {
-                if (var9 >= var3) {
-                  return;
-                } else {
-                  var17_ref = ih.field_w[var9];
-                  var19 = var17_ref;
-                  var19 = var17_ref;
-                  var17_ref.a(1, false, 6, 6, 6);
-                  var17_ref.a((byte) -127);
-                  var18 = new int[]{var17_ref.field_H - -var17_ref.field_i >> -1481761759, var17_ref.field_p - -var17_ref.field_M >> -702008991, var17_ref.field_a + var17_ref.field_b >> -622637407};
-                  lk.field_R[var9] = var18;
-                  var17_ref.a(0, -var18[0], -var18[2], -var18[1]);
-                  var9++;
-                  continue L3;
-                }
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_1 = new StringBuilder().append("kd.E(").append(param0).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param1 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
             } else {
-              ih.field_w[var4] = df.a(false, var16);
-              var4++;
-              continue L2;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
             }
           }
+          throw vk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 
@@ -172,32 +178,32 @@ final class kd {
         l.a(false, 0, 0, 0, 0, 0, 0, 0, 0, new int[0][], 0, false, 0);
         l.a(false, 0, 0, 1, 0, 0, 0, 0, 0, new int[0][], 0, false, 0);
         l.a(false, 0, 0, 2, 0, 0, 0, 0, 0, new int[0][], 0, true, 0);
-        l.a(false, 0, 0, 3, 0, 0, 0, 0, param0 ^ 0, new int[0][], 0, false, 0);
+        l.a(false, 0, 0, 3, 0, 0, 0, 0, param0, new int[0][], 0, false, 0);
         l.a(false, 0, 0, 5, 1, 1, 0, 100, 0, new int[0][], 0, false, 1);
-        l.a(true, 0, 0, 4, 4, 1, 0, 200, param0 ^ 0, new int[1][], 0, false, 1);
+        l.a(true, 0, 0, 4, 4, 1, 0, 200, param0, new int[1][], 0, false, 1);
         l.a(true, 0, 0, 6, 2, 1, 1, 300, 0, new int[1][], 3500, false, 2);
         l.a(true, 0, 0, 7, 6, 1, 0, 500, 0, new int[1][], 7500, false, 3);
-        l.a(false, 0, 0, 8, 3, 1, 1, 600, param0 ^ 0, new int[1][], 11000, false, 4);
+        l.a(false, 0, 0, 8, 3, 1, 1, 600, param0, new int[1][], 11000, false, 4);
         l.a(true, 0, 0, 9, 4, 1, 0, 800, 0, new int[1][], 16000, false, 3);
         l.a(true, 0, 0, 11, 3, 1, 1, 1100, 0, new int[0][], 20000, true, 7);
-        l.a(true, 6, 8, 21, 5, 2, 1, 1400, param0 ^ 0, new int[1][], 27500, false, 0);
+        l.a(true, 6, 8, 21, 5, 2, 1, 1400, param0, new int[1][], 27500, false, 0);
         l.a(true, 6, 0, 12, 6, 1, 0, 1500, 0, new int[1][], 32000, true, 4);
         l.a(true, 0, 0, 13, 7, 1, 1, 1800, 0, new int[1][], 39000, false, 7);
         l.a(false, 0, 0, 10, 8, 1, 2, 2200, 0, new int[2][], 55000, true, 4);
         l.a(false, 0, 0, 14, 6, 1, 3, 2300, 0, new int[0][], 65000, true, 8);
-        l.a(false, 0, 0, 35, 2, 3, 0, 100, param0 + 0, new int[1][], 0, false, 0);
+        l.a(false, 0, 0, 35, 2, 3, 0, 100, param0, new int[1][], 0, false, 0);
         l.a(false, 0, 0, 36, 0, 3, 1, 1100, 0, new int[2][], 23000, false, 6);
         l.a(false, 0, 0, 37, 9, 3, -1, 2200, 0, new int[1][], 60000, false, 0);
         l.a(true, 1, 1, 15, 1, 2, 0, 100, 0, new int[0][], 0, false, 1);
         l.a(true, 1, 1, 16, 2, 2, 0, 200, 0, new int[1][], 0, false, 0);
         l.a(true, 2, 2, 17, 1, 2, 1, 300, 0, new int[0][], 4500, false, 1);
         l.a(true, 2, 1, 25, 3, 2, param0, 350, 0, new int[0][], 5500, false, 1);
-        l.a(true, 2, 3, 18, 1, 2, 0, 400, param0 ^ 0, new int[0][], 6500, false, 1);
+        l.a(true, 2, 3, 18, 1, 2, 0, 400, param0, new int[0][], 6500, false, 1);
         l.a(true, 2, 3, 24, 3, 2, 1, 500, 0, new int[2][], 8500, false, 1);
         l.a(true, 2, 3, 19, 1, 2, 0, 600, 0, new int[0][], 9500, false, 4);
         l.a(true, 2, 4, 20, 3, 2, 0, 700, 0, new int[1][], 11500, false, 0);
         l.a(true, 5, 2, 23, 4, 2, -1, 800, 0, new int[1][], 12500, false, 3);
-        l.a(true, 2, 2, 27, 5, 2, 0, 850, param0 ^ 0, new int[1][], 14000, false, 2);
+        l.a(true, 2, 2, 27, 5, 2, 0, 850, param0, new int[1][], 14000, false, 2);
         l.a(true, 3, 5, 30, 1, 2, -1, 900, 0, new int[0][], 18000, true, 4);
         l.a(true, 5, 4, 28, 2, 2, 1, 1100, 0, new int[2][], 21500, false, 6);
         l.a(true, 6, 6, 31, 2, 2, 1, 1200, 0, new int[0][], 24500, true, 0);
@@ -206,7 +212,7 @@ final class kd {
         l.a(true, 7, 7, 22, 1, 2, 1, 1800, 0, new int[1][], 35000, false, 1);
         l.a(true, 5, 4, 32, 7, 2, 1, 1900, 0, new int[1][], 42000, true, 4);
         l.a(true, 9, 5, 33, 8, 2, 2, 2200, 0, new int[0][], 62000, true, 5);
-        l.a(true, 10, 6, 34, 10, 2, 3, 3000, param0 + 0, new int[1][], 70000, true, 5);
+        l.a(true, 10, 6, 34, 10, 2, 3, 3000, param0, new int[1][], 70000, true, 5);
     }
 
     public static void a(byte param0) {
@@ -216,14 +222,11 @@ final class kd {
         field_f = null;
         field_a = null;
         field_b = null;
-        if (param0 > -43) {
-            field_d = null;
-        }
     }
 
     final synchronized static long c(int param0) {
         long var1 = System.currentTimeMillis();
-        if ((var1 ^ -1L) > (lo.field_f ^ -1L)) {
+        if (~var1 > ~lo.field_f) {
             fb.field_c = fb.field_c + (-var1 + lo.field_f);
             if (param0 == -2456) {
                 lo.field_f = var1;

@@ -10,18 +10,9 @@ final class va {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != -15504) {
-          field_b = null;
-          field_c = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
-          field_c = null;
-          field_d = null;
-          field_b = null;
-          return;
-        }
+        field_c = null;
+        field_d = null;
+        field_b = null;
     }
 
     static {

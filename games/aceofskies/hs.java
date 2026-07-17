@@ -18,20 +18,21 @@ final class hs implements Iterable {
     }
 
     final void a(wt param0, byte param1) {
-        if (!(null == ((wt) param0).field_f)) {
-            param0.d(-114);
+        try {
+            if (!(null == param0.field_f)) {
+                param0.d(-114);
+            }
+            param0.field_j = ((hs) this).field_c;
+            param0.field_f = ((hs) this).field_c.field_f;
+            param0.field_f.field_j = param0;
+            int var3_int = 43 % ((-3 - param1) / 51);
+            param0.field_j.field_f = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "hs.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        param0.field_j = ((hs) this).field_c;
-        param0.field_f = ((hs) this).field_c.field_f;
-        ((wt) param0).field_f.field_j = param0;
-        int var3 = 43 % ((-3 - param1) / 51);
-        ((wt) param0).field_j.field_f = param0;
     }
 
     public static void a(byte param0) {
-        if (param0 != -127) {
-            return;
-        }
         field_a = null;
     }
 
@@ -46,9 +47,9 @@ final class hs implements Iterable {
           ((hs) this).field_b = null;
           return null;
         } else {
-          ((hs) this).field_b = ((wt) var2).field_j;
+          ((hs) this).field_b = var2.field_j;
           if (!param0) {
-            return (wt) null;
+            return null;
           } else {
             return var2;
           }
@@ -57,31 +58,81 @@ final class hs implements Iterable {
 
     private final wt a(wt param0, int param1) {
         wt var3 = null;
-        if (param1 != 128) {
-            ((hs) this).field_c = (wt) null;
-            if (param0 == null) {
-                var3 = ((hs) this).field_c.field_j;
-            } else {
+        RuntimeException var3_ref = null;
+        Object stackIn_6_0 = null;
+        wt stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_5_0 = null;
+        wt stackOut_7_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 != null) {
                 var3 = param0;
+                break L1;
+              } else {
+                var3 = ((hs) this).field_c.field_j;
+                break L1;
+              }
             }
-            if (!(((hs) this).field_c != var3)) {
-                ((hs) this).field_b = null;
-                return null;
+            if (((hs) this).field_c == var3) {
+              ((hs) this).field_b = null;
+              stackOut_5_0 = null;
+              stackIn_6_0 = stackOut_5_0;
+              return (wt) (Object) stackIn_6_0;
+            } else {
+              ((hs) this).field_b = var3.field_j;
+              stackOut_7_0 = (wt) var3;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
             }
-            ((hs) this).field_b = ((wt) var3).field_j;
-            return var3;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var3_ref;
+            stackOut_9_1 = new StringBuilder().append("hs.B(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L2;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L2;
+            }
+          }
+          throw pn.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 128 + 41);
         }
-        if (param0 == null) {
-            var3 = ((hs) this).field_c.field_j;
-        } else {
-            var3 = param0;
-        }
-        if (!(((hs) this).field_c != var3)) {
-            ((hs) this).field_b = null;
-            return null;
-        }
-        ((hs) this).field_b = ((wt) var3).field_j;
-        return var3;
+        return stackIn_8_0;
     }
 
     final wt a(int param0) {
@@ -95,7 +146,7 @@ final class hs implements Iterable {
         if (var2 != ((hs) this).field_c) {
           var2.d(-119);
           if (param0) {
-            return (wt) null;
+            return null;
           } else {
             return var2;
           }

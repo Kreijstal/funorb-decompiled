@@ -508,8 +508,7 @@ final class hsa {
                       break L3;
                     }
                   }
-                  new rt(stackIn_72_2, stackIn_72_3, stackIn_72_4, stackIn_72_5, stackIn_72_6, stackIn_72_7 != 0, var7_array, 0, 0, false);
-                  var44 = stackIn_72_0;
+                  var44 = new rt(stackIn_72_2, stackIn_72_3, stackIn_72_4, stackIn_72_5, stackIn_72_6, stackIn_72_7 != 0, var7_array, 0, 0, false);
                   var44.a(var42.field_n, var42.field_b, -3554);
                   ((hsa) this).field_d.a(param1 + 29166, (Object) (Object) var44, (long)param0);
                   return var44;
@@ -580,8 +579,7 @@ final class hsa {
                       break L4;
                     }
                   }
-                  new rt(stackIn_62_2, stackIn_62_3, stackIn_62_4, stackIn_62_5, stackIn_62_6, stackIn_62_7 != 0, var56, 6408);
-                  var4 = stackIn_62_0;
+                  var4 = new rt(stackIn_62_2, stackIn_62_3, stackIn_62_4, stackIn_62_5, stackIn_62_6, stackIn_62_7 != 0, var56, 6408);
                   var4.a(var42.field_n, var42.field_b, -3554);
                   ((hsa) this).field_d.a(param1 + 29166, (Object) (Object) var4, (long)param0);
                   return var4;
@@ -663,8 +661,7 @@ final class hsa {
                     break L7;
                   }
                 }
-                new rt(stackIn_57_2, stackIn_57_3, stackIn_57_4, stackIn_57_5, stackIn_57_6, stackIn_57_7 != 0, var7_array, 0, 0, false);
-                var43 = stackIn_57_0;
+                var43 = new rt(stackIn_57_2, stackIn_57_3, stackIn_57_4, stackIn_57_5, stackIn_57_6, stackIn_57_7 != 0, var7_array, 0, 0, false);
                 var43.a(var42.field_n, var42.field_b, -3554);
                 ((hsa) this).field_d.a(param1 + 29166, (Object) (Object) var43, (long)param0);
                 return var43;
@@ -758,8 +755,7 @@ final class hsa {
                           break L9;
                         }
                       }
-                      new rt(stackIn_39_2, stackIn_39_3, stackIn_39_4, stackIn_39_5, stackIn_39_6, stackIn_39_7 != 0, var50, 0, 0, false);
-                      var29 = stackIn_39_0;
+                      var29 = new rt(stackIn_39_2, stackIn_39_3, stackIn_39_4, stackIn_39_5, stackIn_39_6, stackIn_39_7 != 0, var50, 0, 0, false);
                       var29.a(var12.field_n, var12.field_b, -3554);
                       ((hsa) this).field_d.a(param1 + 29166, (Object) (Object) var29, (long)param0);
                       return var29;
@@ -825,8 +821,7 @@ final class hsa {
                           break L10;
                         }
                       }
-                      new rt(stackIn_35_2, stackIn_35_3, stackIn_35_4, stackIn_35_5, stackIn_35_6, stackIn_35_7 != 0, var53, 0, 0, false);
-                      var37 = stackIn_35_0;
+                      var37 = new rt(stackIn_35_2, stackIn_35_3, stackIn_35_4, stackIn_35_5, stackIn_35_6, stackIn_35_7 != 0, var53, 0, 0, false);
                       var37.a(var12.field_n, var12.field_b, -3554);
                       ((hsa) this).field_d.a(param1 + 29166, (Object) (Object) var37, (long)param0);
                       return var37;
@@ -893,8 +888,7 @@ final class hsa {
                         break L11;
                       }
                     }
-                    new rt(stackIn_29_2, stackIn_29_3, stackIn_29_4, stackIn_29_5, stackIn_29_6, stackIn_29_7 != 0, var47, 0, 0, false);
-                    var21 = stackIn_29_0;
+                    var21 = new rt(stackIn_29_2, stackIn_29_3, stackIn_29_4, stackIn_29_5, stackIn_29_6, stackIn_29_7 != 0, var47, 0, 0, false);
                     var21.a(var12.field_n, var12.field_b, -3554);
                     ((hsa) this).field_d.a(param1 + 29166, (Object) (Object) var21, (long)param0);
                     return var21;
@@ -966,8 +960,7 @@ final class hsa {
                       break L12;
                     }
                   }
-                  new rt(stackIn_24_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7 != 0, var55, 6408);
-                  var41 = stackIn_24_0;
+                  var41 = new rt(stackIn_24_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7 != 0, var55, 6408);
                   var41.a(var12.field_n, var12.field_b, -3554);
                   ((hsa) this).field_d.a(param1 + 29166, (Object) (Object) var41, (long)param0);
                   return var41;
@@ -1047,8 +1040,7 @@ final class hsa {
                     break L14;
                   }
                 }
-                new rt(stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_18_7 != 0, var7_array, 0, 0, false);
-                var13 = stackIn_18_0;
+                var13 = new rt(stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_18_7 != 0, var7_array, 0, 0, false);
                 var13.a(var12.field_n, var12.field_b, -3554);
                 ((hsa) this).field_d.a(param1 + 29166, (Object) (Object) var13, (long)param0);
                 return var13;
@@ -1088,8 +1080,12 @@ final class hsa {
 
     hsa(cka param0, d param1) {
         ((hsa) this).field_d = new dd(256);
-        ((hsa) this).field_b = param1;
-        ((hsa) this).field_e = param0;
+        try {
+            ((hsa) this).field_b = param1;
+            ((hsa) this).field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hsa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

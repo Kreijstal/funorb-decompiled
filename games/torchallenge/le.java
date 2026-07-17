@@ -14,20 +14,10 @@ final class le {
     public static void a(boolean param0) {
         field_b = null;
         field_f = null;
-        if (!param0) {
-          le.a(true);
-          field_a = null;
-          field_c = null;
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
-          field_a = null;
-          field_c = null;
-          field_d = null;
-          field_e = null;
-          return;
-        }
+        field_a = null;
+        field_c = null;
+        field_d = null;
+        field_e = null;
     }
 
     static {

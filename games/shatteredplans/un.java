@@ -31,18 +31,26 @@ final class un extends hb {
     }
 
     final static void a(String param0, byte param1, long param2, int param3, int param4) {
-        jj.field_n = true;
-        if (param1 <= 44) {
-            field_k = null;
+        try {
+            jj.field_n = true;
+            if (param1 <= 44) {
+                field_k = null;
+            }
+            vs.field_d = param4;
+            ac.field_o = param2;
+            ah.field_S = param0;
+            vp.field_r = param3;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "un.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
-        vs.field_d = param4;
-        ac.field_o = param2;
-        ah.field_S = param0;
-        vp.field_r = param3;
     }
 
     un(pf param0) {
-        ((un) this).field_h = param0;
+        try {
+            ((un) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "un.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
@@ -50,9 +58,6 @@ final class un extends hb {
         field_f = null;
         field_k = null;
         field_j = null;
-        if (param0 != 11) {
-            un.a((String) null, (byte) -25, 15L, -37, -9);
-        }
         field_i = null;
     }
 
@@ -64,7 +69,7 @@ final class un extends hb {
         int var0 = 0;
         field_f = new int[8];
         field_k = new int[12];
-        for (var0 = 0; -9 < (var0 ^ -1); var0++) {
+        for (var0 = 0; var0 < 8; var0++) {
             field_f[var0] = (-var0 + 7) * 789516;
         }
         for (var0 = 0; var0 < 12; var0++) {

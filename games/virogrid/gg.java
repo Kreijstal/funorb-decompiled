@@ -92,10 +92,6 @@ abstract class gg extends fd {
         field_J = null;
         field_D = null;
         field_E = null;
-        if (param0 != -1) {
-            Object var2 = null;
-            int discarded$0 = gg.a((CharSequence) null, 'ﾙ', 7);
-        }
         field_N = null;
         field_M = null;
     }
@@ -132,7 +128,7 @@ abstract class gg extends fd {
         L1: {
           var2 = this.e((byte) 99);
           var3 = -((gg) this).field_H + var2;
-          if ((var3 ^ -1) >= -1) {
+          if (var3 <= 0) {
             break L1;
           } else {
             ((gg) this).field_H = ((gg) this).field_H + (var3 + 7) / 8;
@@ -173,68 +169,130 @@ abstract class gg extends fd {
     }
 
     final void c(int param0, int param1, int param2) {
-        ((gg) this).a(param0, true, mn.field_a + -param0 >> 1758644161, mm.field_i - param2 >> 1382565825, param2);
+        ((gg) this).a(param0, true, mn.field_a + -param0 >> 1, mm.field_i - param2 >> 1, param2);
         if (param1 < 106) {
             field_F = null;
         }
     }
 
     final static int a(CharSequence param0, char param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         Object var7 = null;
-        L0: {
-          var6 = Virogrid.field_F ? 1 : 0;
-          var3 = 0;
-          var4 = param0.length();
-          var5 = 0;
-          if (param2 == 16) {
-            break L0;
-          } else {
-            var7 = null;
-            int discarded$2 = gg.a((CharSequence) null, '`', -91);
-            break L0;
-          }
-        }
-        L1: while (true) {
-          if (var5 >= var4) {
-            return var3;
-          } else {
-            if (param0.charAt(var5) == param1) {
-              var3++;
-              var5++;
-              continue L1;
-            } else {
-              var5++;
-              continue L1;
+        int stackIn_8_0 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        var6 = Virogrid.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var3_int = 0;
+              var4 = param0.length();
+              var5 = 0;
+              if (param2 == 16) {
+                break L1;
+              } else {
+                var7 = null;
+                int discarded$2 = gg.a((CharSequence) null, '`', -91);
+                break L1;
+              }
+            }
+            L2: while (true) {
+              if (var5 >= var4) {
+                stackOut_7_0 = var3_int;
+                stackIn_8_0 = stackOut_7_0;
+                break L0;
+              } else {
+                L3: {
+                  if (param0.charAt(var5) != param1) {
+                    break L3;
+                  } else {
+                    var3_int++;
+                    break L3;
+                  }
+                }
+                var5++;
+                continue L2;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_1 = new StringBuilder().append("gg.EA(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L4;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L4;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_8_0;
     }
 
     final static void a(int param0, wg param1, boolean param2, int param3) {
-        if (!param2) {
-            field_F = null;
+        try {
+            if (!param2) {
+                field_F = null;
+            }
+            jf.field_o = param1;
+            oe.field_f = param0;
+            qg.field_w = param3;
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "gg.HA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
-        jf.field_o = param1;
-        oe.field_f = param0;
-        qg.field_w = param3;
     }
 
     gg(je param0, int param1, int param2) {
-        super(-param1 + mm.field_i >> -1908060287, -param2 + mn.field_a >> -492806047, param1, param2, (ol) null);
-        ((gg) this).field_G = false;
-        ((gg) this).field_L = param0;
-        ((gg) this).field_H = 0;
+        super(-param1 + mm.field_i >> 1, -param2 + mn.field_a >> 1, param1, param2, (ol) null);
+        try {
+            ((gg) this).field_G = false;
+            ((gg) this).field_L = param0;
+            ((gg) this).field_H = 0;
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "gg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final static void a(int param0) {
         pc.field_b = hc.a(-9986);
-        if (param0 != 15810) {
-            return;
-        }
         jg.field_e = 0;
     }
 

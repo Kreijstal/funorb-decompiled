@@ -17,7 +17,7 @@ final class lh {
               break L0;
             } else {
               var1 = kj.field_J;
-              if (-1 == (var1 ^ -1)) {
+              if (var1 == 0) {
                 eh.field_c = eh.field_c - 1;
                 if (eh.field_c > -10 - (tl.field_h - 480)) {
                   break L0;
@@ -27,23 +27,25 @@ final class lh {
                   return;
                 }
               } else {
-                if ((var1 ^ -1) == -2) {
+                if (var1 == 1) {
+                  int fieldTemp$6 = h.field_d;
                   h.field_d = h.field_d + 1;
-                  if (-451 > (h.field_d ^ -1)) {
+                  if (fieldTemp$6 > 450) {
                     kj.field_J = 2;
                     return;
                   } else {
                     return;
                   }
                 } else {
-                  if ((var1 ^ -1) != -3) {
+                  if (var1 != 2) {
                     break L0;
                   } else {
+                    int fieldTemp$7 = eh.field_c;
                     eh.field_c = eh.field_c + 1;
-                    if ((eh.field_c ^ -1) >= -481) {
+                    if (fieldTemp$7 <= 480) {
                       break L0;
                     } else {
-                      hf discarded$2 = pb.field_t.b((byte) -118);
+                      hf discarded$8 = pb.field_t.b((byte) -118);
                       gf.a((byte) -12);
                       return;
                     }
@@ -57,7 +59,7 @@ final class lh {
           lh.b(-5);
           if (null != pb.field_t.g(0)) {
             var1 = kj.field_J;
-            if (-1 == (var1 ^ -1)) {
+            if (var1 == 0) {
               eh.field_c = eh.field_c - 1;
               if (eh.field_c > -10 - (tl.field_h - 480)) {
                 return;
@@ -67,19 +69,21 @@ final class lh {
                 return;
               }
             } else {
-              if ((var1 ^ -1) == -2) {
+              if (var1 == 1) {
+                int fieldTemp$9 = h.field_d;
                 h.field_d = h.field_d + 1;
-                if (-451 <= (h.field_d ^ -1)) {
+                if (fieldTemp$9 <= 450) {
                   return;
                 } else {
                   kj.field_J = 2;
                   return;
                 }
               } else {
-                if ((var1 ^ -1) == -3) {
+                if (var1 == 2) {
+                  int fieldTemp$10 = eh.field_c;
                   eh.field_c = eh.field_c + 1;
-                  if ((eh.field_c ^ -1) < -481) {
-                    hf discarded$3 = pb.field_t.b((byte) -118);
+                  if (fieldTemp$10 > 480) {
+                    hf discarded$11 = pb.field_t.b((byte) -118);
                     gf.a((byte) -12);
                     return;
                   } else {

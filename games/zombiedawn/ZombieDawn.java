@@ -97,12 +97,12 @@ public final class ZombieDawn extends m {
             if (16 <= po.field_xb) {
               sg.field_eb.b((byte) 108);
               sg.field_eb.a((byte) -102);
-              var17.a(512 + -(po.field_xb << -1880089340), (byte) -128, true);
+              var17.a(512 + -(po.field_xb << 4), (byte) -128, true);
               break L0;
             } else {
               ke.field_c.b((byte) 120);
               ke.field_c.a((byte) -118);
-              var17.a(po.field_xb << -626509916, (byte) 46, false);
+              var17.a(po.field_xb << 4, (byte) 46, false);
               break L0;
             }
           } else {
@@ -183,7 +183,7 @@ public final class ZombieDawn extends m {
                   var13 = (int)(oj.field_d.field_b * (float)var3 / 100.0f);
                   bi.b(var8 + -(var3 / 2), 10 + var7, var3, 12, 0);
                   bi.f(-(var3 / 2) + var8, var7 + 10, var8 + (-(var3 / 2) - -var13), var7 - -22);
-                  if (-641 != (bd.field_e ^ -1)) {
+                  if (bd.field_e != 640) {
                     break L10;
                   } else {
                     if (480 != nh.field_P) {
@@ -210,7 +210,7 @@ public final class ZombieDawn extends m {
           break L3;
         }
         L11: {
-          if ((lo.field_j ^ -1) > -3) {
+          if (lo.field_j < 2) {
             break L11;
           } else {
             if (bn.field_f) {
@@ -226,7 +226,7 @@ public final class ZombieDawn extends m {
               L13: {
                 if (tp.field_p % 50L == 0L) {
                   var18 = Runtime.getRuntime();
-                  var3 = (int)(var18.totalMemory() - var18.freeMemory()) >> -1221530038;
+                  var3 = (int)(var18.totalMemory() - var18.freeMemory()) >> 10;
                   var4 = mf.field_d;
                   var5 = 9;
                   L14: while (true) {
@@ -290,7 +290,7 @@ public final class ZombieDawn extends m {
               }
             }
           }
-          if ((dp.field_h ^ -1) != -2147483648) {
+          if (dp.field_h != 2147483647) {
             ca.a(true, true, dp.field_h);
             break L0;
           } else {
@@ -352,7 +352,7 @@ public final class ZombieDawn extends m {
             if (bd.field_e != te.field_eb) {
               break L1;
             } else {
-              if ((kj.field_c ^ -1) == (nh.field_P ^ -1)) {
+              if (~kj.field_c == ~nh.field_P) {
                 break L0;
               } else {
                 break L1;
@@ -374,10 +374,10 @@ public final class ZombieDawn extends m {
               break L2;
             } else {
               L3: {
-                if ((lf.field_h.field_w ^ -1) != (bd.field_e ^ -1)) {
+                if (~lf.field_h.field_w != ~bd.field_e) {
                   break L3;
                 } else {
-                  if ((lf.field_h.field_t ^ -1) == (nh.field_P ^ -1)) {
+                  if (~lf.field_h.field_t == ~nh.field_P) {
                     break L2;
                   } else {
                     break L3;
@@ -431,7 +431,7 @@ public final class ZombieDawn extends m {
               break L8;
             } else {
               L9: {
-                if ((sg.field_eb.field_d ^ -1) != -1) {
+                if (sg.field_eb.field_d != 0) {
                   break L9;
                 } else {
                   sg.field_eb.a((byte) -115, param0);
@@ -439,7 +439,7 @@ public final class ZombieDawn extends m {
                 }
               }
               po.field_xb = po.field_xb + 1;
-              if (-33 == (po.field_xb ^ -1)) {
+              if (po.field_xb == 32) {
                 L10: {
                   if (ke.field_c.field_d == 3) {
                     bd.field_m = null;
@@ -472,10 +472,70 @@ public final class ZombieDawn extends m {
     }
 
     final boolean a(am param0, int param1, int param2) {
-        if (param2 != 2) {
-            ZombieDawn.b(-101, 34);
+        RuntimeException var4 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param2 == 2) {
+                break L1;
+              } else {
+                ZombieDawn.b(-101, 34);
+                break L1;
+              }
+            }
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_1 = new StringBuilder().append("ZombieDawn.HA(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 41);
         }
-        return false;
+        return stackIn_3_0 != 0;
     }
 
     final static void b(int param0, int param1) {

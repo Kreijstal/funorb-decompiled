@@ -87,7 +87,7 @@ final class dp extends de {
         int stackOut_13_0 = 0;
         int stackOut_12_0 = 0;
         L0: {
-          if (-2 == (((dp) this).field_l ^ -1)) {
+          if (((dp) this).field_l == 1) {
             gj.field_W[2].b(0, 45);
             break L0;
           } else {
@@ -122,7 +122,7 @@ final class dp extends de {
             }
           }
           L4: {
-            if ((((dp) this).field_g.field_h ^ -1) < -8) {
+            if (((dp) this).field_g.field_h > 7) {
               stackOut_24_0 = -210 + 30 * ((dp) this).field_g.field_h;
               stackIn_25_0 = stackOut_24_0;
               break L4;
@@ -163,7 +163,7 @@ final class dp extends de {
             }
           }
           L8: {
-            if ((((dp) this).field_g.field_h ^ -1) < -8) {
+            if (((dp) this).field_g.field_h > 7) {
               stackOut_13_0 = -210 + 30 * ((dp) this).field_g.field_h;
               stackIn_14_0 = stackOut_13_0;
               break L8;
@@ -181,21 +181,25 @@ final class dp extends de {
     }
 
     final void a(int[] param0, byte param1) {
-        int var3 = 0;
-        if (((dp) this).field_k != null) {
-            var3 = param0.length - ((dp) this).field_k.length;
-            ((dp) this).field_d = ((dp) this).field_d - ((dp) this).field_i * var3 / 2;
+        int var3_int = 0;
+        try {
+            if (((dp) this).field_k != null) {
+                var3_int = param0.length - ((dp) this).field_k.length;
+                ((dp) this).field_d = ((dp) this).field_d - ((dp) this).field_i * var3_int / 2;
+            }
+            super.a(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "dp.MA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        super.a(param0, param1);
     }
 
     final int b(int param0, int param1) {
         int var4 = 122 % ((-13 - param0) / 37);
         int var3 = 0;
-        if (!(-3 != (((dp) this).field_l ^ -1))) {
+        if (!(((dp) this).field_l != 2)) {
             var3 = 40;
         }
-        if ((((dp) this).field_l ^ -1) == -5) {
+        if (((dp) this).field_l == 4) {
             var3 = 70;
         }
         return super.b(118, param1) + -var3;
@@ -210,16 +214,27 @@ final class dp extends de {
     }
 
     final static void a(String param0, int param1) {
-        int var2 = uf.field_d;
-        int var3 = bg.field_k;
-        int var4 = mg.field_h.field_Db.b(param0, 500);
-        int var5 = mg.field_h.field_Db.a(param0, 500) - -6;
-        int var6 = 2 + var4 * fq.field_q;
-        int var7 = ui.a(12, var2, var5, (byte) -1);
-        int var8 = pj.a(var6, var3, 20, (byte) 112);
-        t.a(var7, var8, var5, var6, 0);
-        t.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
-        int discarded$0 = mg.field_h.field_Db.a(param0, 3 + var7, nc.field_d + (1 + (var8 + -mg.field_h.field_Db.field_w)), 500, 1000, 0, -1, 0, 0, fq.field_q);
+        int var2_int = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        try {
+            var2_int = uf.field_d;
+            var3 = bg.field_k;
+            var4 = mg.field_h.field_Db.b(param0, 500);
+            var5 = mg.field_h.field_Db.a(param0, 500) - -6;
+            var6 = 2 + var4 * fq.field_q;
+            var7 = ui.a(12, var2_int, var5, (byte) -1);
+            var8 = pj.a(var6, var3, 20, (byte) 112);
+            t.a(var7, var8, var5, var6, 0);
+            t.d(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
+            int discarded$0 = mg.field_h.field_Db.a(param0, 3 + var7, nc.field_d + (1 + (var8 + -mg.field_h.field_Db.field_w)), 500, 1000, 0, -1, 0, 0, fq.field_q);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "dp.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void e(byte param0) {
@@ -232,7 +247,7 @@ final class dp extends de {
     final void c(int param0) {
         Object var2 = null;
         var2 = null;
-        if ((((dp) this).field_l ^ -1) == -2) {
+        if (((dp) this).field_l == 1) {
           var2 = (Object) (Object) ro.field_e;
           if (var2 == null) {
             super.c(0);
@@ -240,7 +255,7 @@ final class dp extends de {
           } else {
             L0: {
               ((ii) var2).a(false, param0 + param0);
-              if ((((dp) this).field_l ^ -1) != -2) {
+              if (((dp) this).field_l != 1) {
                 break L0;
               } else {
                 t.a(0, 0, 640, 480);
@@ -251,8 +266,8 @@ final class dp extends de {
             return;
           }
         } else {
-          if ((((dp) this).field_l ^ -1) != -3) {
-            if ((((dp) this).field_l ^ -1) == -5) {
+          if (((dp) this).field_l != 2) {
+            if (((dp) this).field_l == 4) {
               var2 = (Object) (Object) qo.field_r;
               if (var2 == null) {
                 super.c(0);
@@ -260,7 +275,7 @@ final class dp extends de {
               } else {
                 L1: {
                   ((ii) var2).a(false, param0 + param0);
-                  if ((((dp) this).field_l ^ -1) != -2) {
+                  if (((dp) this).field_l != 1) {
                     break L1;
                   } else {
                     t.a(0, 0, 640, 480);
@@ -277,7 +292,7 @@ final class dp extends de {
               } else {
                 L2: {
                   ((ii) var2).a(false, param0 + param0);
-                  if ((((dp) this).field_l ^ -1) != -2) {
+                  if (((dp) this).field_l != 1) {
                     break L2;
                   } else {
                     t.a(0, 0, 640, 480);
@@ -296,7 +311,7 @@ final class dp extends de {
             } else {
               L3: {
                 ((ii) var2).a(false, param0 + param0);
-                if ((((dp) this).field_l ^ -1) != -2) {
+                if (((dp) this).field_l != 1) {
                   break L3;
                 } else {
                   t.a(0, 0, 640, 480);

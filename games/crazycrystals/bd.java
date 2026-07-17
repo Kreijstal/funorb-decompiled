@@ -10,8 +10,8 @@ class bd extends ij {
         int var3 = 0;
         uo.field_o = uo.field_o + 1;
         int var2 = rc.field_a.size();
-        if ((jo.field_o ^ -1) == -2) {
-            if (-1 == (mo.field_l ^ -1)) {
+        if (jo.field_o == 1) {
+            if (mo.field_l == 0) {
                 var2 = 15;
                 if (!(var2 <= uo.field_o)) {
                     fl.field_g = fp.field_a;
@@ -69,28 +69,18 @@ class bd extends ij {
     }
 
     public static void e(int param0) {
-        if (param0 != 7279) {
-            int discarded$0 = bd.a(102, (byte) -53);
-            field_n = null;
-            field_l = null;
-            return;
-        }
         field_n = null;
         field_l = null;
     }
 
     final static void a(db param0, byte[] param1, wj[] param2, int param3) {
-        ga.field_L = param0;
-        io.field_I[16] = mh.field_j;
-        if (param3 != 8) {
-          bd.a((byte) -64, false);
-          io.field_I[17] = ti.field_j;
-          cc.a(8438015, (java.applet.Applet) (Object) fe.field_g, (byte) -121, 2121856, io.field_I, 192);
-          return;
-        } else {
-          io.field_I[17] = ti.field_j;
-          cc.a(8438015, (java.applet.Applet) (Object) fe.field_g, (byte) -121, 2121856, io.field_I, 192);
-          return;
+        try {
+            ga.field_L = param0;
+            io.field_I[16] = mh.field_j;
+            io.field_I[17] = ti.field_j;
+            cc.a(8438015, (java.applet.Applet) (Object) fe.field_g, (byte) -121, 2121856, io.field_I, 192);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "bd.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 8 + 41);
         }
     }
 
@@ -100,7 +90,7 @@ class bd extends ij {
           if (0 < param0) {
             L0: {
               var2 = 1;
-              if (-65536 <= (param0 ^ -1)) {
+              if (param0 <= 65535) {
                 break L0;
               } else {
                 var2 += 16;
@@ -151,7 +141,7 @@ class bd extends ij {
             } else {
               L5: {
                 var2 = 2;
-                if ((param0 ^ -1) <= 65535) {
+                if (param0 >= -65536) {
                   break L5;
                 } else {
                   var2 += 16;

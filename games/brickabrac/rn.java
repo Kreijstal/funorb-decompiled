@@ -27,34 +27,84 @@ final class rn {
     }
 
     final int a(int param0, byte[] param1, int param2, byte param3) throws IOException {
-        int var5 = 0;
-        var5 = ((rn) this).field_f.read(param1, param0, param2);
-        if (param3 < 102) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
           L0: {
-            field_l = -103;
-            if (0 < var5) {
-              ((rn) this).field_j = ((rn) this).field_j + (long)var5;
-              break L0;
+            L1: {
+              var5_int = ((rn) this).field_f.read(param1, param0, param2);
+              if (param3 >= 102) {
+                break L1;
+              } else {
+                field_l = -103;
+                break L1;
+              }
+            }
+            L2: {
+              if (0 < var5_int) {
+                ((rn) this).field_j = ((rn) this).field_j + (long)var5_int;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            stackOut_5_0 = var5_int;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_1 = new StringBuilder().append("rn.A(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
             } else {
-              break L0;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
-          return var5;
-        } else {
-          L1: {
-            if (0 < var5) {
-              ((rn) this).field_j = ((rn) this).field_j + (long)var5;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return var5;
+          throw qb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_6_0;
     }
 
     final static void a(int param0) {
-        tf.field_a[param0] = 57;
+        tf.field_a[59] = 57;
         tf.field_a[93] = 43;
         tf.field_a[91] = 42;
         tf.field_a[47] = 73;
@@ -69,18 +119,19 @@ final class rn {
     }
 
     final void a(int param0, byte param1, byte[] param2, int param3) throws IOException {
-        if ((((rn) this).field_k ^ -1L) <= ((long)param3 + ((rn) this).field_j ^ -1L)) {
-          ((rn) this).field_f.write(param2, param0, param3);
-          if (param1 > -99) {
+        if (~((rn) this).field_k > ~((long)param3 + ((rn) this).field_j)) {
+            ((rn) this).field_f.seek(((rn) this).field_k);
+            ((rn) this).field_f.write(1);
+            throw new EOFException();
+        }
+        ((rn) this).field_f.write(param2, param0, param3);
+        if (param1 > -99) {
             return;
-          } else {
+        }
+        try {
             ((rn) this).field_j = ((rn) this).field_j + (long)param3;
-            return;
-          }
-        } else {
-          ((rn) this).field_f.seek(((rn) this).field_k);
-          ((rn) this).field_f.write(1);
-          throw new EOFException();
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "rn.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -95,20 +146,10 @@ final class rn {
     public static void b(int param0) {
         field_g = null;
         field_e = null;
-        if (param0 != 57) {
-          field_a = null;
-          field_b = null;
-          field_d = null;
-          field_a = null;
-          field_m = null;
-          return;
-        } else {
-          field_b = null;
-          field_d = null;
-          field_a = null;
-          field_m = null;
-          return;
-        }
+        field_b = null;
+        field_d = null;
+        field_a = null;
+        field_m = null;
     }
 
     final void a(int param0, long param1) throws IOException {
@@ -138,25 +179,28 @@ final class rn {
     }
 
     rn(File param0, String param1, long param2) throws IOException {
-        if (param2 == -1L) {
-            param2 = 9223372036854775807L;
-        }
-        if ((param2 ^ -1L) > (param0.length() ^ -1L)) {
-            boolean discarded$0 = param0.delete();
-        }
-        ((rn) this).field_f = new RandomAccessFile(param0, param1);
-        ((rn) this).field_j = 0L;
-        ((rn) this).field_k = param2;
-        int var5 = ((rn) this).field_f.read();
-        if (-1 != var5) {
-            // ifne L114
+        int var5_int = 0;
+        try {
+            if (param2 == -1L) {
+                param2 = 9223372036854775807L;
+            }
+            if (~param2 > ~param0.length()) {
+                boolean discarded$0 = param0.delete();
+            }
+            ((rn) this).field_f = new RandomAccessFile(param0, param1);
+            ((rn) this).field_j = 0L;
+            ((rn) this).field_k = param2;
+            var5_int = ((rn) this).field_f.read();
+            if (-1 != var5_int) {
+                if (!param1.equals((Object) (Object) "r")) {
+                    ((rn) this).field_f.seek(0L);
+                    ((rn) this).field_f.write(var5_int);
+                }
+            }
             ((rn) this).field_f.seek(0L);
-            ((rn) this).field_f.write(var5);
-        } else {
-            ((rn) this).field_f.seek(0L);
-            ((rn) this).field_f.seek(0L);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "rn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        ((rn) this).field_f.seek(0L);
     }
 
     static {

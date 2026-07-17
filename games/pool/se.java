@@ -28,17 +28,21 @@ class se extends re {
     }
 
     final void a(byte param0, ge param1) {
-        param1.a(((se) this).field_j, (byte) -90);
-        int var3 = 6 % ((param0 - 22) / 51);
-        param1.a(((se) this).field_g, 103);
+        try {
+            param1.a(((se) this).field_j, (byte) -90);
+            int var3_int = 6 % ((param0 - 22) / 51);
+            param1.a(((se) this).field_g, 103);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "se.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static int a(boolean param0, int param1) {
-        param1 = (1431655765 & param1) + ((param1 & -1431655766) >>> -1118350591);
-        param1 = (param1 & 858993459) + (-1288490189 & param1 >>> -781252286);
-        param1 = 252645135 & (param1 >>> 1836330372) + param1;
-        param1 = param1 + (param1 >>> 749537320);
-        param1 = param1 + (param1 >>> -647104976);
+        param1 = (1431655765 & param1) + ((param1 & -1431655766) >>> 1);
+        param1 = (param1 & 858993459) + (-1288490189 & param1 >>> 2);
+        param1 = 252645135 & (param1 >>> 4) + param1;
+        param1 = param1 + (param1 >>> 8);
+        param1 = param1 + (param1 >>> 16);
         if (param0) {
           field_k = null;
           return 255 & param1;
@@ -48,8 +52,12 @@ class se extends re {
     }
 
     se(long param0, String param1) {
-        ((se) this).field_j = param0;
-        ((se) this).field_g = param1;
+        try {
+            ((se) this).field_j = param0;
+            ((se) this).field_g = param1;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "se.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

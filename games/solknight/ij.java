@@ -14,7 +14,7 @@ final class ij {
         while (((ij) this).field_a[var1] >= 0) {
             var1 = sl.a() != 0 ? ((ij) this).field_a[var1] : var1 + 1;
         }
-        return ((ij) this).field_a[var1] ^ -1;
+        return ~((ij) this).field_a[var1];
     }
 
     private final static int a(int param0, int param1) {
@@ -65,7 +65,7 @@ final class ij {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ij) this).field_a[var6] = var3 ^ -1;
+                      ((ij) this).field_a[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;

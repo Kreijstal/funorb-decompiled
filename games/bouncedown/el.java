@@ -17,7 +17,7 @@ final class el extends sg {
         int var6 = 0;
         var6 = Bounce.field_N;
         var4 = -123 % ((-65 - param0) / 37);
-        if ((((el) this).field_j ^ -1L) < (((el) this).field_d ^ -1L)) {
+        if (~((el) this).field_j < ~((el) this).field_d) {
           ((el) this).field_g = ((el) this).field_g + (((el) this).field_j + -((el) this).field_d);
           ((el) this).field_d = ((el) this).field_d + (-((el) this).field_d + ((el) this).field_j);
           ((el) this).field_j = ((el) this).field_j + param1;
@@ -28,10 +28,10 @@ final class el extends sg {
             L1: {
               ((el) this).field_j = ((el) this).field_j + param1;
               var5++;
-              if ((var5 ^ -1) <= -11) {
+              if (var5 >= 10) {
                 break L1;
               } else {
-                if ((((el) this).field_j ^ -1L) > (((el) this).field_d ^ -1L)) {
+                if (~((el) this).field_j > ~((el) this).field_d) {
                   continue L0;
                 } else {
                   break L1;
@@ -62,8 +62,8 @@ final class el extends sg {
         var4 = var2 - ((el) this).field_g;
         ((el) this).field_g = var2;
         if (var4 > -5000000000L) {
-          if (-5000000001L >= (var4 ^ -1L)) {
-            var6 = (long)param0;
+          if (var4 >= 5000000000L) {
+            var6 = 0L;
             var8 = 1;
             L0: while (true) {
               if (((el) this).field_h < var8) {
@@ -77,7 +77,7 @@ final class el extends sg {
           } else {
             L1: {
               ((el) this).field_i[((el) this).field_f] = var4;
-              if (-2 < (((el) this).field_h ^ -1)) {
+              if (((el) this).field_h < 1) {
                 ((el) this).field_h = ((el) this).field_h + 1;
                 break L1;
               } else {
@@ -85,7 +85,7 @@ final class el extends sg {
               }
             }
             ((el) this).field_f = (((el) this).field_f - -1) % 10;
-            var6 = (long)param0;
+            var6 = 0L;
             var8 = 1;
             L2: while (true) {
               if (((el) this).field_h < var8) {
@@ -98,7 +98,7 @@ final class el extends sg {
             }
           }
         } else {
-          var6 = (long)param0;
+          var6 = 0L;
           var8 = 1;
           L3: while (true) {
             if (((el) this).field_h < var8) {
@@ -115,7 +115,7 @@ final class el extends sg {
     final void a(boolean param0) {
         L0: {
           ((el) this).field_g = 0L;
-          if ((((el) this).field_d ^ -1L) > (((el) this).field_j ^ -1L)) {
+          if (~((el) this).field_d > ~((el) this).field_j) {
             ((el) this).field_d = ((el) this).field_d + (-((el) this).field_d + ((el) this).field_j);
             break L0;
           } else {
@@ -133,7 +133,7 @@ final class el extends sg {
     final long a(int param0) {
         if (param0 == -32578) {
           ((el) this).field_d = ((el) this).field_d + this.b(0);
-          if ((((el) this).field_d ^ -1L) > (((el) this).field_j ^ -1L)) {
+          if (~((el) this).field_d > ~((el) this).field_j) {
             return (-((el) this).field_d + ((el) this).field_j) / 1000000L;
           } else {
             return 0L;
@@ -141,7 +141,7 @@ final class el extends sg {
         } else {
           int discarded$2 = ((el) this).a(20, -52L);
           ((el) this).field_d = ((el) this).field_d + this.b(0);
-          if ((((el) this).field_d ^ -1L) > (((el) this).field_j ^ -1L)) {
+          if (~((el) this).field_d > ~((el) this).field_j) {
             return (-((el) this).field_d + ((el) this).field_j) / 1000000L;
           } else {
             return 0L;
@@ -161,16 +161,15 @@ final class el extends sg {
     }
 
     final static void a(byte param0, String param1) {
-        Object var3 = null;
-        hh.a(0, param1);
-        if (param0 != -95) {
-          var3 = null;
-          el.a((byte) -31, (String) null);
-          fj.a(false, sh.field_jb, -1);
-          return;
-        } else {
-          fj.a(false, sh.field_jb, -1);
-          return;
+        try {
+            hh.a(0, param1);
+            if (param0 != -95) {
+                Object var3 = null;
+                el.a((byte) -31, (String) null);
+            }
+            fj.a(false, sh.field_jb, -1);
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "el.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

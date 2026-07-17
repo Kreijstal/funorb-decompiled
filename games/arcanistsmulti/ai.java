@@ -125,12 +125,13 @@ final class ai extends pg {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((ai) this).field_G[var3] = (byte)(var6 - 128);
+                    ((ai) this).field_G[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -145,6 +146,7 @@ final class ai extends pg {
 
     final static ai a(eg param0, String param1, String param2) {
         try {
+            ai var4_ref = null;
             if (!ai.a(param0)) {
                 boolean discarded$0 = param0.a(true, param2, param1);
                 return null;
@@ -153,13 +155,11 @@ final class ai extends pg {
             if (var3 == null) {
                 return null;
             }
-            ai var4 = null;
-            try {
-                var4 = new ai(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new ai(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -178,7 +178,7 @@ final class ai extends pg {
         ((ai) this).field_w = var2.d(-10674);
         ((ai) this).field_M = var2.d(-10674);
         if (((ai) this).field_M < 0) {
-            ((ai) this).field_M = ((ai) this).field_M ^ -1;
+            ((ai) this).field_M = ~((ai) this).field_M;
             ((ai) this).field_z = true;
         }
         int var3 = var2.d(-10674);
@@ -254,12 +254,13 @@ final class ai extends pg {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -277,7 +278,7 @@ final class ai extends pg {
 
     private final static void a(byte[] param0, int param1) {
         field_i = param0;
-        field_s = param1;
+        field_s = 0;
         field_l = 0;
     }
 
@@ -299,7 +300,6 @@ final class ai extends pg {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -530,7 +530,7 @@ final class ai extends pg {
                           }
                         }
                         L15: {
-                          var21 = (float[]) (Object) stackIn_40_0;
+                          var21 = stackIn_40_0;
                           if (var3 == 0) {
                             stackOut_42_0 = (float[]) field_v;
                             stackIn_43_0 = stackOut_42_0;
@@ -542,7 +542,7 @@ final class ai extends pg {
                           }
                         }
                         L16: {
-                          var22 = (float[]) (Object) stackIn_43_0;
+                          var22 = stackIn_43_0;
                           if (var3 == 0) {
                             stackOut_45_0 = (float[]) field_N;
                             stackIn_46_0 = stackOut_45_0;
@@ -554,7 +554,7 @@ final class ai extends pg {
                           }
                         }
                         L17: {
-                          var23 = (float[]) (Object) stackIn_46_0;
+                          var23 = stackIn_46_0;
                           if (var3 == 0) {
                             stackOut_48_0 = (int[]) field_H;
                             stackIn_49_0 = stackOut_48_0;
@@ -565,7 +565,7 @@ final class ai extends pg {
                             break L17;
                           }
                         }
-                        var56 = (int[]) (Object) stackIn_49_0;
+                        var56 = stackIn_49_0;
                         var52 = var56;
                         var48 = var52;
                         var44 = var48;
@@ -815,7 +815,7 @@ final class ai extends pg {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((ai) this).field_g) {
                     break L36;
                   } else {
@@ -873,7 +873,7 @@ final class ai extends pg {
               }
             }
             ((ai) this).field_g = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_k[var14.field_d[var17_int]];
             var55 = field_D;
@@ -1154,6 +1154,7 @@ final class ai extends pg {
 
     final static ai a(eg param0, int param1, int param2) {
         try {
+            ai var4_ref = null;
             if (!ai.a(param0)) {
                 boolean discarded$0 = param0.a(param1, param2, false);
                 return null;
@@ -1162,13 +1163,11 @@ final class ai extends pg {
             if (var3 == null) {
                 return null;
             }
-            ai var4 = null;
-            try {
-                var4 = new ai(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new ai(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

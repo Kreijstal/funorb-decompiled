@@ -12,9 +12,6 @@ final class rb {
         field_c = null;
         field_d = null;
         field_b = null;
-        if (param0 > -60) {
-            field_c = null;
-        }
     }
 
     final static boolean a(int param0, boolean param1, byte param2, int param3) {

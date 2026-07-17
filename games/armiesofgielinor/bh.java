@@ -10,14 +10,9 @@ final class bh extends nl {
     int field_K;
 
     final static String a(int param0, byte param1) {
-        String var2 = null;
-        if (param1 != 74) {
-          return null;
-        } else {
-          var2 = "old time: " + wf.field_v;
-          wf.field_v = param0;
-          return var2;
-        }
+        String var2 = "old time: " + wf.field_v;
+        wf.field_v = param0;
+        return var2;
     }
 
     public static void c(boolean param0) {
@@ -25,11 +20,6 @@ final class bh extends nl {
         field_M = null;
         field_J = null;
         field_I = null;
-        if (param0) {
-            bh.c(false);
-            field_L = null;
-            return;
-        }
         field_L = null;
     }
 
@@ -39,62 +29,51 @@ final class bh extends nl {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        wk var6 = null;
-        if (-1 != (param3 ^ -1)) {
-          return;
-        } else {
-          if (((bh) this).field_E == null) {
+        if (!(param3 == 0)) {
             return;
-          } else {
-            if (((bh) this).field_K == -1) {
-              return;
-            } else {
-              if (-257 == ((bh) this).field_K) {
-                ((bh) this).field_E.a(((bh) this).field_B + param0, param1 - -((bh) this).field_p, (byte) -125, param3);
-                return;
-              } else {
-                var6 = new wk(((bh) this).field_E.field_l, ((bh) this).field_E.field_w);
-                if (param2 >= -82) {
-                  field_M = null;
-                  vn.a(var6, 3);
-                  ((bh) this).field_E.a(0, 0, (byte) -86, param3);
-                  rf.b(-18862);
-                  var6.e(((bh) this).field_B + param0, param1 - -((bh) this).field_p, ((bh) this).field_K);
-                  return;
-                } else {
-                  vn.a(var6, 3);
-                  ((bh) this).field_E.a(0, 0, (byte) -86, param3);
-                  rf.b(-18862);
-                  var6.e(((bh) this).field_B + param0, param1 - -((bh) this).field_p, ((bh) this).field_K);
-                  return;
-                }
-              }
-            }
-          }
         }
+        if (!(((bh) this).field_E != null)) {
+            return;
+        }
+        if (!(((bh) this).field_K != 0)) {
+            return;
+        }
+        if (!(((bh) this).field_K != 256)) {
+            ((bh) this).field_E.a(((bh) this).field_B + param0, param1 - -((bh) this).field_p, (byte) -125, param3);
+            return;
+        }
+        wk var6 = new wk(((bh) this).field_E.field_l, ((bh) this).field_E.field_w);
+        if (param2 >= -82) {
+            field_M = null;
+            vn.a(var6, 3);
+            ((bh) this).field_E.a(0, 0, (byte) -86, param3);
+            rf.b(-18862);
+            var6.e(((bh) this).field_B + param0, param1 - -((bh) this).field_p, ((bh) this).field_K);
+            return;
+        }
+        vn.a(var6, 3);
+        ((bh) this).field_E.a(0, 0, (byte) -86, param3);
+        rf.b(-18862);
+        var6.e(((bh) this).field_B + param0, param1 - -((bh) this).field_p, ((bh) this).field_K);
     }
 
     bh(kb param0) {
         super(param0.field_B, param0.field_p, param0.field_l, param0.field_w, (kh) null, (qo) null);
-        param0.a(0, ((bh) this).field_l, 0, 8192, ((bh) this).field_w);
-        ((bh) this).field_K = 256;
-        ((bh) this).field_E = param0;
+        try {
+            param0.a(0, ((bh) this).field_l, 0, 8192, ((bh) this).field_w);
+            ((bh) this).field_K = 256;
+            ((bh) this).field_E = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void d(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        var1 = (tq.field_c + -640) / 2;
-        var2 = mj.field_c * mj.field_c;
-        var3 = -(gk.field_J * gk.field_J) + var2;
-        if (param0) {
-          return;
-        } else {
-          no.field_T.a(-4 + (qn.field_g + -120) - 90, -20500, 199, 90, var1 + -(var3 * 199 / var2));
-          ov.field_i.a(-4 + (qn.field_g - 120), -20500, 438, 0, var3 * 438 / var2 + 202 + var1);
-          return;
-        }
+        int var1 = (tq.field_c + -640) / 2;
+        int var2 = mj.field_c * mj.field_c;
+        int var3 = -(gk.field_J * gk.field_J) + var2;
+        no.field_T.a(-4 + (qn.field_g + -120) - 90, -20500, 199, 90, var1 + -(var3 * 199 / var2));
+        ov.field_i.a(-4 + (qn.field_g - 120), -20500, 438, 0, var3 * 438 / var2 + 202 + var1);
     }
 
     static {

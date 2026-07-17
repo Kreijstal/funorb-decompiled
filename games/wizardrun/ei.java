@@ -32,14 +32,16 @@ final class ei extends wl {
         ((ei) this).field_o = param1;
         ((ei) this).field_v = param4;
         if (param5 != -24536) {
-          return;
-        } else {
-          ((ei) this).field_r = param2;
-          ((ei) this).field_s = param6;
-          ((ei) this).field_q = param0;
-          ((ei) this).field_u = param7;
-          ((ei) this).field_p = param3;
-          return;
+            return;
+        }
+        try {
+            ((ei) this).field_r = param2;
+            ((ei) this).field_s = param6;
+            ((ei) this).field_q = param0;
+            ((ei) this).field_u = param7;
+            ((ei) this).field_p = param3;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "ei.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -59,7 +61,7 @@ final class ei extends wl {
           var6[8] = dupTemp$4;
           var5[7] = dupTemp$4;
           var5[5] = dupTemp$4;
-          if (-1 != (param2 ^ -1)) {
+          if (param2 != 0) {
             var6[4] = id.a((byte) 98, param2, 64);
             return var5;
           } else {
@@ -71,7 +73,7 @@ final class ei extends wl {
           var6[8] = dupTemp$5;
           var5[7] = dupTemp$5;
           var5[5] = dupTemp$5;
-          if (-1 == (param2 ^ -1)) {
+          if (param2 == 0) {
             return var5;
           } else {
             var6[4] = id.a((byte) 98, param2, 64);
@@ -82,32 +84,42 @@ final class ei extends wl {
 
     final static void a(byte param0, int param1) {
         wl var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         pg var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = wizardrun.field_H;
-        var4 = (pg) (Object) sf.field_j.b((byte) 115);
-        L0: while (true) {
-          if (var4 == null) {
-            var2 = bk.field_d.b((byte) 96);
+        try {
+          L0: {
+            var4 = (pg) (Object) sf.field_j.b((byte) 115);
             L1: while (true) {
-              if (var2 == null) {
-                if (param0 == 51) {
-                  return;
-                } else {
-                  o[] discarded$1 = ei.a(122, 75, 31, 20, 79);
-                  return;
+              if (var4 == null) {
+                var2 = bk.field_d.b((byte) 96);
+                L2: while (true) {
+                  if (var2 == null) {
+                    if (param0 == 51) {
+                      break L0;
+                    } else {
+                      o[] discarded$2 = ei.a(122, 75, 31, 20, 79);
+                      return;
+                    }
+                  } else {
+                    hg.a(param1, (byte) 106);
+                    var2 = bk.field_d.d(param0 + 8141);
+                    continue L2;
+                  }
                 }
               } else {
-                hg.a(param1, (byte) 106);
-                var2 = bk.field_d.d(param0 + 8141);
+                pg.a(param1, true, var4);
+                var4 = (pg) (Object) sf.field_j.d(8192);
                 continue L1;
               }
             }
-          } else {
-            pg.a(param1, true, var4);
-            var4 = (pg) (Object) sf.field_j.d(8192);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw bd.a((Throwable) (Object) var2_ref, "ei.D(" + param0 + 44 + param1 + 41);
         }
     }
 

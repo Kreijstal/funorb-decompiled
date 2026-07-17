@@ -20,14 +20,14 @@ final class wo {
         cn var7 = new cn(var5, var6);
         jh.a(var7);
         for (var8 = 0; var8 < param3; var8++) {
-            gf.b(-1 + (param3 + -var8), var8, 1 + 2 * var8, param4);
+            gf.b(-1 + (param3 + -var8), var8, 1 + 2 * var8, 16744448);
         }
-        var8 = -param0 + var5 >> 1081006369;
+        var8 = -param0 + var5 >> 1;
         if (param1 != 1) {
             return null;
         }
         for (var9 = 0; param2 > var9; var9++) {
-            gf.b(var8, param3 + var9, param0, param4);
+            gf.b(var8, param3 + var9, param0, 16744448);
         }
         jh.b();
         return var7;
@@ -35,9 +35,6 @@ final class wo {
 
     public static void a(byte param0) {
         field_h = null;
-        if (param0 < 95) {
-            field_e = null;
-        }
         field_f = null;
         field_d = null;
         field_e = null;

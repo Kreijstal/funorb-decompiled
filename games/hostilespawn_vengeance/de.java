@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class de extends am {
     static bd field_i;
     static int field_n;
@@ -20,9 +22,6 @@ final class de extends am {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            de.c(-110);
-        }
         field_o = null;
         field_i = null;
         field_k = null;
@@ -31,7 +30,8 @@ final class de extends am {
 
     final static String a(int param0, java.applet.Applet param1) {
         try {
-            Throwable var2 = null;
+            RuntimeException var2 = null;
+            Throwable var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -40,7 +40,26 @@ final class de extends am {
             int var8 = 0;
             String var9 = null;
             String stackIn_6_0 = null;
+            String stackIn_13_0 = null;
+            String stackIn_15_0 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            String stackIn_19_2 = null;
             String stackOut_5_0 = null;
+            String stackOut_12_0 = null;
+            String stackOut_14_0 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            String stackOut_18_2 = null;
             int statePc = 0;
             Throwable caughtException = null;
             stateLoop: while (true) {
@@ -82,7 +101,7 @@ final class de extends am {
                     case 3: {
                         try {
                             var7 = var5[var6].indexOf('=');
-                            if (-1 < (var7 ^ -1)) {
+                            if (var7 < 0) {
                                 statePc = 7;
                             } else {
                                 statePc = 4;
@@ -137,7 +156,7 @@ final class de extends am {
                     case 8: {
                         try {
                             var6 = 1 / ((param0 - -47) / 58);
-                            statePc = 11;
+                            statePc = 9;
                             continue stateLoop;
                         } catch (Throwable stateCaught_8) {
                             caughtException = stateCaught_8;
@@ -145,24 +164,108 @@ final class de extends am {
                             continue stateLoop;
                         }
                     }
+                    case 9: {
+                        try {
+                            statePc = 11;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_9) {
+                            caughtException = stateCaught_9;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
                     case 10: {
-                        var2 = caughtException;
-                        statePc = 11;
-                        continue stateLoop;
+                        try {
+                            var2_ref = caughtException;
+                            statePc = 11;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_10) {
+                            caughtException = stateCaught_10;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
                     }
                     case 11: {
-                        if (bi.field_g == null) {
+                        try {
+                            if (bi.field_g == null) {
+                                statePc = 14;
+                            } else {
+                                statePc = 12;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_11) {
+                            caughtException = stateCaught_11;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
+                    case 12: {
+                        try {
+                            stackOut_12_0 = bi.field_g;
+                            stackIn_13_0 = stackOut_12_0;
                             statePc = 13;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_12) {
+                            caughtException = stateCaught_12;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
+                    case 13: {
+                        return stackIn_13_0;
+                    }
+                    case 14: {
+                        try {
+                            stackOut_14_0 = param1.getParameter("settings");
+                            stackIn_15_0 = stackOut_14_0;
+                            statePc = 15;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_14) {
+                            caughtException = stateCaught_14;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
+                    case 15: {
+                        return stackIn_15_0;
+                    }
+                    case 16: {
+                        var2 = (RuntimeException) (Object) caughtException;
+                        stackOut_16_0 = (RuntimeException) var2;
+                        stackOut_16_1 = new StringBuilder().append("de.D(").append(param0).append(44);
+                        stackIn_18_0 = stackOut_16_0;
+                        stackIn_18_1 = stackOut_16_1;
+                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_1 = stackOut_16_1;
+                        if (param1 == null) {
+                            statePc = 18;
                         } else {
-                            statePc = 12;
+                            statePc = 17;
                         }
                         continue stateLoop;
                     }
-                    case 12: {
-                        return bi.field_g;
+                    case 17: {
+                        stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                        stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                        stackOut_17_2 = "{...}";
+                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_1 = stackOut_17_1;
+                        stackIn_19_2 = stackOut_17_2;
+                        statePc = 19;
+                        continue stateLoop;
                     }
-                    case 13: {
-                        return param1.getParameter("settings");
+                    case 18: {
+                        stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+                        stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                        stackOut_18_2 = "null";
+                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_1 = stackOut_18_1;
+                        stackIn_19_2 = stackOut_18_2;
+                        statePc = 19;
+                        continue stateLoop;
+                    }
+                    case 19: {
+                        throw wg.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -179,8 +282,8 @@ final class de extends am {
             Object var4 = null;
             String discarded$0 = de.a(-87, (java.applet.Applet) null);
         }
-        int var3 = param1 - 1 & param2 >> 1094130911;
-        return var3 + (param2 - -(param2 >>> -1347166401)) % param1;
+        int var3 = param1 - 1 & param2 >> 31;
+        return var3 + (param2 - -(param2 >>> 31)) % param1;
     }
 
     de() {

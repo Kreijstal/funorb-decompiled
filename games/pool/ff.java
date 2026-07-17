@@ -28,15 +28,10 @@ final class ff {
         field_d = null;
         field_i = null;
         field_e = null;
-        if (param0 <= 56) {
-          return;
-        } else {
-          field_a = null;
-          field_g = null;
-          field_j = null;
-          field_f = null;
-          return;
-        }
+        field_a = null;
+        field_g = null;
+        field_j = null;
+        field_f = null;
     }
 
     final static void a(int param0, int param1) {

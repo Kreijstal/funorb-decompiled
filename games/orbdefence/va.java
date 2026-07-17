@@ -14,161 +14,74 @@ final class va {
         Object stackIn_2_0 = null;
         Object stackIn_5_0 = null;
         hj stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_4_0 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
         hj stackOut_6_0 = null;
+        Object stackOut_4_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (param3 == -127) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        stackOut_1_0 = null;
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return (hj) (Object) stackIn_2_0;
-                }
-                case 3: {
-                    try {
-                        if (pk.a(-117, param0, param2, param1)) {
-                            statePc = 6;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        stackOut_4_0 = null;
-                        stackIn_5_0 = stackOut_4_0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return (hj) (Object) stackIn_5_0;
-                }
-                case 6: {
-                    try {
-                        stackOut_6_0 = tj.c(117);
-                        stackIn_7_0 = stackOut_6_0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    return stackIn_7_0;
-                }
-                case 8: {
-                    var4 = (RuntimeException) (Object) caughtException;
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 9: {
-                    try {
-                        stackOut_9_0 = (RuntimeException) var4;
-                        stackOut_9_1 = new StringBuilder().append("va.A(").append(param0).append(44).append(param1).append(44);
-                        stackIn_12_0 = stackOut_9_0;
-                        stackIn_12_1 = stackOut_9_1;
-                        stackIn_10_0 = stackOut_9_0;
-                        stackIn_10_1 = stackOut_9_1;
-                        if (param2 == null) {
-                            statePc = 12;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-                        stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-                        stackOut_10_2 = "{...}";
-                        stackIn_13_0 = stackOut_10_0;
-                        stackIn_13_1 = stackOut_10_1;
-                        stackIn_13_2 = stackOut_10_2;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    throw (RuntimeException) (Object) caughtException;
-                }
-                case 12: {
-                    stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                    stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-                    stackOut_12_2 = "null";
-                    stackIn_13_0 = stackOut_12_0;
-                    stackIn_13_1 = stackOut_12_1;
-                    stackIn_13_2 = stackOut_12_2;
-                    statePc = 13;
-                    continue stateLoop;
-                }
-                case 13: {
-                    throw dd.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param3 + 41);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            if (param3 == -127) {
+              if (pk.a(-117, param0, param2, param1)) {
+                stackOut_6_0 = tj.c(117);
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                stackOut_4_0 = null;
+                stackIn_5_0 = stackOut_4_0;
+                return (hj) (Object) stackIn_5_0;
+              }
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (hj) (Object) stackIn_2_0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("va.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_11_0 = stackOut_8_0;
+            stackIn_11_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L1;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_12_0 = stackOut_9_0;
+              stackIn_12_1 = stackOut_9_1;
+              stackIn_12_2 = stackOut_9_2;
+              break L1;
+            }
+          }
+          throw dd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param3 + 41);
         }
+        return stackIn_7_0;
     }
 
     public final String toString() {
@@ -176,8 +89,8 @@ final class va {
         RuntimeException decompiledCaughtException = null;
         try {
           throw new IllegalStateException();
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw dd.a((Throwable) (Object) var1, "va.toString()");
         }
@@ -202,23 +115,21 @@ final class va {
             IOException var2_ref = null;
             int stackIn_4_0 = 0;
             int stackIn_9_0 = 0;
+            int stackIn_22_0 = 0;
             int stackIn_24_0 = 0;
-            int stackIn_26_0 = 0;
-            int stackIn_29_0 = 0;
-            int stackIn_38_0 = 0;
+            int stackIn_34_0 = 0;
             int stackOut_3_0 = 0;
             int stackOut_8_0 = 0;
+            int stackOut_21_0 = 0;
             int stackOut_23_0 = 0;
-            int stackOut_25_0 = 0;
-            int stackOut_28_0 = 0;
-            int stackOut_37_0 = 0;
+            int stackOut_33_0 = 0;
             int statePc = 0;
             Throwable caughtException = null;
             stateLoop: while (true) {
                 switch (statePc) {
                     case 0: {
                         try {
-                            if ((cd.field_t.field_i ^ -1) <= (param1 ^ -1)) {
+                            if (~cd.field_t.field_i <= ~param1) {
                                 statePc = 3;
                             } else {
                                 statePc = 1;
@@ -226,7 +137,7 @@ final class va {
                             continue stateLoop;
                         } catch (Throwable stateCaught_0) {
                             caughtException = stateCaught_0;
-                            statePc = (stateCaught_0 instanceof RuntimeException ? 39 : 2);
+                            statePc = 35;
                             continue stateLoop;
                         }
                     }
@@ -236,16 +147,7 @@ final class va {
                             continue stateLoop;
                         } catch (Throwable stateCaught_1) {
                             caughtException = stateCaught_1;
-                            statePc = (stateCaught_1 instanceof RuntimeException ? 39 : 2);
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            throw (RuntimeException) (Object) caughtException;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 39;
+                            statePc = 35;
                             continue stateLoop;
                         }
                     }
@@ -257,7 +159,7 @@ final class va {
                             continue stateLoop;
                         } catch (Throwable stateCaught_3) {
                             caughtException = stateCaught_3;
-                            statePc = 39;
+                            statePc = 35;
                             continue stateLoop;
                         }
                     }
@@ -274,7 +176,7 @@ final class va {
                             continue stateLoop;
                         } catch (Throwable stateCaught_5) {
                             caughtException = stateCaught_5;
-                            statePc = (stateCaught_5 instanceof RuntimeException ? 39 : 7);
+                            statePc = 35;
                             continue stateLoop;
                         }
                     }
@@ -284,16 +186,7 @@ final class va {
                             continue stateLoop;
                         } catch (Throwable stateCaught_6) {
                             caughtException = stateCaught_6;
-                            statePc = (stateCaught_6 instanceof RuntimeException ? 39 : 7);
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            throw (RuntimeException) (Object) caughtException;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 39;
+                            statePc = 35;
                             continue stateLoop;
                         }
                     }
@@ -305,7 +198,7 @@ final class va {
                             continue stateLoop;
                         } catch (Throwable stateCaught_8) {
                             caughtException = stateCaught_8;
-                            statePc = 39;
+                            statePc = 35;
                             continue stateLoop;
                         }
                     }
@@ -315,134 +208,130 @@ final class va {
                     case 10: {
                         try {
                             if (param0) {
-                                statePc = 14;
+                                statePc = 13;
                             } else {
                                 statePc = 11;
                             }
                             continue stateLoop;
                         } catch (Throwable stateCaught_10) {
                             caughtException = stateCaught_10;
-                            statePc = (stateCaught_10 instanceof IOException ? 36 : 39);
+                            statePc = ((Object) stateCaught_10 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
                     case 11: {
                         try {
                             field_a = null;
-                            statePc = 12;
+                            statePc = 13;
                             continue stateLoop;
                         } catch (Throwable stateCaught_11) {
                             caughtException = stateCaught_11;
-                            statePc = (stateCaught_11 instanceof IOException ? 36 : 39);
+                            statePc = ((Object) stateCaught_11 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
-                    case 12: {
+                    case 13: {
                         try {
-                            statePc = 14;
+                            var2_int = p.field_d.b((byte) 101);
+                            if (0 >= var2_int) {
+                                statePc = 25;
+                            } else {
+                                statePc = 14;
+                            }
                             continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
-                            statePc = (stateCaught_12 instanceof IOException ? 36 : 39);
+                        } catch (Throwable stateCaught_13) {
+                            caughtException = stateCaught_13;
+                            statePc = ((Object) stateCaught_13 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
                     case 14: {
                         try {
-                            var2_int = p.field_d.b((byte) 101);
-                            statePc = 15;
+                            if (var2_int > -cd.field_t.field_i + param1) {
+                                statePc = 19;
+                            } else {
+                                statePc = 15;
+                            }
                             continue stateLoop;
                         } catch (Throwable stateCaught_14) {
                             caughtException = stateCaught_14;
-                            statePc = (stateCaught_14 instanceof IOException ? 36 : 39);
+                            statePc = ((Object) stateCaught_14 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
                     case 15: {
                         try {
-                            if (0 >= var2_int) {
-                                statePc = 27;
-                            } else {
-                                statePc = 16;
-                            }
+                            statePc = 17;
                             continue stateLoop;
                         } catch (Throwable stateCaught_15) {
                             caughtException = stateCaught_15;
-                            statePc = (stateCaught_15 instanceof IOException ? 36 : 39);
-                            continue stateLoop;
-                        }
-                    }
-                    case 16: {
-                        try {
-                            if (var2_int > -cd.field_t.field_i + param1) {
-                                statePc = 21;
-                            } else {
-                                statePc = 17;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = (stateCaught_16 instanceof IOException ? 36 : 39);
+                            statePc = ((Object) stateCaught_15 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
                     case 17: {
                         try {
-                            statePc = 19;
+                            statePc = 20;
                             continue stateLoop;
                         } catch (Throwable stateCaught_17) {
                             caughtException = stateCaught_17;
-                            statePc = (stateCaught_17 instanceof IOException ? 36 : 39);
+                            statePc = ((Object) stateCaught_17 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
                     case 19: {
                         try {
-                            statePc = 22;
+                            var2_int = param1 - cd.field_t.field_i;
+                            statePc = 20;
                             continue stateLoop;
                         } catch (Throwable stateCaught_19) {
                             caughtException = stateCaught_19;
-                            statePc = (stateCaught_19 instanceof IOException ? 36 : 39);
+                            statePc = ((Object) stateCaught_19 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
-                    case 21: {
-                        try {
-                            var2_int = param1 - cd.field_t.field_i;
-                            statePc = 22;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_21) {
-                            caughtException = stateCaught_21;
-                            statePc = (stateCaught_21 instanceof IOException ? 36 : 39);
-                            continue stateLoop;
-                        }
-                    }
-                    case 22: {
+                    case 20: {
                         try {
                             p.field_d.a(cd.field_t.field_i, var2_int, -24, cd.field_t.field_j);
                             of.field_L = ji.b(-19);
                             cd.field_t.field_i = cd.field_t.field_i + var2_int;
                             if (cd.field_t.field_i >= param1) {
-                                statePc = 25;
-                            } else {
                                 statePc = 23;
+                            } else {
+                                statePc = 21;
                             }
                             continue stateLoop;
-                        } catch (Throwable stateCaught_22) {
-                            caughtException = stateCaught_22;
-                            statePc = (stateCaught_22 instanceof IOException ? 36 : 39);
+                        } catch (Throwable stateCaught_20) {
+                            caughtException = stateCaught_20;
+                            statePc = ((Object) stateCaught_20 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
+                    case 21: {
+                        try {
+                            stackOut_21_0 = 0;
+                            stackIn_22_0 = stackOut_21_0;
+                            statePc = 22;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_21) {
+                            caughtException = stateCaught_21;
+                            statePc = ((Object) stateCaught_21 instanceof IOException ? 32 : 35);
+                            continue stateLoop;
+                        }
+                    }
+                    case 22: {
+                        return stackIn_22_0 != 0;
+                    }
                     case 23: {
                         try {
-                            stackOut_23_0 = 0;
+                            cd.field_t.field_i = 0;
+                            stackOut_23_0 = 1;
                             stackIn_24_0 = stackOut_23_0;
                             statePc = 24;
                             continue stateLoop;
                         } catch (Throwable stateCaught_23) {
                             caughtException = stateCaught_23;
-                            statePc = (stateCaught_23 instanceof IOException ? 36 : 39);
+                            statePc = ((Object) stateCaught_23 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
@@ -451,129 +340,91 @@ final class va {
                     }
                     case 25: {
                         try {
-                            cd.field_t.field_i = 0;
-                            stackOut_25_0 = 1;
-                            stackIn_26_0 = stackOut_25_0;
-                            statePc = 26;
+                            if (var2_int < 0) {
+                                statePc = 29;
+                            } else {
+                                statePc = 26;
+                            }
                             continue stateLoop;
                         } catch (Throwable stateCaught_25) {
                             caughtException = stateCaught_25;
-                            statePc = (stateCaught_25 instanceof IOException ? 36 : 39);
+                            statePc = ((Object) stateCaught_25 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
                     case 26: {
-                        return stackIn_26_0 != 0;
-                    }
-                    case 27: {
                         try {
-                            if ((var2_int ^ -1) > -1) {
-                                statePc = 32;
+                            if (ed.b(-1) <= 30000L) {
+                                statePc = 31;
                             } else {
-                                statePc = 28;
+                                statePc = 27;
                             }
                             continue stateLoop;
-                        } catch (Throwable stateCaught_27) {
-                            caughtException = stateCaught_27;
-                            statePc = (stateCaught_27 instanceof IOException ? 36 : 39);
+                        } catch (Throwable stateCaught_26) {
+                            caughtException = stateCaught_26;
+                            statePc = ((Object) stateCaught_26 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
-                    case 28: {
+                    case 27: {
                         try {
-                            stackOut_28_0 = -1;
-                            stackIn_29_0 = stackOut_28_0;
                             statePc = 29;
                             continue stateLoop;
-                        } catch (Throwable stateCaught_28) {
-                            caughtException = stateCaught_28;
-                            statePc = (stateCaught_28 instanceof IOException ? 36 : 39);
+                        } catch (Throwable stateCaught_27) {
+                            caughtException = stateCaught_27;
+                            statePc = ((Object) stateCaught_27 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
                     case 29: {
                         try {
-                            if (ed.b(stackIn_29_0) <= 30000L) {
-                                statePc = 35;
-                            } else {
-                                statePc = 30;
-                            }
+                            th.a(102);
+                            statePc = 31;
                             continue stateLoop;
                         } catch (Throwable stateCaught_29) {
                             caughtException = stateCaught_29;
-                            statePc = (stateCaught_29 instanceof IOException ? 36 : 39);
+                            statePc = ((Object) stateCaught_29 instanceof IOException ? 32 : 35);
                             continue stateLoop;
                         }
                     }
-                    case 30: {
+                    case 31: {
                         try {
-                            statePc = 32;
+                            statePc = 33;
                             continue stateLoop;
-                        } catch (Throwable stateCaught_30) {
-                            caughtException = stateCaught_30;
-                            statePc = (stateCaught_30 instanceof IOException ? 36 : 39);
+                        } catch (Throwable stateCaught_31) {
+                            caughtException = stateCaught_31;
+                            statePc = 35;
                             continue stateLoop;
                         }
                     }
                     case 32: {
                         try {
-                            th.a(102);
+                            var2_ref = (IOException) (Object) caughtException;
+                            th.a(110);
                             statePc = 33;
                             continue stateLoop;
                         } catch (Throwable stateCaught_32) {
                             caughtException = stateCaught_32;
-                            statePc = (stateCaught_32 instanceof IOException ? 36 : 39);
+                            statePc = 35;
                             continue stateLoop;
                         }
                     }
                     case 33: {
                         try {
-                            statePc = 35;
+                            stackOut_33_0 = 0;
+                            stackIn_34_0 = stackOut_33_0;
+                            statePc = 34;
                             continue stateLoop;
                         } catch (Throwable stateCaught_33) {
                             caughtException = stateCaught_33;
-                            statePc = (stateCaught_33 instanceof IOException ? 36 : 39);
+                            statePc = 35;
                             continue stateLoop;
                         }
+                    }
+                    case 34: {
+                        return stackIn_34_0 != 0;
                     }
                     case 35: {
-                        try {
-                            statePc = 37;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_35) {
-                            caughtException = stateCaught_35;
-                            statePc = 39;
-                            continue stateLoop;
-                        }
-                    }
-                    case 36: {
-                        try {
-                            var2_ref = (IOException) (Object) caughtException;
-                            th.a(110);
-                            statePc = 37;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_36) {
-                            caughtException = stateCaught_36;
-                            statePc = 39;
-                            continue stateLoop;
-                        }
-                    }
-                    case 37: {
-                        try {
-                            stackOut_37_0 = 0;
-                            stackIn_38_0 = stackOut_37_0;
-                            statePc = 38;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_37) {
-                            caughtException = stateCaught_37;
-                            statePc = 39;
-                            continue stateLoop;
-                        }
-                    }
-                    case 38: {
-                        return stackIn_38_0 != 0;
-                    }
-                    case 39: {
                         var2 = (RuntimeException) (Object) caughtException;
                         throw dd.a((Throwable) (Object) var2, "va.D(" + param0 + 44 + param1 + 41);
                     }

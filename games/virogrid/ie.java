@@ -10,9 +10,6 @@ abstract class ie {
 
     public static void b(int param0) {
         field_c = null;
-        if (param0 != 0) {
-            ie.a(81, -82, 22, -52, -108, 64);
-        }
         field_a = null;
         field_b = null;
     }
@@ -34,7 +31,7 @@ abstract class ie {
             if (null == ((ie) this).field_d) {
               break L2;
             } else {
-              if ((((ie) this).field_d.length ^ -1) < -1) {
+              if (((ie) this).field_d.length > 0) {
                 stackOut_6_0 = -((ie) this).field_d[0].field_c + ((ie) this).field_d[-1 + ((ie) this).field_d.length].field_b;
                 stackIn_7_0 = stackOut_6_0;
                 break L1;
@@ -65,39 +62,167 @@ abstract class ie {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        int var9 = Virogrid.field_F ? 1 : 0;
-        fd.field_B = new int[param5];
-        o.field_d = new int[param0];
-        int var6 = 0;
-        if (param2 != 28476) {
-            field_e = 1.0884095430374146f;
-        }
-        while (var6 < param0) {
-            var7 = -param3 + (500 + -(param1 * var6));
-            var8 = param1 * var6 + param3 + 140;
-            o.field_d[var6] = var8;
-            o.field_d[var6] = var7;
-            var6++;
-        }
+        int var9 = 0;
         int var10 = 0;
-        var6 = var10;
-        while (var10 < param5) {
-            var7 = -(var10 * param1) + 370 + -param4;
-            fd.field_B[var10] = var7;
-            var10++;
+        RuntimeException decompiledCaughtException = null;
+        var9 = Virogrid.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              fd.field_B = new int[param5];
+              o.field_d = new int[param0];
+              var6_int = 0;
+              if (param2 == 28476) {
+                break L1;
+              } else {
+                field_e = 1.0884095430374146f;
+                break L1;
+              }
+            }
+            L2: while (true) {
+              if (var6_int >= param0) {
+                var10 = 0;
+                var6_int = var10;
+                L3: while (true) {
+                  if (var10 >= param5) {
+                    break L0;
+                  } else {
+                    var7 = -(var10 * param1) + 370 + -param4;
+                    fd.field_B[var10] = var7;
+                    var10++;
+                    continue L3;
+                  }
+                }
+              } else {
+                var7 = -param3 + (500 + -(param1 * var6_int));
+                var8 = param1 * var6_int + param3 + 140;
+                o.field_d[var6_int] = var8;
+                o.field_d[var6_int] = var7;
+                var6_int++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw kg.a((Throwable) (Object) var6, "ie.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
     final static vh a(boolean param0, int param1, int param2, eh param3, eh param4) {
-        if (param0) {
-            return null;
+        RuntimeException var5 = null;
+        Object stackIn_2_0 = null;
+        vh stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        vh stackOut_6_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            if (!param0) {
+              if (hn.a(param3, param2, param1, (byte) 109)) {
+                stackOut_6_0 = jf.a(param4.a(param2, param1, 0), 20);
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                return null;
+              }
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (vh) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var5 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_1 = new StringBuilder().append("ie.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param3 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L1;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param4 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L2;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L2;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
-        if (!hn.a(param3, param2, param1, (byte) 109)) {
-            return null;
-        }
-        return jf.a(param4.a(param2, param1, 0), 20);
+        return stackIn_7_0;
     }
 
     final int a(int param0, int param1) {
@@ -120,57 +245,118 @@ abstract class ie {
     }
 
     final int a(String param0, int param1, boolean param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_17_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var10 = Virogrid.field_F ? 1 : 0;
-        if (param2) {
-          var5 = 0;
-          var6 = 0;
-          var7 = param0.length();
-          var8 = 0;
-          L0: while (true) {
-            if (var8 >= var7) {
-              if (var5 <= 0) {
-                return 0;
-              } else {
-                return (param3 - param1 << -2060076376) / var5;
-              }
-            } else {
-              var9 = param0.charAt(var8);
-              if (var9 == 60) {
-                var6 = 1;
-                var8++;
-                continue L0;
-              } else {
-                if (62 != var9) {
-                  if (var6 == 0) {
-                    if (var9 == 32) {
-                      var5++;
-                      var8++;
-                      continue L0;
-                    } else {
-                      var8++;
-                      continue L0;
-                    }
+        try {
+          L0: {
+            if (param2) {
+              var5_int = 0;
+              var6 = 0;
+              var7 = param0.length();
+              var8 = 0;
+              L1: while (true) {
+                if (var8 >= var7) {
+                  if (var5_int <= 0) {
+                    stackOut_17_0 = 0;
+                    stackIn_18_0 = stackOut_17_0;
+                    break L0;
                   } else {
-                    var8++;
-                    continue L0;
+                    stackOut_15_0 = (param3 - param1 << 8) / var5_int;
+                    stackIn_16_0 = stackOut_15_0;
+                    return stackIn_16_0;
                   }
                 } else {
-                  var6 = 0;
+                  L2: {
+                    var9 = param0.charAt(var8);
+                    if (var9 == 60) {
+                      var6 = 1;
+                      break L2;
+                    } else {
+                      if (62 != var9) {
+                        L3: {
+                          if (var6 != 0) {
+                            break L3;
+                          } else {
+                            break L3;
+                          }
+                        }
+                        var8++;
+                        continue L1;
+                      } else {
+                        var6 = 0;
+                        break L2;
+                      }
+                    }
+                  }
                   var8++;
-                  continue L0;
+                  continue L1;
                 }
               }
+            } else {
+              stackOut_2_0 = 28;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
           }
-        } else {
-          return 28;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var5 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var5;
+            stackOut_19_1 = new StringBuilder().append("ie.B(");
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param0 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L4;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L4;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_18_0;
     }
 
     final int a(int param0) {
@@ -234,14 +420,14 @@ abstract class ie {
           if (((ie) this).field_d == null) {
             break L0;
           } else {
-            if (-1 == (((ie) this).field_d.length ^ -1)) {
+            if (((ie) this).field_d.length == 0) {
               break L0;
             } else {
               if (param1 < ((ie) this).field_d[0].field_c) {
                 break L0;
               } else {
                 if (((ie) this).field_d[-1 + ((ie) this).field_d.length].field_b >= param1) {
-                  if (-2 != (((ie) this).field_d.length ^ -1)) {
+                  if (((ie) this).field_d.length != 1) {
                     var4 = 0;
                     var6 = -97 / ((-46 - param0) / 56);
                     var5 = 0;
@@ -256,7 +442,7 @@ abstract class ie {
                           } else {
                             if (param1 <= var7.field_b) {
                               var8 = var7.a((byte) 119, param2);
-                              if (0 == (var8 ^ -1)) {
+                              if (var8 == -1) {
                                 return -1;
                               } else {
                                 return var8 + var4;

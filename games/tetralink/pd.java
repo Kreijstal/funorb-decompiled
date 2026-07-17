@@ -62,7 +62,7 @@ final class pd extends th {
                   var2_long = k.a(0);
                   var4 = (int)(-((pd) this).field_f + var2_long);
                   ((pd) this).field_f = var2_long;
-                  if ((var4 ^ -1) < -201) {
+                  if (var4 > 200) {
                     var4 = 200;
                     break L1;
                   } else {
@@ -103,7 +103,7 @@ final class pd extends th {
                           var2_int = 0;
                           L7: while (true) {
                             L8: {
-                              if ((var2_int ^ -1) <= -101) {
+                              if (var2_int >= 100) {
                                 break L8;
                               } else {
                                 var3_int = ((pd) this).field_s.f(0);
@@ -115,7 +115,7 @@ final class pd extends th {
                                       ((pd) this).field_a = 0;
                                       var4 = 0;
                                       if (null != ((pd) this).field_q) {
-                                        if (-1 != (((pd) this).field_q.field_I ^ -1)) {
+                                        if (((pd) this).field_q.field_I != 0) {
                                           break L9;
                                         } else {
                                           var4 = 1;
@@ -190,7 +190,7 @@ final class pd extends th {
                                         }
                                         L16: {
                                           ((pd) this).field_s.a(((pd) this).field_m.field_t, var5, ((pd) this).field_m.field_u, 0);
-                                          if (-1 == (((pd) this).field_n ^ -1)) {
+                                          if (((pd) this).field_n == 0) {
                                             break L16;
                                           } else {
                                             var6 = 0;
@@ -240,7 +240,7 @@ final class pd extends th {
                                             }
                                             L19: {
                                               var11 = stackIn_44_0;
-                                              var12 = ((long)var6 << -1637536224) + (long)var7;
+                                              var12 = ((long)var6 << 32) + (long)var7;
                                               var14 = null;
                                               if (var11 != 0) {
                                                 var14_ref = (rh) (Object) ((pd) this).field_c.a((byte) -109);
@@ -262,7 +262,7 @@ final class pd extends th {
                                                   if (var14_ref == null) {
                                                     break L19;
                                                   } else {
-                                                    if ((var14_ref.field_n ^ -1L) != (var12 ^ -1L)) {
+                                                    if (~var14_ref.field_n != ~var12) {
                                                       var14_ref = (rh) (Object) ((pd) this).field_j.a(false);
                                                       continue L21;
                                                     } else {
@@ -361,7 +361,7 @@ final class pd extends th {
                   ((pd) this).field_h = ((pd) this).field_h + 1;
                   ((pd) this).field_d = -2;
                   ((pd) this).field_s = null;
-                  if (-1 != (((pd) this).c((byte) -114) ^ -1)) {
+                  if (((pd) this).c((byte) -114) != 0) {
                     break L26;
                   } else {
                     if (((pd) this).d(20) != 0) {
@@ -417,100 +417,128 @@ final class pd extends th {
         try {
             Exception var4 = null;
             IOException var4_ref = null;
-            rh var4_ref2 = null;
+            RuntimeException var4_ref2 = null;
+            rh var4_ref3 = null;
             Exception var5 = null;
             int var6 = 0;
+            RuntimeException stackIn_24_0 = null;
+            StringBuilder stackIn_24_1 = null;
+            RuntimeException stackIn_25_0 = null;
+            StringBuilder stackIn_25_1 = null;
+            RuntimeException stackIn_26_0 = null;
+            StringBuilder stackIn_26_1 = null;
+            String stackIn_26_2 = null;
             Throwable decompiledCaughtException = null;
-            L0: {
-              var6 = TetraLink.field_J;
-              if (((pd) this).field_s == null) {
-                break L0;
-              } else {
-                try {
-                  L1: {
-                    ((pd) this).field_s.d(-15488);
+            RuntimeException stackOut_23_0 = null;
+            StringBuilder stackOut_23_1 = null;
+            RuntimeException stackOut_25_0 = null;
+            StringBuilder stackOut_25_1 = null;
+            String stackOut_25_2 = null;
+            RuntimeException stackOut_24_0 = null;
+            StringBuilder stackOut_24_1 = null;
+            String stackOut_24_2 = null;
+            var6 = TetraLink.field_J;
+            try {
+              L0: {
+                L1: {
+                  if (((pd) this).field_s == null) {
                     break L1;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
-                    var4 = (Exception) (Object) decompiledCaughtException;
-                    break L2;
-                  }
-                }
-                ((pd) this).field_s = null;
-                break L0;
-              }
-            }
-            L3: {
-              ((pd) this).field_s = (fl) param0;
-              this.c(false);
-              this.a(false, param1);
-              if (param2 <= -73) {
-                break L3;
-              } else {
-                field_r = null;
-                break L3;
-              }
-            }
-            ((pd) this).field_m.field_t = 0;
-            ((pd) this).field_q = null;
-            L4: while (true) {
-              var4_ref2 = (rh) (Object) ((pd) this).field_j.c(-15464);
-              if (var4_ref2 == null) {
-                L5: while (true) {
-                  var4_ref2 = (rh) (Object) ((pd) this).field_c.c(-15464);
-                  if (var4_ref2 == null) {
-                    L6: {
-                      if (((pd) this).field_n == 0) {
-                        break L6;
-                      } else {
-                        try {
-                          L7: {
-                            ((pd) this).field_b.field_t = 0;
-                            ((pd) this).field_b.a(4, false);
-                            ((pd) this).field_b.a((int) ((pd) this).field_n, false);
-                            ((pd) this).field_b.d(0, (byte) -124);
-                            ((pd) this).field_s.a(true, ((pd) this).field_b.field_u.length, ((pd) this).field_b.field_u, 0);
-                            break L7;
-                          }
-                        } catch (java.io.IOException decompiledCaughtParameter1) {
-                          decompiledCaughtException = decompiledCaughtParameter1;
-                          L8: {
-                            var4_ref = (IOException) (Object) decompiledCaughtException;
-                            try {
-                              L9: {
-                                ((pd) this).field_s.d(-15488);
-                                break L9;
-                              }
-                            } catch (java.lang.Exception decompiledCaughtParameter2) {
-                              decompiledCaughtException = decompiledCaughtParameter2;
-                              L10: {
-                                var5 = (Exception) (Object) decompiledCaughtException;
-                                break L10;
-                              }
-                            }
-                            ((pd) this).field_d = -2;
-                            ((pd) this).field_h = ((pd) this).field_h + 1;
-                            ((pd) this).field_s = null;
-                            break L8;
-                          }
-                        }
-                        break L6;
+                  } else {
+                    try {
+                      L2: {
+                        ((pd) this).field_s.d(-15488);
+                        break L2;
+                      }
+                    } catch (java.lang.Exception decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var4 = (Exception) (Object) decompiledCaughtException;
+                        break L3;
                       }
                     }
-                    ((pd) this).field_a = 0;
-                    ((pd) this).field_f = k.a(0);
-                    return;
+                    ((pd) this).field_s = null;
+                    break L1;
+                  }
+                }
+                L4: {
+                  ((pd) this).field_s = (fl) param0;
+                  this.c(false);
+                  this.a(false, param1);
+                  if (param2 <= -73) {
+                    break L4;
                   } else {
-                    ((pd) this).field_o.a((gb) (Object) var4_ref2, 0);
+                    field_r = null;
+                    break L4;
+                  }
+                }
+                ((pd) this).field_m.field_t = 0;
+                ((pd) this).field_q = null;
+                L5: while (true) {
+                  var4_ref3 = (rh) (Object) ((pd) this).field_j.c(-15464);
+                  if (var4_ref3 == null) {
+                    L6: while (true) {
+                      var4_ref3 = (rh) (Object) ((pd) this).field_c.c(-15464);
+                      if (var4_ref3 == null) {
+                        L7: {
+                          if (((pd) this).field_n == 0) {
+                            break L7;
+                          } else {
+                            {
+                              L8: {
+                                ((pd) this).field_b.field_t = 0;
+                                ((pd) this).field_b.a(4, false);
+                                ((pd) this).field_b.a((int) ((pd) this).field_n, false);
+                                ((pd) this).field_b.d(0, (byte) -124);
+                                ((pd) this).field_s.a(true, ((pd) this).field_b.field_u.length, ((pd) this).field_b.field_u, 0);
+                                break L8;
+                              }
+                            }
+                            break L7;
+                          }
+                        }
+                        ((pd) this).field_a = 0;
+                        ((pd) this).field_f = k.a(0);
+                        break L0;
+                      } else {
+                        ((pd) this).field_o.a((gb) (Object) var4_ref3, 0);
+                        continue L6;
+                      }
+                    }
+                  } else {
+                    ((pd) this).field_k.a((gb) (Object) var4_ref3, 0);
                     continue L5;
                   }
                 }
-              } else {
-                ((pd) this).field_k.a((gb) (Object) var4_ref2, 0);
-                continue L4;
               }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
+              decompiledCaughtException = decompiledCaughtParameter3;
+              L12: {
+                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_23_0 = (RuntimeException) var4_ref2;
+                stackOut_23_1 = new StringBuilder().append("pd.B(");
+                stackIn_25_0 = stackOut_23_0;
+                stackIn_25_1 = stackOut_23_1;
+                stackIn_24_0 = stackOut_23_0;
+                stackIn_24_1 = stackOut_23_1;
+                if (param0 == null) {
+                  stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+                  stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+                  stackOut_25_2 = "null";
+                  stackIn_26_0 = stackOut_25_0;
+                  stackIn_26_1 = stackOut_25_1;
+                  stackIn_26_2 = stackOut_25_2;
+                  break L12;
+                } else {
+                  stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+                  stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+                  stackOut_24_2 = "{...}";
+                  stackIn_26_0 = stackOut_24_0;
+                  stackIn_26_1 = stackOut_24_1;
+                  stackIn_26_2 = stackOut_24_2;
+                  break L12;
+                }
+              }
+              throw oi.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 44 + param2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -537,41 +565,19 @@ final class pd extends th {
 
     private final void c(boolean param0) {
         try {
-            IOException iOException = null;
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
             if (null == ((pd) this).field_s) {
               return;
             } else {
-              try {
+              {
                 L0: {
                   ((pd) this).field_b.field_t = 0;
-                  ((pd) this).field_b.a(6, param0);
+                  ((pd) this).field_b.a(6, false);
                   ((pd) this).field_b.a(3, (byte) -66);
-                  ((pd) this).field_b.b(0, param0);
+                  ((pd) this).field_b.b(0, false);
                   ((pd) this).field_s.a(true, ((pd) this).field_b.field_u.length, ((pd) this).field_b.field_u, 0);
                   break L0;
-                }
-              } catch (java.io.IOException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                L1: {
-                  iOException = (IOException) (Object) decompiledCaughtException;
-                  try {
-                    L2: {
-                      ((pd) this).field_s.d(-15488);
-                      break L2;
-                    }
-                  } catch (java.lang.Exception decompiledCaughtParameter1) {
-                    decompiledCaughtException = decompiledCaughtParameter1;
-                    L3: {
-                      var3 = (Exception) (Object) decompiledCaughtException;
-                      break L3;
-                    }
-                  }
-                  ((pd) this).field_d = -2;
-                  ((pd) this).field_s = null;
-                  ((pd) this).field_h = ((pd) this).field_h + 1;
-                  break L1;
                 }
               }
               return;

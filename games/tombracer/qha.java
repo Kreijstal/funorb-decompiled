@@ -10,11 +10,6 @@ final class qha extends ou {
     }
 
     public static void c(byte param0) {
-        if (param0 >= -84) {
-            field_g = null;
-            field_g = null;
-            return;
-        }
         field_g = null;
     }
 

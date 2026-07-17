@@ -307,10 +307,10 @@ public final class Pixelate extends lb {
                       this.a(false, true);
                       break L6;
                     } else {
-                      if ((ga.field_d ^ -1) == (ga.field_a ^ -1)) {
+                      if (~ga.field_d == ~ga.field_a) {
                         L12: {
                           var2 = lp.a(2);
-                          if (-2 != (var2 ^ -1)) {
+                          if (var2 != 1) {
                             break L12;
                           } else {
                             gi.a(te.field_Ib, kf.field_q, (byte) 78);
@@ -329,7 +329,7 @@ public final class Pixelate extends lb {
                   if (ga.field_d == ga.field_a) {
                     L13: {
                       var2 = rl.b((byte) 83);
-                      if ((var2 ^ -1) == -3) {
+                      if (var2 == 2) {
                         ln.a(97);
                         break L13;
                       } else {
@@ -339,7 +339,7 @@ public final class Pixelate extends lb {
                           u.a(((jl) var3_ref).field_z + ((jl) var3_ref).field_w, -879, ((jl) var3_ref).field_w, 2, 320, 8, ab.field_c, (jl) var3_ref, 240, bi.field_g, 8, true);
                           break L13;
                         } else {
-                          if (-5 != (var2 ^ -1)) {
+                          if (var2 != 4) {
                             break L13;
                           } else {
                             wl.field_b = true;
@@ -440,7 +440,7 @@ public final class Pixelate extends lb {
                       if (0 == var3) {
                         break L22;
                       } else {
-                        if ((var3 ^ -1) == -2) {
+                        if (var3 == 1) {
                           break L22;
                         } else {
                           break L21;
@@ -506,7 +506,7 @@ public final class Pixelate extends lb {
                   }
                   L27: {
                     var4 = 0;
-                    if ((var3 ^ -1) != -3) {
+                    if (var3 != 2) {
                       break L27;
                     } else {
                       var4 = 1;
@@ -553,7 +553,7 @@ public final class Pixelate extends lb {
               return;
             } else {
               if (mn.field_e != 9) {
-                if ((mn.field_e ^ -1) == -15) {
+                if (mn.field_e == 14) {
                   nm.a(0);
                   ga.a(150, ne.a(-1879863704, 2000), 1024, 3, hp.j(0), fb.b((byte) 79), rg.field_d, ne.a(-1879863704, 8), cl.field_f.length, sl.a(1));
                   fc.a(ba.a(-26573), 64, nc.b(119));
@@ -562,7 +562,7 @@ public final class Pixelate extends lb {
                   dj.field_c = false;
                   continue L17;
                 } else {
-                  if (-16 == (mn.field_e ^ -1)) {
+                  if (mn.field_e == 15) {
                     L31: {
                       if (oc.field_G) {
                         nm.a(0);
@@ -596,11 +596,11 @@ public final class Pixelate extends lb {
                       }
                     }
                     L33: {
-                      if (-58 == (mn.field_e ^ -1)) {
+                      if (mn.field_e == 57) {
                         break L33;
                       } else {
-                        if ((mn.field_e ^ -1) != -59) {
-                          if (-60 != (mn.field_e ^ -1)) {
+                        if (mn.field_e != 58) {
+                          if (mn.field_e != 59) {
                             L34: {
                               var3_ref = null;
                               if (md.field_Y) {
@@ -619,20 +619,20 @@ public final class Pixelate extends lb {
                               if (var3_ref == null) {
                                 break L35;
                               } else {
-                                if (-62 != (mn.field_e ^ -1)) {
+                                if (mn.field_e != 61) {
                                   if (mn.field_e != 69) {
-                                    if (-71 != (mn.field_e ^ -1)) {
+                                    if (mn.field_e != 70) {
                                       if (62 != mn.field_e) {
                                         if (mn.field_e != 64) {
                                           if (mn.field_e != 65) {
-                                            if (-67 != (mn.field_e ^ -1)) {
+                                            if (mn.field_e != 66) {
                                               if (71 == mn.field_e) {
                                                 var4 = vi.field_o.f(255);
                                                 if (ro.field_e == null) {
                                                   continue L17;
                                                 } else {
                                                   L36: {
-                                                    if (-1 != (var4 ^ -1)) {
+                                                    if (var4 != 0) {
                                                       break L36;
                                                     } else {
                                                       ro.field_e.a(12, (byte) 58, 243);
@@ -651,14 +651,14 @@ public final class Pixelate extends lb {
                                               }
                                             } else {
                                               var4 = vi.field_o.f(255);
-                                              var5 = (((ii) var3_ref).field_o ^ -1) & var4;
+                                              var5 = ~((ii) var3_ref).field_o & var4;
                                               ((ii) var3_ref).field_o = var4;
                                               if (ro.field_e == null) {
                                                 continue L17;
                                               } else {
                                                 L37: {
                                                   var16_ref.e(1);
-                                                  if ((var5 ^ -1) == -2) {
+                                                  if (var5 == 1) {
                                                     break L37;
                                                   } else {
                                                     if (var5 == 2) {
@@ -696,7 +696,7 @@ public final class Pixelate extends lb {
                                         } else {
                                           L39: {
                                             var4 = vi.field_o.f(255);
-                                            var5 = var4 & (((ii) var3_ref).field_a.field_k ^ -1);
+                                            var5 = var4 & ~((ii) var3_ref).field_a.field_k;
                                             ((ii) var3_ref).field_a.field_k = var4;
                                             if (var5 == 1) {
                                               break L39;
@@ -709,7 +709,7 @@ public final class Pixelate extends lb {
                                             }
                                           }
                                           L40: {
-                                            if ((var5 ^ -1) == -2) {
+                                            if (var5 == 1) {
                                               stackOut_137_0 = 0;
                                               stackIn_138_0 = stackOut_137_0;
                                               break L40;
@@ -761,8 +761,8 @@ public final class Pixelate extends lb {
                                   }
                                 } else {
                                   var4 = vi.field_o.c((byte) 13);
-                                  var5 = var4 >> 1747065544;
-                                  var6 = (128 & var4) >> 1909300263;
+                                  var5 = var4 >> 8;
+                                  var6 = (128 & var4) >> 7;
                                   var7 = 127 & var4;
                                   ((ii) var3_ref).a(var6, var7, var5, -62);
                                   continue L17;
@@ -810,7 +810,7 @@ public final class Pixelate extends lb {
                     }
                     L45: {
                       nm.a(0);
-                      if ((vi.field_o.f(255) ^ -1) == -1) {
+                      if (vi.field_o.f(255) == 0) {
                         stackOut_90_0 = 0;
                         stackIn_91_0 = stackOut_90_0;
                         break L45;
@@ -824,7 +824,7 @@ public final class Pixelate extends lb {
                       var3 = stackIn_91_0;
                       var4_ref_String__ = new String[vi.field_o.f(255)];
                       var5 = vi.field_o.a(0);
-                      if ((var5 ^ -1) > -1) {
+                      if (var5 < 0) {
                         var5 = -2;
                         break L46;
                       } else {
@@ -840,7 +840,7 @@ public final class Pixelate extends lb {
                           var8 = vi.field_o.f(255);
                           var9 = vi.field_o.k(0);
                           wh.field_p = null;
-                          if ((mn.field_e ^ -1) != -59) {
+                          if (mn.field_e != 58) {
                             stackOut_99_0 = 0;
                             stackIn_100_0 = stackOut_99_0;
                             break L48;
@@ -1247,22 +1247,28 @@ public final class Pixelate extends lb {
     }
 
     final static void a(int param0, byte param1, df param2) {
-        if (param1 <= 90) {
-            field_E = null;
+        pc var5 = null;
+        int var4 = 0;
+        try {
+            if (param1 <= 90) {
+                field_E = null;
+            }
+            var5 = aa.field_f;
+            var5.g(param0, 15514);
+            var5.field_m = var5.field_m + 1;
+            var4 = var5.field_m;
+            var5.e(160, 1);
+            var5.e(160, param2.field_p);
+            var5.a(param2.field_k, -14596);
+            var5.d(param2.field_l, -108);
+            var5.d(param2.field_n, -43);
+            var5.d(param2.field_o, -104);
+            var5.d(param2.field_q, -106);
+            int discarded$0 = var5.b(var4, (byte) 43);
+            var5.f(-var4 + var5.field_m, -1);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "Pixelate.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        pc var5 = aa.field_f;
-        var5.g(param0, 15514);
-        var5.field_m = var5.field_m + 1;
-        int var4 = var5.field_m;
-        var5.e(160, 1);
-        var5.e(160, param2.field_p);
-        var5.a(param2.field_k, -14596);
-        var5.d(param2.field_l, -108);
-        var5.d(param2.field_n, -43);
-        var5.d(param2.field_o, -104);
-        var5.d(param2.field_q, -106);
-        int discarded$0 = var5.b(var4, (byte) 43);
-        var5.f(-var4 + var5.field_m, -1);
     }
 
     final void b(int param0) {
@@ -1275,7 +1281,7 @@ public final class Pixelate extends lb {
     }
 
     final static void a(boolean param0, byte param1, int param2, boolean param3, int param4, int param5, int param6) {
-        int var7 = 0;
+        int var7_int = 0;
         bb var8 = null;
         long var9 = 0L;
         Object var11 = null;
@@ -1312,7 +1318,6 @@ public final class Pixelate extends lb {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        tf var42 = null;
         ak var43 = null;
         ak var44 = null;
         ak var45 = null;
@@ -1328,7 +1333,6 @@ public final class Pixelate extends lb {
         tf var52_ref = null;
         Object var53 = null;
         tf var53_ref = null;
-        tf var54 = null;
         gp stackIn_1_0 = null;
         boolean stackIn_1_1 = false;
         gp stackIn_2_0 = null;
@@ -1364,18 +1368,18 @@ public final class Pixelate extends lb {
         ak stackIn_30_4 = null;
         int stackIn_34_0 = 0;
         int stackIn_68_0 = 0;
-        int stackIn_77_0 = 0;
+        int stackIn_76_0 = 0;
+        tf[] stackIn_77_0 = null;
         tf[] stackIn_78_0 = null;
         tf[] stackIn_79_0 = null;
-        tf[] stackIn_80_0 = null;
-        int stackIn_80_1 = 0;
+        int stackIn_79_1 = 0;
+        tf[] stackIn_85_0 = null;
         tf[] stackIn_86_0 = null;
         tf[] stackIn_87_0 = null;
-        tf[] stackIn_88_0 = null;
-        int stackIn_88_1 = 0;
-        String stackIn_152_0 = null;
-        String stackIn_162_0 = null;
-        String stackIn_167_0 = null;
+        int stackIn_87_1 = 0;
+        String stackIn_151_0 = null;
+        String stackIn_161_0 = null;
+        String stackIn_166_0 = null;
         gp stackOut_0_0 = null;
         boolean stackOut_0_1 = false;
         gp stackOut_2_0 = null;
@@ -1419,23 +1423,23 @@ public final class Pixelate extends lb {
         int stackOut_75_0 = 0;
         int stackOut_74_0 = 0;
         int stackOut_72_0 = 0;
-        tf[] stackOut_77_0 = null;
-        tf[] stackOut_79_0 = null;
-        int stackOut_79_1 = 0;
+        tf[] stackOut_76_0 = null;
         tf[] stackOut_78_0 = null;
         int stackOut_78_1 = 0;
-        tf[] stackOut_85_0 = null;
-        tf[] stackOut_87_0 = null;
-        int stackOut_87_1 = 0;
+        tf[] stackOut_77_0 = null;
+        int stackOut_77_1 = 0;
+        tf[] stackOut_84_0 = null;
         tf[] stackOut_86_0 = null;
         int stackOut_86_1 = 0;
-        String stackOut_151_0 = null;
+        tf[] stackOut_85_0 = null;
+        int stackOut_85_1 = 0;
         String stackOut_150_0 = null;
-        String stackOut_161_0 = null;
+        String stackOut_149_0 = null;
         String stackOut_160_0 = null;
-        String stackOut_158_0 = null;
-        String stackOut_166_0 = null;
+        String stackOut_159_0 = null;
+        String stackOut_157_0 = null;
         String stackOut_165_0 = null;
+        String stackOut_164_0 = null;
         L0: {
           var50 = null;
           var51 = null;
@@ -1466,7 +1470,7 @@ public final class Pixelate extends lb {
             break L0;
           }
         }
-        var7 = ((gp) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2 != 0, 2, param2 * (fq.field_q * 4 + 8), 0, 2 * fq.field_q - -4) ? 1 : 0;
+        var7_int = ((gp) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2 != 0, 2, param2 * (fq.field_q * 4 + 8), 0, 2 * fq.field_q - -4) ? 1 : 0;
         if (param1 == 69) {
           var8 = aj.field_k.field_Fb.field_L;
           var9 = hm.a(64);
@@ -1538,7 +1542,7 @@ public final class Pixelate extends lb {
                     var12.a(var12.field_Zb, (byte) 26);
                     var12.field_ac = new ak[fj.field_b];
                     var12.field_ic = new ak(0L, (ak) null);
-                    if (-1 == (var14 & 1 << ek.field_a ^ -1)) {
+                    if ((var14 & 1 << ek.field_a) == 0) {
                       break L4;
                     } else {
                       var12.field_Zb.a(var12.field_ic, (byte) 26);
@@ -1547,7 +1551,7 @@ public final class Pixelate extends lb {
                   }
                   L5: {
                     var12.field_Jb = new ak(0L, (ak) null);
-                    if (-1 == (var14 & 1 << ef.field_f ^ -1)) {
+                    if ((var14 & 1 << ef.field_f) == 0) {
                       break L5;
                     } else {
                       var12.field_Zb.a(var12.field_Jb, (byte) 26);
@@ -1556,7 +1560,7 @@ public final class Pixelate extends lb {
                   }
                   L6: {
                     var12.field_Fb = new ak(0L, (ak) null);
-                    if (-1 != (var14 & 1 << g.field_m ^ -1)) {
+                    if ((var14 & 1 << g.field_m) != 0) {
                       var12.field_Zb.a(var12.field_Fb, (byte) 26);
                       break L6;
                     } else {
@@ -1868,39 +1872,39 @@ public final class Pixelate extends lb {
                             if (!var12.field_hc) {
                               if (var12.field_cc) {
                                 stackOut_75_0 = 1;
-                                stackIn_77_0 = stackOut_75_0;
+                                stackIn_76_0 = stackOut_75_0;
                                 break L24;
                               } else {
                                 stackOut_74_0 = 0;
-                                stackIn_77_0 = stackOut_74_0;
+                                stackIn_76_0 = stackOut_74_0;
                                 break L24;
                               }
                             } else {
                               stackOut_72_0 = 1;
-                              stackIn_77_0 = stackOut_72_0;
+                              stackIn_76_0 = stackOut_72_0;
                               break L24;
                             }
                           }
                           L25: {
-                            var36 = stackIn_77_0;
-                            stackOut_77_0 = go.field_h;
-                            stackIn_79_0 = stackOut_77_0;
-                            stackIn_78_0 = stackOut_77_0;
+                            var36 = stackIn_76_0;
+                            stackOut_76_0 = go.field_h;
+                            stackIn_78_0 = stackOut_76_0;
+                            stackIn_77_0 = stackOut_76_0;
                             if (var36 == 0) {
-                              stackOut_79_0 = (tf[]) (Object) stackIn_79_0;
-                              stackOut_79_1 = 0;
-                              stackIn_80_0 = stackOut_79_0;
-                              stackIn_80_1 = stackOut_79_1;
+                              stackOut_78_0 = (tf[]) (Object) stackIn_78_0;
+                              stackOut_78_1 = 0;
+                              stackIn_79_0 = stackOut_78_0;
+                              stackIn_79_1 = stackOut_78_1;
                               break L25;
                             } else {
-                              stackOut_78_0 = (tf[]) (Object) stackIn_78_0;
-                              stackOut_78_1 = 1;
-                              stackIn_80_0 = stackOut_78_0;
-                              stackIn_80_1 = stackOut_78_1;
+                              stackOut_77_0 = (tf[]) (Object) stackIn_77_0;
+                              stackOut_77_1 = 1;
+                              stackIn_79_0 = stackOut_77_0;
+                              stackIn_79_1 = stackOut_77_1;
                               break L25;
                             }
                           }
-                          var51_ref = stackIn_80_0[stackIn_80_1];
+                          var51_ref = stackIn_79_0[stackIn_79_1];
                           var12.field_Jb.field_H = var51_ref;
                           var12.field_Jb.a(0, var12.field_Zb.field_nb, var34_int, 256, var51_ref.field_A);
                           var34_int = var34_int + (hd.field_q + var51_ref.field_A);
@@ -1908,7 +1912,7 @@ public final class Pixelate extends lb {
                         }
                       }
                       L26: {
-                        if (-1 == (1 << g.field_m & var14 ^ -1)) {
+                        if ((1 << g.field_m & var14) == 0) {
                           break L26;
                         } else {
                           var52_ref = so.field_d[-1 + var12.field_Tb];
@@ -1921,24 +1925,24 @@ public final class Pixelate extends lb {
                       L27: {
                         if ((var14 & 1 << qa.field_e) != 0) {
                           L28: {
-                            stackOut_85_0 = fd.field_c;
-                            stackIn_87_0 = stackOut_85_0;
-                            stackIn_86_0 = stackOut_85_0;
+                            stackOut_84_0 = fd.field_c;
+                            stackIn_86_0 = stackOut_84_0;
+                            stackIn_85_0 = stackOut_84_0;
                             if (!var12.field_oc) {
-                              stackOut_87_0 = (tf[]) (Object) stackIn_87_0;
-                              stackOut_87_1 = 0;
-                              stackIn_88_0 = stackOut_87_0;
-                              stackIn_88_1 = stackOut_87_1;
+                              stackOut_86_0 = (tf[]) (Object) stackIn_86_0;
+                              stackOut_86_1 = 0;
+                              stackIn_87_0 = stackOut_86_0;
+                              stackIn_87_1 = stackOut_86_1;
                               break L28;
                             } else {
-                              stackOut_86_0 = (tf[]) (Object) stackIn_86_0;
-                              stackOut_86_1 = 1;
-                              stackIn_88_0 = stackOut_86_0;
-                              stackIn_88_1 = stackOut_86_1;
+                              stackOut_85_0 = (tf[]) (Object) stackIn_85_0;
+                              stackOut_85_1 = 1;
+                              stackIn_87_0 = stackOut_85_0;
+                              stackIn_87_1 = stackOut_85_1;
                               break L28;
                             }
                           }
-                          var53_ref = stackIn_88_0[stackIn_88_1];
+                          var53_ref = stackIn_87_0[stackIn_87_1];
                           var12.field_Vb.field_H = var53_ref;
                           var12.field_Vb.a(0, var12.field_Zb.field_nb, var34_int, 256, var53_ref.field_A);
                           var34_int = var34_int + (hd.field_q + var53_ref.field_A);
@@ -1955,18 +1959,15 @@ public final class Pixelate extends lb {
                               break L29;
                             } else {
                               if (ig.field_a[var36] != null) {
-                                if (0 != (var14 & 1 << cl.field_j + var36)) {
-                                  var42 = ig.field_a[var36][255 & var12.field_Eb[var36]];
-                                  var54 = var42;
-                                  var12.field_ac[var36].field_H = var42;
-                                  var12.field_ac[var36].a(0, var12.field_Zb.field_nb, var34_int, 256, var54.field_A);
-                                  var34_int = var34_int + (hd.field_q + var54.field_A);
-                                  var36++;
-                                  continue L30;
-                                } else {
-                                  var36++;
-                                  continue L30;
+                                L31: {
+                                  if (0 == (var14 & 1 << cl.field_j + var36)) {
+                                    break L31;
+                                  } else {
+                                    break L31;
+                                  }
                                 }
+                                var36++;
+                                continue L30;
                               } else {
                                 var36++;
                                 continue L30;
@@ -1977,55 +1978,55 @@ public final class Pixelate extends lb {
                           break L29;
                         }
                       }
-                      L31: {
+                      L32: {
                         var36 = (-var34_int + var12.field_Zb.field_K) / 2;
-                        if (-1 > (var36 ^ -1)) {
+                        if (var36 > 0) {
                           var12.field_ic.field_D = var12.field_ic.field_D + var36;
                           var12.field_Jb.field_D = var12.field_Jb.field_D + var36;
                           var12.field_Fb.field_D = var12.field_Fb.field_D + var36;
                           var12.field_Vb.field_D = var12.field_Vb.field_D + var36;
                           var37_int = 0;
-                          L32: while (true) {
+                          L33: while (true) {
                             if (var37_int >= fj.field_b) {
-                              break L31;
+                              break L32;
                             } else {
                               var12.field_ac[var37_int].field_D = var12.field_ac[var37_int].field_D + var36;
                               var37_int++;
-                              continue L32;
+                              continue L33;
                             }
                           }
                         } else {
-                          break L31;
+                          break L32;
                         }
                       }
-                      L33: {
+                      L34: {
                         if (var12.field_dc) {
-                          L34: {
+                          L35: {
                             var37_int = var12.field_nc;
                             if (var37_int >= 0) {
-                              break L34;
+                              break L35;
                             } else {
                               var37_int = (int)(var9 - var12.field_Lb);
-                              break L34;
+                              break L35;
                             }
                           }
                           var38_int = var37_int / 1000;
                           var39 = var38_int / 60;
                           var38_int = var38_int % 60;
-                          if (-61 < (var39 ^ -1)) {
+                          if (var39 < 60) {
                             var12.field_Gb.field_cb = var39 + ":" + var38_int / 10 + var38_int % 10;
-                            break L33;
+                            break L34;
                           } else {
                             var40 = var39 / 60;
                             var39 = var39 % 60;
                             var12.field_Gb.field_cb = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
-                            break L33;
+                            break L34;
                           }
                         } else {
-                          break L33;
+                          break L34;
                         }
                       }
-                      L35: {
+                      L36: {
                         var12.field_Gb.a(var31, fq.field_q, 365, 256, var12.field_K + -365);
                         var31 = var31 + fq.field_q;
                         if (var12.field_Ub != null) {
@@ -2034,33 +2035,33 @@ public final class Pixelate extends lb {
                           StringBuilder discarded$4 = var37.append(od.field_Fb);
                           StringBuilder discarded$5 = var37.append(var12.field_Ub[0]);
                           var38_int = 1;
-                          L36: while (true) {
+                          L37: while (true) {
                             if (var12.field_mc <= var38_int) {
                               var38 = var37.toString();
                               var12.field_Kb.field_cb = var38;
                               var39 = var12.field_Kb.field_Db.b(var38, var12.field_K - 2 * var12.field_Kb.field_C);
                               var12.field_Kb.a(var31, fq.field_q * var39, 0, 256, var12.field_K);
                               var31 = var31 + fq.field_q * var39;
-                              break L35;
+                              break L36;
                             } else {
                               StringBuilder discarded$6 = var37.append(", ");
                               StringBuilder discarded$7 = var37.append(var12.field_Ub[var38_int]);
                               var38_int++;
-                              continue L36;
+                              continue L37;
                             }
                           }
                         } else {
-                          break L35;
+                          break L36;
                         }
                       }
-                      L37: {
+                      L38: {
                         if (!var12.field_cc) {
-                          break L37;
+                          break L38;
                         } else {
                           var12.field_Wb.field_cb = sd.a(ok.field_a, param1 + -22, new String[1]);
                           var12.field_Wb.a(var31, fq.field_q, v.field_c, 256, -(2 * v.field_c) + var12.field_K);
                           var31 = var31 + fq.field_q;
-                          break L37;
+                          break L38;
                         }
                       }
                       if (!var12.field_Ob) {
@@ -2075,7 +2076,7 @@ public final class Pixelate extends lb {
                       break L13;
                     }
                   }
-                  L38: {
+                  L39: {
                     var33 = lg.a((byte) 121, var32, var12.field_Qb);
                     if (var33 != null) {
                       var34_int = var12.field_rc.field_Db.b(var33, -v.field_c + var12.field_K + -v.field_c);
@@ -2083,151 +2084,151 @@ public final class Pixelate extends lb {
                       var12.field_rc.field_yb = var12.field_Rb * 256 / mh.field_b;
                       var12.field_rc.a(var31, fq.field_q * var34_int, v.field_c, 256, -(2 * v.field_c) + var12.field_K);
                       var31 = var31 + var34_int * fq.field_q;
-                      break L38;
-                    } else {
-                      break L38;
-                    }
-                  }
-                  L39: {
-                    if (var7 == 0) {
-                      var12.field_Z = -var12.field_nb + var31;
                       break L39;
                     } else {
                       break L39;
                     }
                   }
                   L40: {
-                    if (var13 != 0) {
-                      aj.field_k.field_Fb.a((ak) (Object) var12, 2, param1 + -70, (ak) var11);
+                    if (var7_int == 0) {
+                      var12.field_Z = -var12.field_nb + var31;
                       break L40;
                     } else {
                       break L40;
                     }
                   }
+                  L41: {
+                    if (var13 != 0) {
+                      aj.field_k.field_Fb.a((ak) (Object) var12, 2, param1 + -70, (ak) var11);
+                      break L41;
+                    } else {
+                      break L41;
+                    }
+                  }
                   var34_int = 0;
-                  L41: while (true) {
+                  L42: while (true) {
                     if (var34_int >= fj.field_b) {
-                      L42: {
+                      L43: {
                         if (var12.field_ic.field_W) {
-                          L43: {
+                          L44: {
                             if (1 == var12.field_Ib) {
                               var34 = ri.field_g;
-                              break L43;
+                              break L44;
                             } else {
                               var34 = rb.field_p[var12.field_Ib];
-                              break L43;
+                              break L44;
                             }
                           }
                           up.field_o = fh.field_R + " - " + var34;
-                          break L42;
+                          break L43;
                         } else {
-                          break L42;
+                          break L43;
                         }
                       }
-                      L44: {
+                      L45: {
                         if (!var12.field_Vb.field_W) {
-                          break L44;
+                          break L45;
                         } else {
-                          L45: {
+                          L46: {
                             if (!var12.field_oc) {
-                              stackOut_151_0 = w.field_t;
-                              stackIn_152_0 = stackOut_151_0;
-                              break L45;
+                              stackOut_150_0 = w.field_t;
+                              stackIn_151_0 = stackOut_150_0;
+                              break L46;
                             } else {
-                              stackOut_150_0 = vn.field_d;
-                              stackIn_152_0 = stackOut_150_0;
-                              break L45;
+                              stackOut_149_0 = vn.field_d;
+                              stackIn_151_0 = stackOut_149_0;
+                              break L46;
                             }
                           }
-                          up.field_o = stackIn_152_0;
-                          break L44;
+                          up.field_o = stackIn_151_0;
+                          break L45;
                         }
                       }
-                      L46: {
+                      L47: {
                         if (var12.field_Jb.field_W) {
-                          L47: {
-                            L48: {
+                          L48: {
+                            L49: {
                               if (var12.field_hc) {
-                                break L48;
+                                break L49;
                               } else {
                                 if (!var12.field_cc) {
                                   if (!var12.field_Mb) {
-                                    stackOut_161_0 = qa.field_b;
-                                    stackIn_162_0 = stackOut_161_0;
-                                    break L47;
+                                    stackOut_160_0 = qa.field_b;
+                                    stackIn_161_0 = stackOut_160_0;
+                                    break L48;
                                   } else {
-                                    stackOut_160_0 = he.field_e;
-                                    stackIn_162_0 = stackOut_160_0;
-                                    break L47;
+                                    stackOut_159_0 = he.field_e;
+                                    stackIn_161_0 = stackOut_159_0;
+                                    break L48;
                                   }
                                 } else {
-                                  break L48;
+                                  break L49;
                                 }
                               }
                             }
-                            stackOut_158_0 = bg.field_c;
-                            stackIn_162_0 = stackOut_158_0;
-                            break L47;
+                            stackOut_157_0 = bg.field_c;
+                            stackIn_161_0 = stackOut_157_0;
+                            break L48;
                           }
-                          up.field_o = stackIn_162_0;
-                          break L46;
+                          up.field_o = stackIn_161_0;
+                          break L47;
                         } else {
-                          break L46;
+                          break L47;
                         }
                       }
-                      L49: {
+                      L50: {
                         if (!var12.field_Fb.field_W) {
-                          break L49;
+                          break L50;
                         } else {
-                          L50: {
+                          L51: {
                             if (var12.field_Tb != 2) {
-                              stackOut_166_0 = f.field_i;
-                              stackIn_167_0 = stackOut_166_0;
-                              break L50;
+                              stackOut_165_0 = f.field_i;
+                              stackIn_166_0 = stackOut_165_0;
+                              break L51;
                             } else {
-                              stackOut_165_0 = nb.field_a;
-                              stackIn_167_0 = stackOut_165_0;
-                              break L50;
+                              stackOut_164_0 = nb.field_a;
+                              stackIn_166_0 = stackOut_164_0;
+                              break L51;
                             }
                           }
-                          up.field_o = stackIn_167_0;
-                          break L49;
+                          up.field_o = stackIn_166_0;
+                          break L50;
                         }
                       }
-                      L51: {
-                        if (-1 == (var12.field_P ^ -1)) {
-                          break L51;
+                      L52: {
+                        if (var12.field_P == 0) {
+                          break L52;
                         } else {
                           if (!var12.j(433)) {
                             if (0 == var12.field_jc.field_P) {
                               fb.a(param3, var32, var12, param1 + 32);
-                              break L51;
+                              break L52;
                             } else {
-                              L52: {
+                              L53: {
                                 if (!var12.field_dc) {
-                                  break L52;
+                                  break L53;
                                 } else {
-                                  L53: {
+                                  L54: {
                                     if (!var12.field_Mb) {
-                                      break L53;
+                                      break L54;
                                     } else {
                                       if (var12.field_hc) {
-                                        break L52;
+                                        break L53;
                                       } else {
                                         if (!var12.field_cc) {
-                                          break L53;
+                                          break L54;
                                         } else {
-                                          break L52;
+                                          break L53;
                                         }
                                       }
                                     }
                                   }
                                   qj.a(false, var12.c((byte) 8), param5);
-                                  break L51;
+                                  break L52;
                                 }
                               }
                               wi.b(param5, -925, var12.c((byte) 8));
-                              break L51;
+                              break L52;
                             }
                           } else {
                             var12 = (eq) (Object) var8.f(1504642273);
@@ -2238,34 +2239,35 @@ public final class Pixelate extends lb {
                       var12 = (eq) (Object) var8.f(1504642273);
                       continue L1;
                     } else {
-                      if (var12.field_ac[var34_int].field_W) {
-                        L54: {
-                          if (null == dq.field_b) {
-                            var35 = null;
-                            break L54;
-                          } else {
-                            if (dq.field_b[var34_int] != null) {
-                              var35 = (Object) (Object) dq.field_b[var34_int][255 & var12.field_Eb[var34_int]];
-                              break L54;
-                            } else {
+                      L55: {
+                        if (var12.field_ac[var34_int].field_W) {
+                          L56: {
+                            if (null == dq.field_b) {
                               var35 = null;
-                              break L54;
+                              break L56;
+                            } else {
+                              if (dq.field_b[var34_int] != null) {
+                                var35 = (Object) (Object) dq.field_b[var34_int][255 & var12.field_Eb[var34_int]];
+                                break L56;
+                              } else {
+                                var35 = null;
+                                break L56;
+                              }
                             }
                           }
-                        }
-                        if (var35 != null) {
-                          up.field_o = jk.field_e[var34_int] + " - " + var35;
-                          var34_int++;
-                          continue L41;
+                          if (var35 != null) {
+                            up.field_o = jk.field_e[var34_int] + " - " + var35;
+                            break L55;
+                          } else {
+                            up.field_o = jk.field_e[var34_int];
+                            break L55;
+                          }
                         } else {
-                          up.field_o = jk.field_e[var34_int];
-                          var34_int++;
-                          continue L41;
+                          break L55;
                         }
-                      } else {
-                        var34_int++;
-                        continue L41;
                       }
+                      var34_int++;
+                      continue L42;
                     }
                   }
                 } else {
@@ -2330,7 +2332,7 @@ public final class Pixelate extends lb {
                   }
                   L3: {
                     var3 = stackIn_12_0;
-                    if ((var3 ^ -1) > -1) {
+                    if (var3 < 0) {
                       var3 = 14;
                       break L3;
                     } else {
@@ -2338,13 +2340,13 @@ public final class Pixelate extends lb {
                     }
                   }
                   var4 = wo.b(-51, var3);
-                  if ((ec.field_t ^ -1) <= -17) {
+                  if (ec.field_t >= 16) {
                     ie.a(false, -93, ti.field_t);
-                    var4.a(-(ec.field_t << 1981264004) + 512, true, true);
+                    var4.a(-(ec.field_t << 4) + 512, true, true);
                     break L1;
                   } else {
                     ie.a(false, 97, fc.field_e);
-                    var4.a(ec.field_t << 510351524, true, false);
+                    var4.a(ec.field_t << 4, true, false);
                     break L1;
                   }
                 }
@@ -2355,7 +2357,7 @@ public final class Pixelate extends lb {
                   if (fc.field_e == 4) {
                     break L5;
                   } else {
-                    if ((ti.field_t ^ -1) == -5) {
+                    if (ti.field_t == 4) {
                       break L5;
                     } else {
                       break L4;
@@ -2368,7 +2370,7 @@ public final class Pixelate extends lb {
                     break L6;
                   } else {
                     L7: {
-                      var3 = ec.field_t << -489671581;
+                      var3 = ec.field_t << 3;
                       if (var3 > 192) {
                         var3 = 192;
                         break L7;
@@ -2396,8 +2398,8 @@ public final class Pixelate extends lb {
                       break L9;
                     } else {
                       L10: {
-                        var3 = -(ec.field_t << -366628380) + 256;
-                        if (-1 < (var3 ^ -1)) {
+                        var3 = -(ec.field_t << 4) + 256;
+                        if (var3 < 0) {
                           var3 = 0;
                           break L10;
                         } else {
@@ -2413,12 +2415,12 @@ public final class Pixelate extends lb {
                   if (ti.field_t == fc.field_e) {
                     break L11;
                   } else {
-                    if ((fc.field_e ^ -1) != 1) {
+                    if (fc.field_e != -2) {
                       break L11;
                     } else {
                       L12: {
-                        var3 = ec.field_t << -1433900668;
-                        if ((var3 ^ -1) >= -257) {
+                        var3 = ec.field_t << 4;
+                        if (var3 <= 256) {
                           break L12;
                         } else {
                           var3 = 256;
@@ -2430,7 +2432,7 @@ public final class Pixelate extends lb {
                     }
                   }
                 }
-                if ((fc.field_e ^ -1) != 1) {
+                if (fc.field_e != -2) {
                   in.field_B.b(0, 0);
                   break L8;
                 } else {
@@ -2473,7 +2475,7 @@ public final class Pixelate extends lb {
                 if (ga.field_a == ga.field_d) {
                   break L15;
                 } else {
-                  var3 = (hf.field_o << 1739789640) / 16;
+                  var3 = (hf.field_o << 8) / 16;
                   t.a(0, 0, t.field_j, t.field_d, 0, var3);
                   break L15;
                 }
@@ -2530,7 +2532,7 @@ public final class Pixelate extends lb {
               ((Pixelate) this).d(118);
               var3_int = 0;
               L1: while (true) {
-                if (-19 >= (var3_int ^ -1)) {
+                if (var3_int >= 18) {
                   ri.field_a.field_x.e(-38);
                   ri.field_a.field_H.e(-38);
                   ab.field_f = null;
@@ -2891,9 +2893,6 @@ public final class Pixelate extends lb {
             lf.field_f = null;
             sf.a(0);
         }
-        if (param0 != -18528) {
-            Pixelate.a(false, (byte) -93, -109, true, 5, -125, 20);
-        }
         eh.field_a = wb.a(3, (byte) 124);
         pf.field_d = wb.a(5, (byte) 124);
         hd.field_c = wb.a(6, (byte) 124);
@@ -2931,7 +2930,7 @@ public final class Pixelate extends lb {
         L0: {
           var8 = field_H ? 1 : 0;
           if (ga.field_d != ga.field_a) {
-            if ((ga.field_a ^ -1) == (ho.field_e ^ -1)) {
+            if (~ga.field_a == ~ho.field_e) {
               hf.field_o = hf.field_o + 1;
               if (16 != hf.field_o) {
                 break L0;
@@ -2951,7 +2950,7 @@ public final class Pixelate extends lb {
             } else {
               if (kk.field_y != ga.field_a) {
                 hf.field_o = hf.field_o - 1;
-                if ((hf.field_o ^ -1) != -1) {
+                if (hf.field_o != 0) {
                   break L0;
                 } else {
                   ga.field_a = ga.field_d;
@@ -3015,7 +3014,7 @@ public final class Pixelate extends lb {
                 break L6;
               } else {
                 if (fc.field_e == ti.field_t) {
-                  if (0 == (fc.field_e ^ -1)) {
+                  if (fc.field_e == -1) {
                     if (oc.field_G) {
                       var4 = 1;
                       var3 = 1;
@@ -3030,7 +3029,7 @@ public final class Pixelate extends lb {
                             if (!bc.field_m[82]) {
                               break L8;
                             } else {
-                              if ((ke.field_a ^ -1) != -12) {
+                              if (ke.field_a != 11) {
                                 break L8;
                               } else {
                                 L9: {
@@ -3055,7 +3054,7 @@ public final class Pixelate extends lb {
                       }
                     }
                   } else {
-                    if (1 != (fc.field_e ^ -1)) {
+                    if (fc.field_e != -2) {
                       if (tk.a((byte) -104, fc.field_e)) {
                         wo.b(-79, fc.field_e).e((byte) -83);
                         f.b(0);
@@ -3081,10 +3080,10 @@ public final class Pixelate extends lb {
                   }
                   L11: {
                     f.b(0);
-                    if (0 == (ti.field_t ^ -1)) {
+                    if (ti.field_t == -1) {
                       break L11;
                     } else {
-                      if ((fc.field_e ^ -1) != 0) {
+                      if (fc.field_e != -1) {
                         break L6;
                       } else {
                         break L11;
@@ -3181,17 +3180,17 @@ public final class Pixelate extends lb {
             }
             L20: {
               L21: {
-                if (1 == (ti.field_t ^ -1)) {
+                if (ti.field_t == -2) {
                   break L21;
                 } else {
-                  if ((ti.field_t ^ -1) == 4) {
+                  if (ti.field_t == -5) {
                     break L21;
                   } else {
-                    if (3 == (ti.field_t ^ -1)) {
+                    if (ti.field_t == -4) {
                       break L21;
                     } else {
                       L22: {
-                        if (0 != (ti.field_t ^ -1)) {
+                        if (ti.field_t != -1) {
                           break L22;
                         } else {
                           if (oa.field_i) {
@@ -3246,7 +3245,7 @@ public final class Pixelate extends lb {
           }
         }
         L24: {
-          if ((ti.field_t ^ -1) == 2) {
+          if (ti.field_t == -3) {
             L25: {
               wh.field_p = null;
               ro.field_e = new ii();
@@ -3298,7 +3297,7 @@ public final class Pixelate extends lb {
           }
         }
         L29: {
-          if ((ti.field_t ^ -1) == 4) {
+          if (ti.field_t == -5) {
             qg.a(io.field_c.c((byte) 8), 11, false);
             ia.field_d = true;
             ti.field_t = fc.field_e;
@@ -3318,10 +3317,70 @@ public final class Pixelate extends lb {
     }
 
     final static int a(CharSequence param0, int param1, int param2) {
-        if (param1 != 0) {
-            return -73;
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param1 == 0) {
+              stackOut_3_0 = tj.a(param2, param0, true, true);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = -73;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("Pixelate.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
         }
-        return tj.a(param2, param0, true, true);
+        return stackIn_4_0;
     }
 
     static {

@@ -8,7 +8,11 @@ final class lc extends qj {
     static String field_ib;
 
     final void c(int param0, uj param1) {
-        super.c(param0, param1);
+        try {
+            super.c(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "lc.GA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     lc(tc param0, uj param1) {
@@ -16,55 +20,33 @@ final class lc extends qj {
     }
 
     public static void m(int param0) {
-        Object var2 = null;
         field_fb = null;
-        if (param0 != -11147) {
-          var2 = null;
-          lc.a(true, (ue) null);
-          field_ib = null;
-          field_hb = null;
-          return;
-        } else {
-          field_ib = null;
-          field_hb = null;
-          return;
-        }
+        field_ib = null;
+        field_hb = null;
     }
 
     final static void a(boolean param0, ue param1) {
+        hl var2 = null;
         int var3 = 0;
         int var4 = 0;
-        hl var5 = null;
-        hl var6 = null;
-        if (param0) {
-          field_ib = null;
-          var5 = new hl(param1.a("final_frame.jpg", (byte) -76, ""), (java.awt.Component) (Object) kj.field_E);
-          var3 = var5.field_u;
-          var4 = var5.field_v;
-          wj.b(true);
-          m.field_a = new hl(var3, var4 * 3 / 4);
-          m.field_a.e();
-          var5.d(0, 0);
-          ai.field_g = new hl(var3, -m.field_a.field_v + var4);
-          ai.field_g.e();
-          var5.d(0, -m.field_a.field_v);
-          ai.field_g.field_y = m.field_a.field_v;
-          wf.a(-61);
-          return;
-        } else {
-          var6 = new hl(param1.a("final_frame.jpg", (byte) -76, ""), (java.awt.Component) (Object) kj.field_E);
-          var3 = var6.field_u;
-          var4 = var6.field_v;
-          wj.b(true);
-          m.field_a = new hl(var3, var4 * 3 / 4);
-          m.field_a.e();
-          var6.d(0, 0);
-          ai.field_g = new hl(var3, -m.field_a.field_v + var4);
-          ai.field_g.e();
-          var6.d(0, -m.field_a.field_v);
-          ai.field_g.field_y = m.field_a.field_v;
-          wf.a(-61);
-          return;
+        try {
+            if (param0) {
+                field_ib = null;
+            }
+            var2 = new hl(param1.a("final_frame.jpg", (byte) -76, ""), (java.awt.Component) (Object) kj.field_E);
+            var3 = var2.field_u;
+            var4 = var2.field_v;
+            wj.b(true);
+            m.field_a = new hl(var3, var4 * 3 / 4);
+            m.field_a.e();
+            var2.d(0, 0);
+            ai.field_g = new hl(var3, -m.field_a.field_v + var4);
+            ai.field_g.e();
+            var2.d(0, -m.field_a.field_v);
+            ai.field_g.field_y = m.field_a.field_v;
+            wf.a(-61);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "lc.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

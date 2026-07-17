@@ -11,7 +11,7 @@ final class rba {
     public static void a(int param0) {
         field_c = null;
         field_a = null;
-        int var1 = -16 / ((param0 - 16) / 44);
+        int var1 = 16;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -27,7 +27,7 @@ final class rba {
             if (param2 >= dg.field_i) {
               break L0;
             } else {
-              if ((param1 ^ -1) > -1) {
+              if (param1 < 0) {
                 break L0;
               } else {
                 if (dg.field_c > param1) {
@@ -39,13 +39,14 @@ final class rba {
                       break L1;
                     }
                   }
-                  var5 = param0 * (param4 >>> -1185860040) >> 1147446472;
+                  var5 = param0 * (param4 >>> 24) >> 8;
                   var6 = 256 - var5;
                   var7 = dg.field_i * param1 + param2;
                   var8 = param4;
                   var9 = dg.field_e[var7];
+                  int incrementValue$2 = var7;
                   var7++;
-                  dg.field_e[var7] = dda.a(dda.a(var9, 16711935) * var6 + dda.a(16711935, var8) * var5, -16711936) + dda.a(16711680, var5 * dda.a(var8, 65280) - -(dda.a(65280, var9) * var6)) >>> 1843057384;
+                  dg.field_e[incrementValue$2] = dda.a(dda.a(var9, 16711935) * var6 + dda.a(16711935, var8) * var5, -16711936) + dda.a(16711680, var5 * dda.a(var8, 65280) - -(dda.a(65280, var9) * var6)) >>> 8;
                   return;
                 } else {
                   break L0;
@@ -66,7 +67,6 @@ final class rba {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        uw var2_ref = null;
         int var9 = BachelorFridge.field_y;
         if (param1 >= -82) {
             return null;
@@ -88,33 +88,98 @@ final class rba {
                 var3[511 + -var5] = (byte) var8;
                 var3[var6] = (byte) var8;
             }
-            var2_ref = new uw(var11);
-            it.field_o.a((eo) (Object) var2_ref, (long)param0, 83);
+            var2 = new uw(var11);
+            it.field_o.a((eo) (Object) var2, (long)param0, 83);
         }
-        return var2_ref.field_n;
+        return var2.field_n;
     }
 
     final static void a(mu param0, byte param1) {
-        int[] var6 = null;
+        int[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        int var5 = BachelorFridge.field_y;
-        lp.field_u = false;
-        if (param0 != null) {
-            if (!(null != param0.field_f)) {
-                return;
-            }
-            var6 = param0.field_f;
-            int[] var2 = var6;
-            for (var3 = 0; var6.length > var3; var3++) {
-                var4 = var6[var3];
-                if (!(var4 == 0)) {
-                    lp.field_u = true;
-                    return;
+        int var5 = 0;
+        int[] var6 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        var5 = BachelorFridge.field_y;
+        try {
+          L0: {
+            L1: {
+              lp.field_u = false;
+              if (param0 == null) {
+                break L1;
+              } else {
+                if (null == param0.field_f) {
+                  break L1;
+                } else {
+                  var6 = param0.field_f;
+                  var2 = var6;
+                  var3 = 0;
+                  L2: while (true) {
+                    if (var6.length <= var3) {
+                      var3 = -119 % ((-12 - param1) / 50);
+                      break L0;
+                    } else {
+                      var4 = var6[var3];
+                      if (var4 != 0) {
+                        lp.field_u = true;
+                        return;
+                      } else {
+                        var3++;
+                        continue L2;
+                      }
+                    }
+                  }
                 }
+              }
             }
-            var3 = -119 % ((-12 - param1) / 50);
             return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var2_ref;
+            stackOut_14_1 = new StringBuilder().append("rba.D(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L3;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L3;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 41);
         }
     }
 

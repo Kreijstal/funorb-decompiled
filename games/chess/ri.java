@@ -120,7 +120,7 @@ final class ri extends jb implements ha, we {
                 break L1;
               }
             }
-            if (-1891 < (var4 ^ -1)) {
+            if (var4 < 1890) {
               stackOut_4_0 = qk.field_b;
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
@@ -155,12 +155,6 @@ final class ri extends jb implements ha, we {
     }
 
     public static void h(int param0) {
-        if (param0 != 1) {
-            um discarded$0 = ri.a(94, (byte) 26);
-            field_k = null;
-            field_h = null;
-            return;
-        }
         field_k = null;
         field_h = null;
     }
@@ -174,23 +168,79 @@ final class ri extends jb implements ha, we {
 
     final static void a(int param0, pa param1, int param2) {
         nk var3 = null;
-        var3 = qn.field_U;
-        var3.f(param2, -106);
-        var3.c(2, (byte) -56);
-        var3.c(0, (byte) -112);
-        if (param0 != -1281) {
-          field_g = 45;
-          var3.c(param1.field_p, (byte) 78);
-          return;
-        } else {
-          var3.c(param1.field_p, (byte) 78);
-          return;
+        try {
+            var3 = qn.field_U;
+            var3.f(param2, -106);
+            var3.c(2, (byte) -56);
+            var3.c(0, (byte) -112);
+            if (param0 != -1281) {
+                field_g = 45;
+            }
+            var3.c(param1.field_p, (byte) 78);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ri.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
     public final void b(qn param0, int param1) {
-        if (param1 != 3) {
-            field_i = -5;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 3) {
+                break L1;
+              } else {
+                field_i = -5;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ri.L(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
         }
     }
 
@@ -201,7 +251,11 @@ final class ri extends jb implements ha, we {
         if (param1 != 10999) {
             return;
         }
-        ((ri) this).b(true);
+        try {
+            ((ri) this).b(true);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ri.N(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final static um a(int param0, byte param1) {

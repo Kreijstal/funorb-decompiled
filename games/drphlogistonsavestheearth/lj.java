@@ -34,8 +34,9 @@ final class lj {
 
     final int a(int param0) {
         if (((lj) this).field_g >= ((lj) this).field_c) {
+            int fieldTemp$0 = ((lj) this).field_a;
             ((lj) this).field_a = ((lj) this).field_a + 1;
-            ((lj) this).field_d = ((lj) this).field_f[((lj) this).field_a] << 15;
+            ((lj) this).field_d = ((lj) this).field_f[fieldTemp$0] << 15;
             if (((lj) this).field_a >= ((lj) this).field_k) {
                 ((lj) this).field_a = ((lj) this).field_k - 1;
             }

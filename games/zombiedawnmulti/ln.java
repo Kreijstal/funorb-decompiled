@@ -52,9 +52,13 @@ final class ln implements Iterator {
 
     ln(e param0) {
         ((ln) this).field_a = null;
-        ((ln) this).field_b = param0;
-        ((ln) this).field_a = null;
-        ((ln) this).field_e = ((ln) this).field_b.field_d.field_k;
+        try {
+            ((ln) this).field_b = param0;
+            ((ln) this).field_a = null;
+            ((ln) this).field_e = ((ln) this).field_b.field_d.field_k;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ln.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {
@@ -64,6 +68,6 @@ final class ln implements Iterator {
     private static void $cfr$clinit() {
         field_f = new int[128];
         field_c = "Report abuse";
-        field_d = new char[]{(char)91, (char)93, (char)35};
+        field_d = new char[]{'[', ']', '#'};
     }
 }

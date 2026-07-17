@@ -10,21 +10,16 @@ final class o extends l {
     final static void b(int param0) {
         rg.field_a[93] = 43;
         rg.field_a[192] = 28;
-        if (param0 != -25281) {
-          return;
-        } else {
-          rg.field_a[520] = 59;
-          rg.field_a[222] = 58;
-          rg.field_a[44] = 71;
-          rg.field_a[46] = 72;
-          rg.field_a[92] = 74;
-          rg.field_a[47] = 73;
-          rg.field_a[59] = 57;
-          rg.field_a[45] = 26;
-          rg.field_a[91] = 42;
-          rg.field_a[61] = 27;
-          return;
-        }
+        rg.field_a[520] = 59;
+        rg.field_a[222] = 58;
+        rg.field_a[44] = 71;
+        rg.field_a[46] = 72;
+        rg.field_a[92] = 74;
+        rg.field_a[47] = 73;
+        rg.field_a[59] = 57;
+        rg.field_a[45] = 26;
+        rg.field_a[91] = 42;
+        rg.field_a[61] = 27;
     }
 
     final l a(int param0) {
@@ -81,8 +76,12 @@ final class o extends l {
     }
 
     o(int param0, l param1) {
-        ((o) this).field_g = param1;
-        ((o) this).field_e = param0;
+        try {
+            ((o) this).field_g = param1;
+            ((o) this).field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "o.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

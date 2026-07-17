@@ -7,11 +7,6 @@ final class lga {
 
     final static void a(boolean param0, int param1) {
         crb.a(3, param0);
-        if (param1 != -24055) {
-            int discarded$0 = lga.a((byte) 71, -57);
-            ao.a((byte) 91, param0);
-            return;
-        }
         ao.a((byte) 91, param0);
     }
 
@@ -25,15 +20,19 @@ final class lga {
     }
 
     final static int a(byte param0, int param1) {
-        if (-14 != (param1 ^ -1)) {
-          if (param1 != -10) {
+        if (param1 == 13) {
+          return 2147483647;
+        } else {
+          if (param1 == 9) {
+            return aea.field_b * oq.field_l * 2;
+          } else {
             if (11 != param1) {
-              if (-4 != param1) {
-                if ((param1 ^ -1) != -13) {
-                  if (param0 != -2) {
-                    int discarded$2 = lga.a((byte) 36, 1);
+              if (param1 != 3) {
+                if (param1 != 12) {
+                  if (param0 == -2) {
                     return aea.field_b * oq.field_l;
                   } else {
+                    int discarded$2 = lga.a((byte) 36, 1);
                     return aea.field_b * oq.field_l;
                   }
                 } else {
@@ -45,11 +44,7 @@ final class lga {
             } else {
               return 1 + oq.field_l * (wha.field_a + 300);
             }
-          } else {
-            return aea.field_b * oq.field_l * 2;
           }
-        } else {
-          return 2147483647;
         }
     }
 

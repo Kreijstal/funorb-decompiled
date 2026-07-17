@@ -17,7 +17,7 @@ final class sk implements Runnable {
         if (param0 < 83) {
             return null;
         }
-        if ((((sk) this).field_g ^ -1) != -4) {
+        if (((sk) this).field_g != 3) {
             return null;
         }
         return ((sk) this).field_d;
@@ -41,7 +41,7 @@ final class sk implements Runnable {
                   break L1;
                 }
               }
-              if (-1 != (((sk) this).field_h.field_b ^ -1)) {
+              if (((sk) this).field_h.field_b != 0) {
                 if (1 == ((sk) this).field_h.field_b) {
                   break L0;
                 } else {
@@ -75,7 +75,7 @@ final class sk implements Runnable {
                 }
               }
               if (0 != ((sk) this).field_e.field_b) {
-                if (-2 != (((sk) this).field_e.field_b ^ -1)) {
+                if (((sk) this).field_e.field_b != 1) {
                   ((sk) this).field_e = null;
                   ((sk) this).field_g = ((sk) this).field_g + 1;
                   return false;
@@ -96,7 +96,7 @@ final class sk implements Runnable {
               try {
                 L6: {
                   L7: {
-                    if (-1 == (((sk) this).field_g ^ -1)) {
+                    if (((sk) this).field_g == 0) {
                       ((sk) this).field_b = (DataInputStream) ((sk) this).field_h.field_e;
                       break L7;
                     } else {
@@ -141,7 +141,7 @@ final class sk implements Runnable {
                   }
                 }
                 if (((sk) this).field_a.field_b != 0) {
-                  if ((((sk) this).field_a.field_b ^ -1) == -2) {
+                  if (((sk) this).field_a.field_b == 1) {
                     return false;
                   } else {
                     ((sk) this).finalize();
@@ -161,7 +161,7 @@ final class sk implements Runnable {
               return false;
             } else {
               L11: {
-                if ((((sk) this).field_a.field_b ^ -1) != -2) {
+                if (((sk) this).field_a.field_b != 1) {
                   ((sk) this).finalize();
                   ((sk) this).field_g = ((sk) this).field_g + 1;
                   break L11;
@@ -177,7 +177,7 @@ final class sk implements Runnable {
               return false;
             } else {
               L12: {
-                if ((((sk) this).field_a.field_b ^ -1) != -2) {
+                if (((sk) this).field_a.field_b != 1) {
                   ((sk) this).finalize();
                   ((sk) this).field_g = ((sk) this).field_g + 1;
                   break L12;
@@ -202,86 +202,55 @@ final class sk implements Runnable {
 
     final static void b(byte param0) {
         int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        Object var5 = null;
         int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
+        RuntimeException decompiledCaughtException = null;
         var4 = fleas.field_A ? 1 : 0;
-        var8 = ed.field_c;
-        var7 = var8;
-        var6 = var7;
-        var1 = var6;
-        var2 = 0;
-        var3 = var8.length;
-        if (param0 > -75) {
-          var5 = null;
-          sk.a(-77, (String) null);
-          L0: while (true) {
-            if (var3 > var2) {
-              int incrementValue$48 = var2;
-              var2++;
-              var1[incrementValue$48] = 0;
-              int incrementValue$49 = var2;
-              var2++;
-              var1[incrementValue$49] = 0;
-              int incrementValue$50 = var2;
-              var2++;
-              var1[incrementValue$50] = 0;
-              int incrementValue$51 = var2;
-              var2++;
-              var1[incrementValue$51] = 0;
-              int incrementValue$52 = var2;
-              var2++;
-              var1[incrementValue$52] = 0;
-              int incrementValue$53 = var2;
-              var2++;
-              var1[incrementValue$53] = 0;
-              int incrementValue$54 = var2;
-              var2++;
-              var1[incrementValue$54] = 0;
-              int incrementValue$55 = var2;
-              var2++;
-              var1[incrementValue$55] = 0;
-              continue L0;
-            } else {
-              return;
+        try {
+          L0: {
+            var6 = ed.field_c;
+            var1 = var6;
+            var2 = 0;
+            var3 = var6.length;
+            L1: while (true) {
+              if (var3 <= var2) {
+                break L0;
+              } else {
+                int incrementValue$40 = var2;
+                var2++;
+                var1[incrementValue$40] = 0;
+                int incrementValue$41 = var2;
+                var2++;
+                var1[incrementValue$41] = 0;
+                int incrementValue$42 = var2;
+                var2++;
+                var1[incrementValue$42] = 0;
+                int incrementValue$43 = var2;
+                var2++;
+                var1[incrementValue$43] = 0;
+                int incrementValue$44 = var2;
+                var2++;
+                var1[incrementValue$44] = 0;
+                int incrementValue$45 = var2;
+                var2++;
+                var1[incrementValue$45] = 0;
+                int incrementValue$46 = var2;
+                var2++;
+                var1[incrementValue$46] = 0;
+                int incrementValue$47 = var2;
+                var2++;
+                var1[incrementValue$47] = 0;
+                continue L1;
+              }
             }
           }
-        } else {
-          L1: while (true) {
-            if (var3 > var2) {
-              int incrementValue$56 = var2;
-              var2++;
-              var1[incrementValue$56] = 0;
-              int incrementValue$57 = var2;
-              var2++;
-              var1[incrementValue$57] = 0;
-              int incrementValue$58 = var2;
-              var2++;
-              var1[incrementValue$58] = 0;
-              int incrementValue$59 = var2;
-              var2++;
-              var1[incrementValue$59] = 0;
-              int incrementValue$60 = var2;
-              var2++;
-              var1[incrementValue$60] = 0;
-              int incrementValue$61 = var2;
-              var2++;
-              var1[incrementValue$61] = 0;
-              int incrementValue$62 = var2;
-              var2++;
-              var1[incrementValue$62] = 0;
-              int incrementValue$63 = var2;
-              var2++;
-              var1[incrementValue$63] = 0;
-              continue L1;
-            } else {
-              return;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var1_ref, "sk.D(" + -80 + 41);
         }
     }
 
@@ -349,16 +318,17 @@ final class sk implements Runnable {
         if (!(cb.field_t == null)) {
             return (java.awt.Container) (Object) cb.field_t;
         }
-        if (param0 <= 19) {
-            return null;
-        }
         return (java.awt.Container) (Object) rl.a((byte) -117);
     }
 
     sk(ce param0, java.net.URL param1, int param2) {
-        ((sk) this).field_f = param0;
-        ((sk) this).field_c = param1;
-        ((sk) this).field_d = new ni(param2);
+        try {
+            ((sk) this).field_f = param0;
+            ((sk) this).field_c = param1;
+            ((sk) this).field_d = new ni(param2);
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "sk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final static void a(int param0, qc param1, int param2, int param3, qc param4, int param5) {
@@ -366,10 +336,14 @@ final class sk implements Runnable {
         if (param3 != 443) {
             return;
         }
-        ae.field_c = param2;
-        ge.field_h = param0;
-        qg.field_b = param1;
-        ub.field_a = param4;
+        try {
+            ae.field_c = param2;
+            ge.field_h = param0;
+            qg.field_b = param1;
+            ub.field_a = param4;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "sk.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+        }
     }
 
     protected final void finalize() {

@@ -6,29 +6,10 @@ final class aa {
     static String field_a;
 
     final static void a(boolean param0) {
-        int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        L0: {
-          if (null != fj.field_u) {
-            L1: {
-              if (param0) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L1;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L1;
-              }
-            }
-            c.a(stackIn_5_0 != 0, fj.field_u);
+        if (!(null == fj.field_u)) {
+            c.a(true, fj.field_u);
             fj.field_u = null;
             am.g(-4258);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         ka.field_N = cc.a(1, -14245);
         gj.field_a = cc.a(2, -14245);
@@ -41,7 +22,7 @@ final class aa {
         v.field_Bb = cc.a(8, -14245);
         mn.field_b = cc.a(9, -14245);
         dg.field_n = new ad(50);
-        dg.field_n.a(param0, fi.field_b, dl.field_a, pb.field_e, "basic");
+        dg.field_n.a(false, fi.field_b, dl.field_a, pb.field_e, "basic");
         dg.field_n.a((byte) -6, ka.field_N, un.field_b, ak.field_P);
         dg.field_n.a((byte) -6, gj.field_a, d.field_f, jl.field_n);
         dg.field_n.a((byte) -6, i.field_u, d.field_f, jl.field_n);
@@ -55,7 +36,7 @@ final class aa {
     }
 
     final static bn a(byte param0) {
-        int var1 = 106 % ((-44 - param0) / 58);
+        int var1 = 0;
         return new bn(qj.a(1), fa.a((byte) -69));
     }
 

@@ -26,7 +26,8 @@ final class ifa extends ci {
     }
 
     final static void a(int param0, int param1, int param2, int param3, float[] param4, float param5, int param6, int param7, float[] param8, byte param9, int param10) {
-        float var11 = 0.0f;
+        RuntimeException var11 = null;
+        float var11_float = 0.0f;
         float var12 = 0.0f;
         float var13 = 0.0f;
         float var14 = 0.0f;
@@ -34,56 +35,145 @@ final class ifa extends ci {
         float var16 = 0.0f;
         float var17 = 0.0f;
         int var18 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         var18 = TombRacer.field_G ? 1 : 0;
-        param10 = param10 - param2;
-        param1 = param1 - param7;
-        param0 = param0 - param3;
-        if (param9 == -44) {
+        try {
           L0: {
-            L1: {
-              var11 = (float)param0 * param8[2] + ((float)param10 * param8[1] + (float)param1 * param8[0]);
-              var12 = param8[4] * (float)param10 + param8[3] * (float)param1 + (float)param0 * param8[5];
-              var13 = (float)param1 * param8[6] + (float)param10 * param8[7] + param8[8] * (float)param0;
-              var14 = (float)Math.sqrt((double)(var13 * var13 + (var12 * var12 + var11 * var11)));
-              var15 = 0.5f + (float)Math.atan2((double)var11, (double)var13) / 6.2831854820251465f;
-              var16 = param5 + (0.5f + (float)Math.asin((double)(var12 / var14)) / 3.1415927410125732f);
-              if (param6 != 1) {
-                if (2 == param6) {
-                  var16 = -var16;
-                  var15 = -var15;
-                  break L1;
-                } else {
-                  if ((param6 ^ -1) == -4) {
-                    var17 = var15;
-                    var15 = var16;
-                    var16 = -var17;
-                    break L1;
+            param10 = param10 - param2;
+            param1 = param1 - param7;
+            param0 = param0 - param3;
+            if (param9 == -44) {
+              L1: {
+                L2: {
+                  var11_float = (float)param0 * param8[2] + ((float)param10 * param8[1] + (float)param1 * param8[0]);
+                  var12 = param8[4] * (float)param10 + param8[3] * (float)param1 + (float)param0 * param8[5];
+                  var13 = (float)param1 * param8[6] + (float)param10 * param8[7] + param8[8] * (float)param0;
+                  var14 = (float)Math.sqrt((double)(var13 * var13 + (var12 * var12 + var11_float * var11_float)));
+                  var15 = 0.5f + (float)Math.atan2((double)var11_float, (double)var13) / 6.2831854820251465f;
+                  var16 = param5 + (0.5f + (float)Math.asin((double)(var12 / var14)) / 3.1415927410125732f);
+                  if (param6 != 1) {
+                    if (2 == param6) {
+                      var16 = -var16;
+                      var15 = -var15;
+                      break L2;
+                    } else {
+                      if (param6 == 3) {
+                        var17 = var15;
+                        var15 = var16;
+                        var16 = -var17;
+                        break L2;
+                      } else {
+                        param4[1] = var16;
+                        param4[0] = var15;
+                        break L1;
+                      }
+                    }
                   } else {
-                    param4[1] = var16;
-                    param4[0] = var15;
-                    break L0;
+                    var17 = var15;
+                    var15 = -var16;
+                    var16 = var17;
+                    break L2;
                   }
                 }
-              } else {
-                var17 = var15;
-                var15 = -var16;
-                var16 = var17;
+                param4[1] = var16;
+                param4[0] = var15;
                 break L1;
               }
+              break L0;
+            } else {
+              return;
             }
-            param4[1] = var16;
-            param4[0] = var15;
-            break L0;
           }
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var11 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var11;
+            stackOut_12_1 = new StringBuilder().append("ifa.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param4 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param8 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L4;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param9 + 44 + param10 + 41);
         }
     }
 
     public static void d(byte param0) {
         field_n = null;
-        int var1 = 25 % ((param0 - -28) / 51);
+        int var1 = 1;
         field_r = null;
         field_p = null;
         field_s = null;
@@ -91,32 +181,82 @@ final class ifa extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var5 = TombRacer.field_G ? 1 : 0;
-        if (param0 == 107) {
+        try {
           L0: {
-            var4 = param2;
-            if (var4 == 0) {
-              ((ifa) this).field_o = param1.h(255);
+            if (param0 == 107) {
+              L1: {
+                var4_int = param2;
+                if (var4_int == 0) {
+                  ((ifa) this).field_o = param1.h(255);
+                  break L1;
+                } else {
+                  if (var4_int != 1) {
+                    if (3 == var4_int) {
+                      ((ifa) this).field_t = param1.h(255);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  } else {
+                    ((ifa) this).field_m = param1.h(255);
+                    break L1;
+                  }
+                }
+              }
               break L0;
             } else {
-              if (var4 != 1) {
-                if (3 == var4) {
-                  ((ifa) this).field_t = param1.h(255);
-                  break L0;
-                } else {
-                  break L0;
-                }
-              } else {
-                ((ifa) this).field_m = param1.h(255);
-                break L0;
-              }
+              return;
             }
           }
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_1 = new StringBuilder().append("ifa.A(").append(param0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L2;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
         }
     }
 
@@ -155,7 +295,7 @@ final class ifa extends ci {
         L1: {
           if (((ifa) this).field_i.field_d) {
             var4 = sj.field_b[param1];
-            var5 = var4 - 2048 >> 2030681601;
+            var5 = var4 - 2048 >> 1;
             var6 = 0;
             L2: while (true) {
               if (var6 >= ns.field_g) {
@@ -163,9 +303,9 @@ final class ifa extends ci {
               } else {
                 L3: {
                   var8 = ht.field_Fb[var6];
-                  var9 = var8 - 2048 >> -1320237439;
+                  var9 = var8 - 2048 >> 1;
                   if (0 != ((ifa) this).field_o) {
-                    var10 = var5 * var5 + var9 * var9 >> 1190924620;
+                    var10 = var5 * var5 + var9 * var9 >> 12;
                     var7 = (int)(Math.sqrt((double)((float)var10 / 4096.0f)) * 4096.0);
                     var7 = (int)((double)(var7 * ((ifa) this).field_t) * 3.141592653589793);
                     break L3;
@@ -176,12 +316,12 @@ final class ifa extends ci {
                 }
                 L4: {
                   var7 = var7 - (var7 & -4096);
-                  if (-1 != (((ifa) this).field_m ^ -1)) {
+                  if (((ifa) this).field_m != 0) {
                     if (((ifa) this).field_m == 2) {
                       L5: {
                         var17 = var16;
-                        // wide iinc 7 -2048
-                        if (-1 >= (var7 ^ -1)) {
+                        var7 -= 2048;
+                        if (var7 >= 0) {
                           break L5;
                         } else {
                           var7 = -var7;
@@ -189,13 +329,13 @@ final class ifa extends ci {
                         }
                       }
                       var17 = var16;
-                      var7 = 2048 - var7 << -1751985759;
+                      var7 = 2048 - var7 << 1;
                       break L4;
                     } else {
                       break L4;
                     }
                   } else {
-                    var7 = 4096 + ou.field_e[(var7 & 4088) >> 132274564] >> 216772257;
+                    var7 = 4096 + ou.field_e[(var7 & 4088) >> 4] >> 1;
                     break L4;
                   }
                 }
@@ -213,78 +353,169 @@ final class ifa extends ci {
     }
 
     final static void a(String[] args, int param1, String param2, byte param3) {
-        int var4 = 0;
-        String[] var4_ref_String__ = null;
+        RuntimeException var4 = null;
+        int var4_int = 0;
+        String[] var4_array = null;
         int var5 = 0;
         Object var6 = null;
-        int stackIn_2_0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_4_0 = 0;
-        int stackIn_4_1 = 0;
-        int stackOut_1_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_5_1 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_4_1 = 0;
         int stackOut_3_0 = 0;
         int stackOut_3_1 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_2_1 = 0;
-        L0: {
-          var5 = TombRacer.field_G ? 1 : 0;
-          wt.field_d = mua.field_a;
-          if (255 != param1) {
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
             L1: {
-              if ((param1 ^ -1) > -101) {
+              wt.field_d = mua.field_a;
+              if (255 != param1) {
+                L2: {
+                  if (param1 < 100) {
+                    break L2;
+                  } else {
+                    if (param1 <= 105) {
+                      var4_array = args;
+                      ow.a((byte) -109, var4_array);
+                      oo.field_t = pla.a(90, args);
+                      break L1;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                oo.field_t = doa.a(param2, param1, (byte) 114);
                 break L1;
               } else {
-                if (param1 <= 105) {
-                  var4_ref_String__ = args;
-                  ow.a((byte) -109, var4_ref_String__);
-                  oo.field_t = pla.a(90, args);
-                  break L0;
-                } else {
-                  break L1;
+                L3: {
+                  stackOut_2_0 = 97;
+                  stackIn_4_0 = stackOut_2_0;
+                  stackIn_3_0 = stackOut_2_0;
+                  if (wua.field_n >= 13) {
+                    stackOut_4_0 = stackIn_4_0;
+                    stackOut_4_1 = 0;
+                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_1 = stackOut_4_1;
+                    break L3;
+                  } else {
+                    stackOut_3_0 = stackIn_3_0;
+                    stackOut_3_1 = 1;
+                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_1 = stackOut_3_1;
+                    break L3;
+                  }
                 }
+                oo.field_t = es.a((byte) stackIn_5_0, stackIn_5_1 != 0);
+                var6 = null;
+                ow.a((byte) -101, (String[]) null);
+                break L1;
               }
             }
-            oo.field_t = doa.a(param2, param1, (byte) 114);
-            break L0;
-          } else {
-            L2: {
-              stackOut_1_0 = 97;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
-              if (-14 >= (wua.field_n ^ -1)) {
-                stackOut_3_0 = stackIn_3_0;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                break L2;
-              } else {
-                stackOut_2_0 = stackIn_2_0;
-                stackOut_2_1 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                break L2;
-              }
-            }
-            oo.field_t = es.a((byte) stackIn_4_0, stackIn_4_1 != 0);
-            var6 = null;
-            ow.a((byte) -101, (String[]) null);
+            var4_int = -1;
             break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_1 = new StringBuilder().append("ifa.E(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (args == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param1).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param2 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L5;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L5;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 100 + 41);
         }
-        var4 = -13 % ((param3 - -59) / 56);
     }
 
     final static void d(int param0, int param1) {
-        k.field_A = param0 >> 1126681028 & param1;
-        if ((k.field_A ^ -1) < -3) {
+        k.field_A = param0 >> 4 & 3;
+        if (k.field_A > 2) {
             k.field_A = 2;
         }
-        nba.field_b = 3 & param0 >> 42192226;
+        nba.field_b = 3 & param0 >> 2;
         if (2 < nba.field_b) {
             nba.field_b = 2;
         }
         caa.field_i = 3 & param0;
-        if ((caa.field_i ^ -1) < -3) {
+        if (caa.field_i > 2) {
             caa.field_i = 2;
         }
     }
@@ -300,9 +531,10 @@ final class ifa extends ci {
         field_p = new long[256];
         var2 = 0;
         L0: while (true) {
-          if (-257 >= (var2 ^ -1)) {
+          if (var2 >= 256) {
             field_r = "You must play <%1> more rated games before playing with the current options.";
             field_s = "No";
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;
@@ -312,8 +544,8 @@ final class ifa extends ci {
                 var2++;
                 continue L0;
               } else {
-                if (-2L == (1L & var0 ^ -1L)) {
-                  var0 = -3932672073523589310L ^ var0 >>> 1912067585;
+                if ((1L & var0) == 1L) {
+                  var0 = -3932672073523589310L ^ var0 >>> 1;
                   var3++;
                   continue L1;
                 } else {

@@ -21,7 +21,7 @@ final class cg {
         int var3 = 0;
         int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         te discarded$0 = ub.a((byte) 70, im.field_v[13]);
-        for (var2 = param0; ((cg) this).field_h > var2; var2++) {
+        for (var2 = 0; ((cg) this).field_h > var2; var2++) {
             for (var3 = 0; var3 < ((cg) this).field_f; var3++) {
                 ((cg) this).field_e[var2 - -(((cg) this).field_h * var3)] = qn.field_d[((cg) this).field_l + var2 - -((((cg) this).field_k + var3) * qn.field_l)];
             }
@@ -32,9 +32,6 @@ final class cg {
         int var4 = th.a(param0, 1, param1);
         if (!(var4 <= param1 / 2)) {
             var4 = param1 - var4;
-        }
-        if (param2 != 13) {
-            return -127;
         }
         return var4;
     }
@@ -75,7 +72,7 @@ final class cg {
                     var7 = qn.field_d[var6];
                     var8 = ((cg) this).field_e[var5];
                     var9 = (-param1 + ((cg) this).field_d[var5]) * 256 / 8;
-                    qn.field_d[var6] = oe.c(oe.c(var9 * rn.a(var8, 255) + rn.a(var7, 255) * (-var9 + 256) >> -682449336, rn.a(var9 * (rn.a(var8, 65280) >> 1852188584) - -((-var9 + 256) * (rn.a(var7, 65280) >> 1895087432)), 65280)), rn.a((rn.a(var7, 16711680) >> -2022715408) * (256 - var9) + (rn.a(var8, 16711680) >> -2037990096) * var9 << 140585832, 16711851));
+                    qn.field_d[var6] = oe.c(oe.c(var9 * rn.a(var8, 255) + rn.a(var7, 255) * (-var9 + 256) >> 8, rn.a(var9 * (rn.a(var8, 65280) >> 8) - -((-var9 + 256) * (rn.a(var7, 65280) >> 8)), 65280)), rn.a((rn.a(var7, 16711680) >> 16) * (256 - var9) + (rn.a(var8, 16711680) >> 16) * var9 << 8, 16711851));
                     var4++;
                     continue L2;
                   } else {
@@ -133,6 +130,7 @@ final class cg {
             L1: while (true) {
               if (var2 >= ((cg) this).field_h) {
                 this.a(0);
+                return;
               } else {
                 var3 = 0;
                 L2: while (true) {

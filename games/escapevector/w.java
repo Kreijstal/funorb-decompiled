@@ -18,117 +18,60 @@ final class w extends vg {
     }
 
     final static rk[] c(boolean param0) {
-        if (param0) {
-            return null;
-        }
         return bf.field_M;
     }
 
     final void a(int param0, String param1, float param2, boolean param3) {
-        int var5 = 0;
-        int stackIn_3_0 = 0;
-        Object stackIn_6_0 = null;
-        Object stackIn_7_0 = null;
-        Object stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        L0: {
-          var5 = 46 / ((param0 - -43) / 54);
-          if (param3) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        if (stackIn_3_0 == (((w) this).field_eb ? 1 : 0)) {
-          L1: {
-            stackOut_5_0 = this;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
-            if (!param3) {
-              stackOut_7_0 = this;
-              stackOut_7_1 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              break L1;
-            } else {
-              stackOut_6_0 = this;
-              stackOut_6_1 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              break L1;
+        try {
+            int var5_int = 46 / ((param0 - -43) / 54);
+            if ((!param3 ? 1 : 0) == (((w) this).field_eb ? 1 : 0)) {
+                ((w) this).field_eb = param3 ? true : false;
+                if (((w) this).field_eb) {
+                    ((w) this).field_cb.a(4210752, 8405024, -127);
+                    ((w) this).field_cb.field_G = true;
+                } else {
+                    ((w) this).field_cb.a(4210752, 2113632, -127);
+                    if (!(!((w) this).field_gb)) {
+                        ((w) this).field_cb.field_G = false;
+                    }
+                }
             }
-          }
-          ((w) this).field_eb = stackIn_8_1 != 0;
-          if (!((w) this).field_eb) {
-            ((w) this).field_cb.a(4210752, 2113632, -127);
-            if (!((w) this).field_gb) {
-              ((w) this).field_db = param1;
-              ((w) this).field_cb.field_B = (int)(param2 / 100.0f * 65536.0f);
-              return;
-            } else {
-              ((w) this).field_cb.field_G = false;
-              ((w) this).field_db = param1;
-              ((w) this).field_cb.field_B = (int)(param2 / 100.0f * 65536.0f);
-              return;
-            }
-          } else {
-            ((w) this).field_cb.a(4210752, 8405024, -127);
-            ((w) this).field_cb.field_G = true;
             ((w) this).field_db = param1;
             ((w) this).field_cb.field_B = (int)(param2 / 100.0f * 65536.0f);
-            return;
-          }
-        } else {
-          ((w) this).field_db = param1;
-          ((w) this).field_cb.field_B = (int)(param2 / 100.0f * 65536.0f);
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "w.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 
     public static void n(int param0) {
         field_fb = null;
         field_hb = null;
-        if (param0 != 300) {
-          field_hb = null;
-          field_ab = null;
-          field_bb = null;
-          return;
-        } else {
-          field_ab = null;
-          field_bb = null;
-          return;
-        }
+        field_ab = null;
+        field_bb = null;
     }
 
     w(tb param0, String param1) {
         super(param0, 300, 120);
-        int var3 = 0;
-        ((w) this).field_Z = param1;
-        if (null != ((w) this).field_Z) {
-            var3 = dl.field_b.b(((w) this).field_Z, 260, dl.field_b.field_r);
-            ((w) this).b(255, 150 - -var3, 300);
+        int var3_int = 0;
+        try {
+            ((w) this).field_Z = param1;
+            if (null != ((w) this).field_Z) {
+                var3_int = dl.field_b.b(((w) this).field_Z, 260, dl.field_b.field_r);
+                ((w) this).b(255, 150 - -var3_int, 300);
+            }
+            ((w) this).field_cb = new jm(13, 50, 274, 30, 15, 2113632, 4210752);
+            ((w) this).field_cb.field_G = true;
+            ((w) this).field_eb = false;
+            ((w) this).field_gb = false;
+            ((w) this).b((hm) (Object) ((w) this).field_cb, false);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "w.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((w) this).field_cb = new jm(13, 50, 274, 30, 15, 2113632, 4210752);
-        ((w) this).field_cb.field_G = true;
-        ((w) this).field_eb = false;
-        ((w) this).field_gb = false;
-        ((w) this).b((hm) (Object) ((w) this).field_cb, false);
     }
 
     final void b(int param0, int param1, byte param2) {
         super.b(param0, param1, (byte) 109);
-        dl.field_b.c(((w) this).field_db, param1 + (((w) this).field_g >> -135666879), 103 + param0, 16777215, -1);
+        dl.field_b.c(((w) this).field_db, param1 + (((w) this).field_g >> 1), 103 + param0, 16777215, -1);
         if (param2 >= 80) {
           if (((w) this).field_Z != null) {
             em.e(param1 - -20, -7 + (120 + param0), 260, 8421504);

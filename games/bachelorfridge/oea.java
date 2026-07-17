@@ -17,7 +17,11 @@ final class oea extends ul {
 
     oea(Object param0, int param1) {
         super(param1);
-        ((oea) this).field_r = param0;
+        try {
+            ((oea) this).field_r = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "oea.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final Object e(int param0) {

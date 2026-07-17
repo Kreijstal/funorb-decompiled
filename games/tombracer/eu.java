@@ -7,9 +7,6 @@ final class eu {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 <= 29) {
-            return;
-        }
         field_b = null;
         field_a = null;
     }

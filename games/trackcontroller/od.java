@@ -19,9 +19,6 @@ final class od {
         field_b = null;
         field_c = null;
         field_a = null;
-        if (param0 != 8192) {
-            field_a = null;
-        }
     }
 
     static {

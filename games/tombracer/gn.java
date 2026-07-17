@@ -11,32 +11,28 @@ abstract class gn extends b {
     static String field_A;
 
     private final int b(boolean param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
+        int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
-        if (param0) {
-          return 84;
-        } else {
-          L0: {
-            if (!((gn) this).field_B) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
+        int stackOut_2_0 = 0;
+        L0: {
+          if (!((gn) this).field_B) {
+            stackOut_4_0 = 0;
+            stackIn_5_0 = stackOut_4_0;
+            break L0;
+          } else {
+            if (this != (Object) (Object) ((gn) this).field_z.a((byte) -76)) {
+              stackOut_3_0 = 0;
+              stackIn_5_0 = stackOut_3_0;
               break L0;
             } else {
-              if (this != (Object) (Object) ((gn) this).field_z.a((byte) -76)) {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
-                break L0;
-              } else {
-                stackOut_3_0 = 256;
-                stackIn_6_0 = stackOut_3_0;
-                break L0;
-              }
+              stackOut_2_0 = 256;
+              stackIn_5_0 = stackOut_2_0;
+              break L0;
             }
           }
-          return stackIn_6_0;
         }
+        return stackIn_5_0;
     }
 
     public static void c(int param0) {
@@ -174,27 +170,30 @@ abstract class gn extends b {
     }
 
     gn(jta param0, int param1, int param2) {
-        super(bb.field_m - param1 >> -857858847, -param2 + qba.field_a >> 964196801, param1, param2, (isa) null);
-        ((gn) this).field_x = 0;
-        ((gn) this).field_z = param0;
-        ((gn) this).field_B = false;
+        super(bb.field_m - param1 >> 1, -param2 + qba.field_a >> 1, param1, param2, (isa) null);
+        try {
+            ((gn) this).field_x = 0;
+            ((gn) this).field_z = param0;
+            ((gn) this).field_B = false;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "gn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (((gn) this).field_x != -1) {
-          if (-257 <= ((gn) this).field_x) {
-            if (-1 != (param3 ^ -1)) {
-              return;
-            } else {
+        if (((gn) this).field_x != 0) {
+          if (((gn) this).field_x >= 256) {
+            if (param3 == 0) {
               ((gn) this).a(param1 + ((gn) this).field_n, (byte) -67, ((gn) this).field_i + param0);
               super.a(param0, param1, 0, param3);
+              return;
+            } else {
               return;
             }
           } else {
             if (fta.field_a != null) {
               if (fta.field_a.field_m >= ((gn) this).field_m) {
-                if (fta.field_a.field_q < ((gn) this).field_p) {
-                  fta.field_a = new iu(((gn) this).field_m, ((gn) this).field_p);
+                if (fta.field_a.field_q >= ((gn) this).field_p) {
                   nm.a(fta.field_a, (byte) 118);
                   bea.a();
                   ((gn) this).a(0, (byte) -67, 0);
@@ -203,6 +202,7 @@ abstract class gn extends b {
                   fta.field_a.c(param0 + ((gn) this).field_i, ((gn) this).field_n + param1, ((gn) this).field_x);
                   return;
                 } else {
+                  fta.field_a = new iu(((gn) this).field_m, ((gn) this).field_p);
                   nm.a(fta.field_a, (byte) 118);
                   bea.a();
                   ((gn) this).a(0, (byte) -67, 0);
@@ -242,10 +242,10 @@ abstract class gn extends b {
     final void c(int param0, int param1, int param2) {
         if (param0 != -11560) {
           ((gn) this).field_B = false;
-          ((gn) this).a((byte) -31, param2, param1, -param2 + bb.field_m >> -1836968479, qba.field_a + -param1 >> -229002495);
+          ((gn) this).a((byte) -31, param2, param1, -param2 + bb.field_m >> 1, qba.field_a + -param1 >> 1);
           return;
         } else {
-          ((gn) this).a((byte) -31, param2, param1, -param2 + bb.field_m >> -1836968479, qba.field_a + -param1 >> -229002495);
+          ((gn) this).a((byte) -31, param2, param1, -param2 + bb.field_m >> 1, qba.field_a + -param1 >> 1);
           return;
         }
     }

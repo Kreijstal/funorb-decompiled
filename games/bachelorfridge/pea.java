@@ -8,33 +8,23 @@ final class pea extends pp {
     private int field_i;
 
     final void a(aga param0, op param1, int param2) {
-        aga var4 = null;
-        L0: {
-          var4 = null;
-          if (null == ((pea) this).field_h) {
-            break L0;
-          } else {
-            var4 = ((pea) this).field_h.a(116, param1);
-            break L0;
-          }
+        Object var4 = null;
+        if (null != ((pea) this).field_h) {
+            var4 = (Object) (Object) ((pea) this).field_h.a(116, param1);
         }
-        L1: {
-          if (var4 != null) {
-            break L1;
-          } else {
-            var4 = param1.c(((pea) this).field_j, ((pea) this).field_i, 112);
-            break L1;
-          }
+        if (var4 == null) {
+            var4 = (Object) (Object) param1.c(((pea) this).field_j, ((pea) this).field_i, 112);
         }
-        if (var4 != null) {
-          if (param2 != 12) {
+        if (var4 == null) {
             return;
-          } else {
-            var4.field_A = false;
+        }
+        if (param2 != 12) {
             return;
-          }
-        } else {
-          return;
+        }
+        try {
+            ((aga) var4).field_A = false;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "pea.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -49,37 +39,50 @@ final class pea extends pp {
     }
 
     final void a(lu param0, byte param1) {
-        int var3 = 23 % ((param1 - 34) / 58);
-        this.a(param0, (byte) 113);
-        er.a(((pea) this).field_h, 115, param0);
-        param0.d(((pea) this).field_j, 0);
-        param0.d(((pea) this).field_i, 0);
+        try {
+            int var3_int = 23 % ((param1 - 34) / 58);
+            super.a(param0, (byte) 113);
+            er.a(((pea) this).field_h, 115, param0);
+            param0.d(((pea) this).field_j, 0);
+            param0.d(((pea) this).field_i, 0);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "pea.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     pea(nq param0, int param1, int param2) {
-        ((pea) this).field_i = param2;
-        ((pea) this).field_h = param0;
-        ((pea) this).field_j = param1;
+        try {
+            ((pea) this).field_i = param2;
+            ((pea) this).field_h = param0;
+            ((pea) this).field_j = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "pea.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final static void d(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = BachelorFridge.field_y;
-        var1 = 0;
-        L0: while (true) {
-          if (rn.field_s.field_g.field_m.length <= var1) {
-            if (param0 <= 113) {
-              pea.e((byte) 34);
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            var1_int = 0;
+            L1: while (true) {
+              if (rn.field_s.field_g.field_m.length <= var1_int) {
+                break L0;
+              } else {
+                rn.field_s.field_g.field_m[var1_int] = -1;
+                var1_int++;
+                continue L1;
+              }
             }
-          } else {
-            rn.field_s.field_g.field_m[var1] = -1;
-            var1++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pe.a((Throwable) (Object) var1, "pea.B(" + 120 + 41);
         }
     }
 

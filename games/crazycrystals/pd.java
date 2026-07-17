@@ -15,9 +15,6 @@ abstract class pd extends oh {
 
     public static void a(boolean param0) {
         field_f = null;
-        if (!param0) {
-            return;
-        }
         field_g = null;
     }
 

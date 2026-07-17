@@ -11,23 +11,18 @@ final class sua extends kna {
     static int field_I;
 
     public static void B(int param0) {
-        if (param0 <= 19) {
-          sua.r((byte) 98);
-          field_G = null;
-          field_K = null;
-          field_H = null;
-          return;
-        } else {
-          field_G = null;
-          field_K = null;
-          field_H = null;
-          return;
-        }
+        field_G = null;
+        field_K = null;
+        field_H = null;
     }
 
     final void a(la param0, int param1) {
-        super.a(param0, param1);
-        ((sua) this).field_F = -((sua) this).field_F;
+        try {
+            super.a(param0, param1);
+            ((sua) this).field_F = -((sua) this).field_F;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sua.BB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void q(byte param0) {
@@ -38,7 +33,7 @@ final class sua extends kna {
 
     final static void r(byte param0) {
         int var1 = 0;
-        if ((ot.field_v ^ -1) <= -225) {
+        if (ot.field_v >= 224) {
           mp.a(2, 256);
           if (param0 == 63) {
             return;
@@ -67,33 +62,100 @@ final class sua extends kna {
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        param1.a((byte) -38, dqa.a(!param0 ? true : false, ((sua) this).field_F, 5), 5);
+        try {
+            super.a(param0, param1);
+            param1.a((byte) -38, dqa.a(!param0 ? true : false, ((sua) this).field_F, 5), 5);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sua.V(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final fsa a(boolean param0, int param1, la param2) {
-        fsa var8 = new fsa(param2, param0);
-        var8.b((byte) -11, ((sua) this).field_k, ((sua) this).field_l);
-        var8.h(param1, 0);
-        var8.a(1, (byte) -12, true);
-        var8.a((byte) -3, 6);
-        var8.b((byte) 17, false);
-        var8.g(param1 ^ 109, 2);
-        var8.a((byte) 83, (nv) (Object) new eq(param2, param0));
-        spa var5 = new spa(param2, param0);
-        var5.a((byte) -124, ((sua) this).field_F * 8);
-        var8.a((wda) (Object) var5, 0);
-        mfa var6 = rm.field_a;
-        nq var7 = (nq) (Object) var6.a(16, 124);
-        var7.b(8022, 2);
-        var8.a((gr) (Object) var5, (byte) 124, (dg) (Object) var7);
-        return var8;
+        RuntimeException var4 = null;
+        spa var5 = null;
+        mfa var6 = null;
+        nq var7 = null;
+        fsa var8 = null;
+        fsa stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        fsa stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var8 = new fsa(param2, param0);
+            var8.b((byte) -11, ((sua) this).field_k, ((sua) this).field_l);
+            var8.h(param1, 0);
+            var8.a(1, (byte) -12, true);
+            var8.a((byte) -3, 6);
+            var8.b((byte) 17, false);
+            var8.g(param1 ^ 109, 2);
+            var8.a((byte) 83, (nv) (Object) new eq(param2, param0));
+            var5 = new spa(param2, param0);
+            var5.a((byte) -124, ((sua) this).field_F * 8);
+            var8.a((wda) (Object) var5, 0);
+            var6 = rm.field_a;
+            var7 = (nq) (Object) var6.a(16, 124);
+            var7.b(8022, 2);
+            var8.a((gr) (Object) var5, (byte) 124, (dg) (Object) var7);
+            stackOut_0_0 = (fsa) var8;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_1 = new StringBuilder().append("sua.AC(").append(param0).append(44).append(param1).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param2 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+        }
+        return stackIn_1_0;
     }
 
     sua(la param0, int param1, kh param2, csa param3) {
         super(param0, param1, param2, param3);
         ((sua) this).field_F = 4;
-        ((sua) this).field_F = bla.a(true, 5, param2.b((byte) 44, 5));
+        try {
+            ((sua) this).field_F = bla.a(true, 5, param2.b((byte) 44, 5));
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sua.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean z(int param0) {
@@ -105,10 +167,11 @@ final class sua extends kna {
     }
 
     final static byte[] a(byte[] param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int var5_int = 0;
         byte[] var5 = null;
+        int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
         Throwable var8 = null;
@@ -121,154 +184,143 @@ final class sua extends kna {
         byte[] var15 = null;
         byte[] var16 = null;
         byte[] var17 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var9 = new uia(param0);
-                    var3 = var9.h(255);
-                    var4 = var9.e(124);
-                    if (param1 <= -99) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    goa discarded$4 = sua.A(-108);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (var4 > -1) {
-                        statePc = 6;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (0 == oma.field_H) {
-                        statePc = 7;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
+        byte[] stackIn_21_0 = null;
+        byte[] stackIn_23_0 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        Throwable decompiledCaughtException = null;
+        byte[] stackOut_22_0 = null;
+        byte[] stackOut_20_0 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        try {
+          L0: {
+            L1: {
+              var9 = new uia(param0);
+              var3 = var9.h(255);
+              var4 = var9.e(124);
+              if (param1 <= -99) {
+                break L1;
+              } else {
+                goa discarded$2 = sua.A(-108);
+                break L1;
+              }
+            }
+            L2: {
+              if (var4 < 0) {
+                break L2;
+              } else {
+                L3: {
+                  if (0 == oma.field_H) {
+                    break L3;
+                  } else {
                     if (oma.field_H >= var4) {
-                        statePc = 7;
+                      break L3;
                     } else {
-                        statePc = 6;
+                      break L2;
                     }
-                    continue stateLoop;
+                  }
                 }
-                case 6: {
-                    throw new RuntimeException();
-                }
-                case 7: {
-                    if (-1 == var3) {
-                        statePc = 21;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
+                if (var3 == 0) {
+                  var17 = new byte[var4];
+                  var15 = var17;
+                  var13 = var15;
+                  var11 = var13;
+                  var5 = var11;
+                  var9.a(var17, 0, -86, var4);
+                  stackOut_22_0 = (byte[]) var5;
+                  stackIn_23_0 = stackOut_22_0;
+                  break L0;
+                } else {
+                  L4: {
                     var5_int = var9.e(-127);
                     if (var5_int < 0) {
-                        statePc = 12;
+                      break L4;
                     } else {
-                        statePc = 9;
+                      L5: {
+                        if (oma.field_H == 0) {
+                          break L5;
+                        } else {
+                          if (~var5_int < ~oma.field_H) {
+                            break L4;
+                          } else {
+                            break L5;
+                          }
+                        }
+                      }
+                      L6: {
+                        var16 = new byte[var5_int];
+                        var14 = var16;
+                        var12 = var14;
+                        var10 = var12;
+                        var6 = var10;
+                        if (var3 == 1) {
+                          int discarded$3 = kr.a(var16, var5_int, param0, var4, 9);
+                          break L6;
+                        } else {
+                          var7 = (Object) (Object) sma.field_e;
+                          synchronized (var7) {
+                            L7: {
+                              sma.field_e.a((byte) -34, var16, var9);
+                              break L7;
+                            }
+                          }
+                          break L6;
+                        }
+                      }
+                      stackOut_20_0 = (byte[]) var6;
+                      stackIn_21_0 = stackOut_20_0;
+                      return stackIn_21_0;
                     }
-                    continue stateLoop;
+                  }
+                  throw new RuntimeException();
                 }
-                case 9: {
-                    if (oma.field_H == 0) {
-                        statePc = 13;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
-                    if (var5_int > oma.field_H) {
-                        statePc = 12;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    throw new RuntimeException();
-                }
-                case 13: {
-                    var16 = new byte[var5_int];
-                    var14 = var16;
-                    var12 = var14;
-                    var10 = var12;
-                    var6 = var10;
-                    if (-2 == (var3 ^ -1)) {
-                        statePc = 19;
-                    } else {
-                        statePc = 14;
-                    }
-                    continue stateLoop;
-                }
-                case 14: {
-                    var7 = (Object) (Object) sma.field_e;
-                    // monitorenter sma.field_e
-                    statePc = 15;
-                    continue stateLoop;
-                }
-                case 15: {
-                    try {
-                        sma.field_e.a((byte) -34, var16, var9);
-                        // monitorexit var7
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        var8 = caughtException;
-                        // monitorexit var7
-                        statePc = 18;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    throw (RuntimeException) (Object) var8;
-                }
-                case 19: {
-                    int discarded$5 = kr.a(var16, var5_int, param0, var4, 9);
-                    return var6;
-                }
-                case 20: {
-                    return var6;
-                }
-                case 21: {
-                    var17 = new byte[var4];
-                    var15 = var17;
-                    var13 = var15;
-                    var11 = var13;
-                    var5 = var11;
-                    var9.a(var17, 0, -86, var4);
-                    return var5;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            throw new RuntimeException();
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_24_0 = (RuntimeException) var2;
+            stackOut_24_1 = new StringBuilder().append("sua.UB(");
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
+            if (param0 == null) {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L8;
+            } else {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L8;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 41);
         }
+        return stackIn_23_0;
     }
 
     final int t(int param0) {
@@ -304,7 +356,7 @@ final class sua extends kna {
         var1 = cs.a((byte) -112);
         if (param0 >= 46) {
           if (var1 != null) {
-            if (-1 < (var1.indexOf('@') ^ -1)) {
+            if (var1.indexOf('@') < 0) {
               return new goa(cs.a((byte) 94), npa.a(32));
             } else {
               var1 = "";

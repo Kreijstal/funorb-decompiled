@@ -20,23 +20,18 @@ final class wk extends nm {
     }
 
     final void a(int param0, wq param1) {
-        if (param0 != -12988) {
-          ((wk) this).field_i = -16;
-          ((wk) this).field_n = param1.i(param0 ^ -52668);
-          ((wk) this).field_o = op.a(false, 1 + ((wk) this).field_n);
-          ((wk) this).field_q = param1.e(255);
-          ((wk) this).field_l = param1.l(255);
-          ((wk) this).field_i = param1.e(param0 ^ -12869);
-          ((wk) this).field_j = param1.a((byte) 24);
-          return;
-        } else {
-          ((wk) this).field_n = param1.i(param0 ^ -52668);
-          ((wk) this).field_o = op.a(false, 1 + ((wk) this).field_n);
-          ((wk) this).field_q = param1.e(255);
-          ((wk) this).field_l = param1.l(255);
-          ((wk) this).field_i = param1.e(param0 ^ -12869);
-          ((wk) this).field_j = param1.a((byte) 24);
-          return;
+        try {
+            if (param0 != -12988) {
+                ((wk) this).field_i = -16;
+            }
+            ((wk) this).field_n = param1.i(param0 ^ -52668);
+            ((wk) this).field_o = op.a(false, 1 + ((wk) this).field_n);
+            ((wk) this).field_q = param1.e(255);
+            ((wk) this).field_l = param1.l(255);
+            ((wk) this).field_i = param1.e(param0 ^ -12869);
+            ((wk) this).field_j = param1.a((byte) 24);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "wk.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

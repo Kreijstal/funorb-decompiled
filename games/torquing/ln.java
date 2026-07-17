@@ -9,11 +9,13 @@ final class ln extends jh {
     static int field_G;
 
     final static void a(int param0, int param1, uf[] param2, byte param3) {
-        if (param3 != -58) {
-            field_G = 10;
+        uf var4 = null;
+        try {
+            var4 = param2[param2.length + -1];
+            var4.a(param0, param1, 86);
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "ln.NA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -58 + 41);
         }
-        uf var4 = param2[param2.length + -1];
-        var4.a(param0, param1, 86);
     }
 
     final void h(int param0) {
@@ -71,20 +73,22 @@ final class ln extends jh {
 
     public static void h(byte param0) {
         field_H = null;
-        if (param0 < 81) {
-            int discarded$0 = ln.a(3, -20, 23, 107);
-        }
     }
 
     final void a(gm param0, byte param1) {
-        if (!(param0 instanceof bb)) {
-            throw new IllegalArgumentException();
+        bb var3 = null;
+        try {
+            if (!(param0 instanceof bb)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (bb) (Object) param0;
+            ((ln) this).field_E.b((byte) 68, (q) (Object) var3);
+            var3.field_D = true;
+            int var4 = 107 % ((param1 - 18) / 61);
+            boolean discarded$0 = var3.a((gm) this, false);
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "ln.QA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        bb var3 = (bb) (Object) param0;
-        ((ln) this).field_E.b((byte) 68, (q) (Object) var3);
-        var3.field_D = true;
-        int var4 = 107 % ((param1 - 18) / 61);
-        boolean discarded$0 = var3.a((gm) this, false);
     }
 
     public ln() {

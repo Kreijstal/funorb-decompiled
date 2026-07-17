@@ -13,7 +13,7 @@ class wf {
           ((wf) this).field_a.field_c = ((wf) this).field_c;
           ((wf) this).field_a = null;
           if (param0 >= -122) {
-            ((wf) this).field_a = (wf) null;
+            ((wf) this).field_a = null;
             ((wf) this).field_c = null;
             return;
           } else {
@@ -33,7 +33,7 @@ class wf {
             return true;
           }
         } else {
-          ((wf) this).field_a = (wf) null;
+          ((wf) this).field_a = null;
           if (((wf) this).field_c == null) {
             return false;
           } else {
@@ -44,30 +44,22 @@ class wf {
 
     public static void b(int param0) {
         field_d = null;
-        int var1 = -7 % ((param0 - 12) / 47);
+        int var1 = 0;
     }
 
     final static void a(long param0, boolean param1) {
         if (0L >= param0) {
           return;
         } else {
-          if (-1L == (param0 % 10L ^ -1L)) {
+          if (param0 % 10L != 0L) {
+            ci.a(param0, (byte) 105);
+            field_d = null;
+            return;
+          } else {
             ci.a(param0 - 1L, (byte) 127);
             ci.a(1L, (byte) 104);
-            if (!param1) {
-              return;
-            } else {
-              field_d = (hd) null;
-              return;
-            }
-          } else {
-            ci.a(param0, (byte) 105);
-            if (!param1) {
-              return;
-            } else {
-              field_d = (hd) null;
-              return;
-            }
+            field_d = null;
+            return;
           }
         }
     }

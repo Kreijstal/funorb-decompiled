@@ -106,32 +106,33 @@ final class ab {
 
     final static int c(int param0) {
         wi.field_L.a((byte) -84);
-        if (!ii.field_f.b((byte) 0)) {
-          return cd.a(-18067);
-        } else {
-          if (param0 != 14326) {
-            field_c = null;
+        if (ii.field_f.b((byte) 0)) {
             return 0;
-          } else {
-            return 0;
-          }
         }
+        return cd.a(-18067);
     }
 
     final static void a(kl param0, byte param1) {
-        int var3 = -63 % ((param1 - -44) / 42);
-        o var2 = new o(param0.a(104, "", "final_frame.jpg"), (java.awt.Component) (Object) wizardrun.field_G);
-        int var4 = var2.field_z;
-        int var5 = var2.field_p;
-        ph.d(-31782);
-        af.field_a = new o(var4, var5 * 3 / 4);
-        af.field_a.b();
-        var2.c(0, 0);
-        ee.field_q = new o(var4, -af.field_a.field_p + var5);
-        ee.field_q.b();
-        var2.c(0, -af.field_a.field_p);
-        ee.field_q.field_v = af.field_a.field_p;
-        bb.b(4);
+        o var2 = null;
+        int var4 = 0;
+        int var5 = 0;
+        try {
+            int var3 = 0;
+            var2 = new o(param0.a(104, "", "final_frame.jpg"), (java.awt.Component) (Object) wizardrun.field_G);
+            var4 = var2.field_z;
+            var5 = var2.field_p;
+            ph.d(-31782);
+            af.field_a = new o(var4, var5 * 3 / 4);
+            af.field_a.b();
+            var2.c(0, 0);
+            ee.field_q = new o(var4, -af.field_a.field_p + var5);
+            ee.field_q.b();
+            var2.c(0, -af.field_a.field_p);
+            ee.field_q.field_v = af.field_a.field_p;
+            bb.b(4);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "ab.B(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 41);
+        }
     }
 
     final static boolean d(int param0) {
@@ -171,32 +172,21 @@ final class ab {
     }
 
     final void a(wl param0, int param1, long param2) {
-        wl var5 = null;
-        if (null == param0.field_c) {
-          var5 = ((ab) this).field_d[(int)((long)(((ab) this).field_a + -1) & param2)];
-          if (param1 >= -1) {
+        if (null != param0.field_c) {
+            param0.a(false);
+        }
+        wl var5 = ((ab) this).field_d[(int)((long)(((ab) this).field_a + -1) & param2)];
+        if (param1 >= -1) {
             return;
-          } else {
+        }
+        try {
             param0.field_c = var5.field_c;
             param0.field_b = var5;
             param0.field_c.field_b = param0;
             param0.field_b.field_c = param0;
             param0.field_e = param2;
-            return;
-          }
-        } else {
-          param0.a(false);
-          var5 = ((ab) this).field_d[(int)((long)(((ab) this).field_a + -1) & param2)];
-          if (param1 >= -1) {
-            return;
-          } else {
-            param0.field_c = var5.field_c;
-            param0.field_b = var5;
-            param0.field_c.field_b = param0;
-            param0.field_b.field_c = param0;
-            param0.field_e = param2;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "ab.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 

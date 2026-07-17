@@ -6,7 +6,7 @@ final class nra implements dja {
     static String field_a;
 
     final static void b(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = 0;
         var2 = VoidHunters.field_G;
         if (vjb.field_a) {
@@ -25,9 +25,9 @@ final class nra implements dja {
             ocb.field_m[2] = aj.field_p;
             ocb.field_m[5] = eh.field_o;
             ocb.field_m[1] = nd.field_q;
-            var1 = 0;
+            var1_int = 0;
             L0: while (true) {
-              if (var1 >= ocb.field_m.length) {
+              if (var1_int >= ocb.field_m.length) {
                 ifa.field_g = new String[25];
                 ifa.field_g[9] = fma.field_b;
                 ifa.field_g[18] = ita.field_D;
@@ -52,88 +52,80 @@ final class nra implements dja {
                 ifa.field_g[16] = hv.field_p;
                 ifa.field_g[0] = ukb.field_p;
                 ifa.field_g[23] = gmb.field_b;
-                var1 = 0;
+                var1_int = 0;
                 L1: while (true) {
-                  if (ifa.field_g.length <= var1) {
-                    L2: {
-                      obb.field_o = new String[56];
-                      obb.field_o[53] = omb.field_o;
-                      obb.field_o[14] = jgb.field_o;
-                      obb.field_o[13] = vn.field_i;
-                      obb.field_o[7] = ws.field_o;
-                      obb.field_o[51] = ap.field_q;
-                      obb.field_o[39] = hlb.field_o;
-                      obb.field_o[5] = uh.field_r;
-                      obb.field_o[28] = qt.field_o;
-                      obb.field_o[22] = mla.field_o;
-                      obb.field_o[16] = bc.field_a;
-                      obb.field_o[12] = ne.field_m;
-                      obb.field_o[30] = wsb.field_c;
-                      obb.field_o[0] = ev.field_c;
-                      obb.field_o[26] = dqb.field_c;
-                      obb.field_o[19] = gcb.field_r;
-                      obb.field_o[10] = wgb.field_h;
-                      obb.field_o[29] = vla.field_C;
-                      obb.field_o[38] = seb.field_p;
-                      obb.field_o[54] = omb.field_o;
-                      obb.field_o[9] = gm.field_I;
-                      obb.field_o[2] = tl.field_q;
-                      obb.field_o[42] = ic.field_o;
-                      obb.field_o[34] = kc.field_a;
-                      obb.field_o[15] = fmb.field_q;
-                      obb.field_o[36] = ap.field_q;
-                      obb.field_o[45] = gca.field_o;
-                      obb.field_o[40] = kab.field_p;
-                      obb.field_o[31] = db.field_r;
-                      obb.field_o[48] = omb.field_o;
-                      obb.field_o[23] = kl.field_a;
-                      obb.field_o[21] = omb.field_o;
-                      obb.field_o[1] = iob.field_e;
-                      obb.field_o[25] = urb.field_p;
-                      obb.field_o[3] = fdb.field_S;
-                      obb.field_o[6] = kmb.field_b;
-                      obb.field_o[50] = omb.field_o;
-                      obb.field_o[41] = pn.field_a;
-                      obb.field_o[27] = skb.field_p;
-                      obb.field_o[47] = asa.field_d;
-                      obb.field_o[35] = bqb.field_p;
-                      obb.field_o[37] = lm.field_a;
-                      obb.field_o[33] = pma.field_p;
-                      obb.field_o[4] = pfa.field_a;
-                      obb.field_o[18] = vj.field_o;
-                      obb.field_o[44] = ena.field_r;
-                      obb.field_o[24] = grb.field_i;
-                      obb.field_o[43] = woa.field_e;
-                      obb.field_o[17] = cqa.field_o;
-                      obb.field_o[20] = ubb.field_k;
-                      jsb.field_e = new String[56];
-                      obb.field_o[8] = vob.field_q;
-                      obb.field_o[46] = dsb.field_o;
-                      obb.field_o[49] = omb.field_o;
-                      obb.field_o[32] = dob.field_q;
-                      obb.field_o[52] = omb.field_o;
-                      obb.field_o[11] = ufb.field_c;
-                      obb.field_o[55] = omb.field_o;
-                      jsb.field_e[30] = fib.field_h;
-                      jsb.field_e[39] = fib.field_h;
-                      jsb.field_e[20] = fib.field_h;
-                      jsb.field_e[24] = imb.field_b;
-                      jsb.field_e[44] = nva.field_I;
-                      jsb.field_e[22] = qja.field_o;
-                      jsb.field_e[46] = jjb.field_f;
-                      jsb.field_e[16] = jw.field_a;
-                      jsb.field_e[19] = fib.field_h;
-                      jsb.field_e[38] = fib.field_h;
-                      jsb.field_e[23] = u.field_o;
-                      jsb.field_e[26] = rf.field_o;
-                      jsb.field_e[18] = pb.field_n;
-                      if (param0 <= -91) {
-                        break L2;
-                      } else {
-                        field_b = 108;
-                        break L2;
-                      }
-                    }
+                  if (ifa.field_g.length <= var1_int) {
+                    obb.field_o = new String[56];
+                    obb.field_o[53] = omb.field_o;
+                    obb.field_o[14] = jgb.field_o;
+                    obb.field_o[13] = vn.field_i;
+                    obb.field_o[7] = ws.field_o;
+                    obb.field_o[51] = ap.field_q;
+                    obb.field_o[39] = hlb.field_o;
+                    obb.field_o[5] = uh.field_r;
+                    obb.field_o[28] = qt.field_o;
+                    obb.field_o[22] = mla.field_o;
+                    obb.field_o[16] = bc.field_a;
+                    obb.field_o[12] = ne.field_m;
+                    obb.field_o[30] = wsb.field_c;
+                    obb.field_o[0] = ev.field_c;
+                    obb.field_o[26] = dqb.field_c;
+                    obb.field_o[19] = gcb.field_r;
+                    obb.field_o[10] = wgb.field_h;
+                    obb.field_o[29] = vla.field_C;
+                    obb.field_o[38] = seb.field_p;
+                    obb.field_o[54] = omb.field_o;
+                    obb.field_o[9] = gm.field_I;
+                    obb.field_o[2] = tl.field_q;
+                    obb.field_o[42] = ic.field_o;
+                    obb.field_o[34] = kc.field_a;
+                    obb.field_o[15] = fmb.field_q;
+                    obb.field_o[36] = ap.field_q;
+                    obb.field_o[45] = gca.field_o;
+                    obb.field_o[40] = kab.field_p;
+                    obb.field_o[31] = db.field_r;
+                    obb.field_o[48] = omb.field_o;
+                    obb.field_o[23] = kl.field_a;
+                    obb.field_o[21] = omb.field_o;
+                    obb.field_o[1] = iob.field_e;
+                    obb.field_o[25] = urb.field_p;
+                    obb.field_o[3] = fdb.field_S;
+                    obb.field_o[6] = kmb.field_b;
+                    obb.field_o[50] = omb.field_o;
+                    obb.field_o[41] = pn.field_a;
+                    obb.field_o[27] = skb.field_p;
+                    obb.field_o[47] = asa.field_d;
+                    obb.field_o[35] = bqb.field_p;
+                    obb.field_o[37] = lm.field_a;
+                    obb.field_o[33] = pma.field_p;
+                    obb.field_o[4] = pfa.field_a;
+                    obb.field_o[18] = vj.field_o;
+                    obb.field_o[44] = ena.field_r;
+                    obb.field_o[24] = grb.field_i;
+                    obb.field_o[43] = woa.field_e;
+                    obb.field_o[17] = cqa.field_o;
+                    obb.field_o[20] = ubb.field_k;
+                    jsb.field_e = new String[56];
+                    obb.field_o[8] = vob.field_q;
+                    obb.field_o[46] = dsb.field_o;
+                    obb.field_o[49] = omb.field_o;
+                    obb.field_o[32] = dob.field_q;
+                    obb.field_o[52] = omb.field_o;
+                    obb.field_o[11] = ufb.field_c;
+                    obb.field_o[55] = omb.field_o;
+                    jsb.field_e[30] = fib.field_h;
+                    jsb.field_e[39] = fib.field_h;
+                    jsb.field_e[20] = fib.field_h;
+                    jsb.field_e[24] = imb.field_b;
+                    jsb.field_e[44] = nva.field_I;
+                    jsb.field_e[22] = qja.field_o;
+                    jsb.field_e[46] = jjb.field_f;
+                    jsb.field_e[16] = jw.field_a;
+                    jsb.field_e[19] = fib.field_h;
+                    jsb.field_e[38] = fib.field_h;
+                    jsb.field_e[23] = u.field_o;
+                    jsb.field_e[26] = rf.field_o;
+                    jsb.field_e[18] = pb.field_n;
                     jsb.field_e[15] = pwa.field_a;
                     jsb.field_e[13] = qmb.field_o;
                     jsb.field_e[41] = fib.field_h;
@@ -221,9 +213,9 @@ final class nra implements dja {
                     tq.field_o[29] = ifa.field_e;
                     tq.field_o[6] = ssa.field_b;
                     tq.field_o[11] = boa.field_b;
-                    var1 = 0;
-                    L3: while (true) {
-                      if (var1 >= obb.field_o.length) {
+                    var1_int = 0;
+                    L2: while (true) {
+                      if (var1_int >= obb.field_o.length) {
                         ih.field_f = new String[31];
                         ih.field_f[2] = enb.field_a;
                         aqa.field_a = new String[31];
@@ -288,31 +280,35 @@ final class nra implements dja {
                         hr.field_o[7] = fla.field_o + " " + ti.field_i;
                         return;
                       } else {
-                        tq.field_o[var1 + 72] = isa.a(raa.field_o, new String[1], 126);
-                        var1++;
-                        continue L3;
+                        tq.field_o[var1_int + 72] = isa.a(raa.field_o, new String[1], 126);
+                        var1_int++;
+                        continue L2;
                       }
                     }
                   } else {
-                    if (null != ifa.field_g[var1]) {
-                      ifa.field_g[var1] = lqb.a(-1, ifa.field_g[var1]);
-                      var1++;
-                      continue L1;
-                    } else {
-                      var1++;
-                      continue L1;
+                    L3: {
+                      if (null != ifa.field_g[var1_int]) {
+                        ifa.field_g[var1_int] = lqb.a(-1, ifa.field_g[var1_int]);
+                        break L3;
+                      } else {
+                        break L3;
+                      }
                     }
+                    var1_int++;
+                    continue L1;
                   }
                 }
               } else {
-                if (ocb.field_m[var1] != null) {
-                  ocb.field_m[var1] = ocb.field_m[var1].toUpperCase();
-                  var1++;
-                  continue L0;
-                } else {
-                  var1++;
-                  continue L0;
+                L4: {
+                  if (ocb.field_m[var1_int] != null) {
+                    ocb.field_m[var1_int] = ocb.field_m[var1_int].toUpperCase();
+                    break L4;
+                  } else {
+                    break L4;
+                  }
                 }
+                var1_int++;
+                continue L0;
               }
             }
           }
@@ -336,7 +332,8 @@ final class nra implements dja {
     }
 
     final static int[] a(boolean param0, int[] param1, int param2, int param3, boolean param4) {
-        int[] var5 = null;
+        RuntimeException var5 = null;
+        int[] var5_array = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -349,125 +346,195 @@ final class nra implements dja {
         int[] var14 = null;
         int[] var15 = null;
         int[] var16 = null;
+        Object stackIn_3_0 = null;
+        int[] stackIn_8_0 = null;
+        int[] stackIn_19_0 = null;
+        int[] stackIn_37_0 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        String stackIn_41_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int[] stackOut_18_0 = null;
+        int[] stackOut_36_0 = null;
+        int[] stackOut_7_0 = null;
+        Object stackOut_2_0 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        String stackOut_39_2 = null;
         var8 = VoidHunters.field_G;
-        if (param3 == 28849) {
+        try {
           L0: {
-            if (param1 == null) {
-              break L0;
-            } else {
-              if (0 != param1.length) {
-                L1: {
-                  L2: {
-                    if (param4) {
-                      var5_int = 0;
-                      L3: while (true) {
-                        if (var5_int >= param1.length) {
-                          var10 = new int[1 + param1.length];
-                          var14 = var10;
-                          var12 = var14;
-                          var5 = var12;
-                          var6 = 0;
-                          L4: while (true) {
-                            if (param1.length <= var6) {
-                              break L2;
-                            } else {
-                              var10[var6] = param1[var6];
-                              var6++;
-                              continue L4;
-                            }
-                          }
-                        } else {
-                          if (param2 == param1[var5_int]) {
-                            return param1;
-                          } else {
-                            var5_int++;
-                            continue L3;
-                          }
-                        }
-                      }
-                    } else {
-                      var10 = new int[1 + param1.length];
-                      var14 = var10;
-                      var12 = var14;
-                      var5 = var12;
-                      if (param0) {
-                        var6 = 0;
-                        var7 = 0;
-                        L5: while (true) {
-                          L6: {
-                            if (var7 >= param1.length) {
-                              break L6;
-                            } else {
-                              if (param1[var7] >= param2) {
-                                break L6;
-                              } else {
-                                var6++;
-                                var7++;
-                                continue L5;
-                              }
-                            }
-                          }
-                          var7 = 0;
-                          L7: while (true) {
-                            if (var7 >= var6) {
-                              param1[var6] = param2;
-                              var7 = var6;
-                              L8: while (true) {
-                                if (param1.length <= var7) {
-                                  break L1;
+            if (param3 == 28849) {
+              L1: {
+                if (param1 == null) {
+                  break L1;
+                } else {
+                  if (0 != param1.length) {
+                    L2: {
+                      L3: {
+                        L4: {
+                          if (param4) {
+                            var5_int = 0;
+                            L5: while (true) {
+                              if (var5_int >= param1.length) {
+                                var10 = new int[1 + param1.length];
+                                var14 = var10;
+                                var12 = var14;
+                                var5_array = var12;
+                                if (param0) {
+                                  break L3;
                                 } else {
-                                  var5[var7 - -1] = param1[var7];
-                                  var7++;
-                                  continue L8;
+                                  var6 = 0;
+                                  L6: while (true) {
+                                    if (param1.length <= var6) {
+                                      break L4;
+                                    } else {
+                                      var10[var6] = param1[var6];
+                                      var6++;
+                                      continue L6;
+                                    }
+                                  }
+                                }
+                              } else {
+                                if (param2 == param1[var5_int]) {
+                                  stackOut_18_0 = (int[]) param1;
+                                  stackIn_19_0 = stackOut_18_0;
+                                  return stackIn_19_0;
+                                } else {
+                                  var5_int++;
+                                  continue L5;
                                 }
                               }
+                            }
+                          } else {
+                            var10 = new int[1 + param1.length];
+                            var14 = var10;
+                            var12 = var14;
+                            var5_array = var12;
+                            if (param0) {
+                              break L3;
                             } else {
-                              var5[var7] = param1[var7];
-                              var7++;
-                              continue L7;
+                              var6 = 0;
+                              L7: while (true) {
+                                if (param1.length <= var6) {
+                                  break L4;
+                                } else {
+                                  var10[var6] = param1[var6];
+                                  var6++;
+                                  continue L7;
+                                }
+                              }
                             }
                           }
                         }
-                      } else {
-                        var6 = 0;
-                        L9: while (true) {
-                          if (param1.length <= var6) {
-                            break L2;
+                        var5_array[param1.length] = param2;
+                        break L2;
+                      }
+                      var6 = 0;
+                      var7 = 0;
+                      L8: while (true) {
+                        L9: {
+                          if (var7 >= param1.length) {
+                            break L9;
                           } else {
-                            var10[var6] = param1[var6];
-                            var6++;
-                            continue L9;
+                            if (param1[var7] >= param2) {
+                              break L9;
+                            } else {
+                              var6++;
+                              var7++;
+                              continue L8;
+                            }
+                          }
+                        }
+                        var7 = 0;
+                        L10: while (true) {
+                          if (var7 >= var6) {
+                            param1[var6] = param2;
+                            var7 = var6;
+                            L11: while (true) {
+                              if (param1.length <= var7) {
+                                break L2;
+                              } else {
+                                var5_array[var7 - -1] = param1[var7];
+                                var7++;
+                                continue L11;
+                              }
+                            }
+                          } else {
+                            var5_array[var7] = param1[var7];
+                            var7++;
+                            continue L10;
                           }
                         }
                       }
                     }
+                    stackOut_36_0 = (int[]) var5_array;
+                    stackIn_37_0 = stackOut_36_0;
+                    break L0;
+                  } else {
+                    break L1;
                   }
-                  var5[param1.length] = param2;
-                  break L1;
                 }
-                return var5;
-              } else {
-                break L0;
               }
+              var16 = new int[1];
+              var15 = var16;
+              var13 = var15;
+              var11 = var13;
+              var9 = var11;
+              var5_array = var9;
+              var16[0] = param2;
+              stackOut_7_0 = (int[]) var5_array;
+              stackIn_8_0 = stackOut_7_0;
+              return stackIn_8_0;
+            } else {
+              stackOut_2_0 = null;
+              stackIn_3_0 = stackOut_2_0;
+              return (int[]) (Object) stackIn_3_0;
             }
           }
-          var16 = new int[1];
-          var15 = var16;
-          var13 = var15;
-          var11 = var13;
-          var9 = var11;
-          var5 = var9;
-          var16[0] = param2;
-          return var5;
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L12: {
+            var5 = decompiledCaughtException;
+            stackOut_38_0 = (RuntimeException) var5;
+            stackOut_38_1 = new StringBuilder().append("nra.E(").append(param0).append(44);
+            stackIn_40_0 = stackOut_38_0;
+            stackIn_40_1 = stackOut_38_1;
+            stackIn_39_0 = stackOut_38_0;
+            stackIn_39_1 = stackOut_38_1;
+            if (param1 == null) {
+              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_2 = "null";
+              stackIn_41_0 = stackOut_40_0;
+              stackIn_41_1 = stackOut_40_1;
+              stackIn_41_2 = stackOut_40_2;
+              break L12;
+            } else {
+              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_2 = "{...}";
+              stackIn_41_0 = stackOut_39_0;
+              stackIn_41_1 = stackOut_39_1;
+              stackIn_41_2 = stackOut_39_2;
+              break L12;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
+        return stackIn_37_0;
     }
 
     public static void a(int param0) {
-        if (param0 != 2) {
-            field_a = null;
-        }
         field_a = null;
     }
 

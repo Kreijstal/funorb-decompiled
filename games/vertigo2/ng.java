@@ -8,64 +8,118 @@ final class ng {
 
     public static void b(int param0) {
         field_b = null;
-        if (param0 != 16952) {
-            Object var2 = null;
-            uq[] discarded$0 = ng.a((byte) 5, (mi) null);
-        }
     }
 
     final static void a(int param0) {
         mi.k(-32460, 2);
-        if (param0 != -10236) {
-            field_a = false;
-        }
     }
 
     final static uq[] a(byte param0, mi param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         uq[] var4 = null;
         int var5 = 0;
         int var6_int = 0;
         uq var6 = null;
         int var7 = 0;
+        Object stackIn_6_0 = null;
+        uq[] stackIn_14_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        uq[] stackOut_13_0 = null;
+        Object stackOut_5_0 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         var7 = Vertigo2.field_L ? 1 : 0;
-        var2 = param1.c((byte) -107, 8);
-        if (var2 <= 0) {
-          var3 = param1.c((byte) -96, 12);
-          if (param0 <= -96) {
-            var4 = new uq[var3];
-            var5 = 0;
-            L0: while (true) {
-              if (var5 >= var3) {
-                return var4;
-              } else {
-                if (id.a(param1, -31980)) {
-                  var6 = new uq();
-                  int discarded$6 = param1.c((byte) -124, 24);
-                  int discarded$7 = param1.c((byte) -121, 24);
-                  var6.field_e = param1.c((byte) -120, 24);
-                  int discarded$8 = param1.c((byte) -115, 9);
-                  int discarded$9 = param1.c((byte) -105, 12);
-                  int discarded$10 = param1.c((byte) -119, 12);
-                  int discarded$11 = param1.c((byte) -106, 12);
-                  var4[var5] = var6;
-                  var5++;
-                  continue L0;
-                } else {
-                  var6_int = param1.c((byte) -128, ee.a(-1 + var5, 96));
-                  var4[var5] = var4[var6_int];
-                  var5++;
-                  continue L0;
+        try {
+          L0: {
+            var2_int = param1.c((byte) -107, 8);
+            if (var2_int <= 0) {
+              var3 = param1.c((byte) -96, 12);
+              if (param0 <= -96) {
+                var4 = new uq[var3];
+                var5 = 0;
+                L1: while (true) {
+                  if (var5 >= var3) {
+                    stackOut_13_0 = (uq[]) var4;
+                    stackIn_14_0 = stackOut_13_0;
+                    break L0;
+                  } else {
+                    L2: {
+                      if (id.a(param1, -31980)) {
+                        var6 = new uq();
+                        int discarded$12 = param1.c((byte) -124, 24);
+                        int discarded$13 = param1.c((byte) -121, 24);
+                        var6.field_e = param1.c((byte) -120, 24);
+                        int discarded$14 = param1.c((byte) -115, 9);
+                        int discarded$15 = param1.c((byte) -105, 12);
+                        int discarded$16 = param1.c((byte) -119, 12);
+                        int discarded$17 = param1.c((byte) -106, 12);
+                        var4[var5] = var6;
+                        break L2;
+                      } else {
+                        var6_int = param1.c((byte) -128, ee.a(-1 + var5, 96));
+                        var4[var5] = var4[var6_int];
+                        break L2;
+                      }
+                    }
+                    var5++;
+                    continue L1;
+                  }
                 }
+              } else {
+                stackOut_5_0 = null;
+                stackIn_6_0 = stackOut_5_0;
+                return (uq[]) (Object) stackIn_6_0;
               }
+            } else {
+              return null;
             }
-          } else {
-            return null;
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var2;
+            stackOut_15_1 = new StringBuilder().append("ng.B(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L3;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L3;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
         }
+        return stackIn_14_0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -84,7 +138,7 @@ final class ng {
                   break L1;
                 } else {
                   if (param2 <= cj.field_D) {
-                    if ((param4 ^ -1) != -2) {
+                    if (param4 != 1) {
                       nb.a(param6, param3, param0, (byte) -92, param4, param2, param1);
                       break L0;
                     } else {
@@ -98,7 +152,7 @@ final class ng {
               }
             }
           }
-          if ((param4 ^ -1) == -2) {
+          if (param4 == 1) {
             dm.a(0, param1, param6, param3, param0, param2);
             break L0;
           } else {

@@ -174,7 +174,7 @@ final class jo implements eb {
                   var4 = ((cb) (Object) stackIn_16_0).a((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, stackIn_16_6 + "&v1=" + cb.field_o + "&v2=" + cb.field_l + "&e=" + var10));
                   L6: while (true) {
                     if (0 != var4.field_b) {
-                      if ((var4.field_b ^ -1) == -2) {
+                      if (var4.field_b == 1) {
                         var5 = (DataInputStream) var4.field_e;
                         int discarded$1 = var5.read();
                         var5.close();
@@ -204,129 +204,129 @@ final class jo implements eb {
     }
 
     public final void a(ng param0, byte param1, int param2, int param3, boolean param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         h var11 = null;
         ng stackIn_3_0 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
         Object stackOut_2_0 = null;
         ng stackOut_1_0 = null;
-        L0: {
-          if (!(param0 instanceof h)) {
-            stackOut_2_0 = null;
-            stackIn_3_0 = (ng) (Object) stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = (ng) param0;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        var11 = (h) (Object) stackIn_3_0;
-        if (param1 != -124) {
-          L1: {
-            ((jo) this).field_g = -59;
-            if (var11 == null) {
-              break L1;
-            } else {
-              param4 = param4 & var11.field_H;
-              break L1;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!(param0 instanceof h)) {
+                stackOut_2_0 = null;
+                stackIn_3_0 = (ng) (Object) stackOut_2_0;
+                break L1;
+              } else {
+                stackOut_1_0 = (ng) param0;
+                stackIn_3_0 = stackOut_1_0;
+                break L1;
+              }
             }
-          }
-          L2: {
-            var7 = 5592405;
-            if (!param4) {
-              break L2;
-            } else {
-              var7 = 16777215;
-              break L2;
+            L2: {
+              var11 = (h) (Object) stackIn_3_0;
+              if (param1 == -124) {
+                break L2;
+              } else {
+                ((jo) this).field_g = -59;
+                break L2;
+              }
             }
-          }
-          L3: {
-            t.d(param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, ((jo) this).field_a);
-            var8 = ((jo) this).field_f + (param3 + param0.field_z);
-            var9 = param2 + param0.field_p - -((jo) this).field_l;
-            t.c(var8, var9, ((jo) this).field_q, ((jo) this).field_p, 5592405);
-            t.d(var8, var9, ((jo) this).field_q, ((jo) this).field_p, var7);
-            if (var11.field_M) {
-              t.b(var8, var9, var8 - -((jo) this).field_q, var9 - -((jo) this).field_p, 1);
-              t.b(var8 + ((jo) this).field_q, var9, var8, var9 + ((jo) this).field_p, 1);
-              break L3;
-            } else {
-              break L3;
+            L3: {
+              if (var11 == null) {
+                break L3;
+              } else {
+                param4 = param4 & var11.field_H;
+                break L3;
+              }
             }
-          }
-          L4: {
+            L4: {
+              var7 = 5592405;
+              if (!param4) {
+                break L4;
+              } else {
+                var7 = 16777215;
+                break L4;
+              }
+            }
+            L5: {
+              t.d(param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, ((jo) this).field_a);
+              var8 = ((jo) this).field_f + (param3 + param0.field_z);
+              var9 = param2 + param0.field_p - -((jo) this).field_l;
+              t.c(var8, var9, ((jo) this).field_q, ((jo) this).field_p, 5592405);
+              t.d(var8, var9, ((jo) this).field_q, ((jo) this).field_p, var7);
+              if (var11.field_M) {
+                t.b(var8, var9, var8 - -((jo) this).field_q, var9 - -((jo) this).field_p, 1);
+                t.b(var8 + ((jo) this).field_q, var9, var8, var9 + ((jo) this).field_p, 1);
+                break L5;
+              } else {
+                break L5;
+              }
+            }
             if (((jo) this).field_m != null) {
               var10 = ((jo) this).field_q - (-((jo) this).field_f + -((jo) this).field_b);
-              int discarded$2 = ((jo) this).field_m.a(param0.field_q, param0.field_z + param3 + var10, ((jo) this).field_d + (param0.field_p + param2), param0.field_E - (var10 - -((jo) this).field_b), param0.field_C - (((jo) this).field_b << -1127572639), ((jo) this).field_g, ((jo) this).field_i, ((jo) this).field_e, ((jo) this).field_o, 0);
-              break L4;
+              int discarded$1 = ((jo) this).field_m.a(param0.field_q, param0.field_z + param3 + var10, ((jo) this).field_d + (param0.field_p + param2), param0.field_E - (var10 - -((jo) this).field_b), param0.field_C - (((jo) this).field_b << 1), ((jo) this).field_g, ((jo) this).field_i, ((jo) this).field_e, ((jo) this).field_o, 0);
+              break L0;
             } else {
-              break L4;
+              return;
             }
           }
-          return;
-        } else {
-          L5: {
-            if (var11 == null) {
-              break L5;
-            } else {
-              param4 = param4 & var11.field_H;
-              break L5;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            var7 = 5592405;
-            if (!param4) {
+            var6 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var6;
+            stackOut_16_1 = new StringBuilder().append("jo.A(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param0 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
               break L6;
             } else {
-              var7 = 16777215;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
               break L6;
             }
           }
-          L7: {
-            t.d(param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, ((jo) this).field_a);
-            var8 = ((jo) this).field_f + (param3 + param0.field_z);
-            var9 = param2 + param0.field_p - -((jo) this).field_l;
-            t.c(var8, var9, ((jo) this).field_q, ((jo) this).field_p, 5592405);
-            t.d(var8, var9, ((jo) this).field_q, ((jo) this).field_p, var7);
-            if (var11.field_M) {
-              t.b(var8, var9, var8 - -((jo) this).field_q, var9 - -((jo) this).field_p, 1);
-              t.b(var8 + ((jo) this).field_q, var9, var8, var9 + ((jo) this).field_p, 1);
-              break L7;
-            } else {
-              break L7;
-            }
-          }
-          L8: {
-            if (((jo) this).field_m != null) {
-              var10 = ((jo) this).field_q - (-((jo) this).field_f + -((jo) this).field_b);
-              int discarded$3 = ((jo) this).field_m.a(param0.field_q, param0.field_z + param3 + var10, ((jo) this).field_d + (param0.field_p + param2), param0.field_E - (var10 - -((jo) this).field_b), param0.field_C - (((jo) this).field_b << -1127572639), ((jo) this).field_g, ((jo) this).field_i, ((jo) this).field_e, ((jo) this).field_o, 0);
-              break L8;
-            } else {
-              break L8;
-            }
-          }
-          return;
+          throw aa.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     public static void a(byte param0) {
-        if (param0 > -103) {
-          field_j = null;
-          field_c = null;
-          field_n = null;
-          field_j = null;
-          field_k = null;
-          return;
-        } else {
-          field_c = null;
-          field_n = null;
-          field_j = null;
-          field_k = null;
-          return;
-        }
+        field_c = null;
+        field_n = null;
+        field_j = null;
+        field_k = null;
     }
 
     final static void a(int param0) {
@@ -340,16 +340,20 @@ final class jo implements eb {
     jo(jl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         ((jo) this).field_e = 1;
         ((jo) this).field_o = 1;
-        ((jo) this).field_a = param9;
-        ((jo) this).field_d = param2;
-        ((jo) this).field_g = param3;
-        ((jo) this).field_f = param5;
-        ((jo) this).field_l = param6;
-        ((jo) this).field_i = param4;
-        ((jo) this).field_q = param8;
-        ((jo) this).field_m = param0;
-        ((jo) this).field_p = param7;
-        ((jo) this).field_b = param1;
+        try {
+            ((jo) this).field_a = param9;
+            ((jo) this).field_d = param2;
+            ((jo) this).field_g = param3;
+            ((jo) this).field_f = param5;
+            ((jo) this).field_l = param6;
+            ((jo) this).field_i = param4;
+            ((jo) this).field_q = param8;
+            ((jo) this).field_m = param0;
+            ((jo) this).field_p = param7;
+            ((jo) this).field_b = param1;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "jo.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+        }
     }
 
     static {

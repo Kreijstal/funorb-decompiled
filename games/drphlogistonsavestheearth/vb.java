@@ -17,12 +17,6 @@ final class vb extends gi {
     static int field_o;
 
     public static void d(int param0) {
-        if (param0 != 4) {
-            field_o = 127;
-            field_q = null;
-            field_s = null;
-            return;
-        }
         field_q = null;
         field_s = null;
     }
@@ -30,29 +24,26 @@ final class vb extends gi {
     final static oi a(byte param0) {
         try {
             Throwable var1 = null;
-            Object stackIn_2_0 = null;
-            oi stackIn_4_0 = null;
+            oi stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            Object stackOut_1_0 = null;
-            oi stackOut_3_0 = null;
+            oi stackOut_2_0 = null;
             try {
-              if (param0 == 65) {
-                return (oi) (Object) stackIn_2_0;
-              } else {
-                stackOut_1_0 = null;
-                stackIn_2_0 = stackOut_1_0;
+              L0: {
+                stackOut_2_0 = (oi) Class.forName("mc").newInstance();
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              stackOut_3_0 = (oi) Class.forName("mc").newInstance();
-              stackIn_4_0 = stackOut_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     vb() {

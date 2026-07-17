@@ -8,93 +8,108 @@ final class gia extends le {
     static String field_j;
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
+        RuntimeException runtimeException = null;
+        int var4_int = 0;
         int var5 = 0;
-        Object stackIn_4_0 = null;
-        Object stackIn_5_0 = null;
-        Object stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        Object stackIn_15_0 = null;
-        Object stackIn_16_0 = null;
-        Object stackIn_17_0 = null;
-        int stackIn_17_1 = 0;
-        Object stackOut_14_0 = null;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        Object stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        Object stackOut_3_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
+        Object stackIn_8_0 = null;
+        Object stackIn_9_0 = null;
+        Object stackIn_10_0 = null;
+        int stackIn_10_1 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_7_0 = null;
+        Object stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
+        Object stackOut_8_0 = null;
+        int stackOut_8_1 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var5 = VoidHunters.field_G;
-        if (param1 < -60) {
-          var4 = param0;
-          if (var4 != 0) {
-            if ((var4 ^ -1) == -2) {
-              L0: {
-                stackOut_14_0 = this;
-                stackIn_16_0 = stackOut_14_0;
-                stackIn_15_0 = stackOut_14_0;
-                if ((param2.e((byte) -118) ^ -1) != -2) {
-                  stackOut_16_0 = this;
-                  stackOut_16_1 = 0;
-                  stackIn_17_0 = stackOut_16_0;
-                  stackIn_17_1 = stackOut_16_1;
-                  break L0;
-                } else {
-                  stackOut_15_0 = this;
-                  stackOut_15_1 = 1;
-                  stackIn_17_0 = stackOut_15_0;
-                  stackIn_17_1 = stackOut_15_1;
-                  break L0;
-                }
-              }
-              ((gia) this).field_l = stackIn_17_1 != 0;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            ((gia) this).field_i = param2.e(1869);
-            return;
-          }
-        } else {
-          field_k = null;
-          var4 = param0;
-          if (var4 == 0) {
-            ((gia) this).field_i = param2.e(1869);
-            return;
-          } else {
+        try {
+          L0: {
             L1: {
-              if ((var4 ^ -1) != -2) {
+              if (param1 < -60) {
                 break L1;
               } else {
-                L2: {
-                  stackOut_3_0 = this;
-                  stackIn_5_0 = stackOut_3_0;
-                  stackIn_4_0 = stackOut_3_0;
-                  if ((param2.e((byte) -118) ^ -1) != -2) {
-                    stackOut_5_0 = this;
-                    stackOut_5_1 = 0;
-                    stackIn_6_0 = stackOut_5_0;
-                    stackIn_6_1 = stackOut_5_1;
-                    break L2;
-                  } else {
-                    stackOut_4_0 = this;
-                    stackOut_4_1 = 1;
-                    stackIn_6_0 = stackOut_4_0;
-                    stackIn_6_1 = stackOut_4_1;
-                    break L2;
-                  }
-                }
-                ((gia) this).field_l = stackIn_6_1 != 0;
+                field_k = null;
                 break L1;
               }
             }
-            return;
+            var4_int = param0;
+            if (var4_int == 0) {
+              ((gia) this).field_i = param2.e(1869);
+              return;
+            } else {
+              L2: {
+                if (var4_int != 1) {
+                  break L2;
+                } else {
+                  L3: {
+                    stackOut_7_0 = this;
+                    stackIn_9_0 = stackOut_7_0;
+                    stackIn_8_0 = stackOut_7_0;
+                    if (param2.e((byte) -118) != 1) {
+                      stackOut_9_0 = this;
+                      stackOut_9_1 = 0;
+                      stackIn_10_0 = stackOut_9_0;
+                      stackIn_10_1 = stackOut_9_1;
+                      break L3;
+                    } else {
+                      stackOut_8_0 = this;
+                      stackOut_8_1 = 1;
+                      stackIn_10_0 = stackOut_8_0;
+                      stackIn_10_1 = stackOut_8_1;
+                      break L3;
+                    }
+                  }
+                  ((gia) this).field_l = stackIn_10_1 != 0;
+                  break L2;
+                }
+              }
+              break L0;
+            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            runtimeException = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) runtimeException;
+            stackOut_12_1 = new StringBuilder().append("gia.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param2 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
     }
 
@@ -154,10 +169,10 @@ final class gia extends le {
                 L1: {
                   var14 = ((gia) this).field_i * (var42[var10] - var43[var10]);
                   var15 = (var5[gbb.field_q & var10 - -1] - var5[gbb.field_q & -1 + var10]) * ((gia) this).field_i;
-                  var16 = var15 >> 749562700;
-                  var17 = var14 >> -426725108;
-                  var18 = var16 * var16 >> -1497329268;
-                  var19 = var17 * var17 >> -334275284;
+                  var16 = var15 >> 12;
+                  var17 = var14 >> 12;
+                  var18 = var16 * var16 >> 12;
+                  var19 = var17 * var17 >> 12;
                   var20 = (int)(Math.sqrt((double)((float)(4096 + (var19 + var18)) / 4096.0f)) * 4096.0);
                   if (var20 != 0) {
                     var12 = var14 / var20;
@@ -175,9 +190,9 @@ final class gia extends le {
                   if (!((gia) this).field_l) {
                     break L2;
                   } else {
-                    var13 = 2048 - -(var13 >> -63435647);
-                    var11 = 2048 + (var11 >> -111119967);
-                    var12 = 2048 - -(var12 >> 2111853921);
+                    var13 = 2048 - -(var13 >> 1);
+                    var11 = 2048 + (var11 >> 1);
+                    var12 = 2048 - -(var12 >> 1);
                     break L2;
                   }
                 }
@@ -203,10 +218,6 @@ final class gia extends le {
     }
 
     final static int d(int param0) {
-        if (param0 != -2) {
-            field_j = null;
-            return rpa.field_b;
-        }
         return rpa.field_b;
     }
 

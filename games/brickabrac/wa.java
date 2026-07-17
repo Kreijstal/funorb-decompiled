@@ -16,8 +16,9 @@ final class wa {
 
     final int a(int param0) {
         if (((wa) this).field_g >= ((wa) this).field_h) {
+            int fieldTemp$0 = ((wa) this).field_e;
             ((wa) this).field_e = ((wa) this).field_e + 1;
-            ((wa) this).field_j = ((wa) this).field_f[((wa) this).field_e] << 15;
+            ((wa) this).field_j = ((wa) this).field_f[fieldTemp$0] << 15;
             if (((wa) this).field_e >= ((wa) this).field_c) {
                 ((wa) this).field_e = ((wa) this).field_c - 1;
             }

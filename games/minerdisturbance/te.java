@@ -16,9 +16,6 @@ final class te implements uj {
     public static void b(int param0) {
         field_a = null;
         field_e = null;
-        if (param0 != 31960) {
-            return;
-        }
         field_d = null;
         field_c = null;
         field_b = null;
@@ -39,7 +36,7 @@ final class te implements uj {
     final static int a(int param0) {
         int var1 = 0;
         if (2 <= af.field_u) {
-          var1 = 78 % ((-29 - param0) / 54);
+          var1 = 0;
           if (0 == kb.field_c) {
             if (!hj.field_i.a((byte) 125)) {
               return 20;

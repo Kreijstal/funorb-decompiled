@@ -12,9 +12,6 @@ final class af {
         field_a = null;
         field_b = null;
         field_d = null;
-        if (param0 > -86) {
-            field_d = null;
-        }
     }
 
     static {

@@ -27,7 +27,7 @@ abstract class na {
         if (param0 != 3473) {
           L0: {
             boolean discarded$10 = ((na) this).c(23);
-            if ((((na) this).d(param0 ^ -14914) ^ -1) > -21) {
+            if (((na) this).d(param0 ^ -14914) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -40,7 +40,7 @@ abstract class na {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((na) this).d(param0 ^ -14914) ^ -1) > -21) {
+            if (((na) this).d(param0 ^ -14914) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -66,7 +66,7 @@ abstract class na {
         if (param0 != -21) {
           L0: {
             ((na) this).field_j = null;
-            if ((((na) this).c((byte) -120) ^ -1) > -21) {
+            if (((na) this).c((byte) -120) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -79,7 +79,7 @@ abstract class na {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((na) this).c((byte) -120) ^ -1) > -21) {
+            if (((na) this).c((byte) -120) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -118,9 +118,6 @@ abstract class na {
     abstract void a(boolean param0);
 
     public static void b(int param0) {
-        if (param0 != 0) {
-            return;
-        }
         field_l = null;
     }
 
@@ -137,7 +134,7 @@ abstract class na {
         fi stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = ((long)param0 << 1571593632) - -(long)param1;
+          var6 = ((long)param0 << 32) - -(long)param1;
           var8 = new fi();
           stackOut_0_0 = (fi) var8;
           stackIn_2_0 = stackOut_0_0;

@@ -25,25 +25,32 @@ abstract class ji {
 
     final static void f(int param0) {
         pk var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.field_C;
-        if (param0 > -99) {
-          return;
-        } else {
-          var1 = fj.field_q;
-          L0: while (true) {
-            if (!cf.c((byte) -114)) {
-              return;
-            } else {
-              var1.a(8, (byte) -71);
-              var1.field_f = var1.field_f + 1;
-              var2 = var1.field_f + 1;
-              pf.a(46, var1);
-              fj.field_q.f(11700, var1.field_f + -var2);
-              continue L0;
+        try {
+          L0: {
+            var1 = fj.field_q;
+            L1: while (true) {
+              if (!cf.c((byte) -114)) {
+                break L0;
+              } else {
+                var1.a(8, (byte) -71);
+                int fieldTemp$5 = var1.field_f + 1;
+                var1.field_f = var1.field_f + 1;
+                var2 = fieldTemp$5;
+                pf.a(46, var1);
+                fj.field_q.f(11700, var1.field_f + -var2);
+                continue L1;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var1_ref, "ji.B(" + -102 + 41);
         }
     }
 
@@ -62,7 +69,7 @@ abstract class ji {
         sd stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = ((long)param1 << 1984104992) - -(long)param3;
+          var6 = ((long)param1 << 32) - -(long)param3;
           var8 = new sd();
           var8.field_i = var6;
           stackOut_0_0 = (sd) var8;
@@ -86,14 +93,14 @@ abstract class ji {
           stackIn_3_0.field_q = stackIn_3_1 != 0;
           var8.field_E = param0;
           if (param4) {
-            if ((((ji) this).a(param2 ^ 108) ^ -1) > -21) {
+            if (((ji) this).a(param2 ^ 108) < 20) {
               ((ji) this).field_g.a(param2 ^ -123, (rc) (Object) var8);
               break L1;
             } else {
               throw new RuntimeException();
             }
           } else {
-            if (-21 < (((ji) this).a(false) ^ -1)) {
+            if (((ji) this).a(false) < 20) {
               ((ji) this).field_p.a(8, (rc) (Object) var8);
               break L1;
             } else {
@@ -119,47 +126,30 @@ abstract class ji {
     }
 
     final static void a(long param0, byte param1) {
-        InterruptedException var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        Thread.sleep(param0);
-                        if (param1 == -33) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
+        try {
+            InterruptedException var3 = null;
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                Thread.sleep(param0);
+                if (param1 == -33) {
+                  break L0;
+                } else {
+                  field_a = null;
+                  return;
                 }
-                case 1: {
-                    try {
-                        field_a = null;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    var3 = (InterruptedException) (Object) caughtException;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var3 = (InterruptedException) (Object) decompiledCaughtException;
+                break L1;
+              }
             }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -212,106 +202,155 @@ abstract class ji {
     }
 
     final static short[] a(short[] param0, int param1, int param2, pk param3) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        short[] stackIn_16_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        short[] stackOut_15_0 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var8 = Geoblox.field_C;
-        var4 = param3.e((byte) -17, param1);
-        if (var4 != param2) {
-          if (param0 != null) {
-            if (var4 == param0.length) {
-              var5 = param3.e((byte) -17, 4);
-              var6 = (short)param3.e((byte) -17, 16);
-              if ((var5 ^ -1) >= -1) {
-                var7 = 0;
-                L0: while (true) {
-                  if (var4 > var7) {
-                    param0[var7] = (short)var6;
-                    var7++;
-                    continue L0;
+        try {
+          L0: {
+            var4_int = param3.e((byte) -17, param1);
+            if (var4_int != param2) {
+              L1: {
+                L2: {
+                  if (param0 == null) {
+                    break L2;
                   } else {
-                    return param0;
-                  }
-                }
-              } else {
-                var7 = 0;
-                L1: while (true) {
-                  if (var4 > var7) {
-                    param0[var7] = (short)(var6 + param3.e((byte) -17, var5));
-                    var7++;
-                    continue L1;
-                  } else {
-                    return param0;
-                  }
-                }
-              }
-            } else {
-              L2: {
-                param0 = new short[var4];
-                var5 = param3.e((byte) -17, 4);
-                var6 = (short)param3.e((byte) -17, 16);
-                if ((var5 ^ -1) >= -1) {
-                  var7 = 0;
-                  L3: while (true) {
-                    if (var4 <= var7) {
+                    if (var4_int != param0.length) {
                       break L2;
                     } else {
-                      param0[var7] = (short)var6;
-                      var7++;
-                      continue L3;
+                      break L1;
                     }
                   }
-                } else {
+                }
+                param0 = new short[var4_int];
+                break L1;
+              }
+              L3: {
+                var5 = param3.e((byte) -17, 4);
+                var6 = (short)param3.e((byte) -17, 16);
+                if (var5 <= 0) {
                   var7 = 0;
                   L4: while (true) {
-                    if (var4 <= var7) {
-                      break L2;
+                    if (var4_int <= var7) {
+                      break L3;
                     } else {
-                      param0[var7] = (short)(var6 + param3.e((byte) -17, var5));
+                      param0[var7] = (short)var6;
                       var7++;
                       continue L4;
                     }
                   }
-                }
-              }
-              return param0;
-            }
-          } else {
-            L5: {
-              param0 = new short[var4];
-              var5 = param3.e((byte) -17, 4);
-              var6 = (short)param3.e((byte) -17, 16);
-              if ((var5 ^ -1) >= -1) {
-                var7 = 0;
-                L6: while (true) {
-                  if (var4 <= var7) {
-                    break L5;
-                  } else {
-                    param0[var7] = (short)var6;
-                    var7++;
-                    continue L6;
-                  }
-                }
-              } else {
-                var7 = 0;
-                L7: while (true) {
-                  if (var4 <= var7) {
-                    break L5;
-                  } else {
-                    param0[var7] = (short)(var6 + param3.e((byte) -17, var5));
-                    var7++;
-                    continue L7;
+                } else {
+                  var7 = 0;
+                  L5: while (true) {
+                    if (var4_int <= var7) {
+                      break L3;
+                    } else {
+                      param0[var7] = (short)(var6 + param3.e((byte) -17, var5));
+                      var7++;
+                      continue L5;
+                    }
                   }
                 }
               }
+              stackOut_15_0 = (short[]) param0;
+              stackIn_16_0 = stackOut_15_0;
+              break L0;
+            } else {
+              return null;
             }
-            return param0;
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var4 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var4;
+            stackOut_17_1 = new StringBuilder().append("ji.J(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param0 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L6;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L6;
+            }
+          }
+          L7: {
+            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param3 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L7;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L7;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
+        return stackIn_16_0;
     }
 
     abstract boolean a(byte param0);
@@ -326,7 +365,7 @@ abstract class ji {
         if (param0 != -21) {
           L0: {
             boolean discarded$10 = ((ji) this).a((byte) 74);
-            if ((((ji) this).a(false) ^ -1) > -21) {
+            if (((ji) this).a(false) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -339,7 +378,7 @@ abstract class ji {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((ji) this).a(false) ^ -1) > -21) {
+            if (((ji) this).a(false) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -357,7 +396,7 @@ abstract class ji {
         int var2 = 0;
         int var3 = Geoblox.field_C;
         na[] var1 = new na[sb.field_a];
-        for (var2 = param0; sb.field_a > var2; var2++) {
+        for (var2 = 0; sb.field_a > var2; var2++) {
             var1[var2] = new na(pg.field_b, dd.field_C, gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], mj.field_a[var2], cm.field_j);
         }
         kj.c(true);
@@ -370,7 +409,7 @@ abstract class ji {
         field_a = null;
         field_d = null;
         field_l = null;
-        int var1 = 78 / ((15 - param0) / 56);
+        int var1 = 78;
     }
 
     ji() {

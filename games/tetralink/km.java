@@ -13,7 +13,7 @@ final class km extends mc {
 
     public static void b(byte param0) {
         field_n = null;
-        int var1 = 124 / ((36 - param0) / 60);
+        int var1 = 124;
         field_p = null;
         field_q = null;
         field_o = null;

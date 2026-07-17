@@ -17,7 +17,7 @@ final class ik implements Iterator {
 
     private final void a(int param0) {
         ((ik) this).field_h = 1;
-        int var2 = -7 / ((12 - param0) / 54);
+        int var2 = 7;
         ((ik) this).field_c = ((ik) this).field_j.field_e[0].field_h;
         ((ik) this).field_d = null;
     }
@@ -56,20 +56,10 @@ final class ik implements Iterator {
     public static void a(byte param0) {
         field_g = null;
         field_b = null;
-        if (param0 > -64) {
-          field_a = null;
-          field_a = null;
-          field_i = null;
-          field_e = null;
-          field_f = null;
-          return;
-        } else {
-          field_a = null;
-          field_i = null;
-          field_e = null;
-          field_f = null;
-          return;
-        }
+        field_a = null;
+        field_i = null;
+        field_e = null;
+        field_f = null;
     }
 
     public final boolean hasNext() {
@@ -97,27 +87,24 @@ final class ik implements Iterator {
     }
 
     final static aj b(int param0) {
-        if (g.field_a != ji.field_T) {
-          if (kn.field_D == g.field_a) {
+        if (g.field_a == ji.field_T) {
+            throw new IllegalStateException();
+        }
+        if (!(kn.field_D != g.field_a)) {
             g.field_a = ji.field_T;
             return lg.field_a;
-          } else {
-            if (param0 == 6792) {
-              return null;
-            } else {
-              field_b = null;
-              return null;
-            }
-          }
-        } else {
-          throw new IllegalStateException();
         }
+        return null;
     }
 
     ik(bl param0) {
         ((ik) this).field_d = null;
-        ((ik) this).field_j = param0;
-        this.a(90);
+        try {
+            ((ik) this).field_j = param0;
+            this.a(90);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void remove() {
@@ -134,7 +121,7 @@ final class ik implements Iterator {
 
     private static void $cfr$clinit() {
         field_b = "Unable to delete friend - system busy";
-        field_g = new short[]{(short)16288, (short)6792};
+        field_g = new short[]{(short) 16288, (short) 6792};
         field_f = "3D MODE";
         field_e = new tk();
     }

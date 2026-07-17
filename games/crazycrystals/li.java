@@ -10,7 +10,7 @@ abstract class li implements n {
 
     public final String a(int param0) {
         if (!((li) this).a((byte) -41)) {
-          if ((lo.a((byte) -72) ^ -1L) <= (350L + ((li) this).field_b ^ -1L)) {
+          if (~lo.a((byte) -72) <= ~(350L + ((li) this).field_b)) {
             if (param0 != -16774) {
               ((li) this).b((byte) -60);
               return ((li) this).a(false);
@@ -30,7 +30,7 @@ abstract class li implements n {
           if (((li) this).a((byte) -41)) {
             return pe.field_p;
           } else {
-            if ((((li) this).field_b + 350L ^ -1L) < (lo.a((byte) 84) ^ -1L)) {
+            if (~(((li) this).field_b + 350L) < ~lo.a((byte) 84)) {
               return ta.field_h;
             } else {
               return ((li) this).b(51);

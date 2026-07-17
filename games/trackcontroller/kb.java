@@ -40,20 +40,10 @@ final class kb {
 
     public static void a(int param0) {
         field_f = null;
-        if (param0 != 14) {
-          kb.a(false, 103, -81);
-          field_e = null;
-          field_a = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
-          field_e = null;
-          field_a = null;
-          field_d = null;
-          field_c = null;
-          return;
-        }
+        field_e = null;
+        field_a = null;
+        field_d = null;
+        field_c = null;
     }
 
     static {

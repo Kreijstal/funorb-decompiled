@@ -15,7 +15,7 @@ final class gm extends hl {
         Object var2 = null;
         Throwable var3 = null;
         Throwable decompiledCaughtException = null;
-        var1 = 61 % ((7 - param0) / 35);
+        var1 = 1;
         if (sg.field_i != null) {
           var2 = (Object) (Object) sg.field_i;
           synchronized (var2) {
@@ -32,9 +32,6 @@ final class gm extends hl {
 
     public static void c(boolean param0) {
         field_ib = null;
-        if (param0) {
-            return;
-        }
         field_kb = null;
     }
 

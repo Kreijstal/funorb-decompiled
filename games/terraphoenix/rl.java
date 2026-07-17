@@ -7,43 +7,9 @@ final class rl {
     static String field_c;
 
     final static boolean b(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         rf.field_r = true;
-        if (param0 != 0) {
-          L0: {
-            rl.a(-78);
-            ah.field_z = 15000L + ll.a(param0 + 1000);
-            if (-12 != q.field_Jb) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            ah.field_z = 15000L + ll.a(param0 + 1000);
-            if (-12 != q.field_Jb) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        ah.field_z = 15000L + ll.a(1000);
+        return q.field_Jb == 11 ? true : false;
     }
 
     public static void a(int param0) {
@@ -56,57 +22,50 @@ final class rl {
     }
 
     final static int a(int param0, int param1, boolean param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
+        int stackOut_7_0 = 0;
         var4 = Terraphoenix.field_V;
-        if (!param2) {
-          var3 = 1;
-          L0: while (true) {
-            if (-2 <= (param1 ^ -1)) {
-              if (1 == param1) {
-                return param0 * var3;
-              } else {
-                return var3;
-              }
-            } else {
-              L1: {
-                if (0 == (1 & param1)) {
-                  break L1;
+        try {
+          L0: {
+            var3_int = 1;
+            L1: while (true) {
+              if (param1 <= 1) {
+                if (1 != param1) {
+                  stackOut_9_0 = var3_int;
+                  stackIn_10_0 = stackOut_9_0;
+                  break L0;
                 } else {
-                  var3 = var3 * param0;
-                  break L1;
+                  stackOut_7_0 = param0 * var3_int;
+                  stackIn_8_0 = stackOut_7_0;
+                  return stackIn_8_0;
                 }
+              } else {
+                L2: {
+                  if (0 == (1 & param1)) {
+                    break L2;
+                  } else {
+                    var3_int = var3_int * param0;
+                    break L2;
+                  }
+                }
+                param0 = param0 * param0;
+                param1 = param1 >> 1;
+                continue L1;
               }
-              param0 = param0 * param0;
-              param1 = param1 >> 1;
-              continue L0;
             }
           }
-        } else {
-          field_b = null;
-          var3 = 1;
-          L2: while (true) {
-            if (-2 <= (param1 ^ -1)) {
-              if (1 == param1) {
-                return param0 * var3;
-              } else {
-                return var3;
-              }
-            } else {
-              L3: {
-                if (0 == (1 & param1)) {
-                  break L3;
-                } else {
-                  var3 = var3 * param0;
-                  break L3;
-                }
-              }
-              param0 = param0 * param0;
-              param1 = param1 >> 1;
-              continue L2;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var3, "rl.B(" + param0 + 44 + param1 + 44 + 0 + 41);
         }
+        return stackIn_10_0;
     }
 
     static {

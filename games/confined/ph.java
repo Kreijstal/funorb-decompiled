@@ -50,7 +50,7 @@ final class ph extends rk {
         ((ph) this).field_m = var2.f((byte) 46);
         ((ph) this).field_I = var2.f((byte) 51);
         if (((ph) this).field_I < 0) {
-            ((ph) this).field_I = ((ph) this).field_I ^ -1;
+            ((ph) this).field_I = ~((ph) this).field_I;
             ((ph) this).field_R = true;
         }
         int var3 = var2.f((byte) 121);
@@ -107,12 +107,13 @@ final class ph extends rk {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -138,6 +139,7 @@ final class ph extends rk {
 
     final static ph a(mi param0, String param1, String param2) {
         try {
+            ph var4_ref = null;
             if (!ph.a(param0)) {
                 boolean discarded$0 = param0.a(param1, param2, 255);
                 return null;
@@ -146,13 +148,11 @@ final class ph extends rk {
             if (var3 == null) {
                 return null;
             }
-            ph var4 = null;
-            try {
-                var4 = new ph(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new ph(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -397,6 +397,7 @@ final class ph extends rk {
 
     final static ph a(mi param0, int param1, int param2) {
         try {
+            ph var4_ref = null;
             if (!ph.a(param0)) {
                 boolean discarded$0 = param0.a(param1, param2, 0);
                 return null;
@@ -405,13 +406,11 @@ final class ph extends rk {
             if (var3 == null) {
                 return null;
             }
-            ph var4 = null;
-            try {
-                var4 = new ph(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new ph(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -453,7 +452,7 @@ final class ph extends rk {
 
     private final static void a(byte[] param0, int param1) {
         field_Q = param0;
-        field_H = param1;
+        field_H = 0;
         field_z = 0;
     }
 
@@ -479,7 +478,6 @@ final class ph extends rk {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -995,7 +993,7 @@ final class ph extends rk {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((ph) this).field_P) {
                     break L36;
                   } else {
@@ -1053,7 +1051,7 @@ final class ph extends rk {
               }
             }
             ((ph) this).field_P = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_E[var14.field_d[var17_int]];
             var55 = field_v;
@@ -1162,12 +1160,13 @@ final class ph extends rk {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((ph) this).field_M[var3] = (byte)(var6 - 128);
+                    ((ph) this).field_M[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }

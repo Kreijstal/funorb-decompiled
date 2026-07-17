@@ -12,7 +12,7 @@ abstract class de {
         field_b = null;
         field_c = null;
         field_a = null;
-        int var1 = 44 / ((param0 - 53) / 47);
+        int var1 = 44;
         field_d = null;
     }
 

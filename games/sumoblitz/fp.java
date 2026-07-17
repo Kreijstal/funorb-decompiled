@@ -13,7 +13,7 @@ final class fp extends fj implements ef {
     }
 
     public final void a(ji param0, int param1) {
-        super.a(param0, param1 ^ 0);
+        super.a(param0, param1);
         if (param1 != 15149) {
             jagdx.IDirect3DBaseTexture discarded$0 = ((fp) this).d(20);
         }
@@ -135,6 +135,7 @@ final class fp extends fj implements ef {
         var6 = 0;
         L3: while (true) {
           if (6 <= var6) {
+            return;
           } else {
             var7 = ((fp) this).field_f.LockRect(var6, 0, 0, 0, ((fp) this).field_g, ((fp) this).field_g, 0, var11);
             if (jagdx.gv.b(var7, -47)) {

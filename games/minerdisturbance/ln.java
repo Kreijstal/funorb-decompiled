@@ -410,7 +410,7 @@ final class ln extends hd {
                       }
                     }
                     if ((var3 & 1) == 0) {
-                      ((ln) this).field_m[var1] = (byte)-1;
+                      ((ln) this).field_m[var1] = (byte) -1;
                       ((ln) this).field_m[var1 + 1] = (byte)(var3 - 2 >> 1);
                       var1--;
                       var4--;

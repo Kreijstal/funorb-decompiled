@@ -22,11 +22,11 @@ abstract class bc {
             return;
           } else {
             L0: {
-              var3 = param2 - 135;
+              var3 = 185;
               var4 = param0 + -35;
               var5 = 256;
               if (75 > sn.field_c) {
-                var5 = (sn.field_c << -894248600) / 75;
+                var5 = (sn.field_c << 8) / 75;
                 break L0;
               } else {
                 break L0;
@@ -36,7 +36,7 @@ abstract class bc {
               if (sn.field_c <= 200) {
                 break L1;
               } else {
-                var5 = (-sn.field_c + 250 << -749629432) / 50;
+                var5 = (-sn.field_c + 250 << 8) / 50;
                 break L1;
               }
             }
@@ -53,13 +53,13 @@ abstract class bc {
               }
             }
             lg.a(1);
-            if (-151 < (sn.field_c ^ -1)) {
+            if (sn.field_c < 150) {
               rk.field_a.b(var3, var4);
               var6 = sn.field_c - 125;
               if (var6 > 0) {
-                if ((var6 ^ -1) > -51) {
+                if (var6 < 50) {
                   if (20 <= var6) {
-                    if (-31 >= (var6 ^ -1)) {
+                    if (var6 >= 30) {
                       L3: {
                         var7 = 256 * (-var6 + 50) / 20;
                         eq.field_k.d(var3, var4, var7);
@@ -76,7 +76,7 @@ abstract class bc {
                               break L4;
                             }
                           }
-                          ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> -152919192);
+                          ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> 8);
                           break L3;
                         }
                       }
@@ -97,7 +97,7 @@ abstract class bc {
                               break L6;
                             }
                           }
-                          ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> -152919192);
+                          ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> 8);
                           break L5;
                         }
                       }
@@ -120,7 +120,7 @@ abstract class bc {
                             break L8;
                           }
                         }
-                        ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> -152919192);
+                        ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> 8);
                         break L7;
                       }
                     }
@@ -138,7 +138,7 @@ abstract class bc {
                         break L9;
                       }
                     }
-                    ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> -152919192);
+                    ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> 8);
                     return;
                   } else {
                     return;
@@ -159,7 +159,7 @@ abstract class bc {
                         break L11;
                       }
                     }
-                    ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> -152919192);
+                    ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> 8);
                     break L10;
                   }
                 }
@@ -183,17 +183,17 @@ abstract class bc {
                         break L13;
                       }
                     }
-                    ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> -152919192);
+                    ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> 8);
                     break L12;
                   }
                 }
                 return;
               } else {
                 L14: {
-                  if ((var6 ^ -1) > -51) {
+                  if (var6 < 50) {
                     L15: {
                       if (20 <= var6) {
-                        if (-31 < (var6 ^ -1)) {
+                        if (var6 < 30) {
                           eq.field_k.d(var3, var4, 256);
                           break L15;
                         } else {
@@ -220,7 +220,7 @@ abstract class bc {
                           break L16;
                         }
                       }
-                      ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> -152919192);
+                      ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> 8);
                       break L14;
                     }
                   } else {
@@ -237,7 +237,7 @@ abstract class bc {
                           break L17;
                         }
                       }
-                      ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> -152919192);
+                      ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> 8);
                       break L14;
                     }
                   }
@@ -252,11 +252,11 @@ abstract class bc {
             return;
           } else {
             L18: {
-              var3 = param2 - 135;
+              var3 = 185;
               var4 = param0 + -35;
               var5 = 256;
               if (75 > sn.field_c) {
-                var5 = (sn.field_c << -894248600) / 75;
+                var5 = (sn.field_c << 8) / 75;
                 break L18;
               } else {
                 break L18;
@@ -266,7 +266,7 @@ abstract class bc {
               if (sn.field_c <= 200) {
                 break L19;
               } else {
-                var5 = (-sn.field_c + 250 << -749629432) / 50;
+                var5 = (-sn.field_c + 250 << 8) / 50;
                 break L19;
               }
             }
@@ -284,7 +284,7 @@ abstract class bc {
             }
             L21: {
               lg.a(1);
-              if (-151 < (sn.field_c ^ -1)) {
+              if (sn.field_c < 150) {
                 rk.field_a.b(var3, var4);
                 break L21;
               } else {
@@ -298,9 +298,9 @@ abstract class bc {
                 if (var6 <= 0) {
                   break L23;
                 } else {
-                  if ((var6 ^ -1) > -51) {
+                  if (var6 < 50) {
                     if (20 <= var6) {
-                      if (-31 < (var6 ^ -1)) {
+                      if (var6 < 30) {
                         eq.field_k.d(var3, var4, 256);
                         break L23;
                       } else {
@@ -327,7 +327,7 @@ abstract class bc {
                           break L24;
                         }
                       }
-                      ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> -152919192);
+                      ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> 8);
                       break L22;
                     }
                   }
@@ -346,7 +346,7 @@ abstract class bc {
                     break L25;
                   }
                 }
-                ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> -152919192);
+                ne.field_e.f(var3 - -15, var4 - -10, var5 * var7 >> 8);
                 break L22;
               }
             }
@@ -366,12 +366,6 @@ abstract class bc {
     }
 
     public static void b(int param0) {
-        if (param0 != -26389) {
-            field_f = null;
-            field_a = null;
-            field_f = null;
-            return;
-        }
         field_a = null;
         field_f = null;
     }

@@ -229,7 +229,7 @@ final class dc {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_q[var31] = param0.field_q[var31] - 1;
-                                                                                param0.field_u[param0.field_q[var31]] = param0.field_u[param0.field_q[var31 - 1] + 16 - 1];
+                                                                                param0.field_u[param0.field_q[var31]] = param0.field_u[param0.field_q[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -315,7 +315,7 @@ final class dc {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -493,11 +493,11 @@ final class dc {
                                                 var1 = dc.e(param0);
                                                 if (var1 != 0) {
                                                   var1 = dc.e(param0);
-                                                  if (var1 == 0) {
+                                                  if (var1 != 0) {
                                                     var17--;
                                                     continue L39;
                                                   } else {
-                                                    var17--;
+                                                    var17++;
                                                     continue L39;
                                                   }
                                                 } else {
@@ -819,7 +819,7 @@ final class dc {
         synchronized (var5) {
           L0: {
             field_a.field_w = param2;
-            field_a.field_d = param4;
+            field_a.field_d = 9;
             field_a.field_h = param0;
             field_a.field_s = 0;
             field_a.field_A = param1;

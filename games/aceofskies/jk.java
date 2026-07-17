@@ -16,89 +16,103 @@ final class jk {
 
     final static boolean a(char param0, int param1) {
         char[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         char[] var5 = null;
         char[] var6 = null;
         int var7 = 0;
-        char[] var8 = null;
-        char[] var9 = null;
-        char[] var10 = null;
-        char[] var11 = null;
-        if (Character.isISOControl(param0)) {
-          return false;
-        } else {
-          if (!dc.a((byte) -119, param0)) {
-            var10 = wo.field_l;
-            var8 = var10;
-            var5 = var8;
-            var2 = var5;
-            var3 = 0;
-            L0: while (true) {
-              if (var10.length <= var3) {
-                var11 = wb.field_b;
-                var9 = var11;
-                var6 = var9;
-                var2 = var6;
-                if (param1 == -26024) {
-                  var7 = 0;
-                  var3 = var7;
-                  L1: while (true) {
-                    if (var11.length > var7) {
-                      var4 = var11[var7];
-                      if (var4 == param0) {
-                        return true;
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_24_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_5_0 = 0;
+        try {
+          L0: {
+            if (Character.isISOControl(param0)) {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
+            } else {
+              if (!dc.a((byte) -119, param0)) {
+                var5 = wo.field_l;
+                var2 = var5;
+                var3 = 0;
+                L1: while (true) {
+                  if (var5.length <= var3) {
+                    L2: {
+                      var6 = wb.field_b;
+                      var2 = var6;
+                      if (param1 == -26024) {
+                        break L2;
                       } else {
-                        var7++;
-                        continue L1;
+                        field_b = null;
+                        break L2;
                       }
-                    } else {
-                      return false;
                     }
-                  }
-                } else {
-                  field_b = (gk) null;
-                  var7 = 0;
-                  var3 = var7;
-                  L2: while (true) {
-                    if (var11.length > var7) {
-                      var4 = var11[var7];
-                      if (var4 == param0) {
-                        return true;
+                    var7 = 0;
+                    var3 = var7;
+                    L3: while (true) {
+                      if (var6.length <= var7) {
+                        stackOut_23_0 = 0;
+                        stackIn_24_0 = stackOut_23_0;
+                        break L0;
                       } else {
-                        var7++;
-                        continue L2;
+                        var4 = var6[var7];
+                        if (var4 == param0) {
+                          stackOut_20_0 = 1;
+                          stackIn_21_0 = stackOut_20_0;
+                          return stackIn_21_0 != 0;
+                        } else {
+                          var7++;
+                          continue L3;
+                        }
                       }
+                    }
+                  } else {
+                    var4 = var5[var3];
+                    if (param0 == var4) {
+                      stackOut_11_0 = 1;
+                      stackIn_12_0 = stackOut_11_0;
+                      return stackIn_12_0 != 0;
                     } else {
-                      return false;
+                      var3++;
+                      continue L1;
                     }
                   }
                 }
               } else {
-                var4 = var10[var3];
-                if (param0 == var4) {
-                  return true;
-                } else {
-                  var3++;
-                  continue L0;
-                }
+                stackOut_5_0 = 1;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0 != 0;
               }
             }
-          } else {
-            return true;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw pn.a((Throwable) (Object) var2_ref, "jk.C(" + param0 + 44 + param1 + 41);
         }
+        return stackIn_24_0 != 0;
     }
 
     final void a(byte param0, wl param1) {
         ((jk) this).field_a = param1.a((byte) -49, 24, (byte[]) null, 196584, true);
-        hl discarded$7 = new hl(((jk) this).field_a, 5126, 2, 0);
-        hl discarded$8 = new hl(((jk) this).field_a, 5126, 3, 8);
+        hl discarded$0 = new hl(((jk) this).field_a, 5126, 2, 0);
+        hl discarded$2 = new hl(((jk) this).field_a, 5126, 3, 8);
         if (param0 < 34) {
-          return;
-        } else {
-          hl discarded$9 = new hl(((jk) this).field_a, 5121, 4, 20);
-          return;
+            return;
+        }
+        try {
+            hl discarded$3 = new hl(((jk) this).field_a, 5121, 4, 20);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "jk.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -96,16 +96,8 @@ final class md extends gj {
     public static void d(int param0) {
         field_q = null;
         field_v = null;
-        if (param0 > -50) {
-          field_u = null;
-          field_u = null;
-          field_t = null;
-          return;
-        } else {
-          field_u = null;
-          field_t = null;
-          return;
-        }
+        field_u = null;
+        field_t = null;
     }
 
     final int c(byte param0) {

@@ -157,7 +157,7 @@ final class fh {
           L0: {
             L1: {
               var2_int = 0;
-              if ((param1 ^ -1) == -1) {
+              if (param1 == 0) {
                 var2_int = ik.field_e;
                 break L1;
               } else {
@@ -166,7 +166,7 @@ final class fh {
             }
             if (param0 == 79) {
               L2: {
-                if (-2 == (param1 ^ -1)) {
+                if (param1 == 1) {
                   var2_int = me.field_b;
                   break L2;
                 } else {
@@ -174,7 +174,7 @@ final class fh {
                 }
               }
               L3: {
-                if ((param1 ^ -1) == -3) {
+                if (param1 == 2) {
                   var2_int = mc.field_f;
                   break L3;
                 } else {
@@ -252,7 +252,7 @@ final class fh {
               var2 = 55 % ((param0 - 21) / 59);
               var1 = null;
               var3 = null;
-              if ((sf.field_d ^ -1) != -1) {
+              if (sf.field_d != 0) {
                 break L1;
               } else {
                 if (null == qe.field_a) {
@@ -324,7 +324,7 @@ final class fh {
                   var6 = "|";
                   var7 = sf.field_d;
                   var8 = 0;
-                  if ((var7 ^ -1) == -3) {
+                  if (var7 == 2) {
                     var5 = sk.a(new String[1], vd.field_b, 126);
                     var9 = sk.a(new String[1], mc.field_h, 119);
                     var8 = -485 + ba.field_L.field_Hb + (in.field_g.field_Hb - -we.field_k.b(var9)) + -we.field_k.b(var5);
@@ -436,10 +436,10 @@ final class fh {
                             }
                           }
                         }
-                        if ((in.field_g.field_F ^ -1) == -1) {
+                        if (in.field_g.field_F == 0) {
                           break L15;
                         } else {
-                          if ((var10 ^ -1) < (in.field_g.field_Z ^ -1)) {
+                          if (~var10 < ~in.field_g.field_Z) {
                             if (!cd.field_a) {
                               em.d(-20715);
                               break L15;
@@ -543,7 +543,7 @@ final class fh {
                   L2: {
                     L3: {
                       var9 = param0[var8];
-                      if (-1 < (var9 ^ -1)) {
+                      if (var9 < 0) {
                         break L3;
                       } else {
                         var7_int++;
@@ -568,8 +568,8 @@ final class fh {
                         L6: {
                           int incrementValue$8 = param1;
                           param1++;
-                          param5[incrementValue$8] = (byte)(var10 ^ -1);
-                          if ((param3 ^ -1) < (param1 ^ -1)) {
+                          param5[incrementValue$8] = (byte)(~var10);
+                          if (~param3 < ~param1) {
                             break L6;
                           } else {
                             if (var11 == 0) {
@@ -607,8 +607,8 @@ final class fh {
                         L10: {
                           int incrementValue$9 = param1;
                           param1++;
-                          param5[incrementValue$9] = (byte)(var10 ^ -1);
-                          if ((param1 ^ -1) > (param3 ^ -1)) {
+                          param5[incrementValue$9] = (byte)(~var10);
+                          if (~param1 > ~param3) {
                             break L10;
                           } else {
                             if (var11 == 0) {
@@ -626,7 +626,7 @@ final class fh {
                     }
                     L11: {
                       L12: {
-                        if ((32 & var9 ^ -1) == -1) {
+                        if ((32 & var9) == 0) {
                           break L12;
                         } else {
                           var7_int = ((fh) this).field_c[var7_int];
@@ -645,8 +645,8 @@ final class fh {
                       if (0 > ((fh) this).field_c[var7_int]) {
                         int incrementValue$10 = param1;
                         param1++;
-                        param5[incrementValue$10] = (byte)(var10 ^ -1);
-                        if ((param3 ^ -1) >= (param1 ^ -1)) {
+                        param5[incrementValue$10] = (byte)(~var10);
+                        if (~param3 >= ~param1) {
                           break L4;
                         } else {
                           var7_int = 0;
@@ -658,7 +658,7 @@ final class fh {
                     }
                     L14: {
                       L15: {
-                        if ((var9 & 16 ^ -1) == -1) {
+                        if ((var9 & 16) == 0) {
                           break L15;
                         } else {
                           var7_int = ((fh) this).field_c[var7_int];
@@ -677,7 +677,7 @@ final class fh {
                       if (((fh) this).field_c[var7_int] < 0) {
                         int incrementValue$11 = param1;
                         param1++;
-                        param5[incrementValue$11] = (byte)(var10 ^ -1);
+                        param5[incrementValue$11] = (byte)(~var10);
                         if (param3 <= param1) {
                           break L4;
                         } else {
@@ -706,12 +706,12 @@ final class fh {
                     }
                     L19: {
                       var10 = ((fh) this).field_c[var7_int];
-                      if ((((fh) this).field_c[var7_int] ^ -1) > -1) {
+                      if (((fh) this).field_c[var7_int] < 0) {
                         L20: {
                           int incrementValue$12 = param1;
                           param1++;
-                          param5[incrementValue$12] = (byte)(var10 ^ -1);
-                          if ((param3 ^ -1) < (param1 ^ -1)) {
+                          param5[incrementValue$12] = (byte)(~var10);
+                          if (~param3 < ~param1) {
                             break L20;
                           } else {
                             if (var11 == 0) {
@@ -729,7 +729,7 @@ final class fh {
                     }
                     L21: {
                       L22: {
-                        if ((var9 & 4 ^ -1) != -1) {
+                        if ((var9 & 4) != 0) {
                           break L22;
                         } else {
                           var7_int++;
@@ -750,7 +750,7 @@ final class fh {
                       } else {
                         int incrementValue$13 = param1;
                         param1++;
-                        param5[incrementValue$13] = (byte)(var10 ^ -1);
+                        param5[incrementValue$13] = (byte)(~var10);
                         if (param3 <= param1) {
                           break L4;
                         } else {
@@ -761,7 +761,7 @@ final class fh {
                     }
                     L24: {
                       L25: {
-                        if ((2 & var9 ^ -1) != -1) {
+                        if ((2 & var9) != 0) {
                           break L25;
                         } else {
                           var7_int++;
@@ -782,7 +782,7 @@ final class fh {
                       } else {
                         int incrementValue$14 = param1;
                         param1++;
-                        param5[incrementValue$14] = (byte)(var10 ^ -1);
+                        param5[incrementValue$14] = (byte)(~var10);
                         if (param3 <= param1) {
                           break L4;
                         } else {
@@ -793,7 +793,7 @@ final class fh {
                     }
                     L27: {
                       L28: {
-                        if ((1 & var9 ^ -1) != -1) {
+                        if ((1 & var9) != 0) {
                           break L28;
                         } else {
                           var7_int++;
@@ -809,11 +809,11 @@ final class fh {
                     }
                     L29: {
                       var10 = ((fh) this).field_c[var7_int];
-                      if ((((fh) this).field_c[var7_int] ^ -1) > -1) {
+                      if (((fh) this).field_c[var7_int] < 0) {
                         L30: {
                           int incrementValue$15 = param1;
                           param1++;
-                          param5[incrementValue$15] = (byte)(var10 ^ -1);
+                          param5[incrementValue$15] = (byte)(~var10);
                           if (param3 > param1) {
                             break L30;
                           } else {
@@ -967,7 +967,7 @@ final class fh {
           L0: {
             var7_int = 0;
             param3 = param3 + param0;
-            var8 = param1 << 1749695619;
+            var8 = param1 << 3;
             L1: while (true) {
               L2: {
                 L3: {
@@ -978,7 +978,7 @@ final class fh {
                     var10 = ((fh) this).field_e[var9];
                     var11 = ((fh) this).field_i[var9];
                     stackOut_3_0 = -1;
-                    stackOut_3_1 = var11 ^ -1;
+                    stackOut_3_1 = ~var11;
                     stackIn_25_0 = stackOut_3_0;
                     stackIn_25_1 = stackOut_3_1;
                     stackIn_4_0 = stackOut_3_0;
@@ -988,10 +988,10 @@ final class fh {
                     } else {
                       if (stackIn_4_0 != stackIn_4_1) {
                         L4: {
-                          var12 = var8 >> -91561213;
+                          var12 = var8 >> 3;
                           var13 = 7 & var8;
-                          var7_int = var7_int & -var13 >> 42438143;
-                          var14 = var12 + (var11 + var13 + -1 >> -1157900381);
+                          var7_int = var7_int & -var13 >> 31;
+                          var14 = var12 + (var11 + var13 + -1 >> 3);
                           var13 += 24;
                           int dupTemp$1 = mc.a(var7_int, var10 >>> var13);
                           var7_int = dupTemp$1;
@@ -1078,7 +1078,7 @@ final class fh {
                   break L8;
                 }
               }
-              stackOut_28_0 = (var8 + 7 >> 1032196995) + -param1;
+              stackOut_28_0 = (var8 + 7 >> 3) + -param1;
               stackIn_29_0 = stackOut_28_0;
               break L0;
             }
@@ -1208,8 +1208,8 @@ final class fh {
             var4 = 0;
             var5 = 0;
             L1: while (true) {
-              stackOut_2_0 = var5 ^ -1;
-              stackOut_2_1 = var2_int ^ -1;
+              stackOut_2_0 = ~var5;
+              stackOut_2_1 = ~var2_int;
               stackIn_3_0 = stackOut_2_0;
               stackIn_3_1 = stackOut_2_1;
               L2: while (true) {
@@ -1223,7 +1223,7 @@ final class fh {
                         break L3;
                       } else {
                         L5: {
-                          if ((var6 ^ -1) == -1) {
+                          if (var6 == 0) {
                             break L5;
                           } else {
                             L6: {
@@ -1341,7 +1341,7 @@ final class fh {
                               L16: while (true) {
                                 L17: {
                                   L18: {
-                                    if ((var11 ^ -1) <= (var6 ^ -1)) {
+                                    if (~var11 <= ~var6) {
                                       break L18;
                                     } else {
                                       var12 = -2147483648 >>> var11;
@@ -1420,7 +1420,7 @@ final class fh {
                                       }
                                     }
                                   }
-                                  ((fh) this).field_c[var10] = var5 ^ -1;
+                                  ((fh) this).field_c[var10] = ~var5;
                                   stackOut_62_0 = var10;
                                   stackOut_62_1 = var4;
                                   stackIn_63_0 = stackOut_62_0;

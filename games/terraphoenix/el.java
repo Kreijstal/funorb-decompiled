@@ -9,11 +9,6 @@ final class el extends RuntimeException {
     Throwable field_a;
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            field_d = 29;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

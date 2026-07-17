@@ -17,19 +17,86 @@ final class ce extends tj implements he {
     private fw field_L;
 
     final boolean a(kb param0, int param1, char param2, int param3) {
-        if (this.a(param0, param1, param2, param3)) {
-          return true;
-        } else {
-          if ((param1 ^ -1) != -99) {
-            if ((param1 ^ -1) == -100) {
-              return ((ce) this).b((byte) -126, param0);
+        RuntimeException var5 = null;
+        int stackIn_3_0 = 0;
+        boolean stackIn_6_0 = false;
+        boolean stackIn_9_0 = false;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        int stackOut_10_0 = 0;
+        boolean stackOut_8_0 = false;
+        boolean stackOut_5_0 = false;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
+          L0: {
+            if (super.a(param0, param1, param2, param3)) {
+              stackOut_2_0 = 1;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             } else {
-              return false;
+              if (param1 != 98) {
+                if (param1 != 99) {
+                  stackOut_10_0 = 0;
+                  stackIn_11_0 = stackOut_10_0;
+                  break L0;
+                } else {
+                  stackOut_8_0 = ((ce) this).b((byte) -126, param0);
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
+                }
+              } else {
+                stackOut_5_0 = ((ce) this).a(false, param0);
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0;
+              }
             }
-          } else {
-            return ((ce) this).a(false, param0);
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var5 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_1 = new StringBuilder().append("ce.F(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L1;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L1;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_11_0 != 0;
     }
 
     final static int[] a(int param0) {
@@ -47,11 +114,11 @@ final class ce extends tj implements he {
         if (param2 >= -82) {
           field_F = null;
           int discarded$2 = ArmiesOfGielinor.field_J.a(aq.field_a, 20 + var5, var6 - -20, -40 + ((ce) this).field_l, -50 + ((ce) this).field_w, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
-          this.a(param0, param1, (byte) -107, param3);
+          super.a(param0, param1, (byte) -107, param3);
           return;
         } else {
           int discarded$3 = ArmiesOfGielinor.field_J.a(aq.field_a, 20 + var5, var6 - -20, -40 + ((ce) this).field_l, -50 + ((ce) this).field_w, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
-          this.a(param0, param1, (byte) -107, param3);
+          super.a(param0, param1, (byte) -107, param3);
           return;
         }
     }
@@ -87,10 +154,10 @@ final class ce extends tj implements he {
         ((ce) this).field_E.field_k = (kh) (Object) var1;
         int var2 = 4;
         int var3 = 326;
-        int var4 = -var2 + var3 >> -1319432543;
-        ((ce) this).field_G.a(((ce) this).field_l + -var3 >> 568564289, var4, ((ce) this).field_w - 48 + -var2, 8192, 30);
-        ((ce) this).field_E.a((-var3 + ((ce) this).field_l >> 158666433) - -var4 + var2, var4, -var2 + ((ce) this).field_w - 48, 8192, 30);
-        ((ce) this).field_L.a(-var3 + ((ce) this).field_l >> 1666722785, var3, -(2 * var2) + ((ce) this).field_w + -78, 8192, 30);
+        int var4 = -var2 + var3 >> 1;
+        ((ce) this).field_G.a(((ce) this).field_l + -var3 >> 1, var4, ((ce) this).field_w - 48 + -var2, 8192, 30);
+        ((ce) this).field_E.a((-var3 + ((ce) this).field_l >> 1) - -var4 + var2, var4, -var2 + ((ce) this).field_w - 48, 8192, 30);
+        ((ce) this).field_L.a(-var3 + ((ce) this).field_l >> 1, var3, -(2 * var2) + ((ce) this).field_w + -78, 8192, 30);
         ((ce) this).field_G.field_x = (qo) this;
         ((ce) this).field_L.field_x = (qo) this;
         ((ce) this).field_E.field_x = (qo) this;
@@ -102,48 +169,83 @@ final class ce extends tj implements he {
     }
 
     public final void a(int param0, int param1, int param2, int param3, fw param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         Object var8 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var7 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (((ce) this).field_G == param4) {
-          ou.b((byte) 126);
-          if (param1 != 11) {
-            var8 = null;
-            ((ce) this).a(47, 86, -42, 41, (fw) null);
-            return;
-          } else {
-            return;
-          }
-        } else {
-          if (((ce) this).field_L != param4) {
-            if (((ce) this).field_E != param4) {
-              if (param1 != 11) {
-                var8 = null;
-                ((ce) this).a(47, 86, -42, 41, (fw) null);
-                return;
+        try {
+          L0: {
+            L1: {
+              if (((ce) this).field_G == param4) {
+                ou.b((byte) 126);
+                break L1;
               } else {
-                return;
-              }
-            } else {
-              di.c((byte) -127);
-              if (param1 == 11) {
-                return;
-              } else {
-                var8 = null;
-                ((ce) this).a(47, 86, -42, 41, (fw) null);
-                return;
+                if (((ce) this).field_L != param4) {
+                  if (((ce) this).field_E != param4) {
+                    break L1;
+                  } else {
+                    di.c((byte) -127);
+                    break L1;
+                  }
+                } else {
+                  rq.a(false);
+                  break L1;
+                }
               }
             }
-          } else {
-            rq.a(false);
             if (param1 == 11) {
-              return;
+              break L0;
             } else {
               var8 = null;
               ((ce) this).a(47, 86, -42, 41, (fw) null);
               return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var6 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var6;
+            stackOut_10_1 = new StringBuilder().append("ce.N(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param4 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L2;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L2;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 

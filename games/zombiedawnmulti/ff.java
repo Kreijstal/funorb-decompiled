@@ -17,12 +17,12 @@ class ff extends qa {
         if (param0 != -4604) {
           field_t = null;
           var2 = ii.b((byte) -126);
-          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << -1406805983) + var1, var2 - -(ic.field_g << -1130232991), 12018);
+          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2 - -(ic.field_g << 1), 12018);
           up.b(-125);
           return;
         } else {
           var2 = ii.b((byte) -126);
-          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << -1406805983) + var1, var2 - -(ic.field_g << -1130232991), 12018);
+          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2 - -(ic.field_g << 1), 12018);
           up.b(-125);
           return;
         }
@@ -82,32 +82,36 @@ class ff extends qa {
     }
 
     final static void a(byte param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         vg var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (param0 == 126) {
-          var4 = (vg) (Object) ag.field_i.c(param0 + -74);
-          L0: while (true) {
-            if (var4 == null) {
-              return;
-            } else {
-              vi.a(param1, var4, (byte) -123);
-              var4 = (vg) (Object) ag.field_i.b(6);
-              continue L0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 126) {
+                break L1;
+              } else {
+                ff.a(-116, -3);
+                break L1;
+              }
+            }
+            var4 = (vg) (Object) ag.field_i.c(param0 + -74);
+            L2: while (true) {
+              if (var4 == null) {
+                break L0;
+              } else {
+                vi.a(7, var4, (byte) -123);
+                var4 = (vg) (Object) ag.field_i.b(6);
+                continue L2;
+              }
             }
           }
-        } else {
-          ff.a(-116, -3);
-          var4 = (vg) (Object) ag.field_i.c(param0 + -74);
-          L1: while (true) {
-            if (var4 == null) {
-              return;
-            } else {
-              vi.a(param1, var4, (byte) -123);
-              var4 = (vg) (Object) ag.field_i.b(6);
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw fa.a((Throwable) (Object) var2, "ff.IA(" + param0 + 44 + 7 + 41);
         }
     }
 
@@ -115,11 +119,6 @@ class ff extends qa {
         field_q = null;
         field_u = null;
         field_t = null;
-        if (param0 != -1130232991) {
-            field_r = null;
-            field_r = null;
-            return;
-        }
         field_r = null;
     }
 

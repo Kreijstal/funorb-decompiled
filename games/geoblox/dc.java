@@ -14,23 +14,28 @@ final class dc {
     }
 
     final static void a(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         ja var3 = null;
+        RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.field_C;
-        var3 = (ja) (Object) a.field_d.g(0);
-        L0: while (true) {
-          if (var3 == null) {
-            if (param0 != 7838) {
-              dc.b(-80);
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            var3 = (ja) (Object) a.field_d.g(0);
+            L1: while (true) {
+              if (var3 == null) {
+                break L0;
+              } else {
+                var3.e(1643839728);
+                var3 = (ja) (Object) a.field_d.d(1);
+                continue L1;
+              }
             }
-          } else {
-            var3.e(1643839728);
-            var3 = (ja) (Object) a.field_d.d(1);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var1, "dc.A(" + 7838 + 41);
         }
     }
 

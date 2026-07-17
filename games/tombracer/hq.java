@@ -9,9 +9,6 @@ class hq extends eta {
     }
 
     public static void b(int param0) {
-        if (param0 != -6682) {
-            return;
-        }
         field_b = null;
     }
 

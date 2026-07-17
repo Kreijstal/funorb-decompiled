@@ -35,7 +35,7 @@ final class vla extends mv {
         ad var3 = null;
         int var4 = 0;
         var4 = BachelorFridge.field_y;
-        if (param0 == (((vla) this).field_k.field_p ^ -1)) {
+        if (param0 == ~((vla) this).field_k.field_p) {
           return;
         } else {
           var2 = (pp) (Object) ((vla) this).field_k.field_o.b((byte) 90);
@@ -65,7 +65,11 @@ final class vla extends mv {
 
     vla(gj param0, vja param1) {
         super(param0, param1);
-        ((vla) this).field_q = 64;
+        try {
+            ((vla) this).field_q = 64;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "vla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean c(byte param0) {
@@ -83,9 +87,10 @@ final class vla extends mv {
           return true;
         } else {
           var5 = -90 % ((71 - param0) / 47);
+          int fieldTemp$1 = ((vla) this).field_q - 1;
           ((vla) this).field_q = ((vla) this).field_q - 1;
-          if (0 <= ((vla) this).field_q - 1) {
-            if (-26 != (((vla) this).field_q ^ -1)) {
+          if (0 <= fieldTemp$1) {
+            if (((vla) this).field_q != 25) {
               L0: {
                 if (15 != ((vla) this).field_q) {
                   break L0;
@@ -103,7 +108,7 @@ final class vla extends mv {
                       }
                     }
                     L2: {
-                      if ((((vla) this).field_q ^ -1) != -64) {
+                      if (((vla) this).field_q != 63) {
                         break L2;
                       } else {
                         if (((vla) this).field_k.d((byte) -90)) {
@@ -127,7 +132,7 @@ final class vla extends mv {
                 }
               }
               L4: {
-                if ((((vla) this).field_q ^ -1) != -64) {
+                if (((vla) this).field_q != 63) {
                   break L4;
                 } else {
                   if (((vla) this).field_k.d((byte) -90)) {
@@ -159,7 +164,7 @@ final class vla extends mv {
                     break L6;
                   }
                 }
-                if ((((vla) this).field_q ^ -1) == -64) {
+                if (((vla) this).field_q == 63) {
                   if (((vla) this).field_k.d((byte) -90)) {
                     return false;
                   } else {
@@ -178,7 +183,7 @@ final class vla extends mv {
                     break L7;
                   }
                 }
-                if ((((vla) this).field_q ^ -1) == -64) {
+                if (((vla) this).field_q == 63) {
                   if (!((vla) this).field_k.d((byte) -90)) {
                     var4.b(-1, var6_ref.field_o);
                     return false;
@@ -198,13 +203,78 @@ final class vla extends mv {
     }
 
     final static int a(int param0, be param1) {
-        if (param0 != -64) {
-            return -77;
+        RuntimeException var2 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_8_0 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        try {
+          L0: {
+            if (param0 == -64) {
+              if (param1 == null) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0;
+              } else {
+                stackOut_7_0 = 50 * param1.field_i.length / pb.field_j;
+                stackIn_8_0 = stackOut_7_0;
+                break L0;
+              }
+            } else {
+              stackOut_1_0 = -77;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var2;
+            stackOut_9_1 = new StringBuilder().append("vla.E(").append(param0).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param1 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L1;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L1;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
-        if (!(param1 != null)) {
-            return 0;
-        }
-        return 50 * param1.field_i.length / pb.field_j;
+        return stackIn_8_0;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
@@ -235,10 +305,10 @@ final class vla extends mv {
                   return;
                 } else {
                   L1: {
-                    if (var5 <= -636) {
+                    if (var5 >= 635) {
                       break L1;
                     } else {
-                      if (-1 >= uga.field_x) {
+                      if (uga.field_x <= 0) {
                         break L1;
                       } else {
                         uga.field_x = uga.field_x - 5;
@@ -256,10 +326,10 @@ final class vla extends mv {
                   return;
                 } else {
                   L2: {
-                    if (var5 <= -636) {
+                    if (var5 >= 635) {
                       break L2;
                     } else {
-                      if (-1 >= uga.field_x) {
+                      if (uga.field_x <= 0) {
                         break L2;
                       } else {
                         uga.field_x = uga.field_x - 5;
@@ -279,10 +349,10 @@ final class vla extends mv {
                   return;
                 } else {
                   L3: {
-                    if (var5 <= -636) {
+                    if (var5 >= 635) {
                       break L3;
                     } else {
-                      if (-1 >= uga.field_x) {
+                      if (uga.field_x <= 0) {
                         break L3;
                       } else {
                         uga.field_x = uga.field_x - 5;
@@ -300,10 +370,10 @@ final class vla extends mv {
                   return;
                 } else {
                   L4: {
-                    if (var5 <= -636) {
+                    if (var5 >= 635) {
                       break L4;
                     } else {
-                      if (-1 >= uga.field_x) {
+                      if (uga.field_x <= 0) {
                         break L4;
                       } else {
                         uga.field_x = uga.field_x - 5;
@@ -345,8 +415,8 @@ final class vla extends mv {
                   uga.field_x = uga.field_x + 5;
                   return;
                 } else {
-                  if (var5 > -636) {
-                    if (-1 < uga.field_x) {
+                  if (var5 < 635) {
+                    if (uga.field_x > 0) {
                       uga.field_x = uga.field_x - 5;
                       return;
                     } else {
@@ -358,56 +428,59 @@ final class vla extends mv {
                 }
               } else {
                 var5 = da.field_d.b(false) + da.field_d.field_D;
-                if (var5 <= 640) {
-                  if ((var5 ^ -1) > -636) {
-                    if (-1 <= (uga.field_x ^ -1)) {
+                if (var5 > 640) {
+                  uga.field_x = uga.field_x + 5;
+                  return;
+                } else {
+                  if (var5 < 635) {
+                    if (uga.field_x > 0) {
+                      uga.field_x = uga.field_x - 5;
                       return;
                     } else {
-                      uga.field_x = uga.field_x - 5;
                       return;
                     }
                   } else {
                     return;
                   }
-                } else {
-                  uga.field_x = uga.field_x + 5;
-                  return;
                 }
               }
             } else {
               if (var4 == 0) {
                 var5 = da.field_d.b(false) + da.field_d.field_D;
-                if (var5 <= 640) {
-                  if (var5 > -636) {
-                    if (-1 < uga.field_x) {
-                      uga.field_x = uga.field_x - 5;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
+                if (var5 > 640) {
                   uga.field_x = uga.field_x + 5;
+                  return;
+                } else {
+                  L6: {
+                    if (var5 >= 635) {
+                      break L6;
+                    } else {
+                      if (uga.field_x <= 0) {
+                        break L6;
+                      } else {
+                        uga.field_x = uga.field_x - 5;
+                        return;
+                      }
+                    }
+                  }
                   return;
                 }
               } else {
-                L6: {
+                L7: {
                   fo.field_a.a(19842, param3);
                   var5 = da.field_d.b(false) + da.field_d.field_D;
                   if (var5 > 640) {
                     uga.field_x = uga.field_x + 5;
-                    break L6;
+                    break L7;
                   } else {
-                    if (var5 <= -636) {
-                      break L6;
+                    if (var5 >= 635) {
+                      break L7;
                     } else {
-                      if (-1 >= uga.field_x) {
-                        break L6;
+                      if (uga.field_x <= 0) {
+                        break L7;
                       } else {
                         uga.field_x = uga.field_x - 5;
-                        break L6;
+                        break L7;
                       }
                     }
                   }

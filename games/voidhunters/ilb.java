@@ -6,9 +6,6 @@ final class ilb {
 
     final static void a(byte param0) {
         dfb.a(4410);
-        if (param0 != -114) {
-            return;
-        }
     }
 
     static {

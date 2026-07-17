@@ -12,24 +12,74 @@ final class c extends n {
     private df field_s;
 
     final void a(byte[] param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         var6 = EscapeVector.field_A;
-        if (param1 != 19583) {
-          return;
-        } else {
-          var5 = 0;
-          L0: while (true) {
-            if (param2 <= var5) {
-              return;
+        try {
+          L0: {
+            if (param1 == 19583) {
+              var5_int = 0;
+              L1: while (true) {
+                if (param2 <= var5_int) {
+                  break L0;
+                } else {
+                  int fieldTemp$5 = ((c) this).field_m;
+                  ((c) this).field_m = ((c) this).field_m + 1;
+                  param0[param3 + var5_int] = (byte)(((c) this).field_g[fieldTemp$5] + -((c) this).field_s.a(1736563940));
+                  var5_int++;
+                  continue L1;
+                }
+              }
             } else {
-              int fieldTemp$2 = ((c) this).field_m;
-              ((c) this).field_m = ((c) this).field_m + 1;
-              param0[param3 + var5] = (byte)(((c) this).field_g[fieldTemp$2] + -((c) this).field_s.a(1736563940));
-              var5++;
-              continue L0;
+              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_1 = new StringBuilder().append("c.QA(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -86,27 +136,37 @@ final class c extends n {
 
     final static void p(int param0) {
         c var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = EscapeVector.field_A;
-        var1 = om.field_c;
-        L0: while (true) {
-          if (!ea.c((byte) -115)) {
-            if (param0 != 11197) {
-              c.p(-41);
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            var1 = om.field_c;
+            L1: while (true) {
+              if (!ea.c((byte) -115)) {
+                if (param0 == 11197) {
+                  break L0;
+                } else {
+                  c.p(-41);
+                  return;
+                }
+              } else {
+                var1.a(8, true);
+                int fieldTemp$2 = var1.field_m + 1;
+                var1.field_m = var1.field_m + 1;
+                var2 = fieldTemp$2;
+                mf.a(param0 ^ -25858, var1);
+                om.field_c.e(82, var1.field_m + -var2);
+                continue L1;
+              }
             }
-          } else {
-            var1.a(8, true);
-            int fieldTemp$2 = var1.field_m + 1;
-            var1.field_m = var1.field_m + 1;
-            var2 = fieldTemp$2;
-            mf.a(param0 ^ -25858, var1);
-            om.field_c.e(82, var1.field_m + -var2);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var1_ref, "c.DB(" + param0 + 41);
         }
     }
 
@@ -114,7 +174,11 @@ final class c extends n {
         if (param1 < 80) {
             return;
         }
-        ((c) this).field_s = new df(param0);
+        try {
+            ((c) this).field_s = new df(param0);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "c.RA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     c(int param0) {
@@ -136,7 +200,7 @@ final class c extends n {
 
     final int j(int param0, int param1) {
         int var6 = EscapeVector.field_A;
-        int var3 = ((c) this).field_r >> -1442743357;
+        int var3 = ((c) this).field_r >> 3;
         int var4 = -(7 & ((c) this).field_r) + param1;
         ((c) this).field_r = ((c) this).field_r + param0;
         int var5 = 0;

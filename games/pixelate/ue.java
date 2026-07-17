@@ -16,31 +16,66 @@ final class ue extends fa {
     long[][] field_k;
 
     final static int a(int param0, byte param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int[] var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = Pixelate.field_H ? 1 : 0;
-        int var2 = 0;
-        int[] var8 = new int[la.field_a.length];
-        int[] var7 = var8;
-        int[] var3 = var7;
-        if (param1 != 118) {
-            field_p = null;
-        }
-        for (var4 = 0; var8.length > var4; var4++) {
-            var3[var4] = -Math.abs(param0 + -la.field_a[var4]) + 30;
-            if (var8[var4] < 0) {
-                var8[var4] = 0;
+        int var6 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_13_0 = 0;
+        int stackOut_10_0 = 0;
+        var6 = Pixelate.field_H ? 1 : 0;
+        try {
+          L0: {
+            var2_int = 0;
+            var3 = new int[la.field_a.length];
+            var4 = 0;
+            L1: while (true) {
+              if (var3.length <= var4) {
+                var4 = ok.a(tg.field_f, -117, var2_int);
+                var5 = 0;
+                L2: while (true) {
+                  if (var5 >= var3.length) {
+                    stackOut_13_0 = ok.a(tg.field_f, -125, la.field_a.length);
+                    stackIn_14_0 = stackOut_13_0;
+                    break L0;
+                  } else {
+                    var4 = var4 - var3[var5];
+                    if (var4 <= 0) {
+                      stackOut_10_0 = var5;
+                      stackIn_11_0 = stackOut_10_0;
+                      return stackIn_11_0;
+                    } else {
+                      var5++;
+                      continue L2;
+                    }
+                  }
+                }
+              } else {
+                L3: {
+                  var3[var4] = -Math.abs(param0 + -la.field_a[var4]) + 30;
+                  if (var3[var4] >= 0) {
+                    break L3;
+                  } else {
+                    var3[var4] = 0;
+                    break L3;
+                  }
+                }
+                var2_int = var2_int + var3[var4];
+                var4++;
+                continue L1;
+              }
             }
-            var2 = var2 + var8[var4];
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var2, "ue.C(" + param0 + 44 + 118 + 41);
         }
-        var4 = ok.a(tg.field_f, param1 ^ -3, var2);
-        for (var5 = 0; var5 < var8.length; var5++) {
-            var4 = var4 - var8[var5];
-            if (!(var4 > 0)) {
-                return var5;
-            }
-        }
-        return ok.a(tg.field_f, -125, la.field_a.length);
+        return stackIn_14_0;
     }
 
     final static boolean a(byte param0) {
@@ -52,25 +87,41 @@ final class ue extends fa {
         field_p = null;
         field_t = null;
         field_q = null;
-        if (param0 != 30) {
-            field_q = null;
-        }
     }
 
     final static void b(int param0, byte param1) {
-        int var3 = Pixelate.field_H ? 1 : 0;
-        if (param1 != 42) {
-            field_p = null;
-        }
-        hf var4 = (hf) (Object) dh.field_a.c(1504642273);
-        while (var4 != null) {
-            id.a((byte) -117, var4, param0);
-            var4 = (hf) (Object) dh.field_a.f(param1 + 1504642231);
-        }
-        fa var2 = tj.field_z.c(1504642273);
-        while (var2 != null) {
-            ro.a(126, param0);
-            var2 = tj.field_z.f(1504642273);
+        fa var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
+        hf var4 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = Pixelate.field_H ? 1 : 0;
+        try {
+          L0: {
+            var4 = (hf) (Object) dh.field_a.c(1504642273);
+            L1: while (true) {
+              if (var4 == null) {
+                var2 = tj.field_z.c(1504642273);
+                L2: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    ro.a(126, param0);
+                    var2 = tj.field_z.f(1504642273);
+                    continue L2;
+                  }
+                }
+              } else {
+                id.a((byte) -117, var4, param0);
+                var4 = (hf) (Object) dh.field_a.f(1504642273);
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var2_ref, "ue.B(" + param0 + 44 + 42 + 41);
         }
     }
 

@@ -58,7 +58,7 @@ final class wsa extends ci {
                   ((wsa) this).field_n = ((wsa) this).field_n + ((wsa) this).field_s;
                   ((wsa) this).field_p = ((wsa) this).field_p + ((wsa) this).field_u;
                   L2: while (true) {
-                    if (-1 >= (((wsa) this).field_m ^ -1)) {
+                    if (((wsa) this).field_m >= 0) {
                       L3: {
                         if (((wsa) this).field_n < 0) {
                           ((wsa) this).field_n = 0;
@@ -150,12 +150,12 @@ final class wsa extends ci {
           }
         }
         L1: {
-          if ((param3 ^ -1) >= -2049) {
-            stackOut_4_0 = (param0 + 4096) * param3 >> -1518231540;
+          if (param3 <= 2048) {
+            stackOut_4_0 = (param0 + 4096) * param3 >> 12;
             stackIn_5_0 = stackOut_4_0;
             break L1;
           } else {
-            stackOut_3_0 = param0 + (param3 + -(param0 * param3 >> -434583892));
+            stackOut_3_0 = param0 + (param3 + -(param0 * param3 >> 12));
             stackIn_5_0 = stackOut_3_0;
             break L1;
           }
@@ -165,19 +165,19 @@ final class wsa extends ci {
           if (0 < var5) {
             param2 = param2 * 6;
             var6 = param3 + (param3 - var5);
-            var7 = (var5 + -var6 << 936974060) / var5;
-            var8 = param2 >> -2008380468;
-            var9 = -(var8 << 2060287660) + param2;
+            var7 = (var5 + -var6 << 12) / var5;
+            var8 = param2 >> 12;
+            var9 = -(var8 << 12) + param2;
             var10 = var5;
-            var10 = var7 * var10 >> -1868965940;
-            var10 = var9 * var10 >> 140021196;
+            var10 = var7 * var10 >> 12;
+            var10 = var9 * var10 >> 12;
             var11 = var6 + var10;
             var12 = var5 + -var10;
             var13 = var8;
             if (0 != var13) {
-              if (-2 != (var13 ^ -1)) {
+              if (var13 != 1) {
                 if (var13 != 2) {
-                  if (var13 == -4) {
+                  if (var13 == 3) {
                     ((wsa) this).field_q = var5;
                     ((wsa) this).field_r = var12;
                     ((wsa) this).field_t = var6;
@@ -189,7 +189,7 @@ final class wsa extends ci {
                       ((wsa) this).field_q = var5;
                       break L2;
                     } else {
-                      if (-6 != var13) {
+                      if (var13 != 5) {
                         break L2;
                       } else {
                         ((wsa) this).field_r = var6;
@@ -297,7 +297,7 @@ final class wsa extends ci {
         int stackOut_24_1 = 0;
         L0: {
           var11 = TombRacer.field_G ? 1 : 0;
-          if (param3 >= param2) {
+          if (~param3 <= ~param2) {
             stackOut_2_0 = param3;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -309,7 +309,7 @@ final class wsa extends ci {
         }
         L1: {
           var5 = stackIn_3_0;
-          if (param3 <= param2) {
+          if (~param3 >= ~param2) {
             stackOut_5_0 = param3;
             stackIn_6_0 = stackOut_5_0;
             break L1;
@@ -321,7 +321,7 @@ final class wsa extends ci {
         }
         L2: {
           var6 = stackIn_6_0;
-          if (param1 > var5) {
+          if (~param1 < ~var5) {
             stackOut_8_0 = param1;
             stackIn_9_0 = stackOut_8_0;
             break L2;
@@ -347,22 +347,22 @@ final class wsa extends ci {
           var6 = stackIn_12_0;
           ((wsa) this).field_p = (var6 + var5) / param0;
           var7 = var5 + -var6;
-          if (((wsa) this).field_p >= -1) {
+          if (((wsa) this).field_p <= 0) {
             ((wsa) this).field_n = 0;
             break L4;
           } else {
-            if (-4097 <= ((wsa) this).field_p) {
+            if (((wsa) this).field_p >= 4096) {
               ((wsa) this).field_n = 0;
               break L4;
             } else {
               L5: {
                 stackOut_14_0 = this;
-                stackOut_14_1 = var7 << 438361676;
+                stackOut_14_1 = var7 << 12;
                 stackIn_16_0 = stackOut_14_0;
                 stackIn_16_1 = stackOut_14_1;
                 stackIn_15_0 = stackOut_14_0;
                 stackIn_15_1 = stackOut_14_1;
-                if (-2049 > (((wsa) this).field_p ^ -1)) {
+                if (((wsa) this).field_p > 2048) {
                   stackOut_16_0 = this;
                   stackOut_16_1 = stackIn_16_1;
                   stackOut_16_2 = 8192 + -(((wsa) this).field_p * 2);
@@ -391,15 +391,15 @@ final class wsa extends ci {
             break L6;
           } else {
             L7: {
-              var8 = (-param2 + var5 << 1407528556) / var7;
-              var9 = (-param3 + var5 << 664757452) / var7;
-              var10 = (-param1 + var5 << 1419796652) / var7;
-              if (var5 == param2) {
+              var8 = (-param2 + var5 << 12) / var7;
+              var9 = (-param3 + var5 << 12) / var7;
+              var10 = (-param1 + var5 << 12) / var7;
+              if (~var5 == ~param2) {
                 L8: {
                   stackOut_31_0 = this;
                   stackIn_33_0 = stackOut_31_0;
                   stackIn_32_0 = stackOut_31_0;
-                  if (var6 == param3) {
+                  if (~var6 == ~param3) {
                     stackOut_33_0 = this;
                     stackOut_33_1 = 20480 - -var10;
                     stackIn_34_0 = stackOut_33_0;
@@ -468,32 +468,82 @@ final class wsa extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var5 = TombRacer.field_G ? 1 : 0;
-        if (param0 == 107) {
+        try {
           L0: {
-            var4 = param2;
-            if (-1 == var4) {
-              ((wsa) this).field_o = param1.b(false);
+            if (param0 == 107) {
+              L1: {
+                var4_int = param2;
+                if (var4_int == 0) {
+                  ((wsa) this).field_o = param1.b(false);
+                  break L1;
+                } else {
+                  if (var4_int != 1) {
+                    if (var4_int != 2) {
+                      break L1;
+                    } else {
+                      ((wsa) this).field_u = (param1.c((byte) 44) << 12) / 100;
+                      break L1;
+                    }
+                  } else {
+                    ((wsa) this).field_s = (param1.c((byte) 36) << 12) / 100;
+                    break L1;
+                  }
+                }
+              }
               break L0;
             } else {
-              if (-2 != var4) {
-                if (var4 != 2) {
-                  break L0;
-                } else {
-                  ((wsa) this).field_u = (param1.c((byte) 44) << -148049876) / 100;
-                  break L0;
-                }
-              } else {
-                ((wsa) this).field_s = (param1.c((byte) 36) << -1344103348) / 100;
-                break L0;
-              }
+              return;
             }
           }
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_1 = new StringBuilder().append("wsa.A(").append(param0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L2;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
         }
     }
 
@@ -522,7 +572,7 @@ final class wsa extends ci {
         int stackOut_16_1 = 0;
         L0: {
           var5 = 15 & param3;
-          if (-9 < var5) {
+          if (var5 < 8) {
             stackOut_2_0 = param1;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -539,7 +589,7 @@ final class wsa extends ci {
               if (12 == var5) {
                 break L2;
               } else {
-                if (-15 != var5) {
+                if (var5 != 14) {
                   stackOut_9_0 = param4;
                   stackIn_10_0 = stackOut_9_0;
                   break L1;
@@ -560,7 +610,7 @@ final class wsa extends ci {
         var7 = stackIn_10_0;
         if (param2 == 0) {
           L3: {
-            if (-1 != (1 & var5 ^ -1)) {
+            if ((1 & var5) != 0) {
               stackOut_14_0 = -var6;
               stackIn_15_0 = stackOut_14_0;
               break L3;

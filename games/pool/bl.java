@@ -39,85 +39,143 @@ final class bl {
     static boolean field_x;
 
     final void a(int param0, int[] param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        L0: {
-          var6 = Pool.field_O;
-          var4 = ((bl) this).field_i + -param1[1];
-          var3 = ((bl) this).field_b + -param1[0];
-          var5 = -param1[2] + ((bl) this).field_u;
-          ((bl) this).field_B = var4 * param1[10] + (var3 * param1[9] + param1[11] * var5) >> -1627368720;
-          if ((((bl) this).field_B ^ -1) != -1) {
-            break L0;
-          } else {
-            ((bl) this).field_B = -1;
-            break L0;
-          }
-        }
-        if (-1 > (((bl) this).field_B ^ -1)) {
-          L1: {
-            ((bl) this).field_o = 320 - -((param1[5] * var5 + (param1[3] * var3 + param1[4] * var4) >> -146015513) / ((bl) this).field_B);
-            ((bl) this).field_l = (var5 * param1[8] + (param1[6] * var3 + param1[7] * var4) >> -1794877753) / ((bl) this).field_B + 240;
-            var4 = ((bl) this).field_F - param1[1];
-            var5 = ((bl) this).field_k - param1[2];
-            var3 = ((bl) this).field_J + -param1[0];
-            ((bl) this).field_d = var4 * param1[10] + var3 * param1[9] - -(param1[11] * var5) >> 668293520;
-            if (0 == ((bl) this).field_d) {
-              ((bl) this).field_d = -1;
-              break L1;
-            } else {
-              break L1;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        var6 = Pool.field_O;
+        try {
+          L0: {
+            L1: {
+              var4 = ((bl) this).field_i + -param1[1];
+              var3_int = ((bl) this).field_b + -param1[0];
+              var5 = -param1[2] + ((bl) this).field_u;
+              ((bl) this).field_B = var4 * param1[10] + (var3_int * param1[9] + param1[11] * var5) >> 16;
+              if (((bl) this).field_B != 0) {
+                break L1;
+              } else {
+                ((bl) this).field_B = -1;
+                break L1;
+              }
             }
-          }
-          if (-1 > (((bl) this).field_d ^ -1)) {
-            ((bl) this).field_C = 320 + (var3 * param1[3] + (var4 * param1[4] - -(var5 * param1[5])) >> -2108352345) / ((bl) this).field_d;
-            ((bl) this).field_a = 240 - -((var3 * param1[6] - -(param1[7] * var4) + param1[8] * var5 >> -1294252825) / ((bl) this).field_d);
-            var3 = -param1[0] + ((bl) this).field_z;
-            var4 = ((bl) this).field_D - param1[1];
-            var5 = -param1[2] + ((bl) this).field_h;
-            ((bl) this).field_f = param1[11] * var5 + (var4 * param1[10] + param1[9] * var3) >> 14019312;
-            if (param0 <= -34) {
+            if (((bl) this).field_B > 0) {
               L2: {
-                if (0 == ((bl) this).field_f) {
-                  ((bl) this).field_f = -1;
+                ((bl) this).field_o = 320 - -((param1[5] * var5 + (param1[3] * var3_int + param1[4] * var4) >> 7) / ((bl) this).field_B);
+                ((bl) this).field_l = (var5 * param1[8] + (param1[6] * var3_int + param1[7] * var4) >> 7) / ((bl) this).field_B + 240;
+                var4 = ((bl) this).field_F - param1[1];
+                var5 = ((bl) this).field_k - param1[2];
+                var3_int = ((bl) this).field_J + -param1[0];
+                ((bl) this).field_d = var4 * param1[10] + var3_int * param1[9] - -(param1[11] * var5) >> 16;
+                if (0 == ((bl) this).field_d) {
+                  ((bl) this).field_d = -1;
                   break L2;
                 } else {
                   break L2;
                 }
               }
-              if (((bl) this).field_f <= 0) {
-                return;
-              } else {
-                ((bl) this).field_q = 240 - -((param1[7] * var4 + param1[6] * var3 + param1[8] * var5 >> -430226553) / ((bl) this).field_f);
-                ((bl) this).field_n = (param1[5] * var5 + (param1[4] * var4 + param1[3] * var3) >> 463248295) / ((bl) this).field_f + 320;
-                L3: {
-                  var5 = -param1[2] + ((bl) this).field_A;
-                  var4 = ((bl) this).field_m - param1[1];
-                  var3 = -param1[0] + ((bl) this).field_w;
-                  ((bl) this).field_G = var4 * param1[10] + (param1[9] * var3 + param1[11] * var5) >> 1725088912;
-                  if (0 != ((bl) this).field_G) {
-                    break L3;
-                  } else {
-                    ((bl) this).field_G = -1;
-                    break L3;
+              if (((bl) this).field_d > 0) {
+                ((bl) this).field_C = 320 + (var3_int * param1[3] + (var4 * param1[4] - -(var5 * param1[5])) >> 7) / ((bl) this).field_d;
+                ((bl) this).field_a = 240 - -((var3_int * param1[6] - -(param1[7] * var4) + param1[8] * var5 >> 7) / ((bl) this).field_d);
+                var3_int = -param1[0] + ((bl) this).field_z;
+                var4 = ((bl) this).field_D - param1[1];
+                var5 = -param1[2] + ((bl) this).field_h;
+                ((bl) this).field_f = param1[11] * var5 + (var4 * param1[10] + param1[9] * var3_int) >> 16;
+                if (param0 <= -34) {
+                  L3: {
+                    if (0 == ((bl) this).field_f) {
+                      ((bl) this).field_f = -1;
+                      break L3;
+                    } else {
+                      break L3;
+                    }
                   }
-                }
-                if (0 >= ((bl) this).field_G) {
-                  return;
+                  if (((bl) this).field_f <= 0) {
+                    return;
+                  } else {
+                    ((bl) this).field_q = 240 - -((param1[7] * var4 + param1[6] * var3_int + param1[8] * var5 >> 7) / ((bl) this).field_f);
+                    ((bl) this).field_n = (param1[5] * var5 + (param1[4] * var4 + param1[3] * var3_int) >> 7) / ((bl) this).field_f + 320;
+                    L4: {
+                      var5 = -param1[2] + ((bl) this).field_A;
+                      var4 = ((bl) this).field_m - param1[1];
+                      var3_int = -param1[0] + ((bl) this).field_w;
+                      ((bl) this).field_G = var4 * param1[10] + (param1[9] * var3_int + param1[11] * var5) >> 16;
+                      if (0 != ((bl) this).field_G) {
+                        break L4;
+                      } else {
+                        ((bl) this).field_G = -1;
+                        break L4;
+                      }
+                    }
+                    if (0 >= ((bl) this).field_G) {
+                      decompiledRegionSelector0 = 0;
+                      break L0;
+                    } else {
+                      ((bl) this).field_p = 240 - -((param1[8] * var5 + (param1[7] * var4 + var3_int * param1[6]) >> 7) / ((bl) this).field_G);
+                      ((bl) this).field_I = 320 + (var5 * param1[5] + var3_int * param1[3] - -(param1[4] * var4) >> 7) / ((bl) this).field_G;
+                      decompiledRegionSelector0 = 1;
+                      break L0;
+                    }
+                  }
                 } else {
-                  ((bl) this).field_p = 240 - -((param1[8] * var5 + (param1[7] * var4 + var3 * param1[6]) >> 1626259495) / ((bl) this).field_G);
-                  ((bl) this).field_I = 320 + (var5 * param1[5] + var3 * param1[3] - -(param1[4] * var4) >> -34667129) / ((bl) this).field_G;
                   return;
                 }
+              } else {
+                return;
               }
             } else {
               return;
             }
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var3 = decompiledCaughtException;
+            stackOut_23_0 = (RuntimeException) var3;
+            stackOut_23_1 = new StringBuilder().append("bl.A(").append(param0).append(44);
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
+            if (param1 == null) {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L5;
+            } else {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L5;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
         } else {
           return;
         }
@@ -224,7 +282,7 @@ final class bl {
                     return;
                   }
                   L6: {
-                    if ((((bl) this).field_E ^ -1) >= -1) {
+                    if (((bl) this).field_E <= 0) {
                       var2 = 3346790;
                       break L6;
                     } else {
@@ -238,17 +296,17 @@ final class bl {
                     }
                   }
                   L7: {
-                    if ((((bl) this).field_y ^ -1) >= -1) {
+                    if (((bl) this).field_y <= 0) {
                       break L7;
                     } else {
                       if (256 <= ((bl) this).field_y) {
                         break L7;
                       } else {
-                        var3 = (((bl) this).field_I + -((bl) this).field_o << -2004925183) * ((bl) this).field_y / 256;
-                        var4 = ((bl) this).field_y * (((bl) this).field_p - ((bl) this).field_l << 1874039873) / 256;
+                        var3 = (((bl) this).field_I + -((bl) this).field_o << 1) * ((bl) this).field_y / 256;
+                        var4 = ((bl) this).field_y * (((bl) this).field_p - ((bl) this).field_l << 1) / 256;
                         var5 = 3 * (((bl) this).field_I + -((bl) this).field_o) / 2 * ((bl) this).field_y / 256;
                         var6 = ((bl) this).field_y * ((-((bl) this).field_l + ((bl) this).field_p) * 3 / 2) / 256;
-                        var7 = (-((bl) this).field_y + 256 << -1235201816) / 256;
+                        var7 = (-((bl) this).field_y + 256 << 8) / 256;
                         qh.b(-var3 + ((bl) this).field_o, ((bl) this).field_l - var4, ((bl) this).field_C - var3, ((bl) this).field_a + -var4, 10044586, var7);
                         qh.b(var3 + ((bl) this).field_n, ((bl) this).field_q - -var4, var3 + ((bl) this).field_I, ((bl) this).field_p - -var4, 10044586, var7);
                         qh.b(((bl) this).field_o - var3, -var4 + ((bl) this).field_l, ((bl) this).field_n + -var3, ((bl) this).field_q - var4, 10044586, var7);
@@ -286,9 +344,6 @@ final class bl {
 
     public static void a(int param0) {
         field_v = null;
-        if (param0 <= 116) {
-            field_r = null;
-        }
         field_j = null;
         field_e = null;
         field_r = null;

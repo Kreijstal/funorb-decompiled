@@ -101,11 +101,11 @@ final class sh {
             L1: while (true) {
               L2: {
                 L3: {
-                  if ((var5_int ^ -1) <= (a.field_r.length ^ -1)) {
+                  if (~var5_int <= ~a.field_r.length) {
                     break L3;
                   } else {
                     param2 = a.field_r[var5_int];
-                    stackOut_3_0 = var5_int << 423294052;
+                    stackOut_3_0 = var5_int << 4;
                     stackIn_13_0 = stackOut_3_0;
                     stackIn_4_0 = stackOut_3_0;
                     if (var7 != 0) {
@@ -253,7 +253,7 @@ final class sh {
                 break L1;
               }
             }
-            var11 = param8 + param7.field_z + (param7.field_H >> -1694860959);
+            var11 = param8 + param7.field_z + (param7.field_H >> 1);
             hk.f(var9_int, 0, var10, var11 + param5);
             param7.f(-1 + param3, param8 + -1, param1);
             param7.f(param3 - 1, param8 + 1, param1);

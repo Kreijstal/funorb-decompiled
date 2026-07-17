@@ -16,16 +16,8 @@ final class nb {
         field_a = null;
         field_e = null;
         field_c = null;
-        if (param0 <= 84) {
-          nb.a(1);
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
-          field_b = null;
-          field_d = null;
-          return;
-        }
+        field_b = null;
+        field_d = null;
     }
 
     final static void a(int param0) {

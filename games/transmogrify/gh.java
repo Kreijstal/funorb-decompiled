@@ -14,25 +14,16 @@ final class gh extends wf {
         cf var1 = null;
         hj var2 = null;
         var1 = (cf) (Object) mh.field_e.a((byte) -95);
-        if (var1 != null) {
-          var2 = nf.field_l;
-          int discarded$18 = var2.c((byte) -126);
-          if (param0 != 0) {
-            gh.e(38);
-            int discarded$19 = var2.c((byte) -108);
-            int discarded$20 = var2.c((byte) -105);
-            int discarded$21 = var2.c((byte) -119);
-            var1.c(param0 + 5);
-            return;
-          } else {
-            int discarded$22 = var2.c((byte) -108);
-            int discarded$23 = var2.c((byte) -105);
-            int discarded$24 = var2.c((byte) -119);
-            var1.c(param0 + 5);
-            return;
-          }
-        } else {
+        if (var1 == null) {
           pc.a(1);
+          return;
+        } else {
+          var2 = nf.field_l;
+          int discarded$8 = var2.c((byte) -126);
+          int discarded$9 = var2.c((byte) -108);
+          int discarded$10 = var2.c((byte) -105);
+          int discarded$11 = var2.c((byte) -119);
+          var1.c(5);
           return;
         }
     }
@@ -54,25 +45,70 @@ final class gh extends wf {
 
     final static void a(java.applet.Applet param0, byte param1) {
         String var2 = null;
+        RuntimeException var2_ref = null;
         CharSequence var3 = null;
-        var2 = param0.getParameter("username");
-        if (var2 != null) {
-          var3 = (CharSequence) (Object) var2;
-          if ((uk.b(114, var3) ^ -1L) == -1L) {
-            return;
-          } else {
-            L0: {
-              if (param1 == -112) {
-                break L0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2 = param0.getParameter("username");
+              if (var2 == null) {
+                break L1;
               } else {
-                gh.e(-50);
-                break L0;
+                var3 = (CharSequence) (Object) var2;
+                if (uk.b(114, var3) == 0L) {
+                  break L1;
+                } else {
+                  return;
+                }
               }
             }
-            return;
+            break L0;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2_ref;
+            stackOut_5_1 = new StringBuilder().append("gh.B(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw ch.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -112 + 41);
         }
     }
 

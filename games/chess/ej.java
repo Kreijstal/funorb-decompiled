@@ -11,9 +11,6 @@ final class ej {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 != -30) {
-            return;
-        }
         field_e = null;
         field_b = null;
         field_c = null;

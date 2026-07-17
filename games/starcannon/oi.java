@@ -14,33 +14,29 @@ final class oi extends rf {
     oi field_o;
 
     final static void a(java.awt.Canvas param0, byte param1) {
-        int var2 = 0;
-        if (11 == bl.field_a) {
-          ab.g((byte) -114);
-          var2 = -70 / ((-59 - param1) / 54);
-          w.a(o.field_b, (byte) 86, kb.field_a, nb.field_a);
-          dd.a(param0, 0, 0, -23466);
-          return;
-        } else {
-          var2 = -70 / ((-59 - param1) / 54);
-          w.a(o.field_b, (byte) 86, kb.field_a, nb.field_a);
-          dd.a(param0, 0, 0, -23466);
-          return;
+        try {
+            if (11 == bl.field_a) {
+                ab.g((byte) -114);
+            }
+            int var2_int = -70 / ((-59 - param1) / 54);
+            w.a(o.field_b, (byte) 86, kb.field_a, nb.field_a);
+            dd.a(param0, 0, 0, -23466);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "oi.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        Object var3 = null;
-        param0.addMouseListener((java.awt.event.MouseListener) (Object) rc.field_d);
-        param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) rc.field_d);
-        if (param1 != 0) {
-          var3 = null;
-          oi.a((java.awt.Component) null, -115);
-          param0.addFocusListener((java.awt.event.FocusListener) (Object) rc.field_d);
-          return;
-        } else {
-          param0.addFocusListener((java.awt.event.FocusListener) (Object) rc.field_d);
-          return;
+        try {
+            param0.addMouseListener((java.awt.event.MouseListener) (Object) rc.field_d);
+            param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) rc.field_d);
+            if (param1 != 0) {
+                Object var3 = null;
+                oi.a((java.awt.Component) null, -115);
+            }
+            param0.addFocusListener((java.awt.event.FocusListener) (Object) rc.field_d);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "oi.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -56,10 +52,6 @@ final class oi extends rf {
         field_i = null;
         field_n = null;
         field_j = null;
-        if (param0) {
-            Object var2 = null;
-            oi.a((java.awt.Component) null, 26);
-        }
     }
 
     static {

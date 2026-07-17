@@ -13,16 +13,15 @@ final class kka extends bw {
 
     final static int a(int param0, int param1, int param2) {
         String var3 = null;
-        String var3_ref = null;
         int var4 = 0;
         var3 = lka.field_E[param0][param2];
-        var3_ref = var3.trim();
-        var3_ref = var3_ref.toLowerCase();
-        if (var3_ref.equals((Object) (Object) "")) {
+        var3 = var3.trim();
+        var3 = var3.toLowerCase();
+        if (var3.equals((Object) (Object) "")) {
           return -1;
         } else {
           var4 = 53 / ((4 - param1) / 41);
-          return ((ji) (Object) eo.field_f.a(true, (long)var3_ref.hashCode())).field_h;
+          return ((ji) (Object) eo.field_f.a(true, (long)var3.hashCode())).field_h;
         }
     }
 
@@ -31,9 +30,6 @@ final class kka extends bw {
         field_l = null;
         field_h = null;
         field_f = null;
-        if (param0 != -1) {
-            return;
-        }
         field_i = null;
     }
 

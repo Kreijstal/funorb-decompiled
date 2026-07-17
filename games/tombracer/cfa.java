@@ -21,7 +21,7 @@ final class cfa implements dv {
           if (-1 == param0) {
             L0: {
               ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, -1);
-              if ((param0 ^ -1) <= -1) {
+              if (param0 >= 0) {
                 break L0;
               } else {
                 break L0;
@@ -42,7 +42,7 @@ final class cfa implements dv {
           } else {
             var3 = 63;
             if (3 != ((cfa) this).field_i[param0]) {
-              if (-5 != (((cfa) this).field_i[param0] ^ -1)) {
+              if (((cfa) this).field_i[param0] != 4) {
                 L1: {
                   if (((cfa) this).field_i[param0] == -6) {
                     var3 = 65;
@@ -57,7 +57,7 @@ final class cfa implements dv {
                           ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                           ((cfa) this).field_i[param0] = -1;
                           ((cfa) this).field_f = ((cfa) this).field_f + 1;
-                          if ((param0 ^ -1) <= -1) {
+                          if (param0 >= 0) {
                             break L2;
                           } else {
                             break L2;
@@ -81,7 +81,7 @@ final class cfa implements dv {
                           ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                           ((cfa) this).field_i[param0] = -1;
                           ((cfa) this).field_f = ((cfa) this).field_f + 1;
-                          if ((param0 ^ -1) <= -1) {
+                          if (param0 >= 0) {
                             break L3;
                           } else {
                             break L3;
@@ -108,7 +108,7 @@ final class cfa implements dv {
                     ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                     ((cfa) this).field_i[param0] = -1;
                     ((cfa) this).field_f = ((cfa) this).field_f + 1;
-                    if ((param0 ^ -1) <= -1) {
+                    if (param0 >= 0) {
                       break L5;
                     } else {
                       break L5;
@@ -132,7 +132,7 @@ final class cfa implements dv {
                     ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                     ((cfa) this).field_i[param0] = -1;
                     ((cfa) this).field_f = ((cfa) this).field_f + 1;
-                    if ((param0 ^ -1) <= -1) {
+                    if (param0 >= 0) {
                       break L6;
                     } else {
                       break L6;
@@ -174,7 +174,7 @@ final class cfa implements dv {
                         ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                         ((cfa) this).field_i[param0] = -1;
                         ((cfa) this).field_f = ((cfa) this).field_f + 1;
-                        if ((param0 ^ -1) <= -1) {
+                        if (param0 >= 0) {
                           break L9;
                         } else {
                           break L9;
@@ -201,7 +201,7 @@ final class cfa implements dv {
                     ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                     ((cfa) this).field_i[param0] = -1;
                     ((cfa) this).field_f = ((cfa) this).field_f + 1;
-                    if ((param0 ^ -1) <= -1) {
+                    if (param0 >= 0) {
                       break L11;
                     } else {
                       break L11;
@@ -224,7 +224,7 @@ final class cfa implements dv {
                     ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                     ((cfa) this).field_i[param0] = -1;
                     ((cfa) this).field_f = ((cfa) this).field_f + 1;
-                    if ((param0 ^ -1) <= -1) {
+                    if (param0 >= 0) {
                       break L13;
                     } else {
                       break L13;
@@ -267,7 +267,7 @@ final class cfa implements dv {
                       ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                       ((cfa) this).field_i[param0] = -1;
                       ((cfa) this).field_f = ((cfa) this).field_f + 1;
-                      if ((param0 ^ -1) <= -1) {
+                      if (param0 >= 0) {
                         break L17;
                       } else {
                         break L17;
@@ -294,7 +294,7 @@ final class cfa implements dv {
                   ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                   ((cfa) this).field_i[param0] = -1;
                   ((cfa) this).field_f = ((cfa) this).field_f + 1;
-                  if ((param0 ^ -1) <= -1) {
+                  if (param0 >= 0) {
                     break L19;
                   } else {
                     break L19;
@@ -317,7 +317,7 @@ final class cfa implements dv {
                   ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                   ((cfa) this).field_i[param0] = -1;
                   ((cfa) this).field_f = ((cfa) this).field_f + 1;
-                  if ((param0 ^ -1) <= -1) {
+                  if (param0 >= 0) {
                     break L21;
                   } else {
                     break L21;
@@ -350,9 +350,6 @@ final class cfa implements dv {
     }
 
     public static void c(byte param0) {
-        if (param0 != 103) {
-            return;
-        }
         field_c = null;
     }
 
@@ -367,57 +364,16 @@ final class cfa implements dv {
     private final void d(int param0) {
         int var3 = 0;
         var3 = TombRacer.field_G ? 1 : 0;
-        if (param0 != -14447) {
-          ((cfa) this).field_g = null;
-          if (((cfa) this).field_f >= ((cfa) this).field_i.length) {
-            ((cfa) this).field_h = -1;
-            if (((cfa) this).field_h != -1) {
-              return;
-            } else {
-              ((cfa) this).field_e = true;
-              return;
-            }
+        if (((cfa) this).field_f >= ((cfa) this).field_i.length) {
+          ((cfa) this).field_h = -1;
+          if (((cfa) this).field_h == -1) {
+            ((cfa) this).field_e = true;
+            return;
           } else {
-            if (((cfa) this).field_j.field_P <= ((cfa) this).field_d) {
-              ((cfa) this).field_h = -1;
-              if (((cfa) this).field_h != -1) {
-                return;
-              } else {
-                ((cfa) this).field_e = true;
-                return;
-              }
-            } else {
-              ((cfa) this).field_h = ((cfa) this).field_j.field_c.field_e[((cfa) this).field_d];
-              if (0 == (((cfa) this).field_h ^ -1)) {
-                ((cfa) this).field_h = -1;
-                if (((cfa) this).field_h == -1) {
-                  ((cfa) this).field_e = true;
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                if (!((cfa) this).field_j.b((byte) 90, ((cfa) this).field_h)) {
-                  ((cfa) this).field_h = -1;
-                  if (((cfa) this).field_h == -1) {
-                    ((cfa) this).field_e = true;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  if (((cfa) this).field_h != -1) {
-                    return;
-                  } else {
-                    ((cfa) this).field_e = true;
-                    return;
-                  }
-                }
-              }
-            }
+            return;
           }
         } else {
-          if (((cfa) this).field_f >= ((cfa) this).field_i.length) {
+          if (((cfa) this).field_j.field_P <= ((cfa) this).field_d) {
             ((cfa) this).field_h = -1;
             if (((cfa) this).field_h == -1) {
               ((cfa) this).field_e = true;
@@ -426,42 +382,29 @@ final class cfa implements dv {
               return;
             }
           } else {
-            if (((cfa) this).field_j.field_P <= ((cfa) this).field_d) {
+            ((cfa) this).field_h = ((cfa) this).field_j.field_c.field_e[((cfa) this).field_d];
+            if (((cfa) this).field_h == -1) {
               ((cfa) this).field_h = -1;
-              if (((cfa) this).field_h == -1) {
-                ((cfa) this).field_e = true;
+              if (((cfa) this).field_h != -1) {
                 return;
               } else {
+                ((cfa) this).field_e = true;
                 return;
               }
             } else {
-              ((cfa) this).field_h = ((cfa) this).field_j.field_c.field_e[((cfa) this).field_d];
-              if (0 == (((cfa) this).field_h ^ -1)) {
+              if (!((cfa) this).field_j.b((byte) 90, ((cfa) this).field_h)) {
                 ((cfa) this).field_h = -1;
+                if (((cfa) this).field_h == -1) {
+                  ((cfa) this).field_e = true;
+                  return;
+                } else {
+                  return;
+                }
+              } else {
                 if (((cfa) this).field_h != -1) {
                   return;
                 } else {
                   ((cfa) this).field_e = true;
-                  return;
-                }
-              } else {
-                if (((cfa) this).field_j.b((byte) 90, ((cfa) this).field_h)) {
-                  if (((cfa) this).field_h != -1) {
-                    return;
-                  } else {
-                    ((cfa) this).field_e = true;
-                    return;
-                  }
-                } else {
-                  L0: {
-                    ((cfa) this).field_h = -1;
-                    if (((cfa) this).field_h != -1) {
-                      break L0;
-                    } else {
-                      ((cfa) this).field_e = true;
-                      break L0;
-                    }
-                  }
                   return;
                 }
               }
@@ -577,19 +520,18 @@ final class cfa implements dv {
     }
 
     public final void a(kh param0, boolean param1) {
-        ((cfa) this).field_i = fa.a(0, param0, 8, ((cfa) this).field_i);
-        ((cfa) this).field_d = param0.b((byte) 44, 3);
-        ((cfa) this).field_h = uma.a(4, param0, -26803);
-        ((cfa) this).field_a = param0.b((byte) 44, 16);
-        if (param1) {
-          int discarded$2 = ((cfa) this).a(99, -112);
-          ((cfa) this).field_e = uha.a(5907, param0);
-          ((cfa) this).field_f = param0.b((byte) 44, 2);
-          return;
-        } else {
-          ((cfa) this).field_e = uha.a(5907, param0);
-          ((cfa) this).field_f = param0.b((byte) 44, 2);
-          return;
+        try {
+            ((cfa) this).field_i = fa.a(0, param0, 8, ((cfa) this).field_i);
+            ((cfa) this).field_d = param0.b((byte) 44, 3);
+            ((cfa) this).field_h = uma.a(4, param0, -26803);
+            ((cfa) this).field_a = param0.b((byte) 44, 16);
+            if (param1) {
+                int discarded$0 = ((cfa) this).a(99, -112);
+            }
+            ((cfa) this).field_e = uha.a(5907, param0);
+            ((cfa) this).field_f = param0.b((byte) 44, 2);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cfa.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -606,7 +548,11 @@ final class cfa implements dv {
     cfa(ff param0) {
         ((cfa) this).field_h = -1;
         ((cfa) this).field_f = 0;
-        ((cfa) this).field_j = param0;
+        try {
+            ((cfa) this).field_j = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cfa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void b(int param0) {
@@ -640,7 +586,7 @@ final class cfa implements dv {
                 continue L0;
               } else {
                 var5++;
-                if ((var5 ^ -1) > -8) {
+                if (var5 < 7) {
                   continue L1;
                 } else {
                   var5 = 0;

@@ -12,9 +12,6 @@ final class jf extends fc {
         gh.field_k = false;
         vg.field_o = false;
         qc.b(-1, (byte) -42);
-        if (param0 != 640) {
-            return;
-        }
         rk.field_X = hf.field_f;
         fd.field_h = hf.field_f;
     }

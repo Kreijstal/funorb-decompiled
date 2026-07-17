@@ -10,7 +10,7 @@ final class lm extends fb {
 
     final void g(int param0) {
         if (param0 > 95) {
-          if (-1 <= (((lm) this).field_H ^ -1)) {
+          if (((lm) this).field_H <= 0) {
             return;
           } else {
             ((lm) this).field_H = ((lm) this).field_H - 3;
@@ -36,11 +36,6 @@ final class lm extends fb {
     }
 
     public static void i(int param0) {
-        if (param0 != 3) {
-            boolean discarded$0 = lm.f((byte) -9);
-            field_D = null;
-            return;
-        }
         field_D = null;
     }
 
@@ -70,18 +65,17 @@ final class lm extends fb {
     }
 
     final void a(byte param0, wk param1) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
-        var3 = param1.a(((lm) this).field_y >> 106404400, (byte) -96);
-        if (param0 >= -76) {
-          boolean discarded$2 = lm.f((byte) -99);
-          var4 = param1.a(((lm) this).field_x >> 22567472, 0) + -((lm) this).field_H;
-          ob.field_c[((lm) this).field_E].b(var3, var4);
-          return;
-        } else {
-          var4 = param1.a(((lm) this).field_x >> 22567472, 0) + -((lm) this).field_H;
-          ob.field_c[((lm) this).field_E].b(var3, var4);
-          return;
+        try {
+            var3_int = param1.a(((lm) this).field_y >> 16, (byte) -96);
+            if (param0 >= -76) {
+                boolean discarded$0 = lm.f((byte) -99);
+            }
+            var4 = param1.a(((lm) this).field_x >> 16, 0) + -((lm) this).field_H;
+            ob.field_c[((lm) this).field_E].b(var3_int, var4);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "lm.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

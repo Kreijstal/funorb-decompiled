@@ -10,40 +10,23 @@ final class pb {
     static String field_a;
 
     final void a(long param0, jl param1, int param2) {
-        jl var6 = null;
         jl var5 = null;
-        if (null != param1.field_q) {
-            param1.b(true);
-            var6 = ((pb) this).field_b[(int)(param0 & (long)(-1 + ((pb) this).field_f))];
-            var5 = var6;
-            param1.field_o = var5;
-            param1.field_q = var6.field_q;
-            if (param2 >= 115) {
-                param1.field_q.field_o = param1;
-                param1.field_o.field_q = param1;
-                param1.field_r = param0;
-                return;
+        try {
+            if (null != param1.field_q) {
+                param1.b(true);
             }
-            ((pb) this).field_f = -72;
+            var5 = ((pb) this).field_b[(int)(param0 & (long)(-1 + ((pb) this).field_f))];
+            param1.field_o = var5;
+            param1.field_q = var5.field_q;
+            if (param2 < 115) {
+                ((pb) this).field_f = -72;
+            }
             param1.field_q.field_o = param1;
             param1.field_o.field_q = param1;
             param1.field_r = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "pb.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        jl var7 = ((pb) this).field_b[(int)(param0 & (long)(-1 + ((pb) this).field_f))];
-        var5 = var7;
-        param1.field_o = var5;
-        param1.field_q = var7.field_q;
-        if (param2 < 115) {
-            ((pb) this).field_f = -72;
-            param1.field_q.field_o = param1;
-            param1.field_o.field_q = param1;
-            param1.field_r = param0;
-            return;
-        }
-        param1.field_q.field_o = param1;
-        param1.field_o.field_q = param1;
-        param1.field_r = param0;
     }
 
     final jl a(long param0, int param1) {
@@ -66,11 +49,6 @@ final class pb {
 
     public static void a(byte param0) {
         field_e = null;
-        if (param0 <= 14) {
-            field_e = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
@@ -80,28 +58,28 @@ final class pb {
         ((pb) this).field_f = param0;
         ((pb) this).field_b = new jl[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new jl();
-            ((pb) this).field_b[var2] = new jl();
+            jl dupTemp$0 = new jl();
+            var3 = dupTemp$0;
+            ((pb) this).field_b[var2] = dupTemp$0;
             var3.field_q = var3;
             var3.field_o = var3;
         }
     }
 
     final static void a(ji param0, byte param1, ji param2, int param3, int param4, int param5) {
-        n.field_d = param3;
-        if (param1 >= -63) {
-            Object var7 = null;
-            pb.a((ji) null, (byte) -101, (ji) null, 96, -46, -6);
+        try {
+            n.field_d = param3;
+            if (param1 >= -63) {
+                Object var7 = null;
+                pb.a((ji) null, (byte) -101, (ji) null, 96, -46, -6);
+            }
             db.field_v = param0;
             nj.field_T = param2;
             kb.field_b = param5;
             jd.field_g = param4;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "pb.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
-        db.field_v = param0;
-        nj.field_T = param2;
-        kb.field_b = param5;
-        jd.field_g = param4;
     }
 
     final jl a(int param0) {
@@ -113,7 +91,7 @@ final class pb {
         int var2 = 86 / ((49 - param0) / 55);
         jl var3 = ((pb) this).field_b[(int)((long)(-1 + ((pb) this).field_f) & ((pb) this).field_c)];
         while (var3 != ((pb) this).field_d) {
-            if (!((((pb) this).field_d.field_r ^ -1L) != (((pb) this).field_c ^ -1L))) {
+            if (!(~((pb) this).field_d.field_r != ~((pb) this).field_c)) {
                 var4 = ((pb) this).field_d;
                 ((pb) this).field_d = ((pb) this).field_d.field_o;
                 return var4;
@@ -125,32 +103,44 @@ final class pb {
     }
 
     final static void b(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
+        int var4 = 0;
         int var5 = 0;
-        int var4 = Confined.field_J ? 1 : 0;
-        ti.b();
-        oj.field_D = new int[260];
-        pc.field_h = 11;
-        for (var1 = 0; 256 > var1; var1++) {
-            var2 = 15.0;
-            oj.field_D[var1] = (int)(255.0 * Math.pow((double)((float)var1 / 256.0f), var2));
-        }
-        if (param0 < 122) {
-            field_a = null;
-            var5 = 256;
-            var1 = var5;
-            while (oj.field_D.length > var5) {
-                oj.field_D[var5] = 255;
-                var5++;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Confined.field_J ? 1 : 0;
+        try {
+          L0: {
+            ti.b();
+            oj.field_D = new int[260];
+            pc.field_h = 11;
+            var1_int = 0;
+            L1: while (true) {
+              if (256 <= var1_int) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (oj.field_D.length <= var5) {
+                    break L0;
+                  } else {
+                    oj.field_D[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2 = 15.0;
+                oj.field_D[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+                var1_int++;
+                continue L1;
+              }
             }
-            return;
-        }
-        var5 = 256;
-        var1 = var5;
-        while (oj.field_D.length > var5) {
-            oj.field_D[var5] = 255;
-            var5++;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var1, "pb.B(" + 126 + 41);
         }
     }
 

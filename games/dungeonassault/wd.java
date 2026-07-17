@@ -24,7 +24,7 @@ final class wd {
           if (((wd) this).field_k != ga.field_n) {
             if (((wd) this).field_k == li.field_h) {
               L0: {
-                ((wd) this).field_e = ((wd) this).field_e - (param1 >> -1040102206);
+                ((wd) this).field_e = ((wd) this).field_e - (param1 >> 2);
                 if (0 >= ((wd) this).field_e) {
                   ((wd) this).field_e = 0;
                   ((wd) this).field_k = ga.field_n;
@@ -37,7 +37,7 @@ final class wd {
             } else {
               ((wd) this).field_c = ((wd) this).field_c - param1;
               L1: while (true) {
-                if (-1 < (((wd) this).field_c ^ -1)) {
+                if (((wd) this).field_c < 0) {
                   if (!this.b(0)) {
                     return;
                   } else {
@@ -95,13 +95,13 @@ final class wd {
     }
 
     final void a(int param0, eh param1) {
-        if (param0 < 8) {
-          ((wd) this).a((byte) 98, 50);
-          ((wd) this).a(rf.field_M, param1, -10872);
-          return;
-        } else {
-          ((wd) this).a(rf.field_M, param1, -10872);
-          return;
+        try {
+            if (param0 < 8) {
+                ((wd) this).a((byte) 98, 50);
+            }
+            ((wd) this).a(rf.field_M, param1, -10872);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "wd.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -112,116 +112,127 @@ final class wd {
         } else {
           ((wd) this).field_g = ((wd) this).field_n;
           ((wd) this).field_h = ((wd) this).field_m + 1;
-          if (param0 == 28) {
-            if (((wd) this).field_h >= ((wd) this).field_n.field_c) {
-              if (((wd) this).field_a != rl.field_b) {
-                if (((wd) this).field_a == rf.field_M) {
-                  ((wd) this).field_h = 0;
-                  ((wd) this).field_g = ((wd) this).field_i;
-                  return;
-                } else {
-                  ((wd) this).field_g = null;
-                  return;
-                }
-              } else {
+          if (((wd) this).field_h >= ((wd) this).field_n.field_c) {
+            if (((wd) this).field_a != rl.field_b) {
+              if (((wd) this).field_a == rf.field_M) {
                 ((wd) this).field_h = 0;
+                ((wd) this).field_g = ((wd) this).field_i;
+                return;
+              } else {
+                ((wd) this).field_g = null;
                 return;
               }
             } else {
+              ((wd) this).field_h = 0;
               return;
             }
           } else {
-            field_f = null;
-            if (((wd) this).field_h >= ((wd) this).field_n.field_c) {
-              if (((wd) this).field_a != rl.field_b) {
-                if (((wd) this).field_a == rf.field_M) {
-                  ((wd) this).field_h = 0;
-                  ((wd) this).field_g = ((wd) this).field_i;
-                  return;
-                } else {
-                  ((wd) this).field_g = null;
-                  return;
-                }
-              } else {
-                ((wd) this).field_h = 0;
-                return;
-              }
-            } else {
-              return;
-            }
+            return;
           }
         }
     }
 
     final static void a(byte param0, int param1, ue param2) {
-        wj var3 = null;
-        int var4 = 0;
-        Object var5 = null;
         wj var6 = null;
-        var6 = ac.field_B;
-        var3 = var6;
-        var6.d((byte) -126, param1);
-        var6.field_o = var6.field_o + 1;
-        var4 = var6.field_o;
-        var6.a(6, 1);
-        if (null == param2.field_l) {
-          var6.a(6, 0);
-          int discarded$4 = var6.c((byte) -106, var4);
-          var6.field_o = var6.field_o - 4;
-          if (param0 < -68) {
+        int var4 = 0;
+        try {
+            var6 = ac.field_B;
+            wj var3 = var6;
+            var6.d((byte) -126, param1);
+            var6.field_o = var6.field_o + 1;
+            var4 = var6.field_o;
+            var6.a(6, 1);
+            if (null != param2.field_l) {
+                var6.a(6, param2.field_l.length);
+                var6.a(param2.field_l, 1, param2.field_l.length, 0);
+            } else {
+                var6.a(6, 0);
+            }
+            int discarded$0 = var6.c((byte) -106, var4);
+            var6.field_o = var6.field_o - 4;
+            if (param0 >= -68) {
+                Object var5 = null;
+                wd.a((byte) -67, -90, (ue) null);
+            }
             param2.field_k = var6.h(-31);
             var6.c(var6.field_o + -var4, -1);
-            return;
-          } else {
-            var5 = null;
-            wd.a((byte) -67, -90, (ue) null);
-            param2.field_k = var6.h(-31);
-            var6.c(var6.field_o + -var4, -1);
-            return;
-          }
-        } else {
-          var6.a(6, param2.field_l.length);
-          var6.a(param2.field_l, 1, param2.field_l.length, 0);
-          int discarded$5 = var6.c((byte) -106, var4);
-          var6.field_o = var6.field_o - 4;
-          if (param0 < -68) {
-            param2.field_k = var6.h(-31);
-            var6.c(var6.field_o + -var4, -1);
-            return;
-          } else {
-            var5 = null;
-            wd.a((byte) -67, -90, (ue) null);
-            param2.field_k = var6.h(-31);
-            var6.c(var6.field_o + -var4, -1);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "wd.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     final void a(int param0, eh param1, int param2) {
-        ((wd) this).field_a = param0;
-        ((wd) this).field_e = 256;
-        ((wd) this).field_m = 0;
-        ((wd) this).field_n = param1;
-        if (null != ((wd) this).field_n) {
-          ((wd) this).field_b = ((wd) this).field_n.field_j[0] * ji.a(320, false, 192) >>> -1152399160;
-          ((wd) this).field_c = ((wd) this).field_b;
-          ((wd) this).field_k = rl.field_f;
-          this.a((byte) 28);
-          if (param2 == -10872) {
-            return;
-          } else {
-            this.a(39, -38, 55, 112, -35);
-            return;
+        RuntimeException var4 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((wd) this).field_a = param0;
+              ((wd) this).field_e = 256;
+              ((wd) this).field_m = 0;
+              ((wd) this).field_n = param1;
+              if (null != ((wd) this).field_n) {
+                ((wd) this).field_b = ((wd) this).field_n.field_j[0] * ji.a(320, false, 192) >>> 8;
+                ((wd) this).field_c = ((wd) this).field_b;
+                ((wd) this).field_k = rl.field_f;
+                this.a((byte) 28);
+                break L1;
+              } else {
+                ((wd) this).field_k = ga.field_n;
+                break L1;
+              }
+            }
+            if (param2 == -10872) {
+              break L0;
+            } else {
+              this.a(39, -38, 55, 112, -35);
+              return;
+            }
           }
-        } else {
-          ((wd) this).field_k = ga.field_n;
-          if (param2 == -10872) {
-            return;
-          } else {
-            this.a(39, -38, 55, 112, -35);
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("wd.I(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
           }
+          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 41);
         }
     }
 
@@ -240,40 +251,79 @@ final class wd {
             }
           } else {
             ((wd) this).field_m = 0;
-            if (param0 == 0) {
-              ((wd) this).field_b = ((wd) this).field_n.field_j[((wd) this).field_m] * ji.a(320, false, 192) >>> 1347965128;
-              ((wd) this).field_c = ((wd) this).field_c + ((wd) this).field_b;
-              this.a((byte) 28);
-              return true;
-            } else {
-              wd.a(-49);
-              ((wd) this).field_b = ((wd) this).field_n.field_j[((wd) this).field_m] * ji.a(320, false, 192) >>> 1347965128;
-              ((wd) this).field_c = ((wd) this).field_c + ((wd) this).field_b;
-              this.a((byte) 28);
-              return true;
-            }
+            wd.a(-49);
+            ((wd) this).field_b = ((wd) this).field_n.field_j[((wd) this).field_m] * ji.a(320, false, 192) >>> 8;
+            ((wd) this).field_c = ((wd) this).field_c + ((wd) this).field_b;
+            this.a((byte) 28);
+            return true;
           }
         } else {
-          if (param0 == 0) {
-            ((wd) this).field_b = ((wd) this).field_n.field_j[((wd) this).field_m] * ji.a(320, false, 192) >>> 1347965128;
-            ((wd) this).field_c = ((wd) this).field_c + ((wd) this).field_b;
-            this.a((byte) 28);
-            return true;
-          } else {
-            wd.a(-49);
-            ((wd) this).field_b = ((wd) this).field_n.field_j[((wd) this).field_m] * ji.a(320, false, 192) >>> 1347965128;
-            ((wd) this).field_c = ((wd) this).field_c + ((wd) this).field_b;
-            this.a((byte) 28);
-            return true;
-          }
+          wd.a(-49);
+          ((wd) this).field_b = ((wd) this).field_n.field_j[((wd) this).field_m] * ji.a(320, false, 192) >>> 8;
+          ((wd) this).field_c = ((wd) this).field_c + ((wd) this).field_b;
+          this.a((byte) 28);
+          return true;
         }
     }
 
     wd(eh param0) {
-        ((wd) this).field_i = param0;
-        ((wd) this).a(rl.field_b, ((wd) this).field_i, -10872);
-        if (null != ((wd) this).field_i) {
-            ((wd) this).a((byte) 109, oi.b(0, ((wd) this).field_i.field_f));
+        RuntimeException var2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            ((wd) this).field_i = param0;
+            ((wd) this).a(rl.field_b, ((wd) this).field_i, -10872);
+            if (null != ((wd) this).field_i) {
+              ((wd) this).a((byte) 109, oi.b(0, ((wd) this).field_i.field_f));
+              break L0;
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("wd.<init>(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw vk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
@@ -298,7 +348,7 @@ final class wd {
                 if (var13 == null) {
                   return;
                 } else {
-                  var7 = -((((wd) this).field_c << -304510296) / ((wd) this).field_b) + 256;
+                  var7 = -((((wd) this).field_c << 8) / ((wd) this).field_b) + 256;
                   ob.a(var13, param3, var7, param0, true);
                   return;
                 }
@@ -309,7 +359,7 @@ final class wd {
                   L0: {
                     var12 = ((wd) this).field_g.a(param2, ((wd) this).field_h, param4, param1 + -1);
                     if (var12 != null) {
-                      var7 = -((((wd) this).field_c << -304510296) / ((wd) this).field_b) + 256;
+                      var7 = -((((wd) this).field_c << 8) / ((wd) this).field_b) + 256;
                       ob.a(var12, param3, var7, param0, true);
                       break L0;
                     } else {
@@ -333,7 +383,7 @@ final class wd {
                   if (var11 == null) {
                     return;
                   } else {
-                    var7 = -((((wd) this).field_c << -304510296) / ((wd) this).field_b) + 256;
+                    var7 = -((((wd) this).field_c << 8) / ((wd) this).field_b) + 256;
                     ob.a(var11, param3, var7, param0, true);
                     return;
                   }
@@ -344,7 +394,7 @@ final class wd {
                 L1: {
                   var10 = ((wd) this).field_g.a(param2, ((wd) this).field_h, param4, param1 + -1);
                   if (var10 != null) {
-                    var7 = -((((wd) this).field_c << -304510296) / ((wd) this).field_b) + 256;
+                    var7 = -((((wd) this).field_c << 8) / ((wd) this).field_b) + 256;
                     ob.a(var10, param3, var7, param0, true);
                     break L1;
                   } else {
@@ -371,8 +421,12 @@ final class wd {
     }
 
     wd(eh param0, eh param1, int param2) {
-        ((wd) this).field_i = param0;
-        ((wd) this).a(param2, param1, -10872);
+        try {
+            ((wd) this).field_i = param0;
+            ((wd) this).a(param2, param1, -10872);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "wd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

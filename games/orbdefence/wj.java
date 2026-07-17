@@ -45,26 +45,14 @@ abstract class wj extends o {
     }
 
     final static void b(byte param0) {
-        if (param0 >= 112) {
-          if (!vj.a(97)) {
+        if (!vj.a(97)) {
             cc.field_f.a(true);
             return;
-          } else {
-            return;
-          }
-        } else {
-          field_k = null;
-          if (vj.a(97)) {
-            return;
-          } else {
-            cc.field_f.a(true);
-            return;
-          }
         }
     }
 
     public static void c(byte param0) {
-        int var1 = 121 % ((-48 - param0) / 35);
+        int var1 = 0;
         field_k = null;
         field_o = null;
     }

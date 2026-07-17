@@ -20,118 +20,127 @@ final class hg implements eb {
     }
 
     public final void a(ng param0, byte param1, int param2, int param3, boolean param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        tm var13 = null;
-        tm var14 = null;
-        ng stackIn_4_0 = null;
-        ng stackIn_15_0 = null;
-        Object stackOut_14_0 = null;
-        ng stackOut_13_0 = null;
-        Object stackOut_3_0 = null;
-        ng stackOut_2_0 = null;
+        tm var12 = null;
+        ng stackIn_6_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_5_0 = null;
+        ng stackOut_4_0 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var11 = Pixelate.field_H ? 1 : 0;
-        if (param1 != -124) {
+        try {
           L0: {
-            hg.a(-84);
-            if (!(param0 instanceof tm)) {
-              stackOut_14_0 = null;
-              stackIn_15_0 = (ng) (Object) stackOut_14_0;
-              break L0;
-            } else {
-              stackOut_13_0 = (ng) param0;
-              stackIn_15_0 = stackOut_13_0;
-              break L0;
-            }
-          }
-          L1: {
-            var13 = (tm) (Object) stackIn_15_0;
-            t.d(param0.field_z + param3, param2 + param0.field_p, param0.field_E, param0.field_C, ((hg) this).field_d);
-            if (var13 != null) {
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          var7 = param0.field_E - 2 * var13.field_R;
-          var8 = param3 + param0.field_z + var13.field_R;
-          var9 = param2 + param0.field_p - -var13.field_T;
-          t.b(var8, var9, var7 + var8, var9, ((hg) this).field_c);
-          var10 = -1 + var13.f((byte) 62);
-          L2: while (true) {
-            if (-1 < (var10 ^ -1)) {
-              L3: {
-                if (null != ((hg) this).field_h) {
-                  ((hg) this).field_h.b(var13.field_q, var7 / 2 + var8, ((hg) this).field_h.field_M + (var9 - -var13.field_T), ((hg) this).field_f, ((hg) this).field_j);
-                  break L3;
-                } else {
-                  break L3;
-                }
+            L1: {
+              if (param1 == -124) {
+                break L1;
+              } else {
+                hg.a(-84);
+                break L1;
               }
-              return;
-            } else {
-              t.c(var8 - -(var7 * var13.a((byte) -91, var10) / var13.k(param1 + 123)), var9, ((hg) this).field_e, ((hg) this).field_a);
-              var10--;
-              continue L2;
+            }
+            L2: {
+              if (!(param0 instanceof tm)) {
+                stackOut_5_0 = null;
+                stackIn_6_0 = (ng) (Object) stackOut_5_0;
+                break L2;
+              } else {
+                stackOut_4_0 = (ng) param0;
+                stackIn_6_0 = stackOut_4_0;
+                break L2;
+              }
+            }
+            L3: {
+              var12 = (tm) (Object) stackIn_6_0;
+              t.d(param0.field_z + param3, param2 + param0.field_p, param0.field_E, param0.field_C, ((hg) this).field_d);
+              if (var12 != null) {
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            var7 = param0.field_E - 2 * var12.field_R;
+            var8 = param3 + param0.field_z + var12.field_R;
+            var9 = param2 + param0.field_p - -var12.field_T;
+            t.b(var8, var9, var7 + var8, var9, ((hg) this).field_c);
+            var10 = -1 + var12.f((byte) 62);
+            L4: while (true) {
+              if (var10 < 0) {
+                if (null != ((hg) this).field_h) {
+                  ((hg) this).field_h.b(var12.field_q, var7 / 2 + var8, ((hg) this).field_h.field_M + (var9 - -var12.field_T), ((hg) this).field_f, ((hg) this).field_j);
+                  break L0;
+                } else {
+                  return;
+                }
+              } else {
+                t.c(var8 - -(var7 * var12.a((byte) -91, var10) / var12.k(param1 + 123)), var9, ((hg) this).field_e, ((hg) this).field_a);
+                var10--;
+                continue L4;
+              }
             }
           }
-        } else {
-          L4: {
-            if (!(param0 instanceof tm)) {
-              stackOut_3_0 = null;
-              stackIn_4_0 = (ng) (Object) stackOut_3_0;
-              break L4;
-            } else {
-              stackOut_2_0 = (ng) param0;
-              stackIn_4_0 = stackOut_2_0;
-              break L4;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var14 = (tm) (Object) stackIn_4_0;
-            t.d(param0.field_z + param3, param2 + param0.field_p, param0.field_E, param0.field_C, ((hg) this).field_d);
-            if (var14 != null) {
+            var6 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var6;
+            stackOut_14_1 = new StringBuilder().append("hg.A(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
               break L5;
             } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
               break L5;
             }
           }
-          var7 = param0.field_E - 2 * var14.field_R;
-          var8 = param3 + param0.field_z + var14.field_R;
-          var9 = param2 + param0.field_p - -var14.field_T;
-          t.b(var8, var9, var7 + var8, var9, ((hg) this).field_c);
-          var10 = -1 + var14.f((byte) 62);
-          L6: while (true) {
-            if (-1 < (var10 ^ -1)) {
-              L7: {
-                if (null != ((hg) this).field_h) {
-                  ((hg) this).field_h.b(var14.field_q, var7 / 2 + var8, ((hg) this).field_h.field_M + (var9 - -var14.field_T), ((hg) this).field_f, ((hg) this).field_j);
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              return;
-            } else {
-              t.c(var8 - -(var7 * var14.a((byte) -91, var10) / var14.k(param1 + 123)), var9, ((hg) this).field_e, ((hg) this).field_a);
-              var10--;
-              continue L6;
-            }
-          }
+          throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     hg(jl param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ((hg) this).field_c = param3;
-        ((hg) this).field_j = param2;
-        ((hg) this).field_d = param4;
-        ((hg) this).field_h = param0;
-        ((hg) this).field_f = param1;
-        ((hg) this).field_a = param6;
-        ((hg) this).field_e = param5;
+        try {
+            ((hg) this).field_c = param3;
+            ((hg) this).field_j = param2;
+            ((hg) this).field_d = param4;
+            ((hg) this).field_h = param0;
+            ((hg) this).field_f = param1;
+            ((hg) this).field_a = param6;
+            ((hg) this).field_e = param5;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "hg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     static {

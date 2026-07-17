@@ -10,16 +10,8 @@ final class dl {
     public static void a(byte param0) {
         field_a = null;
         field_c = null;
-        if (param0 < 43) {
-          field_a = null;
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
-          field_b = null;
-          field_d = null;
-          return;
-        }
+        field_b = null;
+        field_d = null;
     }
 
     final static void a(boolean param0, boolean param1, boolean param2) {
@@ -68,7 +60,7 @@ final class dl {
                         var2++;
                         continue L0;
                       } else {
-                        if ((ld.field_d[var2] ^ -1) < -1) {
+                        if (ld.field_d[var2] > 0) {
                           ld.field_d[var2] = ld.field_d[var2] - 1;
                           var3 = fh.field_a[var2][ld.field_d[var2] - 1];
                           fh.field_a[var2][ld.field_d[var2]] = null;
@@ -84,9 +76,10 @@ final class dl {
                   return new byte[param0];
                 }
               } else {
-                if ((sc.field_f ^ -1) < -1) {
+                if (sc.field_f > 0) {
+                  int fieldTemp$46 = sc.field_f - 1;
                   sc.field_f = sc.field_f - 1;
-                  var2_ref_byte__ = hf.field_Z[sc.field_f - 1];
+                  var2_ref_byte__ = hf.field_Z[fieldTemp$46];
                   hf.field_Z[sc.field_f] = null;
                   return var2_ref_byte__;
                 } else {
@@ -101,7 +94,7 @@ final class dl {
                           var2++;
                           continue L1;
                         } else {
-                          if ((ld.field_d[var2] ^ -1) < -1) {
+                          if (ld.field_d[var2] > 0) {
                             ld.field_d[var2] = ld.field_d[var2] - 1;
                             var3 = fh.field_a[var2][ld.field_d[var2] - 1];
                             fh.field_a[var2][ld.field_d[var2]] = null;
@@ -119,7 +112,7 @@ final class dl {
                 }
               }
             } else {
-              byte[] discarded$8 = dl.a(40, 47);
+              byte[] discarded$47 = dl.a(40, 47);
               if (30000 != param0) {
                 if (null != fh.field_a) {
                   var2 = 0;
@@ -132,7 +125,7 @@ final class dl {
                         var2++;
                         continue L2;
                       } else {
-                        if ((ld.field_d[var2] ^ -1) < -1) {
+                        if (ld.field_d[var2] > 0) {
                           ld.field_d[var2] = ld.field_d[var2] - 1;
                           var3 = fh.field_a[var2][ld.field_d[var2] - 1];
                           fh.field_a[var2][ld.field_d[var2]] = null;
@@ -148,9 +141,10 @@ final class dl {
                   return new byte[param0];
                 }
               } else {
-                if ((sc.field_f ^ -1) < -1) {
+                if (sc.field_f > 0) {
+                  int fieldTemp$48 = sc.field_f - 1;
                   sc.field_f = sc.field_f - 1;
-                  var2_ref_byte__ = hf.field_Z[sc.field_f - 1];
+                  var2_ref_byte__ = hf.field_Z[fieldTemp$48];
                   hf.field_Z[sc.field_f] = null;
                   return var2_ref_byte__;
                 } else {
@@ -166,7 +160,7 @@ final class dl {
                             var2++;
                             continue L4;
                           } else {
-                            if ((ld.field_d[var2] ^ -1) < -1) {
+                            if (ld.field_d[var2] > 0) {
                               ld.field_d[var2] = ld.field_d[var2] - 1;
                               var3 = fh.field_a[var2][ld.field_d[var2] - 1];
                               fh.field_a[var2][ld.field_d[var2]] = null;
@@ -187,7 +181,7 @@ final class dl {
               }
             }
           } else {
-            if (-1 <= (rj.field_a ^ -1)) {
+            if (rj.field_a <= 0) {
               if (param1 < -98) {
                 if (30000 != param0) {
                   if (null != fh.field_a) {
@@ -201,7 +195,7 @@ final class dl {
                           var2++;
                           continue L5;
                         } else {
-                          if ((ld.field_d[var2] ^ -1) < -1) {
+                          if (ld.field_d[var2] > 0) {
                             ld.field_d[var2] = ld.field_d[var2] - 1;
                             var3 = fh.field_a[var2][ld.field_d[var2] - 1];
                             fh.field_a[var2][ld.field_d[var2]] = null;
@@ -217,7 +211,7 @@ final class dl {
                     return new byte[param0];
                   }
                 } else {
-                  if ((sc.field_f ^ -1) >= -1) {
+                  if (sc.field_f <= 0) {
                     if (null != fh.field_a) {
                       var2 = 0;
                       L6: while (true) {
@@ -227,7 +221,7 @@ final class dl {
                             var2++;
                             continue L6;
                           } else {
-                            if ((ld.field_d[var2] ^ -1) < -1) {
+                            if (ld.field_d[var2] > 0) {
                               ld.field_d[var2] = ld.field_d[var2] - 1;
                               var3 = fh.field_a[var2][ld.field_d[var2] - 1];
                               fh.field_a[var2][ld.field_d[var2]] = null;
@@ -245,21 +239,23 @@ final class dl {
                       return new byte[param0];
                     }
                   } else {
+                    int fieldTemp$49 = sc.field_f - 1;
                     sc.field_f = sc.field_f - 1;
-                    var2_ref_byte__ = hf.field_Z[sc.field_f - 1];
+                    var2_ref_byte__ = hf.field_Z[fieldTemp$49];
                     hf.field_Z[sc.field_f] = null;
                     return var2_ref_byte__;
                   }
                 }
               } else {
                 L7: {
-                  byte[] discarded$9 = dl.a(40, 47);
+                  byte[] discarded$50 = dl.a(40, 47);
                   if (30000 != param0) {
                     break L7;
                   } else {
-                    if ((sc.field_f ^ -1) < -1) {
+                    if (sc.field_f > 0) {
+                      int fieldTemp$51 = sc.field_f - 1;
                       sc.field_f = sc.field_f - 1;
-                      var2_ref_byte__ = hf.field_Z[sc.field_f - 1];
+                      var2_ref_byte__ = hf.field_Z[fieldTemp$51];
                       hf.field_Z[sc.field_f] = null;
                       return var2_ref_byte__;
                     } else {
@@ -276,7 +272,7 @@ final class dl {
                         var2++;
                         continue L8;
                       } else {
-                        if ((ld.field_d[var2] ^ -1) < -1) {
+                        if (ld.field_d[var2] > 0) {
                           ld.field_d[var2] = ld.field_d[var2] - 1;
                           var3 = fh.field_a[var2][ld.field_d[var2] - 1];
                           fh.field_a[var2][ld.field_d[var2]] = null;
@@ -295,8 +291,9 @@ final class dl {
                 }
               }
             } else {
+              int fieldTemp$52 = rj.field_a - 1;
               rj.field_a = rj.field_a - 1;
-              var2_ref_byte__ = rk.field_c[rj.field_a - 1];
+              var2_ref_byte__ = rk.field_c[fieldTemp$52];
               rk.field_c[rj.field_a] = null;
               return var2_ref_byte__;
             }
@@ -304,21 +301,23 @@ final class dl {
         } else {
           if (fi.field_c <= 0) {
             if (param0 == 5000) {
-              if (-1 > (rj.field_a ^ -1)) {
+              if (rj.field_a > 0) {
+                int fieldTemp$53 = rj.field_a - 1;
                 rj.field_a = rj.field_a - 1;
-                var2_ref_byte__ = rk.field_c[rj.field_a - 1];
+                var2_ref_byte__ = rk.field_c[fieldTemp$53];
                 rk.field_c[rj.field_a] = null;
                 return var2_ref_byte__;
               } else {
                 if (param1 >= -98) {
                   L9: {
-                    byte[] discarded$10 = dl.a(40, 47);
+                    byte[] discarded$54 = dl.a(40, 47);
                     if (30000 != param0) {
                       break L9;
                     } else {
-                      if ((sc.field_f ^ -1) < -1) {
+                      if (sc.field_f > 0) {
+                        int fieldTemp$55 = sc.field_f - 1;
                         sc.field_f = sc.field_f - 1;
-                        var2_ref_byte__ = hf.field_Z[sc.field_f - 1];
+                        var2_ref_byte__ = hf.field_Z[fieldTemp$55];
                         hf.field_Z[sc.field_f] = null;
                         return var2_ref_byte__;
                       } else {
@@ -335,7 +334,7 @@ final class dl {
                           var2++;
                           continue L10;
                         } else {
-                          if ((ld.field_d[var2] ^ -1) < -1) {
+                          if (ld.field_d[var2] > 0) {
                             ld.field_d[var2] = ld.field_d[var2] - 1;
                             var3 = fh.field_a[var2][ld.field_d[var2] - 1];
                             fh.field_a[var2][ld.field_d[var2]] = null;
@@ -357,9 +356,10 @@ final class dl {
                     if (30000 != param0) {
                       break L11;
                     } else {
-                      if ((sc.field_f ^ -1) < -1) {
+                      if (sc.field_f > 0) {
+                        int fieldTemp$56 = sc.field_f - 1;
                         sc.field_f = sc.field_f - 1;
-                        var2_ref_byte__ = hf.field_Z[sc.field_f - 1];
+                        var2_ref_byte__ = hf.field_Z[fieldTemp$56];
                         hf.field_Z[sc.field_f] = null;
                         return var2_ref_byte__;
                       } else {
@@ -376,7 +376,7 @@ final class dl {
                           var2++;
                           continue L12;
                         } else {
-                          if ((ld.field_d[var2] ^ -1) < -1) {
+                          if (ld.field_d[var2] > 0) {
                             ld.field_d[var2] = ld.field_d[var2] - 1;
                             var3 = fh.field_a[var2][ld.field_d[var2] - 1];
                             fh.field_a[var2][ld.field_d[var2]] = null;
@@ -400,7 +400,7 @@ final class dl {
                 if (param1 < -98) {
                   break L13;
                 } else {
-                  byte[] discarded$11 = dl.a(40, 47);
+                  byte[] discarded$57 = dl.a(40, 47);
                   break L13;
                 }
               }
@@ -408,9 +408,10 @@ final class dl {
                 if (30000 != param0) {
                   break L14;
                 } else {
-                  if ((sc.field_f ^ -1) < -1) {
+                  if (sc.field_f > 0) {
+                    int fieldTemp$58 = sc.field_f - 1;
                     sc.field_f = sc.field_f - 1;
-                    var2_ref_byte__ = hf.field_Z[sc.field_f - 1];
+                    var2_ref_byte__ = hf.field_Z[fieldTemp$58];
                     hf.field_Z[sc.field_f] = null;
                     return var2_ref_byte__;
                   } else {
@@ -422,7 +423,7 @@ final class dl {
                 var2 = 0;
                 if (vl.field_d.length > var2) {
                   if (param0 == vl.field_d[var2]) {
-                    if ((ld.field_d[var2] ^ -1) < -1) {
+                    if (ld.field_d[var2] > 0) {
                       ld.field_d[var2] = ld.field_d[var2] - 1;
                       var3 = fh.field_a[var2][ld.field_d[var2] - 1];
                       fh.field_a[var2][ld.field_d[var2]] = null;
@@ -449,8 +450,9 @@ final class dl {
               }
             }
           } else {
+            int fieldTemp$59 = fi.field_c - 1;
             fi.field_c = fi.field_c - 1;
-            var2_ref_byte__ = wd.field_d[fi.field_c - 1];
+            var2_ref_byte__ = wd.field_d[fieldTemp$59];
             wd.field_d[fi.field_c] = null;
             return var2_ref_byte__;
           }
@@ -458,10 +460,14 @@ final class dl {
     }
 
     final static void a(java.awt.Component param0, byte param1) {
-        param0.removeKeyListener((java.awt.event.KeyListener) (Object) tf.field_p);
-        param0.removeFocusListener((java.awt.event.FocusListener) (Object) tf.field_p);
-        int var2 = -9 / ((param1 - 20) / 56);
-        ab.field_a = -1;
+        try {
+            param0.removeKeyListener((java.awt.event.KeyListener) (Object) tf.field_p);
+            param0.removeFocusListener((java.awt.event.FocusListener) (Object) tf.field_p);
+            int var2_int = -9 / ((param1 - 20) / 56);
+            ab.field_a = -1;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "dl.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

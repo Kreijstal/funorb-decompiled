@@ -24,10 +24,10 @@ final class wh extends lj {
           fa.field_i.field_m = al.field_i;
           fa.field_i.field_g = 7697781;
           fa.field_i.field_i = 5;
-          var1 = 40 / ((param0 - 72) / 54);
+          var1 = -13;
           return fa.field_i;
         } else {
-          var1 = 40 / ((param0 - 72) / 54);
+          var1 = -13;
           return fa.field_i;
         }
     }
@@ -41,82 +41,118 @@ final class wh extends lj {
     }
 
     final boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
-        int var8 = 0;
+        RuntimeException var8 = null;
+        int var8_int = 0;
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_21_0 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_15_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_18_0 = 0;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         var12 = Transmogrify.field_A ? 1 : 0;
-        if (super.b(param0, param1, param2, param3, param4 ^ 0, param5, param6)) {
-          var8 = -((wh) this).field_H - param3 - (((wh) this).field_p - param0);
-          var9 = param5 + (-((wh) this).field_G + -param6 + -((wh) this).field_n);
-          if (var8 * var8 - -(var9 * var9) < ((wh) this).field_A * ((wh) this).field_A) {
-            var10 = Math.atan2((double)var9, (double)var8) - ih.field_d;
-            if (0.0 <= var10) {
-              if (0.0 < var10) {
-                var10 = var10 + 3.141592653589793 / (double)((wh) this).field_C;
-                ((wh) this).field_B = (int)((double)((wh) this).field_C * var10 / 6.283185307179586);
-                L0: while (true) {
-                  if (((wh) this).field_B >= ((wh) this).field_C) {
-                    ((wh) this).field_B = ((wh) this).field_B - ((wh) this).field_C;
-                    continue L0;
-                  } else {
-                    L1: while (true) {
-                      if (((wh) this).field_B >= 0) {
-                        return true;
-                      } else {
-                        ((wh) this).field_B = ((wh) this).field_B + ((wh) this).field_C;
-                        continue L1;
-                      }
+        try {
+          L0: {
+            if (super.b(param0, param1, param2, param3, param4, param5, param6)) {
+              var8_int = -((wh) this).field_H - param3 - (((wh) this).field_p - param0);
+              var9 = param5 + (-((wh) this).field_G + -param6 + -((wh) this).field_n);
+              if (var8_int * var8_int - -(var9 * var9) < ((wh) this).field_A * ((wh) this).field_A) {
+                L1: {
+                  var10 = Math.atan2((double)var9, (double)var8_int) - ih.field_d;
+                  if (0.0 <= var10) {
+                    if (0.0 < var10) {
+                      var10 = var10 + 3.141592653589793 / (double)((wh) this).field_C;
+                      break L1;
+                    } else {
+                      break L1;
                     }
+                  } else {
+                    var10 = var10 - 3.141592653589793 / (double)((wh) this).field_C;
+                    break L1;
                   }
                 }
-              } else {
                 ((wh) this).field_B = (int)((double)((wh) this).field_C * var10 / 6.283185307179586);
                 L2: while (true) {
-                  if (((wh) this).field_B >= ((wh) this).field_C) {
-                    ((wh) this).field_B = ((wh) this).field_B - ((wh) this).field_C;
-                    continue L2;
-                  } else {
+                  if (((wh) this).field_B < ((wh) this).field_C) {
                     L3: while (true) {
                       if (((wh) this).field_B >= 0) {
-                        return true;
+                        stackOut_15_0 = 1;
+                        stackIn_16_0 = stackOut_15_0;
+                        return stackIn_16_0 != 0;
                       } else {
                         ((wh) this).field_B = ((wh) this).field_B + ((wh) this).field_C;
                         continue L3;
                       }
                     }
+                  } else {
+                    ((wh) this).field_B = ((wh) this).field_B - ((wh) this).field_C;
+                    continue L2;
                   }
                 }
+              } else {
+                return true;
               }
             } else {
-              var10 = var10 - 3.141592653589793 / (double)((wh) this).field_C;
-              ((wh) this).field_B = (int)((double)((wh) this).field_C * var10 / 6.283185307179586);
-              L4: while (true) {
-                if (((wh) this).field_B >= ((wh) this).field_C) {
-                  ((wh) this).field_B = ((wh) this).field_B - ((wh) this).field_C;
-                  continue L4;
-                } else {
-                  L5: while (true) {
-                    if (((wh) this).field_B >= 0) {
-                      return true;
-                    } else {
-                      ((wh) this).field_B = ((wh) this).field_B + ((wh) this).field_C;
-                      continue L5;
-                    }
-                  }
-                }
+              if (param4 == -30386) {
+                stackOut_20_0 = 0;
+                stackIn_21_0 = stackOut_20_0;
+                break L0;
+              } else {
+                stackOut_18_0 = 1;
+                stackIn_19_0 = stackOut_18_0;
+                return stackIn_19_0 != 0;
               }
             }
-          } else {
-            return true;
           }
-        } else {
-          if (param4 != -30386) {
-            return true;
-          } else {
-            return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var8 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var8;
+            stackOut_22_1 = new StringBuilder().append("wh.O(").append(param0).append(44).append(param1).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param2 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L4;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L4;
+            }
           }
+          throw ch.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
+        return stackIn_21_0 != 0;
     }
 
     final static void e(byte param0) {
@@ -130,53 +166,43 @@ final class wh extends lj {
         tj.field_w[192] = 28;
         tj.field_w[520] = 59;
         tj.field_w[222] = 58;
-        int var1 = 17 / ((param0 - 2) / 42);
+        int var1 = -17;
         tj.field_w[92] = 74;
         tj.field_w[93] = 43;
     }
 
     final static void f(byte param0) {
         Object var1 = null;
-        sj var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = Transmogrify.field_A ? 1 : 0;
-        var1 = null;
-        if (param0 == 104) {
-          var2 = 11;
-          L0: while (true) {
-            if ((var2 ^ -1) <= -1) {
-              var1_ref = od.field_g.field_e[var2];
-              if (od.field_g.field_e[var2] == null) {
-                var2--;
-                continue L0;
-              } else {
-                eh.a(var1_ref, 67);
-                return;
+        try {
+          L0: {
+            var1 = null;
+            var2 = 11;
+            L1: while (true) {
+              L2: {
+                if (var2 < 0) {
+                  break L2;
+                } else {
+                  var1 = (Object) (Object) od.field_g.field_e[var2];
+                  if (od.field_g.field_e[var2] != null) {
+                    break L2;
+                  } else {
+                    var2--;
+                    continue L1;
+                  }
+                }
               }
-            } else {
-              eh.a(var1_ref, 67);
-              return;
-            }
-          }
-        } else {
-          wh.h(86);
-          var2 = 11;
-          L1: while (true) {
-            if ((var2 ^ -1) <= -1) {
-              var1_ref = od.field_g.field_e[var2];
-              if (od.field_g.field_e[var2] == null) {
-                var2--;
-                continue L1;
-              } else {
-                eh.a(var1_ref, 67);
-                return;
-              }
-            } else {
               eh.a((sj) var1, 67);
-              return;
+              break L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = (Object) (Object) decompiledCaughtException;
+          throw ch.a((Throwable) var1, "wh.C(" + 104 + 41);
         }
     }
 

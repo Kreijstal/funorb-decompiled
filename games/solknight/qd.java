@@ -72,7 +72,7 @@ final class qd {
         gg var4 = ((qd) this).field_g[(int)((long)(((qd) this).field_i + -1) & param1)];
         ((qd) this).field_b = var4.field_d;
         while (var4 != ((qd) this).field_b) {
-            if (!((((qd) this).field_b.field_g ^ -1L) != (param1 ^ -1L))) {
+            if (!(~((qd) this).field_b.field_g != ~param1)) {
                 var5 = ((qd) this).field_b;
                 ((qd) this).field_b = ((qd) this).field_b.field_d;
                 return var5;
@@ -94,10 +94,6 @@ final class qd {
 
     final static void a(byte param0) {
         h.a(4, true);
-        if (param0 == -13) {
-            return;
-        }
-        qd.a(28);
     }
 
     public static void a(int param0) {
@@ -110,19 +106,80 @@ final class qd {
     }
 
     final void a(byte param0, gg param1, long param2) {
-        if (!(param1.field_a == null)) {
-            param1.c(10);
+        gg var5 = null;
+        RuntimeException var5_ref = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1.field_a != null) {
+                param1.c(10);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              var5 = ((qd) this).field_g[(int)(param2 & (long)(((qd) this).field_i - 1))];
+              param1.field_d = var5;
+              param1.field_a = var5.field_a;
+              param1.field_a.field_d = param1;
+              param1.field_d.field_a = param1;
+              param1.field_g = param2;
+              if (param0 > 22) {
+                break L2;
+              } else {
+                field_d = -118;
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var5_ref;
+            stackOut_6_1 = new StringBuilder().append("qd.F(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 41);
         }
-        gg var5 = ((qd) this).field_g[(int)(param2 & (long)(((qd) this).field_i - 1))];
-        param1.field_d = var5;
-        param1.field_a = var5.field_a;
-        param1.field_a.field_d = param1;
-        param1.field_d.field_a = param1;
-        param1.field_g = param2;
-        if (param0 > 22) {
-            return;
-        }
-        field_d = -118;
     }
 
     final static boolean b(byte param0) {
@@ -133,7 +190,7 @@ final class qd {
             te.field_O = te.field_N.j(255);
             te.field_N.field_m = 0;
         }
-        if ((te.field_O ^ -1) == 1) {
+        if (te.field_O == -2) {
             if (!bf.c(36, 2)) {
                 return false;
             }

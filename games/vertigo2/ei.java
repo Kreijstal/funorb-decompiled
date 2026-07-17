@@ -14,7 +14,7 @@ final class ei extends gp {
         int var6 = 0;
         ed var8 = null;
         int var9 = 0;
-        mb var10 = null;
+        Object var10 = null;
         mb var11 = null;
         int var12 = 0;
         Object var13 = null;
@@ -87,7 +87,7 @@ final class ei extends gp {
                           break L6;
                         } else {
                           if (var11.field_x == var9) {
-                            var10 = var11;
+                            var10 = (Object) (Object) var11;
                             break L6;
                           } else {
                             var11 = (mb) (Object) var3.b(68);
@@ -97,14 +97,14 @@ final class ei extends gp {
                       }
                       L7: {
                         if (var10 == null) {
-                          var10 = new mb(var9, hd.field_b.a(true, var9));
-                          var3.a((li) (Object) var10, false);
+                          var10 = (Object) (Object) new mb(var9, hd.field_b.a(true, var9));
+                          var3.a((li) var10, false);
                           break L7;
                         } else {
                           break L7;
                         }
                       }
-                      ((ei) this).field_t[var30[var6]] = new ul(var31, var10);
+                      ((ei) this).field_t[var30[var6]] = new ul(var31, (mb) var10);
                       var6++;
                       continue L4;
                     }
@@ -186,21 +186,28 @@ final class ei extends gp {
         vl.field_a[3][0] = lg.a(param0, "", "character/vertigo_char_jetp_nopaint");
         vl.field_a[4][0] = lg.a(param0, "", "character/vertigo_char_jetp_paint");
         vl.field_a[5][0] = lg.a(param0, "", "character/vertigo_char_jetp_paint_blue");
-        vl.field_a[6][0] = lg.a(param0, "", "character/vertigo_char_01_skul_nopaint");
-        vl.field_a[6][1] = lg.a(param0, "", "character/vertigo_char_01_skul_nopaint");
-        vl.field_a[7][0] = lg.a(param0, "", "character/vertigo_char_01_skull");
-        vl.field_a[7][1] = lg.a(param0, "", "character/vertigo_char_01_skull");
-        vl.field_a[8][0] = lg.a(param0, "", "character/vertigo_char_01_skull_blue_paint");
-        vl.field_a[8][1] = lg.a(param0, "", "character/vertigo_char_01_skull_blue_paint");
-        vl.field_a[10][0] = lg.a(param0, "", "character/vertigo_char_01_skull_blue_paint");
-        vl.field_a[10][1] = lg.a(param0, "", "character/vertigo_char_01_skull_blue_paint");
-        vl.field_a[9][0] = lg.a(param0, "", "character/vertigo_char_skull_jetp_paint_blue");
-        vl.field_a[9][1] = lg.a(param0, "", "character/vertigo_char_skull_jetp_paint_blue");
-        vl.field_a[12][0] = lg.a(param0, "", "character/vertigo_char_01_skull_jetp_paint");
-        vl.field_a[12][1] = lg.a(param0, "", "character/vertigo_char_01_skull_jetp_paint");
-        vl.field_a[11][0] = lg.a(param0, "", "character/vertigo_char_01_ghost");
-        vl.field_a[11][1] = lg.a(param0, "", "character/vertigo_char_01_ghost");
-        vl.field_a[11][1] = lg.a(param0, "", "character/vertigo_char_01_ghost");
+        lg dupTemp$23 = lg.a(param0, "", "character/vertigo_char_01_skul_nopaint");
+        vl.field_a[6][0] = dupTemp$23;
+        vl.field_a[6][1] = dupTemp$23;
+        lg dupTemp$24 = lg.a(param0, "", "character/vertigo_char_01_skull");
+        vl.field_a[7][0] = dupTemp$24;
+        vl.field_a[7][1] = dupTemp$24;
+        lg dupTemp$25 = lg.a(param0, "", "character/vertigo_char_01_skull_blue_paint");
+        vl.field_a[8][0] = dupTemp$25;
+        vl.field_a[8][1] = dupTemp$25;
+        lg dupTemp$26 = lg.a(param0, "", "character/vertigo_char_01_skull_blue_paint");
+        vl.field_a[10][0] = dupTemp$26;
+        vl.field_a[10][1] = dupTemp$26;
+        lg dupTemp$27 = lg.a(param0, "", "character/vertigo_char_skull_jetp_paint_blue");
+        vl.field_a[9][0] = dupTemp$27;
+        vl.field_a[9][1] = dupTemp$27;
+        lg dupTemp$28 = lg.a(param0, "", "character/vertigo_char_01_skull_jetp_paint");
+        vl.field_a[12][0] = dupTemp$28;
+        vl.field_a[12][1] = dupTemp$28;
+        lg dupTemp$29 = lg.a(param0, "", "character/vertigo_char_01_ghost");
+        vl.field_a[11][0] = dupTemp$29;
+        vl.field_a[11][1] = dupTemp$29;
+        vl.field_a[11][1] = dupTemp$29;
         vl.field_a[0][1] = lg.a(param0, "", "character/vertigo_char_nopaint_P2");
         vl.field_a[1][1] = lg.a(param0, "", "character/vertigo_char_01_P2");
         vl.field_a[2][1] = lg.a(param0, "", "character/vertigo_char_01_blue_P2");
@@ -211,7 +218,7 @@ final class ei extends gp {
         ch.field_d[0] = lg.a(param0, "", "character/vertigo_blobs");
         ch.field_d[1] = lg.a(param0, "", "character/vertigo_blobs_blue");
         rp.field_c = lg.a(param0, "", "character/flame");
-        lg discarded$1 = lg.a(param0, "", "character/death_block");
+        lg discarded$30 = lg.a(param0, "", "character/death_block");
         ui.field_e = lg.a(param0, "", "character/death_block_electric");
         kn.field_p = lg.a(param0, "", "character/mouth");
         sl.field_u = lg.a(param0, "", "character/spikes");
@@ -221,26 +228,32 @@ final class ei extends gp {
         var2[1] = rp.field_c;
         var3_int = 0;
         L0: while (true) {
-          if (-3 >= (var3_int ^ -1)) {
+          if (var3_int >= 2) {
             var2[1] = kn.field_p;
             var2[0] = vl.field_a[6][0];
-            vl.field_a[6][0] = new lg(var9, 2);
-            vl.field_a[6][1] = new lg(var9, 2);
+            lg dupTemp$31 = new lg(var9, 2);
+            vl.field_a[6][0] = dupTemp$31;
+            vl.field_a[6][1] = dupTemp$31;
             var2[0] = vl.field_a[7][0];
-            vl.field_a[7][0] = new lg(var9, 2);
-            vl.field_a[7][1] = new lg(var9, 2);
+            lg dupTemp$32 = new lg(var9, 2);
+            vl.field_a[7][0] = dupTemp$32;
+            vl.field_a[7][1] = dupTemp$32;
             var2[0] = vl.field_a[8][0];
-            vl.field_a[8][0] = new lg(var9, 2);
-            vl.field_a[8][1] = new lg(var9, 2);
+            lg dupTemp$33 = new lg(var9, 2);
+            vl.field_a[8][0] = dupTemp$33;
+            vl.field_a[8][1] = dupTemp$33;
             var2[0] = vl.field_a[10][0];
-            vl.field_a[10][0] = new lg(var9, 2);
-            vl.field_a[10][1] = new lg(var9, 2);
+            lg dupTemp$34 = new lg(var9, 2);
+            vl.field_a[10][0] = dupTemp$34;
+            vl.field_a[10][1] = dupTemp$34;
             var2[0] = vl.field_a[9][0];
-            vl.field_a[9][0] = new lg(var9, 2);
-            vl.field_a[9][1] = new lg(var9, 2);
+            lg dupTemp$35 = new lg(var9, 2);
+            vl.field_a[9][0] = dupTemp$35;
+            vl.field_a[9][1] = dupTemp$35;
             var2[0] = vl.field_a[12][0];
-            vl.field_a[12][0] = new lg(var9, 2);
-            vl.field_a[12][1] = new lg(var9, 2);
+            lg dupTemp$36 = new lg(var9, 2);
+            vl.field_a[12][0] = dupTemp$36;
+            vl.field_a[12][1] = dupTemp$36;
             rq.field_r = lg.a(param0, "", "character/explosion");
             var3 = lg.a(param0, "", "character/debris");
             var4 = lg.a(param0, "", "character/debris_blue");
@@ -253,27 +266,32 @@ final class ei extends gp {
             th.field_a[1] = lg.a(param0, "", "character/grey_block_cracked_for_anim_lp");
             var6 = 0;
             L1: while (true) {
-              if ((var6 ^ -1) <= -3) {
+              if (var6 >= 2) {
                 L2: {
                   var10 = lg.a(param0, "", "game_object_models/paint_bucket_purple");
-                  wi.field_j[5][0] = new fc(var10, 110, 1560, 10, -10, -5);
-                  wi.field_j[5][1] = new fc(var10, 110, 1560, 10, -10, -5);
+                  fc dupTemp$37 = new fc(var10, 110, 1560, 10, -10, -5);
+                  wi.field_j[5][0] = dupTemp$37;
+                  wi.field_j[5][1] = dupTemp$37;
                   var11 = lg.a(param0, "", "blocks/bomb_block");
                   wi.field_j[8][0] = new fc(var11, 110, 1560, 10, -10, -5);
                   var12 = lg.a(param0, "", "blocks/low_poly/bomb_block_lp");
                   wi.field_j[8][1] = new fc(var12, 110, 1560, 10, -10, -5);
                   var13 = lg.a(param0, "", "game_object_models/compass");
-                  wi.field_j[9][0] = new fc(var13, 110, 1560, 10, -10, -5);
-                  wi.field_j[9][1] = new fc(var13, 110, 1560, 10, -10, -5);
+                  fc dupTemp$38 = new fc(var13, 110, 1560, 10, -10, -5);
+                  wi.field_j[9][0] = dupTemp$38;
+                  wi.field_j[9][1] = dupTemp$38;
                   var14 = lg.a(param0, "", "game_object_models/paint_bucket_blue");
-                  wi.field_j[10][0] = new fc(var14, 110, 1560, 10, -10, -5);
-                  wi.field_j[10][1] = new fc(var14, 110, 1560, 10, -10, -5);
+                  fc dupTemp$39 = new fc(var14, 110, 1560, 10, -10, -5);
+                  wi.field_j[10][0] = dupTemp$39;
+                  wi.field_j[10][1] = dupTemp$39;
                   var15 = lg.a(param0, "", "game_object_models/dynamite");
-                  wi.field_j[11][0] = new fc(var15, 110, 1560, 10, -10, -5);
-                  wi.field_j[11][1] = new fc(var15, 110, 1560, 10, -10, -5);
+                  fc dupTemp$40 = new fc(var15, 110, 1560, 10, -10, -5);
+                  wi.field_j[11][0] = dupTemp$40;
+                  wi.field_j[11][1] = dupTemp$40;
                   var16 = lg.a(param0, "", "game_object_models/100_coin");
-                  wi.field_j[12][0] = new fc(var16, 110, 1560, 10, -10, -5);
-                  wi.field_j[12][1] = new fc(var16, 110, 1560, 10, -10, -5);
+                  fc dupTemp$41 = new fc(var16, 110, 1560, 10, -10, -5);
+                  wi.field_j[12][0] = dupTemp$41;
+                  wi.field_j[12][1] = dupTemp$41;
                   var17 = lg.a(param0, "", "blocks/blocking_block");
                   wi.field_j[17][0] = new fc(var17, 110, 1560, 10, -10, -5);
                   var18 = lg.a(param0, "", "blocks/low_poly/blocking_block_lp");
@@ -283,11 +301,13 @@ final class ei extends gp {
                   vq.field_i = lg.a(param0, "", "character/portal_block_purple_lp");
                   wi.field_j[7][1] = new fc(vq.field_i, 110, 1560, 10, -10, -5);
                   var19 = lg.a(param0, "", "game_object_models/jetpack");
-                  wi.field_j[18][0] = new fc(var19, 110, 1560, 10, -10, -5);
-                  wi.field_j[18][1] = new fc(var19, 110, 1560, 10, -10, -5);
+                  fc dupTemp$42 = new fc(var19, 110, 1560, 10, -10, -5);
+                  wi.field_j[18][0] = dupTemp$42;
+                  wi.field_j[18][1] = dupTemp$42;
                   var20 = lg.a(param0, "", "game_object_models/restart_point");
-                  wi.field_j[20][0] = new fc(var20, 110, 1560, 10, -10, -5);
-                  wi.field_j[20][1] = new fc(var20, 110, 1560, 10, -10, -5);
+                  fc dupTemp$43 = new fc(var20, 110, 1560, 10, -10, -5);
+                  wi.field_j[20][0] = dupTemp$43;
+                  wi.field_j[20][1] = dupTemp$43;
                   var21 = lg.a(param0, "", "blocks/cracked_block");
                   wi.field_j[15][0] = new fc(var21, 110, 1560, 10, -10, -5);
                   var22 = lg.a(param0, "", "blocks/low_poly/cracked_block_lp");
@@ -341,13 +361,15 @@ final class ei extends gp {
                 var42 = lg.a(param0, "", "blocks/low_poly/sticky_block_lp");
                 wi.field_j[16][1] = new fc(var42, 110, 1560, 10, -10, -5);
                 var43 = lg.a(param0, "", "game_object_models/extra_life");
-                wi.field_j[19][0] = new fc(var43, 110, 1560, 10, -10, -5);
-                wi.field_j[19][1] = new fc(var43, 110, 1560, 10, -10, -5);
+                fc dupTemp$44 = new fc(var43, 110, 1560, 10, -10, -5);
+                wi.field_j[19][0] = dupTemp$44;
+                wi.field_j[19][1] = dupTemp$44;
                 var44 = lg.a(param0, "", "game_object_models/skull");
-                wi.field_j[29][0] = new fc(var44, 110, 1560, 10, -10, -5);
-                wi.field_j[29][1] = new fc(var44, 110, 1560, 10, -10, -5);
-                wi.field_j[30][0] = new fc(var44, 110, 1560, 10, -10, -5);
-                wi.field_j[30][1] = new fc(var44, 110, 1560, 10, -10, -5);
+                fc dupTemp$45 = new fc(var44, 110, 1560, 10, -10, -5);
+                wi.field_j[29][0] = dupTemp$45;
+                wi.field_j[29][1] = dupTemp$45;
+                wi.field_j[30][0] = dupTemp$45;
+                wi.field_j[30][1] = dupTemp$45;
                 return;
               } else {
                 var2[0] = var3;

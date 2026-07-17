@@ -16,9 +16,6 @@ final class ga implements Iterable {
         field_b = null;
         field_f = null;
         field_d = null;
-        if (param0 != 72) {
-            field_d = null;
-        }
     }
 
     public final Iterator iterator() {
@@ -48,15 +45,20 @@ final class ga implements Iterable {
     }
 
     final void a(fc param0, long param1, int param2) {
-        if (!(null == param0.field_e)) {
-            param0.a(param2 ^ 64);
+        fc var5 = null;
+        try {
+            if (!(null == param0.field_e)) {
+                param0.a(param2 ^ 64);
+            }
+            var5 = ((ga) this).field_c[(int)((long)(param2 + ((ga) this).field_a) & param1)];
+            param0.field_h = var5;
+            param0.field_e = var5.field_e;
+            param0.field_e.field_h = param0;
+            param0.field_b = param1;
+            param0.field_h.field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "ga.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        fc var5 = ((ga) this).field_c[(int)((long)(param2 + ((ga) this).field_a) & param1)];
-        param0.field_h = var5;
-        param0.field_e = var5.field_e;
-        param0.field_e.field_h = param0;
-        param0.field_b = param1;
-        param0.field_h.field_e = param0;
     }
 
     final fc a(long param0, int param1) {

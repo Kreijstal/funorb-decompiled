@@ -23,7 +23,7 @@ final class vb {
             ((vb) this).a(true, (vh) null, -18L);
             var2 = ((vb) this).field_h[(int)(((vb) this).field_b & (long)(-1 + ((vb) this).field_g))];
             while (var2 != ((vb) this).field_d) {
-                if (!((((vb) this).field_d.field_m ^ -1L) != (((vb) this).field_b ^ -1L))) {
+                if (!(~((vb) this).field_d.field_m != ~((vb) this).field_b)) {
                     var3 = ((vb) this).field_d;
                     ((vb) this).field_d = ((vb) this).field_d.field_o;
                     return var3;
@@ -35,7 +35,7 @@ final class vb {
         }
         var2 = ((vb) this).field_h[(int)(((vb) this).field_b & (long)(-1 + ((vb) this).field_g))];
         while (var2 != ((vb) this).field_d) {
-            if (!((((vb) this).field_d.field_m ^ -1L) != (((vb) this).field_b ^ -1L))) {
+            if (!(~((vb) this).field_d.field_m != ~((vb) this).field_b)) {
                 var3 = ((vb) this).field_d;
                 ((vb) this).field_d = ((vb) this).field_d.field_o;
                 return var3;
@@ -47,51 +47,34 @@ final class vb {
     }
 
     final static String b(byte param0) {
-        if ((uh.field_H ^ -1) > -3) {
-          return c.field_i;
-        } else {
-          L0: {
-            if (param0 == -27) {
-              break L0;
-            } else {
-              boolean discarded$1 = vb.a(-69);
-              break L0;
-            }
-          }
-          if (bl.field_a != null) {
-            if (!bl.field_a.a(0)) {
-              return si.field_hb;
-            } else {
-              return qb.field_e;
-            }
-          } else {
-            if (bi.field_d.a(0)) {
-              if (!bi.field_d.a(-3, "commonui")) {
-                return bl.field_d + " - " + bi.field_d.b(-120, "commonui") + "%";
-              } else {
-                if (!ph.field_q.a(0)) {
-                  return field_a;
-                } else {
-                  if (!ph.field_q.a(-3, "commonui")) {
-                    return ki.field_S + " - " + ph.field_q.b(param0 ^ 120, "commonui") + "%";
-                  } else {
-                    if (!ch.field_g.a(param0 ^ -27)) {
-                      return jj.field_d;
-                    } else {
-                      if (ch.field_g.b((byte) -128)) {
-                        return vd.field_o;
-                      } else {
-                        return li.field_b + " - " + ch.field_g.a((byte) 127) + "%";
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              return be.field_w;
-            }
-          }
+        if (!(uh.field_H >= 2)) {
+            return c.field_i;
         }
+        if (!(bl.field_a == null)) {
+            if (!(bl.field_a.a(0))) {
+                return si.field_hb;
+            }
+            return qb.field_e;
+        }
+        if (!bi.field_d.a(0)) {
+            return be.field_w;
+        }
+        if (!(bi.field_d.a(-3, "commonui"))) {
+            return bl.field_d + " - " + bi.field_d.b(-120, "commonui") + "%";
+        }
+        if (!(ph.field_q.a(0))) {
+            return field_a;
+        }
+        if (!(ph.field_q.a(-3, "commonui"))) {
+            return ki.field_S + " - " + ph.field_q.b(-99, "commonui") + "%";
+        }
+        if (!(ch.field_g.a(0))) {
+            return jj.field_d;
+        }
+        if (!ch.field_g.b((byte) -128)) {
+            return li.field_b + " - " + ch.field_g.a((byte) 127) + "%";
+        }
+        return vd.field_o;
     }
 
     final static boolean a(int param0) {
@@ -108,7 +91,7 @@ final class vb {
         vh var4 = ((vb) this).field_h[(int)((long)(((vb) this).field_g + -1) & param1)];
         ((vb) this).field_d = var4.field_o;
         while (var4 != ((vb) this).field_d) {
-            if ((param1 ^ -1L) == (((vb) this).field_d.field_m ^ -1L)) {
+            if (~param1 == ~((vb) this).field_d.field_m) {
                 var5 = ((vb) this).field_d;
                 ((vb) this).field_d = ((vb) this).field_d.field_o;
                 return var5;
@@ -126,41 +109,83 @@ final class vb {
 
     final void a(boolean param0, vh param1, long param2) {
         vh var5 = null;
-        if (null != param1.field_i) {
-            param1.c((byte) 13);
-            var5 = ((vb) this).field_h[(int)((long)(-1 + ((vb) this).field_g) & param2)];
-            param1.field_i = var5.field_i;
-            param1.field_o = var5;
-            param1.field_i.field_o = param1;
-            param1.field_o.field_i = param1;
-            param1.field_m = param2;
-            if (!param0) {
-                return;
+        RuntimeException var5_ref = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (null == param1.field_i) {
+                break L1;
+              } else {
+                param1.c((byte) 13);
+                break L1;
+              }
             }
-            field_i = -113;
-            return;
-        }
-        var5 = ((vb) this).field_h[(int)((long)(-1 + ((vb) this).field_g) & param2)];
-        param1.field_i = var5.field_i;
-        param1.field_o = var5;
-        param1.field_i.field_o = param1;
-        param1.field_o.field_i = param1;
-        param1.field_m = param2;
-        if (param0) {
-            field_i = -113;
-            return;
+            L2: {
+              var5 = ((vb) this).field_h[(int)((long)(-1 + ((vb) this).field_g) & param2)];
+              param1.field_i = var5.field_i;
+              param1.field_o = var5;
+              param1.field_i.field_o = param1;
+              param1.field_o.field_i = param1;
+              param1.field_m = param2;
+              if (!param0) {
+                break L2;
+              } else {
+                field_i = -113;
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var5_ref;
+            stackOut_5_1 = new StringBuilder().append("vb.E(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L3;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L3;
+            }
+          }
+          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
         }
     }
 
     public static void a(byte param0) {
         field_f = null;
-        if (param0 <= 46) {
-            field_c = null;
-            field_e = null;
-            field_c = null;
-            field_a = null;
-            return;
-        }
         field_e = null;
         field_c = null;
         field_a = null;
@@ -630,8 +655,9 @@ final class vb {
         ((vb) this).field_g = param0;
         ((vb) this).field_h = new vh[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new vh();
-            ((vb) this).field_h[var2] = new vh();
+            vh dupTemp$0 = new vh();
+            var3 = dupTemp$0;
+            ((vb) this).field_h[var2] = dupTemp$0;
             var3.field_i = var3;
             var3.field_o = var3;
         }

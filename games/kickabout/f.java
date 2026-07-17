@@ -30,29 +30,30 @@ final class f {
     }
 
     final static void a(sj param0, byte param1) {
-        ad.field_d[0] = qm.a(param0, "", "KaB_park_menu");
-        sk.a(80, 8, 0);
-        ad.field_d[1] = qm.a(param0, "", "KaB_beach_atmospherics_loop_lvl1_2");
-        sk.a(73, 8, 1);
-        int var2 = 109 / ((param1 - 28) / 61);
-        ad.field_d[2] = qm.a(param0, "", "KaB_park_atmospherics_loop_lvl1_2");
-        sk.a(94, 8, 2);
-        ad.field_d[3] = qm.a(param0, "", "KaB_street_atmospherics_loop_lvl1_2");
-        sk.a(-119, 8, 3);
-        ad.field_d[4] = qm.a(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl3");
-        sk.a(83, 8, 4);
-        ad.field_d[5] = qm.a(param0, "", "KaB_crowd_loop_END_PITCH_lvl3");
-        sk.a(98, 8, 5);
-        ad.field_d[6] = qm.a(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl4");
-        sk.a(-53, 8, 6);
-        ad.field_d[7] = qm.a(param0, "", "KaB_crowd_loop_END_PITCH_lvl4");
+        try {
+            ad.field_d[0] = qm.a(param0, "", "KaB_park_menu");
+            sk.a(80, 8, 0);
+            ad.field_d[1] = qm.a(param0, "", "KaB_beach_atmospherics_loop_lvl1_2");
+            sk.a(73, 8, 1);
+            int var2_int = -54;
+            ad.field_d[2] = qm.a(param0, "", "KaB_park_atmospherics_loop_lvl1_2");
+            sk.a(94, 8, 2);
+            ad.field_d[3] = qm.a(param0, "", "KaB_street_atmospherics_loop_lvl1_2");
+            sk.a(-119, 8, 3);
+            ad.field_d[4] = qm.a(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl3");
+            sk.a(83, 8, 4);
+            ad.field_d[5] = qm.a(param0, "", "KaB_crowd_loop_END_PITCH_lvl3");
+            sk.a(98, 8, 5);
+            ad.field_d[6] = qm.a(param0, "", "KaB_crowd_loop_MIDDLE_PITCH_lvl4");
+            sk.a(-53, 8, 6);
+            ad.field_d[7] = qm.a(param0, "", "KaB_crowd_loop_END_PITCH_lvl4");
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "f.C(" + (param0 != null ? "{...}" : "null") + 44 + -122 + 41);
+        }
     }
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 >= -71) {
-            field_c = true;
-        }
     }
 
     static {

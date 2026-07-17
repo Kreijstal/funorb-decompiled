@@ -217,16 +217,8 @@ abstract class dw implements v {
         rc.field_l[22] = eb.field_b.a(34, "ball armoured hit 1");
         rc.field_l[23] = eb.field_b.a(67, "ball armoured hit 2");
         rc.field_l[24] = eb.field_b.a(112, "ball armoured hit 3");
-        if (param1 <= 4) {
-          field_b = -118;
-          rc.field_l[25] = eb.field_b.a(63, "ball armoured hit 4");
-          rc.field_l[26] = eb.field_b.a(-120, "ball armoured hit5");
-          return;
-        } else {
-          rc.field_l[25] = eb.field_b.a(63, "ball armoured hit 4");
-          rc.field_l[26] = eb.field_b.a(-120, "ball armoured hit5");
-          return;
-        }
+        rc.field_l[25] = eb.field_b.a(63, "ball armoured hit 4");
+        rc.field_l[26] = eb.field_b.a(-120, "ball armoured hit5");
     }
 
     public final gf c(int param0) {
@@ -246,7 +238,7 @@ abstract class dw implements v {
     public final String a(int param0) {
         if (param0 == 3690) {
           if (!((dw) this).b(-8003)) {
-            if ((wq.a(param0 + -3706) ^ -1L) > (350L + ((dw) this).field_a ^ -1L)) {
+            if (~wq.a(param0 + -3706) > ~(350L + ((dw) this).field_a)) {
               return null;
             } else {
               return ((dw) this).d(-98);

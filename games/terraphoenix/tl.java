@@ -41,12 +41,13 @@ final class tl extends uf {
 
     private final static void a(byte[] param0, int param1) {
         field_D = param0;
-        field_k = param1;
+        field_k = 0;
         field_O = 0;
     }
 
     final static tl a(fa param0, String param1, String param2) {
         try {
+            tl var4_ref = null;
             if (!tl.a(param0)) {
                 boolean discarded$0 = param0.a(param2, (byte) 104, param1);
                 return null;
@@ -55,13 +56,11 @@ final class tl extends uf {
             if (var3 == null) {
                 return null;
             }
-            tl var4 = null;
-            try {
-                var4 = new tl(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new tl(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -93,6 +92,7 @@ final class tl extends uf {
 
     final static tl a(fa param0, int param1, int param2) {
         try {
+            tl var4_ref = null;
             if (!tl.a(param0)) {
                 boolean discarded$0 = param0.a(false, param2, param1);
                 return null;
@@ -101,13 +101,11 @@ final class tl extends uf {
             if (var3 == null) {
                 return null;
             }
-            tl var4 = null;
-            try {
-                var4 = new tl(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new tl(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -201,12 +199,13 @@ final class tl extends uf {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((tl) this).field_C[var3] = (byte)(var6 - 128);
+                    ((tl) this).field_C[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -492,12 +491,13 @@ final class tl extends uf {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -524,7 +524,7 @@ final class tl extends uf {
         ((tl) this).field_x = var2.f((byte) -107);
         ((tl) this).field_E = var2.f((byte) -107);
         if (((tl) this).field_E < 0) {
-            ((tl) this).field_E = ((tl) this).field_E ^ -1;
+            ((tl) this).field_E = ~((tl) this).field_E;
             ((tl) this).field_s = true;
         }
         int var3 = var2.f((byte) -107);
@@ -581,7 +581,6 @@ final class tl extends uf {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -1097,7 +1096,7 @@ final class tl extends uf {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((tl) this).field_v) {
                     break L36;
                   } else {
@@ -1155,7 +1154,7 @@ final class tl extends uf {
               }
             }
             ((tl) this).field_v = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_u[var14.field_d[var17_int]];
             var55 = field_n;

@@ -7,16 +7,12 @@ final class vm {
     static int[] field_a;
 
     final static void a(java.awt.Component param0, int param1) {
-        param0.setFocusTraversalKeysEnabled(false);
-        if (param1 != 11631) {
-          vm.a(-6);
-          param0.addKeyListener((java.awt.event.KeyListener) (Object) kb.field_a);
-          param0.addFocusListener((java.awt.event.FocusListener) (Object) kb.field_a);
-          return;
-        } else {
-          param0.addKeyListener((java.awt.event.KeyListener) (Object) kb.field_a);
-          param0.addFocusListener((java.awt.event.FocusListener) (Object) kb.field_a);
-          return;
+        try {
+            param0.setFocusTraversalKeysEnabled(false);
+            param0.addKeyListener((java.awt.event.KeyListener) (Object) kb.field_a);
+            param0.addFocusListener((java.awt.event.FocusListener) (Object) kb.field_a);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "vm.A(" + (param0 != null ? "{...}" : "null") + 44 + 11631 + 41);
         }
     }
 

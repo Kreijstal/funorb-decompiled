@@ -6,11 +6,6 @@ final class sb {
     static String[] field_b;
 
     public static void a(boolean param0) {
-        if (param0) {
-            String discarded$0 = sb.a(-48);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
@@ -45,10 +40,7 @@ final class sb {
     }
 
     final static String a(int param0) {
-        if (param0 != -3871) {
-            field_a = 86;
-            return rd.field_j.c(false);
-        }
+        field_a = 86;
         return rd.field_j.c(false);
     }
 

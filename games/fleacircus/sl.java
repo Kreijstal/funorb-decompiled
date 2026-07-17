@@ -57,7 +57,7 @@ final class sl {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((sl) this).field_d[var6] = var3 ^ -1;
+                      ((sl) this).field_d[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -181,7 +181,7 @@ final class sl {
         while (((sl) this).field_d[var1] >= 0) {
             var1 = hk.c() != 0 ? ((sl) this).field_d[var1] : var1 + 1;
         }
-        return ((sl) this).field_d[var1] ^ -1;
+        return ~((sl) this).field_d[var1];
     }
 
     final float[] c() {

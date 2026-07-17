@@ -143,20 +143,25 @@ final class d extends jc {
         field_N = null;
         field_K = null;
         field_O = null;
-        int var1 = 17 / ((54 - param0) / 56);
+        int var1 = 17;
     }
 
     final void a(gl param0, byte param1) {
+        kh var3 = null;
         if (!(param0 instanceof kh)) {
             throw new IllegalArgumentException();
         }
         if (param1 != -1) {
             return;
         }
-        kh var3 = (kh) (Object) param0;
-        ((d) this).field_A.a((uf) (Object) var3, (byte) 0);
-        var3.field_J = true;
-        boolean discarded$0 = var3.a((byte) 14, (gl) this);
+        try {
+            var3 = (kh) (Object) param0;
+            ((d) this).field_A.a((uf) (Object) var3, (byte) 0);
+            var3.field_J = true;
+            boolean discarded$0 = var3.a((byte) 14, (gl) this);
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "d.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

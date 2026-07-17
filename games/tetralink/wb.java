@@ -10,27 +10,34 @@ final class wb extends java.awt.Canvas {
     static hl field_e;
 
     public final void paint(java.awt.Graphics param0) {
-        ((wb) this).field_d.paint(param0);
+        try {
+            ((wb) this).field_d.paint(param0);
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "wb.paint(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
         field_e = null;
         field_a = null;
         field_f = null;
-        if (param0 > -47) {
-            wb.a(false, -3);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
     public final void update(java.awt.Graphics param0) {
-        ((wb) this).field_d.update(param0);
+        try {
+            ((wb) this).field_d.update(param0);
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "wb.update(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     wb(java.awt.Component param0) {
-        ((wb) this).field_d = param0;
+        try {
+            ((wb) this).field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "wb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(boolean param0, int param1) {

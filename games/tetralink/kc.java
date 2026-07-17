@@ -929,7 +929,7 @@ final class kc extends vh {
                 }
                 if (((kc) this).field_q != null) {
                   if (((kc) this).field_u[var53] == -1) {
-                    ((kc) this).field_q[var53] = (byte)-1;
+                    ((kc) this).field_q[var53] = (byte) -1;
                     var53++;
                     continue L22;
                   } else {
@@ -1243,7 +1243,7 @@ final class kc extends vh {
                                         if ((((kc) this).field_Q[var44] & 65535) != ((kc) this).field_B[var45]) {
                                           break L17;
                                         } else {
-                                          ((kc) this).field_q[var45] = (byte)-1;
+                                          ((kc) this).field_q[var45] = (byte) -1;
                                           var45++;
                                           continue L16;
                                         }
@@ -1403,13 +1403,13 @@ final class kc extends vh {
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((kc) this).field_q[var38] = (byte)-1;
-                      ((kc) this).field_u[var38] = (short)-1;
+                      ((kc) this).field_q[var38] = (byte) -1;
+                      ((kc) this).field_u[var38] = (short) -1;
                       break L25;
                     } else {
                       ((kc) this).field_q[var38] = (byte)(var39 >> 2);
                       ((kc) this).field_u[var38] = ((kc) this).field_H[var38];
-                      ((kc) this).field_H[var38] = (short)127;
+                      ((kc) this).field_H[var38] = (short) 127;
                       if (((kc) this).field_u[var38] == -1) {
                         break L25;
                       } else {

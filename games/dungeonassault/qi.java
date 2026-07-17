@@ -21,31 +21,21 @@ final class qi implements Iterable {
 
     final void a(long param0, byte param1, ne param2) {
         ne var5 = null;
-        if (param2.field_a == null) {
-          if (param1 > -127) {
+        if (param2.field_a != null) {
+            param2.a(false);
+        }
+        if (param1 > -127) {
             return;
-          } else {
+        }
+        try {
             var5 = ((qi) this).field_d[(int)(param0 & (long)(-1 + ((qi) this).field_g))];
             param2.field_a = var5.field_a;
             param2.field_e = var5;
             param2.field_a.field_e = param2;
             param2.field_e.field_a = param2;
             param2.field_h = param0;
-            return;
-          }
-        } else {
-          param2.a(false);
-          if (param1 > -127) {
-            return;
-          } else {
-            var5 = ((qi) this).field_d[(int)(param0 & (long)(-1 + ((qi) this).field_g))];
-            param2.field_a = var5.field_a;
-            param2.field_e = var5;
-            param2.field_a.field_e = param2;
-            param2.field_e.field_a = param2;
-            param2.field_h = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "qi.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -58,7 +48,7 @@ final class qi implements Iterable {
         ((qi) this).field_j = var4.field_e;
         L0: while (true) {
           if (((qi) this).field_j != var4) {
-            if ((((qi) this).field_j.field_h ^ -1L) != (param1 ^ -1L)) {
+            if (~((qi) this).field_j.field_h != ~param1) {
               ((qi) this).field_j = ((qi) this).field_j.field_e;
               continue L0;
             } else {
@@ -79,9 +69,6 @@ final class qi implements Iterable {
 
     public static void a(boolean param0) {
         field_c = null;
-        if (!param0) {
-            return;
-        }
         field_e = null;
         field_h = null;
         field_i = null;

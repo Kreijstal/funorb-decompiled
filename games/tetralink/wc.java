@@ -86,7 +86,7 @@ final class wc extends mb {
                 }
               }
               L2: {
-                if (-2 != (var1_ref.d((byte) -99) ^ -1)) {
+                if (var1_ref.d((byte) -99) != 1) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
                   break L2;
@@ -275,7 +275,7 @@ final class wc extends mb {
                   return;
                 }
               } else {
-                if (-3 == (var2 ^ -1)) {
+                if (var2 == 2) {
                   L18: {
                     if (1 != ji.field_Tb) {
                       break L18;
@@ -420,7 +420,7 @@ final class wc extends mb {
             L1: while (true) {
               L2: {
                 L3: {
-                  if ((var3 ^ -1) >= (var2 ^ -1)) {
+                  if (~var3 >= ~var2) {
                     break L3;
                   } else {
                     int incrementValue$16 = var2;

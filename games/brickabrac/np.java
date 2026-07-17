@@ -11,16 +11,8 @@ final class np {
 
     final static void b(boolean param0) {
         bj.field_T = sh.a((byte) 84);
-        if (param0) {
-          field_e = null;
-          mf.field_f = new cp();
-          ag.a((byte) -16, true, true);
-          return;
-        } else {
-          mf.field_f = new cp();
-          ag.a((byte) -16, true, true);
-          return;
-        }
+        mf.field_f = new cp();
+        ag.a((byte) -16, true, true);
     }
 
     public static void a(boolean param0) {

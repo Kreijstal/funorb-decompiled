@@ -20,9 +20,6 @@ final class qk {
 
     public static void a(int param0) {
         field_e = null;
-        if (param0 != 50) {
-            return;
-        }
         field_f = null;
         field_b = null;
     }

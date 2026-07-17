@@ -33,7 +33,7 @@ final class no extends me {
                 var2 = aq.field_a[0].c();
                 var3 = 60;
                 var3 = var2 * (var3 / var2);
-                if ((((no) this).field_t ^ -1) > -21) {
+                if (((no) this).field_t < 20) {
                   ((no) this).field_l = koa.b(0) + -10 + -(((no) this).field_t * (var3 / 2) / 20);
                   if (((no) this).field_l <= koa.b(0) + 10) {
                     return;
@@ -73,7 +73,7 @@ final class no extends me {
                 var2 = aq.field_a[0].c();
                 var3 = 60;
                 var3 = var2 * (var3 / var2);
-                if ((((no) this).field_t ^ -1) <= -21) {
+                if (((no) this).field_t >= 20) {
                   if (((no) this).field_t < 100) {
                     L0: {
                       ((no) this).field_l = -10 + (koa.b(0) - var3 / 2);
@@ -119,7 +119,7 @@ final class no extends me {
               var2 = aq.field_a[0].c();
               var3 = 60;
               var3 = var2 * (var3 / var2);
-              if ((((no) this).field_t ^ -1) <= -21) {
+              if (((no) this).field_t >= 20) {
                 if (((no) this).field_t >= 100) {
                   L2: {
                     ((no) this).field_l = ((no) this).field_l + 10;
@@ -168,7 +168,7 @@ final class no extends me {
             var2 = aq.field_a[0].c();
             var3 = 60;
             var3 = var2 * (var3 / var2);
-            if ((((no) this).field_t ^ -1) <= -21) {
+            if (((no) this).field_t >= 20) {
               if (((no) this).field_t >= 100) {
                 L5: {
                   ((no) this).field_l = ((no) this).field_l + 10;
@@ -297,21 +297,70 @@ final class no extends me {
         if (!lf.a(param0, param1, 128)) {
             return false;
         }
-        if (!(bqa.a(540800, param1, param0) | (-1 == (param1 & param2 ^ -1) ? true : false) | go.d(param0, param1, 26205))) {
+        if (!(bqa.a(540800, param1, param0) | ((param1 & param2) == 0 ? true : false) | go.d(param0, param1, 26205))) {
             return true;
         }
         return (((8192 & param1) != 0 ? true : false) | kaa.a(param0, param1, false) | rg.e(param0, param2 ^ -36949, param1)) & (0 == (55 & param0) ? true : false);
     }
 
     final static void a(String param0, long param1, byte param2) {
-        wp.field_a = param0;
-        bta.field_q = 2;
-        CharSequence var5 = (CharSequence) (Object) param0;
-        mn.field_n = jd.a(1, var5);
-        ica.field_b = param1;
-        ni.field_c = true;
-        if (param2 <= 108) {
-            no.b(true);
+        RuntimeException var4 = null;
+        CharSequence var5 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            wp.field_a = param0;
+            bta.field_q = 2;
+            var5 = (CharSequence) (Object) param0;
+            mn.field_n = jd.a(1, var5);
+            ica.field_b = param1;
+            ni.field_c = true;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_1 = new StringBuilder().append("no.F(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 120 + 41);
         }
     }
 
@@ -324,17 +373,18 @@ final class no extends me {
         field_p = null;
         field_k = null;
         field_q = null;
-        if (!param0) {
-            String discarded$0 = no.a((byte) 52, '￐');
-        }
     }
 
     no(qh param0, int param1) {
         super(param0);
         ((no) this).field_t = 0;
-        ((no) this).field_j = 10;
-        ((no) this).field_n = param1;
-        ((no) this).field_l = koa.b(0);
+        try {
+            ((no) this).field_j = 10;
+            ((no) this).field_n = param1;
+            ((no) this).field_l = koa.b(0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "no.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final boolean a(int param0, char param1, byte param2) {

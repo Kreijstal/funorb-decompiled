@@ -17,7 +17,7 @@ final class mm implements Runnable {
     static boolean field_h;
 
     final fj a(boolean param0) {
-        if ((((mm) this).field_e ^ -1) == -4) {
+        if (((mm) this).field_e == 3) {
             return ((mm) this).field_i;
         }
         if (param0) {
@@ -92,9 +92,6 @@ final class mm implements Runnable {
     }
 
     final static void a(byte param0) {
-        if (param0 != 60) {
-            return;
-        }
         qi.field_c = false;
         int discarded$0 = kj.field_d.i((byte) -101);
     }
@@ -107,7 +104,7 @@ final class mm implements Runnable {
         Throwable decompiledCaughtException = null;
         if (((mm) this).field_e < 2) {
           L0: {
-            if (-1 == (((mm) this).field_e ^ -1)) {
+            if (((mm) this).field_e == 0) {
               L1: {
                 if (((mm) this).field_f == null) {
                   ((mm) this).field_f = ((mm) this).field_j.a(param0 ^ 3, ((mm) this).field_k);
@@ -141,7 +138,7 @@ final class mm implements Runnable {
                   break L3;
                 }
               }
-              if (-1 != (((mm) this).field_b.field_a ^ -1)) {
+              if (((mm) this).field_b.field_a != 0) {
                 if (((mm) this).field_b.field_a == 1) {
                   break L2;
                 } else {
@@ -161,7 +158,7 @@ final class mm implements Runnable {
               try {
                 L5: {
                   L6: {
-                    if (-1 == (((mm) this).field_e ^ -1)) {
+                    if (((mm) this).field_e == 0) {
                       ((mm) this).field_c = (DataInputStream) ((mm) this).field_f.field_d;
                       break L6;
                     } else {
@@ -211,7 +208,7 @@ final class mm implements Runnable {
             if (((mm) this).field_a.field_a == 0) {
               return false;
             } else {
-              if (-2 == (((mm) this).field_a.field_a ^ -1)) {
+              if (((mm) this).field_a.field_a == 1) {
                 return false;
               } else {
                 ((mm) this).finalize();
@@ -228,90 +225,145 @@ final class mm implements Runnable {
     }
 
     final static long a(CharSequence param0, byte param1) {
-        long var2 = 0L;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
+        long stackIn_21_0 = 0L;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        long stackOut_20_0 = 0L;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         var7 = Torquing.field_u;
-        var2 = 0L;
-        var4 = param0.length();
-        var5 = 0;
-        L0: while (true) {
-          L1: {
-            if (var5 >= var4) {
-              break L1;
-            } else {
+        try {
+          L0: {
+            var2_long = 0L;
+            var4 = param0.length();
+            var5 = 0;
+            L1: while (true) {
               L2: {
-                L3: {
-                  var2 = var2 * 37L;
-                  var6 = param0.charAt(var5);
-                  if (65 > var6) {
-                    break L3;
-                  } else {
-                    if (var6 > 90) {
-                      break L3;
-                    } else {
-                      var2 = var2 + (long)(1 + var6 - 65);
-                      break L2;
-                    }
-                  }
-                }
-                L4: {
-                  if (var6 < 97) {
-                    break L4;
-                  } else {
-                    if (122 < var6) {
-                      break L4;
-                    } else {
-                      var2 = var2 + (long)(1 - -var6 + -97);
-                      break L2;
-                    }
-                  }
-                }
-                if (48 > var6) {
+                if (var5 >= var4) {
                   break L2;
                 } else {
-                  if (57 < var6) {
+                  L3: {
+                    L4: {
+                      var2_long = var2_long * 37L;
+                      var6 = param0.charAt(var5);
+                      if (65 > var6) {
+                        break L4;
+                      } else {
+                        if (var6 > 90) {
+                          break L4;
+                        } else {
+                          var2_long = var2_long + (long)(1 + var6 - 65);
+                          break L3;
+                        }
+                      }
+                    }
+                    L5: {
+                      if (var6 < 97) {
+                        break L5;
+                      } else {
+                        if (122 < var6) {
+                          break L5;
+                        } else {
+                          var2_long = var2_long + (long)(1 - -var6 + -97);
+                          break L3;
+                        }
+                      }
+                    }
+                    if (48 > var6) {
+                      break L3;
+                    } else {
+                      if (57 < var6) {
+                        break L3;
+                      } else {
+                        var2_long = var2_long + (long)(27 - (-var6 - -48));
+                        break L3;
+                      }
+                    }
+                  }
+                  if (var2_long >= 177917621779460413L) {
                     break L2;
                   } else {
-                    var2 = var2 + (long)(27 - (-var6 - -48));
-                    break L2;
+                    var5++;
+                    continue L1;
                   }
                 }
               }
-              if ((var2 ^ -1L) <= -177917621779460414L) {
-                break L1;
-              } else {
-                var5++;
-                continue L0;
-              }
-            }
-          }
-          L5: while (true) {
-            L6: {
-              if (0L != var2 % 37L) {
-                break L6;
-              } else {
-                if (0L == var2) {
-                  break L6;
-                } else {
-                  var2 = var2 / 37L;
-                  continue L5;
+              L6: while (true) {
+                L7: {
+                  if (0L != var2_long % 37L) {
+                    break L7;
+                  } else {
+                    if (0L == var2_long) {
+                      break L7;
+                    } else {
+                      var2_long = var2_long / 37L;
+                      continue L6;
+                    }
+                  }
                 }
+                L8: {
+                  if (param1 >= 86) {
+                    break L8;
+                  } else {
+                    field_h = false;
+                    break L8;
+                  }
+                }
+                stackOut_20_0 = var2_long;
+                stackIn_21_0 = stackOut_20_0;
+                break L0;
               }
             }
-            L7: {
-              if (param1 >= 86) {
-                break L7;
-              } else {
-                field_h = false;
-                break L7;
-              }
-            }
-            return var2;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var2 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_1 = new StringBuilder().append("mm.A(");
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param0 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L9;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L9;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 41);
         }
+        return stackIn_21_0;
     }
 
     protected final void finalize() {
@@ -344,9 +396,13 @@ final class mm implements Runnable {
     }
 
     mm(vh param0, java.net.URL param1, int param2) {
-        ((mm) this).field_j = param0;
-        ((mm) this).field_k = param1;
-        ((mm) this).field_i = new fj(param2);
+        try {
+            ((mm) this).field_j = param0;
+            ((mm) this).field_k = param1;
+            ((mm) this).field_i = new fj(param2);
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "mm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

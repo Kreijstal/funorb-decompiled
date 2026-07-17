@@ -11,7 +11,7 @@ class rc extends hf {
     long field_i;
 
     final static void c(int param0) {
-        int var1 = -62 / ((-75 - param0) / 49);
+        int var1 = 62;
     }
 
     public static void c(byte param0) {
@@ -22,9 +22,6 @@ class rc extends hf {
     }
 
     final static String d(byte param0) {
-        if (param0 > -43) {
-            return null;
-        }
         if (!(null != wd.field_f)) {
             return "";
         }
@@ -61,10 +58,6 @@ class rc extends hf {
     }
 
     final static int d(int param0) {
-        if (param0 < 101) {
-            rc.c((byte) 20);
-            return 1;
-        }
         return 1;
     }
 

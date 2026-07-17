@@ -783,16 +783,8 @@ final class fe extends pg {
         field_o = null;
         field_m = null;
         field_g = null;
-        if (param0 != 32369) {
-          byte discarded$2 = fe.a((byte) -127, 'ﾎ');
-          field_p = null;
-          field_n = null;
-          return;
-        } else {
-          field_p = null;
-          field_n = null;
-          return;
-        }
+        field_p = null;
+        field_n = null;
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, boolean param9, int param10, boolean param11) {

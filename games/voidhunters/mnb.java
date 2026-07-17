@@ -14,106 +14,112 @@ abstract class mnb {
 
     protected final void finalize() throws Throwable {
         if (!((mnb) this).field_e) {
-            ((mnb) this).field_c.b(-100, ((mnb) this).field_b, ((mnb) this).field_f);
-            ((mnb) this).field_e = true;
-            super.finalize();
-            return;
+          ((mnb) this).field_c.b(-100, ((mnb) this).field_b, ((mnb) this).field_f);
+          ((mnb) this).field_e = true;
+          super.finalize();
+          return;
+        } else {
+          super.finalize();
+          return;
         }
-        super.finalize();
     }
 
     mnb(qfa param0, int param1, byte[] param2, int param3, boolean param4) {
         ((mnb) this).field_e = false;
-        ((mnb) this).field_b = param3;
-        ((mnb) this).field_c = param0;
-        ((mnb) this).field_a = param4 ? true : false;
-        jaggl.OpenGL.glGenBuffersARB(1, qra.field_p, 0);
-        ((mnb) this).field_f = qra.field_p[0];
-        ((mnb) this).a(34962);
-        jaggl.OpenGL.glBufferDataARBub(param1, ((mnb) this).field_b, param2, 0, !((mnb) this).field_a ? 35044 : 35040);
-        ((mnb) this).field_c.field_mc = ((mnb) this).field_c.field_mc + ((mnb) this).field_b;
+        try {
+            ((mnb) this).field_b = param3;
+            ((mnb) this).field_c = param0;
+            ((mnb) this).field_a = param4 ? true : false;
+            jaggl.OpenGL.glGenBuffersARB(1, qra.field_p, 0);
+            ((mnb) this).field_f = qra.field_p[0];
+            ((mnb) this).a(34962);
+            jaggl.OpenGL.glBufferDataARBub(param1, ((mnb) this).field_b, param2, 0, !((mnb) this).field_a ? 35044 : 35040);
+            ((mnb) this).field_c.field_mc = ((mnb) this).field_c.field_mc + ((mnb) this).field_b;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "mnb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     public static void b(int param0) {
-        if (param0 <= 109) {
-            field_g = null;
-            field_g = null;
-            return;
-        }
         field_g = null;
     }
 
     final static void a(jk param0, boolean param1) {
         jk var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var3 = VoidHunters.field_G;
-        if (param1) {
-          param0.b(-3846);
-          var2 = (jk) (Object) cta.field_q.d(0);
-          L0: while (true) {
-            if (var2 != null) {
-              if (var2.a(26344, param0)) {
-                var2 = (jk) (Object) cta.field_q.a((byte) 114);
-                continue L0;
-              } else {
-                L1: {
-                  if (var2 != null) {
-                    al.a((ksa) (Object) param0, (ksa) (Object) var2, 2);
-                    break L1;
-                  } else {
-                    cta.field_q.b(-10258, (ksa) (Object) param0);
-                    break L1;
-                  }
-                }
-                return;
-              }
-            } else {
+        try {
+          L0: {
+            param0.b(-3846);
+            var2 = (jk) (Object) cta.field_q.d(0);
+            L1: while (true) {
               L2: {
-                if (var2 != null) {
-                  al.a((ksa) (Object) param0, (ksa) (Object) var2, 2);
+                if (var2 == null) {
                   break L2;
                 } else {
-                  cta.field_q.b(-10258, (ksa) (Object) param0);
-                  break L2;
-                }
-              }
-              return;
-            }
-          }
-        } else {
-          field_d = false;
-          param0.b(-3846);
-          var2 = (jk) (Object) cta.field_q.d(0);
-          L3: while (true) {
-            if (var2 != null) {
-              if (var2.a(26344, param0)) {
-                var2 = (jk) (Object) cta.field_q.a((byte) 114);
-                continue L3;
-              } else {
-                L4: {
-                  if (var2 != null) {
-                    al.a((ksa) (Object) param0, (ksa) (Object) var2, 2);
-                    break L4;
+                  if (!var2.a(26344, param0)) {
+                    break L2;
                   } else {
-                    cta.field_q.b(-10258, (ksa) (Object) param0);
-                    break L4;
+                    var2 = (jk) (Object) cta.field_q.a((byte) 114);
+                    continue L1;
                   }
                 }
+              }
+              if (var2 != null) {
+                al.a((ksa) (Object) param0, (ksa) (Object) var2, 2);
+                break L0;
+              } else {
+                cta.field_q.b(-10258, (ksa) (Object) param0);
                 return;
               }
-            } else {
-              L5: {
-                if (var2 != null) {
-                  al.a((ksa) (Object) param0, (ksa) (Object) var2, 2);
-                  break L5;
-                } else {
-                  cta.field_q.b(-10258, (ksa) (Object) param0);
-                  break L5;
-                }
-              }
-              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var2_ref;
+            stackOut_9_1 = new StringBuilder().append("mnb.F(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 1 + 41);
         }
     }
 

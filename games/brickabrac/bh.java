@@ -24,9 +24,6 @@ final class bh extends fe {
     public static void n(int param0) {
         field_ub = null;
         field_qb = null;
-        if (param0 < 26) {
-            return;
-        }
         field_tb = null;
         field_rb = null;
         field_sb = null;
@@ -36,7 +33,11 @@ final class bh extends fe {
         if (param0 <= 105) {
             return;
         }
-        super.b((byte) 120, param1);
+        try {
+            super.b((byte) 120, param1);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "bh.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

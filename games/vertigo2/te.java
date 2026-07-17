@@ -20,14 +20,14 @@ final class te extends ji {
     private final void d(int param0, int param1) {
         if (param0 != -17016) {
           field_y = null;
-          ((te) this).field_K = 4080 & param1 >> 300287300;
-          ((te) this).field_G = (16711680 & param1) >> -688124244;
-          ((te) this).field_A = (255 & param1) << -1977088540;
+          ((te) this).field_K = 4080 & param1 >> 4;
+          ((te) this).field_G = (16711680 & param1) >> 12;
+          ((te) this).field_A = (255 & param1) << 4;
           return;
         } else {
-          ((te) this).field_K = 4080 & param1 >> 300287300;
-          ((te) this).field_G = (16711680 & param1) >> -688124244;
-          ((te) this).field_A = (255 & param1) << -1977088540;
+          ((te) this).field_K = 4080 & param1 >> 4;
+          ((te) this).field_G = (16711680 & param1) >> 12;
+          ((te) this).field_A = (255 & param1) << 4;
           return;
         }
     }
@@ -38,30 +38,74 @@ final class te extends ji {
     }
 
     final void a(byte param0, int param1, ed param2) {
-        int var4 = 0;
-        if (param0 != 110) {
+        RuntimeException runtimeException = null;
+        int var4_int = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
           L0: {
-            field_z = null;
-            var4 = param1;
-            if (0 != var4) {
-              break L0;
+            L1: {
+              if (param0 == 110) {
+                break L1;
+              } else {
+                field_z = null;
+                break L1;
+              }
+            }
+            L2: {
+              var4_int = param1;
+              if (0 != var4_int) {
+                break L2;
+              } else {
+                this.d(-17016, param2.m(0));
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            runtimeException = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) runtimeException;
+            stackOut_5_1 = new StringBuilder().append("te.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param2 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L3;
             } else {
-              this.d(-17016, param2.m(0));
-              break L0;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L3;
             }
           }
-          return;
-        } else {
-          L1: {
-            var4 = param1;
-            if (0 != var4) {
-              break L1;
-            } else {
-              this.d(-17016, param2.m(0));
-              break L1;
-            }
-          }
-          return;
+          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
@@ -128,20 +172,10 @@ final class te extends ji {
         field_F = null;
         field_B = null;
         field_z = null;
-        if (param0 != -30443) {
-          field_z = null;
-          field_I = null;
-          field_D = null;
-          field_y = null;
-          field_H = null;
-          return;
-        } else {
-          field_I = null;
-          field_D = null;
-          field_y = null;
-          field_H = null;
-          return;
-        }
+        field_I = null;
+        field_D = null;
+        field_y = null;
+        field_H = null;
     }
 
     static {

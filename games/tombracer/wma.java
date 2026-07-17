@@ -45,10 +45,14 @@ final class wma extends nv {
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        ((wma) this).field_o.a(15637, param1);
-        ((wma) this).field_q.a(param1, (byte) 52);
-        param1.a((byte) 121, ((wma) this).field_p, 12);
+        try {
+            super.a(param0, param1);
+            ((wma) this).field_o.a(15637, param1);
+            ((wma) this).field_q.a(param1, (byte) 52);
+            param1.a((byte) 121, ((wma) this).field_p, 12);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wma.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final lj a(int param0, int param1, boolean param2) {
@@ -60,20 +64,23 @@ final class wma extends nv {
     }
 
     final void a(boolean param0, fsa param1) {
-        super.a(param0, param1);
-        ((wma) this).field_r = ((wma) this).field_p;
+        try {
+            super.a(param0, param1);
+            ((wma) this).field_r = ((wma) this).field_p;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wma.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, ui param1, boolean param2, ui param3) {
-        int var5 = 0;
-        super.a(-125, param1, param2, param3);
-        if (null != ((wma) this).field_q) {
-          ((wma) this).field_q.a((byte) -36, new ui(), param2, param1);
-          var5 = -85 % ((param0 - -58) / 57);
-          return;
-        } else {
-          var5 = -85 % ((param0 - -58) / 57);
-          return;
+        try {
+            super.a(-125, param1, param2, param3);
+            if (null != ((wma) this).field_q) {
+                ((wma) this).field_q.a((byte) -36, new ui(), param2, param1);
+            }
+            int var5_int = -85 % ((param0 - -58) / 57);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wma.KB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -94,7 +101,7 @@ final class wma extends nv {
               if (((wma) this).field_o.c(0)) {
                 var2 = ((wma) this).field_g.g(-25787);
                 ((wma) this).field_q.a(var2, ((wma) this).field_g.d(3), ((wma) this).field_g.e(9648), 4);
-                if ((((wma) this).field_r ^ -1) < -1) {
+                if (((wma) this).field_r > 0) {
                   ((wma) this).field_r = ((wma) this).field_r - 1;
                   if (((wma) this).field_r == 0) {
                     ((wma) this).c(false);
@@ -122,7 +129,7 @@ final class wma extends nv {
               if (((wma) this).field_o.c(0)) {
                 var2 = ((wma) this).field_g.g(-25787);
                 ((wma) this).field_q.a(var2, ((wma) this).field_g.d(3), ((wma) this).field_g.e(9648), 4);
-                if ((((wma) this).field_r ^ -1) < -1) {
+                if (((wma) this).field_r > 0) {
                   ((wma) this).field_r = ((wma) this).field_r - 1;
                   if (((wma) this).field_r != 0) {
                     return;
@@ -155,9 +162,13 @@ final class wma extends nv {
     wma(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
         ((wma) this).field_p = 0;
-        ((wma) this).field_o = new mg(param0.field_E, param1);
-        ((wma) this).field_q = pha.a(param1, param0, 162);
-        ((wma) this).field_p = param1.b((byte) 44, 12);
+        try {
+            ((wma) this).field_o = new mg(param0.field_E, param1);
+            ((wma) this).field_q = pha.a(param1, param0, 162);
+            ((wma) this).field_p = param1.b((byte) 44, 12);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wma.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final static int a(byte param0, int param1, int param2) {
@@ -198,9 +209,6 @@ final class wma extends nv {
 
     public static void b(int param0) {
         field_n = null;
-        if (param0 <= 123) {
-            wma.a(true, -91);
-        }
     }
 
     final int a(boolean param0) {

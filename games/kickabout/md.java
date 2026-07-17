@@ -20,7 +20,7 @@ final class md implements hc {
         boolean[][][] var11 = null;
         vn var6 = null;
         int var7 = Kickabout.field_G;
-        int var3 = -1 != (param1 ^ -1) ? 0 : 1;
+        int var3 = param1 != 0 ? 0 : 1;
         for (var4 = 0; 4 > var4; var4++) {
             var11 = ih.a(21656, rp.field_z[param1][var4]);
             var6 = hs.a(false, var4 % 3, var3, ev.field_B[-(2 * param1) + 12], var11[0], var4 % 3, var11[1], (byte) -89, -var4 + 3, false, ev.field_B[31]);
@@ -55,7 +55,7 @@ final class md implements hc {
             gg.a(-32053);
             break L0;
           } else {
-            if (!ng.a(param0 ^ 27302)) {
+            if (!ng.a(27304)) {
               if (vi.c(2915)) {
                 on.g(0, 0, on.field_g, on.field_f);
                 var1 = 1;
@@ -75,7 +75,7 @@ final class md implements hc {
           if (!up.a((byte) -3)) {
             break L1;
           } else {
-            if (!ng.a(param0 ^ 27302)) {
+            if (!ng.a(27304)) {
               L2: {
                 stackOut_10_0 = 100;
                 stackIn_12_0 = stackOut_10_0;
@@ -104,24 +104,19 @@ final class md implements hc {
         }
         L3: {
           if (nv.i(0)) {
-            var2 = (-1 + vo.field_bb << 1245486152) / 16;
+            var2 = (-1 + vo.field_bb << 8) / 16;
             if (0 < var2) {
               var1 = 1;
               on.a(0, 0, on.field_g, on.field_f, 0, var2);
+              boolean discarded$3 = md.d(14);
               break L3;
             } else {
+              boolean discarded$4 = md.d(14);
               break L3;
             }
           } else {
+            boolean discarded$5 = md.d(14);
             break L3;
-          }
-        }
-        L4: {
-          if (param0 == -27302) {
-            break L4;
-          } else {
-            boolean discarded$1 = md.d(14);
-            break L4;
           }
         }
         return var1 != 0;
@@ -233,7 +228,7 @@ final class md implements hc {
               L4: {
                 var6 = stackIn_13_0 * (float)((md) this).field_f;
                 var7 = 1.2000000476837158f * (float)((md) this).field_f;
-                if (-2 <= (var4 ^ -1)) {
+                if (var4 <= 1) {
                   stackOut_15_0 = -var6;
                   stackIn_16_0 = stackOut_15_0;
                   break L4;
@@ -247,14 +242,14 @@ final class md implements hc {
               var9 = (int)var7 + 140;
               iw.a(-102, ((md) this).field_b);
               on.b();
-              ((md) this).field_i[var4].a(var3, 0, on.field_g >> 725710465, on.field_f, (byte) -105);
+              ((md) this).field_i[var4].a(var3, 0, on.field_g >> 1, on.field_f, (byte) -105);
               ta.e(120);
-              if (-137 > (((md) this).field_f ^ -1)) {
-                ((md) this).field_b.b(-(((md) this).field_b.field_o >> -570644511) + var8, -(((md) this).field_b.field_v >> 159796321) + var9, 200 - ((md) this).field_f << 561976578);
+              if (((md) this).field_f > 136) {
+                ((md) this).field_b.b(-(((md) this).field_b.field_o >> 1) + var8, -(((md) this).field_b.field_v >> 1) + var9, 200 - ((md) this).field_f << 2);
                 var4++;
                 continue L1;
               } else {
-                ((md) this).field_b.c(-(((md) this).field_b.field_o >> -268201759) + var8, var9 + -(((md) this).field_b.field_v >> 1055105665));
+                ((md) this).field_b.c(-(((md) this).field_b.field_o >> 1) + var8, var9 + -(((md) this).field_b.field_v >> 1));
                 var4++;
                 continue L1;
               }
@@ -284,19 +279,19 @@ final class md implements hc {
     public final void a(int param0, boolean param1) {
         int var3 = 0;
         int var4 = Kickabout.field_G;
-        if (!(-1 != (((md) this).field_f ^ -1))) {
+        if (!(((md) this).field_f != 0)) {
             return;
         }
         int fieldTemp$0 = ((md) this).field_f + 1;
         ((md) this).field_f = ((md) this).field_f + 1;
-        if ((fieldTemp$0 ^ -1) <= -201) {
+        if (fieldTemp$0 >= 200) {
             ((md) this).field_f = 0;
             return;
         }
         if (param0 != -25) {
             return;
         }
-        for (var3 = 0; (var3 ^ -1) > -5; var3++) {
+        for (var3 = 0; var3 < 4; var3++) {
             ((md) this).field_i[var3].a(param0 ^ -27, (la[]) null, false, false);
             ((md) this).field_i[var3].g((byte) 126);
         }
@@ -305,7 +300,7 @@ final class md implements hc {
     private final void b(int param0) {
         ((md) this).field_i = new gm[4];
         ((md) this).field_b = new ut(100, 200);
-        int var2 = 26 / ((43 - param0) / 54);
+        int var2 = 13;
     }
 
     md() {

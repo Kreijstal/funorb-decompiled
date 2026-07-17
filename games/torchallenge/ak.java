@@ -16,51 +16,61 @@ final class ak implements Iterable {
     static String field_g;
 
     final void a(w param0, int param1) {
-        L0: {
-          if (param0.field_i != null) {
+        if (!(param0.field_i == null)) {
             param0.a(12695);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         if (param1 != 2) {
-          return;
-        } else {
-          param0.field_k = ((ak) this).field_f;
-          param0.field_i = ((ak) this).field_f.field_i;
-          param0.field_i.field_k = param0;
-          param0.field_k.field_i = param0;
-          return;
+            return;
+        }
+        try {
+            param0.field_k = ((ak) this).field_f;
+            param0.field_i = ((ak) this).field_f.field_i;
+            param0.field_i.field_k = param0;
+            param0.field_k.field_i = param0;
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "ak.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     final static void a(boolean param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = TorChallenge.field_F ? 1 : 0;
-        if (!we.b(false)) {
-          if (null != gi.field_d) {
-            if (!gi.field_d.field_i) {
-              return;
+        try {
+          L0: {
+            if (we.b(false)) {
+              boolean discarded$15 = TorChallenge.field_H.a(e.field_m, false, qa.field_b, true);
+              TorChallenge.field_H.j(-86);
+              L1: while (true) {
+                if (!kj.e((byte) -124)) {
+                  break L0;
+                } else {
+                  boolean discarded$16 = TorChallenge.field_H.a(di.field_m, b.field_J, -58);
+                  continue L1;
+                }
+              }
             } else {
-              ij.c((byte) -109);
-              TorChallenge.field_H.a((byte) 123, (ee) (Object) new nh(TorChallenge.field_H, de.field_b));
+              L2: {
+                if (null == gi.field_d) {
+                  break L2;
+                } else {
+                  if (gi.field_d.field_i) {
+                    ij.c((byte) -109);
+                    TorChallenge.field_H.a((byte) 123, (ee) (Object) new nh(TorChallenge.field_H, de.field_b));
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
               return;
             }
-          } else {
-            return;
           }
-        } else {
-          boolean discarded$12 = TorChallenge.field_H.a(e.field_m, param0, qa.field_b, true);
-          TorChallenge.field_H.j(-86);
-          L0: while (true) {
-            if (!kj.e((byte) -124)) {
-              return;
-            } else {
-              boolean discarded$13 = TorChallenge.field_H.a(di.field_m, b.field_J, -58);
-              continue L0;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw oj.a((Throwable) (Object) var1, "ak.G(" + 0 + 41);
         }
     }
 
@@ -69,44 +79,97 @@ final class ak implements Iterable {
     }
 
     final static void a(int param0, int param1, int param2, int param3, ka[] param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var10 = TorChallenge.field_F ? 1 : 0;
-        if (param4 != null) {
-          if (0 < param1) {
-            var5 = param4[0].field_q;
-            var6 = param4[2].field_q;
-            if (param3 > -115) {
-              return;
-            } else {
-              var7 = param4[1].field_q;
-              param4[0].g(param0, param2);
-              param4[2].g(param1 + (param0 + -var6), param2);
-              qg.a(bk.field_s);
-              qg.a(var5 + param0, param2, -var6 + (param0 - -param1), param4[1].field_v + param2);
-              var8 = var5 + param0;
-              var9 = param1 + param0 - var6;
-              param0 = var8;
-              L0: while (true) {
-                if (var9 <= param0) {
-                  qg.b(bk.field_s);
-                  return;
+        try {
+          L0: {
+            L1: {
+              if (param4 == null) {
+                break L1;
+              } else {
+                if (0 >= param1) {
+                  break L1;
                 } else {
-                  param4[1].g(param0, param2);
-                  param0 = param0 + var7;
-                  continue L0;
+                  var5_int = param4[0].field_q;
+                  var6 = param4[2].field_q;
+                  if (param3 <= -115) {
+                    var7 = param4[1].field_q;
+                    param4[0].g(param0, param2);
+                    param4[2].g(param1 + (param0 + -var6), param2);
+                    qg.a(bk.field_s);
+                    qg.a(var5_int + param0, param2, -var6 + (param0 - -param1), param4[1].field_v + param2);
+                    var8 = var5_int + param0;
+                    var9 = param1 + param0 - var6;
+                    param0 = var8;
+                    L2: while (true) {
+                      if (var9 <= param0) {
+                        qg.b(bk.field_s);
+                        break L0;
+                      } else {
+                        param4[1].g(param0, param2);
+                        param0 = param0 + var7;
+                        continue L2;
+                      }
+                    }
+                  } else {
+                    return;
+                  }
                 }
               }
             }
-          } else {
             return;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_1 = new StringBuilder().append("ak.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param4 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
+            }
+          }
+          throw oj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
     }
 
@@ -153,18 +216,10 @@ final class ak implements Iterable {
     }
 
     final static java.awt.Container b(int param0) {
-        Object var2 = null;
-        if (gi.field_b != null) {
-          return (java.awt.Container) (Object) gi.field_b;
-        } else {
-          if (param0 != 4) {
-            var2 = null;
-            ak.a(12, -9, 70, 32, (ka[]) null);
-            return (java.awt.Container) (Object) gi.b(param0 + 12472);
-          } else {
-            return (java.awt.Container) (Object) gi.b(param0 + 12472);
-          }
+        if (!(gi.field_b == null)) {
+            return (java.awt.Container) (Object) gi.field_b;
         }
+        return (java.awt.Container) (Object) gi.b(12476);
     }
 
     final static boolean a(int param0, char param1) {

@@ -35,8 +35,9 @@ final class rpb {
 
     final int a(int param0) {
         if (((rpb) this).field_c >= ((rpb) this).field_k) {
+            int fieldTemp$0 = ((rpb) this).field_d;
             ((rpb) this).field_d = ((rpb) this).field_d + 1;
-            ((rpb) this).field_b = ((rpb) this).field_a[((rpb) this).field_d] << 15;
+            ((rpb) this).field_b = ((rpb) this).field_a[fieldTemp$0] << 15;
             if (((rpb) this).field_d >= ((rpb) this).field_g) {
                 ((rpb) this).field_d = ((rpb) this).field_g - 1;
             }

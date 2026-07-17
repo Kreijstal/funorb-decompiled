@@ -12,9 +12,6 @@ final class ci {
     static String field_d;
 
     public static void a(int param0) {
-        if (param0 != -27513) {
-            return;
-        }
         field_d = null;
         field_f = null;
         field_g = null;
@@ -28,9 +25,6 @@ final class ci {
         int var2 = 0;
         int var3 = client.field_A ? 1 : 0;
         pi[] var1 = new pi[ec.field_g];
-        if (param0 > -110) {
-            return null;
-        }
         for (var2 = 0; var2 < ec.field_g; var2++) {
             var1[var2] = new pi(ed.field_f, i.field_d, sg.field_d[var2], fh.field_a[var2], tm.field_a[var2], hc.field_c[var2], tc.field_Nb[var2], mb.field_d);
         }
@@ -39,49 +33,74 @@ final class ci {
     }
 
     final static void a(byte param0) {
-        int var5 = client.field_A ? 1 : 0;
-        int[] var6 = nm.field_Nb;
-        int[] var1 = var6;
-        int var2 = -61 % ((60 - param0) / 38);
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
         int var3 = 0;
-        int var4 = var6.length;
-        while (var3 < var4) {
-            int incrementValue$0 = var3;
-            var3++;
-            var6[incrementValue$0] = 0;
-            int incrementValue$1 = var3;
-            var3++;
-            var6[incrementValue$1] = 0;
-            int incrementValue$2 = var3;
-            var3++;
-            var6[incrementValue$2] = 0;
-            int incrementValue$3 = var3;
-            var3++;
-            var6[incrementValue$3] = 0;
-            int incrementValue$4 = var3;
-            var3++;
-            var6[incrementValue$4] = 0;
-            int incrementValue$5 = var3;
-            var3++;
-            var6[incrementValue$5] = 0;
-            int incrementValue$6 = var3;
-            var3++;
-            var6[incrementValue$6] = 0;
-            int incrementValue$7 = var3;
-            var3++;
-            var6[incrementValue$7] = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int[] var6 = null;
+        RuntimeException decompiledCaughtException = null;
+        var5 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            var6 = nm.field_Nb;
+            var1 = var6;
+            var2 = -61 % ((60 - param0) / 38);
+            var3 = 0;
+            var4 = var6.length;
+            L1: while (true) {
+              if (var3 >= var4) {
+                break L0;
+              } else {
+                int incrementValue$40 = var3;
+                var3++;
+                var6[incrementValue$40] = 0;
+                int incrementValue$41 = var3;
+                var3++;
+                var6[incrementValue$41] = 0;
+                int incrementValue$42 = var3;
+                var3++;
+                var6[incrementValue$42] = 0;
+                int incrementValue$43 = var3;
+                var3++;
+                var6[incrementValue$43] = 0;
+                int incrementValue$44 = var3;
+                var3++;
+                var6[incrementValue$44] = 0;
+                int incrementValue$45 = var3;
+                var3++;
+                var6[incrementValue$45] = 0;
+                int incrementValue$46 = var3;
+                var3++;
+                var6[incrementValue$46] = 0;
+                int incrementValue$47 = var3;
+                var3++;
+                var6[incrementValue$47] = 0;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw dh.a((Throwable) (Object) var1_ref, "ci.A(" + param0 + 41);
         }
     }
 
     final static void a(cc param0, int param1, int param2, byte param3, int param4, cc param5) {
-        if (param3 >= -62) {
-            field_d = null;
+        try {
+            if (param3 >= -62) {
+                field_d = null;
+            }
+            nf.field_g = param0;
+            da.field_c = param5;
+            mb.field_c = param1;
+            qk.field_m = param4;
+            pa.field_Y = param2;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "ci.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
-        nf.field_g = param0;
-        da.field_c = param5;
-        mb.field_c = param1;
-        qk.field_m = param4;
-        pa.field_Y = param2;
     }
 
     final static boolean a(char param0, byte param1) {

@@ -15,15 +15,16 @@ final class uk extends qc {
     static String field_k;
 
     final static void b(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param0 != 22963) {
-            uk.d(-122);
+        try {
+            for (var1_int = 0; var1_int < lk.field_h; var1_int++) {
+                an.field_F[var1_int] = null;
+            }
+            lk.field_h = 0;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "uk.B(" + 22963 + 41);
         }
-        for (var1 = 0; var1 < lk.field_h; var1++) {
-            an.field_F[var1] = null;
-        }
-        lk.field_h = 0;
     }
 
     final long b(byte param0) {
@@ -63,26 +64,49 @@ final class uk extends qc {
     }
 
     final int a(long param0, int param1) {
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param1 != 0) {
-            uk.d(98);
-        }
-        if (((uk) this).field_r < ((uk) this).field_u) {
-            ((uk) this).field_t = ((uk) this).field_t + (((uk) this).field_u - ((uk) this).field_r);
-            ((uk) this).field_r = ((uk) this).field_r + (-((uk) this).field_r + ((uk) this).field_u);
-            ((uk) this).field_u = ((uk) this).field_u + param0;
-            return 1;
-        }
         int var4 = 0;
-        do {
-            ((uk) this).field_u = ((uk) this).field_u + param0;
-            var4++;
-            // if_icmpge L121
-        } while ((((uk) this).field_u ^ -1L) > (((uk) this).field_r ^ -1L));
-        if (!(((uk) this).field_u >= ((uk) this).field_r)) {
-            ((uk) this).field_u = ((uk) this).field_r;
+        int var5 = 0;
+        L0: {
+          var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+          if (param1 == 0) {
+            break L0;
+          } else {
+            uk.d(98);
+            break L0;
+          }
         }
-        return var4;
+        if (((uk) this).field_r >= ((uk) this).field_u) {
+          var4 = 0;
+          L1: while (true) {
+            L2: {
+              ((uk) this).field_u = ((uk) this).field_u + param0;
+              var4++;
+              if (var4 >= 10) {
+                break L2;
+              } else {
+                if (~((uk) this).field_u > ~((uk) this).field_r) {
+                  continue L1;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              if (((uk) this).field_u < ((uk) this).field_r) {
+                ((uk) this).field_u = ((uk) this).field_r;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            return var4;
+          }
+        } else {
+          ((uk) this).field_t = ((uk) this).field_t + (((uk) this).field_u - ((uk) this).field_r);
+          ((uk) this).field_r = ((uk) this).field_r + (-((uk) this).field_r + ((uk) this).field_u);
+          ((uk) this).field_u = ((uk) this).field_u + param0;
+          return 1;
+        }
     }
 
     final void a(int param0) {

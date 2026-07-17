@@ -47,7 +47,7 @@ final class td {
           return;
         } else {
           L0: {
-            if (-12 == ((td) this).field_n) {
+            if (((td) this).field_n == 11) {
               if (((td) this).field_d.length > ((td) this).field_k / ((td) this).field_e) {
                 ((td) this).field_d[((td) this).field_k / ((td) this).field_e].a(-((td) this).field_c + ((td) this).field_l, ((td) this).field_a + -((td) this).field_h);
                 break L0;
@@ -56,7 +56,7 @@ final class td {
                 break L0;
               }
             } else {
-              if (-1 != ((td) this).field_n) {
+              if (((td) this).field_n != 0) {
                 L1: {
                   var2 = 255 * (hf.field_H[((td) this).field_n] - vh.field_e[((td) this).field_n] * ((td) this).field_k / 2) / hf.field_H[((td) this).field_n];
                   if (255 < var2) {
@@ -102,7 +102,7 @@ final class td {
                   }
                 }
                 L4: {
-                  if (var4 < -251) {
+                  if (var4 > 250) {
                     var4 = 250;
                     break L4;
                   } else {
@@ -110,13 +110,13 @@ final class td {
                   }
                 }
                 L5: {
-                  if (-3 > var3) {
+                  if (var3 < 2) {
                     break L5;
                   } else {
                     if ((double)var3 > 181.25) {
                       break L5;
                     } else {
-                      wj.a(((td) this).field_l << -1127641820, ((td) this).field_a << 781956356, var3 << -1868827805, var4, ((td) this).field_p);
+                      wj.a(((td) this).field_l << 4, ((td) this).field_a << 4, var3 << 3, var4, ((td) this).field_p);
                       break L0;
                     }
                   }
@@ -209,7 +209,7 @@ final class td {
                 }
               }
             }
-            if (-1 != (((td) this).field_n ^ -1)) {
+            if (((td) this).field_n != 0) {
               stackOut_13_0 = 0;
               stackIn_14_0 = stackOut_13_0;
               break L3;
@@ -241,14 +241,14 @@ final class td {
         ((td) this).field_a = param2;
         ((td) this).field_l = param1;
         ((td) this).field_n = param0;
-        var5 = fa.field_l[((td) this).field_n] >> -1309204080;
-        var6 = 255 & fa.field_l[((td) this).field_n] >> 869637800;
+        var5 = fa.field_l[((td) this).field_n] >> 16;
+        var6 = 255 & fa.field_l[((td) this).field_n] >> 8;
         var7 = fa.field_l[((td) this).field_n] & 255;
         var8 = 0;
         L0: while (true) {
           if (var8 >= 250) {
             L1: {
-              if (-12 != (((td) this).field_n ^ -1)) {
+              if (((td) this).field_n != 11) {
                 break L1;
               } else {
                 ((td) this).field_c = 5;
@@ -269,9 +269,10 @@ final class td {
                 break L2;
               }
             }
+            return;
           } else {
-            var9 = 1 - -(var8 >> -714237947);
-            ((td) this).field_p[var8] = var7 / var9 + (var5 / var9 << -842691504) - -(var6 / var9 << 1228323784);
+            var9 = 1 - -(var8 >> 5);
+            ((td) this).field_p[var8] = var7 / var9 + (var5 / var9 << 16) - -(var6 / var9 << 8);
             var8++;
             continue L0;
           }

@@ -352,7 +352,7 @@ final class mr {
                       stackIn_82_0 = stackOut_81_0;
                       stackIn_82_1 = stackOut_81_1;
                       stackIn_82_2 = stackOut_81_2;
-                      if (-1 == (var29.field_k ^ -1)) {
+                      if (var29.field_k == 0) {
                         stackOut_83_0 = (aw) (Object) stackIn_83_0;
                         stackOut_83_1 = (int[]) (Object) stackIn_83_1;
                         stackOut_83_2 = stackIn_83_2;
@@ -390,7 +390,7 @@ final class mr {
                       stackIn_76_0 = stackOut_75_0;
                       stackIn_76_1 = stackOut_75_1;
                       stackIn_76_2 = stackOut_75_2;
-                      if (-1 == (var29.field_k ^ -1)) {
+                      if (var29.field_k == 0) {
                         stackOut_77_0 = (aw) (Object) stackIn_77_0;
                         stackOut_77_1 = (int[]) (Object) stackIn_77_1;
                         stackOut_77_2 = stackIn_77_2;
@@ -429,7 +429,7 @@ final class mr {
                     stackIn_71_0 = stackOut_70_0;
                     stackIn_71_1 = stackOut_70_1;
                     stackIn_71_2 = stackOut_70_2;
-                    if (-1 == (var29.field_k ^ -1)) {
+                    if (var29.field_k == 0) {
                       stackOut_72_0 = (aw) (Object) stackIn_72_0;
                       stackOut_72_1 = (int[]) (Object) stackIn_72_1;
                       stackOut_72_2 = stackIn_72_2;
@@ -471,7 +471,7 @@ final class mr {
                         stackIn_65_0 = stackOut_64_0;
                         stackIn_65_1 = stackOut_64_1;
                         stackIn_65_2 = stackOut_64_2;
-                        if (-1 == (var29.field_k ^ -1)) {
+                        if (var29.field_k == 0) {
                           stackOut_66_0 = (aw) (Object) stackIn_66_0;
                           stackOut_66_1 = (int[]) (Object) stackIn_66_1;
                           stackOut_66_2 = stackIn_66_2;
@@ -509,7 +509,7 @@ final class mr {
                         stackIn_61_0 = stackOut_60_0;
                         stackIn_61_1 = stackOut_60_1;
                         stackIn_61_2 = stackOut_60_2;
-                        if (-1 == (var29.field_k ^ -1)) {
+                        if (var29.field_k == 0) {
                           stackOut_62_0 = (aw) (Object) stackIn_62_0;
                           stackOut_62_1 = (int[]) (Object) stackIn_62_1;
                           stackOut_62_2 = stackIn_62_2;
@@ -548,7 +548,7 @@ final class mr {
                       stackIn_56_0 = stackOut_55_0;
                       stackIn_56_1 = stackOut_55_1;
                       stackIn_56_2 = stackOut_55_2;
-                      if (-1 == (var29.field_k ^ -1)) {
+                      if (var29.field_k == 0) {
                         stackOut_57_0 = (aw) (Object) stackIn_57_0;
                         stackOut_57_1 = (int[]) (Object) stackIn_57_1;
                         stackOut_57_2 = stackIn_57_2;
@@ -656,7 +656,7 @@ final class mr {
                       stackIn_39_0 = stackOut_38_0;
                       stackIn_39_1 = stackOut_38_1;
                       stackIn_39_2 = stackOut_38_2;
-                      if (-1 == (var12.field_k ^ -1)) {
+                      if (var12.field_k == 0) {
                         stackOut_40_0 = (aw) (Object) stackIn_40_0;
                         stackOut_40_1 = (int[]) (Object) stackIn_40_1;
                         stackOut_40_2 = stackIn_40_2;
@@ -694,7 +694,7 @@ final class mr {
                       stackIn_33_0 = stackOut_32_0;
                       stackIn_33_1 = stackOut_32_1;
                       stackIn_33_2 = stackOut_32_2;
-                      if (-1 == (var12.field_k ^ -1)) {
+                      if (var12.field_k == 0) {
                         stackOut_34_0 = (aw) (Object) stackIn_34_0;
                         stackOut_34_1 = (int[]) (Object) stackIn_34_1;
                         stackOut_34_2 = stackIn_34_2;
@@ -733,7 +733,7 @@ final class mr {
                     stackIn_28_0 = stackOut_27_0;
                     stackIn_28_1 = stackOut_27_1;
                     stackIn_28_2 = stackOut_27_2;
-                    if (-1 == (var12.field_k ^ -1)) {
+                    if (var12.field_k == 0) {
                       stackOut_29_0 = (aw) (Object) stackIn_29_0;
                       stackOut_29_1 = (int[]) (Object) stackIn_29_1;
                       stackOut_29_2 = stackIn_29_2;
@@ -786,7 +786,7 @@ final class mr {
                     stackIn_22_0 = stackOut_21_0;
                     stackIn_22_1 = stackOut_21_1;
                     stackIn_22_2 = stackOut_21_2;
-                    if (-1 == (var12.field_k ^ -1)) {
+                    if (var12.field_k == 0) {
                       stackOut_23_0 = (aw) (Object) stackIn_23_0;
                       stackOut_23_1 = (int[]) (Object) stackIn_23_1;
                       stackOut_23_2 = stackIn_23_2;
@@ -871,11 +871,11 @@ final class mr {
         var2 = 0;
         if (param1 == -115) {
           if (0 <= param0) {
-            if ((param0 ^ -1) <= -65537) {
+            if (param0 >= 65536) {
               L0: {
                 param0 = param0 >>> 16;
                 var2 += 16;
-                if ((param0 ^ -1) <= -257) {
+                if (param0 >= 256) {
                   var2 += 8;
                   param0 = param0 >>> 8;
                   break L0;
@@ -913,7 +913,7 @@ final class mr {
               return var2 + param0;
             } else {
               L4: {
-                if ((param0 ^ -1) <= -257) {
+                if (param0 >= 256) {
                   var2 += 8;
                   param0 = param0 >>> 8;
                   break L4;
@@ -954,7 +954,7 @@ final class mr {
             L8: {
               param0 = param0 >>> 16;
               var2 += 16;
-              if ((param0 ^ -1) <= -257) {
+              if (param0 >= 256) {
                 var2 += 8;
                 param0 = param0 >>> 8;
                 break L8;
@@ -998,25 +998,84 @@ final class mr {
 
     final static byte[] a(float param0, float param1, int param2, int param3, ab param4, float param5, float param6, float param7, int param8, int param9, int param10) {
         byte[] var11 = null;
+        RuntimeException var11_ref = null;
         byte[] var12 = null;
-        if (param3 != -30865) {
-          field_b = null;
-          var12 = new byte[param10 * (param2 * param8)];
-          var11 = var12;
-          cn.a(param7, param4, 0, var12, param9, param0, param6, param1, 24046, param5, param10, param8, param2);
-          return var12;
-        } else {
-          var12 = new byte[param10 * (param2 * param8)];
-          var11 = var12;
-          cn.a(param7, param4, 0, var12, param9, param0, param6, param1, 24046, param5, param10, param8, param2);
-          return var12;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param3 == -30865) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
+              }
+            }
+            var12 = new byte[128 * (param2 * param8)];
+            var11 = var12;
+            cn.a(param7, param4, 0, var12, param9, param0, param6, param1, 24046, param5, 128, param8, param2);
+            stackOut_2_0 = (byte[]) var12;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var11_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var11_ref;
+            stackOut_4_1 = new StringBuilder().append("mr.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param4 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + 128 + 41);
         }
+        return stackIn_3_0;
     }
 
     mr(aw param0, d param1) {
         ((mr) this).field_d = new sd(256);
-        ((mr) this).field_a = param0;
-        ((mr) this).field_c = param1;
+        try {
+            ((mr) this).field_a = param0;
+            ((mr) this).field_c = param1;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "mr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

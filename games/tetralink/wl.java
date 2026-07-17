@@ -10,7 +10,7 @@ final class wl {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 65 % ((param0 - -36) / 35);
+        int var1 = 0;
         field_c = null;
         field_b = null;
     }

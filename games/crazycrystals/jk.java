@@ -21,17 +21,16 @@ final class jk extends fb {
 
     public static void a(boolean param0) {
         field_g = null;
-        if (!param0) {
-            field_f = 69;
-            field_h = null;
-            return;
-        }
         field_h = null;
     }
 
     jk(fq param0) {
         super(param0);
-        ((jk) this).field_i = new ji((f) null, 0, 0);
+        try {
+            ((jk) this).field_i = new ji((f) null, 0, 0);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "jk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0, int param1, int param2, byte param3, boolean param4, int param5, int param6) {

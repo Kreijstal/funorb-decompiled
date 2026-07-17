@@ -43,14 +43,14 @@ final class rd implements fo {
                 var8 = 0;
                 L2: while (true) {
                   L3: {
-                    if (-5 >= (var8 ^ -1)) {
+                    if (var8 >= 4) {
                       break L3;
                     } else {
                       var9 = ((rd) this).field_e.j(-91);
                       var6.field_G[var8] = we.a(15, var9);
                       var8++;
                       if (4 > var8) {
-                        var6.field_G[var8] = we.a(var9, 240) >> -1938807996;
+                        var6.field_G[var8] = we.a(var9, 240) >> 4;
                         var8++;
                         continue L2;
                       } else {
@@ -69,7 +69,7 @@ final class rd implements fo {
                     }
                   }
                   var6.field_B = ((rd) this).field_e.j(-86);
-                  var6.field_L = var6.field_B >>> -538290202;
+                  var6.field_L = var6.field_B >>> 6;
                   var6.field_B = var6.field_B & 63;
                   var5++;
                   continue L0;
@@ -97,26 +97,91 @@ final class rd implements fo {
     }
 
     rd(ob param0, int param1, int param2, int param3, int param4) {
-        ((rd) this).field_e = param0;
-        ((rd) this).field_a = param1;
-        ((rd) this).field_f = param2;
-        ((rd) this).field_b = param4;
-        ((rd) this).field_c = param3;
+        try {
+            ((rd) this).field_e = param0;
+            ((rd) this).field_a = param1;
+            ((rd) this).field_f = param2;
+            ((rd) this).field_b = param4;
+            ((rd) this).field_c = param3;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "rd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     final static qr a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, nq param8, int param9, int param10, int param11, int param12) {
-        qr var13 = new qr(0L, (qr) null);
-        var13.field_F = qp.a(param7, -114, param3);
-        var13.field_lb = qp.a(param12, -79, param11);
-        var13.field_vb = qp.a(param10, param5 ^ 28, param6);
-        var13.field_sb = qp.a(param1, -102, param4);
-        var13.field_wb = qp.a(param0, param5 + -213, param2);
-        var13.field_nb = param8;
-        if (param5 != 99) {
-            return null;
+        qr var13 = null;
+        RuntimeException var13_ref = null;
+        Object stackIn_2_0 = null;
+        qr stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        qr stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            var13 = new qr(0L, (qr) null);
+            var13.field_F = qp.a(param7, -114, param3);
+            var13.field_lb = qp.a(param12, -79, param11);
+            var13.field_vb = qp.a(param10, param5 ^ 28, param6);
+            var13.field_sb = qp.a(param1, -102, param4);
+            var13.field_wb = qp.a(param0, param5 + -213, param2);
+            var13.field_nb = param8;
+            if (param5 == 99) {
+              var13.field_x = param9;
+              stackOut_3_0 = (qr) var13;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (qr) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var13_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var13_ref;
+            stackOut_5_1 = new StringBuilder().append("rd.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param8 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 41);
         }
-        var13.field_x = param9;
-        return var13;
+        return stackIn_4_0;
     }
 
     static {

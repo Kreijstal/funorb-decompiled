@@ -11,7 +11,7 @@ final class mn extends pu {
         field_l = null;
         field_m = null;
         field_n = null;
-        int var1 = -77 / ((17 - param0) / 62);
+        int var1 = 77;
     }
 
     static {

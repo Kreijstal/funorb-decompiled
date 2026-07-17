@@ -17,14 +17,14 @@ final class jl extends sk {
 
     private final void c(byte param0) {
         jagdx.IDirect3DVertexShader var2 = null;
-        int var3 = 86 / ((-73 - param0) / 32);
+        int var3 = 86;
         jagdx.IDirect3DDevice var4 = ((jl) this).field_j.field_Rc;
         int var5 = ((jl) this).field_b.n((byte) -104);
         ec var6 = ((jl) this).field_b.t(-11198);
         if (!((jl) this).field_q) {
-            var2 = -2147483648 == var5 ? ((jl) this).field_g : ((jl) this).field_p;
+            var2 = var5 == 2147483647 ? ((jl) this).field_g : ((jl) this).field_p;
         } else {
-            var2 = -2147483648 == var5 ? ((jl) this).field_l : ((jl) this).field_i;
+            var2 = var5 == 2147483647 ? ((jl) this).field_l : ((jl) this).field_i;
         }
         if (!(((jl) this).field_f == var2)) {
             ((jl) this).field_f = var2;
@@ -42,7 +42,7 @@ final class jl extends sk {
 
     final void a(int param0, int param1, int param2) {
         if (param0 != 1786747298) {
-            field_o = (float[]) null;
+            field_o = null;
         }
     }
 
@@ -120,7 +120,7 @@ final class jl extends sk {
           }
         }
         if (param0 >= -117) {
-          ((jl) this).field_i = (jagdx.IDirect3DVertexShader) null;
+          ((jl) this).field_i = null;
           return;
         } else {
           return;
@@ -169,9 +169,11 @@ final class jl extends sk {
         ((jl) this).field_j = param0;
         if (param1 == null) {
           ((jl) this).field_n = false;
+          return;
         } else {
-          if (-258 < (65535 & ((jl) this).field_j.field_Bc.VertexShaderVersion ^ -1)) {
+          if ((65535 & ((jl) this).field_j.field_Bc.VertexShaderVersion) < 257) {
             ((jl) this).field_n = false;
+            return;
           } else {
             L0: {
               ((jl) this).field_g = ((jl) this).field_j.field_Rc.b(param1.a("dx", (byte) -71, "uw_ground_unlit"));
@@ -253,8 +255,10 @@ final class jl extends sk {
               ((jl) this).field_k = ((jl) this).field_b.a(new int[2], 2, 0, false, 1);
               ((jl) this).field_k.a(false, false, (byte) -127);
               ((jl) this).field_n = true;
+              return;
             } else {
               ((jl) this).field_n = false;
+              return;
             }
           }
         }
@@ -393,7 +397,7 @@ final class jl extends sk {
             }
           }
         } else {
-          field_m = (float[]) null;
+          field_m = null;
           ((jl) this).field_b.a(0, (byte) 56);
           if (((jl) this).field_h) {
             ((jl) this).field_b.a((byte) 118, 0, dl.field_p);
@@ -441,7 +445,7 @@ final class jl extends sk {
 
     private final void f(int param0) {
         int var2 = 0;
-        ec var2_ref = null;
+        ec var2_ref_ec = null;
         jagdx.IDirect3DDevice var3 = null;
         ec var4 = null;
         L0: {
@@ -452,7 +456,7 @@ final class jl extends sk {
               break L0;
             } else {
               var4 = ((jl) this).field_b.f(false);
-              var2_ref = var4;
+              var2_ref_ec = var4;
               var3 = ((jl) this).field_j.field_Rc;
               int discarded$5 = var3.b(13, ((jl) this).field_b.field_g * ((jl) this).field_b.field_Wb, ((jl) this).field_b.field_rb * ((jl) this).field_b.field_Wb, ((jl) this).field_b.field_Hb * ((jl) this).field_b.field_Wb, 1.0f);
               int discarded$6 = var3.b(14, ((jl) this).field_b.field_fb * ((jl) this).field_b.field_g, ((jl) this).field_b.field_fb * ((jl) this).field_b.field_rb, ((jl) this).field_b.field_fb * ((jl) this).field_b.field_Hb, 1.0f);
@@ -465,7 +469,7 @@ final class jl extends sk {
             }
           }
         }
-        var2 = -25 / ((param0 - -87) / 36);
+        var2 = -25;
     }
 
     final void c(int param0) {

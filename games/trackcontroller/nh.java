@@ -9,9 +9,6 @@ final class nh {
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 >= -103) {
-            return;
-        }
         field_c = null;
     }
 

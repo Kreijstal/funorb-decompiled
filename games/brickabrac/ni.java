@@ -19,23 +19,92 @@ final class ni extends mh {
     }
 
     final static int a(int param0, CharSequence param1) {
-        int var4 = 0;
-        int var5 = BrickABrac.field_J ? 1 : 0;
-        int var2 = param1.length();
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
-        if (param0 > -103) {
-            field_Ub = null;
+        int var4 = 0;
+        int var5 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var5 = BrickABrac.field_J ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var2_int = param1.length();
+              var3 = 0;
+              if (param0 <= -103) {
+                break L1;
+              } else {
+                field_Ub = null;
+                break L1;
+              }
+            }
+            var4 = 0;
+            L2: while (true) {
+              if (var4 >= var2_int) {
+                stackOut_6_0 = var3;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var3 = (var3 << 5) - var3 - -na.a(-8250, param1.charAt(var4));
+                var4++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_1 = new StringBuilder().append("ni.A(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw qb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        for (var4 = 0; var4 < var2; var4++) {
-            var3 = (var3 << -56117467) - var3 - -na.a(-8250, param1.charAt(var4));
-        }
-        return var3;
+        return stackIn_7_0;
     }
 
     final static boolean b(boolean param0, char param1) {
         int stackIn_10_0 = 0;
-        int stackOut_9_0;
-        int stackOut_8_0;
+        int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
         L0: {
           if (param0) {
             break L0;
@@ -81,25 +150,30 @@ final class ni extends mh {
 
     ni(long param0, jp param1, jp param2, int param3, mh param4, String param5) {
         this(param0, (mh) null, param4, param5);
-        ((ni) this).field_Vb.field_K = param1;
-        ((ni) this).field_Vb.field_Q = param3;
-        ((ni) this).field_Vb.field_wb = param2;
+        try {
+            ((ni) this).field_Vb.field_K = param1;
+            ((ni) this).field_Vb.field_Q = param3;
+            ((ni) this).field_Vb.field_wb = param2;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ni.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private ni(long param0, mh param1, mh param2, String param3) {
         super(param0, (mh) null);
-        ((ni) this).field_Vb = new mh(0L, param1);
-        ((ni) this).field_Qb = new mh(0L, param2);
-        ((ni) this).field_Qb.field_Mb = param3;
-        ((ni) this).a(((ni) this).field_Vb, 0);
-        ((ni) this).a(((ni) this).field_Qb, 0);
-        ((ni) this).c(true);
+        try {
+            ((ni) this).field_Vb = new mh(0L, param1);
+            ((ni) this).field_Qb = new mh(0L, param2);
+            ((ni) this).field_Qb.field_Mb = param3;
+            ((ni) this).a(((ni) this).field_Vb, 0);
+            ((ni) this).a(((ni) this).field_Qb, 0);
+            ((ni) this).c(true);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ni.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static ra h(int param0) {
-        if (param0 < 91) {
-            field_Pb = null;
-        }
         return ob.field_J;
     }
 

@@ -20,9 +20,6 @@ final class ug {
     }
 
     final static void b(boolean param0) {
-        if (param0) {
-            ug.a(-48);
-        }
     }
 
     ug(int param0) {

@@ -9,7 +9,7 @@ final class go extends ci {
         if (param0 != -1) {
             return 4;
         }
-        int var3 = param1 >>> -749859809;
+        int var3 = param1 >>> 31;
         return (var3 + param1) / param2 - var3;
     }
 
@@ -27,9 +27,6 @@ final class go extends ci {
 
     public static void d(byte param0) {
         field_m = null;
-        if (param0 >= -85) {
-            field_m = null;
-        }
     }
 
     final int[] c(int param0, int param1) {
@@ -67,10 +64,10 @@ final class go extends ci {
                 L2: {
                   var8 = (-var24[var7] + var25[var7]) * ((go) this).field_n;
                   var9 = ((go) this).field_n * (-var5[una.field_b & var7 - 1] + var5[1 + var7 & una.field_b]);
-                  var10 = var9 >> 1524452236;
-                  var11 = var8 >> -791331572;
-                  var12 = var10 * var10 >> -1730752852;
-                  var13 = var11 * var11 >> -1609901940;
+                  var10 = var9 >> 12;
+                  var11 = var8 >> 12;
+                  var12 = var10 * var10 >> 12;
+                  var13 = var11 * var11 >> 12;
                   var14 = (int)(4096.0 * Math.sqrt((double)((float)(var13 + var12 + 4096) / 4096.0f)));
                   if (var14 == 0) {
                     stackOut_6_0 = 0;
@@ -104,11 +101,68 @@ final class go extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        if (param0 != 107) {
-            return;
-        }
-        if (-1 == (param2 ^ -1)) {
-            ((go) this).field_n = param1.d(124);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 == 107) {
+              L1: {
+                if (param2 != 0) {
+                  break L1;
+                } else {
+                  ((go) this).field_n = param1.d(124);
+                  break L1;
+                }
+              }
+              break L0;
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) runtimeException;
+            stackOut_5_1 = new StringBuilder().append("go.A(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
         }
     }
 

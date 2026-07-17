@@ -11,9 +11,6 @@ final class qf {
         field_c = null;
         field_a = null;
         field_d = null;
-        if (param0) {
-            qf.a(-39);
-        }
     }
 
     final static void a(int param0, int param1) {

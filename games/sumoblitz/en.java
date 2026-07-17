@@ -129,23 +129,23 @@ abstract class en {
                                     continue L6;
                                   } else {
                                     L8: {
-                                      var42 = ((en) this).field_c[var38] << -432518836;
-                                      var6 = var53[var36] * var42 >> -687124148;
-                                      var8 = ((en) this).field_a * var42 >> -1653163636;
-                                      var5 = var54[var35] * var42 >> -741393364;
-                                      var7 = var42 * var55[var37] >> -221290292;
-                                      var10 = ((en) this).field_i * var42 >> -1617825876;
-                                      var9 = ((en) this).field_b * var42 >> -497949972;
+                                      var42 = ((en) this).field_c[var38] << 12;
+                                      var6 = var53[var36] * var42 >> 12;
+                                      var8 = ((en) this).field_a * var42 >> 12;
+                                      var5 = var54[var35] * var42 >> 12;
+                                      var7 = var42 * var55[var37] >> 12;
+                                      var10 = ((en) this).field_i * var42 >> 12;
+                                      var9 = ((en) this).field_b * var42 >> 12;
                                       var7 = var7 * ((en) this).field_i;
                                       var6 = var6 * ((en) this).field_b;
                                       var5 = var5 * ((en) this).field_a;
-                                      var11 = var5 >> 1865365708;
+                                      var11 = var5 >> 12;
                                       var12 = 1 + var11;
-                                      var13 = var6 >> 244666284;
+                                      var13 = var6 >> 12;
                                       var11 = var11 & 255;
                                       var14 = 1 + var13;
                                       var13 = var13 & 255;
-                                      var15 = var7 >> -682112116;
+                                      var15 = var7 >> 12;
                                       var16 = var15 - -1;
                                       if (var16 >= var10) {
                                         var16 = 0;
@@ -191,19 +191,19 @@ abstract class en {
                                     var26 = ((en) this).field_f[var14 + var23];
                                     var29 = qf.a(var6, var7, 8, (int) ((en) this).field_f[var11 - -var25], var5);
                                     var30 = qf.a(var6, var7, 8, (int) ((en) this).field_f[var12 + var25], var20);
-                                    var31 = var29 - -((-var29 + var30) * var17 >> 888512364);
+                                    var31 = var29 - -((-var29 + var30) * var17 >> 12);
                                     var29 = qf.a(var21, var7, param1 + -198, (int) ((en) this).field_f[var11 + var26], var5);
                                     var30 = qf.a(var21, var7, param1 ^ 198, (int) ((en) this).field_f[var26 + var12], var20);
-                                    var32 = var29 + (var17 * (var30 + -var29) >> 1021556812);
-                                    var33 = var31 - -(var18 * (var32 - var31) >> 989731244);
+                                    var32 = var29 + (var17 * (var30 + -var29) >> 12);
+                                    var33 = var31 - -(var18 * (var32 - var31) >> 12);
                                     var29 = qf.a(var6, var22, param1 ^ 198, (int) ((en) this).field_f[var11 + var27], var5);
                                     var30 = qf.a(var6, var22, 8, (int) ((en) this).field_f[var27 + var12], var20);
-                                    var31 = ((-var29 + var30) * var17 >> -1519766228) + var29;
+                                    var31 = ((-var29 + var30) * var17 >> 12) + var29;
                                     var29 = qf.a(var21, var22, 8, (int) ((en) this).field_f[var28 + var11], var5);
                                     var30 = qf.a(var21, var22, param1 ^ 198, (int) ((en) this).field_f[var28 + var12], var20);
-                                    var32 = ((-var29 + var30) * var17 >> 1290288876) + var29;
-                                    var34 = ((var32 - var31) * var18 >> -1309030932) + var31;
-                                    ((en) this).a(var38, param1 + 951, (var19 * (var34 + -var33) >> -625341588) + var33);
+                                    var32 = ((-var29 + var30) * var17 >> 12) + var29;
+                                    var34 = ((var32 - var31) * var18 >> 12) + var31;
+                                    ((en) this).a(var38, param1 + 951, (var19 * (var34 + -var33) >> 12) + var33);
                                     var38++;
                                     continue L7;
                                   }
@@ -215,19 +215,19 @@ abstract class en {
                       }
                     }
                   } else {
-                    var41[var42] = (var42 << -1138565684) / param0;
+                    var41[var42] = (var42 << 12) / param0;
                     var42++;
                     continue L3;
                   }
                 }
               } else {
-                var40[var42] = (var42 << 788419340) / param2;
+                var40[var42] = (var42 << 12) / param2;
                 var42++;
                 continue L2;
               }
             }
           } else {
-            var39[var42] = (var42 << 1046741740) / param3;
+            var39[var42] = (var42 << 12) / param3;
             var42++;
             continue L1;
           }
@@ -241,7 +241,7 @@ abstract class en {
         int var6 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
         Random var2 = new Random((long)((en) this).field_e);
-        for (var3 = 0; -256 < (var3 ^ -1); var3++) {
+        for (var3 = 0; var3 < 255; var3++) {
             ((en) this).field_f[var3] = (short)var3;
         }
         for (var3 = param0; var3 < 255; var3++) {
@@ -255,19 +255,19 @@ abstract class en {
     }
 
     final static void a(byte param0, int param1) {
-        c.field_s = 3 & param1 >> -1189596572;
+        c.field_s = 3 & param1 >> 4;
         if (!(c.field_s <= 2)) {
             c.field_s = 2;
         }
         if (param0 < 24) {
             en.b((byte) 45);
         }
-        ew.field_f = (param1 & 15) >> -826959710;
-        if (!(-3 <= (ew.field_f ^ -1))) {
+        ew.field_f = (param1 & 15) >> 2;
+        if (!(ew.field_f <= 2)) {
             ew.field_f = 2;
         }
         rs.field_g = param1 & 3;
-        if ((rs.field_g ^ -1) < -3) {
+        if (rs.field_g > 2) {
             rs.field_g = 2;
         }
     }
@@ -275,40 +275,32 @@ abstract class en {
     abstract void b(int param0);
 
     final static boolean a(int param0) {
-        int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_4_0 = 0;
         L0: {
-          if (param0 == -23517) {
-            break L0;
-          } else {
-            field_h = null;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
             if (10 > jv.field_a) {
-              break L2;
+              break L1;
             } else {
               if (ms.field_a) {
-                break L2;
+                break L1;
               } else {
                 if (nt.a((byte) 116)) {
-                  break L2;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
                   break L1;
+                } else {
+                  stackOut_3_0 = 1;
+                  stackIn_5_0 = stackOut_3_0;
+                  break L0;
                 }
               }
             }
           }
-          stackOut_6_0 = 0;
-          stackIn_7_0 = stackOut_6_0;
-          break L1;
+          stackOut_4_0 = 0;
+          stackIn_5_0 = stackOut_4_0;
+          break L0;
         }
-        return stackIn_7_0 != 0;
+        return stackIn_5_0 != 0;
     }
 
     public static void b(byte param0) {
@@ -326,9 +318,6 @@ abstract class en {
         ((en) this).field_c = new short[((en) this).field_g];
         for (var2 = 0; ((en) this).field_g > var2; var2++) {
             ((en) this).field_c[var2] = (short)(int)Math.pow(2.0, (double)var2);
-        }
-        if (param0 <= 43) {
-            this.c(-19);
         }
     }
 

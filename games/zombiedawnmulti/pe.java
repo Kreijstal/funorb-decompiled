@@ -23,8 +23,9 @@ final class pe {
 
     final int a(int param0) {
         if (((pe) this).field_f >= ((pe) this).field_j) {
+            int fieldTemp$0 = ((pe) this).field_d;
             ((pe) this).field_d = ((pe) this).field_d + 1;
-            ((pe) this).field_i = ((pe) this).field_c[((pe) this).field_d] << 15;
+            ((pe) this).field_i = ((pe) this).field_c[fieldTemp$0] << 15;
             if (((pe) this).field_d >= ((pe) this).field_b) {
                 ((pe) this).field_d = ((pe) this).field_b - 1;
             }

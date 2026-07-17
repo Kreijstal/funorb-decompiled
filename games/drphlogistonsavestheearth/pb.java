@@ -17,9 +17,6 @@ final class pb {
     }
 
     final static Object a(String param0, java.applet.Applet param1, boolean param2) throws Throwable {
-        if (!param2) {
-            return null;
-        }
         return netscape.javascript.JSObject.getWindow(param1).call(param0, (Object[]) null);
     }
 }

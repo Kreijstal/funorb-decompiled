@@ -18,71 +18,93 @@ final class tg implements gl {
         field_i = null;
         field_a = null;
         field_f = null;
-        if (param0) {
-          return;
-        } else {
-          field_b = null;
-          field_h = null;
-          return;
-        }
+        field_b = null;
+        field_h = null;
     }
 
     public final void a(boolean param0, int param1, int param2, byte param3, ce param4) {
-        int var6 = 0;
+        int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         ck var8 = null;
-        var6 = param1 + param4.field_u;
-        var7 = param4.field_D + param2;
-        ke.a(var6, var7, param4.field_t, param4.field_y, (byte) 101);
-        var8 = tl.field_u[1];
-        if (param4 instanceof ek) {
-          if (((ek) (Object) param4).field_H) {
-            L0: {
-              var8.f((param4.field_t + -var8.field_K >> -1290148639) + var6 - -1, 1 + var7 + (param4.field_y + -var8.field_C >> -1784257663), 256);
-              if (param4.a(true)) {
-                kd.a(-4 + param4.field_t, 2 + var6, (byte) 124, 2 + var7, param4.field_y + -4);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            if (param3 >= -60) {
-              tg.a(false);
-              return;
-            } else {
-              return;
-            }
-          } else {
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        try {
+          L0: {
             L1: {
-              if (param4.a(true)) {
-                kd.a(-4 + param4.field_t, 2 + var6, (byte) 124, 2 + var7, param4.field_y + -4);
+              var6_int = param1 + param4.field_u;
+              var7 = param4.field_D + param2;
+              ke.a(var6_int, var7, param4.field_t, param4.field_y, (byte) 101);
+              var8 = tl.field_u[1];
+              if (!(param4 instanceof ek)) {
                 break L1;
               } else {
-                break L1;
+                if (!((ek) (Object) param4).field_H) {
+                  break L1;
+                } else {
+                  var8.f((param4.field_t + -var8.field_K >> 1) + var6_int - -1, 1 + var7 + (param4.field_y + -var8.field_C >> 1), 256);
+                  break L1;
+                }
               }
             }
-            if (param3 >= -60) {
+            L2: {
+              if (param4.a(true)) {
+                kd.a(-4 + param4.field_t, 2 + var6_int, (byte) 124, 2 + var7, param4.field_y + -4);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            if (param3 < -60) {
+              break L0;
+            } else {
               tg.a(false);
               return;
-            } else {
-              return;
             }
           }
-        } else {
-          L2: {
-            if (param4.a(true)) {
-              kd.a(-4 + param4.field_t, 2 + var6, (byte) 124, 2 + var7, param4.field_y + -4);
-              break L2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var6 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_1 = new StringBuilder().append("tg.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param4 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
             } else {
-              break L2;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
-          if (param3 >= -60) {
-            tg.a(false);
-            return;
-          } else {
-            return;
-          }
+          throw dh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
     }
 
@@ -98,7 +120,7 @@ final class tg implements gl {
         if (!param0) {
             return null;
         }
-        return ik.field_b[param1][(12 & uf.field_A) >> -2019195358];
+        return ik.field_b[param1][(12 & uf.field_A) >> 2];
     }
 
     static {

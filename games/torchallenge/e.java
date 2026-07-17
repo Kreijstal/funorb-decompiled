@@ -35,89 +35,125 @@ final class e extends da {
     }
 
     final static void a(byte param0, int param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        L0: {
-          var5 = TorChallenge.field_F ? 1 : 0;
-          vj.field_d = new ka[3];
-          if (param0 <= -20) {
-            break L0;
-          } else {
-            e.b((byte) 64);
-            break L0;
+        RuntimeException decompiledCaughtException = null;
+        var5 = TorChallenge.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              vj.field_d = new ka[3];
+              if (param0 <= -20) {
+                break L1;
+              } else {
+                e.b((byte) 64);
+                break L1;
+              }
+            }
+            var2_int = 0;
+            var3 = 0;
+            var4 = 0;
+            L2: while (true) {
+              if (var4 >= 3) {
+                cg.field_g = new ka(var2_int, var3);
+                break L0;
+              } else {
+                L3: {
+                  vj.field_d[var4] = new ka(we.field_m[1 + var4].field_q - -(param1 * 2), 2 * param1 + we.field_m[var4 + 1].field_v);
+                  if (we.field_m[1 + var4].field_q > var2_int) {
+                    var2_int = we.field_m[var4 - -1].field_q;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                L4: {
+                  if (var3 < we.field_m[var4 - -1].field_v) {
+                    var3 = we.field_m[1 + var4].field_v;
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                L5: {
+                  vj.field_d[var4].d();
+                  if (0 != var4) {
+                    break L5;
+                  } else {
+                    qg.a(ui.field_f);
+                    qg.a(0, 0, -(2 * param1) + qg.field_g, qg.field_f);
+                    break L5;
+                  }
+                }
+                L6: {
+                  we.field_m[1 + var4].a(param1, param1, 16777215);
+                  if (var4 != 0) {
+                    break L6;
+                  } else {
+                    qg.b(ui.field_f);
+                    break L6;
+                  }
+                }
+                qg.d(param1, param1, 0, 0, qg.field_g, qg.field_f);
+                la.field_f.a(-32);
+                vj.field_d[var4].h();
+                var4++;
+                continue L2;
+              }
+            }
           }
-        }
-        var2 = 0;
-        var3 = 0;
-        var4 = 0;
-        L1: while (true) {
-          if (var4 >= 3) {
-            cg.field_g = new ka(var2, var3);
-            return;
-          } else {
-            L2: {
-              vj.field_d[var4] = new ka(we.field_m[1 + var4].field_q - -(param1 * 2), 2 * param1 + we.field_m[var4 + 1].field_v);
-              if (we.field_m[1 + var4].field_q > var2) {
-                var2 = we.field_m[var4 - -1].field_q;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              if (var3 < we.field_m[var4 - -1].field_v) {
-                var3 = we.field_m[1 + var4].field_v;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              vj.field_d[var4].d();
-              if (0 != var4) {
-                break L4;
-              } else {
-                qg.a(ui.field_f);
-                qg.a(0, 0, -(2 * param1) + qg.field_g, qg.field_f);
-                break L4;
-              }
-            }
-            L5: {
-              we.field_m[1 + var4].a(param1, param1, 16777215);
-              if (var4 != 0) {
-                break L5;
-              } else {
-                qg.b(ui.field_f);
-                break L5;
-              }
-            }
-            qg.d(param1, param1, 0, 0, qg.field_g, qg.field_f);
-            la.field_f.a(-32);
-            vj.field_d[var4].h();
-            var4++;
-            continue L1;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw oj.a((Throwable) (Object) var2, "e.C(" + param0 + 44 + param1 + 41);
         }
     }
 
     e(nc param0, da param1) {
-        ((e) this).field_n = param0;
-        ((e) this).field_l = param0.f();
-        ((e) this).field_k = param1;
-        ((e) this).field_n.f(128 + ((e) this).field_l * sh.field_r >> -947562936);
+        try {
+            ((e) this).field_n = param0;
+            ((e) this).field_l = param0.f();
+            ((e) this).field_k = param1;
+            ((e) this).field_n.f(128 + ((e) this).field_l * sh.field_r >> 8);
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "e.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, int param1) {
-        int var3 = TorChallenge.field_F ? 1 : 0;
-        if (param0 != -1) {
-            field_j = null;
-        }
-        ue var4 = (ue) (Object) wl.field_b.c((byte) -29);
-        while (var4 != null) {
-            ji.a((byte) 92, param1, var4);
-            var4 = (ue) (Object) wl.field_b.c(-270);
+        RuntimeException var2 = null;
+        int var3 = 0;
+        ue var4 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = TorChallenge.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -1) {
+                break L1;
+              } else {
+                field_j = null;
+                break L1;
+              }
+            }
+            var4 = (ue) (Object) wl.field_b.c((byte) -29);
+            L2: while (true) {
+              if (var4 == null) {
+                break L0;
+              } else {
+                ji.a((byte) 92, 7, var4);
+                var4 = (ue) (Object) wl.field_b.c(-270);
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw oj.a((Throwable) (Object) var2, "e.E(" + param0 + 44 + 7 + 41);
         }
     }
 
@@ -156,7 +192,7 @@ final class e extends da {
                       if (param0 <= var11) {
                         var11 = 0;
                         L5: while (true) {
-                          if (param0 >> -106731839 <= var11) {
+                          if (param0 >> 1 <= var11) {
                             return var10;
                           } else {
                             var12 = 0;

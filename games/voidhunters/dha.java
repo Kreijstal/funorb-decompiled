@@ -39,7 +39,7 @@ final class dha {
     private static String field_I;
 
     public static void a(int param0) {
-        int var1 = 44 % ((-35 - param0) / 52);
+        int var1 = 0;
         field_u = null;
         field_q = null;
     }

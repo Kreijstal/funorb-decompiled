@@ -17,18 +17,22 @@ final class ri extends am {
         if (param0 <= 109) {
             return;
         }
-        rf.field_e = param3;
-        qa.a(param1, (byte) -24, jj.field_i);
+        try {
+            rf.field_e = param3;
+            qa.a(param1, (byte) -24, jj.field_i);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "ri.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, int param1, p param2, int param3) {
-        if (param0 <= 77) {
-          field_o = true;
-          dn.a(param2.field_e, uf.field_f, uf.field_d, param3, -1, param1);
-          return;
-        } else {
-          dn.a(param2.field_e, uf.field_f, uf.field_d, param3, -1, param1);
-          return;
+        try {
+            if (param0 <= 77) {
+                field_o = true;
+            }
+            dn.a(param2.field_e, uf.field_f, uf.field_d, param3, -1, param1);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "ri.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 

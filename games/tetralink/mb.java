@@ -26,16 +26,44 @@ abstract class mb extends gb {
     abstract boolean f(int param0);
 
     final static float a(float param0, float param1, boolean param2) {
+        float var3_float = 0.0f;
+        RuntimeException var3 = null;
         int var4 = 0;
-        int var5 = TetraLink.field_J;
-        float var3 = 0.0f;
-        for (var4 = 0; var4 < 8; var4++) {
-            var3 = (float)((double)var3 + (double)vj.a(param1, true) * Math.sin((double)((float)(1 << var4) * param0 + vj.a(vj.a(param1, true) + param1, true))));
+        int var5 = 0;
+        float stackIn_7_0 = 0.0f;
+        RuntimeException decompiledCaughtException = null;
+        float stackOut_6_0 = 0.0f;
+        var5 = TetraLink.field_J;
+        try {
+          L0: {
+            var3_float = 0.0f;
+            var4 = 0;
+            L1: while (true) {
+              if (var4 >= 8) {
+                L2: {
+                  if (!param2) {
+                    break L2;
+                  } else {
+                    field_u = null;
+                    break L2;
+                  }
+                }
+                stackOut_6_0 = var3_float;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var3_float = (float)((double)var3_float + (double)vj.a(param1, true) * Math.sin((double)((float)(1 << var4) * param0 + vj.a(vj.a(param1, true) + param1, true))));
+                var4++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw oi.a((Throwable) (Object) var3, "mb.D(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
-        if (param2) {
-            field_u = null;
-        }
-        return var3;
+        return stackIn_7_0;
     }
 
     public static void b(byte param0) {
@@ -43,9 +71,6 @@ abstract class mb extends gb {
         field_A = null;
         field_x = null;
         field_u = null;
-        if (param0 != -48) {
-            float discarded$0 = mb.a(0.8539373278617859f, -0.7423967719078064f, true);
-        }
         field_w = null;
         field_y = null;
     }

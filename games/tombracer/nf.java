@@ -22,11 +22,6 @@ final class nf {
     private int field_n;
 
     final static void a(byte param0) {
-        if (param0 != 5) {
-            field_j = null;
-            al.field_g = new vna();
-            return;
-        }
         al.field_g = new vna();
     }
 
@@ -334,7 +329,7 @@ final class nf {
         var14 = param2 + var13;
         var15 = ((nf) this).field_i * param2;
         var16 = param2 + var15;
-        if ((var11 ^ -1) >= -1) {
+        if (var11 <= 0) {
           L2: {
             ((nf) this).field_l = 0;
             ((nf) this).field_k = 2147483647;

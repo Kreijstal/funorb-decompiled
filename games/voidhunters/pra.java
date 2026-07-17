@@ -11,10 +11,70 @@ final class pra extends rqa {
     }
 
     final nc a(nc[] param0, int param1) {
-        if (param1 > -119) {
-            return null;
+        RuntimeException var3 = null;
+        Object stackIn_2_0 = null;
+        nc stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nc stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param1 <= -119) {
+              stackOut_3_0 = new nc((Object) (Object) frb.a(59, 121));
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (nc) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("pra.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
-        return new nc((Object) (Object) frb.a(59, 121));
+        return stackIn_4_0;
     }
 
     final static void a(boolean param0, boolean param1) {
@@ -30,7 +90,7 @@ final class pra extends rqa {
               break L0;
             } else {
               if (param0) {
-                if (-1 > (lia.field_b ^ -1)) {
+                if (lia.field_b > 0) {
                   L1: {
                     lia.field_b = lia.field_b - 1;
                     if (param1) {
@@ -42,8 +102,8 @@ final class pra extends rqa {
                   }
                   return;
                 } else {
-                  if (-1 <= (nf.field_a ^ -1)) {
-                    if ((tba.field_p ^ -1) < -1) {
+                  if (nf.field_a <= 0) {
+                    if (tba.field_p > 0) {
                       L2: {
                         tba.field_p = tba.field_p - 1;
                         if (param1) {
@@ -79,9 +139,9 @@ final class pra extends rqa {
                 L4: {
                   if (lqa.field_o != null) {
                     if (0 >= lia.field_b) {
-                      if ((nf.field_a ^ -1) >= -1) {
+                      if (nf.field_a <= 0) {
                         if (ldb.field_o > tba.field_p) {
-                          if (-1 != (tba.field_p ^ -1)) {
+                          if (tba.field_p != 0) {
                             L5: {
                               tba.field_p = tba.field_p + 1;
                               if (param1) {
@@ -126,9 +186,9 @@ final class pra extends rqa {
                           tba.field_p = tba.field_p - 1;
                           break L4;
                         } else {
-                          if ((nf.field_a ^ -1) > (ldb.field_o ^ -1)) {
+                          if (~nf.field_a > ~ldb.field_o) {
                             L7: {
-                              if (-1 == (nf.field_a ^ -1)) {
+                              if (nf.field_a == 0) {
                                 ai.a(true, 0);
                                 break L7;
                               } else {
@@ -148,8 +208,8 @@ final class pra extends rqa {
                         nf.field_a = nf.field_a - 1;
                         break L4;
                       } else {
-                        if (-1 <= (tba.field_p ^ -1)) {
-                          if ((lia.field_b ^ -1) > (ldb.field_o ^ -1)) {
+                        if (tba.field_p <= 0) {
+                          if (~lia.field_b > ~ldb.field_o) {
                             fma.l(8611);
                             lia.field_b = lia.field_b + 1;
                             break L4;
@@ -181,7 +241,7 @@ final class pra extends rqa {
         }
         L8: {
           if (param0) {
-            if (-1 > (lia.field_b ^ -1)) {
+            if (lia.field_b > 0) {
               lia.field_b = lia.field_b - 1;
               if (param1) {
                 return;
@@ -190,8 +250,8 @@ final class pra extends rqa {
                 return;
               }
             } else {
-              if (-1 <= (nf.field_a ^ -1)) {
-                if ((tba.field_p ^ -1) >= -1) {
+              if (nf.field_a <= 0) {
+                if (tba.field_p <= 0) {
                   break L8;
                 } else {
                   tba.field_p = tba.field_p - 1;
@@ -215,9 +275,9 @@ final class pra extends rqa {
           } else {
             if (lqa.field_o != null) {
               if (0 >= lia.field_b) {
-                if ((nf.field_a ^ -1) >= -1) {
+                if (nf.field_a <= 0) {
                   if (ldb.field_o > tba.field_p) {
-                    if (-1 != (tba.field_p ^ -1)) {
+                    if (tba.field_p != 0) {
                       tba.field_p = tba.field_p + 1;
                       if (param1) {
                         return;
@@ -256,9 +316,9 @@ final class pra extends rqa {
                     tba.field_p = tba.field_p - 1;
                     break L8;
                   } else {
-                    if ((nf.field_a ^ -1) > (ldb.field_o ^ -1)) {
+                    if (~nf.field_a > ~ldb.field_o) {
                       L9: {
-                        if (-1 == (nf.field_a ^ -1)) {
+                        if (nf.field_a == 0) {
                           ai.a(true, 0);
                           break L9;
                         } else {
@@ -278,8 +338,8 @@ final class pra extends rqa {
                   nf.field_a = nf.field_a - 1;
                   break L8;
                 } else {
-                  if (-1 <= (tba.field_p ^ -1)) {
-                    if ((lia.field_b ^ -1) > (ldb.field_o ^ -1)) {
+                  if (tba.field_p <= 0) {
+                    if (~lia.field_b > ~ldb.field_o) {
                       fma.l(8611);
                       lia.field_b = lia.field_b + 1;
                       break L8;
@@ -309,12 +369,6 @@ final class pra extends rqa {
     }
 
     public static void a(int param0) {
-        if (param0 >= -71) {
-            field_p = null;
-            field_q = null;
-            field_p = null;
-            return;
-        }
         field_q = null;
         field_p = null;
     }

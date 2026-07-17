@@ -91,9 +91,6 @@ final class ak {
         field_c = null;
         field_f = null;
         field_i = null;
-        if (param0 != -112) {
-            int discarded$0 = ak.a(-56, -90, (byte) -84);
-        }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -111,43 +108,137 @@ final class ak {
     }
 
     ak(String param0, w param1) {
-        String[] var3 = new String[]{param0, al.field_a, tl.field_s};
-        w[] var4 = new w[]{param1, tb.field_c, (w) (Object) ge.field_f};
-        ((ak) this).field_h = new tc(0L, ec.field_i, var3, fb.field_b, var4, 0);
+        String[] var3 = null;
+        w[] var4 = null;
+        try {
+            var3 = new String[]{param0, al.field_a, tl.field_s};
+            var4 = new w[]{param1, tb.field_c, (w) (Object) ge.field_f};
+            ((ak) this).field_h = new tc(0L, ec.field_i, var3, fb.field_b, var4, 0);
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "ak.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static dc[] a(byte param0, fd param1) {
+        RuntimeException var2 = null;
+        int[] var3 = null;
+        dc[] var4 = null;
         int var5 = 0;
         dc var6 = null;
-        int var7 = client.field_A ? 1 : 0;
-        if (!param1.b(-86)) {
-            return new dc[]{};
+        int var7 = 0;
+        mh var8 = null;
+        int[] var9 = null;
+        int[] var10 = null;
+        int[] var11 = null;
+        int[] var12 = null;
+        dc[] stackIn_3_0 = null;
+        dc[] stackIn_10_0 = null;
+        dc[] stackIn_17_0 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        dc[] stackOut_9_0 = null;
+        dc[] stackOut_16_0 = null;
+        dc[] stackOut_2_0 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        var7 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            if (param1.b(-86)) {
+              var8 = param1.a((byte) 123);
+              L1: while (true) {
+                if (var8.field_c != 0) {
+                  if (var8.field_c == 2) {
+                    stackOut_9_0 = new dc[]{};
+                    stackIn_10_0 = stackOut_9_0;
+                    return stackIn_10_0;
+                  } else {
+                    var12 = (int[]) var8.field_b;
+                    var11 = var12;
+                    var10 = var11;
+                    var9 = var10;
+                    var3 = var9;
+                    var4 = new dc[var12.length >> 2];
+                    var5 = 0;
+                    L2: while (true) {
+                      if (var5 >= var4.length) {
+                        L3: {
+                          if (param0 == -109) {
+                            break L3;
+                          } else {
+                            ak.a(94, -113, true, 89);
+                            break L3;
+                          }
+                        }
+                        stackOut_16_0 = (dc[]) var4;
+                        stackIn_17_0 = stackOut_16_0;
+                        break L0;
+                      } else {
+                        var6 = new dc();
+                        var4[var5] = var6;
+                        var6.field_f = var3[var5 << 2];
+                        var6.field_j = var3[1 + (var5 << 2)];
+                        var6.field_h = var3[(var5 << 2) - -2];
+                        var6.field_a = var3[3 + (var5 << 2)];
+                        var5++;
+                        continue L2;
+                      }
+                    }
+                  }
+                } else {
+                  ua.a(10L, -128);
+                  continue L1;
+                }
+              }
+            } else {
+              stackOut_2_0 = new dc[]{};
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var2;
+            stackOut_18_1 = new StringBuilder().append("ak.E(").append(param0).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param1 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L4;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L4;
+            }
+          }
+          throw dh.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
-        mh var8 = param1.a((byte) 123);
-        while (var8.field_c == 0) {
-            ua.a(10L, -128);
-        }
-        if (!((var8.field_c ^ -1) != -3)) {
-            return new dc[]{};
-        }
-        int[] var12 = (int[]) var8.field_b;
-        int[] var11 = var12;
-        int[] var10 = var11;
-        int[] var9 = var10;
-        int[] var3 = var9;
-        dc[] var4 = new dc[var12.length >> 465277314];
-        for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new dc();
-            var4[var5] = var6;
-            var6.field_f = var3[var5 << 789348322];
-            var6.field_j = var3[1 + (var5 << -1273691358)];
-            var6.field_h = var3[(var5 << -330762750) - -2];
-            var6.field_a = var3[3 + (var5 << 1002693154)];
-        }
-        if (param0 != -109) {
-            ak.a(94, -113, true, 89);
-        }
-        return var4;
+        return stackIn_17_0;
     }
 
     static {

@@ -100,7 +100,7 @@ final class tm {
         int stackOut_21_2 = 0;
         L0: {
           bh.a(param0 + 2);
-          if ((ba.field_b ^ -1) <= -1) {
+          if (ba.field_b >= 0) {
             jb.field_C.field_S = db.a(qg.field_g, -34, new String[1]);
             break L0;
           } else {
@@ -297,7 +297,7 @@ final class tm {
         L7: {
           ((gh) (Object) stackIn_22_0).a((byte) stackIn_22_1, stackIn_22_2 != 0);
           sn.field_f.field_d.j(10000);
-          if (sg.field_i.field_Eb != -1) {
+          if (sg.field_i.field_Eb != 0) {
             of.field_c = true;
             break L7;
           } else {
@@ -312,7 +312,7 @@ final class tm {
               if (vg.field_a) {
                 break L9;
               } else {
-                if (-1 < rd.field_b) {
+                if (rd.field_b > 0) {
                   break L9;
                 } else {
                   if (ul.field_d < 2) {
@@ -336,7 +336,7 @@ final class tm {
             break L10;
           } else {
             L11: {
-              if (-2 != (jg.field_l.length ^ -1)) {
+              if (jg.field_l.length != 1) {
                 break L11;
               } else {
                 if (ok.field_a == jg.field_l[0]) {
@@ -352,7 +352,7 @@ final class tm {
           }
         }
         L12: {
-          if (-1 != (pm.field_gb.field_Eb ^ -1)) {
+          if (pm.field_gb.field_Eb != 0) {
             im.field_b = false;
             break L12;
           } else {
@@ -370,16 +370,13 @@ final class tm {
     }
 
     final static gh a(byte param0) {
-        int var1 = -54 % ((-38 - param0) / 57);
+        int var1 = 0;
         return pl.d(true);
     }
 
     public static void a(int param0) {
         field_f = null;
         field_e = null;
-        if (param0 != 5) {
-            tm.a(-91, false, true, 52);
-        }
         field_b = null;
         field_a = null;
         field_c = null;
@@ -418,8 +415,9 @@ final class tm {
             field_e[0] = 0L;
             var0 = 1;
             L1: while (true) {
-              if (-11 > (var0 ^ -1)) {
+              if (var0 > 10) {
                 field_f = "Camera left/right: Inverted";
+                return;
               } else {
                 var1 = -8 + 8 * var0;
                 field_e[var0] = el.a(td.a(255L, field_i[7][7 + var1]), el.a(el.a(td.a(16711680L, field_i[5][var1 + 5]), el.a(el.a(td.a(1095216660480L, field_i[3][var1 - -3]), el.a(td.a(280375465082880L, field_i[2][2 + var1]), el.a(td.a(71776119061217280L, field_i[1][1 + var1]), td.a(-72057594037927936L, field_i[0][var1])))), td.a(field_i[4][var1 - -4], 4278190080L))), td.a(field_i[6][var1 + 6], 65280L)));
@@ -429,21 +427,21 @@ final class tm {
             }
           } else {
             L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦���䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬���贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀���﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓���鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-              if (-1 != (var0 & 1 ^ -1)) {
+              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+              if ((var0 & 1) != 0) {
                 stackOut_4_0 = (long)(255 & var1);
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
               } else {
-                stackOut_3_0 = (long)(var1 >>> 519103624);
+                stackOut_3_0 = (long)(var1 >>> 8);
                 stackIn_5_0 = stackOut_3_0;
                 break L2;
               }
             }
             L3: {
               var2 = stackIn_5_0;
-              var4 = var2 << -1409144639;
-              if ((var4 ^ -1L) <= -257L) {
+              var4 = var2 << 1;
+              if (var4 >= 256L) {
                 var4 = var4 ^ 285L;
                 break L3;
               } else {
@@ -451,8 +449,8 @@ final class tm {
               }
             }
             L4: {
-              var6 = var4 << -533745407;
-              if ((var6 ^ -1L) <= -257L) {
+              var6 = var4 << 1;
+              if (var6 >= 256L) {
                 var6 = var6 ^ 285L;
                 break L4;
               } else {
@@ -461,7 +459,7 @@ final class tm {
             }
             L5: {
               var8 = var2 ^ var6;
-              var10 = var6 << -1206171391;
+              var10 = var6 << 1;
               if (256L <= var10) {
                 var10 = var10 ^ 285L;
                 break L5;
@@ -470,14 +468,14 @@ final class tm {
               }
             }
             var12 = var2 ^ var10;
-            field_i[0][var0] = mc.a(mc.a(mc.a(mc.a(var10 << 843660184, mc.a(var2 << -114468832, mc.a(mc.a(var2 << 1485928056, var2 << 1213978096), var6 << 1106545704))), var8 << 361289040), var4 << -262356600), var12);
+            field_i[0][var0] = mc.a(mc.a(mc.a(mc.a(var10 << 24, mc.a(var2 << 32, mc.a(mc.a(var2 << 56, var2 << 48), var6 << 40))), var8 << 16), var4 << 8), var12);
             var14 = 1;
             L6: while (true) {
               if (8 <= var14) {
                 var0++;
                 continue L0;
               } else {
-                field_i[var14][var0] = mc.a(field_i[var14 - 1][var0] >>> -1348208568, field_i[-1 + var14][var0] << -1798626376);
+                field_i[var14][var0] = mc.a(field_i[var14 - 1][var0] >>> 8, field_i[-1 + var14][var0] << 56);
                 var14++;
                 continue L6;
               }

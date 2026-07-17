@@ -13,40 +13,38 @@ final class da extends le {
     public static void c(byte param0) {
         field_j = null;
         field_l = null;
-        if (param0 <= 55) {
-          field_h = -12;
-          field_m = null;
-          field_i = null;
-          return;
-        } else {
-          field_m = null;
-          field_i = null;
-          return;
-        }
+        field_m = null;
+        field_i = null;
     }
 
     final static void d(byte param0) {
         am var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawn.field_J;
-        if (param0 != -48) {
-          return;
-        } else {
-          var1 = dp.field_e;
-          L0: while (true) {
-            if (!jh.a((byte) 103)) {
-              return;
-            } else {
-              var1.j(11, 8);
-              int fieldTemp$2 = var1.field_j + 1;
-              var1.field_j = var1.field_j + 1;
-              var2 = fieldTemp$2;
-              dn.a(var1, 84);
-              dp.field_e.d(-128, var1.field_j + -var2);
-              continue L0;
+        try {
+          L0: {
+            var1 = dp.field_e;
+            L1: while (true) {
+              if (!jh.a((byte) 103)) {
+                break L0;
+              } else {
+                var1.j(11, 8);
+                int fieldTemp$5 = var1.field_j + 1;
+                var1.field_j = var1.field_j + 1;
+                var2 = fieldTemp$5;
+                dn.a(var1, 84);
+                dp.field_e.d(-128, var1.field_j + -var2);
+                continue L1;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw sh.a((Throwable) (Object) var1_ref, "da.A(" + -48 + 41);
         }
     }
 

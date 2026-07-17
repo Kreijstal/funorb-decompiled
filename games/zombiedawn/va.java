@@ -23,7 +23,7 @@ final class va {
             L1: {
               int fieldTemp$8 = ((va) this).field_b + 1;
               ((va) this).field_b = ((va) this).field_b + 1;
-              if ((fieldTemp$8 ^ -1) >= (((va) this).field_f ^ -1)) {
+              if (~fieldTemp$8 >= ~((va) this).field_f) {
                 break L1;
               } else {
                 L2: {
@@ -34,7 +34,7 @@ final class va {
                       } else {
                         int fieldTemp$9 = ((va) this).field_g + 1;
                         ((va) this).field_g = ((va) this).field_g + 1;
-                        if ((fieldTemp$9 ^ -1) < (((va) this).field_a ^ -1)) {
+                        if (~fieldTemp$9 < ~((va) this).field_a) {
                           break L3;
                         } else {
                           break L4;
@@ -158,24 +158,24 @@ final class va {
                     if (m.field_z == 0) {
                       break L2;
                     } else {
-                      if ((var4 ^ -1) >= (m.field_z ^ -1)) {
+                      if (~var4 >= ~m.field_z) {
                         break L2;
                       } else {
                         break L1;
                       }
                     }
                   }
-                  if (-1 != (var3 ^ -1)) {
+                  if (var3 != 0) {
                     L3: {
                       var5 = var2_ref.c(-69);
-                      if (-1 < (var5 ^ -1)) {
+                      if (var5 < 0) {
                         break L3;
                       } else {
                         L4: {
                           if (0 == m.field_z) {
                             break L4;
                           } else {
-                            if ((var5 ^ -1) >= (m.field_z ^ -1)) {
+                            if (~var5 >= ~m.field_z) {
                               break L4;
                             } else {
                               break L3;
@@ -296,8 +296,8 @@ final class va {
             }
             var1_ref = fj.field_g;
             var2 = var1_ref.d((byte) -126);
-            if ((var2 ^ -1) != -1) {
-              if (-2 == (var2 ^ -1)) {
+            if (var2 != 0) {
+              if (var2 == 1) {
                 L2: {
                   if (sf.field_j == null) {
                     sf.field_j = new pf(128);
@@ -405,9 +405,9 @@ final class va {
                   return;
                 }
               } else {
-                if (-3 != (var2 ^ -1)) {
-                  if (-4 != (var2 ^ -1)) {
-                    if (-5 != (var2 ^ -1)) {
+                if (var2 != 2) {
+                  if (var2 != 3) {
+                    if (var2 != 4) {
                       ae.a((Throwable) null, 10331, "F1: " + cb.f(3));
                       p.a(param0 + -1544);
                       break L0;
@@ -432,7 +432,7 @@ final class va {
                   }
                 } else {
                   L13: {
-                    if (-2 == (w.field_b ^ -1)) {
+                    if (w.field_b == 1) {
                       w.field_b = 2;
                       break L13;
                     } else {
@@ -570,7 +570,7 @@ final class va {
                           break L5;
                         }
                       }
-                      if (-14 == (kg.field_i ^ -1)) {
+                      if (kg.field_i == 13) {
                         var2 = 1;
                         if (var7 == 0) {
                           continue L2;
@@ -603,7 +603,7 @@ final class va {
                     if (var1_int == 0) {
                       break L9;
                     } else {
-                      if (-1 >= (i.field_W.field_d ^ -1)) {
+                      if (i.field_W.field_d >= 0) {
                         break L8;
                       } else {
                         break L9;
@@ -627,7 +627,7 @@ final class va {
                 }
                 L10: {
                   var3 = qk.field_Kb[i.field_W.field_d];
-                  if ((var3 ^ -1) == -3) {
+                  if (var3 == 2) {
                     break L10;
                   } else {
                     if (var3 == 5) {
@@ -649,7 +649,7 @@ final class va {
                   } else {
                     var4 = -ge.field_f + pd.a(-22826);
                     var6 = (int)((10999L - var4) / 1000L);
-                    if (-1 > (var6 ^ -1)) {
+                    if (var6 > 0) {
                       break L11;
                     } else {
                       ti.a(5, 87, true);

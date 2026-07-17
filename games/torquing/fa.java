@@ -28,22 +28,28 @@ final class fa {
     }
 
     final static void a(int param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         og var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = Torquing.field_u;
-        var4 = (og) (Object) bh.field_c.b(param1 + 21386);
-        if (param1 == -21386) {
-          L0: while (true) {
-            if (var4 != null) {
-              jo.a(true, param0, var4);
-              var4 = (og) (Object) bh.field_c.f(param1 + -2673);
-              continue L0;
-            } else {
-              return;
+        try {
+          L0: {
+            var4 = (og) (Object) bh.field_c.b(0);
+            L1: while (true) {
+              if (var4 == null) {
+                break L0;
+              } else {
+                jo.a(true, param0, var4);
+                var4 = (og) (Object) bh.field_c.f(-24059);
+                continue L1;
+              }
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw rb.a((Throwable) (Object) var2, "fa.A(" + param0 + 44 + -21386 + 41);
         }
     }
 

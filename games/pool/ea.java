@@ -21,7 +21,7 @@ final class ea extends ma {
     static String field_m;
 
     final static void c(byte param0) {
-        int var1 = 27 / ((param0 - 59) / 62);
+        int var1 = -27;
         di.field_j = kn.field_e.j(-100);
         CharSequence var2 = (CharSequence) (Object) di.field_j;
         oj.field_y = hq.a(110, var2);
@@ -29,9 +29,6 @@ final class ea extends ma {
 
     public static void d(byte param0) {
         field_u = null;
-        if (param0 <= 115) {
-            return;
-        }
         field_m = null;
         field_r = null;
     }

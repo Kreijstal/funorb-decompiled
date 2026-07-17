@@ -66,17 +66,21 @@ final class nd {
     }
 
     final static void a(byte param0, String param1, String param2) {
-        if (!(null == hf.field_w)) {
-            hf.field_w.h(true);
+        try {
+            if (!(null == hf.field_w)) {
+                hf.field_w.h(true);
+            }
+            int var3_int = 94 / ((param0 - -93) / 33);
+            aa.field_a = new ca(param1, param2, false, true, true);
+            fi.field_t.b((fi) (Object) aa.field_a, (byte) -53);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "nd.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        int var3 = 94 / ((param0 - -93) / 33);
-        aa.field_a = new ca(param1, param2, false, true, true);
-        fi.field_t.b((fi) (Object) aa.field_a, (byte) -53);
     }
 
     final void a(byte param0, int param1) {
         int var3 = 0;
-        if (-1 >= (param1 ^ -1)) {
+        if (param1 >= 0) {
           if (param1 > ((nd) this).field_i) {
             throw new ArrayIndexOutOfBoundsException(param1);
           } else {

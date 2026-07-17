@@ -10,38 +10,32 @@ final class vk extends uh {
 
     final static void c(int param0) {
         en var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
-        if (param0 != 8) {
-          field_p = null;
-          var1 = s.field_b;
-          L0: while (true) {
-            if (!ac.a(24501)) {
-              return;
-            } else {
-              var1.i(19319, 8);
-              var1.field_i = var1.field_i + 1;
-              var2 = var1.field_i + 1;
-              ln.a(var1, (byte) -111);
-              s.field_b.a(-var2 + var1.field_i, -19720);
-              continue L0;
+        try {
+          L0: {
+            var1 = s.field_b;
+            L1: while (true) {
+              if (!ac.a(24501)) {
+                break L0;
+              } else {
+                var1.i(19319, 8);
+                int fieldTemp$5 = var1.field_i + 1;
+                var1.field_i = var1.field_i + 1;
+                var2 = fieldTemp$5;
+                ln.a(var1, (byte) -111);
+                s.field_b.a(-var2 + var1.field_i, -19720);
+                continue L1;
+              }
             }
           }
-        } else {
-          var1 = s.field_b;
-          L1: while (true) {
-            if (!ac.a(24501)) {
-              return;
-            } else {
-              var1.i(19319, 8);
-              var1.field_i = var1.field_i + 1;
-              var2 = var1.field_i + 1;
-              ln.a(var1, (byte) -111);
-              s.field_b.a(-var2 + var1.field_i, -19720);
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw wg.a((Throwable) (Object) var1_ref, "vk.D(" + 8 + 41);
         }
     }
 
@@ -55,7 +49,7 @@ final class vk extends uh {
 
     public static void d(int param0) {
         field_p = null;
-        int var1 = 117 / ((72 - param0) / 52);
+        int var1 = -117;
     }
 
     static {

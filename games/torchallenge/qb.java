@@ -13,31 +13,76 @@ final class qb {
     static int field_h;
 
     final static void a(byte param0, ka[] param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
-        var2 = 0;
-        if (param0 <= 0) {
-          field_i = 2;
-          L0: while (true) {
-            if (param1.length > var2) {
-              param1[var2].h();
-              var2++;
-              continue L0;
-            } else {
-              return;
+        try {
+          L0: {
+            L1: {
+              var2_int = 0;
+              if (param0 > 0) {
+                break L1;
+              } else {
+                field_i = 2;
+                break L1;
+              }
+            }
+            L2: while (true) {
+              if (param1.length <= var2_int) {
+                break L0;
+              } else {
+                param1[var2_int].h();
+                var2_int++;
+                continue L2;
+              }
             }
           }
-        } else {
-          L1: while (true) {
-            if (param1.length > var2) {
-              param1[var2].h();
-              var2++;
-              continue L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_1 = new StringBuilder().append("qb.D(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
             } else {
-              return;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
             }
           }
+          throw oj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -54,7 +99,7 @@ final class qb {
           var8 = -(param3 / 32) + param4;
           var9 = -var7 + 32 * var8;
           var10 = 328;
-          if (var9 <= -1) {
+          if (var9 >= 0) {
             var11 = 1;
             break L0;
           } else {
@@ -64,7 +109,7 @@ final class qb {
         }
         L1: {
           var9 = var9 * var11;
-          if (-1025 >= var9) {
+          if (var9 <= 1024) {
             break L1;
           } else {
             if (var9 < 2048) {
@@ -77,7 +122,7 @@ final class qb {
         }
         if (2048 <= var9) {
           L2: {
-            // wide iinc 9 -2048
+            var9 -= 2048;
             if (var9 <= 1024) {
               break L2;
             } else {
@@ -85,31 +130,17 @@ final class qb {
               break L2;
             }
           }
-          var12 = 320 + (fj.a(1870096848, wi.field_a[var9], var10 << -2140919664) >> -920221616) * var11;
+          var12 = 320 + (fj.a(1870096848, wi.field_a[var9], var10 << 16) >> 16) * var11;
           var13 = param5 * 64 / 256 + (param1 * 64 + -param2);
           dl.field_n[1] = var12;
           dl.field_n[0] = var12;
-          if (param6 != -2140919664) {
-            field_d = -116;
-            dl.field_n[2] = var13;
-            return;
-          } else {
-            dl.field_n[2] = var13;
-            return;
-          }
+          dl.field_n[2] = var13;
+          return;
         } else {
-          L3: {
-            var12 = 320 + (fj.a(1870096848, wi.field_a[var9], var10 << -2140919664) >> -920221616) * var11;
-            var13 = param5 * 64 / 256 + (param1 * 64 + -param2);
-            dl.field_n[1] = var12;
-            dl.field_n[0] = var12;
-            if (param6 == -2140919664) {
-              break L3;
-            } else {
-              field_d = -116;
-              break L3;
-            }
-          }
+          var12 = 320 + (fj.a(1870096848, wi.field_a[var9], var10 << 16) >> 16) * var11;
+          var13 = param5 * 64 / 256 + (param1 * 64 + -param2);
+          dl.field_n[1] = var12;
+          dl.field_n[0] = var12;
           dl.field_n[2] = var13;
           return;
         }

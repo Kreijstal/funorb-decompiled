@@ -42,7 +42,7 @@ final class bg implements nl {
     final static void a(int param0, byte param1, boolean param2) {
         ml var3 = null;
         jb var4 = null;
-        String var5_ref = null;
+        String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         if (param1 <= 43) {
@@ -52,8 +52,8 @@ final class bg implements nl {
             if (var3 != null) {
               pk.field_b.a(false, (byte) -110);
               var4 = pk.field_b;
-              var5_ref = dg.field_I;
-              var4.field_j.a((byte) -118, var5_ref, 5);
+              var5_ref_String = dg.field_I;
+              var4.field_j.a((byte) -118, var5_ref_String, 5);
               var4 = pk.field_b;
               var5 = vb.field_f;
               var6 = ka.field_t;
@@ -71,8 +71,8 @@ final class bg implements nl {
             if (var3 != null) {
               pk.field_b.a(false, (byte) -110);
               var4 = pk.field_b;
-              var5_ref = dg.field_I;
-              var4.field_j.a((byte) -118, var5_ref, 5);
+              var5_ref_String = dg.field_I;
+              var4.field_j.a((byte) -118, var5_ref_String, 5);
               var4 = pk.field_b;
               var5 = vb.field_f;
               var6 = ka.field_t;
@@ -88,6 +88,7 @@ final class bg implements nl {
     }
 
     public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -97,87 +98,114 @@ final class bg implements nl {
         Object var14 = null;
         ud var15 = null;
         cf stackIn_3_0 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
         cf stackOut_2_0 = null;
         Object stackOut_1_0 = null;
-        L0: {
-          if (param4 instanceof ud) {
-            stackOut_2_0 = (cf) param4;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = null;
-            stackIn_3_0 = (cf) (Object) stackOut_1_0;
-            break L0;
-          }
-        }
-        L1: {
-          var15 = (ud) (Object) stackIn_3_0;
-          oo.e(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, ((bg) this).field_j);
-          if (var15 == null) {
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        var7 = var15.field_R + (param4.field_y + param3);
-        var8 = param1 - -param4.field_i + var15.field_bb;
-        oo.d(var7, var8, var15.field_X, ((bg) this).field_f);
-        if (param2 != -15112) {
-          L2: {
-            var14 = null;
-            ((bg) this).a(true, 88, 109, -117, (cf) null);
-            if (-1 != var15.field_W) {
-              var9 = 3.141592653589793 * (double)var15.field_W * 2.0 / (double)var15.field_U;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param4 instanceof ud) {
+                stackOut_2_0 = (cf) param4;
+                stackIn_3_0 = stackOut_2_0;
+                break L1;
+              } else {
+                stackOut_1_0 = null;
+                stackIn_3_0 = (cf) (Object) stackOut_1_0;
+                break L1;
+              }
+            }
+            L2: {
+              var15 = (ud) (Object) stackIn_3_0;
+              oo.e(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, ((bg) this).field_j);
+              if (var15 == null) {
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              var7 = var15.field_R + (param4.field_y + param3);
+              var8 = param1 - -param4.field_i + var15.field_bb;
+              oo.d(var7, var8, var15.field_X, ((bg) this).field_f);
+              if (param2 == -15112) {
+                break L3;
+              } else {
+                var14 = null;
+                ((bg) this).a(true, 88, 109, -117, (cf) null);
+                break L3;
+              }
+            }
+            L4: {
+              if (-1 != var15.field_W) {
+                var9 = 3.141592653589793 * (double)var15.field_W * 2.0 / (double)var15.field_U;
+                var11 = (int)(-Math.sin(var9) * (double)var15.field_X);
+                var12 = (int)(Math.cos(var9) * (double)var15.field_X);
+                oo.d(var11 + var7, var12 + var8, 1, ((bg) this).field_b);
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            L5: {
+              oo.d(var7, var8, 2, 1);
+              var9 = 3.141592653589793 * (double)var15.field_T * 2.0 / (double)var15.field_U;
               var11 = (int)(-Math.sin(var9) * (double)var15.field_X);
               var12 = (int)(Math.cos(var9) * (double)var15.field_X);
-              oo.d(var11 + var7, var12 + var8, 1, ((bg) this).field_b);
-              break L2;
+              oo.g(var7, var8, var11 + var7, var8 - -var12, 1);
+              if (((bg) this).field_g == null) {
+                break L5;
+              } else {
+                var13 = ((bg) this).field_h + (var15.field_X + var15.field_R);
+                int discarded$1 = ((bg) this).field_g.a(param4.field_j, var13 + (param4.field_y + param3), ((bg) this).field_l + (param1 - -param4.field_i), param4.field_n + -((bg) this).field_h + -var13, -(((bg) this).field_h << 1) + param4.field_w, ((bg) this).field_c, ((bg) this).field_i, 1, 1, 0);
+                break L5;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var6 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_1 = new StringBuilder().append("bg.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param4 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L6;
             } else {
-              break L2;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L6;
             }
           }
-          L3: {
-            oo.d(var7, var8, 2, 1);
-            var9 = 3.141592653589793 * (double)var15.field_T * 2.0 / (double)var15.field_U;
-            var11 = (int)(-Math.sin(var9) * (double)var15.field_X);
-            var12 = (int)(Math.cos(var9) * (double)var15.field_X);
-            oo.g(var7, var8, var11 + var7, var8 - -var12, 1);
-            if (((bg) this).field_g == null) {
-              break L3;
-            } else {
-              var13 = ((bg) this).field_h + (var15.field_X + var15.field_R);
-              int discarded$2 = ((bg) this).field_g.a(param4.field_j, var13 + (param4.field_y + param3), ((bg) this).field_l + (param1 - -param4.field_i), param4.field_n + -((bg) this).field_h + -var13, -(((bg) this).field_h << 1287508609) + param4.field_w, ((bg) this).field_c, ((bg) this).field_i, 1, 1, 0);
-              break L3;
-            }
-          }
-          return;
-        } else {
-          L4: {
-            if (-1 != var15.field_W) {
-              var9 = 3.141592653589793 * (double)var15.field_W * 2.0 / (double)var15.field_U;
-              var11 = (int)(-Math.sin(var9) * (double)var15.field_X);
-              var12 = (int)(Math.cos(var9) * (double)var15.field_X);
-              oo.d(var11 + var7, var12 + var8, 1, ((bg) this).field_b);
-              break L4;
-            } else {
-              break L4;
-            }
-          }
-          L5: {
-            oo.d(var7, var8, 2, 1);
-            var9 = 3.141592653589793 * (double)var15.field_T * 2.0 / (double)var15.field_U;
-            var11 = (int)(-Math.sin(var9) * (double)var15.field_X);
-            var12 = (int)(Math.cos(var9) * (double)var15.field_X);
-            oo.g(var7, var8, var11 + var7, var8 - -var12, 1);
-            if (((bg) this).field_g == null) {
-              break L5;
-            } else {
-              var13 = ((bg) this).field_h + (var15.field_X + var15.field_R);
-              int discarded$3 = ((bg) this).field_g.a(param4.field_j, var13 + (param4.field_y + param3), ((bg) this).field_l + (param1 - -param4.field_i), param4.field_n + -((bg) this).field_h + -var13, -(((bg) this).field_h << 1287508609) + param4.field_w, ((bg) this).field_c, ((bg) this).field_i, 1, 1, 0);
-              break L5;
-            }
-          }
-          return;
+          throw fa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
     }
 
@@ -219,14 +247,18 @@ final class bg implements nl {
     }
 
     bg(fm param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        ((bg) this).field_c = param3;
-        ((bg) this).field_f = param5;
-        ((bg) this).field_h = param1;
-        ((bg) this).field_j = param7;
-        ((bg) this).field_i = param4;
-        ((bg) this).field_g = param0;
-        ((bg) this).field_l = param2;
-        ((bg) this).field_b = param6;
+        try {
+            ((bg) this).field_c = param3;
+            ((bg) this).field_f = param5;
+            ((bg) this).field_h = param1;
+            ((bg) this).field_j = param7;
+            ((bg) this).field_i = param4;
+            ((bg) this).field_g = param0;
+            ((bg) this).field_l = param2;
+            ((bg) this).field_b = param6;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "bg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+        }
     }
 
     static {

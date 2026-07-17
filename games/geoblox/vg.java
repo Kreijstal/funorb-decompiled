@@ -15,26 +15,19 @@ final class vg {
 
     final void a(long param0, int param1, rc param2) {
         rc var5 = null;
-        int var6 = 0;
-        if (null != param2.field_l) {
-          param2.a((byte) 65);
-          var6 = -92 % ((param1 - 34) / 51);
-          var5 = ((vg) this).field_g[(int)(param0 & (long)(-1 + ((vg) this).field_h))];
-          param2.field_k = var5;
-          param2.field_l = var5.field_l;
-          param2.field_l.field_k = param2;
-          param2.field_i = param0;
-          param2.field_k.field_l = param2;
-          return;
-        } else {
-          var6 = -92 % ((param1 - 34) / 51);
-          var5 = ((vg) this).field_g[(int)(param0 & (long)(-1 + ((vg) this).field_h))];
-          param2.field_k = var5;
-          param2.field_l = var5.field_l;
-          param2.field_l.field_k = param2;
-          param2.field_i = param0;
-          param2.field_k.field_l = param2;
-          return;
+        try {
+            if (null != param2.field_l) {
+                param2.a((byte) 65);
+            }
+            int var6 = -92 % ((param1 - 34) / 51);
+            var5 = ((vg) this).field_g[(int)(param0 & (long)(-1 + ((vg) this).field_h))];
+            param2.field_k = var5;
+            param2.field_l = var5.field_l;
+            param2.field_l.field_k = param2;
+            param2.field_i = param0;
+            param2.field_k.field_l = param2;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "vg.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -111,9 +104,6 @@ final class vg {
 
     public static void a(boolean param0) {
         field_i = null;
-        if (!param0) {
-            return;
-        }
         field_f = null;
         field_d = null;
         field_j = null;
@@ -128,13 +118,15 @@ final class vg {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new rc();
-            ((vg) this).field_g[var2] = new rc();
+            rc dupTemp$2 = new rc();
+            var3 = dupTemp$2;
+            ((vg) this).field_g[var2] = dupTemp$2;
             var3.field_k = var3;
             var3.field_l = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

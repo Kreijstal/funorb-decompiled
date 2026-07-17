@@ -16,7 +16,7 @@ final class hb {
           return var3;
         } else {
           L0: {
-            if (-32769 < (param1 ^ -1)) {
+            if (param1 < 32768) {
               var4 = ((hb) this).field_a.a(false, 1, param1);
               break L0;
             } else {
@@ -52,7 +52,7 @@ final class hb {
 
     public static void a(int param0) {
         field_e = null;
-        int var1 = 97 / ((-10 - param0) / 39);
+        int var1 = 48;
     }
 
     final static ea a(int param0, int param1, int param2) {

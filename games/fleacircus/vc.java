@@ -41,34 +41,20 @@ final class vc {
     }
 
     final void b(boolean param0, lh param1) {
-        Object var4 = null;
-        if (param1.field_a == null) {
-          param1.field_a = ((vc) this).field_e;
-          param1.field_h = ((vc) this).field_e.field_h;
-          param1.field_a.field_h = param1;
-          if (!param0) {
-            var4 = null;
-            ((vc) this).a(true, (lh) null);
+        try {
+            if (param1.field_a != null) {
+                param1.c(-1);
+            }
+            param1.field_a = ((vc) this).field_e;
+            param1.field_h = ((vc) this).field_e.field_h;
+            param1.field_a.field_h = param1;
+            if (!param0) {
+                Object var4 = null;
+                ((vc) this).a(true, (lh) null);
+            }
             param1.field_h.field_a = param1;
-            return;
-          } else {
-            param1.field_h.field_a = param1;
-            return;
-          }
-        } else {
-          param1.c(-1);
-          param1.field_a = ((vc) this).field_e;
-          param1.field_h = ((vc) this).field_e.field_h;
-          param1.field_a.field_h = param1;
-          if (param0) {
-            param1.field_h.field_a = param1;
-            return;
-          } else {
-            var4 = null;
-            ((vc) this).a(true, (lh) null);
-            param1.field_h.field_a = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "vc.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -108,6 +94,7 @@ final class vc {
     }
 
     final static void a(byte param0, rh param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -116,39 +103,88 @@ final class vc {
         int var8 = 0;
         ih var9 = null;
         ih var10 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var8 = fleas.field_A ? 1 : 0;
-        var9 = new ih(param1.a(0, "", "logo.fo3d"));
-        var10 = var9;
-        var3 = var10.e(false);
-        var10.k(8);
-        fc.field_a = fleas.a(var10, -6383);
-        ij.field_F = new si[var3];
-        gm.field_kb = new int[var3][];
-        var4 = 0;
-        L0: while (true) {
-          if (var3 <= var4) {
-            var10.m(8);
-            var4 = 17 % ((param0 - 75) / 44);
-            var5 = 0;
+        try {
+          L0: {
+            var9 = new ih(param1.a(0, "", "logo.fo3d"));
+            var10 = var9;
+            var3 = var10.e(false);
+            var10.k(8);
+            fc.field_a = fleas.a(var10, -6383);
+            ij.field_F = new si[var3];
+            gm.field_kb = new int[var3][];
+            var4 = 0;
             L1: while (true) {
-              if (var3 > var5) {
-                var6 = ij.field_F[var5];
-                var6.a(6, 1, 6, 6, 0);
-                var6.b(-23443);
-                var7 = new int[]{var6.field_m - -var6.field_B >> -547659167, var6.field_e + var6.field_k >> -1483446015, var6.field_A + var6.field_b >> -1092895903};
-                gm.field_kb[var5] = var7;
-                var6.a(-var7[1], -var7[0], -var7[2], (byte) -82);
-                var5++;
-                continue L1;
+              if (var3 <= var4) {
+                var10.m(8);
+                var4 = 17 % ((param0 - 75) / 44);
+                var5 = 0;
+                L2: while (true) {
+                  if (var3 <= var5) {
+                    break L0;
+                  } else {
+                    var6 = ij.field_F[var5];
+                    var6.a(6, 1, 6, 6, 0);
+                    var6.b(-23443);
+                    var7 = new int[]{var6.field_m - -var6.field_B >> 1, var6.field_e + var6.field_k >> 1, var6.field_A + var6.field_b >> 1};
+                    gm.field_kb[var5] = var7;
+                    var6.a(-var7[1], -var7[0], -var7[2], (byte) -82);
+                    var5++;
+                    continue L2;
+                  }
+                }
               } else {
-                return;
+                ij.field_F[var4] = d.a(-124, var9);
+                var4++;
+                continue L1;
               }
             }
-          } else {
-            ij.field_F[var4] = d.a(-124, var9);
-            var4++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_1 = new StringBuilder().append("vc.H(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw pf.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
@@ -174,68 +210,69 @@ final class vc {
     }
 
     final void a(boolean param0, lh param1) {
-        if (null == param1.field_a) {
-          if (param0) {
-            field_b = false;
+        try {
+            if (null != param1.field_a) {
+                param1.c(-1);
+            }
+            if (param0) {
+                field_b = false;
+            }
             param1.field_h = ((vc) this).field_e;
             param1.field_a = ((vc) this).field_e.field_a;
             param1.field_a.field_h = param1;
             param1.field_h.field_a = param1;
-            return;
-          } else {
-            param1.field_h = ((vc) this).field_e;
-            param1.field_a = ((vc) this).field_e.field_a;
-            param1.field_a.field_h = param1;
-            param1.field_h.field_a = param1;
-            return;
-          }
-        } else {
-          param1.c(-1);
-          if (!param0) {
-            param1.field_h = ((vc) this).field_e;
-            param1.field_a = ((vc) this).field_e.field_a;
-            param1.field_a.field_h = param1;
-            param1.field_h.field_a = param1;
-            return;
-          } else {
-            field_b = false;
-            param1.field_h = ((vc) this).field_e;
-            param1.field_a = ((vc) this).field_e.field_a;
-            param1.field_a.field_h = param1;
-            param1.field_h.field_a = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "vc.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
-        L0: {
-          var4 = fleas.field_A ? 1 : 0;
-          if (param2 >= param0) {
-            break L0;
-          } else {
-            var3 = param2;
-            param2 = param0;
-            param0 = var3;
-            break L0;
-          }
-        }
-        L1: while (true) {
-          if (param0 == 0) {
-            if (param1 != -1) {
-              return -66;
-            } else {
-              return param2;
+        int stackIn_7_0 = 0;
+        int stackIn_9_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_8_0 = 0;
+        int stackOut_6_0 = 0;
+        var4 = fleas.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param2 >= param0) {
+                break L1;
+              } else {
+                var3_int = param2;
+                param2 = param0;
+                param0 = var3_int;
+                break L1;
+              }
             }
-          } else {
-            var3 = param2 % param0;
-            param2 = param0;
-            param0 = var3;
-            continue L1;
+            L2: while (true) {
+              if (param0 == 0) {
+                if (param1 == -1) {
+                  stackOut_8_0 = param2;
+                  stackIn_9_0 = stackOut_8_0;
+                  break L0;
+                } else {
+                  stackOut_6_0 = -66;
+                  stackIn_7_0 = stackOut_6_0;
+                  return stackIn_7_0;
+                }
+              } else {
+                var3_int = param2 % param0;
+                param2 = param0;
+                param0 = var3_int;
+                continue L2;
+              }
+            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var3, "vc.B(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_9_0;
     }
 
     final lh e(int param0) {
@@ -319,10 +356,6 @@ final class vc {
     }
 
     public static void d(int param0) {
-        field_g = null;
-        if (param0 == -29943) {
-            return;
-        }
         field_g = null;
     }
 

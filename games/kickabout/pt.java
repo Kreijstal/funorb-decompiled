@@ -53,7 +53,7 @@ final class pt extends gn {
                 }
               }
               if (((pt) this).field_f == param0.f((byte) 37)) {
-                if ((((pt) this).field_h ^ -1) == (param0.f(3) ^ -1)) {
+                if (~((pt) this).field_h == ~param0.f(3)) {
                   if (((pt) this).field_g != param0.b(6)) {
                     stackOut_15_0 = 0;
                     stackIn_16_0 = stackOut_15_0;
@@ -329,7 +329,7 @@ final class pt extends gn {
           L0: {
             L1: {
               param0.a(124, 1);
-              param0.a(109, ((pt) this).field_h << 193744548 | ((pt) this).field_f);
+              param0.a(109, ((pt) this).field_h << 4 | ((pt) this).field_f);
               if (param1 == 5) {
                 break L1;
               } else {
@@ -415,7 +415,7 @@ final class pt extends gn {
               int discarded$5 = param0.h((byte) -125);
               var3_int = param0.h((byte) -108);
               ((pt) this).field_f = var3_int & 15;
-              ((pt) this).field_h = (251 & var3_int) >> 247641476;
+              ((pt) this).field_h = (251 & var3_int) >> 4;
               ((pt) this).field_g = param0.k(4);
               ((pt) this).field_j = param0.i((byte) -124);
               if (((pt) this).field_k == null) {

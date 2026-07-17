@@ -13,24 +13,20 @@ final class qc {
     }
 
     final static void a(int param0) {
-        if (ci.field_f) {
-          tb.field_c = true;
-          ae.a(true, (byte) 119);
-          if (param0 != 500) {
-            field_b = 26;
-            bh.field_t = 0;
-            return;
-          } else {
-            bh.field_t = 0;
-            return;
-          }
-        } else {
-          throw new IllegalStateException();
+        if (!ci.field_f) {
+            throw new IllegalStateException();
         }
+        tb.field_c = true;
+        ae.a(true, (byte) 119);
+        bh.field_t = 0;
     }
 
     qc(dd[] param0) {
-        ((qc) this).field_a = param0;
+        try {
+            ((qc) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "qc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -12,9 +12,6 @@ final class ci extends qa {
 
     public static void i(int param0) {
         field_K = null;
-        if (param0 > -45) {
-            field_W = 31;
-        }
     }
 
     final String e(int param0) {
@@ -27,9 +24,13 @@ final class ci extends qa {
 
     ci(qi param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, (cg) (Object) pe.a(2147483647));
-        ((ci) this).field_V = param0;
-        ((ci) this).field_Y = param1;
-        ((ci) this).a(param3, param5, param2, 16535, param4);
+        try {
+            ((ci) this).field_V = param0;
+            ((ci) this).field_Y = param1;
+            ((ci) this).a(param3, param5, param2, 16535, param4);
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "ci.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     final void a(vg param0, int param1, int param2, byte param3) {
@@ -37,7 +38,11 @@ final class ci extends qa {
         if (param3 > -127) {
             return;
         }
-        super.a(param0, param1, param2, (byte) -128);
+        try {
+            super.a(param0, param1, param2, (byte) -128);
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "ci.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
@@ -97,7 +102,7 @@ final class ci extends qa {
                 var6 = ((ci) this).field_V.a(-12317);
                 var41 = (va) (Object) ((ci) this).field_l;
                 var9 = param0 - -((ci) this).field_o;
-                var10 = var41.a((vg) this, param3, (byte) -121) + (var41.a((vg) this, true).b(20111) >> -1489986879);
+                var10 = var41.a((vg) this, param3, (byte) -121) + (var41.a((vg) this, true).b(20111) >> 1);
                 if (ai.field_A == var6) {
                   break L1;
                 } else {
@@ -107,14 +112,14 @@ final class ci extends qa {
                     if (var6 != u.field_b) {
                       if (ce.field_e == var6) {
                         var34 = ja.field_n[1];
-                        var34.a(var9, var10 - (var34.field_w >> -1369675327), 256);
+                        var34.a(var9, var10 - (var34.field_w >> 1), 256);
                         return;
                       } else {
                         return;
                       }
                     } else {
                       var35 = ja.field_n[2];
-                      var35.a(var9, var10 - (var35.field_w >> 1549637409), 256);
+                      var35.a(var9, var10 - (var35.field_w >> 1), 256);
                       return;
                     }
                   }
@@ -123,8 +128,8 @@ final class ci extends qa {
               L2: {
                 var36 = ja.field_n[0];
                 var16 = var36;
-                var11 = var36.field_z << 1009571841;
-                var12 = var36.field_C << 2001067457;
+                var11 = var36.field_z << 1;
+                var12 = var36.field_C << 1;
                 if (null == ((ci) this).field_Z) {
                   break L2;
                 } else {
@@ -134,16 +139,16 @@ final class ci extends qa {
                     if (((ci) this).field_Z.field_w >= var12) {
                       aj.a(((ci) this).field_Z, (byte) 83);
                       wj.c();
-                      var36.b(112, 144, var36.field_z << -1038284572, var36.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+                      var36.b(112, 144, var36.field_z << 4, var36.field_C << 4, -((ci) this).field_X << 10, 4096);
                       cl.d((byte) -94);
-                      ((ci) this).field_Z.a(-(var36.field_z >> 149902305) + var9, -var36.field_C + var10, 256);
+                      ((ci) this).field_Z.a(-(var36.field_z >> 1) + var9, -var36.field_C + var10, 256);
                       return;
                     } else {
                       ((ci) this).field_Z = new nh(var11, var12);
                       aj.a(((ci) this).field_Z, (byte) 85);
-                      var36.b(112, 144, var36.field_z << -1038284572, var36.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+                      var36.b(112, 144, var36.field_z << 4, var36.field_C << 4, -((ci) this).field_X << 10, 4096);
                       cl.d((byte) -94);
-                      ((ci) this).field_Z.a(-(var36.field_z >> 149902305) + var9, -var36.field_C + var10, 256);
+                      ((ci) this).field_Z.a(-(var36.field_z >> 1) + var9, -var36.field_C + var10, 256);
                       return;
                     }
                   }
@@ -151,9 +156,9 @@ final class ci extends qa {
               }
               ((ci) this).field_Z = new nh(var11, var12);
               aj.a(((ci) this).field_Z, (byte) 85);
-              var36.b(112, 144, var36.field_z << -1038284572, var36.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+              var36.b(112, 144, var36.field_z << 4, var36.field_C << 4, -((ci) this).field_X << 10, 4096);
               cl.d((byte) -94);
-              ((ci) this).field_Z.a(-(var36.field_z >> 149902305) + var9, -var36.field_C + var10, 256);
+              ((ci) this).field_Z.a(-(var36.field_z >> 1) + var9, -var36.field_C + var10, 256);
               return;
             } else {
               L3: {
@@ -170,7 +175,7 @@ final class ci extends qa {
                 var6 = ((ci) this).field_V.a(-12317);
                 var40 = (va) (Object) ((ci) this).field_l;
                 var9 = param0 - -((ci) this).field_o;
-                var10 = var40.a((vg) this, param3, (byte) -121) + (var40.a((vg) this, true).b(20111) >> -1489986879);
+                var10 = var40.a((vg) this, param3, (byte) -121) + (var40.a((vg) this, true).b(20111) >> 1);
                 if (ai.field_A == var6) {
                   break L4;
                 } else {
@@ -180,53 +185,53 @@ final class ci extends qa {
                     if (var6 != u.field_b) {
                       if (ce.field_e == var6) {
                         var29 = ja.field_n[1];
-                        var29.a(var9, var10 - (var29.field_w >> -1369675327), 256);
+                        var29.a(var9, var10 - (var29.field_w >> 1), 256);
                         return;
                       } else {
                         return;
                       }
                     } else {
                       var30 = ja.field_n[2];
-                      var30.a(var9, var10 - (var30.field_w >> 1549637409), 256);
+                      var30.a(var9, var10 - (var30.field_w >> 1), 256);
                       return;
                     }
                   }
                 }
               }
               var31 = ja.field_n[0];
-              var11 = var31.field_z << 1009571841;
-              var12 = var31.field_C << 2001067457;
+              var11 = var31.field_z << 1;
+              var12 = var31.field_C << 1;
               if (null != ((ci) this).field_Z) {
                 if (((ci) this).field_Z.field_y >= var11) {
                   if (((ci) this).field_Z.field_w < var12) {
                     ((ci) this).field_Z = new nh(var11, var12);
                     aj.a(((ci) this).field_Z, (byte) 85);
-                    var31.b(112, 144, var31.field_z << -1038284572, var31.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+                    var31.b(112, 144, var31.field_z << 4, var31.field_C << 4, -((ci) this).field_X << 10, 4096);
                     cl.d((byte) -94);
-                    ((ci) this).field_Z.a(-(var31.field_z >> 149902305) + var9, -var31.field_C + var10, 256);
+                    ((ci) this).field_Z.a(-(var31.field_z >> 1) + var9, -var31.field_C + var10, 256);
                     return;
                   } else {
                     aj.a(((ci) this).field_Z, (byte) 83);
                     wj.c();
-                    var31.b(112, 144, var31.field_z << -1038284572, var31.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+                    var31.b(112, 144, var31.field_z << 4, var31.field_C << 4, -((ci) this).field_X << 10, 4096);
                     cl.d((byte) -94);
-                    ((ci) this).field_Z.a(-(var31.field_z >> 149902305) + var9, -var31.field_C + var10, 256);
+                    ((ci) this).field_Z.a(-(var31.field_z >> 1) + var9, -var31.field_C + var10, 256);
                     return;
                   }
                 } else {
                   ((ci) this).field_Z = new nh(var11, var12);
                   aj.a(((ci) this).field_Z, (byte) 85);
-                  var31.b(112, 144, var31.field_z << -1038284572, var31.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+                  var31.b(112, 144, var31.field_z << 4, var31.field_C << 4, -((ci) this).field_X << 10, 4096);
                   cl.d((byte) -94);
-                  ((ci) this).field_Z.a(-(var31.field_z >> 149902305) + var9, -var31.field_C + var10, 256);
+                  ((ci) this).field_Z.a(-(var31.field_z >> 1) + var9, -var31.field_C + var10, 256);
                   return;
                 }
               } else {
                 ((ci) this).field_Z = new nh(var11, var12);
                 aj.a(((ci) this).field_Z, (byte) 85);
-                var31.b(112, 144, var31.field_z << -1038284572, var31.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+                var31.b(112, 144, var31.field_z << 4, var31.field_C << 4, -((ci) this).field_X << 10, 4096);
                 cl.d((byte) -94);
-                ((ci) this).field_Z.a(-(var31.field_z >> 149902305) + var9, -var31.field_C + var10, 256);
+                ((ci) this).field_Z.a(-(var31.field_z >> 1) + var9, -var31.field_C + var10, 256);
                 return;
               }
             }
@@ -246,7 +251,7 @@ final class ci extends qa {
               var6 = ((ci) this).field_V.a(-12317);
               var39 = (va) (Object) ((ci) this).field_l;
               var9 = param0 - -((ci) this).field_o;
-              var10 = var39.a((vg) this, param3, (byte) -121) + (var39.a((vg) this, true).b(20111) >> -1489986879);
+              var10 = var39.a((vg) this, param3, (byte) -121) + (var39.a((vg) this, true).b(20111) >> 1);
               if (ai.field_A == var6) {
                 break L6;
               } else {
@@ -258,51 +263,51 @@ final class ci extends qa {
                       return;
                     } else {
                       var24 = ja.field_n[1];
-                      var24.a(var9, var10 - (var24.field_w >> -1369675327), 256);
+                      var24.a(var9, var10 - (var24.field_w >> 1), 256);
                       return;
                     }
                   } else {
                     var25 = ja.field_n[2];
-                    var25.a(var9, var10 - (var25.field_w >> 1549637409), 256);
+                    var25.a(var9, var10 - (var25.field_w >> 1), 256);
                     return;
                   }
                 }
               }
             }
             var26 = ja.field_n[0];
-            var11 = var26.field_z << 1009571841;
-            var12 = var26.field_C << 2001067457;
+            var11 = var26.field_z << 1;
+            var12 = var26.field_C << 1;
             if (null != ((ci) this).field_Z) {
               if (((ci) this).field_Z.field_y >= var11) {
                 if (((ci) this).field_Z.field_w >= var12) {
                   aj.a(((ci) this).field_Z, (byte) 83);
                   wj.c();
-                  var26.b(112, 144, var26.field_z << -1038284572, var26.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+                  var26.b(112, 144, var26.field_z << 4, var26.field_C << 4, -((ci) this).field_X << 10, 4096);
                   cl.d((byte) -94);
-                  ((ci) this).field_Z.a(-(var26.field_z >> 149902305) + var9, -var26.field_C + var10, 256);
+                  ((ci) this).field_Z.a(-(var26.field_z >> 1) + var9, -var26.field_C + var10, 256);
                   return;
                 } else {
                   ((ci) this).field_Z = new nh(var11, var12);
                   aj.a(((ci) this).field_Z, (byte) 85);
-                  var26.b(112, 144, var26.field_z << -1038284572, var26.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+                  var26.b(112, 144, var26.field_z << 4, var26.field_C << 4, -((ci) this).field_X << 10, 4096);
                   cl.d((byte) -94);
-                  ((ci) this).field_Z.a(-(var26.field_z >> 149902305) + var9, -var26.field_C + var10, 256);
+                  ((ci) this).field_Z.a(-(var26.field_z >> 1) + var9, -var26.field_C + var10, 256);
                   return;
                 }
               } else {
                 ((ci) this).field_Z = new nh(var11, var12);
                 aj.a(((ci) this).field_Z, (byte) 85);
-                var26.b(112, 144, var26.field_z << -1038284572, var26.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+                var26.b(112, 144, var26.field_z << 4, var26.field_C << 4, -((ci) this).field_X << 10, 4096);
                 cl.d((byte) -94);
-                ((ci) this).field_Z.a(-(var26.field_z >> 149902305) + var9, -var26.field_C + var10, 256);
+                ((ci) this).field_Z.a(-(var26.field_z >> 1) + var9, -var26.field_C + var10, 256);
                 return;
               }
             } else {
               ((ci) this).field_Z = new nh(var11, var12);
               aj.a(((ci) this).field_Z, (byte) 85);
-              var26.b(112, 144, var26.field_z << -1038284572, var26.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+              var26.b(112, 144, var26.field_z << 4, var26.field_C << 4, -((ci) this).field_X << 10, 4096);
               cl.d((byte) -94);
-              ((ci) this).field_Z.a(-(var26.field_z >> 149902305) + var9, -var26.field_C + var10, 256);
+              ((ci) this).field_Z.a(-(var26.field_z >> 1) + var9, -var26.field_C + var10, 256);
               return;
             }
           }
@@ -322,7 +327,7 @@ final class ci extends qa {
             var6 = ((ci) this).field_V.a(-12317);
             var38 = (va) (Object) ((ci) this).field_l;
             var9 = param0 - -((ci) this).field_o;
-            var10 = var38.a((vg) this, param3, (byte) -121) + (var38.a((vg) this, true).b(20111) >> -1489986879);
+            var10 = var38.a((vg) this, param3, (byte) -121) + (var38.a((vg) this, true).b(20111) >> 1);
             if (ai.field_A == var6) {
               break L8;
             } else {
@@ -334,61 +339,121 @@ final class ci extends qa {
                     return;
                   } else {
                     var19 = ja.field_n[1];
-                    var19.a(var9, var10 - (var19.field_w >> -1369675327), 256);
+                    var19.a(var9, var10 - (var19.field_w >> 1), 256);
                     return;
                   }
                 } else {
                   var20 = ja.field_n[2];
-                  var20.a(var9, var10 - (var20.field_w >> 1549637409), 256);
+                  var20.a(var9, var10 - (var20.field_w >> 1), 256);
                   return;
                 }
               }
             }
           }
           var21 = ja.field_n[0];
-          var11 = var21.field_z << 1009571841;
-          var12 = var21.field_C << 2001067457;
+          var11 = var21.field_z << 1;
+          var12 = var21.field_C << 1;
           if (null != ((ci) this).field_Z) {
             if (((ci) this).field_Z.field_y >= var11) {
               if (((ci) this).field_Z.field_w < var12) {
                 ((ci) this).field_Z = new nh(var11, var12);
                 aj.a(((ci) this).field_Z, (byte) 85);
-                var21.b(112, 144, var21.field_z << -1038284572, var21.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+                var21.b(112, 144, var21.field_z << 4, var21.field_C << 4, -((ci) this).field_X << 10, 4096);
                 cl.d((byte) -94);
-                ((ci) this).field_Z.a(-(var21.field_z >> 149902305) + var9, -var21.field_C + var10, 256);
+                ((ci) this).field_Z.a(-(var21.field_z >> 1) + var9, -var21.field_C + var10, 256);
                 return;
               } else {
                 aj.a(((ci) this).field_Z, (byte) 83);
                 wj.c();
-                var21.b(112, 144, var21.field_z << -1038284572, var21.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+                var21.b(112, 144, var21.field_z << 4, var21.field_C << 4, -((ci) this).field_X << 10, 4096);
                 cl.d((byte) -94);
-                ((ci) this).field_Z.a(-(var21.field_z >> 149902305) + var9, -var21.field_C + var10, 256);
+                ((ci) this).field_Z.a(-(var21.field_z >> 1) + var9, -var21.field_C + var10, 256);
                 return;
               }
             } else {
               ((ci) this).field_Z = new nh(var11, var12);
               aj.a(((ci) this).field_Z, (byte) 85);
-              var21.b(112, 144, var21.field_z << -1038284572, var21.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+              var21.b(112, 144, var21.field_z << 4, var21.field_C << 4, -((ci) this).field_X << 10, 4096);
               cl.d((byte) -94);
-              ((ci) this).field_Z.a(-(var21.field_z >> 149902305) + var9, -var21.field_C + var10, 256);
+              ((ci) this).field_Z.a(-(var21.field_z >> 1) + var9, -var21.field_C + var10, 256);
               return;
             }
           } else {
             ((ci) this).field_Z = new nh(var11, var12);
             aj.a(((ci) this).field_Z, (byte) 85);
-            var21.b(112, 144, var21.field_z << -1038284572, var21.field_C << 894508132, -((ci) this).field_X << 1961322666, 4096);
+            var21.b(112, 144, var21.field_z << 4, var21.field_C << 4, -((ci) this).field_X << 10, 4096);
             cl.d((byte) -94);
-            ((ci) this).field_Z.a(-(var21.field_z >> 149902305) + var9, -var21.field_C + var10, 256);
+            ((ci) this).field_Z.a(-(var21.field_z >> 1) + var9, -var21.field_C + var10, 256);
             return;
           }
         }
     }
 
     final boolean a(boolean param0, vg param1) {
-        if (param0) {
-            return false;
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (!param0) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("ci.M(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw ie.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        return false;
+        return stackIn_4_0 != 0;
     }
 
     static {

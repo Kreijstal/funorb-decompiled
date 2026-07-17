@@ -52,24 +52,19 @@ final class ou implements Iterable {
     }
 
     final void a(eo param0, byte param1) {
-        L0: {
-          if (null != param0.field_i) {
-            param0.b(0);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        param0.field_m = ((ou) this).field_a;
-        param0.field_i = ((ou) this).field_a.field_i;
-        param0.field_i.field_m = param0;
-        if (param1 != -118) {
-          eo discarded$2 = ((ou) this).a(42);
-          param0.field_m.field_i = param0;
-          return;
-        } else {
-          param0.field_m.field_i = param0;
-          return;
+        try {
+            if (!(null == param0.field_i)) {
+                param0.b(0);
+            }
+            param0.field_m = ((ou) this).field_a;
+            param0.field_i = ((ou) this).field_a.field_i;
+            param0.field_i.field_m = param0;
+            if (param1 != -118) {
+                eo discarded$0 = ((ou) this).a(42);
+            }
+            param0.field_m.field_i = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ou.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

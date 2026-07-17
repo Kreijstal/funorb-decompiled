@@ -47,7 +47,7 @@ abstract class iha extends at {
                     return stackIn_50_0 != 0;
                   } else {
                     L3: {
-                      if (var4.b(param0 + 0)) {
+                      if (var4.b(param0)) {
                         var4.a(false);
                         break L3;
                       } else {
@@ -91,7 +91,7 @@ abstract class iha extends at {
                     return stackIn_34_0 != 0;
                   } else {
                     L7: {
-                      if (var4.b(param0 + 0)) {
+                      if (var4.b(param0)) {
                         var4.a(false);
                         break L7;
                       } else {
@@ -126,7 +126,7 @@ abstract class iha extends at {
                   }
                 } else {
                   L9: {
-                    if (var4.b(param0 + 0)) {
+                    if (var4.b(param0)) {
                       var4.a(false);
                       break L9;
                     } else {
@@ -148,13 +148,10 @@ abstract class iha extends at {
 
     public static void d(int param0) {
         field_k = null;
-        int var1 = -57 / ((param0 - 43) / 45);
+        int var1 = -57;
     }
 
     final static void e(int param0) {
-        if (param0 != 5) {
-            field_k = null;
-        }
     }
 
     static {

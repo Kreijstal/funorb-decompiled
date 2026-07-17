@@ -34,7 +34,7 @@ final class kf {
             if (hp.field_s < 10) {
               break L1;
             } else {
-              if ((eq.field_j ^ -1) > -14) {
+              if (eq.field_j < 13) {
                 break L1;
               } else {
                 stackOut_2_0 = 1;
@@ -59,7 +59,7 @@ final class kf {
         field_b = new mk();
         field_g = false;
         field_e = new int[17];
-        for (var0 = 0; (var0 ^ -1) > -18; var0++) {
+        for (var0 = 0; var0 < 17; var0++) {
             field_e[var0] = -1;
         }
         field_e[16] = 0;

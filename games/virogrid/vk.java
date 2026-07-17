@@ -141,12 +141,12 @@ final class vk {
         int var3 = 0;
         java.awt.DisplayMode[] var4 = ((vk) this).field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 929239010];
+        int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << -179878590] = var4[var3].getWidth();
-            var2[1 + (var3 << -543583998)] = var4[var3].getHeight();
-            var2[(var3 << 1015621986) - -2] = var4[var3].getBitDepth();
-            var2[3 + (var3 << -210688286)] = var4[var3].getRefreshRate();
+            var2[var3 << 2] = var4[var3].getWidth();
+            var2[1 + (var3 << 2)] = var4[var3].getHeight();
+            var2[(var3 << 2) - -2] = var4[var3].getBitDepth();
+            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
         }
         return var2;
     }

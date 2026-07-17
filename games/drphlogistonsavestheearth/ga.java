@@ -9,13 +9,14 @@ final class ga extends gi {
     public static void a(byte param0) {
         field_j = null;
         field_i = null;
-        if (param0 != -4) {
-            field_i = null;
-        }
     }
 
     ga(byte[] param0) {
-        ((ga) this).field_h = param0;
+        try {
+            ((ga) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "ga.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

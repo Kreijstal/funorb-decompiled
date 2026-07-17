@@ -88,22 +88,30 @@ final class dja extends nv implements ut {
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        param1.a((byte) -127, ((dja) this).field_o, 8);
-        param1.a((byte) -128, !((dja) this).field_q ? 0 : 1, 1);
-        ((dja) this).field_n.a(((dja) this).h((byte) 117), (byte) 117, param1);
+        try {
+            super.a(param0, param1);
+            param1.a((byte) -127, ((dja) this).field_o, 8);
+            param1.a((byte) -128, !((dja) this).field_q ? 0 : 1, 1);
+            ((dja) this).field_n.a(((dja) this).h((byte) 117), (byte) 117, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "dja.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     dja(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
-        ((dja) this).field_o = param1.b((byte) 44, 8);
-        if (param0.field_E <= 10) {
-            ((dja) this).field_o = ((dja) this).field_o / 5;
+        try {
+            ((dja) this).field_o = param1.b((byte) 44, 8);
+            if (param0.field_E <= 10) {
+                ((dja) this).field_o = ((dja) this).field_o / 5;
+            }
+            if (9 <= param0.field_E) {
+                ((dja) this).field_q = 1 != param1.b((byte) 44, 1) ? false : true;
+            }
+            ((dja) this).field_n = new jma(15, param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "dja.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        if (9 <= param0.field_E) {
-            ((dja) this).field_q = 1 != param1.b((byte) 44, 1) ? false : true;
-        }
-        ((dja) this).field_n = new jma(15, param0, param1);
     }
 
     public final int b(int param0) {
@@ -113,8 +121,12 @@ final class dja extends nv implements ut {
 
     dja(la param0, boolean param1) {
         super(param0, param1);
-        ((dja) this).field_o = 50;
-        ((dja) this).field_n = new jma(15);
+        try {
+            ((dja) this).field_o = 50;
+            ((dja) this).field_n = new jma(15);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "dja.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final int a(boolean param0) {
@@ -146,23 +158,101 @@ final class dja extends nv implements ut {
     }
 
     private final boolean a(ffa param0, byte param1) {
-        if (!param0.a(124)) {
-            return false;
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        try {
+          L0: {
+            if (param0.a(124)) {
+              if ((Object) (Object) ((dja) this).field_g == (Object) (Object) param0) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0 != 0;
+              } else {
+                L1: {
+                  if (!((dja) this).field_q) {
+                    if (io.a(((dja) this).field_g.c(-73), param0.e(9648), (byte) -89, ((dja) this).field_g.a((byte) 55), param0.d(3), ((dja) this).field_g.e(9648), param0.a((byte) 55), param0.c(-43), ((dja) this).field_g.d(3))) {
+                      break L1;
+                    } else {
+                      stackOut_12_0 = 0;
+                      stackIn_13_0 = stackOut_12_0;
+                      return stackIn_13_0 != 0;
+                    }
+                  } else {
+                    if (ck.a(param0.d(3), param0.a((byte) 55), ((dja) this).field_g.d(3), ((dja) this).field_g.c(-113), ((dja) this).field_g.a((byte) 55), param0.e(9648), (byte) 67, ((dja) this).field_g.e(9648), param0.c(-51))) {
+                      break L1;
+                    } else {
+                      stackOut_9_0 = 0;
+                      stackIn_10_0 = stackOut_9_0;
+                      return stackIn_10_0 != 0;
+                    }
+                  }
+                }
+                stackOut_14_0 = 1;
+                stackIn_15_0 = stackOut_14_0;
+                break L0;
+              }
+            } else {
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var3;
+            stackOut_16_1 = new StringBuilder().append("dja.P(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param0 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L2;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + -103 + 41);
         }
-        if (param1 > -73) {
-            ((dja) this).k(15);
-        }
-        if (!((Object) (Object) ((dja) this).field_g != (Object) (Object) param0)) {
-            return false;
-        }
-        if (((dja) this).field_q) {
-            // ifne L231
-            return false;
-        }
-        if (!io.a(((dja) this).field_g.c(-73), param0.e(9648), (byte) -89, ((dja) this).field_g.a((byte) 55), param0.d(3), ((dja) this).field_g.e(9648), param0.a((byte) 55), param0.c(-43), ((dja) this).field_g.d(3))) {
-            return false;
-        }
-        return true;
+        return stackIn_15_0 != 0;
     }
 
     final void g(int param0) {
@@ -238,7 +328,7 @@ final class dja extends nv implements ut {
         if (!(!bc.a(true))) {
             return true;
         }
-        if (mda.b(param3, (byte) -44, param1, param0)) {
+        if (mda.b(13, (byte) -44, param1, param0)) {
             return true;
         }
         return false;

@@ -15,15 +15,14 @@ final class ak {
     static pg[] field_h;
 
     final static void a(boolean param0, String param1, String param2) {
-        if (null != jj.field_d) {
-          jj.field_d.g((byte) -122);
-          ib.field_e = new lk(param2, param1, param0, true, true);
-          ke.field_s.b((ag) (Object) ib.field_e, (byte) 110);
-          return;
-        } else {
-          ib.field_e = new lk(param2, param1, param0, true, true);
-          ke.field_s.b((ag) (Object) ib.field_e, (byte) 110);
-          return;
+        try {
+            if (null != jj.field_d) {
+                jj.field_d.g((byte) -122);
+            }
+            ib.field_e = new lk(param2, param1, param0, true, true);
+            ke.field_s.b((ag) (Object) ib.field_e, (byte) 110);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "ak.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

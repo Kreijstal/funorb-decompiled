@@ -44,9 +44,6 @@ final class gab {
     }
 
     public static void a(int param0) {
-        if (param0 != 15325) {
-            return;
-        }
         field_j = null;
         field_b = null;
     }
@@ -54,7 +51,6 @@ final class gab {
     final int[] a(byte param0, int param1) {
         int var3 = 0;
         osa var4 = null;
-        osa var4_ref = null;
         osa var5 = null;
         int var6 = 0;
         Object stackIn_3_0 = null;
@@ -110,23 +106,23 @@ final class gab {
                 L2: {
                   ((gab) this).field_e = true;
                   if (((gab) this).field_d < ((gab) this).field_c) {
-                    var4_ref = new osa(param1, ((gab) this).field_d);
+                    var4 = new osa(param1, ((gab) this).field_d);
                     ((gab) this).field_d = ((gab) this).field_d + 1;
                     break L2;
                   } else {
                     var5 = (osa) (Object) ((gab) this).field_i.b((byte) 116);
-                    var4_ref = new osa(param1, var5.field_f);
+                    var4 = new osa(param1, var5.field_f);
                     ((gab) this).field_a[var5.field_d] = null;
                     var5.b(-3846);
                     break L2;
                   }
                 }
-                ((gab) this).field_a[param1] = var4_ref;
+                ((gab) this).field_a[param1] = var4;
                 break L1;
               }
             }
-            ((gab) this).field_i.a((ksa) (Object) var4_ref, (byte) -55);
-            return ((gab) this).field_h[var4_ref.field_f];
+            ((gab) this).field_i.a((ksa) (Object) var4, (byte) -55);
+            return ((gab) this).field_h[var4.field_f];
           } else {
             L3: {
               stackOut_2_0 = this;

@@ -29,14 +29,14 @@ final class ld {
               if (2 != ((ld) this).field_k) {
                 break L1;
               } else {
-                if (-1 > (((ld) this).field_h ^ -1)) {
+                if (((ld) this).field_h > 0) {
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            if ((gb.field_t ^ -1L) == (((ld) this).field_m ^ -1L)) {
+            if (~gb.field_t == ~((ld) this).field_m) {
               return 1;
             } else {
               L2: {
@@ -58,14 +58,15 @@ final class ld {
     }
 
     final static void a(String param0, String param1, int param2) {
-        if (!(null == ua.field_d)) {
-            ua.field_d.k((byte) 95);
+        try {
+            if (!(null == ua.field_d)) {
+                ua.field_d.k((byte) 95);
+            }
+            um.field_b = new wf(param0, param1, false, true, true);
+            nj.field_w.c((mf) (Object) um.field_b, 69);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ld.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
-        um.field_b = new wf(param0, param1, false, true, true);
-        if (param2 != 0) {
-            ld.a(-20);
-        }
-        nj.field_w.c((mf) (Object) um.field_b, 69);
     }
 
     public static void a(int param0) {
@@ -97,18 +98,22 @@ final class ld {
     }
 
     ld(int param0, String param1, int param2, String param3, String param4) {
-        ((ld) this).field_b = param3;
-        ((ld) this).field_c = param2;
-        ((ld) this).field_q = 0;
-        ((ld) this).field_o = param1;
-        ((ld) this).field_h = 0;
-        ((ld) this).field_n = param4;
-        ((ld) this).field_e = 0;
-        ((ld) this).field_l = null;
-        ((ld) this).field_i = param1;
-        ((ld) this).field_d = true;
-        ((ld) this).field_k = param0;
-        ((ld) this).field_m = 0L;
+        try {
+            ((ld) this).field_b = param3;
+            ((ld) this).field_c = param2;
+            ((ld) this).field_q = 0;
+            ((ld) this).field_o = param1;
+            ((ld) this).field_h = 0;
+            ((ld) this).field_n = param4;
+            ((ld) this).field_e = 0;
+            ((ld) this).field_l = null;
+            ((ld) this).field_i = param1;
+            ((ld) this).field_d = true;
+            ((ld) this).field_k = param0;
+            ((ld) this).field_m = 0L;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ld.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

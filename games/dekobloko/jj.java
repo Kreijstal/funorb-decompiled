@@ -23,18 +23,9 @@ final class jj {
     public static void a(boolean param0) {
         field_c = null;
         field_e = null;
-        if (param0) {
-          field_f = null;
-          field_f = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
-          field_f = null;
-          field_a = null;
-          field_d = null;
-          return;
-        }
+        field_f = null;
+        field_a = null;
+        field_d = null;
     }
 
     static {

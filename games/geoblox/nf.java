@@ -61,18 +61,12 @@ final class nf {
     }
 
     final static int c(byte param0) {
-        if (param0 >= -55) {
-            return 66;
-        }
         return qi.b(ag.field_k, 1);
     }
 
     public static void b(byte param0) {
         field_j = null;
         field_E = null;
-        if (param0 != 115) {
-            nf.a(124, -30, -53);
-        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -188,41 +182,125 @@ final class nf {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (hb.field_l != null) {
-            // if_icmpge L28
+        L0: {
+          L1: {
+            if (hb.field_l == null) {
+              break L1;
+            } else {
+              if (hb.field_l.length >= param2) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          hb.field_l = new int[param2 * 2];
+          break L0;
         }
-        hb.field_l = new int[param2 * 2];
-        if (null != hg.field_a) {
-            // if_icmple L57
+        L2: {
+          L3: {
+            if (null == hg.field_a) {
+              break L3;
+            } else {
+              if (param2 <= hg.field_a.length) {
+                break L2;
+              } else {
+                break L3;
+              }
+            }
+          }
+          hg.field_a = new int[param2 * 2];
+          break L2;
         }
-        hg.field_a = new int[param2 * 2];
-        if (null != fb.field_m) {
-            // if_icmpge L86
+        L4: {
+          L5: {
+            if (null == fb.field_m) {
+              break L5;
+            } else {
+              if (fb.field_m.length >= param2) {
+                break L4;
+              } else {
+                break L5;
+              }
+            }
+          }
+          fb.field_m = new int[param2 * 2];
+          break L4;
         }
-        fb.field_m = new int[param2 * 2];
-        if (null != k.field_i) {
-            // if_icmpgt L104
-        } else {
-            k.field_i = new int[param2 * 2];
+        L6: {
+          L7: {
+            if (null == k.field_i) {
+              break L7;
+            } else {
+              if (param2 > k.field_i.length) {
+                break L7;
+              } else {
+                break L6;
+              }
+            }
+          }
+          k.field_i = new int[param2 * 2];
+          break L6;
         }
-        if (null != cj.field_b) {
-            // if_icmplt L130
-        } else {
-            cj.field_b = new int[2 * param2];
+        L8: {
+          L9: {
+            if (null == cj.field_b) {
+              break L9;
+            } else {
+              if (cj.field_b.length < param2) {
+                break L9;
+              } else {
+                break L8;
+              }
+            }
+          }
+          cj.field_b = new int[2 * param2];
+          break L8;
         }
-        if (null != gk.field_a) {
-            // if_icmplt L156
-        } else {
-            gk.field_a = new int[param2 * 2];
+        L10: {
+          L11: {
+            if (null == gk.field_a) {
+              break L11;
+            } else {
+              if (gk.field_a.length < param2) {
+                break L11;
+              } else {
+                break L10;
+              }
+            }
+          }
+          gk.field_a = new int[param2 * 2];
+          break L10;
         }
-        if (null != qi.field_i) {
-            // if_icmpge L197
+        L12: {
+          L13: {
+            if (null == qi.field_i) {
+              break L13;
+            } else {
+              if (qi.field_i.length >= param2 + param1) {
+                break L12;
+              } else {
+                break L13;
+              }
+            }
+          }
+          qi.field_i = new int[(param2 + param1) * 2];
+          break L12;
         }
-        qi.field_i = new int[(param2 + param1) * 2];
-        if (null != qh.field_C) {
-            // if_icmplt L215
-        } else {
-            qh.field_C = new boolean[2 * param2];
+        L14: {
+          L15: {
+            if (null == qh.field_C) {
+              break L15;
+            } else {
+              if (qh.field_C.length < param2) {
+                break L15;
+              } else {
+                break L14;
+              }
+            }
+          }
+          qh.field_C = new boolean[2 * param2];
+          break L14;
         }
         md.field_c = 0;
         va.field_b = -2147483648;
@@ -247,25 +325,19 @@ final class nf {
             }
             var1[var2] = new dm(pg.field_b, dd.field_C, gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], var5);
         }
-        if (param0 != 255) {
-            field_A = 40;
-        }
         kj.c(true);
         return var1;
     }
 
     final static boolean a(boolean param0) {
-        if (param0) {
-            return false;
-        }
-        if (!(0 != (p.field_k ^ -1))) {
+        if (!(p.field_k != -1)) {
             if (!el.b(30000, 1)) {
                 return false;
             }
             p.field_k = eh.field_d.c((byte) 34);
             eh.field_d.field_f = 0;
         }
-        if ((p.field_k ^ -1) == 1) {
+        if (p.field_k == -2) {
             if (!(el.b(30000, 2))) {
                 return false;
             }
@@ -277,9 +349,6 @@ final class nf {
 
     private final void a(int param0) {
         ((nf) this).field_D = false;
-        if (param0 != -7008) {
-            nf.a(-110, 99, 92);
-        }
     }
 
     nf() {

@@ -13,8 +13,9 @@ final class gd extends kd {
 
     final void c(byte param0) {
         if (param0 <= -17) {
+          int fieldTemp$4 = ((gd) this).field_h - 1;
           ((gd) this).field_h = ((gd) this).field_h - 1;
-          if (tb.field_a.field_E > ((gd) this).field_h - 1) {
+          if (tb.field_a.field_E > fieldTemp$4) {
             ((gd) this).b((byte) -123);
             return;
           } else {
@@ -22,8 +23,9 @@ final class gd extends kd {
           }
         } else {
           field_i = null;
+          int fieldTemp$5 = ((gd) this).field_h - 1;
           ((gd) this).field_h = ((gd) this).field_h - 1;
-          if (tb.field_a.field_E <= ((gd) this).field_h - 1) {
+          if (tb.field_a.field_E <= fieldTemp$5) {
             return;
           } else {
             ((gd) this).b((byte) -123);
@@ -48,18 +50,9 @@ final class gd extends kd {
     }
 
     public static void e(byte param0) {
-        if (param0 != -62) {
-          field_m = null;
-          field_j = null;
-          field_m = null;
-          field_i = null;
-          return;
-        } else {
-          field_j = null;
-          field_m = null;
-          field_i = null;
-          return;
-        }
+        field_j = null;
+        field_m = null;
+        field_i = null;
     }
 
     gd(int param0, int param1, int param2) {

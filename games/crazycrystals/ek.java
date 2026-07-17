@@ -52,7 +52,7 @@ final class ek extends l {
         gj stackOut_3_3 = null;
         jj.field_b = jj.field_b + 16;
         if (param0 == -2) {
-          if ((jj.field_b ^ -1) > -1) {
+          if (jj.field_b < 0) {
             return (l) this;
           } else {
             L0: {
@@ -92,7 +92,7 @@ final class ek extends l {
           }
         } else {
           l discarded$6 = ((ek) this).a(-85);
-          if ((jj.field_b ^ -1) > -1) {
+          if (jj.field_b < 0) {
             return (l) this;
           } else {
             L1: {

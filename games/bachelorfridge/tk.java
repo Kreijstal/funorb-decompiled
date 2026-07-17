@@ -25,44 +25,44 @@ final class tk {
         if (0 == param0) {
           return ((tk) this).field_o;
         } else {
-          if ((param0 ^ -1) != -2) {
+          if (param0 != 1) {
             if (2 == param0) {
               return ((tk) this).field_m;
             } else {
               if (param0 != 3) {
-                if (-5 != (param0 ^ -1)) {
-                  if ((param0 ^ -1) == -6) {
+                if (param0 != 4) {
+                  if (param0 == 5) {
                     return ((tk) this).field_j;
                   } else {
-                    if ((param0 ^ -1) == -7) {
+                    if (param0 == 6) {
                       return ((tk) this).field_b;
                     } else {
                       if (7 == param0) {
                         return ((tk) this).field_q;
                       } else {
                         if (param0 != 8) {
-                          if ((param0 ^ -1) == -10) {
+                          if (param0 == 9) {
                             return ((tk) this).field_n;
                           } else {
-                            if ((param0 ^ -1) == -11) {
+                            if (param0 == 10) {
                               return ((tk) this).field_p;
                             } else {
-                              if ((param0 ^ -1) != -12) {
-                                if ((param0 ^ -1) == -13) {
+                              if (param0 != 11) {
+                                if (param0 == 12) {
                                   return ((tk) this).field_h;
                                 } else {
-                                  if (param0 == -14) {
+                                  if (param0 == 13) {
                                     return ((tk) this).field_d;
                                   } else {
                                     if (param1 == 68) {
-                                      if (-15 == (param0 ^ -1)) {
+                                      if (param0 == 14) {
                                         return ((tk) this).field_r;
                                       } else {
                                         if (param0 != 15) {
-                                          if (param0 == -17) {
+                                          if (param0 == 16) {
                                             return ((tk) this).field_c;
                                           } else {
-                                            if (-18 == param0) {
+                                            if (param0 == 17) {
                                               return ((tk) this).field_e;
                                             } else {
                                               return 0;
@@ -74,17 +74,17 @@ final class tk {
                                       }
                                     } else {
                                       ((tk) this).field_r = 57;
-                                      if (-15 == param0) {
+                                      if (param0 == 14) {
                                         return ((tk) this).field_r;
                                       } else {
                                         if (param0 != 15) {
-                                          if (param0 == -17) {
+                                          if (param0 == 16) {
                                             return ((tk) this).field_c;
                                           } else {
-                                            if (-18 != param0) {
-                                              return 0;
-                                            } else {
+                                            if (param0 == 17) {
                                               return ((tk) this).field_e;
+                                            } else {
+                                              return 0;
                                             }
                                           }
                                         } else {

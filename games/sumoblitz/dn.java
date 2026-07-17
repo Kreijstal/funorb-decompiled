@@ -6,15 +6,12 @@ final class dn {
     static String field_a;
 
     public static void a(int param0) {
-        if (param0 != -3) {
-            return;
-        }
         field_a = null;
         field_b = null;
     }
 
     final static String b(int param0) {
-        if ((mp.field_a ^ -1) > -3) {
+        if (mp.field_a < 2) {
           return pi.field_b;
         } else {
           if (null == hd.field_H) {

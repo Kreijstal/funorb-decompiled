@@ -19,14 +19,14 @@ final class aga {
           var3 = TombRacer.field_G ? 1 : 0;
           var2 = ((aga) this).field_d;
           if (2 != var2) {
-            if ((var2 ^ -1) == -4) {
+            if (var2 == 3) {
               ((aga) this).field_f = 1;
               ((aga) this).field_h = 2048;
               ((aga) this).field_g = 0;
               ((aga) this).field_i = 4096;
               break L0;
             } else {
-              if (var2 == -5) {
+              if (var2 == 4) {
                 ((aga) this).field_h = 2048;
                 ((aga) this).field_g = 0;
                 ((aga) this).field_f = 4;
@@ -40,16 +40,16 @@ final class aga {
                   ((aga) this).field_g = 0;
                   break L0;
                 } else {
-                  if (var2 != -13) {
-                    if (-14 != var2) {
-                      if (-11 == var2) {
+                  if (var2 != 12) {
+                    if (var2 != 13) {
+                      if (var2 == 10) {
                         ((aga) this).field_h = 512;
                         ((aga) this).field_i = 2048;
                         ((aga) this).field_g = 1536;
                         ((aga) this).field_f = 3;
                         break L0;
                       } else {
-                        if (var2 != -12) {
+                        if (var2 != 11) {
                           if (6 == var2) {
                             ((aga) this).field_g = 1280;
                             ((aga) this).field_i = 2048;
@@ -57,8 +57,8 @@ final class aga {
                             ((aga) this).field_f = 3;
                             break L0;
                           } else {
-                            if (-8 != var2) {
-                              if (-9 != (var2 ^ -1)) {
+                            if (var2 != 7) {
+                              if (var2 != 8) {
                                 if (9 != var2) {
                                   if (14 == var2) {
                                     ((aga) this).field_i = 2048;
@@ -155,9 +155,65 @@ final class aga {
     }
 
     private final void a(int param0, int param1, ha param2, int param3, int param4, int param5, int param6) {
-        ((aga) this).field_c = param2.a(param5, param1, param0, param3, param6, 1.0f);
-        if (param4 != 512) {
-            nl[] discarded$0 = aga.a(-83);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((aga) this).field_c = param2.a(param5, param1, param0, param3, param6, 1.0f);
+              if (param4 == 512) {
+                break L1;
+              } else {
+                nl[] discarded$2 = aga.a(-83);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("aga.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param2 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -186,18 +242,18 @@ final class aga {
             var5 = 2047 & param1 * ((aga) this).field_i / 50 + ((aga) this).field_e;
             var6 = ((aga) this).field_f;
             if (var6 != 1) {
-              if (-4 == var6) {
-                var4 = ooa.field_e[var5] >> -1814184927;
+              if (var6 == 3) {
+                var4 = ooa.field_e[var5] >> 1;
                 break L1;
               } else {
                 if (4 != var6) {
-                  if (-3 == var6) {
+                  if (var6 == 2) {
                     var4 = var5;
                     break L1;
                   } else {
                     if (5 == var6) {
                       L2: {
-                        if ((var5 ^ -1) <= -1025) {
+                        if (var5 >= 1024) {
                           stackOut_17_0 = 2048 + -var5;
                           stackIn_18_0 = stackOut_17_0;
                           break L2;
@@ -207,7 +263,7 @@ final class aga {
                           break L2;
                         }
                       }
-                      var4 = stackIn_18_0 << -1365349471;
+                      var4 = stackIn_18_0 << 1;
                       break L1;
                     } else {
                       var4 = 2048;
@@ -215,23 +271,20 @@ final class aga {
                     }
                   }
                 } else {
-                  var4 = var5 >> -611924438 << -822238229;
+                  var4 = var5 >> 10 << 11;
                   break L1;
                 }
               }
             } else {
-              var4 = 1024 - -(qu.field_b[var5 << -2069246749] >> -1696208892);
+              var4 = 1024 - -(qu.field_b[var5 << 3] >> 4);
               break L1;
             }
           }
         }
-        ((aga) this).field_c.a((byte) 105, (float)((var4 * ((aga) this).field_h >> -581138165) + ((aga) this).field_g) / 2048.0f);
+        ((aga) this).field_c.a((byte) 105, (float)((var4 * ((aga) this).field_h >> 11) + ((aga) this).field_g) / 2048.0f);
     }
 
     public static void a(byte param0) {
-        if (param0 != -113) {
-            nl[] discarded$0 = aga.a(111);
-        }
         field_a = null;
     }
 
@@ -293,17 +346,22 @@ final class aga {
     }
 
     aga(ha param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int var9_int = 0;
         int var10 = 0;
-        if (ooa.field_e == null) {
-            pd.b(2);
+        try {
+            if (ooa.field_e == null) {
+                pd.b(2);
+            }
+            this.a(param4, param3, param0, param6, 512, param2, param5);
+            var9_int = (-ri.field_q + 2 * param6 >> cn.field_b) + 1;
+            ((aga) this).field_b = new short[var9_int];
+            for (var10 = 0; var10 < ((aga) this).field_b.length; var10++) {
+                ((aga) this).field_b[var10] = (short)var9_int;
+            }
+            this.a(param7, (byte) -42);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "aga.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
-        this.a(param4, param3, param0, param6, 512, param2, param5);
-        int var9 = (-ri.field_q + 2 * param6 >> cn.field_b) + 1;
-        ((aga) this).field_b = new short[var9];
-        for (var10 = 0; var10 < ((aga) this).field_b.length; var10++) {
-            ((aga) this).field_b[var10] = (short)var9;
-        }
-        this.a(param7, (byte) -42);
     }
 
     static {

@@ -21,6 +21,7 @@ abstract class de implements of {
 
     final static byte[] a(int param0, byte param1, int param2, byte[] param3) {
         byte[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5_int = 0;
         bd var5 = null;
         byte[] var6 = null;
@@ -29,43 +30,101 @@ abstract class de implements of {
         byte[] var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
-        L0: {
-          var7 = Vertigo2.field_L ? 1 : 0;
-          if ((param0 ^ -1) >= -1) {
-            var4 = param3;
-            break L0;
-          } else {
-            var9 = new byte[param2];
-            var4 = var9;
-            var5_int = 0;
-            L1: while (true) {
-              if (var5_int >= param2) {
-                break L0;
+        byte[] var12 = null;
+        byte[] var13 = null;
+        byte[] stackIn_9_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_8_0 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var7 = Vertigo2.field_L ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 <= 0) {
+                var4 = param3;
+                break L1;
               } else {
-                var9[var5_int] = param3[param0 + var5_int];
-                var5_int++;
-                continue L1;
+                var9 = new byte[param2];
+                var4 = var9;
+                var5_int = 0;
+                L2: while (true) {
+                  if (var5_int >= param2) {
+                    break L1;
+                  } else {
+                    var9[var5_int] = param3[param0 + var5_int];
+                    var5_int++;
+                    continue L2;
+                  }
+                }
               }
             }
+            L3: {
+              var5 = new bd();
+              var5.a(8);
+              var5.a(var4, (long)(8 * param2), 127);
+              var13 = new byte[64];
+              var12 = var13;
+              var11 = var12;
+              var10 = var11;
+              var6 = var10;
+              var5.a(var13, 125, 0);
+              if (param1 <= -85) {
+                break L3;
+              } else {
+                var8 = null;
+                byte[] discarded$1 = de.a(-127, (byte) -38, -80, (byte[]) null);
+                break L3;
+              }
+            }
+            stackOut_8_0 = (byte[]) var6;
+            stackIn_9_0 = stackOut_8_0;
+            break L0;
           }
-        }
-        L2: {
-          var5 = new bd();
-          var5.a(8);
-          var5.a(var4, (long)(8 * param2), 127);
-          var11 = new byte[64];
-          var10 = var11;
-          var6 = var10;
-          var5.a(var11, 125, 0);
-          if (param1 <= -85) {
-            break L2;
-          } else {
-            var8 = null;
-            byte[] discarded$1 = de.a(-127, (byte) -38, -80, (byte[]) null);
-            break L2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4_ref = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var4_ref;
+            stackOut_10_1 = new StringBuilder().append("de.J(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param3 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
           }
+          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
-        return var6;
+        return stackIn_9_0;
     }
 
     public final String d(int param0) {
@@ -82,9 +141,6 @@ abstract class de implements of {
     }
 
     public static void e(int param0) {
-        if (param0 != 21283) {
-            return;
-        }
         field_c = null;
         field_b = null;
         field_g = null;
@@ -93,10 +149,66 @@ abstract class de implements of {
     }
 
     final static void a(int param0, nf param1, int param2) {
-        ki.field_a.a((li) (Object) param1, false);
-        jc.a(-14499, param2, param1);
-        if (param0 < 3) {
-            field_a = null;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ki.field_a.a((li) (Object) param1, false);
+              jc.a(-14499, 4, param1);
+              if (param0 >= 3) {
+                break L1;
+              } else {
+                field_a = null;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("de.K(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + 4 + 41);
         }
     }
 
@@ -107,7 +219,7 @@ abstract class de implements of {
         if (param0 != -23996) {
             field_d = null;
         }
-        if ((gk.a(54) ^ -1L) > (350L + ((de) this).field_e ^ -1L)) {
+        if (~gk.a(54) > ~(350L + ((de) this).field_e)) {
             return tk.field_n;
         }
         return ((de) this).a((byte) 76);

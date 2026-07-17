@@ -41,15 +41,16 @@ final class sk {
     }
 
     final static void a(ec param0, int param1, int param2, int param3) {
-        mj.field_r = param2;
-        if (param1 != -28995) {
-            String discarded$0 = sk.a(-70);
+        try {
+            mj.field_r = param2;
+            if (param1 != -28995) {
+                String discarded$0 = sk.a(-70);
+            }
             ol.field_f = param0;
             tg.field_d = param3;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "sk.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
-        ol.field_f = param0;
-        tg.field_d = param3;
     }
 
     public static void b(int param0) {
@@ -59,7 +60,7 @@ final class sk {
         field_d = null;
         field_b = null;
         field_g = null;
-        int var1 = 43 % ((param0 - 46) / 42);
+        int var1 = 0;
         field_f = null;
     }
 

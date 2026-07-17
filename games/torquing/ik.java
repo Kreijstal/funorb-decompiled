@@ -16,34 +16,81 @@ final class ik extends q {
     int field_n;
 
     final static boolean a(char param0, byte param1) {
+        char[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        int var5 = Torquing.field_u;
-        if (param1 != -46) {
-            field_k = null;
-        }
-        if (!(!Character.isISOControl(param0))) {
-            return false;
-        }
-        if (wa.a(param0, (byte) 34)) {
-            return true;
-        }
-        char[] var6 = ra.field_d;
-        char[] var2 = var6;
-        for (var3 = 0; var6.length > var3; var3++) {
-            var4 = var6[var3];
-            if (!(var4 != param0)) {
-                return true;
+        int var5 = 0;
+        char[] var6 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_23_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_6_0 = 0;
+        var5 = Torquing.field_u;
+        try {
+          L0: {
+            if (Character.isISOControl(param0)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              if (!wa.a(param0, (byte) 34)) {
+                var6 = ra.field_d;
+                var2 = var6;
+                var3 = 0;
+                L1: while (true) {
+                  if (var6.length <= var3) {
+                    var2 = qe.field_b;
+                    var3 = 0;
+                    L2: while (true) {
+                      if (var2.length <= var3) {
+                        stackOut_22_0 = 0;
+                        stackIn_23_0 = stackOut_22_0;
+                        break L0;
+                      } else {
+                        var4 = var2[var3];
+                        if (var4 == param0) {
+                          stackOut_19_0 = 1;
+                          stackIn_20_0 = stackOut_19_0;
+                          return stackIn_20_0 != 0;
+                        } else {
+                          var3++;
+                          continue L2;
+                        }
+                      }
+                    }
+                  } else {
+                    var4 = var6[var3];
+                    if (var4 == param0) {
+                      stackOut_12_0 = 1;
+                      stackIn_13_0 = stackOut_12_0;
+                      return stackIn_13_0 != 0;
+                    } else {
+                      var3++;
+                      continue L1;
+                    }
+                  }
+                }
+              } else {
+                stackOut_6_0 = 1;
+                stackIn_7_0 = stackOut_6_0;
+                return stackIn_7_0 != 0;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw rb.a((Throwable) (Object) var2_ref, "ik.B(" + param0 + 44 + -46 + 41);
         }
-        var2 = qe.field_b;
-        for (var3 = 0; var2.length > var3; var3++) {
-            var4 = var2[var3];
-            if (!(var4 != param0)) {
-                return true;
-            }
-        }
-        return false;
+        return stackIn_23_0 != 0;
     }
 
     final void a(int param0, boolean param1) {
@@ -76,7 +123,7 @@ final class ik extends q {
               if (-1 != ((ik) this).field_p) {
                 break L1;
               } else {
-                if (-1 > (((ik) this).field_q ^ -1)) {
+                if (((ik) this).field_q > 0) {
                   ((ik) this).field_j.field_v = -((ik) this).field_j.field_s;
                   break L1;
                 } else {
@@ -164,17 +211,17 @@ final class ik extends q {
     final void a(int param0) {
         int var2 = 0;
         ((ik) this).field_l = ((ik) this).field_l + ((ik) this).field_q;
-        var2 = ((ik) this).field_l >> 1866014722;
+        var2 = ((ik) this).field_l >> 2;
         if (param0 == -2857) {
           L0: {
             if (((ik) this).field_j == null) {
               break L0;
             } else {
               L1: {
-                if ((((ik) this).field_q ^ -1) <= -1) {
+                if (((ik) this).field_q >= 0) {
                   break L1;
                 } else {
-                  if (-1 < (var2 - -((ik) this).field_j.field_v + ((ik) this).field_j.field_s ^ -1)) {
+                  if (var2 - -((ik) this).field_j.field_v + ((ik) this).field_j.field_s < 0) {
                     ((ik) this).f(param0 + 2857);
                     break L0;
                   } else {
@@ -243,8 +290,8 @@ final class ik extends q {
             return;
           } else {
             L2: {
-              var6 = -1 + var5 >> 51355873;
-              if (-2 != (var5 ^ -1)) {
+              var6 = -1 + var5 >> 1;
+              if (var5 != 1) {
                 if (var5 == 2) {
                   var7 = 0;
                   break L2;
@@ -260,8 +307,8 @@ final class ik extends q {
             L3: {
               var4[var5] = var7 != 0;
               var8 = ((ik) this).field_o[var6];
-              ((ik) this).field_o[var5] = (var8 >> -751457247) + va.a(var8 + -(var8 >> -1746898431), (byte) 127, hg.field_e);
-              if (-3 >= (((ik) this).field_o[var5] ^ -1)) {
+              ((ik) this).field_o[var5] = (var8 >> 1) + va.a(var8 + -(var8 >> 1), (byte) 127, hg.field_e);
+              if (((ik) this).field_o[var5] >= 2) {
                 break L3;
               } else {
                 ((ik) this).field_o[var5] = 2;
@@ -270,7 +317,7 @@ final class ik extends q {
             }
             L4: {
               var9 = ((ik) this).field_o[var5];
-              var10 = var8 + (-var9 + va.a((var9 >> -965763967) + var9, (byte) 125, hg.field_e));
+              var10 = var8 + (-var9 + va.a((var9 >> 1) + var9, (byte) 125, hg.field_e));
               var11 = va.a(512, (byte) 125, hg.field_e);
               if (var7 == 0) {
                 var11 += 1280;
@@ -280,8 +327,8 @@ final class ik extends q {
                 break L4;
               }
             }
-            var12 = var10 * be.field_l[var11] >> -2063447280;
-            var13 = var10 * be.field_o[var11] >> -1031670960;
+            var12 = var10 * be.field_l[var11] >> 16;
+            var13 = var10 * be.field_o[var11] >> 16;
             ((ik) this).field_s[var5] = var12 + ((ik) this).field_s[var6];
             ((ik) this).field_m[var5] = var13 + ((ik) this).field_m[var6];
             var5++;

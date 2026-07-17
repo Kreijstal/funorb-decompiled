@@ -12,11 +12,6 @@ final class na {
 
     public static void a(int param0) {
         field_e = null;
-        if (param0 != 426388817) {
-            field_c = -42;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

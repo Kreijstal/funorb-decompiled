@@ -11,7 +11,7 @@ final class vf {
         field_b = null;
         field_a = null;
         field_c = null;
-        int var1 = 74 % ((param0 - -55) / 58);
+        int var1 = 0;
     }
 
     static {

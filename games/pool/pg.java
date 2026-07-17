@@ -50,19 +50,12 @@ final class pg extends bp {
 
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((pg) this).field_x, param0 << (field_r ? 2 : 1));
             ((pg) this).field_v = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((pg) this).field_v.open();
             ((pg) this).field_v.start();
             ((pg) this).field_y = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (se.a(false, param0) != 1) {
-                ((pg) this).a(te.a(-17931, param0));
-                return;
-            }
-            ((pg) this).field_v = null;
-            throw lineUnavailableException;
         }
     }
 

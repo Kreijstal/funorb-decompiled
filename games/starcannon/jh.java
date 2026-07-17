@@ -18,18 +18,9 @@ final class jh {
         field_e = null;
         field_b = null;
         field_f = null;
-        if (param0 < 9) {
-          jh.a(107, false);
-          field_a = null;
-          field_c = null;
-          field_h = null;
-          return;
-        } else {
-          field_a = null;
-          field_c = null;
-          field_h = null;
-          return;
-        }
+        field_a = null;
+        field_c = null;
+        field_h = null;
     }
 
     final static void a(int param0, boolean param1) {
@@ -42,35 +33,19 @@ final class jh {
     }
 
     final void a(int param0, uh param1) {
-        if (param0 != 22197) {
-          L0: {
-            int discarded$1 = ((jh) this).b((byte) 89);
-            if (null != param1.field_f) {
-              param1.a(-6242);
-              break L0;
-            } else {
-              break L0;
+        try {
+            if (param0 != 22197) {
+                int discarded$0 = ((jh) this).b((byte) 89);
             }
-          }
-          param1.field_m = ((jh) this).field_i;
-          param1.field_f = ((jh) this).field_i.field_f;
-          param1.field_f.field_m = param1;
-          param1.field_m.field_f = param1;
-          return;
-        } else {
-          L1: {
-            if (null != param1.field_f) {
-              param1.a(-6242);
-              break L1;
-            } else {
-              break L1;
+            if (!(null == param1.field_f)) {
+                param1.a(-6242);
             }
-          }
-          param1.field_m = ((jh) this).field_i;
-          param1.field_f = ((jh) this).field_i.field_f;
-          param1.field_f.field_m = param1;
-          param1.field_m.field_f = param1;
-          return;
+            param1.field_m = ((jh) this).field_i;
+            param1.field_f = ((jh) this).field_i.field_f;
+            param1.field_f.field_m = param1;
+            param1.field_m.field_f = param1;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "jh.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -80,135 +55,72 @@ final class jh {
             ia var4 = null;
             ia var5 = null;
             int stackIn_11_0 = 0;
-            int stackOut_9_0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_10_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (null != ah.field_e) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        ah.field_e = og.field_a.a(sj.field_I, -115, kl.field_a);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (0 == ah.field_e.field_b) {
-                            statePc = 4;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return false;
-                    }
-                    case 5: {
-                        if (param0 == -68) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        field_e = null;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        ca.field_Y = dd.b(71);
-                        ik.field_p = dd.b(71);
-                        if (ah.field_e.field_b != 1) {
-                            statePc = 14;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        try {
-                            m.field_b = new sb((java.net.Socket) ah.field_e.field_f, og.field_a);
-                            d.field_b.field_g = 0;
-                            var4 = se.field_p;
-                            var5 = var4;
-                            if (!param1) {
-                                statePc = 10;
-                            } else {
-                                statePc = 9;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            stackOut_9_0 = -2;
-                            stackIn_11_0 = stackOut_9_0;
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            stackOut_10_0 = -1;
-                            stackIn_11_0 = stackOut_10_0;
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        try {
-                            wc.field_i = stackIn_11_0;
-                            hh.field_a = stackIn_11_0;
-                            bh.field_d = stackIn_11_0;
-                            var5.field_g = 0;
-                            r.field_c = ua.field_b;
-                            oe.a(r.field_d, 32, (rb) (Object) d.field_b, bf.field_s, jg.field_A);
-                            nf.a(-1, (byte) 95);
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        ah.field_e = null;
-                        return true;
-                    }
-                    case 13: {
-                        var2 = (IOException) (Object) caughtException;
-                        r.field_c = rb.field_h;
-                        ah.field_e = null;
-                        return true;
-                    }
-                    case 14: {
-                        r.field_c = rb.field_h;
-                        ah.field_e = null;
-                        return true;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int stackOut_9_0 = 0;
+            L0: {
+              if (null != ah.field_e) {
+                break L0;
+              } else {
+                ah.field_e = og.field_a.a(sj.field_I, -115, kl.field_a);
+                break L0;
+              }
+            }
+            if (0 == ah.field_e.field_b) {
+              return false;
+            } else {
+              L1: {
+                if (param0 == -68) {
+                  break L1;
+                } else {
+                  field_e = null;
+                  break L1;
                 }
+              }
+              long dupTemp$2 = dd.b(71);
+              ca.field_Y = dupTemp$2;
+              ik.field_p = dupTemp$2;
+              if (ah.field_e.field_b != 1) {
+                r.field_c = rb.field_h;
+                ah.field_e = null;
+                return true;
+              } else {
+                try {
+                  L2: {
+                    L3: {
+                      m.field_b = new sb((java.net.Socket) ah.field_e.field_f, og.field_a);
+                      d.field_b.field_g = 0;
+                      var4 = se.field_p;
+                      var5 = var4;
+                      if (!param1) {
+                        stackOut_10_0 = -1;
+                        stackIn_11_0 = stackOut_10_0;
+                        break L3;
+                      } else {
+                        stackOut_9_0 = -2;
+                        stackIn_11_0 = stackOut_9_0;
+                        break L3;
+                      }
+                    }
+                    wc.field_i = stackIn_11_0;
+                    hh.field_a = stackIn_11_0;
+                    bh.field_d = stackIn_11_0;
+                    var5.field_g = 0;
+                    r.field_c = ua.field_b;
+                    oe.a(r.field_d, 32, (rb) (Object) d.field_b, bf.field_s, jg.field_A);
+                    nf.a(-1, (byte) 95);
+                    break L2;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = (IOException) (Object) decompiledCaughtException;
+                  r.field_c = rb.field_h;
+                  ah.field_e = null;
+                  return true;
+                }
+                ah.field_e = null;
+                return true;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

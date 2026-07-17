@@ -16,18 +16,13 @@ final class ta extends al {
     static ak field_hb;
 
     public static void k(byte param0) {
-        if (param0 > -61) {
-          return;
-        } else {
-          field_ob = null;
-          field_ib = null;
-          field_hb = null;
-          field_lb = null;
-          field_gb = null;
-          field_pb = null;
-          field_jb = null;
-          return;
-        }
+        field_ob = null;
+        field_ib = null;
+        field_hb = null;
+        field_lb = null;
+        field_gb = null;
+        field_pb = null;
+        field_jb = null;
     }
 
     final void l(int param0) {
@@ -40,25 +35,38 @@ final class ta extends al {
 
     ta(vk param0, String param1) {
         super(param0, 300, 120);
-        int var3 = 0;
-        ((ta) this).field_mb = param1;
-        if (null != ((ta) this).field_mb) {
-            var3 = ci.field_d.a(((ta) this).field_mb, 260, ci.field_d.field_C);
-            ((ta) this).b(300, var3 + 150, 78);
+        int var3_int = 0;
+        try {
+            ((ta) this).field_mb = param1;
+            if (null != ((ta) this).field_mb) {
+                var3_int = ci.field_d.a(((ta) this).field_mb, 260, ci.field_d.field_C);
+                ((ta) this).b(300, var3_int + 150, 78);
+            }
+            ((ta) this).field_qb = new le(13, 50, 274, 30, 15, 2113632, 4210752);
+            ((ta) this).field_kb = false;
+            ((ta) this).field_qb.field_L = true;
+            ((ta) this).field_nb = false;
+            ((ta) this).b((byte) 107, (cf) (Object) ((ta) this).field_qb);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ta.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((ta) this).field_qb = new le(13, 50, 274, 30, 15, 2113632, 4210752);
-        ((ta) this).field_kb = false;
-        ((ta) this).field_qb.field_L = true;
-        ((ta) this).field_nb = false;
-        ((ta) this).b((byte) 107, (cf) (Object) ((ta) this).field_qb);
     }
 
     final void a(String param0, float param1, int param2, boolean param3) {
+        RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
         Object stackOut_4_0 = null;
@@ -66,85 +74,112 @@ final class ta extends al {
         int stackOut_6_1 = 0;
         Object stackOut_5_0 = null;
         int stackOut_5_1 = 0;
-        L0: {
-          if (((ta) this).field_kb) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        if (stackIn_3_0 != (param3 ? 1 : 0)) {
-          ((ta) this).field_qb.field_B = (int)(65536.0f * (param1 / 100.0f));
-          ((ta) this).field_rb = param0;
-          if (param2 < 24) {
-            field_gb = null;
-            return;
-          } else {
-            return;
-          }
-        } else {
-          L1: {
-            stackOut_4_0 = this;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
-            if (!param3) {
-              stackOut_6_0 = this;
-              stackOut_6_1 = 0;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              break L1;
-            } else {
-              stackOut_5_0 = this;
-              stackOut_5_1 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              break L1;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (((ta) this).field_kb) {
+                stackOut_2_0 = 0;
+                stackIn_3_0 = stackOut_2_0;
+                break L1;
+              } else {
+                stackOut_1_0 = 1;
+                stackIn_3_0 = stackOut_1_0;
+                break L1;
+              }
             }
-          }
-          ((ta) this).field_kb = stackIn_7_1 != 0;
-          if (((ta) this).field_kb) {
-            ((ta) this).field_qb.a(4210752, 8405024, (byte) -95);
-            ((ta) this).field_qb.field_L = true;
+            L2: {
+              if (stackIn_3_0 != (param3 ? 1 : 0)) {
+                break L2;
+              } else {
+                L3: {
+                  stackOut_4_0 = this;
+                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_5_0 = stackOut_4_0;
+                  if (!param3) {
+                    stackOut_6_0 = this;
+                    stackOut_6_1 = 0;
+                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_1 = stackOut_6_1;
+                    break L3;
+                  } else {
+                    stackOut_5_0 = this;
+                    stackOut_5_1 = 1;
+                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_1 = stackOut_5_1;
+                    break L3;
+                  }
+                }
+                ((ta) this).field_kb = stackIn_7_1 != 0;
+                if (((ta) this).field_kb) {
+                  ((ta) this).field_qb.a(4210752, 8405024, (byte) -95);
+                  ((ta) this).field_qb.field_L = true;
+                  break L2;
+                } else {
+                  ((ta) this).field_qb.a(4210752, 2113632, (byte) 117);
+                  if (((ta) this).field_nb) {
+                    ((ta) this).field_qb.field_L = false;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+            }
             ((ta) this).field_qb.field_B = (int)(65536.0f * (param1 / 100.0f));
             ((ta) this).field_rb = param0;
-            if (param2 < 24) {
+            if (param2 >= 24) {
+              break L0;
+            } else {
               field_gb = null;
               return;
-            } else {
-              return;
-            }
-          } else {
-            ((ta) this).field_qb.a(4210752, 2113632, (byte) 117);
-            if (((ta) this).field_nb) {
-              ((ta) this).field_qb.field_L = false;
-              ((ta) this).field_qb.field_B = (int)(65536.0f * (param1 / 100.0f));
-              ((ta) this).field_rb = param0;
-              if (param2 >= 24) {
-                return;
-              } else {
-                field_gb = null;
-                return;
-              }
-            } else {
-              ((ta) this).field_qb.field_B = (int)(65536.0f * (param1 / 100.0f));
-              ((ta) this).field_rb = param0;
-              if (param2 >= 24) {
-                return;
-              } else {
-                field_gb = null;
-                return;
-              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var5 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var5;
+            stackOut_15_1 = new StringBuilder().append("ta.C(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param0 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L4;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L4;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
     final static void b(byte param0, String param1) {
-        int var2 = 34 / ((param0 - -20) / 42);
+        try {
+            int var2_int = 34 / ((param0 - -20) / 42);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ta.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0, int param1, int param2) {
@@ -152,10 +187,10 @@ final class ta extends al {
           L0: {
             field_hb = null;
             super.a(param0, param1, param2);
-            ci.field_d.b(((ta) this).field_rb, param1 + (((ta) this).field_n >> -368012767), 103 + param2, 16777215, -1);
+            ci.field_d.b(((ta) this).field_rb, param1 + (((ta) this).field_n >> 1), 103 + param2, 16777215, -1);
             if (null != ((ta) this).field_mb) {
               oo.b(param1 - -20, 120 + (param2 - 7), 260, 8421504);
-              int discarded$2 = ci.field_d.a(((ta) this).field_mb, param1 + 20, param2 - -120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
+              int discarded$2 = ci.field_d.a(((ta) this).field_mb, param1 + 20, param2 + 128, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
               break L0;
             } else {
               break L0;
@@ -165,10 +200,10 @@ final class ta extends al {
         } else {
           L1: {
             super.a(param0, param1, param2);
-            ci.field_d.b(((ta) this).field_rb, param1 + (((ta) this).field_n >> -368012767), 103 + param2, 16777215, -1);
+            ci.field_d.b(((ta) this).field_rb, param1 + (((ta) this).field_n >> 1), 103 + param2, 16777215, -1);
             if (null != ((ta) this).field_mb) {
               oo.b(param1 - -20, 120 + (param2 - 7), 260, 8421504);
-              int discarded$3 = ci.field_d.a(((ta) this).field_mb, param1 + 20, param2 - -120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
+              int discarded$3 = ci.field_d.a(((ta) this).field_mb, param1 + 20, param2 + 128, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
               break L1;
             } else {
               break L1;

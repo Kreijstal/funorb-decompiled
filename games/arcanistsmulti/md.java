@@ -10,34 +10,50 @@ final class md {
     static String[] field_a;
 
     final static int a(boolean param0, long param1) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        L0: {
-          var5 = ArcanistsMulti.field_G ? 1 : 0;
-          var3 = 0;
-          if (!param0) {
-            break L0;
-          } else {
-            md.a((byte) 28);
-            break L0;
-          }
-        }
-        var4 = 0;
-        L1: while (true) {
-          if ((var4 ^ -1) <= -59) {
-            return var3;
-          } else {
-            if ((param1 & 1L << var4) != 0L) {
-              var3 = var3 + ta.a(true, var4);
-              var4++;
-              continue L1;
-            } else {
-              var4++;
-              continue L1;
+        int stackIn_9_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_8_0 = 0;
+        var5 = ArcanistsMulti.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var3_int = 0;
+              if (!param0) {
+                break L1;
+              } else {
+                md.a((byte) 28);
+                break L1;
+              }
+            }
+            var4 = 0;
+            L2: while (true) {
+              if (var4 >= 58) {
+                stackOut_8_0 = var3_int;
+                stackIn_9_0 = stackOut_8_0;
+                break L0;
+              } else {
+                L3: {
+                  if ((param1 & 1L << var4) == 0L) {
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                var4++;
+                continue L2;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var3, "md.A(" + param0 + 44 + param1 + 41);
         }
+        return stackIn_9_0;
     }
 
     public static void a(byte param0) {

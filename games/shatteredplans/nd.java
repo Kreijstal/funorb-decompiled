@@ -20,7 +20,7 @@ final class nd {
         StringBuilder var3 = null;
         int var4 = 0;
         String var5 = null;
-        Object var6 = null;
+        Object[] var6 = null;
         String[] var6_array = null;
         int var7 = 0;
         sq var8 = null;
@@ -145,9 +145,6 @@ final class nd {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
         field_i = null;
         field_d = null;
         field_c = null;

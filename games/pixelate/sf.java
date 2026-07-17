@@ -6,33 +6,23 @@ final class sf {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = 110 / ((-2 - param0) / 55);
+        int var1 = -110;
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        var2 = Pixelate.field_H ? 1 : 0;
-        gn.field_y.a(true);
-        var1 = param0;
-        L0: while (true) {
-          if (32 <= var1) {
-            var1 = 0;
-            L1: while (true) {
-              if (32 <= var1) {
-                id.field_b = 0;
-                return;
-              } else {
-                gf.field_a[var1] = 0L;
-                var1++;
-                continue L1;
-              }
+        int var1_int = 0;
+        int var2 = Pixelate.field_H ? 1 : 0;
+        try {
+            gn.field_y.a(true);
+            for (var1_int = param0; 32 > var1_int; var1_int++) {
+                rh.field_x[var1_int] = 0L;
             }
-          } else {
-            rh.field_x[var1] = 0L;
-            var1++;
-            continue L0;
-          }
+            for (var1_int = 0; 32 > var1_int; var1_int++) {
+                gf.field_a[var1_int] = 0L;
+            }
+            id.field_b = 0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "sf.B(" + param0 + 41);
         }
     }
 

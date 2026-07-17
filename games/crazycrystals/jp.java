@@ -25,7 +25,7 @@ final class jp {
               }
             } else {
               var7 = new ak();
-              var7.field_j = param4;
+              var7.field_j = 1;
               var7.field_h = param3;
               var7.field_g = param0;
               hd.field_d.b(0, (jb) (Object) var7);
@@ -47,7 +47,7 @@ final class jp {
             } else {
               var8 = new ak();
               var5_ref = var8;
-              var8.field_j = param4;
+              var8.field_j = 1;
               var8.field_h = param3;
               var8.field_g = param0;
               hd.field_d.b(0, (jb) (Object) var8);

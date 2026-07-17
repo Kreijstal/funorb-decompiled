@@ -7,10 +7,14 @@ final class vl extends vg {
     private int field_g;
 
     vl(int param0, fsa param1) {
-        ((vl) this).field_f = param0;
-        ((vl) this).field_g = param1.f((byte) -72).c(121);
-        ((vl) this).field_h = param1.n(31974).field_d;
-        dt discarded$0 = param1.x(15470);
+        try {
+            ((vl) this).field_f = param0;
+            ((vl) this).field_g = param1.f((byte) -72).c(121);
+            ((vl) this).field_h = param1.n(31974).field_d;
+            dt discarded$0 = param1.x(15470);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "vl.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final String toString() {
@@ -26,7 +30,7 @@ final class vl extends vg {
         if (param0 <= 111) {
             iu[] discarded$0 = vl.a((byte) 34, 94, 33, 36);
         }
-        for (var5 = 1; (var5 ^ -1) > -10; var5++) {
+        for (var5 = 1; var5 < 9; var5++) {
             var7[var5] = var7[0];
         }
         var4[4] = jf.a(param2, 43, 64);

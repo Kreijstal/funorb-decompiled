@@ -65,19 +65,12 @@ final class od extends qf {
 
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((od) this).field_z, param0 << (field_l ? 2 : 1));
             ((od) this).field_v = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((od) this).field_v.open();
             ((od) this).field_v.start();
             ((od) this).field_w = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (lc.a(param0, (byte) 121) != 1) {
-                ((od) this).a(cg.a(-922314526, param0));
-                return;
-            }
-            ((od) this).field_v = null;
-            throw lineUnavailableException;
         }
     }
 

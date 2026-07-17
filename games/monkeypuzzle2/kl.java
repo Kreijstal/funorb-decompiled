@@ -45,8 +45,9 @@ final class kl {
                 var19 = var18 * var8 >> 8;
                 var20 = var18 * var9 >> 8;
                 var21 = var18 * var10 >> 8;
+                int incrementValue$1 = var6;
                 var6++;
-                ge.field_i[var6] = (var15 * var7 + var19 * param5 << 8 & 16711680) + (var16 * var7 + var20 * param5 & 65280) + (var17 * var7 + var21 * param5 >> 8);
+                ge.field_i[incrementValue$1] = (var15 * var7 + var19 * param5 << 8 & 16711680) + (var16 * var7 + var20 * param5 & 65280) + (var17 * var7 + var21 * param5 >> 8);
                 var13--;
                 continue L1;
               }

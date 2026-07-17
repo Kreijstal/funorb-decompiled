@@ -39,11 +39,6 @@ class jb {
 
     public static void c(int param0) {
         field_c = null;
-        if (param0 != -24894) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

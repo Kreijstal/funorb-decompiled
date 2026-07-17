@@ -16,9 +16,6 @@ final class nm extends w {
 
     public static void g(int param0) {
         field_Nb = null;
-        if (param0 != 48) {
-            field_Nb = null;
-        }
         field_Pb = null;
     }
 
@@ -50,22 +47,22 @@ final class nm extends w {
           var11 = (-(var9 * param3) + 1.0f) * param1;
           var12 = param1 * (-((1.0f - var9) * param3) + 1.0f);
           var13 = var8;
-          if ((var13 ^ -1) != -1) {
-            if ((var13 ^ -1) != -2) {
-              if (-3 == (var13 ^ -1)) {
+          if (var13 != 0) {
+            if (var13 != 1) {
+              if (var13 == 2) {
                 var5 = param1;
                 var4 = var10;
                 var6 = var12;
                 break L0;
               } else {
-                if ((var13 ^ -1) == -4) {
+                if (var13 == 3) {
                   var5 = var11;
                   var6 = param1;
                   var4 = var10;
                   break L0;
                 } else {
                   if (4 != var13) {
-                    if (-6 == (var13 ^ -1)) {
+                    if (var13 == 5) {
                       var4 = param1;
                       var6 = var11;
                       var5 = var10;
@@ -99,7 +96,7 @@ final class nm extends w {
           var14 = Math.min(Math.round((float)var13 * var4), var13 - 1);
           var15 = Math.min(Math.round(var5 * (float)var13), -1 + var13);
           var16 = Math.min(Math.round((float)var13 * var6), -1 + var13);
-          var17 = 255 & var16 | (var15 << 457078600 & 65280 | 16711680 & var14 << -1294601872);
+          var17 = 255 & var16 | (var15 << 8 & 65280 | 16711680 & var14 << 16);
           return var17;
         } else {
           return 25;
@@ -167,7 +164,7 @@ final class nm extends w {
         for (var4 = 0; var4 < var1; var4++) {
             var3[var4] = mb.field_d[lb.a(255, (int) var2[var4])];
         }
-        var4 = -8 % ((param0 - -40) / 42);
+        var4 = 0;
         ck var5 = new ck(ed.field_f, i.field_d, sg.field_d[0], fh.field_a[0], tm.field_a[0], hc.field_c[0], var3);
         oa.a(127);
         return var5;
@@ -241,7 +238,7 @@ final class nm extends w {
             }
           }
         }
-        if ((wh.field_c ^ -1) != -85) {
+        if (wh.field_c != 84) {
           if (wh.field_c != 85) {
             var4 = el.field_G;
             if (kh.a((char) var4, 8212)) {
@@ -358,7 +355,7 @@ final class nm extends w {
                 break L10;
               }
             } else {
-              if ((dj.field_ab.length() ^ -1) >= -1) {
+              if (dj.field_ab.length() <= 0) {
                 qk.a((byte) 94);
                 break L10;
               } else {
@@ -389,7 +386,7 @@ final class nm extends w {
                     }
                   }
                   L12: {
-                    if (-3 != (rf.a(0, var5) ^ -1)) {
+                    if (rf.a(0, var5) != 2) {
                       break L12;
                     } else {
                       eg.a(var5, param2, 1, (byte) 71);
@@ -416,12 +413,16 @@ final class nm extends w {
 
     nm(long param0, w param1, w param2, jd param3) {
         super(param0, (w) null);
-        ((nm) this).field_Rb = new w(0L, param2);
-        ((nm) this).field_Sb = new jd(0L, param3);
-        ((nm) this).a(((nm) this).field_Rb, -16834);
-        ((nm) this).a((w) (Object) ((nm) this).field_Sb, -16834);
-        ((nm) this).field_Ob = param1;
-        ((nm) this).field_Rb.a(param1, -16834);
+        try {
+            ((nm) this).field_Rb = new w(0L, param2);
+            ((nm) this).field_Sb = new jd(0L, param3);
+            ((nm) this).a(((nm) this).field_Rb, -16834);
+            ((nm) this).a((w) (Object) ((nm) this).field_Sb, -16834);
+            ((nm) this).field_Ob = param1;
+            ((nm) this).field_Rb.a(param1, -16834);
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "nm.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void h(byte param0) {
@@ -442,7 +443,7 @@ final class nm extends w {
             return;
         }
         bl.a(-11, 4, false);
-        int var1 = -75 / ((-27 - param0) / 47);
+        int var1 = 75;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -522,7 +523,7 @@ final class nm extends w {
                 break L7;
               }
             }
-            if (-1 >= (-(((nm) this).field_Ob.field_Ib - -((nm) this).field_Ob.field_Mb) ^ -1)) {
+            if (-(((nm) this).field_Ob.field_Ib - -((nm) this).field_Ob.field_Mb) >= 0) {
               break L5;
             } else {
               ((nm) this).field_Ob.field_Mb = -((nm) this).field_Ob.field_Ib;

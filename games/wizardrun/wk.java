@@ -56,7 +56,7 @@ final class wk {
                   if (param1.field_k[param1.field_m] != 31) {
                     break L1;
                   } else {
-                    if (116 == (param1.field_k[1 + param1.field_m] ^ -1)) {
+                    if (param1.field_k[1 + param1.field_m] == -117) {
                       L2: {
                         if (((wk) this).field_a != null) {
                           break L2;

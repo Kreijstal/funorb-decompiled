@@ -14,8 +14,12 @@ final class vj extends nc {
 
     vj(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
-        ((vj) this).field_r = new vh(0L, (cj) null, 140, 60, 256, 120);
-        ((vj) this).field_q = 0;
+        try {
+            ((vj) this).field_r = new vh(0L, (cj) null, 140, 60, 256, 120);
+            ((vj) this).field_q = 0;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "vj.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void b(byte param0) {
@@ -232,18 +236,18 @@ final class vj extends nc {
         oo.a(30, 142, 60, 52, 3381555);
         oo.f(32, 144, 56, 48, 8947814, 128);
         if (kd.field_b == 1) {
-          if ((vb.field_f ^ -1) < -31) {
-            if (-61 > (ka.field_t ^ -1)) {
-              if ((vb.field_f ^ -1) > -91) {
+          if (vb.field_f > 30) {
+            if (ka.field_t > 60) {
+              if (vb.field_f < 90) {
                 L0: {
-                  if ((ka.field_t ^ -1) <= -113) {
+                  if (ka.field_t >= 112) {
                     break L0;
                   } else {
                     L1: {
                       stackOut_57_0 = ((vj) this).field_r;
                       stackIn_59_0 = stackOut_57_0;
                       stackIn_58_0 = stackOut_57_0;
-                      if (((vj) this).field_q == -2) {
+                      if (((vj) this).field_q == 1) {
                         stackOut_59_0 = (vh) (Object) stackIn_59_0;
                         stackOut_59_1 = ((vj) this).field_n;
                         stackIn_60_0 = stackOut_59_0;
@@ -262,7 +266,7 @@ final class vj extends nc {
                       stackOut_60_0 = this;
                       stackIn_62_0 = stackOut_60_0;
                       stackIn_61_0 = stackOut_60_0;
-                      if (-2 == ((vj) this).field_q) {
+                      if (((vj) this).field_q == 1) {
                         stackOut_62_0 = this;
                         stackOut_62_1 = 2;
                         stackIn_63_0 = stackOut_62_0;
@@ -280,7 +284,7 @@ final class vj extends nc {
                     break L0;
                   }
                 }
-                if ((kd.field_b ^ -1) == -2) {
+                if (kd.field_b == 1) {
                   if (30 < vb.field_f) {
                     if (142 < ka.field_t) {
                       if (90 > vb.field_f) {
@@ -529,7 +533,7 @@ final class vj extends nc {
                 }
               } else {
                 L6: {
-                  if ((kd.field_b ^ -1) != -2) {
+                  if (kd.field_b != 1) {
                     break L6;
                   } else {
                     if (30 >= vb.field_f) {
@@ -630,7 +634,7 @@ final class vj extends nc {
               }
             } else {
               L9: {
-                if ((kd.field_b ^ -1) != -2) {
+                if (kd.field_b != 1) {
                   break L9;
                 } else {
                   if (30 >= vb.field_f) {
@@ -731,7 +735,7 @@ final class vj extends nc {
             }
           } else {
             L12: {
-              if ((kd.field_b ^ -1) != -2) {
+              if (kd.field_b != 1) {
                 break L12;
               } else {
                 if (30 >= vb.field_f) {
@@ -832,7 +836,7 @@ final class vj extends nc {
           }
         } else {
           L15: {
-            if ((kd.field_b ^ -1) != -2) {
+            if (kd.field_b != 1) {
               break L15;
             } else {
               if (30 >= vb.field_f) {
@@ -952,9 +956,9 @@ final class vj extends nc {
         if (param0 == 0) {
           var2 = ((vj) this).field_q;
           if (1 != var2) {
-            if (-3 != (var2 ^ -1)) {
-              if ((var2 ^ -1) != -4) {
-                if ((var2 ^ -1) != -5) {
+            if (var2 != 2) {
+              if (var2 != 3) {
+                if (var2 != 4) {
                   return;
                 } else {
                   ((vj) this).field_s = ((vj) this).field_r.field_Ob;
@@ -976,9 +980,9 @@ final class vj extends nc {
           field_t = 9;
           var2 = ((vj) this).field_q;
           if (1 != var2) {
-            if (-3 != (var2 ^ -1)) {
-              if ((var2 ^ -1) != -4) {
-                if ((var2 ^ -1) != -5) {
+            if (var2 != 2) {
+              if (var2 != 3) {
+                if (var2 != 4) {
                   return;
                 } else {
                   ((vj) this).field_s = ((vj) this).field_r.field_Ob;
@@ -1025,7 +1029,7 @@ final class vj extends nc {
         int stackOut_2_0 = 0;
         int stackOut_10_0 = 0;
         int stackOut_9_0 = 0;
-        if ((kd.field_b ^ -1) == -2) {
+        if (kd.field_b == 1) {
           if (vb.field_f > param6) {
             L0: {
               if (ka.field_t <= param7) {
@@ -1065,7 +1069,7 @@ final class vj extends nc {
                               break L2;
                             } else {
                               L3: {
-                                if (-1 > (1 & jf.field_e ^ -1)) {
+                                if ((1 & jf.field_e) > 0) {
                                   stackOut_48_0 = 16777215;
                                   stackIn_49_0 = stackOut_48_0;
                                   break L3;
@@ -1120,7 +1124,7 @@ final class vj extends nc {
                       break L5;
                     } else {
                       L6: {
-                        if (-1 > (1 & jf.field_e ^ -1)) {
+                        if ((1 & jf.field_e) > 0) {
                           stackOut_63_0 = 16777215;
                           stackIn_64_0 = stackOut_63_0;
                           break L6;
@@ -1170,7 +1174,7 @@ final class vj extends nc {
                       break L8;
                     } else {
                       L9: {
-                        if (-1 > (1 & jf.field_e ^ -1)) {
+                        if ((1 & jf.field_e) > 0) {
                           stackOut_30_0 = 16777215;
                           stackIn_31_0 = stackOut_30_0;
                           break L9;
@@ -1232,7 +1236,7 @@ final class vj extends nc {
                     break L11;
                   } else {
                     L12: {
-                      if (-1 > (1 & jf.field_e ^ -1)) {
+                      if ((1 & jf.field_e) > 0) {
                         stackOut_10_0 = 16777215;
                         stackIn_11_0 = stackOut_10_0;
                         break L12;

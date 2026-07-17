@@ -12,28 +12,76 @@ final class sl {
     static String field_a;
 
     private final void a(int param0, dm param1) {
-        if (param1 == null) {
-          if (param0 < 25) {
-            field_g = null;
-            return;
-          } else {
-            return;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == null) {
+                break L1;
+              } else {
+                param1.a(false);
+                param1.c(82);
+                ((sl) this).field_e = ((sl) this).field_e + param1.field_p;
+                break L1;
+              }
+            }
+            if (param0 >= 25) {
+              break L0;
+            } else {
+              field_g = null;
+              return;
+            }
           }
-        } else {
-          param1.a(false);
-          param1.c(82);
-          ((sl) this).field_e = ((sl) this).field_e + param1.field_p;
-          if (param0 >= 25) {
-            return;
-          } else {
-            field_g = null;
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("sl.E(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
           }
+          throw kg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
     private final void a(long param0, int param1) {
-        int var5 = 83 / ((param1 - 25) / 59);
+        int var5 = -83;
         dm var4 = (dm) (Object) ((sl) this).field_d.a(param0, -18348);
         this.a(106, var4);
     }
@@ -114,22 +162,27 @@ final class sl {
     }
 
     private final void a(int param0, Object param1, long param2, int param3) {
-        dm var9 = null;
+        dm var6 = null;
+        mj var6_ref = null;
         int var8 = Virogrid.field_F ? 1 : 0;
-        if (!(((sl) this).field_f >= param0)) {
-            throw new IllegalStateException();
+        try {
+            if (!(((sl) this).field_f >= param0)) {
+                throw new IllegalStateException();
+            }
+            this.a(param2, -48);
+            ((sl) this).field_e = ((sl) this).field_e - param0;
+            while (((sl) this).field_e < 0) {
+                var6 = (dm) (Object) ((sl) this).field_b.a(-32314);
+                this.a(103, var6);
+            }
+            var6_ref = new mj(param1, param0);
+            ((sl) this).field_d.a((l) (Object) var6_ref, -121, param2);
+            int var7 = 0;
+            ((sl) this).field_b.a(true, (wb) (Object) var6_ref);
+            ((dm) (Object) var6_ref).field_j = 0L;
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "sl.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -106 + 41);
         }
-        this.a(param2, -48);
-        ((sl) this).field_e = ((sl) this).field_e - param0;
-        while (((sl) this).field_e < 0) {
-            var9 = (dm) (Object) ((sl) this).field_b.a(-32314);
-            this.a(103, var9);
-        }
-        mj var6 = new mj(param1, param0);
-        ((sl) this).field_d.a((l) (Object) var6, -121, param2);
-        int var7 = 103 % ((-40 - param3) / 60);
-        ((sl) this).field_b.a(true, (wb) (Object) var6);
-        ((dm) (Object) var6).field_j = 0L;
     }
 
     public static void a(int param0) {
@@ -170,13 +223,13 @@ final class sl {
     }
 
     final void a(Object param0, long param1, int param2) {
-        if (param2 != -14696) {
-          ((sl) this).field_f = -85;
-          this.a(1, param0, param1, -106);
-          return;
-        } else {
-          this.a(1, param0, param1, -106);
-          return;
+        try {
+            if (param2 != -14696) {
+                ((sl) this).field_f = -85;
+            }
+            this.a(1, param0, param1, -106);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "sl.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 

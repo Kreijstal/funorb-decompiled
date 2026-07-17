@@ -9,16 +9,15 @@ final class nj extends ke {
     static he field_l;
 
     final void a(byte[] param0, boolean param1) {
-        ((nj) this).field_h = java.nio.ByteBuffer.allocateDirect(param0.length);
-        if (param1) {
-          field_i = null;
-          java.nio.Buffer discarded$8 = ((nj) this).field_h.position(0);
-          java.nio.ByteBuffer discarded$9 = ((nj) this).field_h.put(param0);
-          return;
-        } else {
-          java.nio.Buffer discarded$10 = ((nj) this).field_h.position(0);
-          java.nio.ByteBuffer discarded$11 = ((nj) this).field_h.put(param0);
-          return;
+        try {
+            ((nj) this).field_h = java.nio.ByteBuffer.allocateDirect(param0.length);
+            if (param1) {
+                field_i = null;
+            }
+            java.nio.Buffer discarded$0 = ((nj) this).field_h.position(0);
+            java.nio.ByteBuffer discarded$1 = ((nj) this).field_h.put(param0);
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "nj.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -43,12 +42,6 @@ final class nj extends ke {
 
     public static void a(int param0) {
         field_k = null;
-        if (param0 != 0) {
-            field_k = null;
-            field_l = null;
-            field_i = null;
-            return;
-        }
         field_l = null;
         field_i = null;
     }

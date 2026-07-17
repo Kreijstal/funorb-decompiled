@@ -12,7 +12,7 @@ final class rh extends wf {
         field_e = null;
         field_f = null;
         if (param0 != 32081) {
-            field_e = (qo) null;
+            field_e = null;
         }
     }
 
@@ -30,19 +30,23 @@ final class rh extends wf {
         ((rh) this).field_h = param1;
         if (param0 != -128) {
           rh.a(-71);
-          ((rh) this).field_g.f(128 + param1 * gn.field_a >> 1233910472);
+          ((rh) this).field_g.f(128 + param1 * gn.field_a >> 8);
           return;
         } else {
-          ((rh) this).field_g.f(128 + param1 * gn.field_a >> 1233910472);
+          ((rh) this).field_g.f(128 + param1 * gn.field_a >> 8);
           return;
         }
     }
 
     rh(su param0, wf param1) {
-        ((rh) this).field_g = param0;
-        ((rh) this).field_h = param0.i();
-        ((rh) this).field_i = param1;
-        ((rh) this).field_g.f(((rh) this).field_h * gn.field_a - -128 >> -1623071768);
+        try {
+            ((rh) this).field_g = param0;
+            ((rh) this).field_h = param0.i();
+            ((rh) this).field_i = param1;
+            ((rh) this).field_g.f(((rh) this).field_h * gn.field_a - -128 >> 8);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

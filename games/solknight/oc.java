@@ -16,7 +16,7 @@ final class oc {
           return var3;
         } else {
           L0: {
-            if ((param1 ^ -1) <= -32769) {
+            if (param1 >= 32768) {
               var4 = ((oc) this).field_b.b(1, 12257, param1 & 32767);
               break L0;
             } else {
@@ -54,11 +54,6 @@ final class oc {
 
     public static void a(int param0) {
         field_e = null;
-        if (param0 != 255) {
-            field_e = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
@@ -71,7 +66,7 @@ final class oc {
         var5 = SolKnight.field_L ? 1 : 0;
         var1 = "(" + nf.field_U + " " + kl.field_b + " " + jg.field_e + ") " + ob.field_h;
         if (!param0) {
-          if ((te.field_O ^ -1) >= -1) {
+          if (te.field_O <= 0) {
             return var1;
           } else {
             var1 = var1 + ":";
@@ -83,7 +78,7 @@ final class oc {
                 L1: {
                   var1 = var1 + 32;
                   var3 = te.field_N.field_l[var2] & 255;
-                  var4 = var3 >> -1918280092;
+                  var4 = var3 >> 4;
                   var3 = var3 & 15;
                   if (10 <= var4) {
                     var4 += 55;
@@ -95,7 +90,7 @@ final class oc {
                 }
                 L2: {
                   var1 = var1 + (char)var4;
-                  if ((var3 ^ -1) <= -11) {
+                  if (var3 >= 10) {
                     var3 += 55;
                     break L2;
                   } else {
@@ -111,7 +106,7 @@ final class oc {
           }
         } else {
           field_a = null;
-          if ((te.field_O ^ -1) < -1) {
+          if (te.field_O > 0) {
             var1 = var1 + ":";
             var2 = 0;
             L3: while (true) {
@@ -119,7 +114,7 @@ final class oc {
                 L4: {
                   var1 = var1 + 32;
                   var3 = te.field_N.field_l[var2] & 255;
-                  var4 = var3 >> -1918280092;
+                  var4 = var3 >> 4;
                   var3 = var3 & 15;
                   if (10 <= var4) {
                     var4 += 55;
@@ -131,7 +126,7 @@ final class oc {
                 }
                 L5: {
                   var1 = var1 + (char)var4;
-                  if ((var3 ^ -1) <= -11) {
+                  if (var3 >= 10) {
                     var3 += 55;
                     break L5;
                   } else {

@@ -14,15 +14,16 @@ final class hj extends oh {
         field_l = null;
         field_m = null;
         field_n = null;
-        if (param0 != 12) {
-            field_n = null;
-        }
     }
 
     hj(fs param0, ln param1, int param2) {
-        ((hj) this).field_h = param2;
-        ((hj) this).field_j = param0;
-        ((hj) this).field_i = param1;
+        try {
+            ((hj) this).field_h = param2;
+            ((hj) this).field_j = param0;
+            ((hj) this).field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "hj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

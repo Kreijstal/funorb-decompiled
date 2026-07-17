@@ -7,12 +7,16 @@ final class pr extends ht {
 
     pr(fr param0, int param1, int param2, byte[] param3, int param4) {
         super(param0, 3552, param1, param2, false);
-        ((pr) this).field_l = param2;
-        ((pr) this).field_d.a(55, (ht) this);
-        jaggl.OpenGL.glPixelStorei(3317, 1);
-        jaggl.OpenGL.glTexImage1Dub(((pr) this).field_c, 0, ((pr) this).field_a, ((pr) this).field_l, 0, param4, 5121, param3, 0);
-        jaggl.OpenGL.glPixelStorei(3317, 4);
-        ((pr) this).a(true, 0);
+        try {
+            ((pr) this).field_l = param2;
+            ((pr) this).field_d.a(55, (ht) this);
+            jaggl.OpenGL.glPixelStorei(3317, 1);
+            jaggl.OpenGL.glTexImage1Dub(((pr) this).field_c, 0, ((pr) this).field_a, ((pr) this).field_l, 0, param4, 5121, param3, 0);
+            jaggl.OpenGL.glPixelStorei(3317, 4);
+            ((pr) this).a(true, 0);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "pr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+        }
     }
 
     public static void d(int param0) {

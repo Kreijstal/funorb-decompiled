@@ -11,9 +11,6 @@ final class ft extends tc {
     static hd field_m;
 
     public static void a(int param0) {
-        if (param0 != -10) {
-            ft.e(-3);
-        }
         field_m = null;
         field_q = null;
         field_p = null;
@@ -25,12 +22,12 @@ final class ft extends tc {
         int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         wk[] var7 = new wk[9];
         wk[] var4 = var7;
-        var7[0] = hl.a(false, param2, param3);
+        var7[0] = hl.a(false, param2, 1);
         int var5 = 1;
         if (param1 > -8) {
             ft.e(-23);
         }
-        while ((var5 ^ -1) > -10) {
+        while (var5 < 9) {
             var4[var5] = var4[0];
             var5++;
         }

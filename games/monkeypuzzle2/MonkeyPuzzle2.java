@@ -285,7 +285,7 @@ public final class MonkeyPuzzle2 extends bi {
 
     final void d(int param0) {
         int var4 = field_F ? 1 : 0;
-        Object var5 = null != ba.field_f ? ba.field_f : ie.field_e;
+        Object var5 = null != ba.field_f ? (Object) (Object) ba.field_f : (Object) (Object) ie.field_e;
         Object var2 = var5;
         if (param0 != -25976) {
             field_A = null;
@@ -392,10 +392,10 @@ public final class MonkeyPuzzle2 extends bi {
           L5: {
             b.a(-21342, ab.field_d);
             je.field_h = this.b((byte) 36, true);
-            if (-7 == qh.field_b) {
+            if (qh.field_b == 6) {
               break L5;
             } else {
-              if (-11 != qh.field_b) {
+              if (qh.field_b != 10) {
                 stackOut_17_0 = 0;
                 stackIn_18_0 = stackOut_17_0;
                 break L4;
@@ -415,11 +415,11 @@ public final class MonkeyPuzzle2 extends bi {
           } else {
             L7: {
               var2 = j.a(5);
-              if ((var2 ^ -1) == -3) {
+              if (var2 == 2) {
                 rb.h(3591);
                 break L7;
               } else {
-                if ((var2 ^ -1) == -4) {
+                if (var2 == 3) {
                   ue.a((byte) 122, true);
                   break L7;
                 } else {
@@ -481,11 +481,8 @@ public final class MonkeyPuzzle2 extends bi {
         hk.field_k = ol.a(-92, 1);
         cl.field_a = ol.a(-106, 2);
         wi.field_d = ol.a(-89, 3);
-        if (param0 != -32) {
-            field_C = null;
-        }
-        fi.field_b = ol.a(param0 + -92, 5);
-        df.field_p = be.a(false, true, param0 + 13303, 6, false);
+        fi.field_b = ol.a(-124, 5);
+        df.field_p = be.a(false, true, 13271, 6, false);
         ha.field_fb = ol.a(-117, 7);
     }
 
@@ -727,7 +724,7 @@ public final class MonkeyPuzzle2 extends bi {
           }
           var3 = 0;
           L14: while (true) {
-            if ((var3 ^ -1) <= -12) {
+            if (var3 >= 11) {
               L15: {
                 qh.field_b = 0;
                 tk.a(50, true);

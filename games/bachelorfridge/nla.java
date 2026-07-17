@@ -11,34 +11,81 @@ final class nla {
     static String field_c;
 
     final void a(cda param0, boolean param1) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         var4 = BachelorFridge.field_y;
-        if (!param1) {
-          return;
-        } else {
-          var3 = 0;
-          L0: while (true) {
-            if (-12 >= (var3 ^ -1)) {
-              return;
+        try {
+          L0: {
+            if (param1) {
+              var3_int = 0;
+              L1: while (true) {
+                if (var3_int >= 11) {
+                  break L0;
+                } else {
+                  ((nla) this).field_g[var3_int].field_h = param0.field_b[var3_int].field_h;
+                  ((nla) this).field_g[var3_int].field_l = param0.field_b[var3_int].field_l;
+                  ((nla) this).field_g[var3_int].field_d = param0.field_b[var3_int].field_d;
+                  ((nla) this).field_g[var3_int].field_e = param0.field_b[var3_int].field_e;
+                  ((nla) this).field_g[var3_int].field_j = param0.field_b[var3_int].field_j;
+                  var3_int++;
+                  continue L1;
+                }
+              }
             } else {
-              ((nla) this).field_g[var3].field_h = param0.field_b[var3].field_h;
-              ((nla) this).field_g[var3].field_l = param0.field_b[var3].field_l;
-              ((nla) this).field_g[var3].field_d = param0.field_b[var3].field_d;
-              ((nla) this).field_g[var3].field_e = param0.field_b[var3].field_e;
-              ((nla) this).field_g[var3].field_j = param0.field_b[var3].field_j;
-              var3++;
-              continue L0;
+              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("nla.A(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
     }
 
     public static void a(boolean param0) {
         field_c = null;
-        if (param0) {
-            return;
-        }
         field_e = null;
         field_b = null;
         field_a = null;

@@ -11,11 +11,67 @@ final class u extends ee {
     private da field_Q;
 
     final boolean a(boolean param0, pm param1) {
-        if (!param0) {
-            field_U = null;
-            return true;
+        RuntimeException var3 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            if (param0) {
+              stackOut_2_0 = 1;
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            } else {
+              field_U = null;
+              return true;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("u.CB(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return true;
+        return stackIn_3_0 != 0;
     }
 
     final boolean f(int param0) {
@@ -60,7 +116,7 @@ final class u extends ee {
         ka var18 = null;
         ka var19 = null;
         var16 = Confined.field_J ? 1 : 0;
-        if ((((u) this).field_V ^ -1) > -3) {
+        if (((u) this).field_V < 2) {
           L0: {
             var2 = 0.25 * ((u) this).field_M;
             var4 = var2 * 16.0 / 1.0;
@@ -158,38 +214,103 @@ final class u extends ee {
 
     private u(hn param0, double param1, double param2, double param3, double param4, double param5, int param6) {
         super(param0, param1, param2, param3, param4, param5);
+        double var13_double = 0.0;
+        double var15 = 0.0;
+        double var17 = 0.0;
         ((u) this).field_W = new da();
         ((u) this).field_Q = new da();
-        ((u) this).field_V = param6;
-        ((u) this).field_R = (int)(Math.random() * 3.99);
-        ((u) this).field_S = 16.0 * param5 / 1.0;
-        double var13 = -0.999 + Math.random() * 1.998;
-        double var15 = Math.sqrt(1.0 - var13 * var13);
-        double var17 = 2.0 * (Math.random() * 3.141592653589793);
-        ((u) this).field_Q.a(0.1 * Math.random(), var13, var15 * Math.sin(var17), Math.cos(var17) * var15, 7);
+        try {
+            ((u) this).field_V = param6;
+            ((u) this).field_R = (int)(Math.random() * 3.99);
+            ((u) this).field_S = 16.0 * param5 / 1.0;
+            var13_double = -0.999 + Math.random() * 1.998;
+            var15 = Math.sqrt(1.0 - var13_double * var13_double);
+            var17 = 2.0 * (Math.random() * 3.141592653589793);
+            ((u) this).field_Q.a(0.1 * Math.random(), var13_double, var15 * Math.sin(var17), Math.cos(var17) * var15, 7);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "u.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     final void a(mn param0, double param1, int param2, vg param3, oi param4) {
-        if (!((u) this).field_N) {
-          if (param2 > -5) {
-            ((u) this).field_Q = null;
-            ((u) this).a(bf.field_R[((u) this).field_V][((u) this).field_R], ((u) this).field_W, param4, (byte) 64, param1, param0, param3, 128);
+        if (((u) this).field_N) {
             return;
-          } else {
+        }
+        try {
+            if (param2 > -5) {
+                ((u) this).field_Q = null;
+            }
             ((u) this).a(bf.field_R[((u) this).field_V][((u) this).field_R], ((u) this).field_W, param4, (byte) 64, param1, param0, param3, 128);
-            return;
-          }
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "u.QA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
     final boolean a(pm param0, byte param1) {
-        if (param1 != 72) {
-            u.h((byte) 61);
-            return false;
+        RuntimeException var3 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 72) {
+                break L1;
+              } else {
+                u.h((byte) 61);
+                break L1;
+              }
+            }
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("u.WA(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
-        return false;
+        return stackIn_3_0 != 0;
     }
 
     final boolean c(int param0) {
@@ -222,15 +343,24 @@ final class u extends ee {
 
     u(hn param0, double param1, double param2, double param3) {
         this(param0, param1, param2, param3, 0.4, 1.0, 0);
-        double var8 = 1.998 * Math.random() - 0.999;
-        double var10 = Math.sqrt(-(var8 * var8) + 1.0);
-        double var12 = Math.random() * 6.283185307179586;
-        double var14 = Math.sin(var12) * var10;
-        double var16 = var10 * Math.cos(var12);
-        var10 = Math.pow(Math.random(), 0.3333333333333333) * 0.01;
-        ((u) this).field_G = var10 * var16;
-        ((u) this).field_L = var10 * var8;
-        ((u) this).field_K = var10 * var14;
+        double var8_double = 0.0;
+        double var10 = 0.0;
+        double var12 = 0.0;
+        double var14 = 0.0;
+        double var16 = 0.0;
+        try {
+            var8_double = 1.998 * Math.random() - 0.999;
+            var10 = Math.sqrt(-(var8_double * var8_double) + 1.0);
+            var12 = Math.random() * 6.283185307179586;
+            var14 = Math.sin(var12) * var10;
+            var16 = var10 * Math.cos(var12);
+            var10 = Math.pow(Math.random(), 0.3333333333333333) * 0.01;
+            ((u) this).field_G = var10 * var16;
+            ((u) this).field_L = var10 * var8_double;
+            ((u) this).field_K = var10 * var14;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "u.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     static {

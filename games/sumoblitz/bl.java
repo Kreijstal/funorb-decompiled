@@ -12,18 +12,18 @@ final class bl {
     hr field_h;
 
     final void a(bl param0, int param1, int param2, hr param3, int param4, int param5, int param6) {
-        ((bl) this).field_f = param0;
-        ((bl) this).field_h = param3;
-        ((bl) this).field_d = param2;
-        ((bl) this).field_b = param1;
-        ((bl) this).field_c = param6;
-        if (param4 != -1) {
-          ((bl) this).field_d = -107;
-          ((bl) this).field_g = param5;
-          return;
-        } else {
-          ((bl) this).field_g = param5;
-          return;
+        try {
+            ((bl) this).field_f = param0;
+            ((bl) this).field_h = param3;
+            ((bl) this).field_d = param2;
+            ((bl) this).field_b = param1;
+            ((bl) this).field_c = param6;
+            if (param4 != -1) {
+                ((bl) this).field_d = -107;
+            }
+            ((bl) this).field_g = param5;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "bl.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

@@ -11,86 +11,33 @@ final class sha extends oda {
     static int field_w;
 
     final void a(boolean param0, vcb param1, byte param2) {
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        Object stackIn_6_0 = null;
-        Object stackIn_7_0 = null;
-        Object stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        Object stackOut_5_0 = null;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        ((sha) this).field_B = param1;
-        ((sha) this).field_u[1] = (shb) (Object) param1;
-        if (param2 > -91) {
-          L0: {
-            this.e(17);
-            stackOut_5_0 = this;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
-            if (!param0) {
-              stackOut_7_0 = this;
-              stackOut_7_1 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              break L0;
-            } else {
-              stackOut_6_0 = this;
-              stackOut_6_1 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              break L0;
+        try {
+            ((sha) this).field_B = param1;
+            ((sha) this).field_u[1] = (shb) (Object) param1;
+            if (param2 > -91) {
+                this.e(17);
             }
-          }
-          ((sha) this).field_A = stackIn_8_1 != 0;
-          return;
-        } else {
-          L1: {
-            stackOut_1_0 = this;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
-            if (!param0) {
-              stackOut_3_0 = this;
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              break L1;
-            } else {
-              stackOut_2_0 = this;
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              break L1;
-            }
-          }
-          ((sha) this).field_A = stackIn_4_1 != 0;
-          return;
+            ((sha) this).field_A = param0 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "sha.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
     public static void f(int param0) {
         field_x = null;
-        if (param0 != 1) {
-            Object var2 = null;
-            sha.a(56, (String) null, 29, -128, (byte) -61, -80, -20, (eab) null, 10);
-        }
     }
 
     sha(int param0, int param1, int param2, int param3, wwa param4, shb param5, wwa param6) {
         super(param0, param1, param2, param3, param4);
-        ((sha) this).field_u = new shb[3];
-        ((sha) this).field_y = new bk(param0, param1, param2, param3, param6, param5);
-        ((sha) this).field_u[2] = (shb) (Object) new bk(param0, param1, param2, param3, param6, param5);
-        ((sha) this).d(16777215);
+        try {
+            ((sha) this).field_u = new shb[3];
+            bk dupTemp$0 = new bk(param0, param1, param2, param3, param6, param5);
+            ((sha) this).field_y = dupTemp$0;
+            ((sha) this).field_u[2] = (shb) (Object) dupTemp$0;
+            ((sha) this).d(16777215);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "sha.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void h(byte param0) {
@@ -149,14 +96,16 @@ final class sha extends oda {
         qfa.field_Ib = param8;
         ea.field_d = param6;
         if (param4 != -2) {
-          return;
-        } else {
-          esa.field_p = param2;
-          vwa.field_p = param3;
-          ff.field_o = (ona) (Object) new wh();
-          nj.field_a = new pfa(param7);
-          ho.field_a = new fwa(ff.field_o, nj.field_a);
-          return;
+            return;
+        }
+        try {
+            esa.field_p = param2;
+            vwa.field_p = param3;
+            ff.field_o = (ona) (Object) new wh();
+            nj.field_a = new pfa(param7);
+            ho.field_a = new fwa(ff.field_o, nj.field_a);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "sha.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
         }
     }
 
@@ -1801,35 +1750,90 @@ final class sha extends oda {
     }
 
     final boolean a(int param0, int param1, shb param2, char param3) {
-        if (param0 != -15834) {
-            Object var6 = null;
-            boolean discarded$0 = ((sha) this).a(-106, -5, (shb) null, '￘');
-            if (super.a(param0 + 0, param1, param2, param3)) {
-                this.e(-1715704688);
-                return true;
+        RuntimeException var5 = null;
+        Object var6 = null;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -15834) {
+                break L1;
+              } else {
+                var6 = null;
+                boolean discarded$2 = ((sha) this).a(-106, -5, (shb) null, '￘');
+                break L1;
+              }
             }
-            return false;
+            if (super.a(param0, param1, param2, param3)) {
+              this.e(-1715704688);
+              stackOut_4_0 = 1;
+              stackIn_5_0 = stackOut_4_0;
+              break L0;
+            } else {
+              return false;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_1 = new StringBuilder().append("sha.N(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 41);
         }
-        if (!(!super.a(param0 + 0, param1, param2, param3))) {
-            this.e(-1715704688);
-            return true;
-        }
-        return false;
+        return stackIn_5_0 != 0;
     }
 
     final void a(int param0, int param1, int param2, shb param3) {
-        Object var6 = null;
-        super.a(param0, param1, param2 ^ 0, param3);
-        if (param2 != -981) {
-          var6 = null;
-          ((sha) this).a(23, 55, 77, (shb) null);
-          this.h((byte) -113);
-          this.e(-1715704688);
-          return;
-        } else {
-          this.h((byte) -113);
-          this.e(-1715704688);
-          return;
+        try {
+            super.a(param0, param1, param2, param3);
+            if (param2 != -981) {
+                Object var6 = null;
+                ((sha) this).a(23, 55, 77, (shb) null);
+            }
+            this.h((byte) -113);
+            this.e(-1715704688);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "sha.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -1837,7 +1841,7 @@ final class sha extends oda {
         Object var3 = null;
         L0: {
           if (null != ((sha) this).field_B) {
-            ((sha) this).field_y.field_t.field_r = -(int)((long)(((sha) this).field_y.field_t.field_f + -((sha) this).field_y.field_f) * (long)((sha) this).field_B.field_L >> -1821903600);
+            ((sha) this).field_y.field_t.field_r = -(int)((long)(((sha) this).field_y.field_t.field_f + -((sha) this).field_y.field_f) * (long)((sha) this).field_B.field_L >> 16);
             break L0;
           } else {
             break L0;
@@ -1845,7 +1849,7 @@ final class sha extends oda {
         }
         if (param0 == -1715704688) {
           if (null != ((sha) this).field_v) {
-            ((sha) this).field_y.field_t.field_g = -(int)((long)(((sha) this).field_y.field_t.field_h + -((sha) this).field_y.field_h) * (long)((sha) this).field_v.field_M >> -1715704688);
+            ((sha) this).field_y.field_t.field_g = -(int)((long)(((sha) this).field_y.field_t.field_h + -((sha) this).field_y.field_h) * (long)((sha) this).field_v.field_M >> 16);
             return;
           } else {
             return;
@@ -1856,26 +1860,94 @@ final class sha extends oda {
           if (null == ((sha) this).field_v) {
             return;
           } else {
-            ((sha) this).field_y.field_t.field_g = -(int)((long)(((sha) this).field_y.field_t.field_h + -((sha) this).field_y.field_h) * (long)((sha) this).field_v.field_M >> -1715704688);
+            ((sha) this).field_y.field_t.field_g = -(int)((long)(((sha) this).field_y.field_t.field_h + -((sha) this).field_y.field_h) * (long)((sha) this).field_v.field_M >> 16);
             return;
           }
         }
     }
 
     final boolean a(int param0, int param1, int param2, shb param3, int param4, int param5, int param6) {
-        if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
-          return true;
-        } else {
-          if (((sha) this).e((byte) -120)) {
-            if (!this.a(param2, param1 + -1715698682)) {
-              return false;
+        RuntimeException var8 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_8_0 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_7_0 = 0;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        try {
+          L0: {
+            if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
+              stackOut_2_0 = 1;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             } else {
-              return true;
+              L1: {
+                L2: {
+                  if (!((sha) this).e((byte) -120)) {
+                    break L2;
+                  } else {
+                    if (!this.a(param2, param1 + -1715698682)) {
+                      break L2;
+                    } else {
+                      stackOut_6_0 = 1;
+                      stackIn_8_0 = stackOut_6_0;
+                      break L1;
+                    }
+                  }
+                }
+                stackOut_7_0 = 0;
+                stackIn_8_0 = stackOut_7_0;
+                break L1;
+              }
+              break L0;
             }
-          } else {
-            return false;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var8 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var8;
+            stackOut_9_1 = new StringBuilder().append("sha.WA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param3 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
+        return stackIn_8_0 != 0;
     }
 
     static {

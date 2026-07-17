@@ -6,9 +6,6 @@ final class slb {
     static String field_b;
 
     public static void a(byte param0) {
-        if (param0 != 13) {
-            return;
-        }
         field_b = null;
     }
 

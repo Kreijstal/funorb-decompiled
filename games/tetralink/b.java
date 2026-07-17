@@ -8,16 +8,13 @@ final class b {
 
     final static void a(int param0, int param1, byte param2) {
         nh.field_Nb = param1;
-        if (param2 > -5) {
-            return;
-        }
         fk.field_S = param0;
     }
 
     final static boolean a(int param0) {
         if (param0 == 0) {
           if (lf.field_b != null) {
-            if (!lf.field_b.h(param0 ^ 0)) {
+            if (!lf.field_b.h(param0)) {
               return false;
             } else {
               return true;
@@ -28,7 +25,7 @@ final class b {
         } else {
           field_b = null;
           if (lf.field_b != null) {
-            if (!lf.field_b.h(param0 ^ 0)) {
+            if (!lf.field_b.h(param0)) {
               return false;
             } else {
               return true;
@@ -41,9 +38,6 @@ final class b {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 != 41) {
-            boolean discarded$0 = b.a(-42);
-        }
     }
 
     static {

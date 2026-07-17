@@ -7,9 +7,6 @@ final class kra {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 <= 32) {
-            return;
-        }
         field_a = null;
     }
 
@@ -19,7 +16,7 @@ final class kra {
         int stackOut_7_0 = 0;
         if (!li.field_i) {
           L0: {
-            if (-2 <= (param4 ^ -1)) {
+            if (param4 <= 1) {
               break L0;
             } else {
               L1: {
@@ -45,7 +42,7 @@ final class kra {
             return;
           }
         } else {
-          og.field_r.a(param7, param5, param3, param4 << 1031681688 | param0, false, param6, param1);
+          og.field_r.a(param7, param5, param3, param4 << 24 | param0, false, param6, param1);
           if (param2 == 16994) {
             return;
           } else {

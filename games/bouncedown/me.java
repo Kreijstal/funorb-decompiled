@@ -19,13 +19,13 @@ final class me extends com.ms.dll.Callback {
         int stackOut_17_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
-        if ((param0 ^ -1) != (((me) this).field_c ^ -1)) {
+        if (~param0 != ~((me) this).field_c) {
           var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
           return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
         } else {
-          if (-33 == (param1 ^ -1)) {
+          if (param1 == 32) {
             var5 = param3 & 65535;
-            if (-2 == (var5 ^ -1)) {
+            if (var5 == 1) {
               L0: {
                 if (((me) this).field_a) {
                   stackOut_25_0 = ((me) this).field_b;
@@ -40,7 +40,7 @@ final class me extends com.ms.dll.Callback {
               int discarded$3 = com.ms.win32.User32.SetCursor(stackIn_26_0);
               return 0;
             } else {
-              if (-101025 == (param1 ^ -1)) {
+              if (param1 == 101024) {
                 L1: {
                   if (((me) this).field_a) {
                     stackOut_18_0 = ((me) this).field_b;
@@ -55,7 +55,7 @@ final class me extends com.ms.dll.Callback {
                 int discarded$4 = com.ms.win32.User32.SetCursor(stackIn_19_0);
                 return 0;
               } else {
-                if ((param1 ^ -1) != -2) {
+                if (param1 != 1) {
                   return com.ms.win32.User32.CallWindowProc(((me) this).field_e, param0, param1, param2, param3);
                 } else {
                   ((me) this).field_c = 0;
@@ -65,7 +65,7 @@ final class me extends com.ms.dll.Callback {
               }
             }
           } else {
-            if (-101025 == (param1 ^ -1)) {
+            if (param1 == 101024) {
               L2: {
                 if (((me) this).field_a) {
                   stackOut_8_0 = ((me) this).field_b;
@@ -80,7 +80,7 @@ final class me extends com.ms.dll.Callback {
               int discarded$5 = com.ms.win32.User32.SetCursor(stackIn_9_0);
               return 0;
             } else {
-              if ((param1 ^ -1) != -2) {
+              if (param1 != 1) {
                 return com.ms.win32.User32.CallWindowProc(((me) this).field_e, param0, param1, param2, param3);
               } else {
                 ((me) this).field_c = 0;
@@ -189,7 +189,7 @@ final class me extends com.ms.dll.Callback {
           }
           if (var5 != ((me) this).field_c) {
             L4: {
-              if (-1 != (((me) this).field_c ^ -1)) {
+              if (((me) this).field_c != 0) {
                 ((me) this).field_a = true;
                 int discarded$6 = com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
                 var6 = this;

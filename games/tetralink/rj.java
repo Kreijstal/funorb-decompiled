@@ -83,7 +83,11 @@ final class rj {
     rj(String param0) {
         ((rj) this).field_k = false;
         ((rj) this).field_e = false;
-        ((rj) this).field_m = param0;
+        try {
+            ((rj) this).field_m = param0;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "rj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void b(boolean param0) {
@@ -96,14 +100,7 @@ final class rj {
         field_i = null;
         field_b = null;
         field_l = null;
-        if (!param0) {
-          field_o = null;
-          field_h = null;
-          return;
-        } else {
-          field_h = null;
-          return;
-        }
+        field_h = null;
     }
 
     static {

@@ -9,7 +9,7 @@ final class rf {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = -104 / ((param0 - 77) / 49);
+        int var1 = 104;
     }
 
     static {

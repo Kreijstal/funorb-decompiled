@@ -10,11 +10,27 @@ final class kc {
     final static void a(java.applet.Applet param0, int param1) {
         try {
             Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             java.net.URL var4 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-              L0: {
+              try {
                 var4 = param0.getCodeBase();
                 var3 = ag.a(param0, var4, false).getFile();
                 Object discarded$6 = ac.a(true, new Object[2], param0, "updatelinks");
@@ -24,17 +40,44 @@ final class kc {
                   Object discarded$9 = ac.a(true, new Object[2], param0, "updatelinks");
                   Object discarded$10 = ac.a(true, new Object[2], param0, "updatelinks");
                   Object discarded$11 = ac.a(true, new Object[2], param0, "updatelinks");
-                  break L0;
+                  return;
                 } else {
                   return;
                 }
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = decompiledCaughtException;
-                break L1;
+                return;
               }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L0: {
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref;
+                stackOut_6_1 = new StringBuilder().append("kc.B(");
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param0 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L0;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L0;
+                }
+              }
+              throw ii.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -69,14 +112,8 @@ final class kc {
         var2 = 0;
         L0: while (true) {
           if (nj.field_p <= var2) {
-            if (!param0) {
-              field_c = null;
-              vb.a((byte) 122);
-              return var1;
-            } else {
-              vb.a((byte) 122);
-              return var1;
-            }
+            vb.a((byte) 122);
+            return var1;
           } else {
             var3 = ih.field_V[var2] * qh.field_i[var2];
             var23 = ph.field_c[var2];
@@ -116,7 +153,7 @@ final class kc {
                   var2++;
                   continue L0;
                 } else {
-                  var6_ref_int__[var7] = ge.a(he.field_k[da.b((int) var23[var7], 255)], da.b(var24[var7] << 77555800, -16777216));
+                  var6_ref_int__[var7] = ge.a(he.field_k[da.b((int) var23[var7], 255)], da.b(var24[var7] << 24, -16777216));
                   var7++;
                   continue L2;
                 }
@@ -130,9 +167,6 @@ final class kc {
         field_b = null;
         field_d = null;
         field_c = null;
-        if (param0 != 17345) {
-            field_d = null;
-        }
     }
 
     final static void a(byte param0) {

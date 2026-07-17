@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import jagdx.IDirect3DDevice;
+
 final class dm implements ti {
     private kr field_f;
     private int field_b;

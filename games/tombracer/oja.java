@@ -31,7 +31,7 @@ final class oja extends vw {
                   break L1;
                 }
               }
-              int discarded$5 = var2.b(0, (float)(((oja) this).field_c.field_g >> -79237104 & 255) / 255.0f, (float)(((oja) this).field_c.field_g >> -1172081208 & 255) / 255.0f, (float)(255 & ((oja) this).field_c.field_g) / 255.0f, 0.0f);
+              int discarded$5 = var2.b(0, (float)(((oja) this).field_c.field_g >> 16 & 255) / 255.0f, (float)(((oja) this).field_c.field_g >> 8 & 255) / 255.0f, (float)(255 & ((oja) this).field_c.field_g) / 255.0f, 0.0f);
               break L0;
             } else {
               break L0;
@@ -68,21 +68,25 @@ final class oja extends vw {
           ((oja) this).field_e = null;
           ((oja) this).field_d = false;
           ((oja) this).field_g = null;
+          return;
         } else {
           if (!((oja) this).field_c.field_Ob) {
             ((oja) this).field_e = null;
             ((oja) this).field_d = false;
             ((oja) this).field_g = null;
+            return;
           } else {
             if (!((oja) this).field_c.field_x) {
               ((oja) this).field_e = null;
               ((oja) this).field_d = false;
               ((oja) this).field_g = null;
+              return;
             } else {
               if (257 > (((oja) this).field_i.field_ld.VertexShaderVersion & 65535)) {
                 ((oja) this).field_e = null;
                 ((oja) this).field_d = false;
                 ((oja) this).field_g = null;
+                return;
               } else {
                 L0: {
                   L1: {
@@ -122,6 +126,7 @@ final class oja extends vw {
                   break L0;
                 }
                 ((oja) this).field_d = stackIn_9_1 != 0;
+                return;
               }
             }
           }
@@ -203,10 +208,10 @@ final class oja extends vw {
           } else {
             var4 = ((oja) this).field_i.field_jd;
             var5 = 1 << (3 & param1);
-            var6 = (float)(1 << (7 & param1 >> 835587875)) / 32.0f;
+            var6 = (float)(1 << (7 & param1 >> 3)) / 32.0f;
             var7 = param2 & 65535;
             int discarded$8 = var4.a(14, (float)(var5 * ((oja) this).field_c.field_Dc % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
-            var8 = (float)((param2 & 227931) >> -735427408) / 8.0f;
+            var8 = (float)((param2 & 227931) >> 16) / 8.0f;
             int discarded$9 = var4.a(15, var6, 0.0f, 0.0f, 0.0f);
             int discarded$10 = var4.b(4, (float)var7, 0.0f, 0.0f, 0.0f);
             int discarded$11 = var4.b(5, var8, 0.0f, 0.0f, 0.0f);

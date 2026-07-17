@@ -34,143 +34,56 @@ final class b extends ka {
         Object var4 = null;
         int var5 = 0;
         Throwable var6 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 == 0) {
-                        statePc = 3;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if ((((b) this).field_x & 1) == 1) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    throw new IllegalStateException();
-                }
-                case 3: {
-                    if (param1 == 0) {
-                        statePc = 6;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if ((((b) this).field_x & 2) == 2) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    throw new IllegalStateException();
-                }
-                case 6: {
-                    if (param2 == 0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    if ((((b) this).field_x & 4) == 4) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    throw new IllegalStateException();
-                }
-                case 9: {
-                    var4 = this;
-                    // monitorenter this
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    try {
-                        var5 = 0;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        if (var5 >= ((b) this).field_u) {
-                            statePc = 13;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        ((b) this).field_e[var5] = ((b) this).field_e[var5] + param0;
-                        ((b) this).field_o[var5] = ((b) this).field_o[var5] + param1;
-                        ((b) this).field_y[var5] = ((b) this).field_y[var5] + param2;
-                        var5++;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        // monitorexit var4
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        var6 = caughtException;
-                        // monitorexit var4
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    throw (RuntimeException) (Object) var6;
-                }
-                case 17: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (param0 == 0) {
+            break L0;
+          } else {
+            if ((((b) this).field_x & 1) == 1) {
+              break L0;
+            } else {
+              throw new IllegalStateException();
             }
+          }
+        }
+        L1: {
+          if (param1 == 0) {
+            break L1;
+          } else {
+            if ((((b) this).field_x & 2) == 2) {
+              break L1;
+            } else {
+              throw new IllegalStateException();
+            }
+          }
+        }
+        L2: {
+          if (param2 == 0) {
+            break L2;
+          } else {
+            if ((((b) this).field_x & 4) == 4) {
+              break L2;
+            } else {
+              throw new IllegalStateException();
+            }
+          }
+        }
+        var4 = this;
+        synchronized (var4) {
+          L3: {
+            var5 = 0;
+            L4: while (true) {
+              if (var5 >= ((b) this).field_u) {
+                break L3;
+              } else {
+                ((b) this).field_e[var5] = ((b) this).field_e[var5] + param0;
+                ((b) this).field_o[var5] = ((b) this).field_o[var5] + param1;
+                ((b) this).field_y[var5] = ((b) this).field_y[var5] + param2;
+                var5++;
+                continue L4;
+              }
+            }
+          }
         }
     }
 
@@ -178,144 +91,57 @@ final class b extends ka {
         Object var4 = null;
         int var5 = 0;
         Throwable var6 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 == 128) {
-                        statePc = 3;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if ((((b) this).field_x & 1) == 1) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    throw new IllegalStateException();
-                }
-                case 3: {
-                    if (param1 == 128) {
-                        statePc = 6;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if ((((b) this).field_x & 2) == 2) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    throw new IllegalStateException();
-                }
-                case 6: {
-                    if (param2 == 128) {
-                        statePc = 9;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    if ((((b) this).field_x & 4) == 4) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    throw new IllegalStateException();
-                }
-                case 9: {
-                    var4 = this;
-                    // monitorenter this
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    try {
-                        var5 = 0;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        if (var5 >= ((b) this).field_u) {
-                            statePc = 13;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        ((b) this).field_e[var5] = ((b) this).field_e[var5] * param0 >> 7;
-                        ((b) this).field_o[var5] = ((b) this).field_o[var5] * param1 >> 7;
-                        ((b) this).field_y[var5] = ((b) this).field_y[var5] * param2 >> 7;
-                        var5++;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        ((b) this).field_n = false;
-                        // monitorexit var4
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        var6 = caughtException;
-                        // monitorexit var4
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    throw (RuntimeException) (Object) var6;
-                }
-                case 17: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (param0 == 128) {
+            break L0;
+          } else {
+            if ((((b) this).field_x & 1) == 1) {
+              break L0;
+            } else {
+              throw new IllegalStateException();
             }
+          }
+        }
+        L1: {
+          if (param1 == 128) {
+            break L1;
+          } else {
+            if ((((b) this).field_x & 2) == 2) {
+              break L1;
+            } else {
+              throw new IllegalStateException();
+            }
+          }
+        }
+        L2: {
+          if (param2 == 128) {
+            break L2;
+          } else {
+            if ((((b) this).field_x & 4) == 4) {
+              break L2;
+            } else {
+              throw new IllegalStateException();
+            }
+          }
+        }
+        var4 = this;
+        synchronized (var4) {
+          L3: {
+            var5 = 0;
+            L4: while (true) {
+              if (var5 >= ((b) this).field_u) {
+                ((b) this).field_n = false;
+                break L3;
+              } else {
+                ((b) this).field_e[var5] = ((b) this).field_e[var5] * param0 >> 7;
+                ((b) this).field_o[var5] = ((b) this).field_o[var5] * param1 >> 7;
+                ((b) this).field_y[var5] = ((b) this).field_y[var5] * param2 >> 7;
+                var5++;
+                continue L4;
+              }
+            }
+          }
         }
     }
 
@@ -473,7 +299,7 @@ final class b extends ka {
         int var11_int = 0;
         kua var11 = null;
         int var12 = 0;
-        opa var13 = null;
+        Object var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -483,9 +309,9 @@ final class b extends ka {
         int var19_int = 0;
         float[] var19 = null;
         float[] var20 = null;
-        sr var21_ref = null;
+        sr var21_ref_sr = null;
         int var21 = 0;
-        opa var22_ref = null;
+        opa var22_ref_opa = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -737,7 +563,7 @@ final class b extends ka {
                           } else {
                             var17 = param1.field_u[var16];
                             if (var17 == -1) {
-                              ((b) this).field_b[var16] = (short)-1;
+                              ((b) this).field_b[var16] = (short) -1;
                               var16++;
                               continue L12;
                             } else {
@@ -747,7 +573,7 @@ final class b extends ka {
                                   break L13;
                                 } else {
                                   if (var18.field_r) {
-                                    ((b) this).field_b[var16] = (short)-1;
+                                    ((b) this).field_b[var16] = (short) -1;
                                     var16++;
                                     continue L12;
                                   } else {
@@ -813,6 +639,7 @@ final class b extends ka {
                         }
                       }
                     }
+                    return;
                   } else {
                     L18: {
                       var16 = var75[var15];
@@ -1122,17 +949,17 @@ final class b extends ka {
                         var56 = param1.field_g[var19_int];
                         if (var12 == var56.field_b) {
                           L28: {
-                            var21_ref = jm.a(var56.field_e, 0);
-                            if (!var21_ref.field_a) {
+                            var21_ref_sr = jm.a(var56.field_e, 0);
+                            if (!var21_ref_sr.field_a) {
                               break L28;
                             } else {
                               var18_int = 1;
                               break L28;
                             }
                           }
-                          if (var21_ref.field_e != -1) {
-                            var22_ref = var7.a(-20292, var21_ref.field_e);
-                            if (var22_ref.field_q == 2) {
+                          if (var21_ref_sr.field_e != -1) {
+                            var22_ref_opa = var7.a(-20292, var21_ref_sr.field_e);
+                            if (var22_ref_opa.field_q == 2) {
                               ((b) this).field_z = true;
                               var19_int++;
                               continue L27;
@@ -1163,7 +990,7 @@ final class b extends ka {
                     } else {
                       L30: {
                         var57 = var7.a(-20292, var18_int & 65535);
-                        var13 = var57;
+                        var13 = (Object) (Object) var57;
                         if ((param5 & 64) == 0) {
                           break L30;
                         } else {
@@ -1196,7 +1023,7 @@ final class b extends ka {
                     }
                   }
                   if (var13 != null) {
-                    if (var13.field_q == 2) {
+                    if (((opa) var13).field_q == 2) {
                       stackOut_35_0 = 1;
                       stackIn_37_0 = stackOut_35_0;
                       break L31;

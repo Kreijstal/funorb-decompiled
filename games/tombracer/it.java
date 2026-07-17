@@ -18,7 +18,7 @@ final class it {
 
     public static void a(int param0) {
         field_b = null;
-        int var1 = 47 % ((param0 - 51) / 40);
+        int var1 = 2;
     }
 
     static {

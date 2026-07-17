@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 abstract class dj {
     static int field_d;
     static String field_h;
@@ -32,107 +34,55 @@ abstract class dj {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (0 == param0) {
-          return 0;
-        } else {
-          if (0 < param0) {
-            L0: {
-              var2 = 1;
-              if (param0 <= 65535) {
-                break L0;
-              } else {
-                param0 = param0 >> 16;
-                var2 += 16;
-                break L0;
-              }
-            }
-            L1: {
-              if ((param0 ^ -1) >= -256) {
-                break L1;
-              } else {
-                param0 = param0 >> 8;
-                var2 += 8;
-                break L1;
-              }
-            }
-            L2: {
-              if (15 < param0) {
-                var2 += 4;
-                param0 = param0 >> 4;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              if (-4 > (param0 ^ -1)) {
-                var2 += 2;
-                param0 = param0 >> 2;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if (1 < param0) {
-                var2++;
-                param0 = param0 >> 1;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            return var2;
-          } else {
-            L5: {
-              var2 = 2;
-              if ((param0 ^ -1) <= 65535) {
-                break L5;
-              } else {
-                var2 += 16;
-                param0 = param0 >> 16;
-                break L5;
-              }
-            }
-            L6: {
-              if (param0 < -256) {
-                param0 = param0 >> 8;
-                var2 += 8;
-                break L6;
-              } else {
-                break L6;
-              }
-            }
-            L7: {
-              if (param1 >= param0) {
-                break L7;
-              } else {
-                param0 = param0 >> 4;
-                var2 += 4;
-                break L7;
-              }
-            }
-            L8: {
-              if (-4 > param0) {
-                var2 += 2;
-                param0 = param0 >> 2;
-                break L8;
-              } else {
-                break L8;
-              }
-            }
-            L9: {
-              if (1 <= param0) {
-                break L9;
-              } else {
-                var2++;
-                param0 = param0 >> 1;
-                break L9;
-              }
-            }
-            return var2;
-          }
+        if (!(0 != param0)) {
+            return 0;
         }
+        if (0 < param0) {
+            var2 = 1;
+            if (param0 > 65535) {
+                param0 = param0 >> 16;
+                var2 += 16;
+            }
+            if (param0 > 255) {
+                param0 = param0 >> 8;
+                var2 += 8;
+            }
+            if (!(15 >= param0)) {
+                var2 += 4;
+                param0 = param0 >> 4;
+            }
+            if (!(param0 <= 3)) {
+                var2 += 2;
+                param0 = param0 >> 2;
+            }
+            if (!(1 >= param0)) {
+                var2++;
+                param0 = param0 >> 1;
+            }
+            return var2;
+        }
+        var2 = 2;
+        if (param0 < -65536) {
+            var2 += 16;
+            param0 = param0 >> 16;
+        }
+        if (!(param0 >= -256)) {
+            param0 = param0 >> 8;
+            var2 += 8;
+        }
+        if (param0 < -16) {
+            param0 = param0 >> 4;
+            var2 += 4;
+        }
+        if (!(-4 <= param0)) {
+            var2 += 2;
+            param0 = param0 >> 2;
+        }
+        if (param0 < -2) {
+            var2++;
+            param0 = param0 >> 1;
+        }
+        return var2;
     }
 
     abstract void a(int param0);
@@ -141,7 +91,7 @@ abstract class dj {
         int var1 = 15 % ((81 - param0) / 36);
         hk.field_R = true;
         cg.field_i = 15000L + ue.a(false);
-        return -12 == (i.field_j ^ -1) ? true : false;
+        return i.field_j == 11 ? true : false;
     }
 
     public static void a(byte param0) {
@@ -150,7 +100,7 @@ abstract class dj {
         field_c = null;
         field_h = null;
         field_e = null;
-        int var1 = 25 % ((param0 - -34) / 58);
+        int var1 = 0;
     }
 
     abstract long d(byte param0);
@@ -160,6 +110,7 @@ abstract class dj {
     final static String a(boolean param0, java.applet.Applet param1) {
         try {
             Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -169,7 +120,24 @@ abstract class dj {
             Object var9 = null;
             String var10 = null;
             String stackIn_8_0 = null;
-            String stackOut_7_0;
+            String stackIn_15_0 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            String stackIn_19_2 = null;
+            String stackOut_7_0 = null;
+            String stackOut_14_0 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            String stackOut_18_2 = null;
             int statePc = 0;
             Throwable caughtException = null;
             stateLoop: while (true) {
@@ -276,7 +244,7 @@ abstract class dj {
                         }
                     }
                     case 8: {
-                        return (String) (Object) stackIn_8_0;
+                        return stackIn_8_0;
                     }
                     case 9: {
                         try {
@@ -290,23 +258,91 @@ abstract class dj {
                         }
                     }
                     case 11: {
-                        var2 = caughtException;
-                        statePc = 12;
-                        continue stateLoop;
+                        try {
+                            var2 = caughtException;
+                            statePc = 12;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_11) {
+                            caughtException = stateCaught_11;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
                     }
                     case 12: {
-                        if (wp.field_d != null) {
-                            statePc = 14;
-                        } else {
+                        try {
+                            if (wp.field_d != null) {
+                                statePc = 14;
+                            } else {
+                                statePc = 13;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_12) {
+                            caughtException = stateCaught_12;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
+                    case 13: {
+                        try {
+                            return param1.getParameter("settings");
+                        } catch (Throwable stateCaught_13) {
+                            caughtException = stateCaught_13;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
+                    case 14: {
+                        try {
+                            stackOut_14_0 = wp.field_d;
+                            stackIn_15_0 = stackOut_14_0;
                             statePc = 15;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_14) {
+                            caughtException = stateCaught_14;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
+                    case 15: {
+                        return stackIn_15_0;
+                    }
+                    case 16: {
+                        var2_ref = (RuntimeException) (Object) caughtException;
+                        stackOut_16_0 = (RuntimeException) var2_ref;
+                        stackOut_16_1 = new StringBuilder().append("dj.G(").append(param0).append(44);
+                        stackIn_18_0 = stackOut_16_0;
+                        stackIn_18_1 = stackOut_16_1;
+                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_1 = stackOut_16_1;
+                        if (param1 == null) {
+                            statePc = 18;
+                        } else {
+                            statePc = 17;
                         }
                         continue stateLoop;
                     }
-                    case 14: {
-                        return wp.field_d;
+                    case 17: {
+                        stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                        stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                        stackOut_17_2 = "{...}";
+                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_1 = stackOut_17_1;
+                        stackIn_19_2 = stackOut_17_2;
+                        statePc = 19;
+                        continue stateLoop;
                     }
-                    case 15: {
-                        return param1.getParameter("settings");
+                    case 18: {
+                        stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+                        stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                        stackOut_18_2 = "null";
+                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_1 = stackOut_18_1;
+                        stackIn_19_2 = stackOut_18_2;
+                        statePc = 19;
+                        continue stateLoop;
+                    }
+                    case 19: {
+                        throw qb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -332,7 +368,7 @@ abstract class dj {
         kd.field_d[7] = nk.field_i;
         kd.field_d[17] = pb.field_l;
         kd.field_d[19] = tq.field_g;
-        kd.field_d[param0] = ed.field_a;
+        kd.field_d[13] = ed.field_a;
         kd.field_d[11] = bl.field_I;
     }
 

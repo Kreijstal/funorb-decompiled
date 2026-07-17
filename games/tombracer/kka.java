@@ -10,9 +10,6 @@ final class kka extends ob {
     public static void c(byte param0) {
         field_r = null;
         field_o = null;
-        if (param0 >= -68) {
-            return;
-        }
         field_p = null;
     }
 

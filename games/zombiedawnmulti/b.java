@@ -12,16 +12,12 @@ final class b {
     public static void a(int param0) {
         field_e = null;
         field_a = null;
-        int var1 = 5 / ((42 - param0) / 45);
+        int var1 = -5;
         field_c = null;
         field_f = null;
     }
 
     final static int a(boolean param0) {
-        if (!param0) {
-            field_a = null;
-            return gi.field_m;
-        }
         return gi.field_m;
     }
 

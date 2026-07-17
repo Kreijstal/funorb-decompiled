@@ -16,9 +16,13 @@ final class np extends an {
     }
 
     final void a(ga param0, byte param1, int param2, int param3) {
-        ((np) this).field_F = ((np) this).field_F + 1;
-        super.a(param0, (byte) -110, param2, param3);
-        int var5 = -62 / ((param1 - 46) / 42);
+        try {
+            ((np) this).field_F = ((np) this).field_F + 1;
+            super.a(param0, (byte) -110, param2, param3);
+            int var5_int = -62 / ((param1 - 46) / 42);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "np.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -34,9 +38,9 @@ final class np extends an {
         vn var16 = null;
         var11 = ZombieDawn.field_J;
         super.a(param0, param1, param2, param3 + param3);
-        if (-1 == (param1 ^ -1)) {
-          var5 = param2 + ((np) this).field_k - -(((np) this).field_i >> -1689432255);
-          var6 = ((np) this).field_j + (param0 + (((np) this).field_n >> -1050180895));
+        if (param1 == 0) {
+          var5 = param2 + ((np) this).field_k - -(((np) this).field_i >> 1);
+          var6 = ((np) this).field_j + (param0 + (((np) this).field_n >> 1));
           var8 = ((np) this).field_G.a((byte) -76);
           if (var8 != se.field_l) {
             if (gj.field_v != var8) {
@@ -45,31 +49,31 @@ final class np extends an {
                   return;
                 } else {
                   var13 = dj.field_k[1];
-                  var13.b(var5 - (var13.field_w >> -746104799), -(var13.field_t >> 752073761) + var6, 256);
+                  var13.b(var5 - (var13.field_w >> 1), -(var13.field_t >> 1) + var6, 256);
                   return;
                 }
               } else {
                 var14 = dj.field_k[2];
-                var14.b(-(var14.field_w >> 1944584193) + var5, -(var14.field_t >> 759024833) + var6, 256);
+                var14.b(-(var14.field_w >> 1) + var5, -(var14.field_t >> 1) + var6, 256);
                 return;
               }
             } else {
               var16 = dj.field_k[0];
-              var9 = var16.field_r << -1853164095;
-              var10 = var16.field_q << -282811007;
+              var9 = var16.field_r << 1;
+              var10 = var16.field_q << 1;
               if (tm.field_m != null) {
                 if (tm.field_m.field_w >= var9) {
                   if (var10 > tm.field_m.field_t) {
                     tm.field_m = new vn(var9, var10);
                     ki.a((byte) -94, tm.field_m);
-                    var16.a(112, 144, var16.field_r << -211027196, var16.field_q << 1033934116, -((np) this).field_F << 1569045130, 4096);
+                    var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -((np) this).field_F << 10, 4096);
                     pa.a(-21189);
                     tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);
                     return;
                   } else {
                     ki.a((byte) -86, tm.field_m);
                     bi.d();
-                    var16.a(112, 144, var16.field_r << -211027196, var16.field_q << 1033934116, -((np) this).field_F << 1569045130, 4096);
+                    var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -((np) this).field_F << 10, 4096);
                     pa.a(-21189);
                     tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);
                     return;
@@ -77,7 +81,7 @@ final class np extends an {
                 } else {
                   tm.field_m = new vn(var9, var10);
                   ki.a((byte) -94, tm.field_m);
-                  var16.a(112, 144, var16.field_r << -211027196, var16.field_q << 1033934116, -((np) this).field_F << 1569045130, 4096);
+                  var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -((np) this).field_F << 10, 4096);
                   pa.a(-21189);
                   tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);
                   return;
@@ -85,7 +89,7 @@ final class np extends an {
               } else {
                 tm.field_m = new vn(var9, var10);
                 ki.a((byte) -94, tm.field_m);
-                var16.a(112, 144, var16.field_r << -211027196, var16.field_q << 1033934116, -((np) this).field_F << 1569045130, 4096);
+                var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -((np) this).field_F << 10, 4096);
                 pa.a(-21189);
                 tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);
                 return;
@@ -93,21 +97,21 @@ final class np extends an {
             }
           } else {
             var15 = dj.field_k[0];
-            var9 = var15.field_r << -1853164095;
-            var10 = var15.field_q << -282811007;
+            var9 = var15.field_r << 1;
+            var10 = var15.field_q << 1;
             if (tm.field_m != null) {
               if (tm.field_m.field_w >= var9) {
                 if (var10 > tm.field_m.field_t) {
                   tm.field_m = new vn(var9, var10);
                   ki.a((byte) -94, tm.field_m);
-                  var15.a(112, 144, var15.field_r << -211027196, var15.field_q << 1033934116, -((np) this).field_F << 1569045130, 4096);
+                  var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -((np) this).field_F << 10, 4096);
                   pa.a(-21189);
                   tm.field_m.b(-var15.field_r + var5, -var15.field_q + var6, 256);
                   return;
                 } else {
                   ki.a((byte) -86, tm.field_m);
                   bi.d();
-                  var15.a(112, 144, var15.field_r << -211027196, var15.field_q << 1033934116, -((np) this).field_F << 1569045130, 4096);
+                  var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -((np) this).field_F << 10, 4096);
                   pa.a(-21189);
                   tm.field_m.b(-var15.field_r + var5, -var15.field_q + var6, 256);
                   return;
@@ -115,7 +119,7 @@ final class np extends an {
               } else {
                 tm.field_m = new vn(var9, var10);
                 ki.a((byte) -94, tm.field_m);
-                var15.a(112, 144, var15.field_r << -211027196, var15.field_q << 1033934116, -((np) this).field_F << 1569045130, 4096);
+                var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -((np) this).field_F << 10, 4096);
                 pa.a(-21189);
                 tm.field_m.b(-var15.field_r + var5, -var15.field_q + var6, 256);
                 return;
@@ -123,7 +127,7 @@ final class np extends an {
             } else {
               tm.field_m = new vn(var9, var10);
               ki.a((byte) -94, tm.field_m);
-              var15.a(112, 144, var15.field_r << -211027196, var15.field_q << 1033934116, -((np) this).field_F << 1569045130, 4096);
+              var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -((np) this).field_F << 10, 4096);
               pa.a(-21189);
               tm.field_m.b(-var15.field_r + var5, -var15.field_q + var6, 256);
               return;
@@ -135,53 +139,104 @@ final class np extends an {
     }
 
     public static void a(int param0) {
-        if (param0 != 1569045130) {
-            field_H = null;
-            field_E = null;
-            field_H = null;
-            return;
-        }
         field_E = null;
         field_H = null;
     }
 
     final static void a(byte param0, int param1) {
+        int[] var5 = null;
         int[] var2 = null;
         int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        var4 = ZombieDawn.field_J;
-        var5 = new int[1 + ln.field_c.length];
-        var2 = var5;
-        var3 = 0;
-        L0: while (true) {
-          if (ln.field_c.length <= var3) {
+        int var4 = ZombieDawn.field_J;
+        try {
+            var5 = new int[1 + ln.field_c.length];
+            var2 = var5;
+            for (var3 = 0; ln.field_c.length > var3; var3++) {
+                var5[var3] = ln.field_c[var3];
+            }
             var2[var2.length + -1] = param1;
             if (param0 != 9) {
-              field_H = null;
-              ln.field_c = var2;
-              return;
-            } else {
-              ln.field_c = var2;
-              return;
+                field_H = null;
             }
-          } else {
-            var5[var3] = ln.field_c[var3];
-            var3++;
-            continue L0;
-          }
+            ln.field_c = var2;
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "np.F(" + param0 + 44 + param1 + 41);
         }
     }
 
     np(vc param0) {
-        ((np) this).field_G = param0;
+        try {
+            ((np) this).field_G = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "np.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean a(byte param0, ga param1) {
-        if (param0 <= 67) {
-            return false;
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 > 67) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("np.B(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        return false;
+        return stackIn_4_0 != 0;
     }
 
     static {

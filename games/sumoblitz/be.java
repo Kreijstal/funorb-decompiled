@@ -8,19 +8,25 @@ final class be extends nt {
     static da field_t;
 
     final void a(ha param0, int param1) {
-        int var3 = (int)((double)((be) this).field_p / 100.0 * 255.0);
-        if (param1 > -121) {
-            Object var5 = null;
-            ((be) this).a((ha) null, 95);
-        }
-        var3 += 20;
+        int var3_int = 0;
         int var4 = 0;
-        if (((be) this).field_u) {
-            var4 = (int)((double)(100 + -((be) this).field_p) / 100.0 * 4096.0);
-        } else {
-            var4 = (int)(4096.0 * ((double)((be) this).field_p / 100.0));
+        try {
+            var3_int = (int)((double)((be) this).field_p / 100.0 * 255.0);
+            if (param1 > -121) {
+                Object var5 = null;
+                ((be) this).a((ha) null, 95);
+            }
+            var3_int += 20;
+            var4 = 0;
+            if (((be) this).field_u) {
+                var4 = (int)((double)(100 + -((be) this).field_p) / 100.0 * 4096.0);
+            } else {
+                var4 = (int)(4096.0 * ((double)((be) this).field_p / 100.0));
+            }
+            vl.field_c.a((float)((be) this).field_k, (float)((be) this).field_o, var4, 0, 0, (var3_int << 24) + ((be) this).field_q, 1);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "be.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        vl.field_c.a((float)((be) this).field_k, (float)((be) this).field_o, var4, 0, 0, (var3 << -1521415720) + ((be) this).field_q, 1);
     }
 
     final static int a(boolean param0, int param1) {
@@ -56,12 +62,12 @@ final class be extends nt {
                           if (6406 == param1) {
                             break L3;
                           } else {
-                            if (-34845 != (param1 ^ -1)) {
+                            if (param1 != 34844) {
                               L4: {
-                                if ((param1 ^ -1) == -6410) {
+                                if (param1 == 6409) {
                                   break L4;
                                 } else {
-                                  if (param1 == -34847) {
+                                  if (param1 == 34846) {
                                     break L4;
                                   } else {
                                     L5: {
@@ -69,7 +75,7 @@ final class be extends nt {
                                         break L5;
                                       } else {
                                         if (34847 != param1) {
-                                          if (-6403 != param1) {
+                                          if (param1 != 6402) {
                                             throw new IllegalArgumentException("");
                                           } else {
                                             return 6402;
@@ -105,9 +111,6 @@ final class be extends nt {
     public static void e(int param0) {
         field_t = null;
         field_v = null;
-        if (param0 != 6408) {
-            field_t = null;
-        }
         field_s = null;
     }
 
@@ -127,7 +130,8 @@ final class be extends nt {
         field_v = new long[256];
         var2 = 0;
         L0: while (true) {
-          if ((var2 ^ -1) <= -257) {
+          if (var2 >= 256) {
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;
@@ -142,7 +146,7 @@ final class be extends nt {
                   var3++;
                   continue L1;
                 } else {
-                  var0 = -3932672073523589310L ^ var0 >>> -840473343;
+                  var0 = -3932672073523589310L ^ var0 >>> 1;
                   var3++;
                   continue L1;
                 }

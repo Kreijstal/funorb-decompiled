@@ -11,16 +11,20 @@ final class sj {
     private int field_a;
 
     final static void a(p param0, int param1, int param2) {
-        rh.field_a.a(-81, (hf) (Object) param0);
-        ol.a(param2, param0, 30175);
-        int var3 = -18 % ((param1 - 3) / 40);
+        try {
+            rh.field_a.a(-81, (hf) (Object) param0);
+            ol.a(4, param0, 30175);
+            int var3_int = -18 % ((param1 - 3) / 40);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "sj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 4 + 41);
+        }
     }
 
     public static void a(int param0) {
         field_g = null;
         field_e = null;
         field_b = null;
-        int var1 = -116 / ((param0 - 72) / 36);
+        int var1 = 116;
     }
 
     final void a(int param0, int param1) {
@@ -46,26 +50,22 @@ final class sj {
         int var3 = 0;
         int var4 = 0;
         var4 = Geoblox.field_C;
-        if (param1 != 1) {
-          return 80;
-        } else {
-          var3 = ((sj) this).field_f.length;
-          L0: while (true) {
-            if (param0 < var3) {
-              return var3;
-            } else {
-              if (((sj) this).field_c) {
-                if (0 == var3) {
-                  var3 = 1;
-                  continue L0;
-                } else {
-                  var3 = var3 * ((sj) this).field_a;
-                  continue L0;
-                }
+        var3 = ((sj) this).field_f.length;
+        L0: while (true) {
+          if (param0 < var3) {
+            return var3;
+          } else {
+            if (((sj) this).field_c) {
+              if (0 == var3) {
+                var3 = 1;
+                continue L0;
               } else {
-                var3 = var3 + ((sj) this).field_a;
+                var3 = var3 * ((sj) this).field_a;
                 continue L0;
               }
+            } else {
+              var3 = var3 + ((sj) this).field_a;
+              continue L0;
             }
           }
         }
@@ -141,18 +141,17 @@ final class sj {
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
-        String var2 = null;
-        String var3 = null;
-        long var4 = 0L;
         td.field_H = true;
-        var2 = "tuhstatbut";
-        var3 = "rvnadlm";
-        var4 = -1L;
+        String var2 = "tuhstatbut";
+        String var3 = "rvnadlm";
+        long var4 = -1L;
         if (param1 <= 98) {
-          return;
-        } else {
-          ea.a((byte) 115, var4, param0, var2, var3);
-          return;
+            return;
+        }
+        try {
+            ea.a((byte) 115, var4, param0, var2, var3);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "sj.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

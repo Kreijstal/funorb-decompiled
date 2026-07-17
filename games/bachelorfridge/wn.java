@@ -11,15 +11,9 @@ final class wn extends at {
     private int field_m;
 
     private final void f(int param0) {
-        if (param0 != 7) {
-            field_l = null;
-        }
     }
 
     public static void d(int param0) {
-        if (param0 != 10) {
-            return;
-        }
         field_l = null;
         field_j = null;
     }
@@ -35,8 +29,9 @@ final class wn extends at {
           }
         }
         var2 = 122 % ((param0 - 71) / 47);
+        int fieldTemp$2 = ((wn) this).field_n + 1;
         ((wn) this).field_n = ((wn) this).field_n + 1;
-        if (((wn) this).field_n + 1 >= this.e(-12304)) {
+        if (fieldTemp$2 >= this.e(-12304)) {
           this.f(7);
           return true;
         } else {
@@ -45,17 +40,17 @@ final class wn extends at {
     }
 
     private final int e(int param0) {
-        if (param0 != -12304) {
-            boolean discarded$0 = ((wn) this).c((byte) 38);
-            return 10;
-        }
         return 10;
     }
 
     wn(ad param0, String param1, int param2) {
-        ((wn) this).field_k = param1;
-        ((wn) this).field_m = param2;
-        ((wn) this).field_o = param0;
+        try {
+            ((wn) this).field_k = param1;
+            ((wn) this).field_m = param2;
+            ((wn) this).field_o = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "wn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

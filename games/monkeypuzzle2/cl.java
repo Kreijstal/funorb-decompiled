@@ -16,7 +16,7 @@ final class cl {
     public static void a(int param0) {
         field_a = null;
         field_e = null;
-        int var1 = -66 % ((-46 - param0) / 55);
+        int var1 = 0;
         field_f = null;
         field_g = null;
         field_c = null;

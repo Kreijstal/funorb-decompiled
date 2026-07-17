@@ -61,82 +61,135 @@ final class ai extends uh {
     }
 
     private final void a(od param0, int param1, int param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         sa var7 = null;
         int var8 = 0;
         int var9 = 0;
         Object var10 = null;
-        L0: {
-          var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-          if (param2 != 1) {
-            if ((param2 ^ -1) == -3) {
-              var4 = param0.l(31760);
-              ((ai) this).field_D = new int[var4];
-              var5 = 0;
-              L1: while (true) {
-                if (var5 >= var4) {
-                  break L0;
-                } else {
-                  ((ai) this).field_D[var5] = param0.j(-788751192);
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              if ((param2 ^ -1) != -4) {
-                if (4 == param2) {
-                  break L0;
-                } else {
-                  break L0;
-                }
-              } else {
-                var4 = param0.l(31760);
-                ((ai) this).field_u = new int[var4][];
-                ((ai) this).field_E = new int[var4];
-                var5 = 0;
-                L2: while (true) {
-                  if (var4 <= var5) {
-                    break L0;
-                  } else {
-                    var6 = param0.j(-788751192);
-                    var7 = m.a(var6, (byte) 46);
-                    if (var7 != null) {
-                      ((ai) this).field_E[var5] = var6;
-                      ((ai) this).field_u[var5] = new int[var7.field_a];
-                      var8 = 0;
-                      L3: while (true) {
-                        if (var7.field_a > var8) {
-                          ((ai) this).field_u[var5][var8] = param0.j(-788751192);
-                          var8++;
-                          continue L3;
-                        } else {
-                          var5++;
-                          continue L2;
-                        }
-                      }
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param2 != 1) {
+                if (param2 == 2) {
+                  var4_int = param0.l(31760);
+                  ((ai) this).field_D = new int[var4_int];
+                  var5 = 0;
+                  L2: while (true) {
+                    if (var5 >= var4_int) {
+                      break L1;
                     } else {
+                      ((ai) this).field_D[var5] = param0.j(-788751192);
                       var5++;
                       continue L2;
                     }
                   }
+                } else {
+                  if (param2 != 3) {
+                    if (4 == param2) {
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  } else {
+                    var4_int = param0.l(31760);
+                    ((ai) this).field_u = new int[var4_int][];
+                    ((ai) this).field_E = new int[var4_int];
+                    var5 = 0;
+                    L3: while (true) {
+                      if (var4_int <= var5) {
+                        break L1;
+                      } else {
+                        L4: {
+                          var6 = param0.j(-788751192);
+                          var7 = m.a(var6, (byte) 46);
+                          if (var7 != null) {
+                            ((ai) this).field_E[var5] = var6;
+                            ((ai) this).field_u[var5] = new int[var7.field_a];
+                            var8 = 0;
+                            L5: while (true) {
+                              if (var7.field_a <= var8) {
+                                break L4;
+                              } else {
+                                ((ai) this).field_u[var5][var8] = param0.j(-788751192);
+                                var8++;
+                                continue L5;
+                              }
+                            }
+                          } else {
+                            break L4;
+                          }
+                        }
+                        var5++;
+                        continue L3;
+                      }
+                    }
+                  }
                 }
+              } else {
+                ((ai) this).field_z = ki.a((byte) -123, '<', param0.b((byte) -56));
+                break L1;
               }
             }
-          } else {
-            ((ai) this).field_z = ki.a((byte) -123, '<', param0.b((byte) -56));
+            L6: {
+              if (param1 < -6) {
+                break L6;
+              } else {
+                var10 = null;
+                ((ai) this).a((od) null, 90);
+                break L6;
+              }
+            }
             break L0;
           }
-        }
-        L4: {
-          if (param1 < -6) {
-            break L4;
-          } else {
-            var10 = null;
-            ((ai) this).a((od) null, 90);
-            break L4;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var4 = decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var4;
+            stackOut_21_1 = new StringBuilder().append("ai.B(");
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param0 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L7;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L7;
+            }
           }
+          throw ie.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -161,9 +214,6 @@ final class ai extends uh {
     public static void h(int param0) {
         field_x = null;
         field_A = null;
-        if (param0 != -30463) {
-            ai.a(0, (byte) -77, 16, -100, 52, 101);
-        }
         field_w = null;
         field_v = null;
         field_y = null;
@@ -173,17 +223,75 @@ final class ai extends uh {
     }
 
     final void a(od param0, int param1) {
-        int var3 = 0;
-        int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        while (true) {
-            var3 = param0.l(31760);
-            if (0 == var3) {
-                break;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        try {
+          L0: {
+            L1: while (true) {
+              var3_int = param0.l(31760);
+              if (0 == var3_int) {
+                L2: {
+                  if (param1 == 0) {
+                    break L2;
+                  } else {
+                    ((ai) this).a((byte) 112);
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                this.a(param0, param1 ^ -61, var3_int);
+                continue L1;
+              }
             }
-            this.a(param0, param1 ^ -61, var3);
-        }
-        if (param1 != 0) {
-            ((ai) this).a((byte) 112);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("ai.D(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
         }
     }
 

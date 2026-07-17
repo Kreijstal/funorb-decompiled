@@ -28,38 +28,31 @@ final class bd extends qk {
 
     bd(int param0, int param1, int param2, int param3, String param4, int param5) {
         super(param0, param1, param2, param3, param4);
-        ((bd) this).field_B = param5;
+        try {
+            ((bd) this).field_B = param5;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "bd.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+        }
     }
 
     final void a(int param0, String param1, int param2) {
-        if (param2 != 16777215) {
-          ((bd) this).field_B = 50;
-          ((bd) this).field_u = param1;
-          ((bd) this).field_B = param0;
-          return;
-        } else {
-          ((bd) this).field_u = param1;
-          ((bd) this).field_B = param0;
-          return;
+        try {
+            if (param2 != 16777215) {
+                ((bd) this).field_B = 50;
+            }
+            ((bd) this).field_u = param1;
+            ((bd) this).field_B = param0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "bd.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
     public static void h(int param0) {
         field_E = null;
-        if (param0 > -104) {
-          field_F = null;
-          field_G = null;
-          field_D = null;
-          field_C = null;
-          field_F = null;
-          return;
-        } else {
-          field_G = null;
-          field_D = null;
-          field_C = null;
-          field_F = null;
-          return;
-        }
+        field_G = null;
+        field_D = null;
+        field_C = null;
+        field_F = null;
     }
 
     static {

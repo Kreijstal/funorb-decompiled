@@ -157,7 +157,7 @@ final class db {
                     }
                     L11: {
                       L12: {
-                        field_n[var6] = (short)-1;
+                        field_n[var6] = (short) -1;
                         if (var10 == 1) {
                           break L12;
                         } else {

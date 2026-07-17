@@ -340,8 +340,9 @@ final class te {
                     break L3;
                   }
                 }
+                int incrementValue$1 = var10;
                 var10++;
-                var9[var10] = param3[var13];
+                var9[incrementValue$1] = param3[var13];
                 var12++;
                 continue L1;
               } else {
@@ -463,8 +464,9 @@ final class te {
                 if (var12 >= param2.length) {
                     var12 = param2.length - 1;
                 }
+                int incrementValue$0 = var9;
                 var9++;
-                var8[var9] = param2[var12];
+                var8[incrementValue$0] = param2[var12];
             }
         }
         return var7;

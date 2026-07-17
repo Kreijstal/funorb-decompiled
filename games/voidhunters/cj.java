@@ -5,55 +5,106 @@ final class cj extends le {
     private int field_i;
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
         Object stackOut_4_0 = null;
         Object stackOut_6_0 = null;
         int stackOut_6_1 = 0;
         Object stackOut_5_0 = null;
         int stackOut_5_1 = 0;
-        L0: {
-          var4 = param0;
-          if (0 == var4) {
-            ((cj) this).field_i = param2.e((byte) -91);
-            break L0;
-          } else {
-            if (var4 == -2) {
-              L1: {
-                stackOut_4_0 = this;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
-                if (-2 != param2.e((byte) -109)) {
-                  stackOut_6_0 = this;
-                  stackOut_6_1 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            L1: {
+              var4_int = param0;
+              if (0 == var4_int) {
+                ((cj) this).field_i = param2.e((byte) -91);
+                break L1;
+              } else {
+                if (var4_int == 1) {
+                  L2: {
+                    stackOut_4_0 = this;
+                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_5_0 = stackOut_4_0;
+                    if (param2.e((byte) -109) != 1) {
+                      stackOut_6_0 = this;
+                      stackOut_6_1 = 0;
+                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_1 = stackOut_6_1;
+                      break L2;
+                    } else {
+                      stackOut_5_0 = this;
+                      stackOut_5_1 = 1;
+                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_1 = stackOut_5_1;
+                      break L2;
+                    }
+                  }
+                  ((cj) this).field_g = stackIn_7_1 != 0;
                   break L1;
                 } else {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
                   break L1;
                 }
               }
-              ((cj) this).field_g = stackIn_7_1 != 0;
-              break L0;
+            }
+            L3: {
+              if (param1 < -60) {
+                break L3;
+              } else {
+                ((cj) this).field_i = 37;
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var4;
+            stackOut_11_1 = new StringBuilder().append("cj.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param2 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
             } else {
-              break L0;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
             }
           }
-        }
-        L2: {
-          if (param1 < -60) {
-            break L2;
-          } else {
-            ((cj) this).field_i = 37;
-            break L2;
-          }
+          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
     }
 
@@ -182,7 +233,7 @@ final class cj extends le {
             var8 = ((cj) this).field_i;
             if (1 != var8) {
               if (var8 != 2) {
-                if (-4 != (var8 ^ -1)) {
+                if (var8 != 3) {
                   if (4 != var8) {
                     if (var8 == 5) {
                       var8 = 0;
@@ -190,7 +241,7 @@ final class cj extends le {
                         if (var8 >= hob.field_d) {
                           break L0;
                         } else {
-                          var3[var8] = -((4096 - var19[var8]) * (4096 + -var18[var8]) >> -2015870228) + 4096;
+                          var3[var8] = -((4096 - var19[var8]) * (4096 + -var18[var8]) >> 12) + 4096;
                           var8++;
                           continue L1;
                         }
@@ -210,10 +261,10 @@ final class cj extends le {
                               stackIn_42_1 = stackOut_40_1;
                               stackIn_41_0 = stackOut_40_0;
                               stackIn_41_1 = stackOut_40_1;
-                              if (-2049 >= (var5 ^ -1)) {
+                              if (var5 >= 2048) {
                                 stackOut_42_0 = (int[]) (Object) stackIn_42_0;
                                 stackOut_42_1 = stackIn_42_1;
-                                stackOut_42_2 = 4096 - ((-var19[var8] + 4096) * (4096 - var5) >> 1272168139);
+                                stackOut_42_2 = 4096 - ((-var19[var8] + 4096) * (4096 - var5) >> 11);
                                 stackIn_43_0 = stackOut_42_0;
                                 stackIn_43_1 = stackOut_42_1;
                                 stackIn_43_2 = stackOut_42_2;
@@ -221,7 +272,7 @@ final class cj extends le {
                               } else {
                                 stackOut_41_0 = (int[]) (Object) stackIn_41_0;
                                 stackOut_41_1 = stackIn_41_1;
-                                stackOut_41_2 = var5 * var19[var8] >> -420351093;
+                                stackOut_41_2 = var5 * var19[var8] >> 11;
                                 stackIn_43_0 = stackOut_41_0;
                                 stackIn_43_1 = stackOut_41_1;
                                 stackIn_43_2 = stackOut_41_2;
@@ -234,7 +285,7 @@ final class cj extends le {
                           }
                         }
                       } else {
-                        if ((var8 ^ -1) == -8) {
+                        if (var8 == 7) {
                           var8 = 0;
                           L4: while (true) {
                             if (hob.field_d <= var8) {
@@ -248,7 +299,7 @@ final class cj extends le {
                                 stackIn_48_1 = stackOut_46_1;
                                 stackIn_47_0 = stackOut_46_0;
                                 stackIn_47_1 = stackOut_46_1;
-                                if (-4097 == (var4 ^ -1)) {
+                                if (var4 == 4096) {
                                   stackOut_48_0 = (int[]) (Object) stackIn_48_0;
                                   stackOut_48_1 = stackIn_48_1;
                                   stackOut_48_2 = 4096;
@@ -259,7 +310,7 @@ final class cj extends le {
                                 } else {
                                   stackOut_47_0 = (int[]) (Object) stackIn_47_0;
                                   stackOut_47_1 = stackIn_47_1;
-                                  stackOut_47_2 = (var18[var8] << -1474943636) / (-var4 + 4096);
+                                  stackOut_47_2 = (var18[var8] << 12) / (-var4 + 4096);
                                   stackIn_49_0 = stackOut_47_0;
                                   stackIn_49_1 = stackOut_47_1;
                                   stackIn_49_2 = stackOut_47_2;
@@ -312,7 +363,7 @@ final class cj extends le {
                                 }
                               }
                             } else {
-                              if ((var8 ^ -1) == -11) {
+                              if (var8 == 10) {
                                 var8 = 0;
                                 L8: while (true) {
                                   if (hob.field_d <= var8) {
@@ -398,7 +449,7 @@ final class cj extends le {
                                       } else {
                                         var4 = var19[var8];
                                         var5 = var18[var8];
-                                        var3[var8] = -(var5 * var4 >> 1388742827) + var5 + var4;
+                                        var3[var8] = -(var5 * var4 >> 11) + var5 + var4;
                                         var8++;
                                         continue L12;
                                       }
@@ -426,7 +477,7 @@ final class cj extends le {
                                   if (var4 != 0) {
                                     stackOut_54_0 = (int[]) (Object) stackIn_54_0;
                                     stackOut_54_1 = stackIn_54_1;
-                                    stackOut_54_2 = -((-var18[var8] + 4096 << 646271564) / var4) + 4096;
+                                    stackOut_54_2 = -((-var18[var8] + 4096 << 12) / var4) + 4096;
                                     stackIn_55_0 = stackOut_54_0;
                                     stackIn_55_1 = stackOut_54_1;
                                     stackIn_55_2 = stackOut_54_2;
@@ -464,10 +515,10 @@ final class cj extends le {
                           stackIn_33_1 = stackOut_31_1;
                           stackIn_32_0 = stackOut_31_0;
                           stackIn_32_1 = stackOut_31_1;
-                          if (-1 != (var5 ^ -1)) {
+                          if (var5 != 0) {
                             stackOut_33_0 = (int[]) (Object) stackIn_33_0;
                             stackOut_33_1 = stackIn_33_1;
-                            stackOut_33_2 = (var19[var8] << 1167135948) / var5;
+                            stackOut_33_2 = (var19[var8] << 12) / var5;
                             stackIn_34_0 = stackOut_33_0;
                             stackIn_34_1 = stackOut_33_1;
                             stackIn_34_2 = stackOut_33_2;
@@ -494,7 +545,7 @@ final class cj extends le {
                     if (var8 >= hob.field_d) {
                       break L0;
                     } else {
-                      var3[var8] = var18[var8] * var19[var8] >> -129632852;
+                      var3[var8] = var18[var8] * var19[var8] >> 12;
                       var8++;
                       continue L17;
                     }
@@ -910,9 +961,9 @@ final class cj extends le {
             var56 = var53[1];
             var58 = var53[2];
             var21 = ((cj) this).field_i;
-            if (-2 != var21) {
+            if (var21 != 1) {
               if (var21 != 2) {
-                if (var21 == -4) {
+                if (var21 == 3) {
                   var12 = var51[0];
                   var13 = var51[1];
                   var14 = var51[2];
@@ -924,18 +975,18 @@ final class cj extends le {
                   var59 = var52[2];
                   var21 = 0;
                   L1: while (true) {
-                    if (hob.field_d <= var21) {
+                    if (~hob.field_d >= ~var21) {
                       break L0;
                     } else {
-                      var12[var21] = var54[var21] * var55[var21] >> -987528564;
-                      var13[var21] = var57[var21] * var56[var21] >> -1185622740;
-                      var14[var21] = var59[var21] * var58[var21] >> 1702744684;
+                      var12[var21] = var54[var21] * var55[var21] >> 12;
+                      var13[var21] = var57[var21] * var56[var21] >> 12;
+                      var14[var21] = var59[var21] * var58[var21] >> 12;
                       var21++;
                       continue L1;
                     }
                   }
                 } else {
-                  if (-5 == var21) {
+                  if (var21 == 4) {
                     var12 = var51[0];
                     var13 = var51[1];
                     var14 = var51[2];
@@ -947,7 +998,7 @@ final class cj extends le {
                     var59 = var52[2];
                     var21 = 0;
                     L2: while (true) {
-                      if (var21 >= hob.field_d) {
+                      if (~var21 <= ~hob.field_d) {
                         break L0;
                       } else {
                         L3: {
@@ -960,10 +1011,10 @@ final class cj extends le {
                           stackIn_33_1 = stackOut_31_1;
                           stackIn_32_0 = stackOut_31_0;
                           stackIn_32_1 = stackOut_31_1;
-                          if (-1 != (var7 ^ -1)) {
+                          if (var7 != 0) {
                             stackOut_33_0 = (int[]) (Object) stackIn_33_0;
                             stackOut_33_1 = stackIn_33_1;
-                            stackOut_33_2 = (var54[var21] << -1561913556) / var7;
+                            stackOut_33_2 = (var54[var21] << 12) / var7;
                             stackIn_34_0 = stackOut_33_0;
                             stackIn_34_1 = stackOut_33_1;
                             stackIn_34_2 = stackOut_33_2;
@@ -997,7 +1048,7 @@ final class cj extends le {
                           } else {
                             stackOut_35_0 = (int[]) (Object) stackIn_35_0;
                             stackOut_35_1 = stackIn_35_1;
-                            stackOut_35_2 = (var57[var21] << -748729812) / var8;
+                            stackOut_35_2 = (var57[var21] << 12) / var8;
                             stackIn_37_0 = stackOut_35_0;
                             stackIn_37_1 = stackOut_35_1;
                             stackIn_37_2 = stackOut_35_2;
@@ -1023,7 +1074,7 @@ final class cj extends le {
                           } else {
                             stackOut_38_0 = (int[]) (Object) stackIn_38_0;
                             stackOut_38_1 = stackIn_38_1;
-                            stackOut_38_2 = (var59[var21] << -1226796372) / var9;
+                            stackOut_38_2 = (var59[var21] << 12) / var9;
                             stackIn_40_0 = stackOut_38_0;
                             stackIn_40_1 = stackOut_38_1;
                             stackIn_40_2 = stackOut_38_2;
@@ -1036,8 +1087,8 @@ final class cj extends le {
                       }
                     }
                   } else {
-                    if (-6 != var21) {
-                      if (-7 == (var21 ^ -1)) {
+                    if (var21 != 5) {
+                      if (var21 == 6) {
                         var12 = var51[0];
                         var13 = var51[1];
                         var14 = var51[2];
@@ -1049,7 +1100,7 @@ final class cj extends le {
                         var59 = var52[2];
                         var21 = 0;
                         L6: while (true) {
-                          if (var21 >= hob.field_d) {
+                          if (~var21 <= ~hob.field_d) {
                             break L0;
                           } else {
                             L7: {
@@ -1062,10 +1113,10 @@ final class cj extends le {
                               stackIn_48_1 = stackOut_46_1;
                               stackIn_47_0 = stackOut_46_0;
                               stackIn_47_1 = stackOut_46_1;
-                              if ((var7 ^ -1) > -2049) {
+                              if (var7 < 2048) {
                                 stackOut_48_0 = (int[]) (Object) stackIn_48_0;
                                 stackOut_48_1 = stackIn_48_1;
-                                stackOut_48_2 = var7 * var54[var21] >> -163917333;
+                                stackOut_48_2 = var7 * var54[var21] >> 11;
                                 stackIn_49_0 = stackOut_48_0;
                                 stackIn_49_1 = stackOut_48_1;
                                 stackIn_49_2 = stackOut_48_2;
@@ -1073,7 +1124,7 @@ final class cj extends le {
                               } else {
                                 stackOut_47_0 = (int[]) (Object) stackIn_47_0;
                                 stackOut_47_1 = stackIn_47_1;
-                                stackOut_47_2 = -((-var7 + 4096) * (-var54[var21] + 4096) >> 900764651) + 4096;
+                                stackOut_47_2 = -((-var7 + 4096) * (-var54[var21] + 4096) >> 11) + 4096;
                                 stackIn_49_0 = stackOut_47_0;
                                 stackIn_49_1 = stackOut_47_1;
                                 stackIn_49_2 = stackOut_47_2;
@@ -1091,7 +1142,7 @@ final class cj extends le {
                               if (var8 >= 2048) {
                                 stackOut_51_0 = (int[]) (Object) stackIn_51_0;
                                 stackOut_51_1 = stackIn_51_1;
-                                stackOut_51_2 = 4096 - ((-var57[var21] + 4096) * (-var8 + 4096) >> -1212995317);
+                                stackOut_51_2 = 4096 - ((-var57[var21] + 4096) * (-var8 + 4096) >> 11);
                                 stackIn_52_0 = stackOut_51_0;
                                 stackIn_52_1 = stackOut_51_1;
                                 stackIn_52_2 = stackOut_51_2;
@@ -1099,7 +1150,7 @@ final class cj extends le {
                               } else {
                                 stackOut_50_0 = (int[]) (Object) stackIn_50_0;
                                 stackOut_50_1 = stackIn_50_1;
-                                stackOut_50_2 = var57[var21] * var8 >> -2044512565;
+                                stackOut_50_2 = var57[var21] * var8 >> 11;
                                 stackIn_52_0 = stackOut_50_0;
                                 stackIn_52_1 = stackOut_50_1;
                                 stackIn_52_2 = stackOut_50_2;
@@ -1117,7 +1168,7 @@ final class cj extends le {
                               if (var9 < 2048) {
                                 stackOut_54_0 = (int[]) (Object) stackIn_54_0;
                                 stackOut_54_1 = stackIn_54_1;
-                                stackOut_54_2 = var59[var21] * var9 >> 86099691;
+                                stackOut_54_2 = var59[var21] * var9 >> 11;
                                 stackIn_55_0 = stackOut_54_0;
                                 stackIn_55_1 = stackOut_54_1;
                                 stackIn_55_2 = stackOut_54_2;
@@ -1125,7 +1176,7 @@ final class cj extends le {
                               } else {
                                 stackOut_53_0 = (int[]) (Object) stackIn_53_0;
                                 stackOut_53_1 = stackIn_53_1;
-                                stackOut_53_2 = 4096 + -((4096 + -var59[var21]) * (-var9 + 4096) >> -891572405);
+                                stackOut_53_2 = 4096 + -((4096 + -var59[var21]) * (-var9 + 4096) >> 11);
                                 stackIn_55_0 = stackOut_53_0;
                                 stackIn_55_1 = stackOut_53_1;
                                 stackIn_55_2 = stackOut_53_2;
@@ -1138,8 +1189,8 @@ final class cj extends le {
                           }
                         }
                       } else {
-                        if (var21 != -8) {
-                          if (-9 == var21) {
+                        if (var21 != 7) {
+                          if (var21 == 8) {
                             var12 = var51[0];
                             var13 = var51[1];
                             var14 = var51[2];
@@ -1151,7 +1202,7 @@ final class cj extends le {
                             var59 = var52[2];
                             var21 = 0;
                             L10: while (true) {
-                              if (hob.field_d <= var21) {
+                              if (~hob.field_d >= ~var21) {
                                 break L0;
                               } else {
                                 L11: {
@@ -1175,7 +1226,7 @@ final class cj extends le {
                                   } else {
                                     stackOut_71_0 = (int[]) (Object) stackIn_71_0;
                                     stackOut_71_1 = stackIn_71_1;
-                                    stackOut_71_2 = -((4096 - var55[var21] << -204124724) / var4) + 4096;
+                                    stackOut_71_2 = -((4096 - var55[var21] << 12) / var4) + 4096;
                                     stackIn_73_0 = stackOut_71_0;
                                     stackIn_73_1 = stackOut_71_1;
                                     stackIn_73_2 = stackOut_71_2;
@@ -1193,7 +1244,7 @@ final class cj extends le {
                                   if (var5 != 0) {
                                     stackOut_75_0 = (int[]) (Object) stackIn_75_0;
                                     stackOut_75_1 = stackIn_75_1;
-                                    stackOut_75_2 = 4096 + -((4096 + -var56[var21] << -72745524) / var5);
+                                    stackOut_75_2 = 4096 + -((4096 + -var56[var21] << 12) / var5);
                                     stackIn_76_0 = stackOut_75_0;
                                     stackIn_76_1 = stackOut_75_1;
                                     stackIn_76_2 = stackOut_75_2;
@@ -1227,7 +1278,7 @@ final class cj extends le {
                                   } else {
                                     stackOut_77_0 = (int[]) (Object) stackIn_77_0;
                                     stackOut_77_1 = stackIn_77_1;
-                                    stackOut_77_2 = 4096 - (-var58[var21] + 4096 << 1182498316) / var6;
+                                    stackOut_77_2 = 4096 - (-var58[var21] + 4096 << 12) / var6;
                                     stackIn_79_0 = stackOut_77_0;
                                     stackIn_79_1 = stackOut_77_1;
                                     stackIn_79_2 = stackOut_77_2;
@@ -1241,8 +1292,8 @@ final class cj extends le {
                             }
                           } else {
                             if (9 != var21) {
-                              if (var21 != -11) {
-                                if (-12 == var21) {
+                              if (var21 != 10) {
+                                if (var21 == 11) {
                                   var12 = var51[0];
                                   var13 = var51[1];
                                   var14 = var51[2];
@@ -1254,7 +1305,7 @@ final class cj extends le {
                                   var59 = var52[2];
                                   var21 = 0;
                                   L14: while (true) {
-                                    if (var21 >= hob.field_d) {
+                                    if (~var21 <= ~hob.field_d) {
                                       break L0;
                                     } else {
                                       L15: {
@@ -1296,7 +1347,7 @@ final class cj extends le {
                                         stackIn_111_1 = stackOut_109_1;
                                         stackIn_110_0 = stackOut_109_0;
                                         stackIn_110_1 = stackOut_109_1;
-                                        if (var5 <= var8) {
+                                        if (~var5 >= ~var8) {
                                           stackOut_111_0 = (int[]) (Object) stackIn_111_0;
                                           stackOut_111_1 = stackIn_111_1;
                                           stackOut_111_2 = -var5 + var8;
@@ -1322,7 +1373,7 @@ final class cj extends le {
                                         stackIn_114_1 = stackOut_112_1;
                                         stackIn_113_0 = stackOut_112_0;
                                         stackIn_113_1 = stackOut_112_1;
-                                        if (var6 <= var9) {
+                                        if (~var6 >= ~var9) {
                                           stackOut_114_0 = (int[]) (Object) stackIn_114_0;
                                           stackOut_114_1 = stackIn_114_1;
                                           stackOut_114_2 = var9 - var6;
@@ -1346,7 +1397,7 @@ final class cj extends le {
                                     }
                                   }
                                 } else {
-                                  if ((var21 ^ -1) == -13) {
+                                  if (var21 == 12) {
                                     var12 = var51[0];
                                     var13 = var51[1];
                                     var14 = var51[2];
@@ -1358,7 +1409,7 @@ final class cj extends le {
                                     var59 = var52[2];
                                     var21 = 0;
                                     L18: while (true) {
-                                      if (var21 >= hob.field_d) {
+                                      if (~var21 <= ~hob.field_d) {
                                         break L0;
                                       } else {
                                         var4 = var54[var21];
@@ -1367,9 +1418,9 @@ final class cj extends le {
                                         var9 = var58[var21];
                                         var6 = var59[var21];
                                         var5 = var57[var21];
-                                        var12[var21] = var7 + (var4 - (var4 * var7 >> 1892005707));
-                                        var13[var21] = var5 - -var8 - (var5 * var8 >> 1055695755);
-                                        var14[var21] = -(var9 * var6 >> 331509963) + (var6 - -var9);
+                                        var12[var21] = var7 + (var4 - (var4 * var7 >> 11));
+                                        var13[var21] = var5 - -var8 - (var5 * var8 >> 11);
+                                        var14[var21] = -(var9 * var6 >> 11) + (var6 - -var9);
                                         var21++;
                                         continue L18;
                                       }
@@ -1494,7 +1545,7 @@ final class cj extends le {
                               var59 = var52[2];
                               var21 = 0;
                               L23: while (true) {
-                                if (hob.field_d <= var21) {
+                                if (~hob.field_d >= ~var21) {
                                   break L0;
                                 } else {
                                   L24: {
@@ -1536,7 +1587,7 @@ final class cj extends le {
                                     stackIn_87_1 = stackOut_85_1;
                                     stackIn_86_0 = stackOut_85_0;
                                     stackIn_86_1 = stackOut_85_1;
-                                    if (var5 >= var8) {
+                                    if (~var5 <= ~var8) {
                                       stackOut_87_0 = (int[]) (Object) stackIn_87_0;
                                       stackOut_87_1 = stackIn_87_1;
                                       stackOut_87_2 = var8;
@@ -1599,7 +1650,7 @@ final class cj extends le {
                           var59 = var52[2];
                           var21 = 0;
                           L27: while (true) {
-                            if (hob.field_d <= var21) {
+                            if (~hob.field_d >= ~var21) {
                               break L0;
                             } else {
                               L28: {
@@ -1612,7 +1663,7 @@ final class cj extends le {
                                 stackIn_60_1 = stackOut_58_1;
                                 stackIn_59_0 = stackOut_58_0;
                                 stackIn_59_1 = stackOut_58_1;
-                                if ((var4 ^ -1) == -4097) {
+                                if (var4 == 4096) {
                                   stackOut_60_0 = (int[]) (Object) stackIn_60_0;
                                   stackOut_60_1 = stackIn_60_1;
                                   stackOut_60_2 = 4096;
@@ -1623,7 +1674,7 @@ final class cj extends le {
                                 } else {
                                   stackOut_59_0 = (int[]) (Object) stackIn_59_0;
                                   stackOut_59_1 = stackIn_59_1;
-                                  stackOut_59_2 = (var55[var21] << -1588175316) / (4096 + -var4);
+                                  stackOut_59_2 = (var55[var21] << 12) / (4096 + -var4);
                                   stackIn_61_0 = stackOut_59_0;
                                   stackIn_61_1 = stackOut_59_1;
                                   stackIn_61_2 = stackOut_59_2;
@@ -1638,7 +1689,7 @@ final class cj extends le {
                                 stackIn_63_1 = stackOut_61_1;
                                 stackIn_62_0 = stackOut_61_0;
                                 stackIn_62_1 = stackOut_61_1;
-                                if (-4097 == (var5 ^ -1)) {
+                                if (var5 == 4096) {
                                   stackOut_63_0 = (int[]) (Object) stackIn_63_0;
                                   stackOut_63_1 = stackIn_63_1;
                                   stackOut_63_2 = 4096;
@@ -1649,7 +1700,7 @@ final class cj extends le {
                                 } else {
                                   stackOut_62_0 = (int[]) (Object) stackIn_62_0;
                                   stackOut_62_1 = stackIn_62_1;
-                                  stackOut_62_2 = (var56[var21] << 1057702700) / (-var5 + 4096);
+                                  stackOut_62_2 = (var56[var21] << 12) / (-var5 + 4096);
                                   stackIn_64_0 = stackOut_62_0;
                                   stackIn_64_1 = stackOut_62_1;
                                   stackIn_64_2 = stackOut_62_2;
@@ -1675,7 +1726,7 @@ final class cj extends le {
                                 } else {
                                   stackOut_65_0 = (int[]) (Object) stackIn_65_0;
                                   stackOut_65_1 = stackIn_65_1;
-                                  stackOut_65_2 = (var58[var21] << -1311322324) / (4096 + -var6);
+                                  stackOut_65_2 = (var58[var21] << 12) / (4096 + -var6);
                                   stackIn_67_0 = stackOut_65_0;
                                   stackIn_67_1 = stackOut_65_1;
                                   stackIn_67_2 = stackOut_65_2;
@@ -1704,9 +1755,9 @@ final class cj extends le {
                         if (var21 >= hob.field_d) {
                           break L0;
                         } else {
-                          var12[var21] = -((4096 + -var55[var21]) * (4096 + -var54[var21]) >> -1680948596) + 4096;
-                          var13[var21] = -((-var56[var21] + 4096) * (4096 - var57[var21]) >> 482569004) + 4096;
-                          var14[var21] = -((-var58[var21] + 4096) * (4096 + -var59[var21]) >> 1903422444) + 4096;
+                          var12[var21] = -((4096 + -var55[var21]) * (4096 + -var54[var21]) >> 12) + 4096;
+                          var13[var21] = -((-var56[var21] + 4096) * (4096 - var57[var21]) >> 12) + 4096;
+                          var14[var21] = -((-var58[var21] + 4096) * (4096 + -var59[var21]) >> 12) + 4096;
                           var21++;
                           continue L31;
                         }
@@ -1726,7 +1777,7 @@ final class cj extends le {
                 var59 = var52[2];
                 var21 = 0;
                 L32: while (true) {
-                  if (hob.field_d <= var21) {
+                  if (~hob.field_d >= ~var21) {
                     break L0;
                   } else {
                     var12[var21] = var54[var21] + -var55[var21];

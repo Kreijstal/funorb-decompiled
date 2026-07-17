@@ -24,27 +24,47 @@ final class re {
     int field_l;
 
     final static int a(int param0, byte param1, int param2) {
-        int var5 = Terraphoenix.field_V;
-        int var3 = 0;
-        while (param2 > 0) {
-            var3 = 1 & param0 | var3 << -863504319;
-            param2--;
-            param0 = param0 >>> 1;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int stackIn_5_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        var5 = Terraphoenix.field_V;
+        try {
+          L0: {
+            var3_int = 0;
+            L1: while (true) {
+              if (param2 <= 0) {
+                var4 = -20 / ((-11 - param1) / 61);
+                stackOut_4_0 = var3_int;
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
+              } else {
+                var3_int = 1 & param0 | var3_int << 1;
+                param2--;
+                param0 = param0 >>> 1;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var3, "re.B(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
-        int var4 = -20 / ((-11 - param1) / 61);
-        return var3;
+        return stackIn_5_0;
     }
 
     public static void a(int param0) {
-        if (param0 != 52) {
-            field_h = null;
-        }
         field_h = null;
         field_d = null;
     }
 
     final static void a(int param0, byte param1, int param2, int param3, boolean param4, int param5, int param6) {
-        int var7 = 0;
+        RuntimeException var7 = null;
+        int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -53,169 +73,209 @@ final class re {
         int var13 = 0;
         int var14 = 0;
         int stackIn_25_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_24_0 = 0;
         int stackOut_23_0 = 0;
         var14 = Terraphoenix.field_V;
-        if (param6 > param5) {
-          if (param0 <= 1 + param5) {
-            return;
-          } else {
-            L0: {
-              if (param0 <= 5 + param5) {
-                break L0;
+        try {
+          L0: {
+            if (param6 > param5) {
+              if (param0 <= 1 + param5) {
+                return;
               } else {
-                if (param2 == param3) {
-                  break L0;
-                } else {
-                  L1: {
-                    var7 = (param3 >> -2062059871) - -(param2 >> 20129377) + (param3 & param2 & 1);
-                    var8 = param5;
-                    if (param1 < -19) {
+                L1: {
+                  if (param0 <= 5 + param5) {
+                    break L1;
+                  } else {
+                    if (param2 == param3) {
                       break L1;
                     } else {
-                      boolean discarded$1 = re.a(-91, '\n');
-                      break L1;
-                    }
-                  }
-                  var9 = param2;
-                  var10 = param3;
-                  var11 = param5;
-                  L2: while (true) {
-                    if (var11 >= param0) {
-                      re.a(var8, (byte) -77, param2, var9, param4, param5, param6);
-                      re.a(param0, (byte) -62, var10, param3, param4, var8, param6);
-                      return;
-                    } else {
-                      L3: {
-                        var12 = pf.field_b[var11];
-                        if (param4) {
-                          stackOut_24_0 = a.field_c[var12];
-                          stackIn_25_0 = stackOut_24_0;
-                          break L3;
+                      L2: {
+                        var7_int = (param3 >> 1) - -(param2 >> 1) + (param3 & param2 & 1);
+                        var8 = param5;
+                        if (param1 < -19) {
+                          break L2;
                         } else {
-                          stackOut_23_0 = al.field_bb[var12];
-                          stackIn_25_0 = stackOut_23_0;
-                          break L3;
+                          boolean discarded$2 = re.a(-91, '\n');
+                          break L2;
                         }
                       }
-                      var13 = stackIn_25_0;
-                      if (var13 > var7) {
-                        L4: {
-                          pf.field_b[var11] = pf.field_b[var8];
-                          if (var13 >= var9) {
-                            break L4;
+                      var9 = param2;
+                      var10 = param3;
+                      var11 = param5;
+                      L3: while (true) {
+                        if (var11 >= param0) {
+                          re.a(var8, (byte) -77, param2, var9, param4, param5, param6);
+                          re.a(param0, (byte) -62, var10, param3, param4, var8, param6);
+                          break L0;
+                        } else {
+                          L4: {
+                            var12 = pf.field_b[var11];
+                            if (param4) {
+                              stackOut_24_0 = a.field_c[var12];
+                              stackIn_25_0 = stackOut_24_0;
+                              break L4;
+                            } else {
+                              stackOut_23_0 = al.field_bb[var12];
+                              stackIn_25_0 = stackOut_23_0;
+                              break L4;
+                            }
+                          }
+                          var13 = stackIn_25_0;
+                          if (var13 > var7_int) {
+                            L5: {
+                              pf.field_b[var11] = pf.field_b[var8];
+                              if (var13 >= var9) {
+                                break L5;
+                              } else {
+                                var9 = var13;
+                                break L5;
+                              }
+                            }
+                            int incrementValue$3 = var8;
+                            var8++;
+                            pf.field_b[incrementValue$3] = var12;
+                            var11++;
+                            continue L3;
                           } else {
-                            var9 = var13;
-                            break L4;
+                            L6: {
+                              if (var10 >= var13) {
+                                break L6;
+                              } else {
+                                break L6;
+                              }
+                            }
+                            var11++;
+                            continue L3;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                var7_int = -1 + param0;
+                L7: while (true) {
+                  if (var7_int <= param5) {
+                    return;
+                  } else {
+                    var8 = param5;
+                    L8: while (true) {
+                      if (var8 >= var7_int) {
+                        var7_int--;
+                        continue L7;
+                      } else {
+                        L9: {
+                          var9 = pf.field_b[var8];
+                          var10 = pf.field_b[var8 + 1];
+                          if (!rb.a(var9, param4, (byte) 126, var10)) {
+                            break L9;
+                          } else {
+                            pf.field_b[var8] = var10;
+                            pf.field_b[1 + var8] = var9;
+                            break L9;
                           }
                         }
                         var8++;
-                        pf.field_b[var8] = var12;
-                        var11++;
-                        continue L2;
-                      } else {
-                        if (var10 < var13) {
-                          var10 = var13;
-                          var11++;
-                          continue L2;
-                        } else {
-                          var11++;
-                          continue L2;
-                        }
+                        continue L8;
                       }
                     }
                   }
                 }
               }
-            }
-            var7 = -1 + param0;
-            L5: while (true) {
-              if (var7 <= param5) {
-                return;
-              } else {
-                var8 = param5;
-                L6: while (true) {
-                  if (var8 >= var7) {
-                    var7--;
-                    continue L5;
-                  } else {
-                    var9 = pf.field_b[var8];
-                    var10 = pf.field_b[var8 + 1];
-                    if (rb.a(var9, param4, (byte) 126, var10)) {
-                      pf.field_b[var8] = var10;
-                      pf.field_b[1 + var8] = var9;
-                      var8++;
-                      continue L6;
-                    } else {
-                      var8++;
-                      continue L6;
-                    }
-                  }
-                }
-              }
+            } else {
+              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var7, "re.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
     final static boolean a(int param0, char param1) {
         char[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        L0: {
-          var5 = Terraphoenix.field_V;
-          if (param1 <= 0) {
-            break L0;
-          } else {
-            if (128 > param1) {
-              return true;
-            } else {
-              break L0;
-            }
-          }
-        }
-        L1: {
-          if (param1 < 160) {
-            break L1;
-          } else {
-            if (255 < param1) {
-              break L1;
-            } else {
-              return true;
-            }
-          }
-        }
-        if (param0 == -10152) {
-          L2: {
-            if (param1 != 0) {
-              var6 = oj.field_s;
-              var2 = var6;
-              var3 = 0;
-              L3: while (true) {
-                if (var3 >= var6.length) {
-                  break L2;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_21_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_10_0 = 0;
+        var5 = Terraphoenix.field_V;
+        try {
+          L0: {
+            L1: {
+              if (param1 <= 0) {
+                break L1;
+              } else {
+                if (128 > param1) {
+                  stackOut_7_0 = 1;
+                  stackIn_8_0 = stackOut_7_0;
+                  return stackIn_8_0 != 0;
                 } else {
-                  var4 = var6[var3];
-                  if (param1 != var4) {
-                    var3++;
-                    continue L3;
-                  } else {
-                    return true;
-                  }
+                  break L1;
                 }
               }
+            }
+            L2: {
+              if (param1 < 160) {
+                break L2;
+              } else {
+                if (255 < param1) {
+                  break L2;
+                } else {
+                  return true;
+                }
+              }
+            }
+            if (param0 == -10152) {
+              L3: {
+                if (param1 != 0) {
+                  var6 = oj.field_s;
+                  var2 = var6;
+                  var3 = 0;
+                  L4: while (true) {
+                    if (var3 >= var6.length) {
+                      break L3;
+                    } else {
+                      var4 = var6[var3];
+                      if (param1 != var4) {
+                        var3++;
+                        continue L4;
+                      } else {
+                        stackOut_17_0 = 1;
+                        stackIn_18_0 = stackOut_17_0;
+                        return stackIn_18_0 != 0;
+                      }
+                    }
+                  }
+                } else {
+                  break L3;
+                }
+              }
+              stackOut_20_0 = 0;
+              stackIn_21_0 = stackOut_20_0;
+              break L0;
             } else {
-              break L2;
+              stackOut_10_0 = 1;
+              stackIn_11_0 = stackOut_10_0;
+              return stackIn_11_0 != 0;
             }
           }
-          return false;
-        } else {
-          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var2_ref, "re.D(" + param0 + 44 + param1 + 41);
         }
+        return stackIn_21_0 != 0;
     }
 
     re(int param0) {
@@ -237,7 +297,7 @@ final class re {
           ((re) this).field_e = i.field_b[param0];
           ((re) this).field_i = da.field_i[param0];
           var2 = param0;
-          if (-1 == var2) {
+          if (var2 == 0) {
             ((re) this).field_l = 16;
             ((re) this).field_o = 12;
             ((re) this).field_p = 2;
@@ -258,7 +318,7 @@ final class re {
             ((re) this).field_t = true;
             break L0;
           } else {
-            if (-2 == var2) {
+            if (var2 == 1) {
               ((re) this).field_g[0] = 15;
               ((re) this).field_r = ml.field_r;
               ((re) this).field_p = 1;
@@ -320,7 +380,7 @@ final class re {
                   ((re) this).field_n = 68;
                   break L0;
                 } else {
-                  if (var2 == -19) {
+                  if (var2 == 18) {
                     ((re) this).field_o = 50;
                     ((re) this).field_l = 40;
                     ((re) this).field_g[0] = 80;
@@ -360,7 +420,7 @@ final class re {
                       ((re) this).field_q = true;
                       break L0;
                     } else {
-                      if (-6 == var2) {
+                      if (var2 == 5) {
                         ((re) this).field_g[0] = 100;
                         ((re) this).field_l = 50;
                         ((re) this).field_o = -1;
@@ -399,7 +459,7 @@ final class re {
                           ((re) this).field_s = 60;
                           break L0;
                         } else {
-                          if (-8 == var2) {
+                          if (var2 == 7) {
                             ((re) this).field_p = 2;
                             ((re) this).field_g[0] = 125;
                             ((re) this).field_o = 0;
@@ -461,7 +521,7 @@ final class re {
                                 ((re) this).field_a = 61;
                                 break L0;
                               } else {
-                                if (-12 == var2) {
+                                if (var2 == 11) {
                                   ((re) this).field_r = bb.field_h;
                                   ((re) this).field_o = -1;
                                   ((re) this).field_g[0] = 100;
@@ -519,7 +579,7 @@ final class re {
                                       ((re) this).field_s = 20;
                                       break L0;
                                     } else {
-                                      if (-14 == var2) {
+                                      if (var2 == 13) {
                                         ((re) this).field_l = 80;
                                         ((re) this).field_o = 24;
                                         ((re) this).field_p = 2;
@@ -575,7 +635,7 @@ final class re {
                                             ((re) this).field_a = 48;
                                             break L0;
                                           } else {
-                                            if (-17 == var2) {
+                                            if (var2 == 16) {
                                               ((re) this).field_p = 2;
                                               ((re) this).field_l = 90;
                                               ((re) this).field_o = 20;

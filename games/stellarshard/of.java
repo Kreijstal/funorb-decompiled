@@ -10,14 +10,79 @@ final class of extends dg {
     final static void a(byte param0, java.applet.Applet param1) {
         try {
             java.net.URL var2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-                if (param0 < 36) {
-                    field_F = false;
+              L0: {
+                try {
+                  L1: {
+                    L2: {
+                      if (param0 >= 36) {
+                        break L2;
+                      } else {
+                        field_F = false;
+                        break L2;
+                      }
+                    }
+                    var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
+                    param1.getAppletContext().showDocument(lk.a(param1, var2, -110), "_top");
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L3: {
+                    var2_ref = (Exception) (Object) decompiledCaughtException;
+                    var2_ref.printStackTrace();
+                    break L3;
+                  }
                 }
-                var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-                param1.getAppletContext().showDocument(lk.a(param1, var2, -110), "_top");
-            } catch (Exception exception) {
-                exception.printStackTrace();
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_1 = new StringBuilder().append("of.S(").append(param0).append(44);
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param1 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L4;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L4;
+                }
+              }
+              throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -41,7 +106,7 @@ final class of extends dg {
           }
         }
         var2 = param1;
-        if (-33 != (var2 ^ -1)) {
+        if (var2 != 32) {
           L1: {
             if (160 != var2) {
               break L1;
@@ -54,7 +119,7 @@ final class of extends dg {
             }
           }
           L2: {
-            if ((var2 ^ -1) != -96) {
+            if (var2 != 95) {
               break L2;
             } else {
               if (var3 != 0) {
@@ -95,7 +160,7 @@ final class of extends dg {
               } else {
                 L6: {
                   L7: {
-                    if ((var2 ^ -1) != -225) {
+                    if (var2 != 224) {
                       break L7;
                     } else {
                       if (var3 == 0) {
@@ -106,7 +171,7 @@ final class of extends dg {
                     }
                   }
                   L8: {
-                    if (-226 != (var2 ^ -1)) {
+                    if (var2 != 225) {
                       break L8;
                     } else {
                       if (var3 == 0) {
@@ -117,7 +182,7 @@ final class of extends dg {
                     }
                   }
                   L9: {
-                    if (-227 != (var2 ^ -1)) {
+                    if (var2 != 226) {
                       break L9;
                     } else {
                       if (var3 == 0) {
@@ -152,13 +217,13 @@ final class of extends dg {
                         }
                       }
                     }
-                    if ((var2 ^ -1) == -194) {
+                    if (var2 == 193) {
                       break L6;
                     } else {
                       if (var2 == 194) {
                         break L6;
                       } else {
-                        if (-197 == (var2 ^ -1)) {
+                        if (var2 == 196) {
                           break L6;
                         } else {
                           if (var2 == 195) {
@@ -180,7 +245,7 @@ final class of extends dg {
                                 break L12;
                               } else {
                                 L14: {
-                                  if (-235 != (var2 ^ -1)) {
+                                  if (var2 != 234) {
                                     break L14;
                                   } else {
                                     if (var3 == 0) {
@@ -190,7 +255,7 @@ final class of extends dg {
                                     }
                                   }
                                 }
-                                if ((var2 ^ -1) == -236) {
+                                if (var2 == 235) {
                                   break L12;
                                 } else {
                                   if (var2 == 200) {
@@ -210,12 +275,12 @@ final class of extends dg {
                                     if (202 == var2) {
                                       break L12;
                                     } else {
-                                      if ((var2 ^ -1) == -204) {
+                                      if (var2 == 203) {
                                         break L12;
                                       } else {
                                         L16: {
                                           L17: {
-                                            if ((var2 ^ -1) != -238) {
+                                            if (var2 != 237) {
                                               break L17;
                                             } else {
                                               if (var3 == 0) {
@@ -248,7 +313,7 @@ final class of extends dg {
                                             }
                                           }
                                           L20: {
-                                            if ((var2 ^ -1) != -206) {
+                                            if (var2 != 205) {
                                               break L20;
                                             } else {
                                               if (var3 == 0) {
@@ -258,7 +323,7 @@ final class of extends dg {
                                               }
                                             }
                                           }
-                                          if (-207 == (var2 ^ -1)) {
+                                          if (var2 == 206) {
                                             break L16;
                                           } else {
                                             if (207 == var2) {
@@ -279,13 +344,13 @@ final class of extends dg {
                                                 if (var2 == 243) {
                                                   break L21;
                                                 } else {
-                                                  if (-245 == (var2 ^ -1)) {
+                                                  if (var2 == 244) {
                                                     break L21;
                                                   } else {
                                                     if (var2 == 246) {
                                                       break L21;
                                                     } else {
-                                                      if (-246 == (var2 ^ -1)) {
+                                                      if (var2 == 245) {
                                                         break L21;
                                                       } else {
                                                         L23: {
@@ -311,7 +376,7 @@ final class of extends dg {
                                                           }
                                                         }
                                                         L25: {
-                                                          if ((var2 ^ -1) != -213) {
+                                                          if (var2 != 212) {
                                                             break L25;
                                                           } else {
                                                             if (var3 == 0) {
@@ -321,14 +386,14 @@ final class of extends dg {
                                                             }
                                                           }
                                                         }
-                                                        if ((var2 ^ -1) == -215) {
+                                                        if (var2 == 214) {
                                                           break L21;
                                                         } else {
                                                           if (213 == var2) {
                                                             break L21;
                                                           } else {
                                                             L26: {
-                                                              if (-250 == (var2 ^ -1)) {
+                                                              if (var2 == 249) {
                                                                 break L26;
                                                               } else {
                                                                 if (250 == var2) {
@@ -349,7 +414,7 @@ final class of extends dg {
                                                                     break L26;
                                                                   } else {
                                                                     L28: {
-                                                                      if ((var2 ^ -1) != -218) {
+                                                                      if (var2 != 217) {
                                                                         break L28;
                                                                       } else {
                                                                         if (var3 == 0) {
@@ -363,7 +428,7 @@ final class of extends dg {
                                                                       break L26;
                                                                     } else {
                                                                       L29: {
-                                                                        if ((var2 ^ -1) != -220) {
+                                                                        if (var2 != 219) {
                                                                           break L29;
                                                                         } else {
                                                                           if (var3 == 0) {
@@ -375,16 +440,16 @@ final class of extends dg {
                                                                       }
                                                                       if (var2 != 220) {
                                                                         L30: {
-                                                                          if (-232 != (var2 ^ -1)) {
+                                                                          if (var2 != 231) {
                                                                             if (var2 == 199) {
                                                                               break L30;
                                                                             } else {
                                                                               L31: {
-                                                                                if ((var2 ^ -1) != -256) {
-                                                                                  if (-377 != (var2 ^ -1)) {
+                                                                                if (var2 != 255) {
+                                                                                  if (var2 != 376) {
                                                                                     L32: {
-                                                                                      if ((var2 ^ -1) != -242) {
-                                                                                        if (-210 != (var2 ^ -1)) {
+                                                                                      if (var2 != 241) {
+                                                                                        if (var2 != 209) {
                                                                                           if (var2 == 223) {
                                                                                             return 'b';
                                                                                           } else {
@@ -405,7 +470,7 @@ final class of extends dg {
                                                                                         if (var3 == 0) {
                                                                                           break L32;
                                                                                         } else {
-                                                                                          if (-210 != (var2 ^ -1)) {
+                                                                                          if (var2 != 209) {
                                                                                             if (var2 == 223) {
                                                                                               return 'b';
                                                                                             } else {
@@ -431,8 +496,8 @@ final class of extends dg {
                                                                                       break L31;
                                                                                     } else {
                                                                                       L33: {
-                                                                                        if ((var2 ^ -1) != -242) {
-                                                                                          if (-210 != (var2 ^ -1)) {
+                                                                                        if (var2 != 241) {
+                                                                                          if (var2 != 209) {
                                                                                             if (var2 == 223) {
                                                                                               return 'b';
                                                                                             } else {
@@ -453,7 +518,7 @@ final class of extends dg {
                                                                                           if (var3 == 0) {
                                                                                             break L33;
                                                                                           } else {
-                                                                                            if (-210 != (var2 ^ -1)) {
+                                                                                            if (var2 != 209) {
                                                                                               if (var2 == 223) {
                                                                                                 return 'b';
                                                                                               } else {
@@ -480,10 +545,10 @@ final class of extends dg {
                                                                                   if (var3 == 0) {
                                                                                     break L31;
                                                                                   } else {
-                                                                                    if (-377 != (var2 ^ -1)) {
+                                                                                    if (var2 != 376) {
                                                                                       L34: {
-                                                                                        if ((var2 ^ -1) != -242) {
-                                                                                          if (-210 != (var2 ^ -1)) {
+                                                                                        if (var2 != 241) {
+                                                                                          if (var2 != 209) {
                                                                                             if (var2 == 223) {
                                                                                               return 'b';
                                                                                             } else {
@@ -504,7 +569,7 @@ final class of extends dg {
                                                                                           if (var3 == 0) {
                                                                                             break L34;
                                                                                           } else {
-                                                                                            if (-210 != (var2 ^ -1)) {
+                                                                                            if (var2 != 209) {
                                                                                               if (var2 == 223) {
                                                                                                 return 'b';
                                                                                               } else {
@@ -531,7 +596,7 @@ final class of extends dg {
                                                                                       } else {
                                                                                         L35: {
                                                                                           L36: {
-                                                                                            if ((var2 ^ -1) != -242) {
+                                                                                            if (var2 != 241) {
                                                                                               break L36;
                                                                                             } else {
                                                                                               if (var3 == 0) {
@@ -542,7 +607,7 @@ final class of extends dg {
                                                                                             }
                                                                                           }
                                                                                           L37: {
-                                                                                            if (-210 != (var2 ^ -1)) {
+                                                                                            if (var2 != 209) {
                                                                                               break L37;
                                                                                             } else {
                                                                                               if (var3 == 0) {
@@ -575,7 +640,7 @@ final class of extends dg {
                                                                               } else {
                                                                                 L38: {
                                                                                   L39: {
-                                                                                    if ((var2 ^ -1) != -256) {
+                                                                                    if (var2 != 255) {
                                                                                       break L39;
                                                                                     } else {
                                                                                       if (var3 == 0) {
@@ -586,7 +651,7 @@ final class of extends dg {
                                                                                     }
                                                                                   }
                                                                                   L40: {
-                                                                                    if (-377 != (var2 ^ -1)) {
+                                                                                    if (var2 != 376) {
                                                                                       break L40;
                                                                                     } else {
                                                                                       if (var3 == 0) {
@@ -598,7 +663,7 @@ final class of extends dg {
                                                                                   }
                                                                                   L41: {
                                                                                     L42: {
-                                                                                      if ((var2 ^ -1) != -242) {
+                                                                                      if (var2 != 241) {
                                                                                         break L42;
                                                                                       } else {
                                                                                         if (var3 == 0) {
@@ -609,7 +674,7 @@ final class of extends dg {
                                                                                       }
                                                                                     }
                                                                                     L43: {
-                                                                                      if (-210 != (var2 ^ -1)) {
+                                                                                      if (var2 != 209) {
                                                                                         break L43;
                                                                                       } else {
                                                                                         if (var3 == 0) {
@@ -639,7 +704,7 @@ final class of extends dg {
                                                                         } else {
                                                                           L44: {
                                                                             L45: {
-                                                                              if (-232 != (var2 ^ -1)) {
+                                                                              if (var2 != 231) {
                                                                                 break L45;
                                                                               } else {
                                                                                 if (var3 == 0) {
@@ -654,7 +719,7 @@ final class of extends dg {
                                                                             } else {
                                                                               L46: {
                                                                                 L47: {
-                                                                                  if ((var2 ^ -1) != -256) {
+                                                                                  if (var2 != 255) {
                                                                                     break L47;
                                                                                   } else {
                                                                                     if (var3 == 0) {
@@ -665,7 +730,7 @@ final class of extends dg {
                                                                                   }
                                                                                 }
                                                                                 L48: {
-                                                                                  if (-377 != (var2 ^ -1)) {
+                                                                                  if (var2 != 376) {
                                                                                     break L48;
                                                                                   } else {
                                                                                     if (var3 == 0) {
@@ -677,7 +742,7 @@ final class of extends dg {
                                                                                 }
                                                                                 L49: {
                                                                                   L50: {
-                                                                                    if ((var2 ^ -1) != -242) {
+                                                                                    if (var2 != 241) {
                                                                                       break L50;
                                                                                     } else {
                                                                                       if (var3 == 0) {
@@ -688,7 +753,7 @@ final class of extends dg {
                                                                                     }
                                                                                   }
                                                                                   L51: {
-                                                                                    if (-210 != (var2 ^ -1)) {
+                                                                                    if (var2 != 209) {
                                                                                       break L51;
                                                                                     } else {
                                                                                       if (var3 == 0) {
@@ -755,9 +820,7 @@ final class of extends dg {
 
     public static void d(byte param0) {
         field_D = null;
-        if (param0 > -117) {
-            of.d((byte) 94);
-        }
+        of.d((byte) 94);
     }
 
     final static String i(int param0) {
@@ -771,51 +834,161 @@ final class of extends dg {
     }
 
     final void a(int param0, int param1, rj param2, int param3, int param4, int param5) {
+        RuntimeException var7 = null;
         int var8 = 0;
         dl var9 = null;
-        super.a(param0, -111, param2, param3, param4, param5);
-        var8 = 58 % ((param1 - -50) / 57);
-        var9 = lk.field_e;
-        if (var9 != null) {
-          if (((of) this).a((byte) 127, param4, param0, param5, param3)) {
-            if (!(((of) this).field_v instanceof jh)) {
-              if (var9.field_v instanceof jh) {
-                ((jh) (Object) var9.field_v).a((of) this, (byte) 107, var9);
-                lk.field_e = null;
-                if (stellarshard.field_B != 0) {
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              super.a(param0, -111, param2, param3, param4, param5);
+              var8 = 58 % ((param1 - -50) / 57);
+              var9 = lk.field_e;
+              if (var9 == null) {
+                break L1;
+              } else {
+                if (!((of) this).a((byte) 127, param4, param0, param5, param3)) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (((of) this).field_v instanceof jh) {
+                      break L2;
+                    } else {
+                      if (var9.field_v instanceof jh) {
+                        ((jh) (Object) var9.field_v).a((of) this, (byte) 107, var9);
+                        lk.field_e = null;
+                        if (stellarshard.field_B == 0) {
+                          break L1;
+                        } else {
+                          break L2;
+                        }
+                      } else {
+                        break L1;
+                      }
+                    }
+                  }
                   ((jh) (Object) ((of) this).field_v).a((of) this, (byte) 30, var9);
                   lk.field_e = null;
-                  return;
-                } else {
-                  return;
+                  break L1;
                 }
-              } else {
-                return;
               }
-            } else {
-              ((jh) (Object) ((of) this).field_v).a((of) this, (byte) 30, var9);
-              lk.field_e = null;
-              return;
             }
-          } else {
-            return;
+            break L0;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var7 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var7;
+            stackOut_8_1 = new StringBuilder().append("of.U(").append(param0).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
     private of(int param0, int param1, int param2, int param3, uk param4, lf param5, rj param6) {
         super(param0, param1, param2, param3, param4, param5);
-        ((of) this).field_y = param6;
+        try {
+            ((of) this).field_y = param6;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "of.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static String a(CharSequence param0, byte param1) {
-        if (param1 != 113) {
+        RuntimeException var2 = null;
+        String stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
             field_A = 45;
-            return rc.a(false, 10, param0);
+            stackOut_0_0 = rc.a(false, 10, param0);
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("of.K(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -65 + 41);
         }
-        return rc.a(false, 10, param0);
+        return stackIn_1_0;
     }
 
     static {

@@ -82,10 +82,8 @@ final class ho extends q {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new ho(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -97,7 +95,7 @@ final class ho extends q {
 
     private final static void a(byte[] param0, int param1) {
         field_C = param0;
-        field_q = param1;
+        field_q = 0;
         field_y = 0;
     }
 
@@ -737,10 +735,8 @@ final class ho extends q {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new ho(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -846,7 +842,7 @@ final class ho extends q {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
@@ -884,7 +880,7 @@ final class ho extends q {
         ((ho) this).field_L = var2.c((byte) -102);
         ((ho) this).field_F = var2.c((byte) -42);
         if (((ho) this).field_F < 0) {
-            ((ho) this).field_F = ((ho) this).field_F ^ -1;
+            ((ho) this).field_F = ~((ho) this).field_F;
             ((ho) this).field_A = true;
         }
         int var3 = var2.c((byte) -94);
@@ -941,7 +937,7 @@ final class ho extends q {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }

@@ -6,10 +6,6 @@ final class rd {
     static String field_a;
 
     final static boolean b(int param0) {
-        if (param0 != 6144) {
-            field_b = null;
-            return true;
-        }
         return true;
     }
 
@@ -30,7 +26,7 @@ final class rd {
         if (param0 == -30) {
           if (4096 > param1) {
             L0: {
-              if (-2049 >= (param1 ^ -1)) {
+              if (param1 >= 2048) {
                 stackOut_18_0 = -db.field_m[param1 - 2048];
                 stackIn_19_0 = stackOut_18_0;
                 break L0;
@@ -59,7 +55,7 @@ final class rd {
           field_b = null;
           if (4096 > param1) {
             L2: {
-              if (-2049 >= (param1 ^ -1)) {
+              if (param1 >= 2048) {
                 stackOut_8_0 = -db.field_m[param1 - 2048];
                 stackIn_9_0 = stackOut_8_0;
                 break L2;
@@ -89,11 +85,6 @@ final class rd {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 <= 85) {
-            int discarded$0 = rd.a((byte) 52, -77);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

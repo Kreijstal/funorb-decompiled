@@ -38,13 +38,15 @@ class gi {
     }
 
     final static void a(ag param0, int param1) {
-        if (param1 != 3408) {
-            Object var3 = null;
-            gi.a((ag) null, -47);
+        try {
+            if (param1 != 3408) {
+                Object var3 = null;
+                gi.a((ag) null, -47);
+            }
             ej.field_a.b((ic) (Object) param0);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "gi.TB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ej.field_a.b((ic) (Object) param0);
     }
 
     public static void b(int param0) {

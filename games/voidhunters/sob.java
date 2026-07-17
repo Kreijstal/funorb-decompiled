@@ -163,8 +163,9 @@ final class sob extends ha {
                                               ((sob) this).field_k[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                               L7: while (true) {
                                                 L8: {
+                                                  int incrementValue$5 = var11;
                                                   var11++;
-                                                  var12 = var12 + (var11 + var11);
+                                                  var12 = var12 + (incrementValue$5 + var11);
                                                   var6 = var6 - ((sob) this).field_i;
                                                   var7 = var7 + ((sob) this).field_i;
                                                   if (var12 <= param2) {
@@ -336,8 +337,9 @@ final class sob extends ha {
                                     }
                                     L13: while (true) {
                                       L14: {
+                                        int incrementValue$6 = var11;
                                         var11++;
-                                        var12 = var12 + (var11 + var11);
+                                        var12 = var12 + (incrementValue$6 + var11);
                                         var6 = var6 - ((sob) this).field_i;
                                         var7 = var7 + ((sob) this).field_i;
                                         if (var12 <= param2) {
@@ -576,8 +578,9 @@ final class sob extends ha {
                                             ((sob) this).field_k[var14] = var15 + var18;
                                             L23: while (true) {
                                               L24: {
+                                                int incrementValue$7 = var11;
                                                 var11++;
-                                                var12 = var12 + (var11 + var11);
+                                                var12 = var12 + (incrementValue$7 + var11);
                                                 var6 = var6 - ((sob) this).field_i;
                                                 var7 = var7 + ((sob) this).field_i;
                                                 if (var12 <= param2) {
@@ -761,8 +764,9 @@ final class sob extends ha {
                                   }
                                   L29: while (true) {
                                     L30: {
+                                      int incrementValue$8 = var11;
                                       var11++;
-                                      var12 = var12 + (var11 + var11);
+                                      var12 = var12 + (incrementValue$8 + var11);
                                       var6 = var6 - ((sob) this).field_i;
                                       var7 = var7 + ((sob) this).field_i;
                                       if (var12 <= param2) {
@@ -1110,8 +1114,9 @@ final class sob extends ha {
                             }
                             L41: while (true) {
                               L42: {
+                                int incrementValue$9 = var11;
                                 var11++;
-                                var12 = var12 + (var11 + var11);
+                                var12 = var12 + (incrementValue$9 + var11);
                                 var6 = var6 - ((sob) this).field_i;
                                 var7 = var7 + ((sob) this).field_i;
                                 if (var12 <= param2) {
@@ -1384,8 +1389,9 @@ final class sob extends ha {
                   var9++;
                   continue L0;
                 } else {
+                  int incrementValue$21 = var8;
                   var8++;
-                  var11 = param0[var8] >>> 24;
+                  var11 = param0[incrementValue$21] >>> 24;
                   if (var11 != 0) {
                     if (var11 != 255) {
                       var7 = 1;
@@ -1504,8 +1510,9 @@ final class sob extends ha {
                                       var13 = param4 + var12;
                                       var14 = (param4 & 16711935) + (var12 & 16711935);
                                       var12 = (var14 & 16777472) + (var13 - var14 & 65536);
+                                      int incrementValue$2 = var8;
                                       var8++;
-                                      ((sob) this).field_k[var8] = var13 - var12 | var12 - (var12 >>> 8);
+                                      ((sob) this).field_k[incrementValue$2] = var13 - var12 | var12 - (var12 >>> 8);
                                       var11++;
                                       continue L10;
                                     }
@@ -1530,8 +1537,9 @@ final class sob extends ha {
                                   } else {
                                     var13 = ((sob) this).field_k[var8];
                                     var13 = ((var13 & 16711935) * var10 >> 8 & 16711935) + (((var13 & -16711936) >>> 8) * var10 & -16711936);
+                                    int incrementValue$3 = var8;
                                     var8++;
-                                    ((sob) this).field_k[var8] = param4 + var13;
+                                    ((sob) this).field_k[incrementValue$3] = param4 + var13;
                                     var12++;
                                     continue L12;
                                   }
@@ -1714,7 +1722,7 @@ final class sob extends ha {
     }
 
     private final void d(int param0) {
-        ((sob) this).field_x[param0].a((Runnable) (Object) Thread.currentThread(), 0);
+        ((sob) this).field_x[0].a((Runnable) (Object) Thread.currentThread(), 0);
     }
 
     final void P(int param0, int param1, int param2, int param3, int param4) {
@@ -1839,18 +1847,29 @@ final class sob extends ha {
     }
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
-        gpb var4_ref = null;
-        gpb var4 = (gpb) (Object) ((sob) this).field_t.a((long)((Object) (Object) param0).hashCode(), 119);
-        if (var4 == null) {
-            var4_ref = rba.a(param1, true, param0, param2);
-            ((sob) this).field_t.a((long)((Object) (Object) param0).hashCode(), (ksa) (Object) var4_ref, (byte) -124);
-        } else {
-            if (var4_ref.field_e == param1) {
-                // if_icmpeq L90
+        gpb var4 = null;
+        L0: {
+          var4 = (gpb) (Object) ((sob) this).field_t.a((long)((Object) (Object) param0).hashCode(), 119);
+          if (var4 != null) {
+            L1: {
+              if (var4.field_e != param1) {
+                break L1;
+              } else {
+                if (var4.field_d == param2) {
+                  return;
+                } else {
+                  break L1;
+                }
+              }
             }
             this.a(param0, param1, param2);
+            break L0;
+          } else {
+            var4 = rba.a(param1, true, param0, param2);
+            ((sob) this).field_t.a((long)((Object) (Object) param0).hashCode(), (ksa) (Object) var4, (byte) -124);
+            break L0;
+          }
         }
-        return;
     }
 
     final boolean x() {
@@ -2200,15 +2219,25 @@ final class sob extends ha {
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
-        gpb var7 = null;
         java.awt.Dimension var5 = null;
-        gpb var6 = (gpb) (Object) ((sob) this).field_t.a((long)((Object) (Object) param0).hashCode(), 97);
-        if (var6 != null) {
+        gpb var6 = null;
+        gpb var7 = null;
+        var6 = (gpb) (Object) ((sob) this).field_t.a((long)((Object) (Object) param0).hashCode(), 97);
+        if (var6 == null) {
+          return;
+        } else {
+          L0: {
             var6.b(-3846);
             var7 = rba.a(param1, true, param0, param2);
             ((sob) this).field_t.a((long)((Object) (Object) param0).hashCode(), (ksa) (Object) var7, (byte) -122);
-            if (((sob) this).field_l == param0) {
-                if (((sob) this).field_c == null) {
+            if (((sob) this).field_l != param0) {
+              break L0;
+            } else {
+              if (((sob) this).field_c != null) {
+                break L0;
+              } else {
+                L1: {
+                  L2: {
                     var5 = param0.getSize();
                     ((sob) this).field_z = var5.width;
                     ((sob) this).field_o = var5.height;
@@ -2216,19 +2245,30 @@ final class sob extends ha {
                     ((sob) this).field_k = var7.field_f;
                     ((sob) this).field_i = var7.field_e;
                     ((sob) this).field_j = var7.field_d;
-                    if (((sob) this).field_i == ((sob) this).field_F) {
-                        // if_icmpeq L218
+                    if (((sob) this).field_i != ((sob) this).field_F) {
+                      break L2;
+                    } else {
+                      if (((sob) this).field_j == ((sob) this).field_q) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
                     }
-                    ((sob) this).field_F = ((sob) this).field_i;
-                    ((sob) this).field_v = ((sob) this).field_i;
-                    ((sob) this).field_q = ((sob) this).field_j;
-                    ((sob) this).field_u = ((sob) this).field_j;
-                    ((sob) this).field_r = new float[((sob) this).field_F * ((sob) this).field_q];
-                    ((sob) this).field_G = new float[((sob) this).field_F * ((sob) this).field_q];
-                    this.y();
+                  }
+                  ((sob) this).field_F = ((sob) this).field_i;
+                  ((sob) this).field_v = ((sob) this).field_i;
+                  ((sob) this).field_q = ((sob) this).field_j;
+                  ((sob) this).field_u = ((sob) this).field_j;
+                  ((sob) this).field_r = new float[((sob) this).field_F * ((sob) this).field_q];
+                  ((sob) this).field_G = new float[((sob) this).field_F * ((sob) this).field_q];
+                  break L1;
                 }
+                this.y();
+                break L0;
+              }
             }
-            return;
+          }
+          return;
         }
     }
 
@@ -2242,13 +2282,20 @@ final class sob extends ha {
           } else {
             if (((sob) this).field_D != null) {
               try {
-                var3 = ((sob) this).field_l.getGraphics();
-                ((sob) this).field_D.a(var3, ((sob) this).field_z, param1, 32255, param0, 0, 0, ((sob) this).field_o);
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
+                L1: {
+                  var3 = ((sob) this).field_l.getGraphics();
+                  ((sob) this).field_D.a(var3, ((sob) this).field_z, param1, 32255, param0, 0, 0, ((sob) this).field_o);
+                  break L1;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L2: {
+                  exception = (Exception) (Object) decompiledCaughtException;
+                  ((sob) this).field_l.repaint();
+                  break L2;
+                }
               }
-              exception = (Exception) (Object) decompiledCaughtException;
-              ((sob) this).field_l.repaint();
+              return;
             } else {
               break L0;
             }
@@ -2317,28 +2364,37 @@ final class sob extends ha {
                         if (var3 >= var1) {
                           return;
                         } else {
+                          int incrementValue$9 = var3;
                           var3++;
-                          ((sob) this).field_r[var3] = 2147483648.0f;
+                          ((sob) this).field_r[incrementValue$9] = 2147483648.0f;
                           continue L2;
                         }
                       }
                     } else {
+                      int incrementValue$10 = var3;
                       var3++;
-                      ((sob) this).field_r[var3] = 2147483648.0f;
+                      ((sob) this).field_r[incrementValue$10] = 2147483648.0f;
+                      int incrementValue$11 = var3;
                       var3++;
-                      ((sob) this).field_r[var3] = 2147483648.0f;
+                      ((sob) this).field_r[incrementValue$11] = 2147483648.0f;
+                      int incrementValue$12 = var3;
                       var3++;
-                      ((sob) this).field_r[var3] = 2147483648.0f;
+                      ((sob) this).field_r[incrementValue$12] = 2147483648.0f;
+                      int incrementValue$13 = var3;
                       var3++;
-                      ((sob) this).field_r[var3] = 2147483648.0f;
+                      ((sob) this).field_r[incrementValue$13] = 2147483648.0f;
+                      int incrementValue$14 = var3;
                       var3++;
-                      ((sob) this).field_r[var3] = 2147483648.0f;
+                      ((sob) this).field_r[incrementValue$14] = 2147483648.0f;
+                      int incrementValue$15 = var3;
                       var3++;
-                      ((sob) this).field_r[var3] = 2147483648.0f;
+                      ((sob) this).field_r[incrementValue$15] = 2147483648.0f;
+                      int incrementValue$16 = var3;
                       var3++;
-                      ((sob) this).field_r[var3] = 2147483648.0f;
+                      ((sob) this).field_r[incrementValue$16] = 2147483648.0f;
+                      int incrementValue$17 = var3;
                       var3++;
-                      ((sob) this).field_r[var3] = 2147483648.0f;
+                      ((sob) this).field_r[incrementValue$17] = 2147483648.0f;
                       continue L1;
                     }
                   }
@@ -2420,7 +2476,7 @@ final class sob extends ha {
 
     private final void f(int param0) {
         int var2 = 0;
-        ((sob) this).field_g = param0;
+        ((sob) this).field_g = 1;
         ((sob) this).field_x = new co[((sob) this).field_g];
         for (var2 = 0; var2 < ((sob) this).field_g; var2++) {
             ((sob) this).field_x[var2] = new co((sob) this);
@@ -2592,41 +2648,64 @@ final class sob extends ha {
     }
 
     private final void a(java.awt.Canvas param0) {
-        java.awt.Dimension var3 = null;
         gpb var2 = null;
-        if (param0 != null) {
-            var2 = (gpb) (Object) ((sob) this).field_t.a((long)((Object) (Object) param0).hashCode(), 125);
-            // ifnull L233
-            ((sob) this).field_l = param0;
-            var3 = param0.getSize();
-            ((sob) this).field_z = var3.width;
-            ((sob) this).field_o = var3.height;
-            ((sob) this).field_D = var2;
-            // ifnonnull L233
-            ((sob) this).field_k = var2.field_f;
-            ((sob) this).field_i = var2.field_e;
-            ((sob) this).field_j = var2.field_d;
-            if (((sob) this).field_i == ((sob) this).field_F) {
-                // if_icmpeq L177
-            }
-            ((sob) this).field_F = ((sob) this).field_i;
-            ((sob) this).field_v = ((sob) this).field_i;
-            ((sob) this).field_q = ((sob) this).field_j;
-            ((sob) this).field_u = ((sob) this).field_j;
-            ((sob) this).field_r = new float[((sob) this).field_F * ((sob) this).field_q];
-            ((sob) this).field_G = new float[((sob) this).field_F * ((sob) this).field_q];
-            this.y();
-        } else {
+        java.awt.Dimension var3 = null;
+        L0: {
+          if (param0 == null) {
             ((sob) this).field_l = null;
             ((sob) this).field_D = null;
-            if (((sob) this).field_c == null) {
-                ((sob) this).field_k = null;
-                ((sob) this).field_j = 1;
-                ((sob) this).field_i = 1;
-                ((sob) this).field_q = 1;
-                ((sob) this).field_F = 1;
-                this.y();
+            if (((sob) this).field_c != null) {
+              break L0;
+            } else {
+              ((sob) this).field_k = null;
+              ((sob) this).field_j = 1;
+              ((sob) this).field_i = 1;
+              ((sob) this).field_q = 1;
+              ((sob) this).field_F = 1;
+              this.y();
+              break L0;
             }
+          } else {
+            var2 = (gpb) (Object) ((sob) this).field_t.a((long)((Object) (Object) param0).hashCode(), 125);
+            if (var2 == null) {
+              break L0;
+            } else {
+              ((sob) this).field_l = param0;
+              var3 = param0.getSize();
+              ((sob) this).field_z = var3.width;
+              ((sob) this).field_o = var3.height;
+              ((sob) this).field_D = var2;
+              if (((sob) this).field_c != null) {
+                break L0;
+              } else {
+                L1: {
+                  L2: {
+                    ((sob) this).field_k = var2.field_f;
+                    ((sob) this).field_i = var2.field_e;
+                    ((sob) this).field_j = var2.field_d;
+                    if (((sob) this).field_i != ((sob) this).field_F) {
+                      break L2;
+                    } else {
+                      if (((sob) this).field_j == ((sob) this).field_q) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  ((sob) this).field_F = ((sob) this).field_i;
+                  ((sob) this).field_v = ((sob) this).field_i;
+                  ((sob) this).field_q = ((sob) this).field_j;
+                  ((sob) this).field_u = ((sob) this).field_j;
+                  ((sob) this).field_r = new float[((sob) this).field_F * ((sob) this).field_q];
+                  ((sob) this).field_G = new float[((sob) this).field_F * ((sob) this).field_q];
+                  break L1;
+                }
+                this.y();
+                break L0;
+              }
+            }
+          }
         }
     }
 
@@ -2751,8 +2830,9 @@ final class sob extends ha {
                                 if (var12 <= var9) {
                                   break L10;
                                 } else {
+                                  int incrementValue$18 = var10;
                                   var10--;
-                                  var13 = var13 - (var10 + var10);
+                                  var13 = var13 - (incrementValue$18 + var10);
                                   var12 = var12 - (var10 + var10);
                                   continue L9;
                                 }
@@ -2782,16 +2862,18 @@ final class sob extends ha {
                               if (var18 > var16) {
                                 var8++;
                                 var13 = var13 + (var11 + var11);
+                                int incrementValue$19 = var11;
                                 var11++;
-                                var12 = var12 + (var11 + var11);
+                                var12 = var12 + (incrementValue$19 + var11);
                                 continue L8;
                               } else {
                                 var19 = ((sob) this).field_k[var17];
                                 var20 = param3 + var19;
                                 var21 = (param3 & 16711935) + (var19 & 16711935);
                                 var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                                int incrementValue$20 = var17;
                                 var17++;
-                                ((sob) this).field_k[var17] = var20 - var19 | var19 - (var19 >>> 8);
+                                ((sob) this).field_k[incrementValue$20] = var20 - var19 | var19 - (var19 >>> 8);
                                 var18++;
                                 continue L13;
                               }
@@ -2829,8 +2911,9 @@ final class sob extends ha {
                               L18: while (true) {
                                 if (var18 >= var16) {
                                   var8++;
+                                  int incrementValue$21 = var11;
                                   var11--;
-                                  var12 = var12 - (var11 + var11);
+                                  var12 = var12 - (incrementValue$21 + var11);
                                   var13 = var13 - (var11 + var11);
                                   continue L7;
                                 } else {
@@ -2838,8 +2921,9 @@ final class sob extends ha {
                                   var20 = param3 + var19;
                                   var21 = (param3 & 16711935) + (var19 & 16711935);
                                   var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                                  int incrementValue$22 = var17;
                                   var17++;
-                                  ((sob) this).field_k[var17] = var20 - var19 | var19 - (var19 >>> 8);
+                                  ((sob) this).field_k[incrementValue$22] = var20 - var19 | var19 - (var19 >>> 8);
                                   var18++;
                                   continue L18;
                                 }
@@ -2850,8 +2934,9 @@ final class sob extends ha {
                           }
                         }
                         var12 = var12 + (var10 + var10);
+                        int incrementValue$23 = var10;
                         var10++;
-                        var13 = var13 + (var10 + var10);
+                        var13 = var13 + (incrementValue$23 + var10);
                         continue L14;
                       }
                     }
@@ -2879,8 +2964,9 @@ final class sob extends ha {
                               if (var12 <= var9) {
                                 break L22;
                               } else {
+                                int incrementValue$24 = var10;
                                 var10--;
-                                var13 = var13 - (var10 + var10);
+                                var13 = var13 - (incrementValue$24 + var10);
                                 var12 = var12 - (var10 + var10);
                                 continue L21;
                               }
@@ -2910,14 +2996,16 @@ final class sob extends ha {
                             if (var19 > var17) {
                               var8++;
                               var13 = var13 + (var11 + var11);
+                              int incrementValue$25 = var11;
                               var11++;
-                              var12 = var12 + (var11 + var11);
+                              var12 = var12 + (incrementValue$25 + var11);
                               continue L20;
                             } else {
                               var20 = ((sob) this).field_k[var18];
                               var20 = ((var20 & 16711935) * var15 >> 8 & 16711935) + ((var20 & 65280) * var15 >> 8 & 65280);
+                              int incrementValue$26 = var18;
                               var18++;
-                              ((sob) this).field_k[var18] = param3 + var20;
+                              ((sob) this).field_k[incrementValue$26] = param3 + var20;
                               var19++;
                               continue L25;
                             }
@@ -2955,15 +3043,17 @@ final class sob extends ha {
                             L30: while (true) {
                               if (var19 >= var17) {
                                 var8++;
+                                int incrementValue$27 = var11;
                                 var11--;
-                                var12 = var12 - (var11 + var11);
+                                var12 = var12 - (incrementValue$27 + var11);
                                 var13 = var13 - (var11 + var11);
                                 continue L19;
                               } else {
                                 var20 = ((sob) this).field_k[var18];
                                 var20 = ((var20 & 16711935) * var15 >> 8 & 16711935) + ((var20 & 65280) * var15 >> 8 & 65280);
+                                int incrementValue$28 = var18;
                                 var18++;
-                                ((sob) this).field_k[var18] = param3 + var20;
+                                ((sob) this).field_k[incrementValue$28] = param3 + var20;
                                 var19++;
                                 continue L30;
                               }
@@ -2974,8 +3064,9 @@ final class sob extends ha {
                         }
                       }
                       var12 = var12 + (var10 + var10);
+                      int incrementValue$29 = var10;
                       var10++;
-                      var13 = var13 + (var10 + var10);
+                      var13 = var13 + (incrementValue$29 + var10);
                       continue L26;
                     }
                   }
@@ -3004,8 +3095,9 @@ final class sob extends ha {
                       if (var12 <= var9) {
                         break L34;
                       } else {
+                        int incrementValue$30 = var10;
                         var10--;
-                        var13 = var13 - (var10 + var10);
+                        var13 = var13 - (incrementValue$30 + var10);
                         var12 = var12 - (var10 + var10);
                         continue L33;
                       }
@@ -3035,12 +3127,14 @@ final class sob extends ha {
                     if (var18 > var16) {
                       var8++;
                       var13 = var13 + (var11 + var11);
+                      int incrementValue$31 = var11;
                       var11++;
-                      var12 = var12 + (var11 + var11);
+                      var12 = var12 + (incrementValue$31 + var11);
                       continue L32;
                     } else {
+                      int incrementValue$32 = var17;
                       var17++;
-                      ((sob) this).field_k[var17] = param3;
+                      ((sob) this).field_k[incrementValue$32] = param3;
                       var18++;
                       continue L37;
                     }
@@ -3078,13 +3172,15 @@ final class sob extends ha {
                     L42: while (true) {
                       if (var18 >= var16) {
                         var8++;
+                        int incrementValue$33 = var11;
                         var11--;
-                        var12 = var12 - (var11 + var11);
+                        var12 = var12 - (incrementValue$33 + var11);
                         var13 = var13 - (var11 + var11);
                         continue L31;
                       } else {
+                        int incrementValue$34 = var17;
                         var17++;
-                        ((sob) this).field_k[var17] = param3;
+                        ((sob) this).field_k[incrementValue$34] = param3;
                         var18++;
                         continue L42;
                       }
@@ -3095,8 +3191,9 @@ final class sob extends ha {
                 }
               }
               var12 = var12 + (var10 + var10);
+              int incrementValue$35 = var10;
               var10++;
-              var13 = var13 + (var10 + var10);
+              var13 = var13 + (incrementValue$35 + var10);
               continue L38;
             }
           }
@@ -3132,7 +3229,7 @@ final class sob extends ha {
         byte[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        sda var7 = null;
+        Object var7 = null;
         int[] var8 = null;
         byte[] var9 = null;
         int var10 = 0;
@@ -3205,7 +3302,7 @@ final class sob extends ha {
                     var10 = 0;
                     L3: while (true) {
                       if (var10 >= var28.length) {
-                        var7 = (sda) (Object) new hfa((sob) this, var29, var30, var5, var6);
+                        var7 = (Object) (Object) new hfa((sob) this, var29, var30, var5, var6);
                         break L0;
                       } else {
                         var8[var10] = var28[var10];
@@ -3241,7 +3338,7 @@ final class sob extends ha {
             var10 = 0;
             L5: while (true) {
               if (var10 >= var6) {
-                var7 = new sda((sob) this, var31, var5, var6);
+                var7 = (Object) (Object) new sda((sob) this, var31, var5, var6);
                 break L0;
               } else {
                 var11 = var10 * var5;
@@ -3288,7 +3385,7 @@ final class sob extends ha {
             var10 = 0;
             L8: while (true) {
               if (var10 >= var6) {
-                var7 = (sda) (Object) new wfa((sob) this, var31, var5, var6);
+                var7 = (Object) (Object) new wfa((sob) this, var31, var5, var6);
                 break L0;
               } else {
                 var11 = var10 * var5;
@@ -3307,8 +3404,8 @@ final class sob extends ha {
             }
           }
         }
-        ((aja) (Object) var7).a(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
-        return (aja) (Object) var7;
+        ((aja) var7).a(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
+        return (aja) var7;
     }
 
     final boolean a() {
@@ -3323,8 +3420,9 @@ final class sob extends ha {
         for (var8 = 0; var8 < param3; var8++) {
             var9 = (param1 + var8) * ((sob) this).field_i + param0;
             for (var10 = 0; var10 < param2; var10++) {
+                int incrementValue$0 = param5;
                 param5++;
-                ((sob) this).field_k[var9 + var10] = param4[param5];
+                ((sob) this).field_k[var9 + var10] = param4[incrementValue$0];
             }
             param5 = param5 + param6;
         }
@@ -3664,15 +3762,15 @@ final class sob extends ha {
 
     private final void z() {
         int var1 = 0;
-        daa var2_ref = null;
+        daa var2_ref_daa = null;
         int var2 = 0;
         int var3 = 0;
         ((sob) this).field_C = ((sob) this).field_H - ((sob) this).field_J;
         ((sob) this).field_h = ((sob) this).field_n - ((sob) this).field_s;
         for (var1 = 0; var1 < ((sob) this).field_g; var1++) {
-            var2_ref = ((sob) this).field_x[var1].field_e;
-            var2_ref.field_b = ((sob) this).field_A - ((sob) this).field_H;
-            var2_ref.field_g = ((sob) this).field_p - ((sob) this).field_n;
+            var2_ref_daa = ((sob) this).field_x[var1].field_e;
+            var2_ref_daa.field_b = ((sob) this).field_A - ((sob) this).field_H;
+            var2_ref_daa.field_g = ((sob) this).field_p - ((sob) this).field_n;
         }
         var1 = ((sob) this).field_n * ((sob) this).field_i + ((sob) this).field_H;
         for (var2 = ((sob) this).field_n; var2 < ((sob) this).field_p; var2++) {
@@ -3692,8 +3790,9 @@ final class sob extends ha {
         for (var7 = 0; var7 < param3; var7++) {
             var8 = (param1 + var7) * ((sob) this).field_i + param0;
             for (var9 = 0; var9 < param2; var9++) {
+                int incrementValue$0 = var6;
                 var6++;
-                var5[var6] = ((sob) this).field_k[var8 + var9];
+                var5[incrementValue$0] = ((sob) this).field_k[var8 + var9];
             }
         }
         return var5;

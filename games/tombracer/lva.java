@@ -22,7 +22,7 @@ final class lva extends ci {
         int var3 = 0;
         L0: {
           var3 = TombRacer.field_G ? 1 : 0;
-          if (param0 < ((lva) this).field_x) {
+          if (0 < ((lva) this).field_x) {
             ((lva) this).field_q = new short[((lva) this).field_n];
             ((lva) this).field_r = new short[((lva) this).field_n];
             var2 = 0;
@@ -61,102 +61,155 @@ final class lva extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
-        Object stackIn_13_0 = null;
         Object stackIn_14_0 = null;
         Object stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
-        Object stackOut_12_0 = null;
+        Object stackIn_16_0 = null;
+        int stackIn_16_1 = 0;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_13_0 = null;
+        Object stackOut_15_0 = null;
+        int stackOut_15_1 = 0;
         Object stackOut_14_0 = null;
         int stackOut_14_1 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        L0: {
-          var5 = TombRacer.field_G ? 1 : 0;
-          var4 = param2;
-          if (-1 != (var4 ^ -1)) {
-            if (1 != var4) {
-              if (var4 != -3) {
-                if (-4 == var4) {
-                  ((lva) this).field_w = param1.h(255);
-                  ((lva) this).field_u = param1.h(255);
-                  break L0;
-                } else {
-                  if (var4 != -5) {
-                    if (5 == var4) {
-                      ((lva) this).field_u = param1.h(255);
-                      break L0;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2;
+              if (var4_int != 0) {
+                if (1 != var4_int) {
+                  if (var4_int != 2) {
+                    if (var4_int == 3) {
+                      int dupTemp$1 = param1.h(255);
+                      ((lva) this).field_w = dupTemp$1;
+                      ((lva) this).field_u = dupTemp$1;
+                      break L1;
                     } else {
-                      if (-7 != var4) {
-                        break L0;
+                      if (var4_int != 4) {
+                        if (5 == var4_int) {
+                          ((lva) this).field_u = param1.h(255);
+                          break L1;
+                        } else {
+                          if (var4_int != 6) {
+                            break L1;
+                          } else {
+                            ((lva) this).field_w = param1.h(255);
+                            break L1;
+                          }
+                        }
                       } else {
-                        ((lva) this).field_w = param1.h(255);
-                        break L0;
+                        ((lva) this).field_z = param1.h(255);
+                        break L1;
                       }
                     }
                   } else {
-                    ((lva) this).field_z = param1.h(255);
-                    break L0;
-                  }
-                }
-              } else {
-                ((lva) this).field_x = param1.b(false);
-                if (-1 >= (((lva) this).field_x ^ -1)) {
-                  break L0;
-                } else {
-                  ((lva) this).field_q = new short[((lva) this).field_n];
-                  var4 = 0;
-                  L1: while (true) {
-                    if (var4 >= ((lva) this).field_n) {
-                      break L0;
+                    ((lva) this).field_x = param1.b(false);
+                    if (((lva) this).field_x >= 0) {
+                      break L1;
                     } else {
-                      ((lva) this).field_q[var4] = (short)param1.b(false);
-                      var4++;
-                      continue L1;
+                      ((lva) this).field_q = new short[((lva) this).field_n];
+                      var4_int = 0;
+                      L2: while (true) {
+                        if (var4_int >= ((lva) this).field_n) {
+                          break L1;
+                        } else {
+                          ((lva) this).field_q[var4_int] = (short)param1.b(false);
+                          var4_int++;
+                          continue L2;
+                        }
+                      }
                     }
                   }
+                } else {
+                  ((lva) this).field_n = param1.h(255);
+                  break L1;
                 }
-              }
-            } else {
-              ((lva) this).field_n = param1.h(255);
-              break L0;
-            }
-          } else {
-            L2: {
-              stackOut_12_0 = this;
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_13_0 = stackOut_12_0;
-              if (param1.h(255) != 1) {
-                stackOut_14_0 = this;
-                stackOut_14_1 = 0;
-                stackIn_15_0 = stackOut_14_0;
-                stackIn_15_1 = stackOut_14_1;
-                break L2;
               } else {
-                stackOut_13_0 = this;
-                stackOut_13_1 = 1;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_15_1 = stackOut_13_1;
-                break L2;
+                L3: {
+                  stackOut_13_0 = this;
+                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_14_0 = stackOut_13_0;
+                  if (param1.h(255) != 1) {
+                    stackOut_15_0 = this;
+                    stackOut_15_1 = 0;
+                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_1 = stackOut_15_1;
+                    break L3;
+                  } else {
+                    stackOut_14_0 = this;
+                    stackOut_14_1 = 1;
+                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_16_1 = stackOut_14_1;
+                    break L3;
+                  }
+                }
+                ((lva) this).field_s = stackIn_16_1 != 0;
+                break L1;
               }
             }
-            ((lva) this).field_s = stackIn_15_1 != 0;
+            L4: {
+              if (param0 == 107) {
+                break L4;
+              } else {
+                ((lva) this).field_u = -71;
+                break L4;
+              }
+            }
             break L0;
           }
-        }
-        L3: {
-          if (param0 == 107) {
-            break L3;
-          } else {
-            ((lva) this).field_u = -71;
-            break L3;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var4 = decompiledCaughtException;
+            stackOut_29_0 = (RuntimeException) var4;
+            stackOut_29_1 = new StringBuilder().append("lva.A(").append(param0).append(44);
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
+            if (param1 == null) {
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L5;
+            } else {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L5;
+            }
           }
+          throw tba.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param2 + 41);
         }
     }
 
     final void a(int[] param0, int param1, int param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -173,187 +226,238 @@ final class lva extends ci {
         int var18 = 0;
         int var19 = 0;
         Object var20 = null;
-        L0: {
-          var19 = TombRacer.field_G ? 1 : 0;
-          var5 = sj.field_b[param2] * ((lva) this).field_w;
-          if (-2 != (((lva) this).field_n ^ -1)) {
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        RuntimeException stackOut_44_0 = null;
+        StringBuilder stackOut_44_1 = null;
+        String stackOut_44_2 = null;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
+        String stackOut_43_2 = null;
+        var19 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
             L1: {
-              L2: {
-                var9 = ((lva) this).field_q[0];
-                if ((var9 ^ -1) < -9) {
-                  break L2;
-                } else {
-                  if (var9 >= -8) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              L3: {
-                var8 = ((lva) this).field_r[0] << -973322228;
-                var12 = ((lva) this).field_u * var8 >> 769815052;
-                var11 = var5 * var8 >> -488072148;
-                var13 = ((lva) this).field_w * var8 >> -541816724;
-                var15 = var11 >> 697473132;
-                var16 = 1 + var15;
-                var11 = var11 & 4095;
-                if (var13 <= var16) {
-                  var16 = 0;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              var18 = 255 & ((lva) this).field_p[255 & var16];
-              var17 = ((lva) this).field_p[var15 & 255] & 255;
-              var14 = pba.field_b[var11];
-              var10 = 0;
-              L4: while (true) {
-                if (ns.field_g <= var10) {
-                  break L1;
-                } else {
-                  var4 = ((lva) this).field_u * ht.field_Fb[var10];
-                  var6 = this.a(var17, false, var14, var11, var8 * var4 >> 1782175724, var12, var18);
-                  param0[var10] = var6 * var9 >> 1965694156;
-                  var10++;
-                  continue L4;
-                }
-              }
-            }
-            var7 = 1;
-            L5: while (true) {
-              if (((lva) this).field_n <= var7) {
-                break L0;
-              } else {
-                L6: {
-                  var9 = ((lva) this).field_q[var7];
-                  if ((var9 ^ -1) < -9) {
-                    break L6;
-                  } else {
-                    if (var9 < -8) {
-                      break L6;
+              var5 = sj.field_b[param2] * ((lva) this).field_w;
+              if (((lva) this).field_n != 1) {
+                L2: {
+                  L3: {
+                    var9 = ((lva) this).field_q[0];
+                    if (var9 > 8) {
+                      break L3;
                     } else {
-                      var7++;
+                      if (var9 >= -8) {
+                        break L2;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                  L4: {
+                    var8 = ((lva) this).field_r[0] << 12;
+                    var12 = ((lva) this).field_u * var8 >> 12;
+                    var11 = var5 * var8 >> 12;
+                    var13 = ((lva) this).field_w * var8 >> 12;
+                    var15 = var11 >> 12;
+                    var16 = 1 + var15;
+                    var11 = var11 & 4095;
+                    if (var13 <= var16) {
+                      var16 = 0;
+                      break L4;
+                    } else {
+                      break L4;
+                    }
+                  }
+                  var18 = 255 & ((lva) this).field_p[255 & var16];
+                  var17 = ((lva) this).field_p[var15 & 255] & 255;
+                  var14 = pba.field_b[var11];
+                  var10 = 0;
+                  L5: while (true) {
+                    if (ns.field_g <= var10) {
+                      break L2;
+                    } else {
+                      var4_int = ((lva) this).field_u * ht.field_Fb[var10];
+                      var6 = this.a(var17, false, var14, var11, var8 * var4_int >> 12, var12, var18);
+                      param0[var10] = var6 * var9 >> 12;
+                      var10++;
                       continue L5;
                     }
                   }
                 }
-                L7: {
-                  var8 = ((lva) this).field_r[var7] << -1484201140;
-                  var12 = var8 * ((lva) this).field_u >> -1962821908;
-                  var11 = var8 * var5 >> 791864492;
-                  var13 = ((lva) this).field_w * var8 >> 959129612;
-                  var15 = var11 >> -1090151316;
-                  var16 = var15 - -1;
-                  var11 = var11 & 4095;
-                  if (var16 >= var13) {
-                    var16 = 0;
-                    break L7;
+                var7 = 1;
+                L6: while (true) {
+                  if (((lva) this).field_n <= var7) {
+                    break L1;
                   } else {
-                    break L7;
-                  }
-                }
-                L8: {
-                  var18 = ((lva) this).field_p[255 & var16] & 255;
-                  var17 = ((lva) this).field_p[255 & var15] & 255;
-                  var14 = pba.field_b[var11];
-                  if (!((lva) this).field_s) {
-                    break L8;
-                  } else {
-                    if (((lva) this).field_n + -1 == var7) {
-                      var10 = 0;
-                      L9: while (true) {
-                        if (ns.field_g > var10) {
-                          var4 = ((lva) this).field_u * ht.field_Fb[var10];
-                          var6 = this.a(var17, false, var14, var11, var8 * var4 >> -1115609108, var12, var18);
-                          var6 = (var6 * var9 >> 1811384652) + param0[var10];
-                          param0[var10] = (var6 >> 1789871265) + 2048;
-                          var10++;
-                          continue L9;
+                    L7: {
+                      L8: {
+                        var9 = ((lva) this).field_q[var7];
+                        if (var9 > 8) {
+                          break L8;
                         } else {
-                          var7++;
-                          continue L5;
+                          if (var9 < -8) {
+                            break L8;
+                          } else {
+                            break L7;
+                          }
                         }
                       }
+                      L9: {
+                        var8 = ((lva) this).field_r[var7] << 12;
+                        var12 = var8 * ((lva) this).field_u >> 12;
+                        var11 = var8 * var5 >> 12;
+                        var13 = ((lva) this).field_w * var8 >> 12;
+                        var15 = var11 >> 12;
+                        var16 = var15 - -1;
+                        var11 = var11 & 4095;
+                        if (var16 >= var13) {
+                          var16 = 0;
+                          break L9;
+                        } else {
+                          break L9;
+                        }
+                      }
+                      L10: {
+                        var18 = ((lva) this).field_p[255 & var16] & 255;
+                        var17 = ((lva) this).field_p[255 & var15] & 255;
+                        var14 = pba.field_b[var11];
+                        if (!((lva) this).field_s) {
+                          break L10;
+                        } else {
+                          if (((lva) this).field_n + -1 == var7) {
+                            var10 = 0;
+                            L11: while (true) {
+                              if (ns.field_g <= var10) {
+                                break L7;
+                              } else {
+                                var4_int = ((lva) this).field_u * ht.field_Fb[var10];
+                                var6 = this.a(var17, false, var14, var11, var8 * var4_int >> 12, var12, var18);
+                                var6 = (var6 * var9 >> 12) + param0[var10];
+                                param0[var10] = (var6 >> 1) + 2048;
+                                var10++;
+                                continue L11;
+                              }
+                            }
+                          } else {
+                            break L10;
+                          }
+                        }
+                      }
+                      var10 = 0;
+                      L12: while (true) {
+                        if (var10 >= ns.field_g) {
+                          break L7;
+                        } else {
+                          var4_int = ((lva) this).field_u * ht.field_Fb[var10];
+                          var6 = this.a(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
+                          param0[var10] = param0[var10] + (var9 * var6 >> 12);
+                          var10++;
+                          continue L12;
+                        }
+                      }
+                    }
+                    var7++;
+                    continue L6;
+                  }
+                }
+              } else {
+                L13: {
+                  var8 = ((lva) this).field_r[0] << 12;
+                  var9 = ((lva) this).field_q[0];
+                  var12 = var8 * ((lva) this).field_u >> 12;
+                  var11 = var8 * var5 >> 12;
+                  var13 = ((lva) this).field_w * var8 >> 12;
+                  var15 = var11 >> 12;
+                  var16 = 1 + var15;
+                  if (var16 >= var13) {
+                    var16 = 0;
+                    break L13;
+                  } else {
+                    break L13;
+                  }
+                }
+                var11 = var11 & 4095;
+                var17 = ((lva) this).field_p[255 & var15] & 255;
+                var14 = pba.field_b[var11];
+                var18 = ((lva) this).field_p[var16 & 255] & 255;
+                if (!((lva) this).field_s) {
+                  var10 = 0;
+                  L14: while (true) {
+                    if (var10 >= ns.field_g) {
+                      break L1;
                     } else {
-                      break L8;
+                      var4_int = ht.field_Fb[var10] * ((lva) this).field_u;
+                      var6 = this.a(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
+                      param0[var10] = var9 * var6 >> 12;
+                      var10++;
+                      continue L14;
+                    }
+                  }
+                } else {
+                  var10 = 0;
+                  L15: while (true) {
+                    if (ns.field_g <= var10) {
+                      break L1;
+                    } else {
+                      var4_int = ht.field_Fb[var10] * ((lva) this).field_u;
+                      var6 = this.a(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
+                      var6 = var6 * var9 >> 12;
+                      param0[var10] = 2048 - -(var6 >> 1);
+                      var10++;
+                      continue L15;
                     }
                   }
                 }
-                var10 = 0;
-                L10: while (true) {
-                  if (var10 < ns.field_g) {
-                    var4 = ((lva) this).field_u * ht.field_Fb[var10];
-                    var6 = this.a(var17, false, var14, var11, var4 * var8 >> -973656244, var12, var18);
-                    param0[var10] = param0[var10] + (var9 * var6 >> 2027859756);
-                    var10++;
-                    continue L10;
-                  } else {
-                    var7++;
-                    continue L5;
-                  }
-                }
               }
             }
-          } else {
-            L11: {
-              var8 = ((lva) this).field_r[0] << -2065260724;
-              var9 = ((lva) this).field_q[0];
-              var12 = var8 * ((lva) this).field_u >> 1942397100;
-              var11 = var8 * var5 >> 89401164;
-              var13 = ((lva) this).field_w * var8 >> -1388217204;
-              var15 = var11 >> -1894182836;
-              var16 = 1 + var15;
-              if (var16 >= var13) {
-                var16 = 0;
-                break L11;
+            L16: {
+              if (param1 == -1) {
+                break L16;
               } else {
-                break L11;
+                var20 = null;
+                ((lva) this).a((byte) 111, (uia) null, 5);
+                break L16;
               }
             }
-            var11 = var11 & 4095;
-            var17 = ((lva) this).field_p[255 & var15] & 255;
-            var14 = pba.field_b[var11];
-            var18 = ((lva) this).field_p[var16 & 255] & 255;
-            if (!((lva) this).field_s) {
-              var10 = 0;
-              L12: while (true) {
-                if (var10 >= ns.field_g) {
-                  break L0;
-                } else {
-                  var4 = ht.field_Fb[var10] * ((lva) this).field_u;
-                  var6 = this.a(var17, false, var14, var11, var4 * var8 >> 450044812, var12, var18);
-                  param0[var10] = var9 * var6 >> -809375316;
-                  var10++;
-                  continue L12;
-                }
-              }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L17: {
+            var4 = decompiledCaughtException;
+            stackOut_42_0 = (RuntimeException) var4;
+            stackOut_42_1 = new StringBuilder().append("lva.I(");
+            stackIn_44_0 = stackOut_42_0;
+            stackIn_44_1 = stackOut_42_1;
+            stackIn_43_0 = stackOut_42_0;
+            stackIn_43_1 = stackOut_42_1;
+            if (param0 == null) {
+              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
+              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
+              stackOut_44_2 = "null";
+              stackIn_45_0 = stackOut_44_0;
+              stackIn_45_1 = stackOut_44_1;
+              stackIn_45_2 = stackOut_44_2;
+              break L17;
             } else {
-              var10 = 0;
-              L13: while (true) {
-                if (ns.field_g <= var10) {
-                  break L0;
-                } else {
-                  var4 = ht.field_Fb[var10] * ((lva) this).field_u;
-                  var6 = this.a(var17, false, var14, var11, var4 * var8 >> -1888172212, var12, var18);
-                  var6 = var6 * var9 >> 1930719308;
-                  param0[var10] = 2048 - -(var6 >> -1023230719);
-                  var10++;
-                  continue L13;
-                }
-              }
+              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_2 = "{...}";
+              stackIn_45_0 = stackOut_43_0;
+              stackIn_45_1 = stackOut_43_1;
+              stackIn_45_2 = stackOut_43_2;
+              break L17;
             }
           }
-        }
-        L14: {
-          if (param1 == -1) {
-            break L14;
-          } else {
-            var20 = null;
-            ((lva) this).a((byte) 111, (uia) null, 5);
-            break L14;
-          }
+          throw tba.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -404,19 +508,39 @@ final class lva extends ci {
     final void b(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        int var4 = TombRacer.field_G ? 1 : 0;
-        ((lva) this).field_p = pca.a(((lva) this).field_z, (byte) 109);
-        if (param0 != 116) {
+        int var4 = 0;
+        L0: {
+          var4 = TombRacer.field_G ? 1 : 0;
+          ((lva) this).field_p = pca.a(((lva) this).field_z, (byte) 109);
+          if (param0 == 116) {
+            break L0;
+          } else {
             ((lva) this).b((byte) 55);
+            break L0;
+          }
         }
         this.c(0);
-        for (var2 = ((lva) this).field_n - 1; var2 >= 1; var2--) {
-            var3 = ((lva) this).field_q[var2];
-            // if_icmpgt L88
-            if (7 > var3) {
-                break;
+        var2 = ((lva) this).field_n - 1;
+        L1: while (true) {
+          L2: {
+            if (var2 < 1) {
+              break L2;
+            } else {
+              var3 = ((lva) this).field_q[var2];
+              if (var3 > 8) {
+                break L2;
+              } else {
+                if (var3 >= -8) {
+                  ((lva) this).field_n = ((lva) this).field_n - 1;
+                  var2--;
+                  continue L1;
+                } else {
+                  break L2;
+                }
+              }
             }
-            ((lva) this).field_n = ((lva) this).field_n - 1;
+          }
+          return;
         }
     }
 
@@ -433,13 +557,19 @@ final class lva extends ci {
     }
 
     final static void a(g[] param0, int param1, int param2, int param3) {
+        int var4_int = 0;
+        int var5 = 0;
         if (!(param1 < param2)) {
             return;
         }
-        int var4 = param1;
-        int var5 = po.a(param2, var4, param1, (byte) -65, param0);
-        lva.a(param0, param1, -1 + var5, param3);
-        lva.a(param0, 1 + var5, param2, param3 + 0);
+        try {
+            var4_int = param1;
+            var5 = po.a(param2, var4_int, param1, (byte) -65, param0);
+            lva.a(param0, param1, -1 + var5, param3);
+            lva.a(param0, 1 + var5, param2, param3);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "lva.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     private final int a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
@@ -481,7 +611,7 @@ final class lva extends ci {
         var18 = TombRacer.field_G ? 1 : 0;
         if (!param1) {
           L0: {
-            var13 = param4 >> -902739956;
+            var13 = param4 >> 12;
             var12 = 1 + var13;
             var13 = var13 & 255;
             param4 = param4 & 4095;
@@ -500,7 +630,7 @@ final class lva extends ci {
             var14 = 3 & ((lva) this).field_p[param0 + var13];
             if (var14 > 1) {
               L2: {
-                if ((var14 ^ -1) == -3) {
+                if (var14 == 2) {
                   stackOut_11_0 = param4 + -param3;
                   stackIn_12_0 = stackOut_11_0;
                   break L2;
@@ -546,7 +676,7 @@ final class lva extends ci {
               break L4;
             } else {
               L6: {
-                if (-1 != (var14 ^ -1)) {
+                if (var14 != 0) {
                   stackOut_16_0 = -var11 + param3;
                   stackIn_17_0 = stackOut_16_0;
                   break L6;
@@ -561,11 +691,11 @@ final class lva extends ci {
             }
           }
           L7: {
-            var16 = var8 - -((var9 - var8) * var15 >> 1632800428);
+            var16 = var8 - -((var9 - var8) * var15 >> 12);
             var14 = ((lva) this).field_p[var13 + param6] & 3;
             if (1 >= var14) {
               L8: {
-                if (-1 == (var14 ^ -1)) {
+                if (var14 == 0) {
                   stackOut_29_0 = param4 + var10;
                   stackIn_30_0 = stackOut_29_0;
                   break L8;
@@ -595,7 +725,7 @@ final class lva extends ci {
           }
           L10: {
             var14 = ((lva) this).field_p[param6 + var12] & 3;
-            if ((var14 ^ -1) >= -2) {
+            if (var14 <= 1) {
               L11: {
                 if (0 != var14) {
                   stackOut_38_0 = -var11 + var10;
@@ -625,8 +755,8 @@ final class lva extends ci {
               break L10;
             }
           }
-          var17 = ((-var8 + var9) * var15 >> 2051106956) + var8;
-          return var16 - -(param2 * (-var16 + var17) >> -387161428);
+          var17 = ((-var8 + var9) * var15 >> 12) + var8;
+          return var16 - -(param2 * (-var16 + var17) >> 12);
         } else {
           return -28;
         }

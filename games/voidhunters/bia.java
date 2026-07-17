@@ -43,9 +43,6 @@ class bia extends tb {
     }
 
     final static qkb a(boolean param0) {
-        if (!param0) {
-            return null;
-        }
         return kpb.field_q;
     }
 

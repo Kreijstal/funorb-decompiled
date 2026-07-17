@@ -12,7 +12,7 @@ final class dd extends rj {
     static wh field_B;
 
     final void a(boolean param0, int param1, int param2) {
-        if (!(-68 >= (param1 ^ -1))) {
+        if (!(param1 >= 67)) {
             param1 = 67;
         }
         super.a(param0, param1, param2);
@@ -29,54 +29,54 @@ final class dd extends rj {
           }
         }
         if (param0 < 65536) {
-          if (param0 > -257) {
+          if (param0 < 256) {
             if (0 <= param0) {
-              return i.field_u[param0] >> 620677224;
+              return i.field_u[param0] >> 8;
             } else {
               return -1;
             }
           } else {
-            if (-4097 > param0) {
+            if (param0 < 4096) {
               if (1024 <= param0) {
-                return i.field_u[param0 >> -964118556] >> 1055449994;
+                return i.field_u[param0 >> 4] >> 10;
               } else {
-                return i.field_u[param0 >> -518475742] >> -1965741623;
+                return i.field_u[param0 >> 2] >> 9;
               }
             } else {
               if (16384 <= param0) {
-                return i.field_u[param0 >> -1723401048] >> 1941784588;
+                return i.field_u[param0 >> 8] >> 12;
               } else {
-                return i.field_u[param0 >> -871764186] >> 1836140299;
+                return i.field_u[param0 >> 6] >> 11;
               }
             }
           }
         } else {
           if (16777216 > param0) {
             if (param0 < 1048576) {
-              if (-262145 < (param0 ^ -1)) {
-                return i.field_u[param0 >> 85196746] >> 1770679117;
+              if (param0 < 262144) {
+                return i.field_u[param0 >> 10] >> 13;
               } else {
-                return i.field_u[param0 >> -1426227028] >> -971274002;
+                return i.field_u[param0 >> 12] >> 14;
               }
             } else {
-              if ((param0 ^ -1) > -4194305) {
-                return i.field_u[param0 >> 707326478] >> 2111196751;
+              if (param0 < 4194304) {
+                return i.field_u[param0 >> 14] >> 15;
               } else {
-                return i.field_u[param0 >> -402174640] >> 146705584;
+                return i.field_u[param0 >> 16] >> 16;
               }
             }
           } else {
-            if ((param0 ^ -1) <= -268435457) {
-              if (-1073741825 >= (param0 ^ -1)) {
-                return i.field_u[param0 >> 455779704] >> -454282060;
+            if (param0 >= 268435456) {
+              if (param0 >= 1073741824) {
+                return i.field_u[param0 >> 24] >> 20;
               } else {
-                return i.field_u[param0 >> -1859793578] >> 2019403795;
+                return i.field_u[param0 >> 22] >> 19;
               }
             } else {
               if (67108864 <= param0) {
-                return i.field_u[param0 >> -482796236] >> -2056822190;
+                return i.field_u[param0 >> 20] >> 18;
               } else {
-                return i.field_u[param0 >> 832273362] >> -681773583;
+                return i.field_u[param0 >> 18] >> 17;
               }
             }
           }
@@ -86,16 +86,13 @@ final class dd extends rj {
     public static void c(byte param0) {
         field_A = null;
         field_C = null;
-        if (param0 != -40) {
-            field_E = null;
-        }
         field_E = null;
         field_z = null;
         field_B = null;
     }
 
     final void d(int param0, int param1, int param2) {
-        if (-1 == (((dd) this).field_D ^ -1)) {
+        if (((dd) this).field_D == 0) {
             return;
         }
         int var4 = (-33 + param0) * ((dd) this).field_G / (-46 + ((dd) this).field_D);
@@ -129,7 +126,7 @@ final class dd extends rj {
           if (var6 >= 7) {
             var6 = 0;
             L1: while (true) {
-              if ((var6 ^ -1) <= -4) {
+              if (var6 >= 3) {
                 var6 = 1;
                 L2: while (true) {
                   if (((dd) this).field_D + -1 <= var6) {
@@ -180,37 +177,105 @@ final class dd extends rj {
     }
 
     final void a(int param0, int param1) {
-        ((dd) this).field_F = ((dd) this).field_F + (param1 * ((dd) this).field_G >> 1473275173);
+        ((dd) this).field_F = ((dd) this).field_F + (param1 * ((dd) this).field_G >> 5);
         if (!(((dd) this).field_F <= ((dd) this).field_G)) {
             ((dd) this).field_F = ((dd) this).field_G;
         }
         if (param0 != 1) {
             field_z = null;
         }
-        if (-1 < (((dd) this).field_F ^ -1)) {
+        if (((dd) this).field_F < 0) {
             ((dd) this).field_F = 0;
         }
     }
 
     final static cn a(byte param0, int param1, cn param2) {
+        RuntimeException var3 = null;
         int var4 = 0;
-        int var5 = DungeonAssault.field_K;
-        cn var6 = new cn(param1 * 2 + param2.field_y, 2 * param1 + param2.field_v);
-        jh.a(var6);
-        gf.b(0, 0, var6.field_y, var6.field_v, 16777215);
-        for (var4 = 0; param1 > var4; var4++) {
-            param2.e(param1 + -param2.field_w, param1 - param2.field_A, 0);
-            gf.d(1, 1, 0, 0, var6.field_y, var6.field_v);
+        int var5 = 0;
+        cn var6 = null;
+        Object stackIn_6_0 = null;
+        cn stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        cn stackOut_7_0 = null;
+        Object stackOut_5_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        var5 = DungeonAssault.field_K;
+        try {
+          L0: {
+            var6 = new cn(param1 * 2 + param2.field_y, 2 * param1 + param2.field_v);
+            jh.a(var6);
+            gf.b(0, 0, var6.field_y, var6.field_v, 16777215);
+            var4 = 0;
+            L1: while (true) {
+              if (param1 <= var4) {
+                var6.h();
+                param2.e(param1 - param2.field_w, param1 - param2.field_A, 0);
+                jh.b();
+                if (param0 == -112) {
+                  var6.field_w = param2.field_w + -param1;
+                  var6.field_A = param2.field_A - param1;
+                  stackOut_7_0 = (cn) var6;
+                  stackIn_8_0 = stackOut_7_0;
+                  break L0;
+                } else {
+                  stackOut_5_0 = null;
+                  stackIn_6_0 = stackOut_5_0;
+                  return (cn) (Object) stackIn_6_0;
+                }
+              } else {
+                param2.e(param1 + -param2.field_w, param1 - param2.field_A, 0);
+                gf.d(1, 1, 0, 0, var6.field_y, var6.field_v);
+                var4++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_1 = new StringBuilder().append("dd.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param2 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L2;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L2;
+            }
+          }
+          throw vk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
-        var6.h();
-        param2.e(param1 - param2.field_w, param1 - param2.field_A, 0);
-        jh.b();
-        if (param0 != -112) {
-            return null;
-        }
-        var6.field_w = param2.field_w + -param1;
-        var6.field_A = param2.field_A - param1;
-        return var6;
+        return stackIn_8_0;
     }
 
     final void a(int param0, byte param1, int param2) {
@@ -219,10 +284,10 @@ final class dd extends rj {
         }
         int var4 = ((dd) this).field_G * (param2 + -33) / (-46 + ((dd) this).field_D);
         if (((dd) this).field_F < var4) {
-            ((dd) this).field_F = ((dd) this).field_F + (((dd) this).field_G >> -556957852);
+            ((dd) this).field_F = ((dd) this).field_F + (((dd) this).field_G >> 4);
         }
         if (var4 < ((dd) this).field_F) {
-            ((dd) this).field_F = ((dd) this).field_F - (((dd) this).field_G >> 389311268);
+            ((dd) this).field_F = ((dd) this).field_F - (((dd) this).field_G >> 4);
         }
         if (!(((dd) this).field_G >= ((dd) this).field_F)) {
             ((dd) this).field_F = ((dd) this).field_G;

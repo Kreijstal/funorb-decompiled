@@ -119,28 +119,30 @@ final class qj extends ub {
         tm var5 = new tm(((qj) this).field_K);
         n var6 = (n) (Object) var5.a(8115);
         while (var6 != null) {
-            var6.a(param0 + 0, ((qj) this).field_o + param1, param2 - -((qj) this).field_k, param3);
+            var6.a(param0, ((qj) this).field_o + param1, param2 - -((qj) this).field_k, param3);
             var6 = (n) (Object) var5.a(false);
         }
     }
 
     final void a(n param0, boolean param1) {
-        if (!(param0 instanceof rl)) {
-            throw new IllegalArgumentException();
+        rl var3 = null;
+        try {
+            if (!(param0 instanceof rl)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (rl) (Object) param0;
+            ((qj) this).field_K.a((hl) (Object) var3, param1);
+            var3.field_F = true;
+            boolean discarded$0 = var3.a((n) this, -25823);
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "qj.M(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        rl var3 = (rl) (Object) param0;
-        ((qj) this).field_K.a((hl) (Object) var3, param1);
-        var3.field_F = true;
-        boolean discarded$0 = var3.a((n) this, -25823);
     }
 
     public static void b(boolean param0) {
         field_N = null;
         field_F = null;
         field_G = null;
-        if (!param0) {
-            field_H = 58L;
-        }
         field_M = null;
         field_J = null;
     }
@@ -149,9 +151,6 @@ final class qj extends ub {
         pc.field_b = si.n(-49);
         ka.field_b = new qj();
         cg.a((byte) -109, true, true);
-        if (param0 != -1) {
-            qj.b(true);
-        }
     }
 
     final void g(byte param0) {

@@ -12,9 +12,6 @@ final class fk {
     public static void a(byte param0) {
         field_c = null;
         field_b = null;
-        if (param0 < 59) {
-            field_d = -118;
-        }
     }
 
     static {

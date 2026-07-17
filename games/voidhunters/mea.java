@@ -9,42 +9,91 @@ abstract class mea extends ksa {
     abstract void a(int param0, int param1);
 
     final static boolean a(int param0, String param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
+        int stackOut_6_0 = 0;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var4 = VoidHunters.field_G;
-        if (param0 >= 112) {
-          var2 = param1.charAt(0);
-          var3 = 1;
-          L0: while (true) {
-            if (param1.length() > var3) {
-              if (var2 == param1.charAt(var3)) {
-                var3++;
-                continue L0;
+        try {
+          L0: {
+            L1: {
+              if (param0 >= 112) {
+                break L1;
               } else {
-                return false;
+                mea.a(-5, (byte) 121, 58, -64);
+                break L1;
               }
-            } else {
-              return true;
+            }
+            var2_int = param1.charAt(0);
+            var3 = 1;
+            L2: while (true) {
+              if (param1.length() <= var3) {
+                stackOut_9_0 = 1;
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
+              } else {
+                if (var2_int == param1.charAt(var3)) {
+                  var3++;
+                  continue L2;
+                } else {
+                  stackOut_6_0 = 0;
+                  stackIn_7_0 = stackOut_6_0;
+                  return stackIn_7_0 != 0;
+                }
+              }
             }
           }
-        } else {
-          mea.a(-5, (byte) 121, 58, -64);
-          var2 = param1.charAt(0);
-          var3 = 1;
-          L1: while (true) {
-            if (param1.length() > var3) {
-              if (var2 == param1.charAt(var3)) {
-                var3++;
-                continue L1;
-              } else {
-                return false;
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_1 = new StringBuilder().append("mea.J(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
             } else {
-              return true;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
             }
           }
+          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
+        return stackIn_10_0 != 0;
     }
 
     final int d(int param0) {
@@ -57,9 +106,6 @@ abstract class mea extends ksa {
 
     public static void c(int param0) {
         field_e = null;
-        if (param0 >= -88) {
-            field_e = null;
-        }
     }
 
     abstract void c(byte param0);
@@ -102,7 +148,7 @@ abstract class mea extends ksa {
             } else {
               if (param1 > -69) {
                 field_e = null;
-                if (-2 == (param3 ^ -1)) {
+                if (param3 == 1) {
                   L1: {
                     if (idb.field_p != param0) {
                       ebb.field_b = true;
@@ -141,7 +187,7 @@ abstract class mea extends ksa {
                 }
               } else {
                 L2: {
-                  if (-2 != (param3 ^ -1)) {
+                  if (param3 != 1) {
                     break L2;
                   } else {
                     if (idb.field_p != param0) {
@@ -183,7 +229,7 @@ abstract class mea extends ksa {
         }
         if (param1 <= -69) {
           L3: {
-            if (-2 != (param3 ^ -1)) {
+            if (param3 != 1) {
               break L3;
             } else {
               if (idb.field_p != param0) {
@@ -228,7 +274,7 @@ abstract class mea extends ksa {
         } else {
           L6: {
             field_e = null;
-            if (-2 != (param3 ^ -1)) {
+            if (param3 != 1) {
               break L6;
             } else {
               if (idb.field_p != param0) {
@@ -277,14 +323,14 @@ abstract class mea extends ksa {
     abstract boolean a(int param0);
 
     mea(qfa param0) {
-        ((mea) this).field_d = param0;
+        try {
+            ((mea) this).field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "mea.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static String a(boolean param0) {
-        if (!param0) {
-            field_e = null;
-            return qga.field_b.a(-1);
-        }
         return qga.field_b.a(-1);
     }
 

@@ -8,9 +8,6 @@ final class fd {
     static tf[] field_c;
 
     final static ak a(int param0) {
-        if (param0 != 0) {
-            return null;
-        }
         return jm.field_b.field_Fb;
     }
 
@@ -21,7 +18,7 @@ final class fd {
         if (100 == param1) {
           if (0 >= fb.field_Hb) {
             L0: {
-              if ((param1 ^ -1) != param0) {
+              if (~param1 != param0) {
                 break L0;
               } else {
                 if (fa.field_c <= 0) {
@@ -107,7 +104,7 @@ final class fd {
           }
         } else {
           L3: {
-            if ((param1 ^ -1) != param0) {
+            if (~param1 != param0) {
               break L3;
             } else {
               if (fa.field_c <= 0) {

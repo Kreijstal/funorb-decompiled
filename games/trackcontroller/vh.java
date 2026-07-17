@@ -7,190 +7,157 @@ abstract class vh extends gb {
     static volatile boolean field_q;
 
     final static void h(int param0) {
-        Object var2 = null;
         bk.field_J = null;
         jf.field_i = null;
         ue.field_c = null;
         mh.field_i = false;
         el.field_O = null;
-        if (param0 == -2532) {
-          return;
-        } else {
-          var2 = null;
-          vh.a((String) null, 32, (String) null);
-          return;
-        }
     }
 
     public static void g(int param0) {
         field_p = null;
-        if (param0 == 32) {
-            return;
-        }
-        field_p = null;
     }
 
     final static long a(byte param0, CharSequence param1) {
-        long var2 = 0L;
+        RuntimeException var2 = null;
+        long var2_long = 0L;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
+        long stackIn_23_0 = 0L;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        long stackOut_22_0 = 0L;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
         var7 = TrackController.field_F ? 1 : 0;
-        var2 = 0L;
-        if (param0 < -79) {
-          var4 = param1.length();
-          var5 = 0;
-          L0: while (true) {
-            if (var4 > var5) {
-              L1: {
-                L2: {
-                  var2 = var2 * 37L;
-                  var6 = param1.charAt(var5);
-                  if (var6 < 65) {
-                    break L2;
-                  } else {
-                    if (var6 <= 90) {
-                      var2 = var2 + (long)(1 + var6 - 65);
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                L3: {
-                  if (var6 < 97) {
-                    break L3;
-                  } else {
-                    if (var6 <= 122) {
-                      var2 = var2 + (long)(-97 + var6 + 1);
-                      break L1;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                if (var6 < 48) {
-                  break L1;
-                } else {
-                  if (57 < var6) {
-                    break L1;
-                  } else {
-                    var2 = var2 + (long)(27 - -var6 - 48);
-                    break L1;
-                  }
-                }
-              }
-              if (-177917621779460414L < (var2 ^ -1L)) {
-                var5++;
-                continue L0;
+        try {
+          L0: {
+            L1: {
+              var2_long = 0L;
+              if (param0 < -79) {
+                break L1;
               } else {
-                L4: while (true) {
-                  L5: {
-                    if ((var2 % 37L ^ -1L) != -1L) {
-                      break L5;
-                    } else {
-                      if (-1L == (var2 ^ -1L)) {
+                field_p = null;
+                break L1;
+              }
+            }
+            var4 = param1.length();
+            var5 = 0;
+            L2: while (true) {
+              L3: {
+                if (var4 <= var5) {
+                  break L3;
+                } else {
+                  L4: {
+                    L5: {
+                      var2_long = var2_long * 37L;
+                      var6 = param1.charAt(var5);
+                      if (var6 < 65) {
                         break L5;
                       } else {
-                        var2 = var2 / 37L;
-                        continue L4;
+                        if (var6 <= 90) {
+                          var2_long = var2_long + (long)(1 + var6 - 65);
+                          break L4;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    }
+                    L6: {
+                      if (var6 < 97) {
+                        break L6;
+                      } else {
+                        if (var6 <= 122) {
+                          var2_long = var2_long + (long)(-97 + var6 + 1);
+                          break L4;
+                        } else {
+                          break L6;
+                        }
+                      }
+                    }
+                    if (var6 < 48) {
+                      break L4;
+                    } else {
+                      if (57 < var6) {
+                        break L4;
+                      } else {
+                        var2_long = var2_long + (long)(27 - -var6 - 48);
+                        break L4;
                       }
                     }
                   }
-                  return var2;
+                  if (var2_long >= 177917621779460413L) {
+                    break L3;
+                  } else {
+                    var5++;
+                    continue L2;
+                  }
                 }
               }
+              L7: while (true) {
+                L8: {
+                  if (var2_long % 37L != 0L) {
+                    break L8;
+                  } else {
+                    if (var2_long == 0L) {
+                      break L8;
+                    } else {
+                      var2_long = var2_long / 37L;
+                      continue L7;
+                    }
+                  }
+                }
+                stackOut_22_0 = var2_long;
+                stackIn_23_0 = stackOut_22_0;
+                break L0;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var2 = decompiledCaughtException;
+            stackOut_24_0 = (RuntimeException) var2;
+            stackOut_24_1 = new StringBuilder().append("vh.I(").append(param0).append(44);
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
+            if (param1 == null) {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L9;
             } else {
-              L6: while (true) {
-                L7: {
-                  if ((var2 % 37L ^ -1L) != -1L) {
-                    break L7;
-                  } else {
-                    if (-1L == (var2 ^ -1L)) {
-                      break L7;
-                    } else {
-                      var2 = var2 / 37L;
-                      continue L6;
-                    }
-                  }
-                }
-                return var2;
-              }
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L9;
             }
           }
-        } else {
-          field_p = null;
-          var4 = param1.length();
-          var5 = 0;
-          L8: while (true) {
-            L9: {
-              if (var4 <= var5) {
-                break L9;
-              } else {
-                L10: {
-                  L11: {
-                    var2 = var2 * 37L;
-                    var6 = param1.charAt(var5);
-                    if (var6 < 65) {
-                      break L11;
-                    } else {
-                      if (var6 <= 90) {
-                        var2 = var2 + (long)(1 + var6 - 65);
-                        break L10;
-                      } else {
-                        break L11;
-                      }
-                    }
-                  }
-                  L12: {
-                    if (var6 < 97) {
-                      break L12;
-                    } else {
-                      if (var6 <= 122) {
-                        var2 = var2 + (long)(-97 + var6 + 1);
-                        break L10;
-                      } else {
-                        break L12;
-                      }
-                    }
-                  }
-                  if (var6 < 48) {
-                    break L10;
-                  } else {
-                    if (57 < var6) {
-                      break L10;
-                    } else {
-                      var2 = var2 + (long)(27 - -var6 - 48);
-                      break L10;
-                    }
-                  }
-                }
-                if (-177917621779460414L >= (var2 ^ -1L)) {
-                  break L9;
-                } else {
-                  var5++;
-                  continue L8;
-                }
-              }
-            }
-            L13: while (true) {
-              L14: {
-                if ((var2 % 37L ^ -1L) != -1L) {
-                  break L14;
-                } else {
-                  if (-1L == (var2 ^ -1L)) {
-                    break L14;
-                  } else {
-                    var2 = var2 / 37L;
-                    continue L13;
-                  }
-                }
-              }
-              return var2;
-            }
-          }
+          throw sl.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
         }
+        return stackIn_23_0;
     }
 
     final static char a(boolean param0, char param1) {
@@ -202,51 +169,51 @@ abstract class vh extends gb {
           var2 = param1;
           if (var2 != 32) {
             L0: {
-              if (-161 == (var2 ^ -1)) {
+              if (var2 == 160) {
                 break L0;
               } else {
-                if ((var2 ^ -1) == -96) {
+                if (var2 == 95) {
                   break L0;
                 } else {
-                  if ((var2 ^ -1) != -46) {
+                  if (var2 != 45) {
                     L1: {
-                      if ((var2 ^ -1) != -92) {
+                      if (var2 != 91) {
                         if (93 != var2) {
                           if (var2 != 35) {
                             L2: {
                               if (224 != var2) {
                                 if (225 != var2) {
-                                  if ((var2 ^ -1) != -227) {
+                                  if (var2 != 226) {
                                     if (var2 != 228) {
                                       if (227 != var2) {
                                         if (var2 != 192) {
                                           if (193 != var2) {
-                                            if (-195 != (var2 ^ -1)) {
-                                              if (-197 == (var2 ^ -1)) {
+                                            if (var2 != 194) {
+                                              if (var2 == 196) {
                                                 break L2;
                                               } else {
-                                                if ((var2 ^ -1) == -196) {
+                                                if (var2 == 195) {
                                                   break L2;
                                                 } else {
                                                   L3: {
-                                                    if (-233 != (var2 ^ -1)) {
+                                                    if (var2 != 232) {
                                                       if (var2 != 233) {
-                                                        if ((var2 ^ -1) == -235) {
+                                                        if (var2 == 234) {
                                                           break L3;
                                                         } else {
-                                                          if (-236 != (var2 ^ -1)) {
-                                                            if ((var2 ^ -1) != -201) {
+                                                          if (var2 != 235) {
+                                                            if (var2 != 200) {
                                                               if (201 != var2) {
                                                                 if (202 == var2) {
                                                                   break L3;
                                                                 } else {
                                                                   if (var2 != 203) {
-                                                                    if ((var2 ^ -1) != -238) {
+                                                                    if (var2 != 237) {
                                                                       L4: {
-                                                                        if ((var2 ^ -1) == -239) {
+                                                                        if (var2 == 238) {
                                                                           break L4;
                                                                         } else {
-                                                                          if ((var2 ^ -1) != -240) {
+                                                                          if (var2 != 239) {
                                                                             if (var2 != 205) {
                                                                               if (206 == var2) {
                                                                                 break L4;
@@ -260,7 +227,7 @@ abstract class vh extends gb {
                                                                                         if (244 == var2) {
                                                                                           break L5;
                                                                                         } else {
-                                                                                          if (-247 != (var2 ^ -1)) {
+                                                                                          if (var2 != 246) {
                                                                                             if (var2 != 245) {
                                                                                               if (var2 == 210) {
                                                                                                 break L5;
@@ -268,29 +235,29 @@ abstract class vh extends gb {
                                                                                                 if (var2 == 211) {
                                                                                                   break L5;
                                                                                                 } else {
-                                                                                                  if (-213 == (var2 ^ -1)) {
+                                                                                                  if (var2 == 212) {
                                                                                                     break L5;
                                                                                                   } else {
                                                                                                     if (var2 != 214) {
                                                                                                       if (213 != var2) {
                                                                                                         L6: {
-                                                                                                          if ((var2 ^ -1) == -250) {
+                                                                                                          if (var2 == 249) {
                                                                                                             break L6;
                                                                                                           } else {
                                                                                                             if (250 == var2) {
                                                                                                               break L6;
                                                                                                             } else {
-                                                                                                              if (-252 == (var2 ^ -1)) {
+                                                                                                              if (var2 == 251) {
                                                                                                                 break L6;
                                                                                                               } else {
-                                                                                                                if ((var2 ^ -1) == -253) {
+                                                                                                                if (var2 == 252) {
                                                                                                                   break L6;
                                                                                                                 } else {
-                                                                                                                  if ((var2 ^ -1) != -218) {
+                                                                                                                  if (var2 != 217) {
                                                                                                                     if (218 == var2) {
                                                                                                                       break L6;
                                                                                                                     } else {
-                                                                                                                      if ((var2 ^ -1) != -220) {
+                                                                                                                      if (var2 != 219) {
                                                                                                                         if (220 == var2) {
                                                                                                                           break L6;
                                                                                                                         } else {
@@ -298,11 +265,11 @@ abstract class vh extends gb {
                                                                                                                             if (var2 == 199) {
                                                                                                                               return 'c';
                                                                                                                             } else {
-                                                                                                                              if (-256 == (var2 ^ -1)) {
+                                                                                                                              if (var2 == 255) {
                                                                                                                                 return 'y';
                                                                                                                               } else {
                                                                                                                                 if (var2 != 376) {
-                                                                                                                                  if (-242 == (var2 ^ -1)) {
+                                                                                                                                  if (var2 == 241) {
                                                                                                                                     return 'n';
                                                                                                                                   } else {
                                                                                                                                     if (var2 != 209) {
@@ -449,45 +416,45 @@ abstract class vh extends gb {
         } else {
           var2 = param1;
           if (var2 != 32) {
-            if (-161 != (var2 ^ -1)) {
-              if ((var2 ^ -1) != -96) {
-                if ((var2 ^ -1) != -46) {
+            if (var2 != 160) {
+              if (var2 != 95) {
+                if (var2 != 45) {
                   L7: {
-                    if ((var2 ^ -1) != -92) {
+                    if (var2 != 91) {
                       if (93 != var2) {
                         if (var2 != 35) {
                           L8: {
                             if (224 != var2) {
                               if (225 != var2) {
-                                if ((var2 ^ -1) != -227) {
+                                if (var2 != 226) {
                                   if (var2 != 228) {
                                     if (227 != var2) {
                                       if (var2 != 192) {
                                         if (193 != var2) {
-                                          if (-195 != (var2 ^ -1)) {
-                                            if (-197 != (var2 ^ -1)) {
-                                              if ((var2 ^ -1) == -196) {
+                                          if (var2 != 194) {
+                                            if (var2 != 196) {
+                                              if (var2 == 195) {
                                                 break L8;
                                               } else {
                                                 L9: {
-                                                  if (-233 != (var2 ^ -1)) {
+                                                  if (var2 != 232) {
                                                     if (var2 != 233) {
-                                                      if ((var2 ^ -1) == -235) {
+                                                      if (var2 == 234) {
                                                         break L9;
                                                       } else {
-                                                        if (-236 != (var2 ^ -1)) {
-                                                          if ((var2 ^ -1) != -201) {
+                                                        if (var2 != 235) {
+                                                          if (var2 != 200) {
                                                             if (201 != var2) {
                                                               if (202 == var2) {
                                                                 break L9;
                                                               } else {
                                                                 if (var2 != 203) {
                                                                   L10: {
-                                                                    if ((var2 ^ -1) != -238) {
-                                                                      if ((var2 ^ -1) == -239) {
+                                                                    if (var2 != 237) {
+                                                                      if (var2 == 238) {
                                                                         break L10;
                                                                       } else {
-                                                                        if ((var2 ^ -1) != -240) {
+                                                                        if (var2 != 239) {
                                                                           if (var2 != 205) {
                                                                             if (206 == var2) {
                                                                               break L10;
@@ -501,7 +468,7 @@ abstract class vh extends gb {
                                                                                       if (244 == var2) {
                                                                                         break L11;
                                                                                       } else {
-                                                                                        if (-247 != (var2 ^ -1)) {
+                                                                                        if (var2 != 246) {
                                                                                           if (var2 != 245) {
                                                                                             if (var2 == 210) {
                                                                                               break L11;
@@ -509,29 +476,29 @@ abstract class vh extends gb {
                                                                                               if (var2 == 211) {
                                                                                                 break L11;
                                                                                               } else {
-                                                                                                if (-213 == (var2 ^ -1)) {
+                                                                                                if (var2 == 212) {
                                                                                                   break L11;
                                                                                                 } else {
                                                                                                   if (var2 != 214) {
                                                                                                     if (213 != var2) {
                                                                                                       L12: {
-                                                                                                        if ((var2 ^ -1) == -250) {
+                                                                                                        if (var2 == 249) {
                                                                                                           break L12;
                                                                                                         } else {
                                                                                                           if (250 == var2) {
                                                                                                             break L12;
                                                                                                           } else {
-                                                                                                            if (-252 == (var2 ^ -1)) {
+                                                                                                            if (var2 == 251) {
                                                                                                               break L12;
                                                                                                             } else {
-                                                                                                              if ((var2 ^ -1) == -253) {
+                                                                                                              if (var2 == 252) {
                                                                                                                 break L12;
                                                                                                               } else {
-                                                                                                                if ((var2 ^ -1) != -218) {
+                                                                                                                if (var2 != 217) {
                                                                                                                   if (218 == var2) {
                                                                                                                     break L12;
                                                                                                                   } else {
-                                                                                                                    if ((var2 ^ -1) != -220) {
+                                                                                                                    if (var2 != 219) {
                                                                                                                       if (220 == var2) {
                                                                                                                         break L12;
                                                                                                                       } else {
@@ -539,11 +506,11 @@ abstract class vh extends gb {
                                                                                                                           if (var2 == 199) {
                                                                                                                             return 'c';
                                                                                                                           } else {
-                                                                                                                            if (-256 == (var2 ^ -1)) {
+                                                                                                                            if (var2 == 255) {
                                                                                                                               return 'y';
                                                                                                                             } else {
                                                                                                                               if (var2 != 376) {
-                                                                                                                                if (-242 == (var2 ^ -1)) {
+                                                                                                                                if (var2 == 241) {
                                                                                                                                   return 'n';
                                                                                                                                 } else {
                                                                                                                                   if (var2 != 209) {
@@ -701,18 +668,113 @@ abstract class vh extends gb {
     final static kk a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param1 != 98) {
           field_q = true;
-          return fh.a(param4, param0, param2, false, param3, -122);
+          return fh.a(true, param0, param2, false, param3, -122);
         } else {
-          return fh.a(param4, param0, param2, false, param3, -122);
+          return fh.a(true, param0, param2, false, param3, -122);
         }
     }
 
     final static void a(String param0, int param1, String param2) {
-        nf.a(false, param2, param0, (byte) -105);
-        if (param1 == 224) {
-            return;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              nf.a(false, param2, param0, (byte) -105);
+              if (param1 == 224) {
+                break L1;
+              } else {
+                field_q = true;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("vh.G(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
-        field_q = true;
     }
 
     abstract boolean f(int param0);

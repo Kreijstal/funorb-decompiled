@@ -7,11 +7,6 @@ final class ds extends pu {
     private static String field_z;
 
     public static void b(int param0) {
-        if (param0 != -1182) {
-            field_l = null;
-            field_l = null;
-            return;
-        }
         field_l = null;
     }
 

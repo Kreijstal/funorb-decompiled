@@ -207,38 +207,27 @@ final class bl {
     }
 
     final static int a(boolean param0) {
-        if (!param0) {
-            bl.b(-26);
-        }
         return wb.field_b;
     }
 
     final static v a(int param0) {
         try {
             Throwable var1 = null;
-            Object stackIn_2_0 = null;
-            v stackIn_4_0 = null;
+            v stackIn_3_0 = null;
             Throwable decompiledCaughtException = null;
-            v stackOut_3_0 = null;
-            Object stackOut_1_0 = null;
+            v stackOut_2_0 = null;
             try {
               L0: {
-                if (param0 >= 27) {
-                  stackOut_3_0 = (v) Class.forName("wj").newInstance();
-                  stackIn_4_0 = stackOut_3_0;
-                  break L0;
-                } else {
-                  stackOut_1_0 = null;
-                  stackIn_2_0 = stackOut_1_0;
-                  return (v) (Object) stackIn_2_0;
-                }
+                stackOut_2_0 = (v) Class.forName("wj").newInstance();
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = decompiledCaughtException;
               return null;
             }
-            return stackIn_4_0;
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -247,11 +236,15 @@ final class bl {
     }
 
     final static void a(int param0, tf param1, String param2) {
-        if (param0 != 11833) {
-            field_g = null;
+        try {
+            if (param0 != 11833) {
+                field_g = null;
+            }
+            qf.field_c = param1;
+            fa.field_i = param2;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "bl.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        qf.field_c = param1;
-        fa.field_i = param2;
     }
 
     static {
@@ -266,15 +259,15 @@ final class bl {
         int var3 = 0;
         int var1 = 0;
         field_a = new int[98304];
-        for (var0 = 92682; (var0 ^ -1) <= -46342; var0--) {
-            var4 = (long)(-1 + (var0 << 1400346465));
-            var6 = (long)(1 + (var0 << 1777501953));
-            var2 = (int)((var4 * var4 >> -427546094) + -32768L);
-            var3 = (int)(-32768L + (var6 * var6 >> -1929501102));
+        for (var0 = 92682; var0 >= 46341; var0--) {
+            var4 = (long)(-1 + (var0 << 1));
+            var6 = (long)(1 + (var0 << 1));
+            var2 = (int)((var4 * var4 >> 18) + -32768L);
+            var3 = (int)(-32768L + (var6 * var6 >> 18));
             if (!(var3 < field_a.length)) {
                 var3 = field_a.length - 1;
             }
-            for (var1 = -1 < (var2 ^ -1) ? 0 : var2; var1 <= var3; var1++) {
+            for (var1 = var2 < 0 ? 0 : var2; var1 <= var3; var1++) {
                 field_a[var1] = var0;
             }
         }

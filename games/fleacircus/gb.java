@@ -1896,10 +1896,10 @@ final class gb {
                                     break L4;
                                   } else {
                                     if (param1 + var8 < field_i) {
-                                      field_a[var4 - var8] = param3;
-                                      field_a[var4 + var8] = param3;
-                                      field_a[var6] = param3;
-                                      field_a[var7] = param3;
+                                      field_a[var4 - var8] = 13421632;
+                                      field_a[var4 + var8] = 13421632;
+                                      field_a[var6] = 13421632;
+                                      field_a[var7] = 13421632;
                                       L5: while (true) {
                                         L6: {
                                           int incrementValue$2 = var9;
@@ -1918,14 +1918,14 @@ final class gb {
                                           }
                                         }
                                         if (var8 >= var9) {
-                                          field_a[var6 - var9] = param3;
-                                          field_a[var6 + var9] = param3;
-                                          field_a[var4 - var8] = param3;
-                                          field_a[var4 + var8] = param3;
-                                          field_a[var5 - var8] = param3;
-                                          field_a[var5 + var8] = param3;
-                                          field_a[var7 - var9] = param3;
-                                          field_a[var7 + var9] = param3;
+                                          field_a[var6 - var9] = 13421632;
+                                          field_a[var6 + var9] = 13421632;
+                                          field_a[var4 - var8] = 13421632;
+                                          field_a[var4 + var8] = 13421632;
+                                          field_a[var5 - var8] = 13421632;
+                                          field_a[var5 + var8] = 13421632;
+                                          field_a[var7 - var9] = 13421632;
+                                          field_a[var7 + var9] = 13421632;
                                           continue L5;
                                         } else {
                                           break L3;
@@ -1948,7 +1948,7 @@ final class gb {
                                   if (param1 >= field_i) {
                                     break L7;
                                   } else {
-                                    field_a[var4 - var8] = param3;
+                                    field_a[var4 - var8] = 13421632;
                                     break L7;
                                   }
                                 }
@@ -1964,7 +1964,7 @@ final class gb {
                                   if (param1 >= field_i) {
                                     break L8;
                                   } else {
-                                    field_a[var4 + var8] = param3;
+                                    field_a[var4 + var8] = 13421632;
                                     break L8;
                                   }
                                 }
@@ -1981,7 +1981,7 @@ final class gb {
                                     if (param0 >= field_h) {
                                       break L9;
                                     } else {
-                                      field_a[var7] = param3;
+                                      field_a[var7] = 13421632;
                                       break L9;
                                     }
                                   }
@@ -1996,7 +1996,7 @@ final class gb {
                                     if (param0 >= field_h) {
                                       break L9;
                                     } else {
-                                      field_a[var7] = param3;
+                                      field_a[var7] = 13421632;
                                       break L9;
                                     }
                                   }
@@ -2035,7 +2035,7 @@ final class gb {
                                           if (param0 - var9 >= field_h) {
                                             break L13;
                                           } else {
-                                            field_a[var6 - var9] = param3;
+                                            field_a[var6 - var9] = 13421632;
                                             break L13;
                                           }
                                         }
@@ -2046,7 +2046,7 @@ final class gb {
                                         if (param0 + var9 >= field_h) {
                                           break L12;
                                         } else {
-                                          field_a[var6 + var9] = param3;
+                                          field_a[var6 + var9] = 13421632;
                                           break L12;
                                         }
                                       }
@@ -2067,7 +2067,7 @@ final class gb {
                                           if (param0 - var8 >= field_h) {
                                             break L15;
                                           } else {
-                                            field_a[var4 - var8] = param3;
+                                            field_a[var4 - var8] = 13421632;
                                             break L15;
                                           }
                                         }
@@ -2078,7 +2078,7 @@ final class gb {
                                         if (param0 + var8 >= field_h) {
                                           break L14;
                                         } else {
-                                          field_a[var4 + var8] = param3;
+                                          field_a[var4 + var8] = 13421632;
                                           break L14;
                                         }
                                       }
@@ -2099,7 +2099,7 @@ final class gb {
                                           if (param0 - var8 >= field_h) {
                                             break L17;
                                           } else {
-                                            field_a[var5 - var8] = param3;
+                                            field_a[var5 - var8] = 13421632;
                                             break L17;
                                           }
                                         }
@@ -2110,7 +2110,7 @@ final class gb {
                                         if (param0 + var8 >= field_h) {
                                           break L16;
                                         } else {
-                                          field_a[var5 + var8] = param3;
+                                          field_a[var5 + var8] = 13421632;
                                           break L16;
                                         }
                                       }
@@ -2130,7 +2130,7 @@ final class gb {
                                         if (param0 - var9 >= field_h) {
                                           break L18;
                                         } else {
-                                          field_a[var7 - var9] = param3;
+                                          field_a[var7 - var9] = 13421632;
                                           break L18;
                                         }
                                       }
@@ -2141,7 +2141,7 @@ final class gb {
                                       if (param0 + var9 >= field_h) {
                                         continue L10;
                                       } else {
-                                        field_a[var7 + var9] = param3;
+                                        field_a[var7 + var9] = 13421632;
                                         continue L10;
                                       }
                                     }
@@ -2168,7 +2168,7 @@ final class gb {
           }
           return;
         } else {
-          gb.a(param0, param1, param3);
+          gb.a(param0, param1, 13421632);
           return;
         }
     }
@@ -3038,7 +3038,7 @@ final class gb {
           } else {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
+            var13 = ((param4 & 16711935) * var11 + 0 * var12 & -16711936) + ((param4 & 65280) * var11 + 0 * var12 & 16711680) >>> 8;
             var14 = -param2;
             L5: while (true) {
               if (var14 >= 0) {
@@ -3092,8 +3092,8 @@ final class gb {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            gb.g(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            gb.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            gb.g(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            gb.c(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 

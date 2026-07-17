@@ -7,7 +7,7 @@ final class tc {
 
     public static void b(int param0) {
         field_a = null;
-        int var1 = 108 % ((param0 - 59) / 48);
+        int var1 = 0;
     }
 
     final static String a(int param0) {

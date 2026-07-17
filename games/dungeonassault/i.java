@@ -23,24 +23,19 @@ final class i extends ne {
     static int field_n;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int[] param7) {
-        ((i) this).field_p = param3;
-        if (param6) {
-          field_r = null;
-          ((i) this).field_m = param2;
-          ((i) this).field_k = param1;
-          ((i) this).field_i = param5;
-          ((i) this).field_q = param0;
-          ((i) this).field_z = param4;
-          ((i) this).field_j = param7;
-          return;
-        } else {
-          ((i) this).field_m = param2;
-          ((i) this).field_k = param1;
-          ((i) this).field_i = param5;
-          ((i) this).field_q = param0;
-          ((i) this).field_z = param4;
-          ((i) this).field_j = param7;
-          return;
+        try {
+            ((i) this).field_p = param3;
+            if (param6) {
+                field_r = null;
+            }
+            ((i) this).field_m = param2;
+            ((i) this).field_k = param1;
+            ((i) this).field_i = param5;
+            ((i) this).field_q = param0;
+            ((i) this).field_z = param4;
+            ((i) this).field_j = param7;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "i.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + (param7 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -53,13 +48,8 @@ final class i extends ne {
         field_s = null;
         field_x = null;
         field_y = null;
-        if (param0 < 119) {
-          return;
-        } else {
-          field_v = null;
-          field_t = null;
-          return;
-        }
+        field_v = null;
+        field_t = null;
     }
 
     i() {

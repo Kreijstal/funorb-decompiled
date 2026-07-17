@@ -62,7 +62,7 @@ final class vh extends li {
         ((vh) this).field_n = var2.b(true);
         ((vh) this).field_I = var2.b(true);
         if (((vh) this).field_I < 0) {
-            ((vh) this).field_I = ((vh) this).field_I ^ -1;
+            ((vh) this).field_I = ~((vh) this).field_I;
             ((vh) this).field_O = true;
         }
         int var3 = var2.b(true);
@@ -129,12 +129,13 @@ final class vh extends li {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -190,7 +191,6 @@ final class vh extends li {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -706,7 +706,7 @@ final class vh extends li {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((vh) this).field_R) {
                     break L36;
                   } else {
@@ -764,7 +764,7 @@ final class vh extends li {
               }
             }
             ((vh) this).field_R = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_u[var14.field_a[var17_int]];
             var55 = field_w;
@@ -785,6 +785,7 @@ final class vh extends li {
 
     final static vh a(r param0, String param1, String param2) {
         try {
+            vh var4_ref = null;
             if (!vh.a(param0)) {
                 boolean discarded$0 = param0.a(param2, param1, false);
                 return null;
@@ -793,13 +794,11 @@ final class vh extends li {
             if (var3 == null) {
                 return null;
             }
-            vh var4 = null;
-            try {
-                var4 = new vh(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new vh(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -912,12 +911,13 @@ final class vh extends li {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((vh) this).field_T[var3] = (byte)(var6 - 128);
+                    ((vh) this).field_T[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -932,12 +932,13 @@ final class vh extends li {
 
     private final static void a(byte[] param0, int param1) {
         field_P = param0;
-        field_U = param1;
+        field_U = 0;
         field_Q = 0;
     }
 
     final static vh a(r param0, int param1, int param2) {
         try {
+            vh var4_ref = null;
             if (!vh.a(param0)) {
                 boolean discarded$0 = param0.b(0, param1, param2);
                 return null;
@@ -946,13 +947,11 @@ final class vh extends li {
             if (var3 == null) {
                 return null;
             }
-            vh var4 = null;
-            try {
-                var4 = new vh(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new vh(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

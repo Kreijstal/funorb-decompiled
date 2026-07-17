@@ -19,127 +19,52 @@ public class ub {
     public static void a(String param0, int param1, int param2) {
         Exception var3 = null;
         Object var4 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    field_a = param1;
-                    field_d = param0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        field_e = System.getProperty("user.home");
-                        if (null == field_e) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_e = field_e + "/";
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (param2 == -26761) {
-                            statePc = 10;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var4 = null;
-                        File discarded$2 = ub.a((String) null, (byte) 19);
-                        field_b = true;
-                        if (null == field_e) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        field_e = "~/";
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var3 = (Exception) (Object) caughtException;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    field_b = true;
-                    if (null == field_e) {
-                        statePc = 12;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    field_e = "~/";
-                    statePc = 13;
-                    continue stateLoop;
-                }
-                case 13: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        field_a = param1;
+        field_d = param0;
+        try {
+          L0: {
+            L1: {
+              field_e = System.getProperty("user.home");
+              if (null == field_e) {
+                break L1;
+              } else {
+                field_e = field_e + "/";
+                break L1;
+              }
             }
+            if (param2 == -26761) {
+              break L0;
+            } else {
+              L2: {
+                var4 = null;
+                File discarded$2 = ub.a((String) null, (byte) 19);
+                field_b = true;
+                if (null == field_e) {
+                  field_e = "~/";
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              return;
+            }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = (Exception) (Object) decompiledCaughtException;
+            break L3;
+          }
+        }
+        L4: {
+          field_b = true;
+          if (null == field_e) {
+            field_e = "~/";
+            break L4;
+          } else {
+            break L4;
+          }
         }
     }
 

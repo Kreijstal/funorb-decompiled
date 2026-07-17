@@ -8,7 +8,7 @@ final class p extends pu {
     static sna field_o;
 
     final static void c(int param0) {
-        int var2 = -3 / ((param0 - 19) / 61);
+        int var2 = 3;
         gb var1 = (gb) (Object) ja.field_s.b((byte) 90);
         if (var1 == null) {
             vc.a((byte) -72);
@@ -23,21 +23,87 @@ final class p extends pu {
     }
 
     final static void a(int param0, byte[] param1, int param2) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int[] var4 = null;
         int var5 = 0;
-        int var6 = BachelorFridge.field_y;
-        int var3 = param2;
-        int[] var4 = new int[256];
-        for (var5 = 0; (var5 ^ -1) > -257; var5++) {
-            var3++;
-            var4[var5] = dda.a(255, (int) param1[var3]);
-        }
-        // wide iinc 3 256
+        int var6 = 0;
         int var7 = 0;
-        var5 = var7;
-        while (-257 < (var7 ^ -1)) {
-            param1[var3] = (byte)(param1[var3] + -param0);
-            var3 = var3 + var4[var7];
-            var7++;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var6 = BachelorFridge.field_y;
+        try {
+          L0: {
+            var3_int = 256;
+            var4 = new int[256];
+            var5 = 0;
+            L1: while (true) {
+              if (var5 >= 256) {
+                var3_int += 256;
+                var7 = 0;
+                var5 = var7;
+                L2: while (true) {
+                  if (var7 >= 256) {
+                    break L0;
+                  } else {
+                    param1[var3_int] = (byte)(param1[var3_int] + -param0);
+                    var3_int = var3_int + var4[var7];
+                    var7++;
+                    continue L2;
+                  }
+                }
+              } else {
+                int incrementValue$2 = var3_int;
+                var3_int++;
+                var4[var5] = dda.a(255, (int) param1[incrementValue$2]);
+                var5++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("p.B(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 256 + 41);
         }
     }
 

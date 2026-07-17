@@ -12,9 +12,6 @@ final class nc extends ue {
 
     public static void b(boolean param0) {
         field_k = null;
-        if (param0) {
-            nc.b(false);
-        }
     }
 
     final void b(int param0) {
@@ -217,14 +214,14 @@ final class nc extends ue {
         if (0 != ((nc) this).field_f.field_f) {
           return;
         } else {
-          if ((((nc) this).field_j ^ -1) != -21) {
+          if (((nc) this).field_j != 20) {
             return;
           } else {
             go.field_l.c(var11, 320, 150, 16760896, -1);
             go.field_l.c(var3, 320, 170, 16760896, -1);
             go.field_l.c(var4, 320, 275, 16760896, -1);
             go.field_l.c(var5, 320, 340, 16760896, -1);
-            super.b(param0 ^ 0);
+            super.b(param0);
             return;
           }
         }
@@ -286,10 +283,10 @@ final class nc extends ue {
         var3 = CrazyCrystals.field_B;
         if (!((nc) this).field_g) {
           if (((nc) this).field_e) {
-            if (-1 > (((nc) this).field_j ^ -1)) {
+            if (((nc) this).field_j > 0) {
               ((nc) this).field_j = ((nc) this).field_j - 1;
               ((nc) this).field_f.c(2, 40, 180);
-              if ((((nc) this).field_f.field_f ^ -1) <= -41) {
+              if (((nc) this).field_f.field_f >= 40) {
                 if (!((nc) this).field_h) {
                   rk.a(0);
                   ((nc) this).field_b.a(-1, true, -1);
@@ -301,7 +298,7 @@ final class nc extends ue {
                   if (!rc.a(-56)) {
                     bq.a((byte) -12);
                     if (null == ((nc) this).field_i) {
-                      if (-1 == (pc.field_y ^ -1)) {
+                      if (pc.field_y == 0) {
                         if (null == ((nc) this).field_i) {
                           if (0 == mo.field_l) {
                             a.field_b = (ue) (Object) new rb(((nc) this).field_f, true);
@@ -322,7 +319,7 @@ final class nc extends ue {
                       }
                     } else {
                       ((nc) this).field_i.d(136);
-                      if (-1 == (pc.field_y ^ -1)) {
+                      if (pc.field_y == 0) {
                         if (null == ((nc) this).field_i) {
                           if (0 != mo.field_l) {
                             a.field_b = (ue) (Object) ((nc) this).field_f;
@@ -344,7 +341,7 @@ final class nc extends ue {
                     }
                   } else {
                     L0: {
-                      if (-21 < (((nc) this).field_j ^ -1)) {
+                      if (((nc) this).field_j < 20) {
                         ((nc) this).field_j = ((nc) this).field_j + 1;
                         break L0;
                       } else {
@@ -361,7 +358,7 @@ final class nc extends ue {
               }
             } else {
               ((nc) this).field_f.c(2, 40, 180);
-              if ((((nc) this).field_f.field_f ^ -1) <= -41) {
+              if (((nc) this).field_f.field_f >= 40) {
                 if (!((nc) this).field_h) {
                   rk.a(0);
                   ((nc) this).field_b.a(-1, true, -1);
@@ -373,7 +370,7 @@ final class nc extends ue {
                   if (!rc.a(-56)) {
                     bq.a((byte) -12);
                     if (null == ((nc) this).field_i) {
-                      if (-1 == (pc.field_y ^ -1)) {
+                      if (pc.field_y == 0) {
                         if (null == ((nc) this).field_i) {
                           if (0 != mo.field_l) {
                             a.field_b = (ue) (Object) ((nc) this).field_f;
@@ -394,7 +391,7 @@ final class nc extends ue {
                       }
                     } else {
                       ((nc) this).field_i.d(136);
-                      if (-1 == (pc.field_y ^ -1)) {
+                      if (pc.field_y == 0) {
                         if (null == ((nc) this).field_i) {
                           if (0 != mo.field_l) {
                             a.field_b = (ue) (Object) ((nc) this).field_f;
@@ -416,7 +413,7 @@ final class nc extends ue {
                     }
                   } else {
                     L1: {
-                      if (-21 < (((nc) this).field_j ^ -1)) {
+                      if (((nc) this).field_j < 20) {
                         ((nc) this).field_j = ((nc) this).field_j + 1;
                         break L1;
                       } else {
@@ -434,7 +431,7 @@ final class nc extends ue {
             }
           } else {
             L2: {
-              if (-21 < (((nc) this).field_j ^ -1)) {
+              if (((nc) this).field_j < 20) {
                 ((nc) this).field_j = ((nc) this).field_j + 1;
                 break L2;
               } else {
@@ -475,12 +472,16 @@ final class nc extends ue {
 
     nc(m param0, re param1) {
         super(2);
-        ((nc) this).field_i = param0;
-        ((nc) this).field_f = param1;
-        ((nc) this).field_d = new ik[2];
-        ((nc) this).field_b.field_c = -1;
-        ((nc) this).field_d[0] = (ik) (Object) new mh(320, 190, si.field_a, 2);
-        ((nc) this).field_d[1] = (ik) (Object) new mh(320, 295, fk.field_y, 2);
+        try {
+            ((nc) this).field_i = param0;
+            ((nc) this).field_f = param1;
+            ((nc) this).field_d = new ik[2];
+            ((nc) this).field_b.field_c = -1;
+            ((nc) this).field_d[0] = (ik) (Object) new mh(320, 190, si.field_a, 2);
+            ((nc) this).field_d[1] = (ik) (Object) new mh(320, 295, fk.field_y, 2);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "nc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

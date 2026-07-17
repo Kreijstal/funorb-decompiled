@@ -27,42 +27,92 @@ final class df extends fe {
     }
 
     final static void a(int param0, java.awt.Canvas param1, boolean param2) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var4 = SteelSentinels.field_G;
-        if ((nj.field_Q ^ -1) <= -11) {
-          if (km.a(-124)) {
-            if (0 == uj.field_d) {
-              fa.a(false, (byte) 88, param2);
-              kg.a(0, 0, 28594, param1);
-              var3 = 89 % ((param0 - -66) / 44);
-              return;
-            } else {
-              en.a(param1, -28003);
-              var3 = 89 % ((param0 - -66) / 44);
-              return;
-            }
-          } else {
-            pb.b();
-            ff.a((byte) 17, 240, 320);
-            kg.a(0, 0, 28594, param1);
-            var3 = 89 % ((param0 - -66) / 44);
-            return;
-          }
-        } else {
+        try {
           L0: {
-            var3 = 0;
-            if (dd.field_e) {
-              dd.field_e = false;
-              var3 = 1;
-              break L0;
+            L1: {
+              if (nj.field_Q < 10) {
+                L2: {
+                  var3_int = 0;
+                  if (dd.field_e) {
+                    dd.field_e = false;
+                    var3_int = 1;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                kc.a(sa.b((byte) 118), fi.a(true), var3_int != 0, 300, d.field_S);
+                break L1;
+              } else {
+                if (!km.a(-124)) {
+                  pb.b();
+                  ff.a((byte) 17, 240, 320);
+                  kg.a(0, 0, 28594, param1);
+                  break L1;
+                } else {
+                  if (0 != uj.field_d) {
+                    en.a(param1, -28003);
+                    break L1;
+                  } else {
+                    fa.a(false, (byte) 88, param2);
+                    kg.a(0, 0, 28594, param1);
+                    break L1;
+                  }
+                }
+              }
+            }
+            var3_int = 89 % ((param0 - -66) / 44);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("df.B(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L3;
             } else {
-              break L0;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L3;
             }
           }
-          kc.a(sa.b((byte) 118), fi.a(true), var3 != 0, 300, d.field_S);
-          var3 = 89 % ((param0 - -66) / 44);
-          return;
+          throw ci.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
         }
     }
 
@@ -73,30 +123,30 @@ final class df extends fe {
 
     final static int a(int param0, int param1) {
         if (param0 == -3720) {
-          if (-1 < (param1 ^ -1)) {
+          if (param1 < 0) {
             if (-65536 > param1) {
               return vn.field_m[134217728 / -param1] + -2048;
             } else {
-              return -vn.field_m[-param1 >> 206538725];
+              return -vn.field_m[-param1 >> 5];
             }
           } else {
             if (param1 <= 65536) {
-              return vn.field_m[param1 >> 1282746501];
+              return vn.field_m[param1 >> 5];
             } else {
               return 2048 + -vn.field_m[134217728 / param1];
             }
           }
         } else {
           field_J = null;
-          if (-1 < (param1 ^ -1)) {
+          if (param1 < 0) {
             if (-65536 > param1) {
               return vn.field_m[134217728 / -param1] + -2048;
             } else {
-              return -vn.field_m[-param1 >> 206538725];
+              return -vn.field_m[-param1 >> 5];
             }
           } else {
             if (param1 <= 65536) {
-              return vn.field_m[param1 >> 1282746501];
+              return vn.field_m[param1 >> 5];
             } else {
               return 2048 + -vn.field_m[134217728 / param1];
             }
@@ -123,9 +173,6 @@ final class df extends fe {
 
     public static void i(int param0) {
         field_J = null;
-        if (param0 >= -20) {
-            field_K = true;
-        }
     }
 
     df() {

@@ -7,9 +7,6 @@ final class uu implements dja {
     static int field_a;
 
     public static void a(int param0) {
-        if (param0 >= -10) {
-            return;
-        }
         field_c = null;
         field_b = null;
     }
@@ -27,21 +24,23 @@ final class uu implements dja {
         param1[62] = 1;
         param1[73] = -1;
         if (param0 != 90) {
-          return;
-        } else {
-          param1[63] = 1;
-          param1[69] = -1;
-          param1[71] = -1;
-          param1[70] = 4;
-          param1[57] = -2;
-          param1[9] = -1;
-          param1[10] = -1;
-          param1[74] = -1;
-          param1[65] = 1;
-          param1[68] = -1;
-          param1[64] = 1;
-          param1[5] = -1;
-          return;
+            return;
+        }
+        try {
+            param1[63] = 1;
+            param1[69] = -1;
+            param1[71] = -1;
+            param1[70] = 4;
+            param1[57] = -2;
+            param1[9] = -1;
+            param1[10] = -1;
+            param1[74] = -1;
+            param1[65] = 1;
+            param1[68] = -1;
+            param1[64] = 1;
+            param1[5] = -1;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "uu.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -18,22 +18,12 @@ abstract class rl extends wb {
     final static void e(boolean param0) {
         ji.field_e.field_l = 0;
         ji.field_e.field_b = 0;
-        if (!param0) {
-            field_s = null;
-        }
     }
 
     final static void b(byte param0) {
-        if (param0 != 29) {
-            field_q = null;
-        }
     }
 
     final static km d(boolean param0) {
-        if (!param0) {
-            field_y = 78;
-            return lg.field_a.field_Lb;
-        }
         return lg.field_a.field_Lb;
     }
 

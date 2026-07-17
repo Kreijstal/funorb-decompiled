@@ -11,28 +11,107 @@ abstract class ik {
     static String field_f;
 
     final static String[] a(String param0, byte param1, char param2) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = CrazyCrystals.field_B;
-        CharSequence var11 = (CharSequence) (Object) param0;
-        int var3 = lp.a(var11, (byte) -40, param2);
-        String[] var4 = new String[var3 + 1];
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        String[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        for (var7 = 0; var7 < var3; var7++) {
-            for (var8 = var6; param2 != param0.charAt(var8); var8++) {
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        Object var10 = null;
+        CharSequence var11 = null;
+        String[] stackIn_10_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String[] stackOut_9_0 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var9 = CrazyCrystals.field_B;
+        try {
+          L0: {
+            var11 = (CharSequence) (Object) param0;
+            var3_int = lp.a(var11, (byte) -40, param2);
+            var4 = new String[var3_int + 1];
+            var5 = 0;
+            var6 = 0;
+            var7 = 0;
+            L1: while (true) {
+              if (var7 >= var3_int) {
+                L2: {
+                  if (param1 == -76) {
+                    break L2;
+                  } else {
+                    var10 = null;
+                    String[] discarded$4 = ik.a((String) null, (byte) 127, 'ﾸ');
+                    break L2;
+                  }
+                }
+                var4[var3_int] = param0.substring(var6);
+                stackOut_9_0 = (String[]) var4;
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
+              } else {
+                var8 = var6;
+                L3: while (true) {
+                  if (param2 == param0.charAt(var8)) {
+                    int incrementValue$5 = var5;
+                    var5++;
+                    var4[incrementValue$5] = param0.substring(var6, var8);
+                    var6 = var8 - -1;
+                    var7++;
+                    continue L1;
+                  } else {
+                    var8++;
+                    continue L3;
+                  }
+                }
+              }
             }
-            int incrementValue$0 = var5;
-            var5++;
-            var4[incrementValue$0] = param0.substring(var6, var8);
-            var6 = var8 - -1;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("ik.G(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 41);
         }
-        if (param1 != -76) {
-            Object var10 = null;
-            String[] discarded$1 = ik.a((String) null, (byte) 127, 'ﾸ');
-        }
-        var4[var3] = param0.substring(var6);
-        return var4;
+        return stackIn_10_0;
     }
 
     final boolean b(int param0) {
@@ -116,9 +195,6 @@ abstract class ik {
     abstract void a(boolean param0, int param1, int param2);
 
     public static void a(byte param0) {
-        if (param0 <= 99) {
-            field_e = -126;
-        }
         field_f = null;
         field_g = null;
     }

@@ -12,7 +12,7 @@ final class wka {
           if (-3 != ((t) (Object) var4).field_p) {
             if (param0 == 57) {
               if (var4 instanceof t) {
-                if (-4 == (((t) (Object) var4).field_p ^ -1)) {
+                if (((t) (Object) var4).field_p == 3) {
                   return (1 + param3) * 6200 / ((1 + param3) * param2 * 57 + 1);
                 } else {
                   return param3 * 400 / param2;
@@ -38,7 +38,7 @@ final class wka {
         } else {
           if (param0 == 57) {
             if (var4 instanceof t) {
-              if (-4 != (((t) (Object) var4).field_p ^ -1)) {
+              if (((t) (Object) var4).field_p != 3) {
                 return param3 * 400 / param2;
               } else {
                 return (1 + param3) * 6200 / ((1 + param3) * param2 * 57 + 1);
@@ -49,7 +49,7 @@ final class wka {
           } else {
             field_a = 79;
             if (var4 instanceof t) {
-              if (-4 != (((t) (Object) var4).field_p ^ -1)) {
+              if (((t) (Object) var4).field_p != 3) {
                 return param3 * 400 / param2;
               } else {
                 return (1 + param3) * 6200 / ((1 + param3) * param2 * 57 + 1);

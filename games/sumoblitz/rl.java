@@ -30,13 +30,15 @@ final class rl extends ms {
         ((rl) this).field_r = param5;
         ((rl) this).field_s = param6;
         if (param4 >= -53) {
-          return;
-        } else {
-          ((rl) this).field_p = param7;
-          ((rl) this).field_u = param3;
-          ((rl) this).field_m = param1;
-          ((rl) this).field_t = param0;
-          return;
+            return;
+        }
+        try {
+            ((rl) this).field_p = param7;
+            ((rl) this).field_u = param3;
+            ((rl) this).field_m = param1;
+            ((rl) this).field_t = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "rl.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 

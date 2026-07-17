@@ -17,9 +17,6 @@ public final class Vertigo2 extends kd {
     private final void p(int param0) {
         int var2 = 0;
         int var3 = field_L ? 1 : 0;
-        if (param0 != 50) {
-            return;
-        }
         ap.field_d = new bl(40, 100, 260, 300, va.field_s, qr.field_h, li.field_m, tb.field_d, pc.field_c);
         ap.field_d.field_K = ar.field_a;
         ap.field_d.field_J = 0;
@@ -39,13 +36,13 @@ public final class Vertigo2 extends kd {
     final void f(int param0) {
         int var2 = 0;
         int var3 = 0;
-        tr var3_ref = null;
+        Object var3_ref = null;
         int var4 = 0;
-        pp var4_ref = null;
+        pp var4_ref_pp = null;
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
-        tr var7 = null;
+        Object var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -61,23 +58,23 @@ public final class Vertigo2 extends kd {
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        Object stackIn_30_0 = null;
-        Object stackIn_31_0 = null;
-        Object stackIn_32_0 = null;
-        int stackIn_32_1 = 0;
-        int stackIn_99_0 = 0;
+        Object stackIn_27_0 = null;
+        Object stackIn_28_0 = null;
+        Object stackIn_29_0 = null;
+        int stackIn_29_1 = 0;
+        int stackIn_98_0 = 0;
         Object stackOut_3_0 = null;
         Object stackOut_5_0 = null;
         int stackOut_5_1 = 0;
         Object stackOut_4_0 = null;
         int stackOut_4_1 = 0;
-        Object stackOut_29_0 = null;
-        Object stackOut_31_0 = null;
-        int stackOut_31_1 = 0;
-        Object stackOut_30_0 = null;
-        int stackOut_30_1 = 0;
-        int stackOut_98_0 = 0;
+        Object stackOut_26_0 = null;
+        Object stackOut_28_0 = null;
+        int stackOut_28_1 = 0;
+        Object stackOut_27_0 = null;
+        int stackOut_27_1 = 0;
         int stackOut_97_0 = 0;
+        int stackOut_96_0 = 0;
         L0: {
           var16 = null;
           var14 = field_L ? 1 : 0;
@@ -169,7 +166,7 @@ public final class Vertigo2 extends kd {
                     } else {
                       L5: {
                         var3 = Vertigo2.p((byte) -78);
-                        if ((var3 ^ -1) == -2) {
+                        if (var3 == 1) {
                           ad.field_h = true;
                           ip.a((byte) -71, oc.field_x, 0);
                           break L5;
@@ -183,132 +180,132 @@ public final class Vertigo2 extends kd {
                   }
                 } else {
                   L6: {
-                    stackOut_29_0 = this;
-                    stackIn_31_0 = stackOut_29_0;
-                    stackIn_30_0 = stackOut_29_0;
+                    stackOut_26_0 = this;
+                    stackIn_28_0 = stackOut_26_0;
+                    stackIn_27_0 = stackOut_26_0;
                     if (dc.field_L == null) {
-                      stackOut_31_0 = this;
-                      stackOut_31_1 = 0;
-                      stackIn_32_0 = stackOut_31_0;
-                      stackIn_32_1 = stackOut_31_1;
+                      stackOut_28_0 = this;
+                      stackOut_28_1 = 0;
+                      stackIn_29_0 = stackOut_28_0;
+                      stackIn_29_1 = stackOut_28_1;
                       break L6;
                     } else {
-                      stackOut_30_0 = this;
-                      stackOut_30_1 = 1;
-                      stackIn_32_0 = stackOut_30_0;
-                      stackIn_32_1 = stackOut_30_1;
+                      stackOut_27_0 = this;
+                      stackOut_27_1 = 1;
+                      stackIn_29_0 = stackOut_27_0;
+                      stackIn_29_1 = stackOut_27_1;
                       break L6;
                     }
                   }
                   L7: {
-                    var3 = ((Vertigo2) this).b(stackIn_32_1 != 0, 125);
-                    if (-2 == (var3 ^ -1)) {
-                      break L7;
-                    } else {
-                      if (var3 == -3) {
-                        break L7;
+                    L8: {
+                      var3 = ((Vertigo2) this).b(stackIn_29_1 != 0, 125);
+                      if (var3 == 1) {
+                        break L8;
                       } else {
-                        this.d(true, -107);
-                        break L4;
+                        if (var3 == 2) {
+                          break L8;
+                        } else {
+                          break L7;
+                        }
                       }
                     }
-                  }
-                  L8: {
-                    if (null != dc.field_L) {
-                      cp.a((byte) 127);
-                      break L8;
-                    } else {
-                      break L8;
+                    L9: {
+                      if (null != dc.field_L) {
+                        cp.a((byte) 127);
+                        break L9;
+                      } else {
+                        break L9;
+                      }
                     }
-                  }
-                  L9: {
-                    if (-3 == var3) {
+                    if (var3 == 2) {
                       sf.a((java.applet.Applet) this, -85);
-                      break L9;
+                      break L7;
                     } else {
-                      break L9;
+                      break L7;
                     }
                   }
                   this.d(true, -107);
                   break L4;
                 }
               } else {
-                if (t.field_a != t.field_f) {
+                if (~t.field_a != ~t.field_f) {
                   this.d(false, -111);
                   break L4;
                 } else {
-                  var3 = lr.e((byte) -116);
-                  if ((var3 ^ -1) != -3) {
-                    if ((var3 ^ -1) == -4) {
-                      ig.a(9790, true);
-                      this.d(true, -93);
-                      break L4;
-                    } else {
-                      if ((var3 ^ -1) != -5) {
-                        this.d(true, -93);
-                        break L4;
+                  L10: {
+                    var3 = lr.e((byte) -116);
+                    if (var3 != 2) {
+                      if (var3 == 3) {
+                        ig.a(9790, true);
+                        break L10;
                       } else {
-                        jo.field_d = true;
-                        ip.a((byte) -65, ob.field_I, 0);
-                        this.d(true, -93);
-                        break L4;
+                        if (var3 != 4) {
+                          break L10;
+                        } else {
+                          jo.field_d = true;
+                          ip.a((byte) -65, ob.field_I, 0);
+                          break L10;
+                        }
                       }
+                    } else {
+                      cp.a((byte) 125);
+                      break L10;
                     }
-                  } else {
-                    cp.a((byte) 125);
-                    break L4;
                   }
+                  this.d(true, -93);
+                  break L4;
                 }
               }
             }
           }
         }
-        L10: {
+        L11: {
           if (ag.b(49)) {
-            break L10;
+            break L11;
           } else {
-            L11: while (true) {
+            L12: while (true) {
               var15 = (nf) (Object) fg.field_eb.b((byte) -43);
               if (var15 != null) {
                 de.a(4, var15, 4);
-                continue L11;
+                continue L12;
               } else {
-                L12: while (true) {
+                L13: while (true) {
                   var17 = (ub) (Object) oh.field_D.b((byte) -43);
                   if (var17 == null) {
-                    break L10;
+                    break L11;
                   } else {
                     jk.a(5, (byte) 44, var17);
-                    continue L12;
+                    continue L13;
                   }
                 }
               }
             }
           }
         }
-        L13: while (true) {
+        L14: while (true) {
           if (!j.a(0, ok.field_d)) {
-            L14: {
+            L15: {
               lf.d(75, 0);
               if (!eo.field_o) {
-                break L14;
+                break L15;
               } else {
                 wg.field_g = 0;
-                break L14;
+                break L15;
               }
             }
-            L15: {
+            L16: {
               if (va.b((byte) -81)) {
-                L16: {
-                  L17: {
+                L17: {
+                  L18: {
                     var3 = ((Vertigo2) this).h((byte) -127);
                     if (var3 == 0) {
-                      break L17;
+                      break L18;
                     } else {
-                      if (-2 != (var3 ^ -1)) {
-                        break L16;
-                      } else {
+                      if (var3 != 1) {
                         break L17;
+                      } else {
+                        break L18;
                       }
                     }
                   }
@@ -316,97 +313,90 @@ public final class Vertigo2 extends kd {
                   if (1 == var3) {
                     kj.field_C = true;
                     rg.field_b = true;
-                    break L16;
+                    break L17;
                   } else {
-                    L18: {
+                    L19: {
                       if (!oj.field_P) {
-                        break L18;
+                        break L19;
                       } else {
-                        an.field_c = true;
-                        sk.field_g = true;
-                        lc.field_d = false;
-                        if (am.field_b) {
-                          ke.field_i = qp.field_c;
-                          gj.a((byte) -103, false, am.field_n, 11);
-                          g.b(7);
-                          fh.field_y[lc.field_b].a(-91, false, 0);
-                          ed.field_q = false;
-                          am.field_b = false;
-                          oj.field_P = false;
-                          vl.a(-115);
-                          ki.a((byte) -72);
-                          ua.a(-5141);
-                          kj.field_C = false;
-                          rg.field_b = false;
-                          break L16;
-                        } else {
-                          gj.a((byte) 124, false, am.field_n, 0);
-                          g.b(7);
-                          fh.field_y[lc.field_b].a(-91, false, 0);
-                          ed.field_q = false;
-                          am.field_b = false;
-                          oj.field_P = false;
-                          vl.a(-115);
-                          ki.a((byte) -72);
-                          ua.a(-5141);
-                          break L18;
+                        L20: {
+                          an.field_c = true;
+                          sk.field_g = true;
+                          lc.field_d = false;
+                          if (am.field_b) {
+                            ke.field_i = qp.field_c;
+                            gj.a((byte) -103, false, am.field_n, 11);
+                            break L20;
+                          } else {
+                            gj.a((byte) 124, false, am.field_n, 0);
+                            break L20;
+                          }
                         }
+                        g.b(7);
+                        fh.field_y[lc.field_b].a(-91, false, 0);
+                        ed.field_q = false;
+                        am.field_b = false;
+                        oj.field_P = false;
+                        vl.a(-115);
+                        ki.a((byte) -72);
+                        ua.a(-5141);
+                        break L19;
                       }
                     }
                     kj.field_C = false;
                     rg.field_b = false;
-                    break L16;
+                    break L17;
                   }
                 }
-                L19: {
+                L21: {
                   var4 = 0;
                   if (2 != var3) {
-                    break L19;
+                    break L21;
                   } else {
                     var4 = 1;
-                    break L19;
+                    break L21;
                   }
                 }
-                L20: {
-                  L21: {
+                L22: {
+                  L23: {
                     if (oj.field_P) {
-                      break L21;
+                      break L23;
                     } else {
                       if (rg.field_b) {
-                        break L21;
+                        break L23;
                       } else {
                         if (kj.field_C) {
-                          break L21;
+                          break L23;
                         } else {
-                          break L20;
+                          break L22;
                         }
                       }
                     }
                   }
                   var4 = 1;
-                  break L20;
+                  break L22;
                 }
-                L22: {
+                L24: {
                   if (va.b((byte) -81)) {
-                    break L22;
+                    break L24;
                   } else {
                     var4 = 0;
-                    break L22;
+                    break L24;
                   }
                 }
                 if (var4 != 0) {
                   wp.a(10);
-                  break L15;
+                  break L16;
                 } else {
-                  break L15;
+                  break L16;
                 }
               } else {
-                break L15;
+                break L16;
               }
             }
             return;
           } else {
-            if ((lc.field_f ^ -1) != -70) {
+            if (lc.field_f != 69) {
               if (9 == lc.field_f) {
                 g.b(7);
                 rg.field_b = false;
@@ -414,11 +404,11 @@ public final class Vertigo2 extends kd {
                 kj.field_C = false;
                 rg.field_b = false;
                 ke.field_i = id.field_f.f(128);
-                continue L13;
+                continue L14;
               } else {
                 if (lc.field_f != 14) {
                   if (lc.field_f == 15) {
-                    L23: {
+                    L25: {
                       if (oj.field_P) {
                         g.b(7);
                         ki.a((byte) -128);
@@ -431,163 +421,165 @@ public final class Vertigo2 extends kd {
                         sk.field_g = true;
                         an.field_c = true;
                         vl.a(-127);
-                        break L23;
+                        break L25;
                       } else {
-                        break L23;
+                        break L25;
                       }
                     }
                     kj.field_C = false;
                     rg.field_b = false;
-                    continue L13;
+                    continue L14;
                   } else {
-                    L24: {
+                    L26: {
                       if (lc.field_f != 10) {
-                        break L24;
+                        break L26;
                       } else {
                         if (!oj.field_P) {
-                          break L24;
+                          break L26;
                         } else {
                           tq.a((byte) -66);
-                          continue L13;
+                          continue L14;
                         }
                       }
                     }
                     if (lc.field_f == 67) {
-                      L25: {
+                      L27: {
                         var3 = id.field_f.b(true);
-                        var3 = var3 & (ml.field_z ^ -1);
+                        var3 = var3 & ~ml.field_z;
                         if (!sp.field_V) {
-                          break L25;
+                          break L27;
                         } else {
                           var4 = 0;
-                          L26: while (true) {
+                          L28: while (true) {
                             if (hi.field_i.length <= var4) {
-                              break L25;
+                              break L27;
                             } else {
-                              if ((1 << var4 & var3) != 0) {
-                                bg.field_b.a((li) (Object) new fa(var4), false);
-                                var4++;
-                                continue L26;
-                              } else {
-                                var4++;
-                                continue L26;
+                              L29: {
+                                if ((1 << var4 & var3) != 0) {
+                                  bg.field_b.a((li) (Object) new fa(var4), false);
+                                  break L29;
+                                } else {
+                                  break L29;
+                                }
                               }
+                              var4++;
+                              continue L28;
                             }
                           }
                         }
                       }
                       ml.field_z = ml.field_z | var3;
                       jq.field_e = jq.field_e | var3;
-                      continue L13;
+                      continue L14;
                     } else {
-                      L27: {
-                        if ((lc.field_f ^ -1) == -58) {
-                          break L27;
+                      L30: {
+                        if (lc.field_f == 57) {
+                          break L30;
                         } else {
                           if (58 != lc.field_f) {
                             if (lc.field_f != 59) {
-                              L28: {
+                              L31: {
                                 var3_ref = null;
                                 if (am.field_b) {
-                                  var3_ref = ln.field_d;
-                                  break L28;
+                                  var3_ref = (Object) (Object) ln.field_d;
+                                  break L31;
                                 } else {
                                   if (ed.field_q) {
-                                    var3_ref = oe.field_pb;
-                                    break L28;
+                                    var3_ref = (Object) (Object) oe.field_pb;
+                                    break L31;
                                   } else {
-                                    break L28;
+                                    break L31;
                                   }
                                 }
                               }
-                              L29: {
+                              L32: {
                                 if (var3_ref != null) {
-                                  if ((lc.field_f ^ -1) == -71) {
-                                    var4_ref = new pp(var3_ref.field_D.field_z);
-                                    var4_ref.a((byte) -8, var3_ref.field_B, id.field_f);
-                                    var3_ref.a(10, var4_ref);
-                                    continue L13;
+                                  if (lc.field_f == 70) {
+                                    var4_ref_pp = new pp(((tr) var3_ref).field_D.field_z);
+                                    var4_ref_pp.a((byte) -8, ((tr) var3_ref).field_B, id.field_f);
+                                    ((tr) var3_ref).a(10, var4_ref_pp);
+                                    continue L14;
                                   } else {
                                     if (lc.field_f != 62) {
                                       if (lc.field_f != 63) {
-                                        if (-65 != (lc.field_f ^ -1)) {
+                                        if (lc.field_f != 64) {
                                           if (lc.field_f != 65) {
-                                            if (-67 != (lc.field_f ^ -1)) {
-                                              break L29;
+                                            if (lc.field_f != 66) {
+                                              break L32;
                                             } else {
-                                              var3_ref.field_h = id.field_f.h(-11);
+                                              ((tr) var3_ref).field_h = id.field_f.h(-11);
                                               if (null == ln.field_d) {
-                                                continue L13;
+                                                continue L14;
                                               } else {
                                                 mq.b(true);
-                                                continue L13;
+                                                continue L14;
                                               }
                                             }
                                           } else {
-                                            var3_ref.field_D.field_t = id.field_f.h(-11);
+                                            ((tr) var3_ref).field_D.field_t = id.field_f.h(-11);
                                             if (ln.field_d != null) {
                                               mq.b(true);
-                                              continue L13;
+                                              continue L14;
                                             } else {
-                                              continue L13;
+                                              continue L14;
                                             }
                                           }
                                         } else {
-                                          var3_ref.field_D.field_u = id.field_f.h(-11);
-                                          continue L13;
+                                          ((tr) var3_ref).field_D.field_u = id.field_f.h(-11);
+                                          continue L14;
                                         }
                                       } else {
-                                        var3_ref.field_D.field_d = id.field_f.h(-11);
+                                        ((tr) var3_ref).field_D.field_d = id.field_f.h(-11);
                                         if (ln.field_d == null) {
-                                          continue L13;
+                                          continue L14;
                                         } else {
                                           jc.b(10);
-                                          continue L13;
+                                          continue L14;
                                         }
                                       }
                                     } else {
                                       var4 = id.field_f.g(88);
                                       var5 = id.field_f.h(-11);
                                       var6 = id.field_f.h(-11);
-                                      var3_ref.field_D.a((byte) 2, var4);
-                                      var3_ref.field_D.field_g = var6;
-                                      var3_ref.field_D.field_f = var5;
+                                      ((tr) var3_ref).field_D.a((byte) 2, var4);
+                                      ((tr) var3_ref).field_D.field_g = var6;
+                                      ((tr) var3_ref).field_D.field_f = var5;
                                       var7 = var3_ref;
-                                      if (2 != var7.field_D.field_j) {
+                                      if (2 != ((tr) var7).field_D.field_j) {
                                         gj.a((byte) -81, true, am.field_n, 15);
-                                        continue L13;
+                                        continue L14;
                                       } else {
                                         gj.a((byte) 63, true, am.field_n, 16);
-                                        continue L13;
+                                        continue L14;
                                       }
                                     }
                                   }
                                 } else {
-                                  break L29;
+                                  break L32;
                                 }
                               }
                               ((Vertigo2) this).g(-109);
-                              continue L13;
+                              continue L14;
                             } else {
-                              L30: {
-                                L31: {
+                              L33: {
+                                L34: {
                                   if (am.field_b) {
-                                    break L31;
+                                    break L34;
                                   } else {
                                     if (ed.field_q) {
-                                      break L31;
+                                      break L34;
                                     } else {
-                                      break L30;
+                                      break L33;
                                     }
                                   }
                                 }
-                                L32: {
+                                L35: {
                                   g.b(7);
                                   if (!am.field_b) {
-                                    break L32;
+                                    break L35;
                                   } else {
                                     ln.field_d.a(2, false);
-                                    break L32;
+                                    break L35;
                                   }
                                 }
                                 an.field_c = true;
@@ -598,17 +590,17 @@ public final class Vertigo2 extends kd {
                                 am.field_n = -2;
                                 am.field_b = false;
                                 vl.a(-118);
-                                break L30;
+                                break L33;
                               }
                               kj.field_C = false;
-                              continue L13;
+                              continue L14;
                             }
                           } else {
-                            break L27;
+                            break L30;
                           }
                         }
                       }
-                      L33: {
+                      L36: {
                         g.b(7);
                         var3 = id.field_f.h(-11);
                         var4 = id.field_f.h(-11);
@@ -617,69 +609,69 @@ public final class Vertigo2 extends kd {
                         var7_int = id.field_f.a((byte) -11);
                         var8 = id.field_f.a((byte) -11);
                         if (id.field_f.h(-11) == 0) {
-                          stackOut_98_0 = 0;
-                          stackIn_99_0 = stackOut_98_0;
-                          break L33;
+                          stackOut_97_0 = 0;
+                          stackIn_98_0 = stackOut_97_0;
+                          break L36;
                         } else {
-                          stackOut_97_0 = 1;
-                          stackIn_99_0 = stackOut_97_0;
-                          break L33;
+                          stackOut_96_0 = 1;
+                          stackIn_98_0 = stackOut_96_0;
+                          break L36;
                         }
                       }
-                      var9 = stackIn_99_0;
+                      var9 = stackIn_98_0;
                       var10 = -2 + id.field_f.h(-11);
                       var11 = new String[id.field_f.h(-11)];
                       var12_int = 0;
-                      L34: while (true) {
+                      L37: while (true) {
                         if (var12_int >= var11.length) {
-                          L35: {
+                          L38: {
                             uh.field_Xb = null;
                             j.field_n = null;
                             var12 = new tr(true, var11, var10, var9 != 0, var3, var4, var5, var6);
                             var12.field_D.field_f = var7_int;
                             var12.field_D.field_g = var8;
                             var13 = id.field_f.h(-11);
-                            if ((var13 ^ -1) == -2) {
+                            if (var13 == 1) {
                               var12.a(16, id.field_f.h(-11));
                               var12.field_D.field_q = id.field_f.b(true);
                               var12.a(id.field_f, 101);
-                              break L35;
+                              break L38;
                             } else {
-                              break L35;
+                              break L38;
                             }
                           }
-                          L36: {
+                          L39: {
                             if (an.field_c) {
                               ln.field_d = null;
                               oe.field_pb = null;
                               an.field_c = false;
-                              break L36;
+                              break L39;
                             } else {
-                              break L36;
+                              break L39;
                             }
                           }
-                          L37: {
-                            if (-58 == (lc.field_f ^ -1)) {
+                          L40: {
+                            if (lc.field_f == 57) {
                               am.field_b = true;
                               ln.field_d = var12;
                               jc.b(10);
                               mq.b(true);
                               mb.b((byte) -110);
-                              break L37;
+                              break L40;
                             } else {
                               oe.field_pb = var12;
                               ed.field_q = true;
-                              break L37;
+                              break L40;
                             }
                           }
                           lc.field_d = true;
                           kj.field_C = false;
                           am.field_n = -1;
-                          continue L13;
+                          continue L14;
                         } else {
                           var11[var12_int] = id.field_f.f(128);
                           var12_int++;
-                          continue L34;
+                          continue L37;
                         }
                       }
                     }
@@ -691,32 +683,34 @@ public final class Vertigo2 extends kd {
                   rg.field_b = false;
                   oj.field_P = true;
                   am.field_n = -2;
-                  continue L13;
+                  continue L14;
                 }
               }
             } else {
-              L38: {
+              L41: {
                 if (ig.field_c == null) {
                   ig.field_c = new short[50];
-                  break L38;
+                  break L41;
                 } else {
-                  break L38;
+                  break L41;
                 }
               }
               var3 = 0;
-              L39: while (true) {
+              L42: while (true) {
                 if (var3 >= 50) {
-                  continue L13;
+                  continue L14;
                 } else {
-                  ig.field_c[var3] = (short)id.field_f.a((byte) -11);
-                  if (0 == ig.field_c[var3]) {
-                    ig.field_c[var3] = (short)30000;
-                    var3++;
-                    continue L39;
-                  } else {
-                    var3++;
-                    continue L39;
+                  L43: {
+                    ig.field_c[var3] = (short)id.field_f.a((byte) -11);
+                    if (0 == ig.field_c[var3]) {
+                      ig.field_c[var3] = (short) 30000;
+                      break L43;
+                    } else {
+                      break L43;
+                    }
                   }
+                  var3++;
+                  continue L42;
                 }
               }
             }
@@ -771,9 +765,6 @@ public final class Vertigo2 extends kd {
         int var3 = field_L ? 1 : 0;
         on.field_b[0][0] = hp.a(gp.field_s, "", "v_menu_select").a();
         on.field_b[1][0] = hp.a(gp.field_s, "", "v_explode").a();
-        if (param0 != 19804) {
-            return;
-        }
         on.field_b[2][0] = hp.a(gp.field_s, "", "v_deflate").a();
         on.field_b[3] = new ae[2];
         on.field_b[3][0] = hp.a(gp.field_s, "", "v_teleport").a();
@@ -841,9 +832,6 @@ public final class Vertigo2 extends kd {
         int var2 = 0;
         int var3 = field_L ? 1 : 0;
         qi.field_d = new bl(40, 100, 260, 300, va.field_s, qr.field_h, li.field_m, tb.field_d, pc.field_c);
-        if (param0 < 80) {
-            field_C = null;
-        }
         qi.field_d.field_F = 16777215;
         qi.field_d.field_P = 16777215;
         qi.field_d.field_I = 16777215;
@@ -896,53 +884,45 @@ public final class Vertigo2 extends kd {
         int var9 = 0;
         Object var10 = null;
         u[] var11 = null;
-        L0: {
-          var9 = field_L ? 1 : 0;
-          tk.field_c = (cc) (Object) w.a(ac.field_G, ml.field_y, "", "kartika13", 119);
-          vj.field_b = mi.a("achievementsgame", rn.field_u, (byte) 34, "");
-          var11 = new u[19];
-          var2 = var11;
-          var11[0] = vl.a(0, "", rn.field_u, "keys_esc");
-          var11[1] = vl.a(0, "", rn.field_u, "keys_right");
-          var2[2] = vl.a(tk.a((int) param0, 31), "", rn.field_u, "keys_left");
-          var11[3] = vl.a(0, "", rn.field_u, "keys_down");
-          var11[4] = vl.a(0, "", rn.field_u, "keys_up");
-          var11[5] = vl.a(0, "", rn.field_u, "keys_space");
-          var11[6] = vl.a(0, "", rn.field_u, "keys_ctrl");
-          var11[7] = vl.a(0, "", rn.field_u, "keys_enter");
-          var11[8] = vl.a(0, "", rn.field_u, "keys_shift");
-          var2[9] = vl.a(tk.a((int) param0, 31), "", rn.field_u, "keys_w");
-          var11[10] = vl.a(0, "", rn.field_u, "keys_a");
-          var11[11] = vl.a(0, "", rn.field_u, "keys_s");
-          var11[12] = vl.a(0, "", rn.field_u, "keys_d");
-          var11[13] = vl.a(0, "", rn.field_u, "keys_f1");
-          var11[14] = vl.a(0, "", rn.field_u, "keys_q");
-          var11[15] = vl.a(0, "", rn.field_u, "keys_e");
-          var11[16] = vl.a(0, "", rn.field_u, "keys_lt");
-          var2[17] = vl.a(param0 + -31, "", rn.field_u, "keys_gt");
-          var2[18] = vl.a(tk.a((int) param0, 31), "", rn.field_u, "keys_f12");
-          tk.field_c.a((fq[]) (Object) var2, (int[]) null);
-          fa.field_s = lm.a("", param0 + 23078, "button_purple_frame", rn.field_u);
-          uk.field_r = lm.a("", 23109, "button_blue_frame", rn.field_u);
-          mn.field_o = new er[3];
-          mn.field_o[0] = tn.a("button_start_blue", rn.field_u, -117, "");
-          mn.field_o[1] = tn.a("button_middle_blue", rn.field_u, -108, "");
-          mn.field_o[2] = tn.a("button_end_blue", rn.field_u, tk.a((int) param0, -102), "");
-          if (param0 == 31) {
-            break L0;
-          } else {
-            field_I = null;
-            break L0;
-          }
-        }
+        var9 = field_L ? 1 : 0;
+        tk.field_c = (cc) (Object) w.a(ac.field_G, ml.field_y, "", "kartika13", 119);
+        vj.field_b = mi.a("achievementsgame", rn.field_u, (byte) 34, "");
+        var11 = new u[19];
+        var2 = var11;
+        var11[0] = vl.a(0, "", rn.field_u, "keys_esc");
+        var11[1] = vl.a(0, "", rn.field_u, "keys_right");
+        var2[2] = vl.a(tk.a(31, 31), "", rn.field_u, "keys_left");
+        var11[3] = vl.a(0, "", rn.field_u, "keys_down");
+        var11[4] = vl.a(0, "", rn.field_u, "keys_up");
+        var11[5] = vl.a(0, "", rn.field_u, "keys_space");
+        var11[6] = vl.a(0, "", rn.field_u, "keys_ctrl");
+        var11[7] = vl.a(0, "", rn.field_u, "keys_enter");
+        var11[8] = vl.a(0, "", rn.field_u, "keys_shift");
+        var2[9] = vl.a(tk.a(31, 31), "", rn.field_u, "keys_w");
+        var11[10] = vl.a(0, "", rn.field_u, "keys_a");
+        var11[11] = vl.a(0, "", rn.field_u, "keys_s");
+        var11[12] = vl.a(0, "", rn.field_u, "keys_d");
+        var11[13] = vl.a(0, "", rn.field_u, "keys_f1");
+        var11[14] = vl.a(0, "", rn.field_u, "keys_q");
+        var11[15] = vl.a(0, "", rn.field_u, "keys_e");
+        var11[16] = vl.a(0, "", rn.field_u, "keys_lt");
+        var11[17] = vl.a(0, "", rn.field_u, "keys_gt");
+        var2[18] = vl.a(tk.a(31, 31), "", rn.field_u, "keys_f12");
+        tk.field_c.a((fq[]) (Object) var2, (int[]) null);
+        fa.field_s = lm.a("", 23109, "button_purple_frame", rn.field_u);
+        uk.field_r = lm.a("", 23109, "button_blue_frame", rn.field_u);
+        mn.field_o = new er[3];
+        mn.field_o[0] = tn.a("button_start_blue", rn.field_u, -117, "");
+        mn.field_o[1] = tn.a("button_middle_blue", rn.field_u, -108, "");
+        mn.field_o[2] = tn.a("button_end_blue", rn.field_u, tk.a(31, -102), "");
         sq.field_a = new er[3];
         sq.field_a[0] = tn.a("button_start_grey", rn.field_u, -111, "");
         sq.field_a[1] = tn.a("button_middle_grey", rn.field_u, -114, "");
         sq.field_a[2] = tn.a("button_end_grey", rn.field_u, -128, "");
         ln.field_b = new er[3];
         ln.field_b[0] = tn.a("button_start_purple", rn.field_u, -126, "");
-        ln.field_b[1] = tn.a("button_middle_purple", rn.field_u, tk.a((int) param0, -83), "");
-        ln.field_b[2] = tn.a("button_end_purple", rn.field_u, tk.a((int) param0, -84), "");
+        ln.field_b[1] = tn.a("button_middle_purple", rn.field_u, tk.a(31, -83), "");
+        ln.field_b[2] = tn.a("button_end_purple", rn.field_u, tk.a(31, -84), "");
         vp.field_b = tn.a("unachieved", ml.field_y, -94, "basic");
         wa.field_f = tn.a("orbcoin", ml.field_y, -83, "basic");
         uh.a(false, vp.field_b);
@@ -950,7 +930,7 @@ public final class Vertigo2 extends kd {
         uq.field_a = (fe) (Object) rq.a(rn.field_u, "menu_base", "", (byte) 98);
         ie.field_Hb = (fe) (Object) rq.a(rn.field_u, "game_complete", "", (byte) 98);
         la.field_a = (cc) (Object) rl.a(rn.field_u, 12, vi.field_n, "", "title_font");
-        va.field_s = new wn((cc) (Object) w.a(vi.field_n, rn.field_u, "interface_font", "", param0 + 96));
+        va.field_s = new wn((cc) (Object) w.a(vi.field_n, rn.field_u, "interface_font", "", 127));
         cd.field_b = tn.a("options_brush_01", rn.field_u, -94, "");
         or.field_b = tn.a("options_brush_02", rn.field_u, -103, "");
         tb.field_d = tn.a("levelselect_tab", rn.field_u, -110, "");
@@ -965,12 +945,12 @@ public final class Vertigo2 extends kd {
         k.field_c.d();
         wa.field_f.b(0, 0, var3, var3);
         wa.field_f = null;
-        ro.field_g.a(param0 + 77);
+        ro.field_g.a(108);
         var4_int = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var4_int >= mb.field_q.length) {
             var4_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var4_int >= td.field_l.length) {
                 tn.field_i = (fe) (Object) rq.a(rn.field_u, "interface_lives", "", (byte) 98);
                 bj.field_j = (fe) (Object) rq.a(rn.field_u, "interface_jetpack", "", (byte) 98);
@@ -980,10 +960,10 @@ public final class Vertigo2 extends kd {
                 im.field_c = new fe[5];
                 bh.field_y = new fe[5];
                 var4_int = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (5 <= var4_int) {
                     var4_int = 0;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (var4_int >= 5) {
                         sf.field_b = (fe) (Object) rq.a(rn.field_u, "star", "", (byte) 98);
                         am.field_o = (fe) (Object) rq.a(rn.field_u, "cloud", "", (byte) 98);
@@ -993,11 +973,11 @@ public final class Vertigo2 extends kd {
                         mp.field_a = (fe) (Object) rq.a(rn.field_u, "instructions_how_to_play", "", (byte) 98);
                         li.field_i = new fe[aa.field_Sb.length];
                         var4_int = 0;
-                        L5: while (true) {
+                        L4: while (true) {
                           if (aa.field_Sb.length <= var4_int) {
                             vj.field_g = new fe[bg.field_e.length];
                             var4_int = 0;
-                            L6: while (true) {
+                            L5: while (true) {
                               if (bg.field_e.length <= var4_int) {
                                 eq.field_F = (fe) (Object) rq.a(rn.field_u, "maintitle", "", (byte) 98);
                                 er discarded$1 = rq.a(rn.field_u, "timeattack_complete", "", (byte) 98);
@@ -1020,46 +1000,46 @@ public final class Vertigo2 extends kd {
                                 ua.a(12, uk.field_r, 320, var7, 480, 240, 10, fa.field_s, 12, va.field_s.field_f, 0, var5, 16777215, 16777215, 16777215, var6, (er[]) null, 0, var8, (byte) 92, tk.field_c);
                                 di.b((byte) -90);
                                 rn.field_u = null;
-                                ((Vertigo2) this).d(param0 + -48);
+                                ((Vertigo2) this).d(-17);
                                 return;
                               } else {
                                 vj.field_g[var4_int] = (fe) (Object) rq.a(rn.field_u, "instructions_item_" + var4_int, "", (byte) 98);
                                 var4_int++;
-                                continue L6;
+                                continue L5;
                               }
                             }
                           } else {
                             li.field_i[var4_int] = (fe) (Object) rq.a(rn.field_u, "instructions_block_" + var4_int, "", (byte) 98);
                             var4_int++;
-                            continue L5;
+                            continue L4;
                           }
                         }
                       } else {
                         bh.field_y[var4_int] = (fe) (Object) rq.a(rn.field_u, "interface_bucket_blue_" + (-var4_int + 5), "", (byte) 98);
                         var4_int++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
                     im.field_c[var4_int] = (fe) (Object) rq.a(rn.field_u, "interface_bucket_" + (-var4_int + 5), "", (byte) 98);
                     var4_int++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
                 ea.field_d[var4_int] = an.b(119, td.field_l[var4_int]);
                 var4_int++;
-                continue L2;
+                continue L1;
               }
             }
           } else {
             if (null != mb.field_q[var4_int]) {
               th.field_f[var4_int] = an.b(118, mb.field_q[var4_int]);
               var4_int++;
-              continue L1;
+              continue L0;
             } else {
               var4_int++;
-              continue L1;
+              continue L0;
             }
           }
         }
@@ -1510,7 +1490,7 @@ public final class Vertigo2 extends kd {
                         break L4;
                       }
                     }
-                    if (lc.field_b > -1) {
+                    if (lc.field_b < 0) {
                       break L3;
                     } else {
                       fh.field_y[lc.field_b].b((byte) -114);
@@ -1526,7 +1506,7 @@ public final class Vertigo2 extends kd {
                     }
                   }
                 } else {
-                  if (-17 >= (vl.field_c ^ -1)) {
+                  if (vl.field_c >= 16) {
                     L5: {
                       if (vp.a(18055, lc.field_b)) {
                         ca.a(var3 != 0, -16237);
@@ -1552,7 +1532,7 @@ public final class Vertigo2 extends kd {
                         break L6;
                       }
                     }
-                    if ((lc.field_b ^ -1) > -1) {
+                    if (lc.field_b < 0) {
                       break L3;
                     } else {
                       fh.field_y[lc.field_b].b((byte) -114);
@@ -1563,7 +1543,7 @@ public final class Vertigo2 extends kd {
               }
               L7: {
                 L8: {
-                  if (-1 != vl.field_c) {
+                  if (vl.field_c != 0) {
                     break L8;
                   } else {
                     if (0 == vq.field_r) {
@@ -1603,7 +1583,7 @@ public final class Vertigo2 extends kd {
                 }
                 var4_int = var4_int << 2;
                 bi.c(var4_int, var4_int, 0, 0, 640, 480);
-                bi.b(0, 0, 640, 480, 1, var4_int << -1064431710);
+                bi.b(0, 0, 640, 480, 1, var4_int << 2);
                 break L7;
               }
               L12: {
@@ -1626,11 +1606,11 @@ public final class Vertigo2 extends kd {
                 if (var4 != null) {
                   L15: {
                     var6 = oa.field_l;
-                    if (-81 < var6) {
+                    if (var6 < 80) {
                       var5 = -32 + var6 / 2;
                       break L15;
                     } else {
-                      if (-231 > var6) {
+                      if (var6 < 230) {
                         var5 = 8;
                         break L15;
                       } else {
@@ -1725,59 +1705,66 @@ public final class Vertigo2 extends kd {
     }
 
     private final static int p(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        L0: {
-          var3 = field_L ? 1 : 0;
-          if (param0 == -78) {
-            break L0;
-          } else {
-            field_G = null;
-            break L0;
-          }
-        }
-        var1 = 0;
-        L1: while (true) {
-          if (!gf.a(false)) {
-            L2: {
-              kg.field_G.a((byte) -29, we.a(gb.field_d, true, ed.field_n), we.a(no.field_e, true, sd.field_N));
-              if (kg.field_G.a(84)) {
-                var1 = 1;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              var2 = 0;
-              if (var1 == 0) {
-                break L3;
-              } else {
-                if (kg.field_G.field_c < 0) {
-                  break L3;
-                } else {
-                  var2 = rc.field_c[kg.field_G.field_c];
-                  if (var2 != 2) {
+        int stackIn_14_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_13_0 = 0;
+        var3 = field_L ? 1 : 0;
+        try {
+          L0: {
+            var1_int = 0;
+            L1: while (true) {
+              if (!gf.a(false)) {
+                L2: {
+                  kg.field_G.a((byte) -29, we.a(gb.field_d, true, ed.field_n), we.a(no.field_e, true, sd.field_N));
+                  if (kg.field_G.a(84)) {
+                    var1_int = 1;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                L3: {
+                  var2 = 0;
+                  if (var1_int == 0) {
                     break L3;
                   } else {
-                    lb.a(11141);
-                    break L3;
+                    if (kg.field_G.field_c < 0) {
+                      break L3;
+                    } else {
+                      var2 = rc.field_c[kg.field_G.field_c];
+                      if (var2 != 2) {
+                        break L3;
+                      } else {
+                        lb.a(11141);
+                        break L3;
+                      }
+                    }
                   }
+                }
+                stackOut_13_0 = var2;
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
+              } else {
+                kg.field_G.d((byte) 88);
+                if (kg.field_G.a(84)) {
+                  var1_int = 1;
+                  continue L1;
+                } else {
+                  continue L1;
                 }
               }
             }
-            return var2;
-          } else {
-            kg.field_G.d((byte) 88);
-            if (kg.field_G.a(84)) {
-              var1 = 1;
-              continue L1;
-            } else {
-              continue L1;
-            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var1, "Vertigo2.R(" + -78 + 41);
         }
+        return stackIn_14_0;
     }
 
     private final void l(byte param0) {
@@ -1799,25 +1786,83 @@ public final class Vertigo2 extends kd {
         np.field_Kb = pm.a(14, 123);
         ml.field_u = pm.a(15, 123);
         tl.field_c = pm.a(16, 124);
-        int var2 = -39 / ((param0 - 70) / 42);
+        int var2 = -39;
         ii.field_C = pm.a(17, 124);
         hi.field_o = pm.a(18, 123);
     }
 
     private final void k(byte param0) {
-        int var2 = -22 / ((48 - param0) / 60);
+        int var2 = 22;
         ei.a(pp.field_s, (byte) -81);
         pp.field_s = null;
         ((Vertigo2) this).d(-17);
     }
 
     private final void a(int param0, String param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = field_L ? 1 : 0;
-        on.field_b[param3] = new ae[param0 + param2];
-        on.field_b[param3][0] = hp.a(gp.field_s, "", param1).a();
-        for (var5 = 1; param2 >= var5; var5++) {
-            on.field_b[param3][var5] = hp.a(gp.field_s, "", param1 + var5).a();
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        var6 = field_L ? 1 : 0;
+        try {
+          L0: {
+            on.field_b[param3] = new ae[param0 + param2];
+            on.field_b[param3][0] = hp.a(gp.field_s, "", param1).a();
+            var5_int = 1;
+            L1: while (true) {
+              if (param2 < var5_int) {
+                break L0;
+              } else {
+                on.field_b[param3][var5_int] = hp.a(gp.field_s, "", param1 + var5_int).a();
+                var5_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var5;
+            stackOut_5_1 = new StringBuilder().append("Vertigo2.C(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -1885,7 +1930,7 @@ public final class Vertigo2 extends kd {
             }
             var3 = 0;
             L5: while (true) {
-              if ((var3 ^ -1) <= -24) {
+              if (var3 >= 23) {
                 lc.field_b = 0;
                 vc.a(0);
                 va.a(50, (byte) 119);
@@ -2349,7 +2394,7 @@ public final class Vertigo2 extends kd {
                         L9: {
                           if (eo.field_o) {
                             if (!am.field_b) {
-                              boolean discarded$2 = gh.a(12, 12, 13, 15);
+                              boolean discarded$3 = gh.a(12, 12, 13, 15);
                               break L9;
                             } else {
                               if (!jm.a(15, 13, 915, 12)) {
@@ -2416,12 +2461,13 @@ public final class Vertigo2 extends kd {
             if (bg.field_b.a((byte) 100) == null) {
               break L0;
             } else {
+              int fieldTemp$4 = oa.field_l + 1;
               oa.field_l = oa.field_l + 1;
-              if (335 != oa.field_l + 1) {
+              if (335 != fieldTemp$4) {
                 break L0;
               } else {
                 oa.field_l = 0;
-                li discarded$3 = bg.field_b.b((byte) -43);
+                li discarded$5 = bg.field_b.b((byte) -43);
                 break L0;
               }
             }
@@ -2435,7 +2481,7 @@ public final class Vertigo2 extends kd {
               uh.field_Xb = null;
               j.field_n = null;
               var4 = qi.field_d.field_t;
-              if ((var4 ^ -1) <= -1) {
+              if (var4 >= 0) {
                 break L14;
               } else {
                 var4 = 0;
@@ -2488,7 +2534,7 @@ public final class Vertigo2 extends kd {
                     if (null == ln.field_d) {
                       break L18;
                     } else {
-                      if ((ln.field_d.field_B ^ -1) > -1) {
+                      if (ln.field_d.field_B < 0) {
                         break L18;
                       } else {
                         if (null == oe.field_pb) {
@@ -2517,7 +2563,7 @@ public final class Vertigo2 extends kd {
                 L19: {
                   ln.field_d.field_D.a(30113, true);
                   ln.field_d.e(-111);
-                  if (-1 == (ln.field_d.field_D.field_j ^ -1)) {
+                  if (ln.field_d.field_D.field_j == 0) {
                     var7_ref_wo = ln.field_d.field_D.field_r.field_f[0];
                     var7_ref_wo.a(true, var7_ref_wo.l(-32768) + -1);
                     break L19;
@@ -2614,7 +2660,7 @@ public final class Vertigo2 extends kd {
             }
           }
           L27: {
-            if ((am.field_n ^ -1) != 4) {
+            if (am.field_n != -5) {
               break L27;
             } else {
               qk.d(gd.field_j.a((byte) -38), 11, 18964);
@@ -2638,117 +2684,274 @@ public final class Vertigo2 extends kd {
     }
 
     final static String a(String[] args, String param1, int param2) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         int var9 = 0;
         String var10 = null;
         int var11 = 0;
         int var12 = 0;
+        String stackIn_27_0 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_26_0 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
         var12 = field_L ? 1 : 0;
-        var3 = param1.length();
-        var4 = var3;
-        var5 = 0;
-        L0: while (true) {
-          var6_int = param1.indexOf("<%", var5);
-          if (-1 >= (var6_int ^ -1)) {
-            var5 = var6_int - -2;
-            L1: while (true) {
-              L2: {
-                if (var5 >= var3) {
-                  break L2;
-                } else {
-                  if (!ab.a(false, param1.charAt(var5))) {
-                    break L2;
-                  } else {
-                    var5++;
-                    continue L1;
-                  }
-                }
-              }
-              var7_ref = param1.substring(var6_int - -2, var5);
-              if (!qb.a((CharSequence) (Object) var7_ref, -124)) {
-                continue L0;
-              } else {
-                if (var5 >= var3) {
-                  continue L0;
-                } else {
-                  if (param1.charAt(var5) == 62) {
-                    var5++;
-                    var8 = cf.a(109, (CharSequence) (Object) var7_ref);
-                    var4 = var4 + (-var5 - -var6_int + args[var8].length());
-                    continue L0;
-                  } else {
-                    continue L0;
-                  }
-                }
-              }
-            }
-          } else {
-            var8 = -43 % ((-70 - param2) / 42);
-            var6 = new StringBuilder(var4);
-            var7 = 0;
+        try {
+          L0: {
+            var3_int = param1.length();
+            var4 = var3_int;
             var5 = 0;
-            L3: while (true) {
-              var9 = param1.indexOf("<%", var5);
-              if (0 <= var9) {
-                var5 = 2 + var9;
-                L4: while (true) {
-                  L5: {
-                    if (var3 <= var5) {
-                      break L5;
+            L1: while (true) {
+              var6_int = param1.indexOf("<%", var5);
+              if (var6_int >= 0) {
+                var5 = var6_int - -2;
+                L2: while (true) {
+                  L3: {
+                    if (var5 >= var3_int) {
+                      break L3;
                     } else {
                       if (!ab.a(false, param1.charAt(var5))) {
-                        break L5;
+                        break L3;
                       } else {
                         var5++;
-                        continue L4;
+                        continue L2;
                       }
                     }
                   }
-                  var10 = param1.substring(2 + var9, var5);
-                  if (qb.a((CharSequence) (Object) var10, 112)) {
-                    if (var3 <= var5) {
-                      continue L3;
+                  var7_ref_String = param1.substring(var6_int - -2, var5);
+                  if (!qb.a((CharSequence) (Object) var7_ref_String, -124)) {
+                    continue L1;
+                  } else {
+                    if (var5 >= var3_int) {
+                      continue L1;
                     } else {
                       if (param1.charAt(var5) == 62) {
                         var5++;
-                        var11 = cf.a(92, (CharSequence) (Object) var10);
-                        StringBuilder discarded$3 = var6.append(param1.substring(var7, var9));
-                        var7 = var5;
-                        StringBuilder discarded$4 = var6.append(args[var11]);
-                        continue L3;
+                        var8 = cf.a(109, (CharSequence) (Object) var7_ref_String);
+                        var4 = var4 + (-var5 - -var6_int + args[var8].length());
+                        continue L1;
                       } else {
-                        continue L3;
+                        continue L1;
                       }
                     }
-                  } else {
-                    continue L3;
                   }
                 }
               } else {
-                StringBuilder discarded$5 = var6.append(param1.substring(var7));
-                return var6.toString();
+                var8 = -43 % ((-70 - param2) / 42);
+                var6 = new StringBuilder(var4);
+                var7 = 0;
+                var5 = 0;
+                L4: while (true) {
+                  var9 = param1.indexOf("<%", var5);
+                  if (0 <= var9) {
+                    var5 = 2 + var9;
+                    L5: while (true) {
+                      L6: {
+                        if (var3_int <= var5) {
+                          break L6;
+                        } else {
+                          if (!ab.a(false, param1.charAt(var5))) {
+                            break L6;
+                          } else {
+                            var5++;
+                            continue L5;
+                          }
+                        }
+                      }
+                      var10 = param1.substring(2 + var9, var5);
+                      if (qb.a((CharSequence) (Object) var10, 112)) {
+                        if (var3_int <= var5) {
+                          continue L4;
+                        } else {
+                          if (param1.charAt(var5) == 62) {
+                            var5++;
+                            var11 = cf.a(92, (CharSequence) (Object) var10);
+                            StringBuilder discarded$3 = var6.append(param1.substring(var7, var9));
+                            var7 = var5;
+                            StringBuilder discarded$4 = var6.append(args[var11]);
+                            continue L4;
+                          } else {
+                            continue L4;
+                          }
+                        }
+                      } else {
+                        continue L4;
+                      }
+                    }
+                  } else {
+                    StringBuilder discarded$5 = var6.append(param1.substring(var7));
+                    stackOut_26_0 = var6.toString();
+                    stackIn_27_0 = stackOut_26_0;
+                    break L0;
+                  }
+                }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var3 = decompiledCaughtException;
+            stackOut_28_0 = (RuntimeException) var3;
+            stackOut_28_1 = new StringBuilder().append("Vertigo2.D(");
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
+            if (args == null) {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L7;
+            } else {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44);
+            stackIn_33_0 = stackOut_31_0;
+            stackIn_33_1 = stackOut_31_1;
+            stackIn_32_0 = stackOut_31_0;
+            stackIn_32_1 = stackOut_31_1;
+            if (param1 == null) {
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "null";
+              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_1 = stackOut_33_1;
+              stackIn_34_2 = stackOut_33_2;
+              break L8;
+            } else {
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "{...}";
+              stackIn_34_0 = stackOut_32_0;
+              stackIn_34_1 = stackOut_32_1;
+              stackIn_34_2 = stackOut_32_2;
+              break L8;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param2 + 41);
         }
+        return stackIn_27_0;
     }
 
     final static void a(java.awt.Canvas param0, byte param1) {
-        rm.a((byte) -89, (java.awt.Component) (Object) param0);
-        ee.a((java.awt.Component) (Object) param0, param1 + 140);
-        if (param1 != -35) {
-            Object var3 = null;
-            Vertigo2.a((java.awt.Canvas) null, (byte) 15);
-        }
-        if (th.field_g != null) {
-            th.field_g.a((java.awt.Component) (Object) param0, param1 + 35);
+        RuntimeException var2 = null;
+        Object var3 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              rm.a((byte) -89, (java.awt.Component) (Object) param0);
+              ee.a((java.awt.Component) (Object) param0, param1 + 140);
+              if (param1 == -35) {
+                break L1;
+              } else {
+                var3 = null;
+                Vertigo2.a((java.awt.Canvas) null, (byte) 15);
+                break L1;
+              }
+            }
+            L2: {
+              if (th.field_g == null) {
+                break L2;
+              } else {
+                th.field_g.a((java.awt.Component) (Object) param0, param1 + 35);
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("Vertigo2.I(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L3;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L3;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
     }
 

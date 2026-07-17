@@ -66,10 +66,14 @@ abstract class bd extends pj {
     }
 
     bd(k param0, int param1, int param2) {
-        super(-param1 + di.field_a >> -1334053151, qe.field_l + -param2 >> 1688990433, param1, param2, (cg) null);
-        ((bd) this).field_Q = false;
-        ((bd) this).field_R = param0;
-        ((bd) this).field_J = 0;
+        super(-param1 + di.field_a >> 1, qe.field_l + -param2 >> 1, param1, param2, (cg) null);
+        try {
+            ((bd) this).field_Q = false;
+            ((bd) this).field_R = param0;
+            ((bd) this).field_J = 0;
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "bd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     boolean j(int param0) {
@@ -88,7 +92,7 @@ abstract class bd extends pj {
     final vg g(int param0) {
         vg var2 = null;
         if (param0 == -22426) {
-          var2 = super.g(param0 ^ 0);
+          var2 = super.g(param0);
           if (var2 != null) {
             return var2;
           } else {
@@ -96,7 +100,7 @@ abstract class bd extends pj {
           }
         } else {
           ((bd) this).field_J = 100;
-          var2 = super.g(param0 ^ 0);
+          var2 = super.g(param0);
           if (var2 != null) {
             return var2;
           } else {
@@ -106,8 +110,8 @@ abstract class bd extends pj {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        if (-1 != (((bd) this).field_J ^ -1)) {
-          if ((((bd) this).field_J ^ -1) > -257) {
+        if (((bd) this).field_J != 0) {
+          if (((bd) this).field_J < 256) {
             if (uk.field_f != null) {
               if (((bd) this).field_w <= uk.field_f.field_y) {
                 if (uk.field_f.field_w >= ((bd) this).field_k) {
@@ -168,16 +172,16 @@ abstract class bd extends pj {
         field_P = null;
         field_K = null;
         field_O = null;
-        int var1 = -114 / ((-67 - param0) / 45);
+        int var1 = -114;
     }
 
     final void b(int param0, int param1, int param2) {
         if (param1 != 1688990433) {
           field_K = null;
-          ((bd) this).a(qe.field_l + -param2 >> 1275705409, param2, -param0 + di.field_a >> 774742753, 16535, param0);
+          ((bd) this).a(qe.field_l + -param2 >> 1, param2, -param0 + di.field_a >> 1, 16535, param0);
           return;
         } else {
-          ((bd) this).a(qe.field_l + -param2 >> 1275705409, param2, -param0 + di.field_a >> 774742753, 16535, param0);
+          ((bd) this).a(qe.field_l + -param2 >> 1, param2, -param0 + di.field_a >> 1, 16535, param0);
           return;
         }
     }
@@ -208,7 +212,7 @@ abstract class bd extends pj {
             }
           }
           if (((bd) this).field_J == 0) {
-            if (-1 != (var2 ^ -1)) {
+            if (var2 != 0) {
               return false;
             } else {
               L2: {
@@ -239,7 +243,7 @@ abstract class bd extends pj {
     }
 
     private static void $cfr$clinit() {
-        field_K = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
+        field_K = new char[]{'_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
         field_T = new bb();
     }
 }

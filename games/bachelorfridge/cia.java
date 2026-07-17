@@ -16,28 +16,13 @@ class cia extends bw {
     int field_q;
 
     final static boolean a(int param0) {
-        if (param0 == 0) {
-          if (dma.field_b != null) {
-            if (uca.field_a != eia.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (dma.field_b == null) {
             return false;
-          }
-        } else {
-          field_f = null;
-          if (dma.field_b != null) {
-            if (uca.field_a != eia.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (uca.field_a != eia.field_a) {
+            return false;
+        }
+        return true;
     }
 
     private cia(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -45,8 +30,9 @@ class cia extends bw {
     }
 
     final boolean b(boolean param0) {
+        int fieldTemp$2 = ((cia) this).field_o + ((cia) this).field_m;
         ((cia) this).field_o = ((cia) this).field_o + ((cia) this).field_m;
-        if (((cia) this).field_o + ((cia) this).field_m >= 0) {
+        if (fieldTemp$2 >= 0) {
           ((cia) this).field_q = ((cia) this).field_q + ((cia) this).field_g;
           ((cia) this).field_h = ((cia) this).field_h + ((cia) this).field_k;
           ((cia) this).field_i = ((cia) this).field_i + ((cia) this).field_p;
@@ -93,9 +79,6 @@ class cia extends bw {
 
     public static void c(byte param0) {
         field_n = null;
-        if (param0 >= -70) {
-            return;
-        }
         field_f = null;
     }
 

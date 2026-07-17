@@ -7,7 +7,7 @@ final class pia extends oda implements oo {
     static mma field_x;
 
     public static void e(int param0) {
-        int var1 = -60 / ((-23 - param0) / 52);
+        int var1 = -60;
         field_x = null;
     }
 
@@ -17,15 +17,19 @@ final class pia extends oda implements oo {
         if (param0 != 16777215) {
           return;
         } else {
-          ((pia) this).field_v.a(-var2 + ((pia) this).field_h >> -1484965119, 140, 25, param0 + -16777214, ((pia) this).field_f + 20 - 25 >> 279984801);
-          ((pia) this).field_w.a((-var2 + ((pia) this).field_h >> 2048248289) - -150, 100, 30, 1, (20 + (((pia) this).field_f - 30) >> 49025217) + 2);
+          ((pia) this).field_v.a(-var2 + ((pia) this).field_h >> 1, 140, 25, param0 + -16777214, ((pia) this).field_f - 5 >> 1);
+          ((pia) this).field_w.a((-var2 + ((pia) this).field_h >> 1) - -150, 100, 30, 1, (20 + (((pia) this).field_f - 30) >> 1) + 2);
           return;
         }
     }
 
     final void a(int param0, int param1, int param2, shb param3) {
-        super.a(param0, param1, param2, param3);
-        ((pia) this).field_w.field_x = ((pia) this).field_v.a(param2 ^ 782443887).a((byte) 35) == lea.field_o ? true : false;
+        try {
+            super.a(param0, param1, param2, param3);
+            ((pia) this).field_w.field_x = ((pia) this).field_v.a(param2 ^ 782443887).a((byte) 35) == lea.field_o ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "pia.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     pia(int param0, int param1, int param2, int param3) {
@@ -48,21 +52,16 @@ final class pia extends oda implements oo {
     }
 
     public final void a(int param0, int param1, int param2, htb param3, int param4) {
-        if (param0 == 11) {
-          if (((pia) this).field_v.a(param0 ^ -782444209).a((byte) 35) != lea.field_o) {
+        if (param0 != 11) {
+            ((pia) this).field_v = null;
+        }
+        if (((pia) this).field_v.a(param0 ^ -782444209).a((byte) 35) != lea.field_o) {
             return;
-          } else {
+        }
+        try {
             seb.b(0, ((pia) this).field_v.e(-5), ((pia) this).field_v.c(true), ((pia) this).field_v.f(3476));
-            return;
-          }
-        } else {
-          ((pia) this).field_v = null;
-          if (((pia) this).field_v.a(param0 ^ -782444209).a((byte) 35) != lea.field_o) {
-            return;
-          } else {
-            seb.b(0, ((pia) this).field_v.e(-5), ((pia) this).field_v.c(true), ((pia) this).field_v.f(3476));
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "pia.Q(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 

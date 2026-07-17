@@ -64,72 +64,29 @@ abstract class oe extends ga {
     }
 
     private final int b(boolean param0) {
-        int stackIn_6_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0) {
-          L0: {
-            oe.k(-60);
-            if (((oe) this).field_H) {
-              if ((Object) (Object) ((oe) this).field_L.h(0) != this) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
-                break L0;
-              } else {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
-                break L0;
-              }
-            } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
-              break L0;
-            }
-          }
-          return stackIn_12_0;
-        } else {
-          L1: {
-            if (((oe) this).field_H) {
-              if ((Object) (Object) ((oe) this).field_L.h(0) != this) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                break L1;
-              } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_6_0;
-        }
+        return !((oe) this).field_H ? 0 : (Object) (Object) ((oe) this).field_L.h(0) == this ? 256 : 0;
     }
 
     final void a(int param0, int param1, int param2) {
         if (param0 > -30) {
           field_P = false;
-          ((oe) this).a(-127, param2, qk.field_c + -param1 >> -1480051007, param1, tg.field_L - param2 >> 962101025);
+          ((oe) this).a(-127, param2, qk.field_c + -param1 >> 1, param1, tg.field_L - param2 >> 1);
           return;
         } else {
-          ((oe) this).a(-127, param2, qk.field_c + -param1 >> -1480051007, param1, tg.field_L - param2 >> 962101025);
+          ((oe) this).a(-127, param2, qk.field_c + -param1 >> 1, param1, tg.field_L - param2 >> 1);
           return;
         }
     }
 
     oe(sh param0, int param1, int param2) {
-        super(tg.field_L + -param1 >> -1596943807, qk.field_c - param2 >> 1637793313, param1, param2, (fe) null);
-        ((oe) this).field_V = 0;
-        ((oe) this).field_H = false;
-        ((oe) this).field_L = param0;
+        super(tg.field_L + -param1 >> 1, qk.field_c - param2 >> 1, param1, param2, (fe) null);
+        try {
+            ((oe) this).field_V = 0;
+            ((oe) this).field_H = false;
+            ((oe) this).field_L = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "oe.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     boolean l(int param0) {
@@ -150,7 +107,7 @@ abstract class oe extends ga {
         if (param0 == -6) {
           var2 = this.b(false);
           var3 = var2 + -((oe) this).field_V;
-          if (-1 > (var3 ^ -1)) {
+          if (var3 > 0) {
             L0: {
               ((oe) this).field_V = ((oe) this).field_V + (8 + (var3 + -1)) / 8;
               if (0 > var3) {
@@ -162,7 +119,7 @@ abstract class oe extends ga {
             }
             L1: {
               L2: {
-                if (-1 != (((oe) this).field_V ^ -1)) {
+                if (((oe) this).field_V != 0) {
                   break L2;
                 } else {
                   if (0 != var2) {
@@ -194,7 +151,7 @@ abstract class oe extends ga {
             }
             L4: {
               L5: {
-                if (-1 != (((oe) this).field_V ^ -1)) {
+                if (((oe) this).field_V != 0) {
                   break L5;
                 } else {
                   if (0 != var2) {
@@ -220,7 +177,7 @@ abstract class oe extends ga {
           field_Q = null;
           var2 = this.b(false);
           var3 = var2 + -((oe) this).field_V;
-          if (-1 <= (var3 ^ -1)) {
+          if (var3 <= 0) {
             L6: {
               if (0 > var3) {
                 ((oe) this).field_V = ((oe) this).field_V + (var3 + -15) / 16;
@@ -229,7 +186,7 @@ abstract class oe extends ga {
                 break L6;
               }
             }
-            if (-1 == (((oe) this).field_V ^ -1)) {
+            if (((oe) this).field_V == 0) {
               if (0 != var2) {
                 return false;
               } else {
@@ -261,7 +218,7 @@ abstract class oe extends ga {
             }
             L9: {
               L10: {
-                if (-1 != (((oe) this).field_V ^ -1)) {
+                if (((oe) this).field_V != 0) {
                   break L10;
                 } else {
                   if (0 != var2) {
@@ -287,7 +244,7 @@ abstract class oe extends ga {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        if (-1 != (((oe) this).field_V ^ -1)) {
+        if (((oe) this).field_V != 0) {
           if (256 > ((oe) this).field_V) {
             if (param2 >= 36) {
               if (ga.field_K != null) {
@@ -391,7 +348,7 @@ abstract class oe extends ga {
         if (param0 != -1) {
             return null;
         }
-        fj var2 = super.f(param0 + 0);
+        fj var2 = super.f(param0);
         if (var2 != null) {
             return var2;
         }

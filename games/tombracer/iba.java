@@ -21,90 +21,39 @@ public class iba {
     public static void a(int param0, int param1, String param2) {
         int var3_int = 0;
         Exception var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    field_e = param2;
-                    field_a = param0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        field_c = System.getProperty("user.home");
-                        var3_int = -103 % ((51 - param1) / 60);
-                        if (field_c == null) {
-                            statePc = 7;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_c = field_c + "/";
-                        field_b = true;
-                        if (null != field_c) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        field_c = "~/";
-                        return;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    var3 = (Exception) (Object) caughtException;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    field_b = true;
-                    if (null == field_c) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                case 9: {
-                    field_c = "~/";
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        field_e = param2;
+        field_a = param0;
+        try {
+          L0: {
+            field_c = System.getProperty("user.home");
+            var3_int = -103 % ((51 - param1) / 60);
+            if (field_c == null) {
+              break L0;
+            } else {
+              field_c = field_c + "/";
+              field_b = true;
+              if (null != field_c) {
+                return;
+              } else {
+                field_c = "~/";
+                return;
+              }
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = (Exception) (Object) decompiledCaughtException;
+            break L1;
+          }
+        }
+        field_b = true;
+        if (null == field_c) {
+          field_c = "~/";
+          return;
+        } else {
+          return;
         }
     }
 

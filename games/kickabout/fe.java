@@ -6,14 +6,6 @@ final class fe {
     private java.awt.GraphicsDevice field_a;
 
     private final void a(java.awt.Frame param0, int param1) {
-        L0: {
-          if (param1 == 0) {
-            break L0;
-          } else {
-            int[] discarded$2 = ((fe) this).listmodes();
-            break L0;
-          }
-        }
         ((fe) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
@@ -32,12 +24,12 @@ final class fe {
         int var3 = 0;
         java.awt.DisplayMode[] var4 = ((fe) this).field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 755799842];
+        int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 288313410] = var4[var3].getWidth();
-            var2[(var3 << -124228510) + 1] = var4[var3].getHeight();
-            var2[2 + (var3 << -831510846)] = var4[var3].getBitDepth();
-            var2[(var3 << -23845150) + 3] = var4[var3].getRefreshRate();
+            var2[var3 << 2] = var4[var3].getWidth();
+            var2[(var3 << 2) + 1] = var4[var3].getHeight();
+            var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
+            var2[(var3 << 2) + 3] = var4[var3].getRefreshRate();
         }
         return var2;
     }

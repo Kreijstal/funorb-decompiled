@@ -51,8 +51,8 @@ final class gk {
 
     final static void b(boolean param0) {
         try {
-            Exception var1 = null;
-            java.lang.reflect.Method var1_ref = null;
+            java.lang.reflect.Method var1 = null;
+            Exception var1_ref = null;
             Throwable var2 = null;
             Runtime var2_ref = null;
             Long var3 = null;
@@ -60,32 +60,37 @@ final class gk {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                if (param0) {
-                  break L0;
-                } else {
-                  gk.b(true);
-                  break L0;
-                }
-              }
-              L1: {
-                var1_ref = Runtime.class.getMethod("maxMemory", new Class[0]);
-                if (var1_ref != null) {
-                  try {
-                    var2_ref = Runtime.getRuntime();
-                    var4 = null;
-                    var3 = (Long) var1_ref.invoke((Object) (Object) var2_ref, (Object[]) null);
-                    wh.field_x = (int)(var3.longValue() / 1048576L) - -1;
-                  } catch (java.lang.Throwable decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
+                L1: {
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  if (var1 != null) {
+                    try {
+                      L2: {
+                        var2_ref = Runtime.getRuntime();
+                        var4 = null;
+                        var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        wh.field_x = (int)(var3.longValue() / 1048576L) - -1;
+                        break L2;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var2 = decompiledCaughtException;
+                        break L3;
+                      }
+                    }
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  break L1;
-                } else {
-                  break L1;
                 }
+                break L0;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              var2 = decompiledCaughtException;
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var1_ref = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -99,9 +104,6 @@ final class gk {
         field_H = null;
         field_v = null;
         field_o = null;
-        if (param0 != 0) {
-            return;
-        }
         field_w = null;
         field_u = null;
         field_O = null;

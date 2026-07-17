@@ -13,9 +13,6 @@ final class pc {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 >= -43) {
-            return;
-        }
         field_d = null;
         field_c = null;
         field_a = null;
@@ -32,7 +29,7 @@ final class pc {
             }
             ah.a((byte) -68, -var1 + wc.field_a);
         }
-        var1 = 57 % ((param0 - -18) / 58);
+        var1 = 1;
     }
 
     static {

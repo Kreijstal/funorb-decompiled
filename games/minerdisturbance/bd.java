@@ -28,18 +28,22 @@ final class bd {
     }
 
     final static void a(String param0, int param1, int param2, int param3) {
-        int var4 = 0;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = MinerDisturbance.field_ab;
-        sb.field_n.field_T[0][bi.field_p] = 0;
-        sb.field_n.field_T[0][re.field_b] = 14540253;
-        for (var4 = param2; var4 < sb.field_n.field_G; var4++) {
-            var5 = 169 - -(-76 * var4 / sb.field_n.field_G);
-            sb.field_n.field_T[0][wd.field_e] = hi.a(hi.a(var5 << -435920024, var5 << 1729126672), var5);
-            eh.a(0, param3 + -sb.field_n.field_G + var4, 640, -sb.field_n.field_G + param3 - -var4 - -1);
-            sb.field_n.b(param0, param1, param3, 0, -1);
+        try {
+            sb.field_n.field_T[0][bi.field_p] = 0;
+            sb.field_n.field_T[0][re.field_b] = 14540253;
+            for (var4_int = param2; var4_int < sb.field_n.field_G; var4_int++) {
+                var5 = 169 - -(-76 * var4_int / sb.field_n.field_G);
+                sb.field_n.field_T[0][wd.field_e] = hi.a(hi.a(var5 << 8, var5 << 16), var5);
+                eh.a(0, 109 + -sb.field_n.field_G + var4_int, 640, -sb.field_n.field_G + 109 - -var4_int - -1);
+                sb.field_n.b(param0, param1, 109, 0, -1);
+            }
+            eh.a();
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "bd.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + 109 + 41);
         }
-        eh.a();
     }
 
     public final String toString() {

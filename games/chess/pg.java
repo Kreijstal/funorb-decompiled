@@ -20,30 +20,28 @@ final class pg extends o {
         field_o = null;
         field_n = null;
         field_v = null;
-        int var1 = -24 % ((-47 - param0) / 56);
+        int var1 = 0;
     }
 
     final static void a(byte param0, di param1) {
-        if (param1 == null) {
-          return;
-        } else {
-          tl.field_Fb = param1;
-          rh.field_c.field_I.e(param0 ^ 31039);
-          rh.field_c.a((byte) 126, (ci) (Object) tl.field_Fb);
-          if (param0 != -18) {
+        if (!(param1 != null)) {
             return;
-          } else {
+        }
+        tl.field_Fb = param1;
+        rh.field_c.field_I.e(param0 ^ 31039);
+        rh.field_c.a((byte) 126, (ci) (Object) tl.field_Fb);
+        if (param0 != -18) {
+            return;
+        }
+        try {
             an.field_c = true;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "pg.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static vg a(int param0) {
-        if (param0 != -12316) {
-            return null;
-        }
-        return new vg(jb.f(param0 ^ -12410), kb.j(param0 + 12205));
+        return new vg(jb.f(98), kb.j(-111));
     }
 
     pg() {

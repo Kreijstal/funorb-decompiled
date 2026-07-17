@@ -14,24 +14,19 @@ abstract class mg extends df implements el {
     abstract int h(int param0);
 
     public static void i(int param0) {
-        if (param0 <= 34) {
-          field_E = null;
-          field_F = null;
-          field_C = null;
-          field_E = null;
-          return;
-        } else {
-          field_F = null;
-          field_C = null;
-          field_E = null;
-          return;
-        }
+        field_F = null;
+        field_C = null;
+        field_E = null;
     }
 
     void a(bl param0, byte param1) {
-        ((mg) this).field_D = param0;
-        int var3 = -119 / ((63 - param1) / 47);
-        ((mg) this).field_D.field_h = (mg) this;
+        try {
+            ((mg) this).field_D = param0;
+            int var3_int = 119;
+            ((mg) this).field_D.field_h = (mg) this;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "mg.C(" + (param0 != null ? "{...}" : "null") + 44 + 116 + 41);
+        }
     }
 
     abstract int g(int param0);

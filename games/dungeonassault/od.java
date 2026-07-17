@@ -35,7 +35,7 @@ final class od {
                       }
                     }
                     L2: {
-                      if (-641 > (hh.field_p ^ -1)) {
+                      if (hh.field_p > 640) {
                         hh.field_p = 640;
                         break L2;
                       } else {
@@ -43,7 +43,7 @@ final class od {
                       }
                     }
                     L3: {
-                      if ((ed.field_P ^ -1) > -1) {
+                      if (ed.field_P < 0) {
                         ed.field_P = 0;
                         break L3;
                       } else {
@@ -93,8 +93,9 @@ final class od {
                             }
                           } else {
                             L6: {
+                              int fieldTemp$20 = fc.field_d - 1;
                               fc.field_d = fc.field_d - 1;
-                              if (0 > fc.field_d - 1) {
+                              if (0 > fieldTemp$20) {
                                 fc.field_d = -1 + uo.field_f.length;
                                 break L6;
                               } else {
@@ -105,8 +106,9 @@ final class od {
                             return true;
                           }
                         } else {
+                          int fieldTemp$21 = fc.field_d + 1;
                           fc.field_d = fc.field_d + 1;
-                          if (fc.field_d + 1 >= uo.field_f.length) {
+                          if (fieldTemp$21 >= uo.field_f.length) {
                             fc.field_d = 0;
                             og.a(false, 0, uo.field_f[fc.field_d]);
                             return true;
@@ -130,8 +132,9 @@ final class od {
                               }
                             } else {
                               L8: {
+                                int fieldTemp$22 = fc.field_d - 1;
                                 fc.field_d = fc.field_d - 1;
-                                if (0 > fc.field_d - 1) {
+                                if (0 > fieldTemp$22) {
                                   fc.field_d = -1 + uo.field_f.length;
                                   break L8;
                                 } else {
@@ -143,8 +146,9 @@ final class od {
                             }
                           } else {
                             L9: {
+                              int fieldTemp$23 = fc.field_d + 1;
                               fc.field_d = fc.field_d + 1;
-                              if (fc.field_d + 1 < uo.field_f.length) {
+                              if (fieldTemp$23 < uo.field_f.length) {
                                 break L9;
                               } else {
                                 fc.field_d = 0;
@@ -173,8 +177,9 @@ final class od {
                       }
                     } else {
                       L10: {
+                        int fieldTemp$24 = fc.field_d - 1;
                         fc.field_d = fc.field_d - 1;
-                        if (0 > fc.field_d - 1) {
+                        if (0 > fieldTemp$24) {
                           fc.field_d = -1 + uo.field_f.length;
                           break L10;
                         } else {
@@ -185,8 +190,9 @@ final class od {
                       return true;
                     }
                   } else {
+                    int fieldTemp$25 = fc.field_d + 1;
                     fc.field_d = fc.field_d + 1;
-                    if (fc.field_d + 1 < uo.field_f.length) {
+                    if (fieldTemp$25 < uo.field_f.length) {
                       og.a(false, 0, uo.field_f[fc.field_d]);
                       return true;
                     } else {
@@ -209,8 +215,9 @@ final class od {
                       }
                     } else {
                       L11: {
+                        int fieldTemp$26 = fc.field_d - 1;
                         fc.field_d = fc.field_d - 1;
-                        if (0 > fc.field_d - 1) {
+                        if (0 > fieldTemp$26) {
                           fc.field_d = -1 + uo.field_f.length;
                           break L11;
                         } else {
@@ -221,8 +228,9 @@ final class od {
                       return true;
                     }
                   } else {
+                    int fieldTemp$27 = fc.field_d + 1;
                     fc.field_d = fc.field_d + 1;
-                    if (fc.field_d + 1 >= uo.field_f.length) {
+                    if (fieldTemp$27 >= uo.field_f.length) {
                       fc.field_d = 0;
                       og.a(false, 0, uo.field_f[fc.field_d]);
                       return true;
@@ -262,7 +270,7 @@ final class od {
                     }
                   }
                   L14: {
-                    if (-641 > (hh.field_p ^ -1)) {
+                    if (hh.field_p > 640) {
                       hh.field_p = 640;
                       break L14;
                     } else {
@@ -270,7 +278,7 @@ final class od {
                     }
                   }
                   L15: {
-                    if ((ed.field_P ^ -1) > -1) {
+                    if (ed.field_P < 0) {
                       ed.field_P = 0;
                       break L15;
                     } else {
@@ -328,8 +336,9 @@ final class od {
                           }
                         } else {
                           L20: {
+                            int fieldTemp$28 = fc.field_d - 1;
                             fc.field_d = fc.field_d - 1;
-                            if (0 > fc.field_d - 1) {
+                            if (0 > fieldTemp$28) {
                               fc.field_d = -1 + uo.field_f.length;
                               break L20;
                             } else {
@@ -341,8 +350,9 @@ final class od {
                         }
                       } else {
                         L21: {
+                          int fieldTemp$29 = fc.field_d + 1;
                           fc.field_d = fc.field_d + 1;
-                          if (fc.field_d + 1 < uo.field_f.length) {
+                          if (fieldTemp$29 < uo.field_f.length) {
                             break L21;
                           } else {
                             fc.field_d = 0;
@@ -370,8 +380,9 @@ final class od {
                     }
                   } else {
                     L22: {
+                      int fieldTemp$30 = fc.field_d - 1;
                       fc.field_d = fc.field_d - 1;
-                      if (0 > fc.field_d - 1) {
+                      if (0 > fieldTemp$30) {
                         fc.field_d = -1 + uo.field_f.length;
                         break L22;
                       } else {
@@ -382,8 +393,9 @@ final class od {
                     return true;
                   }
                 } else {
+                  int fieldTemp$31 = fc.field_d + 1;
                   fc.field_d = fc.field_d + 1;
-                  if (fc.field_d + 1 >= uo.field_f.length) {
+                  if (fieldTemp$31 >= uo.field_f.length) {
                     fc.field_d = 0;
                     og.a(false, 0, uo.field_f[fc.field_d]);
                     return true;
@@ -407,8 +419,9 @@ final class od {
                       }
                     } else {
                       L24: {
+                        int fieldTemp$32 = fc.field_d - 1;
                         fc.field_d = fc.field_d - 1;
-                        if (0 > fc.field_d - 1) {
+                        if (0 > fieldTemp$32) {
                           fc.field_d = -1 + uo.field_f.length;
                           break L24;
                         } else {
@@ -420,8 +433,9 @@ final class od {
                     }
                   } else {
                     L25: {
+                      int fieldTemp$33 = fc.field_d + 1;
                       fc.field_d = fc.field_d + 1;
-                      if (fc.field_d + 1 < uo.field_f.length) {
+                      if (fieldTemp$33 < uo.field_f.length) {
                         break L25;
                       } else {
                         fc.field_d = 0;
@@ -457,7 +471,7 @@ final class od {
                   }
                 }
                 L28: {
-                  if (-641 > (hh.field_p ^ -1)) {
+                  if (hh.field_p > 640) {
                     hh.field_p = 640;
                     break L28;
                   } else {
@@ -465,7 +479,7 @@ final class od {
                   }
                 }
                 L29: {
-                  if ((ed.field_P ^ -1) > -1) {
+                  if (ed.field_P < 0) {
                     ed.field_P = 0;
                     break L29;
                   } else {
@@ -523,8 +537,9 @@ final class od {
                         }
                       } else {
                         L34: {
+                          int fieldTemp$34 = fc.field_d - 1;
                           fc.field_d = fc.field_d - 1;
-                          if (0 > fc.field_d - 1) {
+                          if (0 > fieldTemp$34) {
                             fc.field_d = -1 + uo.field_f.length;
                             break L34;
                           } else {
@@ -536,8 +551,9 @@ final class od {
                       }
                     } else {
                       L35: {
+                        int fieldTemp$35 = fc.field_d + 1;
                         fc.field_d = fc.field_d + 1;
-                        if (fc.field_d + 1 < uo.field_f.length) {
+                        if (fieldTemp$35 < uo.field_f.length) {
                           break L35;
                         } else {
                           fc.field_d = 0;
@@ -565,8 +581,9 @@ final class od {
                   }
                 } else {
                   L36: {
+                    int fieldTemp$36 = fc.field_d - 1;
                     fc.field_d = fc.field_d - 1;
-                    if (0 > fc.field_d - 1) {
+                    if (0 > fieldTemp$36) {
                       fc.field_d = -1 + uo.field_f.length;
                       break L36;
                     } else {
@@ -577,8 +594,9 @@ final class od {
                   return true;
                 }
               } else {
+                int fieldTemp$37 = fc.field_d + 1;
                 fc.field_d = fc.field_d + 1;
-                if (fc.field_d + 1 >= uo.field_f.length) {
+                if (fieldTemp$37 >= uo.field_f.length) {
                   fc.field_d = 0;
                   og.a(false, 0, uo.field_f[fc.field_d]);
                   return true;
@@ -602,8 +620,9 @@ final class od {
                     }
                   } else {
                     L38: {
+                      int fieldTemp$38 = fc.field_d - 1;
                       fc.field_d = fc.field_d - 1;
-                      if (0 > fc.field_d - 1) {
+                      if (0 > fieldTemp$38) {
                         fc.field_d = -1 + uo.field_f.length;
                         break L38;
                       } else {
@@ -615,8 +634,9 @@ final class od {
                   }
                 } else {
                   L39: {
+                    int fieldTemp$39 = fc.field_d + 1;
                     fc.field_d = fc.field_d + 1;
-                    if (fc.field_d + 1 < uo.field_f.length) {
+                    if (fieldTemp$39 < uo.field_f.length) {
                       break L39;
                     } else {
                       fc.field_d = 0;
@@ -636,9 +656,6 @@ final class od {
     public static void b(byte param0) {
         field_c = null;
         field_b = null;
-        if (param0 < 81) {
-            return;
-        }
         field_a = null;
     }
 

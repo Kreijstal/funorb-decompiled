@@ -26,10 +26,10 @@ final class ik extends vg {
         if (0 != var6) {
           if (var8 != 0) {
             L0: {
-              var13 = (var8 << 1223854252) / var6;
-              var14 = -(var13 * param1 >> 1914499532) + param5;
+              var13 = (var8 << 12) / var6;
+              var14 = -(var13 * param1 >> 12) + param5;
               if (param1 < pka.field_b) {
-                var11 = var14 + (var13 * pka.field_b >> -145403028);
+                var11 = var14 + (var13 * pka.field_b >> 12);
                 var9 = pka.field_b;
                 break L0;
               } else {
@@ -38,7 +38,7 @@ final class ik extends vg {
                   var11 = param5;
                   break L0;
                 } else {
-                  var11 = (var13 * ss.field_c >> 1757637740) + var14;
+                  var11 = (var13 * ss.field_c >> 12) + var14;
                   var9 = ss.field_c;
                   break L0;
                 }
@@ -46,12 +46,12 @@ final class ik extends vg {
             }
             L1: {
               if (param0 < pka.field_b) {
-                var12 = var14 + (var13 * pka.field_b >> -1604243636);
+                var12 = var14 + (var13 * pka.field_b >> 12);
                 var10 = pka.field_b;
                 break L1;
               } else {
                 if (ss.field_c < param0) {
-                  var12 = (ss.field_c * var13 >> 2088900844) + var14;
+                  var12 = (ss.field_c * var13 >> 12) + var14;
                   var10 = ss.field_c;
                   break L1;
                 } else {
@@ -67,11 +67,11 @@ final class ik extends vg {
                   break L2;
                 } else {
                   var11 = hc.field_h;
-                  var9 = (hc.field_h + -var14 << -191347604) / var13;
+                  var9 = (hc.field_h + -var14 << 12) / var13;
                   break L2;
                 }
               } else {
-                var9 = (-var14 + gca.field_d << 698802348) / var13;
+                var9 = (-var14 + gca.field_d << 12) / var13;
                 var11 = gca.field_d;
                 break L2;
               }
@@ -79,7 +79,7 @@ final class ik extends vg {
             L3: {
               if (gca.field_d <= var12) {
                 if (var12 > hc.field_h) {
-                  var10 = (hc.field_h - var14 << 1642759884) / var13;
+                  var10 = (hc.field_h - var14 << 12) / var13;
                   var12 = hc.field_h;
                   break L3;
                 } else {
@@ -87,7 +87,7 @@ final class ik extends vg {
                 }
               } else {
                 var12 = gca.field_d;
-                var10 = (gca.field_d + -var14 << 62460588) / var13;
+                var10 = (gca.field_d + -var14 << 12) / var13;
                 break L3;
               }
             }
@@ -111,7 +111,7 @@ final class ik extends vg {
     }
 
     public static void a(byte param0) {
-        int var1 = -13 / ((13 - param0) / 45);
+        int var1 = -6;
         field_j = null;
         field_h = null;
     }
@@ -119,7 +119,7 @@ final class ik extends vg {
     final static roa b(int param0) {
         roa var1 = new roa();
         var1.field_f = new up(0, 5);
-        var1.field_f.b(param0 ^ -17697, 10);
+        var1.field_f.b(1, 10);
         var1.field_t = 14;
         var1.field_k = 150;
         var1.field_x = true;
@@ -129,9 +129,6 @@ final class ik extends vg {
         var1.field_h = 40;
         var1.field_m = true;
         var1.field_b = 2;
-        if (param0 != -17698) {
-            ik.a(108, -3, 45, 83, 83, -49);
-        }
         var1.field_c = true;
         var1.field_l = 524288;
         var1.field_a = 524288;
@@ -140,14 +137,29 @@ final class ik extends vg {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = TombRacer.field_G ? 1 : 0;
-        for (var1 = 0; var1 < ara.field_xb; var1++) {
-            wea.field_d[var1] = null;
-        }
-        ara.field_xb = 0;
-        if (param0 != 5) {
-            field_j = null;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var2 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= ara.field_xb) {
+                ara.field_xb = 0;
+                break L0;
+              } else {
+                wea.field_d[var1_int] = null;
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var1, "ik.C(" + 5 + 41);
         }
     }
 

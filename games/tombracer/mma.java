@@ -10,9 +10,6 @@ final class mma {
     public static void a(int param0) {
         field_b = null;
         field_c = null;
-        if (param0 != -1901) {
-            return;
-        }
         field_d = null;
     }
 

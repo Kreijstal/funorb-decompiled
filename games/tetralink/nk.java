@@ -295,7 +295,7 @@ class nk {
                 }
               }
               field_s = stackIn_7_0 != 0;
-              field_n = param2;
+              field_n = 10;
               return;
             } else {
               break L0;
@@ -476,7 +476,7 @@ class nk {
         eb var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = param1;
+          var3 = 256;
           if (!field_s) {
             break L0;
           } else {
@@ -486,7 +486,7 @@ class nk {
         }
         L1: {
           rd.a(param0, 0, var3);
-          ((nk) this).field_e = ((nk) this).field_e - param1;
+          ((nk) this).field_e = ((nk) this).field_e - 256;
           if (((nk) this).field_j == null) {
             break L1;
           } else {
@@ -520,7 +520,7 @@ class nk {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & (1 << var7_int ^ -1);
+                            var5 = var5 & ~(1 << var7_int);
                             var10 = null;
                             var11 = ((nk) this).field_d[var7_int];
                             var14 = var11;
@@ -653,7 +653,7 @@ class nk {
           if (((nk) this).field_j == null) {
             break L17;
           } else {
-            ((nk) this).field_j.b(param0, 0, param1);
+            ((nk) this).field_j.b(param0, 0, 256);
             break L17;
           }
         }
@@ -667,12 +667,12 @@ class nk {
     }
 
     private final void a(int param0) {
-        ((nk) this).field_e = ((nk) this).field_e - param0;
+        ((nk) this).field_e = ((nk) this).field_e - 256;
         if (((nk) this).field_e < 0) {
             ((nk) this).field_e = 0;
         }
         if (((nk) this).field_j != null) {
-            ((nk) this).field_j.a(param0);
+            ((nk) this).field_j.a(256);
             return;
         }
     }

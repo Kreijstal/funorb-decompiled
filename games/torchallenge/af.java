@@ -32,33 +32,25 @@ final class af {
         field_a = null;
         field_e = null;
         field_d = null;
-        if (param0 != -7604) {
-            boolean discarded$0 = af.a(1, -16);
-        }
     }
 
     final static boolean a(int param0, int param1) {
-        if ((param1 ^ -1) == -4) {
-          return true;
-        } else {
-          if (4 == param1) {
+        if (!(param1 != 3)) {
             return true;
-          } else {
-            if (param1 != -6) {
-              if (param0 == -4275) {
-                if (-9 != param1) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          }
         }
+        if (!(4 != param1)) {
+            return true;
+        }
+        if (param1 == 5) {
+            return true;
+        }
+        if (param0 != -4275) {
+            return false;
+        }
+        if (param1 != 8) {
+            return false;
+        }
+        return true;
     }
 
     static {

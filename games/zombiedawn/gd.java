@@ -70,9 +70,6 @@ final class gd {
 
     private final void a(boolean param0) {
         ((gd) this).field_J = false;
-        if (!param0) {
-            ((gd) this).a(58, 89, 34, 48);
-        }
     }
 
     public static void a(byte param0) {

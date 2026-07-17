@@ -26,17 +26,13 @@ final class vg extends ca {
           if (nh.a(false, param0)) {
             return true;
           } else {
-            if (param1 == -22118) {
-              if (param0 != 45) {
-                if (param0 != 160) {
-                  if (param0 != 32) {
-                    if (param0 == 95) {
-                      return true;
-                    } else {
-                      return false;
-                    }
-                  } else {
+            if (param0 != 45) {
+              if (param0 != 160) {
+                if (param0 != 32) {
+                  if (param0 == 95) {
                     return true;
+                  } else {
+                    return false;
                   }
                 } else {
                   return true;
@@ -45,24 +41,7 @@ final class vg extends ca {
                 return true;
               }
             } else {
-              field_l = -96;
-              if (param0 != 45) {
-                if (param0 != 160) {
-                  if (param0 != 32) {
-                    if (param0 == 95) {
-                      return true;
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
+              return true;
             }
           }
         }
@@ -85,15 +64,20 @@ final class vg extends ca {
     }
 
     vg(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((vg) this).field_k = param1;
-        ((vg) this).field_r = param5;
-        uk.field_a = uk.field_a + 1;
-        ((vg) this).field_t = uk.field_a & 65535;
-        ((vg) this).field_g = param0;
-        ((vg) this).field_o = param6;
-        ((vg) this).field_m = param3;
-        ((vg) this).field_f = param4;
-        ((vg) this).field_n = param2;
+        try {
+            ((vg) this).field_k = param1;
+            ((vg) this).field_r = param5;
+            int fieldTemp$0 = uk.field_a;
+            uk.field_a = uk.field_a + 1;
+            ((vg) this).field_t = fieldTemp$0 & 65535;
+            ((vg) this).field_g = param0;
+            ((vg) this).field_o = param6;
+            ((vg) this).field_m = param3;
+            ((vg) this).field_f = param4;
+            ((vg) this).field_n = param2;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "vg.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

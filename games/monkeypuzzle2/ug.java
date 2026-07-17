@@ -9,9 +9,6 @@ class ug {
 
     public static void b(int param0) {
         field_b = null;
-        if (param0 != -1733) {
-            field_b = null;
-        }
     }
 
     final boolean d(int param0) {

@@ -17,8 +17,8 @@ final class rk extends ae {
     private int field_v;
 
     final void a(boolean param0, int param1, int param2) {
-        ((rk) this).field_G = 8355711 & param1 >> 152693825;
-        ((rk) this).field_v = (param2 & 16711422) >> 1591472225;
+        ((rk) this).field_G = 8355711 & param1 >> 1;
+        ((rk) this).field_v = (param2 & 16711422) >> 1;
         ((rk) this).field_C = param2;
         ((rk) this).field_x = param1;
         if (!param0) {
@@ -35,14 +35,77 @@ final class rk extends ae {
     }
 
     final void a(int param0, int param1, ae param2, int param3) {
-        if (param1 != 2097152) {
-            iu discarded$0 = this.a((byte) 6);
-        }
-        if (((rk) this).field_D) {
-            ((rk) this).field_y = ((rk) this).field_y + 1;
-            if (!(2 * ((rk) this).field_u >= ((rk) this).field_y)) {
-                ((rk) this).field_y = ((rk) this).field_y - 2 * ((rk) this).field_u;
+        RuntimeException var5 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 2097152) {
+                break L1;
+              } else {
+                iu discarded$3 = this.a((byte) 6);
+                break L1;
+              }
             }
+            L2: {
+              if (!((rk) this).field_D) {
+                break L2;
+              } else {
+                ((rk) this).field_y = ((rk) this).field_y + 1;
+                if (2 * ((rk) this).field_u < ((rk) this).field_y) {
+                  ((rk) this).field_y = ((rk) this).field_y - 2 * ((rk) this).field_u;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_1 = new StringBuilder().append("rk.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param2 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 41);
         }
     }
 
@@ -52,7 +115,7 @@ final class rk extends ae {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = TombRacer.field_G ? 1 : 0;
-        int var2 = ((rk) this).field_p >> -1928290239;
+        int var2 = ((rk) this).field_p >> 1;
         iu var3 = new iu(var2, ((rk) this).field_p);
         nm.a(var3, (byte) 93);
         if (param0 <= 66) {
@@ -66,7 +129,7 @@ final class rk extends ae {
                     var6 = Math.sqrt(-var6 + 1.0);
                     var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
                 }
-                bea.a(var5, var4, var8 << -447297816 | var8 | var8 << -2079713616);
+                bea.a(var5, var4, var8 << 8 | var8 | var8 << 16);
             }
         }
         pfa.a(1);
@@ -80,12 +143,9 @@ final class rk extends ae {
 
     private final void g(byte param0) {
         ((rk) this).field_w = new iu[]{this.c(-69, ((rk) this).field_C, ((rk) this).field_x), this.c(91, ((rk) this).field_v, ((rk) this).field_G)};
-        if (param0 != 12) {
-            ((rk) this).field_y = 10;
-        }
         ((rk) this).field_A = this.a((byte) 78);
         ((rk) this).field_z = ((rk) this).field_A.d();
-        ((rk) this).field_E = new iu(((rk) this).field_p >> 1965933377, ((rk) this).field_p);
+        ((rk) this).field_E = new iu(((rk) this).field_p >> 1, ((rk) this).field_p);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -95,15 +155,15 @@ final class rk extends ae {
         int var5 = param0 + ((rk) this).field_i;
         int var6 = param1 + ((rk) this).field_n;
         this.a(var6, ((rk) this).field_w[param2], var5, 93);
-        if ((((rk) this).field_B ^ -1) > -65537) {
-            tga.a(-21953, (((rk) this).field_B * ((rk) this).field_m >> 2004813072) + var5, ((rk) this).field_m + var5, var6, var6 - -((rk) this).field_p);
+        if (((rk) this).field_B < 65536) {
+            tga.a(-21953, (((rk) this).field_B * ((rk) this).field_m >> 16) + var5, ((rk) this).field_m + var5, var6, var6 - -((rk) this).field_p);
             this.a(var6, ((rk) this).field_w[1], var5, 115);
             pfa.a(param2 + 1);
         }
     }
 
     rk(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this(param0, param1, param2, param3, param4, param5, param6, param5 >> -1310161311 & 8355711, param6 >> 6140001 & 8355711);
+        this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
     }
 
     final static boolean a(int param0, boolean param1, byte param2, int param3, int param4, int param5, int param6) {
@@ -147,7 +207,7 @@ final class rk extends ae {
         var4 = 29 % ((28 - param0) / 61);
         var5 = new iu(2 * ((rk) this).field_u, ((rk) this).field_p);
         nm.a(var5, (byte) 110);
-        var6 = ((rk) this).field_p >> 905605601;
+        var6 = ((rk) this).field_p >> 1;
         var7 = 0;
         L0: while (true) {
           if (((rk) this).field_p <= var7) {
@@ -155,7 +215,7 @@ final class rk extends ae {
             return var5;
           } else {
             L1: {
-              var8 = (var7 >> 1525506497) * (((rk) this).field_u * 2 - 1) % (2 * ((rk) this).field_u);
+              var8 = (var7 >> 1) * (((rk) this).field_u * 2 - 1) % (2 * ((rk) this).field_u);
               var9 = 16711935 & param1;
               var10 = 65280 & param1;
               var11 = var7 - var6;
@@ -165,7 +225,7 @@ final class rk extends ae {
                 stackIn_5_0 = stackOut_4_0;
                 break L1;
               } else {
-                stackOut_3_0 = (-16711936 & var9 * var12 | var12 * var10 & 16711680) >>> 1973535016;
+                stackOut_3_0 = (-16711936 & var9 * var12 | var12 * var10 & 16711680) >>> 8;
                 stackIn_5_0 = stackOut_3_0;
                 break L1;
               }
@@ -176,8 +236,8 @@ final class rk extends ae {
               bea.c(-(2 * ((rk) this).field_u) + var8, var7, ((rk) this).field_u, var13);
               var9 = 16711935 & param2;
               var10 = 65280 & param2;
-              if ((var12 ^ -1) > -257) {
-                stackOut_7_0 = (16711680 & var12 * var10 | var12 * var9 & -16711936) >>> 576000424;
+              if (var12 < 256) {
+                stackOut_7_0 = (16711680 & var12 * var10 | var12 * var9 & -16711936) >>> 8;
                 stackIn_8_0 = stackOut_7_0;
                 break L2;
               } else {
@@ -196,65 +256,115 @@ final class rk extends ae {
     }
 
     private final void a(int param0, iu param1, int param2, int param3) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var8 = TombRacer.field_G ? 1 : 0;
-          var5 = param2 - -((rk) this).field_m;
-          tga.a(-21953, ((rk) this).field_A.field_m + param2, var5 + -((rk) this).field_A.field_m, param0, ((rk) this).field_p + param0);
-          if (param3 > 86) {
-            break L0;
-          } else {
-            ((rk) this).a(true, -45, -128);
-            break L0;
-          }
-        }
-        var6 = param2 - ((rk) this).field_y;
-        L1: while (true) {
-          if (var5 <= var6) {
-            L2: {
-              pfa.a(1);
-              if (bea.field_b > ((rk) this).field_A.field_m + param2) {
-                break L2;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var8 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var5_int = param2 - -((rk) this).field_m;
+              tga.a(-21953, ((rk) this).field_A.field_m + param2, var5_int + -((rk) this).field_A.field_m, param0, ((rk) this).field_p + param0);
+              if (param3 > 86) {
+                break L1;
               } else {
-                nm.a(((rk) this).field_E, (byte) 116);
-                param1.b(-((rk) this).field_y, 0);
-                param1.b(2 * ((rk) this).field_u + -((rk) this).field_y, 0);
-                ((rk) this).field_z.a(0, 0);
-                pfa.a(1);
-                ((rk) this).field_E.b(param2, param0);
-                break L2;
+                ((rk) this).a(true, -45, -128);
+                break L1;
               }
             }
-            L3: {
-              if (bea.field_d >= -((rk) this).field_A.field_m + var5) {
-                nm.a(((rk) this).field_E, (byte) 91);
-                var7 = ((rk) this).field_y + ((rk) this).field_m + -((rk) this).field_A.field_m;
-                L4: while (true) {
-                  if (2 * ((rk) this).field_u >= var7) {
-                    param1.b(-var7, 0);
-                    param1.b(-var7 + ((rk) this).field_u * 2, 0);
-                    ((rk) this).field_A.a(0, 0);
-                    pfa.a(1);
-                    ((rk) this).field_E.b(-((rk) this).field_A.field_m + var5, param0);
+            var6 = param2 - ((rk) this).field_y;
+            L2: while (true) {
+              if (var5_int <= var6) {
+                L3: {
+                  pfa.a(1);
+                  if (bea.field_b > ((rk) this).field_A.field_m + param2) {
                     break L3;
                   } else {
-                    var7 = var7 - 2 * ((rk) this).field_u;
-                    continue L4;
+                    nm.a(((rk) this).field_E, (byte) 116);
+                    param1.b(-((rk) this).field_y, 0);
+                    param1.b(2 * ((rk) this).field_u + -((rk) this).field_y, 0);
+                    ((rk) this).field_z.a(0, 0);
+                    pfa.a(1);
+                    ((rk) this).field_E.b(param2, param0);
+                    break L3;
                   }
                 }
+                L4: {
+                  if (bea.field_d >= -((rk) this).field_A.field_m + var5_int) {
+                    nm.a(((rk) this).field_E, (byte) 91);
+                    var7 = ((rk) this).field_y + ((rk) this).field_m + -((rk) this).field_A.field_m;
+                    L5: while (true) {
+                      if (2 * ((rk) this).field_u >= var7) {
+                        param1.b(-var7, 0);
+                        param1.b(-var7 + ((rk) this).field_u * 2, 0);
+                        ((rk) this).field_A.a(0, 0);
+                        pfa.a(1);
+                        ((rk) this).field_E.b(-((rk) this).field_A.field_m + var5_int, param0);
+                        break L4;
+                      } else {
+                        var7 = var7 - 2 * ((rk) this).field_u;
+                        continue L5;
+                      }
+                    }
+                  } else {
+                    break L4;
+                  }
+                }
+                break L0;
               } else {
-                break L3;
+                param1.b(var6, param0);
+                var6 = var6 + param1.field_m;
+                continue L2;
               }
             }
-            return;
-          } else {
-            param1.b(var6, param0);
-            var6 = var6 + param1.field_m;
-            continue L1;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var5 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var5;
+            stackOut_15_1 = new StringBuilder().append("rk.F(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L6;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L6;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

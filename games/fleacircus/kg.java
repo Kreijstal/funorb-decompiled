@@ -216,19 +216,12 @@ final class kg extends la {
 
     final void b(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((kg) this).field_y, param0 << (field_h ? 2 : 1));
             ((kg) this).field_v = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((kg) this).field_v.open();
             ((kg) this).field_v.start();
             ((kg) this).field_z = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (h.a(param0, -122) != 1) {
-                ((kg) this).b(bf.a(true, param0));
-                return;
-            }
-            ((kg) this).field_v = null;
-            throw lineUnavailableException;
         }
     }
 

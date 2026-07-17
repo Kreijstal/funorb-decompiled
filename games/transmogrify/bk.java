@@ -29,13 +29,8 @@ final class bk {
         he.b((byte) 115);
         lb.field_d = true;
         wl.field_I = true;
-        ci.field_f.k(param0 ^ -12743);
-        if (param0 != -19317) {
-          return;
-        } else {
-          jj.a(false, oc.field_E, param0 + 21019);
-          return;
-        }
+        ci.field_f.k(31410);
+        jj.a(false, oc.field_E, 1702);
     }
 
     final ri b(byte param0) {
@@ -124,27 +119,19 @@ final class bk {
     }
 
     final void a(byte param0, ri param1) {
-        L0: {
-          if (param1.field_g != null) {
-            param1.b((byte) -116);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param0 != -128) {
-          field_a = 94;
-          param1.field_g = ((bk) this).field_b.field_g;
-          param1.field_h = ((bk) this).field_b;
-          param1.field_g.field_h = param1;
-          param1.field_h.field_g = param1;
-          return;
-        } else {
-          param1.field_g = ((bk) this).field_b.field_g;
-          param1.field_h = ((bk) this).field_b;
-          param1.field_g.field_h = param1;
-          param1.field_h.field_g = param1;
-          return;
+        try {
+            if (!(param1.field_g == null)) {
+                param1.b((byte) -116);
+            }
+            if (param0 != -128) {
+                field_a = 94;
+            }
+            param1.field_g = ((bk) this).field_b.field_g;
+            param1.field_h = ((bk) this).field_b;
+            param1.field_g.field_h = param1;
+            param1.field_h.field_g = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "bk.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

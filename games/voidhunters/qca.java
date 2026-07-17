@@ -9,12 +9,16 @@ final class qca extends llb {
 
     private qca(long param0, llb param1, llb param2, String param3) {
         super(param0, (llb) null);
-        ((qca) this).field_vb = new llb(0L, param1);
-        ((qca) this).field_xb = new llb(0L, param2);
-        ((qca) this).field_xb.field_R = param3;
-        ((qca) this).b(-561, ((qca) this).field_vb);
-        ((qca) this).b(-561, ((qca) this).field_xb);
-        ((qca) this).g(123);
+        try {
+            ((qca) this).field_vb = new llb(0L, param1);
+            ((qca) this).field_xb = new llb(0L, param2);
+            ((qca) this).field_xb.field_R = param3;
+            ((qca) this).b(-561, ((qca) this).field_vb);
+            ((qca) this).b(-561, ((qca) this).field_xb);
+            ((qca) this).g(123);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "qca.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
@@ -39,19 +43,9 @@ final class qca extends llb {
     }
 
     private final void a(int param0, int param1) {
-        int var3 = 0;
-        if (param1 != 64) {
-          field_wb = -46;
-          ((qca) this).field_vb.a(0, -57, ((qca) this).field_vb.e(78), 0, ((qca) this).field_G);
-          var3 = param0 + ((qca) this).field_vb.field_hb;
-          ((qca) this).field_xb.a(var3, 120, ((qca) this).field_hb - var3, 0, ((qca) this).field_G);
-          return;
-        } else {
-          ((qca) this).field_vb.a(0, -57, ((qca) this).field_vb.e(78), 0, ((qca) this).field_G);
-          var3 = param0 + ((qca) this).field_vb.field_hb;
-          ((qca) this).field_xb.a(var3, 120, ((qca) this).field_hb - var3, 0, ((qca) this).field_G);
-          return;
-        }
+        ((qca) this).field_vb.a(0, -57, ((qca) this).field_vb.e(78), 0, ((qca) this).field_G);
+        int var3 = param0 + ((qca) this).field_vb.field_hb;
+        ((qca) this).field_xb.a(var3, 120, ((qca) this).field_hb - var3, 0, ((qca) this).field_G);
     }
 
     qca(long param0, qca param1, String param2) {
@@ -69,9 +63,13 @@ final class qca extends llb {
 
     qca(long param0, phb param1, phb param2, int param3, llb param4, String param5) {
         this(param0, (llb) null, param4, param5);
-        ((qca) this).field_vb.field_q = param1;
-        ((qca) this).field_vb.field_tb = param2;
-        ((qca) this).field_vb.field_B = param3;
+        try {
+            ((qca) this).field_vb.field_q = param1;
+            ((qca) this).field_vb.field_tb = param2;
+            ((qca) this).field_vb.field_B = param3;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "qca.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

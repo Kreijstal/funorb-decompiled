@@ -7,68 +7,21 @@ final class qr extends ana {
     private tba field_x;
 
     private final void e(int param0) {
-        Object var3 = null;
-        pp var3_ref = null;
-        int var5 = 0;
-        aga var6 = null;
-        ad var7 = null;
-        aga var8 = null;
-        ad var9 = null;
-        var3 = null;
-        var5 = BachelorFridge.field_y;
-        if (param0 > 9) {
-          var8 = ((qr) this).field_x.field_l.a(8, ((qr) this).field_q.field_h);
-          if (var8.i(-79)) {
+        ad var4 = null;
+        int var5 = BachelorFridge.field_y;
+        aga var2 = ((qr) this).field_x.field_l.a(8, ((qr) this).field_q.field_h);
+        if (!(!var2.i(-79))) {
             return;
-          } else {
-            var3_ref = (pp) (Object) ((qr) this).field_x.field_o.b((byte) 90);
-            L0: while (true) {
-              if (var3_ref == null) {
-                return;
-              } else {
-                L1: {
-                  var9 = var3_ref.field_h.a(-27449, ((qr) this).field_q);
-                  var9.b(-1, 6);
-                  var3_ref.a(var8, ((qr) this).field_q.field_h, 12);
-                  if (var3_ref instanceof iv) {
-                    ((qr) this).a(27799, (at) (Object) new ek(((qr) this).field_q, var9, var3_ref.field_f));
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                var3_ref = (pp) (Object) ((qr) this).field_x.field_o.c(0);
-                continue L0;
-              }
+        }
+        pp var3 = (pp) (Object) ((qr) this).field_x.field_o.b((byte) 90);
+        while (var3 != null) {
+            var4 = var3.field_h.a(-27449, ((qr) this).field_q);
+            var4.b(-1, 6);
+            var3.a(var2, ((qr) this).field_q.field_h, 12);
+            if (!(!(var3 instanceof iv))) {
+                ((qr) this).a(27799, (at) (Object) new ek(((qr) this).field_q, var4, var3.field_f));
             }
-          }
-        } else {
-          this.f(104);
-          var6 = ((qr) this).field_x.field_l.a(8, ((qr) this).field_q.field_h);
-          if (var6.i(-79)) {
-            return;
-          } else {
-            var3_ref = (pp) (Object) ((qr) this).field_x.field_o.b((byte) 90);
-            L2: while (true) {
-              if (var3_ref == null) {
-                return;
-              } else {
-                L3: {
-                  var7 = var3_ref.field_h.a(-27449, ((qr) this).field_q);
-                  var7.b(-1, 6);
-                  var3_ref.a(var6, ((qr) this).field_q.field_h, 12);
-                  if (var3_ref instanceof iv) {
-                    ((qr) this).a(27799, (at) (Object) new ek(((qr) this).field_q, var7, var3_ref.field_f));
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                var3_ref = (pp) (Object) ((qr) this).field_x.field_o.c(0);
-                continue L2;
-              }
-            }
-          }
+            var3 = (pp) (Object) ((qr) this).field_x.field_o.c(0);
         }
     }
 
@@ -86,8 +39,9 @@ final class qr extends ana {
               }
             }
             var2 = 93 / ((71 - param0) / 47);
+            int fieldTemp$2 = ((qr) this).field_l - 1;
             ((qr) this).field_l = ((qr) this).field_l - 1;
-            if ((((qr) this).field_l - 1 ^ -1) <= -1) {
+            if (fieldTemp$2 >= 0) {
               return false;
             } else {
               this.f(-1);
@@ -103,9 +57,13 @@ final class qr extends ana {
 
     qr(gj param0, tba param1) {
         super(param0, (bca) (Object) param1);
-        ((qr) this).field_x = param1;
-        ((qr) this).field_w = new taa(((qr) this).field_q, ((qr) this).field_x.field_q, ((qr) this).field_x.field_s);
-        ((qr) this).a(27799, (at) (Object) ((qr) this).field_w);
+        try {
+            ((qr) this).field_x = param1;
+            ((qr) this).field_w = new taa(((qr) this).field_q, ((qr) this).field_x.field_q, ((qr) this).field_x.field_s);
+            ((qr) this).a(27799, (at) (Object) ((qr) this).field_w);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "qr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void d(int param0) {
@@ -130,14 +88,14 @@ final class qr extends ana {
                     L4: {
                       var4 = ((qr) this).field_x.field_t[var3][0];
                       var5 = ((qr) this).field_x.field_t[var3][1];
-                      if (-1 < (var4 ^ -1)) {
+                      if (var4 < 0) {
                         var3++;
                         break L4;
                       } else {
                         if (var4 >= var8.field_z) {
                           break L4;
                         } else {
-                          if ((var5 ^ -1) > -1) {
+                          if (var5 < 0) {
                             break L3;
                           } else {
                             if (var8.field_B <= var5) {
@@ -184,14 +142,14 @@ final class qr extends ana {
                     L9: {
                       var4 = ((qr) this).field_x.field_t[var3][0];
                       var5 = ((qr) this).field_x.field_t[var3][1];
-                      if (-1 < (var4 ^ -1)) {
+                      if (var4 < 0) {
                         var3++;
                         break L9;
                       } else {
                         if (var4 >= var8.field_z) {
                           break L9;
                         } else {
-                          if ((var5 ^ -1) > -1) {
+                          if (var5 < 0) {
                             break L8;
                           } else {
                             if (var8.field_B <= var5) {

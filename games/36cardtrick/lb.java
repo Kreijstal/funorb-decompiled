@@ -51,7 +51,11 @@ final class lb {
     lb(String param0) {
         ((lb) this).field_d = false;
         ((lb) this).field_c = false;
-        ((lb) this).field_b = param0;
+        try {
+            ((lb) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "lb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

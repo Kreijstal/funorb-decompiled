@@ -7,63 +7,120 @@ abstract class jf {
     static String field_b;
 
     final int a(int param0, int param1, int param2, String param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         Object var11 = null;
-        L0: {
-          var10 = SolKnight.field_L ? 1 : 0;
-          if (param2 == 21107) {
-            break L0;
-          } else {
-            var11 = null;
-            int discarded$2 = ((jf) this).a(-66, 103, -92, (String) null);
-            break L0;
-          }
-        }
-        var5 = 0;
-        var6 = 0;
-        var7 = param3.length();
-        var8 = 0;
-        L1: while (true) {
-          if (var7 <= var8) {
-            if (0 >= var5) {
-              return 0;
-            } else {
-              return (-param0 + param1 << 439492808) / var5;
-            }
-          } else {
-            var9 = param3.charAt(var8);
-            if (var9 != 60) {
-              if (var9 == 62) {
-                var6 = 0;
-                var8++;
-                continue L1;
+        int stackIn_15_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_16_0 = 0;
+        int stackOut_14_0 = 0;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        var10 = SolKnight.field_L ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param2 == 21107) {
+                break L1;
               } else {
-                if (var6 == 0) {
-                  if (var9 == 32) {
-                    var5++;
-                    var8++;
-                    continue L1;
-                  } else {
-                    var8++;
-                    continue L1;
-                  }
-                } else {
-                  var8++;
-                  continue L1;
-                }
+                var11 = null;
+                int discarded$2 = ((jf) this).a(-66, 103, -92, (String) null);
+                break L1;
               }
-            } else {
-              var6 = 1;
-              var8++;
-              continue L1;
+            }
+            var5_int = 0;
+            var6 = 0;
+            var7 = param3.length();
+            var8 = 0;
+            L2: while (true) {
+              if (var7 <= var8) {
+                if (0 >= var5_int) {
+                  stackOut_16_0 = 0;
+                  stackIn_17_0 = stackOut_16_0;
+                  break L0;
+                } else {
+                  stackOut_14_0 = (-param0 + param1 << 8) / var5_int;
+                  stackIn_15_0 = stackOut_14_0;
+                  return stackIn_15_0;
+                }
+              } else {
+                L3: {
+                  var9 = param3.charAt(var8);
+                  if (var9 != 60) {
+                    if (var9 == 62) {
+                      var6 = 0;
+                      break L3;
+                    } else {
+                      L4: {
+                        if (var6 != 0) {
+                          break L4;
+                        } else {
+                          break L4;
+                        }
+                      }
+                      var8++;
+                      continue L2;
+                    }
+                  } else {
+                    var6 = 1;
+                    break L3;
+                  }
+                }
+                var8++;
+                continue L2;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var5 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var5;
+            stackOut_18_1 = new StringBuilder().append("jf.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param3 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L5;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L5;
+            }
+          }
+          throw fc.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
+        return stackIn_17_0;
     }
 
     final int a(int param0, int param1, int param2) {
@@ -225,9 +282,6 @@ abstract class jf {
     public static void a(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 != -25616) {
-            field_b = null;
-        }
     }
 
     final int a(byte param0, int param1) {

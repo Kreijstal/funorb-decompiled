@@ -39,28 +39,29 @@ final class hb extends bg {
         if (!(((hb) this).field_t != null)) {
             return;
         }
-        nf.field_q[2] = ((hb) this).field_z;
-        if (param0) {
-            ((hb) this).field_h = null;
+        try {
+            nf.field_q[2] = ((hb) this).field_z;
+            if (param0) {
+                ((hb) this).field_h = null;
+            }
+            nf.field_q[3] = 65535;
+            nf.field_q[4] = 0;
+            nf.field_q[9] = 0;
+            nf.field_q[0] = ((hb) this).field_w;
+            nf.field_q[11] = 65535;
+            nf.field_q[5] = 0;
+            nf.field_q[10] = 0;
+            nf.field_q[7] = 65535;
+            nf.field_q[6] = 0;
+            nf.field_q[1] = ((hb) this).field_x;
+            nf.field_q[8] = 0;
+            new fc(((hb) this).field_t, 110, 1560, 10, -10, -5).a(param1, nf.field_q);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "hb.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
-        nf.field_q[3] = 65535;
-        nf.field_q[4] = 0;
-        nf.field_q[9] = 0;
-        nf.field_q[0] = ((hb) this).field_w;
-        nf.field_q[11] = 65535;
-        nf.field_q[5] = 0;
-        nf.field_q[10] = 0;
-        nf.field_q[7] = 65535;
-        nf.field_q[6] = 0;
-        nf.field_q[1] = ((hb) this).field_x;
-        nf.field_q[8] = 0;
-        new fc(((hb) this).field_t, 110, 1560, 10, -10, -5).a(param1, nf.field_q);
     }
 
     final static void e(int param0) {
-        if (param0 != -1) {
-            return;
-        }
         fh.field_t = null;
         ug.field_c = null;
     }
@@ -71,7 +72,11 @@ final class hb extends bg {
         if (param0) {
             return;
         }
-        ((hb) this).field_z = param1.field_y;
+        try {
+            ((hb) this).field_z = param1.field_y;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "hb.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static int b(byte param0) {
@@ -89,29 +94,39 @@ final class hb extends bg {
 
     final lg c(byte param0) {
         lg var2 = null;
-        if (param0 != 4) {
+        lg var3 = null;
+        L0: {
+          if (param0 == 4) {
+            break L0;
+          } else {
             field_A = null;
+            break L0;
+          }
         }
-        if ((((hb) this).field_l ^ -1) == -3) {
+        if (((hb) this).field_l != 2) {
+          if (((hb) this).field_l != 20) {
+            if (be.field_q) {
+              if (null == ((hb) this).field_t) {
+                return null;
+              } else {
+                var3 = new lg(((hb) this).field_t, false, false, false, false);
+                var2 = var3;
+                var3.field_c = rr.field_D;
+                var3.field_o = lf.field_A[6];
+                var2.field_D = qj.field_b;
+                var2.b();
+                return var2;
+              }
+            } else {
+              var2 = new lg(fb.field_v, false, false, false, false);
+              return var2;
+            }
+          } else {
             return null;
+          }
+        } else {
+          return null;
         }
-        if (((hb) this).field_l == 20) {
-            return null;
-        }
-        if (!be.field_q) {
-            var2 = new lg(fb.field_v, false, false, false, false);
-            return var2;
-        }
-        if (null == ((hb) this).field_t) {
-            return null;
-        }
-        lg var3 = new lg(((hb) this).field_t, false, false, false, false);
-        var2 = var3;
-        var3.field_c = rr.field_D;
-        var3.field_o = lf.field_A[6];
-        var2.field_D = qj.field_b;
-        var2.b();
-        return var2;
     }
 
     final int c(boolean param0) {
@@ -122,17 +137,44 @@ final class hb extends bg {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         int var10 = 0;
-        int var11 = Vertigo2.field_L ? 1 : 0;
-        if (param2 <= 88) {
-            hb.c(105);
-        }
-        int var6 = pk.a((byte) -14, cj.field_D, param4, ua.field_e);
-        int var7 = pk.a((byte) -14, cj.field_D, param1, ua.field_e);
-        int var8 = pk.a((byte) -14, ib.field_a, param5, ap.field_e);
-        int var9 = pk.a((byte) -14, ib.field_a, param0, ap.field_e);
-        for (var10 = var6; var7 >= var10; var10++) {
-            ki.a(-112, var8, vl.field_e[var10], var9, param3);
+        int var11 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var11 = Vertigo2.field_L ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param2 > 88) {
+                break L1;
+              } else {
+                hb.c(105);
+                break L1;
+              }
+            }
+            var6_int = pk.a((byte) -14, cj.field_D, param4, ua.field_e);
+            var7 = pk.a((byte) -14, cj.field_D, param1, ua.field_e);
+            var8 = pk.a((byte) -14, ib.field_a, param5, ap.field_e);
+            var9 = pk.a((byte) -14, ib.field_a, param0, ap.field_e);
+            var10 = var6_int;
+            L2: while (true) {
+              if (var7 < var10) {
+                break L0;
+              } else {
+                ki.a(-112, var8, vl.field_e[var10], var9, param3);
+                var10++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var6, "hb.H(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -170,7 +212,7 @@ final class hb extends bg {
             if (((hb) this).field_l < 0) {
               break L2;
             } else {
-              if ((na.field_o[((hb) this).field_l] ^ -1) < (((hb) this).field_g ^ -1)) {
+              if (~na.field_o[((hb) this).field_l] < ~((hb) this).field_g) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 break L1;
@@ -190,14 +232,14 @@ final class hb extends bg {
               if (25 != ((hb) this).field_l) {
                 break L4;
               } else {
-                if ((param0 ^ -1) == -8) {
+                if (param0 == 7) {
                   break L4;
                 } else {
                   return;
                 }
               }
             } else {
-              if ((((hb) this).field_l ^ -1) == (param0 ^ -1)) {
+              if (~((hb) this).field_l == ~param0) {
                 return;
               } else {
                 if (23 != param0) {
@@ -219,10 +261,10 @@ final class hb extends bg {
                             } else {
                               L6: {
                                 L7: {
-                                  if ((param0 ^ -1) == -3) {
+                                  if (param0 == 2) {
                                     break L7;
                                   } else {
-                                    if (-21 == (param0 ^ -1)) {
+                                    if (param0 == 20) {
                                       break L7;
                                     } else {
                                       stackOut_22_0 = 1;
@@ -237,13 +279,13 @@ final class hb extends bg {
                               }
                               L8: {
                                 var4 = stackIn_24_0;
-                                if ((((hb) this).field_l ^ -1) != -11) {
+                                if (((hb) this).field_l != 10) {
                                   break L8;
                                 } else {
                                   if (var4 == 0) {
                                     break L8;
                                   } else {
-                                    if (-6 == (((hb) this).field_l ^ -1)) {
+                                    if (((hb) this).field_l == 5) {
                                       break L8;
                                     } else {
                                       return;
@@ -252,7 +294,7 @@ final class hb extends bg {
                                 }
                               }
                               L9: {
-                                if ((((hb) this).field_l ^ -1) != -26) {
+                                if (((hb) this).field_l != 25) {
                                   break L9;
                                 } else {
                                   if (7 != param0) {
@@ -266,7 +308,7 @@ final class hb extends bg {
                                 if (19 != ((hb) this).field_l) {
                                   break L10;
                                 } else {
-                                  if (-26 != (param0 ^ -1)) {
+                                  if (param0 != 25) {
                                     return;
                                   } else {
                                     break L10;
@@ -300,7 +342,7 @@ final class hb extends bg {
                                 }
                               }
                               L13: {
-                                if (-10 != (((hb) this).field_l ^ -1)) {
+                                if (((hb) this).field_l != 9) {
                                   break L13;
                                 } else {
                                   if (var4 == 0) {
@@ -312,7 +354,7 @@ final class hb extends bg {
                                       if (param0 == 17) {
                                         break L13;
                                       } else {
-                                        if ((param0 ^ -1) == -6) {
+                                        if (param0 == 5) {
                                           break L13;
                                         } else {
                                           return;
@@ -323,10 +365,10 @@ final class hb extends bg {
                                 }
                               }
                               L14: {
-                                if (-22 != (((hb) this).field_l ^ -1)) {
+                                if (((hb) this).field_l != 21) {
                                   break L14;
                                 } else {
-                                  if ((param0 ^ -1) == -16) {
+                                  if (param0 == 15) {
                                     break L14;
                                   } else {
                                     if (param0 == 8) {
@@ -335,10 +377,10 @@ final class hb extends bg {
                                       if (var4 == 0) {
                                         break L14;
                                       } else {
-                                        if (-6 == (param0 ^ -1)) {
+                                        if (param0 == 5) {
                                           break L14;
                                         } else {
-                                          if ((param0 ^ -1) != -18) {
+                                          if (param0 != 17) {
                                             return;
                                           } else {
                                             break L14;
@@ -350,7 +392,7 @@ final class hb extends bg {
                                 }
                               }
                               L15: {
-                                if (-8 != (((hb) this).field_l ^ -1)) {
+                                if (((hb) this).field_l != 7) {
                                   break L15;
                                 } else {
                                   if (var4 == 0) {
@@ -362,7 +404,7 @@ final class hb extends bg {
                                       if (10 == param0) {
                                         break L15;
                                       } else {
-                                        if ((param0 ^ -1) == -27) {
+                                        if (param0 == 26) {
                                           break L15;
                                         } else {
                                           if (param0 == 15) {
@@ -377,7 +419,7 @@ final class hb extends bg {
                                 }
                               }
                               L16: {
-                                if (-17 != (((hb) this).field_l ^ -1)) {
+                                if (((hb) this).field_l != 16) {
                                   break L16;
                                 } else {
                                   if (var4 == 0) {
@@ -405,7 +447,7 @@ final class hb extends bg {
                                     if (param0 == 5) {
                                       break L17;
                                     } else {
-                                      if ((param0 ^ -1) == -18) {
+                                      if (param0 == 17) {
                                         break L17;
                                       } else {
                                         return;
@@ -415,7 +457,7 @@ final class hb extends bg {
                                 }
                               }
                               L18: {
-                                if ((((hb) this).field_l ^ -1) != -9) {
+                                if (((hb) this).field_l != 8) {
                                   break L18;
                                 } else {
                                   if (7 == param0) {
@@ -424,13 +466,13 @@ final class hb extends bg {
                                     if (var4 == 0) {
                                       break L18;
                                     } else {
-                                      if ((param0 ^ -1) == -6) {
+                                      if (param0 == 5) {
                                         break L18;
                                       } else {
-                                        if ((param0 ^ -1) == -10) {
+                                        if (param0 == 9) {
                                           break L18;
                                         } else {
-                                          if ((param0 ^ -1) == -18) {
+                                          if (param0 == 17) {
                                             break L18;
                                           } else {
                                             return;
@@ -451,7 +493,7 @@ final class hb extends bg {
                                     if (var4 == 0) {
                                       break L19;
                                     } else {
-                                      if (-6 == (param0 ^ -1)) {
+                                      if (param0 == 5) {
                                         break L19;
                                       } else {
                                         if (16 == param0) {
@@ -465,10 +507,10 @@ final class hb extends bg {
                                 }
                               }
                               L20: {
-                                if ((((hb) this).field_l ^ -1) != -18) {
+                                if (((hb) this).field_l != 17) {
                                   break L20;
                                 } else {
-                                  if ((param0 ^ -1) == -8) {
+                                  if (param0 == 7) {
                                     break L20;
                                   } else {
                                     if (var4 == 0) {
@@ -477,7 +519,7 @@ final class hb extends bg {
                                       if (5 == param0) {
                                         break L20;
                                       } else {
-                                        if ((param0 ^ -1) == -19) {
+                                        if (param0 == 18) {
                                           break L20;
                                         } else {
                                           return;
@@ -488,7 +530,7 @@ final class hb extends bg {
                                 }
                               }
                               L21: {
-                                if ((((hb) this).field_l ^ -1) != -19) {
+                                if (((hb) this).field_l != 18) {
                                   break L21;
                                 } else {
                                   if (7 == param0) {
@@ -497,7 +539,7 @@ final class hb extends bg {
                                     if (var4 == 0) {
                                       break L21;
                                     } else {
-                                      if ((param0 ^ -1) != -6) {
+                                      if (param0 != 5) {
                                         return;
                                       } else {
                                         break L21;
@@ -507,14 +549,14 @@ final class hb extends bg {
                                 }
                               }
                               L22: {
-                                if (-2 != (((hb) this).field_l ^ -1)) {
+                                if (((hb) this).field_l != 1) {
                                   break L22;
                                 } else {
                                   L23: {
                                     if (0 == param0) {
                                       break L23;
                                     } else {
-                                      if ((param0 ^ -1) != -5) {
+                                      if (param0 != 4) {
                                         break L22;
                                       } else {
                                         break L23;
@@ -551,7 +593,7 @@ final class hb extends bg {
     }
 
     final void a(wo param0, byte param1) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -601,7 +643,7 @@ final class hb extends bg {
           var12 = Vertigo2.field_L ? 1 : 0;
           boolean discarded$2 = ((hb) this).field_n.c(-660903963);
           ((hb) this).field_r = ((hb) this).field_r | ((hb) this).field_n.field_d;
-          var3 = param0.b(-1);
+          var3_int = param0.b(-1);
           if (param1 < -36) {
             break L0;
           } else {
@@ -620,7 +662,7 @@ final class hb extends bg {
               stackOut_3_0 = this;
               stackIn_6_0 = stackOut_3_0;
               stackIn_4_0 = stackOut_3_0;
-              if (9 != var3) {
+              if (9 != var3_int) {
                 stackOut_6_0 = this;
                 stackOut_6_1 = 0;
                 stackIn_7_0 = stackOut_6_0;
@@ -685,12 +727,12 @@ final class hb extends bg {
           if (((hb) this).field_l == 2) {
             break L5;
           } else {
-            if (-21 != (((hb) this).field_l ^ -1)) {
+            if (((hb) this).field_l != 20) {
               L6: {
                 L7: {
                   var4 = param0.j(70);
                   var5 = -((hb) this).field_s + var4;
-                  if ((var5 ^ -1) <= -65) {
+                  if (var5 >= 64) {
                     break L7;
                   } else {
                     if (var5 <= -64) {
@@ -706,7 +748,7 @@ final class hb extends bg {
                     if (0 >= var5) {
                       break L9;
                     } else {
-                      if ((var5 ^ -1) > -1025) {
+                      if (var5 < 1024) {
                         break L8;
                       } else {
                         break L9;
@@ -724,7 +766,7 @@ final class hb extends bg {
                       }
                     }
                   }
-                  if ((((hb) this).field_s ^ -1) == (var4 ^ -1)) {
+                  if (~((hb) this).field_s == ~var4) {
                     break L6;
                   } else {
                     ((hb) this).field_s = ((hb) this).field_s - 64 & 2047;
@@ -736,7 +778,7 @@ final class hb extends bg {
                 ((hb) this).field_s = 64 + ((hb) this).field_s & 2047;
                 break L6;
               }
-              if ((((hb) this).field_E ^ -1) < -1) {
+              if (((hb) this).field_E > 0) {
                 ((hb) this).field_E = ((hb) this).field_E - 64;
                 ((hb) this).field_r = true;
                 break L5;
@@ -749,7 +791,7 @@ final class hb extends bg {
           }
         }
         L11: {
-          if ((param0.h(13289) ^ -1) == -1) {
+          if (param0.h(13289) == 0) {
             stackOut_31_0 = 0;
             stackIn_32_0 = stackOut_31_0;
             break L11;
@@ -762,10 +804,10 @@ final class hb extends bg {
         L12: {
           var4 = stackIn_32_0;
           var5 = 0;
-          if ((((hb) this).field_v ^ -1) != (var3 ^ -1)) {
+          if (~((hb) this).field_v != ~var3_int) {
             break L12;
           } else {
-            if (-1 != (var3 ^ -1)) {
+            if (var3_int != 0) {
               break L12;
             } else {
               if (((hb) this).field_g != 615) {
@@ -778,17 +820,17 @@ final class hb extends bg {
           }
         }
         L13: {
-          if ((var3 ^ -1) == (((hb) this).field_v ^ -1)) {
+          if (~var3_int == ~((hb) this).field_v) {
             break L13;
           } else {
             L14: {
-              var8_int = var3;
-              if (-2 != (var8_int ^ -1)) {
-                if (-5 == (var8_int ^ -1)) {
-                  if ((((hb) this).field_l ^ -1) == -3) {
+              var8_int = var3_int;
+              if (var8_int != 1) {
+                if (var8_int == 4) {
+                  if (((hb) this).field_l == 2) {
                     break L14;
                   } else {
-                    if ((((hb) this).field_l ^ -1) == -21) {
+                    if (((hb) this).field_l == 20) {
                       break L14;
                     } else {
                       L15: {
@@ -804,10 +846,10 @@ final class hb extends bg {
                             break L15;
                           } else {
                             L16: {
-                              if ((var7 ^ -1) == -2) {
+                              if (var7 == 1) {
                                 break L16;
                               } else {
-                                if (-2 != (ol.field_B ^ -1)) {
+                                if (ol.field_B != 1) {
                                   break L15;
                                 } else {
                                   break L16;
@@ -819,11 +861,11 @@ final class hb extends bg {
                               ((hb) this).a(20, (byte) -36);
                               var8_int = param0.m(-1);
                               if (!param0.c(true)) {
-                                if ((var8_int ^ -1) < -1) {
+                                if (var8_int > 0) {
                                   ((hb) this).field_i = vl.field_a[7][((hb) this).field_m];
                                   break L17;
                                 } else {
-                                  if ((var8_int ^ -1) > -1) {
+                                  if (var8_int < 0) {
                                     ((hb) this).field_i = vl.field_a[8][((hb) this).field_m];
                                     break L17;
                                   } else {
@@ -832,8 +874,8 @@ final class hb extends bg {
                                   }
                                 }
                               } else {
-                                if ((var8_int ^ -1) != -1) {
-                                  if (-1 <= (var8_int ^ -1)) {
+                                if (var8_int != 0) {
+                                  if (var8_int <= 0) {
                                     ((hb) this).field_i = vl.field_a[9][((hb) this).field_m];
                                     break L17;
                                   } else {
@@ -889,7 +931,7 @@ final class hb extends bg {
                     }
                   }
                 } else {
-                  if ((var8_int ^ -1) != -3) {
+                  if (var8_int != 2) {
                     if (var8_int == 3) {
                       ee.a(1, -109, 3);
                       var5 = 1;
@@ -911,11 +953,11 @@ final class hb extends bg {
                             ((hb) this).field_h = vl.field_a[11][((hb) this).field_m];
                             break L14;
                           } else {
-                            if (-1 == (var8_int ^ -1)) {
+                            if (var8_int == 0) {
                               L19: {
-                                if ((((hb) this).field_v ^ -1) == -2) {
+                                if (((hb) this).field_v == 1) {
                                   var5 = 1;
-                                  if ((param0.field_X ^ -1) != 49) {
+                                  if (param0.field_X != -50) {
                                     ((hb) this).a(8, (byte) -36);
                                     break L19;
                                   } else {
@@ -928,7 +970,7 @@ final class hb extends bg {
                                 }
                               }
                               L20: {
-                                if (-8 != (((hb) this).field_v ^ -1)) {
+                                if (((hb) this).field_v != 7) {
                                   break L20;
                                 } else {
                                   ((hb) this).d(75);
@@ -983,20 +1025,20 @@ final class hb extends bg {
                 break L14;
               }
             }
-            ((hb) this).field_v = var3;
+            ((hb) this).field_v = var3_int;
             break L13;
           }
         }
         L23: {
-          if (var3 == 4) {
+          if (var3_int == 4) {
             break L23;
           } else {
-            if (-8 != (var3 ^ -1)) {
+            if (var3_int != 7) {
               L24: {
-                if (-9 == (var3 ^ -1)) {
+                if (var3_int == 8) {
                   break L24;
                 } else {
-                  if ((var3 ^ -1) == -7) {
+                  if (var3_int == 6) {
                     break L24;
                   } else {
                     L25: {
@@ -1026,13 +1068,13 @@ final class hb extends bg {
                         }
                         L28: {
                           var6 = param0.m(-1);
-                          if (-21 == (((hb) this).field_l ^ -1)) {
+                          if (((hb) this).field_l == 20) {
                             break L28;
                           } else {
-                            if ((((hb) this).field_l ^ -1) == -11) {
+                            if (((hb) this).field_l == 10) {
                               break L28;
                             } else {
-                              if (-1 <= (var6 ^ -1)) {
+                              if (var6 <= 0) {
                                 if (0 <= var6) {
                                   if (!((hb) this).field_y) {
                                     ((hb) this).field_h = vl.field_a[0][((hb) this).field_m];
@@ -1063,10 +1105,10 @@ final class hb extends bg {
                           }
                         }
                         L29: {
-                          if (-6 != (((hb) this).field_l ^ -1)) {
+                          if (((hb) this).field_l != 5) {
                             break L29;
                           } else {
-                            if ((var3 ^ -1) == -3) {
+                            if (var3_int == 2) {
                               break L29;
                             } else {
                               ((hb) this).field_l = -1;
@@ -1107,7 +1149,7 @@ final class hb extends bg {
                           }
                         }
                         L32: {
-                          if ((var7 ^ -1) >= 9) {
+                          if (var7 <= -10) {
                             break L32;
                           } else {
                             L33: {
@@ -1122,7 +1164,7 @@ final class hb extends bg {
                               }
                             }
                             if (((hb) this).field_n.a(-80)) {
-                              if ((param0.field_X ^ -1) == 49) {
+                              if (param0.field_X == -50) {
                                 ((hb) this).a(16, (byte) -36);
                                 break L26;
                               } else {
@@ -1134,7 +1176,7 @@ final class hb extends bg {
                             }
                           }
                         }
-                        if ((var7 ^ -1) < -1) {
+                        if (var7 > 0) {
                           if (-50 == param0.field_X) {
                             ((hb) this).a(3, (byte) -36);
                             break L26;
@@ -1162,7 +1204,7 @@ final class hb extends bg {
                                 }
                               }
                               L36: {
-                                if ((var6 ^ -1) <= -1) {
+                                if (var6 >= 0) {
                                   break L36;
                                 } else {
                                   if (0 == (param0.field_C & 2)) {
@@ -1185,7 +1227,7 @@ final class hb extends bg {
                                 if (((hb) this).field_l < 0) {
                                   break L38;
                                 } else {
-                                  if (-1 == (((hb) this).field_l ^ -1)) {
+                                  if (((hb) this).field_l == 0) {
                                     break L38;
                                   } else {
                                     if (na.field_o[((hb) this).field_l] > ((hb) this).field_g) {
@@ -1202,7 +1244,7 @@ final class hb extends bg {
                             ((hb) this).a(1, (byte) -36);
                             break L26;
                           } else {
-                            if (49 == (param0.field_X ^ -1)) {
+                            if (param0.field_X == -50) {
                               ((hb) this).a(12, (byte) -36);
                               break L26;
                             } else {
@@ -1253,7 +1295,7 @@ final class hb extends bg {
                 if (((hb) this).field_B.field_o != null) {
                   var2_int = ((hb) this).field_B.field_o.length - 1;
                   L2: while (true) {
-                    if (-1 < (var2_int ^ -1)) {
+                    if (var2_int < 0) {
                       break L1;
                     } else {
                       ((hb) this).field_B.field_o[var2_int] = (byte) 0;
@@ -1272,7 +1314,7 @@ final class hb extends bg {
                 if (!((hb) this).field_y) {
                   break L3;
                 } else {
-                  if (-18 == (((hb) this).field_l ^ -1)) {
+                  if (((hb) this).field_l == 17) {
                     break L3;
                   } else {
                     if (((hb) this).field_l == 18) {
@@ -1297,7 +1339,7 @@ final class hb extends bg {
                   ((hb) this).field_B.field_q = var3;
                   mj.a(((hb) this).field_w, ((hb) this).field_z, ((hb) this).field_E, ((hb) this).field_s, nf.field_q, (byte) -81, ((hb) this).field_x);
                   qq.a(nf.field_q, 3, eb.field_f, 3, 9);
-                  if (-6 == (((hb) this).field_l ^ -1)) {
+                  if (((hb) this).field_l == 5) {
                     break L5;
                   } else {
                     if (((hb) this).field_l != 13) {
@@ -1345,22 +1387,137 @@ final class hb extends bg {
     }
 
     final void a(int param0, int[] param1, boolean param2, byte[] param3, boolean param4) {
-        int var6 = 0;
-        int var7 = Vertigo2.field_L ? 1 : 0;
-        if (((hb) this).field_t == null) {
-            return;
-        }
-        if (!((((hb) this).field_t.field_z ^ -1) < (param3.length ^ -1))) {
-            for (var6 = 0; ((hb) this).field_t.field_z > var6; var6++) {
-                if (((hb) this).field_t.field_o[var6] >= 0) {
-                    ((hb) this).field_t.field_o[var6] = param3[var6];
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        Object var8 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        var7 = Vertigo2.field_L ? 1 : 0;
+        try {
+          L0: {
+            if (((hb) this).field_t != null) {
+              L1: {
+                if (((hb) this).field_t.field_z <= param3.length) {
+                  var6_int = 0;
+                  L2: while (true) {
+                    if (((hb) this).field_t.field_z <= var6_int) {
+                      break L1;
+                    } else {
+                      L3: {
+                        if (((hb) this).field_t.field_o[var6_int] < 0) {
+                          break L3;
+                        } else {
+                          ((hb) this).field_t.field_o[var6_int] = param3[var6_int];
+                          break L3;
+                        }
+                      }
+                      var6_int++;
+                      continue L2;
+                    }
+                  }
+                } else {
+                  break L1;
                 }
+              }
+              L4: {
+                ((hb) this).a(false, param1, param2, param4);
+                if (param0 == -30) {
+                  break L4;
+                } else {
+                  var8 = null;
+                  ((hb) this).a((wo) null, (byte) 88);
+                  break L4;
+                }
+              }
+              break L0;
+            } else {
+              return;
             }
-        }
-        ((hb) this).a(false, param1, param2, param4);
-        if (param0 != -30) {
-            Object var8 = null;
-            ((hb) this).a((wo) null, (byte) 88);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var6 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_1 = new StringBuilder().append("hb.L(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
+            }
+          }
+          L6: {
+            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param2).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param3 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L6;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L6;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param4 + 41);
         }
     }
 

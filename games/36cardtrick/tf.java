@@ -211,7 +211,7 @@ final class tf extends pd {
               L1: {
                 var7 = -10 + var5_int;
                 sa.a(param3 ^ -123);
-                if ((param2.field_E ^ -1) >= -1) {
+                if (param2.field_E <= 0) {
                   break L1;
                 } else {
                   if (null != param2.field_D) {
@@ -227,7 +227,7 @@ final class tf extends pd {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if ((var8 ^ -1) <= (param2.field_M ^ -1)) {
+                    if (~var8 <= ~param2.field_M) {
                       break L4;
                     } else {
                       var9 = param2.field_a[var8];
@@ -267,7 +267,7 @@ final class tf extends pd {
                           } else {
                             L7: {
                               var13 = lg.field_c[var10];
-                              if (2147483647 != (var13 ^ -1)) {
+                              if (var13 != -2147483648) {
                                 break L7;
                               } else {
                                 if (var19 == 0) {
@@ -279,7 +279,7 @@ final class tf extends pd {
                             }
                             L8: {
                               var14 = lg.field_c[var11];
-                              if ((var14 ^ -1) != 2147483647) {
+                              if (var14 != -2147483648) {
                                 break L8;
                               } else {
                                 if (var19 == 0) {
@@ -297,7 +297,7 @@ final class tf extends pd {
                               stackIn_33_1 = stackOut_30_1;
                               stackIn_31_0 = stackOut_30_0;
                               stackIn_31_1 = stackOut_30_1;
-                              if ((var7 ^ -1) <= -1) {
+                              if (var7 >= 0) {
                                 stackOut_33_0 = stackIn_33_0;
                                 stackOut_33_1 = stackIn_33_1;
                                 stackOut_33_2 = var15 >> var7;
@@ -320,7 +320,7 @@ final class tf extends pd {
                             L10: while (true) {
                               L11: {
                                 L12: {
-                                  if (-1 == (var17 >> 1855553988 ^ -1)) {
+                                  if (var17 >> 4 == 0) {
                                     break L12;
                                   } else {
                                     var16--;
@@ -351,7 +351,7 @@ final class tf extends pd {
                                     }
                                   }
                                 }
-                                stackOut_43_0 = (var16 << 1546467300) - -var17;
+                                stackOut_43_0 = (var16 << 4) - -var17;
                                 stackIn_44_0 = stackOut_43_0;
                                 break L11;
                               }
@@ -359,7 +359,7 @@ final class tf extends pd {
                                 var18 = stackIn_44_0;
                                 lf.field_a[var18] = var8;
                                 mb.field_c[var16] = 1 + var17;
-                                if (-1 <= (param2.field_E ^ -1)) {
+                                if (param2.field_E <= 0) {
                                   break L14;
                                 } else {
                                   if (param2.field_D == null) {
@@ -397,7 +397,7 @@ final class tf extends pd {
                         var8 = 0;
                         var9 = 0;
                         L17: while (true) {
-                          if ((var9 ^ -1) <= (tb.field_h.length ^ -1)) {
+                          if (~var9 <= ~tb.field_h.length) {
                             break L16;
                           } else {
                             var10 = tb.field_h[var9];

@@ -13,7 +13,7 @@ final class qr {
         if (param1 != -7250) {
             return false;
         }
-        return -1 != (param0 & 540800 ^ -1) ? true : false;
+        return (param0 & 540800) != 0 ? true : false;
     }
 
     static {

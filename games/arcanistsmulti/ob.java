@@ -26,7 +26,7 @@ abstract class ob extends vi {
 
     final void b(int param0, int param1, int param2, int param3) {
         int var5 = 58 / ((param1 - 76) / 32);
-        if ((param2 ^ -1) >= -1) {
+        if (param2 <= 0) {
             ((ob) this).a(param0, 0, param3);
             return;
         }
@@ -40,9 +40,6 @@ abstract class ob extends vi {
 
     final static void j(byte param0) {
         int var1 = 0;
-        if (param0 > -107) {
-            return;
-        }
         if (si.field_l > 32) {
             var1 = si.field_l % 32;
             if (!(var1 != 0)) {
@@ -105,7 +102,7 @@ abstract class ob extends vi {
                     return;
                   } else {
                     var9 = (var6 + -var5) * var7 / var4 + var5;
-                    var9 = var9 | (var9 << -1484223032 | var9 << -698295632);
+                    var9 = var9 | (var9 << 8 | var9 << 16);
                     de.f(param0, var8, 6, var9);
                     de.f(((ob) this).field_v + (param0 - 6), var8, 6, var9);
                     var8++;
@@ -115,7 +112,7 @@ abstract class ob extends vi {
                 }
               } else {
                 var9 = var5 - -(var7 * (-var5 + var6) / var4);
-                var9 = var9 | (var9 << 597086600 | var9 << 1816786544);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 de.f(param0, var8, 6, var9);
                 de.f(((ob) this).field_v + (param0 + -6), var8, 6, var9);
                 var7++;
@@ -138,10 +135,10 @@ abstract class ob extends vi {
                         break L4;
                       } else {
                         var12 = (-var7 + 20) * (20 - var7) - -((-var10 + 20) * (-var10 + 20));
-                        if ((var12 ^ -1) >= -463) {
-                          if ((var12 ^ -1) <= -421) {
+                        if (var12 <= 462) {
+                          if (var12 >= 420) {
                             var13 = (462 - var12) * var9 / 42;
-                            var13 = var13 | (var13 << -1529224920 | var13 << -310818192);
+                            var13 = var13 | (var13 << 8 | var13 << 16);
                             de.field_l[de.field_e * var8 + param0 + var10] = var13;
                             var10++;
                             continue L5;
@@ -167,12 +164,12 @@ abstract class ob extends vi {
                           break L8;
                         } else {
                           var14 = (20 + -var7) * (-var7 + 20) + var13 * var13;
-                          if (-463 > (var14 ^ -1)) {
+                          if (var14 > 462) {
                             break L8;
                           } else {
                             if (420 <= var14) {
                               var15 = var9 * (462 + -var14) / 42;
-                              var15 = var15 | (var15 << -1829656368 | var15 << 1496617352);
+                              var15 = var15 | (var15 << 16 | var15 << 8);
                               de.field_l[var11 + (de.field_e * var8 - -param0)] = var15;
                               var11++;
                               var13++;
@@ -193,7 +190,7 @@ abstract class ob extends vi {
                     break L6;
                   }
                 }
-                var9 = var9 | (var9 << 220839984 | var9 << 2024586952);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 de.f(param0 + var10, var8, -var10 + var11, var9);
                 var7++;
                 var8++;
@@ -218,9 +215,6 @@ abstract class ob extends vi {
         field_db = null;
         field_ib = null;
         field_X = null;
-        if (param0) {
-            return;
-        }
         field_bb = null;
         field_eb = null;
         field_T = null;
@@ -231,15 +225,13 @@ abstract class ob extends vi {
         int var3 = 0;
         int var5 = 0;
         int var4 = 0;
-        if (param0 < 19) {
-            return true;
-        }
         if (((ob) this).field_cb <= 0) {
         } else {
             var2 = ((ob) this).field_U;
             var3 = ((ob) this).field_gb;
+            int fieldTemp$0 = ((ob) this).field_Z + 1;
             ((ob) this).field_Z = ((ob) this).field_Z + 1;
-            if (((ob) this).field_Z + 1 < ((ob) this).field_cb) {
+            if (fieldTemp$0 < ((ob) this).field_cb) {
                 var4 = (((ob) this).field_cb * 2 + -((ob) this).field_Z) * ((ob) this).field_Z;
                 var5 = ((ob) this).field_cb * ((ob) this).field_cb;
                 var3 = (((ob) this).field_gb - ((ob) this).field_W) * var4 / var5 + ((ob) this).field_W;
@@ -250,7 +242,7 @@ abstract class ob extends vi {
             }
             ((ob) this).a(var2, 0, var3);
         }
-        return this.a((byte) 107);
+        return super.a((byte) 107);
     }
 
     ob(h param0, int param1, int param2) {
@@ -261,10 +253,7 @@ abstract class ob extends vi {
 
     boolean g(byte param0) {
         ((ob) this).a(109);
-        if (param0 != 45) {
-            return false;
-        }
-        return this.g((byte) 45);
+        return super.g((byte) 45);
     }
 
     void a(int param0) {
@@ -283,15 +272,19 @@ abstract class ob extends vi {
         if (param0 != 20) {
             return;
         }
-        he.field_e.b((byte) -98, 58);
-        he.field_e.f(param2, (byte) -7);
-        he.field_e.c(param1.field_o, (byte) -109);
-        he.field_e.c(param1.field_j, (byte) -101);
-        he.field_e.c(param1.field_q, (byte) -56);
-        he.field_e.c(param1.field_s, (byte) -79);
-        he.field_e.c(param1.field_k, (byte) -113);
-        he.field_e.f(param1.field_m, (byte) -111);
-        he.field_e.f(param1.field_h, (byte) -124);
+        try {
+            he.field_e.b((byte) -98, 58);
+            he.field_e.f(param2, (byte) -7);
+            he.field_e.c(param1.field_o, (byte) -109);
+            he.field_e.c(param1.field_j, (byte) -101);
+            he.field_e.c(param1.field_q, (byte) -56);
+            he.field_e.c(param1.field_s, (byte) -79);
+            he.field_e.c(param1.field_k, (byte) -113);
+            he.field_e.f(param1.field_m, (byte) -111);
+            he.field_e.f(param1.field_h, (byte) -124);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "ob.KA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

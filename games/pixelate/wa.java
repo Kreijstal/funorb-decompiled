@@ -58,7 +58,7 @@ final class wa {
                   var2++;
                   continue L0;
                 } else {
-                  var6[var7] = bq.a(fl.field_g[cm.a(255, (int) var21[var7])], cm.a(var23[var7] << -2052479752, -16777216));
+                  var6[var7] = bq.a(fl.field_g[cm.a(255, (int) var21[var7])], cm.a(var23[var7] << 24, -16777216));
                   var7++;
                   continue L1;
                 }
@@ -124,9 +124,6 @@ final class wa {
         field_g = null;
         field_f = null;
         field_a = null;
-        if (param0 != 0) {
-            int discarded$0 = wa.b(46);
-        }
         field_c = null;
         field_d = null;
     }

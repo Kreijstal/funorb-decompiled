@@ -18,9 +18,6 @@ class kd extends ck {
         field_t = null;
         field_q = null;
         field_x = null;
-        if (param0 != 8191) {
-            return;
-        }
         field_s = null;
     }
 

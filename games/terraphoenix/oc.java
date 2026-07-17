@@ -101,6 +101,7 @@ final class oc {
           if (var2 >= 10) {
             ((oc) this).field_c = param0.i(-25578);
             ((oc) this).field_a = param0.i(-25578);
+            return;
           } else {
             var3 = param0.a(-16384);
             if (var3 != 0) {

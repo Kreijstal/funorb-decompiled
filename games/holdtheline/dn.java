@@ -44,37 +44,99 @@ final class dn {
     float field_c;
 
     final static void a(fb param0, int param1, int param2) {
+        RuntimeException var3 = null;
+        int var4 = 0;
         int var5 = 0;
-        int var6 = HoldTheLine.field_D;
-        da var7 = da.field_p;
-        da var8 = var7;
-        var8.c((byte) 33, param1);
-        var8.field_l = var8.field_l + 1;
-        if (param2 <= 94) {
-            return;
+        int var6 = 0;
+        da var7 = null;
+        da var8 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var6 = HoldTheLine.field_D;
+        try {
+          L0: {
+            var7 = da.field_p;
+            var8 = var7;
+            var8.c((byte) 33, param1);
+            var8.field_l = var8.field_l + 1;
+            if (param2 > 94) {
+              var4 = var8.field_l;
+              var8.f(111, 1);
+              var8.b(-652561784, param0.field_u);
+              var8.b(-652561784, param0.field_j);
+              var8.b(-652561784, param0.field_t);
+              var8.a((byte) -58, param0.field_q);
+              var8.a((byte) -58, param0.field_p);
+              var8.a((byte) -58, param0.field_o);
+              var8.a((byte) -58, param0.field_k);
+              var8.f(111, param0.field_r.length);
+              var5 = 0;
+              L1: while (true) {
+                if (var5 >= param0.field_r.length) {
+                  int discarded$1 = var8.a(var4, (byte) 110);
+                  var8.a(-268435456, var8.field_l + -var4);
+                  break L0;
+                } else {
+                  var7.a((byte) -58, param0.field_r[var5]);
+                  var5++;
+                  continue L1;
+                }
+              }
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("dn.A(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
         }
-        int var4 = var8.field_l;
-        var8.f(111, 1);
-        var8.b(-652561784, param0.field_u);
-        var8.b(-652561784, param0.field_j);
-        var8.b(-652561784, param0.field_t);
-        var8.a((byte) -58, param0.field_q);
-        var8.a((byte) -58, param0.field_p);
-        var8.a((byte) -58, param0.field_o);
-        var8.a((byte) -58, param0.field_k);
-        var8.f(111, param0.field_r.length);
-        for (var5 = 0; var5 < param0.field_r.length; var5++) {
-            var7.a((byte) -58, param0.field_r[var5]);
-        }
-        int discarded$0 = var8.a(var4, (byte) 110);
-        var8.a(-268435456, var8.field_l + -var4);
     }
 
     dn(int param0) {
         int var2 = 0;
         L0: {
           var2 = param0;
-          if (-2 == var2) {
+          if (var2 == 1) {
             ((dn) this).field_G = 0;
             ((dn) this).field_K = 12;
             ((dn) this).field_l = 1500.0f;
@@ -112,7 +174,7 @@ final class dn {
             ((dn) this).field_p = 3.0f;
             break L0;
           } else {
-            if (-1 == var2) {
+            if (var2 == 0) {
               ((dn) this).field_l = 1450.0f;
               ((dn) this).field_K = 12;
               ((dn) this).field_k = 6;
@@ -150,7 +212,7 @@ final class dn {
               ((dn) this).field_m = 4.0f;
               break L0;
             } else {
-              if (var2 == -4) {
+              if (var2 == 3) {
                 ((dn) this).field_K = 12;
                 ((dn) this).field_k = 6;
                 ((dn) this).field_l = 2000.0f;
@@ -188,7 +250,7 @@ final class dn {
                 ((dn) this).field_y = 12.0f / ((dn) this).field_F;
                 break L0;
               } else {
-                if (var2 == -3) {
+                if (var2 == 2) {
                   ((dn) this).field_l = 1000.0f;
                   ((dn) this).field_k = 6;
                   ((dn) this).field_K = 12;
@@ -226,7 +288,7 @@ final class dn {
                   ((dn) this).field_r = 0.4000000059604645f;
                   break L0;
                 } else {
-                  if (-5 == var2) {
+                  if (var2 == 4) {
                     ((dn) this).field_k = 6;
                     ((dn) this).field_G = 2;
                     ((dn) this).field_K = 12;
@@ -302,7 +364,7 @@ final class dn {
                       ((dn) this).field_s = 18500.0f;
                       break L0;
                     } else {
-                      if (-7 == var2) {
+                      if (var2 == 6) {
                         ((dn) this).field_K = 12;
                         ((dn) this).field_l = 1500.0f;
                         ((dn) this).field_G = 0;
@@ -340,7 +402,7 @@ final class dn {
                         ((dn) this).field_L = ec.field_s.field_d;
                         break L0;
                       } else {
-                        if ((var2 ^ -1) == -8) {
+                        if (var2 == 7) {
                           ((dn) this).field_k = 6;
                           ((dn) this).field_G = 0;
                           ((dn) this).field_l = 1800.0f;

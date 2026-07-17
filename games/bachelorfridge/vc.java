@@ -13,7 +13,7 @@ final class vc {
         field_f = null;
         field_e = null;
         field_b = null;
-        int var1 = 55 / ((param0 - 38) / 48);
+        int var1 = -27;
         field_d = null;
     }
 
@@ -39,25 +39,21 @@ final class vc {
 
     final static int a(int param0, int param1, int param2) {
         NumberFormatException var3 = null;
-        int stackIn_3_0 = 0;
+        int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
-        L0: {
-          if (param2 == -16306) {
-            break L0;
-          } else {
-            vc.a((byte) 16);
+        int stackOut_1_0 = 0;
+        try {
+          L0: {
+            stackOut_1_0 = Integer.parseInt(lka.field_E[param0][param1]);
+            stackIn_2_0 = stackOut_1_0;
             break L0;
           }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        try {
-          stackOut_2_0 = Integer.parseInt(lka.field_E[param0][param1]);
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
-        }
-        return 0;
+        return stackIn_2_0;
     }
 
     static {

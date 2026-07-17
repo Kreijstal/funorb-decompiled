@@ -66,8 +66,9 @@ final class ki extends ac {
                     return var5;
                   } else {
                     if (-1 != var17[var9]) {
+                      int incrementValue$1 = var4;
                       var4++;
-                      var5[var4] = var17[var9];
+                      var5[incrementValue$1] = var17[var9];
                       var9++;
                       continue L2;
                     } else {
@@ -77,7 +78,7 @@ final class ki extends ac {
                   }
                 }
               } else {
-                if ((var17[var5_int] ^ -1) <= -1) {
+                if (var17[var5_int] >= 0) {
                   var4++;
                   var6 = var5_int - -1;
                   L3: while (true) {
@@ -119,32 +120,33 @@ final class ki extends ac {
     }
 
     final static long l(int param0) {
-        if (param0 != 150) {
-            int[] discarded$0 = ki.b(-91, (byte) -45);
-        }
         return -oe.field_b + mm.a(115);
     }
 
     final void a(int param0, boolean param1, String param2, float param3) {
-        if ((!param1 ? 1 : 0) == (((ki) this).field_nb ? 1 : 0)) {
-            ((ki) this).field_nb = param1 ? true : false;
-            if (((ki) this).field_nb) {
-                ((ki) this).field_mb.b(4210752, 8405024, 16711422);
-                ((ki) this).field_mb.field_N = true;
-            } else {
-                ((ki) this).field_mb.b(4210752, 2113632, 16711422);
-                if (!(!((ki) this).field_lb)) {
-                    ((ki) this).field_mb.field_N = false;
+        try {
+            if ((!param1 ? 1 : 0) == (((ki) this).field_nb ? 1 : 0)) {
+                ((ki) this).field_nb = param1 ? true : false;
+                if (((ki) this).field_nb) {
+                    ((ki) this).field_mb.b(4210752, 8405024, 16711422);
+                    ((ki) this).field_mb.field_N = true;
+                } else {
+                    ((ki) this).field_mb.b(4210752, 2113632, 16711422);
+                    if (!(!((ki) this).field_lb)) {
+                        ((ki) this).field_mb.field_N = false;
+                    }
                 }
             }
+            ((ki) this).field_mb.field_I = (int)(param3 / 100.0f * 65536.0f);
+            ((ki) this).field_qb = param2;
+            int var5_int = 68 / ((param0 - 52) / 57);
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "ki.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
-        ((ki) this).field_mb.field_I = (int)(param3 / 100.0f * 65536.0f);
-        ((ki) this).field_qb = param2;
-        int var5 = 68 / ((param0 - 52) / 57);
     }
 
     public static void l(byte param0) {
-        int var1 = -24 % ((param0 - 40) / 35);
+        int var1 = 0;
         field_ob = null;
         field_pb = null;
         field_kb = null;
@@ -152,32 +154,40 @@ final class ki extends ac {
 
     ki(ka param0, String param1) {
         super(param0, 300, 120);
-        int var3 = 0;
-        ((ki) this).field_jb = param1;
-        if (((ki) this).field_jb != null) {
-            var3 = gf.field_d.a(((ki) this).field_jb, 260, gf.field_d.field_G);
-            ((ki) this).a((byte) 67, 300, 150 - -var3);
+        int var3_int = 0;
+        try {
+            ((ki) this).field_jb = param1;
+            if (((ki) this).field_jb != null) {
+                var3_int = gf.field_d.a(((ki) this).field_jb, 260, gf.field_d.field_G);
+                ((ki) this).a((byte) 67, 300, 150 - -var3_int);
+            }
+            ((ki) this).field_mb = new bk(13, 50, 274, 30, 15, 2113632, 4210752);
+            ((ki) this).field_lb = false;
+            ((ki) this).field_mb.field_N = true;
+            ((ki) this).field_nb = false;
+            ((ki) this).a((lh) (Object) ((ki) this).field_mb, -110);
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((ki) this).field_mb = new bk(13, 50, 274, 30, 15, 2113632, 4210752);
-        ((ki) this).field_lb = false;
-        ((ki) this).field_mb.field_N = true;
-        ((ki) this).field_nb = false;
-        ((ki) this).a((lh) (Object) ((ki) this).field_mb, -110);
     }
 
     final static void a(byte param0, String[] param1) {
-        if (!(null == da.field_b)) {
-            da.field_b.field_S.a(true, param1);
+        try {
+            if (!(null == da.field_b)) {
+                da.field_b.field_S.a(true, param1);
+            }
+            if (null != nm.field_o) {
+                nm.field_o.field_R.a(true, param1);
+            }
+            int var2_int = -30 / ((15 - param0) / 62);
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "ki.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        if (null != nm.field_o) {
-            nm.field_o.field_R.a(true, param1);
-        }
-        int var2 = -30 / ((15 - param0) / 62);
     }
 
     final void a(int param0, int param1, boolean param2) {
         super.a(param0, param1, param2);
-        gf.field_d.a(((ki) this).field_qb, param0 + (((ki) this).field_x >> -1550069311), 103 + param1, 16777215, -1);
+        gf.field_d.a(((ki) this).field_qb, param0 + (((ki) this).field_x >> 1), 103 + param1, 16777215, -1);
         if (!(null == ((ki) this).field_jb)) {
             pb.g(20 + param0, -7 + param1 - -120, 260, 8421504);
             int discarded$0 = gf.field_d.a(((ki) this).field_jb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, gf.field_d.field_G);

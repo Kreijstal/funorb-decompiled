@@ -11,9 +11,6 @@ final class a {
     public static void b(byte param0) {
         field_b = null;
         field_e = null;
-        if (param0 != 106) {
-            return;
-        }
         field_d = null;
     }
 

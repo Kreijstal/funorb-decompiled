@@ -28,9 +28,9 @@ final class gl {
 
     final static bd[] a(bd param0, int param1, int param2) {
         int var10 = 0;
-        bd[] var3 = new bd[param1 * param2];
-        int[][] var4 = new int[param1 * param2][];
-        int var5 = param0.field_z / param2;
+        bd[] var3 = new bd[param1 * 8];
+        int[][] var4 = new int[param1 * 8][];
+        int var5 = param0.field_z / 8;
         int var6 = param0.field_A / param1;
         int var7 = 0;
         int var8 = 0;

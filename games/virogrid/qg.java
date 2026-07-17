@@ -46,7 +46,7 @@ final class qg extends l {
           var3 = he.field_Xb.b(param1, param0 ^ -29471);
           if (0 != var3) {
             L0: {
-              if (-3 != (var3 ^ -1)) {
+              if (var3 != 2) {
                 break L0;
               } else {
                 if (he.field_Xb.field_V == null) {
@@ -73,7 +73,7 @@ final class qg extends l {
                       }
                     }
                     L3: {
-                      if ((ge.field_d ^ -1) == -2) {
+                      if (ge.field_d == 1) {
                         var5 = (Object) (Object) og.a(var4, true, param2);
                         break L3;
                       } else {
@@ -81,7 +81,7 @@ final class qg extends l {
                       }
                     }
                     L4: {
-                      if (-3 == (ge.field_d ^ -1)) {
+                      if (ge.field_d == 2) {
                         var5 = (Object) (Object) g.a(var4, -128, param2);
                         break L4;
                       } else {
@@ -89,7 +89,7 @@ final class qg extends l {
                       }
                     }
                     L5: {
-                      if (-4 != (ge.field_d ^ -1)) {
+                      if (ge.field_d != 3) {
                         break L5;
                       } else {
                         var5 = (Object) (Object) og.a(var4, param2, (byte) 60, var4);
@@ -170,19 +170,19 @@ final class qg extends l {
     }
 
     final void a(int[] param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        ((qg) this).field_q = param4;
-        ((qg) this).field_p = param0;
-        ((qg) this).field_v = param5;
-        ((qg) this).field_o = param1;
-        ((qg) this).field_i = param2;
-        ((qg) this).field_t = param7;
-        if (param3 != -45) {
-          ((qg) this).field_k = 79;
-          ((qg) this).field_k = param6;
-          return;
-        } else {
-          ((qg) this).field_k = param6;
-          return;
+        try {
+            ((qg) this).field_q = param4;
+            ((qg) this).field_p = param0;
+            ((qg) this).field_v = param5;
+            ((qg) this).field_o = param1;
+            ((qg) this).field_i = param2;
+            ((qg) this).field_t = param7;
+            if (param3 != -45) {
+                ((qg) this).field_k = 79;
+            }
+            ((qg) this).field_k = param6;
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "qg.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 

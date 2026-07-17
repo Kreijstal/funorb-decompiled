@@ -6,64 +6,94 @@ final class vi {
     static String field_a;
 
     public static void a(int param0) {
-        Object var2 = null;
-        if (param0 != 0) {
-          var2 = null;
-          vi.a((String) null, 23, false);
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
-          field_a = null;
-          field_b = null;
-          return;
-        }
+        field_a = null;
+        field_b = null;
     }
 
     final static void a(String param0, int param1, boolean param2) {
-        int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        L0: {
-          if (!param2) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        ja.field_F = stackIn_3_0 != 0;
+        ja.field_F = param2;
         ah.field_h = true;
         if (param1 != 12345) {
-          return;
-        } else {
-          me.field_f = new ha(wg.field_j, pj.field_c, param0, fk.field_a, ja.field_F);
-          wg.field_j.b((byte) -63, (we) (Object) me.field_f);
-          return;
+            return;
+        }
+        try {
+            me.field_f = new ha(wg.field_j, pj.field_c, param0, fk.field_a, ja.field_F);
+            wg.field_j.b((byte) -63, (we) (Object) me.field_f);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "vi.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
     final static int a(int param0, CharSequence param1) {
+        RuntimeException var2 = null;
         Object var3 = null;
-        if (param0 <= 39) {
-          var3 = null;
-          vi.a((String) null, 30, false);
-          return wk.a(90, 10, param1, true);
-        } else {
-          return wk.a(90, 10, param1, true);
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 > 39) {
+                break L1;
+              } else {
+                var3 = null;
+                vi.a((String) null, 30, false);
+                break L1;
+              }
+            }
+            stackOut_2_0 = wk.a(90, 10, param1, true);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("vi.B(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     final static void a(boolean param0) {
-        if (!param0) {
-            Object var2 = null;
-            int discarded$0 = vi.a(97, (CharSequence) null);
-            fg.field_a = 0;
-            return;
-        }
         fg.field_a = 0;
     }
 

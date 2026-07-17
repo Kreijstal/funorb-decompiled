@@ -35,7 +35,8 @@ final class esb extends qq implements mkb {
     }
 
     final static String a(int param0, CharSequence param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -44,233 +45,138 @@ final class esb extends qq implements mkb {
         char[] var8 = null;
         char[] var9 = null;
         char[] var10 = null;
-        L0: {
-          var6 = VoidHunters.field_G;
-          var2 = param1.length();
-          if (20 >= var2) {
-            break L0;
-          } else {
-            var2 = 20;
-            break L0;
-          }
-        }
-        var10 = new char[var2];
-        var9 = var10;
-        var8 = var9;
-        var7 = var8;
-        var3 = var7;
-        if (param0 <= 2) {
-          field_j = null;
-          var4 = 0;
-          if (var2 > var4) {
-            var5 = param1.charAt(var4);
-            if (var5 < 65) {
-              if (97 > var5) {
-                if (var5 >= 48) {
-                  if (var5 > 57) {
-                    var3[var4] = (char)95;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    return new String(var10);
-                  } else {
-                    var3[var4] = (char)var5;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    return new String(var10);
-                  }
-                } else {
-                  var3[var4] = (char)95;
-                  var4++;
-                  var4++;
-                  var4++;
-                  var4++;
-                  var4++;
-                  return new String(var10);
-                }
+        String stackIn_25_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_24_0 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        var6 = VoidHunters.field_G;
+        try {
+          L0: {
+            L1: {
+              var2_int = param1.length();
+              if (20 >= var2_int) {
+                break L1;
               } else {
-                if (var5 > 122) {
-                  if (var5 >= 48) {
-                    if (var5 > 57) {
-                      var3[var4] = (char)95;
-                      var4++;
-                      var4++;
-                      var4++;
-                      var4++;
-                      var4++;
-                      return new String(var10);
-                    } else {
-                      var3[var4] = (char)var5;
-                      var4++;
-                      var4++;
-                      var4++;
-                      var4++;
-                      var4++;
-                      var4++;
-                      return new String(var10);
-                    }
-                  } else {
-                    var3[var4] = (char)95;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    return new String(var10);
-                  }
-                } else {
-                  var3[var4] = (char)var5;
-                  var4++;
-                  var4++;
-                  var4++;
-                  var4++;
-                  var4++;
-                  var4++;
-                  return new String(var10);
-                }
+                var2_int = 20;
+                break L1;
               }
-            } else {
-              if (var5 > 90) {
-                if (97 <= var5) {
-                  if (var5 > 122) {
-                    if (var5 >= 48) {
-                      if (var5 > 57) {
-                        var3[var4] = (char)95;
-                        var4++;
-                        var4++;
-                        var4++;
-                        var4++;
-                        var4++;
-                        return new String(var10);
-                      } else {
-                        var3[var4] = (char)var5;
-                        var4++;
-                        var4++;
-                        var4++;
-                        var4++;
-                        var4++;
-                        var4++;
-                        return new String(var10);
-                      }
+            }
+            L2: {
+              var10 = new char[var2_int];
+              var9 = var10;
+              var8 = var9;
+              var7 = var8;
+              var3 = var7;
+              if (param0 > 2) {
+                break L2;
+              } else {
+                field_j = null;
+                break L2;
+              }
+            }
+            var4 = 0;
+            L3: while (true) {
+              if (var2_int <= var4) {
+                stackOut_24_0 = new String(var10);
+                stackIn_25_0 = stackOut_24_0;
+                break L0;
+              } else {
+                L4: {
+                  L5: {
+                    var5 = param1.charAt(var4);
+                    if (var5 < 65) {
+                      break L5;
                     } else {
-                      var3[var4] = (char)95;
-                      var4++;
-                      var4++;
-                      var4++;
-                      var4++;
-                      var4++;
-                      return new String(var10);
-                    }
-                  } else {
-                    var3[var4] = (char)var5;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    return new String(var10);
-                  }
-                } else {
-                  L1: {
-                    L2: {
-                      if (var5 < 48) {
-                        break L2;
+                      if (var5 <= 90) {
+                        var3[var4] = (char)(var5 + 32);
+                        var4++;
+                        break L4;
                       } else {
-                        if (var5 <= 57) {
-                          var3[var4] = (char)var5;
-                          var4++;
-                          var4++;
-                          break L1;
+                        break L5;
+                      }
+                    }
+                  }
+                  L6: {
+                    L7: {
+                      if (97 > var5) {
+                        break L7;
+                      } else {
+                        if (var5 <= 122) {
+                          break L6;
                         } else {
-                          break L2;
+                          break L7;
                         }
                       }
                     }
-                    var3[var4] = (char)95;
+                    L8: {
+                      if (var5 < 48) {
+                        break L8;
+                      } else {
+                        if (var5 <= 57) {
+                          break L6;
+                        } else {
+                          break L8;
+                        }
+                      }
+                    }
+                    var3[var4] = '_';
                     var4++;
-                    break L1;
-                  }
-                  var4++;
-                  var4++;
-                  var4++;
-                  var4++;
-                  return new String(var10);
-                }
-              } else {
-                var3[var4] = (char)(var5 + 32);
-                var4++;
-                var4++;
-                var4++;
-                var4++;
-                var4++;
-                return new String(var10);
-              }
-            }
-          } else {
-            return new String(var10);
-          }
-        } else {
-          var4 = 0;
-          L3: while (true) {
-            if (var2 <= var4) {
-              return new String(var10);
-            } else {
-              L4: {
-                var5 = param1.charAt(var4);
-                if (var5 < 65) {
-                  break L4;
-                } else {
-                  if (var5 <= 90) {
-                    var3[var4] = (char)(var5 + 32);
-                    var4++;
-                    continue L3;
-                  } else {
                     break L4;
                   }
+                  var3[var4] = (char)var5;
+                  var4++;
+                  break L4;
                 }
-              }
-              L5: {
-                L6: {
-                  if (97 > var5) {
-                    break L6;
-                  } else {
-                    if (var5 <= 122) {
-                      break L5;
-                    } else {
-                      break L6;
-                    }
-                  }
-                }
-                L7: {
-                  if (var5 < 48) {
-                    break L7;
-                  } else {
-                    if (var5 <= 57) {
-                      break L5;
-                    } else {
-                      break L7;
-                    }
-                  }
-                }
-                var3[var4] = (char)95;
-                var4++;
                 var4++;
                 continue L3;
               }
-              var3[var4] = (char)var5;
-              var4++;
-              var4++;
-              continue L3;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var2 = decompiledCaughtException;
+            stackOut_26_0 = (RuntimeException) var2;
+            stackOut_26_1 = new StringBuilder().append("esb.E(").append(param0).append(44);
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
+            if (param1 == null) {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              break L9;
+            } else {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
+              break L9;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
         }
+        return stackIn_25_0;
     }
 
     public final boolean b(int param0) {
@@ -285,12 +191,6 @@ final class esb extends qq implements mkb {
     }
 
     public static void e(int param0) {
-        if (param0 >= -104) {
-            Object var2 = null;
-            String discarded$0 = esb.a(27, (CharSequence) null);
-            field_j = null;
-            return;
-        }
         field_j = null;
     }
 

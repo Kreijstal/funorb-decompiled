@@ -39,7 +39,7 @@ final class ek extends i {
                     if (72 != var5.field_h) {
                       break L1;
                     } else {
-                      if ((1 & ic.field_h.field_n >> 881634240 ^ -1) == -2) {
+                      if ((1 & ic.field_h.field_n) == 1) {
                         break L1;
                       } else {
                         var4++;
@@ -145,11 +145,11 @@ final class ek extends i {
                   var7 = 160 + param2;
                   var8 = ((ek) this).field_H.field_Cb.b(0);
                   var9 = ((ek) this).field_H.field_Cb.a(15);
-                  on.a(-(var8 >> 1423910401) + var6 - 10, -(var9 >> -1676881183) + (var7 + -10), 20 + var8, var9 + 40, 10, 65793, 128);
+                  on.a(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 + -10), 20 + var8, var9 + 40, 10, 65793, 128);
                   ((ek) this).field_H.field_Cb.a(var7, 23, var6);
-                  pb.field_C.d(((ek) this).field_H.field_Eb, var6, 20 + ((var9 >> 1364747137) + var7), ((ek) this).field_H.c(true), -1);
+                  pb.field_C.d(((ek) this).field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), ((ek) this).field_H.c(true), -1);
                   if (((ek) this).field_H.field_Db > ic.field_h.field_x) {
-                    pb.field_C.d(ef.field_n, var6, 62 + ((var9 >> 955037633) + var7), 16777215, -1);
+                    pb.field_C.d(ef.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
                     break L3;
                   } else {
                     break L3;
@@ -157,7 +157,7 @@ final class ek extends i {
                 }
               }
               ((ek) this).field_L.a(117, false);
-              pb.field_C.d(jw.field_Bb, (((ek) this).b(-1379118556) >> 354273121) + param1, 312 + param2, 13421772, -1);
+              pb.field_C.d(jw.field_Bb, (((ek) this).b(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
               return;
             } else {
               L4: {
@@ -186,9 +186,6 @@ final class ek extends i {
 
     final static void g(int param0) {
         np.field_Jb.a((gn) (Object) new kn(), 3);
-        if (param0 != -29315) {
-            ak discarded$0 = ek.b(true, -105, 126);
-        }
     }
 
     final void a(int param0, boolean param1) {
@@ -222,7 +219,7 @@ final class ek extends i {
           if (var3 >= ((ek) this).field_L.field_Db.field_J) {
             break L1;
           } else {
-            if (-1 == (((ek) this).field_K ^ -1)) {
+            if (((ek) this).field_K == 0) {
               wh discarded$2 = sp.c(59, 52);
               ((ek) this).field_K = 10;
               break L1;
@@ -319,9 +316,6 @@ final class ek extends i {
     }
 
     public static void d(boolean param0) {
-        if (param0) {
-            field_G = 36;
-        }
         field_M = null;
     }
 
@@ -337,7 +331,7 @@ final class ek extends i {
         if (param0 >= 60) {
           L0: {
             L1: {
-              if (-1 != (param1 ^ -1)) {
+              if (param1 != 0) {
                 break L1;
               } else {
                 if (null == ((ek) this).field_H) {

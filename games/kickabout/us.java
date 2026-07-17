@@ -35,11 +35,11 @@ final class us extends gn {
           return;
         } else {
           kb.h(-92);
-          if (-1 != (mc.field_a ^ -1)) {
+          if (mc.field_a != 0) {
             L0: {
               var1 = null;
               var2 = je.a(false);
-              if ((var2 ^ -1) != 0) {
+              if (var2 != -1) {
                 var1 = (Object) (Object) rr.field_g[var2];
                 break L0;
               } else {
@@ -49,7 +49,7 @@ final class us extends gn {
             if (param0 <= -75) {
               ul.a((byte) -126, (String) var1);
               if (-1 != var2) {
-                if ((dd.field_f ^ -1) <= -61) {
+                if (dd.field_f >= 60) {
                   return;
                 } else {
                   L1: {
@@ -80,7 +80,7 @@ final class us extends gn {
                       stackIn_24_0 = stackOut_23_0;
                       break L3;
                     } else {
-                      if (-3 == (var4 ^ -1)) {
+                      if (var4 == 2) {
                         stackOut_22_0 = 6;
                         stackIn_24_0 = stackOut_22_0;
                         break L3;
@@ -93,7 +93,7 @@ final class us extends gn {
                   }
                   var5 = stackIn_24_0;
                   var3 = wj.a("</>", "</shad></col>", true, wj.a("<>", "<col=ffff00><shad=010101>", true, var3));
-                  int discarded$1 = pb.field_C.a(var3, (-mc.field_a + 640 >> -1128845375) - -72, -10 + (var5 - -458) + -48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
+                  int discarded$1 = pb.field_C.a(var3, (-mc.field_a + 640 >> 1) - -72, -10 + (var5 - -458) + -48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
                   return;
                 }
               } else {

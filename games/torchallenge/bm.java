@@ -23,8 +23,9 @@ final class bm {
 
     final int a(int param0) {
         if (((bm) this).field_c >= ((bm) this).field_b) {
+            int fieldTemp$0 = ((bm) this).field_k;
             ((bm) this).field_k = ((bm) this).field_k + 1;
-            ((bm) this).field_a = ((bm) this).field_d[((bm) this).field_k] << 15;
+            ((bm) this).field_a = ((bm) this).field_d[fieldTemp$0] << 15;
             if (((bm) this).field_k >= ((bm) this).field_g) {
                 ((bm) this).field_k = ((bm) this).field_g - 1;
             }

@@ -243,8 +243,9 @@ final class od extends on {
                 break L2;
               } else {
                 L4: {
-                  ((od) this).field_z[var28] = var2.b(true);
-                  var29 = var2.b(true);
+                  byte dupTemp$1 = var2.b(true);
+                  ((od) this).field_z[var28] = dupTemp$1;
+                  var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -730,7 +731,7 @@ final class od extends on {
                 }
                 if (((od) this).field_y != null) {
                   if (((od) this).field_p[var53] == -1) {
-                    ((od) this).field_y[var53] = (byte)-1;
+                    ((od) this).field_y[var53] = (byte) -1;
                     var53++;
                     continue L22;
                   } else {
@@ -1032,8 +1033,9 @@ final class od extends on {
                                           break L6;
                                         }
                                       }
-                                      ((od) this).field_u[var1] = new ea();
-                                      var16 = new ea();
+                                      ea dupTemp$1 = new ea();
+                                      ((od) this).field_u[var1] = dupTemp$1;
+                                      var16 = dupTemp$1;
                                       var16.field_d = var11;
                                       var16.field_c = var12;
                                       var16.field_b = var13;
@@ -1421,14 +1423,24 @@ final class od extends on {
     }
 
     private od(byte[] param0) {
-        ((od) this).field_R = 0;
-        ((od) this).field_t = 0;
-        ((od) this).field_j = 0;
-        if (param0[param0.length - 1] == -1) {
-            // if_icmpne L47
-            this.a(param0);
-        } else {
-            this.b(param0);
+        L0: {
+          L1: {
+            ((od) this).field_R = 0;
+            ((od) this).field_t = 0;
+            ((od) this).field_j = 0;
+            if (param0[param0.length - 1] != -1) {
+              break L1;
+            } else {
+              if (param0[param0.length - 2] != -1) {
+                break L1;
+              } else {
+                this.a(param0);
+                break L0;
+              }
+            }
+          }
+          this.b(param0);
+          break L0;
         }
     }
 
@@ -1818,7 +1830,7 @@ final class od extends on {
                                         if ((((od) this).field_T[var44] & 65535) != ((od) this).field_i[var45]) {
                                           break L17;
                                         } else {
-                                          ((od) this).field_y[var45] = (byte)-1;
+                                          ((od) this).field_y[var45] = (byte) -1;
                                           var45++;
                                           continue L16;
                                         }
@@ -1978,13 +1990,13 @@ final class od extends on {
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((od) this).field_y[var38] = (byte)-1;
-                      ((od) this).field_p[var38] = (short)-1;
+                      ((od) this).field_y[var38] = (byte) -1;
+                      ((od) this).field_p[var38] = (short) -1;
                       break L25;
                     } else {
                       ((od) this).field_y[var38] = (byte)(var39 >> 2);
                       ((od) this).field_p[var38] = ((od) this).field_M[var38];
-                      ((od) this).field_M[var38] = (short)127;
+                      ((od) this).field_M[var38] = (short) 127;
                       if (((od) this).field_p[var38] == -1) {
                         break L25;
                       } else {

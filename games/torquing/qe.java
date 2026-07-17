@@ -8,18 +8,9 @@ final class qe {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 <= 86) {
-          field_c = null;
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        }
+        field_a = null;
+        field_b = null;
+        field_c = null;
     }
 
     static {
@@ -28,7 +19,7 @@ final class qe {
 
     private static void $cfr$clinit() {
         field_z = "qe.A(";
-        field_b = new char[]{(char)91, (char)93, (char)35};
+        field_b = new char[]{'[', ']', '#'};
         field_a = "MINE";
     }
 }

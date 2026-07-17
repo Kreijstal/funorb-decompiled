@@ -14,12 +14,70 @@ final class tc extends ib {
     static boolean[] field_D;
 
     final String a(boolean param0, qm param1) {
-        if (param0) {
-          field_D = null;
-          return jo.a(0, '*', param1.field_g.length());
-        } else {
-          return jo.a(0, '*', param1.field_g.length());
+        RuntimeException var3 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!param0) {
+                break L1;
+              } else {
+                field_D = null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = jo.a(0, '*', param1.field_g.length());
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("tc.K(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     final static void a(byte param0) {
@@ -31,7 +89,7 @@ final class tc extends ib {
         h.field_K[15] = gg.field_d;
         h.field_K[17] = lc.field_e;
         h.field_K[5] = aa.field_i;
-        h.field_K[param0] = lf.field_h;
+        h.field_K[6] = lf.field_h;
         h.field_K[13] = wi.field_g;
         h.field_K[7] = jb.field_r;
         h.field_K[16] = kn.field_sb;
@@ -54,14 +112,7 @@ final class tc extends ib {
         field_y = null;
         field_F = null;
         field_E = null;
-        if (param0 < 22) {
-          field_A = null;
-          field_z = null;
-          return;
-        } else {
-          field_z = null;
-          return;
-        }
+        field_z = null;
     }
 
     private tc(dj param0, int param1) {
@@ -69,29 +120,91 @@ final class tc extends ib {
     }
 
     final static boolean a(String param0, int param1) {
+        RuntimeException var2 = null;
         CharSequence var3 = null;
-        if (ef.field_r) {
-          if ((nj.field_c ^ -1) == -3) {
-            if (ua.field_S != null) {
-              var3 = (CharSequence) (Object) param0;
-              if (ua.field_S.equals((Object) (Object) gk.a(var3, -13))) {
-                if (param1 != -31046) {
-                  return true;
+        int stackIn_2_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_10_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
+          L0: {
+            if (ef.field_r) {
+              L1: {
+                if (nj.field_c != 2) {
+                  break L1;
                 } else {
-                  return true;
+                  if (ua.field_S == null) {
+                    break L1;
+                  } else {
+                    var3 = (CharSequence) (Object) param0;
+                    if (ua.field_S.equals((Object) (Object) gk.a(var3, -13))) {
+                      stackOut_10_0 = 1;
+                      stackIn_11_0 = stackOut_10_0;
+                      break L0;
+                    } else {
+                      return false;
+                    }
+                  }
                 }
-              } else {
-                return false;
               }
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              return stackIn_8_0 != 0;
             } else {
-              return false;
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
             }
-          } else {
-            return false;
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var2;
+            stackOut_12_1 = new StringBuilder().append("tc.W(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L2;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L2;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + -31046 + 41);
         }
+        return stackIn_11_0 != 0;
     }
 
     final static void b(int param0, int param1) {
@@ -106,7 +219,7 @@ final class tc extends ib {
           var3 = var2.field_g;
           var2.f(5, (byte) -39);
           var2.f(wi.field_f.field_dc, (byte) -3);
-          var4 = wi.field_f.field_Pb - -(wi.field_f.field_Fb << -106845594);
+          var4 = wi.field_f.field_Pb - -(wi.field_f.field_Fb << 6);
           var2.f(var4, (byte) -97);
           var2.a(wi.field_f.field_Wb, 0, (byte) -86, wi.field_f.field_Wb.length);
           var2.b(var2.field_g + -var3, (byte) 43);
@@ -115,7 +228,7 @@ final class tc extends ib {
           var3 = var2.field_g;
           var2.f(5, (byte) -39);
           var2.f(wi.field_f.field_dc, (byte) -3);
-          var4 = wi.field_f.field_Pb - -(wi.field_f.field_Fb << -106845594);
+          var4 = wi.field_f.field_Pb - -(wi.field_f.field_Fb << 6);
           var2.f(var4, (byte) -97);
           var2.a(wi.field_f.field_Wb, 0, (byte) -86, wi.field_f.field_Wb.length);
           var2.b(var2.field_g + -var3, (byte) 43);

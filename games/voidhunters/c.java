@@ -25,9 +25,13 @@ final class c extends ksa {
     }
 
     c(long param0, int param1, byte[] param2) {
-        ((c) this).field_d = param1;
-        ((c) this).field_e = param0;
-        ((c) this).field_f = param2;
+        try {
+            ((c) this).field_d = param1;
+            ((c) this).field_e = param0;
+            ((c) this).field_f = param2;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "c.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

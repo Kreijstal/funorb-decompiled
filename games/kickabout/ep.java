@@ -13,9 +13,6 @@ final class ep {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 0) {
-            return;
-        }
         field_c = null;
         field_g = null;
         field_b = null;

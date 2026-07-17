@@ -16,15 +16,19 @@ final class aa {
     static int field_d;
 
     final static void a(int param0, ac param1, int param2, int param3, ac param4, int param5) {
-        s.field_O = param1;
-        sn.field_d = param5;
-        mf.field_j = param4;
-        if (param2 != -1) {
-            Object var7 = null;
-            aa.a(-42, (ac) null, -120, -123, (ac) null, -33);
+        try {
+            s.field_O = param1;
+            sn.field_d = param5;
+            mf.field_j = param4;
+            if (param2 != -1) {
+                Object var7 = null;
+                aa.a(-42, (ac) null, -120, -123, (ac) null, -33);
+            }
+            ka.field_a = param3;
+            hi.field_z = param0;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "aa.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
-        ka.field_a = param3;
-        hi.field_z = param0;
     }
 
     private final int a(int param0, int param1) {
@@ -64,9 +68,6 @@ final class aa {
         int var2 = 0;
         int var3 = MinerDisturbance.field_ab;
         ln[] var1 = new ln[sc.field_d];
-        if (param0 >= -104) {
-            return null;
-        }
         for (var2 = 0; var2 < sc.field_d; var2++) {
             var1[var2] = new ln(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], ng.field_e[var2], db.field_b[var2], af.field_p);
         }
@@ -94,7 +95,7 @@ final class aa {
           }
         }
         L1: {
-          if (-1 < (param0 ^ -1)) {
+          if (param0 < 0) {
             break L1;
           } else {
             if (param0 <= ((aa) this).field_g) {
@@ -124,9 +125,6 @@ final class aa {
     }
 
     public static void a(byte param0) {
-        if (param0 > -117) {
-            return;
-        }
         field_h = null;
         field_l = null;
         field_e = null;

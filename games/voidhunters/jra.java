@@ -66,7 +66,7 @@ final class jra {
                     }
                   }
                   L2: {
-                    if ((rc.field_b ^ -1) != -2) {
+                    if (rc.field_b != 1) {
                       break L2;
                     } else {
                       var5 = npa.a((byte) 90, var4, param0);
@@ -141,7 +141,7 @@ final class jra {
         field_b = null;
         field_d = null;
         field_a = null;
-        int var1 = 89 / ((-64 - param0) / 54);
+        int var1 = 89;
     }
 
     static {

@@ -11,22 +11,25 @@ final class of extends s {
 
     of(String param0, ag param1, boolean param2) {
         this(param0, param1);
-        ((of) this).field_D = param2 ? true : false;
+        try {
+            ((of) this).field_D = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "of.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     private of(String param0, td param1, ag param2) {
         super(param0, param1, param2);
-        ((of) this).field_j = mb.field_a.field_e;
+        try {
+            ((of) this).field_j = mb.field_a.field_e;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "of.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(byte param0) {
         field_I = null;
         field_H = null;
-        if (param0 != -83) {
-            field_N = null;
-            field_N = null;
-            return;
-        }
         field_N = null;
     }
 
@@ -37,7 +40,11 @@ final class of extends s {
 
     private of(String param0, ag param1) {
         this(param0, mb.field_a.field_l, param1);
-        ((of) this).field_j = mb.field_a.field_e;
+        try {
+            ((of) this).field_j = mb.field_a.field_e;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "of.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

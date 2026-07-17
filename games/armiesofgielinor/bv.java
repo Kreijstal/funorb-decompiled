@@ -21,7 +21,7 @@ final class bv extends vh {
     }
 
     static boolean a(boolean param0, boolean param1) {
-        return param0 ^ param1;
+        return param0;
     }
 
     final int a(boolean param0) {
@@ -39,8 +39,9 @@ final class bv extends vh {
         if (param0 != 32161) {
           return;
         } else {
+          int fieldTemp$2 = ((bv) this).field_q;
           ((bv) this).field_q = ((bv) this).field_q + 1;
-          ((bv) this).field_o[((bv) this).field_q] = (byte)(param1 + ((bv) this).field_z.a(256));
+          ((bv) this).field_o[fieldTemp$2] = (byte)(param1 + ((bv) this).field_z.a(256));
           return;
         }
     }
@@ -48,13 +49,14 @@ final class bv extends vh {
     final int g(int param0, int param1) {
         int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var5 = -82 / ((-41 - param0) / 57);
-        int var3 = ((bv) this).field_v >> -1458551197;
+        int var3 = ((bv) this).field_v >> 3;
         int var4 = 8 + -(7 & ((bv) this).field_v);
         ((bv) this).field_v = ((bv) this).field_v + param1;
         int var6 = 0;
         while (var4 < param1) {
+            int incrementValue$0 = var3;
             var3++;
-            var6 = var6 + ((((bv) this).field_o[var3] & oj.field_n[var4]) << -var4 + param1);
+            var6 = var6 + ((((bv) this).field_o[incrementValue$0] & oj.field_n[var4]) << -var4 + param1);
             param1 = param1 - var4;
             var4 = 8;
         }
@@ -79,7 +81,7 @@ final class bv extends vh {
             return;
         }
         ((bv) this).field_y = 8 - (param0 & 7);
-        ((bv) this).field_q = param0 >> -1393143965;
+        ((bv) this).field_q = param0 >> 3;
     }
 
     bv(int param0) {
@@ -98,7 +100,7 @@ final class bv extends vh {
             if (((bv) this).field_y >= param1) {
               if (param1 != ((bv) this).field_y) {
                 var4 = -param1 + ((bv) this).field_y;
-                var5 = oj.field_n[param1] << var4 ^ -1;
+                var5 = ~(oj.field_n[param1] << var4);
                 ((bv) this).field_o[((bv) this).field_q] = (byte)oe.c(rn.a(var5, (int) ((bv) this).field_o[((bv) this).field_q]), param2 << var4);
                 ((bv) this).field_y = ((bv) this).field_y - param1;
                 return;
@@ -121,7 +123,7 @@ final class bv extends vh {
             if (((bv) this).field_y >= param1) {
               if (param1 != ((bv) this).field_y) {
                 var4 = -param1 + ((bv) this).field_y;
-                var5 = oj.field_n[param1] << var4 ^ -1;
+                var5 = ~(oj.field_n[param1] << var4);
                 ((bv) this).field_o[((bv) this).field_q] = (byte)oe.c(rn.a(var5, (int) ((bv) this).field_o[((bv) this).field_q]), param2 << var4);
                 ((bv) this).field_y = ((bv) this).field_y - param1;
                 return;
@@ -145,22 +147,24 @@ final class bv extends vh {
     final int m(int param0) {
         if (param0 != 255) {
           ((bv) this).field_v = -69;
+          int fieldTemp$4 = ((bv) this).field_q;
           ((bv) this).field_q = ((bv) this).field_q + 1;
-          return ((bv) this).field_o[((bv) this).field_q] - ((bv) this).field_z.a(256) & 255;
+          return ((bv) this).field_o[fieldTemp$4] - ((bv) this).field_z.a(256) & 255;
         } else {
+          int fieldTemp$5 = ((bv) this).field_q;
           ((bv) this).field_q = ((bv) this).field_q + 1;
-          return ((bv) this).field_o[((bv) this).field_q] - ((bv) this).field_z.a(256) & 255;
+          return ((bv) this).field_o[fieldTemp$5] - ((bv) this).field_z.a(256) & 255;
         }
     }
 
     final void a(int[] param0, int param1) {
-        if (param1 >= -76) {
-          field_w = null;
-          ((bv) this).field_z = new ga(param0);
-          return;
-        } else {
-          ((bv) this).field_z = new ga(param0);
-          return;
+        try {
+            if (param1 >= -76) {
+                field_w = null;
+            }
+            ((bv) this).field_z = new ga(param0);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "bv.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -179,37 +183,91 @@ final class bv extends vh {
     }
 
     final void a(int param0, byte[] param1, boolean param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         var6 = ArmiesOfGielinor.field_M ? 1 : 0;
-        var5 = 0;
-        L0: while (true) {
-          if (param0 <= var5) {
-            if (param2) {
-              ((bv) this).o(-70);
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            var5_int = 0;
+            L1: while (true) {
+              if (param0 <= var5_int) {
+                L2: {
+                  if (!param2) {
+                    break L2;
+                  } else {
+                    ((bv) this).o(-70);
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                int fieldTemp$2 = ((bv) this).field_q;
+                ((bv) this).field_q = ((bv) this).field_q + 1;
+                param1[param3 + var5_int] = (byte)(((bv) this).field_o[fieldTemp$2] + -((bv) this).field_z.a(256));
+                var5_int++;
+                continue L1;
+              }
             }
-          } else {
-            ((bv) this).field_q = ((bv) this).field_q + 1;
-            param1[param3 + var5] = (byte)(((bv) this).field_o[((bv) this).field_q] + -((bv) this).field_z.a(256));
-            var5++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_1 = new StringBuilder().append("bv.L(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
     final static void a(boolean param0, int param1, int param2, int param3) {
         int var4 = 0;
-        if (param1 != jt.field_a) {
+        if (~param1 != ~jt.field_a) {
           hi.field_i = null;
           ho.a(73);
           ui.field_c = param3;
           if (0 == param1) {
             ui.field_c = 0;
             hh.a(-16147, 50, mp.field_Ob, true);
-            if (-24 == (param1 ^ -1)) {
+            if (param1 == 23) {
               ui.field_c = 0;
               if (param1 == -10) {
                 qc.field_j = 0;
@@ -225,7 +283,7 @@ final class bv extends vh {
                       }
                     }
                     L1: {
-                      if (param1 != -1) {
+                      if (param1 != 0) {
                         break L1;
                       } else {
                         var4 = 2;
@@ -249,7 +307,7 @@ final class bv extends vh {
                       }
                     }
                     L4: {
-                      if (-13 != param1) {
+                      if (param1 != 12) {
                         break L4;
                       } else {
                         var4 = 1;
@@ -267,7 +325,7 @@ final class bv extends vh {
                     if (var4 == -2) {
                       L6: {
                         rq.field_p[param1].a(71, param0, 0);
-                        if ((param1 ^ -1) == -16) {
+                        if (param1 == 15) {
                           kj.a(param0, param2 + -1);
                           break L6;
                         } else {
@@ -294,7 +352,7 @@ final class bv extends vh {
                     } else {
                       L8: {
                         rq.field_p[param1].a(85, param0, var4);
-                        if ((param1 ^ -1) == -16) {
+                        if (param1 == 15) {
                           kj.a(param0, param2 + -1);
                           break L8;
                         } else {
@@ -351,7 +409,7 @@ final class bv extends vh {
                       }
                     }
                     L12: {
-                      if (param1 != -1) {
+                      if (param1 != 0) {
                         break L12;
                       } else {
                         var4 = 2;
@@ -375,7 +433,7 @@ final class bv extends vh {
                       }
                     }
                     L15: {
-                      if (-13 != param1) {
+                      if (param1 != 12) {
                         break L15;
                       } else {
                         var4 = 1;
@@ -393,7 +451,7 @@ final class bv extends vh {
                     if (var4 == -2) {
                       L17: {
                         rq.field_p[param1].a(71, param0, 0);
-                        if ((param1 ^ -1) == -16) {
+                        if (param1 == 15) {
                           kj.a(param0, param2 + -1);
                           break L17;
                         } else {
@@ -420,7 +478,7 @@ final class bv extends vh {
                     } else {
                       L19: {
                         rq.field_p[param1].a(85, param0, var4);
-                        if ((param1 ^ -1) == -16) {
+                        if (param1 == 15) {
                           kj.a(param0, param2 + -1);
                           break L19;
                         } else {
@@ -488,7 +546,7 @@ final class bv extends vh {
                       }
                     }
                     L25: {
-                      if (param1 != -1) {
+                      if (param1 != 0) {
                         break L25;
                       } else {
                         var4 = 2;
@@ -512,7 +570,7 @@ final class bv extends vh {
                       }
                     }
                     L28: {
-                      if (-13 != param1) {
+                      if (param1 != 12) {
                         break L28;
                       } else {
                         var4 = 1;
@@ -530,7 +588,7 @@ final class bv extends vh {
                     if (var4 == -2) {
                       L30: {
                         rq.field_p[param1].a(71, param0, 0);
-                        if ((param1 ^ -1) == -16) {
+                        if (param1 == 15) {
                           kj.a(param0, param2 + -1);
                           break L30;
                         } else {
@@ -556,7 +614,7 @@ final class bv extends vh {
                       }
                     } else {
                       rq.field_p[param1].a(85, param0, var4);
-                      if ((param1 ^ -1) == -16) {
+                      if (param1 == 15) {
                         kj.a(param0, param2 + -1);
                         break L23;
                       } else {
@@ -616,7 +674,7 @@ final class bv extends vh {
                       }
                     }
                     L35: {
-                      if (param1 != -1) {
+                      if (param1 != 0) {
                         break L35;
                       } else {
                         var4 = 2;
@@ -640,7 +698,7 @@ final class bv extends vh {
                       }
                     }
                     L38: {
-                      if (-13 != param1) {
+                      if (param1 != 12) {
                         break L38;
                       } else {
                         var4 = 1;
@@ -658,7 +716,7 @@ final class bv extends vh {
                     if (var4 == -2) {
                       L40: {
                         rq.field_p[param1].a(71, param0, 0);
-                        if ((param1 ^ -1) == -16) {
+                        if (param1 == 15) {
                           kj.a(param0, param2 + -1);
                           break L40;
                         } else {
@@ -685,7 +743,7 @@ final class bv extends vh {
                     } else {
                       L42: {
                         rq.field_p[param1].a(85, param0, var4);
-                        if ((param1 ^ -1) == -16) {
+                        if (param1 == 15) {
                           kj.a(param0, param2 + -1);
                           break L42;
                         } else {
@@ -722,10 +780,10 @@ final class bv extends vh {
                       }
                     }
                     jt.field_a = param1;
-                    if (param2 == 1) {
+                    if (param2 != 1) {
+                      bv.k((byte) -51);
                       return;
                     } else {
-                      bv.k((byte) -51);
                       return;
                     }
                   }
@@ -743,7 +801,7 @@ final class bv extends vh {
                         }
                       }
                       L47: {
-                        if (param1 != -1) {
+                        if (param1 != 0) {
                           break L47;
                         } else {
                           var4 = 2;
@@ -767,7 +825,7 @@ final class bv extends vh {
                         }
                       }
                       L50: {
-                        if (-13 != param1) {
+                        if (param1 != 12) {
                           break L50;
                         } else {
                           var4 = 1;
@@ -791,7 +849,7 @@ final class bv extends vh {
                           break L52;
                         }
                       }
-                      if ((param1 ^ -1) == -16) {
+                      if (param1 == 15) {
                         kj.a(param0, param2 + -1);
                         break L45;
                       } else {
@@ -812,10 +870,10 @@ final class bv extends vh {
                     }
                   }
                   jt.field_a = param1;
-                  if (param2 == 1) {
+                  if (param2 != 1) {
+                    bv.k((byte) -51);
                     return;
                   } else {
-                    bv.k((byte) -51);
                     return;
                   }
                 }
@@ -842,7 +900,7 @@ final class bv extends vh {
                       }
                     }
                     L57: {
-                      if (param1 != -1) {
+                      if (param1 != 0) {
                         break L57;
                       } else {
                         var4 = 2;
@@ -866,7 +924,7 @@ final class bv extends vh {
                       }
                     }
                     L60: {
-                      if (-13 != param1) {
+                      if (param1 != 12) {
                         break L60;
                       } else {
                         var4 = 1;
@@ -890,7 +948,7 @@ final class bv extends vh {
                         break L62;
                       }
                     }
-                    if ((param1 ^ -1) == -16) {
+                    if (param1 == 15) {
                       kj.a(param0, param2 + -1);
                       break L55;
                     } else {
@@ -911,17 +969,17 @@ final class bv extends vh {
                   }
                 }
                 jt.field_a = param1;
-                if (param2 == 1) {
+                if (param2 != 1) {
+                  bv.k((byte) -51);
                   return;
                 } else {
-                  bv.k((byte) -51);
                   return;
                 }
               }
             }
           } else {
             L64: {
-              if (-24 != (param1 ^ -1)) {
+              if (param1 != 23) {
                 break L64;
               } else {
                 ui.field_c = 0;
@@ -942,7 +1000,7 @@ final class bv extends vh {
                     }
                   }
                   L66: {
-                    if (param1 != -1) {
+                    if (param1 != 0) {
                       break L66;
                     } else {
                       var4 = 2;
@@ -966,7 +1024,7 @@ final class bv extends vh {
                     }
                   }
                   L69: {
-                    if (-13 != param1) {
+                    if (param1 != 12) {
                       break L69;
                     } else {
                       var4 = 1;
@@ -984,7 +1042,7 @@ final class bv extends vh {
                   if (var4 == -2) {
                     L71: {
                       rq.field_p[param1].a(71, param0, 0);
-                      if ((param1 ^ -1) == -16) {
+                      if (param1 == 15) {
                         kj.a(param0, param2 + -1);
                         break L71;
                       } else {
@@ -1002,16 +1060,16 @@ final class bv extends vh {
                       }
                     }
                     jt.field_a = param1;
-                    if (param2 == 1) {
+                    if (param2 != 1) {
+                      bv.k((byte) -51);
                       return;
                     } else {
-                      bv.k((byte) -51);
                       return;
                     }
                   } else {
                     L73: {
                       rq.field_p[param1].a(85, param0, var4);
-                      if ((param1 ^ -1) == -16) {
+                      if (param1 == 15) {
                         kj.a(param0, param2 + -1);
                         break L73;
                       } else {
@@ -1029,10 +1087,10 @@ final class bv extends vh {
                       }
                     }
                     jt.field_a = param1;
-                    if (param2 == 1) {
+                    if (param2 != 1) {
+                      bv.k((byte) -51);
                       return;
                     } else {
-                      bv.k((byte) -51);
                       return;
                     }
                   }
@@ -1048,10 +1106,10 @@ final class bv extends vh {
                     }
                   }
                   jt.field_a = param1;
-                  if (param2 == 1) {
+                  if (param2 != 1) {
+                    bv.k((byte) -51);
                     return;
                   } else {
-                    bv.k((byte) -51);
                     return;
                   }
                 }
@@ -1069,7 +1127,7 @@ final class bv extends vh {
                       }
                     }
                     L78: {
-                      if (param1 != -1) {
+                      if (param1 != 0) {
                         break L78;
                       } else {
                         var4 = 2;
@@ -1093,7 +1151,7 @@ final class bv extends vh {
                       }
                     }
                     L81: {
-                      if (-13 != param1) {
+                      if (param1 != 12) {
                         break L81;
                       } else {
                         var4 = 1;
@@ -1117,7 +1175,7 @@ final class bv extends vh {
                         break L83;
                       }
                     }
-                    if ((param1 ^ -1) == -16) {
+                    if (param1 == 15) {
                       kj.a(param0, param2 + -1);
                       break L76;
                     } else {
@@ -1138,10 +1196,10 @@ final class bv extends vh {
                   }
                 }
                 jt.field_a = param1;
-                if (param2 == 1) {
+                if (param2 != 1) {
+                  bv.k((byte) -51);
                   return;
                 } else {
-                  bv.k((byte) -51);
                   return;
                 }
               }
@@ -1168,7 +1226,7 @@ final class bv extends vh {
                     }
                   }
                   L88: {
-                    if (param1 != -1) {
+                    if (param1 != 0) {
                       break L88;
                     } else {
                       var4 = 2;
@@ -1192,7 +1250,7 @@ final class bv extends vh {
                     }
                   }
                   L91: {
-                    if (-13 != param1) {
+                    if (param1 != 12) {
                       break L91;
                     } else {
                       var4 = 1;
@@ -1216,7 +1274,7 @@ final class bv extends vh {
                       break L93;
                     }
                   }
-                  if ((param1 ^ -1) == -16) {
+                  if (param1 == 15) {
                     kj.a(param0, param2 + -1);
                     break L86;
                   } else {
@@ -1237,10 +1295,10 @@ final class bv extends vh {
                 }
               }
               jt.field_a = param1;
-              if (param2 == 1) {
+              if (param2 != 1) {
+                bv.k((byte) -51);
                 return;
               } else {
-                bv.k((byte) -51);
                 return;
               }
             }
@@ -1264,6 +1322,6 @@ final class bv extends vh {
 
     private static void $cfr$clinit() {
         field_u = new String[]{"aviansie_axe_spin", null, null, null, null, "spin", null};
-        field_A = new byte[]{(byte)7, (byte)4, (byte)4, (byte)4, (byte)2, (byte) 5};
+        field_A = new byte[]{(byte) 7, (byte) 4, (byte) 4, (byte) 4, (byte) 2, (byte) 5};
     }
 }

@@ -15,16 +15,20 @@ final class an extends bd {
     static boolean field_l;
 
     final void a(wk param0, int param1) {
-        param0.a(((an) this).field_k, (byte) -89);
-        int var3 = 124 / ((-35 - param1) / 36);
-        param0.a((byte) 7, ((an) this).field_i);
+        try {
+            param0.a(((an) this).field_k, (byte) -89);
+            int var3_int = 124 / ((-35 - param1) / 36);
+            param0.a((byte) 7, ((an) this).field_i);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "an.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void a(byte param0) {
         field_e = null;
         field_n = null;
         field_o = null;
-        int var1 = 25 / ((param0 - 39) / 52);
+        int var1 = -12;
         field_m = null;
         field_h = null;
     }
@@ -37,8 +41,12 @@ final class an extends bd {
     }
 
     an(String param0, String param1) {
-        ((an) this).field_k = param0;
-        ((an) this).field_i = param1;
+        try {
+            ((an) this).field_k = param0;
+            ((an) this).field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "an.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

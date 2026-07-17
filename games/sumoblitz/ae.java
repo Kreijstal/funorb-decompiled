@@ -101,6 +101,7 @@ final class ae {
           if (var2 >= 10) {
             ((ae) this).field_a = param0.a(255);
             ((ae) this).field_c = param0.a(255);
+            return;
           } else {
             var3 = param0.e(-31302);
             if (var3 != 0) {

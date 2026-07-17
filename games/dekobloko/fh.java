@@ -12,7 +12,8 @@ final class fh {
     static w field_d;
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -26,38 +27,49 @@ final class fh {
         int var15 = 0;
         int[] var16 = null;
         int var17 = 0;
+        RuntimeException decompiledCaughtException = null;
         var17 = client.field_A ? 1 : 0;
-        if (param2) {
-          var4 = 320;
-          var5 = 490;
-          var6 = 0;
-          L0: while (true) {
-            if (var6 >= rb.field_n.length) {
-              return;
-            } else {
-              var7 = rb.field_n[var6] >> 1058191496 & 255;
-              var8 = 255 & rb.field_n[var6] >> -496612168;
-              var9 = (2048 * var7 >> -208576440) - -(bb.field_f * (1 + var8) >> -1499643386);
-              var10 = rb.field_n[var6] >> -226715728 & 255;
-              var11 = 255 & rb.field_n[var6];
-              var12 = ke.a(2047, var9) >> -200783770;
-              var13 = h.a(var9, (byte) -122) >> -1071707034;
-              var14 = ke.a(2047, var11 + var9) >> -1246657338;
-              var15 = h.a(var9 + var11, (byte) -122) >> -1683979834;
-              var16 = new int[]{var4 + param3, param0 - -var5, var12 + param3, param0 + var13, param3 - -var14, var15 + param0};
-              if (256 == param1) {
-                ok.a(var16, 16777215, var10);
-                var6++;
-                continue L0;
-              } else {
-                ok.a(var16, 16777215, var10 * 256 >> 431644137);
-                var6++;
-                continue L0;
+        try {
+          L0: {
+            if (param2) {
+              var4_int = 320;
+              var5 = 490;
+              var6 = 0;
+              L1: while (true) {
+                if (var6 >= rb.field_n.length) {
+                  break L0;
+                } else {
+                  L2: {
+                    var7 = rb.field_n[var6] >> 8 & 255;
+                    var8 = 255 & rb.field_n[var6] >> 24;
+                    var9 = (2048 * var7 >> 8) - -(bb.field_f * (1 + var8) >> 6);
+                    var10 = rb.field_n[var6] >> 16 & 255;
+                    var11 = 255 & rb.field_n[var6];
+                    var12 = ke.a(2047, var9) >> 6;
+                    var13 = h.a(var9, (byte) -122) >> 6;
+                    var14 = ke.a(2047, var11 + var9) >> 6;
+                    var15 = h.a(var9 + var11, (byte) -122) >> 6;
+                    var16 = new int[]{var4_int + param3, param0 - -var5, var12 + param3, param0 + var13, param3 - -var14, var15 + param0};
+                    if (256 == param1) {
+                      ok.a(var16, 16777215, var10);
+                      break L2;
+                    } else {
+                      ok.a(var16, 16777215, var10 * 256 >> 9);
+                      break L2;
+                    }
+                  }
+                  var6++;
+                  continue L1;
+                }
               }
+            } else {
+              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          throw dh.a((Throwable) (Object) var4, "fh.F(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -69,16 +81,21 @@ final class fh {
     }
 
     final static void a(byte param0, cl param1, int param2) {
-        uf var3 = we.field_b;
-        int var4 = -58 / ((param0 - 59) / 33);
-        var3.f(param2, -4);
-        var3.a(true, param1.field_q);
-        var3.a(true, param1.field_z);
+        uf var3 = null;
+        try {
+            var3 = we.field_b;
+            int var4 = -58 / ((param0 - 59) / 33);
+            var3.f(param2, -4);
+            var3.a(true, param1.field_q);
+            var3.a(true, param1.field_z);
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "fh.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final static boolean a(byte param0) {
         int var1 = 114 % ((param0 - 70) / 46);
-        if (0 == (sm.field_e ^ -1)) {
+        if (sm.field_e == -1) {
             if (!pe.b(25973, 1)) {
                 return false;
             }
@@ -101,28 +118,50 @@ final class fh {
         field_e = null;
         field_b = null;
         field_a = null;
-        if (param0 != 0) {
-            return;
-        }
         field_g = null;
     }
 
     final static void a(int param0) {
-        int var2 = client.field_A ? 1 : 0;
-        if (!(uk.a(-22802))) {
-            if (cl.field_v != null) {
-                if (cl.field_v.field_e) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var2 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            if (!uk.a(-22802)) {
+              L1: {
+                if (cl.field_v == null) {
+                  break L1;
+                } else {
+                  if (!cl.field_v.field_e) {
+                    break L1;
+                  } else {
                     sn.a(false);
                     u.field_i.a((byte) -105, (ce) (Object) new ib(u.field_i, kl.field_p));
+                    break L1;
+                  }
                 }
+              }
+              return;
+            } else {
+              var1_int = -26 % ((param0 - 37) / 58);
+              boolean discarded$15 = u.field_i.a(jd.field_Yb, true, ab.field_f, 29166);
+              u.field_i.g(0);
+              L2: while (true) {
+                if (!ab.c((byte) 50)) {
+                  break L0;
+                } else {
+                  boolean discarded$16 = u.field_i.a(wh.field_c, el.field_G, (byte) 121);
+                  continue L2;
+                }
+              }
             }
-            return;
-        }
-        int var1 = -26 % ((param0 - 37) / 58);
-        boolean discarded$8 = u.field_i.a(jd.field_Yb, true, ab.field_f, 29166);
-        u.field_i.g(0);
-        while (ab.c((byte) 50)) {
-            boolean discarded$9 = u.field_i.a(wh.field_c, el.field_G, (byte) 121);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw dh.a((Throwable) (Object) var1, "fh.E(" + param0 + 41);
         }
     }
 

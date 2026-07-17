@@ -10,20 +10,10 @@ final class fd {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != 0) {
-          field_e = null;
-          field_e = null;
-          field_a = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
-          field_e = null;
-          field_a = null;
-          field_d = null;
-          field_b = null;
-          return;
-        }
+        field_e = null;
+        field_a = null;
+        field_d = null;
+        field_b = null;
     }
 
     static {

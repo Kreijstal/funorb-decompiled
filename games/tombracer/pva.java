@@ -11,8 +11,12 @@ final class pva {
     }
 
     pva(cka param0, int param1, int param2) {
-        ((pva) this).field_a = param2;
-        ((pva) this).field_b = param0;
+        try {
+            ((pva) this).field_a = param2;
+            ((pva) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "pva.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

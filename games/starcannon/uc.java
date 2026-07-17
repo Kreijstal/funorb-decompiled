@@ -10,7 +10,7 @@ abstract class uc implements he {
     public final String a(int param0) {
         if (param0 == 26162) {
           if (!((uc) this).a(true)) {
-            if ((((uc) this).field_c - -350L ^ -1L) < (dd.b(101) ^ -1L)) {
+            if (~(((uc) this).field_c - -350L) < ~dd.b(101)) {
               return null;
             } else {
               return ((uc) this).b(-128);
@@ -33,16 +33,13 @@ abstract class uc implements he {
             return uh.field_g;
         }
         int var2 = -87 / ((param0 - -85) / 36);
-        if (!((((uc) this).field_c + 350L ^ -1L) >= (dd.b(61) ^ -1L))) {
+        if (!(~(((uc) this).field_c + 350L) >= ~dd.b(61))) {
             return cg.field_g;
         }
         return ((uc) this).c(4096);
     }
 
     final static String c(byte param0) {
-        if (param0 <= 47) {
-            return null;
-        }
         return jk.field_b;
     }
 
@@ -71,9 +68,6 @@ abstract class uc implements he {
     }
 
     public static void e(int param0) {
-        if (param0 != 1) {
-            return;
-        }
         field_d = null;
         field_a = null;
         field_b = null;
@@ -82,29 +76,11 @@ abstract class uc implements he {
     abstract p c(int param0);
 
     final static void d(int param0) {
-        if (qb.field_h != -mh.field_k + 0) {
-          if (qb.field_h == 250 + -mh.field_k) {
-            if (param0 != 1) {
-              return;
-            } else {
-              qb.field_h = qb.field_h + 1;
-              return;
-            }
-          } else {
-            if (param0 != 1) {
-              return;
-            } else {
-              qb.field_h = qb.field_h + 1;
-              return;
-            }
-          }
-        } else {
-          if (param0 != 1) {
+        if (qb.field_h == -mh.field_k) {
             return;
-          } else {
-            qb.field_h = qb.field_h + 1;
+        }
+        if (~qb.field_h != ~(250 + -mh.field_k)) {
             return;
-          }
         }
     }
 

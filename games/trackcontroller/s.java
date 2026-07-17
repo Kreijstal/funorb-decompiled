@@ -8,7 +8,7 @@ final class s {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = 80 % ((param0 - -22) / 52);
+        int var1 = 0;
     }
 
     static {

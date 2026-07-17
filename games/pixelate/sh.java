@@ -51,11 +51,6 @@ final class sh implements Iterator {
 
     public static void a(boolean param0) {
         field_e = null;
-        if (!param0) {
-            field_c = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
@@ -90,7 +85,7 @@ final class sh implements Iterator {
         int stackOut_3_0 = 0;
         int stackOut_12_0 = 0;
         int stackOut_11_0 = 0;
-        if ((param1 ^ -1) > -1) {
+        if (param1 < 0) {
           L0: {
             if (0 != (1 + param1) % 4) {
               stackOut_4_0 = 0;
@@ -120,7 +115,7 @@ final class sh implements Iterator {
               return stackIn_13_0 != 0;
             } else {
               if (param1 % 4 == 0) {
-                if (-1 != (param1 % 100 ^ -1)) {
+                if (param1 % 100 != 0) {
                   return true;
                 } else {
                   if (0 == param1 % 400) {
@@ -143,18 +138,16 @@ final class sh implements Iterator {
         ((sh) this).field_b = 1;
         ((sh) this).field_d = null;
         ((sh) this).field_a = ((sh) this).field_g.field_e[0].field_a;
-        if (param0 < -11) {
-          return;
-        } else {
-          ((sh) this).field_a = null;
-          return;
-        }
     }
 
     sh(kl param0) {
         ((sh) this).field_d = null;
-        ((sh) this).field_g = param0;
-        this.a((byte) -39);
+        try {
+            ((sh) this).field_g = param0;
+            this.a((byte) -39);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "sh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

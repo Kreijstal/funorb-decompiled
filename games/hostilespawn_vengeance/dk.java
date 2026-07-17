@@ -50,25 +50,22 @@ class dk extends am {
 
     final static void a(cl param0, int param1, int param2) {
         en var3 = null;
-        var3 = s.field_b;
-        var3.i(19319, param1);
-        var3.d(param2 ^ 97, param0.field_m);
-        if (param2 != 10) {
-          field_m = null;
-          var3.a((byte) -120, param0.field_n);
-          return;
-        } else {
-          var3.a((byte) -120, param0.field_n);
-          return;
+        try {
+            var3 = s.field_b;
+            var3.i(19319, param1);
+            var3.d(param2 ^ 97, param0.field_m);
+            if (param2 != 10) {
+                field_m = null;
+            }
+            var3.a((byte) -120, param0.field_n);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "dk.OB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
     public static void a(byte param0) {
         field_l = null;
         field_m = null;
-        if (param0 != 71) {
-            return;
-        }
         field_n = null;
         field_k = null;
     }

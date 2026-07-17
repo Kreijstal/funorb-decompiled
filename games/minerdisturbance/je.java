@@ -170,7 +170,7 @@ final class je {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        return field_O.a((param0 << 2) + param2, (param1 << 2) + param3, (byte) 61);
+        return field_O.a((param0 << 2) + param2, (param1 << 2) + 1, (byte) 61);
     }
 
     final static void g(int param0, int param1) {
@@ -1326,7 +1326,7 @@ final class je {
                                       var28 = var25 - var22;
                                       var30 = 256 * (var15.field_q - 256) >> 8;
                                       var28 = var28 * var30 >> 8;
-                                      var35 = 16711680 | (var22 + var28 & 255) << 8 | 0;
+                                      var35 = 16711680 | (var22 + var28 & 255) << 8;
                                       break L15;
                                     }
                                   } else {
@@ -1804,7 +1804,7 @@ final class je {
     }
 
     private final static boolean b(int param0, int param1, int param2, int param3) {
-        return field_O.d((param1 << 2) + param3, (param0 << 2) + param2, (byte) -122);
+        return field_O.d((param1 << 2) + 3, (param0 << 2) + param2, (byte) -122);
     }
 
     private final static void b(int param0, int param1, je param2) {
@@ -2207,7 +2207,7 @@ final class je {
                       break L11;
                     } else {
                       if (var10 != 0) {
-                        ((ea) var7).b(-113, var3 + param0 / 2 - 4 + 20, 4096, 7281, var4 + param1 / 2 - 4 + 20);
+                        ((ea) var7).b(-113, var3 + param0 / 2 + 16, 4096, 7281, var4 + param1 / 2 + 16);
                         break L10;
                       } else {
                         break L11;
@@ -2260,7 +2260,7 @@ final class je {
                       break L14;
                     } else {
                       if (var10 != 0) {
-                        ((ea) var7).b(-127, var3 + param0 / 2 - 4 + 20, 4096, 23665, var4 + param1 / 2 - 4 + 20);
+                        ((ea) var7).b(-127, var3 + param0 / 2 + 16, 4096, 23665, var4 + param1 / 2 + 16);
                         break L13;
                       } else {
                         break L14;
@@ -5193,7 +5193,7 @@ final class je {
     }
 
     final static boolean d(int param0, int param1, int param2, int param3) {
-        return field_O.i(98, (param0 << 2) + param2, (param1 << 2) + param3);
+        return field_O.i(98, (param0 << 2) + param2, (param1 << 2) + 1);
     }
 
     public static void c() {

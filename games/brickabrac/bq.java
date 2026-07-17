@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class bq {
     static String field_a;
     static ck field_b;
@@ -15,9 +17,6 @@ final class bq {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (!param0) {
-            bq.a(false, 57, (byte) -48);
-        }
     }
 
     final static mf a(int param0, int param1, boolean param2, int param3, boolean param4) {
@@ -28,14 +27,11 @@ final class bq {
     }
 
     final static km a(int param0, int param1) {
-        if (param1 != 28472) {
-            return null;
-        }
         return pg.field_k[param0];
     }
 
     final static void a(boolean param0, int param1, byte param2) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -63,37 +59,37 @@ final class bq {
         int stackIn_82_1 = 0;
         String stackIn_82_2 = null;
         int stackIn_91_0 = 0;
-        int stackIn_109_0 = 0;
-        int stackIn_110_0 = 0;
-        int stackIn_111_0 = 0;
-        int stackIn_111_1 = 0;
-        int stackOut_64_0;
-        int stackOut_63_0;
-        int stackOut_67_0;
-        int stackOut_66_0;
-        String[] stackOut_79_0;
-        int stackOut_79_1;
-        String[] stackOut_81_0;
-        int stackOut_81_1;
-        String stackOut_81_2;
-        String[] stackOut_80_0;
-        int stackOut_80_1;
-        String stackOut_80_2;
-        String[] stackOut_73_0;
-        int stackOut_73_1;
-        String[] stackOut_75_0;
-        int stackOut_75_1;
-        String stackOut_75_2;
-        String[] stackOut_74_0;
-        int stackOut_74_1;
-        String stackOut_74_2;
-        int stackOut_108_0;
-        int stackOut_110_0;
-        int stackOut_110_1;
-        int stackOut_109_0;
-        int stackOut_109_1;
-        int stackOut_90_0;
-        int stackOut_89_0;
+        int stackIn_106_0 = 0;
+        int stackIn_107_0 = 0;
+        int stackIn_108_0 = 0;
+        int stackIn_108_1 = 0;
+        int stackOut_64_0 = 0;
+        int stackOut_63_0 = 0;
+        int stackOut_67_0 = 0;
+        int stackOut_66_0 = 0;
+        String[] stackOut_79_0 = null;
+        int stackOut_79_1 = 0;
+        String[] stackOut_81_0 = null;
+        int stackOut_81_1 = 0;
+        String stackOut_81_2 = null;
+        String[] stackOut_80_0 = null;
+        int stackOut_80_1 = 0;
+        String stackOut_80_2 = null;
+        String[] stackOut_73_0 = null;
+        int stackOut_73_1 = 0;
+        String[] stackOut_75_0 = null;
+        int stackOut_75_1 = 0;
+        String stackOut_75_2 = null;
+        String[] stackOut_74_0 = null;
+        int stackOut_74_1 = 0;
+        String stackOut_74_2 = null;
+        int stackOut_105_0 = 0;
+        int stackOut_107_0 = 0;
+        int stackOut_107_1 = 0;
+        int stackOut_106_0 = 0;
+        int stackOut_106_1 = 0;
+        int stackOut_90_0 = 0;
+        int stackOut_89_0 = 0;
         L0: {
           var9 = BrickABrac.field_J ? 1 : 0;
           ik.field_j = true;
@@ -101,12 +97,12 @@ final class bq {
           if (0 != ih.field_p) {
             if (1 != ih.field_p) {
               if (2 == ih.field_p) {
-                var3 = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, rd.a(ge.field_x, new String[1], (byte) 103));
+                var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, rd.a(ge.field_x, new String[1], (byte) 103));
                 var4 = -1;
                 var5 = 0;
                 L1: while (true) {
                   L2: {
-                    if (var5 >= var3) {
+                    if (var5 >= var3_int) {
                       break L2;
                     } else {
                       if ("<%0>".equals((Object) (Object) kg.field_h[var5])) {
@@ -123,14 +119,14 @@ final class bq {
                   } else {
                     rg.field_k = new String[var4];
                     pm.a((Object[]) (Object) kg.field_h, 0, (Object[]) (Object) rg.field_k, 0, var4);
-                    h.field_F = new String[-1 + -var4 + var3];
-                    pm.a((Object[]) (Object) kg.field_h, 1 + var4, (Object[]) (Object) h.field_F, 0, -1 + (-var4 + var3));
-                    var3 = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, rd.a(u.field_e, new String[1], (byte) 103));
+                    h.field_F = new String[-1 + -var4 + var3_int];
+                    pm.a((Object[]) (Object) kg.field_h, 1 + var4, (Object[]) (Object) h.field_F, 0, -1 + (-var4 + var3_int));
+                    var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, rd.a(u.field_e, new String[1], (byte) 103));
                     var4 = -1;
                     var5 = 0;
                     L3: while (true) {
                       L4: {
-                        if (var3 <= var5) {
+                        if (var3_int <= var5) {
                           break L4;
                         } else {
                           if (!"<%0>".equals((Object) (Object) kg.field_h[var5])) {
@@ -142,14 +138,14 @@ final class bq {
                           }
                         }
                       }
-                      if (0 == (var4 ^ -1)) {
+                      if (var4 == -1) {
                         throw new IllegalStateException();
                       } else {
                         L5: {
                           ik.field_b = new String[var4];
                           pm.a((Object[]) (Object) kg.field_h, 0, (Object[]) (Object) ik.field_b, 0, var4);
-                          fk.field_h = new String[var3 - (var4 - -1)];
-                          pm.a((Object[]) (Object) kg.field_h, var4 - -1, (Object[]) (Object) fk.field_h, 0, -1 + (var3 - var4));
+                          fk.field_h = new String[var3_int - (var4 - -1)];
+                          pm.a((Object[]) (Object) kg.field_h, var4 - -1, (Object[]) (Object) fk.field_h, 0, -1 + (var3_int - var4));
                           if (ik.field_b.length > rg.field_k.length) {
                             stackOut_64_0 = ik.field_b.length;
                             stackIn_65_0 = stackOut_64_0;
@@ -226,7 +222,7 @@ final class bq {
                                         break L10;
                                       }
                                     }
-                                    stackIn_82_0[stackIn_82_1] = (String) (Object) stackIn_82_2;
+                                    stackIn_82_0[stackIn_82_1] = stackIn_82_2;
                                     var8++;
                                     continue L9;
                                   }
@@ -257,7 +253,7 @@ final class bq {
                                     break L11;
                                   }
                                 }
-                                stackIn_76_0[stackIn_76_1] = (String) (Object) stackIn_76_2;
+                                stackIn_76_0[stackIn_76_1] = stackIn_76_2;
                                 var8++;
                                 continue L8;
                               }
@@ -276,14 +272,14 @@ final class bq {
                 if (3 == ih.field_p) {
                   L12: {
                     if (lp.field_ub.field_i) {
-                      var3 = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, ff.field_a);
+                      var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, ff.field_a);
                       break L12;
                     } else {
-                      var3 = qb.a(kg.field_h, m.field_b, param2 ^ -87, ni.field_Wb, df.field_d);
+                      var3_int = qb.a(kg.field_h, m.field_b, param2 ^ -87, ni.field_Wb, df.field_d);
                       break L12;
                     }
                   }
-                  var4 = 2 + var3;
+                  var4 = 2 + var3_int;
                   qh.field_i = new String[var4];
                   BrickABrac.field_K = new int[var4];
                   var5 = 0;
@@ -292,7 +288,7 @@ final class bq {
                       ri.field_I = new int[1];
                       var5 = 0;
                       L14: while (true) {
-                        if (var5 >= var3) {
+                        if (var5 >= var3_int) {
                           qh.field_i[var4 - 2] = "";
                           qh.field_i[var4 - 1] = oi.field_a;
                           BrickABrac.field_K[-1 + var4] = 0;
@@ -312,8 +308,8 @@ final class bq {
                   }
                 } else {
                   if (ih.field_p == 4) {
-                    var3 = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, oo.field_s);
-                    var4 = var3 + 2;
+                    var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, oo.field_s);
+                    var4 = var3_int + 2;
                     qh.field_i = new String[var4];
                     BrickABrac.field_K = new int[var4];
                     var5 = 0;
@@ -322,7 +318,7 @@ final class bq {
                         ri.field_I = new int[1];
                         var5 = 0;
                         L16: while (true) {
-                          if (var3 <= var5) {
+                          if (var3_int <= var5) {
                             qh.field_i[var4 - 2] = "";
                             qh.field_i[var4 + -1] = oi.field_a;
                             BrickABrac.field_K[-1 + var4] = 0;
@@ -341,9 +337,9 @@ final class bq {
                       }
                     }
                   } else {
-                    if ((ih.field_p ^ -1) == -6) {
-                      var3 = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, eo.field_h);
-                      var4 = 3 + var3;
+                    if (ih.field_p == 5) {
+                      var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, eo.field_h);
+                      var4 = 3 + var3_int;
                       BrickABrac.field_K = new int[var4];
                       qh.field_i = new String[var4];
                       var5 = 0;
@@ -352,7 +348,7 @@ final class bq {
                           ri.field_I = new int[2];
                           var5 = 0;
                           L18: while (true) {
-                            if (var3 <= var5) {
+                            if (var3_int <= var5) {
                               qh.field_i[var4 - 3] = "";
                               qh.field_i[var4 - 2] = ja.field_b;
                               BrickABrac.field_K[var4 + -2] = 0;
@@ -380,8 +376,8 @@ final class bq {
                 }
               }
             } else {
-              var3 = qb.a(kg.field_h, m.field_b, param2 ^ -87, ni.field_Wb, up.field_x);
-              var4 = 2 - -var3;
+              var3_int = qb.a(kg.field_h, m.field_b, param2 ^ -87, ni.field_Wb, up.field_x);
+              var4 = 2 - -var3_int;
               BrickABrac.field_K = new int[var4];
               qh.field_i = new String[var4];
               var5 = 0;
@@ -390,7 +386,7 @@ final class bq {
                   ri.field_I = new int[1];
                   var5 = 0;
                   L20: while (true) {
-                    if (var5 >= var3) {
+                    if (var5 >= var3_int) {
                       qh.field_i[var4 - 2] = "";
                       qh.field_i[-1 + var4] = oi.field_a;
                       BrickABrac.field_K[-1 + var4] = 0;
@@ -410,8 +406,8 @@ final class bq {
               }
             }
           } else {
-            var3 = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, up.field_x);
-            var4 = 3 + var3;
+            var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, up.field_x);
+            var4 = 3 + var3_int;
             BrickABrac.field_K = new int[var4];
             qh.field_i = new String[var4];
             var5 = 0;
@@ -420,7 +416,7 @@ final class bq {
                 ri.field_I = new int[2];
                 var5 = 0;
                 L22: while (true) {
-                  if (var5 >= var3) {
+                  if (var5 >= var3_int) {
                     qh.field_i[var4 + -3] = "";
                     qh.field_i[var4 + -2] = g.field_q;
                     BrickABrac.field_K[var4 - 2] = 0;
@@ -444,7 +440,7 @@ final class bq {
           }
         }
         mh.field_H.field_r = ri.field_I.length;
-        var3 = 0;
+        var3_int = 0;
         if (param2 == 104) {
           var4 = 0;
           L23: while (true) {
@@ -461,123 +457,128 @@ final class bq {
                         if (var11.length <= var5) {
                           break L24;
                         } else {
-                          var13 = var11[var5];
-                          var7 = hm.a(false, var13, 0);
-                          if (var3 < var7) {
-                            var3 = var7;
-                            var5++;
-                            continue L26;
-                          } else {
-                            var5++;
-                            continue L26;
+                          L27: {
+                            var13 = var11[var5];
+                            var7 = hm.a(false, var13, 0);
+                            if (var3_int >= var7) {
+                              break L27;
+                            } else {
+                              break L27;
+                            }
                           }
+                          var5++;
+                          continue L26;
                         }
                       }
                     } else {
-                      var12 = var10[var5];
-                      var7 = hm.a(false, var12, param2 + -104);
-                      if (var7 > var3) {
-                        var3 = var7;
-                        var5++;
-                        continue L25;
-                      } else {
-                        var5++;
-                        continue L25;
+                      L28: {
+                        var12 = var10[var5];
+                        var7 = hm.a(false, var12, param2 + -104);
+                        if (var7 <= var3_int) {
+                          break L28;
+                        } else {
+                          break L28;
+                        }
                       }
+                      var5++;
+                      continue L25;
                     }
                   }
                 } else {
                   break L24;
                 }
               }
-              jj.field_c = mh.field_H.field_r * (kn.field_y + jb.field_H << -601618751);
-              np.field_b = wi.field_k - (var3 >> 1637760833);
-              ci.field_u = -(var3 >> 1316060737) + (var3 + wi.field_k);
+              jj.field_c = mh.field_H.field_r * (kn.field_y + jb.field_H << 1);
+              np.field_b = wi.field_k - (var3_int >> 1);
+              ci.field_u = -(var3_int >> 1) + (var3_int + wi.field_k);
               var4 = 0;
-              L27: while (true) {
+              L29: while (true) {
                 if (qh.field_i.length <= var4) {
-                  jq.field_r = -(jj.field_c >> 1045690177) + w.field_k;
+                  jq.field_r = -(jj.field_c >> 1) + w.field_k;
                   ce.field_a = new int[qh.field_i.length][];
                   var4 = 0;
                   var5 = jq.field_r;
-                  L28: while (true) {
+                  L30: while (true) {
                     if (var4 >= qh.field_i.length) {
-                      L29: {
+                      L31: {
                         if (ih.field_p != 2) {
                           mh.field_H.a(qo.b(120, po.field_a, pq.field_k), 0, param0, (byte) -127);
-                          break L29;
+                          break L31;
                         } else {
                           mh.field_H.a(-1, -1, param0, (byte) -128);
-                          break L29;
+                          break L31;
                         }
                       }
                       return;
                     } else {
-                      var6 = BrickABrac.field_K[var4];
-                      if ((var6 ^ -1) <= -1) {
-                        var7 = hm.a(true, qh.field_i[var4], param2 + -104);
-                        var8 = wi.field_k - (var7 >> 273022945);
-                        var5 = var5 + kn.field_y;
-                        ce.field_a[var4] = new int[4];
-                        ce.field_a[var4][0] = -cn.field_c + var8;
-                        ce.field_a[var4][1] = var5;
-                        ce.field_a[var4][2] = (cn.field_c << 321257345) + var7;
-                        var5 = var5 + (kn.field_y + ((jb.field_H << 873149857) - -b.field_c));
-                        ce.field_a[var4][3] = (jb.field_H << -987699871) + b.field_c;
-                        var4++;
-                        continue L28;
-                      } else {
-                        var5 = var5 + pe.field_s;
-                        var4++;
-                        continue L28;
+                      L32: {
+                        var6 = BrickABrac.field_K[var4];
+                        if (var6 >= 0) {
+                          var7 = hm.a(true, qh.field_i[var4], param2 + -104);
+                          var8 = wi.field_k - (var7 >> 1);
+                          var5 = var5 + kn.field_y;
+                          ce.field_a[var4] = new int[4];
+                          ce.field_a[var4][0] = -cn.field_c + var8;
+                          ce.field_a[var4][1] = var5;
+                          ce.field_a[var4][2] = (cn.field_c << 1) + var7;
+                          var5 = var5 + (kn.field_y + ((jb.field_H << 1) - -b.field_c));
+                          ce.field_a[var4][3] = (jb.field_H << 1) + b.field_c;
+                          break L32;
+                        } else {
+                          var5 = var5 + pe.field_s;
+                          break L32;
+                        }
                       }
+                      var4++;
+                      continue L30;
                     }
                   }
                 } else {
-                  L30: {
-                    stackOut_108_0 = jj.field_c;
-                    stackIn_110_0 = stackOut_108_0;
-                    stackIn_109_0 = stackOut_108_0;
+                  L33: {
+                    stackOut_105_0 = jj.field_c;
+                    stackIn_107_0 = stackOut_105_0;
+                    stackIn_106_0 = stackOut_105_0;
                     if (BrickABrac.field_K[var4] >= 0) {
-                      stackOut_110_0 = stackIn_110_0;
-                      stackOut_110_1 = b.field_c;
-                      stackIn_111_0 = stackOut_110_0;
-                      stackIn_111_1 = stackOut_110_1;
-                      break L30;
+                      stackOut_107_0 = stackIn_107_0;
+                      stackOut_107_1 = b.field_c;
+                      stackIn_108_0 = stackOut_107_0;
+                      stackIn_108_1 = stackOut_107_1;
+                      break L33;
                     } else {
-                      stackOut_109_0 = stackIn_109_0;
-                      stackOut_109_1 = pe.field_s;
-                      stackIn_111_0 = stackOut_109_0;
-                      stackIn_111_1 = stackOut_109_1;
-                      break L30;
+                      stackOut_106_0 = stackIn_106_0;
+                      stackOut_106_1 = pe.field_s;
+                      stackIn_108_0 = stackOut_106_0;
+                      stackIn_108_1 = stackOut_106_1;
+                      break L33;
                     }
                   }
-                  jj.field_c = stackIn_111_0 + stackIn_111_1;
+                  jj.field_c = stackIn_108_0 + stackIn_108_1;
                   var4++;
-                  continue L27;
+                  continue L29;
                 }
               }
             } else {
-              L31: {
-                if ((BrickABrac.field_K[var4] ^ -1) > -1) {
+              L34: {
+                if (BrickABrac.field_K[var4] < 0) {
                   stackOut_90_0 = 0;
                   stackIn_91_0 = stackOut_90_0;
-                  break L31;
+                  break L34;
                 } else {
                   stackOut_89_0 = 1;
                   stackIn_91_0 = stackOut_89_0;
-                  break L31;
+                  break L34;
                 }
               }
-              var5 = hm.a(stackIn_91_0 != 0, qh.field_i[var4], 0);
-              if (var5 > var3) {
-                var3 = var5;
-                var4++;
-                continue L23;
-              } else {
-                var4++;
-                continue L23;
+              L35: {
+                var5 = hm.a(stackIn_91_0 != 0, qh.field_i[var4], 0);
+                if (var5 <= var3_int) {
+                  break L35;
+                } else {
+                  break L35;
+                }
               }
+              var4++;
+              continue L23;
             }
           }
         } else {

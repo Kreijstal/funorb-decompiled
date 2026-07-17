@@ -25,27 +25,14 @@ final class sg {
     public static void a(int param0) {
         field_g = null;
         field_f = null;
-        if (param0 != 511) {
-          field_g = null;
-          field_d = null;
-          field_c = null;
-          field_e = null;
-          field_a = null;
-          return;
-        } else {
-          field_d = null;
-          field_c = null;
-          field_e = null;
-          field_a = null;
-          return;
-        }
+        field_d = null;
+        field_c = null;
+        field_e = null;
+        field_a = null;
     }
 
     final static void a(byte param0) {
         ua.field_F = null;
-        if (param0 != -12) {
-            return;
-        }
         hk.field_a = null;
     }
 

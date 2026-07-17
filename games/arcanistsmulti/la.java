@@ -10,7 +10,7 @@ final class la implements ok {
     static int field_d;
 
     public static void a(byte param0) {
-        int var1 = 2 / ((-60 - param0) / 56);
+        int var1 = -2;
         field_e = null;
         field_b = null;
         field_c = null;
@@ -37,9 +37,6 @@ final class la implements ok {
     }
 
     final static int[] b(byte param0) {
-        if (param0 != 12) {
-            return null;
-        }
         return new int[8];
     }
 

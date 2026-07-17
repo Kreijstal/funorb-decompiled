@@ -148,7 +148,7 @@ final class sna {
             if (((sna) this).field_f) {
               break L7;
             } else {
-              if (-1 <= (var10.a(393216, 2) ^ -1)) {
+              if (var10.a(393216, 2) <= 0) {
                 break L7;
               } else {
                 ((sna) this).field_f = true;
@@ -160,7 +160,7 @@ final class sna {
             if (((sna) this).field_f) {
               break L7;
             } else {
-              if (-1 <= (var10.a(393216, 2) ^ -1)) {
+              if (var10.a(393216, 2) <= 0) {
                 break L7;
               } else {
                 ((sna) this).field_f = true;
@@ -190,7 +190,7 @@ final class sna {
                   if (((sna) this).field_b) {
                     break L8;
                   } else {
-                    if (-2 != (var10.u((byte) 127) ^ -1)) {
+                    if (var10.u((byte) 127) != 1) {
                       break L8;
                     } else {
                       ((sna) this).field_b = true;
@@ -204,7 +204,7 @@ final class sna {
             if (((sna) this).field_b) {
               break L8;
             } else {
-              if (-2 != (var10.u((byte) 127) ^ -1)) {
+              if (var10.u((byte) 127) != 1) {
                 break L8;
               } else {
                 ((sna) this).field_b = true;
@@ -216,7 +216,7 @@ final class sna {
             if (((sna) this).field_b) {
               break L8;
             } else {
-              if (-2 != (var10.u((byte) 127) ^ -1)) {
+              if (var10.u((byte) 127) != 1) {
                 break L8;
               } else {
                 ((sna) this).field_b = true;
@@ -229,29 +229,53 @@ final class sna {
     }
 
     private final void a(String param0, ms param1, int param2, int param3) {
-        if (param3 > -56) {
-            ((sna) this).b((byte) 111);
+        dl var5 = null;
+        try {
+            if (param3 > -56) {
+                ((sna) this).b((byte) 111);
+            }
+            var5 = new dl(((sna) this).field_l, param1);
+            var5.a(tea.field_a, param0, vda.field_n, (byte) 21);
+            ((sna) this).field_c.b((byte) -125, (vg) (Object) new mga(var5, param2));
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sna.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
-        dl var5 = new dl(((sna) this).field_l, param1);
-        var5.a(tea.field_a, param0, vda.field_n, (byte) 21);
-        ((sna) this).field_c.b((byte) -125, (vg) (Object) new mga(var5, param2));
     }
 
     final void a(byte param0) {
-        int var3 = TombRacer.field_G ? 1 : 0;
-        mga var2 = (mga) (Object) ((sna) this).field_c.f(-80);
-        while (var2 != null) {
-            if (var2.field_k <= 0) {
-                // ifne L88
-                ((sna) this).field_l.a((me) (Object) var2.field_h, param0 ^ 644);
-                var2.p(param0 ^ 18);
-            } else {
+        mga var2 = null;
+        int var3 = 0;
+        var3 = TombRacer.field_G ? 1 : 0;
+        var2 = (mga) (Object) ((sna) this).field_c.f(-80);
+        L0: while (true) {
+          if (var2 == null) {
+            L1: {
+              if (param0 == 44) {
+                break L1;
+              } else {
+                ((sna) this).a(1);
+                break L1;
+              }
+            }
+            return;
+          } else {
+            L2: {
+              if (var2.field_k > 0) {
                 var2.field_k = var2.field_k - 1;
+                break L2;
+              } else {
+                if (((sna) this).field_l.d(0)) {
+                  break L2;
+                } else {
+                  ((sna) this).field_l.a((me) (Object) var2.field_h, param0 ^ 644);
+                  var2.p(param0 ^ 18);
+                  break L2;
+                }
+              }
             }
             var2 = (mga) (Object) ((sna) this).field_c.e(108);
-        }
-        if (param0 != 44) {
-            ((sna) this).a(1);
+            continue L0;
+          }
         }
     }
 
@@ -274,7 +298,11 @@ final class sna {
         ((sna) this).field_k = false;
         ((sna) this).field_e = 0;
         ((sna) this).field_c = new vna();
-        ((sna) this).field_l = param0;
+        try {
+            ((sna) this).field_l = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sna.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

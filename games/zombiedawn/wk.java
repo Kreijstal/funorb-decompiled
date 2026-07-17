@@ -30,9 +30,6 @@ final class wk {
     boolean field_d;
 
     public static void a(int param0) {
-        if (param0 < 6) {
-            field_z = null;
-        }
         field_o = null;
         field_z = null;
     }
@@ -88,7 +85,8 @@ final class wk {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
-        int var7 = 0;
+        RuntimeException var7 = null;
+        int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -97,103 +95,115 @@ final class wk {
         int var13 = 0;
         int var14 = 0;
         int stackIn_23_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         var14 = ZombieDawn.field_J;
-        if (param0 >= param2) {
-          return;
-        } else {
-          if (param1 > param0 + 1) {
-            L0: {
-              if (param0 - -5 >= param1) {
-                break L0;
-              } else {
-                if (param6 != param5) {
-                  var7 = (param5 & param6 & 1) + ((param5 >> 282953857) + (param6 >> 1117036385));
-                  var8 = param0;
-                  var9 = param6;
-                  var10 = param5;
-                  var11 = param0;
-                  L1: while (true) {
-                    if (var11 >= param1) {
-                      wk.a(param0, var8, param2, param3, param4, var9, param6);
-                      wk.a(var8, param1, param2, 0, param4, param5, var10);
-                      return;
-                    } else {
-                      L2: {
-                        var12 = qd.field_c[var11];
-                        if (param4) {
-                          stackOut_22_0 = dj.field_g[var12];
-                          stackIn_23_0 = stackOut_22_0;
-                          break L2;
+        try {
+          L0: {
+            if (param0 >= param2) {
+              return;
+            } else {
+              if (param1 > param0 + 1) {
+                L1: {
+                  if (param0 - -5 >= param1) {
+                    break L1;
+                  } else {
+                    if (param6 != param5) {
+                      var7_int = (param5 & param6 & 1) + ((param5 >> 1) + (param6 >> 1));
+                      var8 = param0;
+                      var9 = param6;
+                      var10 = param5;
+                      var11 = param0;
+                      L2: while (true) {
+                        if (var11 >= param1) {
+                          wk.a(param0, var8, param2, param3, param4, var9, param6);
+                          wk.a(var8, param1, param2, 0, param4, param5, var10);
+                          break L0;
                         } else {
-                          stackOut_21_0 = qp.field_b[var12];
-                          stackIn_23_0 = stackOut_21_0;
-                          break L2;
-                        }
-                      }
-                      var13 = stackIn_23_0;
-                      if (var7 < var13) {
-                        L3: {
-                          qd.field_c[var11] = qd.field_c[var8];
-                          if (var9 > var13) {
-                            var9 = var13;
-                            break L3;
+                          L3: {
+                            var12 = qd.field_c[var11];
+                            if (param4) {
+                              stackOut_22_0 = dj.field_g[var12];
+                              stackIn_23_0 = stackOut_22_0;
+                              break L3;
+                            } else {
+                              stackOut_21_0 = qp.field_b[var12];
+                              stackIn_23_0 = stackOut_21_0;
+                              break L3;
+                            }
+                          }
+                          var13 = stackIn_23_0;
+                          if (var7_int < var13) {
+                            L4: {
+                              qd.field_c[var11] = qd.field_c[var8];
+                              if (var9 > var13) {
+                                var9 = var13;
+                                break L4;
+                              } else {
+                                break L4;
+                              }
+                            }
+                            int incrementValue$1 = var8;
+                            var8++;
+                            qd.field_c[incrementValue$1] = var12;
+                            var11++;
+                            continue L2;
                           } else {
-                            break L3;
+                            L5: {
+                              if (var13 <= var10) {
+                                break L5;
+                              } else {
+                                break L5;
+                              }
+                            }
+                            var11++;
+                            continue L2;
                           }
                         }
-                        int incrementValue$1 = var8;
-                        var8++;
-                        qd.field_c[incrementValue$1] = var12;
-                        var11++;
-                        continue L1;
+                      }
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                var7_int = -1 + param1;
+                L6: while (true) {
+                  if (param0 >= var7_int) {
+                    return;
+                  } else {
+                    var8 = param0;
+                    L7: while (true) {
+                      if (var8 >= var7_int) {
+                        var7_int--;
+                        continue L6;
                       } else {
-                        if (var13 > var10) {
-                          var10 = var13;
-                          var11++;
-                          continue L1;
-                        } else {
-                          var11++;
-                          continue L1;
+                        L8: {
+                          var9 = qd.field_c[var8];
+                          var10 = qd.field_c[var8 + 1];
+                          if (!fp.a(var9, param4, 0, var10)) {
+                            break L8;
+                          } else {
+                            qd.field_c[var8] = var10;
+                            qd.field_c[1 + var8] = var9;
+                            break L8;
+                          }
                         }
+                        var8++;
+                        continue L7;
                       }
                     }
                   }
-                } else {
-                  break L0;
                 }
-              }
-            }
-            var7 = -1 + param1;
-            L4: while (true) {
-              if (param0 >= var7) {
-                return;
               } else {
-                var8 = param0;
-                L5: while (true) {
-                  if (var8 >= var7) {
-                    var7--;
-                    continue L4;
-                  } else {
-                    var9 = qd.field_c[var8];
-                    var10 = qd.field_c[var8 + 1];
-                    if (fp.a(var9, param4, 0, var10)) {
-                      qd.field_c[var8] = var10;
-                      qd.field_c[1 + var8] = var9;
-                      var8++;
-                      continue L5;
-                    } else {
-                      var8++;
-                      continue L5;
-                    }
-                  }
-                }
+                return;
               }
             }
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          throw sh.a((Throwable) (Object) var7, "wk.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -291,7 +301,7 @@ final class wk {
               }
             }
             L8: {
-              if ((((wk) this).field_y ^ -1) <= -1) {
+              if (((wk) this).field_y >= 0) {
                 break L8;
               } else {
                 ((wk) this).field_y = ((wk) this).field_y + 1;
@@ -389,9 +399,6 @@ final class wk {
     private final void b(int param0) {
         if (!(((wk) this).field_u >= ((wk) this).field_s)) {
             ((wk) this).field_u = ((wk) this).field_s;
-        }
-        if (param0 != -28216) {
-            return;
         }
         if (((wk) this).field_w > ((wk) this).field_c) {
             ((wk) this).field_c = ((wk) this).field_w;

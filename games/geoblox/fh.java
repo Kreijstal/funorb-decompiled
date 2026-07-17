@@ -14,9 +14,6 @@ final class fh implements dh {
         pc.a(-1, false);
         si.field_g = uf.field_l;
         kd.field_b = uf.field_l;
-        if (param0 != -6011) {
-            field_c = 36;
-        }
     }
 
     public static void a(int param0) {
@@ -45,7 +42,7 @@ final class fh implements dh {
         int var10 = 0;
         int var11 = 0;
         var11 = Geoblox.field_C;
-        if ((param0 ^ -1L) < -1L) {
+        if (param0 > 0L) {
           if (param0 < 6582952005840035281L) {
             if (0L == param0 % 37L) {
               return null;
@@ -56,7 +53,7 @@ final class fh implements dh {
                 if (var4 == 0L) {
                   var6 = new StringBuilder(var3);
                   L1: while (true) {
-                    if (-1L == (param0 ^ -1L)) {
+                    if (param0 == 0L) {
                       StringBuilder discarded$2 = var6.reverse();
                       var7 = 49 % ((27 - param1) / 36);
                       var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
@@ -95,176 +92,129 @@ final class fh implements dh {
     }
 
     public final void a(int param0, int param1, int param2, boolean param3, el param4) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var11 = Geoblox.field_C;
-        if (!param4.field_l) {
-          if (!param4.e((byte) 54)) {
-            L0: {
-              var6 = 2188450;
-              int discarded$6 = ((fh) this).field_d.a("<u=" + Integer.toString(var6, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 - -param4.field_m, param4.field_r, param4.field_h, var6, -1, ((fh) this).field_b, ((fh) this).field_a, ((fh) this).field_d.field_o - -((fh) this).field_d.field_q);
-              if (param1 <= -5) {
-                break L0;
-              } else {
-                String discarded$7 = fh.a(53L, -116);
-                break L0;
-              }
-            }
-            if (param4.e((byte) 54)) {
-              L1: {
-                var7 = ((fh) this).field_d.a(param4.field_s);
-                var8 = ((fh) this).field_d.field_q + ((fh) this).field_d.field_o;
-                var9 = param4.field_v + param0;
-                if (((fh) this).field_b == -3) {
-                  var9 = var9 + (-var7 + param4.field_r);
-                  break L1;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                if (param4.field_l) {
+                  break L2;
                 } else {
-                  if (-2 != ((fh) this).field_b) {
+                  if (param4.e((byte) 54)) {
+                    break L2;
+                  } else {
+                    stackOut_3_0 = 2188450;
+                    stackIn_5_0 = stackOut_3_0;
                     break L1;
-                  } else {
-                    L2: {
-                      var9 = var9 + (-var7 + param4.field_r >> -1257061119);
-                      var10 = param2 - -param4.field_m;
-                      if (-3 == (((fh) this).field_a ^ -1)) {
-                        var10 = var10 + (param4.field_h - var8);
-                        break L2;
-                      } else {
-                        if (((fh) this).field_a == 1) {
-                          var10 = var10 + (param4.field_h - var8 >> 1292510401);
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      }
-                    }
-                    bf.a(var10 - -2, 4 + var7, 14164, var8, -2 + var9);
-                    return;
                   }
                 }
               }
-              var10 = param2 - -param4.field_m;
-              if (-3 != (((fh) this).field_a ^ -1)) {
-                if (((fh) this).field_a != 1) {
-                  bf.a(var10 - -2, 4 + var7, 14164, var8, -2 + var9);
-                  return;
-                } else {
-                  var10 = var10 + (param4.field_h - var8 >> 1292510401);
-                  bf.a(var10 - -2, 4 + var7, 14164, var8, -2 + var9);
-                  return;
-                }
-              } else {
-                var10 = var10 + (param4.field_h - var8);
-                bf.a(var10 - -2, 4 + var7, 14164, var8, -2 + var9);
-                return;
-              }
-            } else {
-              return;
+              stackOut_4_0 = 3249872;
+              stackIn_5_0 = stackOut_4_0;
+              break L1;
             }
-          } else {
             L3: {
-              var6 = 3249872;
-              int discarded$8 = ((fh) this).field_d.a("<u=" + Integer.toString(var6, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 - -param4.field_m, param4.field_r, param4.field_h, var6, -1, ((fh) this).field_b, ((fh) this).field_a, ((fh) this).field_d.field_o - -((fh) this).field_d.field_q);
+              var6_int = stackIn_5_0;
+              int discarded$2 = ((fh) this).field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 - -param4.field_m, param4.field_r, param4.field_h, var6_int, -1, ((fh) this).field_b, ((fh) this).field_a, ((fh) this).field_d.field_o - -((fh) this).field_d.field_q);
               if (param1 <= -5) {
                 break L3;
               } else {
-                String discarded$9 = fh.a(53L, -116);
+                String discarded$3 = fh.a(53L, -116);
                 break L3;
               }
             }
-            L4: {
-              if (param4.e((byte) 54)) {
-                L5: {
-                  var7 = ((fh) this).field_d.a(param4.field_s);
-                  var8 = ((fh) this).field_d.field_q + ((fh) this).field_d.field_o;
-                  var9 = param4.field_v + param0;
-                  if (((fh) this).field_b == -3) {
-                    var9 = var9 + (-var7 + param4.field_r);
-                    break L5;
-                  } else {
-                    if (-2 != ((fh) this).field_b) {
-                      break L5;
-                    } else {
-                      var9 = var9 + (-var7 + param4.field_r >> -1257061119);
-                      break L5;
-                    }
-                  }
-                }
-                L6: {
-                  var10 = param2 - -param4.field_m;
-                  if (-3 == (((fh) this).field_a ^ -1)) {
-                    var10 = var10 + (param4.field_h - var8);
-                    break L6;
-                  } else {
-                    if (((fh) this).field_a == 1) {
-                      var10 = var10 + (param4.field_h - var8 >> 1292510401);
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                }
-                bf.a(var10 - -2, 4 + var7, 14164, var8, -2 + var9);
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            return;
-          }
-        } else {
-          L7: {
-            var6 = 3249872;
-            int discarded$10 = ((fh) this).field_d.a("<u=" + Integer.toString(var6, 16) + ">" + param4.field_s + "</u>", param4.field_v + param0, param2 - -param4.field_m, param4.field_r, param4.field_h, var6, -1, ((fh) this).field_b, ((fh) this).field_a, ((fh) this).field_d.field_o - -((fh) this).field_d.field_q);
-            if (param1 <= -5) {
-              break L7;
-            } else {
-              String discarded$11 = fh.a(53L, -116);
-              break L7;
-            }
-          }
-          L8: {
             if (param4.e((byte) 54)) {
-              L9: {
+              L4: {
                 var7 = ((fh) this).field_d.a(param4.field_s);
                 var8 = ((fh) this).field_d.field_q + ((fh) this).field_d.field_o;
                 var9 = param4.field_v + param0;
-                if (((fh) this).field_b == -3) {
+                if (((fh) this).field_b == 2) {
                   var9 = var9 + (-var7 + param4.field_r);
-                  break L9;
+                  break L4;
                 } else {
-                  if (-2 != ((fh) this).field_b) {
-                    break L9;
+                  if (((fh) this).field_b != 1) {
+                    break L4;
                   } else {
-                    var9 = var9 + (-var7 + param4.field_r >> -1257061119);
-                    break L9;
+                    var9 = var9 + (-var7 + param4.field_r >> 1);
+                    break L4;
                   }
                 }
               }
-              L10: {
+              L5: {
                 var10 = param2 - -param4.field_m;
-                if (-3 == (((fh) this).field_a ^ -1)) {
+                if (((fh) this).field_a == 2) {
                   var10 = var10 + (param4.field_h - var8);
-                  break L10;
+                  break L5;
                 } else {
                   if (((fh) this).field_a == 1) {
-                    var10 = var10 + (param4.field_h - var8 >> 1292510401);
-                    break L10;
+                    var10 = var10 + (param4.field_h - var8 >> 1);
+                    break L5;
                   } else {
-                    break L10;
+                    break L5;
                   }
                 }
               }
               bf.a(var10 - -2, 4 + var7, 14164, var8, -2 + var9);
-              break L8;
+              break L0;
             } else {
-              break L8;
+              return;
             }
           }
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var6 = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_1 = new StringBuilder().append("fh.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param4 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L6;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L6;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
     }
 
@@ -275,9 +225,13 @@ final class fh implements dh {
     }
 
     fh(m param0, int param1, int param2) {
-        ((fh) this).field_a = param2;
-        ((fh) this).field_b = param1;
-        ((fh) this).field_d = param0;
+        try {
+            ((fh) this).field_a = param2;
+            ((fh) this).field_b = param1;
+            ((fh) this).field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "fh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

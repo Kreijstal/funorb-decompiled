@@ -12,9 +12,6 @@ final class oa extends IOException {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (param0 != 17) {
-            oa.b(76);
-        }
     }
 
     final static void b(int param0) {

@@ -6,13 +6,13 @@ final class qa {
     static int[] field_a;
 
     public static void a(int param0) {
-        int var1 = 67 / ((5 - param0) / 61);
+        int var1 = 67;
         field_a = null;
         field_b = null;
     }
 
     final static int a(byte param0) {
-        int var1 = -38 % ((-67 - param0) / 41);
+        int var1 = 0;
         return tc.field_e;
     }
 

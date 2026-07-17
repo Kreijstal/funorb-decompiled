@@ -13,10 +13,6 @@ final class al {
     int field_i;
 
     final static boolean a(byte param0) {
-        if (param0 != 2) {
-            al.a(-100);
-            return ph.field_E == null ? mb.field_d : true;
-        }
         return ph.field_E == null ? mb.field_d : true;
     }
 
@@ -30,9 +26,6 @@ final class al {
     }
 
     final static int a(boolean param0) {
-        if (param0) {
-            return -37;
-        }
         return aq.field_s;
     }
 

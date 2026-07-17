@@ -5,9 +5,6 @@ final class vfb implements dja {
     static String field_a;
 
     public static void a(int param0) {
-        if (param0 < 16) {
-            return;
-        }
         field_a = null;
     }
 

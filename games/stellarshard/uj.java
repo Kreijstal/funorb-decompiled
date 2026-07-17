@@ -10,7 +10,8 @@ final class uj {
     static oj field_e;
 
     final static int a(CharSequence param0, byte param1, int param2, boolean param3) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -18,124 +19,175 @@ final class uj {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        L0: {
-          var11 = stellarshard.field_B;
-          if (param2 < 2) {
-            break L0;
-          } else {
-            if (-37 > (param2 ^ -1)) {
-              break L0;
-            } else {
-              L1: {
-                var4 = 0;
-                var5 = 0;
-                var6 = 0;
-                var7 = param0.length();
-                if (param1 >= 74) {
+        int stackIn_38_0 = 0;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        String stackIn_42_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_37_0 = 0;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
+        String stackOut_41_2 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
+        var11 = stellarshard.field_B;
+        try {
+          L0: {
+            L1: {
+              if (param2 < 2) {
+                break L1;
+              } else {
+                if (param2 > 36) {
                   break L1;
                 } else {
-                  field_e = null;
-                  break L1;
-                }
-              }
-              var8 = 0;
-              L2: while (true) {
-                if (var8 >= var7) {
-                  if (var5 == 0) {
-                    throw new NumberFormatException();
-                  } else {
-                    return var6;
-                  }
-                } else {
-                  L3: {
-                    var9 = param0.charAt(var8);
-                    if (var8 != 0) {
-                      break L3;
+                  L2: {
+                    var4_int = 0;
+                    var5 = 0;
+                    var6 = 0;
+                    var7 = param0.length();
+                    if (param1 >= 74) {
+                      break L2;
                     } else {
-                      if (var9 == 45) {
-                        var4 = 1;
-                        var8++;
-                        continue L2;
+                      field_e = null;
+                      break L2;
+                    }
+                  }
+                  var8 = 0;
+                  L3: while (true) {
+                    if (var8 >= var7) {
+                      if (var5 == 0) {
+                        throw new NumberFormatException();
                       } else {
-                        if (var9 != 43) {
-                          break L3;
-                        } else {
-                          if (!param3) {
-                            break L3;
+                        stackOut_37_0 = var6;
+                        stackIn_38_0 = stackOut_37_0;
+                        break L0;
+                      }
+                    } else {
+                      L4: {
+                        L5: {
+                          var9 = param0.charAt(var8);
+                          if (var8 != 0) {
+                            break L5;
                           } else {
-                            var8++;
-                            continue L2;
+                            if (var9 == 45) {
+                              var4_int = 1;
+                              break L4;
+                            } else {
+                              if (var9 != 43) {
+                                break L5;
+                              } else {
+                                break L5;
+                              }
+                            }
                           }
                         }
-                      }
-                    }
-                  }
-                  L4: {
-                    L5: {
-                      if (48 > var9) {
-                        break L5;
-                      } else {
-                        if (var9 > 57) {
-                          break L5;
+                        L6: {
+                          L7: {
+                            if (48 > var9) {
+                              break L7;
+                            } else {
+                              if (var9 > 57) {
+                                break L7;
+                              } else {
+                                var9 -= 48;
+                                break L6;
+                              }
+                            }
+                          }
+                          L8: {
+                            if (var9 < 65) {
+                              break L8;
+                            } else {
+                              if (var9 <= 90) {
+                                var9 -= 55;
+                                break L6;
+                              } else {
+                                break L8;
+                              }
+                            }
+                          }
+                          L9: {
+                            if (97 > var9) {
+                              break L9;
+                            } else {
+                              if (var9 <= 122) {
+                                var9 -= 87;
+                                break L6;
+                              } else {
+                                break L9;
+                              }
+                            }
+                          }
+                          throw new NumberFormatException();
+                        }
+                        if (param2 > var9) {
+                          L10: {
+                            if (var4_int == 0) {
+                              break L10;
+                            } else {
+                              var9 = -var9;
+                              break L10;
+                            }
+                          }
+                          var10 = var9 + var6 * param2;
+                          if (var10 / param2 == var6) {
+                            var6 = var10;
+                            var5 = 1;
+                            break L4;
+                          } else {
+                            throw new NumberFormatException();
+                          }
                         } else {
-                          var9 -= 48;
-                          break L4;
+                          throw new NumberFormatException();
                         }
                       }
-                    }
-                    L6: {
-                      if (var9 < 65) {
-                        break L6;
-                      } else {
-                        if (var9 <= 90) {
-                          var9 -= 55;
-                          break L4;
-                        } else {
-                          break L6;
-                        }
-                      }
-                    }
-                    L7: {
-                      if (97 > var9) {
-                        break L7;
-                      } else {
-                        if (var9 <= 122) {
-                          var9 -= 87;
-                          break L4;
-                        } else {
-                          break L7;
-                        }
-                      }
-                    }
-                    throw new NumberFormatException();
-                  }
-                  if (param2 > var9) {
-                    L8: {
-                      if (var4 == 0) {
-                        break L8;
-                      } else {
-                        var9 = -var9;
-                        break L8;
-                      }
-                    }
-                    var10 = var9 + var6 * param2;
-                    if (var10 / param2 == var6) {
-                      var6 = var10;
-                      var5 = 1;
                       var8++;
-                      continue L2;
-                    } else {
-                      throw new NumberFormatException();
+                      continue L3;
                     }
-                  } else {
-                    throw new NumberFormatException();
                   }
                 }
               }
             }
+            throw new IllegalArgumentException("" + param2);
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L11: {
+            var4 = decompiledCaughtException;
+            stackOut_39_0 = (RuntimeException) var4;
+            stackOut_39_1 = new StringBuilder().append("uj.C(");
+            stackIn_41_0 = stackOut_39_0;
+            stackIn_41_1 = stackOut_39_1;
+            stackIn_40_0 = stackOut_39_0;
+            stackIn_40_1 = stackOut_39_1;
+            if (param0 == null) {
+              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
+              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_2 = "null";
+              stackIn_42_0 = stackOut_41_0;
+              stackIn_42_1 = stackOut_41_1;
+              stackIn_42_2 = stackOut_41_2;
+              break L11;
+            } else {
+              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_2 = "{...}";
+              stackIn_42_0 = stackOut_40_0;
+              stackIn_42_1 = stackOut_40_1;
+              stackIn_42_2 = stackOut_40_2;
+              break L11;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 44 + param2 + 44 + 1 + 41);
         }
-        throw new IllegalArgumentException("" + param2);
+        return stackIn_38_0;
     }
 
     public static void b(int param0) {
@@ -189,7 +241,7 @@ final class uj {
           if (((uj) this).field_a == null) {
             break L0;
           } else {
-            if (-1 == (((uj) this).field_a.length ^ -1)) {
+            if (((uj) this).field_a.length == 0) {
               break L0;
             } else {
               L1: {
@@ -205,7 +257,7 @@ final class uj {
                 if (var3 >= ((uj) this).field_a.length) {
                   return ((uj) this).field_a.length - 1;
                 } else {
-                  if (param0 >= ((uj) this).field_a[var3] + ((uj) this).field_a[-1 + var3] >> -1417274431) {
+                  if (param0 >= ((uj) this).field_a[var3] + ((uj) this).field_a[-1 + var3] >> 1) {
                     var3++;
                     continue L2;
                   } else {

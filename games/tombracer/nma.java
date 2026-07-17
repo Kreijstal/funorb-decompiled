@@ -22,25 +22,25 @@ final class nma extends rra {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var4 = ((nma) this).field_j * param0 >> 1682847340;
-        var5 = param1 * ((nma) this).field_g >> 768434636;
+        var4 = ((nma) this).field_j * param0 >> 12;
+        var5 = param1 * ((nma) this).field_g >> 12;
         if (!param2) {
           ((nma) this).field_n = 80;
-          var6 = ((nma) this).field_i * param0 >> -1686314100;
-          var7 = param1 * ((nma) this).field_k >> -2135734964;
-          var8 = ((nma) this).field_h * param0 >> -936390132;
-          var9 = ((nma) this).field_f * param1 >> -1406342836;
-          var10 = param0 * ((nma) this).field_n >> -1365190612;
-          var11 = param1 * ((nma) this).field_o >> -1308338036;
+          var6 = ((nma) this).field_i * param0 >> 12;
+          var7 = param1 * ((nma) this).field_k >> 12;
+          var8 = ((nma) this).field_h * param0 >> 12;
+          var9 = ((nma) this).field_f * param1 >> 12;
+          var10 = param0 * ((nma) this).field_n >> 12;
+          var11 = param1 * ((nma) this).field_o >> 12;
           fm.a(var10, var6, var4, var9, ((nma) this).field_b, var5, var11, var8, (byte) -110, var7);
           return;
         } else {
-          var6 = ((nma) this).field_i * param0 >> -1686314100;
-          var7 = param1 * ((nma) this).field_k >> -2135734964;
-          var8 = ((nma) this).field_h * param0 >> -936390132;
-          var9 = ((nma) this).field_f * param1 >> -1406342836;
-          var10 = param0 * ((nma) this).field_n >> -1365190612;
-          var11 = param1 * ((nma) this).field_o >> -1308338036;
+          var6 = ((nma) this).field_i * param0 >> 12;
+          var7 = param1 * ((nma) this).field_k >> 12;
+          var8 = ((nma) this).field_h * param0 >> 12;
+          var9 = ((nma) this).field_f * param1 >> 12;
+          var10 = param0 * ((nma) this).field_n >> 12;
+          var11 = param1 * ((nma) this).field_o >> 12;
           fm.a(var10, var6, var4, var9, ((nma) this).field_b, var5, var11, var8, (byte) -110, var7);
           return;
         }
@@ -63,12 +63,6 @@ final class nma extends rra {
     }
 
     public static void b(boolean param0) {
-        if (param0) {
-            field_m = null;
-            field_l = null;
-            field_m = null;
-            return;
-        }
         field_l = null;
         field_m = null;
     }
@@ -79,11 +73,10 @@ final class nma extends rra {
           return 0;
         } else {
           if (param1 <= 0) {
-            if (param0) {
+            if (!param0) {
               L0: {
-                field_m = null;
                 var2 = 2;
-                if (65535 > param1) {
+                if (param1 < -65536) {
                   var2 += 16;
                   param1 = param1 >> 16;
                   break L0;
@@ -92,7 +85,7 @@ final class nma extends rra {
                 }
               }
               L1: {
-                if ((param1 ^ -1) > 255) {
+                if (param1 < -256) {
                   param1 = param1 >> 8;
                   var2 += 8;
                   break L1;
@@ -110,7 +103,7 @@ final class nma extends rra {
                 }
               }
               L3: {
-                if (3 < (param1 ^ -1)) {
+                if (param1 < -4) {
                   var2 += 2;
                   param1 = param1 >> 2;
                   break L3;
@@ -119,7 +112,7 @@ final class nma extends rra {
                 }
               }
               L4: {
-                if (param1 > 1) {
+                if (param1 < -2) {
                   param1 = param1 >> 1;
                   var2++;
                   break L4;
@@ -130,8 +123,9 @@ final class nma extends rra {
               return var2;
             } else {
               L5: {
+                field_m = null;
                 var2 = 2;
-                if (65535 > param1) {
+                if (param1 < -65536) {
                   var2 += 16;
                   param1 = param1 >> 16;
                   break L5;
@@ -140,7 +134,7 @@ final class nma extends rra {
                 }
               }
               L6: {
-                if ((param1 ^ -1) > 255) {
+                if (param1 < -256) {
                   param1 = param1 >> 8;
                   var2 += 8;
                   break L6;
@@ -158,7 +152,7 @@ final class nma extends rra {
                 }
               }
               L8: {
-                if (3 < (param1 ^ -1)) {
+                if (param1 < -4) {
                   var2 += 2;
                   param1 = param1 >> 2;
                   break L8;
@@ -167,7 +161,7 @@ final class nma extends rra {
                 }
               }
               L9: {
-                if (param1 > 1) {
+                if (param1 < -2) {
                   param1 = param1 >> 1;
                   var2++;
                   break L9;
@@ -180,7 +174,7 @@ final class nma extends rra {
           } else {
             L10: {
               var2 = 1;
-              if (-65536 <= param1) {
+              if (param1 <= 65535) {
                 break L10;
               } else {
                 param1 = param1 >> 16;
@@ -189,7 +183,7 @@ final class nma extends rra {
               }
             }
             L11: {
-              if (-256 < param1) {
+              if (param1 > 255) {
                 var2 += 8;
                 param1 = param1 >> 8;
                 break L11;

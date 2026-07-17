@@ -7,22 +7,42 @@ final class sp extends gr {
     int field_J;
 
     final static boolean h(int param0) {
-        if (param0 != 0) {
-            return true;
-        }
-        return pa.field_I == ra.field_e ? true : false;
+        return pa.field_I == ra.field_e;
     }
 
     final static void a(boolean param0, int param1) {
-        int var2 = 0;
-        int var3 = Pool.field_O;
-        bb.a(gr.field_z, jh.field_c, 0, q.field_a, param1, (byte) -63, param0);
-        for (var2 = 0; var2 < jh.field_c; var2++) {
-            ep.field_H[var2 + param1] = var2;
-        }
-        bb.a(rn.field_d, jh.field_c - -param1, param1, jl.field_c, param1 + param1, (byte) -74, false);
-        if (!(jh.field_c <= param1)) {
-            jh.field_c = param1;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = Pool.field_O;
+        try {
+          L0: {
+            bb.a(gr.field_z, jh.field_c, 0, q.field_a, param1, (byte) -63, param0);
+            var2_int = 0;
+            L1: while (true) {
+              if (var2_int >= jh.field_c) {
+                L2: {
+                  bb.a(rn.field_d, jh.field_c - -param1, param1, jl.field_c, param1 + param1, (byte) -74, false);
+                  if (jh.field_c > param1) {
+                    jh.field_c = param1;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                ep.field_H[var2_int + param1] = var2_int;
+                var2_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var2, "sp.F(" + param0 + 44 + param1 + 41);
         }
     }
 

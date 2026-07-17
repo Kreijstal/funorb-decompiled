@@ -15,11 +15,11 @@ final class fr extends ma {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (-1 != (param1 ^ -1)) {
+        if (param1 != 0) {
           if (0 < param1) {
             L0: {
               var2 = 1;
-              if (-65536 <= (param1 ^ -1)) {
+              if (param1 <= 65535) {
                 break L0;
               } else {
                 param1 = param1 >> 16;
@@ -37,7 +37,7 @@ final class fr extends ma {
               }
             }
             L2: {
-              if ((param1 ^ -1) >= -16) {
+              if (param1 <= 15) {
                 break L2;
               } else {
                 param1 = param1 >> 4;
@@ -86,7 +86,7 @@ final class fr extends ma {
                 }
               }
               L7: {
-                if ((param1 ^ -1) <= 15) {
+                if (param1 >= -16) {
                   break L7;
                 } else {
                   param1 = param1 >> 4;
@@ -104,7 +104,7 @@ final class fr extends ma {
                 }
               }
               L9: {
-                if ((param1 ^ -1) <= 1) {
+                if (param1 >= -2) {
                   break L9;
                 } else {
                   var2++;
@@ -125,7 +125,7 @@ final class fr extends ma {
                 }
               }
               L11: {
-                if ((param1 ^ -1) <= 15) {
+                if (param1 >= -16) {
                   break L11;
                 } else {
                   param1 = param1 >> 4;
@@ -143,7 +143,7 @@ final class fr extends ma {
                 }
               }
               L13: {
-                if ((param1 ^ -1) <= 1) {
+                if (param1 >= -2) {
                   break L13;
                 } else {
                   var2++;
@@ -160,33 +160,28 @@ final class fr extends ma {
     }
 
     final static void a(int param0, kg param1, int param2) {
-        oq var3 = null;
-        int var4 = 0;
-        int var5 = 0;
         oq var6 = null;
-        var6 = ej.field_j;
-        var3 = var6;
-        var6.b(false, param2);
-        var6.field_v = var6.field_v + 1;
-        var4 = var6.field_v;
-        var6.a(1, false);
-        if (null != param1.field_p) {
-          var6.a(param1.field_p.length, false);
-          var6.a(param1.field_p, (byte) 0, 0, param1.field_p.length);
-          var5 = 48 / ((param0 - 52) / 40);
-          int discarded$4 = var6.d(-1, var4);
-          var6.field_v = var6.field_v - 4;
-          param1.field_o = var6.b(true);
-          var6.b(-var4 + var6.field_v, true);
-          return;
-        } else {
-          var6.a(0, false);
-          var5 = 48 / ((param0 - 52) / 40);
-          int discarded$5 = var6.d(-1, var4);
-          var6.field_v = var6.field_v - 4;
-          param1.field_o = var6.b(true);
-          var6.b(-var4 + var6.field_v, true);
-          return;
+        int var4 = 0;
+        try {
+            var6 = ej.field_j;
+            oq var3 = var6;
+            var6.b(false, param2);
+            var6.field_v = var6.field_v + 1;
+            var4 = var6.field_v;
+            var6.a(1, false);
+            if (null != param1.field_p) {
+                var6.a(param1.field_p.length, false);
+                var6.a(param1.field_p, (byte) 0, 0, param1.field_p.length);
+            } else {
+                var6.a(0, false);
+            }
+            int var5 = 48 / ((param0 - 52) / 40);
+            int discarded$0 = var6.d(-1, var4);
+            var6.field_v = var6.field_v - 4;
+            param1.field_o = var6.b(true);
+            var6.b(-var4 + var6.field_v, true);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "fr.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -221,9 +216,13 @@ final class fr extends ma {
     }
 
     fr(long param0, int param1, byte[] param2) {
-        ((fr) this).field_p = param0;
-        ((fr) this).field_l = param2;
-        ((fr) this).field_r = param1;
+        try {
+            ((fr) this).field_p = param0;
+            ((fr) this).field_l = param2;
+            ((fr) this).field_r = param1;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "fr.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

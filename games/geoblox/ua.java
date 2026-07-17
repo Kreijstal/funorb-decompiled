@@ -41,7 +41,7 @@ final class ua extends hf {
 
     private final static void a(byte[] param0, int param1) {
         field_L = param0;
-        field_y = param1;
+        field_y = 0;
         field_j = 0;
     }
 
@@ -57,6 +57,7 @@ final class ua extends hf {
 
     final static ua a(rh param0, int param1, int param2) {
         try {
+            ua var4_ref = null;
             if (!ua.a(param0)) {
                 boolean discarded$0 = param0.a((byte) 37, param1, param2);
                 return null;
@@ -65,13 +66,11 @@ final class ua extends hf {
             if (var3 == null) {
                 return null;
             }
-            ua var4 = null;
-            try {
-                var4 = new ua(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new ua(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -165,12 +164,13 @@ final class ua extends hf {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((ua) this).field_E[var3] = (byte)(var6 - 128);
+                    ((ua) this).field_E[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -215,6 +215,7 @@ final class ua extends hf {
 
     final static ua a(rh param0, String param1, String param2) {
         try {
+            ua var4_ref = null;
             if (!ua.a(param0)) {
                 boolean discarded$0 = param0.a((byte) 113, param2, param1);
                 return null;
@@ -223,13 +224,11 @@ final class ua extends hf {
             if (var3 == null) {
                 return null;
             }
-            ua var4 = null;
-            try {
-                var4 = new ua(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new ua(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -248,7 +247,7 @@ final class ua extends hf {
         ((ua) this).field_I = var2.a((byte) -128);
         ((ua) this).field_n = var2.a((byte) -89);
         if (((ua) this).field_n < 0) {
-            ((ua) this).field_n = ((ua) this).field_n ^ -1;
+            ((ua) this).field_n = ~((ua) this).field_n;
             ((ua) this).field_A = true;
         }
         int var3 = var2.a((byte) -108);
@@ -305,12 +304,13 @@ final class ua extends hf {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -579,7 +579,6 @@ final class ua extends hf {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -1095,7 +1094,7 @@ final class ua extends hf {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((ua) this).field_i) {
                     break L36;
                   } else {
@@ -1153,7 +1152,7 @@ final class ua extends hf {
               }
             }
             ((ua) this).field_i = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_k[var14.field_d[var17_int]];
             var55 = field_B;

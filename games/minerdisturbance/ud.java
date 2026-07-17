@@ -11,22 +11,17 @@ final class ud {
 
     public static void a(int param0) {
         field_b = null;
-        int var1 = 96 / ((param0 - -54) / 45);
+        int var1 = -96;
         field_f = null;
     }
 
     final static void a(ac param0, int param1, int param2, int param3) {
-        if (param3 < 51) {
-          field_e = 50;
-          pm.field_c = param1;
-          rb.field_e = param0;
-          rf.field_b = param2;
-          return;
-        } else {
-          pm.field_c = param1;
-          rb.field_e = param0;
-          rf.field_b = param2;
-          return;
+        try {
+            pm.field_c = param1;
+            rb.field_e = param0;
+            rf.field_b = param2;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "ud.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + 88 + 41);
         }
     }
 

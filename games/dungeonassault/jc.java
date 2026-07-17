@@ -10,97 +10,95 @@ final class jc {
     static String field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var8 = DungeonAssault.field_K;
-          var6 = wh.field_g.field_d;
-          if (param3 == param4) {
-            param2 = param2 + var6;
-            param0 = param0 - var6;
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        L1: {
-          jh.c();
-          if (2 == param5) {
-            param0 = param0 - var6;
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        gf.e(param1, param2, 8 + param1, param0 + param2);
-        var7 = 0;
-        L2: while (true) {
-          if (var7 >= param0) {
-            L3: {
-              jh.b();
-              jh.b();
-              jh.b();
-              if (2 == param3) {
-                ac.field_w.j(param1, -var6 + param2);
-                break L3;
+        RuntimeException decompiledCaughtException = null;
+        var8 = DungeonAssault.field_K;
+        try {
+          L0: {
+            L1: {
+              var6_int = wh.field_g.field_d;
+              if (param3 == param4) {
+                param2 = param2 + var6_int;
+                param0 = param0 - var6_int;
+                break L1;
               } else {
-                break L3;
+                break L1;
               }
             }
-            L4: {
-              if ((param5 ^ -1) == -3) {
-                ac.field_w.h(param1, param0 + param2);
-                break L4;
+            L2: {
+              jh.c();
+              if (2 == param5) {
+                param0 = param0 - var6_int;
+                break L2;
               } else {
-                break L4;
+                break L2;
               }
             }
-            if (1 == param3) {
-              var7 = 0;
-              L5: while (true) {
-                if (8 > var7) {
-                  gf.d(param1, var7 + param2, 8, 0, -(var7 * 24) + 192);
-                  var7++;
-                  continue L5;
-                } else {
-                  if (1 != param5) {
-                    return;
+            gf.e(param1, param2, 8 + param1, param0 + param2);
+            var7 = 0;
+            L3: while (true) {
+              if (var7 >= param0) {
+                L4: {
+                  jh.b();
+                  if (2 == param3) {
+                    ac.field_w.j(param1, -var6_int + param2);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                L5: {
+                  if (param5 == 2) {
+                    ac.field_w.h(param1, param0 + param2);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                L6: {
+                  if (1 != param3) {
+                    break L6;
                   } else {
                     var7 = 0;
-                    L6: while (true) {
-                      if (-9 >= (var7 ^ -1)) {
-                        return;
+                    L7: while (true) {
+                      if (8 <= var7) {
+                        break L6;
                       } else {
-                        gf.d(param1, param2 + (param0 - 1) - var7, 8, 0, 192 - var7 * 24);
+                        gf.d(param1, var7 + param2, 8, 0, -(var7 * 24) + 192);
                         var7++;
-                        continue L6;
+                        continue L7;
                       }
                     }
                   }
                 }
-              }
-            } else {
-              if (1 != param5) {
-                return;
-              } else {
-                var7 = 0;
-                L7: while (true) {
-                  if (-9 >= (var7 ^ -1)) {
-                    return;
-                  } else {
-                    gf.d(param1, param2 + (param0 - 1) - var7, 8, 0, 192 - var7 * 24);
-                    var7++;
-                    continue L7;
+                if (1 == param5) {
+                  var7 = 0;
+                  L8: while (true) {
+                    if (var7 >= 8) {
+                      break L0;
+                    } else {
+                      gf.d(param1, param2 + (param0 - 1) - var7, 8, 0, 192 - var7 * 24);
+                      var7++;
+                      continue L8;
+                    }
                   }
+                } else {
+                  return;
                 }
+              } else {
+                be.field_o.b(param1, param2 - -var7);
+                var7 = var7 + be.field_o.field_b;
+                continue L3;
               }
             }
-          } else {
-            be.field_o.b(param1, param2 - -var7);
-            var7 = var7 + be.field_o.field_b;
-            continue L2;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw vk.a((Throwable) (Object) var6, "jc.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -136,9 +134,6 @@ final class jc {
         field_c = null;
         field_b = null;
         field_d = null;
-        if (param0 != 0) {
-            field_c = null;
-        }
     }
 
     static {

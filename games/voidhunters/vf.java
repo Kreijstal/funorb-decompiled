@@ -6,10 +6,14 @@ final class vf {
     private uq field_b;
 
     final void a(int param0, qfa param1) {
-        ((vf) this).field_b = param1.a((byte[]) null, 24, 196584, true, (byte) 125);
-        od discarded$0 = new od(((vf) this).field_b, 5126, 2, 0);
-        od discarded$1 = new od(((vf) this).field_b, 5126, 3, param0);
-        od discarded$2 = new od(((vf) this).field_b, 5121, 4, 20);
+        try {
+            ((vf) this).field_b = param1.a((byte[]) null, 24, 196584, true, (byte) 125);
+            od discarded$0 = new od(((vf) this).field_b, 5126, 2, 0);
+            od discarded$1 = new od(((vf) this).field_b, 5126, 3, param0);
+            od discarded$2 = new od(((vf) this).field_b, 5121, 4, 20);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "vf.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     vf() {

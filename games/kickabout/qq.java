@@ -11,27 +11,24 @@ final class qq extends i {
     static String field_J;
 
     final static hd h(byte param0) {
-        if (param0 >= -39) {
-            qq.g(-104);
-            return ei.field_d.field_yb;
-        }
         return ei.field_d.field_yb;
     }
 
     final static void a(int param0, byte param1, int param2, String param3, int param4, int param5, int param6) {
-        int var7 = 0;
-        var7 = 15 + un.field_d.a(param3);
+        int var7_int = 15 + un.field_d.a(param3);
         pt.a(640, -22914, 630, 480, 0);
-        on.a(-20 + (param5 - -160), -17 + param4, var7 + 20, 21, 8, 65793, 128);
+        on.a(-20 + (param5 - -160), -17 + param4, var7_int + 20, 21, 8, 65793, 128);
         if (param1 != -101) {
-          return;
-        } else {
-          ta.e(117);
-          pt.a(640, -22914, param5 + 160, 480, 0);
-          on.a(-20 + param5 + 160, -17 + param4, 20 + var7, 21, 8, param6, param0);
-          ta.e(119);
-          un.field_d.a(param3, 10 + (param5 + 160), param4, param2, -1);
-          return;
+            return;
+        }
+        try {
+            ta.e(117);
+            pt.a(640, -22914, param5 + 160, 480, 0);
+            on.a(-20 + param5 + 160, -17 + param4, 20 + var7_int, 21, 8, 14492194, param0);
+            ta.e(119);
+            un.field_d.a(param3, 10 + (param5 + 160), param4, param2, -1);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "qq.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + 14492194 + 41);
         }
     }
 
@@ -58,7 +55,7 @@ final class qq extends i {
     }
 
     final static int g(byte param0) {
-        int var1 = -2 % ((param0 - 47) / 61);
+        int var1 = 0;
         return tn.field_b;
     }
 

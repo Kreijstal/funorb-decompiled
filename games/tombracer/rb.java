@@ -12,18 +12,69 @@ final class rb extends nv {
 
     final static tn a(cn param0, int param1, int param2) {
         byte[] var3 = null;
+        RuntimeException var3_ref = null;
         byte[] var4 = null;
-        if (param2 == 15) {
-          var4 = param0.f(param1, 105);
-          var3 = var4;
-          if (var4 == null) {
-            return null;
-          } else {
-            return new tn(var4);
+        tn stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        tn stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            var4 = param0.f(param1, 105);
+            var3 = var4;
+            if (var4 != null) {
+              stackOut_5_0 = new tn(var4);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              return null;
+            }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3_ref;
+            stackOut_7_1 = new StringBuilder().append("rb.L(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L1;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + 15 + 41);
         }
+        return stackIn_6_0;
     }
 
     final void k(int param0) {
@@ -36,8 +87,12 @@ final class rb extends nv {
 
     rb(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
-        ((rb) this).field_t = param1.b((byte) 44, 4);
-        ((rb) this).field_n = new jma(15, param0, param1);
+        try {
+            ((rb) this).field_t = param1.b((byte) 44, 4);
+            ((rb) this).field_n = new jma(15, param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "rb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public static void g(byte param0) {
@@ -57,12 +112,14 @@ final class rb extends nv {
 
     final void a(boolean param0, kh param1) {
         if (param0) {
-          return;
-        } else {
-          super.a(param0, param1);
-          param1.a((byte) -127, ((rb) this).field_t, 4);
-          ((rb) this).field_n.a(((rb) this).h((byte) 119), (byte) 88, param1);
-          return;
+            return;
+        }
+        try {
+            super.a(param0, param1);
+            param1.a((byte) -127, ((rb) this).field_t, 4);
+            ((rb) this).field_n.a(((rb) this).h((byte) 119), (byte) 88, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "rb.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -82,31 +139,21 @@ final class rb extends nv {
         var4 = TombRacer.field_G ? 1 : 0;
         var3 = ((rb) this).field_t;
         if (var3 != 0) {
-          if ((var3 ^ -1) != -2) {
+          if (var3 != 1) {
             if (var3 != 2) {
-              if (var3 == 3) {
-                ((rb) this).field_s = ((rb) this).i(12340).f(8, 10915);
-                if (param0 == 79) {
-                  return;
-                } else {
-                  ((rb) this).g(91);
-                  return;
-                }
+              if (var3 != 3) {
+                return;
               } else {
-                if (param0 != 79) {
-                  ((rb) this).g(91);
-                  return;
-                } else {
-                  return;
-                }
+                ((rb) this).field_s = ((rb) this).i(12340).f(8, 10915);
+                return;
               }
             } else {
               L0: {
-                var2 = ((rb) this).b(true).a(((rb) this).field_g.e(9648), ((rb) this).field_g.c(-96), param0 ^ 79, 2, ((rb) this).field_g.a((byte) 55), ((rb) this).field_g.d(param0 + -76), (gma) (Object) ((rb) this).e(6));
+                var2 = ((rb) this).b(true).a(((rb) this).field_g.e(9648), ((rb) this).field_g.c(-96), 0, 2, ((rb) this).field_g.a((byte) 55), ((rb) this).field_g.d(3), (gma) (Object) ((rb) this).e(6));
                 stackOut_5_0 = this;
                 stackIn_7_0 = stackOut_5_0;
                 stackIn_6_0 = stackOut_5_0;
-                if (var2 < (((rb) this).field_g.c(param0 ^ -51) >> -82100400) * (((rb) this).field_g.a((byte) 55) >> 775746832)) {
+                if (var2 < (((rb) this).field_g.c(-126) >> 16) * (((rb) this).field_g.a((byte) 55) >> 16)) {
                   stackOut_7_0 = this;
                   stackOut_7_1 = 0;
                   stackIn_8_0 = stackOut_7_0;
@@ -121,30 +168,15 @@ final class rb extends nv {
                 }
               }
               ((rb) this).field_s = stackIn_8_1 != 0;
-              if (param0 != 79) {
-                ((rb) this).g(91);
-                return;
-              } else {
-                return;
-              }
+              return;
             }
           } else {
             ((rb) this).field_s = ((rb) this).field_g.d(50, false);
-            if (param0 != 79) {
-              ((rb) this).g(91);
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         } else {
           ((rb) this).field_s = ((rb) this).a((byte) 87);
-          if (param0 != 79) {
-            ((rb) this).g(91);
-            return;
-          } else {
-            return;
-          }
+          return;
         }
     }
 

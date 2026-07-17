@@ -10,21 +10,21 @@ final class ai {
     static String field_c;
 
     final static void a(int param0, mg param1, int param2, int param3, int param4, int param5, int param6, int param7, o param8, int param9, int param10) {
-        jj.field_db = param4;
-        gf.field_T = param2;
-        ja.field_a = param8;
-        aj.field_p = param10;
-        cl.field_o = param7;
-        ii.field_h = param3;
-        if (param6 >= -115) {
-            field_d = null;
-        } else {
+        try {
+            jj.field_db = param4;
+            gf.field_T = param2;
+            ja.field_a = param8;
+            aj.field_p = 5500;
+            cl.field_o = param7;
+            ii.field_h = param3;
+            if (param6 >= -115) {
+                field_d = null;
+            }
             ke.field_N = param9;
             ji.field_a = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "ai.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 44 + param9 + 44 + 5500 + 41);
         }
-        ke.field_N = param9;
-        ji.field_a = param0;
     }
 
     final static boolean a(boolean param0, byte param1) {
@@ -177,27 +177,22 @@ final class ai {
     }
 
     final static void a(o[] param0, byte param1, int param2, int param3) {
-        int var4 = 86 % ((param1 - -27) / 54);
-        he.field_c = new hi(param0);
-        fh.field_b = param2;
-        pg.field_b = param3;
-        la.a(33);
+        try {
+            int var4_int = 86 % ((param1 - -27) / 54);
+            he.field_c = new hi(param0);
+            fh.field_b = param2;
+            pg.field_b = param3;
+            la.a(33);
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "ai.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 > -43) {
-          field_c = null;
-          field_a = null;
-          field_c = null;
-          field_d = null;
-          return;
-        } else {
-          field_a = null;
-          field_c = null;
-          field_d = null;
-          return;
-        }
+        field_a = null;
+        field_c = null;
+        field_d = null;
     }
 
     static {

@@ -21,9 +21,6 @@ final class a {
         field_f = null;
         field_c = null;
         field_b = null;
-        if (param0 != -1) {
-            o[] discarded$0 = a.b(33);
-        }
     }
 
     static {

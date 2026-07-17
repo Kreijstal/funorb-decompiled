@@ -36,9 +36,6 @@ abstract class wb {
         field_m = null;
         field_c = null;
         field_g = null;
-        if (param0 != 5) {
-            field_m = null;
-        }
     }
 
     final static void b(byte param0) {
@@ -47,50 +44,30 @@ abstract class wb {
         var2 = Lexicominos.field_L ? 1 : 0;
         jj.field_d = null;
         gb.field_d = false;
-        if (ca.field_k) {
-          jj.field_a.i(15);
-          if (param0 != 50) {
-            field_g = null;
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (!ca.field_k) {
           var1 = be.field_l;
-          if (var1 <= 0) {
-            jj.field_a.g(true);
-            vg.a(113);
-            if (param0 != 50) {
-              field_g = null;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if ((var1 ^ -1) == -2) {
+          if (var1 > 0) {
+            if (var1 == 1) {
               jj.field_d = oj.field_d;
               jj.field_d = ef.a(new CharSequence[3], 0);
               jj.field_a.g(true);
               vg.a(113);
-              if (param0 == 50) {
-                return;
-              } else {
-                field_g = null;
-                return;
-              }
+              return;
             } else {
               jj.field_d = da.a(new String[1], mc.field_m, false);
               jj.field_d = ef.a(new CharSequence[3], 0);
               jj.field_a.g(true);
               vg.a(113);
-              if (param0 == 50) {
-                return;
-              } else {
-                field_g = null;
-                return;
-              }
+              return;
             }
+          } else {
+            jj.field_a.g(true);
+            vg.a(113);
+            return;
           }
+        } else {
+          jj.field_a.i(15);
+          return;
         }
     }
 
@@ -99,14 +76,16 @@ abstract class wb {
     final static db[] a(int param0, int param1, int param2, int param3, int param4) {
         db[] var6 = new db[9];
         db[] var5 = var6;
-        var6[6] = gf.a((byte) -76, param2, param0);
-        var5[param4] = gf.a((byte) -76, param2, param0);
-        var5[2] = gf.a((byte) -76, param2, param0);
-        var5[1] = gf.a((byte) -76, param2, param0);
-        var5[0] = gf.a((byte) -76, param2, param0);
-        var6[8] = gf.a((byte) -76, param2, param3);
-        var5[7] = gf.a((byte) -76, param2, param3);
-        var5[5] = gf.a((byte) -76, param2, param3);
+        db dupTemp$0 = gf.a((byte) -76, param2, param0);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        db dupTemp$1 = gf.a((byte) -76, param2, param3);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
         if (!(param1 == 0)) {
             var6[4] = gf.a((byte) -76, 64, param1);
         }
@@ -163,13 +142,13 @@ abstract class wb {
         if (param0 != 5) {
             return null;
         }
-        long var6 = (long)param2 + ((long)param1 << 306764576);
+        long var6 = (long)param2 + ((long)param1 << 32);
         dc var8 = new dc();
         var8.field_j = var6;
         var8.field_p = param4 ? true : false;
         var8.field_A = param3;
         if (!param4) {
-            if (!(-21 < (((wb) this).a(true) ^ -1))) {
+            if (!(((wb) this).a(true) < 20)) {
                 throw new RuntimeException();
             }
             ((wb) this).field_d.a(83, (ca) (Object) var8);
@@ -188,7 +167,7 @@ abstract class wb {
         if (param0 != 9172) {
             return true;
         }
-        return (((wb) this).a(true) ^ -1) <= -21 ? true : false;
+        return ((wb) this).a(true) >= 20 ? true : false;
     }
 
     wb() {

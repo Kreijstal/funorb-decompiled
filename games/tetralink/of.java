@@ -74,7 +74,7 @@ final class of {
               ((of) this).field_k = 0;
               ((of) this).field_c = 0;
               ((of) this).field_d = 0;
-              if (-1 == (((of) this).field_j ^ -1)) {
+              if (((of) this).field_j == 0) {
                 ((of) this).field_c = dg.field_e;
                 break L1;
               } else {
@@ -178,7 +178,7 @@ final class of {
           L0: {
             if (param0 >= 29) {
               L1: {
-                if (-104 != (((of) this).field_c ^ -1)) {
+                if (((of) this).field_c != 103) {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   break L1;
@@ -221,16 +221,16 @@ final class of {
             }
             L2: {
               L3: {
-                if ((((of) this).field_k ^ -1) == -2) {
+                if (((of) this).field_k == 1) {
                   break L3;
                 } else {
-                  if ((((of) this).field_c ^ -1) == -98) {
+                  if (((of) this).field_c == 97) {
                     break L3;
                   } else {
-                    if ((((of) this).field_c ^ -1) == -85) {
+                    if (((of) this).field_c == 84) {
                       break L3;
                     } else {
-                      if ((((of) this).field_c ^ -1) != -84) {
+                      if (((of) this).field_c != 83) {
                         stackOut_15_0 = 0;
                         stackIn_16_0 = stackOut_15_0;
                         break L2;
@@ -284,7 +284,7 @@ final class of {
                   if (0 == ((of) this).field_j) {
                     break L2;
                   } else {
-                    if ((ho.field_X ^ -1) == -1) {
+                    if (ho.field_X == 0) {
                       break L2;
                     } else {
                       L3: {
@@ -1136,7 +1136,7 @@ final class of {
                     break L4;
                   } else {
                     var7_int = var5_ref.indexOf('/', var6 + 1);
-                    if (-1 < (var7_int ^ -1)) {
+                    if (var7_int < 0) {
                       break L4;
                     } else {
                       if (null != param0) {
@@ -1162,7 +1162,7 @@ final class of {
                     }
                   }
                   var7_int = var5_ref.indexOf('/', var6 + 1);
-                  if ((var7_int ^ -1) <= -1) {
+                  if (var7_int >= 0) {
                     if (null != param4) {
                       var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
                       continue L1;
@@ -1177,7 +1177,7 @@ final class of {
                 L7: {
                   var7 = new StringBuilder(var6);
                   StringBuilder discarded$9 = var7.append(var5_ref.substring(0, var6));
-                  if (-1 <= (param2 ^ -1)) {
+                  if (param2 <= 0) {
                     break L7;
                   } else {
                     StringBuilder discarded$10 = var7.append("/l=");
@@ -1189,7 +1189,7 @@ final class of {
                   if (null == param0) {
                     break L8;
                   } else {
-                    if (-1 <= (param0.length() ^ -1)) {
+                    if (param0.length() <= 0) {
                       break L8;
                     } else {
                       StringBuilder discarded$12 = var7.append("/p=");
@@ -1212,7 +1212,7 @@ final class of {
                   }
                 }
                 L10: {
-                  if ((var5_ref.length() ^ -1) < (var6 ^ -1)) {
+                  if (~var5_ref.length() < ~var6) {
                     StringBuilder discarded$16 = var7.append(var5_ref.substring(var6, var5_ref.length()));
                     break L10;
                   } else {
@@ -1340,7 +1340,7 @@ final class of {
               }
             }
             L2: {
-              if (-103 != (((of) this).field_c ^ -1)) {
+              if (((of) this).field_c != 102) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 break L2;
@@ -1384,7 +1384,7 @@ final class of {
                   break L2;
                 } else {
                   L3: {
-                    if (-1 > (((of) this).field_b ^ -1)) {
+                    if (((of) this).field_b > 0) {
                       break L3;
                     } else {
                       ((of) this).field_b = ((of) this).field_g;
@@ -1398,15 +1398,15 @@ final class of {
               }
             }
             L4: {
-              if ((((of) this).field_j ^ -1) != -1) {
+              if (((of) this).field_j != 0) {
                 break L4;
               } else {
-                if (-100 != (dg.field_e ^ -1)) {
+                if (dg.field_e != 99) {
                   break L4;
                 } else {
                   L5: {
                     ((of) this).field_b = ((of) this).field_b + 1;
-                    if ((((of) this).field_b ^ -1) <= (((of) this).field_g ^ -1)) {
+                    if (~((of) this).field_b <= ~((of) this).field_g) {
                       ((of) this).field_b = 0;
                       break L5;
                     } else {
@@ -1478,10 +1478,10 @@ final class of {
             }
             L2: {
               L3: {
-                if (-3 == (((of) this).field_k ^ -1)) {
+                if (((of) this).field_k == 2) {
                   break L3;
                 } else {
-                  if (-97 != (((of) this).field_c ^ -1)) {
+                  if (((of) this).field_c != 96) {
                     stackOut_9_0 = 0;
                     stackIn_10_0 = stackOut_9_0;
                     break L2;

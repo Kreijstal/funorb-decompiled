@@ -22,9 +22,6 @@ final class sd extends ga implements lf {
     public static void h(byte param0) {
         field_R = null;
         field_T = null;
-        if (param0 != 54) {
-            field_T = null;
-        }
     }
 
     final void h(int param0) {
@@ -57,16 +54,24 @@ final class sd extends ga implements lf {
     }
 
     final void a(qm param0, int param1, int param2, int param3) {
-        int var5 = -123 / ((param1 - -50) / 59);
-        super.a(param0, -115, param2, param3);
-        ((sd) this).field_P = -param3 + -((sd) this).field_r + qh.field_i;
+        try {
+            int var5_int = -123 / ((param1 - -50) / 59);
+            super.a(param0, -115, param2, param3);
+            ((sd) this).field_P = -param3 + -((sd) this).field_r + qh.field_i;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "sd.N(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     final void a(boolean param0, n param1) {
         if (!param0) {
             return;
         }
-        ((sd) this).field_S = param1;
+        try {
+            ((sd) this).field_S = param1;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "sd.V(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final String a(byte param0) {

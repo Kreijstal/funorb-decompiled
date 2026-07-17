@@ -36,11 +36,13 @@ final class ie extends qu {
     final void a(boolean param0, byte[] param1) {
         ((ie) this).field_g = java.nio.ByteBuffer.allocateDirect(param1.length);
         if (!param0) {
-          return;
-        } else {
-          java.nio.Buffer discarded$4 = ((ie) this).field_g.position(0);
-          java.nio.ByteBuffer discarded$5 = ((ie) this).field_g.put(param1);
-          return;
+            return;
+        }
+        try {
+            java.nio.Buffer discarded$0 = ((ie) this).field_g.position(0);
+            java.nio.ByteBuffer discarded$1 = ((ie) this).field_g.put(param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ie.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

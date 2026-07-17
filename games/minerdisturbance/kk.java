@@ -80,7 +80,7 @@ final class kk {
                   var2++;
                   continue L1;
                 } else {
-                  var6_ref_int__[var7] = hi.a(af.field_p[c.a(255, (int) var23[var7])], c.a(-16777216, var24[var7] << -554175592));
+                  var6_ref_int__[var7] = hi.a(af.field_p[c.a(255, (int) var23[var7])], c.a(-16777216, var24[var7] << 24));
                   var7++;
                   continue L3;
                 }
@@ -94,9 +94,6 @@ final class kk {
         field_a = null;
         field_b = null;
         field_c = null;
-        if (param0 < 40) {
-            ea[] discarded$0 = kk.a(103);
-        }
     }
 
     static {

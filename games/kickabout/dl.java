@@ -8,7 +8,7 @@ final class dl extends gn {
 
     public static void a(byte param0) {
         field_g = null;
-        int var1 = -50 % ((param0 - 23) / 48);
+        int var1 = 0;
     }
 
     private dl() throws Throwable {

@@ -38,13 +38,11 @@ final class lb {
     }
 
     public static void a(byte param0) {
-        if (param0 != -98) {
-            return;
-        }
         field_a = null;
     }
 
     final static void c(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
@@ -62,79 +60,81 @@ final class lb {
         int[] var16 = null;
         int[] var17 = null;
         int[] var18 = null;
-        L0: {
-          var8 = OrbDefence.field_D ? 1 : 0;
-          var12 = cd.field_t;
-          var2 = var12.b((byte) 90);
-          if (var2 != 0) {
-            if (-2 == (var2 ^ -1)) {
-              var11 = (ha) (Object) oa.field_d.b((byte) 122);
-              if (var11 != null) {
-                var11.b(57);
-                break L0;
-              } else {
-                th.a(103);
-                return;
-              }
-            } else {
-              if (var2 != 2) {
-                pe.a((byte) -13, (Throwable) null, "A1: " + sj.b(true));
-                th.a(107);
-                break L0;
-              } else {
-                var15 = (dc) (Object) mj.field_m.b((byte) 118);
-                if (var15 != null) {
-                  var15.field_f = qh.b(8);
-                  var15.field_g = true;
-                  var15.field_i = var15.field_f[0];
-                  var15.b(57);
-                  break L0;
+        RuntimeException decompiledCaughtException = null;
+        var8 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var12 = cd.field_t;
+              var2 = var12.b((byte) 90);
+              if (var2 != 0) {
+                if (var2 == 1) {
+                  var11 = (ha) (Object) oa.field_d.b((byte) 122);
+                  if (var11 != null) {
+                    var11.b(57);
+                    break L1;
+                  } else {
+                    th.a(103);
+                    return;
+                  }
                 } else {
-                  th.a(121);
-                  return;
+                  if (var2 != 2) {
+                    pe.a((byte) -13, (Throwable) null, "A1: " + sj.b(true));
+                    th.a(107);
+                    break L1;
+                  } else {
+                    var15 = (dc) (Object) mj.field_m.b((byte) 118);
+                    if (var15 != null) {
+                      var15.field_f = qh.b(8);
+                      var15.field_g = true;
+                      var15.field_i = var15.field_f[0];
+                      var15.b(57);
+                      break L1;
+                    } else {
+                      th.a(121);
+                      return;
+                    }
+                  }
+                }
+              } else {
+                var10 = qh.b(8);
+                var18 = var10;
+                var17 = var18;
+                var16 = var17;
+                var13 = var16;
+                var3 = var13;
+                var9 = var10;
+                var4 = var9;
+                var5 = var12;
+                var6 = ((mg) (Object) var5).b((byte) 90);
+                var7 = 0;
+                L2: while (true) {
+                  if (var7 >= var6) {
+                    var14 = (dc) (Object) mj.field_m.b((byte) 117);
+                    if (var14 != null) {
+                      var14.field_i = var18[0];
+                      var14.field_g = true;
+                      var14.field_f = var3;
+                      var14.b(57);
+                      break L1;
+                    } else {
+                      th.a(124);
+                      return;
+                    }
+                  } else {
+                    var9[var7] = ((mg) (Object) var5).l(0);
+                    var7++;
+                    continue L2;
+                  }
                 }
               }
             }
-          } else {
-            var10 = qh.b(8);
-            var18 = var10;
-            var17 = var18;
-            var16 = var17;
-            var13 = var16;
-            var3 = var13;
-            var9 = var10;
-            var4 = var9;
-            var5 = var12;
-            var6 = ((mg) (Object) var5).b((byte) 90);
-            var7 = 0;
-            L1: while (true) {
-              if (var7 >= var6) {
-                var14 = (dc) (Object) mj.field_m.b((byte) 117);
-                if (var14 != null) {
-                  var14.field_i = var18[0];
-                  var14.field_g = true;
-                  var14.field_f = var3;
-                  var14.b(57);
-                  break L0;
-                } else {
-                  th.a(124);
-                  return;
-                }
-              } else {
-                var9[var7] = ((mg) (Object) var5).l(0);
-                var7++;
-                continue L1;
-              }
-            }
+            break L0;
           }
-        }
-        L2: {
-          if (param0 > 108) {
-            break L2;
-          } else {
-            lb.a(false);
-            break L2;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw dd.a((Throwable) (Object) var1, "lb.D(" + 122 + 41);
         }
     }
 
@@ -170,9 +170,9 @@ final class lb {
         if (!param0) {
             field_a = null;
         }
-        hg.field_Z = param1 >> 2081019780 & 3;
-        bd.field_p = (14 & param1) >> 158315010;
-        if ((hg.field_Z ^ -1) < -3) {
+        hg.field_Z = param1 >> 4 & 3;
+        bd.field_p = (14 & param1) >> 2;
+        if (hg.field_Z > 2) {
             hg.field_Z = 2;
         }
         wf.field_a = 3 & param1;
@@ -189,9 +189,13 @@ final class lb {
     }
 
     lb(f param0, int param1) {
-        ((lb) this).field_d = 0;
-        ((lb) this).field_i = param1;
-        ((lb) this).c(false);
+        try {
+            ((lb) this).field_d = 0;
+            ((lb) this).field_i = param1;
+            ((lb) this).c(false);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "lb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

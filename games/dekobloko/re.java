@@ -180,7 +180,7 @@ final class re extends wm {
               }
             }
             L3: {
-              if ((param5 ^ -1) > (hk.field_h ^ -1)) {
+              if (~param5 > ~hk.field_h) {
                 param7 = param7 - (-param5 + hk.field_h);
                 param5 = hk.field_h;
                 break L3;
@@ -197,7 +197,7 @@ final class re extends wm {
               }
             }
             L5: {
-              if ((param6 ^ -1) >= -1) {
+              if (param6 <= 0) {
                 break L5;
               } else {
                 if (0 < param7) {
@@ -216,7 +216,7 @@ final class re extends wm {
                   L6: while (true) {
                     L7: {
                       L8: {
-                        if ((param7 - -param5 ^ -1) >= (var16 ^ -1)) {
+                        if (~(param7 - -param5) >= ~var16) {
                           break L8;
                         } else {
                           if (var19 != 0) {
@@ -259,7 +259,7 @@ final class re extends wm {
                                               if (var16 <= 0) {
                                                 break L15;
                                               } else {
-                                                if (-1 == (var15[var13 + -param4.field_I] ^ -1)) {
+                                                if (var15[var13 + -param4.field_I] == 0) {
                                                   break L13;
                                                 } else {
                                                   break L15;
@@ -267,10 +267,10 @@ final class re extends wm {
                                               }
                                             }
                                             L16: {
-                                              if ((var17 ^ -1) <= (param4.field_I + -1 ^ -1)) {
+                                              if (~var17 <= ~(param4.field_I + -1)) {
                                                 break L16;
                                               } else {
-                                                if (-1 == (var15[1 + var13] ^ -1)) {
+                                                if (var15[1 + var13] == 0) {
                                                   break L13;
                                                 } else {
                                                   break L16;
@@ -1088,10 +1088,10 @@ final class re extends wm {
             L1: while (true) {
               L2: {
                 L3: {
-                  if ((var18 ^ -1) <= -6) {
+                  if (var18 >= 5) {
                     break L3;
                   } else {
-                    stackOut_3_0 = var18 ^ -1;
+                    stackOut_3_0 = ~var18;
                     stackOut_3_1 = -1;
                     stackIn_31_0 = stackOut_3_0;
                     stackIn_31_1 = stackOut_3_1;

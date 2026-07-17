@@ -10,34 +10,17 @@ final class th extends fc {
     boolean field_j;
 
     final static void d(int param0) {
-        if (param0 != -31574) {
-            field_i = null;
-            pf.field_U = 0;
-            return;
-        }
         pf.field_U = 0;
     }
 
     final static kh f(int param0) {
-        String var1 = null;
-        L0: {
-          var1 = l.h(0);
-          if (var1 == null) {
-            break L0;
-          } else {
-            if (0 > var1.indexOf('@')) {
-              break L0;
-            } else {
-              var1 = "";
-              break L0;
+        String var1 = l.h(0);
+        if (var1 != null) {
+            if (0 <= var1.indexOf('@')) {
+                var1 = "";
             }
-          }
         }
-        if (param0 < 36) {
-          return null;
-        } else {
-          return new kh(l.h(0), cf.a((byte) 41));
-        }
+        return new kh(l.h(0), cf.a((byte) 41));
     }
 
     th() {
@@ -47,9 +30,6 @@ final class th extends fc {
     public static void e(int param0) {
         field_n = null;
         field_i = null;
-        if (param0 != 0) {
-            field_l = -45;
-        }
     }
 
     static {

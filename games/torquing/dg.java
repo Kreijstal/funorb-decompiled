@@ -84,7 +84,7 @@ final class dg extends af {
           }
         }
         if (0 < var7) {
-          if (-1 <= (var6 ^ -1)) {
+          if (var6 <= 0) {
             return;
           } else {
             wh.a(0, var5, ((dg) this).field_k.field_l, var6, ((dg) this).field_l, var8, ph.field_e, (byte) 29, var9, var4, var7, ((dg) this).field_k.field_k);
@@ -109,18 +109,19 @@ final class dg extends af {
         field_e = null;
         field_i = null;
         field_j = null;
-        if (param0 != 12949) {
-            return;
-        }
         field_m = null;
         field_f = null;
     }
 
     dg(sm param0, int param1, int param2, int param3) {
-        ((dg) this).field_l = param3;
-        ((dg) this).field_k = param0;
-        ((dg) this).field_c = param1;
-        ((dg) this).field_d = param2;
+        try {
+            ((dg) this).field_l = param3;
+            ((dg) this).field_k = param0;
+            ((dg) this).field_c = param1;
+            ((dg) this).field_d = param2;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "dg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     static {

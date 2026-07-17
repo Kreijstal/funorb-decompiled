@@ -24,72 +24,18 @@ abstract class qb {
     final static void b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 == 31) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    qb.c((byte) -24);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (on.field_Z != null) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    var1 = (Object) (Object) on.field_Z;
-                    // monitorenter on.field_Z
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        on.field_Z = null;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    return;
-                }
-                case 7: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (on.field_Z != null) {
+          var1 = (Object) (Object) on.field_Z;
+          synchronized (var1) {
+            L0: {
+              on.field_Z = null;
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -103,17 +49,15 @@ abstract class qb {
     }
 
     final static void a(int param0, byte param1, pd param2, int param3) {
-        if (param1 > -101) {
-          qb.c((byte) 57);
-          po.field_l = param2;
-          la.field_m = param0;
-          um.field_a = param3;
-          return;
-        } else {
-          po.field_l = param2;
-          la.field_m = param0;
-          um.field_a = param3;
-          return;
+        try {
+            if (param1 > -101) {
+                qb.c((byte) 57);
+            }
+            po.field_l = param2;
+            la.field_m = param0;
+            um.field_a = param3;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "qb.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -149,7 +93,7 @@ abstract class qb {
         tn stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = ((long)param3 << 487989472) - -(long)param1;
+          var6 = ((long)param3 << 32) - -(long)param1;
           var8 = new tn();
           var8.field_B = param4;
           var8.field_l = var6;
@@ -248,7 +192,7 @@ abstract class qb {
         if (param0 > -32) {
           L0: {
             ((qb) this).field_b = null;
-            if ((((qb) this).d(20) ^ -1) > -21) {
+            if (((qb) this).d(20) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -261,7 +205,7 @@ abstract class qb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((qb) this).d(20) ^ -1) > -21) {
+            if (((qb) this).d(20) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;

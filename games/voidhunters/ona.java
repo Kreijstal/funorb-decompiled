@@ -118,7 +118,7 @@ abstract class ona {
         if (param1 != -21) {
             return null;
         }
-        long var6 = ((long)param4 << 1633492640) + (long)param2;
+        long var6 = ((long)param4 << 32) + (long)param2;
         km var8 = new km();
         var8.field_i = var6;
         var8.field_l = param0 ? true : false;

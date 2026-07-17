@@ -21,9 +21,6 @@ final class si {
     public static void a(byte param0) {
         field_c = null;
         field_a = null;
-        if (param0 < 18) {
-            return;
-        }
         field_b = null;
     }
 

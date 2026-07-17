@@ -7,43 +7,89 @@ final class wh {
     static boolean field_b;
 
     final static boolean a(boolean param0, CharSequence param1, byte param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_11_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var4 = SolKnight.field_L ? 1 : 0;
-        if (qk.a(param1, param0, -2)) {
-          if (param2 <= -30) {
-            var3 = 0;
-            L0: while (true) {
-              if (param1.length() > var3) {
-                if (!wg.a(param1.charAt(var3), (byte) -128)) {
-                  return false;
+        try {
+          L0: {
+            if (qk.a(param1, param0, -2)) {
+              var3_int = 0;
+              L1: while (true) {
+                if (param1.length() <= var3_int) {
+                  stackOut_11_0 = 1;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L0;
                 } else {
-                  var3++;
-                  continue L0;
+                  if (!wg.a(param1.charAt(var3_int), (byte) -128)) {
+                    stackOut_8_0 = 0;
+                    stackIn_9_0 = stackOut_8_0;
+                    return stackIn_9_0 != 0;
+                  } else {
+                    var3_int++;
+                    continue L1;
+                  }
                 }
-              } else {
-                return true;
               }
-            }
-          } else {
-            field_a = null;
-            var3 = 0;
-            L1: while (true) {
-              if (param1.length() > var3) {
-                if (!wg.a(param1.charAt(var3), (byte) -128)) {
-                  return false;
-                } else {
-                  var3++;
-                  continue L1;
-                }
-              } else {
-                return true;
-              }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("wh.A(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L2;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L2;
+            }
+          }
+          throw fc.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + -123 + 41);
         }
+        return stackIn_12_0 != 0;
     }
 
     public final String toString() {
@@ -52,11 +98,6 @@ final class wh {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 25817) {
-            field_c = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

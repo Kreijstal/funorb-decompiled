@@ -822,7 +822,7 @@ final class ik extends m {
                               }
                             }
                             if (var9 > 64) {
-                              var10 = field_n[var8] - 64 - 1;
+                              var10 = field_n[var8] - 65;
                               var48 = field_L[var10];
                               var12 = 0;
                               L10: while (true) {
@@ -902,7 +902,7 @@ final class ik extends m {
                           }
                         }
                         if (var9 > 64) {
-                          var10 = field_n[var8] - 64 - 1;
+                          var10 = field_n[var8] - 65;
                           var46 = field_L[var10];
                           var12 = 0;
                           L15: while (true) {
@@ -1580,7 +1580,7 @@ final class ik extends m {
                     }
                   }
                 }
-                ((ik) this).field_l[var9] = (short)-1;
+                ((ik) this).field_l[var9] = (short) -1;
                 var9++;
                 continue L1;
               }
@@ -1620,14 +1620,14 @@ final class ik extends m {
                               break L3;
                             } else {
                               if (param0.field_c[var11] == -1) {
-                                ((ik) this).field_O[var11] = (byte)-1;
+                                ((ik) this).field_O[var11] = (byte) -1;
                                 var11++;
                                 continue L7;
                               } else {
                                 ((ik) this).field_O[var11] = (byte)var9_ref_int__[param0.field_c[var11] & 255];
                                 if (((ik) this).field_O[var11] == -1) {
                                   if (((ik) this).field_l != null) {
-                                    ((ik) this).field_l[var11] = (short)-1;
+                                    ((ik) this).field_l[var11] = (short) -1;
                                     var11++;
                                     continue L7;
                                   } else {

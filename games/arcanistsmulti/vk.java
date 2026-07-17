@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class vk extends ve {
     static aj field_B;
     static int field_u;
@@ -12,7 +14,7 @@ final class vk extends ve {
     static String field_z;
 
     final static void c(boolean param0) {
-        sb.field_a = param0 ? true : false;
+        sb.field_a = false;
     }
 
     final int e(byte param0) {
@@ -52,9 +54,6 @@ final class vk extends ve {
         field_v = null;
         field_z = null;
         field_B = null;
-        if (param0 != 20) {
-            field_w = null;
-        }
         field_w = null;
     }
 
@@ -63,28 +62,84 @@ final class vk extends ve {
 
     final static String a(boolean param0, CharSequence param1, int param2) {
         String var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        String stackIn_3_0 = null;
+        String stackIn_9_0 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_8_0 = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
-        var3 = ba.a(param0, param1, true);
-        if (var3 == null) {
-          var4 = 27 % ((-51 - param2) / 62);
-          var5 = 0;
-          L0: while (true) {
-            if (var5 < param1.length()) {
-              if (pm.a(param1.charAt(var5), 45)) {
-                var5++;
-                continue L0;
+        try {
+          var3 = ba.a(param0, param1, true);
+          if (var3 == null) {
+            var4 = 0;
+            var5 = 0;
+            L0: while (true) {
+              if (var5 < param1.length()) {
+                if (pm.a(param1.charAt(var5), 45)) {
+                  var5++;
+                  continue L0;
+                } else {
+                  stackOut_8_0 = mb.field_N;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
+                }
               } else {
-                return mb.field_N;
+                return null;
               }
+            }
+          } else {
+            stackOut_2_0 = (String) var3;
+            stackIn_3_0 = stackOut_2_0;
+            return stackIn_3_0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var3_ref;
+            stackOut_12_1 = new StringBuilder().append("vk.G(").append(param0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L1;
             } else {
-              return null;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L1;
             }
           }
-        } else {
-          return var3;
+          throw aa.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + -123 + 41);
         }
     }
 

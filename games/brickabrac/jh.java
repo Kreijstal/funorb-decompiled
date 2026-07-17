@@ -9,11 +9,67 @@ final class jh {
     static String field_c;
 
     final static jp a(int param0, jp param1) {
-        jp var2 = new jp(param1.field_x / 2, param1.field_z / 2);
-        var2.g();
-        param1.a(param0, 0, param1.field_x / 2, param1.field_z / 2);
-        kc.field_q.a((byte) 102);
-        return var2;
+        jp var2 = null;
+        RuntimeException var2_ref = null;
+        jp stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        jp stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var2 = new jp(param1.field_x / 2, param1.field_z / 2);
+            var2.g();
+            param1.a(param0, 0, param1.field_x / 2, param1.field_z / 2);
+            kc.field_q.a((byte) 102);
+            stackOut_0_0 = (jp) var2;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2_ref;
+            stackOut_2_1 = new StringBuilder().append("jh.C(").append(param0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param1 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+        }
+        return stackIn_1_0;
     }
 
     public static void a(byte param0) {
@@ -25,39 +81,29 @@ final class jh {
     }
 
     final static void a(boolean param0, mh param1) {
-        mh var2 = null;
-        int var3 = 0;
         mh var4 = null;
         mh var5 = null;
-        mh var5_ref = null;
-        var3 = BrickABrac.field_J ? 1 : 0;
-        var4 = (mh) (Object) param1.field_bb.d(-104);
-        var2 = var4;
-        L0: while (true) {
-          if (var4 == null) {
-            if (!param0) {
-              jh.a((byte) -19);
-              param1.field_zb = 0;
-              param1.field_Db = 0;
-              param1.field_cb = 0;
-              param1.field_C = 0;
-              return;
-            } else {
-              param1.field_zb = 0;
-              param1.field_Db = 0;
-              param1.field_cb = 0;
-              param1.field_C = 0;
-              return;
+        int var3 = BrickABrac.field_J ? 1 : 0;
+        try {
+            var4 = (mh) (Object) param1.field_bb.d(-104);
+            mh var2 = var4;
+            while (var4 != null) {
+                var4.field_Db = 0;
+                var4.field_cb = 0;
+                var4.field_C = 0;
+                var4.field_zb = 0;
+                var5 = (mh) (Object) param1.field_bb.a((byte) 116);
+                var5 = var5;
             }
-          } else {
-            var4.field_Db = 0;
-            var4.field_cb = 0;
-            var4.field_C = 0;
-            var4.field_zb = 0;
-            var5 = (mh) (Object) param1.field_bb.a((byte) 116);
-            var5_ref = var5;
-            continue L0;
-          }
+            if (!param0) {
+                jh.a((byte) -19);
+            }
+            param1.field_zb = 0;
+            param1.field_Db = 0;
+            param1.field_cb = 0;
+            param1.field_C = 0;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "jh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

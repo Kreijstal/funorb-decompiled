@@ -32,9 +32,6 @@ final class m {
         field_q = null;
         field_w = null;
         field_y = null;
-        if (param0 != 8192) {
-            return;
-        }
         field_n = null;
         field_c = null;
     }
@@ -43,7 +40,7 @@ final class m {
         Object var3 = null;
         if (null == dg.field_i) {
           L0: {
-            if (-1 <= (wp.field_w ^ -1)) {
+            if (wp.field_w <= 0) {
               ((m) this).field_i = false;
               break L0;
             } else {
@@ -62,7 +59,7 @@ final class m {
             }
             int fieldTemp$2 = ((m) this).field_o - 1;
             ((m) this).field_o = ((m) this).field_o - 1;
-            if ((fieldTemp$2 ^ -1) >= -1) {
+            if (fieldTemp$2 <= 0) {
               ((m) this).field_o = ((m) this).field_m;
               if (df.field_u >= ((m) this).field_d) {
                 this.a(true);
@@ -77,7 +74,7 @@ final class m {
           } else {
             L2: {
               if (((m) this).field_x <= wk.field_d) {
-                if (-1 > (((m) this).field_x ^ -1)) {
+                if (((m) this).field_x > 0) {
                   aq.field_d = 0;
                   break L2;
                 } else {
@@ -182,41 +179,152 @@ final class m {
     }
 
     final static void a(int param0, java.applet.Applet param1, int param2, String[] param3, int param4, int param5) {
+        String var6 = null;
+        RuntimeException var6_ref = null;
         int var7 = 0;
-        int var8 = Torquing.field_u;
-        hc.field_u = param1.getParameter("overxgames");
-        if (null == hc.field_u) {
-            hc.field_u = "0";
-        }
-        rj.field_y = param1.getParameter("overxachievements");
-        if (null == rj.field_y) {
-            rj.field_y = "0";
-        }
-        String var6 = param1.getParameter("currency");
-        if (var6 == null) {
-            gj.field_j = 2;
-        } else {
-            if (!ip.a((byte) -42, (CharSequence) (Object) var6)) {
-                gj.field_j = 2;
-            } else {
-                gj.field_j = kc.a((byte) -84, (CharSequence) (Object) var6);
+        int var8 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        var8 = Torquing.field_u;
+        try {
+          L0: {
+            L1: {
+              hc.field_u = param1.getParameter("overxgames");
+              if (null != hc.field_u) {
+                break L1;
+              } else {
+                hc.field_u = "0";
+                break L1;
+              }
             }
+            L2: {
+              rj.field_y = param1.getParameter("overxachievements");
+              if (null != rj.field_y) {
+                break L2;
+              } else {
+                rj.field_y = "0";
+                break L2;
+              }
+            }
+            L3: {
+              var6 = param1.getParameter("currency");
+              if (var6 == null) {
+                gj.field_j = 2;
+                break L3;
+              } else {
+                if (!ip.a((byte) -42, (CharSequence) (Object) var6)) {
+                  gj.field_j = 2;
+                  break L3;
+                } else {
+                  gj.field_j = kc.a((byte) -84, (CharSequence) (Object) var6);
+                  break L3;
+                }
+              }
+            }
+            fa.field_c = param0;
+            of.field_o = param2;
+            ln.field_G = param5;
+            ln.field_H = new t[param3.length];
+            var7 = param4;
+            L4: while (true) {
+              if (var7 >= param3.length) {
+                ik.field_k = param3;
+                break L0;
+              } else {
+                ln.field_H[var7] = new t(317, 34);
+                var7++;
+                continue L4;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var6_ref = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var6_ref;
+            stackOut_15_1 = new StringBuilder().append("m.G(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L5;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L5;
+            }
+          }
+          L6: {
+            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param2).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param3 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L6;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L6;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param4 + 44 + param5 + 41);
         }
-        fa.field_c = param0;
-        of.field_o = param2;
-        ln.field_G = param5;
-        ln.field_H = new t[param3.length];
-        for (var7 = param4; var7 < param3.length; var7++) {
-            ln.field_H[var7] = new t(317, 34);
-        }
-        ik.field_k = param3;
     }
 
     final static void a(int param0) {
         ib.field_b = new ki();
-        if (param0 != 11) {
-            return;
-        }
         hb.field_x.c((gm) (Object) ib.field_b, 33);
     }
 
@@ -225,86 +333,78 @@ final class m {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        L0: {
-          var5 = Torquing.field_u;
-          if (param0) {
-            break L0;
-          } else {
-            ((m) this).field_m = 118;
-            break L0;
-          }
-        }
+        var5 = Torquing.field_u;
         var2 = ((m) this).field_x;
         var3 = ((m) this).field_v;
         if (!((m) this).c((byte) -19)) {
           ((m) this).field_i = false;
           return;
         } else {
-          L1: {
+          L0: {
             if (var3 <= ((m) this).field_k) {
               if (((m) this).field_g <= var3) {
-                break L1;
+                break L0;
               } else {
                 var3 = ((m) this).field_g;
-                break L1;
+                break L0;
               }
             } else {
               var3 = ((m) this).field_k;
+              break L0;
+            }
+          }
+          L1: {
+            if (var2 > ((m) this).field_a) {
+              var2 = ((m) this).field_a;
               break L1;
+            } else {
+              if (var2 >= ((m) this).field_h) {
+                break L1;
+              } else {
+                var2 = ((m) this).field_h;
+                break L1;
+              }
             }
           }
           L2: {
-            if (var2 > ((m) this).field_a) {
-              var2 = ((m) this).field_a;
+            if (0.0f >= ((m) this).field_j) {
               break L2;
             } else {
-              if (var2 >= ((m) this).field_h) {
-                break L2;
+              var4 = (int)(0.5f + ((m) this).field_j * (float)var3);
+              if (var2 >= var4) {
+                if (var2 <= var4) {
+                  break L2;
+                } else {
+                  var2 = var4;
+                  break L2;
+                }
               } else {
-                var2 = ((m) this).field_h;
+                var3 = (int)((float)var2 / ((m) this).field_j);
                 break L2;
               }
             }
           }
           L3: {
-            if (0.0f >= ((m) this).field_j) {
-              break L3;
-            } else {
-              var4 = (int)(0.5f + ((m) this).field_j * (float)var3);
-              if (var2 >= var4) {
-                if (var2 <= var4) {
-                  break L3;
-                } else {
-                  var2 = var4;
-                  break L3;
-                }
-              } else {
-                var3 = (int)((float)var2 / ((m) this).field_j);
-                break L3;
-              }
-            }
-          }
-          L4: {
-            L5: {
+            L4: {
               if (wk.field_d != var2) {
-                break L5;
+                break L4;
               } else {
                 if (var3 != ul.field_a) {
-                  break L5;
-                } else {
                   break L4;
+                } else {
+                  break L3;
                 }
               }
             }
             ((m) this).field_p.a(var3, -6714, var2);
-            break L4;
+            break L3;
           }
-          L6: {
+          L5: {
             if (((m) this).field_x > 0) {
               aq.field_d = (((m) this).field_x + -wk.field_d) / 2;
-              break L6;
+              break L5;
             } else {
-              break L6;
+              break L5;
             }
           }
           return;

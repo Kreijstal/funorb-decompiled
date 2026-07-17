@@ -17,9 +17,6 @@ final class df {
 
     public static void a(boolean param0) {
         field_d = null;
-        if (param0) {
-            field_d = null;
-        }
     }
 
     static {

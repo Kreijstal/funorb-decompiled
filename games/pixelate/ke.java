@@ -9,37 +9,19 @@ final class ke {
     static bd field_b;
 
     public static void a(int param0) {
-        if (param0 != -19064) {
-            return;
-        }
         field_c = null;
         field_b = null;
         field_e = null;
     }
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-          if (vh.field_c != null) {
-            if (!vh.field_c.a((byte) 99)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (vh.field_c == null) {
             return false;
-          }
-        } else {
-          field_e = null;
-          if (vh.field_c != null) {
-            if (!vh.field_c.a((byte) 99)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (!vh.field_c.a((byte) 99)) {
+            return false;
+        }
+        return true;
     }
 
     static {

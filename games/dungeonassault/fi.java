@@ -18,39 +18,44 @@ final class fi extends qe {
 
     private final int a(int param0, byte param1) {
         int var3 = 120;
-        if (param1 != -93) {
-            return -30;
-        }
         int var4 = nk.field_Fb[param0];
-        if ((var4 ^ -1) == -28) {
+        if (var4 == 27) {
             var3 = of.field_j.field_y;
         }
         return var3 + this.a((byte) -4, param0);
     }
 
     final static java.awt.Canvas d(boolean param0) {
-        if (param0) {
-            Object var2 = null;
-            fi.a(105, -61, (String) null, 118);
-        }
-        return (java.awt.Canvas) (cm.field_R == null ? c.field_h : cm.field_R);
+        return cm.field_R == null ? c.field_h : (java.awt.Canvas) (Object) cm.field_R;
     }
 
     private final int a(boolean param0, int param1) {
-        if (param0) {
-            return -14;
-        }
-        int var3 = nk.field_Fb[param1];
-        if (25 != var3) {
-            // if_icmpeq L38
-            // if_icmpeq L38
+        int var3 = 0;
+        if (!param0) {
+          L0: {
+            var3 = nk.field_Fb[param1];
+            if (25 == var3) {
+              break L0;
+            } else {
+              if (var3 == 24) {
+                break L0;
+              } else {
+                if (var3 == 26) {
+                  break L0;
+                } else {
+                  if (var3 != 27) {
+                    return 439;
+                  } else {
+                    return 340;
+                  }
+                }
+              }
+            }
+          }
+          return 260;
         } else {
-            return 260;
+          return -14;
         }
-        if ((var3 ^ -1) == -28) {
-            return 340;
-        }
-        return 439;
     }
 
     private final int a(int param0, byte param1, int param2) {
@@ -126,7 +131,7 @@ final class fi extends qe {
           var7 = this.a((byte) -4, param1);
           var8 = this.a(param1, (byte) -93);
           var9 = this.a(false, param1);
-          var10 = var8 - (-var7 + var6) >> -800816895;
+          var10 = var8 - (-var7 + var6) >> 1;
           if (!param0) {
             stackOut_2_0 = cm.field_M;
             stackIn_3_0 = stackOut_2_0;
@@ -162,7 +167,7 @@ final class fi extends qe {
           break L1;
         }
         L3: {
-          of.field_j.h(640 - of.field_j.field_y >> -55946047, var9 + -4);
+          of.field_j.h(640 - of.field_j.field_y >> 1, var9 + -4);
           ((fi) this).field_w[param1].b(var9, 32, var10);
           if (param0) {
             L4: {
@@ -235,7 +240,7 @@ final class fi extends qe {
             } else {
               if (mm.field_t != 13) {
                 ((fi) this).f();
-                if (0 != (nk.field_Jb.field_b ^ -1)) {
+                if (nk.field_Jb.field_b != -1) {
                   this.b(false, 240, nk.field_Jb.field_b);
                   continue L2;
                 } else {
@@ -261,7 +266,7 @@ final class fi extends qe {
         int stackOut_1_0 = 0;
         L0: {
           super.b(param0);
-          if ((nk.field_Jb.field_i ^ -1) < -1) {
+          if (nk.field_Jb.field_i > 0) {
             stackOut_2_0 = 1;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -273,7 +278,7 @@ final class fi extends qe {
         }
         L1: {
           var2 = stackIn_3_0;
-          if ((nk.field_Jb.field_b ^ -1) == 0) {
+          if (nk.field_Jb.field_b == -1) {
             break L1;
           } else {
             var2 = nk.field_Jb.field_b;
@@ -313,8 +318,8 @@ final class fi extends qe {
 
     final void a(boolean param0) {
         int var2 = 0;
-        String var3 = null;
-        String var4 = null;
+        Object var3 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -438,28 +443,28 @@ final class fi extends qe {
                       var3 = null;
                       var4 = null;
                       if (((fi) this).field_B == 2) {
-                        var4 = tn.a((byte) -65, this.a(-13, 26));
-                        var3 = sg.field_a;
+                        var4 = (Object) (Object) tn.a((byte) -65, this.a(-13, 26));
+                        var3 = (Object) (Object) sg.field_a;
                         break L7;
                       } else {
                         if (1 != ((fi) this).field_B) {
                           if (((fi) this).field_B == 0) {
-                            var4 = tn.a((byte) -76, this.a(-13, 24));
-                            var3 = uj.field_b;
+                            var4 = (Object) (Object) tn.a((byte) -76, this.a(-13, 24));
+                            var3 = (Object) (Object) uj.field_b;
                             break L7;
                           } else {
                             break L7;
                           }
                         } else {
-                          var4 = tn.a((byte) -99, this.a(-13, 25));
-                          var3 = an.field_D;
+                          var4 = (Object) (Object) tn.a((byte) -99, this.a(-13, 25));
+                          var3 = (Object) (Object) an.field_D;
                           break L7;
                         }
                       }
                     }
                     L8: {
                       var5 = ne.field_c.field_E + ne.field_c.field_H;
-                      if (-1 != (((fi) this).field_B ^ -1)) {
+                      if (((fi) this).field_B != 0) {
                         var9 = 204;
                         var7 = 169;
                         var8 = 306;
@@ -473,9 +478,9 @@ final class fi extends qe {
                         break L8;
                       }
                     }
-                    pi.a(0, var4, cm.field_M, 30 + var6, (se) (Object) ne.field_c, var5 + var7);
+                    pi.a(0, (String) var4, cm.field_M, 30 + var6, (se) (Object) ne.field_c, var5 + var7);
                     var7 = var7 + (5 + var5);
-                    int discarded$1 = la.field_b.a(var3, 30 + var6, var7, var8 - 60, -30 + var9, 16777215, -1, 0, 0, la.field_b.field_H + la.field_b.field_E);
+                    int discarded$1 = la.field_b.a((String) var3, 30 + var6, var7, var8 - 60, -30 + var9, 16777215, -1, 0, 0, la.field_b.field_H + la.field_b.field_E);
                     break L5;
                   }
                 }
@@ -646,8 +651,13 @@ final class fi extends qe {
         if (var4 == null) {
             return;
         }
-        var4.field_a = hd.a(false, param0, "da_guardian_room_" + param2);
-        var4.field_x = hd.a(false, param0, "da_guardian_room_" + param2);
+        try {
+            cf dupTemp$0 = hd.a(false, param0, "da_guardian_room_" + param2);
+            var4.field_a = dupTemp$0;
+            var4.field_x = dupTemp$0;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "fi.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     private final void b(int param0, int param1) {
@@ -668,20 +678,40 @@ final class fi extends qe {
     }
 
     private final int a(byte param0, int param1) {
-        if (param0 != -4) {
+        int var3 = 0;
+        L0: {
+          if (param0 == -4) {
+            break L0;
+          } else {
             this.a(true, -67, -118);
+            break L0;
+          }
         }
-        int var3 = nk.field_Fb[param1];
-        if ((var3 ^ -1) == -28) {
-            return 640 - of.field_j.field_y >> -1735969055;
-        }
-        if ((var3 ^ -1) != -26) {
-            if (24 != var3) {
-                // if_icmpne L76
+        var3 = nk.field_Fb[param1];
+        if (var3 != 27) {
+          L1: {
+            L2: {
+              if (var3 == 25) {
+                break L2;
+              } else {
+                if (24 == var3) {
+                  break L2;
+                } else {
+                  if (var3 != 26) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
             }
+            param1 -= 3;
+            break L1;
+          }
+          return 140 * param1 + 120;
+        } else {
+          return 640 - of.field_j.field_y >> 1;
         }
-        param1 -= 3;
-        return 140 * param1 + 120;
     }
 
     final void f() {
@@ -699,7 +729,7 @@ final class fi extends qe {
                   L2: while (true) {
                     L3: {
                       var1--;
-                      if ((var1 ^ -1) <= -1) {
+                      if (var1 >= 0) {
                         break L3;
                       } else {
                         var1 = nk.field_Jb.field_i - 1;
@@ -716,7 +746,7 @@ final class fi extends qe {
                 }
               }
               L4: {
-                if ((mm.field_t ^ -1) == -98) {
+                if (mm.field_t == 97) {
                   var1 = nk.field_Jb.field_b;
                   L5: while (true) {
                     L6: {
@@ -774,7 +804,7 @@ final class fi extends qe {
                     L11: while (true) {
                       L12: {
                         var1 += 3;
-                        if (-7 == (var1 ^ -1)) {
+                        if (var1 == 6) {
                           var1 = 0;
                           break L12;
                         } else {
@@ -826,23 +856,89 @@ final class fi extends qe {
     }
 
     private final void a(int param0, int param1, int param2, String param3, int param4, int param5) {
+        String[] var7 = null;
+        RuntimeException var7_ref = null;
+        int var8 = 0;
+        String[] var9 = null;
         int var10 = 0;
         String var11 = null;
-        int var12 = DungeonAssault.field_K;
-        String[] var7 = jn.a(param3, new int[1], param1 + -3847, (se) (Object) la.field_b);
-        if (param1 != 3740) {
-            return;
-        }
-        int var8 = la.field_b.field_H + param5;
-        String[] var9 = var7;
-        for (var10 = 0; var9.length > var10; var10++) {
-            var11 = var9[var10];
-            if (param4 * 3 >> -642001726 > la.field_b.b(var11)) {
-                la.field_b.b(var11, param0, var8, 16777215, -1);
+        int var12 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var12 = DungeonAssault.field_K;
+        try {
+          L0: {
+            var7 = jn.a(param3, new int[1], param1 + -3847, (se) (Object) la.field_b);
+            if (param1 == 3740) {
+              var8 = la.field_b.field_H + 125;
+              var9 = var7;
+              var10 = 0;
+              L1: while (true) {
+                if (var9.length <= var10) {
+                  break L0;
+                } else {
+                  L2: {
+                    var11 = var9[var10];
+                    if (param4 * 3 >> 2 <= la.field_b.b(var11)) {
+                      la.field_b.b(var11, param0, var8, 16777215, -1);
+                      break L2;
+                    } else {
+                      la.field_b.b(var11, param0, var8, 16777215, -1);
+                      break L2;
+                    }
+                  }
+                  var8 = var8 + (la.field_b.field_E + la.field_b.field_H);
+                  var10++;
+                  continue L1;
+                }
+              }
             } else {
-                la.field_b.b(var11, param0, var8, 16777215, -1);
+              return;
             }
-            var8 = var8 + (la.field_b.field_E + la.field_b.field_H);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var7_ref = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var7_ref;
+            stackOut_10_1 = new StringBuilder().append("fi.Q(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param3 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
+            }
+          }
+          throw vk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param4 + 44 + 125 + 41);
         }
     }
 
@@ -869,7 +965,7 @@ final class fi extends qe {
           } else {
             if (nl.a(param2, (byte) -124)) {
               L2: {
-                if ((var4 ^ -1) == -28) {
+                if (var4 == 27) {
                   kn.field_e = false;
                   break L2;
                 } else {
@@ -880,7 +976,7 @@ final class fi extends qe {
                 break L1;
               } else {
                 L3: {
-                  if ((var4 ^ -1) == -26) {
+                  if (var4 == 25) {
                     break L3;
                   } else {
                     if (var4 == 24) {
@@ -896,8 +992,8 @@ final class fi extends qe {
                   }
                 }
                 L4: {
-                  if (-27 != (var4 ^ -1)) {
-                    if ((var4 ^ -1) == -26) {
+                  if (var4 != 26) {
+                    if (var4 == 25) {
                       ((fi) this).field_B = 1;
                       break L4;
                     } else {
@@ -956,92 +1052,39 @@ final class fi extends qe {
         int var9 = 0;
         int var10 = 0;
         int[] var11 = null;
-        int var12 = 0;
         int[] var13 = null;
         int[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        int[] stackIn_5_0 = null;
-        int[] stackOut_4_0 = null;
-        int[] stackOut_3_0 = null;
         var4 = nk.field_Fb[param1];
         var5 = this.a(param0 ^ -14, var4);
         var6 = ne.field_c.b(var5);
         if (param0 == 1) {
           L0: {
-            var7 = this.a((byte) -4, param1);
-            var8 = this.a(param1, (byte) -93);
-            var9 = this.a(false, param1);
-            var10 = -var6 + (var8 - -var7) >> -1332663039;
-            if (param2) {
-              stackOut_4_0 = ml.field_b;
-              stackIn_5_0 = stackOut_4_0;
-              break L0;
-            } else {
-              stackOut_3_0 = cm.field_M;
-              stackIn_5_0 = stackOut_3_0;
-              break L0;
-            }
-          }
-          L1: {
-            L2: {
-              var16 = stackIn_5_0;
-              var15 = var16;
-              var14 = var15;
+            L1: {
+              var7 = this.a((byte) -4, param1);
+              var8 = this.a(param1, (byte) -93);
+              var9 = this.a(false, param1);
+              var10 = -var6 + (var8 - -var7) >> 1;
+              var14 = cm.field_M;
               var13 = var14;
               var11 = var13;
               if (null == ((fi) this).field_w[param1]) {
-                break L2;
+                break L1;
               } else {
                 if (var5 != ((fi) this).field_w[param1].field_f) {
-                  break L2;
+                  break L1;
                 } else {
                   if (((fi) this).field_w[param1].field_h != var11) {
-                    break L2;
-                  } else {
                     break L1;
+                  } else {
+                    break L0;
                   }
                 }
               }
             }
-            ((fi) this).field_w[param1] = new tf((se) (Object) ne.field_c, var5, var16);
-            break L1;
+            ((fi) this).field_w[param1] = new tf((se) (Object) ne.field_c, var5, var14);
+            break L0;
           }
-          L3: {
-            ((fi) this).field_w[param1].b(var9, param0 ^ 33, var10);
-            if (param2) {
-              L4: {
-                if (((fi) this).field_y == param1) {
-                  break L4;
-                } else {
-                  this.b(param1, -114);
-                  break L4;
-                }
-              }
-              L5: {
-                ((fi) this).field_v.b(var10, var9, 64);
-                var12 = (int)(128.0 * (1.0 + te.a(mo.field_a)));
-                if (var12 <= -1) {
-                  break L5;
-                } else {
-                  var12 = 0;
-                  break L5;
-                }
-              }
-              L6: {
-                if (-257 < var12) {
-                  var12 = 256;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              ((fi) this).field_C.b(var10, var9, var12);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
+          ((fi) this).field_w[param1].b(var9, param0 ^ 33, var10);
           return;
         } else {
           return;
@@ -1053,25 +1096,48 @@ final class fi extends qe {
     }
 
     private final String a(int param0, int param1) {
-        String var3 = ll.field_m[param1];
-        if (-11 == param1) {
-            if (-1 != hl.field_f) {
-                if (0 != dc.field_z) {
-                    if (-13 != hl.field_f) {
-                        if (-13 != dc.field_z) {
-                            if (hl.field_f != 1) {
-                                // if_icmpne L66
-                            }
+        String var3 = null;
+        L0: {
+          var3 = ll.field_m[param1];
+          if (param1 != 10) {
+            break L0;
+          } else {
+            L1: {
+              if (hl.field_f == 0) {
+                break L1;
+              } else {
+                if (0 == dc.field_z) {
+                  break L1;
+                } else {
+                  if (hl.field_f == 12) {
+                    break L1;
+                  } else {
+                    if (dc.field_z == 12) {
+                      break L1;
+                    } else {
+                      if (hl.field_f == 1) {
+                        break L1;
+                      } else {
+                        if (dc.field_z != 1) {
+                          break L0;
+                        } else {
+                          break L1;
                         }
+                      }
                     }
+                  }
                 }
+              }
             }
             var3 = ll.field_m[9];
+            break L0;
+          }
         }
-        if (param0 != -13) {
-            return null;
+        if (param0 == -13) {
+          return var3;
+        } else {
+          return null;
         }
-        return var3;
     }
 
     static {

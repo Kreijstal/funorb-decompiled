@@ -59,28 +59,27 @@ final class pj extends rh {
 
     final static o a(int param0, byte param1, int param2, int param3, int param4) {
         o var5 = null;
-        o var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         var7 = Transmogrify.field_A ? 1 : 0;
         var5 = (o) (Object) mh.field_a.a((byte) -95);
         L0: while (true) {
           if (var5 != null) {
-            if (param0 == var5_ref.field_j) {
-              return var5_ref;
+            if (param0 == var5.field_j) {
+              return var5;
             } else {
               var5 = (o) (Object) mh.field_a.a(true);
               continue L0;
             }
           } else {
-            var5_ref = new o();
+            var5 = new o();
             var6 = -119 / ((32 - param1) / 36);
-            var5_ref.field_n = param4;
-            var5_ref.field_j = param0;
-            var5_ref.field_h = param3;
-            mh.field_a.a((wf) (Object) var5_ref, -84);
-            nk.a(param2, var5_ref, -31995);
-            return var5_ref;
+            var5.field_n = param4;
+            var5.field_j = param0;
+            var5.field_h = param3;
+            mh.field_a.a((wf) (Object) var5, -84);
+            nk.a(param2, var5, -31995);
+            return var5;
           }
         }
     }
@@ -97,8 +96,8 @@ final class pj extends rh {
         field_w = new hi();
         field_A = new qj();
         field_x = new int[256];
-        for (var0 = 0; -257 < (var0 ^ -1); var0++) {
-            field_x[var0] = vg.c(var0 * 143, -2063532288) << -838567096;
+        for (var0 = 0; var0 < 256; var0++) {
+            field_x[var0] = vg.c(var0 * 143, -2063532288) << 8;
             field_x[var0] = cl.b(field_x[var0], vg.c(65280, 191 * var0));
             field_x[var0] = cl.b(field_x[var0], var0);
         }

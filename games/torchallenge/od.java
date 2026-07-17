@@ -85,8 +85,9 @@ final class od {
                     param2++;
                     continue L4;
                   } else {
+                    int incrementValue$2 = var9;
                     var9++;
-                    var14 = param0.field_y[var9];
+                    var14 = param0.field_y[incrementValue$2];
                     if (var14 == 0) {
                       var12++;
                       param1++;
@@ -98,8 +99,9 @@ final class od {
                       var16 = var14 + var15;
                       var14 = (var14 & 16711935) + (var15 & 16711935);
                       var15 = (var14 & 16777472) + (var16 - var14 & 65536);
+                      int incrementValue$3 = var12;
                       var12++;
-                      qg.field_i[var12] = var16 - var15 | var15 - (var15 >>> 8);
+                      qg.field_i[incrementValue$3] = var16 - var15 | var15 - (var15 >>> 8);
                       param1++;
                       continue L6;
                     }
@@ -134,8 +136,9 @@ final class od {
                 param8++;
                 continue L0;
               } else {
+                int incrementValue$66 = param5;
                 param5++;
-                param0 = param4[param5];
+                param0 = param4[incrementValue$66];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -147,8 +150,9 @@ final class od {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                  int incrementValue$67 = param7;
                   param7++;
-                  param3[param7] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -292,12 +296,8 @@ final class od {
                                 if (var24 != 0) {
                                   break L12;
                                 } else {
-                                  if (param4 != 0) {
-                                    break L12;
-                                  } else {
-                                    var24 = 1;
-                                    break L12;
-                                  }
+                                  var24 = 1;
+                                  break L12;
                                 }
                               }
                               L13: {
@@ -358,8 +358,9 @@ final class od {
                       param5 = 0;
                       param6 = 0;
                       param7 = 0;
+                      int incrementValue$6 = param4;
                       param4++;
-                      param2 = param1[param4];
+                      param2 = param1[incrementValue$6];
                       if (param2 != 0) {
                         break L3;
                       } else {
@@ -372,8 +373,9 @@ final class od {
                       param6 = param6 + (param2 >> 8 & 255);
                       param7 = param7 + (param2 & 255);
                       param4 = param4 + (param10 - 1);
+                      int incrementValue$7 = param4;
                       param4++;
-                      param2 = param1[param4];
+                      param2 = param1[incrementValue$7];
                       if (param2 != 0) {
                         break L4;
                       } else {
@@ -384,8 +386,9 @@ final class od {
                     param5 = param5 + (param2 >> 16);
                     param6 = param6 + (param2 >> 8 & 255);
                     param7 = param7 + (param2 & 255);
+                    int incrementValue$8 = param3;
                     param3++;
-                    param0[param3] = param5 >> 1 << 16 | param6 >> 1 << 8 | param7 >> 1;
+                    param0[incrementValue$8] = param5 >> 1 << 16 | param6 >> 1 << 8 | param7 >> 1;
                     param4 = param4 - param10;
                     break L2;
                   }
@@ -405,15 +408,17 @@ final class od {
                     var14 = -2;
                     L6: while (true) {
                       if (var14 >= 0) {
+                        int incrementValue$9 = param3;
                         param3++;
-                        param0[param3] = param5 >> 2 << 16 | param6 >> 2 << 8 | param7 >> 2;
+                        param0[incrementValue$9] = param5 >> 2 << 16 | param6 >> 2 << 8 | param7 >> 2;
                         param4 = param4 - param10;
                         var13 += 2;
                         continue L1;
                       } else {
                         L7: {
+                          int incrementValue$10 = param4;
                           param4++;
-                          param2 = param1[param4];
+                          param2 = param1[incrementValue$10];
                           if (param2 != 0) {
                             break L7;
                           } else {
@@ -430,8 +435,9 @@ final class od {
                     }
                   } else {
                     L8: {
+                      int incrementValue$11 = param4;
                       param4++;
-                      param2 = param1[param4];
+                      param2 = param1[incrementValue$11];
                       if (param2 != 0) {
                         break L8;
                       } else {
@@ -573,12 +579,14 @@ final class od {
         int var13 = 0;
         for (var12 = -param8; var12 < 0; var12++) {
             for (var13 = -param7; var13 < 0; var13++) {
+                int incrementValue$0 = param5;
                 param5++;
-                param2 = param1[param5];
+                param2 = param1[incrementValue$0];
                 param3 = (param2 & 16711935) * param11 & -16711936;
                 param4 = (param2 & 65280) * param11 & 16711680;
+                int incrementValue$1 = param6;
                 param6++;
-                param0[param6] = (param3 | param4) >>> 8;
+                param0[incrementValue$1] = (param3 | param4) >>> 8;
             }
             param6 = param6 + param9;
             param5 = param5 + param10;
@@ -590,13 +598,15 @@ final class od {
         int var14 = 0;
         for (var13 = -param9; var13 < 0; var13++) {
             for (var14 = -param8; var14 < 0; var14++) {
+                int incrementValue$0 = param5;
                 param5++;
-                param2 = param1[param5];
+                param2 = param1[incrementValue$0];
                 param7 = var14 + param8;
                 param3 = (param2 & 16711935) * param12[param7] & -16711936;
                 param4 = (param2 & 65280) * param12[param7] & 16711680;
+                int incrementValue$1 = param6;
                 param6++;
-                param0[param6] = (param3 | param4) >>> 8;
+                param0[incrementValue$1] = (param3 | param4) >>> 8;
             }
             param6 = param6 + param10;
             param5 = param5 + param11;
@@ -1124,8 +1134,9 @@ final class od {
                 param8++;
                 continue L0;
               } else {
+                int incrementValue$66 = param5;
                 param5++;
-                param0 = param4[param5];
+                param0 = param4[incrementValue$66];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -1135,8 +1146,9 @@ final class od {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                  int incrementValue$67 = param7;
                   param7++;
-                  param3[param7] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -1162,8 +1174,9 @@ final class od {
                     param8++;
                     continue L1;
                   } else {
+                    int incrementValue$4 = param5;
                     param5++;
-                    param0 = param4[param5];
+                    param0 = param4[incrementValue$4];
                     if (param0 == 0) {
                       param7++;
                       param6++;
@@ -1176,8 +1189,9 @@ final class od {
                       param2 = param0 + param1;
                       param0 = (param0 & 16711935) + (param1 & 16711935);
                       param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                      int incrementValue$5 = param7;
                       param7++;
-                      param3[param7] = param2 - param1 | param1 - (param1 >>> 8);
+                      param3[incrementValue$5] = param2 - param1 | param1 - (param1 >>> 8);
                       param6++;
                       continue L2;
                     }
@@ -1199,8 +1213,9 @@ final class od {
                     param8++;
                     continue L3;
                   } else {
+                    int incrementValue$6 = param5;
                     param5++;
-                    param0 = param4[param5];
+                    param0 = param4[incrementValue$6];
                     if (param0 == 0) {
                       param7++;
                       param6++;
@@ -1213,8 +1228,9 @@ final class od {
                       param2 = param0 + param1;
                       param0 = (param0 & 16711935) + (param1 & 16711935);
                       param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                      int incrementValue$7 = param7;
                       param7++;
-                      param3[param7] = param2 - param1 | param1 - (param1 >>> 8);
+                      param3[incrementValue$7] = param2 - param1 | param1 - (param1 >>> 8);
                       param6++;
                       continue L4;
                     }

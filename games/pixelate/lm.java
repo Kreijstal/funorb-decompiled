@@ -16,9 +16,6 @@ class lm extends fa {
         field_s = null;
         field_l = null;
         field_o = null;
-        if (param0 != -2575) {
-            return;
-        }
         field_n = null;
         field_k = null;
         field_m = null;

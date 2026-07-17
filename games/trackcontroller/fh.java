@@ -89,7 +89,7 @@ abstract class fh {
 
     final static int a(int param0, int param1) {
         param1 = fj.b(param0 ^ -48, param1);
-        if (!(-33 != (param1 ^ -1))) {
+        if (!(param1 != 32)) {
             return 38;
         }
         if (param0 == param1) {
@@ -98,7 +98,7 @@ abstract class fh {
         if (!(param1 <= 32)) {
             return 64 | param1 + -26;
         }
-        return param1 - 1 + 7;
+        return param1 + 6;
     }
 
     abstract void a(byte[] param0, int param1);
@@ -115,24 +115,6 @@ abstract class fh {
     }
 
     final static boolean a(int param0) {
-        if (param0 != 520) {
-            field_e = null;
-            if (!(-1 != hd.field_o)) {
-                if (!(hf.a(1, false))) {
-                    return false;
-                }
-                hd.field_o = ne.field_a.h(16383);
-                ne.field_a.field_k = 0;
-            }
-            if (!(hd.field_o != -2)) {
-                if (!(hf.a(2, false))) {
-                    return false;
-                }
-                hd.field_o = ne.field_a.d((byte) -76);
-                ne.field_a.field_k = 0;
-            }
-            return hf.a(hd.field_o, false);
-        }
         if (!(-1 != hd.field_o)) {
             if (!(hf.a(1, false))) {
                 return false;

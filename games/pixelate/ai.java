@@ -43,42 +43,97 @@ final class ai {
     static int[] field_e;
 
     final static boolean a(byte param0, CharSequence param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_10_0 = 0;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         var3 = Pixelate.field_H ? 1 : 0;
-        if (!we.a(true, 5832, param1)) {
-          return false;
-        } else {
-          var2 = 0;
-          if (param0 >= -125) {
-            ai.a((byte) 125);
-            L0: while (true) {
-              if (param1.length() > var2) {
-                if (!vf.a((byte) -3, param1.charAt(var2))) {
-                  return false;
+        try {
+          L0: {
+            if (!we.a(true, 5832, param1)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              L1: {
+                var2_int = 0;
+                if (param0 < -125) {
+                  break L1;
                 } else {
-                  var2++;
-                  continue L0;
+                  ai.a((byte) 125);
+                  break L1;
                 }
-              } else {
-                return true;
               }
-            }
-          } else {
-            L1: while (true) {
-              if (param1.length() > var2) {
-                if (!vf.a((byte) -3, param1.charAt(var2))) {
-                  return false;
+              L2: while (true) {
+                if (param1.length() <= var2_int) {
+                  stackOut_13_0 = 1;
+                  stackIn_14_0 = stackOut_13_0;
+                  break L0;
                 } else {
-                  var2++;
-                  continue L1;
+                  if (!vf.a((byte) -3, param1.charAt(var2_int))) {
+                    stackOut_10_0 = 0;
+                    stackIn_11_0 = stackOut_10_0;
+                    return stackIn_11_0 != 0;
+                  } else {
+                    var2_int++;
+                    continue L2;
+                  }
                 }
-              } else {
-                return true;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var2;
+            stackOut_15_1 = new StringBuilder().append("ai.B(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L3;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L3;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
         }
+        return stackIn_14_0 != 0;
     }
 
     final static void a(boolean param0, int param1) {
@@ -86,7 +141,7 @@ final class ai {
         int var3 = 0;
         var3 = Pixelate.field_H ? 1 : 0;
         if (param1 == 6) {
-          if ((uo.field_j ^ -1) >= -1) {
+          if (uo.field_j <= 0) {
             if (!jg.a((byte) 58)) {
               var2 = 1;
               if (vh.field_c == null) {
@@ -192,7 +247,7 @@ final class ai {
           }
         } else {
           field_C = null;
-          if ((uo.field_j ^ -1) >= -1) {
+          if (uo.field_j <= 0) {
             if (!jg.a((byte) 58)) {
               var2 = 1;
               if (vh.field_c != null) {

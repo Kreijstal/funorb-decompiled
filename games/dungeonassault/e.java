@@ -47,19 +47,23 @@ final class e extends en {
     }
 
     e(String param0, String param1, String param2) {
-        ((e) this).field_h = param1;
-        ((e) this).field_m = param2;
-        ((e) this).field_f = param0;
+        try {
+            ((e) this).field_h = param1;
+            ((e) this).field_m = param2;
+            ((e) this).field_f = param0;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "e.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, sa param1) {
-        if (param0 != 0) {
-          field_e = -78;
-          param1.a(false, ck.field_H.a(((e) this).field_f, (byte) -48), (byte) 91, ck.field_H.a(((e) this).field_h, (byte) -48), 16777215);
-          return;
-        } else {
-          param1.a(false, ck.field_H.a(((e) this).field_f, (byte) -48), (byte) 91, ck.field_H.a(((e) this).field_h, (byte) -48), 16777215);
-          return;
+        try {
+            if (param0 != 0) {
+                field_e = -78;
+            }
+            param1.a(false, ck.field_H.a(((e) this).field_f, (byte) -48), (byte) 91, ck.field_H.a(((e) this).field_h, (byte) -48), 16777215);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "e.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

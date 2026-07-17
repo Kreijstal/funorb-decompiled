@@ -6,79 +6,73 @@ final class il {
     private java.awt.GraphicsDevice field_a;
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
-        try {
-            int var6 = 0;
-            java.awt.DisplayMode[] var7 = null;
-            int var8 = 0;
-            int var9 = 0;
-            int var10 = 0;
-            ((il) this).field_b = ((il) this).field_a.getDisplayMode();
-            if (null != ((il) this).field_b) {
-              L0: {
-                param0.setUndecorated(true);
-                param0.enableInputMethods(false);
-                this.a((byte) -105, param0);
-                if (param4 == 0) {
-                  var6 = ((il) this).field_b.getRefreshRate();
-                  var7 = ((il) this).field_a.getDisplayModes();
-                  var8 = 0;
-                  var9 = 0;
-                  L1: while (true) {
-                    if (var7.length <= var9) {
-                      if (var8 == 0) {
-                        param4 = var6;
-                        break L0;
-                      } else {
-                        break L0;
-                      }
-                    } else {
-                      if (param1 == var7[var9].getWidth()) {
-                        if (param2 == var7[var9].getHeight()) {
-                          if (var7[var9].getBitDepth() == param3) {
-                            L2: {
-                              var10 = var7[var9].getRefreshRate();
-                              if (var8 == 0) {
-                                break L2;
-                              } else {
-                                if (Math.abs(-var6 + var10) < Math.abs(param4 + -var6)) {
-                                  break L2;
-                                } else {
-                                  var9++;
-                                  continue L1;
-                                }
-                              }
-                            }
-                            param4 = var10;
-                            var8 = 1;
-                            var9++;
-                            continue L1;
+        int var6 = 0;
+        java.awt.DisplayMode[] var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        ((il) this).field_b = ((il) this).field_a.getDisplayMode();
+        if (null != ((il) this).field_b) {
+          L0: {
+            param0.setUndecorated(true);
+            param0.enableInputMethods(false);
+            this.a((byte) -105, param0);
+            if (param4 == 0) {
+              var6 = ((il) this).field_b.getRefreshRate();
+              var7 = ((il) this).field_a.getDisplayModes();
+              var8 = 0;
+              var9 = 0;
+              L1: while (true) {
+                if (var7.length <= var9) {
+                  if (var8 == 0) {
+                    param4 = var6;
+                    break L0;
+                  } else {
+                    break L0;
+                  }
+                } else {
+                  if (param1 == var7[var9].getWidth()) {
+                    if (param2 == var7[var9].getHeight()) {
+                      if (var7[var9].getBitDepth() == param3) {
+                        L2: {
+                          var10 = var7[var9].getRefreshRate();
+                          if (var8 == 0) {
+                            break L2;
                           } else {
-                            var9++;
-                            continue L1;
+                            if (Math.abs(-var6 + var10) < Math.abs(param4 + -var6)) {
+                              break L2;
+                            } else {
+                              var9++;
+                              continue L1;
+                            }
                           }
-                        } else {
-                          var9++;
-                          continue L1;
                         }
+                        param4 = var10;
+                        var8 = 1;
+                        var9++;
+                        continue L1;
                       } else {
                         var9++;
                         continue L1;
                       }
+                    } else {
+                      var9++;
+                      continue L1;
                     }
+                  } else {
+                    var9++;
+                    continue L1;
                   }
-                } else {
-                  break L0;
                 }
               }
-              ((il) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
-              return;
             } else {
-              throw new NullPointerException();
+              break L0;
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          }
+          ((il) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          return;
+        } else {
+          throw new NullPointerException();
         }
     }
 
@@ -86,12 +80,12 @@ final class il {
         int var3 = 0;
         java.awt.DisplayMode[] var4 = ((il) this).field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << -207409598];
+        int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var4.length > var3; var3++) {
-            var2[var3 << -910811262] = var4[var3].getWidth();
-            var2[1 + (var3 << -683139710)] = var4[var3].getHeight();
-            var2[(var3 << -427484254) - -2] = var4[var3].getBitDepth();
-            var2[3 + (var3 << -1399967582)] = var4[var3].getRefreshRate();
+            var2[var3 << 2] = var4[var3].getWidth();
+            var2[1 + (var3 << 2)] = var4[var3].getHeight();
+            var2[(var3 << 2) - -2] = var4[var3].getBitDepth();
+            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
         }
         return var2;
     }
@@ -239,7 +233,7 @@ final class il {
                         continue stateLoop;
                     }
                     case 18: {
-                        throw (RuntimeException) (Object) var6;
+                        throw il.<RuntimeException>$cfr$sneakyThrow(var6);
                     }
                     case 19: {
                         return;
@@ -263,18 +257,20 @@ final class il {
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         ((il) this).field_a = var1.getDefaultScreenDevice();
         if (((il) this).field_a.isFullScreenSupported()) {
+          return;
         } else {
           var2 = var1.getScreenDevices();
           var3 = var2;
           var4 = 0;
           L0: while (true) {
             if (var4 >= var3.length) {
-              throw new Exception();
+              throw il.<RuntimeException>$cfr$sneakyThrow(new Exception());
             } else {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
                   ((il) this).field_a = var5;
+                  return;
                 } else {
                   var4++;
                   continue L0;
@@ -289,5 +285,10 @@ final class il {
     }
 
     static {
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

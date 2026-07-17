@@ -15,9 +15,6 @@ final class dq extends vg {
     public static void a(int param0) {
         field_h = null;
         field_f = null;
-        if (param0 != 8148) {
-            field_f = null;
-        }
     }
 
     static {

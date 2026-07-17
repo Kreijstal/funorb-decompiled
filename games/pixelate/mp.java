@@ -12,18 +12,9 @@ final class mp {
 
     public static void a(boolean param0) {
         field_c = null;
-        if (!param0) {
-          field_e = null;
-          field_d = null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
-          field_d = null;
-          field_a = null;
-          field_e = null;
-          return;
-        }
+        field_d = null;
+        field_a = null;
+        field_e = null;
     }
 
     static {

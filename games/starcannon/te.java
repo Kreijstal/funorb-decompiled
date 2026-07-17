@@ -9,136 +9,144 @@ final class te {
     final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (null == hj.field_c) {
-                        statePc = 8;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var1 = (Object) (Object) hj.field_c;
-                    // monitorenter hj.field_c
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        hj.field_c = null;
-                        // monitorexit var1
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    if (param0 == 98) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    field_c = null;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    return;
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    if (param0 != 98) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    return;
-                }
-                case 10: {
-                    field_c = null;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (null == hj.field_c) {
+          return;
+        } else {
+          var1 = (Object) (Object) hj.field_c;
+          synchronized (var1) {
+            L0: {
+              hj.field_c = null;
+              break L0;
             }
+          }
+          return;
         }
     }
 
     public static void a(int param0) {
         field_c = null;
         field_a = null;
-        if (param0 != -1) {
-            Object var2 = null;
-            te.a(-118, (hl[]) null);
-        }
     }
 
     final static void a(int param0, hl[] param1) {
+        RuntimeException var2 = null;
         Object var3 = null;
-        og.field_d = param1;
-        if (null != og.field_d) {
-          if (-4 >= (param1.length ^ -1)) {
-            if (param0 < 123) {
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              og.field_d = param1;
+              if (null == og.field_d) {
+                break L1;
+              } else {
+                if (param1.length >= 3) {
+                  break L1;
+                } else {
+                  throw new IllegalArgumentException("");
+                }
+              }
+            }
+            if (param0 >= 123) {
+              break L0;
+            } else {
               var3 = null;
               te.a(117, (hl[]) null);
               return;
-            } else {
-              return;
             }
-          } else {
-            throw new IllegalArgumentException("");
           }
-        } else {
-          if (param0 < 123) {
-            var3 = null;
-            te.a(117, (hl[]) null);
-            return;
-          } else {
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_1 = new StringBuilder().append("te.B(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
           }
+          throw sd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var4 = StarCannon.field_A;
-        int var3 = param2;
-        while ((param0 ^ -1) < -2) {
-            if ((param0 & 1) != 0) {
-                var3 = var3 * param1;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_8_0 = 0;
+        int stackOut_10_0 = 0;
+        var4 = StarCannon.field_A;
+        try {
+          L0: {
+            var3_int = 1;
+            L1: while (true) {
+              if (param0 <= 1) {
+                if (param0 == 1) {
+                  stackOut_8_0 = var3_int * param1;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
+                } else {
+                  stackOut_10_0 = var3_int;
+                  stackIn_11_0 = stackOut_10_0;
+                  break L0;
+                }
+              } else {
+                L2: {
+                  if ((param0 & 1) == 0) {
+                    break L2;
+                  } else {
+                    var3_int = var3_int * param1;
+                    break L2;
+                  }
+                }
+                param1 = param1 * param1;
+                param0 = param0 >> 1;
+                continue L1;
+              }
             }
-            param1 = param1 * param1;
-            param0 = param0 >> 1;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var3, "te.A(" + param0 + 44 + param1 + 44 + 1 + 41);
         }
-        if (!(param0 != 1)) {
-            return var3 * param1;
-        }
-        return var3;
+        return stackIn_11_0;
     }
 
     static {

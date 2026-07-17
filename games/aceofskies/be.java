@@ -125,15 +125,17 @@ final class be extends da {
                     var12++;
                     continue L0;
                   } else {
+                    int incrementValue$10 = param3;
                     param3++;
-                    var11 = param0[param3];
-                    if (param0[param3] == 0) {
+                    var11 = param0[incrementValue$10];
+                    if (param0[incrementValue$10] == 0) {
                       param4++;
                       var13++;
                       continue L2;
                     } else {
+                      int incrementValue$11 = param4;
                       param4++;
-                      param1[param4] = param2[var11 & 255];
+                      param1[incrementValue$11] = param2[var11 & 255];
                       var13++;
                       continue L2;
                     }
@@ -141,50 +143,58 @@ final class be extends da {
                 }
               } else {
                 L3: {
+                  int incrementValue$12 = param3;
                   param3++;
-                  var11 = param0[param3];
-                  if (param0[param3] == 0) {
+                  var11 = param0[incrementValue$12];
+                  if (param0[incrementValue$12] == 0) {
                     param4++;
                     break L3;
                   } else {
+                    int incrementValue$13 = param4;
                     param4++;
-                    param1[param4] = param2[var11 & 255];
+                    param1[incrementValue$13] = param2[var11 & 255];
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$14 = param3;
                   param3++;
-                  var11 = param0[param3];
-                  if (param0[param3] == 0) {
+                  var11 = param0[incrementValue$14];
+                  if (param0[incrementValue$14] == 0) {
                     param4++;
                     break L4;
                   } else {
+                    int incrementValue$15 = param4;
                     param4++;
-                    param1[param4] = param2[var11 & 255];
+                    param1[incrementValue$15] = param2[var11 & 255];
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$16 = param3;
                   param3++;
-                  var11 = param0[param3];
-                  if (param0[param3] == 0) {
+                  var11 = param0[incrementValue$16];
+                  if (param0[incrementValue$16] == 0) {
                     param4++;
                     break L5;
                   } else {
+                    int incrementValue$17 = param4;
                     param4++;
-                    param1[param4] = param2[var11 & 255];
+                    param1[incrementValue$17] = param2[var11 & 255];
                     break L5;
                   }
                 }
+                int incrementValue$18 = param3;
                 param3++;
-                var11 = param0[param3];
-                if (param0[param3] == 0) {
+                var11 = param0[incrementValue$18];
+                if (param0[incrementValue$18] == 0) {
                   param4++;
                   var13++;
                   continue L1;
                 } else {
+                  int incrementValue$19 = param4;
                   param4++;
-                  param1[param4] = param2[var11 & 255];
+                  param1[incrementValue$19] = param2[var11 & 255];
                   var13++;
                   continue L1;
                 }
@@ -216,14 +226,16 @@ final class be extends da {
                     var11++;
                     continue L0;
                   } else {
+                    int incrementValue$218 = param3;
                     param3++;
-                    if (param0[param3] == 0) {
+                    if (param0[incrementValue$218] == 0) {
                       param4++;
                       var12++;
                       continue L2;
                     } else {
+                      int incrementValue$219 = param4;
                       param4++;
-                      param1[param4] = param2;
+                      param1[incrementValue$219] = param2;
                       var12++;
                       continue L2;
                     }
@@ -231,46 +243,54 @@ final class be extends da {
                 }
               } else {
                 L3: {
+                  int incrementValue$220 = param3;
                   param3++;
-                  if (param0[param3] == 0) {
+                  if (param0[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
+                    int incrementValue$221 = param4;
                     param4++;
-                    param1[param4] = param2;
+                    param1[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$222 = param3;
                   param3++;
-                  if (param0[param3] == 0) {
+                  if (param0[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
+                    int incrementValue$223 = param4;
                     param4++;
-                    param1[param4] = param2;
+                    param1[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$224 = param3;
                   param3++;
-                  if (param0[param3] == 0) {
+                  if (param0[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
+                    int incrementValue$225 = param4;
                     param4++;
-                    param1[param4] = param2;
+                    param1[incrementValue$225] = param2;
                     break L5;
                   }
                 }
+                int incrementValue$226 = param3;
                 param3++;
-                if (param0[param3] == 0) {
+                if (param0[incrementValue$226] == 0) {
                   param4++;
                   var12++;
                   continue L1;
                 } else {
+                  int incrementValue$227 = param4;
                   param4++;
-                  param1[param4] = param2;
+                  param1[incrementValue$227] = param2;
                   var12++;
                   continue L1;
                 }
@@ -321,13 +341,13 @@ final class be extends da {
         int stackOut_3_0 = 0;
         L0: {
           var16 = null;
-          var16_ref = (nj) param12;
-          var31 = ((nj) var16_ref).field_h;
+          var16_ref = (nj) (Object) param12;
+          var31 = var16_ref.field_h;
           var30 = var31;
           var29 = var30;
           var28 = var29;
           var17 = var28;
-          var18 = ((nj) var16_ref).field_g;
+          var18 = var16_ref.field_g;
           var19 = param9 - ((be) this).field_h.field_z;
           var20 = param10;
           if (param14 <= var20) {
@@ -404,14 +424,16 @@ final class be extends da {
                 var22++;
                 continue L2;
               } else {
+                int incrementValue$2 = param3;
                 param3++;
-                if (param0[param3] == 0) {
+                if (param0[incrementValue$2] == 0) {
                   param4++;
                   var27++;
                   continue L5;
                 } else {
+                  int incrementValue$3 = param4;
                   param4++;
-                  param1[param4] = param2;
+                  param1[incrementValue$3] = param2;
                   var27++;
                   continue L5;
                 }
@@ -445,13 +467,13 @@ final class be extends da {
         int stackOut_3_0 = 0;
         L0: {
           var17 = null;
-          var17_ref = (nj) param13;
-          var33 = ((nj) var17_ref).field_h;
+          var17_ref = (nj) (Object) param13;
+          var33 = var17_ref.field_h;
           var32 = var33;
           var31 = var32;
           var30 = var31;
           var18 = var30;
-          var19 = ((nj) var17_ref).field_g;
+          var19 = var17_ref.field_g;
           var20 = param10 - ((be) this).field_h.field_z;
           var21 = param11;
           if (param15 <= var21) {
@@ -529,15 +551,17 @@ final class be extends da {
                 var24++;
                 continue L2;
               } else {
+                int incrementValue$2 = param4;
                 param4++;
-                var23 = param0[param4];
-                if (param0[param4] == 0) {
+                var23 = param0[incrementValue$2];
+                if (param0[incrementValue$2] == 0) {
                   param5++;
                   var29++;
                   continue L5;
                 } else {
+                  int incrementValue$3 = param5;
                   param5++;
-                  param1[param5] = param2[var23 & 255];
+                  param1[incrementValue$3] = param2[var23 & 255];
                   var29++;
                   continue L5;
                 }

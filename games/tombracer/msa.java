@@ -6,79 +6,82 @@ final class msa {
     static String field_b;
 
     final static boolean a(char param0, byte param1) {
-        int var2 = 0;
-        char[] var12 = null;
-        char[] var7 = null;
-        char[] var6 = null;
-        char[] var2_ref_char__ = null;
+        char[] var2 = null;
+        int var2_int = 0;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        char[] var14 = null;
-        char[] var9 = null;
-        int var5 = TombRacer.field_G ? 1 : 0;
-        if (param0 > 0) {
-            if (param0 < 128) {
-                return true;
-            }
-            if (param0 < 160) {
-                if (param0 == 0) {
-                    var2 = -69 % ((param1 - 34) / 55);
-                    return false;
+        int var5 = 0;
+        char[] var6 = null;
+        int stackIn_8_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_17_0 = 0;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 <= 0) {
+                break L1;
+              } else {
+                if (param0 < 128) {
+                  stackOut_7_0 = 1;
+                  stackIn_8_0 = stackOut_7_0;
+                  return stackIn_8_0 != 0;
+                } else {
+                  break L1;
                 }
-                var12 = gha.field_a;
-                var7 = var12;
-                var6 = var7;
-                var2_ref_char__ = var6;
-                for (var3 = 0; var12.length > var3; var3++) {
-                    var4 = var12[var3];
-                    if (param0 == var4) {
-                        return true;
+              }
+            }
+            L2: {
+              if (param0 < 160) {
+                break L2;
+              } else {
+                if (param0 > 255) {
+                  break L2;
+                } else {
+                  return true;
+                }
+              }
+            }
+            L3: {
+              if (param0 != 0) {
+                var6 = gha.field_a;
+                var2 = var6;
+                var3 = 0;
+                L4: while (true) {
+                  if (var6.length <= var3) {
+                    break L3;
+                  } else {
+                    var4 = var6[var3];
+                    if (param0 != var4) {
+                      var3++;
+                      continue L4;
+                    } else {
+                      stackOut_14_0 = 1;
+                      stackIn_15_0 = stackOut_14_0;
+                      return stackIn_15_0 != 0;
                     }
+                  }
                 }
-                var2 = -69 % ((param1 - 34) / 55);
-                return false;
+              } else {
+                break L3;
+              }
             }
-            if (param0 > 255) {
-                if (param0 == 0) {
-                    var2 = -69 % ((param1 - 34) / 55);
-                    return false;
-                }
-                var14 = gha.field_a;
-                var9 = var14;
-                var6 = var9;
-                var2_ref_char__ = var6;
-                for (var3 = 0; var14.length > var3; var3++) {
-                    var4 = var14[var3];
-                    if (param0 == var4) {
-                        return true;
-                    }
-                }
-                var2 = -69 % ((param1 - 34) / 55);
-                return false;
-            }
-            return true;
+            var2_int = 0;
+            stackOut_17_0 = 0;
+            stackIn_18_0 = stackOut_17_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var2_ref, "msa.A(" + param0 + 44 + 124 + 41);
         }
-        if (param0 >= 160) {
-            if (param0 <= 255) {
-                return true;
-            }
-        }
-        if (param0 == 0) {
-            var2 = -69 % ((param1 - 34) / 55);
-            return false;
-        }
-        char[] var16 = gha.field_a;
-        char[] var11 = var16;
-        var6 = var11;
-        var2_ref_char__ = var6;
-        for (var3 = 0; var16.length > var3; var3++) {
-            var4 = var16[var3];
-            if (param0 == var4) {
-                return true;
-            }
-        }
-        var2 = -69 % ((param1 - 34) / 55);
-        return false;
+        return stackIn_18_0 != 0;
     }
 
     public static void a(int param0) {

@@ -8,9 +8,6 @@ final class ig {
     static int field_a;
 
     public static void b(int param0) {
-        if (param0 != 1) {
-            return;
-        }
         field_d = null;
         field_c = null;
         field_b = null;

@@ -26,7 +26,7 @@ final class ec {
 
     public static void a(int param0) {
         field_c = null;
-        int var1 = -94 % ((param0 - 50) / 62);
+        int var1 = 0;
         field_d = null;
         field_g = null;
         field_f = null;

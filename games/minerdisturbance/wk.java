@@ -12,11 +12,6 @@ final class wk {
         field_a = null;
         field_b = null;
         field_d = null;
-        if (!param0) {
-            field_c = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

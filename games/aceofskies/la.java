@@ -26,31 +26,21 @@ final class la {
         field_i = null;
         field_e = null;
         field_b = null;
-        if (param0 != -86) {
-          String discarded$2 = la.a(119);
-          field_a = null;
-          field_j = null;
-          field_h = null;
-          return;
-        } else {
-          field_a = null;
-          field_j = null;
-          field_h = null;
-          return;
-        }
+        field_a = null;
+        field_j = null;
+        field_h = null;
     }
 
     final static void a(boolean param0, java.applet.Applet param1) {
-        java.applet.Applet var3 = null;
-        rr.a("", (byte) -112, param1);
-        if (!param0) {
-          var3 = (java.applet.Applet) null;
-          la.a(true, (java.applet.Applet) null);
-          jn.a((byte) 120, param1);
-          return;
-        } else {
-          jn.a((byte) 120, param1);
-          return;
+        try {
+            rr.a("", (byte) -112, param1);
+            if (!param0) {
+                Object var3 = null;
+                la.a(true, (java.applet.Applet) null);
+            }
+            jn.a((byte) 120, param1);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "la.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -66,7 +56,7 @@ final class la {
             return ua.field_j;
         }
         if (param0 != 4) {
-            field_h = (la) null;
+            field_h = null;
             if (!(gm.field_x.a(false))) {
                 return ua.field_j;
             }

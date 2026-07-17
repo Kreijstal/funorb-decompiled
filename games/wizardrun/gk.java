@@ -42,9 +42,6 @@ final class gk {
     public static void a(int param0) {
         field_o = null;
         field_e = null;
-        if (param0 >= -69) {
-            return;
-        }
         field_r = null;
         field_g = null;
     }
@@ -113,17 +110,17 @@ final class gk {
     }
 
     final static void a(int param0, int param1, vd param2, vd param3) {
-        le.field_j = param2;
-        uf.field_c = param3;
-        kc.field_I = param1;
-        kj.a(1048576, ed.field_d / 2, ed.field_h / 2);
-        if (param0 <= 15) {
-          field_o = null;
-          qk.a(param2.field_B + param2.field_q, param3.field_q, param2.field_q, 1882, param3.field_q + param3.field_B);
-          return;
-        } else {
-          qk.a(param2.field_B + param2.field_q, param3.field_q, param2.field_q, 1882, param3.field_q + param3.field_B);
-          return;
+        try {
+            le.field_j = param2;
+            uf.field_c = param3;
+            kc.field_I = param1;
+            kj.a(1048576, ed.field_d / 2, ed.field_h / 2);
+            if (param0 <= 15) {
+                field_o = null;
+            }
+            qk.a(param2.field_B + param2.field_q, param3.field_q, param2.field_q, 1882, param3.field_q + param3.field_B);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "gk.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -10,10 +10,6 @@ final class bb {
     static ji field_e;
 
     final static String b(byte param0) {
-        if (param0 != 99) {
-            bb.a((byte) 82);
-            return sc.field_g.o(32);
-        }
         return sc.field_g.o(32);
     }
 

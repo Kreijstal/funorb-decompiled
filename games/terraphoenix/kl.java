@@ -10,9 +10,6 @@ final class kl {
     private static String field_z;
 
     public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
         field_e = null;
         field_b = null;
         field_d = null;

@@ -15,10 +15,6 @@ final class dl {
     static String field_e;
 
     final static boolean a(boolean param0) {
-        if (param0) {
-            int[] discarded$0 = dl.a(-127, -88, 106);
-            return ic.field_U;
-        }
         return ic.field_U;
     }
 
@@ -26,37 +22,80 @@ final class dl {
         field_e = null;
         field_b = null;
         field_a = null;
-        if (param0 != -974314864) {
-          int[] discarded$2 = dl.a(-16, -82, 52);
-          field_h = null;
-          return;
-        } else {
-          field_h = null;
-          return;
-        }
+        field_h = null;
     }
 
     final void a(int param0, long param1, le param2) {
         le var5 = null;
-        L0: {
-          if (param2.field_d != null) {
-            param2.b(-27598);
-            break L0;
-          } else {
-            break L0;
+        RuntimeException var5_ref = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param2.field_d != null) {
+                param2.b(-27598);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            var5 = ((dl) this).field_d[(int)((long)(-1 + ((dl) this).field_i) & param1)];
+            param2.field_d = var5.field_d;
+            param2.field_b = var5;
+            param2.field_d.field_b = param2;
+            param2.field_f = param1;
+            param2.field_b.field_d = param2;
+            if (param0 <= -95) {
+              break L0;
+            } else {
+              field_c = -96;
+              return;
+            }
           }
-        }
-        var5 = ((dl) this).field_d[(int)((long)(-1 + ((dl) this).field_i) & param1)];
-        param2.field_d = var5.field_d;
-        param2.field_b = var5;
-        param2.field_d.field_b = param2;
-        param2.field_f = param1;
-        param2.field_b.field_d = param2;
-        if (param0 <= -95) {
-          return;
-        } else {
-          field_c = -96;
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var5_ref;
+            stackOut_6_1 = new StringBuilder().append("dl.G(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -126,10 +165,10 @@ final class dl {
         } else {
           var5 = rd.a(true, param1);
           var6 = fb.a(1311979239, param1);
-          var7 = (int)((long)var5 * (long)var3 >> -974314864);
-          var8 = (int)((long)var3 * (long)var6 >> -292699824);
-          var9 = (int)((long)var4 * (long)var5 >> 1947186064);
-          var10 = (int)((long)var4 * (long)var6 >> -962322544);
+          var7 = (int)((long)var5 * (long)var3 >> 16);
+          var8 = (int)((long)var3 * (long)var6 >> 16);
+          var9 = (int)((long)var4 * (long)var5 >> 16);
+          var10 = (int)((long)var4 * (long)var6 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
     }
@@ -144,7 +183,7 @@ final class dl {
           ((dl) this).field_g = var4.field_b;
           L0: while (true) {
             if (var4 != ((dl) this).field_g) {
-              if ((param0 ^ -1L) != (((dl) this).field_g.field_f ^ -1L)) {
+              if (~param0 != ~((dl) this).field_g.field_f) {
                 ((dl) this).field_g = ((dl) this).field_g.field_b;
                 continue L0;
               } else {

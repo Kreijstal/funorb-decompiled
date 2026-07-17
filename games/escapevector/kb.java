@@ -15,9 +15,6 @@ abstract class kb {
     public static void a(boolean param0) {
         field_g = null;
         field_c = null;
-        if (!param0) {
-            field_e = -18;
-        }
     }
 
     abstract java.net.Socket a(int param0) throws IOException;

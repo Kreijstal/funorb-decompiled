@@ -246,7 +246,7 @@ abstract class bg {
     }
 
     final static void a(int param0, int param1) {
-        if (0 != (nm.field_h ^ -1)) {
+        if (nm.field_h != -1) {
           if (param1 == nm.field_h) {
             nm.field_h = param1;
             boolean discarded$2 = lc.a((byte) 112);
@@ -254,7 +254,7 @@ abstract class bg {
             he.field_e.f(param1, (byte) -78);
             if (param0 <= qf.field_d) {
               if (ua.field_P + ta.a(true, param1) <= jf.field_j) {
-                if (-1L != (cb.field_e & 1L << param1 ^ -1L)) {
+                if ((cb.field_e & 1L << param1) != 0L) {
                   return;
                 } else {
                   ua.field_P = ua.field_P + ta.a(true, param1);
@@ -278,7 +278,7 @@ abstract class bg {
           he.field_e.f(param1, (byte) -78);
           if (param0 <= qf.field_d) {
             if (ua.field_P + ta.a(true, param1) <= jf.field_j) {
-              if (-1L != (cb.field_e & 1L << param1 ^ -1L)) {
+              if ((cb.field_e & 1L << param1) != 0L) {
                 return;
               } else {
                 ua.field_P = ua.field_P + ta.a(true, param1);
@@ -296,24 +296,11 @@ abstract class bg {
     }
 
     final static void a(boolean param0, byte param1) {
-        cn var2 = null;
         n.field_g.a(param0, true);
-        var2 = ln.field_U;
-        if (var2 == null) {
-          if (param1 > -11) {
-            bg.a(97, -65);
+        cn var2 = ln.field_U;
+        if (var2 != null) {
+            var2.a(n.field_g.field_V, true, n.field_g.field_nb);
             return;
-          } else {
-            return;
-          }
-        } else {
-          var2.a(n.field_g.field_V, true, n.field_g.field_nb);
-          if (param1 <= -11) {
-            return;
-          } else {
-            bg.a(97, -65);
-            return;
-          }
         }
     }
 

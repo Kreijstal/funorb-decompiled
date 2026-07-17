@@ -14,17 +14,11 @@ final class as {
         field_e = null;
         field_f = null;
         field_c = null;
-        if (param0 >= -38) {
-            return;
-        }
         field_b = null;
         field_a = null;
     }
 
     final static Boolean b(int param0) {
-        if (param0 != -599) {
-            return null;
-        }
         Boolean var1 = mr.field_a;
         mr.field_a = null;
         return var1;

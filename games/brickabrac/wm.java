@@ -8,7 +8,7 @@ final class wm {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = -11 / ((-26 - param0) / 61);
+        int var1 = 5;
         field_b = null;
     }
 

@@ -47,16 +47,16 @@ final class mr implements fo {
                 var9 = 0;
                 L2: while (true) {
                   L3: {
-                    if ((var9 ^ -1) <= -5) {
+                    if (var9 >= 4) {
                       break L3;
                     } else {
                       var10 = ((mr) this).field_m.j(-119);
                       var7.field_G[var9] = we.a(15, var10);
                       var9++;
-                      if (-5 >= (var9 ^ -1)) {
+                      if (var9 >= 4) {
                         break L3;
                       } else {
-                        var7.field_G[var9] = we.a(var10, 240) >> -815356732;
+                        var7.field_G[var9] = we.a(var10, 240) >> 4;
                         var9++;
                         continue L2;
                       }
@@ -89,7 +89,7 @@ final class mr implements fo {
                     }
                   }
                   var7.field_B = ((mr) this).field_m.j(-128);
-                  var7.field_L = var7.field_B >>> 2033295110;
+                  var7.field_L = var7.field_B >>> 6;
                   var7.field_B = var7.field_B & 63;
                   var6++;
                   continue L0;
@@ -115,9 +115,6 @@ final class mr implements fo {
     public static void a(boolean param0) {
         field_g = null;
         field_d = null;
-        if (param0) {
-            return;
-        }
         field_h = null;
         field_c = null;
         field_i = null;
@@ -125,12 +122,12 @@ final class mr implements fo {
 
     final static bi a(int param0, int param1) {
         bi var3 = null;
-        bi var2_ref = null;
         bi var2 = tr.field_sb[param0];
         if (var2 == null) {
-            var3 = new bi(256, 256);
-            var2_ref = var3;
-            tr.field_sb[param0] = new bi(256, 256);
+            bi dupTemp$0 = new bi(256, 256);
+            var3 = dupTemp$0;
+            var2 = var3;
+            tr.field_sb[param0] = dupTemp$0;
             bs.a(var3, 100);
             jd.field_j[param0].f(64, 64);
             gf.b(12, 12, 0, 0, 256, 256);
@@ -139,23 +136,24 @@ final class mr implements fo {
         if (param1 >= -28) {
             field_a = 123;
         }
-        return var2_ref;
+        return var2;
     }
 
     final static int a(int param0) {
-        if (param0 != 0) {
-            mr.a(false);
-        }
-        return ul.field_Hb + (sq.field_a << 1602041026) + (vm.field_Bb << 1341801956);
+        return ul.field_Hb + (sq.field_a << 2) + (vm.field_Bb << 4);
     }
 
     mr(ob param0, int param1, int param2, int param3, int param4, int param5) {
-        ((mr) this).field_j = param3;
-        ((mr) this).field_l = param1;
-        ((mr) this).field_k = param5;
-        ((mr) this).field_e = param4;
-        ((mr) this).field_m = param0;
-        ((mr) this).field_b = param2;
+        try {
+            ((mr) this).field_j = param3;
+            ((mr) this).field_l = param1;
+            ((mr) this).field_k = param5;
+            ((mr) this).field_e = param4;
+            ((mr) this).field_m = param0;
+            ((mr) this).field_b = param2;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "mr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     static {

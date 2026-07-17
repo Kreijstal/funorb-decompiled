@@ -53,7 +53,7 @@ final class ria extends gca {
             if (var3 == null) {
               L1: {
                 var4 = vr.field_b & 127;
-                if ((var4 ^ -1) < -33) {
+                if (var4 > 32) {
                   break L1;
                 } else {
                   if (0 != (var4 & 15)) {
@@ -117,7 +117,7 @@ final class ria extends gca {
           L5: while (true) {
             if (var3 == null) {
               var4 = vr.field_b & 127;
-              if ((var4 ^ -1) >= -33) {
+              if (var4 <= 32) {
                 if (0 == (var4 & 15)) {
                   L6: {
                     this.e((byte) -104);
@@ -195,9 +195,6 @@ final class ria extends gca {
 
     public static void a(int param0) {
         field_i = null;
-        if (param0 != 127) {
-            return;
-        }
         field_k = null;
     }
 
@@ -238,10 +235,10 @@ final class ria extends gca {
               return;
             }
           } else {
-            var5 = 256 - (var4.field_o << -874929823);
-            var6 = ((ria) this).field_l.field_n * var5 >> -98916472;
-            var7 = var5 * ((ria) this).field_l.field_o >> 426797736;
-            ((ria) this).field_l.c((var4.field_i >> 1919389572) + param2 + -(var6 >> 1776320513), (var4.field_h >> -2105555191) + param0 - (-(var4.field_q >> 499640261) - -(var7 >> -1618465951)), var6, var7, var4.field_o);
+            var5 = 256 - (var4.field_o << 1);
+            var6 = ((ria) this).field_l.field_n * var5 >> 8;
+            var7 = var5 * ((ria) this).field_l.field_o >> 8;
+            ((ria) this).field_l.c((var4.field_i >> 4) + param2 + -(var6 >> 1), (var4.field_h >> 9) + param0 - (-(var4.field_q >> 5) - -(var7 >> 1)), var6, var7, var4.field_o);
             var4 = (cia) (Object) ((ria) this).field_j.c(0);
             continue L0;
           }

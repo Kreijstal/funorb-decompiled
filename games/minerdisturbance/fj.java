@@ -432,7 +432,7 @@ class fj {
         um var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = param1;
+          var3 = 256;
           if (!field_u) {
             break L0;
           } else {
@@ -442,7 +442,7 @@ class fj {
         }
         L1: {
           ai.a(param0, 0, var3);
-          ((fj) this).field_c = ((fj) this).field_c - param1;
+          ((fj) this).field_c = ((fj) this).field_c - 256;
           if (((fj) this).field_k == null) {
             break L1;
           } else {
@@ -476,7 +476,7 @@ class fj {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & (1 << var7_int ^ -1);
+                            var5 = var5 & ~(1 << var7_int);
                             var10 = null;
                             var11 = ((fj) this).field_f[var7_int];
                             var14 = var11;
@@ -609,7 +609,7 @@ class fj {
           if (((fj) this).field_k == null) {
             break L17;
           } else {
-            ((fj) this).field_k.a(param0, 0, param1);
+            ((fj) this).field_k.a(param0, 0, 256);
             break L17;
           }
         }
@@ -620,12 +620,12 @@ class fj {
     }
 
     private final void a(int param0) {
-        ((fj) this).field_c = ((fj) this).field_c - param0;
+        ((fj) this).field_c = ((fj) this).field_c - 256;
         if (((fj) this).field_c < 0) {
             ((fj) this).field_c = 0;
         }
         if (((fj) this).field_k != null) {
-            ((fj) this).field_k.a(param0);
+            ((fj) this).field_k.a(256);
             return;
         }
     }
@@ -656,7 +656,7 @@ class fj {
                 }
               }
               field_u = stackIn_7_0 != 0;
-              field_d = param2;
+              field_d = 10;
               return;
             } else {
               break L0;

@@ -31,11 +31,6 @@ abstract class fh {
     abstract byte[] a(int param0);
 
     final static void b(int param0) {
-        if (param0 > -27) {
-            fh.a((byte) 2);
-            lj.a(17, 27);
-            return;
-        }
         lj.a(17, 27);
     }
 

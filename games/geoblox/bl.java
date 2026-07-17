@@ -5,66 +5,42 @@ final class bl {
     static String field_a;
 
     final static void c(int param0) {
-        if (param0 >= -9) {
-            field_a = null;
-        }
     }
 
     final static boolean b(int param0) {
-        if (param0 == 255) {
-          if (-21 <= mi.field_C) {
-            if (fj.f(-31456)) {
-              if ((ik.field_a ^ -1) < -1) {
-                if (ck.b(0)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (mi.field_C >= 20) {
+          if (fj.f(-31456)) {
+            if (ik.field_a > 0) {
+              if (ck.b(0)) {
                 return false;
+              } else {
+                return true;
               }
             } else {
-              return true;
+              return false;
             }
           } else {
             return true;
           }
         } else {
-          int discarded$6 = bl.a(-112, (byte) -119);
-          if (-21 >= (mi.field_C ^ -1)) {
-            if (fj.f(-31456)) {
-              if (ik.field_a < -1) {
-                if (ck.b(0)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
+          return true;
         }
     }
 
     final static int a(int param0, byte param1) {
-        param0 = (-715827883 & param0 >>> -1925489311) + (1431655765 & param0);
+        param0 = (-715827883 & param0 >>> 1) + (1431655765 & param0);
         if (param1 != 70) {
           field_a = null;
-          param0 = (param0 & 858993459) - -(param0 >>> -1715558078 & 858993459);
-          param0 = param0 + (param0 >>> -1073219292) & 252645135;
-          param0 = param0 + (param0 >>> 1208603944);
-          param0 = param0 + (param0 >>> 526672816);
+          param0 = (param0 & 858993459) - -(param0 >>> 2 & 858993459);
+          param0 = param0 + (param0 >>> 4) & 252645135;
+          param0 = param0 + (param0 >>> 8);
+          param0 = param0 + (param0 >>> 16);
           return param0 & 255;
         } else {
-          param0 = (param0 & 858993459) - -(param0 >>> -1715558078 & 858993459);
-          param0 = param0 + (param0 >>> -1073219292) & 252645135;
-          param0 = param0 + (param0 >>> 1208603944);
-          param0 = param0 + (param0 >>> 526672816);
+          param0 = (param0 & 858993459) - -(param0 >>> 2 & 858993459);
+          param0 = param0 + (param0 >>> 4) & 252645135;
+          param0 = param0 + (param0 >>> 8);
+          param0 = param0 + (param0 >>> 16);
           return param0 & 255;
         }
     }

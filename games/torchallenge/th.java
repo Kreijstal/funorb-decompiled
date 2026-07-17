@@ -21,7 +21,7 @@ final class th {
         while (((th) this).field_f[var1] >= 0) {
             var1 = wg.a() != 0 ? ((th) this).field_f[var1] : var1 + 1;
         }
-        return ((th) this).field_f[var1] ^ -1;
+        return ~((th) this).field_f[var1];
     }
 
     final float[] b() {
@@ -69,7 +69,7 @@ final class th {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((th) this).field_f[var6] = var3 ^ -1;
+                      ((th) this).field_f[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -216,7 +216,7 @@ final class th {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = wg.d(24);
+          int discarded$2 = wg.d(24);
           ((th) this).field_c = wg.d(16);
           ((th) this).field_a = wg.d(24);
           ((th) this).field_d = new int[((th) this).field_a];
@@ -283,8 +283,9 @@ final class th {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((th) this).field_d[var2] = var3_int;
+                    ((th) this).field_d[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

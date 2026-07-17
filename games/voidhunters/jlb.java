@@ -116,11 +116,11 @@ final class jlb extends le {
                                     }
                                   }
                                   var5 = stackIn_21_0;
-                                  var8 = (var5 * ((jlb) this).field_m >> -671452020) + grb.field_l[var4];
+                                  var8 = (var5 * ((jlb) this).field_m >> 12) + grb.field_l[var4];
                                   L9: while (true) {
-                                    if ((var8 ^ -1) <= -1) {
+                                    if (var8 >= 0) {
                                       L10: while (true) {
-                                        if ((var8 ^ -1) >= -4097) {
+                                        if (var8 <= 4096) {
                                           L11: while (true) {
                                             L12: {
                                               if (var6 >= ((jlb) this).field_q) {
@@ -156,12 +156,12 @@ final class jlb extends le {
                                             continue L7;
                                           }
                                         } else {
-                                          // wide iinc 8 -4096
+                                          var8 -= 4096;
                                           continue L10;
                                         }
                                       }
                                     } else {
-                                      // wide iinc 8 4096
+                                      var8 += 4096;
                                       continue L9;
                                     }
                                   }
@@ -175,12 +175,12 @@ final class jlb extends le {
                         break L0;
                       }
                     } else {
-                      // wide iinc 9 -4096
+                      var9 -= 4096;
                       continue L2;
                     }
                   }
                 } else {
-                  // wide iinc 9 4096
+                  var9 += 4096;
                   continue L1;
                 }
               }
@@ -246,161 +246,208 @@ final class jlb extends le {
         int var8 = 0;
         int var9 = 0;
         Random var10 = null;
+        int[] stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        int[] stackIn_12_0 = null;
+        int stackIn_12_1 = 0;
         int[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        int[] stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
-        int[] stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
-        int stackIn_15_2 = 0;
+        int stackIn_13_2 = 0;
+        int[] stackOut_10_0 = null;
+        int stackOut_10_1 = 0;
         int[] stackOut_12_0 = null;
         int stackOut_12_1 = 0;
-        int[] stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        int stackOut_14_2 = 0;
-        int[] stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
+        int stackOut_12_2 = 0;
+        int[] stackOut_11_0 = null;
+        int stackOut_11_1 = 0;
+        int stackOut_11_2 = 0;
         var9 = VoidHunters.field_G;
         var10 = new Random((long)((jlb) this).field_s);
         ((jlb) this).field_m = 4096 / ((jlb) this).field_q;
         ((jlb) this).field_o = ((jlb) this).field_k / 2;
         ((jlb) this).field_n = 4096 / ((jlb) this).field_s;
         var3 = ((jlb) this).field_m / 2;
-        if (param0 == -34) {
-          ((jlb) this).field_w = new int[((jlb) this).field_s][1 + ((jlb) this).field_q];
-          ((jlb) this).field_i = new int[((jlb) this).field_s][((jlb) this).field_q];
-          var4 = ((jlb) this).field_n / 2;
-          ((jlb) this).field_v = new int[((jlb) this).field_s - -1];
-          ((jlb) this).field_v[0] = 0;
-          var5 = 0;
-          L0: while (true) {
-            if (var5 >= ((jlb) this).field_s) {
-              ((jlb) this).field_v[((jlb) this).field_s] = 4096;
-              return;
-            } else {
-              L1: {
-                if ((var5 ^ -1) < -1) {
-                  var6 = ((jlb) this).field_n;
-                  var7 = (-2048 + hob.a(var10, 4096, 123)) * ((jlb) this).field_l >> -447181460;
-                  var6 = var6 + (var7 * var4 >> 2202668);
-                  ((jlb) this).field_v[var5] = var6 + ((jlb) this).field_v[-1 + var5];
-                  break L1;
-                } else {
-                  break L1;
-                }
+        ((jlb) this).field_w = new int[((jlb) this).field_s][1 + ((jlb) this).field_q];
+        ((jlb) this).field_i = new int[((jlb) this).field_s][((jlb) this).field_q];
+        var4 = ((jlb) this).field_n / 2;
+        ((jlb) this).field_v = new int[((jlb) this).field_s - -1];
+        ((jlb) this).field_v[0] = 0;
+        var5 = 0;
+        L0: while (true) {
+          if (var5 >= ((jlb) this).field_s) {
+            ((jlb) this).field_v[((jlb) this).field_s] = 4096;
+            return;
+          } else {
+            L1: {
+              if (var5 > 0) {
+                var6 = ((jlb) this).field_n;
+                var7 = (-2048 + hob.a(var10, 4096, 123)) * ((jlb) this).field_l >> 12;
+                var6 = var6 + (var7 * var4 >> 12);
+                ((jlb) this).field_v[var5] = var6 + ((jlb) this).field_v[-1 + var5];
+                break L1;
+              } else {
+                break L1;
               }
-              ((jlb) this).field_w[var5][0] = 0;
-              var6 = 0;
-              L2: while (true) {
-                if (((jlb) this).field_q <= var6) {
-                  ((jlb) this).field_w[var5][((jlb) this).field_q] = 4096;
-                  var5++;
-                  continue L0;
-                } else {
-                  L3: {
-                    if (var6 > 0) {
-                      var7 = ((jlb) this).field_m;
-                      var8 = (hob.a(var10, 4096, param0 ^ -91) + -2048) * ((jlb) this).field_r >> -1492058836;
-                      var7 = var7 + (var8 * var3 >> 1923576748);
-                      ((jlb) this).field_w[var5][var6] = ((jlb) this).field_w[var5][var6 + -1] - -var7;
-                      break L3;
-                    } else {
-                      break L3;
-                    }
+            }
+            ((jlb) this).field_w[var5][0] = 0;
+            var6 = 0;
+            L2: while (true) {
+              if (((jlb) this).field_q <= var6) {
+                ((jlb) this).field_w[var5][((jlb) this).field_q] = 4096;
+                var5++;
+                continue L0;
+              } else {
+                L3: {
+                  if (var6 > 0) {
+                    var7 = ((jlb) this).field_m;
+                    var8 = (hob.a(var10, 4096, 123) + -2048) * ((jlb) this).field_r >> 12;
+                    var7 = var7 + (var8 * var3 >> 12);
+                    ((jlb) this).field_w[var5][var6] = ((jlb) this).field_w[var5][var6 + -1] - -var7;
+                    break L3;
+                  } else {
+                    break L3;
                   }
-                  L4: {
-                    stackOut_12_0 = ((jlb) this).field_i[var5];
-                    stackOut_12_1 = var6;
-                    stackIn_14_0 = stackOut_12_0;
-                    stackIn_14_1 = stackOut_12_1;
+                }
+                L4: {
+                  stackOut_10_0 = ((jlb) this).field_i[var5];
+                  stackOut_10_1 = var6;
+                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_1 = stackOut_10_1;
+                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_1 = stackOut_10_1;
+                  if (((jlb) this).field_u <= 0) {
+                    stackOut_12_0 = (int[]) (Object) stackIn_12_0;
+                    stackOut_12_1 = stackIn_12_1;
+                    stackOut_12_2 = 4096;
                     stackIn_13_0 = stackOut_12_0;
                     stackIn_13_1 = stackOut_12_1;
-                    if ((((jlb) this).field_u ^ -1) >= -1) {
-                      stackOut_14_0 = (int[]) (Object) stackIn_14_0;
-                      stackOut_14_1 = stackIn_14_1;
-                      stackOut_14_2 = 4096;
-                      stackIn_15_0 = stackOut_14_0;
-                      stackIn_15_1 = stackOut_14_1;
-                      stackIn_15_2 = stackOut_14_2;
-                      break L4;
-                    } else {
-                      stackOut_13_0 = (int[]) (Object) stackIn_13_0;
-                      stackOut_13_1 = stackIn_13_1;
-                      stackOut_13_2 = -hob.a(var10, ((jlb) this).field_u, 123) + 4096;
-                      stackIn_15_0 = stackOut_13_0;
-                      stackIn_15_1 = stackOut_13_1;
-                      stackIn_15_2 = stackOut_13_2;
-                      break L4;
-                    }
+                    stackIn_13_2 = stackOut_12_2;
+                    break L4;
+                  } else {
+                    stackOut_11_0 = (int[]) (Object) stackIn_11_0;
+                    stackOut_11_1 = stackIn_11_1;
+                    stackOut_11_2 = -hob.a(var10, ((jlb) this).field_u, 123) + 4096;
+                    stackIn_13_0 = stackOut_11_0;
+                    stackIn_13_1 = stackOut_11_1;
+                    stackIn_13_2 = stackOut_11_2;
+                    break L4;
                   }
-                  stackIn_15_0[stackIn_15_1] = stackIn_15_2;
-                  var6++;
-                  continue L2;
                 }
+                stackIn_13_0[stackIn_13_1] = stackIn_13_2;
+                var6++;
+                continue L2;
               }
             }
           }
-        } else {
-          return;
         }
     }
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        L0: {
-          var5 = VoidHunters.field_G;
-          var4 = param0;
-          if (var4 != 0) {
-            if (var4 == 1) {
-              ((jlb) this).field_s = param2.e((byte) -118);
-              break L0;
-            } else {
-              if (2 == var4) {
-                ((jlb) this).field_r = param2.e(1869);
-                break L0;
-              } else {
-                if (var4 != 3) {
-                  if (var4 == 4) {
-                    ((jlb) this).field_j = param2.e(1869);
-                    break L0;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        var5 = VoidHunters.field_G;
+        try {
+          L0: {
+            L1: {
+              var4_int = param0;
+              if (var4_int != 0) {
+                if (var4_int == 1) {
+                  ((jlb) this).field_s = param2.e((byte) -118);
+                  break L1;
+                } else {
+                  if (2 == var4_int) {
+                    ((jlb) this).field_r = param2.e(1869);
+                    break L1;
                   } else {
-                    if (var4 != 5) {
-                      if ((var4 ^ -1) != -7) {
-                        if (7 != var4) {
-                          break L0;
-                        } else {
-                          ((jlb) this).field_u = param2.e(1869);
-                          break L0;
-                        }
+                    if (var4_int != 3) {
+                      if (var4_int == 4) {
+                        ((jlb) this).field_j = param2.e(1869);
+                        break L1;
                       } else {
-                        ((jlb) this).field_k = param2.e(1869);
-                        break L0;
+                        if (var4_int != 5) {
+                          if (var4_int != 6) {
+                            if (7 != var4_int) {
+                              break L1;
+                            } else {
+                              ((jlb) this).field_u = param2.e(1869);
+                              break L1;
+                            }
+                          } else {
+                            ((jlb) this).field_k = param2.e(1869);
+                            break L1;
+                          }
+                        } else {
+                          ((jlb) this).field_p = param2.e(1869);
+                          break L1;
+                        }
                       }
                     } else {
-                      ((jlb) this).field_p = param2.e(1869);
-                      break L0;
+                      ((jlb) this).field_l = param2.e(1869);
+                      break L1;
                     }
                   }
-                } else {
-                  ((jlb) this).field_l = param2.e(1869);
-                  break L0;
                 }
+              } else {
+                ((jlb) this).field_q = param2.e((byte) -101);
+                break L1;
               }
             }
-          } else {
-            ((jlb) this).field_q = param2.e((byte) -101);
+            L2: {
+              if (param1 < -60) {
+                break L2;
+              } else {
+                boolean discarded$1 = jlb.b(-48, 83, 33, 63);
+                break L2;
+              }
+            }
             break L0;
           }
-        }
-        L1: {
-          if (param1 < -60) {
-            break L1;
-          } else {
-            boolean discarded$1 = jlb.b(-48, 83, 33, 63);
-            break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_25_0 = (RuntimeException) var4;
+            stackOut_25_1 = new StringBuilder().append("jlb.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
+            if (param2 == null) {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
+              break L3;
+            } else {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
+              break L3;
+            }
           }
+          throw rta.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
         }
     }
 

@@ -27,9 +27,6 @@ final class wqb extends mfb {
 
     public static void i(byte param0) {
         field_d = null;
-        if (param0 != 75) {
-            return;
-        }
         field_e = null;
         field_b = null;
         field_c = null;

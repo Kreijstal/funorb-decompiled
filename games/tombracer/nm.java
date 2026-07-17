@@ -12,7 +12,11 @@ final class nm extends vo implements sca {
         if (param1 < 88) {
             return;
         }
-        bea.a(param0.field_r, param0.field_n, param0.field_k);
+        try {
+            bea.a(param0.field_r, param0.field_n, param0.field_k);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "nm.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public final long b(int param0) {
@@ -36,28 +40,30 @@ final class nm extends vo implements sca {
         if (param1 != -11783) {
             return;
         }
-        ((nm) this).field_k = param3;
+        try {
+            ((nm) this).field_k = param3;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "nm.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     nm(cka param0, int param1, byte[] param2, int param3, boolean param4) {
         super(param0, 34963, param2, param3, param4);
-        ((nm) this).field_k = param1;
+        try {
+            ((nm) this).field_k = param1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "nm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     public static void a(byte param0) {
         field_i = null;
-        if (param0 < 17) {
-            field_l = null;
-            field_l = null;
-            field_j = null;
-            return;
-        }
         field_l = null;
         field_j = null;
     }
 
     final void d(int param0) {
-        ((nm) this).field_h.a((sca) this, param0 ^ 0);
+        ((nm) this).field_h.a((sca) this, param0);
         if (param0 != 34963) {
             Object var3 = null;
             ((nm) this).a(-86, -126, (byte[]) null, -64);

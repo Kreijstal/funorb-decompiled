@@ -13,25 +13,20 @@ final class ce extends ck {
     static wk field_p;
 
     ce(byte[] param0) {
-        ((ce) this).field_s = param0;
+        try {
+            ((ce) this).field_s = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "ce.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(byte param0) {
         field_v = null;
         field_t = null;
         field_o = null;
-        if (param0 != 77) {
-          field_o = null;
-          field_p = null;
-          field_q = null;
-          field_u = null;
-          return;
-        } else {
-          field_p = null;
-          field_q = null;
-          field_u = null;
-          return;
-        }
+        field_p = null;
+        field_q = null;
+        field_u = null;
     }
 
     static {

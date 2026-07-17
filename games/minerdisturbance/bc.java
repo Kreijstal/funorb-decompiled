@@ -21,16 +21,8 @@ final class bc implements Iterator {
 
     final static void a(int param0, int param1) {
         tg.field_i = param0 * 400 / 150;
-        if (param1 != -20451) {
-          bc.a(96);
-          tg.field_g = 100 * param0 / 150;
-          tg.field_d = (param0 << -1838216400) / 150;
-          return;
-        } else {
-          tg.field_g = 100 * param0 / 150;
-          tg.field_d = (param0 << -1838216400) / 150;
-          return;
-        }
+        tg.field_g = 100 * param0 / 150;
+        tg.field_d = (param0 << 16) / 150;
     }
 
     public final boolean hasNext() {
@@ -39,9 +31,13 @@ final class bc implements Iterator {
 
     bc(qc param0) {
         ((bc) this).field_e = null;
-        ((bc) this).field_f = param0;
-        ((bc) this).field_c = ((bc) this).field_f.field_e.field_t;
-        ((bc) this).field_e = null;
+        try {
+            ((bc) this).field_f = param0;
+            ((bc) this).field_c = ((bc) this).field_f.field_e.field_t;
+            ((bc) this).field_e = null;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "bc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {

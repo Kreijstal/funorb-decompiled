@@ -6,14 +6,72 @@ final class lr extends lg {
     static long field_v;
 
     final static byte[] a(int param0, String param1) {
-        String var3 = null;
-        if (param0 != 4688) {
-          var3 = (String) null;
-          byte[] discarded$2 = lr.a(-91, (String) null);
-          return te.field_f.a("", (byte) -71, param1);
-        } else {
-          return te.field_f.a("", (byte) -71, param1);
+        RuntimeException var2 = null;
+        Object var3 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 4688) {
+                break L1;
+              } else {
+                var3 = null;
+                byte[] discarded$2 = lr.a(-91, (String) null);
+                break L1;
+              }
+            }
+            stackOut_2_0 = te.field_f.a("", (byte) -71, param1);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("lr.B(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw pn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     lr() {
@@ -24,10 +82,11 @@ final class lr extends lg {
         int var4 = 0;
         int var5 = 0;
         var4 = 2 * param0;
+        int incrementValue$2 = var4;
         var4++;
-        ((lr) this).field_w[var4] = (byte)-1;
+        ((lr) this).field_w[incrementValue$2] = (byte) -1;
         var5 = 255 & param2;
-        ((lr) this).field_w[var4] = (byte)(var5 * 3 >> -750572635);
+        ((lr) this).field_w[var4] = (byte)(var5 * 3 >> 5);
         if (param1 != -1) {
           field_v = 21L;
           return;
@@ -39,7 +98,7 @@ final class lr extends lg {
     final byte[] a(int param0, int param1, byte param2, int param3) {
         ((lr) this).field_w = new byte[2 * param3 * param0 * param1];
         if (param2 != -120) {
-          return (byte[]) null;
+          return null;
         } else {
           ((lr) this).a(true, param3, param0, param1);
           return ((lr) this).field_w;

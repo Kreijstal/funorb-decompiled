@@ -18,9 +18,6 @@ final class vi extends uf {
 
     public static void c(byte param0) {
         field_j = null;
-        if (param0 != -113) {
-            return;
-        }
         field_t = null;
         field_h = null;
         field_n = null;

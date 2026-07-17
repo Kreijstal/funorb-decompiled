@@ -11,41 +11,24 @@ final class sh {
 
     final static void a(byte param0) {
         bo.a((byte) 33);
-        if (param0 != -59) {
-          return;
-        } else {
-          dk.field_g = true;
-          bc.field_d = true;
-          jh.field_e.i(param0 ^ -59);
-          qd.a(-1845, qi.field_n, false);
-          return;
-        }
+        dk.field_g = true;
+        bc.field_d = true;
+        jh.field_e.i(0);
+        qd.a(-1845, qi.field_n, false);
     }
 
     public static void c(int param0) {
-        Object var2 = null;
-        if (param0 > -96) {
-          var2 = null;
-          c discarded$2 = sh.a(113, (byte[]) null);
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          field_d = null;
-          return;
-        }
+        field_a = null;
+        field_c = null;
+        field_b = null;
+        field_d = null;
     }
 
     final static um a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param3 != 935) {
             return null;
         }
-        return ci.a(param3 ^ -16417, param1, param0, param4, false, param2);
+        return ci.a(param3 ^ -16417, param1, param0, false, false, param2);
     }
 
     final static void a(int param0) {
@@ -71,29 +54,85 @@ final class sh {
 
     final static c a(int param0, byte[] param1) {
         c var2 = null;
-        if (param0 == -1) {
-          if (param1 == null) {
-            return null;
-          } else {
-            var2 = new c(param1, be.field_a, a.field_c, wm.field_b, b.field_c, vk.field_d);
-            ch.k(4210752);
-            return var2;
+        RuntimeException var2_ref = null;
+        Object stackIn_4_0 = null;
+        c stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        c stackOut_5_0 = null;
+        Object stackOut_3_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -1) {
+                break L1;
+              } else {
+                um discarded$2 = sh.a(-117, -92, false, -84, false);
+                break L1;
+              }
+            }
+            if (param1 != null) {
+              var2 = new c(param1, be.field_a, a.field_c, wm.field_b, b.field_c, vk.field_d);
+              ch.k(4210752);
+              stackOut_5_0 = (c) var2;
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              stackOut_3_0 = null;
+              stackIn_4_0 = stackOut_3_0;
+              return (c) (Object) stackIn_4_0;
+            }
           }
-        } else {
-          um discarded$9 = sh.a(-117, -92, false, -84, false);
-          if (param1 == null) {
-            return null;
-          } else {
-            var2 = new c(param1, be.field_a, a.field_c, wm.field_b, b.field_c, vk.field_d);
-            ch.k(4210752);
-            return var2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_1 = new StringBuilder().append("sh.E(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
           }
+          throw fk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
+        return stackIn_6_0;
     }
 
     final static boolean a(int param0, int param1) {
-        if (!(-1 >= (param1 ^ -1))) {
-            return -1 == ((1 + param1) % 4 ^ -1) ? true : false;
+        if (!(param1 >= 0)) {
+            return (1 + param1) % 4 == 0 ? true : false;
         }
         if (!(1582 <= param1)) {
             return 0 == param1 % 4 ? true : false;
@@ -101,7 +140,7 @@ final class sh {
         if (!(0 == param1 % 4)) {
             return false;
         }
-        if (-1 != (param1 % 100 ^ -1)) {
+        if (param1 % 100 != 0) {
             return true;
         }
         if (param1 % 400 != 0) {
@@ -121,16 +160,16 @@ final class sh {
             int stackIn_13_0 = 0;
             int stackIn_22_0 = 0;
             int stackIn_25_0 = 0;
+            int stackIn_29_0 = 0;
             int stackIn_31_0 = 0;
-            int stackIn_33_0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_12_0 = 0;
             int stackOut_24_0 = 0;
             int stackOut_21_0 = 0;
-            int stackOut_32_0 = 0;
             int stackOut_30_0 = 0;
+            int stackOut_28_0 = 0;
             if (4 <= qh.field_c.field_g) {
-              if (0 != (qh.field_c.field_c ^ -1)) {
+              if (qh.field_c.field_c != -1) {
                 if (-2 != qh.field_c.field_c) {
                   return 1;
                 } else {
@@ -160,7 +199,7 @@ final class sh {
                         stackIn_13_0 = stackOut_12_0;
                         return stackIn_13_0;
                       } else {
-                        if (-2 != (dm.field_b.field_f ^ -1)) {
+                        if (dm.field_b.field_f != 1) {
                           break L2;
                         } else {
                           vm.field_k = vm.field_k + 1;
@@ -185,10 +224,10 @@ final class sh {
                     }
                   }
                   L4: {
-                    if ((vm.field_k ^ -1) != -4) {
+                    if (vm.field_k != 3) {
                       break L4;
                     } else {
-                      if (-1 > (jj.field_a.c(0) ^ -1)) {
+                      if (jj.field_a.c(0) > 0) {
                         var1_int = jj.field_a.b((byte) -103);
                         if (0 == var1_int) {
                           vm.field_k = vm.field_k + 1;
@@ -209,26 +248,18 @@ final class sh {
                       }
                     }
                   }
-                  L5: {
-                    if (param0 == 32288) {
-                      break L5;
-                    } else {
-                      sh.a(24);
-                      break L5;
-                    }
-                  }
-                  if ((vm.field_k ^ -1) != -5) {
-                    stackOut_32_0 = -1;
-                    stackIn_33_0 = stackOut_32_0;
+                  if (vm.field_k != 4) {
+                    stackOut_30_0 = -1;
+                    stackIn_31_0 = stackOut_30_0;
                     break L0;
                   } else {
                     qh.field_c.a((byte) 45, (Object) (Object) jj.field_a, oh.field_b);
                     jj.field_a = null;
                     dm.field_b = null;
                     vm.field_k = 0;
-                    stackOut_30_0 = 0;
-                    stackIn_31_0 = stackOut_30_0;
-                    return stackIn_31_0;
+                    stackOut_28_0 = 0;
+                    stackIn_29_0 = stackOut_28_0;
+                    return stackIn_29_0;
                   }
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -236,7 +267,7 @@ final class sh {
                 var1 = (IOException) (Object) decompiledCaughtException;
                 return ic.a(-18, -3);
               }
-              return stackIn_33_0;
+              return stackIn_31_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -247,9 +278,6 @@ final class sh {
 
     final static void a(boolean param0) {
         vk.field_g = 0;
-        if (param0) {
-            return;
-        }
         df.a(true);
     }
 

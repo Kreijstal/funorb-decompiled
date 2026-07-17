@@ -19,7 +19,7 @@ final class fb implements Runnable {
         ((fb) this).field_f = true;
         try {
             while (!((fb) this).field_h) {
-                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
+                for (var1_int = 0; var1_int < 2; var1_int++) {
                     var2 = ((fb) this).field_i[var1_int];
                     if (var2 == null) {
                     } else {
@@ -42,9 +42,6 @@ final class fb implements Runnable {
         field_a = null;
         field_c = null;
         field_e = null;
-        if (param0 != 256) {
-            field_c = null;
-        }
         field_g = null;
         field_b = null;
     }

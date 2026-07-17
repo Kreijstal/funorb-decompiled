@@ -20,62 +20,112 @@ final class od extends fb {
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
             Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             java.net.URL var4 = null;
             java.applet.Applet stackIn_1_0 = null;
             java.applet.Applet stackIn_2_0 = null;
             java.applet.Applet stackIn_3_0 = null;
             int stackIn_3_1 = 0;
+            RuntimeException stackIn_10_0 = null;
+            StringBuilder stackIn_10_1 = null;
+            RuntimeException stackIn_11_0 = null;
+            StringBuilder stackIn_11_1 = null;
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            String stackIn_12_2 = null;
             Throwable decompiledCaughtException = null;
             java.applet.Applet stackOut_0_0 = null;
             java.applet.Applet stackOut_2_0 = null;
             int stackOut_2_1 = 0;
             java.applet.Applet stackOut_1_0 = null;
             int stackOut_1_1 = 0;
+            RuntimeException stackOut_9_0 = null;
+            StringBuilder stackOut_9_1 = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            String stackOut_11_2 = null;
+            RuntimeException stackOut_10_0 = null;
+            StringBuilder stackOut_10_1 = null;
+            String stackOut_10_2 = null;
             try {
               L0: {
-                L1: {
-                  var4 = param1.getCodeBase();
-                  var3 = rh.a(var4, param1, (byte) -87).getFile();
-                  Object discarded$6 = u.a(param1, true, new Object[2], "updatelinks");
-                  Object discarded$7 = u.a(param1, true, new Object[2], "updatelinks");
-                  stackOut_0_0 = (java.applet.Applet) param1;
-                  stackIn_2_0 = stackOut_0_0;
-                  stackIn_1_0 = stackOut_0_0;
-                  if (param0) {
-                    stackOut_2_0 = (java.applet.Applet) (Object) stackIn_2_0;
-                    stackOut_2_1 = 0;
-                    stackIn_3_0 = stackOut_2_0;
-                    stackIn_3_1 = stackOut_2_1;
-                    break L1;
-                  } else {
-                    stackOut_1_0 = (java.applet.Applet) (Object) stackIn_1_0;
-                    stackOut_1_1 = 1;
-                    stackIn_3_0 = stackOut_1_0;
-                    stackIn_3_1 = stackOut_1_1;
+                try {
+                  L1: {
+                    L2: {
+                      var4 = param1.getCodeBase();
+                      var3 = rh.a(var4, param1, (byte) -87).getFile();
+                      Object discarded$6 = u.a(param1, true, new Object[2], "updatelinks");
+                      Object discarded$7 = u.a(param1, true, new Object[2], "updatelinks");
+                      stackOut_0_0 = (java.applet.Applet) param1;
+                      stackIn_2_0 = stackOut_0_0;
+                      stackIn_1_0 = stackOut_0_0;
+                      if (param0) {
+                        stackOut_2_0 = (java.applet.Applet) (Object) stackIn_2_0;
+                        stackOut_2_1 = 0;
+                        stackIn_3_0 = stackOut_2_0;
+                        stackIn_3_1 = stackOut_2_1;
+                        break L2;
+                      } else {
+                        stackOut_1_0 = (java.applet.Applet) (Object) stackIn_1_0;
+                        stackOut_1_1 = 1;
+                        stackIn_3_0 = stackOut_1_0;
+                        stackIn_3_1 = stackOut_1_1;
+                        break L2;
+                      }
+                    }
+                    L3: {
+                      Object discarded$8 = u.a(stackIn_3_0, stackIn_3_1 != 0, new Object[2], "updatelinks");
+                      if (!param0) {
+                        break L3;
+                      } else {
+                        od.b(false);
+                        break L3;
+                      }
+                    }
+                    Object discarded$9 = u.a(param1, true, new Object[2], "updatelinks");
+                    Object discarded$10 = u.a(param1, true, new Object[2], "updatelinks");
+                    Object discarded$11 = u.a(param1, true, new Object[2], "updatelinks");
                     break L1;
                   }
-                }
-                L2: {
-                  Object discarded$8 = u.a(stackIn_3_0, stackIn_3_1 != 0, new Object[2], "updatelinks");
-                  if (!param0) {
-                    break L2;
-                  } else {
-                    od.b(false);
-                    break L2;
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L4: {
+                    var2 = decompiledCaughtException;
+                    break L4;
                   }
                 }
-                Object discarded$9 = u.a(param1, true, new Object[2], "updatelinks");
-                Object discarded$10 = u.a(param1, true, new Object[2], "updatelinks");
-                Object discarded$11 = u.a(param1, true, new Object[2], "updatelinks");
                 break L0;
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L3: {
-                var2 = decompiledCaughtException;
-                break L3;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L5: {
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_9_0 = (RuntimeException) var2_ref;
+                stackOut_9_1 = new StringBuilder().append("od.A(").append(param0).append(44);
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_1 = stackOut_9_1;
+                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_1 = stackOut_9_1;
+                if (param1 == null) {
+                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_2 = "null";
+                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_12_2 = stackOut_11_2;
+                  break L5;
+                } else {
+                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_2 = "{...}";
+                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_1 = stackOut_10_1;
+                  stackIn_12_2 = stackOut_10_2;
+                  break L5;
+                }
               }
+              throw fk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -85,57 +135,113 @@ final class od extends fb {
     }
 
     final boolean a(int param0, int param1, int param2, byte param3, mf param4, int param5, int param6) {
-        int var8 = 0;
+        RuntimeException var8 = null;
+        int var8_int = 0;
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_16_0 = 0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_15_0 = 0;
+        int stackOut_13_0 = 0;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         var12 = Chess.field_G;
-        if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
-          return false;
-        } else {
-          var8 = -((od) this).field_Q + (-param6 + (-((od) this).field_u + param1));
-          var9 = -param5 - (((od) this).field_r + ((od) this).field_M) + param2;
-          if (((od) this).field_T * ((od) this).field_T > var8 * var8 + var9 * var9) {
-            L0: {
-              var10 = Math.atan2((double)var9, (double)var8) - e.field_L;
-              if (var10 < 0.0) {
-                var10 = var10 - 3.141592653589793 / (double)((od) this).field_P;
-                break L0;
-              } else {
-                if (0.0 >= var10) {
-                  break L0;
-                } else {
-                  var10 = var10 + 3.141592653589793 / (double)((od) this).field_P;
-                  break L0;
-                }
-              }
-            }
-            ((od) this).field_R = (int)(var10 * (double)((od) this).field_P / 6.283185307179586);
-            L1: while (true) {
-              if (((od) this).field_P > ((od) this).field_R) {
-                L2: while (true) {
-                  if (0 <= ((od) this).field_R) {
-                    return true;
+        try {
+          L0: {
+            if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+              stackOut_15_0 = 0;
+              stackIn_16_0 = stackOut_15_0;
+              break L0;
+            } else {
+              var8_int = -((od) this).field_Q + (-param6 + (-((od) this).field_u + param1));
+              var9 = -param5 - (((od) this).field_r + ((od) this).field_M) + param2;
+              if (((od) this).field_T * ((od) this).field_T > var8_int * var8_int + var9 * var9) {
+                L1: {
+                  var10 = Math.atan2((double)var9, (double)var8_int) - e.field_L;
+                  if (var10 < 0.0) {
+                    var10 = var10 - 3.141592653589793 / (double)((od) this).field_P;
+                    break L1;
                   } else {
-                    ((od) this).field_R = ((od) this).field_R + ((od) this).field_P;
+                    if (0.0 >= var10) {
+                      break L1;
+                    } else {
+                      var10 = var10 + 3.141592653589793 / (double)((od) this).field_P;
+                      break L1;
+                    }
+                  }
+                }
+                ((od) this).field_R = (int)(var10 * (double)((od) this).field_P / 6.283185307179586);
+                L2: while (true) {
+                  if (((od) this).field_P > ((od) this).field_R) {
+                    L3: while (true) {
+                      if (0 <= ((od) this).field_R) {
+                        stackOut_13_0 = 1;
+                        stackIn_14_0 = stackOut_13_0;
+                        return stackIn_14_0 != 0;
+                      } else {
+                        ((od) this).field_R = ((od) this).field_R + ((od) this).field_P;
+                        continue L3;
+                      }
+                    }
+                  } else {
+                    ((od) this).field_R = ((od) this).field_R - ((od) this).field_P;
                     continue L2;
                   }
                 }
               } else {
-                ((od) this).field_R = ((od) this).field_R - ((od) this).field_P;
-                continue L1;
+                return true;
               }
             }
-          } else {
-            return true;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var8 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var8;
+            stackOut_17_1 = new StringBuilder().append("od.OA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param4 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L4;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L4;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param5 + 44 + param6 + 41);
         }
+        return stackIn_16_0 != 0;
     }
 
     final static boolean a(int param0) {
-        if (param0 != -5) {
-            return false;
-        }
         return wc.field_E;
     }
 
@@ -144,9 +250,6 @@ final class od extends fb {
         field_X = null;
         field_N = null;
         field_V = null;
-        if (param0) {
-            return;
-        }
         field_U = null;
     }
 
@@ -181,7 +284,7 @@ final class od extends fb {
             var15 = 1;
             var0 = var15;
             L1: while (true) {
-              if (-11 > (var15 ^ -1)) {
+              if (var15 > 10) {
                 field_X = "Please enter a year between <%0> and <%1>";
                 field_W = true;
                 field_U = "Offer rematch";
@@ -201,15 +304,15 @@ final class od extends fb {
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
               } else {
-                stackOut_3_0 = (long)(var1 >>> -27332216);
+                stackOut_3_0 = (long)(var1 >>> 8);
                 stackIn_5_0 = stackOut_3_0;
                 break L2;
               }
             }
             L3: {
               var2 = stackIn_5_0;
-              var4 = var2 << -710980351;
-              if (-257L < (var4 ^ -1L)) {
+              var4 = var2 << 1;
+              if (var4 < 256L) {
                 break L3;
               } else {
                 var4 = var4 ^ 285L;
@@ -217,8 +320,8 @@ final class od extends fb {
               }
             }
             L4: {
-              var6 = var4 << -443597823;
-              if (-257L < (var6 ^ -1L)) {
+              var6 = var4 << 1;
+              if (var6 < 256L) {
                 break L4;
               } else {
                 var6 = var6 ^ 285L;
@@ -227,7 +330,7 @@ final class od extends fb {
             }
             L5: {
               var8 = var6 ^ var2;
-              var10 = var6 << 1375326657;
+              var10 = var6 << 1;
               if (var10 >= 256L) {
                 var10 = var10 ^ 285L;
                 break L5;
@@ -236,14 +339,14 @@ final class od extends fb {
               }
             }
             var12 = var2 ^ var10;
-            field_O[0][var0] = ak.a(ak.a(ak.a(var8 << -1359653168, ak.a(var10 << 513334232, ak.a(ak.a(ak.a(var2 << 1386473712, var2 << -1183038920), var6 << 1264957544), var2 << -900905888))), var4 << 1320529864), var12);
+            field_O[0][var0] = ak.a(ak.a(ak.a(var8 << 16, ak.a(var10 << 24, ak.a(ak.a(ak.a(var2 << 48, var2 << 56), var6 << 40), var2 << 32))), var4 << 8), var12);
             var14 = 1;
             L6: while (true) {
               if (8 <= var14) {
                 var0++;
                 continue L0;
               } else {
-                field_O[var14][var0] = ak.a(field_O[var14 - 1][var0] >>> 2027981000, field_O[-1 + var14][var0] << -1251195144);
+                field_O[var14][var0] = ak.a(field_O[var14 - 1][var0] >>> 8, field_O[-1 + var14][var0] << 56);
                 var14++;
                 continue L6;
               }

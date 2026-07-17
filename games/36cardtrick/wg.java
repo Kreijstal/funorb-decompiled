@@ -7,7 +7,7 @@ final class wg {
     private static String field_z;
 
     public static void a(byte param0) {
-        int var1 = -4 % ((-4 - param0) / 51);
+        int var1 = 0;
         field_b = null;
     }
 

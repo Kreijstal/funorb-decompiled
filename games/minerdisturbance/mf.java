@@ -18,9 +18,6 @@ final class mf {
     static ac field_j;
 
     public static void c(byte param0) {
-        if (param0 <= 0) {
-            field_h = null;
-        }
         field_j = null;
         field_f = null;
         field_m = null;
@@ -33,11 +30,15 @@ final class mf {
         if (param0 != -752960408) {
             return;
         }
-        if (!(11 != fh.field_b)) {
-            pk.b(114);
+        try {
+            if (!(11 != fh.field_b)) {
+                pk.b(114);
+            }
+            mn.a((byte) -63, oe.field_d, ul.field_a, bj.field_c);
+            cl.a(param1, 0, 0, 310);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "mf.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        mn.a((byte) -63, oe.field_d, ul.field_a, bj.field_c);
-        cl.a(param1, 0, 0, 310);
     }
 
     private final void a(byte param0) {
@@ -51,42 +52,34 @@ final class mf {
         ((mf) this).field_g = ((mf) this).field_g + fieldTemp$3;
         var2 = 0;
         L0: while (true) {
-          if (-257 >= (var2 ^ -1)) {
-            L1: {
-              if (param0 == -91) {
-                break L1;
-              } else {
-                ((mf) this).field_d = -29;
-                break L1;
-              }
-            }
+          if (var2 >= 256) {
             return;
           } else {
-            L2: {
+            L1: {
               var3 = ((mf) this).field_e[var2];
               if ((var2 & 2) == 0) {
                 if ((var2 & 1) != 0) {
-                  ((mf) this).field_b = ((mf) this).field_b ^ ((mf) this).field_b >>> 691401094;
-                  break L2;
+                  ((mf) this).field_b = ((mf) this).field_b ^ ((mf) this).field_b >>> 6;
+                  break L1;
                 } else {
-                  ((mf) this).field_b = ((mf) this).field_b ^ ((mf) this).field_b << -57282547;
-                  break L2;
+                  ((mf) this).field_b = ((mf) this).field_b ^ ((mf) this).field_b << 13;
+                  break L1;
                 }
               } else {
                 if ((1 & var2) == 0) {
-                  ((mf) this).field_b = ((mf) this).field_b ^ ((mf) this).field_b << -1366241694;
-                  break L2;
+                  ((mf) this).field_b = ((mf) this).field_b ^ ((mf) this).field_b << 2;
+                  break L1;
                 } else {
-                  ((mf) this).field_b = ((mf) this).field_b ^ ((mf) this).field_b >>> -209774640;
-                  break L2;
+                  ((mf) this).field_b = ((mf) this).field_b ^ ((mf) this).field_b >>> 16;
+                  break L1;
                 }
               }
             }
             ((mf) this).field_b = ((mf) this).field_b + ((mf) this).field_e[var2 + 128 & 255];
-            int dupTemp$4 = ((mf) this).field_g + (((mf) this).field_b + ((mf) this).field_e[c.a(1020, var3) >> 654921122]);
+            int dupTemp$4 = ((mf) this).field_g + (((mf) this).field_b + ((mf) this).field_e[c.a(1020, var3) >> 2]);
             var4 = dupTemp$4;
             ((mf) this).field_e[var2] = dupTemp$4;
-            int dupTemp$5 = var3 + ((mf) this).field_e[c.a(261205, var4) >> 705589640 >> 296878274];
+            int dupTemp$5 = var3 + ((mf) this).field_e[c.a(261205, var4) >> 8 >> 2];
             ((mf) this).field_g = dupTemp$5;
             ((mf) this).field_l[var2] = dupTemp$5;
             var2++;
@@ -106,15 +99,7 @@ final class mf {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        L0: {
-          var11 = MinerDisturbance.field_ab;
-          if (param0 == 90) {
-            break L0;
-          } else {
-            ((mf) this).field_e = null;
-            break L0;
-          }
-        }
+        var11 = MinerDisturbance.field_ab;
         var7 = -1640531527;
         var8 = -1640531527;
         var6 = -1640531527;
@@ -124,14 +109,14 @@ final class mf {
         var3 = -1640531527;
         var5 = -1640531527;
         var2 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var2 >= 4) {
             var2 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var2 >= 256) {
                 var2 = 0;
-                L3: while (true) {
-                  if (-257 >= (var2 ^ -1)) {
+                L2: while (true) {
+                  if (var2 >= 256) {
                     this.a((byte) -91);
                     ((mf) this).field_d = 256;
                     return;
@@ -144,28 +129,28 @@ final class mf {
                     var10 = var10 + ((mf) this).field_e[7 + var2];
                     var6 = var6 + ((mf) this).field_e[3 + var2];
                     var4 = var4 + ((mf) this).field_e[var2 + 1];
-                    var3 = var3 ^ var4 << -1084828021;
+                    var3 = var3 ^ var4 << 11;
                     var4 = var4 + var5;
                     var6 = var6 + var3;
-                    var4 = var4 ^ var5 >>> -1393050782;
+                    var4 = var4 ^ var5 >>> 2;
                     var5 = var5 + var6;
                     var7 = var7 + var4;
-                    var5 = var5 ^ var6 << 1374820968;
+                    var5 = var5 ^ var6 << 8;
                     var6 = var6 + var7;
                     var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> 847888816;
+                    var6 = var6 ^ var7 >>> 16;
                     var7 = var7 + var8;
                     var9 = var9 + var6;
-                    var7 = var7 ^ var8 << 1904117450;
+                    var7 = var7 ^ var8 << 10;
                     var10 = var10 + var7;
                     var8 = var8 + var9;
-                    var8 = var8 ^ var9 >>> -1049415772;
+                    var8 = var8 ^ var9 >>> 4;
                     var3 = var3 + var8;
                     var9 = var9 + var10;
-                    var9 = var9 ^ var10 << -249633272;
+                    var9 = var9 ^ var10 << 8;
                     var10 = var10 + var3;
                     var4 = var4 + var9;
-                    var10 = var10 ^ var3 >>> 320964361;
+                    var10 = var10 ^ var3 >>> 9;
                     var3 = var3 + var4;
                     var5 = var5 + var10;
                     ((mf) this).field_e[var2] = var3;
@@ -177,7 +162,7 @@ final class mf {
                     ((mf) this).field_e[6 + var2] = var9;
                     ((mf) this).field_e[var2 - -7] = var10;
                     var2 += 8;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -189,28 +174,28 @@ final class mf {
                 var9 = var9 + ((mf) this).field_l[6 + var2];
                 var10 = var10 + ((mf) this).field_l[var2 - -7];
                 var7 = var7 + ((mf) this).field_l[var2 + 4];
-                var3 = var3 ^ var4 << -1332641621;
+                var3 = var3 ^ var4 << 11;
                 var6 = var6 + var3;
                 var4 = var4 + var5;
-                var4 = var4 ^ var5 >>> -128159422;
+                var4 = var4 ^ var5 >>> 2;
                 var7 = var7 + var4;
                 var5 = var5 + var6;
-                var5 = var5 ^ var6 << -2130680280;
+                var5 = var5 ^ var6 << 8;
                 var6 = var6 + var7;
                 var8 = var8 + var5;
-                var6 = var6 ^ var7 >>> -1212044944;
+                var6 = var6 ^ var7 >>> 16;
                 var9 = var9 + var6;
                 var7 = var7 + var8;
-                var7 = var7 ^ var8 << 45326570;
+                var7 = var7 ^ var8 << 10;
                 var8 = var8 + var9;
                 var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> 1197919364;
+                var8 = var8 ^ var9 >>> 4;
                 var3 = var3 + var8;
                 var9 = var9 + var10;
-                var9 = var9 ^ var10 << 591620840;
+                var9 = var9 ^ var10 << 8;
                 var4 = var4 + var9;
                 var10 = var10 + var3;
-                var10 = var10 ^ var3 >>> -161835735;
+                var10 = var10 ^ var3 >>> 9;
                 var3 = var3 + var4;
                 var5 = var5 + var10;
                 ((mf) this).field_e[var2] = var3;
@@ -222,42 +207,42 @@ final class mf {
                 ((mf) this).field_e[var2 + 6] = var9;
                 ((mf) this).field_e[var2 + 7] = var10;
                 var2 += 8;
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            var3 = var3 ^ var4 << 2122869803;
+            var3 = var3 ^ var4 << 11;
             var6 = var6 + var3;
             var4 = var4 + var5;
-            var4 = var4 ^ var5 >>> 1329604770;
+            var4 = var4 ^ var5 >>> 2;
             var7 = var7 + var4;
             var5 = var5 + var6;
-            var5 = var5 ^ var6 << 186479592;
+            var5 = var5 ^ var6 << 8;
             var6 = var6 + var7;
             var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> -1175804560;
+            var6 = var6 ^ var7 >>> 16;
             var9 = var9 + var6;
             var7 = var7 + var8;
-            var7 = var7 ^ var8 << -1552008854;
+            var7 = var7 ^ var8 << 10;
             var8 = var8 + var9;
             var10 = var10 + var7;
-            var8 = var8 ^ var9 >>> 1504221540;
+            var8 = var8 ^ var9 >>> 4;
             var3 = var3 + var8;
             var9 = var9 + var10;
-            var9 = var9 ^ var10 << -752960408;
+            var9 = var9 ^ var10 << 8;
             var10 = var10 + var3;
             var4 = var4 + var9;
-            var10 = var10 ^ var3 >>> 832577897;
+            var10 = var10 ^ var3 >>> 9;
             var3 = var3 + var4;
             var5 = var5 + var10;
             var2++;
-            continue L1;
+            continue L0;
           }
         }
     }
 
     final static pf a(int param0) {
-        int var1 = 78 / ((param0 - 80) / 44);
+        int var1 = -78;
         return new pf(lm.n(81), wc.b((byte) 117));
     }
 
@@ -265,7 +250,7 @@ final class mf {
         if (param0 != 4) {
             return 35;
         }
-        if (-1 == (((mf) this).field_d ^ -1)) {
+        if (((mf) this).field_d == 0) {
             this.a((byte) -91);
             ((mf) this).field_d = 256;
         }
@@ -275,13 +260,17 @@ final class mf {
     }
 
     mf(int[] param0) {
-        int var2 = 0;
-        ((mf) this).field_l = new int[256];
-        ((mf) this).field_e = new int[256];
-        for (var2 = 0; param0.length > var2; var2++) {
-            ((mf) this).field_l[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((mf) this).field_l = new int[256];
+            ((mf) this).field_e = new int[256];
+            for (var2_int = 0; param0.length > var2_int; var2_int++) {
+                ((mf) this).field_l[var2_int] = param0[var2_int];
+            }
+            this.b((byte) 90);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "mf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.b((byte) 90);
     }
 
     static {
@@ -291,7 +280,7 @@ final class mf {
     private static void $cfr$clinit() {
         field_k = 0L;
         field_h = new ta();
-        field_f = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+        field_f = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
         field_c = new ea(640, 480);
     }
 }

@@ -14,9 +14,6 @@ final class nf {
         field_b = null;
         field_d = null;
         field_e = null;
-        if (param0 != -107) {
-            field_d = null;
-        }
     }
 
     static {

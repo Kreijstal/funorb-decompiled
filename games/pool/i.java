@@ -15,11 +15,6 @@ final class i extends ma {
 
     public static void c(byte param0) {
         field_l = null;
-        if (param0 <= 33) {
-            field_u = -21;
-            field_o = null;
-            return;
-        }
         field_o = null;
     }
 
@@ -612,7 +607,7 @@ final class i extends ma {
               stackIn_52_7 = stackOut_51_7;
               stackIn_52_8 = stackOut_51_8;
               stackIn_52_9 = stackOut_51_9;
-              if ((wk.field_P ^ -1) >= -51) {
+              if (wk.field_P <= 50) {
                 stackOut_53_0 = stackIn_53_0;
                 stackOut_53_1 = stackIn_53_1;
                 stackOut_53_2 = stackIn_53_2;
@@ -845,7 +840,7 @@ final class i extends ma {
               stackIn_30_7 = stackOut_29_7;
               stackIn_30_8 = stackOut_29_8;
               stackIn_30_9 = stackOut_29_9;
-              if ((wk.field_P ^ -1) >= -51) {
+              if (wk.field_P <= 50) {
                 stackOut_31_0 = stackIn_31_0;
                 stackOut_31_1 = stackIn_31_1;
                 stackOut_31_2 = stackIn_31_2;
@@ -1079,7 +1074,7 @@ final class i extends ma {
             stackIn_7_7 = stackOut_6_7;
             stackIn_7_8 = stackOut_6_8;
             stackIn_7_9 = stackOut_6_9;
-            if ((wk.field_P ^ -1) >= -51) {
+            if (wk.field_P <= 50) {
               stackOut_8_0 = stackIn_8_0;
               stackOut_8_1 = stackIn_8_1;
               stackOut_8_2 = stackIn_8_2;

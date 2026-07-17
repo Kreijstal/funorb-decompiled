@@ -30,24 +30,166 @@ final class hd {
     int field_e;
 
     final void a(int param0, we param1) {
-        int var3 = 0;
-        int var4 = Pixelate.field_H ? 1 : 0;
-        ((hd) this).field_e = param1.f(param0 + 257);
-        if (param0 != -2) {
-            hd.d(-62);
-        }
-        ((hd) this).field_h = param1.f(255);
-        ((hd) this).field_u = param1.a((byte) 76);
-        ((hd) this).field_b = param1.a((byte) -117);
-        ((hd) this).field_p = 1 == param1.f(255) ? true : false;
-        for (var3 = 0; -5 < (var3 ^ -1); var3++) {
-            ((hd) this).field_s[var3] = (param1.f(255) ^ -1) == -2 ? true : false;
-        }
-        for (var3 = 0; ((hd) this).field_r.length > var3; var3++) {
-            ((hd) this).field_r[var3] = param1.a(0);
-        }
-        for (var3 = 0; ((hd) this).field_u > var3; var3++) {
-            int discarded$0 = ok.a(((hd) this).field_t, -104, 1);
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        Object stackIn_4_0 = null;
+        Object stackIn_5_0 = null;
+        Object stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        boolean[] stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        boolean[] stackIn_10_0 = null;
+        int stackIn_10_1 = 0;
+        boolean[] stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        int stackIn_11_2 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_3_0 = null;
+        Object stackOut_5_0 = null;
+        int stackOut_5_1 = 0;
+        Object stackOut_4_0 = null;
+        int stackOut_4_1 = 0;
+        boolean[] stackOut_8_0 = null;
+        int stackOut_8_1 = 0;
+        boolean[] stackOut_10_0 = null;
+        int stackOut_10_1 = 0;
+        int stackOut_10_2 = 0;
+        boolean[] stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
+        int stackOut_9_2 = 0;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        var4 = Pixelate.field_H ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              ((hd) this).field_e = param1.f(param0 + 257);
+              if (param0 == -2) {
+                break L1;
+              } else {
+                hd.d(-62);
+                break L1;
+              }
+            }
+            L2: {
+              ((hd) this).field_h = param1.f(255);
+              ((hd) this).field_u = param1.a((byte) 76);
+              ((hd) this).field_b = param1.a((byte) -117);
+              stackOut_3_0 = this;
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_4_0 = stackOut_3_0;
+              if (1 != param1.f(255)) {
+                stackOut_5_0 = this;
+                stackOut_5_1 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_1 = stackOut_5_1;
+                break L2;
+              } else {
+                stackOut_4_0 = this;
+                stackOut_4_1 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                break L2;
+              }
+            }
+            ((hd) this).field_p = stackIn_6_1 != 0;
+            var3_int = 0;
+            L3: while (true) {
+              if (var3_int >= 4) {
+                var3_int = 0;
+                L4: while (true) {
+                  if (((hd) this).field_r.length <= var3_int) {
+                    var3_int = 0;
+                    L5: while (true) {
+                      if (((hd) this).field_u <= var3_int) {
+                        break L0;
+                      } else {
+                        int discarded$6 = ok.a(((hd) this).field_t, -104, 1);
+                        var3_int++;
+                        continue L5;
+                      }
+                    }
+                  } else {
+                    ((hd) this).field_r[var3_int] = param1.a(0);
+                    var3_int++;
+                    continue L4;
+                  }
+                }
+              } else {
+                L6: {
+                  stackOut_8_0 = ((hd) this).field_s;
+                  stackOut_8_1 = var3_int;
+                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_1 = stackOut_8_1;
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  if (param1.f(255) != 1) {
+                    stackOut_10_0 = (boolean[]) (Object) stackIn_10_0;
+                    stackOut_10_1 = stackIn_10_1;
+                    stackOut_10_2 = 0;
+                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_1 = stackOut_10_1;
+                    stackIn_11_2 = stackOut_10_2;
+                    break L6;
+                  } else {
+                    stackOut_9_0 = (boolean[]) (Object) stackIn_9_0;
+                    stackOut_9_1 = stackIn_9_1;
+                    stackOut_9_2 = 1;
+                    stackIn_11_0 = stackOut_9_0;
+                    stackIn_11_1 = stackOut_9_1;
+                    stackIn_11_2 = stackOut_9_2;
+                    break L6;
+                  }
+                }
+                stackIn_11_0[stackIn_11_1] = stackIn_11_2 != 0;
+                var3_int++;
+                continue L3;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var3 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var3;
+            stackOut_19_1 = new StringBuilder().append("hd.G(").append(param0).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param1 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L7;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L7;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
         }
     }
 
@@ -91,7 +233,7 @@ final class hd {
           }
         }
         L1: {
-          if (-3 == (param0 ^ -1)) {
+          if (param0 == 2) {
             L2: {
               if (((hd) this).field_e == 0) {
                 break L2;
@@ -110,7 +252,7 @@ final class hd {
             }
             return false;
           } else {
-            if (-4 == (param0 ^ -1)) {
+            if (param0 == 3) {
               L3: {
                 if (-2 + ((hd) this).field_i == ((hd) this).field_e) {
                   break L3;
@@ -118,7 +260,7 @@ final class hd {
                   if (-1 == ((hd) this).field_r[2 + (((hd) this).field_e + ((hd) this).field_i * ((hd) this).field_h)]) {
                     break L3;
                   } else {
-                    if ((((hd) this).field_r[((hd) this).field_i + ((hd) this).field_i * ((hd) this).field_h + ((hd) this).field_e - -2] ^ -1) != 0) {
+                    if (((hd) this).field_r[((hd) this).field_i + ((hd) this).field_i * ((hd) this).field_h + ((hd) this).field_e - -2] != -1) {
                       ((hd) this).field_e = ((hd) this).field_e + 1;
                       break L1;
                     } else {
@@ -129,9 +271,9 @@ final class hd {
               }
               return false;
             } else {
-              if ((param0 ^ -1) == -1) {
+              if (param0 == 0) {
                 L4: {
-                  if ((((hd) this).field_h ^ -1) == -1) {
+                  if (((hd) this).field_h == 0) {
                     break L4;
                   } else {
                     if (-1 == ((hd) this).field_r[((hd) this).field_h * ((hd) this).field_i + ((hd) this).field_e - ((hd) this).field_i]) {
@@ -148,7 +290,7 @@ final class hd {
                 }
                 return false;
               } else {
-                if ((param0 ^ -1) == -2) {
+                if (param0 == 1) {
                   L5: {
                     if (((hd) this).field_a + -2 == ((hd) this).field_h) {
                       break L5;
@@ -169,8 +311,8 @@ final class hd {
                 } else {
                   if (4 != param0) {
                     if (param0 != 6) {
-                      if ((param0 ^ -1) != -8) {
-                        if (-6 == (param0 ^ -1)) {
+                      if (param0 != 7) {
+                        if (param0 == 5) {
                           var10 = new int[4];
                           var9 = var10;
                           var8 = var9;
@@ -187,16 +329,16 @@ final class hd {
                               L7: {
                                 L8: {
                                   ((hd) this).b(-91);
-                                  if (-1 == (((hd) this).field_e ^ -1)) {
+                                  if (((hd) this).field_e == 0) {
                                     break L8;
                                   } else {
-                                    if ((((hd) this).field_h ^ -1) == -1) {
+                                    if (((hd) this).field_h == 0) {
                                       break L8;
                                     } else {
                                       if (((hd) this).field_e == -2 + ((hd) this).field_i) {
                                         break L8;
                                       } else {
-                                        if ((-2 + ((hd) this).field_a ^ -1) == (((hd) this).field_h ^ -1)) {
+                                        if (~(-2 + ((hd) this).field_a) == ~((hd) this).field_h) {
                                           break L8;
                                         } else {
                                           break L7;
@@ -275,7 +417,7 @@ final class hd {
 
     final static int a(int param0, int param1) {
         int var2 = -19 % ((param1 - 71) / 53);
-        return vg.a(param0, -1) >> 244867944;
+        return vg.a(param0, -1) >> 8;
     }
 
     final boolean c(int param0) {
@@ -321,7 +463,7 @@ final class hd {
         L0: {
           var6 = Pixelate.field_H ? 1 : 0;
           var2 = 0;
-          if ((oa.field_j ^ -1) == -2) {
+          if (oa.field_j == 1) {
             var2 = un.field_j.a(0);
             if (-1 == var2) {
               return;
@@ -334,7 +476,7 @@ final class hd {
             var4 = 0;
             var5 = 0;
             L1: while (true) {
-              if (-7 >= (var5 ^ -1)) {
+              if (var5 >= 6) {
                 break L0;
               } else {
                 var4 = var4 + ak.field_db[var5];
@@ -359,9 +501,9 @@ final class hd {
         }
         var3 = 0;
         L3: while (true) {
-          if ((var3 ^ -1) <= -5) {
+          if (var3 >= 4) {
             L4: {
-              if (-2 != (oa.field_j ^ -1)) {
+              if (oa.field_j != 1) {
                 ((hd) this).field_u = ((hd) this).field_u + 1;
                 var3 = ok.a(((hd) this).field_t, -116, 4);
                 var4 = 0;
@@ -412,7 +554,7 @@ final class hd {
             ((hd) this).field_k = false;
             return;
           } else {
-            if (0 != (((hd) this).field_r[var3] ^ -1)) {
+            if (((hd) this).field_r[var3] != -1) {
               ((hd) this).field_r[var3] = (byte) 0;
               var3++;
               continue L0;
@@ -425,10 +567,68 @@ final class hd {
     }
 
     final void a(int param0, byte[] param1) {
-        int var3 = 0;
-        int var4 = Pixelate.field_H ? 1 : 0;
-        for (var3 = param0; var3 < param1.length; var3++) {
-            ((hd) this).field_r[var3] = param1[var3];
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        var4 = Pixelate.field_H ? 1 : 0;
+        try {
+          L0: {
+            var3_int = param0;
+            L1: while (true) {
+              if (var3_int >= param1.length) {
+                break L0;
+              } else {
+                ((hd) this).field_r[var3_int] = param1[var3_int];
+                var3_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("hd.K(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
@@ -440,109 +640,165 @@ final class hd {
     }
 
     hd(dd param0) {
-        int var2 = 0;
-        L0: {
-          ((hd) this).field_x = false;
-          ((hd) this).field_m = false;
-          ((hd) this).field_k = false;
-          ((hd) this).field_s = new boolean[4];
-          ((hd) this).field_j = param0;
-          ((hd) this).field_i = ((hd) this).field_j.field_o + 2;
-          ((hd) this).field_a = 2 + ((hd) this).field_j.field_k;
-          ((hd) this).field_r = new byte[((hd) this).field_a * ((hd) this).field_i];
-          if (-1 == (((hd) this).field_j.field_p & 1 ^ -1)) {
-            break L0;
-          } else {
-            ((hd) this).field_r[0] = (byte)-1;
-            ((hd) this).field_r[((hd) this).field_i - 1] = (byte)-1;
-            ((hd) this).field_r[-((hd) this).field_i + ((hd) this).field_a * ((hd) this).field_i] = (byte)-1;
-            ((hd) this).field_r[((hd) this).field_a * ((hd) this).field_i - 1] = (byte)-1;
-            break L0;
-          }
-        }
-        L1: {
-          if ((2 & ((hd) this).field_j.field_p) == 0) {
-            break L1;
-          } else {
-            var2 = 0;
-            L2: while (true) {
-              if (((hd) this).field_a <= var2) {
+        RuntimeException var2 = null;
+        int var2_int = 0;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        ((hd) this).field_x = false;
+        ((hd) this).field_m = false;
+        ((hd) this).field_k = false;
+        try {
+          L0: {
+            L1: {
+              ((hd) this).field_s = new boolean[4];
+              ((hd) this).field_j = param0;
+              ((hd) this).field_i = ((hd) this).field_j.field_o + 2;
+              ((hd) this).field_a = 2 + ((hd) this).field_j.field_k;
+              ((hd) this).field_r = new byte[((hd) this).field_a * ((hd) this).field_i];
+              if ((((hd) this).field_j.field_p & 1) == 0) {
                 break L1;
               } else {
-                ((hd) this).field_r[((hd) this).field_i * var2] = (byte)-1;
-                var2++;
-                continue L2;
+                ((hd) this).field_r[0] = (byte) -1;
+                ((hd) this).field_r[((hd) this).field_i - 1] = (byte) -1;
+                ((hd) this).field_r[-((hd) this).field_i + ((hd) this).field_a * ((hd) this).field_i] = (byte) -1;
+                ((hd) this).field_r[((hd) this).field_a * ((hd) this).field_i - 1] = (byte) -1;
+                break L1;
               }
             }
-          }
-        }
-        L3: {
-          if (-1 == (((hd) this).field_j.field_p & 4 ^ -1)) {
-            break L3;
-          } else {
-            var2 = 0;
-            L4: while (true) {
-              if (((hd) this).field_i <= var2) {
-                break L3;
+            L2: {
+              if ((2 & ((hd) this).field_j.field_p) == 0) {
+                break L2;
               } else {
-                ((hd) this).field_r[var2] = (byte)-1;
-                var2++;
-                continue L4;
+                var2_int = 0;
+                L3: while (true) {
+                  if (((hd) this).field_a <= var2_int) {
+                    break L2;
+                  } else {
+                    ((hd) this).field_r[((hd) this).field_i * var2_int] = (byte) -1;
+                    var2_int++;
+                    continue L3;
+                  }
+                }
               }
             }
-          }
-        }
-        L5: {
-          if ((8 & ((hd) this).field_j.field_p) == 0) {
-            break L5;
-          } else {
-            var2 = 0;
-            L6: while (true) {
-              if (var2 >= ((hd) this).field_a) {
-                break L5;
+            L4: {
+              if ((((hd) this).field_j.field_p & 4) == 0) {
+                break L4;
               } else {
-                ((hd) this).field_r[var2 * ((hd) this).field_i + ((hd) this).field_i - 1] = (byte)-1;
-                var2++;
-                continue L6;
+                var2_int = 0;
+                L5: while (true) {
+                  if (((hd) this).field_i <= var2_int) {
+                    break L4;
+                  } else {
+                    ((hd) this).field_r[var2_int] = (byte) -1;
+                    var2_int++;
+                    continue L5;
+                  }
+                }
               }
             }
-          }
-        }
-        L7: {
-          if (-1 == (16 & ((hd) this).field_j.field_p ^ -1)) {
-            break L7;
-          } else {
-            var2 = 0;
-            L8: while (true) {
-              if (((hd) this).field_i <= var2) {
-                break L7;
+            L6: {
+              if ((8 & ((hd) this).field_j.field_p) == 0) {
+                break L6;
               } else {
-                ((hd) this).field_r[var2 + (((hd) this).field_a + -1) * ((hd) this).field_i] = (byte)-1;
-                var2++;
-                continue L8;
+                var2_int = 0;
+                L7: while (true) {
+                  if (var2_int >= ((hd) this).field_a) {
+                    break L6;
+                  } else {
+                    ((hd) this).field_r[var2_int * ((hd) this).field_i + ((hd) this).field_i - 1] = (byte) -1;
+                    var2_int++;
+                    continue L7;
+                  }
+                }
               }
             }
+            L8: {
+              if ((16 & ((hd) this).field_j.field_p) == 0) {
+                break L8;
+              } else {
+                var2_int = 0;
+                L9: while (true) {
+                  if (((hd) this).field_i <= var2_int) {
+                    break L8;
+                  } else {
+                    ((hd) this).field_r[var2_int + (((hd) this).field_a + -1) * ((hd) this).field_i] = (byte) -1;
+                    var2_int++;
+                    continue L9;
+                  }
+                }
+              }
+            }
+            ((hd) this).field_h = -1 + ((hd) this).field_a / 2;
+            ((hd) this).field_e = -1 + ((hd) this).field_i / 2;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L10: {
+            var2 = decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var2;
+            stackOut_21_1 = new StringBuilder().append("hd.<init>(");
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param0 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L10;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L10;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
         }
-        ((hd) this).field_h = -1 + ((hd) this).field_a / 2;
-        ((hd) this).field_e = -1 + ((hd) this).field_i / 2;
     }
 
     final void a(hh param0, int param1) {
+        byte[] var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = Pixelate.field_H ? 1 : 0;
-        byte[] var3 = param0.field_n;
-        for (var4 = 0; param0.field_a > var4; var4++) {
-            for (var5 = 0; var5 < param0.field_f; var5++) {
-                var6 = 1 + var5 - -((1 + var4) * ((hd) this).field_i);
-                ((hd) this).field_r[var6] = (byte)cm.a((int) ((hd) this).field_r[var6], -4);
-                ((hd) this).field_r[var6] = (byte)bq.a((int) ((hd) this).field_r[var6], (int) var3[param0.field_f * var4 + var5]);
-                ((hd) this).field_r[var6] = (byte)bq.a((int) ((hd) this).field_r[var6], 4);
+        try {
+            var3 = param0.field_n;
+            for (var4 = 0; param0.field_a > var4; var4++) {
+                for (var5 = 0; var5 < param0.field_f; var5++) {
+                    var6 = 1 + var5 - -((1 + var4) * ((hd) this).field_i);
+                    ((hd) this).field_r[var6] = (byte)cm.a((int) ((hd) this).field_r[var6], -4);
+                    ((hd) this).field_r[var6] = (byte)bq.a((int) ((hd) this).field_r[var6], (int) var3[param0.field_f * var4 + var5]);
+                    ((hd) this).field_r[var6] = (byte)bq.a((int) ((hd) this).field_r[var6], 4);
+                }
             }
+            var5 = -8 % ((param1 - -13) / 43);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "hd.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        var5 = -8 % ((param1 - -13) / 43);
     }
 
     static {

@@ -19,9 +19,6 @@ final class ok {
         field_d = null;
         field_h = null;
         field_e = null;
-        if (!param0) {
-            field_d = null;
-        }
     }
 
     static {

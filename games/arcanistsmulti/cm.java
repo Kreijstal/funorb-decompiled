@@ -14,11 +14,6 @@ final class cm extends pg {
 
     public static void a(int param0) {
         field_l = null;
-        if (param0 != 49) {
-            field_j = 83;
-            field_h = null;
-            return;
-        }
         field_h = null;
     }
 

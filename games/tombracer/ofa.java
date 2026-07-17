@@ -12,7 +12,7 @@ abstract class ofa extends gn {
     static String field_D;
 
     final void a(int param0, int param1, int param2, byte param3) {
-        if ((param0 ^ -1) >= -1) {
+        if (param0 <= 0) {
             ((ofa) this).c(-11560, param2, param1);
             return;
         }
@@ -34,9 +34,6 @@ abstract class ofa extends gn {
     }
 
     boolean a(byte param0) {
-        if (param0 >= -53) {
-            ofa.e(69);
-        }
         ((ofa) this).c(true);
         return super.a((byte) -92);
     }
@@ -85,7 +82,7 @@ abstract class ofa extends gn {
                       return;
                     } else {
                       var9 = var7 * (var6 + -var5) / var4 + var5;
-                      var9 = var9 | (var9 << 1854461320 | var9 << 75080656);
+                      var9 = var9 | (var9 << 8 | var9 << 16);
                       bea.c(param2, var8, 6, var9);
                       bea.c(param2 + ((ofa) this).field_m + -6, var8, 6, var9);
                       var8++;
@@ -98,7 +95,7 @@ abstract class ofa extends gn {
                 }
               } else {
                 var9 = var7 * (-var5 + var6) / var4 + var5;
-                var9 = var9 | (var9 << 2008726120 | var9 << -323450416);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 bea.c(param2, var8, 6, var9);
                 bea.c(param2 - -((ofa) this).field_m + -6, var8, 6, var9);
                 var7++;
@@ -113,9 +110,9 @@ abstract class ofa extends gn {
                   var9 = (var6 + -var5) * var7 / var4 + var5;
                   var10 = 0;
                   var11 = ((ofa) this).field_m;
-                  if ((var7 ^ -1) >= -21) {
+                  if (var7 <= 20) {
                     L4: while (true) {
-                      if ((var10 ^ -1) < -21) {
+                      if (var10 > 20) {
                         break L3;
                       } else {
                         var12 = (-var10 + 20) * (-var10 + 20) + (20 - var7) * (20 - var7);
@@ -124,7 +121,7 @@ abstract class ofa extends gn {
                             break L3;
                           } else {
                             var13 = var9 * (-var12 + 462) / 42;
-                            var13 = var13 | (var13 << -1260004696 | var13 << 1823227088);
+                            var13 = var13 | (var13 << 8 | var13 << 16);
                             bea.field_l[var10 + param2 + bea.field_g * var8] = var13;
                             var10++;
                             continue L4;
@@ -140,7 +137,7 @@ abstract class ofa extends gn {
                   }
                 }
                 L5: {
-                  if ((var7 ^ -1) >= -21) {
+                  if (var7 <= 20) {
                     var12 = var11;
                     var11 -= 21;
                     var13 = 0;
@@ -151,14 +148,14 @@ abstract class ofa extends gn {
                         } else {
                           var14 = var13 * var13 + (-var7 + 20) * (20 - var7);
                           if (462 >= var14) {
-                            if (-421 < (var14 ^ -1)) {
+                            if (var14 < 420) {
                               var12 = 1 + var11;
                               var13++;
                               var11++;
                               continue L6;
                             } else {
                               var15 = var9 * (-var14 + 462) / 42;
-                              var15 = var15 | (var15 << -122188656 | var15 << -1850743896);
+                              var15 = var15 | (var15 << 16 | var15 << 8);
                               bea.field_l[param2 + (var8 * bea.field_g + var11)] = var15;
                               var13++;
                               var11++;
@@ -176,7 +173,7 @@ abstract class ofa extends gn {
                     break L5;
                   }
                 }
-                var9 = var9 | (var9 << 1039656680 | var9 << -496378768);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 bea.c(var10 + param2, var8, -var10 + var11, var9);
                 var8++;
                 var7++;
@@ -200,15 +197,13 @@ abstract class ofa extends gn {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        if (param0 < 126) {
-            ((ofa) this).field_J = 90;
-        }
         if (0 >= ((ofa) this).field_F) {
         } else {
             var2 = ((ofa) this).field_K;
             var3 = ((ofa) this).field_E;
+            int fieldTemp$0 = ((ofa) this).field_G + 1;
             ((ofa) this).field_G = ((ofa) this).field_G + 1;
-            if (((ofa) this).field_F <= ((ofa) this).field_G + 1) {
+            if (((ofa) this).field_F <= fieldTemp$0) {
                 ((ofa) this).field_F = 0;
                 ((ofa) this).d(-69);
             } else {
@@ -223,19 +218,19 @@ abstract class ofa extends gn {
     }
 
     final static void a(int[] param0, long[] param1, int param2) {
-        if (param2 < 31) {
-            Object var4 = null;
-            ofa.a((int[]) null, (long[]) null, -57);
+        try {
+            if (param2 < 31) {
+                Object var4 = null;
+                ofa.a((int[]) null, (long[]) null, -57);
+            }
+            hk.a(-1 + param1.length, param1, 0, param0, -2646);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ofa.QA(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        hk.a(-1 + param1.length, param1, 0, param0, -2646);
     }
 
     final static boolean a(int param0, int param1, byte param2) {
-        if (param2 != -126) {
-            Object var4 = null;
-            ofa.a((int[]) null, (long[]) null, -16);
-        }
-        return (param0 & 384) != 0 ? true : false;
+        return (param0 & 384) != 0;
     }
 
     void c(boolean param0) {
@@ -264,9 +259,6 @@ abstract class ofa extends gn {
     }
 
     final static boolean d(boolean param0) {
-        if (!param0) {
-            return false;
-        }
         return cl.field_o;
     }
 

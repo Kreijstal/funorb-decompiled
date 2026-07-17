@@ -696,8 +696,8 @@ abstract class lh {
           var3 = var3 % 60;
           var5 = var4 / 60;
           var4 = var4 % 60;
-          if ((var5 ^ -1) >= -1) {
-            if ((var4 ^ -1) >= -1) {
+          if (var5 <= 0) {
+            if (var4 <= 0) {
               L0: {
                 var16 = mp.field_Q;
                 var21 = var16.toCharArray();
@@ -773,7 +773,7 @@ abstract class lh {
                   if (0 < var4) {
                     break L4;
                   } else {
-                    if ((var5 ^ -1) < -1) {
+                    if (var5 > 0) {
                       break L4;
                     } else {
                       break L3;
@@ -840,7 +840,7 @@ abstract class lh {
                 break L3;
               }
               L7: {
-                if (-1 >= (var3 ^ -1)) {
+                if (var3 >= 0) {
                   L8: {
                     var8 = var16.indexOf("ss");
                     int incrementValue$47 = var8;
@@ -851,7 +851,7 @@ abstract class lh {
                     stackIn_184_1 = stackOut_182_1;
                     stackIn_183_0 = stackOut_182_0;
                     stackIn_183_1 = stackOut_182_1;
-                    if ((var3 ^ -1) > -1) {
+                    if (var3 < 0) {
                       stackOut_184_0 = (char[]) (Object) stackIn_184_0;
                       stackOut_184_1 = stackIn_184_1;
                       stackOut_184_2 = 45;
@@ -879,7 +879,7 @@ abstract class lh {
                     stackIn_187_1 = stackOut_185_1;
                     stackIn_186_0 = stackOut_185_0;
                     stackIn_186_1 = stackOut_185_1;
-                    if ((var3 ^ -1) <= -1) {
+                    if (var3 >= 0) {
                       stackOut_187_0 = (char[]) (Object) stackIn_187_0;
                       stackOut_187_1 = stackIn_187_1;
                       stackOut_187_2 = 48 + var3 % 10;
@@ -904,7 +904,7 @@ abstract class lh {
                 }
               }
               L10: {
-                if (-1 >= (var2 ^ -1)) {
+                if (var2 >= 0) {
                   L11: {
                     var8 = var16.indexOf("ff");
                     int incrementValue$49 = var8;
@@ -943,7 +943,7 @@ abstract class lh {
                     stackIn_196_1 = stackOut_194_1;
                     stackIn_195_0 = stackOut_194_0;
                     stackIn_195_1 = stackOut_194_1;
-                    if ((var2 ^ -1) > -1) {
+                    if (var2 < 0) {
                       stackOut_196_0 = (char[]) (Object) stackIn_196_0;
                       stackOut_196_1 = stackIn_196_1;
                       stackOut_196_2 = 45;
@@ -1041,9 +1041,9 @@ abstract class lh {
                 }
               }
               if (0 >= var4) {
-                if ((var5 ^ -1) >= -1) {
+                if (var5 <= 0) {
                   L16: {
-                    if (-1 >= (var3 ^ -1)) {
+                    if (var3 >= 0) {
                       L17: {
                         var8 = var14.indexOf("ss");
                         int incrementValue$53 = var8;
@@ -1054,7 +1054,7 @@ abstract class lh {
                         stackIn_147_1 = stackOut_145_1;
                         stackIn_146_0 = stackOut_145_0;
                         stackIn_146_1 = stackOut_145_1;
-                        if ((var3 ^ -1) > -1) {
+                        if (var3 < 0) {
                           stackOut_147_0 = (char[]) (Object) stackIn_147_0;
                           stackOut_147_1 = stackIn_147_1;
                           stackOut_147_2 = 45;
@@ -1082,7 +1082,7 @@ abstract class lh {
                         stackIn_150_1 = stackOut_148_1;
                         stackIn_149_0 = stackOut_148_0;
                         stackIn_149_1 = stackOut_148_1;
-                        if ((var3 ^ -1) <= -1) {
+                        if (var3 >= 0) {
                           stackOut_150_0 = (char[]) (Object) stackIn_150_0;
                           stackOut_150_1 = stackIn_150_1;
                           stackOut_150_2 = 48 + var3 % 10;
@@ -1107,7 +1107,7 @@ abstract class lh {
                     }
                   }
                   L19: {
-                    if (-1 >= (var2 ^ -1)) {
+                    if (var2 >= 0) {
                       L20: {
                         var8 = var14.indexOf("ff");
                         int incrementValue$55 = var8;
@@ -1146,7 +1146,7 @@ abstract class lh {
                         stackIn_159_1 = stackOut_157_1;
                         stackIn_158_0 = stackOut_157_0;
                         stackIn_158_1 = stackOut_157_1;
-                        if ((var2 ^ -1) > -1) {
+                        if (var2 < 0) {
                           stackOut_159_0 = (char[]) (Object) stackIn_159_0;
                           stackOut_159_1 = stackIn_159_1;
                           stackOut_159_2 = 45;
@@ -1230,7 +1230,7 @@ abstract class lh {
                   }
                   L24: {
                     stackIn_123_0[stackIn_123_1] = (char)stackIn_123_2;
-                    if (-1 >= (var3 ^ -1)) {
+                    if (var3 >= 0) {
                       L25: {
                         var8 = var14.indexOf("ss");
                         int incrementValue$59 = var8;
@@ -1241,7 +1241,7 @@ abstract class lh {
                         stackIn_127_1 = stackOut_125_1;
                         stackIn_126_0 = stackOut_125_0;
                         stackIn_126_1 = stackOut_125_1;
-                        if ((var3 ^ -1) > -1) {
+                        if (var3 < 0) {
                           stackOut_127_0 = (char[]) (Object) stackIn_127_0;
                           stackOut_127_1 = stackIn_127_1;
                           stackOut_127_2 = 45;
@@ -1269,7 +1269,7 @@ abstract class lh {
                         stackIn_130_1 = stackOut_128_1;
                         stackIn_129_0 = stackOut_128_0;
                         stackIn_129_1 = stackOut_128_1;
-                        if ((var3 ^ -1) <= -1) {
+                        if (var3 >= 0) {
                           stackOut_130_0 = (char[]) (Object) stackIn_130_0;
                           stackOut_130_1 = stackIn_130_1;
                           stackOut_130_2 = 48 + var3 % 10;
@@ -1294,7 +1294,7 @@ abstract class lh {
                     }
                   }
                   L27: {
-                    if (-1 >= (var2 ^ -1)) {
+                    if (var2 >= 0) {
                       L28: {
                         var8 = var14.indexOf("ff");
                         int incrementValue$61 = var8;
@@ -1333,7 +1333,7 @@ abstract class lh {
                         stackIn_139_1 = stackOut_137_1;
                         stackIn_138_0 = stackOut_137_0;
                         stackIn_138_1 = stackOut_137_1;
-                        if ((var2 ^ -1) > -1) {
+                        if (var2 < 0) {
                           stackOut_139_0 = (char[]) (Object) stackIn_139_0;
                           stackOut_139_1 = stackIn_139_1;
                           stackOut_139_2 = 45;
@@ -1418,7 +1418,7 @@ abstract class lh {
                 }
                 L32: {
                   stackIn_97_0[stackIn_97_1] = (char)stackIn_97_2;
-                  if (-1 >= (var3 ^ -1)) {
+                  if (var3 >= 0) {
                     L33: {
                       var8 = var14.indexOf("ss");
                       int incrementValue$65 = var8;
@@ -1429,7 +1429,7 @@ abstract class lh {
                       stackIn_101_1 = stackOut_99_1;
                       stackIn_100_0 = stackOut_99_0;
                       stackIn_100_1 = stackOut_99_1;
-                      if ((var3 ^ -1) > -1) {
+                      if (var3 < 0) {
                         stackOut_101_0 = (char[]) (Object) stackIn_101_0;
                         stackOut_101_1 = stackIn_101_1;
                         stackOut_101_2 = 45;
@@ -1457,7 +1457,7 @@ abstract class lh {
                       stackIn_104_1 = stackOut_102_1;
                       stackIn_103_0 = stackOut_102_0;
                       stackIn_103_1 = stackOut_102_1;
-                      if ((var3 ^ -1) <= -1) {
+                      if (var3 >= 0) {
                         stackOut_104_0 = (char[]) (Object) stackIn_104_0;
                         stackOut_104_1 = stackIn_104_1;
                         stackOut_104_2 = 48 + var3 % 10;
@@ -1482,7 +1482,7 @@ abstract class lh {
                   }
                 }
                 L35: {
-                  if (-1 >= (var2 ^ -1)) {
+                  if (var2 >= 0) {
                     L36: {
                       var8 = var14.indexOf("ff");
                       int incrementValue$67 = var8;
@@ -1521,7 +1521,7 @@ abstract class lh {
                       stackIn_113_1 = stackOut_111_1;
                       stackIn_112_0 = stackOut_111_0;
                       stackIn_112_1 = stackOut_111_1;
-                      if ((var2 ^ -1) > -1) {
+                      if (var2 < 0) {
                         stackOut_113_0 = (char[]) (Object) stackIn_113_0;
                         stackOut_113_1 = stackIn_113_1;
                         stackOut_113_2 = 45;
@@ -1624,7 +1624,7 @@ abstract class lh {
                 if (0 < var4) {
                   break L42;
                 } else {
-                  if ((var5 ^ -1) < -1) {
+                  if (var5 > 0) {
                     break L42;
                   } else {
                     break L41;
@@ -1691,7 +1691,7 @@ abstract class lh {
               break L41;
             }
             L45: {
-              if (-1 >= (var3 ^ -1)) {
+              if (var3 >= 0) {
                 L46: {
                   var8 = var12.indexOf("ss");
                   int incrementValue$73 = var8;
@@ -1702,7 +1702,7 @@ abstract class lh {
                   stackIn_66_1 = stackOut_64_1;
                   stackIn_65_0 = stackOut_64_0;
                   stackIn_65_1 = stackOut_64_1;
-                  if ((var3 ^ -1) > -1) {
+                  if (var3 < 0) {
                     stackOut_66_0 = (char[]) (Object) stackIn_66_0;
                     stackOut_66_1 = stackIn_66_1;
                     stackOut_66_2 = 45;
@@ -1730,7 +1730,7 @@ abstract class lh {
                   stackIn_69_1 = stackOut_67_1;
                   stackIn_68_0 = stackOut_67_0;
                   stackIn_68_1 = stackOut_67_1;
-                  if ((var3 ^ -1) <= -1) {
+                  if (var3 >= 0) {
                     stackOut_69_0 = (char[]) (Object) stackIn_69_0;
                     stackOut_69_1 = stackIn_69_1;
                     stackOut_69_2 = 48 + var3 % 10;
@@ -1755,7 +1755,7 @@ abstract class lh {
               }
             }
             L48: {
-              if (-1 >= (var2 ^ -1)) {
+              if (var2 >= 0) {
                 L49: {
                   var8 = var12.indexOf("ff");
                   int incrementValue$75 = var8;
@@ -1794,7 +1794,7 @@ abstract class lh {
                   stackIn_78_1 = stackOut_76_1;
                   stackIn_77_0 = stackOut_76_0;
                   stackIn_77_1 = stackOut_76_1;
-                  if ((var2 ^ -1) > -1) {
+                  if (var2 < 0) {
                     stackOut_78_0 = (char[]) (Object) stackIn_78_0;
                     stackOut_78_1 = stackIn_78_1;
                     stackOut_78_2 = 45;
@@ -1826,8 +1826,8 @@ abstract class lh {
             var3 = var3 % 60;
             var5 = var4 / 60;
             var4 = var4 % 60;
-            if ((var5 ^ -1) >= -1) {
-              if ((var4 ^ -1) >= -1) {
+            if (var5 <= 0) {
+              if (var4 <= 0) {
                 var6 = mp.field_Q;
                 break L51;
               } else {
@@ -1913,7 +1913,7 @@ abstract class lh {
               if (0 < var4) {
                 break L56;
               } else {
-                if ((var5 ^ -1) < -1) {
+                if (var5 > 0) {
                   break L56;
                 } else {
                   break L55;
@@ -1980,7 +1980,7 @@ abstract class lh {
             break L55;
           }
           L59: {
-            if (-1 >= (var3 ^ -1)) {
+            if (var3 >= 0) {
               L60: {
                 var8 = var6.indexOf("ss");
                 int incrementValue$82 = var8;
@@ -1991,7 +1991,7 @@ abstract class lh {
                 stackIn_28_1 = stackOut_26_1;
                 stackIn_27_0 = stackOut_26_0;
                 stackIn_27_1 = stackOut_26_1;
-                if ((var3 ^ -1) > -1) {
+                if (var3 < 0) {
                   stackOut_28_0 = (char[]) (Object) stackIn_28_0;
                   stackOut_28_1 = stackIn_28_1;
                   stackOut_28_2 = 45;
@@ -2019,7 +2019,7 @@ abstract class lh {
                 stackIn_31_1 = stackOut_29_1;
                 stackIn_30_0 = stackOut_29_0;
                 stackIn_30_1 = stackOut_29_1;
-                if ((var3 ^ -1) <= -1) {
+                if (var3 >= 0) {
                   stackOut_31_0 = (char[]) (Object) stackIn_31_0;
                   stackOut_31_1 = stackIn_31_1;
                   stackOut_31_2 = 48 + var3 % 10;
@@ -2044,7 +2044,7 @@ abstract class lh {
             }
           }
           L62: {
-            if (-1 >= (var2 ^ -1)) {
+            if (var2 >= 0) {
               L63: {
                 var8 = var6.indexOf("ff");
                 int incrementValue$84 = var8;
@@ -2083,7 +2083,7 @@ abstract class lh {
                 stackIn_40_1 = stackOut_38_1;
                 stackIn_39_0 = stackOut_38_0;
                 stackIn_39_1 = stackOut_38_1;
-                if ((var2 ^ -1) > -1) {
+                if (var2 < 0) {
                   stackOut_40_0 = (char[]) (Object) stackIn_40_0;
                   stackOut_40_1 = stackIn_40_1;
                   stackOut_40_2 = 45;
@@ -2114,9 +2114,9 @@ abstract class lh {
     final static int a(int param0, byte param1, long param2) {
         if (param1 > -60) {
           String discarded$2 = lh.b(-118, (byte) 57);
-          return (int)((param2 << -1666128560) / (long)param0);
+          return (int)((param2 << 16) / (long)param0);
         } else {
-          return (int)((param2 << -1666128560) / (long)param0);
+          return (int)((param2 << 16) / (long)param0);
         }
     }
 

@@ -13,16 +13,21 @@ final class qf implements Runnable {
     static String field_f;
 
     final static void a(byte param0) {
+        fk var3 = null;
         int var2 = stellarshard.field_B;
-        fk var3 = (fk) (Object) tf.field_a.b(-92);
-        while (var3 != null) {
-            hf.a(var3, 58, 5);
-            var3 = (fk) (Object) tf.field_a.b((byte) 109);
+        try {
+            var3 = (fk) (Object) tf.field_a.b(-92);
+            while (var3 != null) {
+                hf.a(var3, 58, 5);
+                var3 = (fk) (Object) tf.field_a.b((byte) 109);
+            }
+            if (param0 != -125) {
+                qf.a((byte) 102);
+            }
+            gg.field_f = ee.a(5, 0, (byte) -124, 1);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "qf.B(" + param0 + 41);
         }
-        if (param0 != -125) {
-            qf.a((byte) 102);
-        }
-        gg.field_f = ee.a(5, 0, (byte) -124, 1);
     }
 
     public final void run() {
@@ -32,7 +37,7 @@ final class qf implements Runnable {
         ((qf) this).field_c = true;
         try {
             while (!((qf) this).field_b) {
-                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
+                for (var1_int = 0; var1_int < 2; var1_int++) {
                     var2 = ((qf) this).field_e[var1_int];
                     if (var2 == null) {
                     } else {
@@ -58,9 +63,6 @@ final class qf implements Runnable {
     }
 
     public static void a(int param0) {
-        if (param0 != -15967) {
-            return;
-        }
         field_i = null;
         field_g = null;
         field_f = null;

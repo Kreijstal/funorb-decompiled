@@ -15,15 +15,19 @@ final class ao extends km {
 
     ao(long param0, km param1, km param2, qm param3, km param4, String param5, String param6) {
         super(param0, param1);
-        ((ao) this).field_Lb = new km(0L, (km) null);
-        ((ao) this).field_Ib = new um(0L, ((ao) this).field_Lb, param2, param3);
-        ((ao) this).field_Fb = new km(0L, param4);
-        ((ao) this).field_Mb = new km(0L, param4);
-        ((ao) this).field_Fb.field_V = param5;
-        ((ao) this).field_Mb.field_V = param6;
-        ((ao) this).a(0, (km) (Object) ((ao) this).field_Ib);
-        ((ao) this).a(0, ((ao) this).field_Fb);
-        ((ao) this).a(0, ((ao) this).field_Mb);
+        try {
+            ((ao) this).field_Lb = new km(0L, (km) null);
+            ((ao) this).field_Ib = new um(0L, ((ao) this).field_Lb, param2, param3);
+            ((ao) this).field_Fb = new km(0L, param4);
+            ((ao) this).field_Mb = new km(0L, param4);
+            ((ao) this).field_Fb.field_V = param5;
+            ((ao) this).field_Mb.field_V = param6;
+            ((ao) this).a(0, (km) (Object) ((ao) this).field_Ib);
+            ((ao) this).a(0, ((ao) this).field_Fb);
+            ((ao) this).a(0, ((ao) this).field_Mb);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "ao.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static km d(boolean param0) {
@@ -63,7 +67,7 @@ final class ao extends km {
     public static void g(int param0) {
         field_Jb = null;
         field_Nb = null;
-        int var1 = 13 / ((-63 - param0) / 49);
+        int var1 = 13;
         field_Eb = null;
         field_Kb = null;
     }

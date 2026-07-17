@@ -28,16 +28,21 @@ final class kn extends ie {
     }
 
     final void b(int param0, ng param1) {
-        if (!(param1 instanceof ud)) {
-            throw new IllegalArgumentException();
+        ud var3 = null;
+        try {
+            if (!(param1 instanceof ud)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (ud) (Object) param1;
+            if (param0 != -6183) {
+                field_L = true;
+            }
+            ((kn) this).field_N.b(param0 ^ -1392505192, (fa) (Object) var3);
+            var3.field_N = true;
+            boolean discarded$0 = var3.a((ng) this, 27);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "kn.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ud var3 = (ud) (Object) param1;
-        if (param0 != -6183) {
-            field_L = true;
-        }
-        ((kn) this).field_N.b(param0 ^ -1392505192, (fa) (Object) var3);
-        var3.field_N = true;
-        boolean discarded$0 = var3.a((ng) this, 27);
     }
 
     final ng l(int param0) {

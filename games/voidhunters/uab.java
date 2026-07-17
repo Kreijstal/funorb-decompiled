@@ -23,17 +23,16 @@ final class uab {
     }
 
     final static void a(byte param0, java.awt.Component param1) {
-        param1.removeMouseListener((java.awt.event.MouseListener) (Object) wj.field_q);
-        param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wj.field_q);
-        if (param0 != 1) {
-          boolean discarded$2 = uab.a((byte) 73);
-          param1.removeFocusListener((java.awt.event.FocusListener) (Object) wj.field_q);
-          am.field_q = 0;
-          return;
-        } else {
-          param1.removeFocusListener((java.awt.event.FocusListener) (Object) wj.field_q);
-          am.field_q = 0;
-          return;
+        try {
+            param1.removeMouseListener((java.awt.event.MouseListener) (Object) wj.field_q);
+            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wj.field_q);
+            if (param0 != 1) {
+                boolean discarded$0 = uab.a((byte) 73);
+            }
+            param1.removeFocusListener((java.awt.event.FocusListener) (Object) wj.field_q);
+            am.field_q = 0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "uab.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

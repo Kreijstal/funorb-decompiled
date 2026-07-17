@@ -38,15 +38,21 @@ final class kc extends wf {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
             try {
-              if (param0 == -14226) {
-                Object discarded$1 = kj.a(param0 + 36328, "resizing", new Object[1], ha.b(param0 + 14293));
-              } else {
-                return;
+              L0: {
+                if (param0 == -14226) {
+                  Object discarded$1 = kj.a(param0 + 36328, "resizing", new Object[1], ha.b(param0 + 14293));
+                  break L0;
+                } else {
+                  return;
+                }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2 = decompiledCaughtException;
+                break L1;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -55,19 +61,16 @@ final class kc extends wf {
     }
 
     final static void a(byte param0, java.awt.Component param1) {
-        if (param0 != 104) {
-          field_D = false;
-          param1.removeMouseListener((java.awt.event.MouseListener) (Object) hi.field_e);
-          param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) hi.field_e);
-          param1.removeFocusListener((java.awt.event.FocusListener) (Object) hi.field_e);
-          cg.field_k = 0;
-          return;
-        } else {
-          param1.removeMouseListener((java.awt.event.MouseListener) (Object) hi.field_e);
-          param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) hi.field_e);
-          param1.removeFocusListener((java.awt.event.FocusListener) (Object) hi.field_e);
-          cg.field_k = 0;
-          return;
+        try {
+            if (param0 != 104) {
+                field_D = false;
+            }
+            param1.removeMouseListener((java.awt.event.MouseListener) (Object) hi.field_e);
+            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) hi.field_e);
+            param1.removeFocusListener((java.awt.event.FocusListener) (Object) hi.field_e);
+            cg.field_k = 0;
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "kc.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

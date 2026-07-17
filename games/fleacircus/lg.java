@@ -54,59 +54,110 @@ final class lg {
     }
 
     final static void a(sg param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         sg var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var4 = fleas.field_A ? 1 : 0;
-        if (null == param0.field_l) {
-          return;
-        } else {
+        try {
           L0: {
-            L1: {
-              if (param0.field_b != param1) {
-                break L1;
-              } else {
-                if (0 == param0.field_e) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            var2 = 0;
-            L2: while (true) {
-              if (var2 >= qb.field_a) {
-                break L0;
-              } else {
-                var3 = vg.field_H[var2];
-                if (2 == var3.field_j) {
-                  if (var3.field_b == param0.field_b) {
-                    if (param0.field_e == var3.field_e) {
-                      return;
-                    } else {
-                      var2++;
-                      continue L2;
-                    }
-                  } else {
-                    var2++;
-                    continue L2;
-                  }
-                } else {
-                  var2++;
-                  continue L2;
-                }
-              }
-            }
-          }
-          L3: {
-            if (null == param0.field_c) {
-              break L3;
+            if (null == param0.field_l) {
+              return;
             } else {
-              break L3;
+              L1: {
+                L2: {
+                  if (param0.field_b != param1) {
+                    break L2;
+                  } else {
+                    if (0 == param0.field_e) {
+                      break L1;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                var2_int = 0;
+                L3: while (true) {
+                  if (var2_int >= qb.field_a) {
+                    break L1;
+                  } else {
+                    L4: {
+                      var3 = vg.field_H[var2_int];
+                      if (2 != var3.field_j) {
+                        break L4;
+                      } else {
+                        if (var3.field_b != param0.field_b) {
+                          break L4;
+                        } else {
+                          if (param0.field_e != var3.field_e) {
+                            break L4;
+                          } else {
+                            return;
+                          }
+                        }
+                      }
+                    }
+                    var2_int++;
+                    continue L3;
+                  }
+                }
+              }
+              L5: {
+                if (null == param0.field_c) {
+                  break L5;
+                } else {
+                  break L5;
+                }
+              }
+              ef.a(param0, (byte) -101);
+              break L0;
             }
           }
-          ef.a(param0, (byte) -101);
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var2 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var2;
+            stackOut_18_1 = new StringBuilder().append("lg.C(");
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param0 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L6;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L6;
+            }
+          }
+          throw pf.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
         }
     }
 

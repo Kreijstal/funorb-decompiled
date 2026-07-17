@@ -38,7 +38,7 @@ abstract class k extends eh {
         field_T = null;
         field_V = null;
         field_ab = null;
-        int var1 = -88 / ((80 - param0) / 36);
+        int var1 = -44;
     }
 
     final static void a(boolean param0, int param1) {
@@ -107,7 +107,7 @@ abstract class k extends eh {
                     return;
                   } else {
                     var9 = var5 + (var6 + -var5) * var7 / var4;
-                    var9 = var9 | (var9 << 964523560 | var9 << 1138657104);
+                    var9 = var9 | (var9 << 8 | var9 << 16);
                     wb.a(param2, var8, 6, var9);
                     wb.a(((k) this).field_y + (param2 - 6), var8, 6, var9);
                     var7++;
@@ -117,7 +117,7 @@ abstract class k extends eh {
                 }
               } else {
                 var9 = var5 - -((-var5 + var6) * var7 / var4);
-                var9 = var9 | (var9 << -2130049752 | var9 << -1199007632);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 wb.a(param2, var8, 6, var9);
                 wb.a(-6 + (param2 - -((k) this).field_y), var8, 6, var9);
                 var8++;
@@ -136,14 +136,14 @@ abstract class k extends eh {
                     break L4;
                   } else {
                     L5: while (true) {
-                      if ((var10 ^ -1) < -21) {
+                      if (var10 > 20) {
                         break L4;
                       } else {
                         var12 = (-var10 + 20) * (20 - var10) + (20 + -var7) * (20 - var7);
                         if (var12 <= 462) {
-                          if ((var12 ^ -1) <= -421) {
+                          if (var12 >= 420) {
                             var13 = var9 * (462 - var12) / 42;
-                            var13 = var13 | (var13 << 2099047536 | var13 << -1988578552);
+                            var13 = var13 | (var13 << 16 | var13 << 8);
                             wb.field_d[param2 + (var8 * wb.field_h + var10)] = var13;
                             var10++;
                             continue L5;
@@ -159,7 +159,7 @@ abstract class k extends eh {
                   }
                 }
                 L6: {
-                  if ((var7 ^ -1) < -21) {
+                  if (var7 > 20) {
                     break L6;
                   } else {
                     var12 = var11;
@@ -176,7 +176,7 @@ abstract class k extends eh {
                           } else {
                             if (var14 >= 420) {
                               var15 = (-var14 + 462) * var9 / 42;
-                              var15 = var15 | (var15 << 1412984464 | var15 << -986899224);
+                              var15 = var15 | (var15 << 16 | var15 << 8);
                               wb.field_d[var11 + var8 * wb.field_h + param2] = var15;
                               var11++;
                               var13++;
@@ -195,7 +195,7 @@ abstract class k extends eh {
                     }
                   }
                 }
-                var9 = var9 | (var9 << -1395942808 | var9 << -2131303632);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 wb.a(var10 - -param2, var8, var11 - var10, var9);
                 var7++;
                 var8++;
@@ -216,14 +216,11 @@ abstract class k extends eh {
 
     boolean a(int param0) {
         ((k) this).i((byte) -109);
-        if (param0 <= 46) {
-            field_ab = null;
-        }
         return super.a(116);
     }
 
     void i(byte param0) {
-        if ((((k) this).field_Z ^ -1) >= -1) {
+        if (((k) this).field_Z <= 0) {
             return;
         }
         if (param0 > -84) {
@@ -239,10 +236,7 @@ abstract class k extends eh {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        if (param0 > -4) {
-            ((k) this).field_W = 63;
-        }
-        if ((((k) this).field_Z ^ -1) >= -1) {
+        if (((k) this).field_Z <= 0) {
         } else {
             var2 = ((k) this).field_X;
             var3 = ((k) this).field_U;

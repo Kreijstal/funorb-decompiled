@@ -19,12 +19,16 @@ final class sga extends sna {
 
     sga(long param0, sna param1, sna param2, cw param3) {
         super(param0, (sna) null);
-        ((sga) this).field_wb = new sna(0L, param2);
-        ((sga) this).field_xb = new cw(0L, param3);
-        ((sga) this).a(-1, ((sga) this).field_wb);
-        ((sga) this).a(-1, (sna) (Object) ((sga) this).field_xb);
-        ((sga) this).field_vb = param1;
-        ((sga) this).field_wb.a(-1, param1);
+        try {
+            ((sga) this).field_wb = new sna(0L, param2);
+            ((sga) this).field_xb = new cw(0L, param3);
+            ((sga) this).a(-1, ((sga) this).field_wb);
+            ((sga) this).a(-1, (sna) (Object) ((sga) this).field_xb);
+            ((sga) this).field_vb = param1;
+            ((sga) this).field_wb.a(-1, param1);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "sga.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void a(byte param0, int param1, int param2, boolean param3, int param4) {

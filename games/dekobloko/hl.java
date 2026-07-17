@@ -30,14 +30,14 @@ final class hl {
               if (2 != ((hl) this).field_m) {
                 break L1;
               } else {
-                if (-1 > (((hl) this).field_l ^ -1)) {
+                if (((hl) this).field_l > 0) {
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            if ((uc.field_g ^ -1L) != (((hl) this).field_r ^ -1L)) {
+            if (~uc.field_g != ~((hl) this).field_r) {
               L2: {
                 if (2 != jj.field_b) {
                   break L2;
@@ -64,21 +64,80 @@ final class hl {
     }
 
     final static boolean a(byte param0) {
-        if (param0 != -53) {
-            return false;
-        }
         return sg.a(cf.field_c, 113, fm.field_d);
     }
 
     final static void a(java.awt.Canvas param0, byte param1) {
-        db.a((java.awt.Component) (Object) param0, false);
-        if (param1 >= -29) {
-            Object var3 = null;
-            hl.a((java.awt.Canvas) null, (byte) -79);
-        }
-        al.a(-2204, (java.awt.Component) (Object) param0);
-        if (!(uc.field_e == null)) {
-            uc.field_e.a((java.awt.Component) (Object) param0, -63);
+        RuntimeException var2 = null;
+        Object var3 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              db.a((java.awt.Component) (Object) param0, false);
+              if (param1 < -29) {
+                break L1;
+              } else {
+                var3 = null;
+                hl.a((java.awt.Canvas) null, (byte) -79);
+                break L1;
+              }
+            }
+            L2: {
+              al.a(-2204, (java.awt.Component) (Object) param0);
+              if (uc.field_e != null) {
+                uc.field_e.a((java.awt.Component) (Object) param0, -63);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_1 = new StringBuilder().append("hl.C(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
         }
     }
 
@@ -112,18 +171,22 @@ final class hl {
     }
 
     hl(int param0, String param1, int param2, String param3, String param4) {
-        ((hl) this).field_i = 0;
-        ((hl) this).field_n = 0;
-        ((hl) this).field_m = param0;
-        ((hl) this).field_g = param3;
-        ((hl) this).field_l = 0;
-        ((hl) this).field_k = param2;
-        ((hl) this).field_q = null;
-        ((hl) this).field_r = 0L;
-        ((hl) this).field_o = param1;
-        ((hl) this).field_h = param4;
-        ((hl) this).field_j = true;
-        ((hl) this).field_p = param1;
+        try {
+            ((hl) this).field_i = 0;
+            ((hl) this).field_n = 0;
+            ((hl) this).field_m = param0;
+            ((hl) this).field_g = param3;
+            ((hl) this).field_l = 0;
+            ((hl) this).field_k = param2;
+            ((hl) this).field_q = null;
+            ((hl) this).field_r = 0L;
+            ((hl) this).field_o = param1;
+            ((hl) this).field_h = param4;
+            ((hl) this).field_j = true;
+            ((hl) this).field_p = param1;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "hl.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

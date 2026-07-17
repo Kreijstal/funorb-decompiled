@@ -19,9 +19,6 @@ final class gg {
         field_i = null;
         field_j = null;
         field_b = null;
-        if (param0 != 28) {
-            field_a = null;
-        }
         field_d = null;
         field_g = null;
         field_f = null;
@@ -45,7 +42,7 @@ final class gg {
         int[] var24 = null;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         var1 = new qb[h.field_J];
-        var2 = param0;
+        var2 = 0;
         L0: while (true) {
           if (var2 >= h.field_J) {
             dk.a(-18229);
@@ -67,7 +64,7 @@ final class gg {
                   var2++;
                   continue L0;
                 } else {
-                  var6[var7] = fj.b(ph.field_c[dg.a(255, (int) var21[var7])], dg.a(-16777216, var23[var7] << -86934024));
+                  var6[var7] = fj.b(ph.field_c[dg.a(255, (int) var21[var7])], dg.a(-16777216, var23[var7] << 24));
                   var7++;
                   continue L1;
                 }

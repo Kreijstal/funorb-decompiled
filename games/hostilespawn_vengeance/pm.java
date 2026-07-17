@@ -95,16 +95,16 @@ final class pm {
         if (0L >= param0) {
             return null;
         }
-        if (-6582952005840035282L >= (param0 ^ -1L)) {
+        if (param0 >= 6582952005840035281L) {
             return null;
         }
-        if ((param0 % 37L ^ -1L) == -1L) {
+        if (param0 % 37L == 0L) {
             return null;
         }
-        int var4 = -74 / ((41 - param1) / 33);
+        int var4 = 74;
         int var3 = 0;
         long var5 = param0;
-        while ((var5 ^ -1L) != -1L) {
+        while (var5 != 0L) {
             var3++;
             var5 = var5 / 37L;
         }
@@ -127,19 +127,34 @@ final class pm {
 
     final int a(int param0, byte param1) {
         int var3 = 0;
-        int var5 = HostileSpawn.field_I ? 1 : 0;
-        if (null != ((pm) this).field_b) {
-            // ifeq L24
-        } else {
-            return 0;
-        }
-        for (var3 = 1; var3 < ((pm) this).field_b.length; var3++) {
-            if (!(((pm) this).field_b[var3] + ((pm) this).field_b[var3 - 1] >> 1023397505 <= param0)) {
-                return var3 + -1;
+        int var4 = 0;
+        int var5 = 0;
+        L0: {
+          var5 = HostileSpawn.field_I ? 1 : 0;
+          if (null == ((pm) this).field_b) {
+            break L0;
+          } else {
+            if (((pm) this).field_b.length == 0) {
+              break L0;
+            } else {
+              var3 = 1;
+              L1: while (true) {
+                if (var3 >= ((pm) this).field_b.length) {
+                  var4 = -108 / ((-45 - param1) / 61);
+                  return ((pm) this).field_b.length + -1;
+                } else {
+                  if (((pm) this).field_b[var3] + ((pm) this).field_b[var3 - 1] >> 1 > param0) {
+                    return var3 + -1;
+                  } else {
+                    var3++;
+                    continue L1;
+                  }
+                }
+              }
             }
+          }
         }
-        int var4 = -108 / ((-45 - param1) / 61);
-        return ((pm) this).field_b.length + -1;
+        return 0;
     }
 
     pm(int param0, int param1, int param2) {

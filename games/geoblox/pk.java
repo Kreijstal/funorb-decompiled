@@ -13,17 +13,77 @@ final class pk extends qc {
     static int field_m;
 
     final void c(int param0, int param1, byte[] param2, int param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
-        int var7 = Geoblox.field_C;
-        int var5 = 31 % ((param0 - -36) / 37);
-        for (var6 = 0; var6 < param3; var6++) {
-            ((pk) this).field_f = ((pk) this).field_f + 1;
-            param2[var6 + param1] = (byte)(((pk) this).field_j[((pk) this).field_f] + -((pk) this).field_p.b(0));
+        int var7 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        var7 = Geoblox.field_C;
+        try {
+          L0: {
+            var5_int = 31 % ((param0 - -36) / 37);
+            var6 = 0;
+            L1: while (true) {
+              if (var6 >= param3) {
+                break L0;
+              } else {
+                int fieldTemp$5 = ((pk) this).field_f;
+                ((pk) this).field_f = ((pk) this).field_f + 1;
+                param2[var6 + param1] = (byte)(((pk) this).field_j[fieldTemp$5] + -((pk) this).field_p.b(0));
+                var6++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var5;
+            stackOut_5_1 = new StringBuilder().append("pk.FB(").append(param0).append(44).append(param1).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param2 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 41);
         }
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = param2 >>> 2037282111;
+        int var3 = param2 >>> 31;
         if (param1 != -6) {
             pk.k((byte) 101);
         }
@@ -38,9 +98,65 @@ final class pk extends qc {
     }
 
     final void a(int[] param0, boolean param1) {
-        ((pk) this).field_p = new ne(param0);
-        if (param1) {
-            ((pk) this).i(-68);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((pk) this).field_p = new ne(param0);
+              if (!param1) {
+                break L1;
+              } else {
+                ((pk) this).i(-68);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("pk.JB(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
         }
     }
 
@@ -53,63 +169,51 @@ final class pk extends qc {
     }
 
     final static void h(int param0, int param1) {
-        int var2 = 0;
-        gd var3 = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var4 = 0;
-        var2 = 0;
-        if (param0 < -117) {
-          L0: while (true) {
-            if (33 <= var2) {
-              var4 = 0;
-              var2 = var4;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            var2_int = 0;
+            if (param0 < -117) {
               L1: while (true) {
-                if (var4 >= 33) {
-                  p.field_i = null;
-                  return;
-                } else {
-                  if (!vg.field_j[var4]) {
-                    return;
-                  } else {
-                    var4++;
-                    continue L1;
+                if (33 <= var2_int) {
+                  var4 = 0;
+                  var2_int = var4;
+                  L2: while (true) {
+                    if (var4 >= 33) {
+                      p.field_i = null;
+                      break L0;
+                    } else {
+                      if (!vg.field_j[var4]) {
+                        return;
+                      } else {
+                        var4++;
+                        continue L2;
+                      }
+                    }
                   }
+                } else {
+                  L3: {
+                    if (param1 != ck.field_c[var2_int]) {
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  var2_int++;
+                  continue L1;
                 }
               }
             } else {
-              if (param1 == ck.field_c[var2]) {
-                if (!vg.field_j[var2]) {
-                  L2: {
-                    L3: {
-                      if (10 > var2) {
-                        break L3;
-                      } else {
-                        if (26 >= var2) {
-                          var3 = te.field_c.c(-1879044097, w.field_b[var2]);
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                    var3 = te.field_c.b(1, w.field_b[var2]);
-                    break L2;
-                  }
-                  fl.field_c[var2] = var3.a(p.field_i);
-                  vg.field_j[var2] = true;
-                  var2++;
-                  continue L0;
-                } else {
-                  var2++;
-                  continue L0;
-                }
-              } else {
-                var2++;
-                continue L0;
-              }
+              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var2, "pk.IB(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -126,7 +230,7 @@ final class pk extends qc {
 
     final int e(byte param0, int param1) {
         int var6 = Geoblox.field_C;
-        int var3 = ((pk) this).field_s >> 2101762179;
+        int var3 = ((pk) this).field_s >> 3;
         if (param0 != -17) {
             return -69;
         }
@@ -134,8 +238,9 @@ final class pk extends qc {
         int var5 = 0;
         ((pk) this).field_s = ((pk) this).field_s + param1;
         while (var4 < param1) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((((pk) this).field_j[var3] & kj.field_G[var4]) << -var4 + param1);
+            var5 = var5 + ((((pk) this).field_j[incrementValue$0] & kj.field_G[var4]) << -var4 + param1);
             param1 = param1 - var4;
             var4 = 8;
         }
@@ -148,8 +253,9 @@ final class pk extends qc {
     }
 
     final void a(int param0, byte param1) {
+        int fieldTemp$0 = ((pk) this).field_f;
         ((pk) this).field_f = ((pk) this).field_f + 1;
-        ((pk) this).field_j[((pk) this).field_f] = (byte)(param0 + ((pk) this).field_p.b(0));
+        ((pk) this).field_j[fieldTemp$0] = (byte)(param0 + ((pk) this).field_p.b(0));
         if (param1 >= -12) {
             pk.h(-6, -80);
         }
@@ -166,8 +272,9 @@ final class pk extends qc {
         if (param0 != 122) {
             ((pk) this).k(-51);
         }
+        int fieldTemp$0 = ((pk) this).field_f;
         ((pk) this).field_f = ((pk) this).field_f + 1;
-        return 255 & ((pk) this).field_j[((pk) this).field_f] + -((pk) this).field_p.b(0);
+        return 255 & ((pk) this).field_j[fieldTemp$0] + -((pk) this).field_p.b(0);
     }
 
     pk(int param0) {

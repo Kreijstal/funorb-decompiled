@@ -40,16 +40,8 @@ final class ki {
     public static void a(int param0) {
         field_a = null;
         field_e = null;
-        if (param0 != 49) {
-          field_e = null;
-          field_f = null;
-          field_c = null;
-          return;
-        } else {
-          field_f = null;
-          field_c = null;
-          return;
-        }
+        field_f = null;
+        field_c = null;
     }
 
     final ob a(int param0, int param1) {
@@ -61,7 +53,7 @@ final class ki {
           return var3;
         } else {
           L0: {
-            if ((param1 ^ -1) > -32769) {
+            if (param1 < 32768) {
               var4 = ((ki) this).field_g.a(1, param1, (byte) -23);
               break L0;
             } else {

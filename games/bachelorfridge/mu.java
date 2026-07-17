@@ -19,9 +19,6 @@ final class mu {
     public static void a(int param0) {
         field_j = null;
         field_d = null;
-        if (param0 != 9072) {
-            kv[] discarded$0 = mu.a(99, -114, 75, 42, 22, (byte) -8);
-        }
         field_b = null;
         field_m = null;
         field_l = null;
@@ -36,7 +33,7 @@ final class mu {
         kv var11 = null;
         kv var12 = null;
         kv var13 = null;
-        kv var14 = null;
+        Object var14 = null;
         int[] var15 = null;
         kv var16 = null;
         int[] var17 = null;
@@ -78,7 +75,7 @@ final class mu {
           var14 = null;
           if (param4 > 0) {
             var16 = new kv(16, 16);
-            var14 = var16;
+            var14 = (Object) (Object) var16;
             var16.b();
             dg.c(0, 0, 16, 16, param4);
             break L1;
@@ -87,7 +84,7 @@ final class mu {
           }
         }
         dg.a(var20, var7, var8);
-        return new kv[]{var10, var11, var10, var9, var14, var9, var12, var13, var12};
+        return new kv[]{var10, var11, var10, var9, (kv) var14, var9, var12, var13, var12};
     }
 
     final void b(int param0) {
@@ -123,133 +120,180 @@ final class mu {
     }
 
     private final int a(lu param0, boolean param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4_int = 0;
         boolean[] var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int stackIn_33_0 = 0;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        RuntimeException stackIn_37_0 = null;
+        StringBuilder stackIn_37_1 = null;
+        String stackIn_37_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_32_0 = 0;
+        RuntimeException stackOut_34_0 = null;
+        StringBuilder stackOut_34_1 = null;
+        RuntimeException stackOut_36_0 = null;
+        StringBuilder stackOut_36_1 = null;
+        String stackOut_36_2 = null;
+        RuntimeException stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
+        String stackOut_35_2 = null;
         var8 = BachelorFridge.field_y;
-        var3 = param0.b(16711935);
-        if (iha.field_j < var3) {
-          throw new RuntimeException("Profile version too recent! " + var3 + " > " + iha.field_j);
-        } else {
-          int discarded$13 = param0.f(-122);
-          int discarded$14 = param0.f(-122);
-          ((mu) this).field_a = param0.f(-81);
-          int discarded$15 = param0.f(-90);
-          int discarded$16 = param0.f(-53);
-          ((mu) this).field_c = param0.b(16711935);
-          ((mu) this).field_e = gca.a(0, param0);
-          ((mu) this).field_i = new rk[50];
-          var4_int = 0;
-          L0: while (true) {
-            if (-51 >= (var4_int ^ -1)) {
-              L1: {
-                if (4 < var3) {
-                  break L1;
-                } else {
+        try {
+          L0: {
+            var3_int = param0.b(16711935);
+            if (iha.field_j < var3_int) {
+              throw new RuntimeException("Profile version too recent! " + var3_int + " > " + iha.field_j);
+            } else {
+              int discarded$12 = param0.f(-122);
+              int discarded$13 = param0.f(-122);
+              ((mu) this).field_a = param0.f(-81);
+              int discarded$14 = param0.f(-90);
+              int discarded$15 = param0.f(-53);
+              ((mu) this).field_c = param0.b(16711935);
+              ((mu) this).field_e = gca.a(0, param0);
+              ((mu) this).field_i = new rk[50];
+              var4_int = 0;
+              L1: while (true) {
+                if (var4_int >= 50) {
                   L2: {
-                    var4_int = param0.b(16711935);
-                    if ((var4_int ^ -1) > -1) {
+                    if (4 < var3_int) {
                       break L2;
                     } else {
-                      if ((var4_int ^ -1) > -4) {
-                        int discarded$17 = param0.f(99);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  rk discarded$18 = gka.a(param0, 255);
-                  break L1;
-                }
-              }
-              var4 = new boolean[50];
-              var5 = 0;
-              var6 = param0.b(16711935);
-              var7 = 0;
-              L3: while (true) {
-                if (50 <= var7) {
-                  L4: {
-                    ((mu) this).field_f = rd.a(true, param0);
-                    if (!param1) {
-                      break L4;
-                    } else {
-                      boolean discarded$19 = ((mu) this).a((byte) -6);
-                      break L4;
-                    }
-                  }
-                  L5: {
-                    if (var3 >= 2) {
-                      int discarded$20 = param0.f((byte) 97);
-                      int discarded$21 = param0.f((byte) 111);
-                      int discarded$22 = param0.f((byte) -16);
-                      int discarded$23 = param0.f((byte) -123);
-                      int discarded$24 = param0.f((byte) -123);
-                      int discarded$25 = param0.f((byte) -20);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  L6: {
-                    if ((var3 ^ -1) > -4) {
-                      break L6;
-                    } else {
-                      ((mu) this).field_h = new int[50];
-                      var7 = 0;
-                      L7: while (true) {
-                        if ((var7 ^ -1) <= -51) {
-                          break L6;
+                      L3: {
+                        var4_int = param0.b(16711935);
+                        if (var4_int < 0) {
+                          break L3;
                         } else {
-                          ((mu) this).field_h[var7] = param0.b(16711935);
-                          var7++;
-                          continue L7;
+                          if (var4_int < 3) {
+                            int discarded$16 = param0.f(99);
+                            break L3;
+                          } else {
+                            break L3;
+                          }
                         }
                       }
+                      rk discarded$17 = gka.a(param0, 255);
+                      break L2;
                     }
                   }
-                  L8: {
-                    if (var3 >= 4) {
-                      ((mu) this).field_g = param0.b(16711935);
-                      break L8;
+                  var4 = new boolean[50];
+                  var5 = 0;
+                  var6 = param0.b(16711935);
+                  var7 = 0;
+                  L4: while (true) {
+                    if (50 <= var7) {
+                      L5: {
+                        ((mu) this).field_f = rd.a(true, param0);
+                        if (var3_int >= 2) {
+                          int discarded$18 = param0.f((byte) 97);
+                          int discarded$19 = param0.f((byte) 111);
+                          int discarded$20 = param0.f((byte) -16);
+                          int discarded$21 = param0.f((byte) -123);
+                          int discarded$22 = param0.f((byte) -123);
+                          int discarded$23 = param0.f((byte) -20);
+                          break L5;
+                        } else {
+                          break L5;
+                        }
+                      }
+                      L6: {
+                        if (var3_int < 3) {
+                          break L6;
+                        } else {
+                          ((mu) this).field_h = new int[50];
+                          var7 = 0;
+                          L7: while (true) {
+                            if (var7 >= 50) {
+                              break L6;
+                            } else {
+                              ((mu) this).field_h[var7] = param0.b(16711935);
+                              var7++;
+                              continue L7;
+                            }
+                          }
+                        }
+                      }
+                      L8: {
+                        if (var3_int >= 4) {
+                          ((mu) this).field_g = param0.b(16711935);
+                          break L8;
+                        } else {
+                          ((mu) this).field_g = 13;
+                          break L8;
+                        }
+                      }
+                      stackOut_32_0 = var3_int;
+                      stackIn_33_0 = stackOut_32_0;
+                      break L0;
                     } else {
-                      ((mu) this).field_g = 13;
-                      break L8;
+                      L9: {
+                        if ((1 << var5 & var6) == 1 << var5) {
+                          var4[var7] = true;
+                          break L9;
+                        } else {
+                          break L9;
+                        }
+                      }
+                      L10: {
+                        var5++;
+                        if (var5 != 8) {
+                          break L10;
+                        } else {
+                          break L10;
+                        }
+                      }
+                      var7++;
+                      continue L4;
                     }
                   }
-                  return var3;
                 } else {
-                  L9: {
-                    if ((1 << var5 & var6) == 1 << var5) {
-                      var4[var7] = true;
-                      break L9;
-                    } else {
-                      break L9;
-                    }
-                  }
-                  var5++;
-                  if (var5 == 8) {
-                    var5 = 0;
-                    var6 = param0.b(16711935);
-                    var7++;
-                    continue L3;
-                  } else {
-                    var7++;
-                    continue L3;
-                  }
+                  ((mu) this).field_i[var4_int] = gka.a(param0, 255);
+                  var4_int++;
+                  continue L1;
                 }
               }
-            } else {
-              ((mu) this).field_i[var4_int] = gka.a(param0, 255);
-              var4_int++;
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L11: {
+            var3 = decompiledCaughtException;
+            stackOut_34_0 = (RuntimeException) var3;
+            stackOut_34_1 = new StringBuilder().append("mu.C(");
+            stackIn_36_0 = stackOut_34_0;
+            stackIn_36_1 = stackOut_34_1;
+            stackIn_35_0 = stackOut_34_0;
+            stackIn_35_1 = stackOut_34_1;
+            if (param0 == null) {
+              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
+              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
+              stackOut_36_2 = "null";
+              stackIn_37_0 = stackOut_36_0;
+              stackIn_37_1 = stackOut_36_1;
+              stackIn_37_2 = stackOut_36_2;
+              break L11;
+            } else {
+              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
+              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_2 = "{...}";
+              stackIn_37_0 = stackOut_35_0;
+              stackIn_37_1 = stackOut_35_1;
+              stackIn_37_2 = stackOut_35_2;
+              break L11;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + 0 + 41);
         }
+        return stackIn_33_0;
     }
 
     public mu() {
@@ -259,7 +303,11 @@ final class mu {
 
     mu(lu param0) {
         ((mu) this).field_i = new rk[50];
-        int discarded$0 = this.a(param0, false);
+        try {
+            int discarded$0 = this.a(param0, false);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "mu.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean a(byte param0) {

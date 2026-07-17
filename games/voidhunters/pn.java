@@ -12,9 +12,6 @@ final class pn implements dja {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != -30938) {
-            field_b = 84;
-        }
     }
 
     public final tv[] a(int param0, int param1) {

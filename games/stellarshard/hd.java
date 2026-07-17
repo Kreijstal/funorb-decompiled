@@ -11,23 +11,20 @@ final class hd {
         if (param1 < 28) {
             int discarded$0 = hd.a(-38, -105);
             param0 = param0 & 8191;
-            if (-4097 < (param0 ^ -1)) {
-                return (param0 ^ -1) > -2049 ? fh.field_h[param0] : fh.field_h[4096 - param0];
+            if (param0 < 4096) {
+                return param0 < 2048 ? fh.field_h[param0] : fh.field_h[4096 - param0];
             }
-            return -6145 < (param0 ^ -1) ? -fh.field_h[-4096 + param0] : -fh.field_h[-param0 + 8192];
+            return param0 < 6144 ? -fh.field_h[-4096 + param0] : -fh.field_h[-param0 + 8192];
         }
         param0 = param0 & 8191;
-        if (-4097 < (param0 ^ -1)) {
-            return (param0 ^ -1) > -2049 ? fh.field_h[param0] : fh.field_h[4096 - param0];
+        if (param0 < 4096) {
+            return param0 < 2048 ? fh.field_h[param0] : fh.field_h[4096 - param0];
         }
-        return -6145 < (param0 ^ -1) ? -fh.field_h[-4096 + param0] : -fh.field_h[-param0 + 8192];
+        return param0 < 6144 ? -fh.field_h[-4096 + param0] : -fh.field_h[-param0 + 8192];
     }
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 != -41) {
-            return;
-        }
         field_d = null;
         field_a = null;
     }

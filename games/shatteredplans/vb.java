@@ -18,7 +18,7 @@ final class vb {
         while (((vb) this).field_f[var1] >= 0) {
             var1 = fd.c() != 0 ? ((vb) this).field_f[var1] : var1 + 1;
         }
-        return ((vb) this).field_f[var1] ^ -1;
+        return ~((vb) this).field_f[var1];
     }
 
     private final static int a(int param0, int param1) {
@@ -69,7 +69,7 @@ final class vb {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((vb) this).field_f[var6] = var3 ^ -1;
+                      ((vb) this).field_f[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -216,7 +216,7 @@ final class vb {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = fd.a(24);
+          int discarded$2 = fd.a(24);
           ((vb) this).field_a = fd.a(16);
           ((vb) this).field_c = fd.a(24);
           ((vb) this).field_b = new int[((vb) this).field_c];
@@ -283,8 +283,9 @@ final class vb {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((vb) this).field_b[var2] = var3_int;
+                    ((vb) this).field_b[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

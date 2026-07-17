@@ -35,14 +35,14 @@ final class hj {
         int stackOut_11_1 = 0;
         var5 = MinerDisturbance.field_ab;
         var6 = "(" + lc.field_s + " " + rd.field_a + " " + ud.field_a + ") " + oj.field_K;
-        if ((rj.field_d ^ -1) < -1) {
+        if (rj.field_d > 0) {
           var1 = var6 + ":";
           var2 = 0;
           L0: while (true) {
             if (rj.field_d > var2) {
               var7 = var1 + 32;
               var3 = kj.field_a.field_u[var2] & 255;
-              var4 = var3 >> 347664612;
+              var4 = var3 >> 4;
               var3 = var3 & 15;
               stackOut_11_0 = var4;
               stackOut_11_1 = 10;
@@ -76,7 +76,7 @@ final class hj {
                 }
                 L3: {
                   L4: {
-                    if ((var3 ^ -1) > -11) {
+                    if (var3 < 10) {
                       break L4;
                     } else {
                       var3 += 55;
@@ -124,137 +124,124 @@ final class hj {
     }
 
     final static void a(bj param0, int param1) {
-        ld var2 = null;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
+        pb var5 = null;
+        int[] var6 = null;
         int var7 = 0;
         ld var8 = null;
-        pb var13 = null;
-        int[] var14 = null;
-        pb var15 = null;
-        pb var17 = null;
-        int[] var18 = null;
-        pb var19 = null;
-        int[] var20 = null;
+        ld var9 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         var7 = MinerDisturbance.field_ab;
-        if (param1 == 347664612) {
-          var8 = new ld(param0.a("", 0, "logo.fo3d"));
-          var2 = var8;
-          var3 = var2.d((byte) -54);
-          var2.f((byte) 16);
-          bl.field_v = tk.a(-123, var2);
-          aj.field_b = new pb[var3];
-          pa.field_b = new int[var3][];
-          var4 = 0;
-          L0: while (true) {
-            if (var4 >= var3) {
-              var2.o(-98);
+        try {
+          L0: {
+            if (param1 == 347664612) {
+              var8 = new ld(param0.a("", 0, "logo.fo3d"));
+              var9 = var8;
+              var3 = var9.d((byte) -54);
+              var9.f((byte) 16);
+              bl.field_v = tk.a(-123, var9);
+              aj.field_b = new pb[var3];
+              pa.field_b = new int[var3][];
               var4 = 0;
               L1: while (true) {
-                if (var3 > var4) {
-                  var13 = aj.field_b[var4];
-                  var15 = var13;
-                  var17 = var15;
-                  var19 = var17;
-                  var15 = var13;
-                  var13.a(1, 6, 6, 6, (byte) -81);
-                  var13.a(true);
-                  var14 = new int[]{var13.field_v + var13.field_H >> 130271905, var13.field_h + var13.field_l >> 1490739201, var13.field_J + var13.field_j >> -111880767};
-                  pa.field_b[var4] = var14;
-                  var13.a(-var14[2], -var14[1], 0, -var14[0]);
-                  var4++;
-                  if (var7 == 0) {
-                    continue L1;
+                L2: {
+                  if (var4 >= var3) {
+                    var9.o(-98);
+                    break L2;
                   } else {
-                    return;
+                    aj.field_b[var4] = lj.a(var8, (byte) -62);
+                    var4++;
+                    if (var7 != 0) {
+                      break L2;
+                    } else {
+                      continue L1;
+                    }
                   }
-                } else {
-                  return;
+                }
+                var4 = 0;
+                L3: while (true) {
+                  if (var3 <= var4) {
+                    break L0;
+                  } else {
+                    var5 = aj.field_b[var4];
+                    var5.a(1, 6, 6, 6, (byte) -81);
+                    var5.a(true);
+                    var6 = new int[]{var5.field_v + var5.field_H >> 1, var5.field_h + var5.field_l >> 1, var5.field_J + var5.field_j >> 1};
+                    pa.field_b[var4] = var6;
+                    var5.a(-var6[2], -var6[1], 0, -var6[0]);
+                    var4++;
+                    if (var7 == 0) {
+                      continue L3;
+                    } else {
+                      return;
+                    }
+                  }
                 }
               }
             } else {
-              aj.field_b[var4] = lj.a(var8, (byte) -62);
-              var4++;
-              if (var7 != 0) {
-                var4 = 0;
-                L2: while (true) {
-                  if (var3 > var4) {
-                    var19 = aj.field_b[var4];
-                    var19.a(1, 6, 6, 6, (byte) -81);
-                    var19.a(true);
-                    var20 = new int[]{var19.field_v + var19.field_H >> 130271905, var19.field_h + var19.field_l >> 1490739201, var19.field_J + var19.field_j >> -111880767};
-                    pa.field_b[var4] = var20;
-                    var19.a(-var20[2], -var20[1], 0, -var20[0]);
-                    var4++;
-                    if (var7 == 0) {
-                      continue L2;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                if (var7 == 0) {
-                  continue L0;
-                } else {
-                  var2.o(-98);
-                  var4 = 0;
-                  L3: while (true) {
-                    if (var3 > var4) {
-                      var17 = aj.field_b[var4];
-                      var19 = var17;
-                      var19 = var17;
-                      var17.a(1, 6, 6, 6, (byte) -81);
-                      var17.a(true);
-                      var18 = new int[]{var17.field_v + var17.field_H >> 130271905, var17.field_h + var17.field_l >> 1490739201, var17.field_J + var17.field_j >> -111880767};
-                      pa.field_b[var4] = var18;
-                      var17.a(-var18[2], -var18[1], 0, -var18[0]);
-                      var4++;
-                      if (var7 == 0) {
-                        continue L3;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              }
+              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var2;
+            stackOut_16_1 = new StringBuilder().append("hj.B(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param0 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L4;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L4;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 41);
         }
     }
 
     public static void a(boolean param0) {
         field_i = null;
         field_a = null;
-        if (param0) {
-          hj.a(false);
-          field_c = null;
-          field_b = null;
-          field_n = null;
-          field_o = null;
-          field_k = null;
-          field_e = null;
-          field_h = null;
-          field_f = null;
-          return;
-        } else {
-          field_c = null;
-          field_b = null;
-          field_n = null;
-          field_o = null;
-          field_k = null;
-          field_e = null;
-          field_h = null;
-          field_f = null;
-          return;
-        }
+        field_c = null;
+        field_b = null;
+        field_n = null;
+        field_o = null;
+        field_k = null;
+        field_e = null;
+        field_h = null;
+        field_f = null;
     }
 
     private hj() throws Throwable {
@@ -276,15 +263,15 @@ final class hj {
         field_a = "Just play";
         field_k = new ta();
         field_c = new int[98304];
-        for (var0 = 92682; -46342 >= (var0 ^ -1); var0--) {
-            var4 = (long)(-1 + (var0 << 1678240737));
-            var6 = (long)((var0 << -922672735) - -1);
-            var2 = (int)((var4 * var4 >> -884165806) + -32768L);
-            var3 = (int)((var6 * var6 >> -2085222830) - 32768L);
+        for (var0 = 92682; var0 >= 46341; var0--) {
+            var4 = (long)(-1 + (var0 << 1));
+            var6 = (long)((var0 << 1) - -1);
+            var2 = (int)((var4 * var4 >> 18) + -32768L);
+            var3 = (int)((var6 * var6 >> 18) - 32768L);
             if (field_c.length <= var3) {
                 var3 = -1 + field_c.length;
             }
-            for (var1 = -1 >= (var2 ^ -1) ? var2 : 0; var3 >= var1; var1++) {
+            for (var1 = var2 >= 0 ? var2 : 0; var3 >= var1; var1++) {
                 field_c[var1] = var0;
             }
         }

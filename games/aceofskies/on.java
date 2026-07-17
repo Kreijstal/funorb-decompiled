@@ -101,64 +101,30 @@ final class on {
         Object var5 = null;
         Throwable var6 = null;
         int stackIn_2_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_1_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var5 = (Object) (Object) field_a;
-                    // monitorenter field_a
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        field_a.field_p = param2;
-                        field_a.field_i = param4;
-                        field_a.field_s = param0;
-                        field_a.field_j = 0;
-                        field_a.field_e = param1;
-                        field_a.field_y = 0;
-                        field_a.field_z = 0;
-                        field_a.field_b = 0;
-                        field_a.field_c = 0;
-                        on.c(field_a);
-                        param1 = param1 - field_a.field_e;
-                        field_a.field_p = null;
-                        field_a.field_s = null;
-                        // monitorexit var5
-                        stackOut_1_0 = param1;
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return stackIn_2_0;
-                }
-                case 3: {
-                    try {
-                        var6 = caughtException;
-                        // monitorexit var5
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    throw (RuntimeException) (Object) var6;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        var5 = (Object) (Object) field_a;
+        synchronized (var5) {
+          L0: {
+            field_a.field_p = param2;
+            field_a.field_i = 9;
+            field_a.field_s = param0;
+            field_a.field_j = 0;
+            field_a.field_e = param1;
+            field_a.field_y = 0;
+            field_a.field_z = 0;
+            field_a.field_b = 0;
+            field_a.field_c = 0;
+            on.c(field_a);
+            param1 = param1 - field_a.field_e;
+            field_a.field_p = null;
+            field_a.field_s = null;
+            stackOut_1_0 = param1;
+            stackIn_2_0 = stackOut_1_0;
+            break L0;
+          }
         }
+        return stackIn_2_0;
     }
 
     private final static byte a(bd param0) {
@@ -183,21 +149,21 @@ final class on {
         int[] var15 = null;
         int[] var16 = null;
         int[] var17 = null;
-        var2 = ((bd) param0).field_f;
-        var3 = ((bd) param0).field_k;
-        var4 = ((bd) param0).field_h;
-        var5 = ((bd) param0).field_a;
+        var2 = param0.field_f;
+        var3 = param0.field_k;
+        var4 = param0.field_h;
+        var5 = param0.field_a;
         var17 = oc.field_g;
         var16 = var17;
         var15 = var16;
         var14 = var15;
         var6 = var14;
-        var7 = ((bd) param0).field_q;
-        var8 = ((bd) param0).field_s;
-        var9 = ((bd) param0).field_j;
-        var10 = ((bd) param0).field_e;
+        var7 = param0.field_q;
+        var8 = param0.field_s;
+        var9 = param0.field_j;
+        var10 = param0.field_e;
         var11 = var10;
-        var12 = ((bd) param0).field_A + 1;
+        var12 = param0.field_A + 1;
         L0: while (true) {
           L1: {
             L2: {
@@ -225,9 +191,9 @@ final class on {
                     }
                   } else {
                     L4: {
-                      var13 = ((bd) param0).field_c;
-                      ((bd) param0).field_c = ((bd) param0).field_c + (var11 - var10);
-                      if (((bd) param0).field_c >= var13) {
+                      var13 = param0.field_c;
+                      param0.field_c = param0.field_c + (var11 - var10);
+                      if (param0.field_c >= var13) {
                         break L4;
                       } else {
                         break L4;
@@ -325,9 +291,9 @@ final class on {
             }
           }
           L7: {
-            var13 = ((bd) param0).field_c;
-            ((bd) param0).field_c = ((bd) param0).field_c + (var11 - var10);
-            if (((bd) param0).field_c >= var13) {
+            var13 = param0.field_c;
+            param0.field_c = param0.field_c + (var11 - var10);
+            if (param0.field_c >= var13) {
               break L7;
             } else {
               break L7;
@@ -349,19 +315,19 @@ final class on {
     private final static int a(int param0, bd param1) {
         int var2 = 0;
         L0: while (true) {
-          if (((bd) param1).field_y < param0) {
-            param1.field_z = ((bd) param1).field_z << 8 | ((bd) param1).field_p[((bd) param1).field_i] & 255;
-            ((bd) param1).field_y = ((bd) param1).field_y + 8;
-            ((bd) param1).field_i = ((bd) param1).field_i + 1;
-            ((bd) param1).field_b = ((bd) param1).field_b + 1;
-            if (((bd) param1).field_b != 0) {
+          if (param1.field_y < param0) {
+            param1.field_z = param1.field_z << 8 | param1.field_p[param1.field_i] & 255;
+            param1.field_y = param1.field_y + 8;
+            param1.field_i = param1.field_i + 1;
+            param1.field_b = param1.field_b + 1;
+            if (param1.field_b != 0) {
               continue L0;
             } else {
               continue L0;
             }
           } else {
-            var2 = ((bd) param1).field_z >> ((bd) param1).field_y - param0 & (1 << param0) - 1;
-            ((bd) param1).field_y = ((bd) param1).field_y - param0;
+            var2 = param1.field_z >> param1.field_y - param0 & (1 << param0) - 1;
+            param1.field_y = param1.field_y - param0;
             return var2;
           }
         }
@@ -375,9 +341,9 @@ final class on {
           if (var1 >= 256) {
             return;
           } else {
-            if (((bd) param0).field_r[var1]) {
-              ((bd) param0).field_m[((bd) param0).field_w] = (byte)var1;
-              ((bd) param0).field_w = ((bd) param0).field_w + 1;
+            if (param0.field_r[var1]) {
+              param0.field_m[param0.field_w] = (byte)var1;
+              param0.field_w = param0.field_w + 1;
               var1++;
               continue L0;
             } else {
@@ -416,11 +382,8 @@ final class on {
         int var21 = 0;
         int var22 = 0;
         Object var23 = null;
-        int[] var23_array = null;
         Object var24 = null;
-        int[] var24_array = null;
         Object var25 = null;
-        int[] var25_array = null;
         int var26 = 0;
         byte[] var27_ref_byte__ = null;
         int var27 = 0;
@@ -463,7 +426,7 @@ final class on {
           if (oc.field_g != null) {
             break L0;
           } else {
-            oc.field_g = new int[((bd) param0).field_G * 100000];
+            oc.field_g = new int[param0.field_G * 100000];
             break L0;
           }
         }
@@ -493,11 +456,11 @@ final class on {
               }
               param0.field_d = 0;
               var1 = on.e(param0);
-              param0.field_d = ((bd) param0).field_d << 8 | var1 & 255;
+              param0.field_d = param0.field_d << 8 | var1 & 255;
               var1 = on.e(param0);
-              param0.field_d = ((bd) param0).field_d << 8 | var1 & 255;
+              param0.field_d = param0.field_d << 8 | var1 & 255;
               var1 = on.e(param0);
-              param0.field_d = ((bd) param0).field_d << 8 | var1 & 255;
+              param0.field_d = param0.field_d << 8 | var1 & 255;
               var4 = 0;
               L3: while (true) {
                 if (var4 >= 16) {
@@ -508,7 +471,7 @@ final class on {
                       L5: while (true) {
                         if (var4 >= 16) {
                           on.b(param0);
-                          var7 = ((bd) param0).field_w + 2;
+                          var7 = param0.field_w + 2;
                           var8 = on.a(3, param0);
                           var9 = on.a(15, param0);
                           var4 = 0;
@@ -531,7 +494,7 @@ final class on {
                                           var6 = 0;
                                           L10: while (true) {
                                             if (var6 >= var8) {
-                                              var10 = ((bd) param0).field_w + 1;
+                                              var10 = param0.field_w + 1;
                                               var11 = -1;
                                               var12 = 0;
                                               var4 = 0;
@@ -548,11 +511,11 @@ final class on {
                                                         } else {
                                                           var11++;
                                                           var12 = 50;
-                                                          var21 = ((bd) param0).field_v[var11];
-                                                          var22 = ((bd) param0).field_u[var21];
-                                                          var23_array = ((bd) param0).field_t[var21];
-                                                          var25_array = ((bd) param0).field_l[var21];
-                                                          var24_array = ((bd) param0).field_B[var21];
+                                                          var21 = param0.field_v[var11];
+                                                          var22 = param0.field_u[var21];
+                                                          var23 = (Object) (Object) param0.field_t[var21];
+                                                          var25 = (Object) (Object) param0.field_l[var21];
+                                                          var24 = (Object) (Object) param0.field_B[var21];
                                                           break L13;
                                                         }
                                                       }
@@ -560,13 +523,13 @@ final class on {
                                                       var18 = var22;
                                                       var19 = on.a(var18, param0);
                                                       L14: while (true) {
-                                                        if (var19 > var23_array[var18]) {
+                                                        if (var19 > ((int[]) var23)[var18]) {
                                                           var18++;
                                                           var20 = on.a(param0);
                                                           var19 = var19 << 1 | var20;
                                                           continue L14;
                                                         } else {
-                                                          var13 = var25_array[var19 - var24_array[var18]];
+                                                          var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
                                                           L15: while (true) {
                                                             if (var13 != var10) {
                                                               L16: {
@@ -579,17 +542,17 @@ final class on {
                                                                       if (var33 >= 16) {
                                                                         var31 = var33 / 16;
                                                                         var32 = var33 % 16;
-                                                                        var35 = ((bd) param0).field_g[var31] + var32;
+                                                                        var35 = param0.field_g[var31] + var32;
                                                                         var30 = var35;
-                                                                        var1 = ((bd) param0).field_x[var35];
+                                                                        var1 = param0.field_x[var35];
                                                                         L18: while (true) {
-                                                                          if (var35 <= ((bd) param0).field_g[var31]) {
-                                                                            ((bd) param0).field_g[var31] = ((bd) param0).field_g[var31] + 1;
+                                                                          if (var35 <= param0.field_g[var31]) {
+                                                                            param0.field_g[var31] = param0.field_g[var31] + 1;
                                                                             L19: while (true) {
                                                                               if (var31 <= 0) {
-                                                                                ((bd) param0).field_g[0] = ((bd) param0).field_g[0] - 1;
-                                                                                ((bd) param0).field_x[((bd) param0).field_g[0]] = (byte)var1;
-                                                                                if (((bd) param0).field_g[0] != 0) {
+                                                                                param0.field_g[0] = param0.field_g[0] - 1;
+                                                                                param0.field_x[param0.field_g[0]] = (byte)var1;
+                                                                                if (param0.field_g[0] != 0) {
                                                                                   break L17;
                                                                                 } else {
                                                                                   var29 = 4095;
@@ -601,11 +564,11 @@ final class on {
                                                                                       var28 = 15;
                                                                                       L21: while (true) {
                                                                                         if (var28 < 0) {
-                                                                                          ((bd) param0).field_g[var27] = var29 + 1;
+                                                                                          param0.field_g[var27] = var29 + 1;
                                                                                           var27--;
                                                                                           continue L20;
                                                                                         } else {
-                                                                                          ((bd) param0).field_x[var29] = ((bd) param0).field_x[((bd) param0).field_g[var27] + var28];
+                                                                                          param0.field_x[var29] = param0.field_x[param0.field_g[var27] + var28];
                                                                                           var29--;
                                                                                           var28--;
                                                                                           continue L21;
@@ -615,39 +578,39 @@ final class on {
                                                                                   }
                                                                                 }
                                                                               } else {
-                                                                                ((bd) param0).field_g[var31] = ((bd) param0).field_g[var31] - 1;
-                                                                                ((bd) param0).field_x[((bd) param0).field_g[var31]] = ((bd) param0).field_x[((bd) param0).field_g[var31 - 1] + 16 - 1];
+                                                                                param0.field_g[var31] = param0.field_g[var31] - 1;
+                                                                                param0.field_x[param0.field_g[var31]] = param0.field_x[param0.field_g[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
                                                                             }
                                                                           } else {
-                                                                            ((bd) param0).field_x[var35] = ((bd) param0).field_x[var35 - 1];
+                                                                            param0.field_x[var35] = param0.field_x[var35 - 1];
                                                                             var35--;
                                                                             continue L18;
                                                                           }
                                                                         }
                                                                       } else {
-                                                                        var30 = ((bd) param0).field_g[0];
-                                                                        var1 = ((bd) param0).field_x[var30 + var33];
+                                                                        var30 = param0.field_g[0];
+                                                                        var1 = param0.field_x[var30 + var33];
                                                                         L22: while (true) {
                                                                           if (var33 <= 3) {
                                                                             L23: while (true) {
                                                                               if (var33 <= 0) {
-                                                                                ((bd) param0).field_x[var30] = (byte)var1;
+                                                                                param0.field_x[var30] = (byte)var1;
                                                                                 break L17;
                                                                               } else {
-                                                                                ((bd) param0).field_x[var30 + var33] = ((bd) param0).field_x[var30 + var33 - 1];
+                                                                                param0.field_x[var30 + var33] = param0.field_x[var30 + var33 - 1];
                                                                                 var33--;
                                                                                 continue L23;
                                                                               }
                                                                             }
                                                                           } else {
                                                                             var34 = var30 + var33;
-                                                                            ((bd) param0).field_x[var34] = ((bd) param0).field_x[var34 - 1];
-                                                                            ((bd) param0).field_x[var34 - 1] = ((bd) param0).field_x[var34 - 2];
-                                                                            ((bd) param0).field_x[var34 - 2] = ((bd) param0).field_x[var34 - 3];
-                                                                            ((bd) param0).field_x[var34 - 3] = ((bd) param0).field_x[var34 - 4];
+                                                                            param0.field_x[var34] = param0.field_x[var34 - 1];
+                                                                            param0.field_x[var34 - 1] = param0.field_x[var34 - 2];
+                                                                            param0.field_x[var34 - 2] = param0.field_x[var34 - 3];
+                                                                            param0.field_x[var34 - 3] = param0.field_x[var34 - 4];
                                                                             var33 -= 4;
                                                                             continue L22;
                                                                           }
@@ -655,19 +618,19 @@ final class on {
                                                                       }
                                                                     }
                                                                     L24: {
-                                                                      ((bd) param0).field_F[((bd) param0).field_m[var1 & 255] & 255] = ((bd) param0).field_F[((bd) param0).field_m[var1 & 255] & 255] + 1;
-                                                                      oc.field_g[var14] = ((bd) param0).field_m[var1 & 255] & 255;
+                                                                      param0.field_F[param0.field_m[var1 & 255] & 255] = param0.field_F[param0.field_m[var1 & 255] & 255] + 1;
+                                                                      oc.field_g[var14] = param0.field_m[var1 & 255] & 255;
                                                                       var14++;
                                                                       if (var12 != 0) {
                                                                         break L24;
                                                                       } else {
                                                                         var11++;
                                                                         var12 = 50;
-                                                                        var21 = ((bd) param0).field_v[var11];
-                                                                        var22 = ((bd) param0).field_u[var21];
-                                                                        var23_array = ((bd) param0).field_t[var21];
-                                                                        var25_array = ((bd) param0).field_l[var21];
-                                                                        var24_array = ((bd) param0).field_B[var21];
+                                                                        var21 = param0.field_v[var11];
+                                                                        var22 = param0.field_u[var21];
+                                                                        var23 = (Object) (Object) param0.field_t[var21];
+                                                                        var25 = (Object) (Object) param0.field_l[var21];
+                                                                        var24 = (Object) (Object) param0.field_B[var21];
                                                                         break L24;
                                                                       }
                                                                     }
@@ -675,13 +638,13 @@ final class on {
                                                                     var18 = var22;
                                                                     var19 = on.a(var18, param0);
                                                                     L25: while (true) {
-                                                                      if (var19 > var23_array[var18]) {
+                                                                      if (var19 > ((int[]) var23)[var18]) {
                                                                         var18++;
                                                                         var20 = on.a(param0);
                                                                         var19 = var19 << 1 | var20;
                                                                         continue L25;
                                                                       } else {
-                                                                        var13 = var25_array[var19 - var24_array[var18]];
+                                                                        var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
                                                                         continue L15;
                                                                       }
                                                                     }
@@ -702,7 +665,7 @@ final class on {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -713,11 +676,11 @@ final class on {
                                                                   } else {
                                                                     var11++;
                                                                     var12 = 50;
-                                                                    var21 = ((bd) param0).field_v[var11];
-                                                                    var22 = ((bd) param0).field_u[var21];
-                                                                    var23_array = ((bd) param0).field_t[var21];
-                                                                    var25_array = ((bd) param0).field_l[var21];
-                                                                    var24_array = ((bd) param0).field_B[var21];
+                                                                    var21 = param0.field_v[var11];
+                                                                    var22 = param0.field_u[var21];
+                                                                    var23 = (Object) (Object) param0.field_t[var21];
+                                                                    var25 = (Object) (Object) param0.field_l[var21];
+                                                                    var24 = (Object) (Object) param0.field_B[var21];
                                                                     break L28;
                                                                   }
                                                                 }
@@ -725,13 +688,13 @@ final class on {
                                                                 var18 = var22;
                                                                 var19 = on.a(var18, param0);
                                                                 L29: while (true) {
-                                                                  if (var19 > var23_array[var18]) {
+                                                                  if (var19 > ((int[]) var23)[var18]) {
                                                                     var18++;
                                                                     var20 = on.a(param0);
                                                                     var19 = var19 << 1 | var20;
                                                                     continue L29;
                                                                   } else {
-                                                                    var13 = var25_array[var19 - var24_array[var18]];
+                                                                    var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
                                                                     if (var13 == 0) {
                                                                       continue L26;
                                                                     } else {
@@ -739,8 +702,8 @@ final class on {
                                                                         continue L26;
                                                                       } else {
                                                                         var15++;
-                                                                        var1 = ((bd) param0).field_m[((bd) param0).field_x[((bd) param0).field_g[0]] & 255];
-                                                                        ((bd) param0).field_F[var1 & 255] = ((bd) param0).field_F[var1 & 255] + var15;
+                                                                        var1 = param0.field_m[param0.field_x[param0.field_g[0]] & 255];
+                                                                        param0.field_F[var1 & 255] = param0.field_F[var1 & 255] + var15;
                                                                         L30: while (true) {
                                                                           if (var15 <= 0) {
                                                                             continue L15;
@@ -759,7 +722,7 @@ final class on {
                                                             } else {
                                                               param0.field_k = 0;
                                                               param0.field_f = (byte) 0;
-                                                              ((bd) param0).field_o[0] = 0;
+                                                              param0.field_o[0] = 0;
                                                               var4 = 1;
                                                               L31: while (true) {
                                                                 if (var4 > 256) {
@@ -770,18 +733,18 @@ final class on {
                                                                       L33: while (true) {
                                                                         if (var4 >= var14) {
                                                                           L34: {
-                                                                            param0.field_q = oc.field_g[((bd) param0).field_d] >> 8;
+                                                                            param0.field_q = oc.field_g[param0.field_d] >> 8;
                                                                             param0.field_h = 0;
-                                                                            param0.field_q = oc.field_g[((bd) param0).field_q];
-                                                                            param0.field_a = (byte)(((bd) param0).field_q & 255);
-                                                                            ((bd) param0).field_q = ((bd) param0).field_q >> 8;
-                                                                            ((bd) param0).field_h = ((bd) param0).field_h + 1;
+                                                                            param0.field_q = oc.field_g[param0.field_q];
+                                                                            param0.field_a = (byte)(param0.field_q & 255);
+                                                                            param0.field_q = param0.field_q >> 8;
+                                                                            param0.field_h = param0.field_h + 1;
                                                                             param0.field_A = var14;
                                                                             on.d(param0);
-                                                                            if (((bd) param0).field_h != ((bd) param0).field_A + 1) {
+                                                                            if (param0.field_h != param0.field_A + 1) {
                                                                               break L34;
                                                                             } else {
-                                                                              if (((bd) param0).field_k != 0) {
+                                                                              if (param0.field_k != 0) {
                                                                                 break L34;
                                                                               } else {
                                                                                 var26 = 1;
@@ -793,20 +756,20 @@ final class on {
                                                                           continue L1;
                                                                         } else {
                                                                           var1 = (byte)(oc.field_g[var4] & 255);
-                                                                          oc.field_g[((bd) param0).field_o[var1 & 255]] = oc.field_g[((bd) param0).field_o[var1 & 255]] | var4 << 8;
-                                                                          ((bd) param0).field_o[var1 & 255] = ((bd) param0).field_o[var1 & 255] + 1;
+                                                                          oc.field_g[param0.field_o[var1 & 255]] = oc.field_g[param0.field_o[var1 & 255]] | var4 << 8;
+                                                                          param0.field_o[var1 & 255] = param0.field_o[var1 & 255] + 1;
                                                                           var4++;
                                                                           continue L33;
                                                                         }
                                                                       }
                                                                     } else {
-                                                                      ((bd) param0).field_o[var4] = ((bd) param0).field_o[var4] + ((bd) param0).field_o[var4 - 1];
+                                                                      param0.field_o[var4] = param0.field_o[var4] + param0.field_o[var4 - 1];
                                                                       var4++;
                                                                       continue L32;
                                                                     }
                                                                   }
                                                                 } else {
-                                                                  ((bd) param0).field_o[var4] = ((bd) param0).field_F[var4 - 1];
+                                                                  param0.field_o[var4] = param0.field_F[var4 - 1];
                                                                   var4++;
                                                                   continue L31;
                                                                 }
@@ -819,11 +782,11 @@ final class on {
                                                       var28 = 15;
                                                       L35: while (true) {
                                                         if (var28 < 0) {
-                                                          ((bd) param0).field_g[var27] = var29 + 1;
+                                                          param0.field_g[var27] = var29 + 1;
                                                           var27--;
                                                           continue L12;
                                                         } else {
-                                                          ((bd) param0).field_x[var29] = (byte)(var27 * 16 + var28);
+                                                          param0.field_x[var29] = (byte)(var27 * 16 + var28);
                                                           var29--;
                                                           var28--;
                                                           continue L35;
@@ -832,7 +795,7 @@ final class on {
                                                     }
                                                   }
                                                 } else {
-                                                  ((bd) param0).field_F[var4] = 0;
+                                                  param0.field_F[var4] = 0;
                                                   var4++;
                                                   continue L11;
                                                 }
@@ -843,21 +806,21 @@ final class on {
                                               var4 = 0;
                                               L36: while (true) {
                                                 if (var4 >= var7) {
-                                                  on.a(((bd) param0).field_t[var6], ((bd) param0).field_B[var6], ((bd) param0).field_l[var6], ((bd) param0).field_H[var6], var2, var3, var7);
-                                                  ((bd) param0).field_u[var6] = var2;
+                                                  on.a(param0.field_t[var6], param0.field_B[var6], param0.field_l[var6], param0.field_H[var6], var2, var3, var7);
+                                                  param0.field_u[var6] = var2;
                                                   var6++;
                                                   continue L10;
                                                 } else {
                                                   L37: {
-                                                    if (((bd) param0).field_H[var6][var4] <= var3) {
+                                                    if (param0.field_H[var6][var4] <= var3) {
                                                       break L37;
                                                     } else {
-                                                      var3 = ((bd) param0).field_H[var6][var4];
+                                                      var3 = param0.field_H[var6][var4];
                                                       break L37;
                                                     }
                                                   }
-                                                  if (((bd) param0).field_H[var6][var4] < var2) {
-                                                    var2 = ((bd) param0).field_H[var6][var4];
+                                                  if (param0.field_H[var6][var4] < var2) {
+                                                    var2 = param0.field_H[var6][var4];
                                                     var4++;
                                                     continue L36;
                                                   } else {
@@ -880,15 +843,15 @@ final class on {
                                                 var1 = on.a(param0);
                                                 if (var1 != 0) {
                                                   var1 = on.a(param0);
-                                                  if (var1 == 0) {
+                                                  if (var1 != 0) {
                                                     var17--;
                                                     continue L39;
                                                   } else {
-                                                    var17--;
+                                                    var17++;
                                                     continue L39;
                                                   }
                                                 } else {
-                                                  ((bd) param0).field_H[var6][var4] = (byte)var17;
+                                                  param0.field_H[var6][var4] = (byte)var17;
                                                   var4++;
                                                   continue L38;
                                                 }
@@ -898,12 +861,12 @@ final class on {
                                         }
                                       }
                                     } else {
-                                      var29 = ((bd) param0).field_E[var4];
+                                      var29 = param0.field_E[var4];
                                       var28 = var39[var29];
                                       L40: while (true) {
                                         if (var29 <= 0) {
                                           var27_ref_byte__[0] = (byte)var28;
-                                          ((bd) param0).field_v[var4] = (byte)var28;
+                                          param0.field_v[var4] = (byte)var28;
                                           var4++;
                                           continue L8;
                                         } else {
@@ -928,7 +891,7 @@ final class on {
                                   var5++;
                                   continue L41;
                                 } else {
-                                  ((bd) param0).field_E[var4] = (byte)var5;
+                                  param0.field_E[var4] = (byte)var5;
                                   var4++;
                                   continue L6;
                                 }
@@ -936,13 +899,13 @@ final class on {
                             }
                           }
                         } else {
-                          if (((bd) param0).field_n[var4]) {
+                          if (param0.field_n[var4]) {
                             var5 = 0;
                             L42: while (true) {
                               if (var5 < 16) {
                                 var1 = on.a(param0);
                                 if (var1 == 1) {
-                                  ((bd) param0).field_r[var4 * 16 + var5] = true;
+                                  param0.field_r[var4 * 16 + var5] = true;
                                   var5++;
                                   continue L42;
                                 } else {
@@ -961,7 +924,7 @@ final class on {
                         }
                       }
                     } else {
-                      ((bd) param0).field_r[var4] = false;
+                      param0.field_r[var4] = false;
                       var4++;
                       continue L4;
                     }
@@ -969,11 +932,11 @@ final class on {
                 } else {
                   var1 = on.a(param0);
                   if (var1 != 1) {
-                    ((bd) param0).field_n[var4] = false;
+                    param0.field_n[var4] = false;
                     var4++;
                     continue L3;
                   } else {
-                    ((bd) param0).field_n[var4] = true;
+                    param0.field_n[var4] = true;
                     var4++;
                     continue L3;
                   }

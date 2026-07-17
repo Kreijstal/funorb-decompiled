@@ -7,27 +7,18 @@ final class ii extends RuntimeException {
     String field_b;
 
     final static ig a(byte param0) {
-        if (cl.field_k != uh.field_k) {
-          if (s.field_f == uh.field_k) {
+        if (cl.field_k == uh.field_k) {
+            throw new IllegalStateException();
+        }
+        if (!(s.field_f != uh.field_k)) {
             uh.field_k = cl.field_k;
             return gj.field_a;
-          } else {
-            if (param0 == -92) {
-              return null;
-            } else {
-              return null;
-            }
-          }
-        } else {
-          throw new IllegalStateException();
         }
+        return null;
     }
 
     public static void b(byte param0) {
         field_c = null;
-        if (param0 <= 40) {
-            int discarded$0 = ii.a(78);
-        }
     }
 
     ii(Throwable param0, String param1) {

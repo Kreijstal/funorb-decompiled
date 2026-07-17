@@ -14,11 +14,6 @@ abstract class cda extends dg {
     private int field_n;
 
     public static void n(byte param0) {
-        if (param0 < 0) {
-            cda.a(-97, true);
-            field_u = null;
-            return;
-        }
         field_u = null;
     }
 
@@ -238,7 +233,7 @@ abstract class cda extends dg {
               if (var5 != ((cda) this).field_v) {
                 var2 = 1;
                 ((cda) this).field_o = dfa.a(-((cda) this).field_m + var6, 8192, -60);
-                if (-4097 <= (((cda) this).field_o ^ -1)) {
+                if (((cda) this).field_o <= 4096) {
                   L3: {
                     ((cda) this).field_m = var6;
                     if (var3 != 0) {
@@ -430,7 +425,7 @@ abstract class cda extends dg {
           }
           var2 = stackIn_55_0;
           ((cda) this).field_o = dfa.a(-((cda) this).field_m + var6, 8192, -60);
-          if (-4097 > (((cda) this).field_o ^ -1)) {
+          if (((cda) this).field_o > 4096) {
             L14: {
               ((cda) this).field_o = -((cda) this).field_o + 8192;
               ((cda) this).field_m = var6;

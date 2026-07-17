@@ -10,38 +10,41 @@ final class ie extends ne {
     static String[] field_j;
 
     ie(gd param0) {
-        ((ie) this).field_m = param0;
+        try {
+            ((ie) this).field_m = param0;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "ie.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0) {
         i var1 = null;
-        i var1_ref = null;
         if (param0 < 89) {
           L0: {
             field_l = null;
             var1 = (i) (Object) cd.field_g.c(0);
             if (var1 == null) {
-              var1_ref = new i();
+              var1 = new i();
               break L0;
             } else {
               break L0;
             }
           }
-          var1_ref.a(gf.field_c, gf.field_e, gf.field_j, gf.field_f, gf.field_h, gf.field_i, false, gf.field_b);
-          id.field_e.a((ne) (Object) var1_ref, false);
+          var1.a(gf.field_c, gf.field_e, gf.field_j, gf.field_f, gf.field_h, gf.field_i, false, gf.field_b);
+          id.field_e.a((ne) (Object) var1, false);
           return;
         } else {
           L1: {
             var1 = (i) (Object) cd.field_g.c(0);
             if (var1 == null) {
-              var1_ref = new i();
+              var1 = new i();
               break L1;
             } else {
               break L1;
             }
           }
-          var1_ref.a(gf.field_c, gf.field_e, gf.field_j, gf.field_f, gf.field_h, gf.field_i, false, gf.field_b);
-          id.field_e.a((ne) (Object) var1_ref, false);
+          var1.a(gf.field_c, gf.field_e, gf.field_j, gf.field_f, gf.field_h, gf.field_i, false, gf.field_b);
+          id.field_e.a((ne) (Object) var1, false);
           return;
         }
     }
@@ -52,9 +55,6 @@ final class ie extends ne {
         field_n = null;
         field_k = null;
         field_l = null;
-        if (param0 >= -33) {
-            ie.a(54);
-        }
     }
 
     static {

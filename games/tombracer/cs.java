@@ -25,18 +25,9 @@ final class cs {
     }
 
     public static void a(int param0) {
-        if (param0 != 3840) {
-          String discarded$2 = cs.a((byte) 80);
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          return;
-        }
+        field_b = null;
+        field_a = null;
+        field_c = null;
     }
 
     static {

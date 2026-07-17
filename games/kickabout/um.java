@@ -14,20 +14,12 @@ final class um {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;
-            L0: {
-              if (param0 == 114) {
-                break L0;
-              } else {
-                field_a = null;
-                break L0;
-              }
-            }
             if (pd.field_G != null) {
               try {
-                L1: {
+                L0: {
                   pd.field_G.a((byte) 4, 0L);
-                  pd.field_G.a(un.field_e.field_n, param0 + 12, 24, un.field_e.field_f);
-                  break L1;
+                  pd.field_G.a(un.field_e.field_n, 126, 24, un.field_e.field_f);
+                  break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

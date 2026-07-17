@@ -26,21 +26,10 @@ final class ek extends fb {
     }
 
     private final void f(byte param0) {
-        Object var3 = null;
         ((ek) this).field_H = pb.a(so.field_a, 127, 1) + 128;
-        if (param0 != -8) {
-          var3 = null;
-          ((ek) this).a((byte) 119, (wk) null);
-          ((ek) this).field_F = 0;
-          ((ek) this).field_y = ((ek) this).field_N - (-pb.a(so.field_a, 24, param0 ^ -7) - -12) << 1112895856;
-          ((ek) this).field_x = ((ek) this).field_L - 12 - -pb.a(so.field_a, 24, 1) << 99730800;
-          return;
-        } else {
-          ((ek) this).field_F = 0;
-          ((ek) this).field_y = ((ek) this).field_N - (-pb.a(so.field_a, 24, param0 ^ -7) - -12) << 1112895856;
-          ((ek) this).field_x = ((ek) this).field_L - 12 - -pb.a(so.field_a, 24, 1) << 99730800;
-          return;
-        }
+        ((ek) this).field_F = 0;
+        ((ek) this).field_y = ((ek) this).field_N - (-pb.a(so.field_a, 24, 1) - -12) << 16;
+        ((ek) this).field_x = ((ek) this).field_L - 12 - -pb.a(so.field_a, 24, 1) << 16;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -51,8 +40,8 @@ final class ek extends fb {
         if (param3 != 2011722288) {
           return;
         } else {
-          ((ek) this).field_y = param1 << -703263792;
-          ((ek) this).field_x = param0 << 2011722288;
+          ((ek) this).field_y = param1 << 16;
+          ((ek) this).field_x = param0 << 16;
           ((ek) this).field_M = 0;
           this.f((byte) -8);
           var5 = bg.field_o.length;
@@ -64,55 +53,97 @@ final class ek extends fb {
     }
 
     final void a(byte param0, wk param1) {
-        int var3 = 0;
+        RuntimeException runtimeException = null;
+        int var3_int = 0;
         int var4 = 0;
-        if (!((ek) this).field_G) {
-          int fieldTemp$1 = ((ek) this).field_K - 1;
-          ((ek) this).field_K = ((ek) this).field_K - 1;
-          if (fieldTemp$1 <= 0) {
-            if (param0 < -76) {
-              var3 = param1.a(((ek) this).a(true), (byte) -59);
-              var4 = param1.a(((ek) this).f(237239984), 0) + -24;
-              if (km.a(21405, var3, param1, var4)) {
-                if (!ng.field_e) {
-                  if (!dj.field_e.field_H.field_b[((ek) this).f(237239984) / 24][((ek) this).a(true) / 24]) {
-                    bg.field_o[((ek) this).field_F].e(var3, var4, ((ek) this).field_H);
-                    return;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (((ek) this).field_G) {
+                break L1;
+              } else {
+                int fieldTemp$3 = ((ek) this).field_K - 1;
+                ((ek) this).field_K = ((ek) this).field_K - 1;
+                if (fieldTemp$3 > 0) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (param0 < -76) {
+                      break L2;
+                    } else {
+                      ((ek) this).j(-76);
+                      break L2;
+                    }
+                  }
+                  var3_int = param1.a(((ek) this).a(true), (byte) -59);
+                  var4 = param1.a(((ek) this).f(237239984), 0) + -24;
+                  if (km.a(21405, var3_int, param1, var4)) {
+                    L3: {
+                      if (ng.field_e) {
+                        break L3;
+                      } else {
+                        if (dj.field_e.field_H.field_b[((ek) this).f(237239984) / 24][((ek) this).a(true) / 24]) {
+                          return;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
+                    bg.field_o[((ek) this).field_F].e(var3_int, var4, ((ek) this).field_H);
+                    break L0;
                   } else {
                     return;
                   }
-                } else {
-                  bg.field_o[((ek) this).field_F].e(var3, var4, ((ek) this).field_H);
-                  return;
                 }
-              } else {
-                return;
-              }
-            } else {
-              ((ek) this).j(-76);
-              var3 = param1.a(((ek) this).a(true), (byte) -59);
-              var4 = param1.a(((ek) this).f(237239984), 0) + -24;
-              if (km.a(21405, var3, param1, var4)) {
-                if (!ng.field_e) {
-                  if (!dj.field_e.field_H.field_b[((ek) this).f(237239984) / 24][((ek) this).a(true) / 24]) {
-                    bg.field_o[((ek) this).field_F].e(var3, var4, ((ek) this).field_H);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  bg.field_o[((ek) this).field_F].e(var3, var4, ((ek) this).field_H);
-                  return;
-                }
-              } else {
-                return;
               }
             }
-          } else {
             return;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            runtimeException = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) runtimeException;
+            stackOut_14_1 = new StringBuilder().append("ek.B(").append(param0).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param1 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 
@@ -126,7 +157,7 @@ final class ek extends fb {
     final void g(int param0) {
         int fieldTemp$2 = ((ek) this).field_D + 1;
         ((ek) this).field_D = ((ek) this).field_D + 1;
-        if (-5 >= (fieldTemp$2 ^ -1)) {
+        if (fieldTemp$2 >= 4) {
           ((ek) this).field_D = 0;
           int fieldTemp$3 = ((ek) this).field_F + 1;
           ((ek) this).field_F = ((ek) this).field_F + 1;

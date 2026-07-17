@@ -7,9 +7,6 @@ final class ebb {
 
     final static void a(byte param0) {
         ola.field_p = null;
-        if (param0 != -74) {
-            field_a = null;
-        }
     }
 
     public static void a(int param0) {

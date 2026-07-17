@@ -11,11 +11,6 @@ final class bm extends vg {
     int field_j;
 
     public static void a(int param0) {
-        if (param0 != 717) {
-            field_f = null;
-            field_f = null;
-            return;
-        }
         field_f = null;
     }
 

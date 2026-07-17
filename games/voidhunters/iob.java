@@ -8,9 +8,6 @@ final class iob extends vhb {
     private static String field_z;
 
     public static void c(int param0) {
-        if (param0 != -5509) {
-            return;
-        }
         field_e = null;
     }
 

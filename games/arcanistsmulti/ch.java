@@ -23,9 +23,6 @@ final class ch {
         field_e = null;
         field_d = null;
         field_h = null;
-        if (param0) {
-            return;
-        }
         field_a = null;
         field_f = null;
         field_c = null;

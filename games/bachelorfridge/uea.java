@@ -10,14 +10,14 @@ final class uea extends kj {
 
     final void a(int param0, int param1, int param2) {
         int var4 = (int)((1.0 - Math.cos((double)(((uea) this).field_h * 4) * 3.141592653589793 / 50.0)) * 64.0);
-        this.a(param0, param1, param2);
+        super.a(param0, param1, param2);
         ((uea) this).field_f.a(param2, param0, var4);
     }
 
     public static void c(byte param0) {
         field_j = null;
         field_g = null;
-        int var1 = -108 % ((param0 - 15) / 62);
+        int var1 = 0;
     }
 
     final boolean b(int param0) {
@@ -28,8 +28,9 @@ final class uea extends kj {
           return true;
         } else {
           L0: {
+            int fieldTemp$2 = ((uea) this).field_h - 1;
             ((uea) this).field_h = ((uea) this).field_h - 1;
-            if ((((uea) this).field_h - 1 ^ -1) < -1) {
+            if (fieldTemp$2 > 0) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -51,11 +52,15 @@ final class uea extends kj {
 
     uea(gj param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
-        ((uea) this).field_h = 50;
-        ((uea) this).field_f = new kv(128, 64);
-        bu.a(0, ((uea) this).field_f);
-        param0.field_s.field_p.e(0, 0, param3);
-        db.b(100);
+        try {
+            ((uea) this).field_h = 50;
+            ((uea) this).field_f = new kv(128, 64);
+            bu.a(0, ((uea) this).field_f);
+            param0.field_s.field_p.e(0, 0, param3);
+            db.b(100);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "uea.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     static {

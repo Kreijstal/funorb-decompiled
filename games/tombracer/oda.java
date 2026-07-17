@@ -10,9 +10,6 @@ final class oda extends vg {
     public static void a(boolean param0) {
         field_i = null;
         field_h = null;
-        if (!param0) {
-            field_i = null;
-        }
     }
 
     oda(int param0, int param1) {

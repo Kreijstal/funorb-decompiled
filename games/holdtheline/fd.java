@@ -9,7 +9,7 @@ final class fd {
     static int field_d;
 
     public static void a(int param0) {
-        int var1 = 113 / ((-37 - param0) / 56);
+        int var1 = -56;
         field_e = null;
         field_b = null;
         field_a = null;

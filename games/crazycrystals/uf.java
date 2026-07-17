@@ -17,8 +17,8 @@ final class uf {
 
     final int a(boolean param0) {
         if (!((uf) this).field_j) {
-          if ((((uf) this).field_f ^ -1) != -3) {
-            if ((((uf) this).field_g ^ -1L) == (gl.field_i ^ -1L)) {
+          if (((uf) this).field_f != 2) {
+            if (~((uf) this).field_g == ~gl.field_i) {
               return 1;
             } else {
               L0: {
@@ -39,8 +39,8 @@ final class uf {
               }
             }
           } else {
-            if ((((uf) this).field_a ^ -1) >= -1) {
-              if ((((uf) this).field_g ^ -1L) == (gl.field_i ^ -1L)) {
+            if (((uf) this).field_a <= 0) {
+              if (~((uf) this).field_g == ~gl.field_i) {
                 return 1;
               } else {
                 if (mh.field_h == 2) {

@@ -7,11 +7,6 @@ abstract class bt extends pt {
     static volatile long field_f;
 
     public static void c(byte param0) {
-        if (param0 != -21) {
-            field_f = 90L;
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 
@@ -20,17 +15,10 @@ abstract class bt extends pt {
     }
 
     final static boolean b(int param0) {
-        if (param0 <= 64) {
-            return false;
-        }
-        return !ut.field_o.a(true) ? true : false;
+        return !ut.field_o.a(true);
     }
 
     final static uw a(boolean param0) {
-        if (param0) {
-            field_e = null;
-            return (uw) (Object) new fd();
-        }
         return (uw) (Object) new fd();
     }
 

@@ -14,9 +14,6 @@ final class tc {
 
     public static void a(boolean param0) {
         field_d = null;
-        if (param0) {
-            field_d = null;
-        }
     }
 
     final int a(byte param0) {
@@ -126,12 +123,7 @@ final class tc {
         var3 = ((tc) this).field_e.length;
         L0: while (true) {
           if (var3 > param0) {
-            if (param1 > -12) {
-              this.b(-26, -84);
-              return var3;
-            } else {
-              return var3;
-            }
+            return var3;
           } else {
             if (((tc) this).field_a) {
               if (var3 != 0) {

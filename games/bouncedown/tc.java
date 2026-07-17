@@ -9,28 +9,68 @@ class tc extends jd {
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
-            Exception exception = null;
             java.net.URL var2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
+            RuntimeException stackIn_5_0 = null;
+            StringBuilder stackIn_5_1 = null;
+            RuntimeException stackIn_6_0 = null;
+            StringBuilder stackIn_6_1 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            String stackIn_7_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_4_0 = null;
+            StringBuilder stackOut_4_1 = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            String stackOut_6_2 = null;
+            RuntimeException stackOut_5_0 = null;
+            StringBuilder stackOut_5_1 = null;
+            String stackOut_5_2 = null;
             try {
-              L0: {
-                var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                param0.getAppletContext().showDocument(ag.a(param0, var2, false), "_top");
-                break L0;
+              try {
+                L0: {
+                  var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
+                  param0.getAppletContext().showDocument(ag.a(param0, var2, false), "_top");
+                  break L0;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
+                return;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
+              return;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
               L1: {
-                exception = (Exception) (Object) decompiledCaughtException;
-                exception.printStackTrace();
-                break L1;
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_4_0 = (RuntimeException) var2_ref2;
+                stackOut_4_1 = new StringBuilder().append("tc.C(");
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_1 = stackOut_4_1;
+                if (param0 == null) {
+                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_2 = "null";
+                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_2 = stackOut_6_2;
+                  break L1;
+                } else {
+                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_2 = "{...}";
+                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_2 = stackOut_5_2;
+                  break L1;
+                }
               }
-            }
-            if (param1 != 6091) {
-              tc.a(true);
-              return;
-            } else {
-              return;
+              throw ii.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 6091 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -59,15 +99,14 @@ class tc extends jd {
     }
 
     public final void a(int param0, lk param1, byte param2, boolean param3, int param4) {
-        int var6 = 0;
-        var6 = 105 % ((-60 - param2) / 56);
-        if (param3) {
-          dh.a(param1.field_i + param0, 1232050056, param1.field_k, param4 + param1.field_r, param1.field_m);
-          super.a(param0, param1, (byte) -125, param3, param4);
-          return;
-        } else {
-          super.a(param0, param1, (byte) -125, param3, param4);
-          return;
+        try {
+            int var6_int = 105 % ((-60 - param2) / 56);
+            if (param3) {
+                dh.a(param1.field_i + param0, 1232050056, param1.field_k, param4 + param1.field_r, param1.field_m);
+            }
+            super.a(param0, param1, (byte) -125, param3, param4);
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "tc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

@@ -47,9 +47,9 @@ final class bt {
         } else {
           var2 = kr.field_E.h((byte) 94);
           if (var2 != null) {
-            var3 = 9 % ((param0 - -41) / 55);
+            var3 = 0;
             var4 = kr.field_E.h(-10754);
-            if ((var4 ^ -1) > -1) {
+            if (var4 < 0) {
               return;
             } else {
               if (null != kr.field_E.field_N) {

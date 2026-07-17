@@ -16,27 +16,20 @@ final class ui extends oh {
         field_kb = null;
         field_pb = null;
         field_nb = null;
-        if (param0) {
-            Object var2 = null;
-            ui.a((java.awt.Component) null, 22);
-        }
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        Object var3 = null;
-        param0.removeMouseListener((java.awt.event.MouseListener) (Object) sg.field_i);
-        if (param1 < 106) {
-          var3 = null;
-          ui.a((java.awt.Component) null, -120);
-          param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) sg.field_i);
-          param0.removeFocusListener((java.awt.event.FocusListener) (Object) sg.field_i);
-          lk.field_J = 0;
-          return;
-        } else {
-          param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) sg.field_i);
-          param0.removeFocusListener((java.awt.event.FocusListener) (Object) sg.field_i);
-          lk.field_J = 0;
-          return;
+        try {
+            param0.removeMouseListener((java.awt.event.MouseListener) (Object) sg.field_i);
+            if (param1 < 106) {
+                Object var3 = null;
+                ui.a((java.awt.Component) null, -120);
+            }
+            param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) sg.field_i);
+            param0.removeFocusListener((java.awt.event.FocusListener) (Object) sg.field_i);
+            lk.field_J = 0;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "ui.BA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -45,7 +38,11 @@ final class ui extends oh {
     }
 
     final void d(qa param0, int param1) {
-        super.d(param0, param1);
+        try {
+            super.d(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "ui.IA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

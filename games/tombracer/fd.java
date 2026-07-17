@@ -20,27 +20,23 @@ final class fd {
     }
 
     final void a(int param0, fd param1) {
-        ((fd) this).field_c = param1.field_c;
-        ((fd) this).field_f = param1.field_f;
-        ((fd) this).field_h = param1.field_h;
-        ((fd) this).field_b = param1.field_b;
-        if (param0 != 167) {
-          field_d = null;
-          ((fd) this).field_g = param1.field_g;
-          ((fd) this).field_a = param1.field_a;
-          return;
-        } else {
-          ((fd) this).field_g = param1.field_g;
-          ((fd) this).field_a = param1.field_a;
-          return;
+        try {
+            ((fd) this).field_c = param1.field_c;
+            ((fd) this).field_f = param1.field_f;
+            ((fd) this).field_h = param1.field_h;
+            ((fd) this).field_b = param1.field_b;
+            if (param0 != 167) {
+                field_d = null;
+            }
+            ((fd) this).field_g = param1.field_g;
+            ((fd) this).field_a = param1.field_a;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fd.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     public static void b(byte param0) {
         field_d = null;
-        if (param0 >= -103) {
-            field_d = null;
-        }
     }
 
     fd(int param0) {

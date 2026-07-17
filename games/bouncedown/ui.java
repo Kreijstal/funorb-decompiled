@@ -114,30 +114,30 @@ final class ui extends ai {
           L0: {
             var7_int = 2147483647;
             var8 = -2147483648;
-            var21 = param3[3] >> 1601515810;
-            var22 = param3[4] >> -526408126;
-            var23 = param3[5] >> -266505982;
-            var24 = param3[6] >> 1693261634;
-            var25 = param3[7] >> 331939234;
-            var26 = param3[8] >> -1884070558;
-            var27 = param3[9] >> -1481233694;
+            var21 = param3[3] >> 2;
+            var22 = param3[4] >> 2;
+            var23 = param3[5] >> 2;
+            var24 = param3[6] >> 2;
+            var25 = param3[7] >> 2;
+            var26 = param3[8] >> 2;
+            var27 = param3[9] >> 2;
             var29 = 118 / ((3 - param0) / 47);
-            var28 = param3[10] >> 1461082658;
-            var30 = param3[11] >> 1458425346;
-            var13 = var26 * param4[5] + (param4[3] * var24 + param4[4] * var25) >> -919885490;
-            var12 = param4[3] * var21 + (param4[4] * var22 - -(var23 * param4[5])) >> 272887566;
-            var19 = param4[9] * var24 - (-(var25 * param4[10]) - var26 * param4[11]) >> 848992750;
-            var14 = param4[4] * var28 + (var27 * param4[3] + param4[5] * var30) >> -678438866;
-            var15 = var21 * param4[6] + (param4[7] * var22 - -(var23 * param4[8])) >> 290034318;
-            var18 = param4[10] * var22 + param4[9] * var21 - -(var23 * param4[11]) >> -1378909234;
-            var16 = param4[7] * var25 + param4[6] * var24 + param4[8] * var26 >> 605821230;
-            var17 = var30 * param4[8] + param4[7] * var28 + param4[6] * var27 >> -1787084498;
-            var20 = var27 * param4[9] + param4[10] * var28 - -(var30 * param4[11]) >> 18156366;
+            var28 = param3[10] >> 2;
+            var30 = param3[11] >> 2;
+            var13 = var26 * param4[5] + (param4[3] * var24 + param4[4] * var25) >> 14;
+            var12 = param4[3] * var21 + (param4[4] * var22 - -(var23 * param4[5])) >> 14;
+            var19 = param4[9] * var24 - (-(var25 * param4[10]) - var26 * param4[11]) >> 14;
+            var14 = param4[4] * var28 + (var27 * param4[3] + param4[5] * var30) >> 14;
+            var15 = var21 * param4[6] + (param4[7] * var22 - -(var23 * param4[8])) >> 14;
+            var18 = param4[10] * var22 + param4[9] * var21 - -(var23 * param4[11]) >> 14;
+            var16 = param4[7] * var25 + param4[6] * var24 + param4[8] * var26 >> 14;
+            var17 = var30 * param4[8] + param4[7] * var28 + param4[6] * var27 >> 14;
+            var20 = var27 * param4[9] + param4[10] * var28 - -(var30 * param4[11]) >> 14;
             var21 = param4[0] - param3[0];
             var22 = param4[1] + -param3[1];
             var23 = param4[2] - param3[2];
             var9 = var23 * param3[5] + (var22 * param3[4] + var21 * param3[3]) >> 16 - kk.field_s;
-            var11 = param3[11] * var23 + var22 * param3[10] + param3[9] * var21 >> 335346160;
+            var11 = param3[11] * var23 + var22 * param3[10] + param3[9] * var21 >> 16;
             var10 = var21 * param3[6] + var22 * param3[7] + param3[8] * var23 >> 16 - kk.field_s;
             var21 = qk.field_f;
             var22 = qk.field_e;
@@ -154,9 +154,9 @@ final class ui extends ai {
                       var26 = param6.field_J[var23];
                       var27 = var9 + (var25 * var15 + (var24 * var12 - -(var26 * var18)) >> 16 + -kk.field_s);
                       var28 = var10 + (var25 * var16 + (var13 * var24 + var19 * var26) >> -kk.field_s + 16);
-                      var29 = var11 + (var24 * var14 - -(var17 * var25) + var26 * var20 >> -207515920);
+                      var29 = var11 + (var24 * var14 - -(var17 * var25) + var26 * var20 >> 16);
                       stackOut_3_0 = -51;
-                      stackOut_3_1 = var29 ^ -1;
+                      stackOut_3_1 = ~var29;
                       stackIn_62_0 = stackOut_3_0;
                       stackIn_62_1 = stackOut_3_1;
                       stackIn_4_0 = stackOut_3_0;
@@ -173,7 +173,7 @@ final class ui extends ai {
                                 ca.field_c[var23] = var27 / var29 + var21;
                                 kg.field_g[var23] = var22 + var28 / var29;
                                 r.field_c[var23] = var29;
-                                if ((var29 ^ -1) <= (var7_int ^ -1)) {
+                                if (~var29 <= ~var7_int) {
                                   break L7;
                                 } else {
                                   var7_int = var29;
@@ -248,21 +248,21 @@ final class ui extends ai {
                                           var24 = param6.field_G[var23];
                                           var25 = param6.field_j[var23];
                                           var26 = param6.field_A[var23];
-                                          il.field_d[var23] = var9 - -(var12 * var24 - -(var25 * var15) - -(var18 * var26) >> -1457332944);
-                                          nd.field_F[var23] = (var19 * var26 + var16 * var25 + var24 * var13 >> 1132593136) + var10;
-                                          pc.field_j[var23] = (var26 * var20 + var17 * var25 + var24 * var14 >> 508131920) + var11;
+                                          il.field_d[var23] = var9 - -(var12 * var24 - -(var25 * var15) - -(var18 * var26) >> 16);
+                                          nd.field_F[var23] = (var19 * var26 + var16 * var25 + var24 * var13 >> 16) + var10;
+                                          pc.field_j[var23] = (var26 * var20 + var17 * var25 + var24 * var14 >> 16) + var11;
                                           var24 = param6.field_c[var23];
                                           var25 = param6.field_o[var23];
                                           var26 = param6.field_r[var23];
-                                          ml.field_f[var23] = var9 - -(var12 * var24 + (var15 * var25 - -(var18 * var26)) >> 635262480);
-                                          gh.field_I[var23] = (var26 * var19 + var16 * var25 + var24 * var13 >> -1278888496) + var10;
-                                          fl.field_b[var23] = (var20 * var26 + (var14 * var24 - -(var25 * var17)) >> -45919920) + var11;
+                                          ml.field_f[var23] = var9 - -(var12 * var24 + (var15 * var25 - -(var18 * var26)) >> 16);
+                                          gh.field_I[var23] = (var26 * var19 + var16 * var25 + var24 * var13 >> 16) + var10;
+                                          fl.field_b[var23] = (var20 * var26 + (var14 * var24 - -(var25 * var17)) >> 16) + var11;
                                           var24 = param6.field_z[var23];
                                           var25 = param6.field_h[var23];
                                           var26 = param6.field_E[var23];
-                                          ne.field_m[var23] = var9 - -(var18 * var26 + var12 * var24 - -(var25 * var15) >> -1904765680);
-                                          qe.field_g[var23] = (var25 * var16 + var13 * var24 + var19 * var26 >> -1934787152) + var10;
-                                          nc.field_a[var23] = (var26 * var20 + (var17 * var25 + var24 * var14) >> -309494160) + var11;
+                                          ne.field_m[var23] = var9 - -(var18 * var26 + var12 * var24 - -(var25 * var15) >> 16);
+                                          qe.field_g[var23] = (var25 * var16 + var13 * var24 + var19 * var26 >> 16) + var10;
+                                          nc.field_a[var23] = (var26 * var20 + (var17 * var25 + var24 * var14) >> 16) + var11;
                                           var23++;
                                           if (var31 != 0) {
                                             break L2;
@@ -320,9 +320,9 @@ final class ui extends ai {
                               var19 = param6.field_f[var18];
                               var20 = param6.field_i[var18];
                               var21 = param6.field_x[var18];
-                              uc.field_D[var18] = var9 * var19 - (-(var20 * var12) - var15 * var21) >> 24685648;
-                              ih.field_db[var18] = var20 * var13 + (var19 * var10 - -(var21 * var16)) >> -119997904;
-                              nk.field_b[var18] = var11 * var19 - -(var14 * var20) - -(var21 * var17) >> -1326185040;
+                              uc.field_D[var18] = var9 * var19 - (-(var20 * var12) - var15 * var21) >> 16;
+                              ih.field_db[var18] = var20 * var13 + (var19 * var10 - -(var21 * var16)) >> 16;
+                              nk.field_b[var18] = var11 * var19 - -(var14 * var20) - -(var21 * var17) >> 16;
                               var18++;
                               if (var31 == 0) {
                                 continue L12;

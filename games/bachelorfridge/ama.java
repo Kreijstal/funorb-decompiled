@@ -56,9 +56,9 @@ final class ama extends k {
                 var13 = var31[2];
                 for (var14 = 0; hh.field_d > var14; var14++) {
                     var15 = var32[var14];
-                    var13[var14] = dda.a(var15, 255) << -892567228;
-                    var12[var14] = dda.a(65280, var15) >> 294872388;
-                    var11[var14] = dda.a(var15 >> 357549900, 4080);
+                    var13[var14] = dda.a(var15, 255) << 4;
+                    var12[var14] = dda.a(65280, var15) >> 4;
+                    var11[var14] = dda.a(var15 >> 12, 4080);
                 }
             }
         }
@@ -66,92 +66,142 @@ final class ama extends k {
     }
 
     final void a(byte param0, lu param1, int param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
         Object stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        Object stackOut_16_0 = null;
+        Object stackIn_20_0 = null;
+        int stackIn_20_1 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_17_0 = null;
+        Object stackOut_19_0 = null;
+        int stackOut_19_1 = 0;
         Object stackOut_18_0 = null;
         int stackOut_18_1 = 0;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        L0: {
-          var7 = BachelorFridge.field_y;
-          if (-1 != (param2 ^ -1)) {
-            if (1 != param2) {
-              break L0;
-            } else {
-              L1: {
-                stackOut_16_0 = this;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_17_0 = stackOut_16_0;
-                if (param1.b(16711935) != 1) {
-                  stackOut_18_0 = this;
-                  stackOut_18_1 = 0;
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        var7 = BachelorFridge.field_y;
+        try {
+          L0: {
+            L1: {
+              if (param2 != 0) {
+                if (1 != param2) {
                   break L1;
                 } else {
-                  stackOut_17_0 = this;
-                  stackOut_17_1 = 1;
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_19_1 = stackOut_17_1;
+                  L2: {
+                    stackOut_17_0 = this;
+                    stackIn_19_0 = stackOut_17_0;
+                    stackIn_18_0 = stackOut_17_0;
+                    if (param1.b(16711935) != 1) {
+                      stackOut_19_0 = this;
+                      stackOut_19_1 = 0;
+                      stackIn_20_0 = stackOut_19_0;
+                      stackIn_20_1 = stackOut_19_1;
+                      break L2;
+                    } else {
+                      stackOut_18_0 = this;
+                      stackOut_18_1 = 1;
+                      stackIn_20_0 = stackOut_18_0;
+                      stackIn_20_1 = stackOut_18_1;
+                      break L2;
+                    }
+                  }
+                  ((ama) this).field_f = stackIn_20_1 != 0;
                   break L1;
                 }
-              }
-              ((ama) this).field_f = stackIn_19_1 != 0;
-              break L0;
-            }
-          } else {
-            ((ama) this).field_n = new vo[param1.b(param0 + 16712006)];
-            var4 = 0;
-            L2: while (true) {
-              if (var4 >= ((ama) this).field_n.length) {
-                break L0;
               } else {
-                var5 = param1.b(16711935);
-                var6 = var5;
-                if (0 != var6) {
-                  if (-2 != (var6 ^ -1)) {
-                    if (var6 == 2) {
-                      ((ama) this).field_n[var4] = (vo) (Object) ig.a(0, param1);
-                      var4++;
-                      continue L2;
-                    } else {
-                      if ((var6 ^ -1) == -4) {
-                        ((ama) this).field_n[var4] = (vo) (Object) afa.a(param1, -128);
-                        var4++;
-                        continue L2;
+                ((ama) this).field_n = new vo[param1.b(param0 + 16712006)];
+                var4_int = 0;
+                L3: while (true) {
+                  if (var4_int >= ((ama) this).field_n.length) {
+                    break L1;
+                  } else {
+                    L4: {
+                      var5 = param1.b(16711935);
+                      var6 = var5;
+                      if (0 != var6) {
+                        if (var6 != 1) {
+                          if (var6 == 2) {
+                            ((ama) this).field_n[var4_int] = (vo) (Object) ig.a(0, param1);
+                            break L4;
+                          } else {
+                            if (var6 == 3) {
+                              ((ama) this).field_n[var4_int] = (vo) (Object) afa.a(param1, -128);
+                              break L4;
+                            } else {
+                              break L4;
+                            }
+                          }
+                        } else {
+                          ((ama) this).field_n[var4_int] = (vo) (Object) ch.a(false, param1);
+                          break L4;
+                        }
                       } else {
-                        var4++;
-                        continue L2;
+                        ((ama) this).field_n[var4_int] = (vo) (Object) pka.a(param1, false);
+                        break L4;
                       }
                     }
-                  } else {
-                    ((ama) this).field_n[var4] = (vo) (Object) ch.a(false, param1);
-                    var4++;
-                    continue L2;
+                    var4_int++;
+                    continue L3;
                   }
-                } else {
-                  ((ama) this).field_n[var4] = (vo) (Object) pka.a(param1, false);
-                  var4++;
-                  continue L2;
                 }
               }
             }
+            L5: {
+              if (param0 == -71) {
+                break L5;
+              } else {
+                field_k = null;
+                break L5;
+              }
+            }
+            break L0;
           }
-        }
-        L3: {
-          if (param0 == -71) {
-            break L3;
-          } else {
-            field_k = null;
-            break L3;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var4 = decompiledCaughtException;
+            stackOut_24_0 = (RuntimeException) var4;
+            stackOut_24_1 = new StringBuilder().append("ama.E(").append(param0).append(44);
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
+            if (param1 == null) {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L6;
+            } else {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L6;
+            }
           }
+          throw pe.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param2 + 41);
         }
     }
 
@@ -166,61 +216,112 @@ final class ama extends k {
     }
 
     private final void a(byte param0, int[][] param1) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         vo var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        L0: {
-          var9 = BachelorFridge.field_y;
-          var3 = hh.field_d;
-          var4 = bi.field_g;
-          tma.a(param1, -5);
-          bm.a(it.field_r, 0, wp.field_r, -14702, 0);
-          if (((ama) this).field_n != null) {
-            var5 = 0;
-            L1: while (true) {
-              if (var5 >= ((ama) this).field_n.length) {
-                break L0;
-              } else {
-                var6 = ((ama) this).field_n[var5];
-                var7 = var6.field_a;
-                var8 = var6.field_f;
-                if (var7 < 0) {
-                  if (0 <= var8) {
-                    var6.a(var3, -25222, var4);
-                    var5++;
-                    continue L1;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var9 = BachelorFridge.field_y;
+        try {
+          L0: {
+            L1: {
+              var3_int = hh.field_d;
+              var4 = bi.field_g;
+              tma.a(param1, -5);
+              bm.a(it.field_r, 0, wp.field_r, -14702, 0);
+              if (((ama) this).field_n != null) {
+                var5 = 0;
+                L2: while (true) {
+                  if (var5 >= ((ama) this).field_n.length) {
+                    break L1;
                   } else {
+                    L3: {
+                      var6 = ((ama) this).field_n[var5];
+                      var7 = var6.field_a;
+                      var8 = var6.field_f;
+                      if (var7 < 0) {
+                        if (0 > var8) {
+                          break L3;
+                        } else {
+                          var6.a(var3_int, -25222, var4);
+                          break L3;
+                        }
+                      } else {
+                        if (var8 >= 0) {
+                          var6.a((byte) -80, var4, var3_int);
+                          break L3;
+                        } else {
+                          var6.b(var3_int, 76, var4);
+                          break L3;
+                        }
+                      }
+                    }
                     var5++;
-                    continue L1;
-                  }
-                } else {
-                  if (var8 >= 0) {
-                    var6.a((byte) -80, var4, var3);
-                    var5++;
-                    continue L1;
-                  } else {
-                    var6.b(var3, 76, var4);
-                    var5++;
-                    continue L1;
+                    continue L2;
                   }
                 }
+              } else {
+                break L1;
               }
             }
-          } else {
+            L4: {
+              if (param0 >= 72) {
+                break L4;
+              } else {
+                field_l = null;
+                break L4;
+              }
+            }
             break L0;
           }
-        }
-        L2: {
-          if (param0 >= 72) {
-            break L2;
-          } else {
-            field_l = null;
-            break L2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var3 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var3;
+            stackOut_15_1 = new StringBuilder().append("ama.C(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L5;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L5;
+            }
           }
+          throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
         }
     }
 

@@ -25,9 +25,6 @@ final class ve {
         sc.field_c = null;
         fl.field_s = false;
         fi.field_Db = -1;
-        if (param0 != -83) {
-            field_b = 56;
-        }
     }
 
     public static void a(int param0) {
@@ -47,27 +44,17 @@ final class ve {
     }
 
     final static void a(int param0, String param1, String param2) {
-        if (null == fl.field_u) {
-          ao.field_c = new tl(param2, param1, false, true, true);
-          if (param0 != -1) {
-            field_a = null;
+        try {
+            if (null != fl.field_u) {
+                fl.field_u.r(-127);
+            }
+            ao.field_c = new tl(param2, param1, false, true, true);
+            if (param0 != -1) {
+                field_a = null;
+            }
             mm.field_u.e((na) (Object) ao.field_c, param0 + -27666);
-            return;
-          } else {
-            mm.field_u.e((na) (Object) ao.field_c, param0 + -27666);
-            return;
-          }
-        } else {
-          fl.field_u.r(-127);
-          ao.field_c = new tl(param2, param1, false, true, true);
-          if (param0 == -1) {
-            mm.field_u.e((na) (Object) ao.field_c, param0 + -27666);
-            return;
-          } else {
-            field_a = null;
-            mm.field_u.e((na) (Object) ao.field_c, param0 + -27666);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "ve.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -114,7 +101,11 @@ final class ve {
     }
 
     ve(oh[] param0) {
-        ((ve) this).field_e = param0;
+        try {
+            ((ve) this).field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "ve.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

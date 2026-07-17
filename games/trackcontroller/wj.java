@@ -10,18 +10,22 @@ abstract class wj {
     abstract int a(int param0, long param1);
 
     final static void a(int param0, uf param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
-        kb.field_d = param1;
-        gi.field_r = param3;
-        fj.field_T = param8;
-        sa.field_T = param6;
-        kf.field_a = param5;
-        int var9 = 41 % ((-36 - param7) / 32);
-        fc.field_g = param4;
-        vk.field_j = param2;
-        ga.field_e = param0;
-        rj.field_d = (ae) (Object) new da();
-        rb.field_a = new sd(param1);
-        ij.field_d = new wg(rj.field_d, rb.field_a);
+        try {
+            kb.field_d = param1;
+            gi.field_r = param3;
+            fj.field_T = param8;
+            sa.field_T = param6;
+            kf.field_a = param5;
+            int var9_int = 41 % ((-36 - param7) / 32);
+            fc.field_g = param4;
+            vk.field_j = param2;
+            ga.field_e = param0;
+            rj.field_d = (ae) (Object) new da();
+            rb.field_a = new sd(param1);
+            ij.field_d = new wg(rj.field_d, rb.field_a);
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "wj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+        }
     }
 
     final int a(byte param0, long param1) {

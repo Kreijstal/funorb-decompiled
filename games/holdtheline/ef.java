@@ -53,7 +53,11 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
-        ((ef) this).field_a = true;
+        try {
+            ((ef) this).field_a = true;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "ef.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -63,20 +67,28 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
         if (param1 >= -94) {
             return;
         }
-        n.field_w = param0;
-        be.field_i = param2;
+        try {
+            n.field_w = param0;
+            be.field_i = param2;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "ef.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(ib param0, int param1) {
-        if (param1 != 50) {
-            String discarded$0 = ef.c(62);
+        try {
+            if (param1 != 50) {
+                String discarded$0 = ef.c(62);
+            }
             rd.a((byte) 118, param0, ((ef) this).field_f);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "ef.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        rd.a((byte) 118, param0, ((ef) this).field_f);
     }
 
     final static float a(float param0, wd param1, int param2, float param3) {
+        RuntimeException var4 = null;
+        qm var5 = null;
         float var6 = 0.0f;
         float var7 = 0.0f;
         float var8 = 0.0f;
@@ -84,42 +96,89 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
         float var10 = 0.0f;
         float var11 = 0.0f;
         float var12 = 0.0f;
-        qm var14 = null;
-        qm var15 = null;
-        qm var16 = null;
-        qm var17 = null;
-        if (param1.field_k != 0) {
-          return 0.0f;
-        } else {
-          if (param2 != 14) {
-            field_h = null;
-            var15 = param1.a(false, param3);
-            var14 = param1.a(false, param0);
-            var6 = (float)(var14.field_h + -var15.field_h);
-            var7 = (float)(var14.field_f - var15.field_f);
-            var8 = (-param3 + param0) * param1.f(param2 ^ 60) * param1.field_o;
-            var9 = var8 * -var6;
-            var10 = -var7 * var8;
-            var11 = var7 * var7 + var6 * var6;
-            var12 = (float)Math.sqrt((double)(var11 * var11 + (var9 * var9 + var10 * var10)));
-            var10 = var10 / var12;
-            var9 = var9 / var12;
-            return (var9 + var10) * -5.0f;
-          } else {
-            var17 = param1.a(false, param3);
-            var16 = param1.a(false, param0);
-            var6 = (float)(var16.field_h + -var17.field_h);
-            var7 = (float)(var16.field_f - var17.field_f);
-            var8 = (-param3 + param0) * param1.f(param2 ^ 60) * param1.field_o;
-            var9 = var8 * -var6;
-            var10 = -var7 * var8;
-            var11 = var7 * var7 + var6 * var6;
-            var12 = (float)Math.sqrt((double)(var11 * var11 + (var9 * var9 + var10 * var10)));
-            var10 = var10 / var12;
-            var9 = var9 / var12;
-            return (var9 + var10) * -5.0f;
+        qm var13 = null;
+        float stackIn_3_0 = 0.0f;
+        float stackIn_7_0 = 0.0f;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        float stackOut_2_0 = 0.0f;
+        float stackOut_6_0 = 0.0f;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            if (param1.field_k != 0) {
+              stackOut_2_0 = 0.0f;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
+            } else {
+              L1: {
+                if (param2 == 14) {
+                  break L1;
+                } else {
+                  field_h = null;
+                  break L1;
+                }
+              }
+              var13 = param1.a(false, param3);
+              var5 = param1.a(false, param0);
+              var6 = (float)(var5.field_h + -var13.field_h);
+              var7 = (float)(var5.field_f - var13.field_f);
+              var8 = (-param3 + param0) * param1.f(param2 ^ 60) * param1.field_o;
+              var9 = var8 * -var6;
+              var10 = -var7 * var8;
+              var11 = var7 * var7 + var6 * var6;
+              var12 = (float)Math.sqrt((double)(var11 * var11 + (var9 * var9 + var10 * var10)));
+              var10 = var10 / var12;
+              var9 = var9 / var12;
+              stackOut_6_0 = (var9 + var10) * -5.0f;
+              stackIn_7_0 = stackOut_6_0;
+              break L0;
+            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("ef.A(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_7_0;
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {
@@ -129,20 +188,12 @@ final class ef extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static void a(int param0) {
-        if (!mn.field_a) {
-          throw new IllegalStateException();
-        } else {
-          bn.field_j = true;
-          ol.a(true, (byte) -90);
-          if (param0 <= 106) {
-            field_i = null;
-            bk.field_w = 0;
-            return;
-          } else {
-            bk.field_w = 0;
-            return;
-          }
+        if (!(mn.field_a)) {
+            throw new IllegalStateException();
         }
+        bn.field_j = true;
+        ol.a(true, (byte) -90);
+        bk.field_w = 0;
     }
 
     static {

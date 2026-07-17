@@ -9,7 +9,7 @@ final class rp implements Runnable {
     volatile boolean field_d;
 
     final static sj[] a(int param0) {
-        int var1 = -121 % ((param0 - -40) / 41);
+        int var1 = -1;
         return new sj[]{mn.field_j, og.field_x, cc.field_c, lm.field_e, jl.field_g, qn.field_g, sb.field_E, cm.field_a, tn.field_q, md.field_u, vg.field_a, qj.field_a, cn.field_b, sp.field_f};
     }
 
@@ -20,9 +20,6 @@ final class rp implements Runnable {
     }
 
     public static void b(int param0) {
-        if (param0 != 2) {
-            return;
-        }
         field_a = null;
     }
 

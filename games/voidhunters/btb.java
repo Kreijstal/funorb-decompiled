@@ -12,9 +12,6 @@ final class btb {
         field_b = null;
         field_c = null;
         field_d = null;
-        if (param0 != 94) {
-            field_c = null;
-        }
     }
 
     static {

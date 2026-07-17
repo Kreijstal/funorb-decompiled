@@ -9,7 +9,7 @@ final class vib {
     private static String field_z;
 
     public static void a(int param0) {
-        int var1 = 110 % ((6 - param0) / 37);
+        int var1 = 0;
         field_b = null;
     }
 

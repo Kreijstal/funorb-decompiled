@@ -18,54 +18,67 @@ final class ik extends cq implements qi {
 
     ik(jc param0, hd param1, la param2, int param3, int param4) {
         super(param0, 34037, param1, param2, param4 * param3, false);
-        ((ik) this).field_j = param3;
-        ((ik) this).field_i = param4;
-        ((ik) this).field_g.a((jj) this, -9135);
-        jaggl.OpenGL.glTexImage2Dub(((ik) this).field_e, 0, ((ik) this).a(false), param3, param4, 0, gq.a(((ik) this).field_h, -29824), kk.a(((ik) this).field_c, (byte) -117), (byte[]) null, 0);
+        try {
+            ((ik) this).field_j = param3;
+            ((ik) this).field_i = param4;
+            ((ik) this).field_g.a((jj) this, -9135);
+            jaggl.OpenGL.glTexImage2Dub(((ik) this).field_e, 0, ((ik) this).a(false), param3, param4, 0, gq.a(((ik) this).field_h, -29824), kk.a(((ik) this).field_c, (byte) -117), (byte[]) null, 0);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     ik(jc param0, hd param1, int param2, int param3, float[] param4, int param5, int param6) {
         super(param0, 34037, param1, la.field_i, param3 * param2, false);
-        ((ik) this).field_j = param2;
-        ((ik) this).field_i = param3;
-        ((ik) this).field_g.a((jj) this, -9135);
-        jaggl.OpenGL.glPixelStorei(3314, param6);
-        jaggl.OpenGL.glTexImage2Df(((ik) this).field_e, 0, ((ik) this).a(false), param2, param3, 0, gq.a(((ik) this).field_h, -29824), 5126, param4, param5 * 4);
-        jaggl.OpenGL.glPixelStorei(3314, 0);
+        try {
+            ((ik) this).field_j = param2;
+            ((ik) this).field_i = param3;
+            ((ik) this).field_g.a((jj) this, -9135);
+            jaggl.OpenGL.glPixelStorei(3314, param6);
+            jaggl.OpenGL.glTexImage2Df(((ik) this).field_e, 0, ((ik) this).a(false), param2, param3, 0, gq.a(((ik) this).field_h, -29824), 5126, param4, param5 * 4);
+            jaggl.OpenGL.glPixelStorei(3314, 0);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     ik(jc param0, int param1, int param2, int[] param3, int param4, int param5) {
         super(param0, 34037, lc.field_g, la.field_h, param1 * param2, false);
-        ((ik) this).field_j = param1;
-        ((ik) this).field_i = param2;
-        ((ik) this).field_g.a((jj) this, -9135);
-        jaggl.OpenGL.glPixelStorei(3314, param5);
-        jaggl.OpenGL.glTexImage2Di(((ik) this).field_e, 0, 6408, ((ik) this).field_j, ((ik) this).field_i, 0, 32993, ((ik) this).field_g.field_Bc, param3, param4 * 4);
-        jaggl.OpenGL.glPixelStorei(3314, 0);
+        try {
+            ((ik) this).field_j = param1;
+            ((ik) this).field_i = param2;
+            ((ik) this).field_g.a((jj) this, -9135);
+            jaggl.OpenGL.glPixelStorei(3314, param5);
+            jaggl.OpenGL.glTexImage2Di(((ik) this).field_e, 0, 6408, ((ik) this).field_j, ((ik) this).field_i, 0, 32993, ((ik) this).field_g.field_Bc, param3, param4 * 4);
+            jaggl.OpenGL.glPixelStorei(3314, 0);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     ik(jc param0, hd param1, int param2, int param3, byte[] param4, int param5, int param6) {
         super(param0, 34037, param1, la.field_h, param3 * param2, false);
-        ((ik) this).field_i = param3;
-        ((ik) this).field_j = param2;
-        ((ik) this).field_g.a((jj) this, -9135);
-        jaggl.OpenGL.glPixelStorei(3317, 1);
-        jaggl.OpenGL.glPixelStorei(3314, param6);
-        jaggl.OpenGL.glTexImage2Dub(((ik) this).field_e, 0, ((ik) this).a(false), param2, param3, 0, gq.a(((ik) this).field_h, -29824), 5121, param4, param5);
-        jaggl.OpenGL.glPixelStorei(3314, 0);
-        jaggl.OpenGL.glPixelStorei(3317, 4);
+        try {
+            ((ik) this).field_i = param3;
+            ((ik) this).field_j = param2;
+            ((ik) this).field_g.a((jj) this, -9135);
+            jaggl.OpenGL.glPixelStorei(3317, 1);
+            jaggl.OpenGL.glPixelStorei(3314, param6);
+            jaggl.OpenGL.glTexImage2Dub(((ik) this).field_e, 0, ((ik) this).a(false), param2, param3, 0, gq.a(((ik) this).field_h, -29824), 5121, param4, param5);
+            jaggl.OpenGL.glPixelStorei(3314, 0);
+            jaggl.OpenGL.glPixelStorei(3317, 4);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     public static void b(boolean param0) {
         field_m = null;
-        if (!param0) {
-            field_l = -80;
-        }
     }
 
     public final float a(float param0, byte param1) {
         if (param1 != -32) {
-            ke var4 = (ke) null;
+            Object var4 = null;
             ((ik) this).a((ke) null, 7);
             return param0;
         }
@@ -79,7 +92,11 @@ final class ik extends cq implements qi {
     }
 
     public final void a(ke param0, int param1) {
-        this.a(param0, param1);
+        try {
+            super.a(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "ik.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public final int b(byte param0) {
@@ -91,7 +108,7 @@ final class ik extends cq implements qi {
     }
 
     public final void a(byte param0) {
-        this.a(param0);
+        super.a(param0);
     }
 
     public final int a(int param0) {

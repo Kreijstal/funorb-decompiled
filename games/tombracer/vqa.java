@@ -127,8 +127,9 @@ final class vqa extends pf {
                         } else {
                           L7: {
                             var10 = (var8 >> 12) * ((vqa) this).field_a + (var7 >> 12);
+                            int incrementValue$27 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$27;
                             var57 = var3;
                             var48 = var57;
                             var39 = var48;
@@ -283,8 +284,9 @@ final class vqa extends pf {
                                       break L7;
                                     }
                                   } else {
+                                    int incrementValue$28 = var10;
                                     var10++;
-                                    var15 = ((vqa) this).field_E[var10];
+                                    var15 = ((vqa) this).field_E[incrementValue$28];
                                     var16 = field_B;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -293,8 +295,9 @@ final class vqa extends pf {
                                     break L7;
                                   }
                                 } else {
+                                  int incrementValue$29 = var10;
                                   var10++;
-                                  var15 = ((vqa) this).field_E[var10];
+                                  var15 = ((vqa) this).field_E[incrementValue$29];
                                   var16 = (var15 & 16711680) * field_d & -16777216;
                                   var17 = (var15 & 65280) * field_j & 16711680;
                                   var18 = (var15 & 255) * field_t & 65280;
@@ -378,8 +381,9 @@ final class vqa extends pf {
                         } else {
                           L15: {
                             var10 = (var8 >> 12) * ((vqa) this).field_a + (var7 >> 12);
+                            int incrementValue$30 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$30;
                             var56 = var3;
                             var47 = var56;
                             var38 = var47;
@@ -534,8 +538,9 @@ final class vqa extends pf {
                                       break L15;
                                     }
                                   } else {
+                                    int incrementValue$31 = var10;
                                     var10++;
-                                    var15 = ((vqa) this).field_E[var10];
+                                    var15 = ((vqa) this).field_E[incrementValue$31];
                                     var16 = field_B;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -544,8 +549,9 @@ final class vqa extends pf {
                                     break L15;
                                   }
                                 } else {
+                                  int incrementValue$32 = var10;
                                   var10++;
-                                  var15 = ((vqa) this).field_E[var10];
+                                  var15 = ((vqa) this).field_E[incrementValue$32];
                                   var16 = (var15 & 16711680) * field_d & -16777216;
                                   var17 = (var15 & 65280) * field_j & 16711680;
                                   var18 = (var15 & 255) * field_t & 65280;
@@ -606,8 +612,9 @@ final class vqa extends pf {
                             } else {
                               L22: {
                                 var10 = (var8 >> 12) * ((vqa) this).field_a + (var7 >> 12);
+                                int incrementValue$33 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$33;
                                 var55 = var3;
                                 var46 = var55;
                                 var37 = var46;
@@ -762,8 +769,9 @@ final class vqa extends pf {
                                           break L22;
                                         }
                                       } else {
+                                        int incrementValue$34 = var10;
                                         var10++;
-                                        var15 = ((vqa) this).field_E[var10];
+                                        var15 = ((vqa) this).field_E[incrementValue$34];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -772,8 +780,9 @@ final class vqa extends pf {
                                         break L22;
                                       }
                                     } else {
+                                      int incrementValue$35 = var10;
                                       var10++;
-                                      var15 = ((vqa) this).field_E[var10];
+                                      var15 = ((vqa) this).field_E[incrementValue$35];
                                       var16 = (var15 & 16711680) * field_d & -16777216;
                                       var17 = (var15 & 65280) * field_j & 16711680;
                                       var18 = (var15 & 255) * field_t & 65280;
@@ -871,8 +880,9 @@ final class vqa extends pf {
                         } else {
                           L30: {
                             var10 = (var8 >> 12) * ((vqa) this).field_a + (var7 >> 12);
+                            int incrementValue$36 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$36;
                             var54 = var3;
                             var45 = var54;
                             var36 = var45;
@@ -1027,8 +1037,9 @@ final class vqa extends pf {
                                       break L30;
                                     }
                                   } else {
+                                    int incrementValue$37 = var10;
                                     var10++;
-                                    var15 = ((vqa) this).field_E[var10];
+                                    var15 = ((vqa) this).field_E[incrementValue$37];
                                     var16 = field_B;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1037,8 +1048,9 @@ final class vqa extends pf {
                                     break L30;
                                   }
                                 } else {
+                                  int incrementValue$38 = var10;
                                   var10++;
-                                  var15 = ((vqa) this).field_E[var10];
+                                  var15 = ((vqa) this).field_E[incrementValue$38];
                                   var16 = (var15 & 16711680) * field_d & -16777216;
                                   var17 = (var15 & 65280) * field_j & 16711680;
                                   var18 = (var15 & 255) * field_t & 65280;
@@ -1123,8 +1135,9 @@ final class vqa extends pf {
                         } else {
                           L38: {
                             var10 = (var8 >> 12) * ((vqa) this).field_a + (var7 >> 12);
+                            int incrementValue$39 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$39;
                             var53 = var3;
                             var44 = var53;
                             var35 = var44;
@@ -1279,8 +1292,9 @@ final class vqa extends pf {
                                       break L38;
                                     }
                                   } else {
+                                    int incrementValue$40 = var10;
                                     var10++;
-                                    var15 = ((vqa) this).field_E[var10];
+                                    var15 = ((vqa) this).field_E[incrementValue$40];
                                     var16 = field_B;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1289,8 +1303,9 @@ final class vqa extends pf {
                                     break L38;
                                   }
                                 } else {
+                                  int incrementValue$41 = var10;
                                   var10++;
-                                  var15 = ((vqa) this).field_E[var10];
+                                  var15 = ((vqa) this).field_E[incrementValue$41];
                                   var16 = (var15 & 16711680) * field_d & -16777216;
                                   var17 = (var15 & 65280) * field_j & 16711680;
                                   var18 = (var15 & 255) * field_t & 65280;
@@ -1352,8 +1367,9 @@ final class vqa extends pf {
                             } else {
                               L45: {
                                 var10 = (var8 >> 12) * ((vqa) this).field_a + (var7 >> 12);
+                                int incrementValue$42 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$42;
                                 var52 = var3;
                                 var43 = var52;
                                 var34 = var43;
@@ -1508,8 +1524,9 @@ final class vqa extends pf {
                                           break L45;
                                         }
                                       } else {
+                                        int incrementValue$43 = var10;
                                         var10++;
-                                        var15 = ((vqa) this).field_E[var10];
+                                        var15 = ((vqa) this).field_E[incrementValue$43];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1518,8 +1535,9 @@ final class vqa extends pf {
                                         break L45;
                                       }
                                     } else {
+                                      int incrementValue$44 = var10;
                                       var10++;
-                                      var15 = ((vqa) this).field_E[var10];
+                                      var15 = ((vqa) this).field_E[incrementValue$44];
                                       var16 = (var15 & 16711680) * field_d & -16777216;
                                       var17 = (var15 & 65280) * field_j & 16711680;
                                       var18 = (var15 & 255) * field_t & 65280;
@@ -1593,8 +1611,9 @@ final class vqa extends pf {
                             } else {
                               L52: {
                                 var10 = (var8 >> 12) * ((vqa) this).field_a + (var7 >> 12);
+                                int incrementValue$45 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$45;
                                 var51 = var3;
                                 var42 = var51;
                                 var33 = var42;
@@ -1749,8 +1768,9 @@ final class vqa extends pf {
                                           break L52;
                                         }
                                       } else {
+                                        int incrementValue$46 = var10;
                                         var10++;
-                                        var15 = ((vqa) this).field_E[var10];
+                                        var15 = ((vqa) this).field_E[incrementValue$46];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1759,8 +1779,9 @@ final class vqa extends pf {
                                         break L52;
                                       }
                                     } else {
+                                      int incrementValue$47 = var10;
                                       var10++;
-                                      var15 = ((vqa) this).field_E[var10];
+                                      var15 = ((vqa) this).field_E[incrementValue$47];
                                       var16 = (var15 & 16711680) * field_d & -16777216;
                                       var17 = (var15 & 65280) * field_j & 16711680;
                                       var18 = (var15 & 255) * field_t & 65280;
@@ -1831,8 +1852,9 @@ final class vqa extends pf {
                             } else {
                               L59: {
                                 var10 = (var8 >> 12) * ((vqa) this).field_a + (var7 >> 12);
+                                int incrementValue$48 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$48;
                                 var50 = var3;
                                 var41 = var50;
                                 var32 = var41;
@@ -1987,8 +2009,9 @@ final class vqa extends pf {
                                           break L59;
                                         }
                                       } else {
+                                        int incrementValue$49 = var10;
                                         var10++;
-                                        var15 = ((vqa) this).field_E[var10];
+                                        var15 = ((vqa) this).field_E[incrementValue$49];
                                         var16 = field_B;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1997,8 +2020,9 @@ final class vqa extends pf {
                                         break L59;
                                       }
                                     } else {
+                                      int incrementValue$50 = var10;
                                       var10++;
-                                      var15 = ((vqa) this).field_E[var10];
+                                      var15 = ((vqa) this).field_E[incrementValue$50];
                                       var16 = (var15 & 16711680) * field_d & -16777216;
                                       var17 = (var15 & 65280) * field_j & 16711680;
                                       var18 = (var15 & 255) * field_t & 65280;
@@ -2051,8 +2075,9 @@ final class vqa extends pf {
                               } else {
                                 L64: {
                                   var10 = (var8 >> 12) * ((vqa) this).field_a + (var7 >> 12);
+                                  int incrementValue$51 = var6;
                                   var6++;
-                                  var11 = var6;
+                                  var11 = incrementValue$51;
                                   var49 = var3;
                                   var40 = var49;
                                   var31 = var40;
@@ -2207,8 +2232,9 @@ final class vqa extends pf {
                                             break L64;
                                           }
                                         } else {
+                                          int incrementValue$52 = var10;
                                           var10++;
-                                          var15 = ((vqa) this).field_E[var10];
+                                          var15 = ((vqa) this).field_E[incrementValue$52];
                                           var16 = field_B;
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2217,8 +2243,9 @@ final class vqa extends pf {
                                           break L64;
                                         }
                                       } else {
+                                        int incrementValue$53 = var10;
                                         var10++;
-                                        var15 = ((vqa) this).field_E[var10];
+                                        var15 = ((vqa) this).field_E[incrementValue$53];
                                         var16 = (var15 & 16711680) * field_d & -16777216;
                                         var17 = (var15 & 65280) * field_j & 16711680;
                                         var18 = (var15 & 255) * field_t & 65280;
@@ -3944,8 +3971,9 @@ final class vqa extends pf {
                                             var29 = var27 + var28;
                                             var30 = (var27 & 16711935) + (var28 & 16711935);
                                             var28 = (var30 & 16777472) + (var29 - var30 & 65536);
+                                            int incrementValue$14 = var16;
                                             var16++;
-                                            var18[var16] = var29 - var28 | var28 - (var28 >>> 8);
+                                            var18[incrementValue$14] = var29 - var28 | var28 - (var28 >>> 8);
                                             break L12;
                                           }
                                         }
@@ -3983,8 +4011,9 @@ final class vqa extends pf {
                                       var24 = var23 + var26;
                                       var25 = (var23 & 16711935) + (var26 & 16711935);
                                       var26 = (var25 & 16777472) + (var24 - var25 & 65536);
+                                      int incrementValue$15 = var16;
                                       var16++;
-                                      var18[var16] = var24 - var26 | var26 - (var26 >>> 8);
+                                      var18[incrementValue$15] = var24 - var26 | var26 - (var26 >>> 8);
                                       var9 = var9 + var14;
                                       var22++;
                                       continue L14;
@@ -4027,8 +4056,9 @@ final class vqa extends pf {
                                         var31 = var26 + var30;
                                         var32 = (var26 & 16711935) + (var30 & 16711935);
                                         var30 = (var32 & 16777472) + (var31 - var32 & 65536);
+                                        int incrementValue$16 = var16;
                                         var16++;
-                                        var18[var16] = var31 - var30 | var30 - (var30 >>> 8);
+                                        var18[incrementValue$16] = var31 - var30 | var30 - (var30 >>> 8);
                                         break L17;
                                       }
                                     }
@@ -4067,8 +4097,9 @@ final class vqa extends pf {
                                       var25 = var23 + var24;
                                       var26 = (var23 & 16711935) + (var24 & 16711935);
                                       var24 = (var26 & 16777472) + (var25 - var26 & 65536);
+                                      int incrementValue$17 = var16;
                                       var16++;
-                                      var18[var16] = var25 - var24 | var24 - (var24 >>> 8);
+                                      var18[incrementValue$17] = var25 - var24 | var24 - (var24 >>> 8);
                                       break L20;
                                     }
                                   }
@@ -4116,8 +4147,9 @@ final class vqa extends pf {
                                       var22 = (var27 & 65280) * var19 & 16711680;
                                       var27 = ((var21 | var22) >>> 8) + param5;
                                       var30 = var36[var16];
+                                      int incrementValue$18 = var16;
                                       var16++;
-                                      var18[var16] = ((var27 & 16711935) * var28 + (var30 & 16711935) * var29 & -16711936) + ((var27 & 65280) * var28 + (var30 & 65280) * var29 & 16711680) >> 8;
+                                      var18[incrementValue$18] = ((var27 & 16711935) * var28 + (var30 & 16711935) * var29 & -16711936) + ((var27 & 65280) * var28 + (var30 & 65280) * var29 & 16711680) >> 8;
                                       var9 = var9 + var14;
                                       var26++;
                                       continue L22;
@@ -4160,8 +4192,9 @@ final class vqa extends pf {
                                         break L25;
                                       }
                                     }
+                                    int incrementValue$19 = var16;
                                     var16++;
-                                    var18[var16] = var26;
+                                    var18[incrementValue$19] = var26;
                                     var9 = var9 + var14;
                                     var22++;
                                     continue L24;
@@ -4199,8 +4232,9 @@ final class vqa extends pf {
                                         var29 = (var26 & 16711680) * var20 & -16777216;
                                         var30 = (var26 & 65280) * var21 & 16711680;
                                         var31 = (var26 & 255) * var22 & 65280;
+                                        int incrementValue$20 = var16;
                                         var16++;
-                                        var18[var16] = (var29 | var30 | var31) >>> 8;
+                                        var18[incrementValue$20] = (var29 | var30 | var31) >>> 8;
                                         break L28;
                                       } else {
                                         var29 = (var26 & 16711680) * var20 & -16777216;
@@ -4208,8 +4242,9 @@ final class vqa extends pf {
                                         var31 = (var26 & 255) * var22 & 65280;
                                         var26 = (var29 | var30 | var31) >>> 8;
                                         var32 = var36[var16];
+                                        int incrementValue$21 = var16;
                                         var16++;
-                                        var18[var16] = ((var26 & 16711935) * var27 + (var32 & 16711935) * var28 & -16711936) + ((var26 & 65280) * var27 + (var32 & 65280) * var28 & 16711680) >> 8;
+                                        var18[incrementValue$21] = ((var26 & 16711935) * var27 + (var32 & 16711935) * var28 & -16711936) + ((var26 & 65280) * var27 + (var32 & 65280) * var28 & 16711680) >> 8;
                                         break L28;
                                       }
                                     }
@@ -4240,8 +4275,9 @@ final class vqa extends pf {
                                     var24 = (var23 >>> 24) * (param5 >>> 24) >> 8;
                                     var25 = 256 - var24;
                                     var26 = var36[var16];
+                                    int incrementValue$22 = var16;
                                     var16++;
-                                    var18[var16] = ((var23 & 16711935) * var24 + (var26 & 16711935) * var25 & -16711936) + ((var23 & 65280) * var24 + (var26 & 65280) * var25 & 16711680) >> 8;
+                                    var18[incrementValue$22] = ((var23 & 16711935) * var24 + (var26 & 16711935) * var25 & -16711936) + ((var23 & 65280) * var24 + (var26 & 65280) * var25 & 16711680) >> 8;
                                     var9 = var9 + var14;
                                     var22++;
                                     continue L30;
@@ -4272,8 +4308,9 @@ final class vqa extends pf {
                                 var24 = var23 >>> 24;
                                 var25 = 256 - var24;
                                 var26 = var36[var16];
+                                int incrementValue$23 = var16;
                                 var16++;
-                                var18[var16] = (((var23 & 16711935) * var24 + (var26 & 16711935) * var25 & -16711936) >> 8) + (((var23 & -16711936) >>> 8) * var24 + ((var26 & -16711936) >>> 8) * var25 & -16711936);
+                                var18[incrementValue$23] = (((var23 & 16711935) * var24 + (var26 & 16711935) * var25 & -16711936) >> 8) + (((var23 & -16711936) >>> 8) * var24 + ((var26 & -16711936) >>> 8) * var25 & -16711936);
                                 var9 = var9 + var14;
                                 var22++;
                                 continue L32;
@@ -4314,8 +4351,9 @@ final class vqa extends pf {
                                     var27 = ((vqa) this).field_E[(var9 >> 16) + var25];
                                     var21 = (var27 & 16711935) * var19 & -16711936;
                                     var22 = (var27 & 65280) * var19 & 16711680;
+                                    int incrementValue$24 = var16;
                                     var16++;
-                                    var18[var16] = ((var21 | var22) >>> 8) + param5;
+                                    var18[incrementValue$24] = ((var21 | var22) >>> 8) + param5;
                                     var9 = var9 + var14;
                                     var26++;
                                     continue L34;
@@ -4345,8 +4383,9 @@ final class vqa extends pf {
                                   var24 = var23 + param5;
                                   var25 = (var23 & 16711935) + (param5 & 16711935);
                                   var26 = (var25 & 16777472) + (var24 - var25 & 65536);
+                                  int incrementValue$25 = var16;
                                   var16++;
-                                  var18[var16] = var24 - var26 | var26 - (var26 >>> 8);
+                                  var18[incrementValue$25] = var24 - var26 | var26 - (var26 >>> 8);
                                   var9 = var9 + var14;
                                   var22++;
                                   continue L36;
@@ -4379,8 +4418,9 @@ final class vqa extends pf {
                                 var27 = (var26 & 16711680) * var19 & -16777216;
                                 var28 = (var26 & 65280) * var20 & 16711680;
                                 var29 = (var26 & 255) * var21 & 65280;
+                                int incrementValue$26 = var16;
                                 var16++;
-                                var18[var16] = (var27 | var28 | var29) >>> 8;
+                                var18[incrementValue$26] = (var27 | var28 | var29) >>> 8;
                                 var9 = var9 + var14;
                                 var25++;
                                 continue L38;
@@ -4406,8 +4446,9 @@ final class vqa extends pf {
                               var20++;
                               continue L39;
                             } else {
+                              int incrementValue$27 = var16;
                               var16++;
-                              var18[var16] = ((vqa) this).field_E[(var9 >> 16) + var21];
+                              var18[incrementValue$27] = ((vqa) this).field_E[(var9 >> 16) + var21];
                               var9 = var9 + var14;
                               var22++;
                               continue L40;
@@ -4448,9 +4489,11 @@ final class vqa extends pf {
         int var8 = 0;
         for (var9 = 0; var9 < param5; var9++) {
             for (var10 = 0; var10 < param4; var10++) {
+                int incrementValue$0 = var8;
                 var8++;
+                int incrementValue$1 = param2;
                 param2++;
-                ((vqa) this).field_E[var8] = param1[param2];
+                ((vqa) this).field_E[incrementValue$0] = param1[incrementValue$1];
             }
             param2 = param2 + param3;
         }
@@ -4577,8 +4620,9 @@ final class vqa extends pf {
                                         var18++;
                                         continue L6;
                                       } else {
+                                        int incrementValue$35 = var8;
                                         var8++;
-                                        var20 = ((vqa) this).field_E[var8];
+                                        var20 = ((vqa) this).field_E[incrementValue$35];
                                         if (var20 == 0) {
                                           var7++;
                                           var19++;
@@ -4591,8 +4635,9 @@ final class vqa extends pf {
                                           var22 = var20 + var21;
                                           var23 = (var20 & 16711935) + (var21 & 16711935);
                                           var21 = (var23 & 16777472) + (var22 - var23 & 65536);
+                                          int incrementValue$36 = var7;
                                           var7++;
-                                          var13[var7] = var22 - var21 | var21 - (var21 >>> 8);
+                                          var13[incrementValue$36] = var22 - var21 | var21 - (var21 >>> 8);
                                           var19++;
                                           continue L7;
                                         }
@@ -4615,8 +4660,9 @@ final class vqa extends pf {
                                       var14++;
                                       continue L8;
                                     } else {
+                                      int incrementValue$37 = var8;
                                       var8++;
-                                      var16 = ((vqa) this).field_E[var8];
+                                      var16 = ((vqa) this).field_E[incrementValue$37];
                                       var17 = var16 + param3;
                                       var18 = (var16 & 16711935) + (param3 & 16711935);
                                       var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -4625,8 +4671,9 @@ final class vqa extends pf {
                                       var17 = var16 + var19;
                                       var18 = (var16 & 16711935) + (var19 & 16711935);
                                       var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                                      int incrementValue$38 = var7;
                                       var7++;
-                                      var13[var7] = var17 - var19 | var19 - (var19 >>> 8);
+                                      var13[incrementValue$38] = var17 - var19 | var19 - (var19 >>> 8);
                                       var15++;
                                       continue L9;
                                     }
@@ -4651,8 +4698,9 @@ final class vqa extends pf {
                                     var17++;
                                     continue L10;
                                   } else {
+                                    int incrementValue$39 = var8;
                                     var8++;
-                                    var19 = ((vqa) this).field_E[var8];
+                                    var19 = ((vqa) this).field_E[incrementValue$39];
                                     if (var19 == 0) {
                                       var7++;
                                       var18++;
@@ -4666,8 +4714,9 @@ final class vqa extends pf {
                                       var24 = var19 + var23;
                                       var25 = (var19 & 16711935) + (var23 & 16711935);
                                       var23 = (var25 & 16777472) + (var24 - var25 & 65536);
+                                      int incrementValue$40 = var7;
                                       var7++;
-                                      var13[var7] = var24 - var23 | var23 - (var23 >>> 8);
+                                      var13[incrementValue$40] = var24 - var23 | var23 - (var23 >>> 8);
                                       var18++;
                                       continue L11;
                                     }
@@ -4690,8 +4739,9 @@ final class vqa extends pf {
                                   var14++;
                                   continue L12;
                                 } else {
+                                  int incrementValue$41 = var8;
                                   var8++;
-                                  var16 = ((vqa) this).field_E[var8];
+                                  var16 = ((vqa) this).field_E[incrementValue$41];
                                   if (var16 == 0) {
                                     var7++;
                                     var15++;
@@ -4701,8 +4751,9 @@ final class vqa extends pf {
                                     var18 = var16 + var17;
                                     var19 = (var16 & 16711935) + (var17 & 16711935);
                                     var17 = (var19 & 16777472) + (var18 - var19 & 65536);
+                                    int incrementValue$42 = var7;
                                     var7++;
-                                    var13[var7] = var18 - var17 | var17 - (var17 >>> 8);
+                                    var13[incrementValue$42] = var18 - var17 | var17 - (var17 >>> 8);
                                     var15++;
                                     continue L13;
                                   }
@@ -4737,16 +4788,18 @@ final class vqa extends pf {
                                       var18++;
                                       continue L14;
                                     } else {
+                                      int incrementValue$43 = var8;
                                       var8++;
-                                      var20 = ((vqa) this).field_E[var8];
+                                      var20 = ((vqa) this).field_E[incrementValue$43];
                                       var21 = var20 >>> 24;
                                       var22 = 256 - var21;
                                       var16 = (var20 & 16711935) * var14 & -16711936;
                                       var17 = (var20 & 65280) * var14 & 16711680;
                                       var20 = ((var16 | var17) >>> 8) + param3;
                                       var23 = var29[var7];
+                                      int incrementValue$44 = var7;
                                       var7++;
-                                      var13[var7] = ((var20 & 16711935) * var21 + (var23 & 16711935) * var22 & -16711936) + ((var20 & 65280) * var21 + (var23 & 65280) * var22 & 16711680) >> 8;
+                                      var13[incrementValue$44] = ((var20 & 16711935) * var21 + (var23 & 16711935) * var22 & -16711936) + ((var20 & 65280) * var21 + (var23 & 65280) * var22 & 16711680) >> 8;
                                       var19++;
                                       continue L15;
                                     }
@@ -4769,8 +4822,9 @@ final class vqa extends pf {
                                     continue L16;
                                   } else {
                                     L18: {
+                                      int incrementValue$45 = var8;
                                       var8++;
-                                      var16 = ((vqa) this).field_E[var8];
+                                      var16 = ((vqa) this).field_E[incrementValue$45];
                                       var17 = var16 + param3;
                                       var18 = (var16 & 16711935) + (param3 & 16711935);
                                       var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -4786,8 +4840,9 @@ final class vqa extends pf {
                                         break L18;
                                       }
                                     }
+                                    int incrementValue$46 = var7;
                                     var7++;
-                                    var13[var7] = var19;
+                                    var13[incrementValue$46] = var19;
                                     var15++;
                                     continue L17;
                                   }
@@ -4813,16 +4868,18 @@ final class vqa extends pf {
                                     var17++;
                                     continue L19;
                                   } else {
+                                    int incrementValue$47 = var8;
                                     var8++;
-                                    var19 = ((vqa) this).field_E[var8];
+                                    var19 = ((vqa) this).field_E[incrementValue$47];
                                     var20 = (var19 >>> 24) * (param3 >>> 24) >> 8;
                                     var21 = 256 - var20;
                                     if (var20 == 255) {
                                       var22 = (var19 & 16711680) * var14 & -16777216;
                                       var23 = (var19 & 65280) * var15 & 16711680;
                                       var24 = (var19 & 255) * var16 & 65280;
+                                      int incrementValue$48 = var7;
                                       var7++;
-                                      var13[var7] = (var22 | var23 | var24) >>> 8;
+                                      var13[incrementValue$48] = (var22 | var23 | var24) >>> 8;
                                       var18++;
                                       continue L20;
                                     } else {
@@ -4831,8 +4888,9 @@ final class vqa extends pf {
                                       var24 = (var19 & 255) * var16 & 65280;
                                       var19 = (var22 | var23 | var24) >>> 8;
                                       var25 = var29[var7];
+                                      int incrementValue$49 = var7;
                                       var7++;
-                                      var13[var7] = ((var19 & 16711935) * var20 + (var25 & 16711935) * var21 & -16711936) + ((var19 & 65280) * var20 + (var25 & 65280) * var21 & 16711680) >> 8;
+                                      var13[incrementValue$49] = ((var19 & 16711935) * var20 + (var25 & 16711935) * var21 & -16711936) + ((var19 & 65280) * var20 + (var25 & 65280) * var21 & 16711680) >> 8;
                                       var18++;
                                       continue L20;
                                     }
@@ -4854,13 +4912,15 @@ final class vqa extends pf {
                                     var14++;
                                     continue L21;
                                   } else {
+                                    int incrementValue$50 = var8;
                                     var8++;
-                                    var16 = ((vqa) this).field_E[var8];
+                                    var16 = ((vqa) this).field_E[incrementValue$50];
                                     var17 = (var16 >>> 24) * (param3 >>> 24) >> 8;
                                     var18 = 256 - var17;
                                     var19 = var29[var7];
+                                    int incrementValue$51 = var7;
                                     var7++;
-                                    var13[var7] = ((var16 & 16711935) * var17 + (var19 & 16711935) * var18 & -16711936) + ((var16 & 65280) * var17 + (var19 & 65280) * var18 & 16711680) >> 8;
+                                    var13[incrementValue$51] = ((var16 & 16711935) * var17 + (var19 & 16711935) * var18 & -16711936) + ((var16 & 65280) * var17 + (var19 & 65280) * var18 & 16711680) >> 8;
                                     var15++;
                                     continue L22;
                                   }
@@ -4883,13 +4943,15 @@ final class vqa extends pf {
                                 var14++;
                                 continue L23;
                               } else {
+                                int incrementValue$52 = var8;
                                 var8++;
-                                var16 = ((vqa) this).field_E[var8];
+                                var16 = ((vqa) this).field_E[incrementValue$52];
                                 var17 = var16 >>> 24;
                                 var18 = 256 - var17;
                                 var19 = var29[var7];
+                                int incrementValue$53 = var7;
                                 var7++;
-                                var13[var7] = (((var16 & 16711935) * var17 + (var19 & 16711935) * var18 & -16711936) >> 8) + (((var16 & -16711936) >>> 8) * var17 + ((var19 & -16711936) >>> 8) * var18 & -16711936);
+                                var13[incrementValue$53] = (((var16 & 16711935) * var17 + (var19 & 16711935) * var18 & -16711936) >> 8) + (((var16 & -16711936) >>> 8) * var17 + ((var19 & -16711936) >>> 8) * var18 & -16711936);
                                 var15++;
                                 continue L24;
                               }
@@ -4923,12 +4985,14 @@ final class vqa extends pf {
                                     var18++;
                                     continue L25;
                                   } else {
+                                    int incrementValue$54 = var8;
                                     var8++;
-                                    var20 = ((vqa) this).field_E[var8];
+                                    var20 = ((vqa) this).field_E[incrementValue$54];
                                     var16 = (var20 & 16711935) * var14 & -16711936;
                                     var17 = (var20 & 65280) * var14 & 16711680;
+                                    int incrementValue$55 = var7;
                                     var7++;
-                                    var13[var7] = ((var16 | var17) >>> 8) + param3;
+                                    var13[incrementValue$55] = ((var16 | var17) >>> 8) + param3;
                                     var19++;
                                     continue L26;
                                   }
@@ -4950,13 +5014,15 @@ final class vqa extends pf {
                                   var14++;
                                   continue L27;
                                 } else {
+                                  int incrementValue$56 = var8;
                                   var8++;
-                                  var16 = ((vqa) this).field_E[var8];
+                                  var16 = ((vqa) this).field_E[incrementValue$56];
                                   var17 = var16 + param3;
                                   var18 = (var16 & 16711935) + (param3 & 16711935);
                                   var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                                  int incrementValue$57 = var7;
                                   var7++;
-                                  var13[var7] = var17 - var19 | var19 - (var19 >>> 8);
+                                  var13[incrementValue$57] = var17 - var19 | var19 - (var19 >>> 8);
                                   var15++;
                                   continue L28;
                                 }
@@ -4981,13 +5047,15 @@ final class vqa extends pf {
                                 var17++;
                                 continue L29;
                               } else {
+                                int incrementValue$58 = var8;
                                 var8++;
-                                var19 = ((vqa) this).field_E[var8];
+                                var19 = ((vqa) this).field_E[incrementValue$58];
                                 var20 = (var19 & 16711680) * var14 & -16777216;
                                 var21 = (var19 & 65280) * var15 & 16711680;
                                 var22 = (var19 & 255) * var16 & 65280;
+                                int incrementValue$59 = var7;
                                 var7++;
-                                var13[var7] = (var20 | var21 | var22) >>> 8;
+                                var13[incrementValue$59] = (var20 | var21 | var22) >>> 8;
                                 var18++;
                                 continue L30;
                               }
@@ -5012,25 +5080,35 @@ final class vqa extends pf {
                                   var14++;
                                   continue L31;
                                 } else {
+                                  int incrementValue$60 = var7;
                                   var7++;
+                                  int incrementValue$61 = var8;
                                   var8++;
-                                  var13[var7] = ((vqa) this).field_E[var8];
+                                  var13[incrementValue$60] = ((vqa) this).field_E[incrementValue$61];
                                   continue L33;
                                 }
                               }
                             } else {
+                              int incrementValue$62 = var7;
                               var7++;
+                              int incrementValue$63 = var8;
                               var8++;
-                              var13[var7] = ((vqa) this).field_E[var8];
+                              var13[incrementValue$62] = ((vqa) this).field_E[incrementValue$63];
+                              int incrementValue$64 = var7;
                               var7++;
+                              int incrementValue$65 = var8;
                               var8++;
-                              var13[var7] = ((vqa) this).field_E[var8];
+                              var13[incrementValue$64] = ((vqa) this).field_E[incrementValue$65];
+                              int incrementValue$66 = var7;
                               var7++;
+                              int incrementValue$67 = var8;
                               var8++;
-                              var13[var7] = ((vqa) this).field_E[var8];
+                              var13[incrementValue$66] = ((vqa) this).field_E[incrementValue$67];
+                              int incrementValue$68 = var7;
                               var7++;
+                              int incrementValue$69 = var8;
                               var8++;
-                              var13[var7] = ((vqa) this).field_E[var8];
+                              var13[incrementValue$68] = ((vqa) this).field_E[incrementValue$69];
                               continue L32;
                             }
                           }

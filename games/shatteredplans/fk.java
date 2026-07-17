@@ -13,11 +13,15 @@ final class fk extends oh {
     int field_j;
 
     final static void a(String param0, int param1, boolean param2) {
-        jh.field_D = param2 ? true : false;
-        mg.field_C = true;
-        ji.field_G = new ns(le.field_e, sl.field_p, param0, el.field_b, jh.field_D);
-        le.field_e.a(true, (vg) (Object) ji.field_G);
-        int var3 = -116 / ((-1 - param1) / 54);
+        try {
+            jh.field_D = param2;
+            mg.field_C = true;
+            ji.field_G = new ns(le.field_e, sl.field_p, param0, el.field_b, jh.field_D);
+            le.field_e.a(true, (vg) (Object) ji.field_G);
+            int var3_int = -116 / ((-1 - param1) / 54);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "fk.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     public static void a(byte param0) {
@@ -40,7 +44,11 @@ final class fk extends oh {
     }
 
     fk(byte[] param0) {
-        ((fk) this).field_n = param0;
+        try {
+            ((fk) this).field_n = param0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "fk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

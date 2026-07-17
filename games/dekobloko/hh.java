@@ -15,9 +15,6 @@ final class hh {
         field_b = null;
         field_a = null;
         field_e = null;
-        if (param0 != -9724) {
-            return;
-        }
         field_d = null;
     }
 

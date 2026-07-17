@@ -51,34 +51,92 @@ final class mca {
     }
 
     final static void a(kb param0, int param1, int param2) {
+        RuntimeException var3 = null;
+        int var4 = 0;
         int var5 = 0;
-        int var6 = TombRacer.field_G ? 1 : 0;
-        kh var7 = ql.field_k;
-        kh var8 = var7;
-        var8.k(param2, -2988);
-        var8.field_h = var8.field_h + 1;
-        int var4 = var8.field_h;
-        var8.i(1, 0);
-        var8.f(-1477662136, param0.field_l);
-        var8.f(-1477662136, param0.field_f);
-        var8.f(param1 ^ -1477662136, param0.field_n);
-        var8.a(param0.field_i, (byte) -36);
-        var8.a(param0.field_g, (byte) -75);
-        var8.a(param0.field_k, (byte) -63);
-        var8.a(param0.field_j, (byte) 124);
-        var8.i(param0.field_o.length, 0);
-        for (var5 = param1; var5 < param0.field_o.length; var5++) {
-            var7.a(param0.field_o[var5], (byte) 96);
+        int var6 = 0;
+        kh var7 = null;
+        kh var8 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        var6 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            var7 = ql.field_k;
+            var8 = var7;
+            var8.k(param2, -2988);
+            var8.field_h = var8.field_h + 1;
+            var4 = var8.field_h;
+            var8.i(1, 0);
+            var8.f(-1477662136, param0.field_l);
+            var8.f(-1477662136, param0.field_f);
+            var8.f(param1 ^ -1477662136, param0.field_n);
+            var8.a(param0.field_i, (byte) -36);
+            var8.a(param0.field_g, (byte) -75);
+            var8.a(param0.field_k, (byte) -63);
+            var8.a(param0.field_j, (byte) 124);
+            var8.i(param0.field_o.length, 0);
+            var5 = param1;
+            L1: while (true) {
+              if (var5 >= param0.field_o.length) {
+                int discarded$1 = var8.g(var4, 64);
+                var8.d(-var4 + var8.field_h, (byte) 72);
+                break L0;
+              } else {
+                var7.a(param0.field_o[var5], (byte) 96);
+                var5++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("mca.A(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 41);
         }
-        int discarded$0 = var8.g(var4, 64);
-        var8.d(-var4 + var8.field_h, (byte) 72);
     }
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 != 0) {
-            field_d = null;
-        }
     }
 
     static {

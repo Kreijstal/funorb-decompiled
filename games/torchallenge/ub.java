@@ -20,7 +20,7 @@ final class ub {
     public static void a(byte param0) {
         field_d = null;
         field_c = null;
-        int var1 = -122 / ((40 - param0) / 45);
+        int var1 = -61;
         field_e = null;
         field_b = null;
         field_a = null;
@@ -32,7 +32,8 @@ final class ub {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -42,109 +43,135 @@ final class ub {
         int var12 = 0;
         int var13 = 0;
         int[][] var17 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_33_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_32_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_2_0 = 0;
         var12 = TorChallenge.field_F ? 1 : 0;
-        var4 = param2;
-        var5 = param3 + var4;
-        if (param1 > 30) {
+        try {
           L0: {
-            var6 = 2048;
-            if (var5 < var6) {
-              break L0;
-            } else {
-              var5 = var5 - var6;
-              break L0;
-            }
-          }
-          var7 = -1;
-          var17 = pa.field_v[param0];
-          var9 = s.field_i[param0];
-          var13 = 0;
-          var7 = var13;
-          L1: while (true) {
-            if (var9 > var13) {
-              L2: {
-                var10 = 32 * var17[var13][0];
-                if (var10 < var6) {
-                  break L2;
+            var4_int = param2;
+            var5 = param3 + var4_int;
+            if (param1 > 30) {
+              L1: {
+                var6 = 2048;
+                if (var5 < var6) {
+                  break L1;
                 } else {
-                  var10 = var10 - var6;
-                  break L2;
+                  var5 = var5 - var6;
+                  break L1;
                 }
               }
-              L3: {
-                var11 = (var17[var13][1] - -1) * 32;
-                if (var6 <= var11) {
-                  var11 = var11 - var6;
-                  break L3;
+              var7 = -1;
+              var17 = pa.field_v[param0];
+              var9 = s.field_i[param0];
+              var13 = 0;
+              var7 = var13;
+              L2: while (true) {
+                if (var9 <= var13) {
+                  stackOut_32_0 = -1;
+                  stackIn_33_0 = stackOut_32_0;
+                  break L0;
                 } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (var10 > var11) {
-                  break L4;
-                } else {
-                  if (var4 > var5) {
-                    break L4;
-                  } else {
-                    if (var10 <= var5) {
-                      if (var4 <= var11) {
-                        return var13;
-                      } else {
-                        var13++;
-                        var13++;
-                        continue L1;
-                      }
+                  L3: {
+                    var10 = 32 * var17[var13][0];
+                    if (var10 < var6) {
+                      break L3;
                     } else {
-                      var13++;
-                      var13++;
-                      continue L1;
+                      var10 = var10 - var6;
+                      break L3;
                     }
                   }
-                }
-              }
-              L5: {
-                if (var10 < var11) {
-                  break L5;
-                } else {
-                  if (var5 < var4) {
-                    break L5;
-                  } else {
+                  L4: {
+                    var11 = (var17[var13][1] - -1) * 32;
+                    if (var6 <= var11) {
+                      var11 = var11 - var6;
+                      break L4;
+                    } else {
+                      break L4;
+                    }
+                  }
+                  L5: {
                     L6: {
-                      if (var5 >= var10) {
+                      if (var10 > var11) {
                         break L6;
                       } else {
-                        if (var4 <= var11) {
+                        if (var4_int > var5) {
                           break L6;
                         } else {
-                          var13++;
-                          var13++;
-                          continue L1;
+                          if (var10 > var5) {
+                            break L5;
+                          } else {
+                            if (var4_int > var11) {
+                              break L5;
+                            } else {
+                              stackOut_17_0 = var13;
+                              stackIn_18_0 = stackOut_17_0;
+                              return stackIn_18_0;
+                            }
+                          }
                         }
                       }
                     }
-                    return var13;
+                    L7: {
+                      if (var10 < var11) {
+                        break L7;
+                      } else {
+                        if (var5 < var4_int) {
+                          break L7;
+                        } else {
+                          L8: {
+                            if (var5 >= var10) {
+                              break L8;
+                            } else {
+                              if (var4_int > var11) {
+                                break L5;
+                              } else {
+                                break L8;
+                              }
+                            }
+                          }
+                          stackOut_24_0 = var13;
+                          stackIn_25_0 = stackOut_24_0;
+                          return stackIn_25_0;
+                        }
+                      }
+                    }
+                    if (var11 > var10) {
+                      break L5;
+                    } else {
+                      if (var4_int >= var5) {
+                        stackOut_29_0 = var13;
+                        stackIn_30_0 = stackOut_29_0;
+                        return stackIn_30_0;
+                      } else {
+                        break L5;
+                      }
+                    }
                   }
-                }
-              }
-              if (var11 <= var10) {
-                if (var4 >= var5) {
-                  return var13;
-                } else {
                   var13++;
-                  continue L1;
+                  continue L2;
                 }
-              } else {
-                var13++;
-                continue L1;
               }
             } else {
-              return -1;
+              stackOut_2_0 = 81;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
           }
-        } else {
-          return 81;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          throw oj.a((Throwable) (Object) var4, "ub.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_33_0;
     }
 
     static {
@@ -160,8 +187,8 @@ final class ub {
         field_n = -1;
         field_l = new int[]{96, 96, 96, 96, 96, 96};
         field_i = false;
-        field_a = new int[]{field_l[0] + field_b[0] >> 1626538849, field_l[1] + field_b[1] >> -2058231839, field_l[2] + field_b[2] >> 1807388961, field_l[3] - -field_b[3] >> 1177122177, field_l[4] - -field_b[4] >> -1139605151, field_b[5] + field_l[5] >> 2006380481};
+        field_a = new int[]{field_l[0] + field_b[0] >> 1, field_l[1] + field_b[1] >> 1, field_l[2] + field_b[2] >> 1, field_l[3] - -field_b[3] >> 1, field_l[4] - -field_b[4] >> 1, field_b[5] + field_l[5] >> 1};
         field_j = 2;
-        field_k = new int[]{-field_l[0] + field_b[0] >> 481525185, field_b[1] - field_l[1] >> 432480833, field_b[2] - field_l[2] >> 1409236449, field_b[3] - field_l[3] >> -1232959775, field_b[4] + -field_l[4] >> 2112182337, field_b[5] - field_l[5] >> -73940127};
+        field_k = new int[]{-field_l[0] + field_b[0] >> 1, field_b[1] - field_l[1] >> 1, field_b[2] - field_l[2] >> 1, field_b[3] - field_l[3] >> 1, field_b[4] + -field_l[4] >> 1, field_b[5] - field_l[5] >> 1};
     }
 }

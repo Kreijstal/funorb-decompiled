@@ -84,8 +84,9 @@ final class ea {
                           break L3;
                         }
                       }
+                      int incrementValue$1 = var29;
                       var29++;
-                      var30[var29] = param2[var16];
+                      var30[incrementValue$1] = param2[var16];
                       var32++;
                       continue L1;
                     } else {
@@ -161,6 +162,7 @@ final class ea {
             var3 = 0;
             L1: while (true) {
               if (var3 >= 65536) {
+                return;
               } else {
                 ((ea) this).field_e[var3] = ea.a(var3);
                 var3++;

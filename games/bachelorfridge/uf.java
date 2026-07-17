@@ -18,9 +18,6 @@ final class uf {
         field_c = null;
         field_a = null;
         field_b = null;
-        if (param0 != 24) {
-            field_a = null;
-        }
     }
 
     static {

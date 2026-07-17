@@ -15,7 +15,11 @@ final class lc extends nf {
 
     lc(Object param0, int param1) {
         super(param1);
-        ((lc) this).field_p = param0;
+        try {
+            ((lc) this).field_p = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "lc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final boolean g(int param0) {
@@ -30,7 +34,7 @@ final class lc extends nf {
         field_w = null;
         field_u = null;
         field_v = null;
-        int var1 = -51 % ((7 - param0) / 56);
+        int var1 = 0;
     }
 
     final Object f(int param0) {

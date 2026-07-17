@@ -8,9 +8,6 @@ final class ch {
     static int[] field_b;
 
     public static void a(int param0) {
-        if (param0 <= 76) {
-            return;
-        }
         field_b = null;
         field_d = null;
         field_a = null;
@@ -398,8 +395,8 @@ final class ch {
         int stackOut_73_1 = 0;
         int stackOut_73_2 = 0;
         L0: {
-          gg.a(0, 20763, 640 + hk.field_j >> -522707743, hk.field_j + -640 >> -824402751, hk.field_i);
-          if ((lg.field_W ^ -1) >= -1) {
+          gg.a(0, 20763, 640 + hk.field_j >> 1, hk.field_j + -640 >> 1, hk.field_i);
+          if (lg.field_W <= 0) {
             break L0;
           } else {
             if (null == ve.field_dc) {
@@ -445,7 +442,7 @@ final class ch {
                 L4: {
                   ((w) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_57_2 != 0);
                   stackOut_57_0 = wm.field_h;
-                  stackOut_57_1 = param1 + 1141039778;
+                  stackOut_57_1 = 1141039778;
                   stackIn_60_0 = stackOut_57_0;
                   stackIn_60_1 = stackOut_57_1;
                   stackIn_58_0 = stackOut_57_0;
@@ -526,7 +523,7 @@ final class ch {
                 L8: {
                   ((w) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2 != 0);
                   stackOut_6_0 = wm.field_h;
-                  stackOut_6_1 = param1 + 1141039778;
+                  stackOut_6_1 = 1141039778;
                   stackIn_9_0 = stackOut_6_0;
                   stackIn_9_1 = stackOut_6_1;
                   stackIn_7_0 = stackOut_6_0;
@@ -562,13 +559,13 @@ final class ch {
                 break L7;
               }
               ((w) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2 != 0);
-              if (bf.field_r <= param1) {
+              if (bf.field_r <= 0) {
                 if (tg.field_e > 0) {
                   if (null == ve.field_dc) {
                     L9: {
                       L10: {
                         stackOut_43_0 = ee.field_i;
-                        stackOut_43_1 = param1 ^ 1141039778;
+                        stackOut_43_1 = 1141039778;
                         stackIn_46_0 = stackOut_43_0;
                         stackIn_46_1 = stackOut_43_1;
                         stackIn_44_0 = stackOut_43_0;
@@ -607,7 +604,7 @@ final class ch {
                       L12: {
                         ((w) (Object) stackIn_47_0).a(stackIn_47_1, stackIn_47_2 != 0);
                         stackOut_47_0 = oh.field_d;
-                        stackOut_47_1 = param1 ^ 1141039778;
+                        stackOut_47_1 = 1141039778;
                         stackIn_50_0 = stackOut_47_0;
                         stackIn_50_1 = stackOut_47_1;
                         stackIn_48_0 = stackOut_47_0;
@@ -650,7 +647,7 @@ final class ch {
                       L14: {
                         ve.field_dc.e(ee.field_i.field_vb, 0);
                         stackOut_34_0 = ee.field_i;
-                        stackOut_34_1 = param1 ^ 1141039778;
+                        stackOut_34_1 = 1141039778;
                         stackIn_37_0 = stackOut_34_0;
                         stackIn_37_1 = stackOut_34_1;
                         stackIn_35_0 = stackOut_34_0;
@@ -689,7 +686,7 @@ final class ch {
                       L16: {
                         ((w) (Object) stackIn_38_0).a(stackIn_38_1, stackIn_38_2 != 0);
                         stackOut_38_0 = oh.field_d;
-                        stackOut_38_1 = param1 ^ 1141039778;
+                        stackOut_38_1 = 1141039778;
                         stackIn_41_0 = stackOut_38_0;
                         stackIn_41_1 = stackOut_38_1;
                         stackIn_39_0 = stackOut_38_0;
@@ -738,7 +735,7 @@ final class ch {
                     L18: {
                       ve.field_dc.e(ee.field_i.field_vb, 0);
                       stackOut_21_0 = ee.field_i;
-                      stackOut_21_1 = param1 ^ 1141039778;
+                      stackOut_21_1 = 1141039778;
                       stackIn_24_0 = stackOut_21_0;
                       stackIn_24_1 = stackOut_21_1;
                       stackIn_22_0 = stackOut_21_0;
@@ -777,7 +774,7 @@ final class ch {
                     L20: {
                       ((w) (Object) stackIn_25_0).a(stackIn_25_1, stackIn_25_2 != 0);
                       stackOut_25_0 = oh.field_d;
-                      stackOut_25_1 = param1 ^ 1141039778;
+                      stackOut_25_1 = 1141039778;
                       stackIn_28_0 = stackOut_25_0;
                       stackIn_28_1 = stackOut_25_1;
                       stackIn_26_0 = stackOut_25_0;
@@ -819,7 +816,7 @@ final class ch {
                   L21: {
                     L22: {
                       stackOut_12_0 = ee.field_i;
-                      stackOut_12_1 = param1 ^ 1141039778;
+                      stackOut_12_1 = 1141039778;
                       stackIn_15_0 = stackOut_12_0;
                       stackIn_15_1 = stackOut_12_1;
                       stackIn_13_0 = stackOut_12_0;
@@ -858,7 +855,7 @@ final class ch {
                     L24: {
                       ((w) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2 != 0);
                       stackOut_16_0 = oh.field_d;
-                      stackOut_16_1 = param1 ^ 1141039778;
+                      stackOut_16_1 = 1141039778;
                       stackIn_19_0 = stackOut_16_0;
                       stackIn_19_1 = stackOut_16_1;
                       stackIn_17_0 = stackOut_16_0;
@@ -901,13 +898,13 @@ final class ch {
             }
           }
         }
-        if (bf.field_r > param1) {
+        if (bf.field_r > 0) {
           if (null != ve.field_dc) {
             L25: {
               L26: {
                 ve.field_dc.e(ee.field_i.field_vb, 0);
                 stackOut_95_0 = ee.field_i;
-                stackOut_95_1 = param1 ^ 1141039778;
+                stackOut_95_1 = 1141039778;
                 stackIn_98_0 = stackOut_95_0;
                 stackIn_98_1 = stackOut_95_1;
                 stackIn_96_0 = stackOut_95_0;
@@ -946,7 +943,7 @@ final class ch {
               L28: {
                 ((w) (Object) stackIn_99_0).a(stackIn_99_1, stackIn_99_2 != 0);
                 stackOut_99_0 = oh.field_d;
-                stackOut_99_1 = param1 ^ 1141039778;
+                stackOut_99_1 = 1141039778;
                 stackIn_102_0 = stackOut_99_0;
                 stackIn_102_1 = stackOut_99_1;
                 stackIn_100_0 = stackOut_99_0;
@@ -988,7 +985,7 @@ final class ch {
             L29: {
               L30: {
                 stackOut_86_0 = ee.field_i;
-                stackOut_86_1 = param1 ^ 1141039778;
+                stackOut_86_1 = 1141039778;
                 stackIn_89_0 = stackOut_86_0;
                 stackIn_89_1 = stackOut_86_1;
                 stackIn_87_0 = stackOut_86_0;
@@ -1027,7 +1024,7 @@ final class ch {
               L32: {
                 ((w) (Object) stackIn_90_0).a(stackIn_90_1, stackIn_90_2 != 0);
                 stackOut_90_0 = oh.field_d;
-                stackOut_90_1 = param1 ^ 1141039778;
+                stackOut_90_1 = 1141039778;
                 stackIn_93_0 = stackOut_90_0;
                 stackIn_93_1 = stackOut_90_1;
                 stackIn_91_0 = stackOut_90_0;
@@ -1073,7 +1070,7 @@ final class ch {
                 L34: {
                   ve.field_dc.e(ee.field_i.field_vb, 0);
                   stackOut_75_0 = ee.field_i;
-                  stackOut_75_1 = param1 ^ 1141039778;
+                  stackOut_75_1 = 1141039778;
                   stackIn_78_0 = stackOut_75_0;
                   stackIn_78_1 = stackOut_75_1;
                   stackIn_76_0 = stackOut_75_0;
@@ -1112,7 +1109,7 @@ final class ch {
                 L36: {
                   ((w) (Object) stackIn_79_0).a(stackIn_79_1, stackIn_79_2 != 0);
                   stackOut_79_0 = oh.field_d;
-                  stackOut_79_1 = param1 ^ 1141039778;
+                  stackOut_79_1 = 1141039778;
                   stackIn_82_0 = stackOut_79_0;
                   stackIn_82_1 = stackOut_79_1;
                   stackIn_80_0 = stackOut_79_0;
@@ -1154,7 +1151,7 @@ final class ch {
               L37: {
                 L38: {
                   stackOut_66_0 = ee.field_i;
-                  stackOut_66_1 = param1 ^ 1141039778;
+                  stackOut_66_1 = 1141039778;
                   stackIn_69_0 = stackOut_66_0;
                   stackIn_69_1 = stackOut_66_1;
                   stackIn_67_0 = stackOut_66_0;
@@ -1193,7 +1190,7 @@ final class ch {
                 L40: {
                   ((w) (Object) stackIn_70_0).a(stackIn_70_1, stackIn_70_2 != 0);
                   stackOut_70_0 = oh.field_d;
-                  stackOut_70_1 = param1 ^ 1141039778;
+                  stackOut_70_1 = 1141039778;
                   stackIn_73_0 = stackOut_70_0;
                   stackIn_73_1 = stackOut_70_1;
                   stackIn_71_0 = stackOut_70_0;

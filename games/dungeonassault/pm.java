@@ -15,39 +15,32 @@ final class pm extends ne {
         field_k = null;
         field_l = null;
         field_n = null;
-        if (param0 < 104) {
-            return;
-        }
         field_o = null;
     }
 
     final static nl a(byte param0) {
         try {
             Throwable var1 = null;
-            nl stackIn_3_0 = null;
+            nl stackIn_2_0 = null;
             Throwable decompiledCaughtException = null;
-            nl stackOut_2_0 = null;
-            L0: {
-              if (param0 > 83) {
-                break L0;
-              } else {
-                field_l = null;
+            nl stackOut_1_0 = null;
+            try {
+              L0: {
+                stackOut_1_0 = (nl) Class.forName("sk").newInstance();
+                stackIn_2_0 = stackOut_1_0;
                 break L0;
               }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
-            try {
-              stackOut_2_0 = (nl) Class.forName("sk").newInstance();
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
-            }
+            return stackIn_2_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     private pm() throws Throwable {

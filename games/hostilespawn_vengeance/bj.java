@@ -41,7 +41,7 @@ abstract class bj implements bg {
     public final bm b(int param0) {
         if (param0 < -58) {
           if (!((bj) this).a((byte) 73)) {
-            if ((hn.a((byte) 80) ^ -1L) > (350L + ((bj) this).field_c ^ -1L)) {
+            if (~hn.a((byte) 80) > ~(350L + ((bj) this).field_c)) {
               return wl.field_c;
             } else {
               return ((bj) this).d(11269);
@@ -57,7 +57,7 @@ abstract class bj implements bg {
     public final String a(int param0) {
         if (param0 < -22) {
           if (!((bj) this).a((byte) -70)) {
-            if ((350L + ((bj) this).field_c ^ -1L) < (hn.a((byte) 80) ^ -1L)) {
+            if (~(350L + ((bj) this).field_c) < ~hn.a((byte) 80)) {
               return null;
             } else {
               return ((bj) this).b((byte) 18);
@@ -68,7 +68,7 @@ abstract class bj implements bg {
         } else {
           ((bj) this).a(false);
           if (!((bj) this).a((byte) -70)) {
-            if ((350L + ((bj) this).field_c ^ -1L) < (hn.a((byte) 80) ^ -1L)) {
+            if (~(350L + ((bj) this).field_c) < ~hn.a((byte) 80)) {
               return null;
             } else {
               return ((bj) this).b((byte) 18);

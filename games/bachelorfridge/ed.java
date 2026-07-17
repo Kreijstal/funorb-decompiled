@@ -13,18 +13,9 @@ final class ed {
     public static void a(int param0) {
         field_c = null;
         field_f = null;
-        if (param0 < 41) {
-          field_f = null;
-          field_e = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
-          field_e = null;
-          field_d = null;
-          field_b = null;
-          return;
-        }
+        field_e = null;
+        field_d = null;
+        field_b = null;
     }
 
     static {

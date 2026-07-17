@@ -9,16 +9,14 @@ final class hw {
     static int field_b;
 
     public static void a(int param0) {
-        if (param0 != -1) {
-            return;
-        }
         field_d = null;
         field_e = null;
     }
 
     final void a(long param0, byte param1) {
+        int fieldTemp$2 = ((hw) this).field_a;
         ((hw) this).field_a = ((hw) this).field_a + 1;
-        ((hw) this).field_c[((hw) this).field_a] = param0;
+        ((hw) this).field_c[fieldTemp$2] = param0;
         if (param1 != -115) {
           return;
         } else {
@@ -87,7 +85,7 @@ final class hw {
                     }
                   }
                   L3: {
-                    if (-1 <= (var12 ^ -1)) {
+                    if (var12 <= 0) {
                       break L3;
                     } else {
                       c.a(var16, var13, var9, var10, -16777216, var11);
@@ -134,7 +132,7 @@ final class hw {
               }
             }
             L6: {
-              if (-1 <= (var12 ^ -1)) {
+              if (var12 <= 0) {
                 break L6;
               } else {
                 c.a(var16, var13, var9, var10, -16777216, var11);

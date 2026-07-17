@@ -14,14 +14,14 @@ final class vk {
         ci.field_a = 0;
         var2 = nb.field_b;
         nb.field_b = nr.field_e;
-        if (-52 != (param1 ^ -1)) {
+        if (param1 != 51) {
           if (50 == param1) {
             gt.field_t.field_l = 5;
             nr.field_e = var2;
             gt.field_t.field_o = gt.field_t.field_o + 1;
             if (param0 < -115) {
               if (gt.field_t.field_o < 2) {
-                if (-3 < (gt.field_t.field_o ^ -1)) {
+                if (gt.field_t.field_o < 2) {
                   if (4 <= gt.field_t.field_o) {
                     return 1;
                   } else {
@@ -39,10 +39,10 @@ final class vk {
                   }
                 }
               } else {
-                if (-52 == (param1 ^ -1)) {
+                if (param1 == 51) {
                   return 2;
                 } else {
-                  if (-3 < (gt.field_t.field_o ^ -1)) {
+                  if (gt.field_t.field_o < 2) {
                     if (4 <= gt.field_t.field_o) {
                       return 1;
                     } else {
@@ -70,7 +70,7 @@ final class vk {
             gt.field_t.field_o = gt.field_t.field_o + 1;
             if (param0 < -115) {
               if (gt.field_t.field_o < 2) {
-                if (-3 < (gt.field_t.field_o ^ -1)) {
+                if (gt.field_t.field_o < 2) {
                   if (4 <= gt.field_t.field_o) {
                     return 1;
                   } else {
@@ -88,10 +88,10 @@ final class vk {
                   }
                 }
               } else {
-                if (-52 == (param1 ^ -1)) {
+                if (param1 == 51) {
                   return 2;
                 } else {
-                  if (-3 < (gt.field_t.field_o ^ -1)) {
+                  if (gt.field_t.field_o < 2) {
                     if (4 <= gt.field_t.field_o) {
                       return 1;
                     } else {
@@ -120,10 +120,10 @@ final class vk {
           gt.field_t.field_o = gt.field_t.field_o + 1;
           if (param0 < -115) {
             if (gt.field_t.field_o >= 2) {
-              if (-52 == (param1 ^ -1)) {
+              if (param1 == 51) {
                 return 2;
               } else {
-                if (-3 >= (gt.field_t.field_o ^ -1)) {
+                if (gt.field_t.field_o >= 2) {
                   if (param1 == 50) {
                     return 5;
                   } else {
@@ -142,7 +142,7 @@ final class vk {
                 }
               }
             } else {
-              if (-3 < (gt.field_t.field_o ^ -1)) {
+              if (gt.field_t.field_o < 2) {
                 if (4 <= gt.field_t.field_o) {
                   return 1;
                 } else {

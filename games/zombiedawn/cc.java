@@ -36,79 +36,121 @@ final class cc {
             throw new IllegalStateException();
         }
         de.field_i = true;
-        lk.a(false, param0 ^ 116);
-        fl.field_a = param0;
+        lk.a(false, 116);
+        fl.field_a = 0;
     }
 
     final static void a(de param0, int param1) {
         try {
             byte[] var2 = null;
+            RuntimeException var2_ref = null;
             int var3_int = 0;
             Exception var3 = null;
             int var4 = 0;
             int var5 = 0;
             byte[] var6 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            String stackIn_19_2 = null;
             Throwable decompiledCaughtException = null;
-            L0: {
-              var5 = ZombieDawn.field_J;
-              if (param1 == 10) {
-                break L0;
-              } else {
-                field_b = null;
-                break L0;
-              }
-            }
-            L1: {
-              var6 = new byte[24];
-              var2 = var6;
-              if (null != ce.field_t) {
-                try {
-                  L2: {
-                    ce.field_t.a(param1 ^ 10, 0L);
-                    ce.field_t.a(85, var6);
-                    var3_int = 0;
-                    L3: while (true) {
-                      L4: {
-                        if (var3_int >= 24) {
-                          break L4;
-                        } else {
-                          if (var2[var3_int] == 0) {
-                            var3_int++;
-                            continue L3;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            String stackOut_18_2 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
+            var5 = ZombieDawn.field_J;
+            try {
+              L0: {
+                L1: {
+                  var6 = new byte[24];
+                  var2 = var6;
+                  if (null != ce.field_t) {
+                    try {
+                      L2: {
+                        ce.field_t.a(0, 0L);
+                        ce.field_t.a(85, var6);
+                        var3_int = 0;
+                        L3: while (true) {
+                          L4: {
+                            if (var3_int >= 24) {
+                              break L4;
+                            } else {
+                              if (var2[var3_int] == 0) {
+                                var3_int++;
+                                continue L3;
+                              } else {
+                                break L4;
+                              }
+                            }
+                          }
+                          if (var3_int < 24) {
+                            break L2;
                           } else {
-                            break L4;
+                            throw new IOException();
                           }
                         }
                       }
-                      if (var3_int < 24) {
-                        break L2;
-                      } else {
-                        throw new IOException();
+                    } catch (java.lang.Exception decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        var3 = (Exception) (Object) decompiledCaughtException;
+                        var4 = 0;
+                        L6: while (true) {
+                          if (var4 >= 24) {
+                            break L5;
+                          } else {
+                            var2[var4] = (byte) -1;
+                            var4++;
+                            continue L6;
+                          }
+                        }
                       }
                     }
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L5: {
-                    var3 = (Exception) (Object) decompiledCaughtException;
-                    var4 = 0;
-                    L6: while (true) {
-                      if (var4 >= 24) {
-                        break L5;
-                      } else {
-                        var2[var4] = (byte)-1;
-                        var4++;
-                        continue L6;
-                      }
-                    }
+                    param0.a(var2, 24, 0, -27843);
+                    break L1;
+                  } else {
+                    param0.a(var2, 24, 0, -27843);
+                    break L1;
                   }
                 }
-                param0.a(var2, 24, 0, -27843);
-                break L1;
-              } else {
-                param0.a(var2, 24, 0, -27843);
-                break L1;
+                break L0;
               }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L7: {
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_16_0 = (RuntimeException) var2_ref;
+                stackOut_16_1 = new StringBuilder().append("cc.E(");
+                stackIn_18_0 = stackOut_16_0;
+                stackIn_18_1 = stackOut_16_1;
+                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_1 = stackOut_16_1;
+                if (param0 == null) {
+                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_2 = "null";
+                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_1 = stackOut_18_1;
+                  stackIn_19_2 = stackOut_18_2;
+                  break L7;
+                } else {
+                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_2 = "{...}";
+                  stackIn_19_0 = stackOut_17_0;
+                  stackIn_19_1 = stackOut_17_1;
+                  stackIn_19_2 = stackOut_17_2;
+                  break L7;
+                }
+              }
+              throw sh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 10 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -130,7 +172,7 @@ final class cc {
                 if (0 >= -((cc) this).field_l + param0) {
                   break L1;
                 } else {
-                  if ((param0 - ((cc) this).field_l ^ -1) > -41) {
+                  if (param0 - ((cc) this).field_l < 40) {
                     stackOut_7_0 = ((cc) this).field_f;
                     stackIn_8_0 = stackOut_7_0;
                     break L0;
@@ -178,9 +220,6 @@ final class cc {
         field_b = null;
         field_k = null;
         field_c = null;
-        if (param0 != -27940) {
-            return;
-        }
         field_h = null;
         field_m = null;
     }
@@ -206,7 +245,7 @@ final class cc {
         }
         L1: {
           L2: {
-            if (-81 >= (-param1 + nh.field_P ^ -1)) {
+            if (-param1 + nh.field_P >= 80) {
               break L2;
             } else {
               if (0 >= param2 + -((cc) this).field_l) {
@@ -315,7 +354,7 @@ final class cc {
                     break L6;
                   }
                 }
-                if (-61 < (((cc) this).field_o ^ -1)) {
+                if (((cc) this).field_o < 60) {
                   ((cc) this).field_o = 60;
                   break L2;
                 } else {
@@ -324,7 +363,7 @@ final class cc {
               }
             } else {
               if (0 == ((cc) this).field_n) {
-                if ((((cc) this).field_o ^ -1) > -81) {
+                if (((cc) this).field_o < 80) {
                   ((cc) this).field_o = ((cc) this).field_o + 3;
                   break L2;
                 } else {
@@ -334,7 +373,7 @@ final class cc {
                 }
               } else {
                 if (((cc) this).field_n >= 4) {
-                  if ((((cc) this).field_n ^ -1) <= -7) {
+                  if (((cc) this).field_n >= 6) {
                     if (((cc) this).field_n >= 8) {
                       if (8 == ((cc) this).field_n) {
                         L7: {
@@ -346,7 +385,7 @@ final class cc {
                             break L7;
                           }
                         }
-                        if ((((cc) this).field_o ^ -1) < (var4 ^ -1)) {
+                        if (~((cc) this).field_o < ~var4) {
                           ((cc) this).field_o = ((cc) this).field_o - 2;
                           if (var4 > ((cc) this).field_o) {
                             ((cc) this).field_o = var4;
@@ -367,7 +406,7 @@ final class cc {
                     }
                   } else {
                     ((cc) this).field_n = ((cc) this).field_n + 1;
-                    if (-6 == (((cc) this).field_n ^ -1)) {
+                    if (((cc) this).field_n == 5) {
                       ((cc) this).field_e = 2;
                       break L2;
                     } else {
@@ -376,7 +415,7 @@ final class cc {
                   }
                 } else {
                   ((cc) this).field_n = ((cc) this).field_n + 1;
-                  if ((((cc) this).field_n ^ -1) == -4) {
+                  if (((cc) this).field_n == 3) {
                     ((cc) this).field_e = 1;
                     break L2;
                   } else {
@@ -430,7 +469,7 @@ final class cc {
         vn stackOut_7_0 = null;
         vn stackOut_6_0 = null;
         var4 = ZombieDawn.field_J;
-        if ((((cc) this).field_o ^ -1) >= -1) {
+        if (((cc) this).field_o <= 0) {
           return;
         } else {
           L0: {

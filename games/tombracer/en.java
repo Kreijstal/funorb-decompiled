@@ -57,126 +57,49 @@ final class en extends cg {
         Object var6 = null;
         int var7 = 0;
         Throwable var8 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (((en) this).field_j >= 0) {
-                        statePc = 2;
+        Throwable decompiledCaughtException = null;
+        L0: while (true) {
+          if (((en) this).field_j >= 0) {
+            if (((en) this).field_k + param2 >= ((en) this).field_j) {
+              var4 = ((en) this).field_j - ((en) this).field_k;
+              this.c(param0, param1, var4);
+              param1 = param1 + var4;
+              param2 = param2 - var4;
+              ((en) this).field_k = ((en) this).field_k + var4;
+              this.e();
+              var5 = (jva) (Object) ((en) this).field_m.f(-80);
+              var6 = (Object) (Object) var5;
+              synchronized (var6) {
+                L1: {
+                  L2: {
+                    var7 = var5.a((en) this);
+                    if (var7 >= 0) {
+                      var5.field_f = var7;
+                      this.a(var5.field_a, var5);
+                      break L2;
                     } else {
-                        statePc = 1;
+                      var5.field_f = 0;
+                      this.a(var5);
+                      break L2;
                     }
-                    continue stateLoop;
+                  }
+                  break L1;
                 }
-                case 1: {
-                    this.c(param0, param1, param2);
-                    return;
-                }
-                case 2: {
-                    if (((en) this).field_k + param2 >= ((en) this).field_j) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    ((en) this).field_k = ((en) this).field_k + param2;
-                    this.c(param0, param1, param2);
-                    return;
-                }
-                case 4: {
-                    var4 = ((en) this).field_j - ((en) this).field_k;
-                    this.c(param0, param1, var4);
-                    param1 = param1 + var4;
-                    param2 = param2 - var4;
-                    ((en) this).field_k = ((en) this).field_k + var4;
-                    this.e();
-                    var5 = (jva) (Object) ((en) this).field_m.f(-80);
-                    var6 = (Object) (Object) var5;
-                    // monitorenter var5
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        var7 = var5.a((en) this);
-                        if (var7 >= 0) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var5.field_f = 0;
-                        this.a(var5);
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var5.field_f = var7;
-                        this.a(var5.field_a, var5);
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        // monitorexit var6
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var8 = caughtException;
-                        // monitorexit var6
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    throw (RuntimeException) (Object) var8;
-                }
-                case 12: {
-                    if (param2 != 0) {
-                        statePc = 0;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 13: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              if (param2 != 0) {
+                continue L0;
+              } else {
+                return;
+              }
+            } else {
+              ((en) this).field_k = ((en) this).field_k + param2;
+              this.c(param0, param1, param2);
+              return;
             }
+          } else {
+            this.c(param0, param1, param2);
+            return;
+          }
         }
     }
 
@@ -202,125 +125,48 @@ final class en extends cg {
         Object var4 = null;
         int var5 = 0;
         Throwable var6 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (((en) this).field_j >= 0) {
-                        statePc = 2;
+        Throwable decompiledCaughtException = null;
+        L0: while (true) {
+          if (((en) this).field_j >= 0) {
+            if (((en) this).field_k + param0 >= ((en) this).field_j) {
+              var2 = ((en) this).field_j - ((en) this).field_k;
+              this.b(var2);
+              param0 = param0 - var2;
+              ((en) this).field_k = ((en) this).field_k + var2;
+              this.e();
+              var3 = (jva) (Object) ((en) this).field_m.f(-80);
+              var4 = (Object) (Object) var3;
+              synchronized (var4) {
+                L1: {
+                  L2: {
+                    var5 = var3.a((en) this);
+                    if (var5 >= 0) {
+                      var3.field_f = var5;
+                      this.a(var3.field_a, var3);
+                      break L2;
                     } else {
-                        statePc = 1;
+                      var3.field_f = 0;
+                      this.a(var3);
+                      break L2;
                     }
-                    continue stateLoop;
+                  }
+                  break L1;
                 }
-                case 1: {
-                    this.b(param0);
-                    return;
-                }
-                case 2: {
-                    if (((en) this).field_k + param0 >= ((en) this).field_j) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    ((en) this).field_k = ((en) this).field_k + param0;
-                    this.b(param0);
-                    return;
-                }
-                case 4: {
-                    var2 = ((en) this).field_j - ((en) this).field_k;
-                    this.b(var2);
-                    param0 = param0 - var2;
-                    ((en) this).field_k = ((en) this).field_k + var2;
-                    this.e();
-                    var3 = (jva) (Object) ((en) this).field_m.f(-80);
-                    var4 = (Object) (Object) var3;
-                    // monitorenter var3
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        var5 = var3.a((en) this);
-                        if (var5 >= 0) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var3.field_f = 0;
-                        this.a(var3);
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var3.field_f = var5;
-                        this.a(var3.field_a, var3);
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        // monitorexit var4
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var6 = caughtException;
-                        // monitorexit var4
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    throw (RuntimeException) (Object) var6;
-                }
-                case 12: {
-                    if (param0 != 0) {
-                        statePc = 0;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 13: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              if (param0 != 0) {
+                continue L0;
+              } else {
+                return;
+              }
+            } else {
+              ((en) this).field_k = ((en) this).field_k + param0;
+              this.b(param0);
+              return;
             }
+          } else {
+            this.b(param0);
+            return;
+          }
         }
     }
 

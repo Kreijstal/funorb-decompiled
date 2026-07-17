@@ -49,7 +49,7 @@ final class re {
     }
 
     final static void b(int param0) {
-        int var1 = -105 / ((param0 - -17) / 58);
+        int var1 = -105;
     }
 
     static {

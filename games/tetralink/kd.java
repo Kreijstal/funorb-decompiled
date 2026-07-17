@@ -32,7 +32,7 @@ final class kd {
                 return null;
               }
             } else {
-              if ((((kd) this).field_b.field_n ^ -1L) == (((kd) this).field_f ^ -1L)) {
+              if (~((kd) this).field_b.field_n == ~((kd) this).field_f) {
                 var3 = ((kd) this).field_b;
                 ((kd) this).field_b = ((kd) this).field_b.field_o;
                 return var3;
@@ -49,53 +49,21 @@ final class kd {
 
     final void a(long param0, gb param1, int param2) {
         gb var5 = null;
-        gb var6 = null;
-        gb var7 = null;
-        gb var8 = null;
-        gb var9 = null;
-        if (param1.field_s == null) {
-          if (param2 < 94) {
-            kd.a(-121, 28, (byte) -36);
-            var8 = ((kd) this).field_j[(int)(param0 & (long)(((kd) this).field_a + -1))];
-            var5 = var8;
+        try {
+            if (param1.field_s != null) {
+                param1.e(0);
+            }
+            if (param2 < 94) {
+                kd.a(-121, 28, (byte) -36);
+            }
+            var5 = ((kd) this).field_j[(int)(param0 & (long)(((kd) this).field_a + -1))];
             param1.field_o = var5;
-            param1.field_s = var8.field_s;
+            param1.field_s = var5.field_s;
             param1.field_s.field_o = param1;
             param1.field_o.field_s = param1;
             param1.field_n = param0;
-            return;
-          } else {
-            var9 = ((kd) this).field_j[(int)(param0 & (long)(((kd) this).field_a + -1))];
-            var5 = var9;
-            param1.field_o = var5;
-            param1.field_s = var9.field_s;
-            param1.field_s.field_o = param1;
-            param1.field_o.field_s = param1;
-            param1.field_n = param0;
-            return;
-          }
-        } else {
-          param1.e(0);
-          if (param2 >= 94) {
-            var6 = ((kd) this).field_j[(int)(param0 & (long)(((kd) this).field_a + -1))];
-            var5 = var6;
-            param1.field_o = var5;
-            param1.field_s = var6.field_s;
-            param1.field_s.field_o = param1;
-            param1.field_o.field_s = param1;
-            param1.field_n = param0;
-            return;
-          } else {
-            kd.a(-121, 28, (byte) -36);
-            var7 = ((kd) this).field_j[(int)(param0 & (long)(((kd) this).field_a + -1))];
-            var5 = var7;
-            param1.field_o = var5;
-            param1.field_s = var7.field_s;
-            param1.field_s.field_o = param1;
-            param1.field_o.field_s = param1;
-            param1.field_n = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "kd.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -113,7 +81,7 @@ final class kd {
     public static void a(int param0) {
         field_e = null;
         field_i = null;
-        int var1 = -52 / ((-5 - param0) / 51);
+        int var1 = -52;
         field_g = null;
         field_k = null;
         field_m = null;
@@ -156,7 +124,7 @@ final class kd {
         gb var5 = null;
         gb var8 = null;
         var3 = TetraLink.field_J;
-        if (param0 > (((kd) this).field_d ^ -1)) {
+        if (param0 > ~((kd) this).field_d) {
           if (((kd) this).field_c == ((kd) this).field_j[-1 + ((kd) this).field_d]) {
             L0: while (true) {
               if (((kd) this).field_a > ((kd) this).field_d) {

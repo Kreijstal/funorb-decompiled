@@ -21,8 +21,9 @@ final class hp extends nm {
     }
 
     final void a(int param0, int param1) {
+        int fieldTemp$0 = ((hp) this).field_j + 1;
         ((hp) this).field_j = ((hp) this).field_j + 1;
-        ((hp) this).field_o[(((hp) this).field_j + 1) % ((hp) this).field_n] = param1;
+        ((hp) this).field_o[fieldTemp$0 % ((hp) this).field_n] = param1;
         if (param0 != -7255) {
             ((hp) this).a(-25, 104);
         }
@@ -32,9 +33,6 @@ final class hp extends nm {
         field_i = null;
         field_l = null;
         field_k = null;
-        if (param0 != 67108864) {
-            field_l = null;
-        }
     }
 
     hp(int param0) {

@@ -20,16 +20,15 @@ final class h extends q {
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        param0.setFocusTraversalKeysEnabled(false);
-        if (param1 != -8662) {
-          h.a(10);
-          param0.addKeyListener((java.awt.event.KeyListener) (Object) ha.field_b);
-          param0.addFocusListener((java.awt.event.FocusListener) (Object) ha.field_b);
-          return;
-        } else {
-          param0.addKeyListener((java.awt.event.KeyListener) (Object) ha.field_b);
-          param0.addFocusListener((java.awt.event.FocusListener) (Object) ha.field_b);
-          return;
+        try {
+            param0.setFocusTraversalKeysEnabled(false);
+            if (param1 != -8662) {
+                h.a(10);
+            }
+            param0.addKeyListener((java.awt.event.KeyListener) (Object) ha.field_b);
+            param0.addFocusListener((java.awt.event.FocusListener) (Object) ha.field_b);
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "h.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

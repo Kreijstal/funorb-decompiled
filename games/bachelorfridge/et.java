@@ -57,17 +57,17 @@ final class et extends k {
           var3 = var12;
           if (((et) this).field_j.field_m) {
             var4 = tj.field_f[param0];
-            var5 = -2048 + var4 >> 1914696353;
+            var5 = -2048 + var4 >> 1;
             var6 = 0;
             L2: while (true) {
-              if (var6 >= hh.field_d) {
+              if (~var6 <= ~hh.field_d) {
                 break L1;
               } else {
                 L3: {
                   var8 = jq.field_k[var6];
-                  var9 = -2048 + var8 >> 1437591073;
+                  var9 = -2048 + var8 >> 1;
                   if (((et) this).field_k != 0) {
-                    var10 = var9 * var9 - -(var5 * var5) >> 831162476;
+                    var10 = var9 * var9 - -(var5 * var5) >> 12;
                     var7 = (int)(Math.sqrt((double)((float)var10 / 4096.0f)) * 4096.0);
                     var7 = (int)(3.141592653589793 * (double)(((et) this).field_n * var7));
                     break L3;
@@ -78,26 +78,24 @@ final class et extends k {
                 }
                 L4: {
                   var7 = var7 - (var7 & -4096);
-                  if (((et) this).field_o == -1) {
-                    var7 = 4096 + baa.field_z[var7 >> 1807660068 & 255] >> -1266543263;
+                  if (((et) this).field_o == 0) {
+                    var7 = 4096 + baa.field_z[var7 >> 4 & 255] >> 1;
                     break L4;
                   } else {
                     if (((et) this).field_o == 2) {
                       L5: {
-                        // wide iinc 7 -2048
-                        if (-1 <= var7) {
+                        var7 -= 2048;
+                        if (var7 >= 0) {
                           break L5;
                         } else {
                           var7 = -var7;
                           break L5;
                         }
                       }
-                      var7 = 2048 - var7 << -1188395071;
+                      var7 = 2048 - var7 << 1;
                       break L4;
                     } else {
-                      var16[var6] = var7;
-                      var6++;
-                      continue L2;
+                      break L4;
                     }
                   }
                 }
@@ -114,32 +112,82 @@ final class et extends k {
     }
 
     final void a(byte param0, lu param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var5 = BachelorFridge.field_y;
-        if (param0 == -71) {
+        try {
           L0: {
-            var4 = param2;
-            if (var4 == 0) {
-              ((et) this).field_k = param1.b(16711935);
+            if (param0 == -71) {
+              L1: {
+                var4_int = param2;
+                if (var4_int == 0) {
+                  ((et) this).field_k = param1.b(16711935);
+                  break L1;
+                } else {
+                  if (var4_int != 1) {
+                    if (var4_int != 3) {
+                      break L1;
+                    } else {
+                      ((et) this).field_n = param1.b(16711935);
+                      break L1;
+                    }
+                  } else {
+                    ((et) this).field_o = param1.b(16711935);
+                    break L1;
+                  }
+                }
+              }
               break L0;
             } else {
-              if (var4 != 1) {
-                if (-4 != (var4 ^ -1)) {
-                  break L0;
-                } else {
-                  ((et) this).field_n = param1.b(16711935);
-                  break L0;
-                }
-              } else {
-                ((et) this).field_o = param1.b(16711935);
-                break L0;
-              }
+              return;
             }
           }
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_1 = new StringBuilder().append("et.E(").append(param0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L2;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
         }
     }
 

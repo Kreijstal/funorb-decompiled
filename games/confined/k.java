@@ -197,7 +197,7 @@ final class k {
             var1 = field_h;
             var2 = field_f;
             var3 = field_c;
-            fn.b(var1, var3, var2 - var1, param0);
+            fn.b(var1, var3, var2 - var1, 0);
         }
     }
 

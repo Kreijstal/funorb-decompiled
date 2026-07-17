@@ -12,8 +12,9 @@ final class ee extends th {
         int var2 = 0;
         for (var3 = ((ee) this).field_e - 1; var3 >= 0; var3--) {
             for (var4 = 0; var4 < ((ee) this).field_d; var4++) {
+                int incrementValue$0 = var2;
                 var2++;
-                var1[var2] = ((ee) this).field_g[var4 + var3 * ((ee) this).field_d];
+                var1[incrementValue$0] = ((ee) this).field_g[var4 + var3 * ((ee) this).field_d];
             }
         }
         ((ee) this).field_g = var1;
@@ -202,23 +203,33 @@ final class ee extends th {
         param5 = -(param5 & 3);
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = var9; var11 < 0; var11++) {
+                int incrementValue$0 = param4;
                 param4++;
+                int incrementValue$1 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$0] = param2[param1[incrementValue$1] & 255];
+                int incrementValue$2 = param4;
                 param4++;
+                int incrementValue$3 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$2] = param2[param1[incrementValue$3] & 255];
+                int incrementValue$4 = param4;
                 param4++;
+                int incrementValue$5 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$4] = param2[param1[incrementValue$5] & 255];
+                int incrementValue$6 = param4;
                 param4++;
+                int incrementValue$7 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$6] = param2[param1[incrementValue$7] & 255];
             }
             for (var11 = param5; var11 < 0; var11++) {
+                int incrementValue$8 = param4;
                 param4++;
+                int incrementValue$9 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$8] = param2[param1[incrementValue$9] & 255];
             }
             param4 = param4 + param7;
             param3 = param3 + param8;
@@ -575,8 +586,9 @@ final class ee extends th {
                                     var34++;
                                     break L21;
                                   } else {
+                                    int incrementValue$9 = var34;
                                     var34++;
-                                    dg.field_e[var34] = var38;
+                                    dg.field_e[incrementValue$9] = var38;
                                     break L21;
                                   }
                                 }
@@ -655,8 +667,9 @@ final class ee extends th {
                                     var34++;
                                     break L28;
                                   } else {
+                                    int incrementValue$10 = var34;
                                     var34++;
-                                    dg.field_e[var34] = var38;
+                                    dg.field_e[incrementValue$10] = var38;
                                     break L28;
                                   }
                                 }
@@ -712,8 +725,9 @@ final class ee extends th {
                                         var34++;
                                         break L34;
                                       } else {
+                                        int incrementValue$11 = var34;
                                         var34++;
-                                        dg.field_e[var34] = var38;
+                                        dg.field_e[incrementValue$11] = var38;
                                         break L34;
                                       }
                                     }
@@ -805,8 +819,9 @@ final class ee extends th {
                                     var34++;
                                     break L41;
                                   } else {
+                                    int incrementValue$12 = var34;
                                     var34++;
-                                    dg.field_e[var34] = var38;
+                                    dg.field_e[incrementValue$12] = var38;
                                     break L41;
                                   }
                                 }
@@ -886,8 +901,9 @@ final class ee extends th {
                                     var34++;
                                     break L48;
                                   } else {
+                                    int incrementValue$13 = var34;
                                     var34++;
-                                    dg.field_e[var34] = var38;
+                                    dg.field_e[incrementValue$13] = var38;
                                     break L48;
                                   }
                                 }
@@ -944,8 +960,9 @@ final class ee extends th {
                                         var34++;
                                         break L54;
                                       } else {
+                                        int incrementValue$14 = var34;
                                         var34++;
-                                        dg.field_e[var34] = var38;
+                                        dg.field_e[incrementValue$14] = var38;
                                         break L54;
                                       }
                                     }
@@ -1014,8 +1031,9 @@ final class ee extends th {
                                         var34++;
                                         break L60;
                                       } else {
+                                        int incrementValue$15 = var34;
                                         var34++;
-                                        dg.field_e[var34] = var38;
+                                        dg.field_e[incrementValue$15] = var38;
                                         break L60;
                                       }
                                     }
@@ -1081,8 +1099,9 @@ final class ee extends th {
                                         var34++;
                                         break L66;
                                       } else {
+                                        int incrementValue$16 = var34;
                                         var34++;
-                                        dg.field_e[var34] = var38;
+                                        dg.field_e[incrementValue$16] = var38;
                                         break L66;
                                       }
                                     }
@@ -1133,8 +1152,9 @@ final class ee extends th {
                                         var37++;
                                         continue L69;
                                       } else {
+                                        int incrementValue$17 = var34;
                                         var34++;
-                                        dg.field_e[var34] = var38;
+                                        dg.field_e[incrementValue$17] = var38;
                                         var37++;
                                         continue L69;
                                       }
@@ -1427,8 +1447,9 @@ final class ee extends th {
             for (var15 = -param7; var15 < 0; var15++) {
                 var16 = param1[(param3 >> 16) + var14];
                 if (var16 != 0) {
+                    int incrementValue$1 = param5;
                     param5++;
-                    param0[param5] = param2[var16 & 255];
+                    param0[incrementValue$1] = param2[var16 & 255];
                 } else {
                     param5++;
                 }
@@ -1462,15 +1483,17 @@ final class ee extends th {
                     var11++;
                     continue L0;
                   } else {
+                    int incrementValue$10 = param4;
                     param4++;
-                    param3 = param1[param4];
+                    param3 = param1[incrementValue$10];
                     if (param3 == 0) {
                       param5++;
                       var12++;
                       continue L2;
                     } else {
+                      int incrementValue$11 = param5;
                       param5++;
-                      param0[param5] = param2[param3 & 255];
+                      param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
                       continue L2;
                     }
@@ -1478,50 +1501,58 @@ final class ee extends th {
                 }
               } else {
                 L3: {
+                  int incrementValue$12 = param4;
                   param4++;
-                  param3 = param1[param4];
+                  param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
+                    int incrementValue$13 = param5;
                     param5++;
-                    param0[param5] = param2[param3 & 255];
+                    param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$14 = param4;
                   param4++;
-                  param3 = param1[param4];
+                  param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
+                    int incrementValue$15 = param5;
                     param5++;
-                    param0[param5] = param2[param3 & 255];
+                    param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$16 = param4;
                   param4++;
-                  param3 = param1[param4];
+                  param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
+                    int incrementValue$17 = param5;
                     param5++;
-                    param0[param5] = param2[param3 & 255];
+                    param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
+                int incrementValue$18 = param4;
                 param4++;
-                param3 = param1[param4];
+                param3 = param1[incrementValue$18];
                 if (param3 == 0) {
                   param5++;
                   var12++;
                   continue L1;
                 } else {
+                  int incrementValue$19 = param5;
                   param5++;
-                  param0[param5] = param2[param3 & 255];
+                  param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
                   continue L1;
                 }
@@ -1630,8 +1661,9 @@ final class ee extends th {
                 var13++;
                 continue L0;
               } else {
+                int incrementValue$787 = param3;
                 param3++;
-                var15 = param1[param3];
+                var15 = param1[incrementValue$787];
                 if (var15 == 0) {
                   param4++;
                   var14++;
@@ -1648,15 +1680,17 @@ final class ee extends th {
                       if (var17 != var18) {
                         break L2;
                       } else {
+                        int incrementValue$788 = param4;
                         param4++;
-                        param0[param4] = (var16 * var10 >> 8 << 16) + (var17 * var11 >> 8 << 8) + (var18 * var12 >> 8);
+                        param0[incrementValue$788] = (var16 * var10 >> 8 << 16) + (var17 * var11 >> 8 << 8) + (var18 * var12 >> 8);
                         var14++;
                         continue L1;
                       }
                     }
                   }
+                  int incrementValue$789 = param4;
                   param4++;
-                  param0[param4] = var15;
+                  param0[incrementValue$789] = var15;
                   var14++;
                   continue L1;
                 }
@@ -1761,15 +1795,17 @@ final class ee extends th {
                     var11++;
                     continue L0;
                   } else {
+                    int incrementValue$10 = param4;
                     param4--;
-                    param3 = param2[param1[param4] & 255];
+                    param3 = param2[param1[incrementValue$10] & 255];
                     if (param3 == 0) {
                       param5++;
                       var12++;
                       continue L2;
                     } else {
+                      int incrementValue$11 = param5;
                       param5++;
-                      param0[param5] = param3;
+                      param0[incrementValue$11] = param3;
                       var12++;
                       continue L2;
                     }
@@ -1777,50 +1813,58 @@ final class ee extends th {
                 }
               } else {
                 L3: {
+                  int incrementValue$12 = param4;
                   param4--;
-                  param3 = param2[param1[param4] & 255];
+                  param3 = param2[param1[incrementValue$12] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
+                    int incrementValue$13 = param5;
                     param5++;
-                    param0[param5] = param3;
+                    param0[incrementValue$13] = param3;
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$14 = param4;
                   param4--;
-                  param3 = param2[param1[param4] & 255];
+                  param3 = param2[param1[incrementValue$14] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
+                    int incrementValue$15 = param5;
                     param5++;
-                    param0[param5] = param3;
+                    param0[incrementValue$15] = param3;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$16 = param4;
                   param4--;
-                  param3 = param2[param1[param4] & 255];
+                  param3 = param2[param1[incrementValue$16] & 255];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
+                    int incrementValue$17 = param5;
                     param5++;
-                    param0[param5] = param3;
+                    param0[incrementValue$17] = param3;
                     break L5;
                   }
                 }
+                int incrementValue$18 = param4;
                 param4--;
-                param3 = param2[param1[param4] & 255];
+                param3 = param2[param1[incrementValue$18] & 255];
                 if (param3 == 0) {
                   param5++;
                   var12++;
                   continue L1;
                 } else {
+                  int incrementValue$19 = param5;
                   param5++;
-                  param0[param5] = param3;
+                  param0[incrementValue$19] = param3;
                   var12++;
                   continue L1;
                 }
@@ -1861,8 +1905,9 @@ final class ee extends th {
                 var11++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                var13 = param1[param3];
+                var13 = param1[incrementValue$66];
                 if (var13 == 0) {
                   param4++;
                   var12++;
@@ -1870,8 +1915,9 @@ final class ee extends th {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
+                  param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
                   continue L1;
                 }

@@ -11,24 +11,52 @@ final class p {
     static fi field_d;
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
-        int var4 = StarCannon.field_A;
-        gl.b();
-        sd.field_e = new int[260];
-        fb.field_r = 11;
-        for (var1 = 0; (var1 ^ -1) > -257; var1++) {
-            var2 = 15.0;
-            sd.field_e[var1] = (int)(255.0 * Math.pow((double)((float)var1 / 256.0f), var2));
-        }
-        int var5 = 256;
-        var1 = var5;
-        while (sd.field_e.length > var5) {
-            sd.field_e[var5] = 255;
-            var5++;
-        }
-        if (param0 != -68) {
-            field_g = 120;
+        int var4 = 0;
+        int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = StarCannon.field_A;
+        try {
+          L0: {
+            gl.b();
+            sd.field_e = new int[260];
+            fb.field_r = 11;
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 256) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (sd.field_e.length <= var5) {
+                    L3: {
+                      if (param0 == -68) {
+                        break L3;
+                      } else {
+                        field_g = 120;
+                        break L3;
+                      }
+                    }
+                    break L0;
+                  } else {
+                    sd.field_e[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2 = 15.0;
+                sd.field_e[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var1, "p.B(" + param0 + 41);
         }
     }
 
@@ -38,9 +66,6 @@ final class p {
         field_e = null;
         field_d = null;
         field_b = null;
-        if (param0 != 11) {
-            p.a((byte) -118);
-        }
     }
 
     public final String toString() {

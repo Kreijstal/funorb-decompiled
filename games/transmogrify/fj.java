@@ -7,7 +7,7 @@ final class fj {
     private static String field_z;
 
     public static void a(byte param0) {
-        int var1 = 54 % ((param0 - -31) / 49);
+        int var1 = 0;
         field_a = null;
         field_b = null;
     }

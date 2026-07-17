@@ -19,11 +19,6 @@ final class qk implements Runnable {
 
     public static void a(boolean param0) {
         field_b = null;
-        if (!param0) {
-            qk.a(true);
-            field_k = null;
-            return;
-        }
         field_k = null;
     }
 
@@ -63,7 +58,7 @@ final class qk implements Runnable {
         CharSequence var5 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        if (-3 < (((qk) this).field_a ^ -1)) {
+        if (((qk) this).field_a < 2) {
           L0: {
             if (((qk) this).field_a == 0) {
               L1: {
@@ -176,7 +171,7 @@ final class qk implements Runnable {
                       break L10;
                     }
                   }
-                  if (-2 == (((qk) this).field_d.field_f ^ -1)) {
+                  if (((qk) this).field_d.field_f == 1) {
                     return false;
                   } else {
                     ((qk) this).finalize();
@@ -248,7 +243,7 @@ final class qk implements Runnable {
                     break L1;
                   } else {
                     var1_int = ((qk) this).field_c.read(((qk) this).field_j.field_o, ((qk) this).field_j.field_l, ((qk) this).field_j.field_o.length + -((qk) this).field_j.field_l);
-                    if ((var1_int ^ -1) <= -1) {
+                    if (var1_int >= 0) {
                       ((qk) this).field_j.field_l = ((qk) this).field_j.field_l + var1_int;
                       continue L0;
                     } else {
@@ -291,14 +286,18 @@ final class qk implements Runnable {
     }
 
     qk(jk param0, java.net.URL param1, int param2) {
-        ((qk) this).field_g = param0;
-        ((qk) this).field_i = param1;
-        ((qk) this).field_j = new p(param2);
+        try {
+            ((qk) this).field_g = param0;
+            ((qk) this).field_i = param1;
+            ((qk) this).field_j = new p(param2);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "qk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final p b(int param0) {
         int var2 = -89 % ((-84 - param0) / 36);
-        if (!(-4 != (((qk) this).field_a ^ -1))) {
+        if (!(((qk) this).field_a != 3)) {
             return ((qk) this).field_j;
         }
         return null;

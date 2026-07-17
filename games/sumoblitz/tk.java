@@ -48,9 +48,6 @@ final class tk {
 
     public static void b(int param0) {
         field_c = null;
-        if (param0 < 68) {
-            field_c = null;
-        }
     }
 
     final int a(int param0, byte param1) {
@@ -64,7 +61,7 @@ final class tk {
             var3 = 1;
             L0: while (true) {
               if (((tk) this).field_b.length > var3) {
-                if (param0 >= ((tk) this).field_b[var3] + ((tk) this).field_b[-1 + var3] >> 188143169) {
+                if (param0 >= ((tk) this).field_b[var3] + ((tk) this).field_b[-1 + var3] >> 1) {
                   var3++;
                   continue L0;
                 } else {

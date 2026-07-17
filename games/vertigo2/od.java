@@ -12,18 +12,9 @@ final class od extends cr {
     static mp field_Jb;
 
     public static void k(int param0) {
-        if (param0 != -23936) {
-          field_Ob = null;
-          field_Ob = null;
-          field_Jb = null;
-          field_Ib = null;
-          return;
-        } else {
-          field_Ob = null;
-          field_Jb = null;
-          field_Ib = null;
-          return;
-        }
+        field_Ob = null;
+        field_Jb = null;
+        field_Ib = null;
     }
 
     final boolean a(int param0, int param1, boolean param2, boolean param3, int param4, int param5) {
@@ -56,14 +47,10 @@ final class od extends cr {
                             if (!kb.field_b.b(0)) {
                               return 82;
                             } else {
-                              if (kb.field_b.a((byte) -112)) {
-                                if (param0 >= -6) {
-                                  return -85;
-                                } else {
-                                  return 100;
-                                }
-                              } else {
+                              if (!kb.field_b.a((byte) -112)) {
                                 return 86;
+                              } else {
+                                return 100;
                               }
                             }
                           } else {
@@ -91,14 +78,10 @@ final class od extends cr {
                       if (!kb.field_b.b(0)) {
                         return 82;
                       } else {
-                        if (kb.field_b.a((byte) -112)) {
-                          if (param0 >= -6) {
-                            return -85;
-                          } else {
-                            return 100;
-                          }
-                        } else {
+                        if (!kb.field_b.a((byte) -112)) {
                           return 86;
+                        } else {
+                          return 100;
                         }
                       }
                     } else {
@@ -121,11 +104,7 @@ final class od extends cr {
                   if (la.field_e.c("commonui", 0)) {
                     if (kb.field_b.b(0)) {
                       if (kb.field_b.a((byte) -112)) {
-                        if (param0 >= -6) {
-                          return -85;
-                        } else {
-                          return 100;
-                        }
+                        return 100;
                       } else {
                         return 80;
                       }
@@ -228,7 +207,7 @@ final class od extends cr {
                       break L4;
                     }
                   }
-                  if ((-(((od) this).field_Nb.field_N + ((od) this).field_Nb.field_L) ^ -1) > -1) {
+                  if (-(((od) this).field_Nb.field_N + ((od) this).field_Nb.field_L) < 0) {
                     ((od) this).field_Nb.field_L = -((od) this).field_Nb.field_N;
                     break L3;
                   } else {
@@ -316,7 +295,7 @@ final class od extends cr {
                       break L10;
                     }
                   }
-                  if ((-(((od) this).field_Nb.field_N + ((od) this).field_Nb.field_L) ^ -1) > -1) {
+                  if (-(((od) this).field_Nb.field_N + ((od) this).field_Nb.field_L) < 0) {
                     ((od) this).field_Nb.field_L = -((od) this).field_Nb.field_N;
                     break L9;
                   } else {
@@ -407,7 +386,7 @@ final class od extends cr {
                     break L18;
                   }
                 }
-                if ((-(((od) this).field_Nb.field_N + ((od) this).field_Nb.field_L) ^ -1) > -1) {
+                if (-(((od) this).field_Nb.field_N + ((od) this).field_Nb.field_L) < 0) {
                   ((od) this).field_Nb.field_L = -((od) this).field_Nb.field_N;
                   break L17;
                 } else {
@@ -467,12 +446,16 @@ final class od extends cr {
 
     od(long param0, cr param1, cr param2, ie param3) {
         super(param0, (cr) null);
-        ((od) this).field_Lb = new cr(0L, param2);
-        ((od) this).field_Hb = new ie(0L, param3);
-        ((od) this).b(((od) this).field_Lb, 125);
-        ((od) this).b((cr) (Object) ((od) this).field_Hb, 124);
-        ((od) this).field_Nb = param1;
-        ((od) this).field_Lb.b(param1, 124);
+        try {
+            ((od) this).field_Lb = new cr(0L, param2);
+            ((od) this).field_Hb = new ie(0L, param3);
+            ((od) this).b(((od) this).field_Lb, 125);
+            ((od) this).b((cr) (Object) ((od) this).field_Hb, 124);
+            ((od) this).field_Nb = param1;
+            ((od) this).field_Lb.b(param1, 124);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "od.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

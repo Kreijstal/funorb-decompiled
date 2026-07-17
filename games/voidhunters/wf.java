@@ -9,47 +9,183 @@ final class wf {
     private ae field_b;
 
     private final void b(int param0, byte param1) {
-        int var9 = VoidHunters.field_G;
-        int var3 = 20;
-        if (0 == ((wf) this).field_c) {
-            var3 += 60;
-        } else {
-            if (((wf) this).field_c != 1) {
-                if (2 != ((wf) this).field_c) {
-                    if (((wf) this).field_c != 3) {
-                        if (((wf) this).field_c != 4) {
-                            // if_icmpne L72
-                        }
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        L0: {
+          var9 = VoidHunters.field_G;
+          var3 = 20;
+          if (0 != ((wf) this).field_c) {
+            L1: {
+              if (((wf) this).field_c == 1) {
+                break L1;
+              } else {
+                if (2 == ((wf) this).field_c) {
+                  break L1;
+                } else {
+                  if (((wf) this).field_c == 3) {
+                    break L1;
+                  } else {
+                    if (((wf) this).field_c == 4) {
+                      break L1;
+                    } else {
+                      if (((wf) this).field_c != 9) {
+                        break L0;
+                      } else {
+                        break L1;
+                      }
                     }
+                  }
                 }
+              }
             }
             var3 = 200;
+            break L0;
+          } else {
+            var3 += 60;
+            break L0;
+          }
         }
-        int var4 = 36;
-        int var5 = (-dma.field_g + ip.field_p.width) / 2;
-        var3 = var3 + var5;
-        int var6 = (ip.field_p.height + -dma.field_j) / 2;
-        var4 = var4 + var6;
-        int var7 = pob.field_b;
-        if (param1 != -61) {
+        L2: {
+          var4 = 36;
+          var5 = (-dma.field_g + ip.field_p.width) / 2;
+          var3 = var3 + var5;
+          var6 = (ip.field_p.height + -dma.field_j) / 2;
+          var4 = var4 + var6;
+          var7 = pob.field_b;
+          if (param1 == -61) {
+            break L2;
+          } else {
             ((wf) this).field_b = null;
+            break L2;
+          }
         }
-        int var8 = 0;
-        if (-17 >= (var7 ^ -1)) {
-            var8 = -(mg.f(255) * 4) + 1020;
-        } else {
-            if (!((var7 ^ -1) >= -1)) {
-                var8 = 4 * mg.f(param1 ^ -196);
+        L3: {
+          var8 = 0;
+          if (var7 < 16) {
+            if (var7 > 0) {
+              var8 = 4 * mg.f(param1 ^ -196);
+              break L3;
+            } else {
+              break L3;
             }
+          } else {
+            var8 = -(mg.f(255) * 4) + 1020;
+            break L3;
+          }
         }
         ga.a(param0, false, var3 - -var8, var4, -(2 * var4) + ip.field_p.height, ip.field_p.width - var3 * 2, 0);
     }
 
     private final String a(String param0, byte param1, String param2, int param3) {
-        if (param1 <= 34) {
-            ((wf) this).a(true, 114, 76);
+        RuntimeException var5 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 > 34) {
+                break L1;
+              } else {
+                ((wf) this).a(true, 114, 76);
+                break L1;
+              }
+            }
+            stackOut_2_0 = jd.a(param2, param0, 0, "<col=ffaa00>" + bpb.field_q[param3] + "</col>");
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var5;
+            stackOut_4_1 = new StringBuilder().append("wf.M(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param1).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param2 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 41);
         }
-        return jd.a(param2, param0, 0, "<col=ffaa00>" + bpb.field_q[param3] + "</col>");
+        return stackIn_3_0;
     }
 
     final void b(byte param0) {
@@ -59,9 +195,6 @@ final class wf {
     }
 
     public static void a(int param0) {
-        if (param0 != 3) {
-            return;
-        }
         field_a = null;
     }
 
@@ -123,7 +256,7 @@ final class wf {
                 }
               }
             }
-            if ((pma.field_o ^ -1) == -98) {
+            if (pma.field_o == 97) {
               L5: {
                 if (((wf) this).field_b.field_j < 0) {
                   break L5;
@@ -178,8 +311,7 @@ final class wf {
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        String var8_ref = null;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -202,16 +334,15 @@ final class wf {
         int var27 = 0;
         String var28 = null;
         String var29 = null;
-        int stackIn_64_0 = 0;
-        int stackIn_85_0 = 0;
-        int stackIn_91_0 = 0;
+        int stackIn_63_0 = 0;
+        int stackIn_84_0 = 0;
+        int stackIn_90_0 = 0;
         int stackOut_62_0 = 0;
         int stackOut_61_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_90_0 = 0;
         int stackOut_89_0 = 0;
-        int stackOut_84_0 = 0;
+        int stackOut_88_0 = 0;
         int stackOut_83_0 = 0;
+        int stackOut_82_0 = 0;
         L0: {
           var27 = VoidHunters.field_G;
           var4 = pob.field_b;
@@ -223,7 +354,7 @@ final class wf {
             break L0;
           } else {
             L1: {
-              if (-1 == (he.field_o ^ -1)) {
+              if (he.field_o == 0) {
                 break L1;
               } else {
                 if (wgb.field_f == 0) {
@@ -236,24 +367,24 @@ final class wf {
                       break L1;
                     } else {
                       L2: {
-                        if (he.field_o == -2) {
+                        if (he.field_o == 1) {
                           break L2;
                         } else {
-                          if (-2 != wgb.field_f) {
+                          if (wgb.field_f != 1) {
                             L3: {
-                              if (he.field_o == -3) {
+                              if (he.field_o == 2) {
                                 break L3;
                               } else {
-                                if (-3 == wgb.field_f) {
+                                if (wgb.field_f == 2) {
                                   break L3;
                                 } else {
                                   if (he.field_o == 3) {
                                     break L3;
                                   } else {
-                                    if (-4 == (wgb.field_f ^ -1)) {
+                                    if (wgb.field_f == 3) {
                                       break L3;
                                     } else {
-                                      if ((he.field_o ^ -1) == -5) {
+                                      if (he.field_o == 4) {
                                         break L3;
                                       } else {
                                         if (4 != wgb.field_f) {
@@ -267,14 +398,14 @@ final class wf {
                                 }
                               }
                             }
-                            var8_ref = aj.field_p.toUpperCase();
+                            var8 = aj.field_p.toUpperCase();
                             break L0;
                           } else {
                             break L2;
                           }
                         }
                       }
-                      var8_ref = nd.field_q.toUpperCase();
+                      var8 = nd.field_q.toUpperCase();
                       break L0;
                     }
                   }
@@ -282,8 +413,8 @@ final class wf {
               }
             }
             var8 = ifa.field_g[5];
-            var9_ref = var8;
-            var9_ref = var8;
+            var9_ref_String = var8;
+            var9_ref_String = var8;
             break L0;
           }
         }
@@ -291,26 +422,26 @@ final class wf {
           if (19 == var6) {
             L5: {
               if (2 != jha.field_p) {
-                if ((jha.field_p ^ -1) == -2) {
-                  var9_ref = jhb.field_o;
+                if (jha.field_p == 1) {
+                  var9_ref_String = jhb.field_o;
                   break L5;
                 } else {
-                  var9_ref = wva.field_a;
+                  var9_ref_String = wva.field_a;
                   break L5;
                 }
               } else {
-                var9_ref = dv.field_d;
+                var9_ref_String = dv.field_d;
                 break L5;
               }
             }
-            var28 = var9_ref.toUpperCase();
-            var9_ref = var28;
-            var8_ref = var9_ref;
-            var9_ref = var28;
-            var8_ref = var8_ref + var28;
-            var9_ref = var8_ref;
-            var8_ref = var9_ref;
-            var9_ref = var8_ref;
+            var28 = var9_ref_String.toUpperCase();
+            var9_ref_String = var28;
+            var8 = var9_ref_String;
+            var9_ref_String = var28;
+            var8 = var8 + var28;
+            var9_ref_String = var8;
+            var8 = var9_ref_String;
+            var9_ref_String = var8;
             break L4;
           } else {
             break L4;
@@ -324,27 +455,27 @@ final class wf {
               if (3 != eaa.field_q) {
                 if (eaa.field_q != 1) {
                   if (0 != eaa.field_q) {
-                    var9_ref = vk.field_o;
-                    var8_ref = var9_ref;
-                    var8_ref = var9_ref;
+                    var9_ref_String = vk.field_o;
+                    var8 = var9_ref_String;
+                    var8 = var9_ref_String;
                     break L7;
                   } else {
-                    var9_ref = kja.field_C;
+                    var9_ref_String = kja.field_C;
                     break L7;
                   }
                 } else {
-                  var9_ref = ot.field_a;
+                  var9_ref_String = ot.field_a;
                   break L7;
                 }
               } else {
-                var9_ref = msa.field_p;
+                var9_ref_String = msa.field_p;
                 break L7;
               }
             }
-            var29 = var9_ref.toUpperCase();
-            var8_ref = var29;
-            var8_ref = var29;
-            var8_ref = var8_ref + var29;
+            var29 = var9_ref_String.toUpperCase();
+            var8 = var29;
+            var8 = var29;
+            var8 = var8 + var29;
             break L6;
           }
         }
@@ -353,7 +484,7 @@ final class wf {
             break L8;
           } else {
             if (ji.b(true)) {
-              var8_ref = tqa.field_o.toUpperCase();
+              var8 = tqa.field_o.toUpperCase();
               break L8;
             } else {
               break L8;
@@ -386,13 +517,13 @@ final class wf {
                 }
               }
             }
-            if ((wh.field_n ^ -1) < -1) {
+            if (wh.field_n > 0) {
               var9 = 1;
-              var8_ref = pu.field_b.toUpperCase();
+              var8 = pu.field_b.toUpperCase();
               break L9;
             } else {
               L12: {
-                var8_ref = gmb.field_b.toUpperCase();
+                var8 = gmb.field_b.toUpperCase();
                 if (bm.field_o == null) {
                   break L12;
                 } else {
@@ -413,11 +544,11 @@ final class wf {
           }
         }
         L13: {
-          var10 = tea.a(var5, var8_ref, 13879);
+          var10 = tea.a(var5, var8, 13879);
           var12 = this.b(31488, param0);
           var13 = this.a((byte) -60, param0);
           var14 = 0;
-          if ((var4 ^ -1) > -17) {
+          if (var4 < 16) {
             if (0 < var4) {
               var15_float = (float)(var7 * 2 + -param0) * 0.800000011920929f;
               var14 = (int)(var15_float * (float)mg.f(255));
@@ -432,144 +563,145 @@ final class wf {
           }
         }
         L14: {
-          var13 = var13 + var14;
-          var12 = var12 + var14;
-          var15 = this.c(param0, 17915);
-          if ((var6 ^ -1) != -14) {
-            if ((var6 ^ -1) == -15) {
-              stackOut_62_0 = 1;
-              stackIn_64_0 = stackOut_62_0;
-              break L14;
+          L15: {
+            var13 = var13 + var14;
+            var12 = var12 + var14;
+            var15 = this.c(param0, 17915);
+            if (var6 == 13) {
+              break L15;
             } else {
-              stackOut_61_0 = 0;
-              stackIn_64_0 = stackOut_61_0;
-              break L14;
+              if (var6 != 14) {
+                stackOut_62_0 = 0;
+                stackIn_63_0 = stackOut_62_0;
+                break L14;
+              } else {
+                break L15;
+              }
             }
-          } else {
-            stackOut_59_0 = 1;
-            stackIn_64_0 = stackOut_59_0;
-            break L14;
           }
-        }
-        L15: {
-          var16 = stackIn_64_0;
-          if (var16 == 0) {
-            break L15;
-          } else {
-            var10 = wrb.a(100, 132);
-            break L15;
-          }
+          stackOut_61_0 = 1;
+          stackIn_63_0 = stackOut_61_0;
+          break L14;
         }
         L16: {
-          var17 = -var10 + var12 + var13 >> 678852897;
+          var16 = stackIn_63_0;
+          if (var16 == 0) {
+            break L16;
+          } else {
+            var10 = wrb.a(100, 132);
+            break L16;
+          }
+        }
+        L17: {
+          var17 = -var10 + var12 + var13 >> 1;
           var18 = this.a(param0, (byte) 70);
           var19 = var13 - var12;
           var20 = this.a(param0, (byte) 70);
           var21 = 0;
           if (!param1) {
-            break L16;
-          } else {
-            var21 = 1;
-            break L16;
-          }
-        }
-        L17: {
-          var22 = 125;
-          if (((wf) this).field_c == 5) {
-            var22 = 129;
             break L17;
           } else {
+            var21 = 1;
             break L17;
           }
         }
         L18: {
-          L19: {
+          var22 = 125;
+          if (((wf) this).field_c == 5) {
+            var22 = 129;
+            break L18;
+          } else {
+            break L18;
+          }
+        }
+        L19: {
+          L20: {
             if (var6 == 0) {
-              break L19;
+              break L20;
             } else {
-              if ((var6 ^ -1) == -2) {
-                break L19;
+              if (var6 == 1) {
+                break L20;
               } else {
                 if (var6 != 13) {
                   if (14 == var6) {
                     var22 = 133;
-                    break L18;
+                    break L19;
                   } else {
-                    break L18;
+                    break L19;
                   }
                 } else {
                   var22 = 135;
-                  break L18;
+                  break L19;
                 }
               }
             }
           }
           var22 = 127;
-          break L18;
-        }
-        L20: {
-          if (var21 != 1) {
-            break L20;
-          } else {
-            var22++;
-            break L20;
-          }
+          break L19;
         }
         L21: {
+          if (var21 != 1) {
+            break L21;
+          } else {
+            var22++;
+            break L21;
+          }
+        }
+        L22: {
           var23 = wrb.a(100, var22);
           var24 = ct.a(19143, var22);
           if (var16 != 0) {
-            L22: {
+            L23: {
               var25 = var15 + var18 / 2 + -1;
               bn.a(131, var17, (byte) 93, var25);
-              if (-14 != (var6 ^ -1)) {
-                stackOut_90_0 = var10 * hlb.field_p / 256;
-                stackIn_91_0 = stackOut_90_0;
-                break L22;
+              if (var6 != 13) {
+                stackOut_89_0 = var10 * hlb.field_p / 256;
+                stackIn_90_0 = stackOut_89_0;
+                break L23;
               } else {
-                stackOut_89_0 = var10 * kt.field_l / 256;
-                stackIn_91_0 = stackOut_89_0;
-                break L22;
+                stackOut_88_0 = var10 * kt.field_l / 256;
+                stackIn_90_0 = stackOut_88_0;
+                break L23;
               }
             }
-            L23: {
-              var26 = stackIn_91_0;
+            L24: {
+              var26 = stackIn_90_0;
               if (var21 == 1) {
                 fpa.a(var25, ct.a(19143, 131) + var25, true, var17 + var26, var17);
                 bn.a(132, var17, (byte) 122, var25);
                 tm.a(126);
-                break L23;
+                break L24;
               } else {
-                break L23;
+                break L24;
               }
             }
             bn.a(var22, -1 + var17 - (-var26 - -(var23 / 2)), (byte) 92, var25 - -((ct.a(19143, 132) - var24) / 2));
-            break L21;
+            break L22;
           } else {
-            L24: {
+            L25: {
               bn.a(var22, var19 / 2 + (var12 - var23 / 2), (byte) 108, var15 + var20 / 2 + -(var24 / 2));
               uoa.a(var22, 250, -(var24 / 2) + (var20 / 2 + var15), 0, -(var23 / 2) + var12 + var19 / 2);
               if (param1) {
-                stackOut_84_0 = 15658751;
-                stackIn_85_0 = stackOut_84_0;
-                break L24;
+                stackOut_83_0 = 15658751;
+                stackIn_84_0 = stackOut_83_0;
+                break L25;
               } else {
-                stackOut_83_0 = 13421772;
-                stackIn_85_0 = stackOut_83_0;
-                break L24;
+                stackOut_82_0 = 13421772;
+                stackIn_84_0 = stackOut_82_0;
+                break L25;
               }
             }
-            L25: {
-              var25 = stackIn_85_0;
+            L26: {
+              var25 = stackIn_84_0;
               if (var9 == 0) {
-                break L25;
+                break L26;
               } else {
                 var25 = 7829367;
-                break L25;
+                break L26;
               }
             }
-            pm.a(var17, -1, -12 + var18 / 2 + var15 + tib.a(true, var5), var8_ref, var5, var25, (byte) -88);
-            break L21;
+            pm.a(var17, -1, -12 + var18 / 2 + var15 + tib.a(true, var5), var8, var5, var25, (byte) -88);
+            break L22;
           }
         }
     }
@@ -578,7 +710,7 @@ final class wf {
         if (param1 != 320) {
             field_a = null;
         }
-        if (0 != (((wf) this).field_b.field_j ^ -1)) {
+        if (((wf) this).field_b.field_j != -1) {
             if (this.a(((wf) this).field_b.field_j, 117)) {
                 param2 = ((wf) this).field_b.field_j;
             }
@@ -678,8 +810,8 @@ final class wf {
           var6 = (-dma.field_j + ip.field_p.height) / 2;
           var7 = 20;
           var8 = 20;
-          var10 = -32 % ((param0 - 3) / 51);
-          af.a((byte) -115, 200, var8 * 2 + ko.field_e[6].field_n + (ko.field_e[0].field_n + 180 - -55), 80 - -var5 + (-ko.field_e[0].field_m + -var7), -var8 + (160 + var6 - ko.field_e[0].field_n) - 55, 2 * var7 + (480 - -ko.field_e[0].field_m) + ko.field_e[2].field_m);
+          var10 = 0;
+          af.a((byte) -115, 200, var8 * 2 + ko.field_e[6].field_n + (ko.field_e[0].field_n + 235), 80 - -var5 + (-ko.field_e[0].field_m + -var7), -var8 + (160 + var6 - ko.field_e[0].field_n) - 55, 2 * var7 + (480 - -ko.field_e[0].field_m) + ko.field_e[2].field_m);
           var9 = 16;
           var11 = 50;
           var12 = var11 + (-55 + -ko.field_e[0].field_n) + (var6 + 160) + -var8;
@@ -718,6 +850,7 @@ final class wf {
         int var12_int = 0;
         String var12 = null;
         String var13 = null;
+        java.awt.datatransfer.StringSelection var13_ref = null;
         String var14 = null;
         int var15 = 0;
         int[] var16 = null;
@@ -763,7 +896,7 @@ final class wf {
                 break L0;
               }
             } else {
-              if ((var10_int ^ -1) != -3) {
+              if (var10_int != 2) {
                 if (5 != var10_int) {
                   if (16 == var10_int) {
                     if (((wf) this).field_b.e((byte) -78)) {
@@ -775,7 +908,7 @@ final class wf {
                       break L0;
                     }
                   } else {
-                    if (var10_int == -4) {
+                    if (var10_int == 3) {
                       if (((wf) this).field_b.e((byte) -86)) {
                         op.field_o = 0;
                         var10_int = param1 ? 1 : 0;
@@ -785,7 +918,7 @@ final class wf {
                         break L0;
                       }
                     } else {
-                      if (-7 != var10_int) {
+                      if (var10_int != 6) {
                         if (20 == var10_int) {
                           if (!((wf) this).field_b.e((byte) -95)) {
                             break L0;
@@ -796,7 +929,7 @@ final class wf {
                           }
                         } else {
                           if (var10_int != 21) {
-                            if (-14 != (var10_int ^ -1)) {
+                            if (var10_int != 13) {
                               if (var10_int != 14) {
                                 if (4 == var10_int) {
                                   if (((wf) this).field_b.e((byte) -87)) {
@@ -855,8 +988,8 @@ final class wf {
                                       break L0;
                                     }
                                   } else {
-                                    if (var10_int != -25) {
-                                      if (-8 == var10_int) {
+                                    if (var10_int != 24) {
+                                      if (var10_int == 7) {
                                         if (!((wf) this).field_b.e((byte) -126)) {
                                           break L0;
                                         } else {
@@ -884,7 +1017,7 @@ final class wf {
                                           }
                                         }
                                       } else {
-                                        if (var10_int != -9) {
+                                        if (var10_int != 8) {
                                           if (var10_int == 9) {
                                             if (!((wf) this).field_b.e((byte) -94)) {
                                               break L0;
@@ -927,7 +1060,7 @@ final class wf {
                                                 break L0;
                                               }
                                             } else {
-                                              if (-12 == var10_int) {
+                                              if (var10_int == 11) {
                                                 if (!((wf) this).field_b.e((byte) -98)) {
                                                   break L0;
                                                 } else {
@@ -948,8 +1081,8 @@ final class wf {
                                                   }
                                                 }
                                               } else {
-                                                if ((var10_int ^ -1) != -18) {
-                                                  if ((var10_int ^ -1) == -19) {
+                                                if (var10_int != 17) {
+                                                  if (var10_int == 18) {
                                                     L9: {
                                                       if (!((wf) this).field_b.e((byte) -115)) {
                                                         break L9;
@@ -973,7 +1106,7 @@ final class wf {
                                                       }
                                                     }
                                                   } else {
-                                                    if (var10_int == -13) {
+                                                    if (var10_int == 12) {
                                                       if (!((wf) this).field_b.e((byte) -82)) {
                                                         break L0;
                                                       } else {
@@ -981,7 +1114,7 @@ final class wf {
                                                         break L0;
                                                       }
                                                     } else {
-                                                      if (-23 == var10_int) {
+                                                      if (var10_int == 22) {
                                                         if (!((wf) this).field_b.e((byte) -119)) {
                                                           break L0;
                                                         } else {
@@ -1009,7 +1142,7 @@ final class wf {
                                                             if (vqa.field_g == null) {
                                                               break L0;
                                                             } else {
-                                                              if (-1 > (wh.field_n ^ -1)) {
+                                                              if (wh.field_n > 0) {
                                                                 break L0;
                                                               } else {
                                                                 L11: {
@@ -1083,8 +1216,8 @@ final class wf {
                                                                           }
                                                                         }
                                                                         var20 = "http://" + var13 + "/g=voidhunters/autochoose.ws?dest=" + msa.a((CharSequence) (Object) var12, 32);
-                                                                        var13 = (String) (Object) new java.awt.datatransfer.StringSelection(var20);
-                                                                        mob discarded$3 = bm.field_o.a((byte) -45, (java.awt.datatransfer.Transferable) (Object) var13);
+                                                                        var13_ref = new java.awt.datatransfer.StringSelection(var20);
+                                                                        mob discarded$3 = bm.field_o.a((byte) -45, (java.awt.datatransfer.Transferable) (Object) var13_ref);
                                                                         wh.field_n = 100;
                                                                         var4 = 1;
                                                                         qp.a(true, 0, vpa.b((byte) -92), var20);
@@ -1169,12 +1302,12 @@ final class wf {
                                           break L16;
                                         }
                                       }
-                                      if (-1 == (var9 ^ -1)) {
+                                      if (var9 == 0) {
                                         break L0;
                                       } else {
                                         var10_int = 0;
                                         L17: while (true) {
-                                          if (var10_int >= ub.field_f.length) {
+                                          if (~var10_int <= ~ub.field_f.length) {
                                             break L0;
                                           } else {
                                             var11 = lwa.a(eaa.field_q, -1);
@@ -1214,10 +1347,10 @@ final class wf {
                                 }
                                 L20: {
                                   if (((wf) this).field_b.b((byte) 111)) {
-                                    var10_int = this.b(31488, param2) + (this.a((byte) -76, param2) + -wrb.a(100, 131)) >> 1867720897;
+                                    var10_int = this.b(31488, param2) + (this.a((byte) -76, param2) + -wrb.a(100, 131)) >> 1;
                                     var11 = kc.field_b + -var10_int;
                                     var12_int = 256 * var11 / wrb.a(100, 131);
-                                    if (-1 > (var12_int ^ -1)) {
+                                    if (var12_int > 0) {
                                       if (var12_int < 256) {
                                         re.a(var12_int, (byte) -111);
                                         break L20;
@@ -1267,7 +1400,7 @@ final class wf {
                                 if (!((wf) this).field_b.a(true)) {
                                   break L23;
                                 } else {
-                                  if (-1 > (kt.field_l ^ -1)) {
+                                  if (kt.field_l > 0) {
                                     nl.a(0, -13205);
                                     var6 = 1;
                                     break L23;
@@ -1291,11 +1424,11 @@ final class wf {
                               }
                               L25: {
                                 if (((wf) this).field_b.b((byte) 126)) {
-                                  var10_int = this.b(31488, param2) - (-this.a((byte) -79, param2) + wrb.a(100, 131)) >> -294120575;
+                                  var10_int = this.b(31488, param2) - (-this.a((byte) -79, param2) + wrb.a(100, 131)) >> 1;
                                   var11 = kc.field_b - var10_int;
                                   var12_int = 256 * var11 / wrb.a(param0 + 76, 131);
                                   var6 = 1;
-                                  if ((var12_int ^ -1) >= -1) {
+                                  if (var12_int <= 0) {
                                     nl.a(0, -13205);
                                     break L25;
                                   } else {
@@ -1345,7 +1478,7 @@ final class wf {
                                     if (!((wf) this).field_b.b((byte) 119)) {
                                       break L29;
                                     } else {
-                                      if (mba.field_b < kdb.field_o) {
+                                      if (~mba.field_b > ~kdb.field_o) {
                                         break L29;
                                       } else {
                                         break L28;
@@ -1486,7 +1619,7 @@ final class wf {
         int stackOut_11_2 = 0;
         var7 = VoidHunters.field_G;
         this.b(150, (byte) -61);
-        if ((((wf) this).field_c ^ -1) != -8) {
+        if (((wf) this).field_c != 7) {
           L0: {
             if (((wf) this).field_c != 8) {
               break L0;
@@ -1512,7 +1645,7 @@ final class wf {
                   this.d((byte) -48);
                   break L3;
                 } else {
-                  if (-7 == (((wf) this).field_c ^ -1)) {
+                  if (((wf) this).field_c == 6) {
                     var2 = 3;
                     var3 = aib.a((byte) -37, iia.field_c, pqa.a(false, var2), var2, 480);
                     var4 = 16;
@@ -1530,8 +1663,8 @@ final class wf {
               L4: {
                 var2 = pob.field_b;
                 var3 = 0;
-                if (-17 < (var2 ^ -1)) {
-                  if ((var2 ^ -1) < -1) {
+                if (var2 < 16) {
+                  if (var2 > 0) {
                     var3 = mg.f(255) * 4;
                     break L4;
                   } else {
@@ -1544,7 +1677,7 @@ final class wf {
               }
               L5: {
                 var4 = (ip.field_p.height - dma.field_j) / 2;
-                if (-1 != (((wf) this).field_c ^ -1)) {
+                if (((wf) this).field_c != 0) {
                   if (((wf) this).field_c >= ocb.field_m.length) {
                     break L5;
                   } else {
@@ -1614,7 +1747,7 @@ final class wf {
             return 190 * param1 + var3 + vba.field_r[((wf) this).field_c];
         }
         if (!(0 != ((wf) this).field_c)) {
-            if (-3 < (param1 ^ -1)) {
+            if (param1 < 2) {
                 var4 = -25 + (ip.field_p.width / 2 - wrb.a(100, 128));
                 return var4;
             }
@@ -1627,16 +1760,16 @@ final class wf {
         if (param1 <= 112) {
             field_d = -28;
         }
-        if (((wf) this).field_c != -6) {
+        if (((wf) this).field_c != 5) {
             return true;
         }
-        if (-1 == param0) {
+        if (param0 == 0) {
             if (!(op.field_o != 0)) {
                 return false;
             }
         }
         if (param0 == 2) {
-            if (op.field_o == mb.field_k.length - 1) {
+            if (~op.field_o == ~(mb.field_k.length - 1)) {
                 return false;
             }
         }
@@ -1659,7 +1792,7 @@ final class wf {
                 break L0;
               } else {
                 var4 = vba.field_p[((wf) this).field_c][var3];
-                if ((var4 ^ -1) == -7) {
+                if (var4 == 6) {
                   var5 = he.field_o;
                   lha.a(wgb.field_f, false, (byte) -85, var5);
                   var3++;
@@ -1675,24 +1808,16 @@ final class wf {
               ((wf) this).field_b.a((byte) -63);
               break L0;
             } else {
-              this.c(param0 + 183);
+              this.c(132);
               break L0;
             }
-          }
-        }
-        L2: {
-          if (param0 == -51) {
-            break L2;
-          } else {
-            this.b(-56, (byte) 28);
-            break L2;
           }
         }
     }
 
     private final int a(byte param0, int param1) {
         int var3 = (-dma.field_g + ip.field_p.width) / 2;
-        if (-6 == (((wf) this).field_c ^ -1)) {
+        if (((wf) this).field_c == 5) {
             return this.b(31488, param1) + 140;
         }
         if (param0 > -1) {
@@ -1747,7 +1872,7 @@ final class wf {
                         if (((wf) this).field_b.field_j < 0) {
                           break L4;
                         } else {
-                          if (var2 == ((wf) this).field_b.field_j) {
+                          if (~var2 == ~((wf) this).field_b.field_j) {
                             break L4;
                           } else {
                             ana discarded$2 = lha.a(-124, fa.field_d[0]);
@@ -1755,7 +1880,7 @@ final class wf {
                           }
                         }
                       }
-                      if (0 == (((wf) this).field_b.field_j ^ -1)) {
+                      if (((wf) this).field_b.field_j == -1) {
                         break L2;
                       } else {
                         this.b(24, true, ((wf) this).field_b.field_j);
@@ -1771,10 +1896,10 @@ final class wf {
                               if (2 == ((wf) this).field_c) {
                                 break L5;
                               } else {
-                                if (-4 == ((wf) this).field_c) {
+                                if (((wf) this).field_c == 3) {
                                   break L5;
                                 } else {
-                                  if (-5 == ((wf) this).field_c) {
+                                  if (((wf) this).field_c == 4) {
                                     break L5;
                                   } else {
                                     continue L3;
@@ -1803,7 +1928,7 @@ final class wf {
                             if (0 > ((wf) this).field_b.field_j) {
                               break L7;
                             } else {
-                              if (var2 == ((wf) this).field_b.field_j) {
+                              if (~var2 == ~((wf) this).field_b.field_j) {
                                 break L7;
                               } else {
                                 ana discarded$3 = lha.a(-110, fa.field_d[0]);
@@ -1811,7 +1936,7 @@ final class wf {
                               }
                             }
                           }
-                          if ((((wf) this).field_b.field_j ^ -1) == 0) {
+                          if (((wf) this).field_b.field_j == -1) {
                             continue L3;
                           } else {
                             this.b(24, false, ((wf) this).field_b.field_j);
@@ -1859,7 +1984,7 @@ final class wf {
               }
             }
             L11: {
-              if (var2 == -2) {
+              if (var2 == 1) {
                 lha.a(wgb.field_f, false, (byte) -85, 0);
                 break L11;
               } else {
@@ -1867,7 +1992,7 @@ final class wf {
               }
             }
             L12: {
-              if (-3 == var2) {
+              if (var2 == 2) {
                 lha.a(wgb.field_f, true, (byte) -85, 0);
                 break L12;
               } else {
@@ -1882,13 +2007,10 @@ final class wf {
     }
 
     private final int a(int param0, byte param1) {
-        if (((wf) this).field_c == -1) {
-            if (-3 > param0) {
+        if (((wf) this).field_c == 0) {
+            if (param0 < 2) {
                 return vba.field_o[((wf) this).field_c] + 30;
             }
-        }
-        if (param1 != 70) {
-            int discarded$0 = this.c(-81, -122);
         }
         return 30;
     }

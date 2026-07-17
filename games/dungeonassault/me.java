@@ -75,7 +75,11 @@ final class me {
     me(String param0) {
         ((me) this).field_h = false;
         ((me) this).field_b = false;
-        ((me) this).field_d = param0;
+        try {
+            ((me) this).field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "me.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static cn a(int param0, int param1, int param2, int param3, int param4) {

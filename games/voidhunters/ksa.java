@@ -24,15 +24,15 @@ class ksa {
     }
 
     final static void a(phb[] param0, int param1, int param2, phb[] param3, phb[] param4, int param5, int param6, int param7, int param8, no param9, int param10, int param11, int param12, int param13, int param14) {
-        int var15 = 0;
-        int var16 = 0;
-        var15 = param9.field_A + param9.field_o;
-        var16 = param9.field_o;
+        int var15_int = param9.field_A + param9.field_o;
+        int var16 = param9.field_o;
         if (param13 != -14109) {
-          return;
-        } else {
-          dia.a(param6, param1, param2, param9, var16, param3, param5, param14, var15, param8, var15, param4, param12, var16, param9, param7, param10, param13 + 14192, param11, param0);
-          return;
+            return;
+        }
+        try {
+            dia.a(param6, param1, param2, param9, var16, param3, param5, param14, var15_int, param8, var15_int, param4, param12, var16, param9, param7, param10, param13 + 14192, param11, param0);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "ksa.OB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + (param9 != null ? "{...}" : "null") + 44 + param10 + 44 + param11 + 44 + param12 + 44 + param13 + 44 + param14 + 41);
         }
     }
 
@@ -104,14 +104,7 @@ class ksa {
     }
 
     final static faa a(byte param0) {
-        Object var2 = null;
-        if (param0 != -6) {
-          var2 = null;
-          ksa.a((phb[]) null, 27, -49, (phb[]) null, (phb[]) null, 58, 92, 102, -42, (no) null, 125, 6, -7, 73, -90);
-          return new faa(wi.a((byte) 73, (ds) (Object) bk.field_w));
-        } else {
-          return new faa(wi.a((byte) 73, (ds) (Object) bk.field_w));
-        }
+        return new faa(wi.a((byte) 73, (ds) (Object) bk.field_w));
     }
 
     static {

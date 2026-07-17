@@ -61,10 +61,10 @@ final class db {
             if (param2 >= sm.field_d) {
               if (ko.field_b >= param1) {
                 if (ko.field_b <= param0) {
-                  var5 = param2 + param4 >> -533106143;
-                  var6 = param0 + param1 >> 1661761121;
-                  var7 = -param4 + param2 >> -624927903;
-                  var8 = -param1 + param0 >> -1743943711;
+                  var5 = param2 + param4 >> 1;
+                  var6 = param0 + param1 >> 1;
+                  var7 = -param4 + param2 >> 1;
+                  var8 = -param1 + param0 >> 1;
                   if (var8 < var7) {
                     L0: {
                       if (Math.abs(var5 + -sm.field_d) + Math.abs(var6 + -ko.field_b) * var7 / var8 > var7) {
@@ -110,10 +110,10 @@ final class db {
             if (param2 >= sm.field_d) {
               if (ko.field_b >= param1) {
                 if (ko.field_b <= param0) {
-                  var5 = param2 + param4 >> -533106143;
-                  var6 = param0 + param1 >> 1661761121;
-                  var7 = -param4 + param2 >> -624927903;
-                  var8 = -param1 + param0 >> -1743943711;
+                  var5 = param2 + param4 >> 1;
+                  var6 = param0 + param1 >> 1;
+                  var7 = -param4 + param2 >> 1;
+                  var8 = -param1 + param0 >> 1;
                   if (var8 < var7) {
                     L2: {
                       if (Math.abs(var5 + -sm.field_d) + Math.abs(var6 + -ko.field_b) * var7 / var8 > var7) {
@@ -150,78 +150,112 @@ final class db {
     }
 
     final static hl a(String param0, int param1) {
-        String var2 = null;
+        Object var2 = null;
         hl var3 = null;
         String var4 = null;
         int var5 = 0;
-        CharSequence var10 = null;
-        CharSequence var11 = null;
-        CharSequence var12 = null;
-        Object var16 = null;
-        var16 = null;
+        CharSequence var6 = null;
+        CharSequence var7 = null;
+        Object stackIn_3_0 = null;
+        hl stackIn_14_0 = null;
+        Object stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        Object stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        Object stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        hl stackOut_13_0 = null;
+        Object stackOut_2_0 = null;
+        Object stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        Object stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        Object stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (null != bk.field_a) {
-          L0: {
-            var10 = (CharSequence) (Object) param0;
-            var2 = k.a(var10, false);
-            if (var2 != null) {
-              break L0;
-            } else {
-              var2 = (String) (Object) var10;
-              break L0;
+        try {
+          if (null != bk.field_a) {
+            L0: {
+              var6 = (CharSequence) (Object) param0;
+              var2 = (Object) (Object) k.a(var6, false);
+              if (var2 != null) {
+                break L0;
+              } else {
+                var2 = (Object) (Object) var6;
+                break L0;
+              }
             }
-          }
-          var3 = (hl) (Object) bk.field_a.a((byte) -27, (long)var2.hashCode());
-          if (param1 > -40) {
-            db.a(-88);
-            L1: while (true) {
+            L1: {
+              var3 = (hl) (Object) bk.field_a.a((byte) -27, (long)((String) var2).hashCode());
+              if (param1 <= -40) {
+                break L1;
+              } else {
+                db.a(-88);
+                break L1;
+              }
+            }
+            L2: while (true) {
               if (var3 != null) {
-                L2: {
-                  var12 = (CharSequence) (Object) var3.field_Mb;
-                  var4 = k.a(var12, false);
+                L3: {
+                  var7 = (CharSequence) (Object) var3.field_Mb;
+                  var4 = k.a(var7, false);
                   if (var4 != null) {
-                    break L2;
+                    break L3;
                   } else {
                     var4 = var3.field_Mb;
-                    break L2;
+                    break L3;
                   }
                 }
-                if (!var4.equals((Object) (Object) var2)) {
+                if (!var4.equals(var2)) {
                   var3 = (hl) (Object) bk.field_a.d(-348);
-                  continue L1;
+                  continue L2;
                 } else {
-                  return var3;
+                  stackOut_13_0 = (hl) var3;
+                  stackIn_14_0 = stackOut_13_0;
+                  return stackIn_14_0;
                 }
               } else {
                 return null;
               }
             }
           } else {
-            L3: while (true) {
-              if (var3 != null) {
-                L4: {
-                  var11 = (CharSequence) (Object) var3.field_Mb;
-                  var4 = k.a(var11, false);
-                  if (var4 != null) {
-                    break L4;
-                  } else {
-                    var4 = var3.field_Mb;
-                    break L4;
-                  }
-                }
-                if (!var4.equals((Object) (Object) var2)) {
-                  var3 = (hl) (Object) bk.field_a.d(-348);
-                  continue L3;
-                } else {
-                  return var3;
-                }
-              } else {
-                return null;
-              }
+            stackOut_2_0 = null;
+            stackIn_3_0 = stackOut_2_0;
+            return (hl) (Object) stackIn_3_0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = (Object) (Object) decompiledCaughtException;
+            stackOut_17_0 = var2;
+            stackOut_17_1 = new StringBuilder().append("db.D(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param0 == null) {
+              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L4;
+            } else {
+              stackOut_18_0 = stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L4;
             }
           }
-        } else {
-          return null;
+          throw ig.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
         }
     }
 
@@ -229,7 +263,7 @@ final class db {
         if (!param0) {
             return -83;
         }
-        return param1 + (so.field_b.field_a - rs.field_k >> 599425889);
+        return param1 + (so.field_b.field_a - rs.field_k >> 1);
     }
 
     static {

@@ -45,9 +45,6 @@ final class ma {
     byte field_n;
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            return;
-        }
         field_k = null;
     }
 

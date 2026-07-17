@@ -462,7 +462,7 @@ final class pl {
         if (null != kf.field_d) {
           return;
         } else {
-          if (-1 > (pj.field_a ^ -1)) {
+          if (pj.field_a > 0) {
             if (!((pl) this).field_n) {
               if (((pl) this).field_r <= nk.field_x) {
                 if (0 < ((pl) this).field_r) {
@@ -508,7 +508,7 @@ final class pl {
             } else {
               int fieldTemp$2 = ((pl) this).field_m - 1;
               ((pl) this).field_m = ((pl) this).field_m - 1;
-              if (-1 <= (fieldTemp$2 ^ -1)) {
+              if (fieldTemp$2 <= 0) {
                 if (param0 == 565) {
                   ((pl) this).field_m = ((pl) this).field_v;
                   if (ec.field_e < ((pl) this).field_s) {
@@ -558,7 +558,7 @@ final class pl {
             } else {
               int fieldTemp$3 = ((pl) this).field_m - 1;
               ((pl) this).field_m = ((pl) this).field_m - 1;
-              if (-1 <= (fieldTemp$3 ^ -1)) {
+              if (fieldTemp$3 <= 0) {
                 if (param0 == 565) {
                   ((pl) this).field_m = ((pl) this).field_v;
                   if (ec.field_e < ((pl) this).field_s) {
@@ -580,10 +580,6 @@ final class pl {
     }
 
     final static int b(byte param0) {
-        if (param0 != -116) {
-            field_a = null;
-            return (int)(1000000000L / rj.field_c);
-        }
         return (int)(1000000000L / rj.field_c);
     }
 

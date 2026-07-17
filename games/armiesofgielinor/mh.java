@@ -9,57 +9,65 @@ final class mh {
 
     final static void a(int param0, byte param1) {
         te var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
-        bp.field_e = param0;
-        var2 = (te) (Object) bl.field_h.e((byte) 110);
-        L0: while (true) {
-          if (var2 == null) {
-            if (ts.field_e != null) {
-              var2 = (te) (Object) ts.field_e.e((byte) 95);
-              L1: while (true) {
-                if (var2 == null) {
-                  if (param1 >= -26) {
-                    field_d = null;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  L2: {
-                    if (!var2.field_k.c(65280)) {
-                      var2.d(47);
-                      break L2;
-                    } else {
-                      var2.field_q.i(128 + bp.field_e * var2.field_o >> 929072552);
-                      break L2;
+        try {
+          L0: {
+            bp.field_e = param0;
+            var2 = (te) (Object) bl.field_h.e((byte) 110);
+            L1: while (true) {
+              if (var2 == null) {
+                L2: {
+                  if (ts.field_e != null) {
+                    var2 = (te) (Object) ts.field_e.e((byte) 95);
+                    L3: while (true) {
+                      if (var2 == null) {
+                        break L2;
+                      } else {
+                        L4: {
+                          if (!var2.field_k.c(65280)) {
+                            var2.d(47);
+                            break L4;
+                          } else {
+                            var2.field_q.i(128 + bp.field_e * var2.field_o >> 8);
+                            break L4;
+                          }
+                        }
+                        var2 = (te) (Object) ts.field_e.a((byte) 123);
+                        continue L3;
+                      }
                     }
+                  } else {
+                    break L2;
                   }
-                  var2 = (te) (Object) ts.field_e.a((byte) 123);
-                  continue L1;
                 }
-              }
-            } else {
-              if (param1 < -26) {
-                return;
+                if (param1 < -26) {
+                  break L0;
+                } else {
+                  field_d = null;
+                  return;
+                }
               } else {
-                field_d = null;
-                return;
+                L5: {
+                  if (!var2.field_k.c(65280)) {
+                    var2.d(-110);
+                    break L5;
+                  } else {
+                    var2.field_q.i(var2.field_o * bp.field_e - -128 >> 8);
+                    break L5;
+                  }
+                }
+                var2 = (te) (Object) bl.field_h.a((byte) 123);
+                continue L1;
               }
             }
-          } else {
-            L3: {
-              if (!var2.field_k.c(65280)) {
-                var2.d(-110);
-                break L3;
-              } else {
-                var2.field_q.i(var2.field_o * bp.field_e - -128 >> 948244840);
-                break L3;
-              }
-            }
-            var2 = (te) (Object) bl.field_h.a((byte) 123);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw ig.a((Throwable) (Object) var2_ref, "mh.A(" + param0 + 44 + param1 + 41);
         }
     }
 

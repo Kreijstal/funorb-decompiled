@@ -11,32 +11,35 @@ final class fl {
 
     final static void a(boolean param0, boolean param1, String param2, int param3) {
         fh.a(-55);
-        if (param3 != -22175) {
-            return;
+        try {
+            nb.field_a.i(-117);
+            lg.field_b = new ul(aa.field_s, (String) null, jg.field_d, param1, param0);
+            ak.field_a = new ui(nb.field_a, (qa) (Object) lg.field_b);
+            nb.field_a.b((qa) (Object) ak.field_a, (byte) -35);
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "fl.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -22175 + 41);
         }
-        nb.field_a.i(param3 ^ 22250);
-        lg.field_b = new ul(aa.field_s, (String) null, jg.field_d, param1, param0);
-        ak.field_a = new ui(nb.field_a, (qa) (Object) lg.field_b);
-        nb.field_a.b((qa) (Object) ak.field_a, (byte) -35);
     }
 
     final static void a(byte param0, rh param1) {
-        if (param0 < 90) {
-            Object var3 = null;
-            fl.a((byte) 103, (rh) null);
+        hk var2 = null;
+        try {
+            if (param0 < 90) {
+                Object var3 = null;
+                fl.a((byte) 103, (rh) null);
+            }
+            hk.b(param1.a(0, "", "headers.packvorbis"));
+            var2 = hk.a(param1, "jagex logo2.packvorbis", "");
+            sf discarded$0 = var2.b();
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "fl.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        hk.b(param1.a(0, "", "headers.packvorbis"));
-        hk var2 = hk.a(param1, "jagex logo2.packvorbis", "");
-        sf discarded$0 = var2.b();
     }
 
     public static void a(int param0) {
         field_e = null;
         field_c = null;
         field_b = null;
-        if (param0 != 26113) {
-            return;
-        }
         field_d = null;
     }
 
@@ -47,7 +50,7 @@ final class fl {
         int var6 = 0;
         L0: {
           var6 = fleas.field_A ? 1 : 0;
-          var3 = (((fl) this).field_a.length >> -491016159) - 1;
+          var3 = (((fl) this).field_a.length >> 1) - 1;
           if (param1 > 114) {
             break L0;
           } else {
@@ -58,7 +61,7 @@ final class fl {
         var4 = param0 & var3;
         L1: while (true) {
           var5 = ((fl) this).field_a[1 + var4 + var4];
-          if ((var5 ^ -1) != 0) {
+          if (var5 != -1) {
             if (param0 == ((fl) this).field_a[var4 + var4]) {
               return var5;
             } else {
@@ -72,23 +75,95 @@ final class fl {
     }
 
     fl(int[] param0) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int var2 = 1;
-        while (var2 <= (param0.length >> 1430897505) + param0.length) {
-            var2 = var2 << 1;
-        }
-        ((fl) this).field_a = new int[var2 + var2];
-        for (var3 = 0; var3 < var2 + var2; var3++) {
-            ((fl) this).field_a[var3] = -1;
-        }
-        for (var3 = 0; var3 < param0.length; var3++) {
-            var4 = param0[var3] & -1 + var2;
-            while ((((fl) this).field_a[1 + (var4 + var4)] ^ -1) != 0) {
-                var4 = 1 + var4 & -1 + var2;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            var2_int = 1;
+            L1: while (true) {
+              if (var2_int > (param0.length >> 1) + param0.length) {
+                ((fl) this).field_a = new int[var2_int + var2_int];
+                var3 = 0;
+                L2: while (true) {
+                  if (var3 >= var2_int + var2_int) {
+                    var3 = 0;
+                    L3: while (true) {
+                      if (var3 >= param0.length) {
+                        break L0;
+                      } else {
+                        var4 = param0[var3] & -1 + var2_int;
+                        L4: while (true) {
+                          if (((fl) this).field_a[1 + (var4 + var4)] == -1) {
+                            ((fl) this).field_a[var4 + var4] = param0[var3];
+                            ((fl) this).field_a[var4 + var4 - -1] = var3;
+                            var3++;
+                            continue L3;
+                          } else {
+                            var4 = 1 + var4 & -1 + var2_int;
+                            continue L4;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    ((fl) this).field_a[var3] = -1;
+                    var3++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2_int = var2_int << 1;
+                continue L1;
+              }
             }
-            ((fl) this).field_a[var4 + var4] = param0[var3];
-            ((fl) this).field_a[var4 + var4 - -1] = var3;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var2 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_1 = new StringBuilder().append("fl.<init>(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
+            }
+          }
+          throw pf.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 

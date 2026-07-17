@@ -50,19 +50,12 @@ final class oc extends ap {
 
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((oc) this).field_w, param0 << (field_h ? 2 : 1));
             ((oc) this).field_y = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((oc) this).field_y.open();
             ((oc) this).field_y.start();
             ((oc) this).field_v = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (lc.a(12330, param0) != 1) {
-                ((oc) this).a(js.a(param0, (byte) 122));
-                return;
-            }
-            ((oc) this).field_y = null;
-            throw lineUnavailableException;
         }
     }
 
@@ -203,8 +196,7 @@ final class oc extends ap {
           }
         }
         L4: {
-          new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
-          ((oc) this).field_w = stackIn_13_1;
+          ((oc) this).field_w = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
           stackOut_13_0 = this;
           stackOut_13_1 = 256;
           stackIn_15_0 = stackOut_13_0;

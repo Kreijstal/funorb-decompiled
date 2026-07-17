@@ -12,22 +12,11 @@ final class hf extends dj {
     static ti[] field_d;
 
     public static void a(byte param0) {
-        if (param0 != 118) {
-          field_f = null;
-          field_h = null;
-          field_g = null;
-          field_d = null;
-          field_k = null;
-          field_f = null;
-          return;
-        } else {
-          field_h = null;
-          field_g = null;
-          field_d = null;
-          field_k = null;
-          field_f = null;
-          return;
-        }
+        field_h = null;
+        field_g = null;
+        field_d = null;
+        field_k = null;
+        field_f = null;
     }
 
     final byte[] a(boolean param0) {
@@ -48,10 +37,14 @@ final class hf extends dj {
     }
 
     final void a(byte[] param0, byte param1) {
-        int var3 = -63 % ((-59 - param1) / 55);
-        ((hf) this).field_e = java.nio.ByteBuffer.allocateDirect(param0.length);
-        java.nio.Buffer discarded$0 = ((hf) this).field_e.position(0);
-        java.nio.ByteBuffer discarded$1 = ((hf) this).field_e.put(param0);
+        try {
+            int var3_int = -63 % ((-59 - param1) / 55);
+            ((hf) this).field_e = java.nio.ByteBuffer.allocateDirect(param0.length);
+            java.nio.Buffer discarded$0 = ((hf) this).field_e.position(0);
+            java.nio.ByteBuffer discarded$1 = ((hf) this).field_e.put(param0);
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "hf.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {
@@ -60,7 +53,7 @@ final class hf extends dj {
 
     private static void $cfr$clinit() {
         field_j = 0;
-        field_k = new char[]{(char)91, (char)93, (char)35};
+        field_k = new char[]{'[', ']', '#'};
         field_h = new char[128];
     }
 }

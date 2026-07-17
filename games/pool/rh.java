@@ -35,7 +35,7 @@ final class rh {
         synchronized (var5) {
           L0: {
             field_a.field_B = param2;
-            field_a.field_u = param4;
+            field_a.field_u = 9;
             field_a.field_g = param0;
             field_a.field_a = 0;
             field_a.field_t = param1;
@@ -579,7 +579,7 @@ final class rh {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_o[var31] = param0.field_o[var31] - 1;
-                                                                                param0.field_G[param0.field_o[var31]] = param0.field_G[param0.field_o[var31 - 1] + 16 - 1];
+                                                                                param0.field_G[param0.field_o[var31]] = param0.field_G[param0.field_o[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -665,7 +665,7 @@ final class rh {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }

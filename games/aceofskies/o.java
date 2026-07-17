@@ -23,15 +23,12 @@ class o {
     public static void a(boolean param0) {
         field_a = null;
         field_c = null;
-        if (!param0) {
-            o.a(-30, 98, 16, -74, 112, -14);
-        }
     }
 
     final void a(double param0, int param1) {
         ((o) this).a(param0, (byte) 49, param0);
         if (param1 >= -77) {
-            field_a = (vd[]) null;
+            field_a = null;
         }
     }
 
@@ -262,7 +259,7 @@ class o {
             return;
           }
         } else {
-          field_c = (ej) null;
+          field_c = null;
           ((o) this).field_e = ((o) this).field_e + param0;
           if (((o) this).field_e >= 0.0) {
             L2: {
@@ -390,7 +387,7 @@ class o {
           }
         } else {
           L3: {
-            field_a = (vd[]) null;
+            field_a = null;
             if (op.field_a > param5) {
               nh.field_a = param5;
               break L3;
@@ -440,7 +437,11 @@ class o {
         ((o) this).field_f = 0;
         ((o) this).field_e = 0.0;
         ((o) this).field_b = 0.0;
-        ((o) this).field_d = new kc(param0);
+        try {
+            ((o) this).field_d = new kc(param0);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "o.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

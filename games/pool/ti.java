@@ -22,29 +22,52 @@ final class ti {
     }
 
     final static boolean a(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_8_0 = 0;
         var3 = Pool.field_O;
-        if (0L == (pd.field_i & 1L)) {
-          return false;
-        } else {
-          de.a(-105);
-          var1 = 0;
-          var2 = -112 / ((-54 - param0) / 32);
-          L0: while (true) {
-            if (aq.field_a.length > var1) {
-              if (!aq.field_a[var1].b(59)) {
-                var1++;
-                continue L0;
-              } else {
-                return true;
-              }
+        try {
+          L0: {
+            if (0L == (pd.field_i & 1L)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
             } else {
-              return false;
+              de.a(-105);
+              var1_int = 0;
+              var2 = 28;
+              L1: while (true) {
+                if (aq.field_a.length <= var1_int) {
+                  stackOut_11_0 = 0;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L0;
+                } else {
+                  if (!aq.field_a[var1_int].b(59)) {
+                    var1_int++;
+                    continue L1;
+                  } else {
+                    stackOut_8_0 = 1;
+                    stackIn_9_0 = stackOut_8_0;
+                    return stackIn_9_0 != 0;
+                  }
+                }
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var1, "ti.A(" + 94 + 41);
         }
+        return stackIn_12_0 != 0;
     }
 
     static {

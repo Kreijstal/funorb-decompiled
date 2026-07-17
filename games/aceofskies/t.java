@@ -53,6 +53,7 @@ final class t extends wf {
 
     final static t a(gk param0, int param1, int param2) {
         try {
+            t var4_ref = null;
             if (!t.a(param0)) {
                 boolean discarded$0 = param0.a(param2, (byte) 96, param1);
                 return null;
@@ -61,13 +62,11 @@ final class t extends wf {
             if (var3 == null) {
                 return null;
             }
-            t var4 = null;
-            try {
-                var4 = new t(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new t(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -86,7 +85,7 @@ final class t extends wf {
         ((t) this).field_j = var2.a((byte) 113);
         ((t) this).field_H = var2.a((byte) 120);
         if (((t) this).field_H < 0) {
-            ((t) this).field_H = ((t) this).field_H ^ -1;
+            ((t) this).field_H = ~((t) this).field_H;
             ((t) this).field_k = true;
         }
         int var3 = var2.a((byte) 117);
@@ -108,7 +107,7 @@ final class t extends wf {
 
     private final static void a(byte[] param0, int param1) {
         field_e = param0;
-        field_F = param1;
+        field_F = 0;
         field_y = 0;
     }
 
@@ -130,7 +129,6 @@ final class t extends wf {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -305,8 +303,8 @@ final class t extends wf {
         }
         L8: {
           var14 = field_p[field_u[var2]];
-          var16 = ((uo) var14).field_d;
-          var17_int = ((uo) var14).field_c[var16];
+          var16 = var14.field_d;
+          var17_int = var14.field_c[var16];
           if (field_D[var17_int].a()) {
             stackOut_21_0 = 0;
             stackIn_22_0 = stackOut_21_0;
@@ -321,13 +319,13 @@ final class t extends wf {
         var16 = var15;
         var17_int = 0;
         L9: while (true) {
-          if (var17_int >= ((uo) var14).field_a) {
+          if (var17_int >= var14.field_a) {
             L10: {
               if (var15 != 0) {
                 break L10;
               } else {
-                var17_int = ((uo) var14).field_d;
-                var18_int = ((uo) var14).field_c[var17_int];
+                var17_int = var14.field_d;
+                var18_int = var14.field_c[var17_int];
                 field_D[var18_int].a(field_n, var4 >> 1);
                 break L10;
               }
@@ -361,7 +359,7 @@ final class t extends wf {
                           }
                         }
                         L15: {
-                          var21 = (float[]) (Object) stackIn_40_0;
+                          var21 = stackIn_40_0;
                           if (var3 == 0) {
                             stackOut_42_0 = (float[]) field_s;
                             stackIn_43_0 = stackOut_42_0;
@@ -373,7 +371,7 @@ final class t extends wf {
                           }
                         }
                         L16: {
-                          var22 = (float[]) (Object) stackIn_43_0;
+                          var22 = stackIn_43_0;
                           if (var3 == 0) {
                             stackOut_45_0 = (float[]) field_f;
                             stackIn_46_0 = stackOut_45_0;
@@ -385,7 +383,7 @@ final class t extends wf {
                           }
                         }
                         L17: {
-                          var23 = (float[]) (Object) stackIn_46_0;
+                          var23 = stackIn_46_0;
                           if (var3 == 0) {
                             stackOut_48_0 = (int[]) field_L;
                             stackIn_49_0 = stackOut_48_0;
@@ -396,7 +394,7 @@ final class t extends wf {
                             break L17;
                           }
                         }
-                        var56 = (int[]) (Object) stackIn_49_0;
+                        var56 = stackIn_49_0;
                         var52 = var56;
                         var48 = var52;
                         var44 = var48;
@@ -646,7 +644,7 @@ final class t extends wf {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((t) this).field_v) {
                     break L36;
                   } else {
@@ -704,9 +702,9 @@ final class t extends wf {
               }
             }
             ((t) this).field_v = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
-            var42 = field_A[((uo) var14).field_b[var17_int]];
+            var42 = field_A[var14.field_b[var17_int]];
             var55 = field_n;
             var42.a(var55, var4 >> 1, var16 != 0);
             var17_int++;
@@ -717,6 +715,7 @@ final class t extends wf {
 
     final static t a(gk param0, String param1, String param2) {
         try {
+            t var4_ref = null;
             if (!t.a(param0)) {
                 boolean discarded$0 = param0.a(param2, false, param1);
                 return null;
@@ -725,13 +724,11 @@ final class t extends wf {
             if (var3 == null) {
                 return null;
             }
-            t var4 = null;
-            try {
-                var4 = new t(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new t(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -825,12 +822,13 @@ final class t extends wf {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((t) this).field_l[var3] = (byte)(var6 - 128);
+                    ((t) this).field_l[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -1155,12 +1153,13 @@ final class t extends wf {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {

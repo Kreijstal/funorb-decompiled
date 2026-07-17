@@ -45,22 +45,26 @@ final class lo {
     }
 
     private final void a(qc param0, int param1) {
-        if (!(param0 == null)) {
-            param0.c(2);
-            param0.a(-115);
-            ((lo) this).field_c = ((lo) this).field_c + param0.field_C;
+        try {
+            if (!(param0 == null)) {
+                param0.c(2);
+                param0.a(-115);
+                ((lo) this).field_c = ((lo) this).field_c + param0.field_C;
+            }
+            int var3_int = 4 % ((param1 - -12) / 48);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "lo.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        int var3 = 4 % ((param1 - -12) / 48);
     }
 
     private final void a(long param0, byte param1) {
         qc var4 = (qc) (Object) ((lo) this).field_f.a(param0, (byte) 32);
-        int var5 = 56 % ((2 - param1) / 33);
+        int var5 = 2;
         this.a(var4, 118);
     }
 
     public static void a(byte param0) {
-        int var1 = -47 / ((param0 - -63) / 36);
+        int var1 = 47;
         field_j = null;
         field_a = null;
         field_g = null;
@@ -69,54 +73,97 @@ final class lo {
     }
 
     private final void a(byte param0, int param1, Object param2, long param3) {
-        oq var6 = null;
-        int var7 = 0;
-        Object var8 = null;
         qc var9 = null;
-        var7 = Vertigo2.field_L ? 1 : 0;
-        if (param1 > ((lo) this).field_h) {
-          throw new IllegalStateException();
-        } else {
-          this.a(param3, (byte) 126);
-          ((lo) this).field_c = ((lo) this).field_c - param1;
-          L0: while (true) {
-            if (((lo) this).field_c >= 0) {
-              if (param0 != 89) {
-                var8 = null;
-                ((lo) this).a(101L, (Object) null, (byte) -113);
-                var6 = new oq(param2, param1);
-                ((lo) this).field_f.a(param3, (li) (Object) var6, param0 ^ 32);
-                ((lo) this).field_e.a((byte) 35, (gp) (Object) var6);
-                ((qc) (Object) var6).field_n = 0L;
-                return;
-              } else {
-                var6 = new oq(param2, param1);
-                ((lo) this).field_f.a(param3, (li) (Object) var6, param0 ^ 32);
-                ((lo) this).field_e.a((byte) 35, (gp) (Object) var6);
-                ((qc) (Object) var6).field_n = 0L;
-                return;
-              }
-            } else {
-              var9 = (qc) (Object) ((lo) this).field_e.a(param0 ^ -66);
-              this.a(var9, 56);
-              continue L0;
+        oq var6 = null;
+        int var7 = Vertigo2.field_L ? 1 : 0;
+        try {
+            if (!(param1 <= ((lo) this).field_h)) {
+                throw new IllegalStateException();
             }
-          }
+            this.a(param3, (byte) 126);
+            ((lo) this).field_c = ((lo) this).field_c - param1;
+            while (((lo) this).field_c < 0) {
+                var9 = (qc) (Object) ((lo) this).field_e.a(param0 ^ -66);
+                this.a(var9, 56);
+            }
+            if (param0 != 89) {
+                Object var8 = null;
+                ((lo) this).a(101L, (Object) null, (byte) -113);
+            }
+            var6 = new oq(param2, param1);
+            ((lo) this).field_f.a(param3, (li) (Object) var6, param0 ^ 32);
+            ((lo) this).field_e.a((byte) 35, (gp) (Object) var6);
+            ((qc) (Object) var6).field_n = 0L;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "lo.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
     final void a(long param0, Object param1, byte param2) {
-        this.a((byte) 89, 1, param1, param0);
-        if (param2 >= -25) {
-            this.a((byte) 79, 30, (Object) null, 93L);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              this.a((byte) 89, 1, param1, param0);
+              if (param2 < -25) {
+                break L1;
+              } else {
+                this.a((byte) 79, 30, (Object) null, 93L);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("lo.A(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 41);
         }
     }
 
     final static void a(int param0) {
         to.field_c = 0;
-        if (param0 != 8537) {
-            field_b = null;
-        }
     }
 
     lo(int param0) {
@@ -136,9 +183,11 @@ final class lo {
               continue L0;
             } else {
               ((lo) this).field_f = new el(var3);
+              return;
             }
           } else {
             ((lo) this).field_f = new el(var3);
+            return;
           }
         }
     }

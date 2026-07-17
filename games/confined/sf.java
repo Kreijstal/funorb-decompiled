@@ -15,14 +15,7 @@ final class sf extends rk {
 
     final static void c(int param0) {
         da.field_i = false;
-        if (param0 != -52) {
-          int discarded$6 = sf.a(94, (byte) -124);
-          int discarded$7 = e.field_c.c(32);
-          return;
-        } else {
-          int discarded$8 = e.field_c.c(32);
-          return;
-        }
+        int discarded$0 = e.field_c.c(32);
     }
 
     final static void a(boolean param0, int param1) {
@@ -305,7 +298,7 @@ final class sf extends rk {
           ol.field_a = null;
           var2 = fa.field_P;
           fa.field_P = tl.field_f;
-          if (-52 == (param0 ^ -1)) {
+          if (param0 == 51) {
             L0: {
               om.field_s.field_e = 2;
               tl.field_f = var2;
@@ -313,7 +306,7 @@ final class sf extends rk {
               if (2 > om.field_s.field_a) {
                 break L0;
               } else {
-                if ((param0 ^ -1) != -52) {
+                if (param0 != 51) {
                   break L0;
                 } else {
                   return 2;
@@ -331,7 +324,7 @@ final class sf extends rk {
                 }
               }
             }
-            if ((om.field_s.field_a ^ -1) > -5) {
+            if (om.field_s.field_a < 4) {
               return -1;
             } else {
               return 1;
@@ -345,7 +338,7 @@ final class sf extends rk {
                 if (2 > om.field_s.field_a) {
                   break L2;
                 } else {
-                  if ((param0 ^ -1) != -52) {
+                  if (param0 != 51) {
                     break L2;
                   } else {
                     return 2;
@@ -363,7 +356,7 @@ final class sf extends rk {
                   }
                 }
               }
-              if ((om.field_s.field_a ^ -1) > -5) {
+              if (om.field_s.field_a < 4) {
                 return -1;
               } else {
                 return 1;
@@ -376,7 +369,7 @@ final class sf extends rk {
                 if (2 > om.field_s.field_a) {
                   break L4;
                 } else {
-                  if ((param0 ^ -1) != -52) {
+                  if (param0 != 51) {
                     break L4;
                   } else {
                     return 2;
@@ -394,7 +387,7 @@ final class sf extends rk {
                   }
                 }
               }
-              if ((om.field_s.field_a ^ -1) > -5) {
+              if (om.field_s.field_a < 4) {
                 return -1;
               } else {
                 return 1;
@@ -408,12 +401,12 @@ final class sf extends rk {
           ol.field_a = null;
           var2 = fa.field_P;
           fa.field_P = tl.field_f;
-          if (-52 == (param0 ^ -1)) {
+          if (param0 == 51) {
             om.field_s.field_e = 2;
             tl.field_f = var2;
             om.field_s.field_a = om.field_s.field_a + 1;
             if (2 <= om.field_s.field_a) {
-              if ((param0 ^ -1) == -52) {
+              if (param0 == 51) {
                 return 2;
               } else {
                 L6: {
@@ -427,7 +420,7 @@ final class sf extends rk {
                     }
                   }
                 }
-                if ((om.field_s.field_a ^ -1) > -5) {
+                if (om.field_s.field_a < 4) {
                   return -1;
                 } else {
                   return 1;
@@ -445,7 +438,7 @@ final class sf extends rk {
                   }
                 }
               }
-              if ((om.field_s.field_a ^ -1) > -5) {
+              if (om.field_s.field_a < 4) {
                 return -1;
               } else {
                 return 1;
@@ -457,7 +450,7 @@ final class sf extends rk {
               tl.field_f = var2;
               om.field_s.field_a = om.field_s.field_a + 1;
               if (2 <= om.field_s.field_a) {
-                if ((param0 ^ -1) == -52) {
+                if (param0 == 51) {
                   return 2;
                 } else {
                   L8: {
@@ -471,7 +464,7 @@ final class sf extends rk {
                       }
                     }
                   }
-                  if ((om.field_s.field_a ^ -1) > -5) {
+                  if (om.field_s.field_a < 4) {
                     return -1;
                   } else {
                     return 1;
@@ -489,7 +482,7 @@ final class sf extends rk {
                     }
                   }
                 }
-                if ((om.field_s.field_a ^ -1) > -5) {
+                if (om.field_s.field_a < 4) {
                   return -1;
                 } else {
                   return 1;
@@ -500,7 +493,7 @@ final class sf extends rk {
               tl.field_f = var2;
               om.field_s.field_a = om.field_s.field_a + 1;
               if (2 <= om.field_s.field_a) {
-                if ((param0 ^ -1) == -52) {
+                if (param0 == 51) {
                   return 2;
                 } else {
                   L10: {
@@ -514,7 +507,7 @@ final class sf extends rk {
                       }
                     }
                   }
-                  if ((om.field_s.field_a ^ -1) > -5) {
+                  if (om.field_s.field_a < 4) {
                     return -1;
                   } else {
                     return 1;
@@ -525,14 +518,14 @@ final class sf extends rk {
                   if (param0 == 50) {
                     return 5;
                   } else {
-                    if ((om.field_s.field_a ^ -1) > -5) {
+                    if (om.field_s.field_a < 4) {
                       return -1;
                     } else {
                       return 1;
                     }
                   }
                 } else {
-                  if ((om.field_s.field_a ^ -1) <= -5) {
+                  if (om.field_s.field_a >= 4) {
                     return 1;
                   } else {
                     return -1;

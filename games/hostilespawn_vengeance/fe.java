@@ -11,24 +11,11 @@ abstract class fe {
     abstract java.net.Socket a(int param0) throws IOException;
 
     final static void a(boolean param0) {
-        L0: {
-          if (jj.field_d != null) {
+        if (!(jj.field_d == null)) {
             jj.field_d.g((byte) -42);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (!param0) {
-          fe.a((byte) -109);
-          te.field_M = new ij();
-          ke.field_s.b((ag) (Object) te.field_M, (byte) 110);
-          return;
-        } else {
-          te.field_M = new ij();
-          ke.field_s.b((ag) (Object) te.field_M, (byte) 110);
-          return;
-        }
+        te.field_M = new ij();
+        ke.field_s.b((ag) (Object) te.field_M, (byte) 110);
     }
 
     final java.net.Socket b(int param0) throws IOException {

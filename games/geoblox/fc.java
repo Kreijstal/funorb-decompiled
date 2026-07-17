@@ -11,101 +11,100 @@ final class fc {
     static int field_c;
 
     final static void a(int param0) {
-        ja var1 = null;
+        RuntimeException var1 = null;
+        ja var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.field_C;
-        pf.field_D = true;
-        var1 = (ja) (Object) a.field_d.g(0);
-        L0: while (true) {
-          if (var1 == null) {
-            var2 = 12 % ((-69 - param0) / 38);
-            var1 = (ja) (Object) bh.field_c.g(0);
+        try {
+          L0: {
+            pf.field_D = true;
+            var1_ref = (ja) (Object) a.field_d.g(0);
             L1: while (true) {
-              if (var1 == null) {
-                return;
-              } else {
-                L2: {
-                  L3: {
-                    var1.b(true);
-                    if (5 == var1.field_z) {
-                      break L3;
-                    } else {
-                      if ((var1.field_z ^ -1) == -8) {
-                        break L3;
-                      } else {
-                        if ((var1.field_z ^ -1) == -9) {
-                          break L3;
+              if (var1_ref == null) {
+                var2 = 12 % ((-69 - param0) / 38);
+                var1_ref = (ja) (Object) bh.field_c.g(0);
+                L2: while (true) {
+                  if (var1_ref == null) {
+                    break L0;
+                  } else {
+                    L3: {
+                      L4: {
+                        var1_ref.b(true);
+                        if (5 == var1_ref.field_z) {
+                          break L4;
                         } else {
-                          break L2;
+                          if (var1_ref.field_z == 7) {
+                            break L4;
+                          } else {
+                            if (var1_ref.field_z == 8) {
+                              break L4;
+                            } else {
+                              break L3;
+                            }
+                          }
                         }
                       }
+                      pf.field_D = false;
+                      if (var1_ref.field_G < 3) {
+                        break L3;
+                      } else {
+                        ra.field_a.a(-115, (hf) (Object) var1_ref);
+                        break L3;
+                      }
                     }
-                  }
-                  pf.field_D = false;
-                  if (var1.field_G < 3) {
-                    break L2;
-                  } else {
-                    ra.field_a.a(-115, (hf) (Object) var1);
-                    break L2;
+                    var1_ref = (ja) (Object) bh.field_c.d(1);
+                    continue L2;
                   }
                 }
-                var1 = (ja) (Object) bh.field_c.d(1);
+              } else {
+                L5: {
+                  var1_ref.b(true);
+                  if (6 == var1_ref.field_z) {
+                    pf.field_D = false;
+                    if (var1_ref.field_G < 3) {
+                      break L5;
+                    } else {
+                      ra.field_a.a(-67, (hf) (Object) var1_ref);
+                      break L5;
+                    }
+                  } else {
+                    break L5;
+                  }
+                }
+                var1_ref = (ja) (Object) a.field_d.d(1);
                 continue L1;
               }
             }
-          } else {
-            L4: {
-              var1.b(true);
-              if (6 == var1.field_z) {
-                pf.field_D = false;
-                if (var1.field_G < 3) {
-                  break L4;
-                } else {
-                  ra.field_a.a(-67, (hf) (Object) var1);
-                  break L4;
-                }
-              } else {
-                break L4;
-              }
-            }
-            var1 = (ja) (Object) a.field_d.d(1);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var1, "fc.B(" + param0 + 41);
         }
     }
 
     final static void a(boolean param0, java.awt.Canvas param1) {
-        L0: {
-          if ((hj.field_a ^ -1) == -12) {
+        if (!(hj.field_a != 11)) {
             w.a(31);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         if (!param0) {
-          return;
-        } else {
-          qc.a(pb.field_s, oi.field_e, lb.field_a, (byte) -40);
-          i.a(0, (byte) 117, param1, 0);
-          return;
+            return;
+        }
+        try {
+            qc.a(pb.field_s, oi.field_e, lb.field_a, (byte) -40);
+            i.a(0, (byte) 117, param1, 0);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "fc.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     public static void a(byte param0) {
         field_b = null;
         field_g = null;
-        if (param0 >= -79) {
-          fc.a(-17);
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
-          field_d = null;
-          field_e = null;
-          return;
-        }
+        field_d = null;
+        field_e = null;
     }
 
     static {

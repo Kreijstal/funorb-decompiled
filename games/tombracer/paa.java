@@ -13,8 +13,12 @@ abstract class paa extends b implements mk {
         if (param4 != -11635) {
             return;
         }
-        lu.field_b = param0;
-        hka.field_b = new lja(param6, param3, param2, param8, param1, param7, param5);
+        try {
+            lu.field_b = param0;
+            hka.field_b = new lja(param6, param3, param2, param8, param1, param7, param5);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "paa.M(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
+        }
     }
 
     abstract int j(byte param0);
@@ -35,131 +39,75 @@ abstract class paa extends b implements mk {
 
     public static void k(byte param0) {
         field_y = null;
-        if (param0 < 29) {
-          g discarded$2 = paa.c(81, -67, 72);
-          field_z = null;
-          field_x = null;
-          return;
-        } else {
-          field_z = null;
-          field_x = null;
-          return;
-        }
+        field_z = null;
+        field_x = null;
     }
 
     void a(byte param0, uba param1) {
-        int var3 = 126 % ((-36 - param0) / 59);
-        ((paa) this).field_w = param1;
-        ((paa) this).field_w.field_i = (paa) this;
+        try {
+            int var3_int = 126 % ((-36 - param0) / 59);
+            ((paa) this).field_w = param1;
+            ((paa) this).field_w.field_i = (paa) this;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "paa.AA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(boolean param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
-        L0: {
-          var3 = TombRacer.field_G ? 1 : 0;
-          if (0 == param1) {
-            fna.field_j[0] = qua.a(bja.field_a, "", "TR_theme");
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (1 != param1) {
-          if ((param1 ^ -1) != -3) {
-            if (!param0) {
-              if (3 == param1) {
-                fna.field_j[3] = qua.a(bja.field_a, "", "TR_lose_jingle_long");
-                L1: while (true) {
-                  if (!ab.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
-                    continue L1;
-                  } else {
-                    return;
-                  }
-                }
+        RuntimeException decompiledCaughtException = null;
+        var3 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (0 == param1) {
+                fna.field_j[0] = qua.a(bja.field_a, "", "TR_theme");
+                break L1;
               } else {
-                L2: while (true) {
-                  if (!ab.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
-                    continue L2;
-                  } else {
-                    return;
-                  }
-                }
+                break L1;
               }
-            } else {
-              return;
             }
-          } else {
-            fna.field_j[2] = qua.a(bja.field_a, "", "TR_win_jingle_long");
-            if (!param0) {
-              if (3 != param1) {
-                L3: while (true) {
-                  if (!ab.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
-                    continue L3;
-                  } else {
-                    return;
-                  }
-                }
+            L2: {
+              if (1 != param1) {
+                break L2;
               } else {
-                fna.field_j[3] = qua.a(bja.field_a, "", "TR_lose_jingle_long");
-                L4: while (true) {
-                  if (!ab.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
-                    continue L4;
-                  } else {
-                    return;
-                  }
-                }
+                fna.field_j[1] = qua.a(bja.field_a, "", "TR_temple_music");
+                break L2;
               }
-            } else {
-              return;
             }
-          }
-        } else {
-          fna.field_j[1] = qua.a(bja.field_a, "", "TR_temple_music");
-          if ((param1 ^ -1) == -3) {
-            fna.field_j[2] = qua.a(bja.field_a, "", "TR_win_jingle_long");
-            if (!param0) {
-              if (3 != param1) {
-                L5: while (true) {
-                  if (!ab.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
-                    continue L5;
-                  } else {
-                    return;
-                  }
-                }
+            L3: {
+              if (param1 != 2) {
+                break L3;
               } else {
-                fna.field_j[3] = qua.a(bja.field_a, "", "TR_lose_jingle_long");
-                L6: while (true) {
-                  if (!ab.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
-                    continue L6;
-                  } else {
-                    return;
-                  }
-                }
+                fna.field_j[2] = qua.a(bja.field_a, "", "TR_win_jingle_long");
+                break L3;
               }
-            } else {
-              return;
             }
-          } else {
-            if (param0) {
-              return;
-            } else {
-              L7: {
+            if (!param0) {
+              L4: {
                 if (3 != param1) {
-                  break L7;
+                  break L4;
                 } else {
                   fna.field_j[3] = qua.a(bja.field_a, "", "TR_lose_jingle_long");
-                  break L7;
+                  break L4;
                 }
               }
-              L8: while (true) {
-                if (!ab.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
-                  continue L8;
+              L5: while (true) {
+                if (ab.field_n.field_y.a(176400, fna.field_j[param1], ua.field_a, ns.field_j, 0)) {
+                  break L0;
                 } else {
-                  return;
+                  continue L5;
                 }
               }
+            } else {
+              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var2, "paa.F(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -168,10 +116,7 @@ abstract class paa extends b implements mk {
     abstract int a(int param0);
 
     final static vb c(int param0) {
-        if (param0 != 141) {
-            return null;
-        }
-        return it.a(255, 141 - -uca.field_c.a(2, param0 ^ 141));
+        return it.a(255, 141 - -uca.field_c.a(2, 0));
     }
 
     paa(int param0, int param1, int param2, int param3, isa param4) {

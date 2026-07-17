@@ -41,8 +41,9 @@ final class o implements Iterator {
         if (((o) this).field_e == ((o) this).field_a.field_j[-1 + ((o) this).field_b]) {
           L0: while (true) {
             if (((o) this).field_a.field_i > ((o) this).field_b) {
+              int fieldTemp$1 = ((o) this).field_b;
               ((o) this).field_b = ((o) this).field_b + 1;
-              if (((o) this).field_a.field_j[((o) this).field_b].field_h != ((o) this).field_a.field_j[-1 + ((o) this).field_b]) {
+              if (((o) this).field_a.field_j[fieldTemp$1].field_h != ((o) this).field_a.field_j[-1 + ((o) this).field_b]) {
                 ((o) this).field_e = ((o) this).field_a.field_j[((o) this).field_b + -1].field_h;
                 return true;
               } else {
@@ -61,13 +62,17 @@ final class o implements Iterator {
     private final void a(int param0) {
         ((o) this).field_c = null;
         ((o) this).field_e = ((o) this).field_a.field_j[0].field_h;
-        ((o) this).field_b = param0;
+        ((o) this).field_b = 1;
     }
 
     o(gh param0) {
         ((o) this).field_c = null;
-        ((o) this).field_a = param0;
-        this.a(1);
+        try {
+            ((o) this).field_a = param0;
+            this.a(1);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "o.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final Object next() {
@@ -77,8 +82,9 @@ final class o implements Iterator {
         if (((o) this).field_a.field_j[-1 + ((o) this).field_b] == ((o) this).field_e) {
           L0: while (true) {
             if (((o) this).field_a.field_i > ((o) this).field_b) {
+              int fieldTemp$2 = ((o) this).field_b;
               ((o) this).field_b = ((o) this).field_b + 1;
-              var1 = ((o) this).field_a.field_j[((o) this).field_b].field_h;
+              var1 = ((o) this).field_a.field_j[fieldTemp$2].field_h;
               if (((o) this).field_a.field_j[((o) this).field_b + -1] != var1) {
                 ((o) this).field_e = var1.field_h;
                 ((o) this).field_c = var1;

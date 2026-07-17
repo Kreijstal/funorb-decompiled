@@ -353,7 +353,7 @@ final class il extends cn {
                               }
                             }
                             if (var9 > 64) {
-                              var10 = field_v[var8] - 64 - 1;
+                              var10 = field_v[var8] - 65;
                               var48 = field_y[var10];
                               var12 = 0;
                               L10: while (true) {
@@ -433,7 +433,7 @@ final class il extends cn {
                           }
                         }
                         if (var9 > 64) {
-                          var10 = field_v[var8] - 64 - 1;
+                          var10 = field_v[var8] - 65;
                           var46 = field_y[var10];
                           var12 = 0;
                           L15: while (true) {
@@ -1177,7 +1177,7 @@ final class il extends cn {
                     }
                   }
                   if (var2 > 64) {
-                    var3 = field_v[var1] - 64 - 1;
+                    var3 = field_v[var1] - 65;
                     var12 = field_y[var3];
                     var8 = 0;
                     var5 = var8;
@@ -1917,7 +1917,7 @@ final class il extends cn {
                     }
                   }
                 }
-                ((il) this).field_ab[var9] = (short)-1;
+                ((il) this).field_ab[var9] = (short) -1;
                 var9++;
                 continue L1;
               }
@@ -1957,14 +1957,14 @@ final class il extends cn {
                               break L3;
                             } else {
                               if (param0.field_B[var11] == -1) {
-                                ((il) this).field_Y[var11] = (byte)-1;
+                                ((il) this).field_Y[var11] = (byte) -1;
                                 var11++;
                                 continue L7;
                               } else {
                                 ((il) this).field_Y[var11] = (byte)var9_ref_int__[param0.field_B[var11] & 255];
                                 if (((il) this).field_Y[var11] == -1) {
                                   if (((il) this).field_ab != null) {
-                                    ((il) this).field_ab[var11] = (short)-1;
+                                    ((il) this).field_ab[var11] = (short) -1;
                                     var11++;
                                     continue L7;
                                   } else {

@@ -9,11 +9,6 @@ final class te {
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 != -8297) {
-            field_c = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

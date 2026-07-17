@@ -10,37 +10,54 @@ final class pa {
             throw new IllegalStateException();
         }
         c.field_u = true;
-        ic.a((byte) -126, param0);
+        ic.a((byte) -126, true);
         ff.field_e = 0;
     }
 
     public static void a(byte param0) {
-        if (param0 != 103) {
-            field_a = null;
-        }
         field_a = null;
         field_b = null;
     }
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
-        int var4 = EscapeVector.field_A;
-        bi.b();
-        ij.field_i = 11;
-        pb.field_c = new int[260];
-        for (var1 = 0; (var1 ^ -1) > -257; var1++) {
-            var2 = 15.0;
-            pb.field_c[var1] = (int)(Math.pow((double)((float)var1 / 256.0f), var2) * 255.0);
-        }
-        if (param0 >= -19) {
-            field_b = null;
-        }
-        int var5 = 256;
-        var1 = var5;
-        while (var5 < pb.field_c.length) {
-            pb.field_c[var5] = 255;
-            var5++;
+        int var4 = 0;
+        int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = EscapeVector.field_A;
+        try {
+          L0: {
+            bi.b();
+            ij.field_i = 11;
+            pb.field_c = new int[260];
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 256) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (var5 >= pb.field_c.length) {
+                    break L0;
+                  } else {
+                    pb.field_c[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2 = 15.0;
+                pb.field_c[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var1, "pa.A(" + -83 + 41);
         }
     }
 

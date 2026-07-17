@@ -12,18 +12,9 @@ final class ib extends ej implements v {
 
     public static void b(boolean param0) {
         field_ab = null;
-        if (param0) {
-          boolean discarded$2 = ib.p(-64);
-          field_X = null;
-          field_bb = null;
-          field_Y = null;
-          return;
-        } else {
-          field_X = null;
-          field_bb = null;
-          field_Y = null;
-          return;
-        }
+        field_X = null;
+        field_bb = null;
+        field_Y = null;
     }
 
     final String f(int param0) {
@@ -44,12 +35,14 @@ final class ib extends ej implements v {
     }
 
     final void a(rc param0, int param1) {
-        if (param1 != 5859) {
-            field_cb = -97;
+        try {
+            if (param1 != 5859) {
+                field_cb = -97;
+            }
             ((ib) this).field_db = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "ib.CA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((ib) this).field_db = param0;
     }
 
     ib(String param0, sc param1, int param2) {
@@ -57,15 +50,14 @@ final class ib extends ej implements v {
     }
 
     final void a(gl param0, int param1, int param2, int param3) {
-        if (param3 < 25) {
-          String discarded$2 = ((ib) this).f(-56);
-          super.a(param0, param1, param2, 77);
-          ((ib) this).field_Z = -param2 + -((ib) this).field_w + ef.field_j;
-          return;
-        } else {
-          super.a(param0, param1, param2, 77);
-          ((ib) this).field_Z = -param2 + -((ib) this).field_w + ef.field_j;
-          return;
+        try {
+            if (param3 < 25) {
+                String discarded$0 = ((ib) this).f(-56);
+            }
+            super.a(param0, param1, param2, 77);
+            ((ib) this).field_Z = -param2 + -((ib) this).field_w + ef.field_j;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "ib.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -106,16 +98,72 @@ final class ib extends ej implements v {
 
     final static pd a(boolean param0, String[] param1) {
         pd var2 = null;
-        if (!param0) {
-          field_cb = 75;
-          var2 = new pd(false);
-          var2.field_d = param1;
-          return var2;
-        } else {
-          var2 = new pd(false);
-          var2.field_d = param1;
-          return var2;
+        RuntimeException var2_ref = null;
+        pd stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        pd stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0) {
+                break L1;
+              } else {
+                field_cb = 75;
+                break L1;
+              }
+            }
+            var2 = new pd(false);
+            var2.field_d = param1;
+            stackOut_2_0 = (pd) var2;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2_ref;
+            stackOut_4_1 = new StringBuilder().append("ib.FA(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw qk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     static {

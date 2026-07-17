@@ -40,50 +40,146 @@ final class j {
     int field_m;
 
     final static void a(java.awt.Canvas param0, byte param1) {
-        int var2 = 0;
-        h.a((java.awt.Component) (Object) param0, -8662);
-        var2 = -50 / ((-56 - param1) / 59);
-        sa.a((java.awt.Component) (Object) param0, true);
-        if (wb.field_u != null) {
-          wb.field_u.a((byte) 71, (java.awt.Component) (Object) param0);
-          return;
-        } else {
-          return;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            h.a((java.awt.Component) (Object) param0, -8662);
+            var2_int = -50 / ((-56 - param1) / 59);
+            sa.a((java.awt.Component) (Object) param0, true);
+            if (wb.field_u == null) {
+              break L0;
+            } else {
+              wb.field_u.a((byte) 71, (java.awt.Component) (Object) param0);
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) var2;
+            stackOut_3_1 = new StringBuilder().append("j.C(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L1;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L1;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
         }
     }
 
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
             Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             java.net.URL var4 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-              L0: {
-                L1: {
-                  if (param0) {
-                    break L1;
-                  } else {
-                    field_p = -23L;
-                    break L1;
+              try {
+                L0: {
+                  L1: {
+                    if (param0) {
+                      break L1;
+                    } else {
+                      field_p = -23L;
+                      break L1;
+                    }
                   }
+                  var4 = param1.getCodeBase();
+                  var3 = og.a(var4, param1, (byte) -85).getFile();
+                  Object discarded$6 = hp.a(param1, new Object[2], 28989, "updatelinks");
+                  Object discarded$7 = hp.a(param1, new Object[2], 28989, "updatelinks");
+                  Object discarded$8 = hp.a(param1, new Object[2], 28989, "updatelinks");
+                  Object discarded$9 = hp.a(param1, new Object[2], 28989, "updatelinks");
+                  Object discarded$10 = hp.a(param1, new Object[2], 28989, "updatelinks");
+                  Object discarded$11 = hp.a(param1, new Object[2], 28989, "updatelinks");
+                  break L0;
                 }
-                var4 = param1.getCodeBase();
-                var3 = og.a(var4, param1, (byte) -85).getFile();
-                Object discarded$6 = hp.a(param1, new Object[2], 28989, "updatelinks");
-                Object discarded$7 = hp.a(param1, new Object[2], 28989, "updatelinks");
-                Object discarded$8 = hp.a(param1, new Object[2], 28989, "updatelinks");
-                Object discarded$9 = hp.a(param1, new Object[2], 28989, "updatelinks");
-                Object discarded$10 = hp.a(param1, new Object[2], 28989, "updatelinks");
-                Object discarded$11 = hp.a(param1, new Object[2], 28989, "updatelinks");
-                break L0;
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = decompiledCaughtException;
-                break L2;
+                return;
               }
+              return;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L2: {
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref;
+                stackOut_6_1 = new StringBuilder().append("j.A(").append(param0).append(44);
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param1 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L2;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L2;
+                }
+              }
+              throw rb.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -94,12 +190,6 @@ final class j {
 
     public static void a(byte param0) {
         field_F = null;
-        if (param0 != 44) {
-            Object var2 = null;
-            j.a((java.awt.Canvas) null, (byte) -16);
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

@@ -8,21 +8,22 @@ final class dw extends kj {
 
     dw(gj param0, int param1, int param2) {
         super(param0, param1, param2);
-        ((dw) this).field_h = 39;
+        try {
+            ((dw) this).field_h = 39;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "dw.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     public static void a(boolean param0) {
         field_g = null;
-        if (!param0) {
-            return;
-        }
-        dw.a(30, -41, 76, 123, -15, -79);
     }
 
     final boolean b(int param0) {
         if (param0 >= 21) {
+          int fieldTemp$2 = ((dw) this).field_h - 1;
           ((dw) this).field_h = ((dw) this).field_h - 1;
-          if (((dw) this).field_h - 1 != 0) {
+          if (fieldTemp$2 != 0) {
             return false;
           } else {
             return true;
@@ -33,7 +34,8 @@ final class dw extends kj {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -53,70 +55,79 @@ final class dw extends kj {
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
+        RuntimeException decompiledCaughtException = null;
         var25 = BachelorFridge.field_y;
-        var6 = param2;
-        var7 = param1;
-        var8 = param3 * param3;
-        var9 = param1 * param1;
-        var10 = var9 << -2002178271;
-        var11 = var8 << 1995104129;
-        var12 = param1 << -876583007;
-        var13 = (1 + -var12) * var8 + var10;
-        var14 = -(var11 * (var12 + -1)) + var9;
-        var15 = var8 << 457629442;
-        var16 = var9 << -1981960286;
-        var17 = var10 * (3 + (var6 << 278404801));
-        var18 = ((var7 << 251199585) + -3) * var11;
-        var19 = var16 * (1 + var6);
-        hba.a(param4, -param3 + param5, tj.field_b[param0], 7, param3 + param5);
-        var20 = var15 * (-1 + var7);
-        L0: while (true) {
-          if (var7 < -1) {
-            L1: {
-              if (var13 >= 0) {
-                break L1;
+        try {
+          L0: {
+            var6_int = param2;
+            var7 = param1;
+            var8 = param3 * param3;
+            var9 = param1 * param1;
+            var10 = var9 << 1;
+            var11 = var8 << 1;
+            var12 = param1 << 1;
+            var13 = (1 + -var12) * var8 + var10;
+            var14 = -(var11 * (var12 + -1)) + var9;
+            var15 = var8 << 2;
+            var16 = var9 << 2;
+            var17 = var10 * (3 + (var6_int << 1));
+            var18 = ((var7 << 1) + -3) * var11;
+            var19 = var16 * (1 + var6_int);
+            hba.a(param4, -param3 + param5, tj.field_b[param0], 7, param3 + param5);
+            var20 = var15 * (-1 + var7);
+            L1: while (true) {
+              if (var7 <= 0) {
+                break L0;
               } else {
-                L2: while (true) {
-                  if (-1 <= var13) {
-                    break L1;
+                L2: {
+                  if (var13 >= 0) {
+                    break L2;
                   } else {
-                    var14 = var14 + var19;
-                    var13 = var13 + var17;
-                    var19 = var19 + var16;
-                    var17 = var17 + var16;
-                    var6++;
-                    continue L2;
+                    L3: while (true) {
+                      if (var13 >= 0) {
+                        break L2;
+                      } else {
+                        var14 = var14 + var19;
+                        var13 = var13 + var17;
+                        var19 = var19 + var16;
+                        var17 = var17 + var16;
+                        var6_int++;
+                        continue L3;
+                      }
+                    }
                   }
                 }
+                L4: {
+                  if (0 <= var14) {
+                    break L4;
+                  } else {
+                    var13 = var13 + var17;
+                    var14 = var14 + var19;
+                    var19 = var19 + var16;
+                    var17 = var17 + var16;
+                    var6_int++;
+                    break L4;
+                  }
+                }
+                var14 = var14 + -var18;
+                var13 = var13 + -var20;
+                var7--;
+                var18 = var18 - var15;
+                var20 = var20 - var15;
+                var21 = param0 + -var7;
+                var22 = param0 + var7;
+                var23 = var6_int + param5;
+                var24 = param5 + -var6_int;
+                hba.a(param4, var24, tj.field_b[var21], 7, var23);
+                hba.a(param4, var24, tj.field_b[var22], param2 ^ 7, var23);
+                continue L1;
               }
             }
-            L3: {
-              if (0 <= var14) {
-                break L3;
-              } else {
-                var13 = var13 + var17;
-                var14 = var14 + var19;
-                var19 = var19 + var16;
-                var17 = var17 + var16;
-                var6++;
-                break L3;
-              }
-            }
-            var14 = var14 + -var18;
-            var13 = var13 + -var20;
-            var7--;
-            var18 = var18 - var15;
-            var20 = var20 - var15;
-            var21 = param0 + -var7;
-            var22 = param0 + var7;
-            var23 = var6 + param5;
-            var24 = param5 + -var6;
-            hba.a(param4, var24, tj.field_b[var21], 7, var23);
-            hba.a(param4, var24, tj.field_b[var22], param2 ^ 7, var23);
-            continue L0;
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw pe.a((Throwable) (Object) var6, "dw.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

@@ -20,6 +20,7 @@ final class vp implements hc {
     static String field_m;
 
     final static void a(int param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -30,96 +31,105 @@ final class vp implements hc {
         int var10 = 0;
         int var11 = 0;
         dd var12 = null;
+        RuntimeException decompiledCaughtException = null;
         var11 = Kickabout.field_G;
-        if (param1 == wr.field_l) {
-          return;
-        } else {
+        try {
           L0: {
-            hq.field_a = false;
-            wr.field_l = param1;
-            var12 = new dd();
-            if (wr.field_l == 0) {
-              break L0;
+            if (param1 == wr.field_l) {
+              return;
             } else {
-              if ((wr.field_l ^ -1) == -2) {
-                break L0;
-              } else {
-                vf.field_K = new byte[5][][][];
-                cb.field_b = new byte[5][][];
-                var3 = 5;
-                var4 = 0;
-                L1: while (true) {
-                  if ((var4 ^ -1) <= -6) {
-                    L2: {
-                      var4 = 0;
-                      if (param0 == -4121) {
-                        break L2;
-                      } else {
-                        vp.c(9);
-                        break L2;
-                      }
-                    }
-                    var5 = 0;
-                    L3: while (true) {
-                      if (var5 >= 5) {
-                        hq.field_a = true;
-                        return;
-                      } else {
-                        var6 = pv.field_I[var5][5];
-                        var7 = pv.field_I[var5][3];
-                        var12.a(var7, (byte) -107);
-                        cb.field_b[var5] = new byte[8][];
-                        var8 = 0;
-                        L4: while (true) {
-                          if (var8 >= 8) {
-                            var12.a(var6, (byte) -107);
-                            var8 = (2 + var6.field_e.length) / 3;
-                            vf.field_K[var5] = new byte[var8][8][];
-                            var9 = 0;
-                            L5: while (true) {
-                              if (var9 >= var8) {
-                                var5++;
-                                continue L3;
-                              } else {
-                                var12.a(var9 * 3, -39);
-                                var10 = 0;
-                                L6: while (true) {
-                                  if (-9 >= (var10 ^ -1)) {
-                                    var4++;
-                                    jm.a(var3, param0 + 13984, var4);
-                                    var9++;
-                                    continue L5;
-                                  } else {
-                                    kh.a(var5, var12, var10 << -1931856088, false, 2150);
-                                    vf.field_K[var5][var9][var10] = ge.a(16, vf.field_F);
-                                    var10++;
-                                    continue L6;
-                                  }
-                                }
-                              }
-                            }
+              L1: {
+                hq.field_a = false;
+                wr.field_l = param1;
+                var12 = new dd();
+                if (wr.field_l == 0) {
+                  break L1;
+                } else {
+                  if (wr.field_l == 1) {
+                    break L1;
+                  } else {
+                    vf.field_K = new byte[5][][][];
+                    cb.field_b = new byte[5][][];
+                    var3 = 5;
+                    var4 = 0;
+                    L2: while (true) {
+                      if (var4 >= 5) {
+                        L3: {
+                          var4 = 0;
+                          if (param0 == -4121) {
+                            break L3;
                           } else {
-                            kh.a(var5, var12, var8 << 453597256, false, 2150);
-                            cb.field_b[var5][var8] = ge.a(16, vf.field_F);
-                            var8++;
-                            continue L4;
+                            vp.c(9);
+                            break L3;
                           }
                         }
+                        var5 = 0;
+                        L4: while (true) {
+                          if (var5 >= 5) {
+                            hq.field_a = true;
+                            break L0;
+                          } else {
+                            var6 = pv.field_I[var5][5];
+                            var7 = pv.field_I[var5][3];
+                            var12.a(var7, (byte) -107);
+                            cb.field_b[var5] = new byte[8][];
+                            var8 = 0;
+                            L5: while (true) {
+                              if (var8 >= 8) {
+                                var12.a(var6, (byte) -107);
+                                var8 = (2 + var6.field_e.length) / 3;
+                                vf.field_K[var5] = new byte[var8][8][];
+                                var9 = 0;
+                                L6: while (true) {
+                                  if (var9 >= var8) {
+                                    var5++;
+                                    continue L4;
+                                  } else {
+                                    var12.a(var9 * 3, -39);
+                                    var10 = 0;
+                                    L7: while (true) {
+                                      if (var10 >= 8) {
+                                        var4++;
+                                        jm.a(var3, param0 + 13984, var4);
+                                        var9++;
+                                        continue L6;
+                                      } else {
+                                        kh.a(var5, var12, var10 << 8, false, 2150);
+                                        vf.field_K[var5][var9][var10] = ge.a(16, vf.field_F);
+                                        var10++;
+                                        continue L7;
+                                      }
+                                    }
+                                  }
+                                }
+                              } else {
+                                kh.a(var5, var12, var8 << 8, false, 2150);
+                                cb.field_b[var5][var8] = ge.a(16, vf.field_F);
+                                var8++;
+                                continue L5;
+                              }
+                            }
+                          }
+                        }
+                      } else {
+                        var3 = var3 + pv.field_I[var4][5].field_e.length / 3;
+                        var4++;
+                        continue L2;
                       }
                     }
-                  } else {
-                    var3 = var3 + pv.field_I[var4][5].field_e.length / 3;
-                    var4++;
-                    continue L1;
                   }
                 }
               }
+              hq.field_a = true;
+              vf.field_K = null;
+              cb.field_b = null;
+              return;
             }
           }
-          hq.field_a = true;
-          vf.field_K = null;
-          cb.field_b = null;
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var2, "vp.A(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -340,7 +350,7 @@ final class vp implements hc {
     public final void a(int param0) {
         int var2 = 83 % ((50 - param0) / 45);
         if (((vp) this).a((byte) 87)) {
-            ei.a(-1 == (((vp) this).field_i & 8 ^ -1) ? true : false, false);
+            ei.a((((vp) this).field_i & 8) == 0 ? true : false, false);
         }
     }
 

@@ -10,16 +10,73 @@ final class vqb extends rqa {
 
     public static void e(byte param0) {
         field_o = null;
-        if (param0 >= -15) {
-            field_o = null;
-        }
     }
 
     final nc a(nc[] param0, int param1) {
-        if (param1 > -119) {
-            return null;
+        RuntimeException var3 = null;
+        Object stackIn_2_0 = null;
+        nc stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nc stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param1 <= -119) {
+              stackOut_3_0 = new nc((Object) (Object) frb.a(150, 94));
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (nc) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("vqb.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
-        return new nc((Object) (Object) frb.a(150, 94));
+        return stackIn_4_0;
     }
 
     final static void f(byte param0) {
@@ -29,20 +86,15 @@ final class vqb extends rqa {
         egb.field_o[15] = rq.field_G;
         egb.field_o[17] = otb.field_p;
         egb.field_o[9] = vqa.field_j;
-        if (param0 > -75) {
-          return;
-        } else {
-          egb.field_o[11] = fk.field_d;
-          egb.field_o[7] = gcb.field_o;
-          egb.field_o[19] = cfa.field_e;
-          egb.field_o[20] = rhb.field_o;
-          egb.field_o[4] = hcb.field_q;
-          egb.field_o[16] = hoa.field_p;
-          egb.field_o[18] = tr.field_b;
-          egb.field_o[13] = bjb.field_q;
-          egb.field_o[6] = uea.field_p;
-          return;
-        }
+        egb.field_o[11] = fk.field_d;
+        egb.field_o[7] = gcb.field_o;
+        egb.field_o[19] = cfa.field_e;
+        egb.field_o[20] = rhb.field_o;
+        egb.field_o[4] = hcb.field_q;
+        egb.field_o[16] = hoa.field_p;
+        egb.field_o[18] = tr.field_b;
+        egb.field_o[13] = bjb.field_q;
+        egb.field_o[6] = uea.field_p;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {

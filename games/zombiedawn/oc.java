@@ -7,7 +7,7 @@ final class oc {
     static float field_c;
 
     public static void a(int param0) {
-        int var1 = 25 % ((-45 - param0) / 32);
+        int var1 = 1;
         field_a = null;
     }
 

@@ -23,9 +23,6 @@ final class ub {
     private int field_r;
 
     private final String h(int param0) {
-        if (param0 != 31214) {
-            return null;
-        }
         int var2 = ((ub) this).field_a / 3000;
         int var3 = ((ub) this).field_a % 3000 / 50;
         return var2 + ":" + (10 <= var3 ? "" : "0") + var3;
@@ -48,21 +45,44 @@ final class ub {
     }
 
     final static void a(int param0, byte param1) {
-        int var2 = 0;
-        int var3 = ZombieDawn.field_J;
-        b.field_q = param0;
-        qn.field_g.a();
-        bi.d();
-        bd.field_i[qd.field_e][b.field_q].b(10, 10);
-        for (var2 = 0; 3 > var2; var2++) {
-            so.a(16777045);
-        }
-        bd.field_i[qd.field_e][b.field_q].d(10, 10, 0);
-        bi.h(2, 2, 0, 0, qn.field_g.field_w, qn.field_g.field_t);
-        cn.field_f.b(-115);
-        rk.field_a = 3 * sn.field_f.length >> 416263970;
-        if (param1 >= -25) {
-            ub.c((byte) 111);
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = ZombieDawn.field_J;
+        try {
+          L0: {
+            b.field_q = param0;
+            qn.field_g.a();
+            bi.d();
+            bd.field_i[qd.field_e][b.field_q].b(10, 10);
+            var2_int = 0;
+            L1: while (true) {
+              if (3 <= var2_int) {
+                L2: {
+                  bd.field_i[qd.field_e][b.field_q].d(10, 10, 0);
+                  bi.h(2, 2, 0, 0, qn.field_g.field_w, qn.field_g.field_t);
+                  cn.field_f.b(-115);
+                  rk.field_a = 3 * sn.field_f.length >> 2;
+                  if (param1 < -25) {
+                    break L2;
+                  } else {
+                    ub.c((byte) 111);
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                so.a(16777045);
+                var2_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw sh.a((Throwable) (Object) var2, "ub.L(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -135,7 +155,7 @@ final class ub {
         bi.d();
         si.field_Ub[5].h(0, 0, 16777215);
         oc.a((byte) 50);
-        si.field_Ub[5].h(0, param0, 0);
+        si.field_Ub[5].h(0, 0, 0);
     }
 
     private final void c(int param0) {
@@ -180,7 +200,7 @@ final class ub {
               break L3;
             } else {
               if (!((ub) this).field_g) {
-                if (-100 <= (var3 ^ -1)) {
+                if (var3 <= 99) {
                   ((ub) this).field_o.c(var2 + "/" + var3, 20, 2 * ((ub) this).field_o.field_I + -3, 2, 65793);
                   break L2;
                 } else {
@@ -301,7 +321,7 @@ final class ub {
                     }
                   }
                 }
-                if ((((ah) (Object) var2).field_F ^ -1) == -19) {
+                if (((ah) (Object) var2).field_F == 18) {
                   break L3;
                 } else {
                   if (19 == ((ah) (Object) var2).field_t) {
@@ -347,7 +367,7 @@ final class ub {
             if (!((ub) this).field_c) {
               break L2;
             } else {
-              if (-1 > (((ub) this).field_a ^ -1)) {
+              if (((ub) this).field_a > 0) {
                 break L2;
               } else {
                 stackOut_4_0 = 1;
@@ -375,7 +395,7 @@ final class ub {
     }
 
     final void i(int param0) {
-        if (!((((ub) this).field_r ^ -1) <= -321)) {
+        if (!(((ub) this).field_r >= 320)) {
             ((ub) this).field_r = ((ub) this).field_r + 1;
         }
         if (param0 != 16777215) {
@@ -387,7 +407,7 @@ final class ub {
         if (param0 != 16954) {
             ((ub) this).c(-109, 76);
         }
-        return -1 <= (((ub) this).field_k ^ -1) ? true : false;
+        return ((ub) this).field_k <= 0 ? true : false;
     }
 
     final void b(int param0) {
@@ -457,9 +477,6 @@ final class ub {
     }
 
     final static void b(byte param0) {
-        if (param0 < 43) {
-            va discarded$0 = ub.a(124, 35);
-        }
         jm.a((String) null, to.field_d, -901373652);
     }
 
@@ -591,7 +608,7 @@ final class ub {
     final void c(int param0, int param1) {
         L0: {
           if (((ub) this).field_i) {
-            if ((((ub) this).field_n ^ -1) <= (((ub) this).field_r ^ -1)) {
+            if (~((ub) this).field_n <= ~((ub) this).field_r) {
               if (((ub) this).field_r < ((ub) this).field_n) {
                 ((ub) this).field_n = ((ub) this).field_r;
                 break L0;
@@ -653,13 +670,13 @@ final class ub {
           }
         }
         L4: {
-          if ((((ub) this).field_a ^ -1) >= -1) {
+          if (((ub) this).field_a <= 0) {
             break L4;
           } else {
-            if (-551 > (((ub) this).field_a ^ -1)) {
+            if (((ub) this).field_a > 550) {
               break L4;
             } else {
-              if ((((ub) this).field_a % 50 ^ -1) != -50) {
+              if (((ub) this).field_a % 50 != 49) {
                 break L4;
               } else {
                 ((ub) this).field_p = 2.0f;
@@ -677,7 +694,7 @@ final class ub {
               this.a(0);
               break L5;
             } else {
-              if (-50 != (((ub) this).field_a % 50 ^ -1)) {
+              if (((ub) this).field_a % 50 != 49) {
                 break L5;
               } else {
                 this.a(0);

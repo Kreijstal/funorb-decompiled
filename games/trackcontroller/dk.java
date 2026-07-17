@@ -6,17 +6,10 @@ final class dk {
     static String[] field_b;
 
     public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
         field_b = null;
     }
 
     final static void a(int param0) {
-        if (param0 == 9888) {
-            return;
-        }
-        aa discarded$0 = dk.a(99, (byte) 15);
     }
 
     final static aa a(int param0, byte param1) {

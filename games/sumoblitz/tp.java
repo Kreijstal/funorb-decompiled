@@ -18,7 +18,7 @@ final class tp {
         while (((tp) this).field_e[var1] >= 0) {
             var1 = q.b() != 0 ? ((tp) this).field_e[var1] : var1 + 1;
         }
-        return ((tp) this).field_e[var1] ^ -1;
+        return ~((tp) this).field_e[var1];
     }
 
     private final void a() {
@@ -62,7 +62,7 @@ final class tp {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((tp) this).field_e[var6] = var3 ^ -1;
+                      ((tp) this).field_e[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -216,7 +216,7 @@ final class tp {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = q.a(24);
+          int discarded$2 = q.a(24);
           ((tp) this).field_c = q.a(16);
           ((tp) this).field_f = q.a(24);
           ((tp) this).field_d = new int[((tp) this).field_f];
@@ -283,8 +283,9 @@ final class tp {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((tp) this).field_d[var2] = var3_int;
+                    ((tp) this).field_d[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

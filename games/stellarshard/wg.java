@@ -12,7 +12,7 @@ final class wg extends RuntimeException {
     public static void a(byte param0) {
         field_e = null;
         field_b = null;
-        int var1 = 1 / ((3 - param0) / 33);
+        int var1 = 0;
         field_d = null;
     }
 

@@ -50,9 +50,6 @@ final class k extends gn {
 
     public static void a(int param0) {
         field_f = null;
-        if (param0 > -28) {
-            return;
-        }
         field_e = null;
         field_l = null;
         field_h = null;

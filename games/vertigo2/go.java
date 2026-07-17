@@ -73,56 +73,135 @@ final class go {
     }
 
     final static void b(int param0) {
-        int var4 = Vertigo2.field_L ? 1 : 0;
-        if (param0 < 13) {
-            return;
-        }
-        int[] var5 = oq.field_F;
-        int[] var1 = var5;
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
-        int var3 = var5.length;
-        while (var2 < var3) {
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int[] var5 = null;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Vertigo2.field_L ? 1 : 0;
+        try {
+          L0: {
+            if (param0 >= 13) {
+              var5 = oq.field_F;
+              var1 = var5;
+              var2 = 0;
+              var3 = var5.length;
+              L1: while (true) {
+                if (var2 >= var3) {
+                  break L0;
+                } else {
+                  int incrementValue$40 = var2;
+                  var2++;
+                  var5[incrementValue$40] = 0;
+                  int incrementValue$41 = var2;
+                  var2++;
+                  var5[incrementValue$41] = 0;
+                  int incrementValue$42 = var2;
+                  var2++;
+                  var5[incrementValue$42] = 0;
+                  int incrementValue$43 = var2;
+                  var2++;
+                  var5[incrementValue$43] = 0;
+                  int incrementValue$44 = var2;
+                  var2++;
+                  var5[incrementValue$44] = 0;
+                  int incrementValue$45 = var2;
+                  var2++;
+                  var5[incrementValue$45] = 0;
+                  int incrementValue$46 = var2;
+                  var2++;
+                  var5[incrementValue$46] = 0;
+                  int incrementValue$47 = var2;
+                  var2++;
+                  var5[incrementValue$47] = 0;
+                  continue L1;
+                }
+              }
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var1_ref, "go.C(" + param0 + 41);
         }
     }
 
     private final void a(int param0, ed param1) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         Object var5 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
-        L0: while (true) {
-          var3 = param1.h(-11);
-          if (0 != var3) {
-            this.a(var3, param1, (byte) -121);
-            continue L0;
-          } else {
-            L1: {
-              if (param0 >= 108) {
-                break L1;
+        try {
+          L0: {
+            L1: while (true) {
+              var3_int = param1.h(-11);
+              if (0 != var3_int) {
+                this.a(var3_int, param1, (byte) -121);
+                continue L1;
               } else {
-                var5 = null;
-                this.a(-60, (ed) null);
-                break L1;
+                L2: {
+                  if (param0 >= 108) {
+                    break L2;
+                  } else {
+                    var5 = null;
+                    this.a(-60, (ed) null);
+                    break L2;
+                  }
+                }
+                break L0;
               }
             }
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("go.A(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
     }
 
@@ -135,238 +214,353 @@ final class go {
     }
 
     private final void a(int param0, ed param1, byte param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        L0: {
-          var9 = Vertigo2.field_L ? 1 : 0;
-          var4 = 124 / ((param2 - 4) / 62);
-          if (-2 == (param0 ^ -1)) {
-            var5 = param1.a((byte) -11);
-            ((go) this).field_e = new int[var5];
-            var6 = 0;
-            L1: while (true) {
-              if (var6 >= var5) {
-                ((go) this).field_c = new int[var5];
-                var6 = 0;
-                L2: while (true) {
-                  if (var5 <= var6) {
-                    var6 = 0;
-                    L3: while (true) {
-                      if (var6 >= var5) {
-                        break L0;
-                      } else {
-                        ((go) this).field_c[var6] = (param1.a((byte) -11) << -533953584) - -((go) this).field_c[var6];
-                        var6++;
-                        continue L3;
+        RuntimeException stackIn_55_0 = null;
+        StringBuilder stackIn_55_1 = null;
+        RuntimeException stackIn_56_0 = null;
+        StringBuilder stackIn_56_1 = null;
+        RuntimeException stackIn_57_0 = null;
+        StringBuilder stackIn_57_1 = null;
+        String stackIn_57_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_54_0 = null;
+        StringBuilder stackOut_54_1 = null;
+        RuntimeException stackOut_56_0 = null;
+        StringBuilder stackOut_56_1 = null;
+        String stackOut_56_2 = null;
+        RuntimeException stackOut_55_0 = null;
+        StringBuilder stackOut_55_1 = null;
+        String stackOut_55_2 = null;
+        var9 = Vertigo2.field_L ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                var4_int = -62;
+                if (param0 == 1) {
+                  var5 = param1.a((byte) -11);
+                  ((go) this).field_e = new int[var5];
+                  var6 = 0;
+                  L3: while (true) {
+                    if (var6 >= var5) {
+                      ((go) this).field_c = new int[var5];
+                      var6 = 0;
+                      L4: while (true) {
+                        if (var5 <= var6) {
+                          var6 = 0;
+                          L5: while (true) {
+                            if (var6 >= var5) {
+                              break L2;
+                            } else {
+                              ((go) this).field_c[var6] = (param1.a((byte) -11) << 16) - -((go) this).field_c[var6];
+                              var6++;
+                              continue L5;
+                            }
+                          }
+                        } else {
+                          ((go) this).field_c[var6] = param1.a((byte) -11);
+                          var6++;
+                          continue L4;
+                        }
                       }
-                    }
-                  } else {
-                    ((go) this).field_c[var6] = param1.a((byte) -11);
-                    var6++;
-                    continue L2;
-                  }
-                }
-              } else {
-                ((go) this).field_e[var6] = param1.a((byte) -11);
-                var6++;
-                continue L1;
-              }
-            }
-          } else {
-            if (param0 == 2) {
-              ((go) this).field_b = param1.a((byte) -11);
-              break L0;
-            } else {
-              if (param0 == -4) {
-                var5 = param1.h(-11);
-                ((go) this).field_f = new int[1 + var5];
-                var6 = 0;
-                L4: while (true) {
-                  if (var6 >= var5) {
-                    ((go) this).field_f[var5] = 9999999;
-                    break L0;
-                  } else {
-                    ((go) this).field_f[var6] = param1.h(-11);
-                    var6++;
-                    continue L4;
-                  }
-                }
-              } else {
-                if (param0 == 5) {
-                  int discarded$8 = param1.h(-11);
-                  break L0;
-                } else {
-                  if (-7 != param0) {
-                    if (-8 == (param0 ^ -1)) {
-                      int discarded$9 = param1.a((byte) -11);
-                      break L0;
                     } else {
-                      if (8 == param0) {
-                        ((go) this).field_j = param1.h(-11);
-                        ((go) this).field_a = false;
-                        break L0;
+                      ((go) this).field_e[var6] = param1.a((byte) -11);
+                      var6++;
+                      continue L3;
+                    }
+                  }
+                } else {
+                  if (param0 == 2) {
+                    ((go) this).field_b = param1.a((byte) -11);
+                    break L1;
+                  } else {
+                    if (param0 == 3) {
+                      var5 = param1.h(-11);
+                      ((go) this).field_f = new int[1 + var5];
+                      var6 = 0;
+                      L6: while (true) {
+                        if (var6 >= var5) {
+                          ((go) this).field_f[var5] = 9999999;
+                          break L1;
+                        } else {
+                          ((go) this).field_f[var6] = param1.h(-11);
+                          var6++;
+                          continue L6;
+                        }
+                      }
+                    } else {
+                      if (param0 == 5) {
+                        int discarded$8 = param1.h(-11);
+                        break L1;
                       } else {
-                        if ((param0 ^ -1) != -10) {
-                          if ((param0 ^ -1) != -11) {
-                            if (11 != param0) {
-                              if (12 != param0) {
-                                if ((param0 ^ -1) == -14) {
-                                  var5 = param1.a((byte) -11);
-                                  ((go) this).field_i = new int[var5][];
-                                  var6 = 0;
-                                  L5: while (true) {
-                                    if (var6 >= var5) {
-                                      break L0;
-                                    } else {
-                                      var7 = param1.h(-11);
-                                      if (0 < var7) {
-                                        ((go) this).field_i[var6] = new int[var7];
-                                        ((go) this).field_i[var6][0] = param1.m(0);
-                                        var8 = 1;
-                                        L6: while (true) {
-                                          if (var8 < var7) {
-                                            ((go) this).field_i[var6][var8] = param1.a((byte) -11);
-                                            var8++;
-                                            continue L6;
+                        if (param0 != 6) {
+                          if (param0 == 7) {
+                            int discarded$9 = param1.a((byte) -11);
+                            break L1;
+                          } else {
+                            if (8 == param0) {
+                              ((go) this).field_j = param1.h(-11);
+                              ((go) this).field_a = false;
+                              break L1;
+                            } else {
+                              if (param0 != 9) {
+                                if (param0 != 10) {
+                                  if (11 != param0) {
+                                    if (12 != param0) {
+                                      if (param0 == 13) {
+                                        var5 = param1.a((byte) -11);
+                                        ((go) this).field_i = new int[var5][];
+                                        var6 = 0;
+                                        L7: while (true) {
+                                          if (~var6 <= ~var5) {
+                                            break L2;
                                           } else {
+                                            L8: {
+                                              var7 = param1.h(-11);
+                                              if (0 < var7) {
+                                                ((go) this).field_i[var6] = new int[var7];
+                                                ((go) this).field_i[var6][0] = param1.m(0);
+                                                var8 = 1;
+                                                L9: while (true) {
+                                                  if (~var8 <= ~var7) {
+                                                    break L8;
+                                                  } else {
+                                                    ((go) this).field_i[var6][var8] = param1.a((byte) -11);
+                                                    var8++;
+                                                    continue L9;
+                                                  }
+                                                }
+                                              } else {
+                                                break L8;
+                                              }
+                                            }
                                             var6++;
-                                            continue L5;
+                                            continue L7;
                                           }
                                         }
                                       } else {
-                                        var6++;
-                                        continue L5;
-                                      }
-                                    }
-                                  }
-                                } else {
-                                  if (14 == param0) {
-                                    break L0;
-                                  } else {
-                                    if ((param0 ^ -1) == -16) {
-                                      break L0;
-                                    } else {
-                                      if (param0 == -17) {
-                                        break L0;
-                                      } else {
-                                        if (-19 == param0) {
-                                          break L0;
+                                        if (14 == param0) {
+                                          break L2;
                                         } else {
-                                          break L0;
+                                          if (param0 == 15) {
+                                            break L2;
+                                          } else {
+                                            if (param0 == 16) {
+                                              break L2;
+                                            } else {
+                                              if (param0 == 18) {
+                                                break L2;
+                                              } else {
+                                                break L1;
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    } else {
+                                      var5 = param1.h(-11);
+                                      var6 = 0;
+                                      L10: while (true) {
+                                        if (~var6 <= ~var5) {
+                                          var6 = 0;
+                                          L11: while (true) {
+                                            if (~var6 <= ~var5) {
+                                              break L2;
+                                            } else {
+                                              int discarded$10 = param1.a((byte) -11);
+                                              var6++;
+                                              continue L11;
+                                            }
+                                          }
+                                        } else {
+                                          int discarded$11 = param1.a((byte) -11);
+                                          var6++;
+                                          continue L10;
                                         }
                                       }
                                     }
+                                  } else {
+                                    int discarded$12 = param1.h(-11);
+                                    break L1;
                                   }
+                                } else {
+                                  int discarded$13 = param1.h(-11);
+                                  break L1;
                                 }
                               } else {
-                                var5 = param1.h(-11);
-                                var6 = 0;
-                                L7: while (true) {
-                                  if (var6 >= var5) {
-                                    var6 = 0;
-                                    L8: while (true) {
-                                      if (var6 >= var5) {
-                                        break L0;
-                                      } else {
-                                        int discarded$10 = param1.a((byte) -11);
-                                        var6++;
-                                        continue L8;
-                                      }
-                                    }
-                                  } else {
-                                    int discarded$11 = param1.a((byte) -11);
-                                    var6++;
-                                    continue L7;
-                                  }
-                                }
+                                int discarded$14 = param1.h(-11);
+                                break L1;
                               }
-                            } else {
-                              int discarded$12 = param1.h(-11);
-                              break L0;
                             }
-                          } else {
-                            int discarded$13 = param1.h(-11);
-                            break L0;
                           }
                         } else {
-                          int discarded$14 = param1.h(-11);
-                          break L0;
+                          int discarded$15 = param1.a((byte) -11);
+                          break L1;
                         }
                       }
                     }
-                  } else {
-                    int discarded$15 = param1.a((byte) -11);
-                    break L0;
                   }
                 }
               }
+              break L1;
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L12: {
+            var4 = decompiledCaughtException;
+            stackOut_54_0 = (RuntimeException) var4;
+            stackOut_54_1 = new StringBuilder().append("go.B(").append(param0).append(44);
+            stackIn_56_0 = stackOut_54_0;
+            stackIn_56_1 = stackOut_54_1;
+            stackIn_55_0 = stackOut_54_0;
+            stackIn_55_1 = stackOut_54_1;
+            if (param1 == null) {
+              stackOut_56_0 = (RuntimeException) (Object) stackIn_56_0;
+              stackOut_56_1 = (StringBuilder) (Object) stackIn_56_1;
+              stackOut_56_2 = "null";
+              stackIn_57_0 = stackOut_56_0;
+              stackIn_57_1 = stackOut_56_1;
+              stackIn_57_2 = stackOut_56_2;
+              break L12;
+            } else {
+              stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
+              stackOut_55_1 = (StringBuilder) (Object) stackIn_55_1;
+              stackOut_55_2 = "{...}";
+              stackIn_57_0 = stackOut_55_0;
+              stackIn_57_1 = stackOut_55_1;
+              stackIn_57_2 = stackOut_55_2;
+              break L12;
             }
           }
+          throw wn.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + 44 + -121 + 41);
         }
     }
 
     public static void a(int param0) {
         field_d = null;
-        int var1 = 40 % ((param0 - -63) / 61);
+        int var1 = 0;
         field_g = null;
     }
 
     private go(r param0, int param1, int param2) {
         byte[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         byte[] var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
-        L0: {
-          ((go) this).field_j = 0;
-          ((go) this).field_b = -1;
-          ((go) this).field_a = true;
-          var11 = param0.a(param1, param2, (byte) -79);
-          var10 = var11;
-          var9 = var10;
-          var4 = var9;
-          if (var9 == null) {
-            break L0;
-          } else {
-            this.a(121, new ed(var11));
-            break L0;
-          }
-        }
-        var5 = 0;
-        var6 = 0;
-        L1: while (true) {
-          if (var6 >= ((go) this).field_c.length) {
-            var6 = 0;
-            var7 = 0;
-            L2: while (true) {
-              if (var7 >= ((go) this).field_e.length) {
+        byte[] var12 = null;
+        byte[] var13 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        ((go) this).field_j = 0;
+        ((go) this).field_b = -1;
+        try {
+          L0: {
+            L1: {
+              ((go) this).field_a = true;
+              var13 = param0.a(param1, param2, (byte) -79);
+              var12 = var13;
+              var11 = var12;
+              var10 = var11;
+              var9 = var10;
+              var4 = var9;
+              if (var9 == null) {
+                break L1;
               } else {
-                if (((go) this).field_e[var7] > var6) {
-                  var6 = ((go) this).field_e[var7];
-                  var7++;
-                  continue L2;
-                } else {
-                  var7++;
-                  continue L2;
-                }
+                this.a(121, new ed(var13));
+                break L1;
               }
             }
-          } else {
-            if (var5 < ((go) this).field_c[var6]) {
-              var5 = ((go) this).field_c[var6];
-              var6++;
-              continue L1;
-            } else {
-              var6++;
-              continue L1;
+            var5 = 0;
+            var6 = 0;
+            L2: while (true) {
+              if (var6 >= ((go) this).field_c.length) {
+                var6 = 0;
+                var7 = 0;
+                L3: while (true) {
+                  if (var7 >= ((go) this).field_e.length) {
+                    break L0;
+                  } else {
+                    L4: {
+                      if (((go) this).field_e[var7] <= var6) {
+                        break L4;
+                      } else {
+                        var6 = ((go) this).field_e[var7];
+                        break L4;
+                      }
+                    }
+                    var7++;
+                    continue L3;
+                  }
+                }
+              } else {
+                L5: {
+                  if (var5 >= ((go) this).field_c[var6]) {
+                    break L5;
+                  } else {
+                    var5 = ((go) this).field_c[var6];
+                    break L5;
+                  }
+                }
+                var6++;
+                continue L2;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var4_ref = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var4_ref;
+            stackOut_14_1 = new StringBuilder().append("go.<init>(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L6;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L6;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 

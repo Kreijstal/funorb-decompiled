@@ -17,31 +17,38 @@ final class ad implements Runnable {
     private int field_k;
 
     final static void a(int param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         rl var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = EscapeVector.field_A;
-        if (param1 < 44) {
-          return;
-        } else {
-          var4 = (rl) (Object) cd.field_s.a(false);
-          L0: while (true) {
-            if (var4 == null) {
-              return;
+        try {
+          L0: {
+            if (param1 >= 44) {
+              var4 = (rl) (Object) cd.field_s.a(false);
+              L1: while (true) {
+                if (var4 == null) {
+                  break L0;
+                } else {
+                  qh.a(var4, true, param0);
+                  var4 = (rl) (Object) cd.field_s.b((byte) 70);
+                  continue L1;
+                }
+              }
             } else {
-              qh.a(var4, true, param0);
-              var4 = (rl) (Object) cd.field_s.b((byte) 70);
-              continue L0;
+              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var2, "ad.A(" + param0 + 44 + param1 + 41);
         }
     }
 
     public static void b(int param0) {
         field_c = null;
         field_h = null;
-        if (param0 != -1) {
-            field_d = -109;
-        }
     }
 
     final n c(int param0) {
@@ -149,7 +156,7 @@ final class ad implements Runnable {
         java.net.Socket var4 = null;
         CharSequence var5 = null;
         Throwable decompiledCaughtException = null;
-        if (-3 >= (((ad) this).field_k ^ -1)) {
+        if (((ad) this).field_k >= 2) {
           return true;
         } else {
           L0: {
@@ -165,7 +172,7 @@ final class ad implements Runnable {
               if (((ad) this).field_e.field_f == 0) {
                 return false;
               } else {
-                if ((((ad) this).field_e.field_f ^ -1) != -2) {
+                if (((ad) this).field_e.field_f != 1) {
                   ((ad) this).field_e = null;
                   ((ad) this).field_k = ((ad) this).field_k + 1;
                   return false;
@@ -189,7 +196,7 @@ final class ad implements Runnable {
                   break L3;
                 }
               }
-              if (-1 != (((ad) this).field_a.field_f ^ -1)) {
+              if (((ad) this).field_a.field_f != 0) {
                 if (1 != ((ad) this).field_a.field_f) {
                   ((ad) this).field_a = null;
                   ((ad) this).field_k = ((ad) this).field_k + 1;
@@ -236,7 +243,7 @@ final class ad implements Runnable {
               ((ad) this).finalize();
               ((ad) this).field_k = ((ad) this).field_k + 1;
               if (((ad) this).field_g != null) {
-                if (-1 != (((ad) this).field_g.field_f ^ -1)) {
+                if (((ad) this).field_g.field_f != 0) {
                   if (1 == ((ad) this).field_g.field_f) {
                     if (param0 != 17) {
                       ad.a(49, -88);
@@ -259,7 +266,7 @@ final class ad implements Runnable {
                 }
               } else {
                 ((ad) this).field_g = ((ad) this).field_f.a(true, 5, (Runnable) this);
-                if (-1 != (((ad) this).field_g.field_f ^ -1)) {
+                if (((ad) this).field_g.field_f != 0) {
                   if (1 != ((ad) this).field_g.field_f) {
                     ((ad) this).finalize();
                     ((ad) this).field_k = ((ad) this).field_k + 1;
@@ -290,7 +297,7 @@ final class ad implements Runnable {
                 break L7;
               }
             }
-            if (-1 == (((ad) this).field_g.field_f ^ -1)) {
+            if (((ad) this).field_g.field_f == 0) {
               return false;
             } else {
               L8: {
@@ -321,7 +328,7 @@ final class ad implements Runnable {
                 break L10;
               }
             }
-            if (-1 == (((ad) this).field_g.field_f ^ -1)) {
+            if (((ad) this).field_g.field_f == 0) {
               return false;
             } else {
               L11: {
@@ -348,9 +355,13 @@ final class ad implements Runnable {
     }
 
     ad(lk param0, java.net.URL param1, int param2) {
-        ((ad) this).field_f = param0;
-        ((ad) this).field_j = param1;
-        ((ad) this).field_i = new n(param2);
+        try {
+            ((ad) this).field_f = param0;
+            ((ad) this).field_j = param1;
+            ((ad) this).field_i = new n(param2);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "ad.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

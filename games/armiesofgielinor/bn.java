@@ -11,14 +11,15 @@ final class bn {
     static String field_g;
 
     final static void a(byte param0, float param1, String param2) {
-        if (param0 != -24) {
-            field_a = null;
+        try {
+            if (param0 != -24) {
+                field_a = null;
+            }
             wa.field_e = param2;
             q.field_C = param1;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "bn.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        wa.field_e = param2;
-        q.field_C = param1;
     }
 
     final static int a(byte param0, int param1, int param2) {
@@ -45,30 +46,15 @@ final class bn {
         if (!hf.field_c) {
             return false;
         }
-        if (param0) {
-            return true;
-        }
-        if (rs.field_t != 0) {
-            return false;
-        }
         return true;
     }
 
     public static void a(int param0) {
         field_g = null;
         field_d = null;
-        if (param0 != 29022) {
-          field_d = null;
-          field_a = null;
-          field_f = null;
-          field_c = null;
-          return;
-        } else {
-          field_a = null;
-          field_f = null;
-          field_c = null;
-          return;
-        }
+        field_a = null;
+        field_f = null;
+        field_c = null;
     }
 
     final static void a(boolean param0, boolean param1, int param2, int param3) {
@@ -436,7 +422,7 @@ final class bn {
           L6: {
             ((je) (Object) stackIn_69_0).a(stackIn_69_1 != 0, stackIn_69_2 != 0);
             pj.field_E.field_a.l(10000);
-            if (-1 != (cp.field_d.field_yb ^ -1)) {
+            if (cp.field_d.field_yb != 0) {
               cg.field_a = true;
               break L6;
             } else {
@@ -452,7 +438,7 @@ final class bn {
                   gu.a(-61, param3);
                   break L7;
                 } else {
-                  if ((df.field_M ^ -1) < -1) {
+                  if (df.field_M > 0) {
                     gu.a(-61, param3);
                     break L7;
                   } else {
@@ -477,7 +463,7 @@ final class bn {
               }
             }
             L9: {
-              if (-1 == (pe.field_x.field_yb ^ -1)) {
+              if (pe.field_x.field_yb == 0) {
                 break L9;
               } else {
                 L10: {
@@ -697,7 +683,7 @@ final class bn {
           L18: {
             ((je) (Object) stackIn_20_0).a(stackIn_20_1 != 0, stackIn_20_2 != 0);
             pj.field_E.field_a.l(10000);
-            if (-1 != (cp.field_d.field_yb ^ -1)) {
+            if (cp.field_d.field_yb != 0) {
               cg.field_a = true;
               break L18;
             } else {
@@ -713,7 +699,7 @@ final class bn {
                   gu.a(-61, param3);
                   break L19;
                 } else {
-                  if ((df.field_M ^ -1) < -1) {
+                  if (df.field_M > 0) {
                     gu.a(-61, param3);
                     break L19;
                   } else {
@@ -736,7 +722,7 @@ final class bn {
               }
             }
             L20: {
-              if (-1 == (pe.field_x.field_yb ^ -1)) {
+              if (pe.field_x.field_yb == 0) {
                 break L20;
               } else {
                 if (lm.field_e.length != 1) {

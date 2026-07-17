@@ -103,7 +103,7 @@ final class bd extends en {
                 stackOut_11_0 = stackIn_11_0;
                 stackIn_14_0 = stackOut_11_0;
                 stackIn_12_0 = stackOut_11_0;
-                if (-4 != (((bd) this).field_h.field_g ^ -1)) {
+                if (((bd) this).field_h.field_g != 3) {
                   stackOut_14_0 = stackIn_14_0;
                   stackOut_14_1 = 0;
                   stackIn_15_0 = stackOut_14_0;
@@ -135,7 +135,7 @@ final class bd extends en {
         L6: {
           var10 = new cn(param1, var6);
           var10.e();
-          db.field_v.c(((bd) this).field_h.field_z.toUpperCase(), param1 >> 1294990081, var7, 16777215, -1);
+          db.field_v.c(((bd) this).field_h.field_z.toUpperCase(), param1 >> 1, var7, 16777215, -1);
           var7 = var7 + la.field_b.field_H * 2;
           if (param0) {
             break L6;
@@ -156,18 +156,18 @@ final class bd extends en {
                 L9: {
                   var7 = var7 + la.field_b.field_H;
                   if (2 == ((bd) this).field_h.field_g) {
-                    db.field_v.c(rb.field_K, param1 >> 3111937, var7, 16711680, -1);
+                    db.field_v.c(rb.field_K, param1 >> 1, var7, 16711680, -1);
                     break L9;
                   } else {
-                    if (-2 != (((bd) this).field_h.field_g ^ -1)) {
+                    if (((bd) this).field_h.field_g != 1) {
                       if (3 != ((bd) this).field_h.field_g) {
                         break L9;
                       } else {
-                        db.field_v.c(lf.field_m, param1 >> -1079794143, var7, 16711680, -1);
+                        db.field_v.c(lf.field_m, param1 >> 1, var7, 16711680, -1);
                         break L9;
                       }
                     } else {
-                      db.field_v.c(gm.field_a, param1 >> 309056961, var7, 16711680, -1);
+                      db.field_v.c(gm.field_a, param1 >> 1, var7, 16711680, -1);
                       break L9;
                     }
                   }
@@ -188,8 +188,8 @@ final class bd extends en {
                   } else {
                     var21 = var20[var17];
                     var14 = db.field_v.b(var21.field_b) - -24;
-                    var21.field_c.c(-var14 + param1 >> -1438539359, -(-var21.field_c.field_v + la.field_b.field_H * 3 >> 1700686177) + var7, var21.field_a);
-                    db.field_v.b(ck.field_H.a(var21.field_b, (byte) -48), 24 + (-var14 + param1 >> 1163385153), var7, var21.field_a, -1);
+                    var21.field_c.c(-var14 + param1 >> 1, -(-var21.field_c.field_v + la.field_b.field_H * 3 >> 1) + var7, var21.field_a);
+                    db.field_v.b(ck.field_H.a(var21.field_b, (byte) -48), 24 + (-var14 + param1 >> 1), var7, var21.field_a, -1);
                     var7 = var7 + la.field_b.field_H;
                     var17++;
                     continue L11;
@@ -203,7 +203,7 @@ final class bd extends en {
             return var10;
           } else {
             var19 = var18[var12];
-            la.field_b.c(var19, param1 >> -2033248223, var7, 16777215, -1);
+            la.field_b.c(var19, param1 >> 1, var7, 16777215, -1);
             var7 = var7 + la.field_b.field_H;
             var12++;
             continue L7;
@@ -224,15 +224,14 @@ final class bd extends en {
     final cn b(byte param0) {
         String var2 = null;
         Object var3 = null;
-        String[] var3_array = null;
-        String var4_ref = null;
+        String var4_ref_String = null;
         int var4 = 0;
         cn var5 = null;
         int var6 = 0;
-        String[] var7_ref_String__ = null;
+        Object[] var7_ref = null;
         int var7 = 0;
         int var8 = 0;
-        String var9 = null;
+        Object var9 = null;
         int var10 = 0;
         String var11 = null;
         int stackIn_7_0 = 0;
@@ -264,10 +263,10 @@ final class bd extends en {
           if (var2 == null) {
             break L1;
           } else {
-            var4_ref = jk.a(new String[1], "<col=178B8B><%0></col>", 30496);
+            var4_ref_String = jk.a(new String[1], "<col=178B8B><%0></col>", 30496);
             var11 = ck.field_H.a(jk.a(new String[1], var2, 30496), (byte) -48);
             var2 = var11;
-            var3_array = jn.a(var11, new int[1], -122, (se) (Object) db.field_v);
+            var3 = (Object) (Object) jn.a(var11, new int[1], -122, (se) (Object) db.field_v);
             break L1;
           }
         }
@@ -283,7 +282,7 @@ final class bd extends en {
             break L2;
           } else {
             stackOut_7_0 = stackIn_7_0;
-            stackOut_7_1 = 2 + var3_array.length;
+            stackOut_7_1 = 2 + ((Object[]) var3).length;
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             break L2;
@@ -297,15 +296,15 @@ final class bd extends en {
           db.field_v.c(((bd) this).field_h.field_z, 100, var6, 16777215, -1);
           var6 = var6 + db.field_v.field_H;
           if (var2 != null) {
-            var7_ref_String__ = var3_array;
+            var7_ref = (Object[]) var3;
             var8 = 0;
             L4: while (true) {
-              if (var7_ref_String__.length <= var8) {
+              if (var7_ref.length <= var8) {
                 break L3;
               } else {
-                var9 = var7_ref_String__[var8];
+                var9 = var7_ref[var8];
                 var6 = var6 + db.field_v.field_H;
-                db.field_v.c(var9, 100, var6, 16777215, -1);
+                db.field_v.c((String) var9, 100, var6, 16777215, -1);
                 var8++;
                 continue L4;
               }
@@ -320,11 +319,16 @@ final class bd extends en {
     }
 
     final void a(int param0, sa param1) {
-        if (param0 != 0) {
-            ((bd) this).field_d = null;
+        cn var3 = null;
+        try {
+            if (param0 != 0) {
+                ((bd) this).field_d = null;
+            }
+            var3 = this.a(true, -40 + param1.field_b);
+            param1.a(var3, 8 + var3.field_v, false, 111, -la.field_b.field_H + param1.field_y >> 1);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "bd.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        cn var3 = this.a(true, -40 + param1.field_b);
-        param1.a(var3, 8 + var3.field_v, false, 111, -la.field_b.field_H + param1.field_y >> 823221761);
     }
 
     public static void b(int param0) {
@@ -336,13 +340,21 @@ final class bd extends en {
     }
 
     bd(pj param0, ai param1) {
-        ((bd) this).field_d = param1;
-        ((bd) this).field_h = ((bd) this).field_d.field_h;
+        try {
+            ((bd) this).field_d = param1;
+            ((bd) this).field_h = ((bd) this).field_d.field_h;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "bd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     bd(ac param0) {
-        ((bd) this).field_h = param0;
-        ((bd) this).field_d = null;
+        try {
+            ((bd) this).field_h = param0;
+            ((bd) this).field_d = null;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "bd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

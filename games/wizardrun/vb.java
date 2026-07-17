@@ -10,7 +10,8 @@ final class vb extends pl {
     private int field_K;
 
     final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ub param6) {
-        int var8 = 0;
+        RuntimeException var8 = null;
+        int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -18,68 +19,128 @@ final class vb extends pl {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_23_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_22_0 = 0;
+        int stackOut_20_0 = 0;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
         var15 = wizardrun.field_H;
-        var8 = 49 / ((param1 - 12) / 36);
-        if (!super.a(param0, (byte) -103, param2, param3, param4, param5, param6)) {
-          return false;
-        } else {
+        try {
           L0: {
-            var9 = -((vb) this).field_G + -param0 + param2;
-            var10 = -(2 * ((vb) this).field_G) + ((vb) this).field_r;
-            if (var9 > var10) {
-              var9 = var10;
+            var8_int = 49 / ((param1 - 12) / 36);
+            if (!super.a(param0, (byte) -103, param2, param3, param4, param5, param6)) {
+              stackOut_22_0 = 0;
+              stackIn_23_0 = stackOut_22_0;
               break L0;
             } else {
-              break L0;
-            }
-          }
-          L1: {
-            if ((var9 ^ -1) <= -1) {
-              break L1;
-            } else {
-              var9 = 0;
-              break L1;
-            }
-          }
-          L2: {
-            var9 = ((vb) this).field_K * var9 / var10;
-            if (param4 != 1) {
-              if ((param4 ^ -1) == -3) {
-                var11 = 2147483647;
-                var12 = -1;
-                var13 = 0;
-                L3: while (true) {
-                  if (var13 >= ((vb) this).field_H.a(31)) {
-                    if ((var12 ^ -1) <= -1) {
-                      ((vb) this).field_H.d(-1, var12);
-                      break L2;
-                    } else {
-                      break L2;
+              L1: {
+                var9 = -((vb) this).field_G + -param0 + param2;
+                var10 = -(2 * ((vb) this).field_G) + ((vb) this).field_r;
+                if (var9 > var10) {
+                  var9 = var10;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              L2: {
+                if (var9 >= 0) {
+                  break L2;
+                } else {
+                  var9 = 0;
+                  break L2;
+                }
+              }
+              L3: {
+                var9 = ((vb) this).field_K * var9 / var10;
+                if (param4 != 1) {
+                  if (param4 == 2) {
+                    var11 = 2147483647;
+                    var12 = -1;
+                    var13 = 0;
+                    L4: while (true) {
+                      if (var13 >= ((vb) this).field_H.a(31)) {
+                        if (var12 >= 0) {
+                          ((vb) this).field_H.d(-1, var12);
+                          break L3;
+                        } else {
+                          break L3;
+                        }
+                      } else {
+                        L5: {
+                          var14 = -var9 + ((vb) this).field_H.a(-112, var13);
+                          var14 = var14 * var14;
+                          if (var11 > var14) {
+                            var12 = var13;
+                            var11 = var14;
+                            break L5;
+                          } else {
+                            break L5;
+                          }
+                        }
+                        var13++;
+                        continue L4;
+                      }
                     }
                   } else {
-                    var14 = -var9 + ((vb) this).field_H.a(-112, var13);
-                    var14 = var14 * var14;
-                    if (var11 > var14) {
-                      var12 = var13;
-                      var11 = var14;
-                      var13++;
-                      continue L3;
-                    } else {
-                      var13++;
-                      continue L3;
-                    }
+                    return true;
                   }
+                } else {
+                  ((vb) this).field_H.e(16711838, var9);
+                  break L3;
                 }
-              } else {
-                return true;
               }
-            } else {
-              ((vb) this).field_H.e(16711838, var9);
-              break L2;
+              stackOut_20_0 = 1;
+              stackIn_21_0 = stackOut_20_0;
+              return stackIn_21_0 != 0;
             }
           }
-          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var8 = decompiledCaughtException;
+            stackOut_24_0 = (RuntimeException) var8;
+            stackOut_24_1 = new StringBuilder().append("vb.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
+            if (param6 == null) {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L6;
+            } else {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L6;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
         }
+        return stackIn_23_0 != 0;
     }
 
     final int b(int param0, int param1) {
@@ -92,7 +153,7 @@ final class vb extends pl {
           }
         }
         L1: {
-          if (-1 < (param1 ^ -1)) {
+          if (param1 < 0) {
             break L1;
           } else {
             if (((vb) this).field_H.a(param0 + 10327) > param1) {
@@ -116,7 +177,7 @@ final class vb extends pl {
         if (param0 != -3) {
             return null;
         }
-        return cb.a(param4, param2, 1, true, 1, param3, 3, param1, 1);
+        return cb.a(65793, param2, 1, true, 1, param3, 3, param1, 1);
     }
 
     final int e(int param0) {
@@ -127,9 +188,6 @@ final class vb extends pl {
     }
 
     public static void a(byte param0) {
-        if (param0 <= 125) {
-            field_F = null;
-        }
         field_I = null;
         field_F = null;
     }

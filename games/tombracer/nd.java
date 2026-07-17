@@ -10,10 +10,7 @@ final class nd implements Iterator {
     private sk field_c;
 
     final static boolean b(byte param0) {
-        if (param0 > -88) {
-            return true;
-        }
-        return !gva.field_b.b(52) ? true : false;
+        return !gva.field_b.b(52);
     }
 
     public final boolean hasNext() {
@@ -22,8 +19,9 @@ final class nd implements Iterator {
         if (((nd) this).field_c.field_e[-1 + ((nd) this).field_b] == ((nd) this).field_a) {
           L0: while (true) {
             if (((nd) this).field_c.field_g > ((nd) this).field_b) {
+              int fieldTemp$1 = ((nd) this).field_b;
               ((nd) this).field_b = ((nd) this).field_b + 1;
-              if (((nd) this).field_c.field_e[((nd) this).field_b].field_a == ((nd) this).field_c.field_e[((nd) this).field_b - 1]) {
+              if (((nd) this).field_c.field_e[fieldTemp$1].field_a == ((nd) this).field_c.field_e[((nd) this).field_b - 1]) {
                 ((nd) this).field_a = ((nd) this).field_c.field_e[-1 + ((nd) this).field_b];
                 continue L0;
               } else {
@@ -41,16 +39,8 @@ final class nd implements Iterator {
 
     private final void a(boolean param0) {
         ((nd) this).field_d = null;
-        if (!param0) {
-          ((nd) this).field_b = -88;
-          ((nd) this).field_a = ((nd) this).field_c.field_e[0].field_a;
-          ((nd) this).field_b = 1;
-          return;
-        } else {
-          ((nd) this).field_a = ((nd) this).field_c.field_e[0].field_a;
-          ((nd) this).field_b = 1;
-          return;
-        }
+        ((nd) this).field_a = ((nd) this).field_c.field_e[0].field_a;
+        ((nd) this).field_b = 1;
     }
 
     final static void a(byte param0) {
@@ -63,8 +53,56 @@ final class nd implements Iterator {
     }
 
     final static void a(String param0, int param1) {
-        if (param1 != -1) {
-            return;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("nd.B(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -1 + 41);
         }
     }
 
@@ -92,8 +130,9 @@ final class nd implements Iterator {
         if (((nd) this).field_a == ((nd) this).field_c.field_e[((nd) this).field_b - 1]) {
           L0: while (true) {
             if (((nd) this).field_b < ((nd) this).field_c.field_g) {
+              int fieldTemp$2 = ((nd) this).field_b;
               ((nd) this).field_b = ((nd) this).field_b + 1;
-              var3 = ((nd) this).field_c.field_e[((nd) this).field_b].field_a;
+              var3 = ((nd) this).field_c.field_e[fieldTemp$2].field_a;
               if (var3 != ((nd) this).field_c.field_e[-1 + ((nd) this).field_b]) {
                 ((nd) this).field_a = var3.field_a;
                 ((nd) this).field_d = var3;
@@ -115,8 +154,12 @@ final class nd implements Iterator {
 
     nd(sk param0) {
         ((nd) this).field_d = null;
-        ((nd) this).field_c = param0;
-        this.a(true);
+        try {
+            ((nd) this).field_c = param0;
+            this.a(true);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

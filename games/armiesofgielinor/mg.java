@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 abstract class mg {
     static String field_c;
     static String field_b;
@@ -22,9 +24,6 @@ abstract class mg {
     }
 
     public static void b(int param0) {
-        if (param0 != 9892) {
-            return;
-        }
         field_d = null;
         field_c = null;
         field_b = null;
@@ -37,6 +36,7 @@ abstract class mg {
     final static String a(int param0, java.applet.Applet param1) {
         try {
             Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -45,7 +45,26 @@ abstract class mg {
             int var8 = 0;
             String var9 = null;
             String stackIn_7_0 = null;
+            String stackIn_13_0 = null;
+            String stackIn_15_0 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            String stackIn_19_2 = null;
             String stackOut_6_0 = null;
+            String stackOut_12_0 = null;
+            String stackOut_14_0 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            String stackOut_18_2 = null;
             int statePc = 0;
             Throwable caughtException = null;
             stateLoop: while (true) {
@@ -87,7 +106,7 @@ abstract class mg {
                     case 3: {
                         try {
                             var7 = var5[var6].indexOf('=');
-                            if (-1 < (var7 ^ -1)) {
+                            if (var7 < 0) {
                                 statePc = 8;
                             } else {
                                 statePc = 4;
@@ -136,7 +155,7 @@ abstract class mg {
                         }
                     }
                     case 7: {
-                        return (String) (Object) stackIn_7_0;
+                        return stackIn_7_0;
                     }
                     case 8: {
                         try {
@@ -150,23 +169,97 @@ abstract class mg {
                         }
                     }
                     case 10: {
-                        var2 = caughtException;
-                        statePc = 11;
-                        continue stateLoop;
+                        try {
+                            var2 = caughtException;
+                            statePc = 11;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_10) {
+                            caughtException = stateCaught_10;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
                     }
                     case 11: {
-                        if (sj.field_b != null) {
+                        try {
+                            if (sj.field_b == null) {
+                                statePc = 14;
+                            } else {
+                                statePc = 12;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_11) {
+                            caughtException = stateCaught_11;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
+                    case 12: {
+                        try {
+                            stackOut_12_0 = sj.field_b;
+                            stackIn_13_0 = stackOut_12_0;
                             statePc = 13;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_12) {
+                            caughtException = stateCaught_12;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
+                    case 13: {
+                        return stackIn_13_0;
+                    }
+                    case 14: {
+                        try {
+                            stackOut_14_0 = param1.getParameter("settings");
+                            stackIn_15_0 = stackOut_14_0;
+                            statePc = 15;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_14) {
+                            caughtException = stateCaught_14;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
+                    case 15: {
+                        return stackIn_15_0;
+                    }
+                    case 16: {
+                        var2_ref = (RuntimeException) (Object) caughtException;
+                        stackOut_16_0 = (RuntimeException) var2_ref;
+                        stackOut_16_1 = new StringBuilder().append("mg.G(").append(param0).append(44);
+                        stackIn_18_0 = stackOut_16_0;
+                        stackIn_18_1 = stackOut_16_1;
+                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_1 = stackOut_16_1;
+                        if (param1 == null) {
+                            statePc = 18;
                         } else {
-                            statePc = 12;
+                            statePc = 17;
                         }
                         continue stateLoop;
                     }
-                    case 12: {
-                        return param1.getParameter("settings");
+                    case 17: {
+                        stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                        stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                        stackOut_17_2 = "{...}";
+                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_1 = stackOut_17_1;
+                        stackIn_19_2 = stackOut_17_2;
+                        statePc = 19;
+                        continue stateLoop;
                     }
-                    case 13: {
-                        return sj.field_b;
+                    case 18: {
+                        stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+                        stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                        stackOut_18_2 = "null";
+                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_1 = stackOut_18_1;
+                        stackIn_19_2 = stackOut_18_2;
+                        statePc = 19;
+                        continue stateLoop;
+                    }
+                    case 19: {
+                        throw ig.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }

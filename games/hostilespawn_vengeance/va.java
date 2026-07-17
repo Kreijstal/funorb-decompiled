@@ -109,6 +109,7 @@ final class va {
           if (var2 >= 10) {
             ((va) this).field_b = param0.e(8);
             ((va) this).field_c = param0.e(8);
+            return;
           } else {
             var3 = param0.l(32270);
             if (var3 != 0) {

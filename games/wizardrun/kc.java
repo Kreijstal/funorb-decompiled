@@ -10,8 +10,12 @@ final class kc extends pl {
     private dk field_F;
 
     final void a(int param0, int param1, int param2, ub param3) {
-        ((kc) this).field_K = ((kc) this).field_K + 1;
-        super.a(param0, param1, param2, param3);
+        try {
+            ((kc) this).field_K = ((kc) this).field_K + 1;
+            super.a(param0, param1, param2, param3);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "kc.H(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final String c(boolean param0) {
@@ -41,8 +45,8 @@ final class kc extends pl {
         if (param2 != 0) {
           return;
         } else {
-          var5 = ((kc) this).field_o + param0 + (((kc) this).field_r >> 2142554721);
-          var6 = (((kc) this).field_n >> 2086654273) + (param3 - -((kc) this).field_l);
+          var5 = ((kc) this).field_o + param0 + (((kc) this).field_r >> 1);
+          var6 = (((kc) this).field_n >> 1) + (param3 - -((kc) this).field_l);
           var8 = ((kc) this).field_F.a(true);
           if (nf.field_c != var8) {
             if (l.field_S != var8) {
@@ -51,31 +55,31 @@ final class kc extends pl {
                   return;
                 } else {
                   var21 = te.field_k[1];
-                  var21.a(-(var21.field_z >> 1860228641) + var5, var6 - (var21.field_p >> 712628705), 256);
+                  var21.a(-(var21.field_z >> 1) + var5, var6 - (var21.field_p >> 1), 256);
                   return;
                 }
               } else {
                 var12 = te.field_k[2];
-                var12.a(-(var12.field_z >> 2100765505) + var5, -(var12.field_p >> 2072487713) + var6, 256);
+                var12.a(-(var12.field_z >> 1) + var5, -(var12.field_p >> 1) + var6, 256);
                 return;
               }
             } else {
               var18 = te.field_k[0];
-              var9 = var18.field_x << -125988159;
-              var10 = var18.field_s << -1428188991;
+              var9 = var18.field_x << 1;
+              var10 = var18.field_s << 1;
               if (null != ue.field_d) {
                 if (ue.field_d.field_z >= var9) {
                   if (ue.field_d.field_p < var10) {
                     ue.field_d = new o(var9, var10);
                     ud.a(ue.field_d, false);
-                    var18.b(112, 144, var18.field_x << -2026646044, var18.field_s << 1483631588, -((kc) this).field_K << 1816807530, 4096);
+                    var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -((kc) this).field_K << 10, 4096);
                     bb.b(4);
                     ue.field_d.a(var5 - var18.field_x, var6 - var18.field_s, 256);
                     return;
                   } else {
                     ud.a(ue.field_d, false);
                     ed.d();
-                    var18.b(112, 144, var18.field_x << -2026646044, var18.field_s << 1483631588, -((kc) this).field_K << 1816807530, 4096);
+                    var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -((kc) this).field_K << 10, 4096);
                     bb.b(4);
                     ue.field_d.a(var5 - var18.field_x, var6 - var18.field_s, 256);
                     return;
@@ -83,7 +87,7 @@ final class kc extends pl {
                 } else {
                   ue.field_d = new o(var9, var10);
                   ud.a(ue.field_d, false);
-                  var18.b(112, 144, var18.field_x << -2026646044, var18.field_s << 1483631588, -((kc) this).field_K << 1816807530, 4096);
+                  var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -((kc) this).field_K << 10, 4096);
                   bb.b(4);
                   ue.field_d.a(var5 - var18.field_x, var6 - var18.field_s, 256);
                   return;
@@ -91,7 +95,7 @@ final class kc extends pl {
               } else {
                 ue.field_d = new o(var9, var10);
                 ud.a(ue.field_d, false);
-                var18.b(112, 144, var18.field_x << -2026646044, var18.field_s << 1483631588, -((kc) this).field_K << 1816807530, 4096);
+                var18.b(112, 144, var18.field_x << 4, var18.field_s << 4, -((kc) this).field_K << 10, 4096);
                 bb.b(4);
                 ue.field_d.a(var5 - var18.field_x, var6 - var18.field_s, 256);
                 return;
@@ -99,21 +103,21 @@ final class kc extends pl {
             }
           } else {
             var15 = te.field_k[0];
-            var9 = var15.field_x << -125988159;
-            var10 = var15.field_s << -1428188991;
+            var9 = var15.field_x << 1;
+            var10 = var15.field_s << 1;
             if (null != ue.field_d) {
               if (ue.field_d.field_z >= var9) {
                 if (ue.field_d.field_p < var10) {
                   ue.field_d = new o(var9, var10);
                   ud.a(ue.field_d, false);
-                  var15.b(112, 144, var15.field_x << -2026646044, var15.field_s << 1483631588, -((kc) this).field_K << 1816807530, 4096);
+                  var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -((kc) this).field_K << 10, 4096);
                   bb.b(4);
                   ue.field_d.a(var5 - var15.field_x, var6 - var15.field_s, 256);
                   return;
                 } else {
                   ud.a(ue.field_d, false);
                   ed.d();
-                  var15.b(112, 144, var15.field_x << -2026646044, var15.field_s << 1483631588, -((kc) this).field_K << 1816807530, 4096);
+                  var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -((kc) this).field_K << 10, 4096);
                   bb.b(4);
                   ue.field_d.a(var5 - var15.field_x, var6 - var15.field_s, 256);
                   return;
@@ -121,7 +125,7 @@ final class kc extends pl {
               } else {
                 ue.field_d = new o(var9, var10);
                 ud.a(ue.field_d, false);
-                var15.b(112, 144, var15.field_x << -2026646044, var15.field_s << 1483631588, -((kc) this).field_K << 1816807530, 4096);
+                var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -((kc) this).field_K << 10, 4096);
                 bb.b(4);
                 ue.field_d.a(var5 - var15.field_x, var6 - var15.field_s, 256);
                 return;
@@ -129,7 +133,7 @@ final class kc extends pl {
             } else {
               ue.field_d = new o(var9, var10);
               ud.a(ue.field_d, false);
-              var15.b(112, 144, var15.field_x << -2026646044, var15.field_s << 1483631588, -((kc) this).field_K << 1816807530, 4096);
+              var15.b(112, 144, var15.field_x << 4, var15.field_s << 4, -((kc) this).field_K << 10, 4096);
               bb.b(4);
               ue.field_d.a(var5 - var15.field_x, var6 - var15.field_s, 256);
               return;
@@ -139,29 +143,84 @@ final class kc extends pl {
     }
 
     final boolean a(ub param0, int param1) {
-        if (param1 != 8) {
-            return false;
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param1 == 8) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("kc.J(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
-        return false;
+        return stackIn_4_0 != 0;
     }
 
     public static void d(int param0) {
-        if (param0 != 112) {
-          field_G = null;
-          field_G = null;
-          field_J = null;
-          field_H = null;
-          return;
-        } else {
-          field_G = null;
-          field_J = null;
-          field_H = null;
-          return;
-        }
+        field_G = null;
+        field_J = null;
+        field_H = null;
     }
 
     kc(dk param0) {
-        ((kc) this).field_F = param0;
+        try {
+            ((kc) this).field_F = param0;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "kc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

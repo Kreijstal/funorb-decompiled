@@ -23,20 +23,12 @@ final class nj extends aa {
     }
 
     final static void d(int param0) {
-        if (param0 != -8129) {
-            return;
-        }
         ag.field_n = ka.b((byte) 116);
         vn.field_f = new lt();
         hg.a(true, true, true);
     }
 
     public static void a(byte param0) {
-        if (param0 != -59) {
-            field_f = (qo) null;
-            field_f = null;
-            return;
-        }
         field_f = null;
     }
 

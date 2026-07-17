@@ -266,7 +266,7 @@ final class mj {
           L0: {
             if (param1 == -31729) {
               L1: {
-                if ((((mj) this).field_n ^ -1) != 0) {
+                if (((mj) this).field_n != -1) {
                   L2: {
                     if (((mj) this).field_e) {
                       break L2;
@@ -417,13 +417,13 @@ final class mj {
           L0: {
             L1: {
               L2: {
-                if ((uc.field_C ^ -1) != (((mj) this).field_h ^ -1)) {
+                if (~uc.field_C != ~((mj) this).field_h) {
                   break L2;
                 } else {
-                  if ((((mj) this).field_a ^ -1) != (ll.field_y ^ -1)) {
+                  if (~((mj) this).field_a != ~ll.field_y) {
                     break L2;
                   } else {
-                    if ((vh.field_e ^ -1) != -1) {
+                    if (vh.field_e != 0) {
                       break L2;
                     } else {
                       break L1;
@@ -497,7 +497,7 @@ final class mj {
             }
             var3 = 0;
             L9: while (true) {
-              if ((((mj) this).field_m.length ^ -1) >= (var3 ^ -1)) {
+              if (~((mj) this).field_m.length >= ~var3) {
                 L10: {
                   if (jh.b(767564065)) {
                     ((mj) this).field_c[11].field_f = qe.field_c;
@@ -519,9 +519,9 @@ final class mj {
                 }
                 var3 = 0;
                 L11: while (true) {
-                  if ((var3 ^ -1) <= (((mj) this).field_c.length ^ -1)) {
+                  if (~var3 <= ~((mj) this).field_c.length) {
                     L12: {
-                      if (-1 <= (kb.field_a ^ -1)) {
+                      if (kb.field_a <= 0) {
                         if (!jh.b(767564065)) {
                           ((mj) this).field_g[0].field_f = hi.field_b;
                           ((mj) this).field_g[0].field_i = 12;
@@ -560,7 +560,7 @@ final class mj {
                         }
                         var3 = 0;
                         L15: while (true) {
-                          if ((((mj) this).field_i.length ^ -1) >= (var3 ^ -1)) {
+                          if (~((mj) this).field_i.length >= ~var3) {
                             ((mj) this).field_h = uc.field_C;
                             ((mj) this).field_a = ll.field_y;
                             if (var2_int != 0) {
@@ -855,7 +855,7 @@ final class mj {
                     var7 = 0;
                     var8 = 0;
                     L4: while (true) {
-                      if (-11 >= (var8 ^ -1)) {
+                      if (var8 >= 10) {
                         L5: {
                           if (var7 != 0) {
                             break L5;
@@ -876,7 +876,7 @@ final class mj {
                               if (!s.a(var2_array[var8], param0 + -23409)) {
                                 break L6;
                               } else {
-                                if ((var3[var8] ^ -1L) != (var6.field_o ^ -1L)) {
+                                if (~var3[var8] != ~var6.field_o) {
                                   break L6;
                                 } else {
                                   if (var4[var8] != ti.field_O) {
@@ -903,7 +903,7 @@ final class mj {
                                   if (var8 != 9) {
                                     break L9;
                                   } else {
-                                    if ((ti.field_O ^ -1) >= -1) {
+                                    if (ti.field_O <= 0) {
                                       break L9;
                                     } else {
                                       break L8;
@@ -985,7 +985,7 @@ final class mj {
             }
             var2_int = 0;
             L13: while (true) {
-              if ((((mj) this).field_m.length ^ -1) >= (var2_int ^ -1)) {
+              if (~((mj) this).field_m.length >= ~var2_int) {
                 var2_int = 0;
                 L14: while (true) {
                   if (((mj) this).field_c.length <= var2_int) {
@@ -999,10 +999,10 @@ final class mj {
                     }
                     var2_int = 0;
                     L16: while (true) {
-                      if ((var2_int ^ -1) <= (((mj) this).field_g.length ^ -1)) {
+                      if (~var2_int <= ~((mj) this).field_g.length) {
                         var2_int = 0;
                         L17: while (true) {
-                          if ((var2_int ^ -1) <= (((mj) this).field_i.length ^ -1)) {
+                          if (~var2_int <= ~((mj) this).field_i.length) {
                             break L0;
                           } else {
                             stackOut_103_0 = ((mj) this).field_i[var2_int];
@@ -1106,7 +1106,7 @@ final class mj {
                 if (((mj) this).field_l) {
                   L2: {
                     ((mj) this).field_n = ((mj) this).field_n + param0;
-                    if (-1 >= (((mj) this).field_n ^ -1)) {
+                    if (((mj) this).field_n >= 0) {
                       break L2;
                     } else {
                       ((mj) this).field_n = -1 + ((mj) this).field_g.length;
@@ -1114,14 +1114,14 @@ final class mj {
                     }
                   }
                   L3: {
-                    if ((((mj) this).field_g.length ^ -1) >= (((mj) this).field_n ^ -1)) {
+                    if (~((mj) this).field_g.length >= ~((mj) this).field_n) {
                       ((mj) this).field_n = 0;
                       break L3;
                     } else {
                       break L3;
                     }
                   }
-                  if ((kb.field_a ^ -1) != -1) {
+                  if (kb.field_a != 0) {
                     break L1;
                   } else {
                     if (!jh.b(767564065)) {
@@ -1138,14 +1138,14 @@ final class mj {
                   } else {
                     L4: {
                       ((mj) this).field_n = ((mj) this).field_n + param0;
-                      if ((((mj) this).field_n ^ -1) <= -1) {
+                      if (((mj) this).field_n >= 0) {
                         break L4;
                       } else {
                         ((mj) this).field_n = ((mj) this).field_m.length - 1;
                         break L4;
                       }
                     }
-                    if ((((mj) this).field_n ^ -1) <= (((mj) this).field_m.length ^ -1)) {
+                    if (~((mj) this).field_n <= ~((mj) this).field_m.length) {
                       ((mj) this).field_n = 0;
                       break L1;
                     } else {
@@ -1197,16 +1197,16 @@ final class mj {
             ((mj) this).field_h = uc.field_C;
             var1_int = 0;
             L1: while (true) {
-              if ((var1_int ^ -1) <= (((mj) this).field_m.length ^ -1)) {
+              if (~var1_int <= ~((mj) this).field_m.length) {
                 var1_int = 0;
                 L2: while (true) {
                   if (var1_int >= ((mj) this).field_c.length) {
                     var1_int = 0;
                     L3: while (true) {
-                      if ((((mj) this).field_g.length ^ -1) >= (var1_int ^ -1)) {
+                      if (~((mj) this).field_g.length >= ~var1_int) {
                         var1_int = 0;
                         L4: while (true) {
-                          if ((var1_int ^ -1) <= (((mj) this).field_i.length ^ -1)) {
+                          if (~var1_int <= ~((mj) this).field_i.length) {
                             break L0;
                           } else {
                             ((mj) this).field_i[var1_int].field_c = 3;

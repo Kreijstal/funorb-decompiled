@@ -25,9 +25,6 @@ final class rl {
         field_i = null;
         field_h = null;
         field_g = null;
-        if (param0 <= 41) {
-            field_h = null;
-        }
     }
 
     static {

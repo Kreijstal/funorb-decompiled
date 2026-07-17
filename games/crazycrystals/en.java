@@ -15,15 +15,12 @@ abstract class en extends ab {
     static dl[] field_K;
 
     boolean e(byte param0) {
-        ((en) this).j(param0 ^ -80);
-        if (param0 != 79) {
-            boolean discarded$0 = ((en) this).g((byte) 101);
-        }
+        ((en) this).j(-1);
         return super.e((byte) 79);
     }
 
     void j(int param0) {
-        if (!(param0 > (((en) this).field_P ^ -1))) {
+        if (!(param0 > ~((en) this).field_P)) {
             return;
         }
         ((en) this).a(((en) this).field_G, (byte) -50, ((en) this).field_H);
@@ -54,20 +51,70 @@ abstract class en extends ab {
     }
 
     final static si a(String[] args, int param1) {
-        if (param1 != 169) {
-            return null;
+        si var2 = null;
+        RuntimeException var2_ref = null;
+        si stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        si stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            var2 = new si(false);
+            var2.field_d = args;
+            stackOut_2_0 = (si) var2;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2_ref;
+            stackOut_4_1 = new StringBuilder().append("en.S(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (args == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 169 + 41);
         }
-        si var2 = new si(false);
-        var2.field_d = args;
-        return var2;
+        return stackIn_3_0;
     }
 
     public static void i(int param0) {
         field_K = null;
         field_F = null;
-        if (param0 != 0) {
-            return;
-        }
         field_M = null;
         field_I = null;
     }
@@ -123,7 +170,7 @@ abstract class en extends ab {
                     return;
                   } else {
                     var9 = var5 + (-var5 + var6) * var7 / var4;
-                    var9 = var9 | (var9 << -20949936 | var9 << -2002812920);
+                    var9 = var9 | (var9 << 16 | var9 << 8);
                     kh.f(param1, var8, 6, var9);
                     kh.f(((en) this).field_g + (param1 - 6), var8, 6, var9);
                     var8++;
@@ -133,7 +180,7 @@ abstract class en extends ab {
                 }
               } else {
                 var9 = (var6 + -var5) * var7 / var4 + var5;
-                var9 = var9 | (var9 << -2121216824 | var9 << 1384111760);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 kh.f(param1, var8, 6, var9);
                 kh.f(-6 + ((en) this).field_g + param1, var8, 6, var9);
                 var8++;
@@ -148,16 +195,16 @@ abstract class en extends ab {
                   var9 = (-var5 + var6) * var7 / var4 + var5;
                   var10 = 0;
                   var11 = ((en) this).field_g;
-                  if (-21 <= (var7 ^ -1)) {
+                  if (var7 <= 20) {
                     L5: while (true) {
-                      if ((var10 ^ -1) < -21) {
+                      if (var10 > 20) {
                         break L4;
                       } else {
                         var12 = (-var10 + 20) * (20 + -var10) + (20 + -var7) * (20 - var7);
                         if (462 >= var12) {
-                          if ((var12 ^ -1) <= -421) {
+                          if (var12 >= 420) {
                             var13 = var9 * (-var12 + 462) / 42;
-                            var13 = var13 | (var13 << -2019475480 | var13 << -504002128);
+                            var13 = var13 | (var13 << 8 | var13 << 16);
                             kh.field_i[var8 * kh.field_l + (param1 - -var10)] = var13;
                             var10++;
                             continue L5;
@@ -175,7 +222,7 @@ abstract class en extends ab {
                   }
                 }
                 L6: {
-                  if ((var7 ^ -1) >= -21) {
+                  if (var7 <= 20) {
                     var12 = var11;
                     var11 -= 21;
                     var13 = 0;
@@ -188,9 +235,9 @@ abstract class en extends ab {
                           if (var14 > 462) {
                             break L8;
                           } else {
-                            if (-421 >= (var14 ^ -1)) {
+                            if (var14 >= 420) {
                               var15 = var9 * (462 - var14) / 42;
-                              var15 = var15 | (var15 << 1233493808 | var15 << -2062388472);
+                              var15 = var15 | (var15 << 16 | var15 << 8);
                               kh.field_i[var11 + (param1 + var8 * kh.field_l)] = var15;
                               var13++;
                               var11++;
@@ -211,7 +258,7 @@ abstract class en extends ab {
                     break L6;
                   }
                 }
-                var9 = var9 | (var9 << 259611440 | var9 << 1948130440);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 kh.f(var10 + param1, var8, -var10 + var11, var9);
                 var8++;
                 var7++;

@@ -28,7 +28,8 @@ final class lf extends gj {
     }
 
     final static jk a(ii param0, byte param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         jk var5 = null;
@@ -36,97 +37,153 @@ final class lf extends gj {
         int var7 = 0;
         int var8 = 0;
         Object var9 = null;
-        L0: {
-          var8 = Bounce.field_N;
-          var2 = param0.f(7, 8);
-          if (param1 <= -32) {
-            break L0;
-          } else {
-            var9 = null;
-            jk discarded$2 = lf.a((ii) null, (byte) -64);
-            break L0;
-          }
-        }
-        if ((var2 ^ -1) >= -1) {
-          L1: {
-            var3 = re.a(95, param0) ? 1 : 0;
-            var4 = re.a(38, param0) ? 1 : 0;
-            var5 = new jk();
-            var5.field_k = (short)param0.f(7, 16);
-            var5.field_g = ne.a(0, 16, var5.field_g, param0);
-            var5.field_C = ne.a(0, 16, var5.field_C, param0);
-            var5.field_J = ne.a(0, 16, var5.field_J, param0);
-            var5.field_L = (short)param0.f(7, 16);
-            var5.field_O = ne.a(0, 16, var5.field_O, param0);
-            var5.field_P = ne.a(0, 16, var5.field_P, param0);
-            var5.field_l = ne.a(0, 16, var5.field_l, param0);
-            if (var3 != 0) {
-              var5.field_d = (short)param0.f(7, 16);
-              var5.field_f = ne.a(0, 16, var5.field_f, param0);
-              var5.field_i = ne.a(0, 16, var5.field_i, param0);
-              var5.field_x = ne.a(0, 16, var5.field_x, param0);
-              var5.field_F = ne.a(0, 16, var5.field_F, param0);
-              var5.field_I = ne.a(0, 16, var5.field_I, param0);
-              var5.field_Q = ne.a(0, 16, var5.field_Q, param0);
-              break L1;
-            } else {
-              break L1;
+        jk stackIn_25_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        jk stackOut_24_0 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        var8 = Bounce.field_N;
+        try {
+          L0: {
+            L1: {
+              var2_int = param0.f(7, 8);
+              if (param1 <= -32) {
+                break L1;
+              } else {
+                var9 = null;
+                jk discarded$2 = lf.a((ii) null, (byte) -64);
+                break L1;
+              }
             }
-          }
-          L2: {
-            if (var4 != 0) {
-              int discarded$3 = param0.f(7, 16);
-              var5.field_u = ne.a(0, 16, var5.field_u, param0);
-              var5.field_s = ne.a(0, 16, var5.field_s, param0);
-              var5.field_y = ne.a(0, 16, var5.field_y, param0);
-              var5.field_B = ne.a(0, 16, var5.field_B, param0);
-              var5.field_b = ne.a(0, 16, var5.field_b, param0);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            if (re.a(91, param0)) {
-              var5.field_p = ne.a(0, 16, var5.field_p, param0);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            if (!re.a(106, param0)) {
-              break L4;
-            } else {
-              var5.field_v = qg.a(true, var5.field_v, 16, param0);
-              var6 = 0;
-              var7 = 0;
-              L5: while (true) {
-                if (var7 >= var5.field_v.length) {
-                  if (0 != var6) {
-                    var5.field_w = (byte)(1 + var6);
-                    break L4;
-                  } else {
-                    var5.field_v = null;
-                    break L4;
-                  }
+            if (var2_int <= 0) {
+              L2: {
+                var3 = re.a(95, param0) ? 1 : 0;
+                var4 = re.a(38, param0) ? 1 : 0;
+                var5 = new jk();
+                var5.field_k = (short)param0.f(7, 16);
+                var5.field_g = ne.a(0, 16, var5.field_g, param0);
+                var5.field_C = ne.a(0, 16, var5.field_C, param0);
+                var5.field_J = ne.a(0, 16, var5.field_J, param0);
+                var5.field_L = (short)param0.f(7, 16);
+                var5.field_O = ne.a(0, 16, var5.field_O, param0);
+                var5.field_P = ne.a(0, 16, var5.field_P, param0);
+                var5.field_l = ne.a(0, 16, var5.field_l, param0);
+                if (var3 != 0) {
+                  var5.field_d = (short)param0.f(7, 16);
+                  var5.field_f = ne.a(0, 16, var5.field_f, param0);
+                  var5.field_i = ne.a(0, 16, var5.field_i, param0);
+                  var5.field_x = ne.a(0, 16, var5.field_x, param0);
+                  var5.field_F = ne.a(0, 16, var5.field_F, param0);
+                  var5.field_I = ne.a(0, 16, var5.field_I, param0);
+                  var5.field_Q = ne.a(0, 16, var5.field_Q, param0);
+                  break L2;
                 } else {
-                  if ((255 & var5.field_v[var7]) > var6) {
-                    var6 = var5.field_v[var7] & 255;
-                    var7++;
-                    continue L5;
-                  } else {
-                    var7++;
-                    continue L5;
+                  break L2;
+                }
+              }
+              L3: {
+                if (var4 != 0) {
+                  int discarded$3 = param0.f(7, 16);
+                  var5.field_u = ne.a(0, 16, var5.field_u, param0);
+                  var5.field_s = ne.a(0, 16, var5.field_s, param0);
+                  var5.field_y = ne.a(0, 16, var5.field_y, param0);
+                  var5.field_B = ne.a(0, 16, var5.field_B, param0);
+                  var5.field_b = ne.a(0, 16, var5.field_b, param0);
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+              L4: {
+                if (re.a(91, param0)) {
+                  var5.field_p = ne.a(0, 16, var5.field_p, param0);
+                  break L4;
+                } else {
+                  break L4;
+                }
+              }
+              L5: {
+                if (!re.a(106, param0)) {
+                  break L5;
+                } else {
+                  var5.field_v = qg.a(true, var5.field_v, 16, param0);
+                  var6 = 0;
+                  var7 = 0;
+                  L6: while (true) {
+                    if (var7 >= var5.field_v.length) {
+                      if (0 != var6) {
+                        var5.field_w = (byte)(1 + var6);
+                        break L5;
+                      } else {
+                        var5.field_v = null;
+                        break L5;
+                      }
+                    } else {
+                      L7: {
+                        if ((255 & var5.field_v[var7]) > var6) {
+                          var6 = var5.field_v[var7] & 255;
+                          break L7;
+                        } else {
+                          break L7;
+                        }
+                      }
+                      var7++;
+                      continue L6;
+                    }
                   }
                 }
               }
+              stackOut_24_0 = (jk) var5;
+              stackIn_25_0 = stackOut_24_0;
+              break L0;
+            } else {
+              throw new IllegalStateException("" + var2_int);
             }
           }
-          return var5;
-        } else {
-          throw new IllegalStateException("" + var2);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var2 = decompiledCaughtException;
+            stackOut_26_0 = (RuntimeException) var2;
+            stackOut_26_1 = new StringBuilder().append("lf.D(");
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
+            if (param0 == null) {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              break L8;
+            } else {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
+              break L8;
+            }
+          }
+          throw ii.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param1 + 41);
         }
+        return stackIn_25_0;
     }
 
     final static byte a(char param0, byte param1) {
@@ -325,16 +382,20 @@ final class lf extends gj {
     }
 
     final static void a(ai param0, ai param1, int param2) {
-        if (null != param1.field_f) {
-            param1.c(2);
+        try {
+            if (null != param1.field_f) {
+                param1.c(2);
+            }
+            if (param2 != -17957) {
+                lf.a(true);
+            }
+            param1.field_f = param0.field_f;
+            param1.field_c = param0;
+            param1.field_f.field_c = param1;
+            param1.field_c.field_f = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "lf.G(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        if (param2 != -17957) {
-            lf.a(true);
-        }
-        param1.field_f = param0.field_f;
-        param1.field_c = param0;
-        param1.field_f.field_c = param1;
-        param1.field_c.field_f = param1;
     }
 
     final static ld a(int param0, int param1) {
@@ -344,7 +405,7 @@ final class lf extends gj {
             lf.a((ai) null, (ai) null, 33);
         }
         ne.field_r.a(1, (ai) (Object) var2);
-        ea.a(2, param1);
+        ea.a(2, 4);
         return var2;
     }
 

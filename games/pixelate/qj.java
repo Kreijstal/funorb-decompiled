@@ -11,15 +11,14 @@ final class qj {
     final static void a(String param0, long param1, byte param2) {
         CharSequence var5 = null;
         jo.field_k = param0;
-        if (param2 != 8) {
-          return;
-        } else {
-          ce.field_d = 2;
-          var5 = (CharSequence) (Object) param0;
-          fp.field_d = dh.a(var5, (byte) 74);
-          fp.field_e = param1;
-          ib.b(param2 ^ 20550);
-          return;
+        try {
+            ce.field_d = 2;
+            var5 = (CharSequence) (Object) param0;
+            fp.field_d = dh.a(var5, (byte) 74);
+            fp.field_e = param1;
+            ib.b(20558);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "qj.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 8 + 41);
         }
     }
 
@@ -47,9 +46,6 @@ final class qj {
         field_c = null;
         field_e = null;
         field_a = null;
-        if (param0) {
-            field_e = null;
-        }
     }
 
     static {

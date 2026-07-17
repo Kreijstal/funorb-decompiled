@@ -34,7 +34,7 @@ final class rh extends qb {
             if (param0 == 0) {
               var1_ref = rd.field_j;
               var2 = var1_ref.f(-102);
-              if (-1 != (var2 ^ -1)) {
+              if (var2 != 0) {
                 if (1 == var2) {
                   L1: {
                     if (rf.field_d == null) {
@@ -59,7 +59,7 @@ final class rh extends qb {
                     var5 = var1_ref.c(false);
                     var6 = jf.a(0, var4_ref_String);
                     if (var6 == null) {
-                      var6 = jf.a(param0 + 0, var5);
+                      var6 = jf.a(param0, var5);
                       if (null != var6) {
                         rf.field_d.a((he) (Object) var6, (long)ff.a((byte) 116, (CharSequence) (Object) var4_ref_String).hashCode(), 6144);
                         break L3;
@@ -125,15 +125,15 @@ final class rh extends qb {
                           }
                         }
                       }
-                      ce.a((qb) (Object) var7_ref, param0 ^ 0, (qb) (Object) var6);
+                      ce.a((qb) (Object) var7_ref, param0, (qb) (Object) var6);
                       break L8;
                     }
                     return;
                   }
                 } else {
-                  if (-3 == (var2 ^ -1)) {
+                  if (var2 == 2) {
                     L10: {
-                      if ((ii.field_c ^ -1) != -2) {
+                      if (ii.field_c != 1) {
                         break L10;
                       } else {
                         ii.field_c = 2;
@@ -142,7 +142,7 @@ final class rh extends qb {
                     }
                     return;
                   } else {
-                    if ((var2 ^ -1) == -4) {
+                    if (var2 == 3) {
                       L11: {
                         if (2 == ii.field_c) {
                           ii.field_c = 1;
@@ -153,7 +153,7 @@ final class rh extends qb {
                       }
                       return;
                     } else {
-                      if (-5 != (var2 ^ -1)) {
+                      if (var2 != 4) {
                         k.a((Throwable) null, (byte) -108, "F1: " + aj.a((byte) 92));
                         mc.a((byte) -125);
                         break L0;

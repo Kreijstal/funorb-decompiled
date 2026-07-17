@@ -23,7 +23,7 @@ final class me {
         if ((7 & param0) != 0) {
             var2 = -(param0 & 7) + 8;
         }
-        int var4 = 77 / ((10 - param1) / 47);
+        int var4 = 77;
         int var3 = param0 + var2;
         return var3;
     }
@@ -39,14 +39,8 @@ final class me {
     final static void a(int param0, boolean param1) {
         jf.field_f = mf.field_g[param0];
         bl.field_c = af.field_c[param0];
-        if (!param1) {
-          me.a((byte) -45);
-          td.field_e = wh.field_e[param0];
-          return;
-        } else {
-          td.field_e = wh.field_e[param0];
-          return;
-        }
+        me.a((byte) -45);
+        td.field_e = wh.field_e[param0];
     }
 
     static {

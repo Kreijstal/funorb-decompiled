@@ -28,9 +28,6 @@ final class lg {
 
     public static void b(int param0) {
         field_e = null;
-        if (param0 != 31039) {
-            field_e = null;
-        }
     }
 
     private lg() throws Throwable {

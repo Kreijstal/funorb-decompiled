@@ -32,7 +32,7 @@ abstract class ab {
         if (!(param1 != 1)) {
             var2 = oa.field_p;
         }
-        if (!((param1 ^ -1) != -3)) {
+        if (!(param1 != 2)) {
             var2 = mf.field_b;
         }
         return var2;
@@ -40,12 +40,6 @@ abstract class ab {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 0) {
-            field_b = true;
-            field_c = null;
-            field_d = null;
-            return;
-        }
         field_c = null;
         field_d = null;
     }

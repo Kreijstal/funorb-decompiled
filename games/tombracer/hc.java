@@ -31,10 +31,10 @@ final class hc extends rra {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var4 = ((hc) this).field_i * param0 >> -432891284;
-        var5 = ((hc) this).field_f * param0 >> 2107257548;
-        var6 = param1 * ((hc) this).field_g >> -1386539956;
-        var7 = param1 * ((hc) this).field_j >> 1315183084;
+        var4 = ((hc) this).field_i * param0 >> 12;
+        var5 = ((hc) this).field_f * param0 >> 12;
+        var6 = param1 * ((hc) this).field_g >> 12;
+        var7 = param1 * ((hc) this).field_j >> 12;
         ik.a(var5, var4, -49, ((hc) this).field_b, var7, var6);
         if (!param2) {
           field_h = 68;

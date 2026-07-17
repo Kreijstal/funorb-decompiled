@@ -50,7 +50,7 @@ final class p {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((p) this).field_a[var6] = var3 ^ -1;
+                      ((p) this).field_a[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -174,7 +174,7 @@ final class p {
         while (((p) this).field_a[var1] >= 0) {
             var1 = te.b() != 0 ? ((p) this).field_a[var1] : var1 + 1;
         }
-        return ((p) this).field_a[var1] ^ -1;
+        return ~((p) this).field_a[var1];
     }
 
     final float[] b() {

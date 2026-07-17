@@ -7,11 +7,6 @@ final class u {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != -2355) {
-            field_a = 71;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

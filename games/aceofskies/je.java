@@ -6,28 +6,13 @@ final class je {
     private static String field_z;
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-          if (null != ft.field_l) {
-            if (!ca.field_f.a(true)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (null == ft.field_l) {
             return false;
-          }
-        } else {
-          boolean discarded$5 = je.a(false);
-          if (null != ft.field_l) {
-            if (!ca.field_f.a(true)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (!ca.field_f.a(true)) {
+            return false;
+        }
+        return true;
     }
 
     static {

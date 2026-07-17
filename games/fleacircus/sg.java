@@ -17,48 +17,156 @@ final class sg {
     static td field_h;
 
     final static pd a(byte param0, ie param1) {
-        if (param0 != 20) {
-            return null;
+        pd var2 = null;
+        RuntimeException var2_ref = null;
+        Object stackIn_2_0 = null;
+        pd stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        pd stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 == 20) {
+              var2 = new pd(param1, (lh) (Object) param1);
+              bk.field_d.a(false, (lh) (Object) var2);
+              qg.field_f.a((sh) (Object) param1);
+              stackOut_3_0 = (pd) var2;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (pd) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2_ref;
+            stackOut_5_1 = new StringBuilder().append("sg.D(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw pf.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        pd var2 = new pd(param1, (lh) (Object) param1);
-        bk.field_d.a(false, (lh) (Object) var2);
-        qg.field_f.a((sh) (Object) param1);
-        return var2;
+        return stackIn_4_0;
     }
 
     final static boolean a(char param0, byte param1) {
-        int var4 = 0;
-        int var5 = fleas.field_A ? 1 : 0;
-        if (!(!Character.isISOControl(param0))) {
-            return false;
-        }
-        if (!(!ii.a(param1 + 96, param0))) {
-            return true;
-        }
-        char[] var2 = ei.field_m;
+        char[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
-        if (param1 != -95) {
-            sg discarded$0 = sg.a(false, -117);
-        }
-        while (var2.length > var3) {
-            var4 = var2[var3];
-            if (param0 == var4) {
-                return true;
+        int var4 = 0;
+        int var5 = 0;
+        char[] var6 = null;
+        char[] var7 = null;
+        int var8 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_22_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_12_0 = 0;
+        var5 = fleas.field_A ? 1 : 0;
+        try {
+          L0: {
+            if (Character.isISOControl(param0)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              if (ii.a(1, param0)) {
+                stackOut_7_0 = 1;
+                stackIn_8_0 = stackOut_7_0;
+                return stackIn_8_0 != 0;
+              } else {
+                var6 = ei.field_m;
+                var2 = var6;
+                var3 = 0;
+                L1: while (true) {
+                  if (var6.length <= var3) {
+                    var7 = sa.field_a;
+                    var2 = var7;
+                    var8 = 0;
+                    var3 = var8;
+                    L2: while (true) {
+                      if (var8 >= var7.length) {
+                        stackOut_21_0 = 0;
+                        stackIn_22_0 = stackOut_21_0;
+                        break L0;
+                      } else {
+                        var4 = var7[var8];
+                        if (var4 != param0) {
+                          var8++;
+                          continue L2;
+                        } else {
+                          stackOut_18_0 = 1;
+                          stackIn_19_0 = stackOut_18_0;
+                          return stackIn_19_0 != 0;
+                        }
+                      }
+                    }
+                  } else {
+                    var4 = var6[var3];
+                    if (param0 != var4) {
+                      var3++;
+                      continue L1;
+                    } else {
+                      stackOut_12_0 = 1;
+                      stackIn_13_0 = stackOut_12_0;
+                      return stackIn_13_0 != 0;
+                    }
+                  }
+                }
+              }
             }
-            var3++;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var2_ref, "sg.E(" + param0 + 44 + -95 + 41);
         }
-        char[] var6 = sa.field_a;
-        var2 = var6;
-        int var7 = 0;
-        var3 = var7;
-        while (var7 < var6.length) {
-            var4 = var6[var7];
-            if (var4 == param0) {
-                return true;
-            }
-            var7++;
-        }
-        return false;
+        return stackIn_22_0 != 0;
     }
 
     final static sg a(boolean param0, int param1) {
@@ -98,7 +206,7 @@ final class sg {
           d.field_N = 127 & var3;
           gm.field_ob = var8.e(false);
           ki.field_b = var8.f(-83);
-          if ((d.field_N ^ -1) == -3) {
+          if (d.field_N == 2) {
             ga.field_o = var8.d((byte) -60);
             jd.field_t = var8.c(true);
             break L1;
@@ -109,7 +217,7 @@ final class sg {
           }
         }
         L2: {
-          if ((var8.e(false) ^ -1) != -2) {
+          if (var8.e(false) != 1) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
             break L2;
@@ -132,10 +240,10 @@ final class sg {
         }
         L4: {
           L5: {
-            if (-2 == (d.field_N ^ -1)) {
+            if (d.field_N == 1) {
               break L5;
             } else {
-              if (-5 == (d.field_N ^ -1)) {
+              if (d.field_N == 4) {
                 break L5;
               } else {
                 break L4;
@@ -201,7 +309,7 @@ final class sg {
             break L0;
           } else {
             L1: {
-              if (-3 != (((sg) this).field_j ^ -1)) {
+              if (((sg) this).field_j != 2) {
                 break L1;
               } else {
                 if (0 < ((sg) this).field_d) {
@@ -215,7 +323,7 @@ final class sg {
               return 1;
             } else {
               L2: {
-                if (-3 != (nb.field_i ^ -1)) {
+                if (nb.field_i != 2) {
                   break L2;
                 } else {
                   if (ef.a((byte) 119, ((sg) this).field_m)) {

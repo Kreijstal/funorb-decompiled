@@ -8,29 +8,17 @@ final class pl {
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 != 0) {
-            field_a = null;
-            field_a = null;
-            field_b = null;
-            return;
-        }
         field_a = null;
         field_b = null;
     }
 
     final static void a(byte param0) {
-        if (!qg.field_d) {
-          throw new IllegalStateException();
-        } else {
-          u.field_tb = true;
-          if (param0 > -73) {
-            return;
-          } else {
-            q.a((byte) 110, false);
-            ta.field_g = 0;
-            return;
-          }
+        if (!(qg.field_d)) {
+            throw new IllegalStateException();
         }
+        u.field_tb = true;
+        q.a((byte) 110, false);
+        ta.field_g = 0;
     }
 
     static {

@@ -16,89 +16,68 @@ final class nl extends ksa {
 
     final static void a(int param0, int param1) {
         ana var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = VoidHunters.field_G;
-        kt.field_l = param0;
-        var2 = (ana) (Object) cg.field_p.d(param1 + 13205);
-        if (param1 != -13205) {
-          nl.a(-88);
-          L0: while (true) {
-            if (var2 == null) {
-              if (null != rd.field_o) {
-                var2 = (ana) (Object) rd.field_o.d(0);
-                L1: while (true) {
-                  if (var2 != null) {
-                    L2: {
-                      if (!var2.field_g.b((byte) -63)) {
-                        var2.b(param1 ^ 15505);
-                        break L2;
+        try {
+          L0: {
+            L1: {
+              kt.field_l = param0;
+              var2 = (ana) (Object) cg.field_p.d(param1 + 13205);
+              if (param1 == -13205) {
+                break L1;
+              } else {
+                nl.a(-88);
+                break L1;
+              }
+            }
+            L2: while (true) {
+              if (var2 == null) {
+                L3: {
+                  if (null == rd.field_o) {
+                    break L3;
+                  } else {
+                    var2 = (ana) (Object) rd.field_o.d(0);
+                    L4: while (true) {
+                      if (var2 == null) {
+                        break L3;
                       } else {
-                        var2.field_e.e(kt.field_l * var2.field_d + 128 >> -1771790904);
-                        break L2;
+                        L5: {
+                          if (!var2.field_g.b((byte) -63)) {
+                            var2.b(param1 ^ 15505);
+                            break L5;
+                          } else {
+                            var2.field_e.e(kt.field_l * var2.field_d + 128 >> 8);
+                            break L5;
+                          }
+                        }
+                        var2 = (ana) (Object) rd.field_o.a((byte) 100);
+                        continue L4;
                       }
                     }
-                    var2 = (ana) (Object) rd.field_o.a((byte) 100);
-                    continue L1;
-                  } else {
-                    return;
                   }
                 }
+                break L0;
               } else {
-                return;
-              }
-            } else {
-              L3: {
-                if (var2.field_g.b((byte) -63)) {
-                  var2.field_e.e(128 + kt.field_l * var2.field_d >> 2128263208);
-                  break L3;
-                } else {
-                  var2.b(-3846);
-                  break L3;
-                }
-              }
-              var2 = (ana) (Object) cg.field_p.a((byte) 61);
-              continue L0;
-            }
-          }
-        } else {
-          L4: while (true) {
-            if (var2 == null) {
-              if (null != rd.field_o) {
-                var2 = (ana) (Object) rd.field_o.d(0);
-                L5: while (true) {
-                  if (var2 != null) {
-                    L6: {
-                      if (!var2.field_g.b((byte) -63)) {
-                        var2.b(param1 ^ 15505);
-                        break L6;
-                      } else {
-                        var2.field_e.e(kt.field_l * var2.field_d + 128 >> -1771790904);
-                        break L6;
-                      }
-                    }
-                    var2 = (ana) (Object) rd.field_o.a((byte) 100);
-                    continue L5;
+                L6: {
+                  if (var2.field_g.b((byte) -63)) {
+                    var2.field_e.e(128 + kt.field_l * var2.field_d >> 8);
+                    break L6;
                   } else {
-                    return;
+                    var2.b(-3846);
+                    break L6;
                   }
                 }
-              } else {
-                return;
+                var2 = (ana) (Object) cg.field_p.a((byte) 61);
+                continue L2;
               }
-            } else {
-              L7: {
-                if (var2.field_g.b((byte) -63)) {
-                  var2.field_e.e(128 + kt.field_l * var2.field_d >> 2128263208);
-                  break L7;
-                } else {
-                  var2.b(-3846);
-                  break L7;
-                }
-              }
-              var2 = (ana) (Object) cg.field_p.a((byte) 61);
-              continue L4;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var2_ref, "nl.B(" + param0 + 44 + param1 + 41);
         }
     }
 

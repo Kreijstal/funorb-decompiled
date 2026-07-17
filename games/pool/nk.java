@@ -6931,7 +6931,7 @@ final class nk {
                     break L2;
                   } else {
                     L3: {
-                      if ((var2 ^ -1) == -2) {
+                      if (var2 == 1) {
                         break L3;
                       } else {
                         tc.a((Throwable) null, "A1: " + t.a(93), -8555);

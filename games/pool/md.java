@@ -9,10 +9,7 @@ final class md {
     static vh field_d;
 
     final static boolean a(byte param0) {
-        if (param0 >= -11) {
-            field_d = null;
-            return re.field_b;
-        }
+        field_d = null;
         return re.field_b;
     }
 
@@ -25,23 +22,15 @@ final class md {
         fb.a();
         fb.b(320, 240);
         hr.field_q.field_k = 0;
-        fb.a((in) (Object) new dp(ep.field_F, hr.field_q, param0, 128));
+        fb.a((in) (Object) new dp(ep.field_F, hr.field_q, 32, 128));
         di.a(0);
     }
 
     public static void a(boolean param0) {
         field_a = null;
         field_d = null;
-        if (!param0) {
-          boolean discarded$2 = md.a((byte) -8);
-          field_e = null;
-          field_c = null;
-          return;
-        } else {
-          field_e = null;
-          field_c = null;
-          return;
-        }
+        field_e = null;
+        field_c = null;
     }
 
     static {

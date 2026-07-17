@@ -76,7 +76,7 @@ class qa extends br {
         int var14 = 0;
         int var15 = 0;
         var15 = ZombieDawnMulti.field_E ? 1 : 0;
-        var9 = param7 + (param2 + param8);
+        var9 = param7 + (param2 + 1);
         var10 = new ja[]{new ja(var9, var9), new ja(param3, var9), new ja(var9, var9), new ja(var9, param3), new ja(64, 64), new ja(var9, param3), new ja(var9, var9), new ja(param3, var9), new ja(var9, var9)};
         var11_ref_ja__ = var10;
         var12 = 0;
@@ -101,12 +101,12 @@ class qa extends br {
                         }
                         var11 = 0;
                         L5: while (true) {
-                          if (param3 >> 179000001 <= var11) {
+                          if (param3 >> 1 <= var11) {
                             return var10;
                           } else {
                             var12 = 0;
                             L6: while (true) {
-                              if (var12 >= param8) {
+                              if (var12 >= 1) {
                                 var11++;
                                 continue L5;
                               } else {
@@ -194,16 +194,85 @@ class qa extends br {
     }
 
     final static boolean a(byte param0, String param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
-        int var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        int var2 = param1.charAt(0);
-        int var4 = 11 % ((-85 - param0) / 36);
-        for (var3 = 1; param1.length() > var3; var3++) {
-            if (var2 != param1.charAt(var3)) {
-                return false;
+        int var4 = 0;
+        int var5 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        var5 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          L0: {
+            var2_int = param1.charAt(0);
+            var4 = 11 % ((-85 - param0) / 36);
+            var3 = 1;
+            L1: while (true) {
+              if (param1.length() <= var3) {
+                stackOut_7_0 = 1;
+                stackIn_8_0 = stackOut_7_0;
+                break L0;
+              } else {
+                if (var2_int == param1.charAt(var3)) {
+                  var3++;
+                  continue L1;
+                } else {
+                  stackOut_4_0 = 0;
+                  stackIn_5_0 = stackOut_4_0;
+                  return stackIn_5_0 != 0;
+                }
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var2;
+            stackOut_9_1 = new StringBuilder().append("qa.B(").append(param0).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param1 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L2;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L2;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
-        return true;
+        return stackIn_8_0 != 0;
     }
 
     protected qa() {

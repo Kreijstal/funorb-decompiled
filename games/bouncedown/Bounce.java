@@ -93,10 +93,10 @@ public final class Bounce extends kk {
                 if (param2 - -16 - -var8_int < uc.field_C) {
                   break L1;
                 } else {
-                  if ((ll.field_y ^ -1) >= (-od.field_f.field_s + (param4 - 8) ^ -1)) {
+                  if (~ll.field_y >= ~(-od.field_f.field_s + (param4 - 8))) {
                     break L1;
                   } else {
-                    if ((param4 - -16 ^ -1) > (ll.field_y ^ -1)) {
+                    if (~(param4 - -16) > ~ll.field_y) {
                       break L1;
                     } else {
                       if (!param1) {
@@ -121,10 +121,10 @@ public final class Bounce extends kk {
             if (param5 == 93) {
               L3: {
                 od.field_f.b(param0, param2, param4, param6, -1);
-                if ((param6 ^ -1) != -16777216) {
+                if (param6 != 16777215) {
                   break L3;
                 } else {
-                  if ((((Bounce) this).field_K ^ -1) == -1) {
+                  if (((Bounce) this).field_K == 0) {
                     break L3;
                   } else {
                     if (!param1) {
@@ -479,7 +479,7 @@ public final class Bounce extends kk {
           L0: {
             L1: {
               L2: {
-                if ((((Bounce) this).field_J ^ -1) != (uc.field_C ^ -1)) {
+                if (~((Bounce) this).field_J != ~uc.field_C) {
                   break L2;
                 } else {
                   if (ll.field_y != ((Bounce) this).field_M) {
@@ -500,7 +500,7 @@ public final class Bounce extends kk {
               break L1;
             }
             L3: {
-              if (-1 == (vh.field_e ^ -1)) {
+              if (vh.field_e == 0) {
                 ((Bounce) this).field_K = 0;
                 break L3;
               } else {
@@ -545,7 +545,7 @@ public final class Bounce extends kk {
                     if (!ng.field_a[32]) {
                       break L8;
                     } else {
-                      if (-6001 >= (fa.field_c ^ -1)) {
+                      if (fa.field_c >= 6000) {
                         break L8;
                       } else {
                         he.field_n[0].field_j = 300.0;
@@ -559,7 +559,7 @@ public final class Bounce extends kk {
                   if (!ng.field_a[33]) {
                     break L7;
                   } else {
-                    if (-1 > (fa.field_c ^ -1)) {
+                    if (fa.field_c > 0) {
                       he.field_n[0].field_q = 0.0;
                       fa.field_c = fa.field_c - 10;
                       he.field_n[0].field_j = 300.0;
@@ -602,7 +602,7 @@ public final class Bounce extends kk {
                 } else {
                   int fieldTemp$2 = ((Bounce) this).field_H + 1;
                   ((Bounce) this).field_H = ((Bounce) this).field_H + 1;
-                  if (-336 != (fieldTemp$2 ^ -1)) {
+                  if (fieldTemp$2 != 335) {
                     break L12;
                   } else {
                     ((Bounce) this).field_H = 0;
@@ -613,7 +613,7 @@ public final class Bounce extends kk {
               }
               L13: {
                 ae.field_f = ae.field_f + 1;
-                if (-257 < (ae.field_f ^ -1)) {
+                if (ae.field_f < 256) {
                   break L13;
                 } else {
                   ae.field_f = ae.field_f - 256;
@@ -654,7 +654,7 @@ public final class Bounce extends kk {
                   break L17;
                 } else {
                   ta.field_c = ta.field_c + 0.001;
-                  if ((he.field_n[0].field_n ^ -1) >= -1) {
+                  if (he.field_n[0].field_n <= 0) {
                     break L17;
                   } else {
                     L18: {
@@ -684,7 +684,7 @@ public final class Bounce extends kk {
                       break L17;
                     } else {
                       L20: {
-                        if (-1001 != (fa.field_c ^ -1)) {
+                        if (fa.field_c != 1000) {
                           break L20;
                         } else {
                           dk.a(false, 0, 255);
@@ -700,7 +700,7 @@ public final class Bounce extends kk {
                         }
                       }
                       L22: {
-                        if ((fa.field_c ^ -1) == -4001) {
+                        if (fa.field_c == 4000) {
                           dk.a(false, 2, 253);
                           break L22;
                         } else {
@@ -749,7 +749,7 @@ public final class Bounce extends kk {
                         if (he.field_n[0].field_d <= 0.0) {
                           break L26;
                         } else {
-                          if (-1001 >= (qe.field_f ^ -1)) {
+                          if (qe.field_f >= 1000) {
                             break L26;
                           } else {
                             qe.field_f = qe.field_f + 1;
@@ -759,7 +759,7 @@ public final class Bounce extends kk {
                         }
                       }
                       L27: {
-                        if (-1001 != (kg.field_f ^ -1)) {
+                        if (kg.field_f != 1000) {
                           break L27;
                         } else {
                           kg.field_f = 1001;
@@ -768,7 +768,7 @@ public final class Bounce extends kk {
                         }
                       }
                       L28: {
-                        if ((hg.field_l ^ -1) != -1001) {
+                        if (hg.field_l != 1000) {
                           break L28;
                         } else {
                           hg.field_l = 1001;
@@ -777,7 +777,7 @@ public final class Bounce extends kk {
                         }
                       }
                       L29: {
-                        if ((qe.field_f ^ -1) != -1001) {
+                        if (qe.field_f != 1000) {
                           break L29;
                         } else {
                           qe.field_f = 1001;
@@ -785,13 +785,13 @@ public final class Bounce extends kk {
                           break L29;
                         }
                       }
-                      if ((kg.field_f ^ -1) != -1002) {
+                      if (kg.field_f != 1001) {
                         break L17;
                       } else {
-                        if (-1002 != (hg.field_l ^ -1)) {
+                        if (hg.field_l != 1001) {
                           break L17;
                         } else {
-                          if ((qe.field_f ^ -1) != -1002) {
+                          if (qe.field_f != 1001) {
                             break L17;
                           } else {
                             kg.field_f = 1002;
@@ -823,7 +823,7 @@ public final class Bounce extends kk {
                   }
                 } else {
                   ((Bounce) this).field_I = (9 * ((Bounce) this).field_I - -100) / 10;
-                  if ((((Bounce) this).field_I ^ -1) <= -101) {
+                  if (((Bounce) this).field_I >= 100) {
                     break L31;
                   } else {
                     ((Bounce) this).field_I = ((Bounce) this).field_I + 1;
@@ -844,10 +844,10 @@ public final class Bounce extends kk {
                 }
               }
               L33: {
-                if (0 == (rj.field_j ^ -1)) {
+                if (rj.field_j == -1) {
                   break L33;
                 } else {
-                  if ((rj.field_j ^ -1) == -1) {
+                  if (rj.field_j == 0) {
                     L34: {
                       var2_ref = gk.field_e;
                       var3_int = var2_ref.field_s + 200;
@@ -855,13 +855,13 @@ public final class Bounce extends kk {
                       var5 = gk.field_e.b(qe.field_c);
                       var6 = 320 + -(var5 / 2);
                       var7 = 3 * var4 + var3_int;
-                      if ((var6 + -8 ^ -1) <= (uc.field_C ^ -1)) {
+                      if (~(var6 + -8) <= ~uc.field_C) {
                         break L34;
                       } else {
-                        if ((uc.field_C ^ -1) < (var6 - (-16 - var5) ^ -1)) {
+                        if (~uc.field_C < ~(var6 - (-16 - var5))) {
                           break L34;
                         } else {
-                          if ((var7 - 8 + -gk.field_e.field_s ^ -1) <= (ll.field_y ^ -1)) {
+                          if (~(var7 - 8 + -gk.field_e.field_s) <= ~ll.field_y) {
                             break L34;
                           } else {
                             if (ll.field_y > 16 + var7) {
@@ -886,20 +886,20 @@ public final class Bounce extends kk {
                     var5 = gk.field_e.b(db.field_T);
                     var6 = -(var5 / 2) + 320;
                     var7 = var4 / 2 + 4 * var4 + var3_int - -32;
-                    if ((var6 + -8 ^ -1) <= (uc.field_C ^ -1)) {
+                    if (~(var6 + -8) <= ~uc.field_C) {
                       break L33;
                     } else {
                       if (var5 + var6 + 16 < uc.field_C) {
                         break L33;
                       } else {
-                        if ((-8 + var7 + -gk.field_e.field_s ^ -1) <= (ll.field_y ^ -1)) {
+                        if (~(-8 + var7 + -gk.field_e.field_s) <= ~ll.field_y) {
                           break L33;
                         } else {
                           if (ll.field_y > var7 + 16) {
                             break L33;
                           } else {
                             if (((Bounce) this).field_L) {
-                              if ((vh.field_e ^ -1) == -2) {
+                              if (vh.field_e == 1) {
                                 L35: {
                                   ka.field_o.field_l = false;
                                   if (!((Bounce) this).field_L) {
@@ -949,7 +949,7 @@ public final class Bounce extends kk {
                         if (jk.field_q == -1) {
                           break L37;
                         } else {
-                          if ((vh.field_e ^ -1) != -1) {
+                          if (vh.field_e != 0) {
                             break L39;
                           } else {
                             if (ng.field_a[83]) {
@@ -983,13 +983,13 @@ public final class Bounce extends kk {
                         }
                         L41: {
                           ka.field_o.field_n = -1 + vk.field_b;
-                          if ((vk.field_b ^ -1) != -2) {
+                          if (vk.field_b != 1) {
                             break L41;
                           } else {
                             L42: {
                               he.field_n[0].field_n = 0;
                               this.c(false, fa.field_c);
-                              if ((kb.field_a ^ -1) < -1) {
+                              if (kb.field_a > 0) {
                                 ka.field_o.field_l = true;
                                 break L42;
                               } else {
@@ -1025,7 +1025,7 @@ public final class Bounce extends kk {
                       break L44;
                     } else {
                       L45: {
-                        if ((vk.field_b ^ -1) == -2) {
+                        if (vk.field_b == 1) {
                           L46: {
                             L47: {
                               if (ng.field_a[96]) {
@@ -1169,7 +1169,7 @@ public final class Bounce extends kk {
                     if (var2_int >= vk.field_b) {
                       var2_int = 0;
                       L61: while (true) {
-                        if ((ua.field_b ^ -1) >= (var2_int ^ -1)) {
+                        if (~ua.field_b >= ~var2_int) {
                           L62: {
                             if (0 >= wj.field_e) {
                               break L62;
@@ -1205,10 +1205,10 @@ public final class Bounce extends kk {
                     } else {
                       L64: {
                         L65: {
-                          if ((he.field_n[var2_int].field_n ^ -1) < -1) {
+                          if (he.field_n[var2_int].field_n > 0) {
                             break L65;
                           } else {
-                            if ((he.field_n[var2_int].field_p ^ -1) < -1) {
+                            if (he.field_n[var2_int].field_p > 0) {
                               break L65;
                             } else {
                               he.field_n[var2_int].a(il.field_a, false);
@@ -1236,7 +1236,7 @@ public final class Bounce extends kk {
                           break L64;
                         } else {
                           L68: {
-                            if (-1 == (he.field_n[var2_int].field_h ^ -1)) {
+                            if (he.field_n[var2_int].field_h == 0) {
                               he.field_n[var2_int].field_c = he.field_n[var2_int].field_c + 0.35;
                               break L68;
                             } else {
@@ -1266,7 +1266,7 @@ public final class Bounce extends kk {
                   }
                 } else {
                   L70: {
-                    if ((lh.field_f ^ -1) == -50) {
+                    if (lh.field_f == 49) {
                       L71: {
                         if (wd.field_x) {
                           stackOut_224_0 = 0;
@@ -1285,7 +1285,7 @@ public final class Bounce extends kk {
                     }
                   }
                   L72: {
-                    if (-71 != (lh.field_f ^ -1)) {
+                    if (lh.field_f != 70) {
                       break L72;
                     } else {
                       L73: {
@@ -1343,11 +1343,11 @@ public final class Bounce extends kk {
                     if (ka.field_o == null) {
                       break L77;
                     } else {
-                      if ((rj.field_j ^ -1) == 0) {
+                      if (rj.field_j == -1) {
                         L78: {
-                          if (-1 == (n.field_m ^ -1)) {
+                          if (n.field_m == 0) {
                             L79: {
-                              if (-99 != (lh.field_f ^ -1)) {
+                              if (lh.field_f != 98) {
                                 break L79;
                               } else {
                                 ka.field_o.a(-1, 12011);
@@ -1371,7 +1371,7 @@ public final class Bounce extends kk {
                               }
                             }
                             L82: {
-                              if (-98 == (lh.field_f ^ -1)) {
+                              if (lh.field_f == 97) {
                                 ka.field_o.a(false, -31729, 1);
                                 break L82;
                               } else {
@@ -1391,7 +1391,7 @@ public final class Bounce extends kk {
                               }
                             }
                             L84: {
-                              if (-104 != (lh.field_f ^ -1)) {
+                              if (lh.field_f != 103) {
                                 break L84;
                               } else {
                                 if (!ka.field_o.field_e) {
@@ -1402,7 +1402,7 @@ public final class Bounce extends kk {
                                 }
                               }
                             }
-                            if (-85 != (lh.field_f ^ -1)) {
+                            if (lh.field_f != 84) {
                               break L78;
                             } else {
                               ka.field_o.a(false, -31729, 0);
@@ -1436,7 +1436,7 @@ public final class Bounce extends kk {
                           break L85;
                         }
                       }
-                      if ((qf.field_b ^ -1) == -2) {
+                      if (qf.field_b == 1) {
                         ka.field_o.field_l = false;
                         kb.field_a = 0;
                         ka.field_o.field_e = false;
@@ -1630,7 +1630,7 @@ public final class Bounce extends kk {
                         } else {
                           L9: {
                             var2_int = vi.c(param0 + 88);
-                            if ((var2_int ^ -1) != -3) {
+                            if (var2_int != 2) {
                               break L9;
                             } else {
                               if (sj.field_f == null) {
@@ -1669,7 +1669,7 @@ public final class Bounce extends kk {
                         } else {
                           L12: {
                             ui.field_g = ui.field_g | bh.field_d.field_k;
-                            kb.field_a = kb.field_a & (bh.field_d.field_k ^ -1);
+                            kb.field_a = kb.field_a & ~bh.field_d.field_k;
                             bh.field_d = null;
                             if (0 >= kb.field_a) {
                               break L12;
@@ -1704,7 +1704,7 @@ public final class Bounce extends kk {
                             if (var2_int == 0) {
                               break L16;
                             } else {
-                              if ((var2_int ^ -1) == -2) {
+                              if (var2_int == 1) {
                                 break L16;
                               } else {
                                 break L15;
@@ -1715,7 +1715,7 @@ public final class Bounce extends kk {
                           ih.a(4, -1);
                           break L15;
                         }
-                        if (-3 != (var2_int ^ -1)) {
+                        if (var2_int != 2) {
                           break L4;
                         } else {
                           vk.a(240, (tg[]) null, 320, gk.field_e.field_s, cl.field_p[0].field_o, od.field_f.field_s, gk.field_e.field_s, 3, 2, (tj) (Object) gk.field_e, (tj) (Object) od.field_f, (tg[]) null, cl.field_p[0].field_t, od.field_f.field_s);
@@ -1771,13 +1771,13 @@ public final class Bounce extends kk {
             if (param5 <= param3) {
               return;
             } else {
-              if ((param1 ^ -1) < (1 + param3 ^ -1)) {
+              if (~param1 < ~(1 + param3)) {
                 L1: {
-                  if ((param1 ^ -1) >= (5 + param3 ^ -1)) {
+                  if (~param1 >= ~(5 + param3)) {
                     break L1;
                   } else {
-                    if ((param0 ^ -1) != (param4 ^ -1)) {
-                      var7_int = (param4 & param0 & 1) + (param4 >> -1616669407) + (param0 >> -845565151);
+                    if (~param0 != ~param4) {
+                      var7_int = (param4 & param0 & 1) + (param4 >> 1) + (param0 >> 1);
                       var8 = param3;
                       var9 = param4;
                       var10 = param0;
@@ -1814,7 +1814,7 @@ public final class Bounce extends kk {
                               int incrementValue$1 = var8;
                               var8++;
                               w.field_f[incrementValue$1] = var12;
-                              if ((var13 ^ -1) <= (var9 ^ -1)) {
+                              if (~var13 <= ~var9) {
                                 break L4;
                               } else {
                                 var9 = var13;
@@ -1833,12 +1833,12 @@ public final class Bounce extends kk {
                 }
                 var7_int = -1 + param1;
                 L5: while (true) {
-                  if ((var7_int ^ -1) >= (param3 ^ -1)) {
+                  if (~var7_int >= ~param3) {
                     return;
                   } else {
                     var8 = param3;
                     L6: while (true) {
-                      if ((var7_int ^ -1) >= (var8 ^ -1)) {
+                      if (~var7_int >= ~var8) {
                         var7_int--;
                         continue L5;
                       } else {
@@ -2632,10 +2632,10 @@ public final class Bounce extends kk {
                       na.e(var3, 0, var3 + 512, 446);
                       var5_int = 0;
                       L5: while (true) {
-                        if ((ua.field_b ^ -1) >= (var5_int ^ -1)) {
+                        if (~ua.field_b >= ~var5_int) {
                           var5_int = 0;
                           L6: while (true) {
-                            if ((vk.field_b ^ -1) >= (var5_int ^ -1)) {
+                            if (~vk.field_b >= ~var5_int) {
                               L7: {
                                 if (ka.field_o != null) {
                                   he.field_n[0].field_n = 3;
@@ -2665,7 +2665,7 @@ public final class Bounce extends kk {
                                     if (vk.field_b != 1) {
                                       break L10;
                                     } else {
-                                      if (-2 <= (he.field_n[0].field_n ^ -1)) {
+                                      if (he.field_n[0].field_n <= 1) {
                                         break L10;
                                       } else {
                                         he.field_n[0].field_n = 1;
@@ -2674,12 +2674,12 @@ public final class Bounce extends kk {
                                     }
                                   }
                                   L11: {
-                                    if (-1 <= (vk.field_b ^ -1)) {
+                                    if (vk.field_b <= 0) {
                                       break L11;
                                     } else {
                                       var5_int = 1;
                                       L12: while (true) {
-                                        if ((he.field_n[0].field_n ^ -1) >= (var5_int ^ -1)) {
+                                        if (~he.field_n[0].field_n >= ~var5_int) {
                                           break L11;
                                         } else {
                                           dg.field_a[0].b(8 * (var5_int * 2 - he.field_n[0].field_n) + var3 / 2, 0, param0 + -741572383, 32, var3 / 2 - -16);
@@ -2690,7 +2690,7 @@ public final class Bounce extends kk {
                                     }
                                   }
                                   L13: {
-                                    if (-2 <= (vk.field_b ^ -1)) {
+                                    if (vk.field_b <= 1) {
                                       break L13;
                                     } else {
                                       var5_int = 1;
@@ -2710,7 +2710,7 @@ public final class Bounce extends kk {
                                   } else {
                                     var5_int = 1;
                                     L15: while (true) {
-                                      if ((he.field_n[2].field_n ^ -1) >= (var5_int ^ -1)) {
+                                      if (~he.field_n[2].field_n >= ~var5_int) {
                                         break L9;
                                       } else {
                                         dg.field_a[2].b(8 * (var5_int * 2 - he.field_n[2].field_n) + var3 / 2, 0, -741572379, 32, 16 + var3 / 2 + 240);
@@ -2731,7 +2731,7 @@ public final class Bounce extends kk {
                                     if (he.field_n[1].field_n <= 0) {
                                       break L17;
                                     } else {
-                                      if ((he.field_n[2].field_n ^ -1) >= -1) {
+                                      if (he.field_n[2].field_n <= 0) {
                                         break L17;
                                       } else {
                                         break L16;
@@ -2783,7 +2783,7 @@ public final class Bounce extends kk {
                                               if (vk.field_b != 1) {
                                                 break L23;
                                               } else {
-                                                if ((kb.field_a ^ -1) < -1) {
+                                                if (kb.field_a > 0) {
                                                   ka.field_o.field_l = true;
                                                   break L23;
                                                 } else {
@@ -2823,7 +2823,7 @@ public final class Bounce extends kk {
                                 } else {
                                   L25: {
                                     var5_int = -1;
-                                    if ((he.field_n[0].field_n ^ -1) < -1) {
+                                    if (he.field_n[0].field_n > 0) {
                                       var5_int = 0;
                                       break L25;
                                     } else {
@@ -2831,7 +2831,7 @@ public final class Bounce extends kk {
                                     }
                                   }
                                   L26: {
-                                    if (-2 <= (vk.field_b ^ -1)) {
+                                    if (vk.field_b <= 1) {
                                       break L26;
                                     } else {
                                       L27: {
@@ -2846,10 +2846,10 @@ public final class Bounce extends kk {
                                           }
                                         }
                                       }
-                                      if (-1 <= (he.field_n[1].field_n ^ -1)) {
+                                      if (he.field_n[1].field_n <= 0) {
                                         break L26;
                                       } else {
-                                        if ((var5_int ^ -1) != -2) {
+                                        if (var5_int != 1) {
                                           var5_int = -1;
                                           break L26;
                                         } else {
@@ -2859,14 +2859,14 @@ public final class Bounce extends kk {
                                     }
                                   }
                                   L28: {
-                                    if (-3 <= (vk.field_b ^ -1)) {
+                                    if (vk.field_b <= 2) {
                                       break L28;
                                     } else {
                                       L29: {
-                                        if ((he.field_n[2].field_n ^ -1) >= -1) {
+                                        if (he.field_n[2].field_n <= 0) {
                                           break L29;
                                         } else {
-                                          if ((var5_int ^ -1) != 0) {
+                                          if (var5_int != -1) {
                                             break L29;
                                           } else {
                                             var5_int = 2;
@@ -2874,10 +2874,10 @@ public final class Bounce extends kk {
                                           }
                                         }
                                       }
-                                      if ((he.field_n[2].field_n ^ -1) >= -1) {
+                                      if (he.field_n[2].field_n <= 0) {
                                         break L28;
                                       } else {
-                                        if (-3 == (var5_int ^ -1)) {
+                                        if (var5_int == 2) {
                                           break L28;
                                         } else {
                                           var5_int = -1;
@@ -2887,7 +2887,7 @@ public final class Bounce extends kk {
                                     }
                                   }
                                   L30: {
-                                    if ((var5_int ^ -1) == 0) {
+                                    if (var5_int == -1) {
                                       break L30;
                                     } else {
                                       wj.field_e = 1;
@@ -2899,10 +2899,10 @@ public final class Bounce extends kk {
                                     if (3 != vk.field_b) {
                                       break L31;
                                     } else {
-                                      if (-1 > (he.field_n[0].field_n ^ -1)) {
+                                      if (he.field_n[0].field_n > 0) {
                                         break L31;
                                       } else {
-                                        if (-1 > (he.field_n[1].field_n ^ -1)) {
+                                        if (he.field_n[1].field_n > 0) {
                                           break L31;
                                         } else {
                                           if (he.field_n[2].field_n <= 0) {
@@ -2920,10 +2920,10 @@ public final class Bounce extends kk {
                                     if (2 != vk.field_b) {
                                       break L32;
                                     } else {
-                                      if (-1 > (he.field_n[0].field_n ^ -1)) {
+                                      if (he.field_n[0].field_n > 0) {
                                         break L32;
                                       } else {
-                                        if (-1 <= (he.field_n[1].field_n ^ -1)) {
+                                        if (he.field_n[1].field_n <= 0) {
                                           jk.field_q = 3;
                                           wj.field_e = 1;
                                           break L32;
@@ -2934,7 +2934,7 @@ public final class Bounce extends kk {
                                     }
                                   }
                                   L33: {
-                                    if (-2 != (vk.field_b ^ -1)) {
+                                    if (vk.field_b != 1) {
                                       break L33;
                                     } else {
                                       if (0 < he.field_n[0].field_n) {
@@ -2950,7 +2950,7 @@ public final class Bounce extends kk {
                                             break L34;
                                           }
                                         }
-                                        if ((ca.field_a[0] ^ -1) > (fa.field_c ^ -1)) {
+                                        if (~ca.field_a[0] > ~fa.field_c) {
                                           jk.field_q = 5;
                                           break L33;
                                         } else {
@@ -2972,13 +2972,13 @@ public final class Bounce extends kk {
                                     L36: {
                                       L37: {
                                         na.a(64, 0, 512, 480, 0, 64);
-                                        if (-1 == (jk.field_q ^ -1)) {
+                                        if (jk.field_q == 0) {
                                           break L37;
                                         } else {
                                           if (jk.field_q == 1) {
                                             break L37;
                                           } else {
-                                            if ((jk.field_q ^ -1) != -3) {
+                                            if (jk.field_q != 2) {
                                               break L36;
                                             } else {
                                               break L37;
@@ -2991,7 +2991,7 @@ public final class Bounce extends kk {
                                       break L36;
                                     }
                                     L38: {
-                                      if ((jk.field_q ^ -1) != -4) {
+                                      if (jk.field_q != 3) {
                                         break L38;
                                       } else {
                                         var5_int = wj.field_e / 20 % 8;
@@ -3000,7 +3000,7 @@ public final class Bounce extends kk {
                                       }
                                     }
                                     L39: {
-                                      if (-5 != (jk.field_q ^ -1)) {
+                                      if (jk.field_q != 4) {
                                         break L39;
                                       } else {
                                         jc.field_n.b(320, 0, -741572379, 128, 240);
@@ -3029,7 +3029,7 @@ public final class Bounce extends kk {
                                 if (!u.field_g) {
                                   L42: {
                                     na.a(var3, 0, 512, 480, 0, 112);
-                                    if ((bk.field_c ^ -1) == -2) {
+                                    if (bk.field_c == 1) {
                                       break L42;
                                     } else {
                                       break L42;
@@ -3053,7 +3053,7 @@ public final class Bounce extends kk {
                                   if (null == ka.field_o) {
                                     break L41;
                                   } else {
-                                    if ((rj.field_j ^ -1) != 0) {
+                                    if (rj.field_j != -1) {
                                       break L41;
                                     } else {
                                       ka.field_o.a(23417);
@@ -3064,7 +3064,7 @@ public final class Bounce extends kk {
                                   if (null == ka.field_o) {
                                     break L41;
                                   } else {
-                                    if (0 != (rj.field_j ^ -1)) {
+                                    if (rj.field_j != -1) {
                                       break L41;
                                     } else {
                                       ka.field_o.a(23417);
@@ -3075,7 +3075,7 @@ public final class Bounce extends kk {
                               }
                               L45: {
                                 L46: {
-                                  if (-2 == (vk.field_b ^ -1)) {
+                                  if (vk.field_b == 1) {
                                     break L46;
                                   } else {
                                     if (u.field_g) {
@@ -3086,7 +3086,7 @@ public final class Bounce extends kk {
                                   }
                                 }
                                 L47: {
-                                  if ((he.field_n[0].field_n ^ -1) < -2) {
+                                  if (he.field_n[0].field_n > 1) {
                                     he.field_n[0].field_n = 1;
                                     break L47;
                                   } else {
@@ -3111,7 +3111,7 @@ public final class Bounce extends kk {
                                 if (var5 != null) {
                                   L49: {
                                     var7 = ((Bounce) this).field_H;
-                                    if ((var7 ^ -1) <= -81) {
+                                    if (var7 >= 80) {
                                       if (var7 < 230) {
                                         var6_int = 8;
                                         break L49;
@@ -3141,11 +3141,11 @@ public final class Bounce extends kk {
                                   break L50;
                                 } else {
                                   L51: {
-                                    if ((rj.field_j ^ -1) == -3) {
+                                    if (rj.field_j == 2) {
                                       break L51;
                                     } else {
-                                      if (-4 != (rj.field_j ^ -1)) {
-                                        if ((rj.field_j ^ -1) == -1) {
+                                      if (rj.field_j != 3) {
+                                        if (rj.field_j == 0) {
                                           L52: {
                                             var6_ref = gk.field_e;
                                             var7 = 200 - -var6_ref.field_s;
@@ -3154,7 +3154,7 @@ public final class Bounce extends kk {
                                             ve.a(84 + (5 * var8 - -6), 187, ig.field_d, (byte) -94, 422, 109);
                                             var6_ref.a(tc.field_q, 320, var7, 16777088, -1);
                                             stackOut_307_0 = (ie) var6_ref;
-                                            stackOut_307_1 = param0 ^ 0;
+                                            stackOut_307_1 = param0;
                                             stackOut_307_2 = 0;
                                             stackIn_310_0 = stackOut_307_0;
                                             stackIn_310_1 = stackOut_307_1;
@@ -3237,7 +3237,7 @@ public final class Bounce extends kk {
                                             stackIn_316_1 = stackOut_315_1;
                                             stackIn_316_2 = stackOut_315_2;
                                             stackIn_316_3 = stackOut_315_3;
-                                            if (-1 != (qf.field_b ^ -1)) {
+                                            if (qf.field_b != 0) {
                                               stackOut_318_0 = this;
                                               stackOut_318_1 = (String) (Object) stackIn_318_1;
                                               stackOut_318_2 = stackIn_318_2;
@@ -3380,7 +3380,7 @@ public final class Bounce extends kk {
                                             stackOut_331_0 = (ie) var6_ref;
                                             stackIn_334_0 = stackOut_331_0;
                                             stackIn_332_0 = stackOut_331_0;
-                                            if ((fa.field_c ^ -1) == -1) {
+                                            if (fa.field_c == 0) {
                                               stackOut_334_0 = (ie) (Object) stackIn_334_0;
                                               stackOut_334_1 = 0;
                                               stackIn_335_0 = stackOut_334_0;
@@ -3401,7 +3401,7 @@ public final class Bounce extends kk {
                                             stackIn_338_1 = stackOut_335_1;
                                             stackIn_336_0 = stackOut_335_0;
                                             stackIn_336_1 = stackOut_335_1;
-                                            if ((kb.field_a ^ -1) == -1) {
+                                            if (kb.field_a == 0) {
                                               stackOut_338_0 = (ie) (Object) stackIn_338_0;
                                               stackOut_338_1 = stackIn_338_1;
                                               stackOut_338_2 = 0;

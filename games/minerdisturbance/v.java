@@ -26,9 +26,6 @@ final class v implements uj {
     public static void b(byte param0) {
         field_d = null;
         field_b = null;
-        if (param0 > -25) {
-            return;
-        }
         field_a = null;
     }
 

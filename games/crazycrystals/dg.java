@@ -12,9 +12,6 @@ final class dg {
     }
 
     public static void b(byte param0) {
-        if (param0 < 35) {
-            return;
-        }
         field_a = null;
     }
 
@@ -646,14 +643,7 @@ final class dg {
         ke.field_b[jo.field_o] = 0;
         so.field_h.a(22800);
         fk.field_s = 0;
-        if (param0 > -25) {
-          byte discarded$2 = dg.a('ￚ', 73);
-          pc.field_y = 0;
-          return;
-        } else {
-          pc.field_y = 0;
-          return;
-        }
+        pc.field_y = 0;
     }
 
     static {

@@ -30,23 +30,129 @@ final class rp implements ef {
     final static void a(java.applet.Applet param0, int param1, String param2) {
         try {
             String var3 = null;
+            Throwable var3_ref = null;
+            RuntimeException var3_ref2 = null;
             String var4 = null;
             String var5 = null;
-            sm.field_Ib = param2;
-            if (param1 != -2112) {
-                return;
-            }
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            RuntimeException stackIn_13_0 = null;
+            StringBuilder stackIn_13_1 = null;
+            RuntimeException stackIn_14_0 = null;
+            StringBuilder stackIn_14_1 = null;
+            String stackIn_14_2 = null;
+            RuntimeException stackIn_15_0 = null;
+            StringBuilder stackIn_15_1 = null;
+            RuntimeException stackIn_16_0 = null;
+            StringBuilder stackIn_16_1 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            String stackIn_17_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            RuntimeException stackOut_13_0 = null;
+            StringBuilder stackOut_13_1 = null;
+            String stackOut_13_2 = null;
+            RuntimeException stackOut_12_0 = null;
+            StringBuilder stackOut_12_1 = null;
+            String stackOut_12_2 = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            String stackOut_16_2 = null;
+            RuntimeException stackOut_15_0 = null;
+            StringBuilder stackOut_15_1 = null;
+            String stackOut_15_2 = null;
             try {
-                var3 = param0.getParameter("cookieprefix");
-                var4 = param0.getParameter("cookiehost");
-                var5 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
-                if (!(param2.length() != 0)) {
-                    var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              L0: {
+                sm.field_Ib = param2;
+                try {
+                  L1: {
+                    if (param1 == -2112) {
+                      L2: {
+                        var3 = param0.getParameter("cookieprefix");
+                        var4 = param0.getParameter("cookiehost");
+                        var5 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
+                        if (param2.length() == 0) {
+                          var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                          break L2;
+                        } else {
+                          break L2;
+                        }
+                      }
+                      je.a(param0, "document.cookie=\"" + var5 + "\"", (byte) 124);
+                      break L1;
+                    } else {
+                      return;
+                    }
+                  }
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L3: {
+                    var3_ref = decompiledCaughtException;
+                    break L3;
+                  }
                 }
-                je.a(param0, "document.cookie=\"" + var5 + "\"", (byte) 124);
-            } catch (Throwable throwable) {
+                op.a(0, param0);
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_11_0 = (RuntimeException) var3_ref2;
+                stackOut_11_1 = new StringBuilder().append("rp.F(");
+                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_1 = stackOut_11_1;
+                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_1 = stackOut_11_1;
+                if (param0 == null) {
+                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_2 = "null";
+                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_1 = stackOut_13_1;
+                  stackIn_14_2 = stackOut_13_2;
+                  break L4;
+                } else {
+                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_2 = "{...}";
+                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_1 = stackOut_12_1;
+                  stackIn_14_2 = stackOut_12_2;
+                  break L4;
+                }
+              }
+              L5: {
+                stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param1).append(44);
+                stackIn_16_0 = stackOut_14_0;
+                stackIn_16_1 = stackOut_14_1;
+                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_1 = stackOut_14_1;
+                if (param2 == null) {
+                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                  stackOut_16_2 = "null";
+                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_1 = stackOut_16_1;
+                  stackIn_17_2 = stackOut_16_2;
+                  break L5;
+                } else {
+                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_2 = "{...}";
+                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_17_1 = stackOut_15_1;
+                  stackIn_17_2 = stackOut_15_2;
+                  break L5;
+                }
+              }
+              throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
             }
-            op.a(0, param0);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -71,92 +177,109 @@ final class rp implements ef {
     }
 
     rp(boolean param0, er[] param1) {
-        int[] var5 = new int[6];
-        int[] var3 = var5;
-        ((rp) this).field_h = dk.a(var5, true, param1);
-        ef var4 = oo.field_o;
-        oo.a((ef) this);
-        ((rp) this).field_g = (fc) (Object) th.a(param0, var5, -27911);
-        oo.a(var4);
+        int[] var5 = null;
+        ef var4 = null;
+        try {
+            var5 = new int[6];
+            int[] var3 = var5;
+            ((rp) this).field_h = dk.a(var5, true, param1);
+            var4 = oo.field_o;
+            oo.a((ef) this);
+            ((rp) this).field_g = (fc) (Object) th.a(param0, var5, -27911);
+            oo.a(var4);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "rp.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int[] param0, int param1) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         ef var6 = null;
         Throwable var7 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = param0[0];
-                    var4 = param0[1];
-                    param0[0] = 0;
-                    if (param1 == 28580) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    ((rp) this).field_g = null;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    param0[1] = 0;
-                    var5 = param0[2];
-                    param0[2] = 0;
-                    var6 = oo.field_o;
-                    oo.a((ef) this);
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        ((rp) this).field_g.a(param0, mb.field_w);
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    oo.a(var6);
-                    param0[0] = var3;
-                    param0[1] = var4;
-                    param0[2] = var5;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        var7 = caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    oo.a(var6);
-                    param0[0] = var3;
-                    param0[1] = var4;
-                    param0[2] = var5;
-                    throw (RuntimeException) (Object) var7;
-                }
-                case 7: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            var3_int = param0[0];
+            var4 = param0[1];
+            param0[0] = 0;
+            if (param1 == 28580) {
+              break L0;
+            } else {
+              ((rp) this).field_g = null;
+              break L0;
             }
+          }
+          param0[1] = 0;
+          var5 = param0[2];
+          param0[2] = 0;
+          var6 = oo.field_o;
+          oo.a((ef) this);
+          try {
+            L1: {
+              ((rp) this).field_g.a(param0, mb.field_w);
+              break L1;
+            }
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var7 = decompiledCaughtException;
+            oo.a(var6);
+            param0[0] = var3_int;
+            param0[1] = var4;
+            param0[2] = var5;
+            throw rp.<RuntimeException>$cfr$sneakyThrow(var7);
+          }
+          oo.a(var6);
+          param0[0] = var3_int;
+          param0[1] = var4;
+          param0[2] = var5;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L2: {
+            var3 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("rp.H(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
         }
     }
 
@@ -195,5 +318,10 @@ final class rp implements ef {
         field_f = new ve(14, 0, 4, 1);
         field_d = "Blue won!";
         field_b = "<%0> is not a member, and cannot play with the current options.";
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

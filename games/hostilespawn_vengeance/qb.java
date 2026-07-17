@@ -11,9 +11,6 @@ final class qb extends am {
 
     public static void a(boolean param0) {
         field_m = null;
-        if (param0) {
-            field_k = -37;
-        }
     }
 
     private qb() throws Throwable {

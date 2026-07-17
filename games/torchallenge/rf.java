@@ -13,27 +13,19 @@ final class rf extends dj implements uh {
     public static void i(byte param0) {
         field_eb = null;
         field_jb = null;
-        if (param0 < 6) {
-          field_ib = 113;
-          field_hb = null;
-          field_db = null;
-          return;
-        } else {
-          field_hb = null;
-          field_db = null;
-          return;
-        }
+        field_hb = null;
+        field_db = null;
     }
 
     final void a(ee param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, (byte) -114, param3);
-        if (param2 >= -97) {
-          field_jb = null;
-          ((rf) this).field_gb = kc.field_u - ((rf) this).field_m - param1;
-          return;
-        } else {
-          ((rf) this).field_gb = kc.field_u - ((rf) this).field_m - param1;
-          return;
+        try {
+            super.a(param0, param1, (byte) -114, param3);
+            if (param2 >= -97) {
+                field_jb = null;
+            }
+            ((rf) this).field_gb = kc.field_u - ((rf) this).field_m - param1;
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "rf.U(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -43,27 +35,23 @@ final class rf extends dj implements uh {
         bk.field_p = 0;
         sj.field_R = false;
         bi.field_h = -1;
-        if (param0 != 19630) {
-            rf.m(119);
-        }
     }
 
     final static void a(lj param0, byte param1, boolean param2, lj param3, lj param4) {
-        Object var6 = null;
-        ji.field_k = og.a("", true);
-        ji.field_k.a((byte) 56, false);
-        vj.a(param4, param3, param1 + 23104, param0);
-        ul.c(-1247);
-        if (param1 != -23) {
-            var6 = null;
-            rf.a((lj) null, (byte) 35, false, (lj) null, (lj) null);
-        } else {
+        try {
+            ji.field_k = og.a("", true);
+            ji.field_k.a((byte) 56, false);
+            vj.a(param4, param3, param1 + 23104, param0);
+            ul.c(-1247);
+            if (param1 != -23) {
+                Object var6 = null;
+                rf.a((lj) null, (byte) 35, false, (lj) null, (lj) null);
+            }
             gj.field_a = mg.field_c;
             eh.field_p = mg.field_c;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "rf.FA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
-        gj.field_a = mg.field_c;
-        eh.field_p = mg.field_c;
     }
 
     final String b(boolean param0) {
@@ -104,9 +92,65 @@ final class rf extends dj implements uh {
     }
 
     final void a(int param0, wd param1) {
-        ((rf) this).field_fb = param1;
-        if (param0 != -27997) {
-            ((rf) this).k(-38);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((rf) this).field_fb = param1;
+              if (param0 == -27997) {
+                break L1;
+              } else {
+                ((rf) this).k(-38);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("rf.EA(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw oj.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -129,7 +173,7 @@ final class rf extends dj implements uh {
         } else {
           var1 = fl.f(param0 + -62);
           var2 = o.a(18);
-          gb.field_f.a(var2 - -(mg.field_d << -326978687), jl.field_e + -mg.field_d, -1, -i.field_m + qe.field_R, var1 - -(i.field_m << -1913119871));
+          gb.field_f.a(var2 - -(mg.field_d << 1), jl.field_e + -mg.field_d, -1, -i.field_m + qe.field_R, var1 - -(i.field_m << 1));
           m.a((byte) 118);
           return;
         }

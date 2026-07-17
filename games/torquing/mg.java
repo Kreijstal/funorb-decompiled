@@ -11,10 +11,10 @@ final class mg {
         byte[] var3 = null;
         if (param0 < -46) {
           L0: {
-            if (-101 != (param1 ^ -1)) {
+            if (param1 != 100) {
               break L0;
             } else {
-              if ((gl.field_q ^ -1) >= -1) {
+              if (gl.field_q <= 0) {
                 break L0;
               } else {
                 int fieldTemp$29 = gl.field_q - 1;
@@ -26,7 +26,7 @@ final class mg {
             }
           }
           if (5000 != param1) {
-            if (-30001 != (param1 ^ -1)) {
+            if (param1 != 30000) {
               if (null != l.field_d) {
                 var2 = 0;
                 L1: while (true) {
@@ -38,7 +38,7 @@ final class mg {
                       var2++;
                       continue L1;
                     } else {
-                      if ((ke.field_a[var2] ^ -1) < -1) {
+                      if (ke.field_a[var2] > 0) {
                         ke.field_a[var2] = ke.field_a[var2] - 1;
                         var3 = l.field_d[var2][ke.field_a[var2] - 1];
                         l.field_d[var2][ke.field_a[var2]] = null;
@@ -72,7 +72,7 @@ final class mg {
                         var2++;
                         continue L2;
                       } else {
-                        if ((ke.field_a[var2] ^ -1) < -1) {
+                        if (ke.field_a[var2] > 0) {
                           ke.field_a[var2] = ke.field_a[var2] - 1;
                           var3 = l.field_d[var2][ke.field_a[var2] - 1];
                           l.field_d[var2][ke.field_a[var2]] = null;
@@ -91,7 +91,7 @@ final class mg {
             }
           } else {
             if (ok.field_E <= 0) {
-              if (-30001 != (param1 ^ -1)) {
+              if (param1 != 30000) {
                 if (null != l.field_d) {
                   var2 = 0;
                   L3: while (true) {
@@ -103,7 +103,7 @@ final class mg {
                         var2++;
                         continue L3;
                       } else {
-                        if ((ke.field_a[var2] ^ -1) < -1) {
+                        if (ke.field_a[var2] > 0) {
                           ke.field_a[var2] = ke.field_a[var2] - 1;
                           var3 = l.field_d[var2][ke.field_a[var2] - 1];
                           l.field_d[var2][ke.field_a[var2]] = null;
@@ -138,7 +138,7 @@ final class mg {
                             var2++;
                             continue L5;
                           } else {
-                            if ((ke.field_a[var2] ^ -1) < -1) {
+                            if (ke.field_a[var2] > 0) {
                               ke.field_a[var2] = ke.field_a[var2] - 1;
                               var3 = l.field_d[var2][ke.field_a[var2] - 1];
                               l.field_d[var2][ke.field_a[var2]] = null;
@@ -167,8 +167,8 @@ final class mg {
           }
         } else {
           field_b = null;
-          if (-101 == (param1 ^ -1)) {
-            if ((gl.field_q ^ -1) >= -1) {
+          if (param1 == 100) {
+            if (gl.field_q <= 0) {
               L6: {
                 if (5000 != param1) {
                   break L6;
@@ -185,7 +185,7 @@ final class mg {
                 }
               }
               L7: {
-                if (-30001 != (param1 ^ -1)) {
+                if (param1 != 30000) {
                   break L7;
                 } else {
                   if (d.field_s > 0) {
@@ -208,7 +208,7 @@ final class mg {
                       var2++;
                       continue L8;
                     } else {
-                      if ((ke.field_a[var2] ^ -1) < -1) {
+                      if (ke.field_a[var2] > 0) {
                         ke.field_a[var2] = ke.field_a[var2] - 1;
                         var3 = l.field_d[var2][ke.field_a[var2] - 1];
                         l.field_d[var2][ke.field_a[var2]] = null;
@@ -249,7 +249,7 @@ final class mg {
               }
             }
             L10: {
-              if (-30001 != (param1 ^ -1)) {
+              if (param1 != 30000) {
                 break L10;
               } else {
                 if (d.field_s > 0) {
@@ -267,7 +267,7 @@ final class mg {
               var2 = 0;
               if (rf.field_r.length > var2) {
                 if (rf.field_r[var2] == param1) {
-                  if ((ke.field_a[var2] ^ -1) < -1) {
+                  if (ke.field_a[var2] > 0) {
                     ke.field_a[var2] = ke.field_a[var2] - 1;
                     var3 = l.field_d[var2][ke.field_a[var2] - 1];
                     l.field_d[var2][ke.field_a[var2]] = null;
@@ -300,28 +300,26 @@ final class mg {
         tl.field_u = param7;
         um.field_r = param1;
         if (param0 != -1) {
-          return;
-        } else {
-          gi.field_c = param3;
-          gf.field_g = param2;
-          hq.field_a = param4;
-          eg.field_x = param5;
-          qg.field_A = param8;
-          cl.field_d = param6;
-          nn.field_c = (jp) (Object) new fh();
-          gh.field_a = new co(param4);
-          no.field_n = new bo(nn.field_c, gh.field_a);
-          return;
+            return;
+        }
+        try {
+            gi.field_c = param3;
+            gf.field_g = param2;
+            hq.field_a = param4;
+            eg.field_x = param5;
+            qg.field_A = param8;
+            cl.field_d = param6;
+            nn.field_c = (jp) (Object) new fh();
+            gh.field_a = new co(param4);
+            no.field_n = new bo(nn.field_c, gh.field_a);
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "mg.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + param8 + 41);
         }
     }
 
     public static void a(int param0) {
         field_b = null;
         field_a = null;
-        if (param0 >= -23) {
-            Object var2 = null;
-            mg.a(-36, 74, 14, 75, (vh) null, 80, (String) null, -11, -19);
-        }
     }
 
     static {

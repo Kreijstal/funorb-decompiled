@@ -20,18 +20,9 @@ final class efb implements dja {
     }
 
     public static void b(byte param0) {
-        if (param0 != -80) {
-          field_c = null;
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          return;
-        }
+        field_b = null;
+        field_a = null;
+        field_c = null;
     }
 
     static {

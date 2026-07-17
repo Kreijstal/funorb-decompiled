@@ -70,7 +70,7 @@ final class mla {
           var3 = var5.field_h;
           var5.i(5, 0);
           var5.i(uu.field_a.field_Jb, 0);
-          var4 = (uu.field_a.field_yb << -869570490) + uu.field_a.field_cc;
+          var4 = (uu.field_a.field_yb << 6) + uu.field_a.field_cc;
           var5.i(var4, 0);
           var5.a(0, uu.field_a.field_ac, uu.field_a.field_ac.length, 121);
           var5.d(var5.field_h - var3, (byte) -97);
@@ -82,7 +82,7 @@ final class mla {
           var3 = var6.field_h;
           var6.i(5, 0);
           var6.i(uu.field_a.field_Jb, 0);
-          var4 = (uu.field_a.field_yb << -869570490) + uu.field_a.field_cc;
+          var4 = (uu.field_a.field_yb << 6) + uu.field_a.field_cc;
           var6.i(var4, 0);
           var6.a(0, uu.field_a.field_ac, uu.field_a.field_ac.length, 121);
           var6.d(var6.field_h - var3, (byte) -97);

@@ -84,12 +84,13 @@ final class dv extends bw {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -191,12 +192,13 @@ final class dv extends bw {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((dv) this).field_C[var3] = (byte)(var6 - 128);
+                    ((dv) this).field_C[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -437,6 +439,7 @@ final class dv extends bw {
 
     final static dv a(vr param0, String param1, String param2) {
         try {
+            dv var4_ref = null;
             if (!dv.a(param0)) {
                 boolean discarded$0 = param0.a(param2, false, param1);
                 return null;
@@ -445,13 +448,11 @@ final class dv extends bw {
             if (var3 == null) {
                 return null;
             }
-            dv var4 = null;
-            try {
-                var4 = new dv(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new dv(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -461,7 +462,7 @@ final class dv extends bw {
 
     private final static void a(byte[] param0, int param1) {
         field_F = param0;
-        field_o = param1;
+        field_o = 0;
         field_w = 0;
     }
 
@@ -483,7 +484,6 @@ final class dv extends bw {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -714,7 +714,7 @@ final class dv extends bw {
                           }
                         }
                         L15: {
-                          var21 = (float[]) (Object) stackIn_40_0;
+                          var21 = stackIn_40_0;
                           if (var3 == 0) {
                             stackOut_42_0 = (float[]) field_y;
                             stackIn_43_0 = stackOut_42_0;
@@ -726,7 +726,7 @@ final class dv extends bw {
                           }
                         }
                         L16: {
-                          var22 = (float[]) (Object) stackIn_43_0;
+                          var22 = stackIn_43_0;
                           if (var3 == 0) {
                             stackOut_45_0 = (float[]) field_j;
                             stackIn_46_0 = stackOut_45_0;
@@ -738,7 +738,7 @@ final class dv extends bw {
                           }
                         }
                         L17: {
-                          var23 = (float[]) (Object) stackIn_46_0;
+                          var23 = stackIn_46_0;
                           if (var3 == 0) {
                             stackOut_48_0 = (int[]) field_G;
                             stackIn_49_0 = stackOut_48_0;
@@ -749,7 +749,7 @@ final class dv extends bw {
                             break L17;
                           }
                         }
-                        var56 = (int[]) (Object) stackIn_49_0;
+                        var56 = stackIn_49_0;
                         var52 = var56;
                         var48 = var52;
                         var44 = var48;
@@ -999,7 +999,7 @@ final class dv extends bw {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((dv) this).field_p) {
                     break L36;
                   } else {
@@ -1057,7 +1057,7 @@ final class dv extends bw {
               }
             }
             ((dv) this).field_p = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_l[var14.field_b[var17_int]];
             var55 = field_q;
@@ -1101,7 +1101,7 @@ final class dv extends bw {
         ((dv) this).field_g = var2.f(77);
         ((dv) this).field_k = var2.f(93);
         if (((dv) this).field_k < 0) {
-            ((dv) this).field_k = ((dv) this).field_k ^ -1;
+            ((dv) this).field_k = ~((dv) this).field_k;
             ((dv) this).field_H = true;
         }
         int var3 = var2.f(-91);
@@ -1123,6 +1123,7 @@ final class dv extends bw {
 
     final static dv a(vr param0, int param1, int param2) {
         try {
+            dv var4_ref = null;
             if (!dv.a(param0)) {
                 boolean discarded$0 = param0.a(-105, param2, param1);
                 return null;
@@ -1131,13 +1132,11 @@ final class dv extends bw {
             if (var3 == null) {
                 return null;
             }
-            dv var4 = null;
-            try {
-                var4 = new dv(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new dv(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

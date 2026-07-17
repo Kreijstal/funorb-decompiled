@@ -8,32 +8,26 @@ final class g {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 != 122) {
-            field_c = null;
-            field_c = null;
-            field_a = null;
-            return;
-        }
         field_c = null;
         field_a = null;
     }
 
     final static void a(byte param0, long param1) {
-        int var3 = 0;
-        InterruptedException var4 = null;
-        Throwable decompiledCaughtException = null;
-        var3 = -60 % ((64 - param0) / 39);
         try {
-          L0: {
-            Thread.sleep(param1);
-            break L0;
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = (InterruptedException) (Object) decompiledCaughtException;
-            break L1;
-          }
+            int var3 = 0;
+            InterruptedException var4 = null;
+            Throwable decompiledCaughtException = null;
+            var3 = -60 % ((64 - param0) / 39);
+            {
+              L0: {
+                Thread.sleep(param1);
+                break L0;
+              }
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 

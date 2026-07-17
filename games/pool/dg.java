@@ -14,23 +14,13 @@ final class dg extends gr {
     static String field_P;
 
     public static void c(byte param0) {
-        Object var2 = null;
         field_T = null;
         field_M = null;
         field_L = null;
         field_K = null;
         field_S = null;
-        if (param0 != -80) {
-          var2 = null;
-          String discarded$2 = dg.a(83, (String) null, (String) null, (String) null);
-          field_J = null;
-          field_P = null;
-          return;
-        } else {
-          field_J = null;
-          field_P = null;
-          return;
-        }
+        field_J = null;
+        field_P = null;
     }
 
     final byte[] b(boolean param0) {
@@ -61,7 +51,7 @@ final class dg extends gr {
               stackIn_8_0 = stackOut_7_0;
               break L0;
             } else {
-              if (-9 != (param1 ^ -1)) {
+              if (param1 != 8) {
                 if (8 > param1) {
                   stackOut_6_0 = cr.field_p;
                   stackIn_8_0 = stackOut_6_0;
@@ -84,7 +74,7 @@ final class dg extends gr {
 
     final static int a(byte param0, int param1, int param2) {
         int var3 = 0;
-        var3 = param2 >>> 58595551;
+        var3 = param2 >>> 31;
         if (param0 != 44) {
           field_M = null;
           return -var3 + (param2 - -var3) / param1;

@@ -12,27 +12,19 @@ final class oi {
     static String field_d;
 
     final void a(wl param0, int param1) {
-        L0: {
-          if (param0.field_c != null) {
-            param0.a(false);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param1 != -5441) {
-          field_d = null;
-          param0.field_b = ((oi) this).field_a.field_b;
-          param0.field_c = ((oi) this).field_a;
-          param0.field_c.field_b = param0;
-          param0.field_b.field_c = param0;
-          return;
-        } else {
-          param0.field_b = ((oi) this).field_a.field_b;
-          param0.field_c = ((oi) this).field_a;
-          param0.field_c.field_b = param0;
-          param0.field_b.field_c = param0;
-          return;
+        try {
+            if (!(param0.field_c == null)) {
+                param0.a(false);
+            }
+            if (param1 != -5441) {
+                field_d = null;
+            }
+            param0.field_b = ((oi) this).field_a.field_b;
+            param0.field_c = ((oi) this).field_a;
+            param0.field_c.field_b = param0;
+            param0.field_b.field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "oi.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -128,29 +120,73 @@ final class oi {
     }
 
     final void a(wl param0, boolean param1) {
-        if (null == param0.field_c) {
-          param0.field_b = ((oi) this).field_a;
-          param0.field_c = ((oi) this).field_a.field_c;
-          param0.field_c.field_b = param0;
-          param0.field_b.field_c = param0;
-          if (param1) {
-            field_e = null;
-            return;
-          } else {
-            return;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (null == param0.field_c) {
+                break L1;
+              } else {
+                param0.a(param1);
+                break L1;
+              }
+            }
+            param0.field_b = ((oi) this).field_a;
+            param0.field_c = ((oi) this).field_a.field_c;
+            param0.field_c.field_b = param0;
+            param0.field_b.field_c = param0;
+            if (!param1) {
+              break L0;
+            } else {
+              field_e = null;
+              return;
+            }
           }
-        } else {
-          param0.a(param1);
-          param0.field_b = ((oi) this).field_a;
-          param0.field_c = ((oi) this).field_a.field_c;
-          param0.field_c.field_b = param0;
-          param0.field_b.field_c = param0;
-          if (!param1) {
-            return;
-          } else {
-            field_e = null;
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("oi.E(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
           }
+          throw bd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
     }
 

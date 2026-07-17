@@ -164,8 +164,9 @@ final class le extends iaa {
                 break L2;
               } else {
                 L4: {
-                  ((le) this).field_e[var28] = var2.b(true);
-                  var29 = var2.b(true);
+                  byte dupTemp$1 = var2.b(true);
+                  ((le) this).field_e[var28] = dupTemp$1;
+                  var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -651,7 +652,7 @@ final class le extends iaa {
                 }
                 if (((le) this).field_s != null) {
                   if (((le) this).field_x[var53] == -1) {
-                    ((le) this).field_s[var53] = (byte)-1;
+                    ((le) this).field_s[var53] = (byte) -1;
                     var53++;
                     continue L22;
                   } else {
@@ -803,8 +804,9 @@ final class le extends iaa {
                                           break L6;
                                         }
                                       }
-                                      ((le) this).field_B[var1] = new jea();
-                                      var16 = new jea();
+                                      jea dupTemp$1 = new jea();
+                                      ((le) this).field_B[var1] = dupTemp$1;
+                                      var16 = dupTemp$1;
                                       var16.field_b = var11;
                                       var16.field_e = var12;
                                       var16.field_a = var13;
@@ -1124,7 +1126,7 @@ final class le extends iaa {
                                         if ((((le) this).field_E[var44] & 65535) != ((le) this).field_J[var45]) {
                                           break L17;
                                         } else {
-                                          ((le) this).field_s[var45] = (byte)-1;
+                                          ((le) this).field_s[var45] = (byte) -1;
                                           var45++;
                                           continue L16;
                                         }
@@ -1284,13 +1286,13 @@ final class le extends iaa {
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((le) this).field_s[var38] = (byte)-1;
-                      ((le) this).field_x[var38] = (short)-1;
+                      ((le) this).field_s[var38] = (byte) -1;
+                      ((le) this).field_x[var38] = (short) -1;
                       break L25;
                     } else {
                       ((le) this).field_s[var38] = (byte)(var39 >> 2);
                       ((le) this).field_x[var38] = ((le) this).field_z[var38];
-                      ((le) this).field_z[var38] = (short)127;
+                      ((le) this).field_z[var38] = (short) 127;
                       if (((le) this).field_x[var38] == -1) {
                         break L25;
                       } else {
@@ -1486,14 +1488,24 @@ final class le extends iaa {
     }
 
     private le(byte[] param0) {
-        ((le) this).field_d = 0;
-        ((le) this).field_F = 0;
-        ((le) this).field_i = 0;
-        if (param0[param0.length - 1] == -1) {
-            // if_icmpne L47
-            this.a(param0);
-        } else {
-            this.b(param0);
+        L0: {
+          L1: {
+            ((le) this).field_d = 0;
+            ((le) this).field_F = 0;
+            ((le) this).field_i = 0;
+            if (param0[param0.length - 1] != -1) {
+              break L1;
+            } else {
+              if (param0[param0.length - 2] != -1) {
+                break L1;
+              } else {
+                this.a(param0);
+                break L0;
+              }
+            }
+          }
+          this.b(param0);
+          break L0;
         }
     }
 }

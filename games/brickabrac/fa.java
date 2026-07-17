@@ -14,12 +14,12 @@ final class fa extends nm {
           field_j = null;
           var4.field_m = new int[param0];
           ob.field_F.a((nm) (Object) var4, (byte) 3);
-          i.a(param3, var4, 108);
+          i.a(5, var4, 108);
           return var4;
         } else {
           var4.field_m = new int[param0];
           ob.field_F.a((nm) (Object) var4, (byte) 3);
-          i.a(param3, var4, 108);
+          i.a(5, var4, 108);
           return var4;
         }
     }
@@ -30,9 +30,6 @@ final class fa extends nm {
 
     public static void a(byte param0) {
         field_j = null;
-        if (param0 != -102) {
-            field_j = null;
-        }
     }
 
     static {

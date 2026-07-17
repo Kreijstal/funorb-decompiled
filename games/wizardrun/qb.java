@@ -8,18 +8,10 @@ class qb extends ll {
     static String field_s;
 
     public static void b(int param0) {
-        if (param0 != -1) {
-          qb.a((byte) 59, 86);
-          field_r = null;
-          field_s = null;
-          field_q = null;
-          return;
-        } else {
-          field_r = null;
-          field_s = null;
-          field_q = null;
-          return;
-        }
+        qb.a((byte) 59, 86);
+        field_r = null;
+        field_s = null;
+        field_q = null;
     }
 
     qb(vd param0, int param1) {
@@ -27,66 +19,148 @@ class qb extends ll {
     }
 
     final static uh a(String param0, boolean param1, byte param2, String param3) {
-        long var4 = 0L;
+        long var4_long = 0L;
+        RuntimeException var4 = null;
         Object var6 = null;
         CharSequence var7 = null;
-        CharSequence var8 = null;
-        if (param2 > -82) {
+        uh stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        uh stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
           L0: {
             L1: {
-              qb.a((byte) -117, -79);
-              var4 = 0L;
-              var6 = null;
-              if (0 != (param3.indexOf('@') ^ -1)) {
+              if (param2 <= -82) {
                 break L1;
               } else {
-                var7 = (CharSequence) (Object) param3;
-                var4 = sb.a((byte) 124, var7);
-                if (wizardrun.field_H == 0) {
-                  break L0;
-                } else {
-                  break L1;
-                }
+                qb.a((byte) -117, -79);
+                break L1;
               }
             }
-            var6 = (Object) (Object) param3;
+            L2: {
+              L3: {
+                var4_long = 0L;
+                var6 = null;
+                if (param3.indexOf('@') != -1) {
+                  break L3;
+                } else {
+                  var7 = (CharSequence) (Object) param3;
+                  var4_long = sb.a((byte) 124, var7);
+                  if (wizardrun.field_H == 0) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              var6 = (Object) (Object) param3;
+              break L2;
+            }
+            stackOut_5_0 = uk.a((String) var6, 8355711, var4_long, param1, param0);
+            stackIn_6_0 = stackOut_5_0;
             break L0;
           }
-          return uk.a((String) var6, 8355711, var4, param1, param0);
-        } else {
-          L2: {
-            L3: {
-              var4 = 0L;
-              var6 = null;
-              if (0 != (param3.indexOf('@') ^ -1)) {
-                break L3;
-              } else {
-                var8 = (CharSequence) (Object) param3;
-                var4 = sb.a((byte) 124, var8);
-                if (wizardrun.field_H == 0) {
-                  break L2;
-                } else {
-                  break L3;
-                }
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_1 = new StringBuilder().append("qb.V(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L4;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L4;
             }
-            var6 = (Object) (Object) param3;
-            break L2;
           }
-          return uk.a((String) var6, 8355711, var4, param1, param0);
+          L5: {
+            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param3 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L5;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L5;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
+        return stackIn_6_0;
     }
 
     public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
-        if (!(!param4)) {
-            pe.a(param2.field_n, (byte) -14, param1 + param2.field_l, param2.field_r, param0 + param2.field_o);
+        try {
+            if (!(!param4)) {
+                pe.a(param2.field_n, (byte) -14, param1 + param2.field_l, param2.field_r, param0 + param2.field_o);
+            }
+            super.a(param0, param1, param2, param3, param4);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "qb.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
-        super.a(param0, param1, param2, param3, param4);
     }
 
     final static void a(byte param0, int param1) {
         L0: {
-          r.field_e = 3 & param1 >> 704573220;
+          r.field_e = 3 & param1 >> 4;
           if (2 < r.field_e) {
             r.field_e = 2;
             break L0;
@@ -96,7 +170,7 @@ class qb extends ll {
         }
         if (param0 == 52) {
           L1: {
-            ff.field_J = param1 >> 407328610 & 3;
+            ff.field_J = param1 >> 2 & 3;
             if (ff.field_J > 2) {
               ff.field_J = 2;
               break L1;
@@ -105,7 +179,7 @@ class qb extends ll {
             }
           }
           di.field_e = 3 & param1;
-          if (-3 > (di.field_e ^ -1)) {
+          if (di.field_e > 2) {
             di.field_e = 2;
             return;
           } else {
@@ -114,7 +188,7 @@ class qb extends ll {
         } else {
           L2: {
             qb.b(73);
-            ff.field_J = param1 >> 407328610 & 3;
+            ff.field_J = param1 >> 2 & 3;
             if (ff.field_J > 2) {
               ff.field_J = 2;
               break L2;
@@ -123,7 +197,7 @@ class qb extends ll {
             }
           }
           di.field_e = 3 & param1;
-          if (-3 <= (di.field_e ^ -1)) {
+          if (di.field_e <= 2) {
             return;
           } else {
             di.field_e = 2;

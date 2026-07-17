@@ -8,16 +8,8 @@ final class bfa {
     private static String field_z;
 
     public static void a(boolean param0) {
-        if (!param0) {
-          field_c = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
-          field_b = null;
-          field_c = null;
-          return;
-        }
+        field_b = null;
+        field_c = null;
     }
 
     static {

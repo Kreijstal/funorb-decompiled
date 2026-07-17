@@ -12,9 +12,6 @@ abstract class jq {
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 > -87) {
-            return;
-        }
         field_c = null;
     }
 
@@ -70,9 +67,6 @@ abstract class jq {
     abstract void a(int param0, int param1, int param2);
 
     final static int a(byte param0) {
-        if (param0 != 29) {
-            return -36;
-        }
         return mm.field_a;
     }
 

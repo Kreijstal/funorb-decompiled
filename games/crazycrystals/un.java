@@ -69,7 +69,7 @@ final class un implements Runnable {
             gl stackOut_13_0 = null;
             L0: {
               if (33 != param2) {
-                if ((param2 ^ -1) == -35) {
+                if (param2 == 34) {
                   var4 = "jagex_" + param3 + "_preferences" + param0 + "_wip.dat";
                   break L0;
                 } else {
@@ -88,7 +88,7 @@ final class un implements Runnable {
                 if (var6 < var5_array.length) {
                   L2: {
                     var7 = var5_array[var6];
-                    if (-1 <= (var7.length() ^ -1)) {
+                    if (var7.length() <= 0) {
                       break L2;
                     } else {
                       if (new File(var7).exists()) {
@@ -244,16 +244,10 @@ final class un implements Runnable {
             }
             L4: {
               if (((un) this).field_p != null) {
-                try {
+                {
                   L5: {
                     ((un) this).field_p.d(107);
                     break L5;
-                  }
-                } catch (java.io.IOException decompiledCaughtParameter1) {
-                  decompiledCaughtException = decompiledCaughtParameter1;
-                  L6: {
-                    var2_ref2 = (IOException) (Object) decompiledCaughtException;
-                    break L6;
                   }
                 }
                 break L4;
@@ -263,16 +257,10 @@ final class un implements Runnable {
             }
             L7: {
               if (null != ((un) this).field_g) {
-                try {
+                {
                   L8: {
                     ((un) this).field_g.d(102);
                     break L8;
-                  }
-                } catch (java.io.IOException decompiledCaughtParameter2) {
-                  decompiledCaughtException = decompiledCaughtParameter2;
-                  L9: {
-                    var2_ref2 = (IOException) (Object) decompiledCaughtException;
-                    break L9;
                   }
                 }
                 break L7;
@@ -288,18 +276,11 @@ final class un implements Runnable {
                     break L10;
                   } else {
                     if (((un) this).field_n[var2_int] != null) {
-                      try {
+                      {
                         L12: {
                           ((un) this).field_n[var2_int].d(119);
                           var2_int++;
                           break L12;
-                        }
-                      } catch (java.io.IOException decompiledCaughtParameter3) {
-                        decompiledCaughtException = decompiledCaughtParameter3;
-                        L13: {
-                          var3_ref = (IOException) (Object) decompiledCaughtException;
-                          var2_int++;
-                          break L13;
                         }
                       }
                       continue L11;
@@ -315,16 +296,10 @@ final class un implements Runnable {
             }
             L14: {
               if (null != ((un) this).field_s) {
-                try {
+                {
                   L15: {
                     ((un) this).field_s.d(98);
                     break L15;
-                  }
-                } catch (java.io.IOException decompiledCaughtParameter4) {
-                  decompiledCaughtException = decompiledCaughtParameter4;
-                  L16: {
-                    var2_ref2 = (IOException) (Object) decompiledCaughtException;
-                    break L16;
                   }
                 }
                 break L14;
@@ -403,16 +378,10 @@ final class un implements Runnable {
                         }
                         break L2;
                       } else {
-                        try {
+                        {
                           L5: {
                             this.wait();
                             break L5;
-                          }
-                        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                          decompiledCaughtException = decompiledCaughtParameter0;
-                          L6: {
-                            var3 = (InterruptedException) (Object) decompiledCaughtException;
-                            break L6;
                           }
                         }
                         continue L3;
@@ -427,7 +396,7 @@ final class un implements Runnable {
                 L7: {
                   L8: {
                     var2_int = var8_ref.field_d;
-                    if ((var2_int ^ -1) == -2) {
+                    if (var2_int == 1) {
                       if (field_k > lo.a((byte) 111)) {
                         throw new IOException();
                       } else {
@@ -453,7 +422,7 @@ final class un implements Runnable {
                           break L8;
                         }
                       } else {
-                        if (-3 == (var2_int ^ -1)) {
+                        if (var2_int == 2) {
                           var18 = new Thread((Runnable) var8_ref.field_e);
                           var18.setDaemon(true);
                           var18.start();
@@ -461,8 +430,8 @@ final class un implements Runnable {
                           var8_ref.field_b = (Object) (Object) var18;
                           break L8;
                         } else {
-                          if ((var2_int ^ -1) != -5) {
-                            if ((var2_int ^ -1) == -9) {
+                          if (var2_int != 4) {
+                            if (var2_int == 8) {
                               L10: {
                                 var17 = (Object[]) var8_ref.field_e;
                                 if (!((un) this).field_h) {
@@ -479,7 +448,7 @@ final class un implements Runnable {
                               break L8;
                             } else {
                               if (9 != var2_int) {
-                                if ((var2_int ^ -1) != -19) {
+                                if (var2_int != 18) {
                                   if (var2_int == 19) {
                                     var7 = (java.awt.datatransfer.Transferable) var8_ref.field_e;
                                     var16 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -487,16 +456,16 @@ final class un implements Runnable {
                                     break L8;
                                   } else {
                                     if (((un) this).field_h) {
-                                      if (-4 == (var2_int ^ -1)) {
+                                      if (var2_int == 3) {
                                         if (field_k <= lo.a((byte) 90)) {
-                                          var15 = (var8_ref.field_f >> -1945308808 & 255) + "." + (255 & var8_ref.field_f >> 1028868624) + "." + (var8_ref.field_f >> -1219629784 & 255) + "." + (255 & var8_ref.field_f);
+                                          var15 = (var8_ref.field_f >> 24 & 255) + "." + (255 & var8_ref.field_f >> 16) + "." + (var8_ref.field_f >> 8 & 255) + "." + (255 & var8_ref.field_f);
                                           var8_ref.field_b = (Object) (Object) java.net.InetAddress.getByName(var15).getHostName();
                                           break L8;
                                         } else {
                                           throw new IOException();
                                         }
                                       } else {
-                                        if ((var2_int ^ -1) == -22) {
+                                        if (var2_int == 21) {
                                           if (field_k <= lo.a((byte) 127)) {
                                             var8_ref.field_b = (Object) (Object) java.net.InetAddress.getByName((String) var8_ref.field_e).getAddress();
                                             break L8;
@@ -513,21 +482,21 @@ final class un implements Runnable {
                                               break L8;
                                             }
                                           } else {
-                                            if (-7 == (var2_int ^ -1)) {
+                                            if (var2_int == 6) {
                                               var14 = new java.awt.Frame("Jagex Full Screen");
                                               var8_ref.field_b = (Object) (Object) var14;
                                               var14.setResizable(false);
                                               if (((un) this).field_i) {
-                                                ((un) this).field_x.a(var8_ref.field_f >>> 1073737104, var8_ref.field_g >> -124729264, (byte) -108, 65535 & var8_ref.field_f, var14, var8_ref.field_g & 65535);
+                                                ((un) this).field_x.a(var8_ref.field_f >>> 16, var8_ref.field_g >> 16, (byte) -108, 65535 & var8_ref.field_f, var14, var8_ref.field_g & 65535);
                                                 break L8;
                                               } else {
                                                 Object discarded$6 = Class.forName("bg").getMethod("enter", new Class[5]).invoke(((un) this).field_v, new Object[5]);
                                                 break L8;
                                               }
                                             } else {
-                                              if ((var2_int ^ -1) != -8) {
+                                              if (var2_int != 7) {
                                                 if (var2_int != 12) {
-                                                  if ((var2_int ^ -1) == -14) {
+                                                  if (var2_int == 13) {
                                                     var3_ref3 = un.a((String) var8_ref.field_e, -26, field_c, "");
                                                     var8_ref.field_b = (Object) (Object) var3_ref3;
                                                     break L8;
@@ -536,7 +505,7 @@ final class un implements Runnable {
                                                       if (!((un) this).field_h) {
                                                         break L11;
                                                       } else {
-                                                        if ((var2_int ^ -1) != -15) {
+                                                        if (var2_int != 14) {
                                                           break L11;
                                                         } else {
                                                           var3_int = var8_ref.field_f;
@@ -559,7 +528,7 @@ final class un implements Runnable {
                                                           break L12;
                                                         } else {
                                                           L13: {
-                                                            if (-1 == (var8_ref.field_f ^ -1)) {
+                                                            if (var8_ref.field_f == 0) {
                                                               stackOut_56_0 = 0;
                                                               stackIn_57_0 = stackOut_56_0;
                                                               break L13;
@@ -615,12 +584,12 @@ final class un implements Runnable {
                                                             var4_ref = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                                                             var5 = 0;
                                                             L17: while (true) {
-                                                              if ((var5 ^ -1) <= (var12.length() ^ -1)) {
+                                                              if (~var5 <= ~var12.length()) {
                                                                 Process discarded$10 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var12 + "\"");
                                                                 var8_ref.field_b = null;
                                                                 break L15;
                                                               } else {
-                                                                if ((var4_ref.indexOf((int) var12.charAt(var5)) ^ -1) == 0) {
+                                                                if (var4_ref.indexOf((int) var12.charAt(var5)) == -1) {
                                                                   throw un.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                                 } else {
                                                                   var5++;
@@ -723,7 +692,7 @@ final class un implements Runnable {
             Object var7 = null;
             gb discarded$0 = this.a((String) null, false, true, 4);
         }
-        return this.a((param0 << 844095504) - -param1, 6, (Object) null, true, param3 + (param2 << 1496836240));
+        return this.a((param0 << 16) - -param1, 6, (Object) null, true, param3 + (param2 << 16));
     }
 
     final gb a(Runnable param0, int param1, int param2) {
@@ -793,7 +762,7 @@ final class un implements Runnable {
           }
         }
         L3: {
-          if ((field_e.toLowerCase().indexOf("microsoft") ^ -1) == 0) {
+          if (field_e.toLowerCase().indexOf("microsoft") == -1) {
             break L3;
           } else {
             ((un) this).field_i = true;

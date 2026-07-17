@@ -26,77 +26,39 @@ final class we {
     }
 
     final static int a(int param0, boolean param1) {
-        int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
+        int stackOut_6_0 = 0;
         int stackOut_3_0 = 0;
-        if (!param1) {
-          param0 = param0 & 8191;
-          if (-4097 < (param0 ^ -1)) {
-            L0: {
-              if (param0 < 2048) {
-                stackOut_18_0 = mg.field_b[2048 - param0];
-                stackIn_19_0 = stackOut_18_0;
-                break L0;
-              } else {
-                stackOut_17_0 = -mg.field_b[param0 + -2048];
-                stackIn_19_0 = stackOut_17_0;
-                break L0;
-              }
+        int stackOut_2_0 = 0;
+        param0 = param0 & 8191;
+        if (param0 < 4096) {
+          L0: {
+            if (param0 < 2048) {
+              stackOut_7_0 = mg.field_b[2048 - param0];
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = -mg.field_b[param0 + -2048];
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
             }
-            return stackIn_19_0;
-          } else {
-            L1: {
-              if (param0 < 6144) {
-                stackOut_14_0 = -mg.field_b[6144 - param0];
-                stackIn_15_0 = stackOut_14_0;
-                break L1;
-              } else {
-                stackOut_13_0 = mg.field_b[-6144 + param0];
-                stackIn_15_0 = stackOut_13_0;
-                break L1;
-              }
-            }
-            return stackIn_15_0;
           }
+          return stackIn_8_0;
         } else {
-          we.a((byte) 50);
-          param0 = param0 & 8191;
-          if (-4097 < (param0 ^ -1)) {
-            L2: {
-              if (param0 < 2048) {
-                stackOut_8_0 = mg.field_b[2048 - param0];
-                stackIn_9_0 = stackOut_8_0;
-                break L2;
-              } else {
-                stackOut_7_0 = -mg.field_b[param0 + -2048];
-                stackIn_9_0 = stackOut_7_0;
-                break L2;
-              }
+          L1: {
+            if (param0 < 6144) {
+              stackOut_3_0 = -mg.field_b[6144 - param0];
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = mg.field_b[-6144 + param0];
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
             }
-            return stackIn_9_0;
-          } else {
-            L3: {
-              if (param0 < 6144) {
-                stackOut_4_0 = -mg.field_b[6144 - param0];
-                stackIn_5_0 = stackOut_4_0;
-                break L3;
-              } else {
-                stackOut_3_0 = mg.field_b[-6144 + param0];
-                stackIn_5_0 = stackOut_3_0;
-                break L3;
-              }
-            }
-            return stackIn_5_0;
           }
+          return stackIn_4_0;
         }
     }
 
@@ -272,7 +234,7 @@ final class we {
         int stackOut_21_1 = 0;
         int stackOut_21_2 = 0;
         pa.b((byte) 123);
-        if ((mi.field_d ^ -1) <= -1) {
+        if (mi.field_d >= 0) {
           L0: {
             L1: {
               li.field_a.field_E = vo.a((byte) -18, id.field_r, new String[1]);
@@ -484,11 +446,11 @@ final class we {
                 ov.a(-43, param3);
                 break L8;
               } else {
-                if (-1 > (eq.field_d ^ -1)) {
+                if (eq.field_d > 0) {
                   ov.a(-43, param3);
                   break L8;
                 } else {
-                  if ((tk.field_Ib ^ -1) > -3) {
+                  if (tk.field_Ib < 2) {
                     break L8;
                   } else {
                     if (!ne.field_G[12]) {
@@ -745,11 +707,11 @@ final class we {
                 ov.a(-43, param3);
                 break L20;
               } else {
-                if (-1 > (eq.field_d ^ -1)) {
+                if (eq.field_d > 0) {
                   ov.a(-43, param3);
                   break L20;
                 } else {
-                  if ((tk.field_Ib ^ -1) > -3) {
+                  if (tk.field_Ib < 2) {
                     break L20;
                   } else {
                     if (!ne.field_G[12]) {

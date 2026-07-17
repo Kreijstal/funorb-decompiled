@@ -34,20 +34,13 @@ final class df {
         var10 = -1640531527;
         var2 = 0;
         L0: while (true) {
-          if (-5 >= (var2 ^ -1)) {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                df.a((byte) -116);
-                break L1;
-              }
-            }
+          if (var2 >= 4) {
+            df.a((byte) -116);
             var2 = 0;
-            L2: while (true) {
-              if (-257 >= (var2 ^ -1)) {
+            L1: while (true) {
+              if (var2 >= 256) {
                 var2 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var2 >= 256) {
                     this.b(-115);
                     ((df) this).field_g = 256;
@@ -61,28 +54,28 @@ final class df {
                     var5 = var5 + ((df) this).field_i[2 + var2];
                     var7 = var7 + ((df) this).field_i[var2 - -4];
                     var10 = var10 + ((df) this).field_i[var2 - -7];
-                    var3 = var3 ^ var4 << -146730869;
+                    var3 = var3 ^ var4 << 11;
                     var4 = var4 + var5;
                     var6 = var6 + var3;
-                    var4 = var4 ^ var5 >>> 2135609410;
+                    var4 = var4 ^ var5 >>> 2;
                     var7 = var7 + var4;
                     var5 = var5 + var6;
-                    var5 = var5 ^ var6 << 1561196616;
+                    var5 = var5 ^ var6 << 8;
                     var6 = var6 + var7;
                     var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> 2000362512;
+                    var6 = var6 ^ var7 >>> 16;
                     var7 = var7 + var8;
                     var9 = var9 + var6;
-                    var7 = var7 ^ var8 << 92771242;
+                    var7 = var7 ^ var8 << 10;
                     var8 = var8 + var9;
                     var10 = var10 + var7;
-                    var8 = var8 ^ var9 >>> 1384457188;
+                    var8 = var8 ^ var9 >>> 4;
                     var3 = var3 + var8;
                     var9 = var9 + var10;
-                    var9 = var9 ^ var10 << -1366361592;
+                    var9 = var9 ^ var10 << 8;
                     var10 = var10 + var3;
                     var4 = var4 + var9;
-                    var10 = var10 ^ var3 >>> 1426433417;
+                    var10 = var10 ^ var3 >>> 9;
                     var5 = var5 + var10;
                     var3 = var3 + var4;
                     ((df) this).field_i[var2] = var3;
@@ -94,7 +87,7 @@ final class df {
                     ((df) this).field_i[6 + var2] = var9;
                     ((df) this).field_i[var2 - -7] = var10;
                     var2 += 8;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -106,28 +99,28 @@ final class df {
                 var10 = var10 + ((df) this).field_c[var2 + 7];
                 var5 = var5 + ((df) this).field_c[var2 + 2];
                 var6 = var6 + ((df) this).field_c[3 + var2];
-                var3 = var3 ^ var4 << -85168501;
+                var3 = var3 ^ var4 << 11;
                 var4 = var4 + var5;
                 var6 = var6 + var3;
-                var4 = var4 ^ var5 >>> 625876770;
+                var4 = var4 ^ var5 >>> 2;
                 var7 = var7 + var4;
                 var5 = var5 + var6;
-                var5 = var5 ^ var6 << -260928920;
+                var5 = var5 ^ var6 << 8;
                 var6 = var6 + var7;
                 var8 = var8 + var5;
-                var6 = var6 ^ var7 >>> 932474512;
+                var6 = var6 ^ var7 >>> 16;
                 var7 = var7 + var8;
                 var9 = var9 + var6;
-                var7 = var7 ^ var8 << -1014308726;
+                var7 = var7 ^ var8 << 10;
                 var8 = var8 + var9;
                 var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> 1736563940;
+                var8 = var8 ^ var9 >>> 4;
                 var3 = var3 + var8;
                 var9 = var9 + var10;
-                var9 = var9 ^ var10 << -350915448;
+                var9 = var9 ^ var10 << 8;
                 var4 = var4 + var9;
                 var10 = var10 + var3;
-                var10 = var10 ^ var3 >>> 1071505865;
+                var10 = var10 ^ var3 >>> 9;
                 var3 = var3 + var4;
                 var5 = var5 + var10;
                 ((df) this).field_i[var2] = var3;
@@ -139,32 +132,32 @@ final class df {
                 ((df) this).field_i[6 + var2] = var9;
                 ((df) this).field_i[var2 + 7] = var10;
                 var2 += 8;
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            var3 = var3 ^ var4 << 1519723627;
+            var3 = var3 ^ var4 << 11;
             var6 = var6 + var3;
             var4 = var4 + var5;
-            var4 = var4 ^ var5 >>> -1040685950;
+            var4 = var4 ^ var5 >>> 2;
             var5 = var5 + var6;
             var7 = var7 + var4;
-            var5 = var5 ^ var6 << -545774200;
+            var5 = var5 ^ var6 << 8;
             var6 = var6 + var7;
             var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> -105730352;
+            var6 = var6 ^ var7 >>> 16;
             var9 = var9 + var6;
             var7 = var7 + var8;
-            var7 = var7 ^ var8 << 1547410282;
+            var7 = var7 ^ var8 << 10;
             var10 = var10 + var7;
             var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> -653819004;
+            var8 = var8 ^ var9 >>> 4;
             var9 = var9 + var10;
             var3 = var3 + var8;
-            var9 = var9 ^ var10 << 1527445608;
+            var9 = var9 ^ var10 << 8;
             var4 = var4 + var9;
             var10 = var10 + var3;
-            var10 = var10 ^ var3 >>> 1354533737;
+            var10 = var10 ^ var3 >>> 9;
             var3 = var3 + var4;
             var5 = var5 + var10;
             var2++;
@@ -198,34 +191,34 @@ final class df {
         if (param0 <= -96) {
           var2 = 0;
           L0: while (true) {
-            if ((var2 ^ -1) <= -257) {
+            if (var2 >= 256) {
               return;
             } else {
               L1: {
                 var3 = ((df) this).field_i[var2];
                 if (0 != (var2 & 2)) {
                   if ((1 & var2) != 0) {
-                    ((df) this).field_b = ((df) this).field_b ^ ((df) this).field_b >>> 1122678928;
+                    ((df) this).field_b = ((df) this).field_b ^ ((df) this).field_b >>> 16;
                     break L1;
                   } else {
-                    ((df) this).field_b = ((df) this).field_b ^ ((df) this).field_b << -1966116830;
+                    ((df) this).field_b = ((df) this).field_b ^ ((df) this).field_b << 2;
                     break L1;
                   }
                 } else {
                   if ((var2 & 1) != 0) {
-                    ((df) this).field_b = ((df) this).field_b ^ ((df) this).field_b >>> -1889161722;
+                    ((df) this).field_b = ((df) this).field_b ^ ((df) this).field_b >>> 6;
                     break L1;
                   } else {
-                    ((df) this).field_b = ((df) this).field_b ^ ((df) this).field_b << -1621742835;
+                    ((df) this).field_b = ((df) this).field_b ^ ((df) this).field_b << 13;
                     break L1;
                   }
                 }
               }
               ((df) this).field_b = ((df) this).field_b + ((df) this).field_i[255 & var2 + 128];
-              int dupTemp$4 = ((df) this).field_b + (((df) this).field_i[ae.a(var3, 1020) >> 1900691618] - -((df) this).field_e);
+              int dupTemp$4 = ((df) this).field_b + (((df) this).field_i[ae.a(var3, 1020) >> 2] - -((df) this).field_e);
               var4 = dupTemp$4;
               ((df) this).field_i[var2] = dupTemp$4;
-              int dupTemp$5 = var3 + ((df) this).field_i[ae.a(var4 >> -1854611896, 1020) >> 2067746082];
+              int dupTemp$5 = var3 + ((df) this).field_i[ae.a(var4 >> 8, 1020) >> 2];
               ((df) this).field_e = dupTemp$5;
               ((df) this).field_c[var2] = dupTemp$5;
               var2++;
@@ -251,13 +244,17 @@ final class df {
     }
 
     df(int[] param0) {
-        int var2 = 0;
-        ((df) this).field_i = new int[256];
-        ((df) this).field_c = new int[256];
-        for (var2 = 0; param0.length > var2; var2++) {
-            ((df) this).field_c[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((df) this).field_i = new int[256];
+            ((df) this).field_c = new int[256];
+            for (var2_int = 0; param0.length > var2_int; var2_int++) {
+                ((df) this).field_c[var2_int] = param0[var2_int];
+            }
+            this.a(false);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "df.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.a(false);
     }
 
     static {

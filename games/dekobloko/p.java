@@ -8,18 +8,9 @@ final class p {
     static long field_a;
 
     public static void a(int param0) {
-        if (param0 < 104) {
-          field_b = null;
-          field_b = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
-          field_b = null;
-          field_d = null;
-          field_c = null;
-          return;
-        }
+        field_b = null;
+        field_d = null;
+        field_c = null;
     }
 
     final static void a(int param0, byte param1) {

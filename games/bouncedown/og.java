@@ -8,9 +8,6 @@ final class og {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 <= 73) {
-            return;
-        }
         field_b = null;
     }
 

@@ -8,7 +8,7 @@ abstract class mna {
     static int field_d;
 
     final static gqa a(byte param0, int param1, int param2, int param3) {
-        gqa var4 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -95,17 +95,17 @@ abstract class mna {
                   }
                 }
                 voa.field_v = stackIn_40_0 != 0;
-                return var4;
+                return (gqa) var4;
               } else {
                 var16 = wea.field_d[var8];
                 if (null != var16.field_l) {
                   L7: {
                     ne.field_d.field_tb.b(-125, var16.field_l);
                     var16.field_l.a(var16.field_l.b((byte) 69), param2, -23776, var7, param3);
-                    if (-1 == (var16.field_l.field_y ^ -1)) {
+                    if (var16.field_l.field_y == 0) {
                       break L7;
                     } else {
-                      var4 = var16;
+                      var4 = (Object) (Object) var16;
                       break L7;
                     }
                   }
@@ -179,10 +179,10 @@ abstract class mna {
               var13 = uaa.a((byte) -116, var15);
               var15.field_l = new jea(0L, bn.field_t, var12);
               var6 = var6 + param2;
-              var15.field_l.field_ab = ((bn.field_t.field_ab & 16711422) >> -1620649535) + var13 - (8355711 & var13 >> 558816673);
+              var15.field_l.field_ab = ((bn.field_t.field_ab & 16711422) >> 1) + var13 - (8355711 & var13 >> 1);
               var15.field_l.field_H = lpa.field_s;
               var15.field_l.field_ib = var13;
-              var15.field_l.field_N = -(var13 >> -483807679 & 8355711) + var13 + ((16711422 & bn.field_t.field_N) >> -2007580191);
+              var15.field_l.field_N = -(var13 >> 1 & 8355711) + var13 + ((16711422 & bn.field_t.field_N) >> 1);
               var5++;
               var7--;
               continue L0;
@@ -220,9 +220,6 @@ abstract class mna {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (param0) {
-            mna.a(false);
-        }
     }
 
     static {

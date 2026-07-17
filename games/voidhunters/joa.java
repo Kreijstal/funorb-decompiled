@@ -6,14 +6,72 @@ final class joa {
     static int field_a;
 
     final static String a(CharSequence param0, boolean param1) {
-        String var2 = vga.a(agb.a(param0, -49), -128);
-        if (param1) {
-            field_b = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2 = vga.a(agb.a(param0, -49), -128);
+              if (var2 != null) {
+                break L1;
+              } else {
+                var2 = "";
+                break L1;
+              }
+            }
+            stackOut_2_0 = (String) var2;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2_ref;
+            stackOut_4_1 = new StringBuilder().append("joa.C(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 41);
         }
-        if (var2 == null) {
-            var2 = "";
-        }
-        return var2;
+        return stackIn_3_0;
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -41,12 +99,12 @@ final class joa {
         int stackOut_28_0 = 0;
         int stackOut_29_0 = 0;
         var8 = param5 * param3 + -(param1 * param0);
-        if (var8 == -1) {
+        if (var8 == 0) {
           return -1;
         } else {
           L0: {
             var9 = param6 * param0 - param2 * param3;
-            if (-1 > var9) {
+            if (var9 < 0) {
               stackOut_5_0 = 0;
               stackIn_6_0 = stackOut_5_0;
               break L0;
@@ -99,10 +157,10 @@ final class joa {
                     L5: {
                       var12 = param6 + (param1 * var11 >> param4);
                       if (0 > param3) {
-                        if (var12 < param3) {
+                        if (~var12 > ~param3) {
                           break L4;
                         } else {
-                          if (-1 > (var12 ^ -1)) {
+                          if (var12 > 0) {
                             break L4;
                           } else {
                             break L5;
@@ -112,7 +170,7 @@ final class joa {
                         if (0 > var12) {
                           break L4;
                         } else {
-                          if (var12 > param3) {
+                          if (~var12 < ~param3) {
                             break L4;
                           } else {
                             break L5;
@@ -134,18 +192,18 @@ final class joa {
                   L7: {
                     L8: {
                       var12 = param2 - -(var11 * param5 >> param4);
-                      if (-1 >= (param0 ^ -1)) {
+                      if (param0 >= 0) {
                         if (var12 < 0) {
                           break L7;
                         } else {
-                          if (param0 < var12) {
+                          if (~param0 > ~var12) {
                             break L7;
                           } else {
                             break L8;
                           }
                         }
                       } else {
-                        if (param0 > var12) {
+                        if (~param0 < ~var12) {
                           break L7;
                         } else {
                           if (var12 > 0) {
@@ -175,9 +233,6 @@ final class joa {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 26936) {
-            int discarded$0 = joa.a(-25, -71, 87, 48, 85, 34, -54, 36);
-        }
     }
 
     static {
@@ -193,14 +248,14 @@ final class joa {
         int var1 = 0;
         field_b = new int[98304];
         for (var0 = 92682; var0 >= 46341; var0--) {
-            var4 = (long)((var0 << -945755263) + -1);
-            var6 = (long)(1 + (var0 << -255027551));
-            var3 = (int)((var6 * var6 >> -1334368494) - 32768L);
-            var2 = (int)((var4 * var4 >> 210053970) + -32768L);
+            var4 = (long)((var0 << 1) + -1);
+            var6 = (long)(1 + (var0 << 1));
+            var3 = (int)((var6 * var6 >> 18) - 32768L);
+            var2 = (int)((var4 * var4 >> 18) + -32768L);
             if (!(field_b.length > var3)) {
                 var3 = -1 + field_b.length;
             }
-            for (var1 = -1 < (var2 ^ -1) ? 0 : var2; var1 <= var3; var1++) {
+            for (var1 = var2 < 0 ? 0 : var2; var1 <= var3; var1++) {
                 field_b[var1] = var0;
             }
         }

@@ -19,7 +19,7 @@ final class ek implements Iterable {
         ((ek) this).field_e = var4.field_a;
         L0: while (true) {
           if (var4 != ((ek) this).field_e) {
-            if ((param0 ^ -1L) != (((ek) this).field_e.field_b ^ -1L)) {
+            if (~param0 != ~((ek) this).field_e.field_b) {
               ((ek) this).field_e = ((ek) this).field_e.field_a;
               continue L0;
             } else {
@@ -36,9 +36,6 @@ final class ek implements Iterable {
 
     public static void a(boolean param0) {
         field_b = null;
-        if (param0) {
-            boolean discarded$0 = ek.a(44);
-        }
     }
 
     final static int a(int param0, int param1) {
@@ -65,23 +62,18 @@ final class ek implements Iterable {
 
     final void a(long param0, int param1, rf param2) {
         rf var5 = null;
-        if (null != param2.field_d) {
-          param2.b(4);
-          var5 = ((ek) this).field_a[(int)(param0 & (long)(param1 + ((ek) this).field_c))];
-          param2.field_a = var5;
-          param2.field_d = var5.field_d;
-          param2.field_d.field_a = param2;
-          param2.field_a.field_d = param2;
-          param2.field_b = param0;
-          return;
-        } else {
-          var5 = ((ek) this).field_a[(int)(param0 & (long)(param1 + ((ek) this).field_c))];
-          param2.field_a = var5;
-          param2.field_d = var5.field_d;
-          param2.field_d.field_a = param2;
-          param2.field_a.field_d = param2;
-          param2.field_b = param0;
-          return;
+        try {
+            if (null != param2.field_d) {
+                param2.b(4);
+            }
+            var5 = ((ek) this).field_a[(int)(param0 & (long)(param1 + ((ek) this).field_c))];
+            param2.field_a = var5;
+            param2.field_d = var5.field_d;
+            param2.field_d.field_a = param2;
+            param2.field_a.field_d = param2;
+            param2.field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "ek.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

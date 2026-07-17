@@ -109,6 +109,7 @@ final class q {
           if (var2 >= 10) {
             ((q) this).field_c = param0.c(false);
             ((q) this).field_a = param0.c(false);
+            return;
           } else {
             var3 = param0.j(-109);
             if (var3 != 0) {

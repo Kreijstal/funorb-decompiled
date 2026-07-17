@@ -10,20 +10,10 @@ final class fc {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 != -43) {
-          field_d = null;
-          field_d = null;
-          field_a = null;
-          field_b = null;
-          field_e = null;
-          return;
-        } else {
-          field_d = null;
-          field_a = null;
-          field_b = null;
-          field_e = null;
-          return;
-        }
+        field_d = null;
+        field_a = null;
+        field_b = null;
+        field_e = null;
     }
 
     static {

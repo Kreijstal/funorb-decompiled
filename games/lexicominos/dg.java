@@ -29,8 +29,31 @@ final class dg {
     }
 
     final static boolean a(boolean param0, boolean param1) {
-        // if_icmpeq L7
-        return true;
+        L0: {
+          if (null != al.field_H) {
+            break L0;
+          } else {
+            al.field_H = vl.field_a.a(nj.field_a, (byte) -58, ol.field_n);
+            break L0;
+          }
+        }
+        if (0 == al.field_H.field_b) {
+          return false;
+        } else {
+          L1: {
+            long dupTemp$2 = rf.c(0);
+            p.field_c = dupTemp$2;
+            ta.field_e = dupTemp$2;
+            if (al.field_H.field_b != 1) {
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          uf.field_m = rh.field_r;
+          al.field_H = null;
+          return true;
+        }
     }
 
     final static void a(int param0) {
@@ -49,10 +72,11 @@ final class dg {
         }
         t.field_a.b();
         var1.f(0, 0);
-        if (param0 != 19681) {
-            return;
+        try {
+            pd.a(-22949);
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "dg.C(" + 19681 + 41);
         }
-        pd.a(-22949);
     }
 
     final boolean b(int param0) {

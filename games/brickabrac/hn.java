@@ -6,15 +6,12 @@ final class hn {
     static jp field_b;
 
     public static void a(int param0) {
-        int var1 = 125 % ((28 - param0) / 60);
+        int var1 = 0;
         field_b = null;
     }
 
     final static boolean b(byte param0) {
-        if (param0 != 7) {
-            return true;
-        }
-        return o.field_e.field_xc == oc.field_p ? true : false;
+        return o.field_e.field_xc == oc.field_p;
     }
 
     final static jp[] a(int param0, int param1, int param2, int param3) {
@@ -32,7 +29,7 @@ final class hn {
           var7[0] = hd.a(param0, param2, (byte) -6);
           var5 = 1;
           L0: while (true) {
-            if (-10 >= (var5 ^ -1)) {
+            if (var5 >= 9) {
               var4[4] = hd.a(param1, 64, (byte) -6);
               return var4;
             } else {
@@ -49,7 +46,7 @@ final class hn {
           var7[0] = hd.a(param0, param2, (byte) -6);
           var5 = 1;
           L1: while (true) {
-            if (-10 >= (var5 ^ -1)) {
+            if (var5 >= 9) {
               var4[4] = hd.a(param1, 64, (byte) -6);
               return var4;
             } else {
@@ -73,42 +70,26 @@ final class hn {
     }
 
     final static void a(mh param0, mh param1, int param2) {
-        if (!(param1.field_bb != null)) {
-            param1.field_bb = new vl();
-        }
-        int var3 = -102 / ((param2 - -58) / 50);
-        if (param0.field_bb == null) {
-            param0.field_bb = new vl();
+        try {
+            if (!(param1.field_bb != null)) {
+                param1.field_bb = new vl();
+            }
+            int var3_int = -102 / ((param2 - -58) / 50);
+            if (param0.field_bb == null) {
+                param0.field_bb = new vl();
+            }
             if (!(null != of.field_i)) {
                 of.field_i = new mk(64);
             }
             if (tf.field_d == null) {
                 tf.field_d = new mk(64);
-            } else {
-                bf.field_N = param1.field_bb;
-                jq.field_n = param0.field_bb;
-                uc.e(108);
-                return;
             }
             bf.field_N = param1.field_bb;
             jq.field_n = param0.field_bb;
             uc.e(108);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "hn.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        if (!(null != of.field_i)) {
-            of.field_i = new mk(64);
-        }
-        if (tf.field_d == null) {
-            tf.field_d = new mk(64);
-        } else {
-            bf.field_N = param1.field_bb;
-            jq.field_n = param0.field_bb;
-            uc.e(108);
-            return;
-        }
-        bf.field_N = param1.field_bb;
-        jq.field_n = param0.field_bb;
-        uc.e(108);
     }
 
     static {

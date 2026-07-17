@@ -36,57 +36,49 @@ final class lh {
         ed var32 = null;
         var4 = EscapeVector.field_A;
         var1 = qa.f((byte) -49);
-        if (param0 < 60) {
-          lh.a((byte) -88);
-          if (null != ma.field_a) {
-            am.field_k = 0;
-            return;
-          } else {
-            if (var1 == null) {
-              L0: {
-                if (am.field_k >= 80) {
-                  break L0;
-                } else {
-                  am.field_k = 95;
-                  rk.field_e.a(qh.field_i, 100, 3072 * qm.field_c / 64, 8192);
-                  break L0;
-                }
-              }
+        if (null != ma.field_a) {
+          am.field_k = 0;
+          return;
+        } else {
+          if (var1 == null) {
+            if (am.field_k < 80) {
+              am.field_k = 95;
+              rk.field_e.a(qh.field_i, 100, 3072 * qm.field_c / 64, 8192);
               var2 = null;
               var3 = 0;
               if (!wk.field_c) {
-                L1: {
+                L0: {
                   if (pg.field_b) {
                     var32 = k.field_j;
                     var2 = (Object) (Object) var32;
                     var3 = (77 - var32.field_z) / 2;
-                    break L1;
+                    break L0;
                   } else {
-                    if (-1 == (od.field_q ^ -1)) {
-                      L2: {
+                    if (od.field_q == 0) {
+                      L1: {
                         var31 = kb.field_c;
                         var3 = (77 - var31.field_z) / 2;
                         if (var2 == null) {
-                          L3: {
+                          L2: {
                             if (am.field_k == 110) {
                               rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                              break L3;
+                              break L2;
                             } else {
-                              break L3;
+                              break L2;
                             }
                           }
-                          if (-81 > (am.field_k ^ -1)) {
+                          if (am.field_k > 80) {
                             am.field_k = am.field_k - 1;
-                            break L2;
+                            break L1;
                           } else {
                             return;
                           }
                         } else {
                           fg.field_b = var3;
                           dg.field_t = (ed) var2;
-                          if (-96 >= (am.field_k ^ -1)) {
-                            if (-111 >= (am.field_k ^ -1)) {
-                              break L2;
+                          if (am.field_k >= 95) {
+                            if (am.field_k >= 110) {
+                              break L1;
                             } else {
                               am.field_k = am.field_k + 1;
                               return;
@@ -101,42 +93,42 @@ final class lh {
                       return;
                     } else {
                       if (od.field_q != 1) {
-                        if ((od.field_q ^ -1) != -3) {
-                          if (-4 != (od.field_q ^ -1)) {
+                        if (od.field_q != 2) {
+                          if (od.field_q != 3) {
                             if (!n.field_h) {
                               if (e.field_a) {
-                                L4: {
+                                L3: {
                                   if (ce.field_f.b(123)) {
                                     var2 = (Object) (Object) lf.field_I;
-                                    break L4;
+                                    break L3;
                                   } else {
                                     var2 = (Object) (Object) oi.field_O;
-                                    break L4;
+                                    break L3;
                                   }
                                 }
-                                L5: {
+                                L4: {
                                   var3 = (-((ed) var2).field_z + 90) / 2;
                                   if (var2 == null) {
-                                    L6: {
+                                    L5: {
                                       if (am.field_k == 110) {
                                         rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                                        break L6;
+                                        break L5;
                                       } else {
-                                        break L6;
+                                        break L5;
                                       }
                                     }
-                                    if (-81 > (am.field_k ^ -1)) {
+                                    if (am.field_k > 80) {
                                       am.field_k = am.field_k - 1;
-                                      break L5;
+                                      break L4;
                                     } else {
                                       return;
                                     }
                                   } else {
                                     fg.field_b = var3;
                                     dg.field_t = (ed) var2;
-                                    if (-96 >= (am.field_k ^ -1)) {
-                                      if (-111 >= (am.field_k ^ -1)) {
-                                        break L5;
+                                    if (am.field_k >= 95) {
+                                      if (am.field_k >= 110) {
+                                        break L4;
                                       } else {
                                         am.field_k = am.field_k + 1;
                                         return;
@@ -152,30 +144,30 @@ final class lh {
                               } else {
                                 if (!hn.field_n) {
                                   if (ch.field_b) {
-                                    L7: {
+                                    L6: {
                                       var30 = jf.field_H;
                                       var3 = (100 - var30.field_z) / 2;
                                       if (var2 == null) {
-                                        L8: {
+                                        L7: {
                                           if (am.field_k == 110) {
                                             rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                                            break L8;
+                                            break L7;
                                           } else {
-                                            break L8;
+                                            break L7;
                                           }
                                         }
-                                        if (-81 > (am.field_k ^ -1)) {
+                                        if (am.field_k > 80) {
                                           am.field_k = am.field_k - 1;
-                                          break L7;
+                                          break L6;
                                         } else {
                                           return;
                                         }
                                       } else {
                                         fg.field_b = var3;
                                         dg.field_t = (ed) var2;
-                                        if (-96 >= (am.field_k ^ -1)) {
-                                          if (-111 >= (am.field_k ^ -1)) {
-                                            break L7;
+                                        if (am.field_k >= 95) {
+                                          if (am.field_k >= 110) {
+                                            break L6;
                                           } else {
                                             am.field_k = am.field_k + 1;
                                             return;
@@ -189,28 +181,28 @@ final class lh {
                                     }
                                     return;
                                   } else {
-                                    L9: {
+                                    L8: {
                                       if (var2 == null) {
-                                        L10: {
+                                        L9: {
                                           if (am.field_k == 110) {
                                             rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                                            break L10;
+                                            break L9;
                                           } else {
-                                            break L10;
+                                            break L9;
                                           }
                                         }
-                                        if (-81 > (am.field_k ^ -1)) {
+                                        if (am.field_k > 80) {
                                           am.field_k = am.field_k - 1;
-                                          break L9;
+                                          break L8;
                                         } else {
                                           return;
                                         }
                                       } else {
                                         fg.field_b = var3;
                                         dg.field_t = (ed) var2;
-                                        if (-96 >= (am.field_k ^ -1)) {
-                                          if (-111 >= (am.field_k ^ -1)) {
-                                            break L9;
+                                        if (am.field_k >= 95) {
+                                          if (am.field_k >= 110) {
+                                            break L8;
                                           } else {
                                             am.field_k = am.field_k + 1;
                                             return;
@@ -225,30 +217,30 @@ final class lh {
                                     return;
                                   }
                                 } else {
-                                  L11: {
+                                  L10: {
                                     var29 = na.field_w;
                                     var3 = (66 + -var29.field_z) / 2;
                                     if (var2 == null) {
-                                      L12: {
+                                      L11: {
                                         if (am.field_k == 110) {
                                           rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                                          break L12;
+                                          break L11;
                                         } else {
-                                          break L12;
+                                          break L11;
                                         }
                                       }
-                                      if (-81 > (am.field_k ^ -1)) {
+                                      if (am.field_k > 80) {
                                         am.field_k = am.field_k - 1;
-                                        break L11;
+                                        break L10;
                                       } else {
                                         return;
                                       }
                                     } else {
                                       fg.field_b = var3;
                                       dg.field_t = (ed) var2;
-                                      if (-96 >= (am.field_k ^ -1)) {
-                                        if (-111 >= (am.field_k ^ -1)) {
-                                          break L11;
+                                      if (am.field_k >= 95) {
+                                        if (am.field_k >= 110) {
+                                          break L10;
                                         } else {
                                           am.field_k = am.field_k + 1;
                                           return;
@@ -264,28 +256,28 @@ final class lh {
                                 }
                               }
                             } else {
-                              L13: {
+                              L12: {
                                 if (var2 == null) {
-                                  L14: {
+                                  L13: {
                                     if (am.field_k == 110) {
                                       rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                                      break L14;
+                                      break L13;
                                     } else {
-                                      break L14;
+                                      break L13;
                                     }
                                   }
-                                  if (-81 > (am.field_k ^ -1)) {
+                                  if (am.field_k > 80) {
                                     am.field_k = am.field_k - 1;
-                                    break L13;
+                                    break L12;
                                   } else {
                                     return;
                                   }
                                 } else {
                                   fg.field_b = var3;
                                   dg.field_t = (ed) var2;
-                                  if (-96 >= (am.field_k ^ -1)) {
-                                    if (-111 >= (am.field_k ^ -1)) {
-                                      break L13;
+                                  if (am.field_k >= 95) {
+                                    if (am.field_k >= 110) {
+                                      break L12;
                                     } else {
                                       am.field_k = am.field_k + 1;
                                       return;
@@ -302,43 +294,43 @@ final class lh {
                           } else {
                             var28 = oj.field_Q;
                             var3 = (77 - var28.field_z) / 2;
-                            break L1;
+                            break L0;
                           }
                         } else {
                           var27 = p.field_c;
                           var3 = (77 - var27.field_z) / 2;
-                          break L1;
+                          break L0;
                         }
                       } else {
                         var26 = kb.field_c;
                         var3 = (77 + -var26.field_z) / 2;
-                        break L1;
+                        break L0;
                       }
                     }
                   }
                 }
-                L15: {
+                L14: {
                   if (var2 == null) {
-                    L16: {
+                    L15: {
                       if (am.field_k == 110) {
                         rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                        break L16;
+                        break L15;
                       } else {
-                        break L16;
+                        break L15;
                       }
                     }
-                    if (-81 > (am.field_k ^ -1)) {
+                    if (am.field_k > 80) {
                       am.field_k = am.field_k - 1;
-                      break L15;
+                      break L14;
                     } else {
                       return;
                     }
                   } else {
                     fg.field_b = var3;
                     dg.field_t = (ed) var2;
-                    if (-96 >= (am.field_k ^ -1)) {
-                      if (-111 >= (am.field_k ^ -1)) {
-                        break L15;
+                    if (am.field_k >= 95) {
+                      if (am.field_k >= 110) {
+                        break L14;
                       } else {
                         am.field_k = am.field_k + 1;
                         return;
@@ -352,28 +344,28 @@ final class lh {
                 }
                 return;
               } else {
-                L17: {
+                L16: {
                   if (var2 == null) {
-                    L18: {
+                    L17: {
                       if (am.field_k == 110) {
                         rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                        break L18;
+                        break L17;
                       } else {
-                        break L18;
+                        break L17;
                       }
                     }
-                    if (-81 > (am.field_k ^ -1)) {
+                    if (am.field_k > 80) {
                       am.field_k = am.field_k - 1;
-                      break L17;
+                      break L16;
                     } else {
                       return;
                     }
                   } else {
                     fg.field_b = var3;
                     dg.field_t = (ed) var2;
-                    if (-96 >= (am.field_k ^ -1)) {
-                      if (-111 >= (am.field_k ^ -1)) {
-                        break L17;
+                    if (am.field_k >= 95) {
+                      if (am.field_k >= 110) {
+                        break L16;
                       } else {
                         am.field_k = am.field_k + 1;
                         return;
@@ -388,101 +380,101 @@ final class lh {
                 return;
               }
             } else {
-              L19: {
+              L18: {
                 var2 = null;
                 var3 = 0;
                 if (wk.field_c) {
-                  break L19;
+                  break L18;
                 } else {
                   if (pg.field_b) {
                     var25 = k.field_j;
                     var2 = (Object) (Object) var25;
                     var3 = (77 - var25.field_z) / 2;
-                    break L19;
+                    break L18;
                   } else {
-                    if (-1 == (od.field_q ^ -1)) {
-                      L20: {
+                    if (od.field_q == 0) {
+                      L19: {
                         var24 = kb.field_c;
                         var3 = (77 - var24.field_z) / 2;
                         if (var2 == null) {
-                          L21: {
+                          L20: {
                             if (am.field_k == 110) {
                               rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                              break L21;
+                              break L20;
                             } else {
-                              break L21;
+                              break L20;
                             }
                           }
-                          if (-81 > (am.field_k ^ -1)) {
+                          if (am.field_k > 80) {
                             am.field_k = am.field_k - 1;
-                            break L20;
+                            break L19;
                           } else {
-                            break L20;
+                            break L19;
                           }
                         } else {
                           fg.field_b = var3;
                           dg.field_t = (ed) var2;
-                          if (-96 >= (am.field_k ^ -1)) {
-                            if (-111 >= (am.field_k ^ -1)) {
-                              break L20;
+                          if (am.field_k >= 95) {
+                            if (am.field_k >= 110) {
+                              break L19;
                             } else {
                               am.field_k = am.field_k + 1;
-                              break L20;
+                              break L19;
                             }
                           } else {
                             am.field_k = 95;
                             rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
-                            break L20;
+                            break L19;
                           }
                         }
                       }
                       return;
                     } else {
                       if (od.field_q != 1) {
-                        if ((od.field_q ^ -1) != -3) {
-                          if (-4 != (od.field_q ^ -1)) {
+                        if (od.field_q != 2) {
+                          if (od.field_q != 3) {
                             if (!n.field_h) {
                               if (e.field_a) {
-                                L22: {
+                                L21: {
                                   if (ce.field_f.b(123)) {
                                     var2 = (Object) (Object) lf.field_I;
-                                    break L22;
+                                    break L21;
                                   } else {
                                     var2 = (Object) (Object) oi.field_O;
-                                    break L22;
+                                    break L21;
                                   }
                                 }
-                                L23: {
+                                L22: {
                                   var3 = (-((ed) var2).field_z + 90) / 2;
                                   if (var2 == null) {
-                                    L24: {
+                                    L23: {
                                       if (am.field_k == 110) {
                                         rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                                        break L24;
+                                        break L23;
                                       } else {
-                                        break L24;
+                                        break L23;
                                       }
                                     }
-                                    if (-81 > (am.field_k ^ -1)) {
+                                    if (am.field_k > 80) {
                                       am.field_k = am.field_k - 1;
-                                      break L23;
+                                      break L22;
                                     } else {
-                                      break L23;
+                                      break L22;
                                     }
                                   } else {
                                     fg.field_b = var3;
                                     dg.field_t = (ed) var2;
-                                    if (-96 >= (am.field_k ^ -1)) {
-                                      if (-111 >= (am.field_k ^ -1)) {
-                                        break L23;
+                                    if (am.field_k >= 95) {
+                                      if (am.field_k >= 110) {
+                                        break L22;
                                       } else {
                                         am.field_k = am.field_k + 1;
-                                        break L23;
+                                        break L22;
                                       }
                                     } else {
                                       am.field_k = 95;
                                       rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
-                                      break L23;
+                                      break L22;
                                     }
                                   }
                                 }
@@ -492,60 +484,60 @@ final class lh {
                                   if (ch.field_b) {
                                     var23 = jf.field_H;
                                     var3 = (100 - var23.field_z) / 2;
-                                    break L19;
+                                    break L18;
                                   } else {
-                                    break L19;
+                                    break L18;
                                   }
                                 } else {
                                   var22 = na.field_w;
                                   var3 = (66 + -var22.field_z) / 2;
-                                  break L19;
+                                  break L18;
                                 }
                               }
                             } else {
-                              break L19;
+                              break L18;
                             }
                           } else {
                             var21 = oj.field_Q;
                             var3 = (77 - var21.field_z) / 2;
-                            break L19;
+                            break L18;
                           }
                         } else {
                           var20 = p.field_c;
                           var3 = (77 - var20.field_z) / 2;
-                          break L19;
+                          break L18;
                         }
                       } else {
                         var19 = kb.field_c;
                         var3 = (77 + -var19.field_z) / 2;
-                        break L19;
+                        break L18;
                       }
                     }
                   }
                 }
               }
-              L25: {
+              L24: {
                 if (var2 == null) {
-                  L26: {
+                  L25: {
                     if (am.field_k == 110) {
                       rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                      break L26;
+                      break L25;
                     } else {
-                      break L26;
+                      break L25;
                     }
                   }
-                  if (-81 > (am.field_k ^ -1)) {
+                  if (am.field_k > 80) {
                     am.field_k = am.field_k - 1;
-                    break L25;
+                    break L24;
                   } else {
                     return;
                   }
                 } else {
                   fg.field_b = var3;
                   dg.field_t = (ed) var2;
-                  if (-96 >= (am.field_k ^ -1)) {
-                    if (-111 >= (am.field_k ^ -1)) {
-                      break L25;
+                  if (am.field_k >= 95) {
+                    if (am.field_k >= 110) {
+                      break L24;
                     } else {
                       am.field_k = am.field_k + 1;
                       return;
@@ -559,120 +551,102 @@ final class lh {
               }
               return;
             }
-          }
-        } else {
-          if (null != ma.field_a) {
-            am.field_k = 0;
-            return;
           } else {
-            L27: {
-              if (var1 != null) {
-                break L27;
-              } else {
-                if (am.field_k >= 80) {
-                  break L27;
-                } else {
-                  am.field_k = 95;
-                  rk.field_e.a(qh.field_i, 100, 3072 * qm.field_c / 64, 8192);
-                  break L27;
-                }
-              }
-            }
-            L28: {
+            L26: {
               var2 = null;
               var3 = 0;
               if (wk.field_c) {
-                break L28;
+                break L26;
               } else {
                 if (pg.field_b) {
                   var18 = k.field_j;
                   var2 = (Object) (Object) var18;
                   var3 = (77 - var18.field_z) / 2;
-                  break L28;
+                  break L26;
                 } else {
-                  if (-1 == (od.field_q ^ -1)) {
-                    L29: {
+                  if (od.field_q == 0) {
+                    L27: {
                       var17 = kb.field_c;
                       var3 = (77 - var17.field_z) / 2;
                       if (var2 == null) {
-                        L30: {
+                        L28: {
                           if (am.field_k == 110) {
                             rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                            break L30;
+                            break L28;
                           } else {
-                            break L30;
+                            break L28;
                           }
                         }
-                        if (-81 > (am.field_k ^ -1)) {
+                        if (am.field_k > 80) {
                           am.field_k = am.field_k - 1;
-                          break L29;
+                          break L27;
                         } else {
-                          break L29;
+                          break L27;
                         }
                       } else {
                         fg.field_b = var3;
                         dg.field_t = (ed) var2;
-                        if (-96 >= (am.field_k ^ -1)) {
-                          if (-111 >= (am.field_k ^ -1)) {
-                            break L29;
+                        if (am.field_k >= 95) {
+                          if (am.field_k >= 110) {
+                            break L27;
                           } else {
                             am.field_k = am.field_k + 1;
-                            break L29;
+                            break L27;
                           }
                         } else {
                           am.field_k = 95;
                           rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
-                          break L29;
+                          break L27;
                         }
                       }
                     }
                     return;
                   } else {
                     if (od.field_q != 1) {
-                      if ((od.field_q ^ -1) != -3) {
-                        if (-4 != (od.field_q ^ -1)) {
+                      if (od.field_q != 2) {
+                        if (od.field_q != 3) {
                           if (!n.field_h) {
                             if (e.field_a) {
-                              L31: {
+                              L29: {
                                 if (ce.field_f.b(123)) {
                                   var2 = (Object) (Object) lf.field_I;
-                                  break L31;
+                                  break L29;
                                 } else {
                                   var2 = (Object) (Object) oi.field_O;
-                                  break L31;
+                                  break L29;
                                 }
                               }
-                              L32: {
+                              L30: {
                                 var3 = (-((ed) var2).field_z + 90) / 2;
                                 if (var2 == null) {
-                                  L33: {
+                                  L31: {
                                     if (am.field_k == 110) {
                                       rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                                      break L33;
+                                      break L31;
                                     } else {
-                                      break L33;
+                                      break L31;
                                     }
                                   }
-                                  if (-81 > (am.field_k ^ -1)) {
+                                  if (am.field_k > 80) {
                                     am.field_k = am.field_k - 1;
-                                    break L32;
+                                    break L30;
                                   } else {
-                                    break L32;
+                                    break L30;
                                   }
                                 } else {
                                   fg.field_b = var3;
                                   dg.field_t = (ed) var2;
-                                  if (-96 >= (am.field_k ^ -1)) {
-                                    if (-111 >= (am.field_k ^ -1)) {
-                                      break L32;
+                                  if (am.field_k >= 95) {
+                                    if (am.field_k >= 110) {
+                                      break L30;
                                     } else {
                                       am.field_k = am.field_k + 1;
-                                      break L32;
+                                      break L30;
                                     }
                                   } else {
                                     am.field_k = 95;
                                     rk.field_e.a(qh.field_i, 100, qm.field_c * 3072 / 64, 8192);
-                                    break L32;
+                                    break L30;
                                   }
                                 }
                               }
@@ -682,60 +656,60 @@ final class lh {
                                 if (ch.field_b) {
                                   var16 = jf.field_H;
                                   var3 = (100 - var16.field_z) / 2;
-                                  break L28;
+                                  break L26;
                                 } else {
-                                  break L28;
+                                  break L26;
                                 }
                               } else {
                                 var15 = na.field_w;
                                 var3 = (66 + -var15.field_z) / 2;
-                                break L28;
+                                break L26;
                               }
                             }
                           } else {
-                            break L28;
+                            break L26;
                           }
                         } else {
                           var14 = oj.field_Q;
                           var3 = (77 - var14.field_z) / 2;
-                          break L28;
+                          break L26;
                         }
                       } else {
                         var13 = p.field_c;
                         var3 = (77 - var13.field_z) / 2;
-                        break L28;
+                        break L26;
                       }
                     } else {
                       var12 = kb.field_c;
                       var3 = (77 + -var12.field_z) / 2;
-                      break L28;
+                      break L26;
                     }
                   }
                 }
               }
             }
-            L34: {
+            L32: {
               if (var2 == null) {
-                L35: {
+                L33: {
                   if (am.field_k == 110) {
                     rk.field_e.a(bm.field_a, 100, qm.field_c * 3072 / 64, 8192);
-                    break L35;
+                    break L33;
                   } else {
-                    break L35;
+                    break L33;
                   }
                 }
-                if (-81 > (am.field_k ^ -1)) {
+                if (am.field_k > 80) {
                   am.field_k = am.field_k - 1;
-                  break L34;
+                  break L32;
                 } else {
                   return;
                 }
               } else {
                 fg.field_b = var3;
                 dg.field_t = (ed) var2;
-                if (-96 >= (am.field_k ^ -1)) {
-                  if (-111 >= (am.field_k ^ -1)) {
-                    break L34;
+                if (am.field_k >= 95) {
+                  if (am.field_k >= 110) {
+                    break L32;
                   } else {
                     am.field_k = am.field_k + 1;
                     return;

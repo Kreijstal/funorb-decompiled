@@ -125,7 +125,7 @@ final class in extends hg {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
@@ -181,7 +181,7 @@ final class in extends hg {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
@@ -205,7 +205,7 @@ final class in extends hg {
 
     private final static void a(byte[] param0, int param1) {
         field_j = param0;
-        field_o = param1;
+        field_o = 0;
         field_C = 0;
     }
 
@@ -221,10 +221,8 @@ final class in extends hg {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new in(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -254,10 +252,8 @@ final class in extends hg {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new in(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -319,7 +315,7 @@ final class in extends hg {
         ((in) this).field_L = var2.g(-5053);
         ((in) this).field_F = var2.g(-5053);
         if (((in) this).field_F < 0) {
-            ((in) this).field_F = ((in) this).field_F ^ -1;
+            ((in) this).field_F = ~((in) this).field_F;
             ((in) this).field_A = true;
         }
         int var3 = var2.g(-5053);

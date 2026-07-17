@@ -9,9 +9,6 @@ abstract class nc {
     static int field_a;
 
     public static void b(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_c = null;
         field_e = null;
     }

@@ -6,9 +6,6 @@ final class wm extends pu {
     private static String field_z;
 
     public static void b(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_l = null;
     }
 

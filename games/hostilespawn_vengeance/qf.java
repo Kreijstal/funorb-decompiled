@@ -273,7 +273,6 @@ final class qf extends am {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -789,7 +788,7 @@ final class qf extends am {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((qf) this).field_H) {
                     break L36;
                   } else {
@@ -847,7 +846,7 @@ final class qf extends am {
               }
             }
             ((qf) this).field_H = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_N[var14.field_c[var17_int]];
             var55 = field_r;
@@ -944,12 +943,13 @@ final class qf extends am {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((qf) this).field_s[var3] = (byte)(var6 - 128);
+                    ((qf) this).field_s[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -1017,6 +1017,7 @@ final class qf extends am {
 
     final static qf a(gb param0, int param1, int param2) {
         try {
+            qf var4_ref = null;
             if (!qf.a(param0)) {
                 boolean discarded$0 = param0.a(param2, param1, (byte) 86);
                 return null;
@@ -1025,13 +1026,11 @@ final class qf extends am {
             if (var3 == null) {
                 return null;
             }
-            qf var4 = null;
-            try {
-                var4 = new qf(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new qf(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1041,6 +1040,7 @@ final class qf extends am {
 
     final static qf a(gb param0, String param1, String param2) {
         try {
+            qf var4_ref = null;
             if (!qf.a(param0)) {
                 boolean discarded$0 = param0.a(-121, param1, param2);
                 return null;
@@ -1049,13 +1049,11 @@ final class qf extends am {
             if (var3 == null) {
                 return null;
             }
-            qf var4 = null;
-            try {
-                var4 = new qf(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new qf(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1065,7 +1063,7 @@ final class qf extends am {
 
     private final static void a(byte[] param0, int param1) {
         field_F = param0;
-        field_k = param1;
+        field_k = 0;
         field_O = 0;
     }
 
@@ -1080,7 +1078,7 @@ final class qf extends am {
         ((qf) this).field_u = var2.d(8195);
         ((qf) this).field_B = var2.d(8195);
         if (((qf) this).field_B < 0) {
-            ((qf) this).field_B = ((qf) this).field_B ^ -1;
+            ((qf) this).field_B = ~((qf) this).field_B;
             ((qf) this).field_n = true;
         }
         int var3 = var2.d(8195);
@@ -1159,12 +1157,13 @@ final class qf extends am {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {

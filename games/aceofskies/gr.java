@@ -18,7 +18,7 @@ final class gr {
         if (param0) {
           L0: {
             ((gr) this).field_a = 0;
-            if (-1 != (((gr) this).field_d ^ -1)) {
+            if (((gr) this).field_d != 0) {
               break L0;
             } else {
               if (98 == bk.field_f) {
@@ -124,7 +124,7 @@ final class gr {
         } else {
           ((gr) this).a(true);
           ((gr) this).field_a = 0;
-          if (-1 == (((gr) this).field_d ^ -1)) {
+          if (((gr) this).field_d == 0) {
             L6: {
               if (98 == bk.field_f) {
                 L7: {
@@ -253,7 +253,7 @@ final class gr {
         int stackOut_5_0 = 0;
         if (param0 > 80) {
           if (-1 == ((gr) this).field_a) {
-            if ((((gr) this).field_e ^ -1) != -85) {
+            if (((gr) this).field_e != 84) {
               if (((gr) this).field_e == 83) {
                 return true;
               } else {
@@ -267,7 +267,7 @@ final class gr {
           }
         } else {
           ((gr) this).field_c = -21;
-          if (-1 == (((gr) this).field_a ^ -1)) {
+          if (((gr) this).field_a == 0) {
             if (((gr) this).field_e == -85) {
               return true;
             } else {
@@ -312,15 +312,15 @@ final class gr {
 
     final boolean a(int param0) {
         int var2 = 39 / ((71 - param0) / 37);
-        return -97 == (((gr) this).field_e ^ -1) ? true : false;
+        return ((gr) this).field_e == 96 ? true : false;
     }
 
     final void d(byte param0) {
         ((gr) this).field_a = 0;
         ((gr) this).field_e = 0;
-        if (-1 != (((gr) this).field_d ^ -1)) {
+        if (((gr) this).field_d != 0) {
           if (param0 <= 122) {
-            field_b = (en) null;
+            field_b = null;
             return;
           } else {
             return;
@@ -330,7 +330,7 @@ final class gr {
           if (param0 > 122) {
             return;
           } else {
-            field_b = (en) null;
+            field_b = null;
             return;
           }
         }
@@ -352,7 +352,7 @@ final class gr {
             if (0 != ((gr) this).field_d) {
               break L1;
             } else {
-              if (-97 == (bk.field_f ^ -1)) {
+              if (bk.field_f == 96) {
                 L2: {
                   if (((gr) this).field_g <= 0) {
                     ((gr) this).field_g = ((gr) this).field_c;
@@ -415,7 +415,7 @@ final class gr {
           }
           if (0 == ((gr) this).field_d) {
             L4: {
-              if (-97 == (bk.field_f ^ -1)) {
+              if (bk.field_f == 96) {
                 L5: {
                   if (((gr) this).field_g <= 0) {
                     ((gr) this).field_g = ((gr) this).field_c;
@@ -549,9 +549,6 @@ final class gr {
     public static void c(int param0) {
         field_i = null;
         field_b = null;
-        if (param0 >= -117) {
-            field_b = (en) null;
-        }
     }
 
     final void a(int param0, int param1, int param2) {
@@ -574,9 +571,9 @@ final class gr {
               }
             }
             if (param2 == -24702) {
-              if (-1 != (((gr) this).field_d ^ -1)) {
+              if (((gr) this).field_d != 0) {
                 if (0 != vu.field_f) {
-                  if (-1 > (((gr) this).field_j ^ -1)) {
+                  if (((gr) this).field_j > 0) {
                     L1: {
                       ((gr) this).field_j = ((gr) this).field_j - 1;
                       if (0 != vj.field_d) {
@@ -932,7 +929,7 @@ final class gr {
         if (param0 != -102) {
           L0: {
             ((gr) this).field_f = true;
-            if ((((gr) this).field_e ^ -1) != -98) {
+            if (((gr) this).field_e != 97) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -945,7 +942,7 @@ final class gr {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((gr) this).field_e ^ -1) != -98) {
+            if (((gr) this).field_e != 97) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;

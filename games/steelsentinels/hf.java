@@ -10,9 +10,6 @@ final class hf {
     static String field_a;
 
     public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
         field_a = null;
         field_f = null;
         field_b = null;
@@ -20,33 +17,23 @@ final class hf {
     }
 
     final static void a(ak param0, int param1, int param2, ak param3, int param4, int param5) {
-        Object var7 = null;
-        rc.field_j = param1;
-        ng.field_m = param2;
-        if (param4 >= -122) {
-          var7 = null;
-          hf.a((ak) null, -18, -91, (ak) null, 27, -75);
-          vd.field_f = param0;
-          ud.field_y = param5;
-          kk.field_c = param3;
-          return;
-        } else {
-          vd.field_f = param0;
-          ud.field_y = param5;
-          kk.field_c = param3;
-          return;
+        try {
+            rc.field_j = param1;
+            ng.field_m = param2;
+            if (param4 >= -122) {
+                Object var7 = null;
+                hf.a((ak) null, -18, -91, (ak) null, 27, -75);
+            }
+            vd.field_f = param0;
+            ud.field_y = param5;
+            kk.field_c = param3;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "hf.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
         }
     }
 
     final static void a(boolean param0, int param1) {
-        if (param1 != 1) {
-          wk[] discarded$2 = hf.a(-30, 29, 66, -59, false);
-          hh.field_a.a(param0, (byte) 127);
-          return;
-        } else {
-          hh.field_a.a(param0, (byte) 127);
-          return;
-        }
+        hh.field_a.a(param0, (byte) 127);
     }
 
     final static wk[] a(int param0, int param1, int param2, int param3, boolean param4) {

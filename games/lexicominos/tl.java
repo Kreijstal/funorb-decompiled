@@ -13,45 +13,91 @@ final class tl {
 
     final static void a(boolean param0, ng param1) {
         kd var2 = null;
+        RuntimeException var2_ref = null;
         kd var3 = null;
         int var4 = 0;
         Object var5 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var4 = Lexicominos.field_L ? 1 : 0;
-        var2 = param1.field_b;
-        L0: while (true) {
-          var3 = var2.field_f;
-          var2.field_c = var3;
-          var2 = var3;
-          if (var2 != param1.field_b) {
-            continue L0;
-          } else {
+        try {
+          L0: {
             var2 = param1.field_b;
             L1: while (true) {
-              var3 = var2.field_c;
-              var3.field_f = var2;
+              var3 = var2.field_f;
+              var2.field_c = var3;
               var2 = var3;
-              if (param1.field_b != var2) {
+              if (var2 != param1.field_b) {
                 continue L1;
               } else {
-                if (param0) {
-                  var5 = null;
-                  tl.a(true, (ng) null);
-                  return;
-                } else {
-                  return;
+                var2 = param1.field_b;
+                L2: while (true) {
+                  var3 = var2.field_c;
+                  var3.field_f = var2;
+                  var2 = var3;
+                  if (param1.field_b != var2) {
+                    continue L2;
+                  } else {
+                    if (!param0) {
+                      break L0;
+                    } else {
+                      var5 = null;
+                      tl.a(true, (ng) null);
+                      return;
+                    }
+                  }
                 }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var2_ref;
+            stackOut_8_1 = new StringBuilder().append("tl.A(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw ld.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
     public static void a(int param0) {
         field_h = null;
-        if (param0 != 3) {
-            Object var2 = null;
-            tl.a(false, (ng) null);
-        }
     }
 
     final int a(byte param0, int param1) {

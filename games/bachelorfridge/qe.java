@@ -73,7 +73,7 @@ final class qe {
     public static void a(byte param0) {
         field_d = null;
         field_q = null;
-        int var1 = 101 / ((param0 - 34) / 50);
+        int var1 = 101;
     }
 
     private final void a(int param0) {
@@ -116,7 +116,7 @@ final class qe {
                       if (var2 != dda.field_j) {
                         L2: {
                           ((qe) this).field_j.a(var3, (byte) 19, var2);
-                          if (-1 > (((qe) this).field_i ^ -1)) {
+                          if (((qe) this).field_i > 0) {
                             qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                             break L2;
                           } else {
@@ -128,7 +128,7 @@ final class qe {
                         if (var3 != nn.field_b) {
                           L3: {
                             ((qe) this).field_j.a(var3, (byte) 19, var2);
-                            if (-1 > (((qe) this).field_i ^ -1)) {
+                            if (((qe) this).field_i > 0) {
                               qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                               break L3;
                             } else {
@@ -138,7 +138,7 @@ final class qe {
                           return;
                         } else {
                           L4: {
-                            if (-1 > (((qe) this).field_i ^ -1)) {
+                            if (((qe) this).field_i > 0) {
                               qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                               break L4;
                             } else {
@@ -154,7 +154,7 @@ final class qe {
                         if (var2 != dda.field_j) {
                           L5: {
                             ((qe) this).field_j.a(var3, (byte) 19, var2);
-                            if (-1 > (((qe) this).field_i ^ -1)) {
+                            if (((qe) this).field_i > 0) {
                               qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                               break L5;
                             } else {
@@ -166,7 +166,7 @@ final class qe {
                           if (var3 != nn.field_b) {
                             L6: {
                               ((qe) this).field_j.a(var3, (byte) 19, var2);
-                              if (-1 > (((qe) this).field_i ^ -1)) {
+                              if (((qe) this).field_i > 0) {
                                 qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                                 break L6;
                               } else {
@@ -176,7 +176,7 @@ final class qe {
                             return;
                           } else {
                             L7: {
-                              if (-1 > (((qe) this).field_i ^ -1)) {
+                              if (((qe) this).field_i > 0) {
                                 qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                                 break L7;
                               } else {
@@ -213,7 +213,7 @@ final class qe {
                         } else {
                           L10: {
                             ((qe) this).field_j.a(var3, (byte) 19, var2);
-                            if (-1 > (((qe) this).field_i ^ -1)) {
+                            if (((qe) this).field_i > 0) {
                               qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                               break L10;
                             } else {
@@ -247,7 +247,7 @@ final class qe {
                       }
                     }
                     L13: {
-                      if (-1 > (((qe) this).field_i ^ -1)) {
+                      if (((qe) this).field_i > 0) {
                         qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                         break L13;
                       } else {
@@ -275,7 +275,7 @@ final class qe {
                     if (var2 != dda.field_j) {
                       L15: {
                         ((qe) this).field_j.a(var3, (byte) 19, var2);
-                        if (-1 > (((qe) this).field_i ^ -1)) {
+                        if (((qe) this).field_i > 0) {
                           qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                           break L15;
                         } else {
@@ -287,7 +287,7 @@ final class qe {
                       if (var3 != nn.field_b) {
                         L16: {
                           ((qe) this).field_j.a(var3, (byte) 19, var2);
-                          if (-1 > (((qe) this).field_i ^ -1)) {
+                          if (((qe) this).field_i > 0) {
                             qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                             break L16;
                           } else {
@@ -297,7 +297,7 @@ final class qe {
                         return;
                       } else {
                         L17: {
-                          if (-1 > (((qe) this).field_i ^ -1)) {
+                          if (((qe) this).field_i > 0) {
                             qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                             break L17;
                           } else {
@@ -311,7 +311,7 @@ final class qe {
                     if (var2 != dda.field_j) {
                       L18: {
                         ((qe) this).field_j.a(var3, (byte) 19, var2);
-                        if (-1 > (((qe) this).field_i ^ -1)) {
+                        if (((qe) this).field_i > 0) {
                           qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                           break L18;
                         } else {
@@ -323,7 +323,7 @@ final class qe {
                       if (var3 != nn.field_b) {
                         L19: {
                           ((qe) this).field_j.a(var3, (byte) 19, var2);
-                          if (-1 > (((qe) this).field_i ^ -1)) {
+                          if (((qe) this).field_i > 0) {
                             qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                             break L19;
                           } else {
@@ -333,7 +333,7 @@ final class qe {
                         return;
                       } else {
                         L20: {
-                          if (-1 > (((qe) this).field_i ^ -1)) {
+                          if (((qe) this).field_i > 0) {
                             qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                             break L20;
                           } else {
@@ -350,7 +350,7 @@ final class qe {
             if (var2 != dda.field_j) {
               L21: {
                 ((qe) this).field_j.a(var3, (byte) 19, var2);
-                if (-1 > (((qe) this).field_i ^ -1)) {
+                if (((qe) this).field_i > 0) {
                   qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                   break L21;
                 } else {
@@ -362,7 +362,7 @@ final class qe {
               if (var3 != nn.field_b) {
                 L22: {
                   ((qe) this).field_j.a(var3, (byte) 19, var2);
-                  if (-1 > (((qe) this).field_i ^ -1)) {
+                  if (((qe) this).field_i > 0) {
                     qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                     break L22;
                   } else {
@@ -372,7 +372,7 @@ final class qe {
                 return;
               } else {
                 L23: {
-                  if (-1 > (((qe) this).field_i ^ -1)) {
+                  if (((qe) this).field_i > 0) {
                     qw.field_d = (((qe) this).field_i - dda.field_j) / 2;
                     break L23;
                   } else {
@@ -402,7 +402,7 @@ final class qe {
     final void b(byte param0) {
         if (null == kga.field_c) {
           L0: {
-            if (-1 <= (dm.field_f ^ -1)) {
+            if (dm.field_f <= 0) {
               ((qe) this).field_k = false;
               break L0;
             } else {
@@ -410,15 +410,16 @@ final class qe {
             }
           }
           if (((qe) this).field_k) {
+            int fieldTemp$2 = ((qe) this).field_p - 1;
             ((qe) this).field_p = ((qe) this).field_p - 1;
-            if (0 >= ((qe) this).field_p - 1) {
+            if (0 >= fieldTemp$2) {
               ((qe) this).field_p = ((qe) this).field_a;
               if (aja.field_o < ((qe) this).field_g) {
                 ((qe) this).field_k = false;
                 return;
               } else {
                 if (param0 != 106) {
-                  boolean discarded$1 = ((qe) this).b(70);
+                  boolean discarded$3 = ((qe) this).b(70);
                   this.a(param0 + -73);
                   return;
                 } else {

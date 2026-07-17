@@ -12,7 +12,7 @@ final class lj implements Iterable {
     public static void b(int param0) {
         field_b = null;
         field_c = null;
-        int var1 = -71 / ((param0 - 70) / 43);
+        int var1 = 23;
     }
 
     public final Iterator iterator() {
@@ -20,47 +20,86 @@ final class lj implements Iterable {
     }
 
     final void a(ta param0, byte param1) {
-        L0: {
-          if (param0.field_j != null) {
-            param0.h(0);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        param0.field_p = ((lj) this).field_a;
-        param0.field_j = ((lj) this).field_a.field_j;
-        param0.field_j.field_p = param0;
-        if (param1 >= -13) {
-          field_b = null;
-          param0.field_p.field_j = param0;
-          return;
-        } else {
-          param0.field_p.field_j = param0;
-          return;
+        try {
+            if (!(param0.field_j == null)) {
+                param0.h(0);
+            }
+            param0.field_p = ((lj) this).field_a;
+            param0.field_j = ((lj) this).field_a.field_j;
+            param0.field_j.field_p = param0;
+            if (param1 >= -13) {
+                field_b = null;
+            }
+            param0.field_p.field_j = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "lj.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     final static void a(nj param0, byte param1) {
-        Object var2 = null;
-        int var3 = 0;
-        Throwable var4 = null;
-        Throwable decompiledCaughtException = null;
-        var2 = (Object) (Object) Torquing.field_v;
-        synchronized (var2) {
-          L0: {
-            var3 = 127 / ((17 - param1) / 41);
+        synchronized (Torquing.field_v) {
+            int var3 = 127 / ((17 - param1) / 41);
             Torquing.field_v.field_r.a((lf) (Object) param0);
-            break L0;
-          }
         }
     }
 
     final static String a(byte[] param0, boolean param1) {
-        if (param1) {
-            return null;
+        RuntimeException var2 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            stackOut_2_0 = hk.a(param0.length, true, 0, param0);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("lj.B(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 41);
         }
-        return hk.a(param0.length, true, 0, param0);
+        return stackIn_3_0;
     }
 
     final ta a(int param0) {

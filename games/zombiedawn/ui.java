@@ -11,9 +11,6 @@ final class ui {
     static String field_a;
 
     public static void b(int param0) {
-        if (param0 < 111) {
-            return;
-        }
         field_e = null;
         field_f = null;
         field_a = null;
@@ -23,10 +20,6 @@ final class ui {
     }
 
     final static fi a(int param0) {
-        if (param0 != 0) {
-            field_g = null;
-            return t.field_i;
-        }
         return t.field_i;
     }
 

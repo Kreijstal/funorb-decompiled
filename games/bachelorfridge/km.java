@@ -12,78 +12,113 @@ final class km extends hf {
     int field_G;
 
     final boolean b(int param0, int param1, int param2, int param3, int param4, wj param5, int param6) {
-        int var8 = 0;
+        RuntimeException var8 = null;
+        int var8_int = 0;
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_16_0 = 0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_15_0 = 0;
+        int stackOut_13_0 = 0;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         var12 = BachelorFridge.field_y;
-        if (this.b(param0, param1, param2, param3, param4, param5, param6)) {
-          var8 = -((km) this).field_s - (param2 + (((km) this).field_A - param0));
-          var9 = param6 - ((km) this).field_D - ((km) this).field_v - param4;
-          if (var9 * var9 + var8 * var8 < ((km) this).field_G * ((km) this).field_G) {
-            var10 = Math.atan2((double)var9, (double)var8) - nd.field_j;
-            if (0.0 > var10) {
-              var10 = var10 - 3.141592653589793 / (double)((km) this).field_F;
-              ((km) this).field_I = (int)((double)((km) this).field_F * var10 / 6.283185307179586);
-              L0: while (true) {
-                if (((km) this).field_F <= ((km) this).field_I) {
-                  ((km) this).field_I = ((km) this).field_I - ((km) this).field_F;
-                  continue L0;
-                } else {
-                  L1: while (true) {
-                    if (-1 >= (((km) this).field_I ^ -1)) {
-                      return true;
-                    } else {
-                      ((km) this).field_I = ((km) this).field_I + ((km) this).field_F;
-                      continue L1;
-                    }
-                  }
-                }
-              }
+        try {
+          L0: {
+            if (!super.b(param0, param1, param2, param3, param4, param5, param6)) {
+              stackOut_15_0 = 0;
+              stackIn_16_0 = stackOut_15_0;
+              break L0;
             } else {
-              if (var10 > 0.0) {
-                var10 = var10 + 3.141592653589793 / (double)((km) this).field_F;
-                ((km) this).field_I = (int)((double)((km) this).field_F * var10 / 6.283185307179586);
-                L2: while (true) {
-                  if (((km) this).field_F <= ((km) this).field_I) {
-                    ((km) this).field_I = ((km) this).field_I - ((km) this).field_F;
-                    continue L2;
-                  } else {
-                    L3: while (true) {
-                      if (-1 >= (((km) this).field_I ^ -1)) {
-                        return true;
+              L1: {
+                var8_int = -((km) this).field_s - (param2 + (((km) this).field_A - param0));
+                var9 = param6 - ((km) this).field_D - ((km) this).field_v - param4;
+                if (var9 * var9 + var8_int * var8_int >= ((km) this).field_G * ((km) this).field_G) {
+                  break L1;
+                } else {
+                  L2: {
+                    var10 = Math.atan2((double)var9, (double)var8_int) - nd.field_j;
+                    if (0.0 > var10) {
+                      var10 = var10 - 3.141592653589793 / (double)((km) this).field_F;
+                      break L2;
+                    } else {
+                      if (var10 > 0.0) {
+                        var10 = var10 + 3.141592653589793 / (double)((km) this).field_F;
+                        break L2;
                       } else {
-                        ((km) this).field_I = ((km) this).field_I + ((km) this).field_F;
-                        continue L3;
+                        break L2;
                       }
                     }
                   }
-                }
-              } else {
-                ((km) this).field_I = (int)((double)((km) this).field_F * var10 / 6.283185307179586);
-                L4: while (true) {
-                  if (((km) this).field_F <= ((km) this).field_I) {
-                    ((km) this).field_I = ((km) this).field_I - ((km) this).field_F;
-                    continue L4;
-                  } else {
-                    L5: while (true) {
-                      if (-1 >= (((km) this).field_I ^ -1)) {
-                        return true;
-                      } else {
-                        ((km) this).field_I = ((km) this).field_I + ((km) this).field_F;
-                        continue L5;
+                  ((km) this).field_I = (int)((double)((km) this).field_F * var10 / 6.283185307179586);
+                  L3: while (true) {
+                    if (((km) this).field_F > ((km) this).field_I) {
+                      L4: while (true) {
+                        if (((km) this).field_I >= 0) {
+                          break L1;
+                        } else {
+                          ((km) this).field_I = ((km) this).field_I + ((km) this).field_F;
+                          continue L4;
+                        }
                       }
+                    } else {
+                      ((km) this).field_I = ((km) this).field_I - ((km) this).field_F;
+                      continue L3;
                     }
                   }
                 }
               }
+              stackOut_13_0 = 1;
+              stackIn_14_0 = stackOut_13_0;
+              return stackIn_14_0 != 0;
             }
-          } else {
-            return true;
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var8 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var8;
+            stackOut_17_1 = new StringBuilder().append("km.L(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param5 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L5;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L5;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param6 + 41);
         }
+        return stackIn_16_0 != 0;
     }
 
     final static String a(long param0, int param1) {

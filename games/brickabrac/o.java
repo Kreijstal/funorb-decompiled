@@ -83,34 +83,16 @@ final class o {
         field_g = null;
         field_b = null;
         field_a = null;
-        if (param0 != 31583) {
-          boolean discarded$2 = o.d(-14);
-          field_e = null;
-          field_c = null;
-          field_h = null;
-          return;
-        } else {
-          field_e = null;
-          field_c = null;
-          field_h = null;
-          return;
-        }
+        field_e = null;
+        field_c = null;
+        field_h = null;
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        var1 = pe.a((byte) -89);
-        var2 = v.b(param0 + 29830);
-        lm.field_c.a((hn.field_a << -572695519) + var1, var2 - -(bh.field_vb << 435442209), -hn.field_a + np.field_b, false, -bh.field_vb + jq.field_r);
-        if (param0 != -24435) {
-          field_b = null;
-          cp.h(param0 ^ 8147);
-          return;
-        } else {
-          cp.h(param0 ^ 8147);
-          return;
-        }
+        int var1 = pe.a((byte) -89);
+        int var2 = v.b(5395);
+        lm.field_c.a((hn.field_a << 1) + var1, var2 - -(bh.field_vb << 1), -hn.field_a + np.field_b, false, -bh.field_vb + jq.field_r);
+        cp.h(-16546);
     }
 
     static {

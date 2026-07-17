@@ -34,9 +34,6 @@ abstract class c {
     }
 
     public static void a(int param0) {
-        if (param0 != -9431) {
-            return;
-        }
         field_h = null;
         field_c = null;
         field_d = null;

@@ -6,23 +6,95 @@ final class lr {
     private int[] field_b;
 
     lr(int[] param0) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int var2 = 1;
-        while ((param0.length >> 821848545) + param0.length >= var2) {
-            var2 = var2 << 1;
-        }
-        ((lr) this).field_b = new int[var2 - -var2];
-        for (var3 = 0; var2 + var2 > var3; var3++) {
-            ((lr) this).field_b[var3] = -1;
-        }
-        for (var3 = 0; param0.length > var3; var3++) {
-            var4 = var2 + -1 & param0[var3];
-            while (0 != (((lr) this).field_b[var4 + (var4 + 1)] ^ -1)) {
-                var4 = var4 + 1 & var2 - 1;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            var2_int = 1;
+            L1: while (true) {
+              if ((param0.length >> 1) + param0.length < var2_int) {
+                ((lr) this).field_b = new int[var2_int - -var2_int];
+                var3 = 0;
+                L2: while (true) {
+                  if (var2_int + var2_int <= var3) {
+                    var3 = 0;
+                    L3: while (true) {
+                      if (param0.length <= var3) {
+                        break L0;
+                      } else {
+                        var4 = var2_int + -1 & param0[var3];
+                        L4: while (true) {
+                          if (((lr) this).field_b[var4 + (var4 + 1)] == -1) {
+                            ((lr) this).field_b[var4 + var4] = param0[var3];
+                            ((lr) this).field_b[var4 + var4 + 1] = var3;
+                            var3++;
+                            continue L3;
+                          } else {
+                            var4 = var4 + 1 & var2_int - 1;
+                            continue L4;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    ((lr) this).field_b[var3] = -1;
+                    var3++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2_int = var2_int << 1;
+                continue L1;
+              }
             }
-            ((lr) this).field_b[var4 + var4] = param0[var3];
-            ((lr) this).field_b[var4 + var4 + 1] = var3;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var2 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_1 = new StringBuilder().append("lr.<init>(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 
@@ -47,12 +119,12 @@ final class lr {
         int var5 = 0;
         int var6 = 0;
         var6 = ArmiesOfGielinor.field_M ? 1 : 0;
-        var3 = -1 + (((lr) this).field_b.length >> -2140433471);
+        var3 = -1 + (((lr) this).field_b.length >> 1);
         if (param1 == 1) {
           var4 = var3 & param0;
           L0: while (true) {
             var5 = ((lr) this).field_b[1 + (var4 + var4)];
-            if ((var5 ^ -1) != 0) {
+            if (var5 != -1) {
               if (((lr) this).field_b[var4 + var4] == param0) {
                 return var5;
               } else {
@@ -69,14 +141,79 @@ final class lr {
     }
 
     final static void a(co[] param0, byte param1) {
+        co[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
-        co[] var5 = param0;
-        co[] var2 = var5;
-        if (param1 <= 35) {
-            ru[] discarded$0 = lr.a(-11);
-        }
-        for (var3 = 0; var3 < var5.length; var3++) {
+        int var4 = 0;
+        co[] var5 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var5 = param0;
+              var2 = var5;
+              if (param1 > 35) {
+                break L1;
+              } else {
+                ru[] discarded$2 = lr.a(-11);
+                break L1;
+              }
+            }
+            var3 = 0;
+            L2: while (true) {
+              if (var3 >= var5.length) {
+                break L0;
+              } else {
+                var3++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_1 = new StringBuilder().append("lr.B(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
     }
 

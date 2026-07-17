@@ -29,89 +29,121 @@ final class vl implements bf {
     }
 
     public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         ef var11 = null;
         ub stackIn_3_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
         ub stackOut_2_0 = null;
         Object stackOut_1_0 = null;
-        L0: {
-          if (param2 instanceof ef) {
-            stackOut_2_0 = (ub) param2;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = null;
-            stackIn_3_0 = (ub) (Object) stackOut_1_0;
-            break L0;
-          }
-        }
-        L1: {
-          var11 = (ef) (Object) stackIn_3_0;
-          if (var11 == null) {
-            break L1;
-          } else {
-            param4 = param4 & var11.field_B;
-            break L1;
-          }
-        }
-        L2: {
-          var7 = 5592405;
-          if (param4) {
-            var7 = 16777215;
-            break L2;
-          } else {
-            break L2;
-          }
-        }
-        ed.c(param0 - -param2.field_o, param2.field_l + param1, param2.field_r, param2.field_n, ((vl) this).field_c);
-        var8 = param0 - -param2.field_o - -((vl) this).field_m;
-        var9 = param1 + param2.field_l - -((vl) this).field_b;
-        ed.b(var8, var9, ((vl) this).field_l, ((vl) this).field_p, 5592405);
-        ed.c(var8, var9, ((vl) this).field_l, ((vl) this).field_p, var7);
-        if (!param3) {
-          L3: {
-            ((vl) this).field_p = 11;
-            if (var11.field_z) {
-              ed.e(var8, var9, var8 + ((vl) this).field_l, var9 + ((vl) this).field_p, 1);
-              ed.e(var8 - -((vl) this).field_l, var9, var8, ((vl) this).field_p + var9, 1);
-              break L3;
-            } else {
-              break L3;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param2 instanceof ef) {
+                stackOut_2_0 = (ub) param2;
+                stackIn_3_0 = stackOut_2_0;
+                break L1;
+              } else {
+                stackOut_1_0 = null;
+                stackIn_3_0 = (ub) (Object) stackOut_1_0;
+                break L1;
+              }
             }
-          }
-          L4: {
+            L2: {
+              var11 = (ef) (Object) stackIn_3_0;
+              if (var11 == null) {
+                break L2;
+              } else {
+                param4 = param4 & var11.field_B;
+                break L2;
+              }
+            }
+            L3: {
+              var7 = 5592405;
+              if (param4) {
+                var7 = 16777215;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L4: {
+              ed.c(param0 - -param2.field_o, param2.field_l + param1, param2.field_r, param2.field_n, ((vl) this).field_c);
+              var8 = param0 - -param2.field_o - -((vl) this).field_m;
+              var9 = param1 + param2.field_l - -((vl) this).field_b;
+              ed.b(var8, var9, ((vl) this).field_l, ((vl) this).field_p, 5592405);
+              ed.c(var8, var9, ((vl) this).field_l, ((vl) this).field_p, var7);
+              if (param3) {
+                break L4;
+              } else {
+                ((vl) this).field_p = 11;
+                break L4;
+              }
+            }
+            L5: {
+              if (var11.field_z) {
+                ed.e(var8, var9, var8 + ((vl) this).field_l, var9 + ((vl) this).field_p, 1);
+                ed.e(var8 - -((vl) this).field_l, var9, var8, ((vl) this).field_p + var9, 1);
+                break L5;
+              } else {
+                break L5;
+              }
+            }
             if (null != ((vl) this).field_j) {
               var10 = ((vl) this).field_i + ((vl) this).field_l + ((vl) this).field_m;
-              int discarded$2 = ((vl) this).field_j.a(param2.field_k, param2.field_o + param0 - -var10, ((vl) this).field_o + param1 + param2.field_l, -((vl) this).field_i - (var10 - param2.field_r), param2.field_n - (((vl) this).field_i << -898435263), ((vl) this).field_r, ((vl) this).field_e, ((vl) this).field_k, ((vl) this).field_q, 0);
-              break L4;
+              int discarded$1 = ((vl) this).field_j.a(param2.field_k, param2.field_o + param0 - -var10, ((vl) this).field_o + param1 + param2.field_l, -((vl) this).field_i - (var10 - param2.field_r), param2.field_n - (((vl) this).field_i << 1), ((vl) this).field_r, ((vl) this).field_e, ((vl) this).field_k, ((vl) this).field_q, 0);
+              break L0;
             } else {
-              break L4;
+              return;
             }
           }
-          return;
-        } else {
-          L5: {
-            if (var11.field_z) {
-              ed.e(var8, var9, var8 + ((vl) this).field_l, var9 + ((vl) this).field_p, 1);
-              ed.e(var8 - -((vl) this).field_l, var9, var8, ((vl) this).field_p + var9, 1);
-              break L5;
-            } else {
-              break L5;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            if (null != ((vl) this).field_j) {
-              var10 = ((vl) this).field_i + ((vl) this).field_l + ((vl) this).field_m;
-              int discarded$3 = ((vl) this).field_j.a(param2.field_k, param2.field_o + param0 - -var10, ((vl) this).field_o + param1 + param2.field_l, -((vl) this).field_i - (var10 - param2.field_r), param2.field_n - (((vl) this).field_i << -898435263), ((vl) this).field_r, ((vl) this).field_e, ((vl) this).field_k, ((vl) this).field_q, 0);
+            var6 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var6;
+            stackOut_17_1 = new StringBuilder().append("vl.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param2 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
               break L6;
             } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
               break L6;
             }
           }
-          return;
+          throw bd.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -133,43 +165,32 @@ final class vl implements bf {
     }
 
     final static boolean a(char param0, int param1) {
-        if (param1 == -5717) {
-          if (param0 >= 48) {
-            if (param0 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (param0 < 48) {
             return false;
-          }
-        } else {
-          String discarded$5 = vl.a(-107);
-          if (param0 >= 48) {
-            if (param0 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (param0 > 57) {
+            return false;
+        }
+        return true;
     }
 
     vl(vd param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         ((vl) this).field_k = 1;
         ((vl) this).field_q = 1;
-        ((vl) this).field_r = param3;
-        ((vl) this).field_c = param9;
-        ((vl) this).field_o = param2;
-        ((vl) this).field_m = param5;
-        ((vl) this).field_e = param4;
-        ((vl) this).field_b = param6;
-        ((vl) this).field_i = param1;
-        ((vl) this).field_l = param8;
-        ((vl) this).field_p = param7;
-        ((vl) this).field_j = param0;
+        try {
+            ((vl) this).field_r = param3;
+            ((vl) this).field_c = param9;
+            ((vl) this).field_o = param2;
+            ((vl) this).field_m = param5;
+            ((vl) this).field_e = param4;
+            ((vl) this).field_b = param6;
+            ((vl) this).field_i = param1;
+            ((vl) this).field_l = param8;
+            ((vl) this).field_p = param7;
+            ((vl) this).field_j = param0;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "vl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+        }
     }
 
     static {

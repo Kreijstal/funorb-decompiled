@@ -19,35 +19,32 @@ final class ni extends fa {
         field_o = null;
         field_s = null;
         field_m = null;
-        if (param0 > -4) {
-            field_m = null;
-        }
     }
 
     final static um a(int param0, int param1) {
         um var2 = new um();
         bq.field_a.a(22125, (fa) (Object) var2);
         sd.a(true, param0);
-        int var3 = -62 / ((param1 - 48) / 62);
+        int var3 = 31;
         return var2;
     }
 
     final static void a(tf param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, jl param8, int param9, int param10) {
-        cl.field_d = param2;
-        bl.field_c = param3;
-        mk.field_d = param0;
-        i.field_l = param1;
-        r.field_a = param7;
-        vp.field_Lb = param9;
-        if (param5) {
-            ni.a(88);
-        } else {
+        try {
+            cl.field_d = param2;
+            bl.field_c = param3;
+            mk.field_d = param0;
+            i.field_l = param1;
+            r.field_a = param7;
+            vp.field_Lb = param9;
+            if (param5) {
+                ni.a(88);
+            }
             aq.field_a = param6;
             mp.field_f = param4;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "ni.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 44 + param9 + 44 + param10 + 41);
         }
-        aq.field_a = param6;
-        mp.field_f = param4;
     }
 
     final static void a(int param0) {
@@ -75,14 +72,14 @@ final class ni extends fa {
     }
 
     final static int a(byte param0, int param1) {
-        param1 = (1431655765 & param1) - -(-715827883 & param1 >>> 1314130401);
-        param1 = (param1 >>> -543517598 & -214748365) + (858993459 & param1);
-        param1 = (param1 >>> 420709732) + param1 & 252645135;
-        param1 = param1 + (param1 >>> -210269112);
+        param1 = (1431655765 & param1) - -(-715827883 & param1 >>> 1);
+        param1 = (param1 >>> 2 & -214748365) + (858993459 & param1);
+        param1 = (param1 >>> 4) + param1 & 252645135;
+        param1 = param1 + (param1 >>> 8);
         if (param0 > -37) {
           return 116;
         } else {
-          param1 = param1 + (param1 >>> 1012604144);
+          param1 = param1 + (param1 >>> 16);
           return param1 & 255;
         }
     }

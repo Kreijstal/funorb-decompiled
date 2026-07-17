@@ -28,7 +28,7 @@ final class hq {
                 var3 = var3 + ((hq) this).field_b;
                 continue L0;
               } else {
-                if (-1 != (var3 ^ -1)) {
+                if (var3 != 0) {
                   var3 = var3 * ((hq) this).field_b;
                   continue L0;
                 } else {
@@ -43,7 +43,7 @@ final class hq {
 
     final void c(int param0, int param1) {
         if (param1 == 17424) {
-          if ((param0 ^ -1) <= -1) {
+          if (param0 >= 0) {
             if (param0 <= ((hq) this).field_i) {
               if (param0 != ((hq) this).field_i) {
                 dk.a(((hq) this).field_f, param0 + 1, ((hq) this).field_f, param0, ((hq) this).field_i - param0);

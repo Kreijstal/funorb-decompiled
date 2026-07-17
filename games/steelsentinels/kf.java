@@ -20,26 +20,13 @@ final class kf extends ck {
     static gh field_y;
 
     public static void d(int param0) {
-        if (param0 != 90) {
-          field_B = null;
-          field_r = null;
-          field_B = null;
-          field_t = null;
-          field_A = null;
-          field_o = null;
-          field_v = null;
-          field_y = null;
-          return;
-        } else {
-          field_r = null;
-          field_B = null;
-          field_t = null;
-          field_A = null;
-          field_o = null;
-          field_v = null;
-          field_y = null;
-          return;
-        }
+        field_r = null;
+        field_B = null;
+        field_t = null;
+        field_A = null;
+        field_o = null;
+        field_v = null;
+        field_y = null;
     }
 
     kf() {

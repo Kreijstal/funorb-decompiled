@@ -16,7 +16,8 @@ final class ko extends vjb {
     }
 
     final void a(float param0, float param1, float[] param2, float param3, int param4, float param5, byte param6, int param7, int param8, int param9, int param10) {
-        int var12 = 0;
+        RuntimeException var12 = null;
+        int var12_int = 0;
         int var13 = 0;
         int var14 = 0;
         float var15 = 0.0f;
@@ -46,69 +47,119 @@ final class ko extends vjb {
         float var39 = 0.0f;
         float var40 = 0.0f;
         int var41 = 0;
-        L0: {
-          var41 = VoidHunters.field_G;
-          var12 = (int)(-1.0f + param1 * (float)param10);
-          if (param6 > 90) {
-            break L0;
-          } else {
-            ko.a(-90);
-            break L0;
-          }
-        }
-        var12 = var12 & 255;
-        var13 = (int)(param0 * (float)param8 - 1.0f);
-        var13 = var13 & 255;
-        var14 = (int)(param3 * (float)param4 - 1.0f);
-        var14 = var14 & 255;
-        var15 = (float)param9 * param3;
-        var16 = (int)var15;
-        var17 = 1 + var16;
-        var18 = var15 - (float)var16;
-        var19 = -var18 + 1.0f;
-        var16 = var16 & var14;
-        var20 = pob.a((byte) -125, var18);
-        var17 = var17 & var14;
-        var21 = ((ko) this).field_f[var16];
-        var22 = ((ko) this).field_f[var17];
-        var23 = 0;
-        L1: while (true) {
-          if (var23 >= param8) {
-            return;
-          } else {
-            var24 = (float)var23 * param0;
-            var25 = (int)var24;
-            var26 = var25 + 1;
-            var27 = var24 - (float)var25;
-            var28 = -var27 + 1.0f;
-            var29 = pob.a((byte) -123, var27);
-            var26 = var26 & var13;
-            var25 = var25 & var13;
-            var30 = ((ko) this).field_f[var21 + var25];
-            var31 = ((ko) this).field_f[var21 + var26];
-            var32 = ((ko) this).field_f[var25 + var22];
-            var33 = ((ko) this).field_f[var26 + var22];
-            var34 = 0;
-            L2: while (true) {
-              if (param10 <= var34) {
-                var23++;
-                continue L1;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var41 = VoidHunters.field_G;
+        try {
+          L0: {
+            L1: {
+              var12_int = (int)(-1.0f + param1 * (float)param10);
+              if (param6 > 90) {
+                break L1;
               } else {
-                var35 = (float)var34 * param1;
-                var36 = (int)var35;
-                var37 = 1 + var36;
-                var38 = (float)(-var36) + var35;
-                var39 = 1.0f - var38;
-                var40 = pob.a((byte) 127, var38);
-                var37 = var37 & var12;
-                var36 = var36 & var12;
-                param7++;
-                param2[param7] = param5 * kfb.a(kfb.a(kfb.a(rha.a(var18, var38, dla.a(7, ((ko) this).field_f[var33 + var37]), var27, (byte) 69), var40, -14, rha.a(var18, var39, dla.a(7, ((ko) this).field_f[var36 + var33]), var27, (byte) 78)), var29, -9, kfb.a(rha.a(var18, var38, dla.a(7, ((ko) this).field_f[var32 + var37]), var28, (byte) 66), var40, -75, rha.a(var18, var39, dla.a(((ko) this).field_f[var32 + var36], 7), var28, (byte) 99))), var20, -28, kfb.a(kfb.a(rha.a(var19, var38, dla.a(7, ((ko) this).field_f[var31 + var37]), var27, (byte) 69), var40, -86, rha.a(var19, var39, dla.a(7, ((ko) this).field_f[var31 + var36]), var27, (byte) 65)), var29, -97, kfb.a(rha.a(var19, var38, dla.a(7, ((ko) this).field_f[var30 + var37]), var28, (byte) 70), var40, -97, rha.a(var19, var39, dla.a(7, ((ko) this).field_f[var36 + var30]), var28, (byte) 54))));
-                var34++;
-                continue L2;
+                ko.a(-90);
+                break L1;
+              }
+            }
+            var12_int = var12_int & 255;
+            var13 = (int)(param0 * (float)param8 - 1.0f);
+            var13 = var13 & 255;
+            var14 = (int)(param3 * (float)param4 - 1.0f);
+            var14 = var14 & 255;
+            var15 = (float)param9 * param3;
+            var16 = (int)var15;
+            var17 = 1 + var16;
+            var18 = var15 - (float)var16;
+            var19 = -var18 + 1.0f;
+            var16 = var16 & var14;
+            var20 = pob.a((byte) -125, var18);
+            var17 = var17 & var14;
+            var21 = ((ko) this).field_f[var16];
+            var22 = ((ko) this).field_f[var17];
+            var23 = 0;
+            L2: while (true) {
+              if (var23 >= param8) {
+                break L0;
+              } else {
+                var24 = (float)var23 * param0;
+                var25 = (int)var24;
+                var26 = var25 + 1;
+                var27 = var24 - (float)var25;
+                var28 = -var27 + 1.0f;
+                var29 = pob.a((byte) -123, var27);
+                var26 = var26 & var13;
+                var25 = var25 & var13;
+                var30 = ((ko) this).field_f[var21 + var25];
+                var31 = ((ko) this).field_f[var21 + var26];
+                var32 = ((ko) this).field_f[var25 + var22];
+                var33 = ((ko) this).field_f[var26 + var22];
+                var34 = 0;
+                L3: while (true) {
+                  if (param10 <= var34) {
+                    var23++;
+                    continue L2;
+                  } else {
+                    var35 = (float)var34 * param1;
+                    var36 = (int)var35;
+                    var37 = 1 + var36;
+                    var38 = (float)(-var36) + var35;
+                    var39 = 1.0f - var38;
+                    var40 = pob.a((byte) 127, var38);
+                    var37 = var37 & var12_int;
+                    var36 = var36 & var12_int;
+                    int incrementValue$1 = param7;
+                    param7++;
+                    param2[incrementValue$1] = param5 * kfb.a(kfb.a(kfb.a(rha.a(var18, var38, dla.a(7, ((ko) this).field_f[var33 + var37]), var27, (byte) 69), var40, -14, rha.a(var18, var39, dla.a(7, ((ko) this).field_f[var36 + var33]), var27, (byte) 78)), var29, -9, kfb.a(rha.a(var18, var38, dla.a(7, ((ko) this).field_f[var32 + var37]), var28, (byte) 66), var40, -75, rha.a(var18, var39, dla.a(((ko) this).field_f[var32 + var36], 7), var28, (byte) 99))), var20, -28, kfb.a(kfb.a(rha.a(var19, var38, dla.a(7, ((ko) this).field_f[var31 + var37]), var27, (byte) 69), var40, -86, rha.a(var19, var39, dla.a(7, ((ko) this).field_f[var31 + var36]), var27, (byte) 65)), var29, -97, kfb.a(rha.a(var19, var38, dla.a(7, ((ko) this).field_f[var30 + var37]), var28, (byte) 70), var40, -97, rha.a(var19, var39, dla.a(7, ((ko) this).field_f[var36 + var30]), var28, (byte) 54))));
+                    var34++;
+                    continue L3;
+                  }
+                }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var12 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var12;
+            stackOut_10_1 = new StringBuilder().append("ko.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param2 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 41);
         }
     }
 

@@ -8,25 +8,16 @@ abstract class at extends bw {
     eaa field_h;
 
     final void a(int param0, at param1) {
-        if (((at) this).field_h != null) {
-          if (param0 != 27799) {
-            field_g = null;
+        try {
+            if (((at) this).field_h == null) {
+                ((at) this).field_h = new eaa();
+            }
+            if (param0 != 27799) {
+                field_g = null;
+            }
             ((at) this).field_h.a((bw) (Object) param1, true);
-            return;
-          } else {
-            ((at) this).field_h.a((bw) (Object) param1, true);
-            return;
-          }
-        } else {
-          ((at) this).field_h = new eaa();
-          if (param0 == 27799) {
-            ((at) this).field_h.a((bw) (Object) param1, true);
-            return;
-          } else {
-            field_g = null;
-            ((at) this).field_h.a((bw) (Object) param1, true);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "at.T(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -34,7 +25,6 @@ abstract class at extends bw {
 
     boolean b(int param0) {
         Object var2 = null;
-        at var2_ref = null;
         int var3 = 0;
         int stackIn_11_0 = 0;
         int stackIn_34_0 = 0;
@@ -56,18 +46,18 @@ abstract class at extends bw {
         if (!((at) this).field_f) {
           if (!((at) this).c((byte) -14)) {
             if (param0 == 21807) {
-              if (var2_ref.field_h == null) {
-                return var2_ref.field_f;
+              if (((at) var2).field_h == null) {
+                return ((at) var2).field_f;
               } else {
-                var2_ref = (at) (Object) var2_ref.field_h.b((byte) 90);
+                var2 = (Object) (Object) (at) (Object) ((at) var2).field_h.b((byte) 90);
                 L0: while (true) {
-                  if (var2_ref == null) {
+                  if (var2 == null) {
                     L1: {
                       L2: {
-                        if (!var2_ref.field_f) {
+                        if (!((at) var2).field_f) {
                           break L2;
                         } else {
-                          if (!var2_ref.field_h.e(param0 + -8890)) {
+                          if (!((at) var2).field_h.e(param0 + -8890)) {
                             break L2;
                           } else {
                             stackOut_59_0 = 1;
@@ -82,17 +72,17 @@ abstract class at extends bw {
                     }
                     return stackIn_61_0 != 0;
                   } else {
-                    if (var2_ref.b(21807)) {
-                      var2_ref.a(false);
-                      var2_ref = (at) (Object) var2_ref.field_h.c(0);
+                    if (((at) var2).b(21807)) {
+                      ((at) var2).a(false);
+                      var2 = (Object) (Object) (at) (Object) ((at) var2).field_h.c(0);
                       continue L0;
                     } else {
                       L3: {
                         L4: {
-                          if (!var2_ref.field_f) {
+                          if (!((at) var2).field_f) {
                             break L4;
                           } else {
-                            if (!var2_ref.field_h.e(param0 + -8890)) {
+                            if (!((at) var2).field_h.e(param0 + -8890)) {
                               break L4;
                             } else {
                               stackOut_53_0 = 1;
@@ -116,23 +106,23 @@ abstract class at extends bw {
           } else {
             ((at) this).field_f = true;
             if (param0 == 21807) {
-              if (var2_ref.field_h == null) {
-                return var2_ref.field_f;
+              if (((at) var2).field_h == null) {
+                return ((at) var2).field_f;
               } else {
-                var2_ref = (at) (Object) var2_ref.field_h.b((byte) 90);
+                var2 = (Object) (Object) (at) (Object) ((at) var2).field_h.b((byte) 90);
                 L5: while (true) {
-                  if (var2_ref != null) {
-                    if (var2_ref.b(21807)) {
-                      var2_ref.a(false);
-                      var2_ref = (at) (Object) var2_ref.field_h.c(0);
+                  if (var2 != null) {
+                    if (((at) var2).b(21807)) {
+                      ((at) var2).a(false);
+                      var2 = (Object) (Object) (at) (Object) ((at) var2).field_h.c(0);
                       continue L5;
                     } else {
                       L6: {
                         L7: {
-                          if (!var2_ref.field_f) {
+                          if (!((at) var2).field_f) {
                             break L7;
                           } else {
-                            if (!var2_ref.field_h.e(param0 + -8890)) {
+                            if (!((at) var2).field_h.e(param0 + -8890)) {
                               break L7;
                             } else {
                               stackOut_41_0 = 1;
@@ -150,10 +140,10 @@ abstract class at extends bw {
                   } else {
                     L8: {
                       L9: {
-                        if (!var2_ref.field_f) {
+                        if (!((at) var2).field_f) {
                           break L9;
                         } else {
-                          if (!var2_ref.field_h.e(param0 + -8890)) {
+                          if (!((at) var2).field_h.e(param0 + -8890)) {
                             break L9;
                           } else {
                             stackOut_32_0 = 1;
@@ -177,16 +167,16 @@ abstract class at extends bw {
         } else {
           if (param0 == 21807) {
             if (((at) this).field_h != null) {
-              var2_ref = (at) (Object) ((at) this).field_h.b((byte) 90);
+              var2 = (Object) (Object) (at) (Object) ((at) this).field_h.b((byte) 90);
               L10: while (true) {
-                if (var2_ref != null) {
-                  if (var2_ref.b(21807)) {
-                    var2_ref.a(false);
-                    var2_ref = (at) (Object) var2_ref.field_h.c(0);
+                if (var2 != null) {
+                  if (((at) var2).b(21807)) {
+                    ((at) var2).a(false);
+                    var2 = (Object) (Object) (at) (Object) ((at) var2).field_h.c(0);
                     continue L10;
                   } else {
-                    if (var2_ref.field_f) {
-                      if (var2_ref.field_h.e(param0 + -8890)) {
+                    if (((at) var2).field_f) {
+                      if (((at) var2).field_h.e(param0 + -8890)) {
                         return true;
                       } else {
                         return false;
@@ -198,10 +188,10 @@ abstract class at extends bw {
                 } else {
                   L11: {
                     L12: {
-                      if (!var2_ref.field_f) {
+                      if (!((at) var2).field_f) {
                         break L12;
                       } else {
-                        if (!var2_ref.field_h.e(param0 + -8890)) {
+                        if (!((at) var2).field_h.e(param0 + -8890)) {
                           break L12;
                         } else {
                           stackOut_9_0 = 1;
@@ -237,9 +227,6 @@ abstract class at extends bw {
 
     public static void a(int param0) {
         field_i = null;
-        if (param0 != 5849) {
-            return;
-        }
         field_g = null;
     }
 

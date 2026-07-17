@@ -41,7 +41,7 @@ final class gu extends me {
               return;
             } else {
               var10 = ((gu) this).field_g.field_e.field_b[var9];
-              if ((var10 ^ -1) != 0) {
+              if (var10 != -1) {
                 L1: {
                   if (var10 == var2) {
                     var11 = var3;
@@ -89,34 +89,34 @@ final class gu extends me {
           }
         }
         var2 = param1;
-        if (-1 != var2) {
-          if (var2 != -2) {
-            if (-3 == var2) {
+        if (var2 != 0) {
+          if (var2 != 1) {
+            if (var2 == 2) {
               return (ci) (Object) new qga();
             } else {
-              if (-4 != var2) {
-                if (-5 != var2) {
+              if (var2 != 3) {
+                if (var2 != 4) {
                   if (var2 != 5) {
-                    if (-7 != var2) {
+                    if (var2 != 6) {
                       if (var2 == 7) {
                         return (ci) (Object) new eka();
                       } else {
-                        if (-9 != var2) {
-                          if (-10 != var2) {
-                            if ((var2 ^ -1) == -11) {
+                        if (var2 != 8) {
+                          if (var2 != 9) {
+                            if (var2 == 10) {
                               return (ci) (Object) new wna();
                             } else {
-                              if (var2 == -12) {
+                              if (var2 == 11) {
                                 return (ci) (Object) new vda();
                               } else {
-                                if (-13 != var2) {
+                                if (var2 != 12) {
                                   if (var2 != 13) {
                                     if (var2 != 14) {
                                       if (var2 != 15) {
-                                        if (var2 == -17) {
+                                        if (var2 == 16) {
                                           return (ci) (Object) new vc();
                                         } else {
-                                          if (-18 != var2) {
+                                          if (var2 != 17) {
                                             if (var2 == 18) {
                                               return (ci) (Object) new hb();
                                             } else {
@@ -132,11 +132,11 @@ final class gu extends me {
                                                     } else {
                                                       if (var2 != 23) {
                                                         if (24 != var2) {
-                                                          if (var2 == -26) {
+                                                          if (var2 == 25) {
                                                             return (ci) (Object) new cma();
                                                           } else {
                                                             if (var2 != 26) {
-                                                              if (-28 == var2) {
+                                                              if (var2 == 27) {
                                                                 return (ci) (Object) new bj();
                                                               } else {
                                                                 if (28 != var2) {
@@ -152,15 +152,15 @@ final class gu extends me {
                                                                         if (32 == var2) {
                                                                           return (ci) (Object) new un();
                                                                         } else {
-                                                                          if (-34 == (var2 ^ -1)) {
+                                                                          if (var2 == 33) {
                                                                             return (ci) (Object) new jv();
                                                                           } else {
-                                                                            if ((var2 ^ -1) != -35) {
-                                                                              if (var2 == -36) {
+                                                                            if (var2 != 34) {
+                                                                              if (var2 == 35) {
                                                                                 return (ci) (Object) new go();
                                                                               } else {
-                                                                                if (-37 != var2) {
-                                                                                  if ((var2 ^ -1) == -38) {
+                                                                                if (var2 != 36) {
+                                                                                  if (var2 == 37) {
                                                                                     return (ci) (Object) new voa();
                                                                                   } else {
                                                                                     if (38 != var2) {
@@ -253,12 +253,17 @@ final class gu extends me {
     }
 
     final static void a(int param0, boolean param1, String param2, String param3, String param4, int param5) {
-        if (!param1) {
-            Object var7 = null;
-            gu.a(-67, true, (String) null, (String) null, (String) null, 15);
+        gqa var6 = null;
+        try {
+            if (!param1) {
+                Object var7 = null;
+                gu.a(-67, true, (String) null, (String) null, (String) null, 15);
+            }
+            var6 = new gqa(param5, param2, param0, param4, param3);
+            tna.a(16599, var6);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "gu.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
-        gqa var6 = new gqa(param5, param2, param0, param4, param3);
-        tna.a(16599, var6);
     }
 
     gu(qh param0) {

@@ -14,22 +14,18 @@ abstract class hb extends tk {
     abstract byte[] c(byte param0);
 
     final static void a(kn param0, boolean param1) {
-        if (param1) {
-          hb.a(27, -126, 116, 12, -63, -53, 36, -10, -75);
-          param0.field_v = new int[]{-1};
-          param0.field_u = new char[]{(char)63};
-          return;
-        } else {
-          param0.field_v = new int[]{-1};
-          param0.field_u = new char[]{(char)63};
-          return;
+        try {
+            if (param1) {
+                hb.a(27, -126, 116, 12, -63, -53, 36, -10, -75);
+            }
+            param0.field_v = new int[]{-1};
+            param0.field_u = new char[]{'?'};
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "hb.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     final static void g(int param0) {
-        if (param0 < 20) {
-            return;
-        }
         bd.a(4, true);
     }
 
@@ -55,9 +51,9 @@ abstract class hb extends tk {
           }
         }
         param4 = 256 + -param4;
-        if (-1 == (param8 ^ -1)) {
+        if (param8 == 0) {
           if (0 != param1) {
-            rp.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 1588022344, -(param1 * 2) + param5, param1 + param2);
+            rp.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
             rp.a(param0, 65280, param6, param4, param1, param2);
             rp.a(param0, 65280, param6, param4, param1, param2 + param5 - param1);
             rp.a(param0, 65280, param8, param4, -(2 * param1) + param5, param2 - -param1);
@@ -70,7 +66,7 @@ abstract class hb extends tk {
             return;
           }
         } else {
-          rp.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 1588022344, -(param1 * 2) + param5, param1 + param2);
+          rp.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
           rp.a(param0, 65280, param6, param4, param1, param2);
           rp.a(param0, 65280, param6, param4, param1, param2 + param5 - param1);
           rp.a(param0, 65280, param8, param4, -(2 * param1) + param5, param2 - -param1);

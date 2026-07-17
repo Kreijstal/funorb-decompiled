@@ -34,7 +34,8 @@ final class vu extends ab {
     }
 
     final void a(float param0, int param1, float param2, float param3, int param4, int param5, int param6, float[] param7, int param8, float param9, int param10) {
-        int var12 = 0;
+        RuntimeException var12 = null;
+        int var12_int = 0;
         int var13 = 0;
         int var14 = 0;
         float var15 = 0.0f;
@@ -64,61 +65,111 @@ final class vu extends ab {
         float var39 = 0.0f;
         float var40 = 0.0f;
         int var41 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var41 = Sumoblitz.field_L ? 1 : 0;
-        var12 = (int)(-1.0f + param0 * (float)param8);
-        var12 = var12 & 255;
-        var13 = (int)(param2 * (float)param10 - 1.0f);
-        var13 = var13 & 255;
-        var14 = (int)(-1.0f + param3 * (float)param5);
-        var14 = var14 & 255;
-        var15 = (float)param4 * param3;
-        var16 = (int)var15;
-        var17 = param6 + var16;
-        var18 = (float)(-var16) + var15;
-        var19 = 1.0f - var18;
-        var17 = var17 & var14;
-        var20 = fs.a((byte) 124, var18);
-        var16 = var16 & var14;
-        var21 = ((vu) this).field_f[var16];
-        var22 = ((vu) this).field_f[var17];
-        var23 = 0;
-        L0: while (true) {
-          if (var23 >= param10) {
-            return;
-          } else {
-            var24 = param2 * (float)var23;
-            var25 = (int)var24;
-            var26 = var25 + 1;
-            var27 = var24 - (float)var25;
-            var28 = 1.0f - var27;
-            var26 = var26 & var13;
-            var29 = fs.a((byte) 124, var27);
-            var25 = var25 & var13;
-            var30 = ((vu) this).field_f[var21 + var25];
-            var31 = ((vu) this).field_f[var21 + var26];
-            var32 = ((vu) this).field_f[var22 + var25];
-            var33 = ((vu) this).field_f[var26 - -var22];
-            var34 = 0;
+        try {
+          L0: {
+            var12_int = (int)(-1.0f + param0 * (float)param8);
+            var12_int = var12_int & 255;
+            var13 = (int)(param2 * (float)param10 - 1.0f);
+            var13 = var13 & 255;
+            var14 = (int)(-1.0f + param3 * (float)param5);
+            var14 = var14 & 255;
+            var15 = (float)param4 * param3;
+            var16 = (int)var15;
+            var17 = param6 + var16;
+            var18 = (float)(-var16) + var15;
+            var19 = 1.0f - var18;
+            var17 = var17 & var14;
+            var20 = fs.a((byte) 124, var18);
+            var16 = var16 & var14;
+            var21 = ((vu) this).field_f[var16];
+            var22 = ((vu) this).field_f[var17];
+            var23 = 0;
             L1: while (true) {
-              if (var34 >= param8) {
-                var23++;
-                continue L0;
+              if (var23 >= param10) {
+                break L0;
               } else {
-                var35 = (float)var34 * param0;
-                var36 = (int)var35;
-                var37 = var36 - -1;
-                var38 = (float)(-var36) + var35;
-                var39 = -var38 + 1.0f;
-                var40 = fs.a((byte) 124, var38);
-                var37 = var37 & var12;
-                var36 = var36 & var12;
-                param1++;
-                param7[param1] = param9 * nw.a(1050, nw.a(1050, nw.a(jg.a(param6, 1051), an.a(var28, var19, eb.a(7, ((vu) this).field_f[var30 + var36]), var39, 2), an.a(var28, var19, eb.a(7, ((vu) this).field_f[var37 - -var30]), var38, jg.a(param6, 3)), var40), nw.a(1050, an.a(var27, var19, eb.a(7, ((vu) this).field_f[var31 + var36]), var39, param6 + 1), an.a(var27, var19, eb.a(7, ((vu) this).field_f[var37 - -var31]), var38, 2), var40), var29), nw.a(1050, nw.a(1050, an.a(var28, var18, eb.a(7, ((vu) this).field_f[var32 + var36]), var39, 2), an.a(var28, var18, eb.a(((vu) this).field_f[var32 + var37], 7), var38, param6 + 1), var40), nw.a(1050, an.a(var27, var18, eb.a(((vu) this).field_f[var36 + var33], 7), var39, 2), an.a(var27, var18, eb.a(7, ((vu) this).field_f[var33 + var37]), var38, 2), var40), var29), var20);
-                var34++;
-                continue L1;
+                var24 = param2 * (float)var23;
+                var25 = (int)var24;
+                var26 = var25 + 1;
+                var27 = var24 - (float)var25;
+                var28 = 1.0f - var27;
+                var26 = var26 & var13;
+                var29 = fs.a((byte) 124, var27);
+                var25 = var25 & var13;
+                var30 = ((vu) this).field_f[var21 + var25];
+                var31 = ((vu) this).field_f[var21 + var26];
+                var32 = ((vu) this).field_f[var22 + var25];
+                var33 = ((vu) this).field_f[var26 - -var22];
+                var34 = 0;
+                L2: while (true) {
+                  if (var34 >= param8) {
+                    var23++;
+                    continue L1;
+                  } else {
+                    var35 = (float)var34 * param0;
+                    var36 = (int)var35;
+                    var37 = var36 - -1;
+                    var38 = (float)(-var36) + var35;
+                    var39 = -var38 + 1.0f;
+                    var40 = fs.a((byte) 124, var38);
+                    var37 = var37 & var12_int;
+                    var36 = var36 & var12_int;
+                    int incrementValue$1 = param1;
+                    param1++;
+                    param7[incrementValue$1] = param9 * nw.a(1050, nw.a(1050, nw.a(jg.a(param6, 1051), an.a(var28, var19, eb.a(7, ((vu) this).field_f[var30 + var36]), var39, 2), an.a(var28, var19, eb.a(7, ((vu) this).field_f[var37 - -var30]), var38, jg.a(param6, 3)), var40), nw.a(1050, an.a(var27, var19, eb.a(7, ((vu) this).field_f[var31 + var36]), var39, param6 + 1), an.a(var27, var19, eb.a(7, ((vu) this).field_f[var37 - -var31]), var38, 2), var40), var29), nw.a(1050, nw.a(1050, an.a(var28, var18, eb.a(7, ((vu) this).field_f[var32 + var36]), var39, 2), an.a(var28, var18, eb.a(((vu) this).field_f[var32 + var37], 7), var38, param6 + 1), var40), nw.a(1050, an.a(var27, var18, eb.a(((vu) this).field_f[var36 + var33], 7), var39, 2), an.a(var27, var18, eb.a(7, ((vu) this).field_f[var33 + var37]), var38, 2), var40), var29), var20);
+                    var34++;
+                    continue L2;
+                  }
+                }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var12 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var12;
+            stackOut_8_1 = new StringBuilder().append("vu.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param7 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param8 + 44 + param9 + 44 + param10 + 41);
         }
     }
 

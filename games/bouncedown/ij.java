@@ -12,9 +12,9 @@ final class ij {
         try {
           L0: {
             L1: {
-              fk.field_a = param0 >> 1033532516 & 3;
-              wb.field_a = (13 & param0) >> -2006240478;
-              if (-3 > (fk.field_a ^ -1)) {
+              fk.field_a = param0 >> 4 & 3;
+              wb.field_a = (13 & param0) >> 2;
+              if (fk.field_a > 2) {
                 fk.field_a = 2;
                 break L1;
               } else {
@@ -31,7 +31,7 @@ final class ij {
             }
             L3: {
               bk.field_a = 3 & param0;
-              if (-3 <= (bk.field_a ^ -1)) {
+              if (bk.field_a <= 2) {
                 break L3;
               } else {
                 bk.field_a = 2;
@@ -689,7 +689,7 @@ final class ij {
           L0: {
             if (param0 < -66) {
               L1: {
-                if ((oa.field_a ^ -1) == (0 - fe.field_i ^ -1)) {
+                if (~oa.field_a == ~(0 - fe.field_i)) {
                   break L1;
                 } else {
                   if (oa.field_a != 250 + -fe.field_i) {
@@ -780,7 +780,7 @@ final class ij {
             }
             L5: {
               q.field_M = q.field_M + 1;
-              if ((uc.field_A ^ -1) > (var7 ^ -1)) {
+              if (~uc.field_A > ~var7) {
                 uc.field_A = var7;
                 break L5;
               } else {

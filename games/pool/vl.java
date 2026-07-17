@@ -364,7 +364,7 @@ final class vl extends tm {
                             break L5;
                           } else {
                             L6: {
-                              if (-1 < (param0 ^ -1)) {
+                              if (param0 < 0) {
                                 break L6;
                               } else {
                                 s.field_c[param0].b(0);
@@ -471,7 +471,7 @@ final class vl extends tm {
         try {
           L0: {
             var2_int = param1.length();
-            if (-1 == (var2_int ^ -1)) {
+            if (var2_int == 0) {
               stackOut_4_0 = uj.field_e;
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
@@ -481,8 +481,8 @@ final class vl extends tm {
                 stackIn_10_0 = stackOut_9_0;
                 return stackIn_10_0;
               } else {
-                if ((param1.charAt(0) ^ -1) == -35) {
-                  if ((param1.charAt(-1 + var2_int) ^ -1) == -35) {
+                if (param1.charAt(0) == 34) {
+                  if (param1.charAt(-1 + var2_int) == 34) {
                     var3 = 0;
                     var4 = 1;
                     L1: while (true) {
@@ -560,7 +560,7 @@ final class vl extends tm {
                           L9: {
                             L10: {
                               var5 = param1.charAt(var4);
-                              if (-47 != (var5 ^ -1)) {
+                              if (var5 != 46) {
                                 break L10;
                               } else {
                                 L11: {
@@ -588,7 +588,7 @@ final class vl extends tm {
                                 return stackIn_57_0;
                               }
                             }
-                            if ((dj.field_b.indexOf(var5) ^ -1) != 0) {
+                            if (dj.field_b.indexOf(var5) != -1) {
                               var3 = 0;
                               break L9;
                             } else {
@@ -744,44 +744,44 @@ final class vl extends tm {
         var27 = Pool.field_O;
         try {
           L0: {
-            var18 = param0[3] >> 24769058;
-            var19 = param0[4] >> -514656894;
-            var20 = param0[5] >> -1352694046;
-            var21 = param0[6] >> -205148766;
-            var22 = param0[7] >> 583344674;
-            var23 = param0[8] >> 591913186;
-            var24 = param0[9] >> 67091714;
-            var25 = param0[10] >> -315518494;
+            var18 = param0[3] >> 2;
+            var19 = param0[4] >> 2;
+            var20 = param0[5] >> 2;
+            var21 = param0[6] >> 2;
+            var22 = param0[7] >> 2;
+            var23 = param0[8] >> 2;
+            var24 = param0[9] >> 2;
+            var25 = param0[10] >> 2;
             if (param3 < -37) {
-              var26 = param0[11] >> -2063191134;
-              var9 = param1[5] * var20 + param1[4] * var19 + param1[3] * var18 >> 587351182;
-              var10 = param1[3] * var21 - -(param1[4] * var22) - -(param1[5] * var23) >> 77586446;
-              var13 = param1[6] * var21 - -(var22 * param1[7]) + param1[8] * var23 >> 150268494;
-              var17 = var26 * param1[11] + param1[10] * var25 + var24 * param1[9] >> -1373633266;
-              var15 = param1[11] * var20 + param1[9] * var18 - -(var19 * param1[10]) >> 427364654;
-              var12 = var18 * param1[6] + var19 * param1[7] - -(param1[8] * var20) >> 1437706350;
-              var11 = param1[5] * var26 + param1[4] * var25 + var24 * param1[3] >> 333871534;
-              var14 = var26 * param1[8] + param1[7] * var25 + var24 * param1[6] >> -641646514;
-              var16 = var22 * param1[10] + param1[9] * var21 + param1[11] * var23 >> -1433344402;
+              var26 = param0[11] >> 2;
+              var9 = param1[5] * var20 + param1[4] * var19 + param1[3] * var18 >> 14;
+              var10 = param1[3] * var21 - -(param1[4] * var22) - -(param1[5] * var23) >> 14;
+              var13 = param1[6] * var21 - -(var22 * param1[7]) + param1[8] * var23 >> 14;
+              var17 = var26 * param1[11] + param1[10] * var25 + var24 * param1[9] >> 14;
+              var15 = param1[11] * var20 + param1[9] * var18 - -(var19 * param1[10]) >> 14;
+              var12 = var18 * param1[6] + var19 * param1[7] - -(param1[8] * var20) >> 14;
+              var11 = param1[5] * var26 + param1[4] * var25 + var24 * param1[3] >> 14;
+              var14 = var26 * param1[8] + param1[7] * var25 + var24 * param1[6] >> 14;
+              var16 = var22 * param1[10] + param1[9] * var21 + param1[11] * var23 >> 14;
               var18 = param1[0] + -param0[0];
               var19 = -param0[1] + param1[1];
               var20 = -param0[2] + param1[2];
-              var7 = var19 * param0[7] + (var18 * param0[6] - -(param0[8] * var20)) >> -98336272;
-              var8 = param0[10] * var19 + (var18 * param0[9] - -(param0[11] * var20)) >> -283843184;
-              var6_int = var20 * param0[5] + (var18 * param0[3] + var19 * param0[4]) >> -1369514672;
+              var7 = var19 * param0[7] + (var18 * param0[6] - -(param0[8] * var20)) >> 16;
+              var8 = param0[10] * var19 + (var18 * param0[9] - -(param0[11] * var20)) >> 16;
+              var6_int = var20 * param0[5] + (var18 * param0[3] + var19 * param0[4]) >> 16;
               var18 = 0;
               var19 = 0;
               L1: while (true) {
                 L2: {
                   L3: {
                     L4: {
-                      if ((var19 ^ -1) <= (hj.field_d[param2].length ^ -1)) {
+                      if (~var19 <= ~hj.field_d[param2].length) {
                         break L4;
                       } else {
                         var20 = 2 + (128 * var19 / hj.field_d[param2].length + -64);
-                        kp.field_i[param2][var19] = var20 * var15 + var12 * tj.field_ab[param2][var19] + hj.field_d[param2][var19] * var9 >> -590652816;
-                        field_n[param2][var19] = var13 * tj.field_ab[param2][var19] + (var10 * hj.field_d[param2][var19] + var16 * var20) >> 26455952;
-                        var20 = var14 * tj.field_ab[param2][var19] + hj.field_d[param2][var19] * var11 + var20 * var17 >> -383431248;
+                        kp.field_i[param2][var19] = var20 * var15 + var12 * tj.field_ab[param2][var19] + hj.field_d[param2][var19] * var9 >> 16;
+                        field_n[param2][var19] = var13 * tj.field_ab[param2][var19] + (var10 * hj.field_d[param2][var19] + var16 * var20) >> 16;
+                        var20 = var14 * tj.field_ab[param2][var19] + hj.field_d[param2][var19] * var11 + var20 * var17 >> 16;
                         kp.field_i[param2][var19] = kp.field_i[param2][var19] + var6_int;
                         field_n[param2][var19] = field_n[param2][var19] + var7;
                         var20 = var20 + var8;
@@ -801,8 +801,8 @@ final class vl extends tm {
                               } else {
                                 L7: {
                                   L8: {
-                                    kp.field_i[param2][var19] = (qh.field_b - -fb.field_q << 1388713666) - -((kp.field_i[param2][var19] << -299218677) / var20);
-                                    field_n[param2][var19] = (qh.field_c - -fb.field_d << 888691202) + (field_n[param2][var19] << -1933287701) / var20;
+                                    kp.field_i[param2][var19] = (qh.field_b - -fb.field_q << 2) - -((kp.field_i[param2][var19] << 11) / var20);
+                                    field_n[param2][var19] = (qh.field_c - -fb.field_d << 2) + (field_n[param2][var19] << 11) / var20;
                                     stackOut_9_0 = jr.field_o[param2];
                                     stackOut_9_1 = var19;
                                     stackIn_15_0 = stackOut_9_0;
@@ -825,7 +825,7 @@ final class vl extends tm {
                                       if (var18 == 0) {
                                         stackOut_17_0 = (int[]) (Object) stackIn_17_0;
                                         stackOut_17_1 = stackIn_17_1;
-                                        stackOut_17_2 = (int)(((long)ie.field_a[param2][var19] << 658650826) / (long)var20);
+                                        stackOut_17_2 = (int)(((long)ie.field_a[param2][var19] << 10) / (long)var20);
                                         stackIn_18_0 = stackOut_17_0;
                                         stackIn_18_1 = stackOut_17_1;
                                         stackIn_18_2 = stackOut_17_2;
@@ -881,7 +881,7 @@ final class vl extends tm {
                       break L2;
                     }
                   }
-                  wn.a((byte) stackIn_27_0, (byte) stackIn_27_1, s.a(param2, 115), field_n[param2], 32512 + -(param4 * 127) >> 1280317448, 0, kp.field_i[param2], jr.field_o[param2]);
+                  wn.a((byte) stackIn_27_0, (byte) stackIn_27_1, s.a(param2, 115), field_n[param2], 32512 + -(param4 * 127) >> 8, 0, kp.field_i[param2], jr.field_o[param2]);
                   break L2;
                 }
                 break L0;
@@ -967,11 +967,11 @@ final class vl extends tm {
               if (hj.field_d.length <= var5) {
                 var5 = 1;
                 L2: while (true) {
-                  if ((var4 + -1 ^ -1) >= (var5 ^ -1)) {
+                  if (~(var4 + -1) >= ~var5) {
                     break L0;
                   } else {
                     var2_int = var5 - var4 / 2;
-                    var6 = rf.a(65536 - (var2_int * var2_int << 383683600) / (var4 * var4 / 4), -120) * 8 >> 1656634605 >> -1602798527;
+                    var6 = rf.a(65536 - (var2_int * var2_int << 16) / (var4 * var4 / 4), -120) * 8 >> 13 >> 1;
                     var7 = 0;
                     L3: while (true) {
                       if (var7 >= hj.field_d.length) {
@@ -979,10 +979,10 @@ final class vl extends tm {
                         continue L2;
                       } else {
                         L4: {
-                          if (-1 > (var6 ^ -1)) {
+                          if (var6 > 0) {
                             L5: {
-                              hj.field_d[var7][var5] = hj.field_d[var7][var5] + hj.field_d[var7][-1 + var5] >> 1346339073;
-                              tj.field_ab[var7][var5] = tj.field_ab[var7][var5] + tj.field_ab[var7][var5 - 1] >> 353234113;
+                              hj.field_d[var7][var5] = hj.field_d[var7][var5] + hj.field_d[var7][-1 + var5] >> 1;
+                              tj.field_ab[var7][var5] = tj.field_ab[var7][var5] + tj.field_ab[var7][var5 - 1] >> 1;
                               hj.field_d[var7][var5] = hj.field_d[var7][var5] + (ga.a(5, true, ea.field_r) + -2);
                               tj.field_ab[var7][var5] = tj.field_ab[var7][var5] + (ga.a(5, true, ea.field_r) - 2);
                               if (var6 >= hj.field_d[var7][var5]) {
@@ -1023,7 +1023,7 @@ final class vl extends tm {
                   ie.field_a[var5][1] = ie.field_a[var5][1] + (-3 + ga.a(5, true, ea.field_r));
                   ie.field_a[var5][hj.field_d[var5].length - 1] = 0;
                   if (48 >= ie.field_a[var5][1]) {
-                    if ((ie.field_a[var5][1] ^ -1) > -17) {
+                    if (ie.field_a[var5][1] < 16) {
                       ie.field_a[var5][1] = 16;
                       break L6;
                     } else {
@@ -1121,7 +1121,7 @@ final class vl extends tm {
                       L4: while (true) {
                         L5: {
                           L6: {
-                            if ((var4 ^ -1) <= (hj.field_d[var3_int].length ^ -1)) {
+                            if (~var4 <= ~hj.field_d[var3_int].length) {
                               break L6;
                             } else {
                               hj.field_d[var3_int][var4] = 0;
@@ -1221,7 +1221,7 @@ final class vl extends tm {
             stackIn_7_0 = stackOut_6_0;
             return stackIn_7_0;
           } else {
-            if (-2 == (param0 ^ -1)) {
+            if (param0 == 1) {
               stackOut_11_0 = oe.field_S;
               stackIn_12_0 = stackOut_11_0;
               return stackIn_12_0;
@@ -1283,17 +1283,17 @@ final class vl extends tm {
             var9 = (long)(-param3[1] + param4[1]);
             var11 = (long)(-param3[2] + param4[2]);
             var13 = (long)param3[9] * var7 + ((long)param3[10] * var9 - -((long)param3[11] * var11));
-            if (-1L <= (var13 ^ -1L)) {
+            if (var13 <= 0L) {
               return;
             } else {
               L1: {
                 var15 = (long)param3[4] * var9 + (long)param3[3] * var7 - -((long)param3[5] * var11);
                 var17 = var9 * (long)param3[7] + (var7 * (long)param3[6] + var11 * (long)param3[8]);
-                var15 = (var15 << 2015665613) / var13 + (long)(qh.field_b + fb.field_q << 1846502276);
-                var17 = (var17 << 1396390605) / var13 + (long)(qh.field_c - -fb.field_d << 2056129380);
-                qh.a((int)(var15 >> -1462654460), (int)(var17 >> 466795908), -2 + ((int)(2147483648L / var13) * (256 + -param0) >> 662030440), 0, 224);
+                var15 = (var15 << 13) / var13 + (long)(qh.field_b + fb.field_q << 4);
+                var17 = (var17 << 13) / var13 + (long)(qh.field_c - -fb.field_d << 4);
+                qh.a((int)(var15 >> 4), (int)(var17 >> 4), -2 + ((int)(2147483648L / var13) * (256 + -param0) >> 8), 0, 224);
                 if (2147483647L > 127L * (34359738368L / var13) * (34359738368L / var13)) {
-                  qh.a((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - param0) >> -1984877944, 127, dg.a(-9, param2));
+                  qh.a((int)var15, (int)var17, (int)(34359738368L / var13) * (256 - param0) >> 8, 127, dg.a(-9, param2));
                   break L1;
                 } else {
                   break L1;
@@ -1440,11 +1440,11 @@ final class vl extends tm {
                       }
                     }
                   }
-                  if ((var3_int ^ -1) == -3) {
+                  if (var3_int == 2) {
                     break L2;
                   } else {
                     L4: {
-                      if (-4 != (var3_int ^ -1)) {
+                      if (var3_int != 3) {
                         break L4;
                       } else {
                         if (var4 == 0) {
@@ -1465,7 +1465,7 @@ final class vl extends tm {
                         }
                       }
                     }
-                    if ((var3_int ^ -1) == -6) {
+                    if (var3_int == 5) {
                       break L2;
                     } else {
                       L6: {
@@ -1480,7 +1480,7 @@ final class vl extends tm {
                         }
                       }
                       L7: {
-                        if ((var3_int ^ -1) != -8) {
+                        if (var3_int != 7) {
                           break L7;
                         } else {
                           if (var4 == 0) {
@@ -1505,7 +1505,7 @@ final class vl extends tm {
                       }
                       L9: {
                         L10: {
-                          if (-10 != (var3_int ^ -1)) {
+                          if (var3_int != 9) {
                             break L10;
                           } else {
                             if (var4 == 0) {
@@ -1537,7 +1537,7 @@ final class vl extends tm {
                             }
                           }
                         }
-                        if (-13 == (var3_int ^ -1)) {
+                        if (var3_int == 12) {
                           break L9;
                         } else {
                           L13: {
@@ -1764,7 +1764,7 @@ final class vl extends tm {
             }
             L2: {
               var3 = var1_long - db.field_Pb;
-              if (-30001L > (var3 ^ -1L)) {
+              if (var3 > 30000L) {
                 break L2;
               } else {
                 L3: {
@@ -1785,7 +1785,7 @@ final class vl extends tm {
                     if (5 <= up.field_j) {
                       break L5;
                     } else {
-                      if ((up.field_j ^ -1) > -4) {
+                      if (up.field_j < 3) {
                         break L3;
                       } else {
                         var5 = 6000;
@@ -1907,7 +1907,7 @@ final class vl extends tm {
             L2: {
               L3: {
                 ((vl) this).a(param4, param2, param1, param3, -20263);
-                if ((param2[2] ^ -1) >= -16385) {
+                if (param2[2] <= 16384) {
                   break L3;
                 } else {
                   L4: {
@@ -2050,7 +2050,7 @@ final class vl extends tm {
             L2: {
               L3: {
                 var3_int = param0;
-                if ((var3_int ^ -1) != -1) {
+                if (var3_int != 0) {
                   break L3;
                 } else {
                   if (var4 == 0) {
@@ -2075,11 +2075,11 @@ final class vl extends tm {
                       }
                     }
                   }
-                  if (-4 == (var3_int ^ -1)) {
+                  if (var3_int == 3) {
                     break L4;
                   } else {
                     L6: {
-                      if (-5 != (var3_int ^ -1)) {
+                      if (var3_int != 4) {
                         break L6;
                       } else {
                         if (var4 == 0) {
@@ -2092,7 +2092,7 @@ final class vl extends tm {
                     if (5 == var3_int) {
                       break L4;
                     } else {
-                      if (-7 == (var3_int ^ -1)) {
+                      if (var3_int == 6) {
                         break L4;
                       } else {
                         L7: {
@@ -2107,7 +2107,7 @@ final class vl extends tm {
                           }
                         }
                         L8: {
-                          if ((var3_int ^ -1) != -9) {
+                          if (var3_int != 8) {
                             break L8;
                           } else {
                             if (var4 == 0) {
@@ -2120,11 +2120,11 @@ final class vl extends tm {
                           }
                         }
                         L9: {
-                          if (-10 == (var3_int ^ -1)) {
+                          if (var3_int == 9) {
                             break L9;
                           } else {
                             L10: {
-                              if (-11 != (var3_int ^ -1)) {
+                              if (var3_int != 10) {
                                 break L10;
                               } else {
                                 if (var4 == 0) {
@@ -2135,7 +2135,7 @@ final class vl extends tm {
                               }
                             }
                             L11: {
-                              if ((var3_int ^ -1) != -12) {
+                              if (var3_int != 11) {
                                 break L11;
                               } else {
                                 if (var4 == 0) {
@@ -2145,10 +2145,10 @@ final class vl extends tm {
                                 }
                               }
                             }
-                            if ((var3_int ^ -1) == -13) {
+                            if (var3_int == 12) {
                               break L9;
                             } else {
-                              if (-14 == (var3_int ^ -1)) {
+                              if (var3_int == 13) {
                                 break L9;
                               } else {
                                 L12: {

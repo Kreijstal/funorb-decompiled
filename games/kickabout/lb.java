@@ -83,10 +83,10 @@ class lb extends wi {
             if (20 + param0 <= 0) {
               break L2;
             } else {
-              if (-1 <= (param1 ^ -1)) {
+              if (param1 <= 0) {
                 break L2;
               } else {
-                if ((param0 - 20 ^ -1) <= -641) {
+                if (param0 - 20 >= 640) {
                   break L2;
                 } else {
                   if (480 <= -40 + param1) {
@@ -150,21 +150,30 @@ class lb extends wi {
     lb(String param0, gj param1) {
         super(param0, (jv) null);
         ((lb) this).field_I = null;
-        ((lb) this).field_r = param1;
+        try {
+            ((lb) this).field_r = param1;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "lb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, String param1) {
+        int var2_int = 0;
         if (!(cq.e(15137))) {
             return;
         }
-        if (param0 != -28153) {
-            field_L = null;
+        try {
+            if (param0 != -28153) {
+                field_L = null;
+            }
+            or.field_d.b(89, (byte) 77);
+            or.field_d.field_n = or.field_d.field_n + 2;
+            var2_int = or.field_d.field_n;
+            or.field_d.a(14190, param1);
+            or.field_d.d(or.field_d.field_n + -var2_int, 62);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "lb.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        or.field_d.b(89, (byte) 77);
-        or.field_d.field_n = or.field_d.field_n + 2;
-        int var2 = or.field_d.field_n;
-        or.field_d.a(14190, param1);
-        or.field_d.d(or.field_d.field_n + -var2, 62);
     }
 
     String f(int param0) {
@@ -184,25 +193,137 @@ class lb extends wi {
     }
 
     void a(byte param0, fd param1, int param2, int param3) {
-        int var5 = 0;
+        RuntimeException runtimeException = null;
+        int var5_int = 0;
         int var6 = 0;
-        super.a(param0, param1, param2, param3);
-        ((lb) this).field_I = null;
-        if (((lb) this).field_m) {
-            var5 = -param2 + (el.field_A - ((lb) this).field_t);
-            var6 = n.field_m - (param3 + ((lb) this).field_g);
-            ((lb) this).field_I = this.b(var5, 2, var6);
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              super.a(param0, param1, param2, param3);
+              ((lb) this).field_I = null;
+              if (!((lb) this).field_m) {
+                break L1;
+              } else {
+                var5_int = -param2 + (el.field_A - ((lb) this).field_t);
+                var6 = n.field_m - (param3 + ((lb) this).field_g);
+                ((lb) this).field_I = this.b(var5_int, 2, var6);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("lb.P(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
     final static ak a(gm param0, int param1) {
-        ak var2 = new ak(param1);
-        var2.field_m = param0;
-        return var2;
+        ak var2 = null;
+        RuntimeException var2_ref = null;
+        ak stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ak stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var2 = new ak(param1);
+            var2.field_m = param0;
+            stackOut_0_0 = (ak) var2;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2_ref;
+            stackOut_2_1 = new StringBuilder().append("lb.D(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+        }
+        return stackIn_1_0;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1 ^ 0, param2, param3, param4);
+        super.a(param0, param1, param2, param3, param4);
         ((lb) this).a((byte) -41);
         if (param1 != 1) {
             field_H = null;
@@ -210,60 +331,173 @@ class lb extends wi {
     }
 
     final void a(String param0, int param1, int param2) {
+        RuntimeException runtimeException = null;
         String[] var4 = null;
         int var5 = 0;
         int var6 = 0;
         String[] var7 = null;
-        L0: {
-          var6 = Kickabout.field_G;
-          if (param2 == 12082) {
-            break L0;
-          } else {
-            field_H = null;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (((lb) this).field_J == null) {
-              break L2;
-            } else {
-              if (param1 >= ((lb) this).field_J.length) {
-                break L2;
+        String[] var8 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var6 = Kickabout.field_G;
+        try {
+          L0: {
+            L1: {
+              if (param2 == 12082) {
+                break L1;
               } else {
+                field_H = null;
                 break L1;
               }
             }
-          }
-          L3: {
-            var7 = new String[1 + param1];
-            var4 = var7;
-            if (null == ((lb) this).field_J) {
-              break L3;
-            } else {
-              var5 = 0;
-              L4: while (true) {
-                if (var5 >= ((lb) this).field_J.length) {
+            L2: {
+              L3: {
+                if (((lb) this).field_J == null) {
                   break L3;
                 } else {
-                  var7[var5] = ((lb) this).field_J[var5];
-                  var5++;
-                  continue L4;
+                  if (param1 >= ((lb) this).field_J.length) {
+                    break L3;
+                  } else {
+                    break L2;
+                  }
                 }
               }
+              L4: {
+                var7 = new String[1 + param1];
+                var8 = var7;
+                var4 = var8;
+                if (null == ((lb) this).field_J) {
+                  break L4;
+                } else {
+                  var5 = 0;
+                  L5: while (true) {
+                    if (var5 >= ((lb) this).field_J.length) {
+                      break L4;
+                    } else {
+                      var7[var5] = ((lb) this).field_J[var5];
+                      var5++;
+                      continue L5;
+                    }
+                  }
+                }
+              }
+              ((lb) this).field_J = var8;
+              break L2;
+            }
+            ((lb) this).field_J[param1] = param0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            runtimeException = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) runtimeException;
+            stackOut_13_1 = new StringBuilder().append("lb.K(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param0 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L6;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L6;
             }
           }
-          ((lb) this).field_J = var4;
-          break L1;
+          throw nb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
         }
-        ((lb) this).field_J[param1] = param0;
     }
 
     boolean a(fd param0, int param1) {
-        if (param1 != 0) {
-            return false;
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param1 == 0) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("lb.HA(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
-        return false;
+        return stackIn_4_0 != 0;
     }
 
     void a(int param0, int param1, int param2, int param3) {

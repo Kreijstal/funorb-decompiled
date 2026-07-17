@@ -65,9 +65,9 @@ final class vda extends ci {
                     break L3;
                   } else {
                     if (var13 == var14) {
-                      var8[var11] = ((vda) this).field_r * var12 >> 1754141132;
-                      var9[var11] = ((vda) this).field_p * var13 >> -1035565524;
-                      var10[var11] = var14 * ((vda) this).field_o >> -1317739860;
+                      var8[var11] = ((vda) this).field_r * var12 >> 12;
+                      var9[var11] = ((vda) this).field_p * var13 >> 12;
+                      var10[var11] = var14 * ((vda) this).field_o >> 12;
                       var11++;
                       continue L2;
                     } else {
@@ -90,35 +90,86 @@ final class vda extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        L0: {
-          var5 = TombRacer.field_G ? 1 : 0;
-          if (param0 == 107) {
-            break L0;
-          } else {
-            field_m = null;
-            break L0;
-          }
-        }
-        L1: {
-          var4 = param2;
-          if (var4 != 0) {
-            if (-2 != (var4 ^ -1)) {
-              if (2 == var4) {
-                ((vda) this).field_o = param1.d(127);
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 107) {
                 break L1;
               } else {
+                field_m = null;
                 break L1;
               }
-            } else {
-              ((vda) this).field_p = param1.d(123);
-              break L1;
             }
-          } else {
-            ((vda) this).field_r = param1.d(125);
-            break L1;
+            L2: {
+              var4_int = param2;
+              if (var4_int != 0) {
+                if (var4_int != 1) {
+                  if (2 == var4_int) {
+                    ((vda) this).field_o = param1.d(127);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                } else {
+                  ((vda) this).field_p = param1.d(123);
+                  break L2;
+                }
+              } else {
+                ((vda) this).field_r = param1.d(125);
+                break L2;
+              }
+            }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_1 = new StringBuilder().append("vda.A(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L3;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
         }
     }
 
@@ -130,9 +181,6 @@ final class vda extends ci {
     }
 
     public static void d(byte param0) {
-        if (param0 != 90) {
-            return;
-        }
         field_m = null;
         field_n = null;
     }

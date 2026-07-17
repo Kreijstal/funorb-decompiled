@@ -14,10 +14,6 @@ final class eb {
         field_f = null;
         field_a = null;
         field_c = null;
-        if (param0 != 5) {
-            Object var2 = null;
-            eb.a((String) null, false, true, -94);
-        }
         field_d = null;
         field_b = null;
         field_g = null;
@@ -32,63 +28,225 @@ final class eb {
         if (param3 != 10) {
             return;
         }
-        ng.field_c.a((byte) -125, (vg) (Object) fb.field_e);
+        try {
+            ng.field_c.a((byte) -125, (vg) (Object) fb.field_e);
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "eb.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     final static void a(byte param0) {
+        nl var3 = null;
         int var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (param0 != 20) {
-            return;
+        try {
+            var3 = (nl) (Object) dl.field_M.h(-11151);
+            while (var3 != null) {
+                rc.a(5, var3, -11659);
+                var3 = (nl) (Object) dl.field_M.e(0);
+            }
+            vi.field_c = ck.a(0, 5, 1, true);
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "eb.B(" + 20 + 41);
         }
-        nl var3 = (nl) (Object) dl.field_M.h(param0 ^ -11163);
-        while (var3 != null) {
-            rc.a(5, var3, -11659);
-            var3 = (nl) (Object) dl.field_M.e(0);
-        }
-        vi.field_c = ck.a(0, 5, 1, true);
     }
 
     final static boolean a(od param0, int param1) {
-        int var2 = param0.l(31760);
-        if (param1 < 6) {
-            return true;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int stackIn_2_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            var2_int = param0.l(31760);
+            if (param1 >= 6) {
+              L1: {
+                if (var2_int != 1) {
+                  stackOut_5_0 = 0;
+                  stackIn_6_0 = stackOut_5_0;
+                  break L1;
+                } else {
+                  stackOut_4_0 = 1;
+                  stackIn_6_0 = stackOut_4_0;
+                  break L1;
+                }
+              }
+              var3 = stackIn_6_0;
+              stackOut_6_0 = var3;
+              stackIn_7_0 = stackOut_6_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 1;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_1 = new StringBuilder().append("eb.C(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw ie.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
         }
-        int var3 = (var2 ^ -1) == -2 ? 1 : 0;
-        return var3 != 0;
+        return stackIn_7_0 != 0;
     }
 
     final static fl[] a(bl param0, boolean param1) {
+        RuntimeException var2 = null;
+        int[] var3 = null;
+        fl[] var4 = null;
         int var5 = 0;
         fl var6 = null;
-        int var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (!param1) {
-            return null;
+        int var7 = 0;
+        il var8 = null;
+        int[] var9 = null;
+        int[] var10 = null;
+        int[] var11 = null;
+        int[] var12 = null;
+        fl[] stackIn_6_0 = null;
+        fl[] stackIn_13_0 = null;
+        fl[] stackIn_18_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        fl[] stackOut_5_0 = null;
+        fl[] stackOut_12_0 = null;
+        fl[] stackOut_17_0 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        try {
+          L0: {
+            if (!param0.a(-20)) {
+              stackOut_5_0 = new fl[]{};
+              stackIn_6_0 = stackOut_5_0;
+              return stackIn_6_0;
+            } else {
+              var8 = param0.a((byte) -107);
+              L1: while (true) {
+                if (var8.field_b != 0) {
+                  if (var8.field_b == 2) {
+                    stackOut_12_0 = new fl[]{};
+                    stackIn_13_0 = stackOut_12_0;
+                    return stackIn_13_0;
+                  } else {
+                    var12 = (int[]) var8.field_g;
+                    var11 = var12;
+                    var10 = var11;
+                    var9 = var10;
+                    var3 = var9;
+                    var4 = new fl[var12.length >> 2];
+                    var5 = 0;
+                    L2: while (true) {
+                      if (var5 >= var4.length) {
+                        stackOut_17_0 = (fl[]) var4;
+                        stackIn_18_0 = stackOut_17_0;
+                        break L0;
+                      } else {
+                        var6 = new fl();
+                        var4[var5] = var6;
+                        var6.field_g = var3[var5 << 2];
+                        var6.field_h = var3[(var5 << 2) - -1];
+                        var6.field_b = var3[2 + (var5 << 2)];
+                        var6.field_c = var3[(var5 << 2) - -3];
+                        var5++;
+                        continue L2;
+                      }
+                    }
+                  }
+                } else {
+                  kk.a(10L, true);
+                  continue L1;
+                }
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var2;
+            stackOut_19_1 = new StringBuilder().append("eb.A(");
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param0 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L3;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L3;
+            }
+          }
+          throw ie.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 1 + 41);
         }
-        if (!(param0.a(-20))) {
-            return new fl[]{};
-        }
-        il var8 = param0.a((byte) -107);
-        while (var8.field_b == 0) {
-            kk.a(10L, true);
-        }
-        if (!((var8.field_b ^ -1) != -3)) {
-            return new fl[]{};
-        }
-        int[] var12 = (int[]) var8.field_g;
-        int[] var11 = var12;
-        int[] var10 = var11;
-        int[] var9 = var10;
-        int[] var3 = var9;
-        fl[] var4 = new fl[var12.length >> 1061568130];
-        for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new fl();
-            var4[var5] = var6;
-            var6.field_g = var3[var5 << 698699138];
-            var6.field_h = var3[(var5 << -86045406) - -1];
-            var6.field_b = var3[2 + (var5 << 484328738)];
-            var6.field_c = var3[(var5 << 793747810) - -3];
-        }
-        return var4;
+        return stackIn_18_0;
     }
 
     static {

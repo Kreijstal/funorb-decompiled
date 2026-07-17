@@ -28,10 +28,7 @@ final class gu extends hd {
     }
 
     final static boolean b(int param0) {
-        if (param0 != -20010) {
-            field_Ib = null;
-        }
-        return mj.field_a == nr.field_f ? true : false;
+        return mj.field_a == nr.field_f;
     }
 
     final int a(byte param0, boolean param1) {
@@ -107,20 +104,24 @@ final class gu extends hd {
     }
 
     final void a(int param0, int param1, String param2) {
-        ((gu) this).field_Bb[((gu) this).field_Ab] = new vu((long)param0, (hd) null, (hd) null, ((gu) this).field_Lb, (ut) null, param2);
-        ((gu) this).field_Bb[((gu) this).field_Ab].field_S = ((gu) this).field_Ob;
-        ((gu) this).field_Bb[((gu) this).field_Ab].field_ob = true;
-        ((gu) this).field_Bb[((gu) this).field_Ab].field_p = 1;
-        ((gu) this).a((byte) -115, (hd) (Object) ((gu) this).field_Bb[((gu) this).field_Ab]);
-        ((gu) this).field_Kb[((gu) this).field_Ab] = param1;
-        ((gu) this).field_Ab = ((gu) this).field_Ab + 1;
+        try {
+            ((gu) this).field_Bb[((gu) this).field_Ab] = new vu((long)param0, (hd) null, (hd) null, ((gu) this).field_Lb, (ut) null, param2);
+            ((gu) this).field_Bb[((gu) this).field_Ab].field_S = ((gu) this).field_Ob;
+            ((gu) this).field_Bb[((gu) this).field_Ab].field_ob = true;
+            ((gu) this).field_Bb[((gu) this).field_Ab].field_p = 1;
+            ((gu) this).a((byte) -115, (hd) (Object) ((gu) this).field_Bb[((gu) this).field_Ab]);
+            ((gu) this).field_Kb[((gu) this).field_Ab] = param1;
+            ((gu) this).field_Ab = ((gu) this).field_Ab + 1;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "gu.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean a(int param0) {
         if (!(((gu) this).field_Gb == param0)) {
             return false;
         }
-        if (-14 != (cc.field_e ^ -1)) {
+        if (cc.field_e != 13) {
             return true;
         }
         ((gu) this).field_Gb = -1;
@@ -135,13 +136,17 @@ final class gu extends hd {
     }
 
     final void a(String param0, boolean param1, int param2, ut param3) {
-        ((gu) this).field_Bb[((gu) this).field_Ab] = new vu(0L, (hd) null, (hd) null, ((gu) this).field_Lb, param3, param0);
-        ((gu) this).field_Bb[((gu) this).field_Ab].field_S = ((gu) this).field_Ob;
-        ((gu) this).field_Bb[((gu) this).field_Ab].field_ob = param1 ? true : false;
-        ((gu) this).field_Bb[((gu) this).field_Ab].field_p = 1;
-        ((gu) this).a((byte) -117, (hd) (Object) ((gu) this).field_Bb[((gu) this).field_Ab]);
-        ((gu) this).field_Kb[((gu) this).field_Ab] = param2;
-        ((gu) this).field_Ab = ((gu) this).field_Ab + 1;
+        try {
+            ((gu) this).field_Bb[((gu) this).field_Ab] = new vu(0L, (hd) null, (hd) null, ((gu) this).field_Lb, param3, param0);
+            ((gu) this).field_Bb[((gu) this).field_Ab].field_S = ((gu) this).field_Ob;
+            ((gu) this).field_Bb[((gu) this).field_Ab].field_ob = param1 ? true : false;
+            ((gu) this).field_Bb[((gu) this).field_Ab].field_p = 1;
+            ((gu) this).a((byte) -117, (hd) (Object) ((gu) this).field_Bb[((gu) this).field_Ab]);
+            ((gu) this).field_Kb[((gu) this).field_Ab] = param2;
+            ((gu) this).field_Ab = ((gu) this).field_Ab + 1;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "gu.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     gu(gu param0) {
@@ -149,26 +154,91 @@ final class gu extends hd {
     }
 
     final static void a(byte param0, pt param1, boolean param2) {
-        int var4 = Kickabout.field_G;
-        jb var3 = (jb) (Object) np.field_Jb.g(24009);
-        while (var3 != null) {
-            if (var3 instanceof bm) {
-                if (((bm) (Object) var3).field_J.a(param1, param0 ^ -5275)) {
-                    return;
+        jb var3 = null;
+        RuntimeException var3_ref = null;
+        int var4 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var4 = Kickabout.field_G;
+        try {
+          L0: {
+            var3 = (jb) (Object) np.field_Jb.g(24009);
+            L1: while (true) {
+              if (var3 == null) {
+                L2: {
+                  np.field_Jb.a((gn) (Object) new bm(param1, param2), 3);
+                  if (param0 == -25) {
+                    break L2;
+                  } else {
+                    gu.b(-42, (byte) 4, 39);
+                    break L2;
+                  }
                 }
+                break L0;
+              } else {
+                L3: {
+                  if (!(var3 instanceof bm)) {
+                    break L3;
+                  } else {
+                    if (!((bm) (Object) var3).field_J.a(param1, param0 ^ -5275)) {
+                      break L3;
+                    } else {
+                      return;
+                    }
+                  }
+                }
+                var3 = (jb) (Object) np.field_Jb.c(33);
+                continue L1;
+              }
             }
-            var3 = (jb) (Object) np.field_Jb.c(33);
-        }
-        np.field_Jb.a((gn) (Object) new bm(param1, param2), 3);
-        if (param0 != -25) {
-            gu.b(-42, (byte) 4, 39);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3_ref = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var3_ref;
+            stackOut_11_1 = new StringBuilder().append("gu.H(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
         }
     }
 
     public static void h(byte param0) {
-        if (param0 < 13) {
-            return;
-        }
         field_zb = null;
         field_Jb = null;
         field_Ib = null;
@@ -192,14 +262,18 @@ final class gu extends hd {
         ((gu) this).field_Kb = new int[256];
         ((gu) this).field_Bb = new vu[256];
         ((gu) this).field_Gb = -2;
-        ((gu) this).field_Lb = param3;
-        ((gu) this).field_Nb = param2;
-        ((gu) this).field_Fb = param7;
-        ((gu) this).field_Hb = param5;
-        ((gu) this).field_Cb = param8;
-        ((gu) this).field_Eb = param6;
-        ((gu) this).field_Ob = param1;
-        ((gu) this).field_Mb = param4;
+        try {
+            ((gu) this).field_Lb = param3;
+            ((gu) this).field_Nb = param2;
+            ((gu) this).field_Fb = param7;
+            ((gu) this).field_Hb = param5;
+            ((gu) this).field_Cb = param8;
+            ((gu) this).field_Eb = param6;
+            ((gu) this).field_Ob = param1;
+            ((gu) this).field_Mb = param4;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "gu.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+        }
     }
 
     static {
@@ -209,7 +283,7 @@ final class gu extends hd {
     private static void $cfr$clinit() {
         field_Ib = "scroll up";
         field_Jb = null;
-        field_yb = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
+        field_yb = new char[]{'_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
         field_Db = "Click a player on the left to view.";
     }
 }

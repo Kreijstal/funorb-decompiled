@@ -7,9 +7,6 @@ final class bc {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 <= 101) {
-            return;
-        }
         field_a = null;
         field_b = null;
     }

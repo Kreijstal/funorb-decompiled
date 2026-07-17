@@ -8,11 +8,6 @@ abstract class ib extends ij {
 
     public static void g(int param0) {
         field_l = null;
-        if (param0 != 31438) {
-            field_l = null;
-            field_m = null;
-            return;
-        }
         field_m = null;
     }
 
@@ -21,7 +16,7 @@ abstract class ib extends ij {
         int var2 = 0;
         md var3 = null;
         var1 = (sc) (Object) hd.field_c.g(32073);
-        var2 = -21 / ((param0 - 61) / 40);
+        var2 = 21;
         if (var1 == null) {
           jj.a(4);
           return;

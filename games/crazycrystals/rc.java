@@ -30,9 +30,6 @@ final class rc {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            field_a = null;
-        }
         field_a = null;
         field_b = null;
     }
@@ -73,7 +70,7 @@ final class rc {
                       if (var11 >= param0) {
                         var11 = 0;
                         L5: while (true) {
-                          if (var11 >= param0 >> -1140107775) {
+                          if (var11 >= param0 >> 1) {
                             return var10;
                           } else {
                             var12 = 0;

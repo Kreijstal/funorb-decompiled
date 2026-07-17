@@ -174,8 +174,9 @@ final class eoa {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((eoa) this).field_l[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_c[var5] = var13 >= 0 ? fg.field_n[var13].c() : 0;
+                field_c[incrementValue$0] = var13 >= 0 ? fg.field_n[var13].c() : 0;
             }
         }
         return true;
@@ -266,6 +267,7 @@ final class eoa {
                             field_b = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((eoa) this).field_g[var6];
                           var8 = 0;
@@ -274,8 +276,9 @@ final class eoa {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((eoa) this).field_e[var5] = fg.a(var4);
+                              ((eoa) this).field_e[incrementValue$2] = fg.a(var4);
                               var8++;
                               continue L6;
                             }
@@ -291,8 +294,9 @@ final class eoa {
                 } else {
                   L7: {
                     ((eoa) this).field_a[var4] = fg.a(3) + 1;
-                    ((eoa) this).field_f[var4] = fg.a(2);
-                    var5 = fg.a(2);
+                    int dupTemp$3 = fg.a(2);
+                    ((eoa) this).field_f[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {

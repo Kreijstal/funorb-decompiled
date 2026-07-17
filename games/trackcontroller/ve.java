@@ -225,7 +225,7 @@ final class ve extends ug {
             L2: while (true) {
               L3: {
                 L4: {
-                  if ((param3.field_E ^ -1) >= (var9 ^ -1)) {
+                  if (~param3.field_E >= ~var9) {
                     break L4;
                   } else {
                     var10 = param3.field_O[var9];
@@ -273,7 +273,7 @@ final class ve extends ug {
                           }
                           L8: {
                             var15 = od.field_c[var12];
-                            if ((var15 ^ -1) != 2147483647) {
+                            if (var15 != -2147483648) {
                               break L8;
                             } else {
                               if (var20 == 0) {
@@ -291,7 +291,7 @@ final class ve extends ug {
                             stackIn_27_1 = stackOut_24_1;
                             stackIn_25_0 = stackOut_24_0;
                             stackIn_25_1 = stackOut_24_1;
-                            if (-1 < (var8 ^ -1)) {
+                            if (var8 < 0) {
                               stackOut_27_0 = stackIn_27_0;
                               stackOut_27_1 = stackIn_27_1;
                               stackOut_27_2 = var16 << -var8;
@@ -314,11 +314,11 @@ final class ve extends ug {
                           L10: while (true) {
                             L11: {
                               L12: {
-                                if (var18 >> 204119684 == 0) {
+                                if (var18 >> 4 == 0) {
                                   break L12;
                                 } else {
                                   var17--;
-                                  stackOut_30_0 = var17 ^ -1;
+                                  stackOut_30_0 = ~var17;
                                   stackOut_30_1 = -1;
                                   stackIn_39_0 = stackOut_30_0;
                                   stackIn_39_1 = stackOut_30_1;
@@ -348,7 +348,7 @@ final class ve extends ug {
                                   }
                                 }
                               }
-                              stackOut_38_0 = var17 << 1529511108;
+                              stackOut_38_0 = var17 << 4;
                               stackOut_38_1 = var18;
                               stackIn_39_0 = stackOut_38_0;
                               stackIn_39_1 = stackOut_38_1;
@@ -358,7 +358,7 @@ final class ve extends ug {
                               var19 = stackIn_39_0 + stackIn_39_1;
                               gk.field_b[var19] = var9;
                               rf.field_a[var17] = 1 + var18;
-                              if (-1 <= (param3.field_a ^ -1)) {
+                              if (param3.field_a <= 0) {
                                 break L14;
                               } else {
                                 if (null == param3.field_x) {
@@ -389,7 +389,7 @@ final class ve extends ug {
               }
               L15: {
                 L16: {
-                  if (stackIn_48_0 <= (param3.field_a ^ -1)) {
+                  if (stackIn_48_0 <= ~param3.field_a) {
                     break L16;
                   } else {
                     if (param3.field_x == null) {
@@ -567,7 +567,7 @@ final class ve extends ug {
             L1: while (true) {
               L2: {
                 L3: {
-                  if ((var4 ^ -1) <= (gi.field_o ^ -1)) {
+                  if (~var4 <= ~gi.field_o) {
                     break L3;
                   } else {
                     ka.field_f[var4] = var2_ref.d((byte) -111);
@@ -611,7 +611,7 @@ final class ve extends ug {
                 L7: while (true) {
                   L8: {
                     L9: {
-                      if ((gi.field_o ^ -1) >= (var4 ^ -1)) {
+                      if (~gi.field_o >= ~var4) {
                         break L9;
                       } else {
                         cf.field_p[var4] = var2_ref.d((byte) -66);
@@ -633,7 +633,7 @@ final class ve extends ug {
                   L10: while (true) {
                     L11: {
                       L12: {
-                        if ((var4 ^ -1) <= (gi.field_o ^ -1)) {
+                        if (~var4 <= ~gi.field_o) {
                           break L12;
                         } else {
                           j.field_f[var4] = var2_ref.d((byte) -62);
@@ -657,11 +657,11 @@ final class ve extends ug {
                     L13: while (true) {
                       L14: {
                         L15: {
-                          if ((var3 ^ -1) >= (var4 ^ -1)) {
+                          if (~var3 >= ~var4) {
                             break L15;
                           } else {
                             qe.field_z[var4] = var2_ref.e(8);
-                            stackOut_34_0 = qe.field_z[var4] ^ -1;
+                            stackOut_34_0 = ~qe.field_z[var4];
                             stackOut_34_1 = -1;
                             stackIn_42_0 = stackOut_34_0;
                             stackIn_42_1 = stackOut_34_1;
@@ -762,7 +762,7 @@ final class ve extends ug {
                                                 var12 = 0;
                                                 L28: while (true) {
                                                   L29: {
-                                                    if ((var12 ^ -1) <= (var7 ^ -1)) {
+                                                    if (~var12 <= ~var7) {
                                                       break L29;
                                                     } else {
                                                       byte dupTemp$2 = var2_ref.f(param0 + -99);
@@ -770,7 +770,7 @@ final class ve extends ug {
                                                       var13 = dupTemp$2;
                                                       stackOut_61_0 = var10;
                                                       stackOut_61_1 = 0;
-                                                      stackOut_61_2 = var13 ^ -1;
+                                                      stackOut_61_2 = ~var13;
                                                       stackIn_51_0 = stackOut_61_0;
                                                       stackIn_51_1 = stackOut_61_1;
                                                       stackIn_51_2 = stackOut_61_2;
@@ -822,7 +822,7 @@ final class ve extends ug {
                                         L31: while (true) {
                                           L32: {
                                             L33: {
-                                              if ((var12 ^ -1) <= (var5 ^ -1)) {
+                                              if (~var12 <= ~var5) {
                                                 break L33;
                                               } else {
                                                 stackOut_70_0 = 0;
@@ -867,10 +867,10 @@ final class ve extends ug {
                                             stackIn_80_0 = stackOut_79_0;
                                             break L32;
                                           }
-                                          if (stackIn_80_0 != (2 & var11 ^ -1)) {
+                                          if (stackIn_80_0 != ~(2 & var11)) {
                                             var12 = 0;
                                             L37: while (true) {
-                                              stackOut_84_0 = var5 ^ -1;
+                                              stackOut_84_0 = ~var5;
                                               stackOut_84_1 = var12;
                                               stackOut_84_2 = -1;
                                               stackIn_85_0 = stackOut_84_0;
@@ -889,7 +889,7 @@ final class ve extends ug {
                                                     var13 = stackIn_87_0;
                                                     L39: while (true) {
                                                       L40: {
-                                                        if ((var13 ^ -1) <= (var6 ^ -1)) {
+                                                        if (~var13 <= ~var6) {
                                                           break L40;
                                                         } else {
                                                           byte dupTemp$3 = var2_ref.f(-125);

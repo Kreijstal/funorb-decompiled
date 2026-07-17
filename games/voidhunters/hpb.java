@@ -35,17 +35,102 @@ final class hpb extends le {
 
     public static void d(int param0) {
         field_j = null;
-        if (param0 != -6200) {
-            field_k = -61L;
-        }
     }
 
     final void a(int param0, int param1, ds param2) {
-        if (-1 == param0) {
-            ((hpb) this).field_g = -2 == param2.e((byte) -97) ? true : false;
-        }
-        if (param1 > -60) {
-            int[][] discarded$0 = ((hpb) this).a(-4, 51);
+        RuntimeException var4 = null;
+        Object stackIn_2_0 = null;
+        Object stackIn_3_0 = null;
+        Object stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_1_0 = null;
+        Object stackOut_3_0 = null;
+        int stackOut_3_1 = 0;
+        Object stackOut_2_0 = null;
+        int stackOut_2_1 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 != 0) {
+                break L1;
+              } else {
+                L2: {
+                  stackOut_1_0 = this;
+                  stackIn_3_0 = stackOut_1_0;
+                  stackIn_2_0 = stackOut_1_0;
+                  if (param2.e((byte) -97) != 1) {
+                    stackOut_3_0 = this;
+                    stackOut_3_1 = 0;
+                    stackIn_4_0 = stackOut_3_0;
+                    stackIn_4_1 = stackOut_3_1;
+                    break L2;
+                  } else {
+                    stackOut_2_0 = this;
+                    stackOut_2_1 = 1;
+                    stackIn_4_0 = stackOut_2_0;
+                    stackIn_4_1 = stackOut_2_1;
+                    break L2;
+                  }
+                }
+                ((hpb) this).field_g = stackIn_4_1 != 0;
+                break L1;
+              }
+            }
+            L3: {
+              if (param1 <= -60) {
+                break L3;
+              } else {
+                int[][] discarded$2 = ((hpb) this).a(-4, 51);
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("hpb.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L4;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L4;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 

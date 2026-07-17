@@ -8,88 +8,103 @@ final class qna extends k {
     private boolean field_m;
 
     final void a(byte param0, lu param1, int param2) {
-        int var4 = 0;
-        Object stackIn_5_0 = null;
-        Object stackIn_6_0 = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         Object stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        Object stackIn_14_0 = null;
-        Object stackIn_15_0 = null;
-        Object stackIn_16_0 = null;
-        int stackIn_16_1 = 0;
-        Object stackOut_13_0 = null;
-        Object stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
-        Object stackOut_4_0 = null;
+        Object stackIn_8_0 = null;
+        Object stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
         Object stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        if (param0 == -71) {
-          var4 = param2;
-          if (var4 != 0) {
-            if (var4 != 1) {
-              return;
-            } else {
-              L0: {
-                stackOut_13_0 = this;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_14_0 = stackOut_13_0;
-                if ((param1.b(param0 + 16712006) ^ -1) != -2) {
-                  stackOut_15_0 = this;
-                  stackOut_15_1 = 0;
-                  stackIn_16_0 = stackOut_15_0;
-                  stackIn_16_1 = stackOut_15_1;
-                  break L0;
-                } else {
-                  stackOut_14_0 = this;
-                  stackOut_14_1 = 1;
-                  stackIn_16_0 = stackOut_14_0;
-                  stackIn_16_1 = stackOut_14_1;
-                  break L0;
-                }
+        Object stackOut_8_0 = null;
+        int stackOut_8_1 = 0;
+        Object stackOut_7_0 = null;
+        int stackOut_7_1 = 0;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -71) {
+                break L1;
+              } else {
+                field_k = -126;
+                break L1;
               }
-              ((qna) this).field_m = stackIn_16_1 != 0;
-              return;
             }
-          } else {
-            ((qna) this).field_n = param1.e((byte) 107);
-            return;
-          }
-        } else {
-          field_k = -126;
-          var4 = param2;
-          if (var4 != 0) {
-            if (var4 != 1) {
+            var4_int = param2;
+            if (var4_int == 0) {
+              ((qna) this).field_n = param1.e((byte) 107);
               return;
             } else {
-              L1: {
-                stackOut_4_0 = this;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
-                if ((param1.b(param0 + 16712006) ^ -1) != -2) {
+              if (var4_int == 1) {
+                L2: {
                   stackOut_6_0 = this;
-                  stackOut_6_1 = 0;
+                  stackIn_8_0 = stackOut_6_0;
                   stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
-                  break L1;
-                } else {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
-                  break L1;
+                  if (param1.b(param0 + 16712006) != 1) {
+                    stackOut_8_0 = this;
+                    stackOut_8_1 = 0;
+                    stackIn_9_0 = stackOut_8_0;
+                    stackIn_9_1 = stackOut_8_1;
+                    break L2;
+                  } else {
+                    stackOut_7_0 = this;
+                    stackOut_7_1 = 1;
+                    stackIn_9_0 = stackOut_7_0;
+                    stackIn_9_1 = stackOut_7_1;
+                    break L2;
+                  }
                 }
+                ((qna) this).field_m = stackIn_9_1 != 0;
+                break L0;
+              } else {
+                return;
               }
-              ((qna) this).field_m = stackIn_7_1 != 0;
-              return;
             }
-          } else {
-            ((qna) this).field_n = param1.e((byte) 107);
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var4;
+            stackOut_11_1 = new StringBuilder().append("qna.E(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
         }
     }
 
@@ -97,15 +112,10 @@ final class qna extends k {
         pf var2 = sja.field_fb;
         var2.c(param0, (byte) 124);
         var2.d(1, param1 ^ param1);
-        var2.d(0, param1 ^ 0);
+        var2.d(0, param1);
     }
 
     public static void e(byte param0) {
-        if (param0 != -106) {
-            qna.b(18, -38);
-            field_l = null;
-            return;
-        }
         field_l = null;
     }
 
@@ -182,10 +192,10 @@ final class qna extends k {
                 L1: {
                   var14 = (var54[var10] - var55[var10]) * ((qna) this).field_n;
                   var15 = (-var5[-1 + var10 & wp.field_r] + var5[var10 + 1 & wp.field_r]) * ((qna) this).field_n;
-                  var16 = var15 >> -798477748;
-                  var17 = var14 >> -1653000436;
-                  var18 = var16 * var16 >> 1249397452;
-                  var19 = var17 * var17 >> -737892756;
+                  var16 = var15 >> 12;
+                  var17 = var14 >> 12;
+                  var18 = var16 * var16 >> 12;
+                  var19 = var17 * var17 >> 12;
                   var20 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var19 + var18)) / 4096.0f)));
                   if (var20 == 0) {
                     var13 = 0;
@@ -201,9 +211,9 @@ final class qna extends k {
                 }
                 L2: {
                   if (((qna) this).field_m) {
-                    var13 = (var13 >> -251053087) + 2048;
-                    var12 = (var12 >> 769610785) + 2048;
-                    var11 = 2048 + (var11 >> 302087841);
+                    var13 = (var13 >> 1) + 2048;
+                    var12 = (var12 >> 1) + 2048;
+                    var11 = 2048 + (var11 >> 1);
                     break L2;
                   } else {
                     break L2;
@@ -248,10 +258,10 @@ final class qna extends k {
                 L4: {
                   var14 = (var48[var10] - var49[var10]) * ((qna) this).field_n;
                   var15 = (-var5[-1 + var10 & wp.field_r] + var5[var10 + 1 & wp.field_r]) * ((qna) this).field_n;
-                  var16 = var15 >> -798477748;
-                  var17 = var14 >> -1653000436;
-                  var18 = var16 * var16 >> 1249397452;
-                  var19 = var17 * var17 >> -737892756;
+                  var16 = var15 >> 12;
+                  var17 = var14 >> 12;
+                  var18 = var16 * var16 >> 12;
+                  var19 = var17 * var17 >> 12;
                   var20 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var19 + var18)) / 4096.0f)));
                   if (var20 == 0) {
                     var13 = 0;
@@ -267,9 +277,9 @@ final class qna extends k {
                 }
                 L5: {
                   if (((qna) this).field_m) {
-                    var13 = (var13 >> -251053087) + 2048;
-                    var12 = (var12 >> 769610785) + 2048;
-                    var11 = 2048 + (var11 >> 302087841);
+                    var13 = (var13 >> 1) + 2048;
+                    var12 = (var12 >> 1) + 2048;
+                    var11 = 2048 + (var11 >> 1);
                     break L5;
                   } else {
                     break L5;

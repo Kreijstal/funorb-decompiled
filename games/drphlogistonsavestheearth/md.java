@@ -16,9 +16,6 @@ final class md {
         field_e = null;
         field_a = null;
         field_f = null;
-        if (param0 != 75) {
-            field_b = null;
-        }
     }
 
     static {

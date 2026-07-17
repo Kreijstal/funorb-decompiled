@@ -1166,7 +1166,7 @@ final class eg extends qc {
                               }
                             }
                             if (var9 > 64) {
-                              var10 = field_D[var8] - 64 - 1;
+                              var10 = field_D[var8] - 65;
                               var48 = field_K[var10];
                               var12 = 0;
                               L10: while (true) {
@@ -1246,7 +1246,7 @@ final class eg extends qc {
                           }
                         }
                         if (var9 > 64) {
-                          var10 = field_D[var8] - 64 - 1;
+                          var10 = field_D[var8] - 65;
                           var46 = field_K[var10];
                           var12 = 0;
                           L15: while (true) {
@@ -2983,14 +2983,18 @@ final class eg extends qc {
                 }
               }
             } else {
-              if (field_y.length >= ((eg) this).field_ab) {
+              if (param1) {
                 break L0;
               } else {
-                field_G = new int[((eg) this).field_ab + 100];
-                field_cb = new int[((eg) this).field_ab + 100];
-                field_j = new int[((eg) this).field_ab + 100];
-                field_y = new short[((eg) this).field_ab + 100];
-                break L0;
+                if (field_y.length >= ((eg) this).field_ab) {
+                  break L0;
+                } else {
+                  field_G = new int[((eg) this).field_ab + 100];
+                  field_cb = new int[((eg) this).field_ab + 100];
+                  field_j = new int[((eg) this).field_ab + 100];
+                  field_y = new short[((eg) this).field_ab + 100];
+                  break L0;
+                }
               }
             }
           } else {
@@ -3103,7 +3107,7 @@ final class eg extends qc {
                     }
                   }
                 }
-                ((eg) this).field_x[var9] = (short)-1;
+                ((eg) this).field_x[var9] = (short) -1;
                 var9++;
                 continue L1;
               }
@@ -3143,14 +3147,14 @@ final class eg extends qc {
                               break L3;
                             } else {
                               if (param0.field_I[var11] == -1) {
-                                ((eg) this).field_o[var11] = (byte)-1;
+                                ((eg) this).field_o[var11] = (byte) -1;
                                 var11++;
                                 continue L7;
                               } else {
                                 ((eg) this).field_o[var11] = (byte)var9_ref_int__[param0.field_I[var11] & 255];
                                 if (((eg) this).field_o[var11] == -1) {
                                   if (((eg) this).field_x != null) {
-                                    ((eg) this).field_x[var11] = (short)-1;
+                                    ((eg) this).field_x[var11] = (short) -1;
                                     var11++;
                                     continue L7;
                                   } else {

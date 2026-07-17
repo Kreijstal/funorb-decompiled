@@ -22,9 +22,9 @@ final class th extends com.ms.dll.Callback {
         if (param0 == ((th) this).field_a) {
           if (param1 == 32) {
             var5 = 65535 & param3;
-            if ((var5 ^ -1) != -2) {
+            if (var5 != 1) {
               if (param1 != 101024) {
-                if (-2 == (param1 ^ -1)) {
+                if (param1 == 1) {
                   ((th) this).field_a = 0;
                   ((th) this).field_b = true;
                   return com.ms.win32.User32.CallWindowProc(((th) this).field_e, param0, param1, param2, param3);
@@ -63,7 +63,7 @@ final class th extends com.ms.dll.Callback {
             }
           } else {
             if (param1 != 101024) {
-              if (-2 == (param1 ^ -1)) {
+              if (param1 == 1) {
                 ((th) this).field_a = 0;
                 ((th) this).field_b = true;
                 return com.ms.win32.User32.CallWindowProc(((th) this).field_e, param0, param1, param2, param3);

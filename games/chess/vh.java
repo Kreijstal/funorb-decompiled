@@ -14,7 +14,7 @@ final class vh {
     static int field_c;
 
     final static boolean a(int param0, int param1, int param2) {
-        if (-14 == (vg.field_a ^ -1)) {
+        if (vg.field_a == 13) {
           kf.a(-87);
           return true;
         } else {
@@ -49,25 +49,15 @@ final class vh {
     }
 
     public static void a(int param0) {
-        Object var2 = null;
         field_d = null;
         field_h = null;
         field_f = null;
         field_b = null;
-        if (param0 != 102) {
-          var2 = null;
-          byte[] discarded$2 = vh.a((byte) 46, (String) null);
-          field_a = null;
-          return;
-        } else {
-          field_a = null;
-          return;
-        }
+        field_a = null;
     }
 
     final static void a(int param0, byte param1) {
         try {
-            IOException iOException = null;
             int var2 = 0;
             Throwable decompiledCaughtException = null;
             L0: {
@@ -76,7 +66,7 @@ final class vh {
                 break L0;
               } else {
                 L1: {
-                  if ((param0 ^ -1) > -1) {
+                  if (param0 < 0) {
                     break L1;
                   } else {
                     if (tb.field_f == ik.field_e) {
@@ -90,7 +80,7 @@ final class vh {
                   if (qn.field_U.field_l != 0) {
                     break L2;
                   } else {
-                    if ((10000L + ta.field_t ^ -1L) > (ud.a(2) ^ -1L)) {
+                    if (~(10000L + ta.field_t) > ~ud.a(2)) {
                       qn.field_U.f(param0, -105);
                       break L2;
                     } else {
@@ -99,19 +89,12 @@ final class vh {
                   }
                 }
                 L3: {
-                  if (-1 > (qn.field_U.field_l ^ -1)) {
-                    try {
+                  if (qn.field_U.field_l > 0) {
+                    {
                       L4: {
                         lj.field_a.a(0, qn.field_U.field_l, (byte) -92, qn.field_U.field_o);
                         ta.field_t = ud.a(2);
                         break L4;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        si.d(65280);
-                        break L5;
                       }
                     }
                     qn.field_U.field_l = 0;
@@ -132,11 +115,70 @@ final class vh {
     }
 
     final static byte[] a(byte param0, String param1) {
-        if (param0 <= 41) {
-            field_d = null;
-            return jj.field_e.a("", 30045, param1);
+        RuntimeException var2 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 > 41) {
+                break L1;
+              } else {
+                field_d = null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = jj.field_e.a("", 30045, param1);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("vh.A(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return jj.field_e.a("", 30045, param1);
+        return stackIn_3_0;
     }
 
     static {

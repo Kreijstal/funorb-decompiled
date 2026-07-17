@@ -26,8 +26,12 @@ final class vl {
     }
 
     vl(jn param0, int param1) {
-        ((vl) this).field_d = param0;
-        ((vl) this).field_e = param1;
+        try {
+            ((vl) this).field_d = param0;
+            ((vl) this).field_e = param1;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "vl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

@@ -281,8 +281,9 @@ final class ss extends gga {
                 var14 = (50 - var8) * jb.field_c[var10 - var8];
                 field_q[var4] = var2 + (var11 + ((field_H[var7] - var11) * var14 >> 16) << 9) / 50;
                 field_u[var4] = var3 + (var12 + ((field_B[var7] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$9 = var4;
                 var4++;
-                field_V[var4] = var13 + (((((ss) this).field_L[param0] & 65535) - var13) * var14 >> 16);
+                field_V[incrementValue$9] = var13 + (((((ss) this).field_L[param0] & 65535) - var13) * var14 >> 16);
                 break L2;
               }
             }
@@ -292,15 +293,17 @@ final class ss extends gga {
               var14 = (50 - var8) * jb.field_c[var9 - var8];
               field_q[var4] = var2 + (var11 + ((field_H[var6] - var11) * var14 >> 16) << 9) / 50;
               field_u[var4] = var3 + (var12 + ((field_B[var6] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$10 = var4;
               var4++;
-              field_V[var4] = var13 + (((((ss) this).field_i[param0] & 65535) - var13) * var14 >> 16);
+              field_V[incrementValue$10] = var13 + (((((ss) this).field_i[param0] & 65535) - var13) * var14 >> 16);
               break L1;
             }
           } else {
             field_q[var4] = field_p[var5];
             field_u[var4] = field_F[var5];
+            int incrementValue$11 = var4;
             var4++;
-            field_V[var4] = ((ss) this).field_r[param0] & 65535;
+            field_V[incrementValue$11] = ((ss) this).field_r[param0] & 65535;
             break L1;
           }
         }
@@ -316,8 +319,9 @@ final class ss extends gga {
                 var14 = (50 - var9) * jb.field_c[var8 - var9];
                 field_q[var4] = var2 + (var11 + ((field_H[var5] - var11) * var14 >> 16) << 9) / 50;
                 field_u[var4] = var3 + (var12 + ((field_B[var5] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$12 = var4;
                 var4++;
-                field_V[var4] = var13 + (((((ss) this).field_r[param0] & 65535) - var13) * var14 >> 16);
+                field_V[incrementValue$12] = var13 + (((((ss) this).field_r[param0] & 65535) - var13) * var14 >> 16);
                 break L4;
               }
             }
@@ -327,15 +331,17 @@ final class ss extends gga {
               var14 = (50 - var9) * jb.field_c[var10 - var9];
               field_q[var4] = var2 + (var11 + ((field_H[var7] - var11) * var14 >> 16) << 9) / 50;
               field_u[var4] = var3 + (var12 + ((field_B[var7] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$13 = var4;
               var4++;
-              field_V[var4] = var13 + (((((ss) this).field_L[param0] & 65535) - var13) * var14 >> 16);
+              field_V[incrementValue$13] = var13 + (((((ss) this).field_L[param0] & 65535) - var13) * var14 >> 16);
               break L3;
             }
           } else {
             field_q[var4] = field_p[var6];
             field_u[var4] = field_F[var6];
+            int incrementValue$14 = var4;
             var4++;
-            field_V[var4] = ((ss) this).field_i[param0] & 65535;
+            field_V[incrementValue$14] = ((ss) this).field_i[param0] & 65535;
             break L3;
           }
         }
@@ -351,8 +357,9 @@ final class ss extends gga {
                 var14 = (50 - var10) * jb.field_c[var9 - var10];
                 field_q[var4] = var2 + (var11 + ((field_H[var6] - var11) * var14 >> 16) << 9) / 50;
                 field_u[var4] = var3 + (var12 + ((field_B[var6] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$15 = var4;
                 var4++;
-                field_V[var4] = var13 + (((((ss) this).field_i[param0] & 65535) - var13) * var14 >> 16);
+                field_V[incrementValue$15] = var13 + (((((ss) this).field_i[param0] & 65535) - var13) * var14 >> 16);
                 break L6;
               }
             }
@@ -362,15 +369,17 @@ final class ss extends gga {
               var14 = (50 - var10) * jb.field_c[var8 - var10];
               field_q[var4] = var2 + (var11 + ((field_H[var5] - var11) * var14 >> 16) << 9) / 50;
               field_u[var4] = var3 + (var12 + ((field_B[var5] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$16 = var4;
               var4++;
-              field_V[var4] = var13 + (((((ss) this).field_r[param0] & 65535) - var13) * var14 >> 16);
+              field_V[incrementValue$16] = var13 + (((((ss) this).field_r[param0] & 65535) - var13) * var14 >> 16);
               break L5;
             }
           } else {
             field_q[var4] = field_p[var7];
             field_u[var4] = field_F[var7];
+            int incrementValue$17 = var4;
             var4++;
-            field_V[var4] = ((ss) this).field_L[param0] & 65535;
+            field_V[incrementValue$17] = ((ss) this).field_L[param0] & 65535;
             break L5;
           }
         }
@@ -683,7 +692,7 @@ final class ss extends gga {
                               }
                             }
                             if (var9 > 64) {
-                              var10 = field_j[var8] - 64 - 1;
+                              var10 = field_j[var8] - 65;
                               var48 = field_s[var10];
                               var12 = 0;
                               L10: while (true) {
@@ -763,7 +772,7 @@ final class ss extends gga {
                           }
                         }
                         if (var9 > 64) {
-                          var10 = field_j[var8] - 64 - 1;
+                          var10 = field_j[var8] - 65;
                           var46 = field_s[var10];
                           var12 = 0;
                           L15: while (true) {
@@ -918,8 +927,9 @@ final class ss extends gga {
                       return;
                     } else {
                       L29: {
+                        int incrementValue$7 = var12;
                         var12++;
-                        this.b(var14[var12]);
+                        this.b(var14[incrementValue$7]);
                         if (var12 != var13) {
                           break L29;
                         } else {
@@ -953,8 +963,9 @@ final class ss extends gga {
                           break L31;
                         } else {
                           L32: {
+                            int incrementValue$8 = var12;
                             var12++;
-                            this.b(var14[var12]);
+                            this.b(var14[incrementValue$8]);
                             if (var12 != var13) {
                               break L32;
                             } else {
@@ -988,8 +999,9 @@ final class ss extends gga {
                             break L34;
                           } else {
                             L35: {
+                              int incrementValue$9 = var12;
                               var12++;
-                              this.b(var14[var12]);
+                              this.b(var14[incrementValue$9]);
                               if (var12 != var13) {
                                 break L35;
                               } else {
@@ -1023,8 +1035,9 @@ final class ss extends gga {
                               break L37;
                             } else {
                               L38: {
+                                int incrementValue$10 = var12;
                                 var12++;
-                                this.b(var14[var12]);
+                                this.b(var14[incrementValue$10]);
                                 if (var12 != var13) {
                                   break L38;
                                 } else {
@@ -1147,8 +1160,9 @@ final class ss extends gga {
                         }
                       } else {
                         field_f[var7] = (field_I[var9] + field_I[var10] + field_I[var11]) / 3;
+                        int incrementValue$11 = var7;
                         var7++;
-                        field_e[var7] = var8;
+                        field_e[incrementValue$11] = var8;
                         var8++;
                         continue L3;
                       }
@@ -1165,8 +1179,9 @@ final class ss extends gga {
                     if (!this.a(aca.field_i + jb.field_h, on.field_n + jb.field_j, field_F[var9], field_F[var10], field_F[var11], var12, var13, var14_int)) {
                       break L43;
                     } else {
+                      int fieldTemp$12 = dn.field_a;
                       dn.field_a = dn.field_a + 1;
-                      p.field_l[dn.field_a] = param2;
+                      p.field_l[fieldTemp$12] = param2;
                       param1 = false;
                       break L43;
                     }
@@ -1238,8 +1253,9 @@ final class ss extends gga {
                     }
                   } else {
                     field_f[var7] = (field_I[var9] + field_I[var10] + field_I[var11]) / 3;
+                    int incrementValue$13 = var7;
                     var7++;
-                    field_e[var7] = var8;
+                    field_e[incrementValue$13] = var8;
                     var8++;
                     continue L3;
                   }
@@ -1369,13 +1385,20 @@ final class ss extends gga {
                   L3: while (true) {
                     if (var27 >= ((ss) this).field_W) {
                       try {
-                        this.a((var20 & var16) != 0, false, 0L, (int) ((ss) this).field_h, ((ss) this).field_h << 1);
-                      } catch (java.lang.Exception decompiledCaughtParameter) {
-                        decompiledCaughtException = decompiledCaughtParameter;
+                        L4: {
+                          this.a((var20 & var16) != 0, false, 0L, (int) ((ss) this).field_h, ((ss) this).field_h << 1);
+                          break L4;
+                        }
+                      } catch (java.lang.Exception decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L5: {
+                          var21 = (Exception) (Object) decompiledCaughtException;
+                          break L5;
+                        }
                       }
-                      var21 = (Exception) (Object) decompiledCaughtException;
+                      return;
                     } else {
-                      L4: {
+                      L6: {
                         var22 = ((ss) this).field_x[var27];
                         var23 = ((ss) this).field_J[var27];
                         var24 = ((ss) this).field_U[var27];
@@ -1391,11 +1414,11 @@ final class ss extends gga {
                         if (var24 < 50) {
                           field_p[var27] = -5000;
                           var20 = 1;
-                          break L4;
+                          break L6;
                         } else {
                           field_p[var27] = var18 + (var22 << 9) / var24;
                           field_F[var27] = var19 + (var23 << 9) / var24;
-                          break L4;
+                          break L6;
                         }
                       }
                       if (var17 != 0) {
@@ -1587,7 +1610,7 @@ final class ss extends gga {
                     }
                   }
                 }
-                ((ss) this).field_P[var9] = (short)-1;
+                ((ss) this).field_P[var9] = (short) -1;
                 var9++;
                 continue L1;
               }
@@ -1627,14 +1650,14 @@ final class ss extends gga {
                               break L3;
                             } else {
                               if (param0.field_s[var11] == -1) {
-                                ((ss) this).field_m[var11] = (byte)-1;
+                                ((ss) this).field_m[var11] = (byte) -1;
                                 var11++;
                                 continue L7;
                               } else {
                                 ((ss) this).field_m[var11] = (byte)var9_ref_int__[param0.field_s[var11] & 255];
                                 if (((ss) this).field_m[var11] == -1) {
                                   if (((ss) this).field_P != null) {
-                                    ((ss) this).field_P[var11] = (short)-1;
+                                    ((ss) this).field_P[var11] = (short) -1;
                                     var11++;
                                     continue L7;
                                   } else {
@@ -1659,8 +1682,9 @@ final class ss extends gga {
                                 ((ss) this).field_G[var10] = param0.field_I[var11] & 65535;
                                 ((ss) this).field_R[var10] = param0.field_w[var11] & 65535;
                                 ((ss) this).field_N[var10] = param0.field_E[var11] & 65535;
+                                int incrementValue$1 = var10;
                                 var10++;
-                                var9_ref_int__[var11] = var10;
+                                var9_ref_int__[var11] = incrementValue$1;
                                 var11++;
                                 continue L6;
                               }
@@ -1705,6 +1729,7 @@ final class ss extends gga {
         var9 = var16;
         L9: while (true) {
           if (var16 >= ((ss) this).field_o) {
+            return;
           } else {
             L10: {
               if (param0.field_C != null) {

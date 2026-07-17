@@ -9,20 +9,10 @@ final class wj {
     static mf field_a;
 
     public static void a(int param0) {
-        if (param0 != 0) {
-          field_e = 48;
-          field_b = null;
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
-          field_b = null;
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          return;
-        }
+        field_b = null;
+        field_c = null;
+        field_a = null;
+        field_d = null;
     }
 
     final static tg[] a(byte param0, int param1) {

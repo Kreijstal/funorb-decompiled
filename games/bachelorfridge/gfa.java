@@ -37,9 +37,6 @@ final class gfa {
         field_k = null;
         field_g = null;
         field_b = null;
-        if (param0 != 17733) {
-            gfa.a(false, -37, 15, -89, true, 19, true, true, 68, false, -72, 72);
-        }
     }
 
     static {

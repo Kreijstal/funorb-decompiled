@@ -7,39 +7,20 @@ final class vea extends ana {
     private taa field_v;
 
     private final void b(boolean param0) {
-        pp var3_ref = null;
-        ad var6 = null;
-        ad var7 = null;
-        Object var3 = null;
+        ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var2 = ((vea) this).field_w.field_l.a(23, ((vea) this).field_q.field_h);
-        if (!param0) {
-            field_x = null;
-            if (!(!var2.i(100))) {
-                return;
-            }
-            var3_ref = (pp) (Object) ((vea) this).field_w.field_o.b((byte) 90);
-            oha discarded$6 = al.a(87, ((vea) this).field_w.field_k);
-            while (var3_ref != null) {
-                var6 = var3_ref.field_h.a(-27449, ((vea) this).field_q);
-                var6.b(-1, 19);
-                var6.a(24831, 105, gb.field_i);
-                var3_ref.a(var2, ((vea) this).field_q.field_h, 12);
-                var3_ref = (pp) (Object) ((vea) this).field_w.field_o.c(0);
-            }
-            return;
-        }
         if (!(!var2.i(100))) {
             return;
         }
-        var3_ref = (pp) (Object) ((vea) this).field_w.field_o.b((byte) 90);
-        oha discarded$13 = al.a(87, ((vea) this).field_w.field_k);
-        while (var3_ref != null) {
-            var7 = var3_ref.field_h.a(-27449, ((vea) this).field_q);
-            var7.b(-1, 19);
-            var7.a(24831, 105, gb.field_i);
-            var3_ref.a(var2, ((vea) this).field_q.field_h, 12);
-            var3_ref = (pp) (Object) ((vea) this).field_w.field_o.c(0);
+        pp var3 = (pp) (Object) ((vea) this).field_w.field_o.b((byte) 90);
+        oha discarded$6 = al.a(87, ((vea) this).field_w.field_k);
+        while (var3 != null) {
+            var4 = var3.field_h.a(-27449, ((vea) this).field_q);
+            var4.b(-1, 19);
+            var4.a(24831, 105, gb.field_i);
+            var3.a(var2, ((vea) this).field_q.field_h, 12);
+            var3 = (pp) (Object) ((vea) this).field_w.field_o.c(0);
         }
     }
 
@@ -60,12 +41,13 @@ final class vea extends ana {
         if (((vea) this).field_v.a((byte) -106)) {
             return false;
         }
-        if (!((((vea) this).field_l ^ -1) != -101)) {
+        if (!(((vea) this).field_l != 100)) {
             jja.a(256, -1, 46);
             this.b(true);
         }
+        int fieldTemp$0 = ((vea) this).field_l - 1;
         ((vea) this).field_l = ((vea) this).field_l - 1;
-        if (!(-1 < (((vea) this).field_l - 1 ^ -1))) {
+        if (!(fieldTemp$0 < 0)) {
             return false;
         }
         this.f((byte) -91);
@@ -73,26 +55,23 @@ final class vea extends ana {
     }
 
     public static void e(byte param0) {
-        if (param0 <= 14) {
-            field_x = null;
-            field_x = null;
-            return;
-        }
         field_x = null;
     }
 
     private final void f(byte param0) {
-        if (param0 >= -90) {
-            ((vea) this).field_v = null;
-        }
     }
 
     vea(gj param0, hla param1) {
         super(param0, (bca) (Object) param1);
-        ((vea) this).field_w = param1;
-        ad var3 = ((vea) this).field_w.field_q.a(-27449, ((vea) this).field_q);
-        ((vea) this).field_v = new taa(((vea) this).field_q, var3);
-        ((vea) this).a(27799, (at) (Object) ((vea) this).field_v);
+        ad var3 = null;
+        try {
+            ((vea) this).field_w = param1;
+            var3 = ((vea) this).field_w.field_q.a(-27449, ((vea) this).field_q);
+            ((vea) this).field_v = new taa(((vea) this).field_q, var3);
+            ((vea) this).a(27799, (at) (Object) ((vea) this).field_v);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "vea.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

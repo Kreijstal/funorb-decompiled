@@ -9,19 +9,25 @@ final class pm {
     private ha field_c;
 
     final static void a(int param0, int param1, hg param2) {
-        pl var5 = as.field_v;
-        var5.g(param0, 8);
-        var5.field_p = var5.field_p + 1;
-        int var4 = var5.field_p;
-        var5.b((byte) 39, param1);
-        var5.b((byte) 99, param2.field_u);
-        var5.b((byte) 63, param2.field_q);
-        var5.e(48, param2.field_r);
-        var5.e(48, param2.field_s);
-        var5.e(48, param2.field_n);
-        var5.e(48, param2.field_p);
-        int discarded$0 = var5.a(var4, false);
-        var5.c(var5.field_p + -var4, -13745);
+        pl var5 = null;
+        int var4 = 0;
+        try {
+            var5 = as.field_v;
+            var5.g(param0, 8);
+            var5.field_p = var5.field_p + 1;
+            var4 = var5.field_p;
+            var5.b((byte) 39, param1);
+            var5.b((byte) 99, param2.field_u);
+            var5.b((byte) 63, param2.field_q);
+            var5.e(48, param2.field_r);
+            var5.e(48, param2.field_s);
+            var5.e(48, param2.field_n);
+            var5.e(48, param2.field_p);
+            int discarded$0 = var5.a(var4, false);
+            var5.c(var5.field_p + -var4, -13745);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "pm.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void a(byte param0) {
@@ -145,20 +151,20 @@ final class pm {
           var4 = cn.c(0, param2);
           var5 = ic.b(param1, -431);
           var6 = cn.c(0, param1);
-          var7 = (int)((long)var5 * (long)var3 >> 61094992);
-          var8 = (int)((long)var6 * (long)var3 >> -1727784624);
-          var9 = (int)((long)var5 * (long)var4 >> 203174032);
-          var10 = (int)((long)var4 * (long)var6 >> -221448240);
+          var7 = (int)((long)var5 * (long)var3 >> 16);
+          var8 = (int)((long)var6 * (long)var3 >> 16);
+          var9 = (int)((long)var5 * (long)var4 >> 16);
+          var10 = (int)((long)var4 * (long)var6 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         } else {
           var3 = ic.b(param2, -431);
           var4 = cn.c(0, param2);
           var5 = ic.b(param1, -431);
           var6 = cn.c(0, param1);
-          var7 = (int)((long)var5 * (long)var3 >> 61094992);
-          var8 = (int)((long)var6 * (long)var3 >> -1727784624);
-          var9 = (int)((long)var5 * (long)var4 >> 203174032);
-          var10 = (int)((long)var4 * (long)var6 >> -221448240);
+          var7 = (int)((long)var5 * (long)var3 >> 16);
+          var8 = (int)((long)var6 * (long)var3 >> 16);
+          var9 = (int)((long)var5 * (long)var4 >> 16);
+          var10 = (int)((long)var4 * (long)var6 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
     }
@@ -166,7 +172,11 @@ final class pm {
     pm(ha param0) {
         ((pm) this).field_b = new int[4];
         ((pm) this).field_d = null;
-        ((pm) this).field_c = param0;
+        try {
+            ((pm) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "pm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

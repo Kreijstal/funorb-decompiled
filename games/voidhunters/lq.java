@@ -6,11 +6,8 @@ final class lq extends le {
     static String field_j;
 
     private final int c(int param0, int param1, int param2) {
-        if (param2 != 789221) {
-            field_j = null;
-        }
         int var4 = param1 * 57 + param0;
-        var4 = var4 << -2144966559 ^ var4;
+        var4 = var4 << 1 ^ var4;
         return -((2147483647 & 1376312589 + (789221 + var4 * (var4 * 15731)) * var4) / 262144) + 4096;
     }
 

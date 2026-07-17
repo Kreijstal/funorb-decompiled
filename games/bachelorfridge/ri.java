@@ -8,11 +8,6 @@ final class ri {
     private static String field_z;
 
     public static void a(boolean param0) {
-        if (param0) {
-            ri.a(false);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

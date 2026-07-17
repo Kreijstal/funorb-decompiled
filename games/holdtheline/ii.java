@@ -10,28 +10,13 @@ final class ii extends RuntimeException {
     static String[] field_b;
 
     final static boolean a(byte param0) {
-        if (param0 < -112) {
-          if (null != r.field_a) {
-            if (null == r.field_a.i((byte) -127)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (null == r.field_a) {
             return false;
-          }
-        } else {
-          field_b = null;
-          if (null != r.field_a) {
-            if (null == r.field_a.i((byte) -127)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (null == r.field_a.i((byte) -127)) {
+            return false;
+        }
+        return true;
     }
 
     final static boolean a(int param0, char param1) {
@@ -68,9 +53,6 @@ final class ii extends RuntimeException {
         field_e = null;
         field_b = null;
         field_d = null;
-        if (param0 != 8388479) {
-            field_c = 23;
-        }
     }
 
     static {

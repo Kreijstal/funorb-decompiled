@@ -14,25 +14,16 @@ final class be {
         if (param1) {
             return null;
         }
-        return jc.a(3, 1, param3, param2, 1, param4, 1, param0, 0);
+        return jc.a(3, 1, param3, param2, 1, 0, 1, param0, 0);
     }
 
     public static void a(byte param0) {
         field_d = null;
         field_b = null;
         field_c = null;
-        if (param0 < 120) {
-          field_b = null;
-          field_a = null;
-          field_g = null;
-          field_e = null;
-          return;
-        } else {
-          field_a = null;
-          field_g = null;
-          field_e = null;
-          return;
-        }
+        field_a = null;
+        field_g = null;
+        field_e = null;
     }
 
     static {

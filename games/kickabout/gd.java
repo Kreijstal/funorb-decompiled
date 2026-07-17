@@ -12,13 +12,76 @@ final class gd {
     static boolean field_a;
 
     final void a(int param0, bc[] param1, long param2) {
-        int var5 = 0;
-        int var6 = Kickabout.field_G;
-        for (var5 = 0; var5 < param1.length; var5++) {
-            this.a((byte) 98, param1[var5], param2);
-        }
-        if (param0 != 2) {
-            field_a = true;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        var6 = Kickabout.field_G;
+        try {
+          L0: {
+            var5_int = 0;
+            L1: while (true) {
+              if (var5_int >= param1.length) {
+                L2: {
+                  if (param0 == 2) {
+                    break L2;
+                  } else {
+                    field_a = true;
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                this.a((byte) 98, param1[var5_int], param2);
+                var5_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_1 = new StringBuilder().append("gd.C(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 41);
         }
     }
 
@@ -27,9 +90,6 @@ final class gd {
         field_b = null;
         field_h = null;
         field_g = null;
-        if (param0 != 22897) {
-            return;
-        }
         field_f = null;
         field_c = null;
         field_d = null;
@@ -47,21 +107,21 @@ final class gd {
 
     final static void a(int param0, int param1, int param2, int param3) {
         int var4 = 115 / ((-39 - param0) / 47);
-        if ((param2 ^ -1) == -1) {
+        if (param2 == 0) {
             if (!(param1 == ng.field_a)) {
                 wj.field_z = true;
                 ng.field_a = param1;
                 ca.a(3, param3);
             }
         }
-        if ((param2 ^ -1) == -2) {
-            if ((q.field_b ^ -1) != (param1 ^ -1)) {
+        if (param2 == 1) {
+            if (~q.field_b != ~param1) {
                 q.field_b = param1;
                 wj.field_z = true;
                 ca.a(3, param3);
             }
         }
-        if (-3 == (param2 ^ -1)) {
+        if (param2 == 2) {
             if (!(fc.field_a == param1)) {
                 wj.field_z = true;
                 fc.field_a = param1;
@@ -71,41 +131,90 @@ final class gd {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
-        int var7 = Kickabout.field_G;
-        if (param3 != -96) {
-            field_g = null;
-        }
-        for (var5 = 0; (var5 ^ -1) > -4; var5++) {
-            for (var6 = 0; 3 > var6; var6++) {
-                dk.a(param2, -112, param1, var5, var6);
-                on.a(param2, param1, 156, 225, 10, 65793, 96);
-                ta.e(126);
+        int var7 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var7 = Kickabout.field_G;
+        try {
+          L0: {
+            L1: {
+              if (param3 == -96) {
+                break L1;
+              } else {
+                field_g = null;
+                break L1;
+              }
             }
-        }
-        if (!(param0 != param4)) {
-            param4 = -1;
-        }
-        if (!((param0 ^ -1) == 0)) {
-            vl.a(3, param1, param2, param0, 160);
-        }
-        if (!(param4 == -1)) {
-            vl.a(param3 + 99, param1, param2, param4, 50);
+            var5_int = 0;
+            L2: while (true) {
+              if (var5_int >= 3) {
+                L3: {
+                  if (param0 == param4) {
+                    param4 = -1;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                L4: {
+                  if (param0 != -1) {
+                    vl.a(3, param1, param2, param0, 160);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                L5: {
+                  if (param4 != -1) {
+                    vl.a(param3 + 99, param1, param2, param4, 50);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                break L0;
+              } else {
+                var6 = 0;
+                L6: while (true) {
+                  if (3 <= var6) {
+                    var5_int++;
+                    continue L2;
+                  } else {
+                    dk.a(param2, -112, param1, var5_int, var6);
+                    on.a(param2, param1, 156, 225, 10, 65793, 96);
+                    ta.e(126);
+                    var6++;
+                    continue L6;
+                  }
+                }
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var5, "gd.H(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     private final void a(byte param0, bc param1, long param2) {
-        iu var5 = (iu) (Object) bm.field_L[param1.field_j].a(true, (long)param1.field_g);
-        if (var5 == null) {
-            var5 = new iu(param1, vs.a(-1090519040, param2));
-            bm.field_L[param1.field_j].a((gn) (Object) var5, -116, (long)param1.field_g);
-            mt.field_f[param1.field_j] = mt.field_f[param1.field_j] + 1;
-        } else {
-            var5.field_g = param1;
-            var5.field_f = vs.a(-1090519040, param2);
+        iu var5 = null;
+        try {
+            var5 = (iu) (Object) bm.field_L[param1.field_j].a(true, (long)param1.field_g);
+            if (var5 == null) {
+                var5 = new iu(param1, vs.a(-1090519040, param2));
+                bm.field_L[param1.field_j].a((gn) (Object) var5, -116, (long)param1.field_g);
+                mt.field_f[param1.field_j] = mt.field_f[param1.field_j] + 1;
+            } else {
+                var5.field_g = param1;
+                var5.field_f = vs.a(-1090519040, param2);
+            }
+            int var6 = 2 / ((44 - param0) / 51);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "gd.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        int var6 = 2 / ((44 - param0) / 51);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -176,7 +285,7 @@ final class gd {
         if (param2 < 0) {
             return null;
         }
-        if (-8 >= (param2 ^ -1)) {
+        if (param2 >= 7) {
             return null;
         }
         iu var4 = (iu) (Object) bm.field_L[param2].a(true, (long)param0);

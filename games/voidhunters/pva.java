@@ -40,12 +40,6 @@ final class pva extends uj {
 
     public static void d(int param0) {
         field_f = null;
-        if (param0 != 109) {
-            field_d = null;
-            field_e = null;
-            field_d = null;
-            return;
-        }
         field_e = null;
         field_d = null;
     }

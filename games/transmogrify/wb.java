@@ -52,104 +52,31 @@ final class wb {
             Runtime var2_ref = null;
             Long var3 = null;
             Object var4 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
-                            if (var1 != null) {
-                                statePc = 2;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 1: {
-                        try {
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            var2_ref = Runtime.getRuntime();
-                            var4 = null;
-                            var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
-                            qa.field_p = 1 + (int)(var3.longValue() / 1048576L);
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 4;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            var2 = caughtException;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (param0 == -124) {
-                                statePc = 9;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            field_d = null;
-                            return;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        var1_ref = (Exception) (Object) caughtException;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            try {
+              var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
+              if (var1 != null) {
+                try {
+                  L0: {
+                    var2_ref = Runtime.getRuntime();
+                    var4 = null;
+                    var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                    qa.field_p = 1 + (int)(var3.longValue() / 1048576L);
+                    break L0;
+                  }
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = decompiledCaughtException;
+                  return;
                 }
+                return;
+              } else {
+                return;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var1_ref = (Exception) (Object) decompiledCaughtException;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -168,7 +95,7 @@ final class wb {
           var2 = ((wb) this).field_c[(int)((long)(-1 + ((wb) this).field_b) & ((wb) this).field_a)];
           L0: while (true) {
             if (((wb) this).field_e != var2) {
-              if ((((wb) this).field_e.field_j ^ -1L) != (((wb) this).field_a ^ -1L)) {
+              if (~((wb) this).field_e.field_j != ~((wb) this).field_a) {
                 ((wb) this).field_e = ((wb) this).field_e.field_h;
                 continue L0;
               } else {
@@ -193,8 +120,9 @@ final class wb {
         ((wb) this).field_c = new ri[param0];
         ((wb) this).field_b = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new ri();
-            ((wb) this).field_c[var2] = new ri();
+            ri dupTemp$0 = new ri();
+            var3 = dupTemp$0;
+            ((wb) this).field_c[var2] = dupTemp$0;
             var3.field_h = var3;
             var3.field_g = var3;
         }
@@ -202,39 +130,21 @@ final class wb {
 
     final void a(int param0, long param1, ri param2) {
         ri var5 = null;
-        ri var6 = null;
-        ri var7 = null;
-        if (null == param2.field_g) {
-          var7 = ((wb) this).field_c[(int)((long)(((wb) this).field_b + -1) & param1)];
-          var5 = var7;
-          param2.field_g = var7.field_g;
-          param2.field_h = var5;
-          param2.field_g.field_h = param2;
-          param2.field_j = param1;
-          if (param0 != 19200) {
-            ri discarded$2 = ((wb) this).a(117);
+        try {
+            if (null != param2.field_g) {
+                param2.b((byte) -59);
+            }
+            var5 = ((wb) this).field_c[(int)((long)(((wb) this).field_b + -1) & param1)];
+            param2.field_g = var5.field_g;
+            param2.field_h = var5;
+            param2.field_g.field_h = param2;
+            param2.field_j = param1;
+            if (param0 != 19200) {
+                ri discarded$0 = ((wb) this).a(117);
+            }
             param2.field_h.field_g = param2;
-            return;
-          } else {
-            param2.field_h.field_g = param2;
-            return;
-          }
-        } else {
-          param2.b((byte) -59);
-          var6 = ((wb) this).field_c[(int)((long)(((wb) this).field_b + -1) & param1)];
-          var5 = var6;
-          param2.field_g = var6.field_g;
-          param2.field_h = var5;
-          param2.field_g.field_h = param2;
-          param2.field_j = param1;
-          if (param0 == 19200) {
-            param2.field_h.field_g = param2;
-            return;
-          } else {
-            ri discarded$3 = ((wb) this).a(117);
-            param2.field_h.field_g = param2;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "wb.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

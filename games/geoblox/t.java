@@ -15,15 +15,14 @@ final class t {
     int field_h;
 
     final static sa a(Throwable param0, String param1) {
-        sa var2_ref = null;
         sa var2 = null;
         if (param0 instanceof sa) {
             var2 = (sa) (Object) param0;
             var2.field_d = var2.field_d + 32 + param1;
         } else {
-            var2_ref = new sa(param0, param1);
+            var2 = new sa(param0, param1);
         }
-        return var2_ref;
+        return var2;
     }
 
     final static boolean b(int param0) {
@@ -54,9 +53,6 @@ final class t {
     public static void a(int param0) {
         field_i = null;
         field_k = null;
-        if (param0 != 17348) {
-            boolean discarded$0 = t.b(-123);
-        }
     }
 
     static {

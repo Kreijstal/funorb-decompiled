@@ -62,7 +62,7 @@ final class gw extends le {
                         } else {
                           L2: {
                             var7 = 2048 - var6;
-                            if (-1 >= (var7 ^ -1)) {
+                            if (var7 >= 0) {
                               var9 = var3;
                               var13 = var12;
                               stackOut_12_0 = var7;
@@ -95,7 +95,7 @@ final class gw extends le {
                     if (var6 < 2048 - -((gw) this).field_j) {
                       L4: {
                         var7 = var4 - 2048;
-                        if ((var7 ^ -1) <= -1) {
+                        if (var7 >= 0) {
                           stackOut_19_0 = var7;
                           stackIn_20_0 = stackOut_19_0;
                           break L4;
@@ -160,7 +160,7 @@ final class gw extends le {
                 }
                 L8: {
                   var7 = var6 + -2048;
-                  if (-1 >= (var7 ^ -1)) {
+                  if (var7 >= 0) {
                     stackOut_26_0 = var7;
                     stackIn_27_0 = stackOut_26_0;
                     break L8;
@@ -193,21 +193,71 @@ final class gw extends le {
     }
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
-        L0: {
-          var4 = param0;
-          if (-1 == (var4 ^ -1)) {
-            ((gw) this).field_j = param2.e(1869);
-            break L0;
-          } else {
-            break L0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              var4_int = param0;
+              if (var4_int == 0) {
+                ((gw) this).field_j = param2.e(1869);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            if (param1 <= -60) {
+              break L0;
+            } else {
+              gw.a(false);
+              return;
+            }
           }
-        }
-        if (param1 > -60) {
-          gw.a(false);
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("gw.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 

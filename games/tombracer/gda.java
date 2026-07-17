@@ -11,25 +11,22 @@ abstract class gda {
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 != 27316) {
-            field_d = null;
-        }
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (-1 == (param0 ^ -1)) {
+        if (param0 == 0) {
             var2 = k.field_A;
         }
         if (param1 != -20011) {
             int discarded$0 = gda.a(-61, -111);
         }
-        if (param0 == -2) {
+        if (param0 == 1) {
             var2 = nba.field_b;
         }
-        if (-3 == param0) {
+        if (param0 == 2) {
             var2 = caa.field_i;
         }
         return var2;
@@ -40,6 +37,7 @@ abstract class gda {
     abstract void a(int param0, int param1, int param2);
 
     final static void a(cn param0, int param1) {
+        qg[] var10 = null;
         int var3 = 0;
         qg var4 = null;
         g[] var5 = null;
@@ -47,26 +45,27 @@ abstract class gda {
         g var7 = null;
         byte[] var14 = null;
         int var9 = TombRacer.field_G ? 1 : 0;
-        hga.a(true, param0.a("", (byte) 124, "roomdata.csv"));
-        qg[] var10 = cm.field_a;
-        for (var3 = 0; var3 < var10.length; var3++) {
-            var4 = var10[var3];
-            var5 = var4.field_c;
-            for (var6 = 0; var6 < var5.length; var6++) {
-                var7 = var5[var6];
-                bt.field_b = bt.field_b + 1;
-                var14 = param0.a(var7.field_g, (byte) 127, var7.field_b);
-                var7.field_c = new kh(var14);
-                var7.field_c.h((byte) -38);
-                var7.field_e = m.a(-1, var7.field_c);
-                var7.field_c.i((byte) 98);
+        try {
+            hga.a(true, param0.a("", (byte) 124, "roomdata.csv"));
+            var10 = cm.field_a;
+            for (var3 = 0; var3 < var10.length; var3++) {
+                var4 = var10[var3];
+                var5 = var4.field_c;
+                for (var6 = 0; var6 < var5.length; var6++) {
+                    var7 = var5[var6];
+                    bt.field_b = bt.field_b + 1;
+                    var14 = param0.a(var7.field_g, (byte) 127, var7.field_b);
+                    var7.field_c = new kh(var14);
+                    var7.field_c.h((byte) -38);
+                    var7.field_e = m.a(-1, var7.field_c);
+                    var7.field_c.i((byte) 98);
+                }
+                lva.a(var4.field_c, 0, -1 + var4.field_c.length, -1);
             }
-            lva.a(var4.field_c, 0, -1 + var4.field_c.length, -1);
+            du.field_e = true;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "gda.QA(" + (param0 != null ? "{...}" : "null") + 44 + 17572 + 41);
         }
-        if (param1 != 17572) {
-            field_a = 31;
-        }
-        du.field_e = true;
     }
 
     final static boolean b(int param0, int param1, int param2) {
@@ -130,9 +129,6 @@ abstract class gda {
     final static roa a(boolean param0) {
         roa var1 = new roa();
         var1.field_f = new up(0, 5);
-        if (!param0) {
-            return null;
-        }
         var1.field_f.b(1, 9);
         var1.field_d = 0;
         var1.field_h = 25;

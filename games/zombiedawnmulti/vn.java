@@ -27,9 +27,6 @@ final class vn {
             return;
         }
         eb.a(false, false, 4);
-        if (param0 != -29507) {
-            vn.b(75);
-        }
     }
 
     final static ja[] a(int param0, int param1, int param2, int param3) {

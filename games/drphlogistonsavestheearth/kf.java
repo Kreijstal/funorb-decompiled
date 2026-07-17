@@ -34,10 +34,6 @@ final class kf {
     }
 
     final static int a(boolean param0) {
-        if (param0) {
-            field_a = null;
-            return hi.field_a;
-        }
         return hi.field_a;
     }
 

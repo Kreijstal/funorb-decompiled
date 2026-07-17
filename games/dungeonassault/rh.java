@@ -159,17 +159,17 @@ final class rh {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int[] var17 = ((rh) this).field_d.field_B;
-        int[] var16 = var17;
+        int[] var16 = ((rh) this).field_d.field_B;
         int[] var15 = var16;
         int[] var14 = var15;
-        int[] var1 = var14;
+        int[] var13 = var14;
+        int[] var1 = var13;
         int var3 = ((rh) this).field_d.field_y;
         int var4 = ((rh) this).field_d.field_v;
         int var2 = var3 + 1;
         for (var5 = 2 - var4; var5 < 0; var5++) {
             var6 = var1[var2 - 1];
-            var7 = var17[var2];
+            var7 = var16[var2];
             var8 = var1[var2 + 1];
             for (var9 = 2 - var3; var9 < 0; var9++) {
                 var10 = var1[var2 - var3];
@@ -183,16 +183,13 @@ final class rh {
             }
             var2 += 2;
         }
-        int var13 = var17.length - 1;
-        var5 = var13;
-        while (var13 >= 0) {
-            var6 = var17[var13];
+        for (var5 = var16.length - 1; var5 >= 0; var5--) {
+            var6 = var16[var5];
             var7 = var6 & 65280;
             var6 = var6 & 16711935;
             var6 = var6 * ((rh) this).field_a;
             var7 = var7 * ((rh) this).field_a;
-            var1[var13] = (var6 & -16711936 | var7 & 16711680) >>> 8;
-            var13--;
+            var1[var5] = (var6 & -16711936 | var7 & 16711680) >>> 8;
         }
         ((rh) this).field_d.b(((rh) this).field_g - (((rh) this).field_c >> 1), ((rh) this).field_b - ((rh) this).field_f, 256);
         ((rh) this).field_d.b(((rh) this).field_g - (((rh) this).field_c >> 1), ((rh) this).field_b - ((rh) this).field_f, 256);

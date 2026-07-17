@@ -8,10 +8,62 @@ abstract class al {
     String field_b;
 
     final static boolean a(ad param0, byte param1) {
-        if (param1 <= 19) {
-            return true;
+        RuntimeException var2 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_2_0 = false;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            stackOut_2_0 = param0.b(0);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("al.G(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 39 + 41);
         }
-        return param0.b(0);
+        return stackIn_3_0;
     }
 
     abstract java.net.Socket a(int param0) throws IOException;
@@ -24,9 +76,9 @@ abstract class al {
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         var2 = -50 / ((param1 - -40) / 48);
         var4 = aa.field_a;
-        if (-2 != (var4 ^ -1)) {
-          if ((var4 ^ -1) != -3) {
-            if ((var4 ^ -1) != -4) {
+        if (var4 != 1) {
+          if (var4 != 2) {
+            if (var4 != 3) {
               return;
             } else {
               tj.field_a.c(0, 0);
@@ -76,7 +128,6 @@ abstract class al {
 
     final static void a(byte param0, int param1) {
         try {
-            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (param0 == -71) {
@@ -117,18 +168,18 @@ abstract class al {
                   if (0 >= gf.field_c.field_h) {
                     break L4;
                   } else {
-                    try {
-                      ol.field_g.a(gf.field_c.field_g, 0, (byte) 122, gf.field_c.field_h);
-                      qg.field_d = pf.a(param0 + 71);
-                    } catch (java.io.IOException decompiledCaughtParameter) {
-                      decompiledCaughtException = decompiledCaughtParameter;
+                    {
+                      L5: {
+                        ol.field_g.a(gf.field_c.field_g, 0, (byte) 122, gf.field_c.field_h);
+                        qg.field_d = pf.a(param0 + 71);
+                        break L5;
+                      }
                     }
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    gk.a(-1);
+                    gf.field_c.field_h = 0;
                     break L4;
                   }
                 }
-                gf.field_c.field_h = 0;
+                return;
               }
             }
             gf.field_c.field_h = 0;
@@ -140,10 +191,6 @@ abstract class al {
     }
 
     final static int a(byte param0) {
-        if (param0 != 113) {
-            al.a(-92, (byte) 8);
-            return fd.field_s;
-        }
         return fd.field_s;
     }
 
@@ -165,35 +212,50 @@ abstract class al {
     }
 
     final static int a(int param0, int param1, boolean param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_12_0 = 0;
+        int stackOut_10_0 = 0;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (param2) {
-          var3 = 1;
-          L0: while (true) {
-            if ((param1 ^ -1) >= -2) {
-              if (-2 == (param1 ^ -1)) {
-                return param0 * var3;
-              } else {
-                return var3;
-              }
-            } else {
-              L1: {
-                if (0 != (param1 & 1)) {
-                  var3 = var3 * param0;
-                  break L1;
+        try {
+          L0: {
+            var3_int = 1;
+            L1: while (true) {
+              if (param1 <= 1) {
+                if (param1 != 1) {
+                  stackOut_12_0 = var3_int;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L0;
                 } else {
-                  break L1;
+                  stackOut_10_0 = param0 * var3_int;
+                  stackIn_11_0 = stackOut_10_0;
+                  return stackIn_11_0;
                 }
+              } else {
+                L2: {
+                  if (0 != (param1 & 1)) {
+                    var3_int = var3_int * param0;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                param1 = param1 >> 1;
+                param0 = param0 * param0;
+                continue L1;
               }
-              param1 = param1 >> 1;
-              param0 = param0 * param0;
-              continue L0;
             }
           }
-        } else {
-          return -124;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw la.a((Throwable) (Object) var3, "al.I(" + param0 + 44 + param1 + 44 + 1 + 41);
         }
+        return stackIn_13_0;
     }
 
     static {

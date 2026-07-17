@@ -82,8 +82,8 @@ final class ka {
     }
 
     final static void a(int param0, byte param1) {
-        int var2 = 83 % ((param1 - -31) / 51);
-        nf.field_b = (param0 << -302954576) / 150;
+        int var2 = 0;
+        nf.field_b = (param0 << 16) / 150;
         nf.field_c = param0 * 400 / 150;
         nf.field_a = param0 * 100 / 150;
     }
@@ -91,9 +91,6 @@ final class ka {
     public static void a(byte param0) {
         field_m = null;
         field_s = null;
-        if (param0 <= 112) {
-            return;
-        }
         field_f = null;
         field_b = null;
         field_p = null;
@@ -101,18 +98,76 @@ final class ka {
     }
 
     final static ri a(int param0, int param1, int param2, ul param3) {
+        RuntimeException var4 = null;
         Object var5 = null;
-        if (ud.a(param2, param3, param1, (byte) -42)) {
-          if (param0 != -1) {
-            var5 = null;
-            ri discarded$2 = ka.a(-91, -49, -2, (ul) null);
-            return lc.c((byte) 89);
-          } else {
-            return lc.c((byte) 89);
+        ri stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ri stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            if (ud.a(param2, param3, param1, (byte) -42)) {
+              L1: {
+                if (param0 == -1) {
+                  break L1;
+                } else {
+                  var5 = null;
+                  ri discarded$2 = ka.a(-91, -49, -2, (ul) null);
+                  break L1;
+                }
+              }
+              stackOut_5_0 = lc.c((byte) 89);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              return null;
+            }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_1 = new StringBuilder().append("ka.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param3 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
+        return stackIn_6_0;
     }
 
     ka(boolean param0) {
@@ -135,18 +190,22 @@ final class ka {
     }
 
     ka(int param0, String param1, int param2, String param3, String param4) {
-        ((ka) this).field_j = param2;
-        ((ka) this).field_n = param1;
-        ((ka) this).field_a = 0L;
-        ((ka) this).field_k = true;
-        ((ka) this).field_l = param0;
-        ((ka) this).field_r = null;
-        ((ka) this).field_h = 0;
-        ((ka) this).field_g = param3;
-        ((ka) this).field_d = param4;
-        ((ka) this).field_o = 0;
-        ((ka) this).field_e = param1;
-        ((ka) this).field_i = 0;
+        try {
+            ((ka) this).field_j = param2;
+            ((ka) this).field_n = param1;
+            ((ka) this).field_a = 0L;
+            ((ka) this).field_k = true;
+            ((ka) this).field_l = param0;
+            ((ka) this).field_r = null;
+            ((ka) this).field_h = 0;
+            ((ka) this).field_g = param3;
+            ((ka) this).field_d = param4;
+            ((ka) this).field_o = 0;
+            ((ka) this).field_e = param1;
+            ((ka) this).field_i = 0;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ka.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

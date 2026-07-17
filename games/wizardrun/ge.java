@@ -21,7 +21,7 @@ abstract class ge {
         int var4 = 0;
         var4 = wizardrun.field_H;
         if (param1 == 81) {
-          if ((vk.field_r ^ -1) != -97) {
+          if (vk.field_r != 96) {
             if (97 != vk.field_r) {
               if (vk.field_r != 84) {
                 if (vk.field_r == 83) {
@@ -44,7 +44,7 @@ abstract class ge {
           }
         } else {
           ((ge) this).b(-42, -78);
-          if ((vk.field_r ^ -1) != -97) {
+          if (vk.field_r != 96) {
             if (97 != vk.field_r) {
               if (vk.field_r != 84) {
                 if (vk.field_r != 83) {
@@ -69,66 +69,13 @@ abstract class ge {
     }
 
     void c(int param0) {
+        int var4 = wizardrun.field_H;
         int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        Object stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        int stackOut_4_2 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        var4 = wizardrun.field_H;
-        var2 = 0;
-        var3 = ((ge) this).field_d;
-        L0: while (true) {
-          if (((ge) this).field_e <= var2) {
-            if (param0 <= 12) {
-              field_j = 114;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            L1: {
-              stackOut_2_0 = this;
-              stackOut_2_1 = var3;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              stackIn_3_0 = stackOut_2_0;
-              stackIn_3_1 = stackOut_2_1;
-              if (((ge) this).field_a != var2) {
-                stackOut_4_0 = this;
-                stackOut_4_1 = stackIn_4_1;
-                stackOut_4_2 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
-                stackIn_5_2 = stackOut_4_2;
-                break L1;
-              } else {
-                stackOut_3_0 = this;
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_5_1 = stackOut_3_1;
-                stackIn_5_2 = stackOut_3_2;
-                break L1;
-              }
-            }
-            ((ge) this).a(stackIn_5_1, stackIn_5_2 != 0, var2, (byte) -120);
+        int var3 = ((ge) this).field_d;
+        while (((ge) this).field_e > var2) {
+            ((ge) this).a(var3, ((ge) this).field_a == var2 ? true : false, var2, (byte) -120);
             var3 = var3 + ((ge) this).field_c;
             var2++;
-            continue L0;
-          }
         }
     }
 
@@ -141,8 +88,8 @@ abstract class ge {
         var3 = wizardrun.field_H;
         if (param0 == 0) {
           if (!((ge) this).field_m) {
-            if (-99 == (vk.field_r ^ -1)) {
-              if ((((ge) this).field_a ^ -1) < -1) {
+            if (vk.field_r == 98) {
+              if (((ge) this).field_a > 0) {
                 ((ge) this).field_a = ((ge) this).field_a - 1;
                 ((ge) this).field_g = true;
                 return;
@@ -153,7 +100,7 @@ abstract class ge {
                 return;
               }
             } else {
-              if (-100 == (vk.field_r ^ -1)) {
+              if (vk.field_r == 99) {
                 ((ge) this).field_a = ((ge) this).field_a + 1;
                 if (((ge) this).field_a < ((ge) this).field_e) {
                   ((ge) this).field_g = true;
@@ -164,7 +111,7 @@ abstract class ge {
                   return;
                 }
               } else {
-                if (-1 < (((ge) this).field_a ^ -1)) {
+                if (((ge) this).field_a < 0) {
                   return;
                 } else {
                   this.a(((ge) this).field_a, (byte) 81);
@@ -178,8 +125,8 @@ abstract class ge {
         } else {
           this.a(123, (byte) -33);
           if (!((ge) this).field_m) {
-            if (-99 == (vk.field_r ^ -1)) {
-              if ((((ge) this).field_a ^ -1) < -1) {
+            if (vk.field_r == 98) {
+              if (((ge) this).field_a > 0) {
                 ((ge) this).field_a = ((ge) this).field_a - 1;
                 ((ge) this).field_g = true;
                 return;
@@ -190,7 +137,7 @@ abstract class ge {
                 return;
               }
             } else {
-              if (-100 == (vk.field_r ^ -1)) {
+              if (vk.field_r == 99) {
                 ((ge) this).field_a = ((ge) this).field_a + 1;
                 if (((ge) this).field_a < ((ge) this).field_e) {
                   ((ge) this).field_g = true;
@@ -201,7 +148,7 @@ abstract class ge {
                   return;
                 }
               } else {
-                if (-1 >= (((ge) this).field_a ^ -1)) {
+                if (((ge) this).field_a >= 0) {
                   this.a(((ge) this).field_a, (byte) 81);
                   return;
                 } else {
@@ -317,7 +264,7 @@ abstract class ge {
         } else {
           ie.field_j = ie.field_j - 1;
           if (0 >= ie.field_j) {
-            if ((param3 ^ -1) == -2) {
+            if (param3 == 1) {
               ((ge) this).b(-127, param1);
               ie.field_j = mk.field_b;
               if (!param5) {

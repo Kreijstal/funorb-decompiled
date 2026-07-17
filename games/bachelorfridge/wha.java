@@ -17,40 +17,23 @@ final class wha implements Iterable {
     }
 
     final void a(int param0, long param1, bw param2) {
-        bw var6 = null;
         bw var5 = null;
-        if (null != param2.field_e) {
-            param2.a(false);
-            var6 = ((wha) this).field_c[(int)(param1 & (long)(((wha) this).field_f - 1))];
-            var5 = var6;
-            param2.field_e = var6.field_e;
-            param2.field_b = var5;
-            if (param0 == 0) {
-                param2.field_e.field_b = param2;
-                param2.field_c = param1;
-                param2.field_b.field_e = param2;
-                return;
+        try {
+            if (null != param2.field_e) {
+                param2.a(false);
             }
-            ((wha) this).field_f = 63;
+            var5 = ((wha) this).field_c[(int)(param1 & (long)(((wha) this).field_f - 1))];
+            param2.field_e = var5.field_e;
+            param2.field_b = var5;
+            if (param0 != 0) {
+                ((wha) this).field_f = 63;
+            }
             param2.field_e.field_b = param2;
             param2.field_c = param1;
             param2.field_b.field_e = param2;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "wha.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        bw var7 = ((wha) this).field_c[(int)(param1 & (long)(((wha) this).field_f - 1))];
-        var5 = var7;
-        param2.field_e = var7.field_e;
-        param2.field_b = var5;
-        if (param0 != 0) {
-            ((wha) this).field_f = 63;
-            param2.field_e.field_b = param2;
-            param2.field_c = param1;
-            param2.field_b.field_e = param2;
-            return;
-        }
-        param2.field_e.field_b = param2;
-        param2.field_c = param1;
-        param2.field_b.field_e = param2;
     }
 
     final bw a(long param0, byte param1) {
@@ -59,7 +42,7 @@ final class wha implements Iterable {
         bw var4 = ((wha) this).field_c[(int)((long)(-1 + ((wha) this).field_f) & param0)];
         ((wha) this).field_d = var4.field_b;
         while (((wha) this).field_d != var4) {
-            if ((param0 ^ -1L) == (((wha) this).field_d.field_c ^ -1L)) {
+            if (~param0 == ~((wha) this).field_d.field_c) {
                 var5 = ((wha) this).field_d;
                 ((wha) this).field_d = ((wha) this).field_d.field_b;
                 return var5;
@@ -93,8 +76,9 @@ final class wha implements Iterable {
         ((wha) this).field_c = new bw[param0];
         ((wha) this).field_f = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new bw();
-            ((wha) this).field_c[var2] = new bw();
+            bw dupTemp$0 = new bw();
+            var3 = dupTemp$0;
+            ((wha) this).field_c[var2] = dupTemp$0;
             var3.field_e = var3;
             var3.field_b = var3;
         }

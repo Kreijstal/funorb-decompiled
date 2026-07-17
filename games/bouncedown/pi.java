@@ -942,7 +942,7 @@ final class pi extends wf {
     }
 
     private final synchronized void h(int param0) {
-        this.e(param0, ((pi) this).h());
+        this.e(0, ((pi) this).h());
     }
 
     final synchronized void a(int param0, int param1, int param2) {

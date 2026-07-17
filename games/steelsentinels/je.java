@@ -19,25 +19,80 @@ final class je extends ck {
 
     public static void a(byte param0) {
         field_w = null;
-        if (param0 >= -102) {
-            Object var2 = null;
-            u discarded$0 = je.a(-111, (byte[]) null);
-        }
     }
 
     final static u a(int param0, byte[] param1) {
         u var2 = null;
-        if (param1 != null) {
-          if (param0 < 57) {
-            return null;
-          } else {
-            var2 = new u(param1, rl.field_a, oa.field_M, le.field_L, ca.field_r, ba.field_d, dl.field_L);
-            uh.a(9324);
-            return var2;
+        RuntimeException var2_ref = null;
+        Object stackIn_5_0 = null;
+        u stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        u stackOut_6_0 = null;
+        Object stackOut_4_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            if (param1 != null) {
+              if (param0 >= 57) {
+                var2 = new u(param1, rl.field_a, oa.field_M, le.field_L, ca.field_r, ba.field_d, dl.field_L);
+                uh.a(9324);
+                stackOut_6_0 = (u) var2;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                stackOut_4_0 = null;
+                stackIn_5_0 = stackOut_4_0;
+                return (u) (Object) stackIn_5_0;
+              }
+            } else {
+              return null;
+            }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var2_ref;
+            stackOut_8_1 = new StringBuilder().append("je.B(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L1;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L1;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
+        return stackIn_7_0;
     }
 
     je(int param0, int param1, int param2) {
@@ -50,7 +105,7 @@ final class je extends ck {
           ((je) this).field_p = false;
           var4 = 50;
           ((je) this).field_z = false;
-          if (-7 != (((je) this).field_s ^ -1)) {
+          if (((je) this).field_s != 6) {
             break L0;
           } else {
             var4 = 5;
@@ -67,7 +122,7 @@ final class je extends ck {
           }
         }
         L2: {
-          if (((je) this).field_s != -13) {
+          if (((je) this).field_s != 12) {
             break L2;
           } else {
             ((je) this).field_z = false;
@@ -76,7 +131,7 @@ final class je extends ck {
           }
         }
         L3: {
-          if (-4 != ((je) this).field_s) {
+          if (((je) this).field_s != 3) {
             break L3;
           } else {
             ((je) this).field_z = true;
@@ -90,7 +145,7 @@ final class je extends ck {
           } else {
             L5: {
               var4 = 10;
-              if (-1 != (((je) this).field_A ^ -1)) {
+              if (((je) this).field_A != 0) {
                 break L5;
               } else {
                 var4 = 25;
@@ -106,7 +161,7 @@ final class je extends ck {
               }
             }
             L7: {
-              if ((((je) this).field_A ^ -1) != -3) {
+              if (((je) this).field_A != 2) {
                 break L7;
               } else {
                 var4 = 35;
@@ -131,7 +186,7 @@ final class je extends ck {
               }
             }
             L10: {
-              if ((((je) this).field_A ^ -1) != -8) {
+              if (((je) this).field_A != 7) {
                 break L10;
               } else {
                 var4 = 50;
@@ -149,7 +204,7 @@ final class je extends ck {
               }
             }
             L12: {
-              if ((((je) this).field_A ^ -1) != -10) {
+              if (((je) this).field_A != 9) {
                 break L12;
               } else {
                 var4 = 30;
@@ -158,7 +213,7 @@ final class je extends ck {
               }
             }
             L13: {
-              if ((((je) this).field_A ^ -1) != -11) {
+              if (((je) this).field_A != 10) {
                 break L13;
               } else {
                 var4 = 20;
@@ -183,7 +238,7 @@ final class je extends ck {
           }
         }
         L15: {
-          if ((((je) this).field_s ^ -1) != -8) {
+          if (((je) this).field_s != 7) {
             break L15;
           } else {
             ((je) this).field_z = true;
@@ -206,7 +261,7 @@ final class je extends ck {
           }
         }
         L17: {
-          if ((((je) this).field_s ^ -1) != -10) {
+          if (((je) this).field_s != 9) {
             break L17;
           } else {
             ((je) this).field_z = true;

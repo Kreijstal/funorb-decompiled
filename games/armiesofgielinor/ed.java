@@ -12,16 +12,8 @@ final class ed {
         field_c = null;
         field_d = null;
         field_e = null;
-        if (param0 != 15000) {
-          field_c = null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
-          field_a = null;
-          field_b = null;
-          return;
-        }
+        field_a = null;
+        field_b = null;
     }
 
     final static boolean a(int param0) {
@@ -49,21 +41,12 @@ final class ed {
     }
 
     final static void a(boolean param0) {
-        if (bl.field_b) {
-          it.field_b = true;
-          if (param0) {
-            boolean discarded$2 = ed.a(-80);
-            wc.a(true, -49);
-            p.field_b = 0;
-            return;
-          } else {
-            wc.a(true, -49);
-            p.field_b = 0;
-            return;
-          }
-        } else {
-          throw new IllegalStateException();
+        if (!bl.field_b) {
+            throw new IllegalStateException();
         }
+        it.field_b = true;
+        wc.a(true, -49);
+        p.field_b = 0;
     }
 
     static {

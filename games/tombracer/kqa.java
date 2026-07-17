@@ -142,28 +142,51 @@ final class kqa {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 >= -119) {
-            kqa.b(-126);
-        }
     }
 
     final static void b(int param0) {
+        vb var1 = null;
+        RuntimeException var1_ref = null;
         fla var2 = null;
-        int var3 = TombRacer.field_G ? 1 : 0;
-        if (param0 != 18916) {
-            field_a = null;
-        }
-        vb var1 = (vb) (Object) tna.field_e.f(-80);
-        while (var1 != null) {
-            var2 = new fla(var1, var1.field_f.k(), var1.field_f.g());
-            rs.a(var2, -58);
-            var1 = (vb) (Object) tna.field_e.e(119);
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 18916) {
+                break L1;
+              } else {
+                field_a = null;
+                break L1;
+              }
+            }
+            var1 = (vb) (Object) tna.field_e.f(-80);
+            L2: while (true) {
+              if (var1 == null) {
+                break L0;
+              } else {
+                var2 = new fla(var1, var1.field_f.k(), var1.field_f.g());
+                rs.a(var2, -58);
+                var1 = (vb) (Object) tna.field_e.e(119);
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var1_ref, "kqa.D(" + param0 + 41);
         }
     }
 
     kqa(ff param0) {
-        ((kqa) this).field_d = param0;
-        ((kqa) this).a(false);
+        try {
+            ((kqa) this).field_d = param0;
+            ((kqa) this).a(false);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "kqa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0) {

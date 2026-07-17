@@ -9,39 +9,93 @@ final class qd {
 
     final static void a(int param0, java.applet.Applet param1) {
         String var2 = null;
+        RuntimeException var2_ref = null;
         CharSequence var3 = null;
-        CharSequence var4 = null;
-        var2 = param1.getParameter("username");
-        if (param0 == 0) {
-          if (var2 != null) {
-            var4 = (CharSequence) (Object) var2;
-            if (agb.a(var4, -49) == 0L) {
-              return;
-            } else {
-              return;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2 = param1.getParameter("username");
+              if (param0 == 0) {
+                break L1;
+              } else {
+                field_b = -84;
+                break L1;
+              }
             }
-          } else {
-            return;
+            L2: {
+              if (var2 == null) {
+                break L2;
+              } else {
+                var3 = (CharSequence) (Object) var2;
+                if (agb.a(var3, -49) != 0L) {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2_ref;
+            stackOut_6_1 = new StringBuilder().append("qd.A(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
         } else {
-          field_b = -84;
-          if (var2 != null) {
-            var3 = (CharSequence) (Object) var2;
-            if (agb.a(var3, -49) == 0L) {
-              return;
-            } else {
-              return;
-            }
-          } else {
-            return;
-          }
+          return;
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_c = null;
-        int var1 = 82 / ((-47 - param0) / 60);
+        int var1 = -82;
     }
 
     static {

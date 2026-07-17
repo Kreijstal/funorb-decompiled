@@ -11,7 +11,7 @@ final class gi extends RuntimeException {
     public static void a(int param0) {
         field_b = null;
         field_c = null;
-        int var1 = 10 / ((param0 - 26) / 60);
+        int var1 = 10;
     }
 
     gi(Throwable param0, String param1) {

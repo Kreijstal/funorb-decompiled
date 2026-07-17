@@ -13,17 +13,12 @@ final class nj {
 
     final static void a(fm param0, byte param1) {
         qd var2 = null;
-        if (param1 != 14) {
-          field_e = null;
-          qd.a(param0.a((byte) 24, "", "headers.packvorbis"));
-          var2 = qd.a(param0, "jagex logo2.packvorbis", "");
-          sp discarded$4 = var2.a();
-          return;
-        } else {
-          qd.a(param0.a((byte) 24, "", "headers.packvorbis"));
-          var2 = qd.a(param0, "jagex logo2.packvorbis", "");
-          sp discarded$5 = var2.a();
-          return;
+        try {
+            qd.a(param0.a((byte) 24, "", "headers.packvorbis"));
+            var2 = qd.a(param0, "jagex logo2.packvorbis", "");
+            sp discarded$0 = var2.a();
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "nj.C(" + (param0 != null ? "{...}" : "null") + 44 + 14 + 41);
         }
     }
 
@@ -77,36 +72,49 @@ final class nj {
     }
 
     final static void d(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = Pixelate.field_H ? 1 : 0;
-        if (ql.e(114)) {
-          boolean discarded$2 = lb.field_x.a(qk.field_i, true, (byte) 99, nh.field_b);
-          lb.field_x.d((byte) 111);
-          L0: while (true) {
-            if (!bh.b((byte) 126)) {
-              if (param0 != 49661) {
-                nj.b((byte) -125);
-                return;
-              } else {
-                return;
+        try {
+          L0: {
+            if (ql.e(114)) {
+              boolean discarded$12 = lb.field_x.a(qk.field_i, true, (byte) 99, nh.field_b);
+              lb.field_x.d((byte) 111);
+              L1: while (true) {
+                if (!bh.b((byte) 126)) {
+                  if (param0 == 49661) {
+                    break L0;
+                  } else {
+                    nj.b((byte) -125);
+                    return;
+                  }
+                } else {
+                  boolean discarded$13 = lb.field_x.a(field_f, ke.field_a, false);
+                  continue L1;
+                }
               }
             } else {
-              boolean discarded$3 = lb.field_x.a(field_f, ke.field_a, false);
-              continue L0;
+              L2: {
+                if (null == ib.field_f) {
+                  break L2;
+                } else {
+                  if (!ib.field_f.field_g) {
+                    break L2;
+                  } else {
+                    ln.a(49);
+                    lb.field_x.b(param0 + -55844, (ng) (Object) new ic(lb.field_x, ia.field_c));
+                    break L2;
+                  }
+                }
+              }
+              return;
             }
           }
-        } else {
-          if (null != ib.field_f) {
-            if (!ib.field_f.field_g) {
-              return;
-            } else {
-              ln.a(49);
-              lb.field_x.b(param0 + -55844, (ng) (Object) new ic(lb.field_x, ia.field_c));
-              return;
-            }
-          } else {
-            return;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var1, "nj.E(" + param0 + 41);
         }
     }
 
@@ -127,22 +135,17 @@ final class nj {
     }
 
     final void a(int param0, lm param1) {
-        int var3 = 0;
-        if (param1.field_r != null) {
-          param1.e(17);
-          param1.field_r = ((nj) this).field_b.field_r;
-          param1.field_p = ((nj) this).field_b;
-          param1.field_r.field_p = param1;
-          param1.field_p.field_r = param1;
-          var3 = -65 % ((31 - param0) / 45);
-          return;
-        } else {
-          param1.field_r = ((nj) this).field_b.field_r;
-          param1.field_p = ((nj) this).field_b;
-          param1.field_r.field_p = param1;
-          param1.field_p.field_r = param1;
-          var3 = -65 % ((31 - param0) / 45);
-          return;
+        try {
+            if (param1.field_r != null) {
+                param1.e(17);
+            }
+            param1.field_r = ((nj) this).field_b.field_r;
+            param1.field_p = ((nj) this).field_b;
+            param1.field_r.field_p = param1;
+            param1.field_p.field_r = param1;
+            int var3_int = -65 % ((31 - param0) / 45);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "nj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

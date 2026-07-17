@@ -97,7 +97,7 @@ final class hj {
             L3: while (true) {
               L4: {
                 L5: {
-                  if ((var8 ^ -1) <= (param2.field_L ^ -1)) {
+                  if (~var8 <= ~param2.field_L) {
                     break L5;
                   } else {
                     var9 = param2.field_O[var8];
@@ -145,7 +145,7 @@ final class hj {
                         }
                         L9: {
                           var13 = r.field_c[var10];
-                          if (2147483647 != (var13 ^ -1)) {
+                          if (var13 != -2147483648) {
                             break L9;
                           } else {
                             if (var19 == 0) {
@@ -156,7 +156,7 @@ final class hj {
                           }
                         }
                         var14 = r.field_c[var11];
-                        if (2147483647 == (var14 ^ -1)) {
+                        if (var14 == -2147483648) {
                           break L6;
                         } else {
                           L10: {
@@ -167,7 +167,7 @@ final class hj {
                             stackIn_33_1 = stackOut_30_1;
                             stackIn_31_0 = stackOut_30_0;
                             stackIn_31_1 = stackOut_30_1;
-                            if (-1 < (var7 ^ -1)) {
+                            if (var7 < 0) {
                               stackOut_33_0 = stackIn_33_0;
                               stackOut_33_1 = stackIn_33_1;
                               stackOut_33_2 = var15 << -var7;
@@ -190,12 +190,12 @@ final class hj {
                           L11: while (true) {
                             L12: {
                               L13: {
-                                if ((var17 >> 899036036 ^ -1) == -1) {
+                                if (var17 >> 4 == 0) {
                                   break L13;
                                 } else {
                                   var16--;
                                   stackOut_36_0 = -1;
-                                  stackOut_36_1 = var16 ^ -1;
+                                  stackOut_36_1 = ~var16;
                                   stackIn_45_0 = stackOut_36_0;
                                   stackIn_45_1 = stackOut_36_1;
                                   stackIn_37_0 = stackOut_36_0;
@@ -224,7 +224,7 @@ final class hj {
                                   }
                                 }
                               }
-                              stackOut_44_0 = var16 << -1112307772;
+                              stackOut_44_0 = var16 << 4;
                               stackOut_44_1 = -var17;
                               stackIn_45_0 = stackOut_44_0;
                               stackIn_45_1 = stackOut_44_1;
@@ -234,7 +234,7 @@ final class hj {
                               var18 = stackIn_45_0 - stackIn_45_1;
                               lb.field_c[var18] = var8;
                               ja.field_c[var16] = 1 + var17;
-                              if (-1 <= (param2.field_w ^ -1)) {
+                              if (param2.field_w <= 0) {
                                 break L15;
                               } else {
                                 if (null != param2.field_v) {
@@ -259,7 +259,7 @@ final class hj {
                     }
                   }
                 }
-                stackOut_54_0 = param2.field_w ^ -1;
+                stackOut_54_0 = ~param2.field_w;
                 stackIn_55_0 = stackOut_54_0;
                 break L4;
               }

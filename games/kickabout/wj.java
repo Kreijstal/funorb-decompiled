@@ -544,7 +544,7 @@ class wj extends fd implements jp {
                   if (var3 == null) {
                     break L4;
                   } else {
-                    var3.g(param0 ^ 0);
+                    var3.g(param0);
                     var3 = (fd) (Object) var2.a(0);
                     if (var4 != 0) {
                       break L3;
@@ -818,7 +818,7 @@ class wj extends fd implements jp {
           L0: {
             if (param1 == 65) {
               L1: {
-                if (-1 != (param0 ^ -1)) {
+                if (param0 != 0) {
                   break L1;
                 } else {
                   if (((wj) this).field_r == null) {
@@ -907,7 +907,7 @@ class wj extends fd implements jp {
             L2: while (true) {
               L3: {
                 L4: {
-                  if ((param1 ^ -1) >= (var7 ^ -1)) {
+                  if (~param1 >= ~var7) {
                     break L4;
                   } else {
                     var8 = 65793;
@@ -916,7 +916,7 @@ class wj extends fd implements jp {
                       break L3;
                     } else {
                       L5: {
-                        if ((param0 ^ -1) == (var7 ^ -1)) {
+                        if (~param0 == ~var7) {
                           var8 = 16777215;
                           var9 = 50;
                           break L5;
@@ -1036,7 +1036,7 @@ class wj extends fd implements jp {
             if (param0 == -336184828) {
               L1: {
                 wa.b((byte) -105);
-                if ((param1.field_u ^ -1) >= -1) {
+                if (param1.field_u <= 0) {
                   break L1;
                 } else {
                   if (param1.field_G == null) {
@@ -1052,7 +1052,7 @@ class wj extends fd implements jp {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if ((var8 ^ -1) <= (param1.field_g ^ -1)) {
+                    if (~var8 <= ~param1.field_g) {
                       break L4;
                     } else {
                       var9 = param1.field_n[var8];
@@ -1075,7 +1075,7 @@ class wj extends fd implements jp {
                               var15 = fb.field_M[var11] - var12;
                               var16 = fk.field_k[var10] + -var13;
                               var17 = fk.field_k[var11] + -var13;
-                              if ((var17 * var14 + -(var15 * var16) ^ -1) > -1) {
+                              if (var17 * var14 + -(var15 * var16) < 0) {
                                 break L6;
                               } else {
                                 if (var19 == 0) {
@@ -1092,7 +1092,7 @@ class wj extends fd implements jp {
                           } else {
                             L7: {
                               var13 = ld.field_e[var10];
-                              if (2147483647 != (var13 ^ -1)) {
+                              if (var13 != -2147483648) {
                                 break L7;
                               } else {
                                 if (var19 == 0) {
@@ -1122,7 +1122,7 @@ class wj extends fd implements jp {
                               stackIn_31_1 = stackOut_28_1;
                               stackIn_29_0 = stackOut_28_0;
                               stackIn_29_1 = stackOut_28_1;
-                              if ((var7 ^ -1) > -1) {
+                              if (var7 < 0) {
                                 stackOut_31_0 = stackIn_31_0;
                                 stackOut_31_1 = stackIn_31_1;
                                 stackOut_31_2 = var15 << -var7;
@@ -1145,7 +1145,7 @@ class wj extends fd implements jp {
                             L10: while (true) {
                               L11: {
                                 L12: {
-                                  if (var17 >> -988548572 == 0) {
+                                  if (var17 >> 4 == 0) {
                                     break L12;
                                   } else {
                                     var16--;
@@ -1176,7 +1176,7 @@ class wj extends fd implements jp {
                                     }
                                   }
                                 }
-                                stackOut_41_0 = (var16 << -336184828) + var17;
+                                stackOut_41_0 = (var16 << 4) + var17;
                                 stackIn_42_0 = stackOut_41_0;
                                 break L11;
                               }
@@ -1184,7 +1184,7 @@ class wj extends fd implements jp {
                                 var18 = stackIn_42_0;
                                 nb.field_e[var18] = var8;
                                 qe.field_b[var16] = 1 + var17;
-                                if (-1 <= (param1.field_u ^ -1)) {
+                                if (param1.field_u <= 0) {
                                   break L14;
                                 } else {
                                   if (param1.field_G == null) {
@@ -1224,7 +1224,7 @@ class wj extends fd implements jp {
                         var8 = 0;
                         var9 = 0;
                         L17: while (true) {
-                          if ((var9 ^ -1) <= (vu.field_zb.length ^ -1)) {
+                          if (~var9 <= ~vu.field_zb.length) {
                             break L16;
                           } else {
                             var10 = vu.field_zb[var9];
@@ -1388,7 +1388,7 @@ class wj extends fd implements jp {
             var4_int = param3.length();
             var5 = param0.length();
             var6 = param1.length();
-            if (-1 == (var5 ^ -1)) {
+            if (var5 == 0) {
               throw new IllegalArgumentException("Key cannot have zero length");
             } else {
               L1: {
@@ -1702,7 +1702,7 @@ class wj extends fd implements jp {
                         L4: while (true) {
                           L5: {
                             L6: {
-                              if ((param2 ^ -1) > (var7 ^ -1)) {
+                              if (~param2 > ~var7) {
                                 break L6;
                               } else {
                                 StringBuilder discarded$10 = param0.append(32);
@@ -2079,7 +2079,7 @@ class wj extends fd implements jp {
                 break L3;
               }
               var6 = stackIn_20_0;
-              if (-81 == (var6 ^ -1)) {
+              if (var6 == 80) {
                 L6: {
                   if (!ne.field_G[81]) {
                     stackOut_26_0 = ((wj) this).b(param2, (byte) 123);

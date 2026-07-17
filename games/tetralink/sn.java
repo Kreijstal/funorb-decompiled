@@ -17,9 +17,6 @@ final class sn {
     }
 
     public static void a(int param0) {
-        if (param0 > -113) {
-            return;
-        }
         field_f = null;
         field_d = null;
         field_c = null;
@@ -28,10 +25,6 @@ final class sn {
     }
 
     final static String b(int param0) {
-        if (param0 != 11137) {
-            field_d = null;
-            return rb.field_Nb;
-        }
         return rb.field_Nb;
     }
 

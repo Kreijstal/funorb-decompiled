@@ -19,9 +19,6 @@ final class b extends cia {
 
     public static void b(int param0) {
         field_t = null;
-        if (param0 != 5910) {
-            field_u = 59;
-        }
     }
 
     static {

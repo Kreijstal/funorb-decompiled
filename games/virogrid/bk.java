@@ -21,7 +21,7 @@ abstract class bk {
         var2 = ok.field_G;
         ok.field_G = rb.field_c;
         if (51 != param0) {
-          if ((param0 ^ -1) != -51) {
+          if (param0 != 50) {
             ji.field_e.field_b = 1;
             ji.field_e.field_l = ji.field_e.field_l + 1;
             rb.field_c = var2;
@@ -29,7 +29,7 @@ abstract class bk {
               if (51 == param0) {
                 return 2;
               } else {
-                if (-3 < (ji.field_e.field_l ^ -1)) {
+                if (ji.field_e.field_l < 2) {
                   if (ji.field_e.field_l >= 4) {
                     return 1;
                   } else {
@@ -58,7 +58,7 @@ abstract class bk {
                 }
               }
             } else {
-              if (-3 < (ji.field_e.field_l ^ -1)) {
+              if (ji.field_e.field_l < 2) {
                 if (ji.field_e.field_l >= 4) {
                   return 1;
                 } else {
@@ -94,7 +94,7 @@ abstract class bk {
               if (51 == param0) {
                 return 2;
               } else {
-                if (-3 < (ji.field_e.field_l ^ -1)) {
+                if (ji.field_e.field_l < 2) {
                   if (ji.field_e.field_l >= 4) {
                     return 1;
                   } else {
@@ -123,7 +123,7 @@ abstract class bk {
                 }
               }
             } else {
-              if (-3 < (ji.field_e.field_l ^ -1)) {
+              if (ji.field_e.field_l < 2) {
                 if (ji.field_e.field_l >= 4) {
                   return 1;
                 } else {
@@ -158,7 +158,7 @@ abstract class bk {
           rb.field_c = var2;
           if (ji.field_e.field_l >= 2) {
             if (51 != param0) {
-              if (-3 < (ji.field_e.field_l ^ -1)) {
+              if (ji.field_e.field_l < 2) {
                 if (ji.field_e.field_l >= 4) {
                   return 1;
                 } else {
@@ -192,7 +192,7 @@ abstract class bk {
               return 2;
             }
           } else {
-            if (-3 < (ji.field_e.field_l ^ -1)) {
+            if (ji.field_e.field_l < 2) {
               if (ji.field_e.field_l >= 4) {
                 return 1;
               } else {
@@ -234,9 +234,6 @@ abstract class bk {
     }
 
     public static void a(byte param0) {
-        if (param0 <= 110) {
-            return;
-        }
         field_d = null;
         field_c = null;
     }

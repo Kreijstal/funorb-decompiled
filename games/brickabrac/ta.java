@@ -12,7 +12,7 @@ class ta {
 
     final static jp b(int param0) {
         int var1 = 0;
-        fb var3 = null;
+        Object var3 = null;
         int[] var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -48,10 +48,10 @@ class ta {
             var6 = 0;
             L2: while (true) {
               if (var6 >= var1) {
-                var3 = new fb(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var21);
+                var3 = (Object) (Object) new fb(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var21);
                 break L1;
               } else {
-                var5[var6] = ud.d(qp.field_c[ik.a((int) var18[var6], 255)], ik.a(-16777216, var20[var6] << -339543976));
+                var5[var6] = ud.d(qp.field_c[ik.a((int) var18[var6], 255)], ik.a(-16777216, var20[var6] << 24));
                 var6++;
                 continue L2;
               }
@@ -63,7 +63,7 @@ class ta {
             var5_int = 0;
             L3: while (true) {
               if (var5_int >= var1) {
-                var3 = (fb) (Object) new jp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var19);
+                var3 = (Object) (Object) new jp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var19);
                 break L1;
               } else {
                 var8[var5_int] = qp.field_c[ik.a((int) var18[var5_int], 255)];
@@ -74,7 +74,7 @@ class ta {
           }
         }
         ee.d((byte) 96);
-        return (jp) (Object) var3;
+        return (jp) var3;
     }
 
     public static void a(int param0) {
@@ -96,9 +96,6 @@ class ta {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (param1) {
-            return;
-        }
         if (!(m.a(2))) {
             return;
         }
@@ -109,7 +106,11 @@ class ta {
     }
 
     ta(jp[] param0) {
-        ((ta) this).field_b = param0;
+        try {
+            ((ta) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ta.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

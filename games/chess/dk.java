@@ -26,7 +26,7 @@ final class dk {
             var2 = ((dk) this).field_b[(int)(((dk) this).field_j & (long)(-1 + ((dk) this).field_m))];
             L0: while (true) {
               if (((dk) this).field_i != var2) {
-                if ((((dk) this).field_i.field_l ^ -1L) != (((dk) this).field_j ^ -1L)) {
+                if (~((dk) this).field_i.field_l != ~((dk) this).field_j) {
                   ((dk) this).field_i = ((dk) this).field_i.field_p;
                   continue L0;
                 } else {
@@ -72,7 +72,7 @@ final class dk {
           ((dk) this).field_i = var7.field_p;
           L0: while (true) {
             if (var4 != ((dk) this).field_i) {
-              if ((((dk) this).field_i.field_l ^ -1L) != (param0 ^ -1L)) {
+              if (~((dk) this).field_i.field_l != ~param0) {
                 ((dk) this).field_i = ((dk) this).field_i.field_p;
                 continue L0;
               } else {
@@ -92,7 +92,7 @@ final class dk {
           ((dk) this).field_i = var8.field_p;
           L1: while (true) {
             if (var4 != ((dk) this).field_i) {
-              if ((((dk) this).field_i.field_l ^ -1L) != (param0 ^ -1L)) {
+              if (~((dk) this).field_i.field_l != ~param0) {
                 ((dk) this).field_i = ((dk) this).field_i.field_p;
                 continue L1;
               } else {
@@ -110,53 +110,21 @@ final class dk {
 
     final void a(boolean param0, l param1, long param2) {
         l var5 = null;
-        l var6 = null;
-        l var7 = null;
-        l var8 = null;
-        l var9 = null;
-        if (param0) {
-          if (null != param1.field_m) {
-            param1.d(-1);
-            var8 = ((dk) this).field_b[(int)(param2 & (long)(((dk) this).field_m - 1))];
-            var5 = var8;
-            param1.field_m = var8.field_m;
+        try {
+            if (!param0) {
+                ((dk) this).a(false, (l) null, -111L);
+            }
+            if (null != param1.field_m) {
+                param1.d(-1);
+            }
+            var5 = ((dk) this).field_b[(int)(param2 & (long)(((dk) this).field_m - 1))];
+            param1.field_m = var5.field_m;
             param1.field_p = var5;
             param1.field_m.field_p = param1;
             param1.field_l = param2;
             param1.field_p.field_m = param1;
-            return;
-          } else {
-            var9 = ((dk) this).field_b[(int)(param2 & (long)(((dk) this).field_m - 1))];
-            var5 = var9;
-            param1.field_m = var9.field_m;
-            param1.field_p = var5;
-            param1.field_m.field_p = param1;
-            param1.field_l = param2;
-            param1.field_p.field_m = param1;
-            return;
-          }
-        } else {
-          ((dk) this).a(false, (l) null, -111L);
-          if (null == param1.field_m) {
-            var6 = ((dk) this).field_b[(int)(param2 & (long)(((dk) this).field_m - 1))];
-            var5 = var6;
-            param1.field_m = var6.field_m;
-            param1.field_p = var5;
-            param1.field_m.field_p = param1;
-            param1.field_l = param2;
-            param1.field_p.field_m = param1;
-            return;
-          } else {
-            param1.d(-1);
-            var7 = ((dk) this).field_b[(int)(param2 & (long)(((dk) this).field_m - 1))];
-            var5 = var7;
-            param1.field_m = var7.field_m;
-            param1.field_p = var5;
-            param1.field_m.field_p = param1;
-            param1.field_l = param2;
-            param1.field_p.field_m = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "dk.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -167,7 +135,7 @@ final class dk {
         l var9 = null;
         l var12 = null;
         var3 = Chess.field_G;
-        if (-1 > (((dk) this).field_d ^ -1)) {
+        if (((dk) this).field_d > 0) {
           if (((dk) this).field_c == ((dk) this).field_b[((dk) this).field_d + -1]) {
             L0: while (true) {
               if (((dk) this).field_m <= ((dk) this).field_d) {
@@ -225,41 +193,18 @@ final class dk {
         long var3 = 0L;
         int var5 = 0;
         int var6 = 0;
-        L0: {
-          var6 = Chess.field_G;
-          if (!param0) {
-            break L0;
-          } else {
-            boolean discarded$1 = dk.c(false);
-            break L0;
-          }
-        }
+        var6 = Chess.field_G;
         var1 = ud.a(2);
         var3 = -cf.field_Jb + var1;
-        if (-30001L <= (var3 ^ -1L)) {
-          var5 = 3000;
-          if (7 <= s.field_K) {
-            var5 = 12000;
-            if (var3 > (long)var5) {
-              cf.field_Jb = var1;
-              s.field_K = s.field_K + 1;
-              return true;
+        if (var3 <= 30000L) {
+          L0: {
+            var5 = 3000;
+            if (7 <= s.field_K) {
+              var5 = 12000;
+              break L0;
             } else {
-              return false;
-            }
-          } else {
-            if ((s.field_K ^ -1) <= -6) {
-              var5 = 9000;
-              if (var3 > (long)var5) {
-                cf.field_Jb = var1;
-                s.field_K = s.field_K + 1;
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              if (s.field_K >= 3) {
-                var5 = 6000;
+              if (s.field_K >= 5) {
+                var5 = 9000;
                 if (var3 > (long)var5) {
                   cf.field_Jb = var1;
                   s.field_K = s.field_K + 1;
@@ -268,15 +213,27 @@ final class dk {
                   return false;
                 }
               } else {
-                if (var3 <= (long)var5) {
-                  return false;
+                if (s.field_K < 3) {
+                  break L0;
                 } else {
-                  cf.field_Jb = var1;
-                  s.field_K = s.field_K + 1;
-                  return true;
+                  var5 = 6000;
+                  if (var3 <= (long)var5) {
+                    return false;
+                  } else {
+                    cf.field_Jb = var1;
+                    s.field_K = s.field_K + 1;
+                    return true;
+                  }
                 }
               }
             }
+          }
+          if (var3 > (long)var5) {
+            cf.field_Jb = var1;
+            s.field_K = s.field_K + 1;
+            return true;
+          } else {
+            return false;
           }
         } else {
           cf.field_Jb = var1;

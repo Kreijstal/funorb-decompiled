@@ -41,7 +41,7 @@ final class bf {
             if (0 > nk.field_w) {
               break L0;
             } else {
-              if (-1 >= (gb.field_e ^ -1)) {
+              if (gb.field_e >= 0) {
                 var2 = nk.field_w - -li.field_c;
                 var3 = gb.field_e - -db.field_d;
                 var4 = var2 / 32 * 32 - li.field_c;
@@ -109,18 +109,18 @@ final class bf {
         var6 = MinerDisturbance.field_ab;
         if (param0 != 32) {
           ((bf) this).b(94);
-          if (-1 != (tb.field_a ^ -1)) {
-            if ((wj.field_j ^ -1) > -3) {
+          if (tb.field_a != 0) {
+            if (wj.field_j < 2) {
               return;
             } else {
               L0: {
-                if (-1 < (wi.field_w ^ -1)) {
+                if (wi.field_w < 0) {
                   break L0;
                 } else {
                   if (m.field_e < 0) {
                     break L0;
                   } else {
-                    if ((jk.field_ab ^ -1) == -1) {
+                    if (jk.field_ab == 0) {
                       break L0;
                     } else {
                       L1: {
@@ -130,7 +130,7 @@ final class bf {
                         var5 = var3 / 32;
                         qm.field_f = true;
                         di.field_X = di.field_X + 1;
-                        if (-2 == (tb.field_a ^ -1)) {
+                        if (tb.field_a == 1) {
                           mh.field_e[var4][var5].field_U = gd.field_x;
                           break L1;
                         } else {
@@ -143,7 +143,7 @@ final class bf {
                         } else {
                           if (0 != bc.field_a) {
                             L3: {
-                              if (-5 == (bc.field_a ^ -1)) {
+                              if (bc.field_a == 4) {
                                 mh.field_e[var4][var5].field_b = true;
                                 break L3;
                               } else {
@@ -172,7 +172,7 @@ final class bf {
                                   mh.field_e[var4][var5].field_E = false;
                                   mh.field_e[var4][var5].field_v = false;
                                   mh.field_e[var4][var5].field_b = false;
-                                  if (-1 == (ha.field_e ^ -1)) {
+                                  if (ha.field_e == 0) {
                                     L5: {
                                       je.field_O.g(var5, var4, 4);
                                       if (tb.field_a == 4) {
@@ -189,7 +189,7 @@ final class bf {
                                     return;
                                   } else {
                                     if (ha.field_e != 1) {
-                                      if ((ha.field_e ^ -1) == -3) {
+                                      if (ha.field_e == 2) {
                                         L6: {
                                           je.field_O.h(var4, 4, var5);
                                           if (tb.field_a == 4) {
@@ -205,7 +205,7 @@ final class bf {
                                         }
                                         return;
                                       } else {
-                                        if ((ha.field_e ^ -1) != -4) {
+                                        if (ha.field_e != 3) {
                                           if (tb.field_a == 4) {
                                             mh.field_e[var4][var5].field_a = false;
                                             mh.field_e[var4][var5].field_E = false;
@@ -295,7 +295,7 @@ final class bf {
                                 mh.field_e[var4][var5].field_E = false;
                                 mh.field_e[var4][var5].field_v = false;
                                 mh.field_e[var4][var5].field_b = false;
-                                if (-1 == (ha.field_e ^ -1)) {
+                                if (ha.field_e == 0) {
                                   L12: {
                                     je.field_O.g(var5, var4, 4);
                                     if (tb.field_a == 4) {
@@ -312,7 +312,7 @@ final class bf {
                                   return;
                                 } else {
                                   if (ha.field_e != 1) {
-                                    if ((ha.field_e ^ -1) == -3) {
+                                    if (ha.field_e == 2) {
                                       L13: {
                                         je.field_O.h(var4, 4, var5);
                                         if (tb.field_a == 4) {
@@ -328,7 +328,7 @@ final class bf {
                                       }
                                       return;
                                     } else {
-                                      if ((ha.field_e ^ -1) != -4) {
+                                      if (ha.field_e != 3) {
                                         if (tb.field_a == 4) {
                                           mh.field_e[var4][var5].field_a = false;
                                           mh.field_e[var4][var5].field_E = false;
@@ -395,7 +395,7 @@ final class bf {
                               mh.field_e[var4][var5].field_E = false;
                               mh.field_e[var4][var5].field_v = false;
                               mh.field_e[var4][var5].field_b = false;
-                              if (-5 == (bc.field_a ^ -1)) {
+                              if (bc.field_a == 4) {
                                 mh.field_e[var4][var5].field_b = true;
                                 break L17;
                               } else {
@@ -437,7 +437,7 @@ final class bf {
                               mh.field_e[var4][var5].field_E = false;
                               mh.field_e[var4][var5].field_v = false;
                               mh.field_e[var4][var5].field_b = false;
-                              if (-1 == (ha.field_e ^ -1)) {
+                              if (ha.field_e == 0) {
                                 L21: {
                                   je.field_O.g(var5, var4, 4);
                                   if (tb.field_a == 4) {
@@ -454,7 +454,7 @@ final class bf {
                                 return;
                               } else {
                                 if (ha.field_e != 1) {
-                                  if ((ha.field_e ^ -1) == -3) {
+                                  if (ha.field_e == 2) {
                                     L22: {
                                       je.field_O.h(var4, 4, var5);
                                       if (tb.field_a == 4) {
@@ -470,7 +470,7 @@ final class bf {
                                     }
                                     return;
                                   } else {
-                                    if ((ha.field_e ^ -1) != -4) {
+                                    if (ha.field_e != 3) {
                                       if (tb.field_a == 4) {
                                         mh.field_e[var4][var5].field_a = false;
                                         mh.field_e[var4][var5].field_E = false;
@@ -538,7 +538,7 @@ final class bf {
                         mh.field_e[var4][var5].field_E = false;
                         mh.field_e[var4][var5].field_v = false;
                         mh.field_e[var4][var5].field_b = false;
-                        if (-1 == (ha.field_e ^ -1)) {
+                        if (ha.field_e == 0) {
                           L26: {
                             je.field_O.g(var5, var4, 4);
                             if (tb.field_a == 4) {
@@ -555,7 +555,7 @@ final class bf {
                           return;
                         } else {
                           if (ha.field_e != 1) {
-                            if ((ha.field_e ^ -1) == -3) {
+                            if (ha.field_e == 2) {
                               L27: {
                                 je.field_O.h(var4, 4, var5);
                                 if (tb.field_a == 4) {
@@ -571,7 +571,7 @@ final class bf {
                               }
                               return;
                             } else {
-                              if ((ha.field_e ^ -1) != -4) {
+                              if (ha.field_e != 3) {
                                 if (tb.field_a == 4) {
                                   mh.field_e[var4][var5].field_a = false;
                                   mh.field_e[var4][var5].field_E = false;
@@ -642,20 +642,20 @@ final class bf {
           }
         } else {
           L31: {
-            if (-1 == (tb.field_a ^ -1)) {
+            if (tb.field_a == 0) {
               break L31;
             } else {
-              if ((wj.field_j ^ -1) > -3) {
+              if (wj.field_j < 2) {
                 break L31;
               } else {
                 L32: {
-                  if (-1 < (wi.field_w ^ -1)) {
+                  if (wi.field_w < 0) {
                     break L32;
                   } else {
                     if (m.field_e < 0) {
                       break L32;
                     } else {
-                      if ((jk.field_ab ^ -1) == -1) {
+                      if (jk.field_ab == 0) {
                         break L32;
                       } else {
                         L33: {
@@ -665,7 +665,7 @@ final class bf {
                           var5 = var3 / 32;
                           qm.field_f = true;
                           di.field_X = di.field_X + 1;
-                          if (-2 == (tb.field_a ^ -1)) {
+                          if (tb.field_a == 1) {
                             mh.field_e[var4][var5].field_U = gd.field_x;
                             break L33;
                           } else {
@@ -688,7 +688,7 @@ final class bf {
                               }
                             }
                             L36: {
-                              if (-5 == (bc.field_a ^ -1)) {
+                              if (bc.field_a == 4) {
                                 mh.field_e[var4][var5].field_b = true;
                                 break L36;
                               } else {
@@ -730,7 +730,7 @@ final class bf {
                           mh.field_e[var4][var5].field_E = false;
                           mh.field_e[var4][var5].field_v = false;
                           mh.field_e[var4][var5].field_b = false;
-                          if (-1 == (ha.field_e ^ -1)) {
+                          if (ha.field_e == 0) {
                             L39: {
                               je.field_O.g(var5, var4, 4);
                               if (tb.field_a == 4) {
@@ -747,7 +747,7 @@ final class bf {
                             return;
                           } else {
                             if (ha.field_e != 1) {
-                              if ((ha.field_e ^ -1) == -3) {
+                              if (ha.field_e == 2) {
                                 L40: {
                                   je.field_O.h(var4, 4, var5);
                                   if (tb.field_a == 4) {
@@ -763,7 +763,7 @@ final class bf {
                                 }
                                 return;
                               } else {
-                                if ((ha.field_e ^ -1) != -4) {
+                                if (ha.field_e != 3) {
                                   if (tb.field_a == 4) {
                                     mh.field_e[var4][var5].field_a = false;
                                     mh.field_e[var4][var5].field_E = false;

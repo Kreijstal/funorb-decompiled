@@ -76,7 +76,7 @@ final class ml extends fc {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
@@ -326,10 +326,8 @@ final class ml extends fc {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new ml(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1001,7 +999,7 @@ final class ml extends fc {
         ((ml) this).field_O = var2.e((byte) 113);
         ((ml) this).field_C = var2.e((byte) 113);
         if (((ml) this).field_C < 0) {
-            ((ml) this).field_C = ((ml) this).field_C ^ -1;
+            ((ml) this).field_C = ~((ml) this).field_C;
             ((ml) this).field_u = true;
         }
         int var3 = var2.e((byte) 113);
@@ -1117,7 +1115,7 @@ final class ml extends fc {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
@@ -1138,7 +1136,7 @@ final class ml extends fc {
 
     private final static void a(byte[] param0, int param1) {
         field_y = param0;
-        field_N = param1;
+        field_N = 0;
         field_M = 0;
     }
 
@@ -1154,10 +1152,8 @@ final class ml extends fc {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new ml(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {

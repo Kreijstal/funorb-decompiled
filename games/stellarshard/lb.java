@@ -15,9 +15,6 @@ final class lb extends gg {
 
     public static void a(byte param0) {
         field_o = null;
-        if (param0 < 81) {
-            field_o = null;
-        }
     }
 
     lb() {

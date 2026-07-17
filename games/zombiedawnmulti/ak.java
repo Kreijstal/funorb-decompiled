@@ -9,7 +9,6 @@ final class ak {
 
     final static op a(int param0, byte param1, int param2, int param3) {
         op var4 = null;
-        op var4_ref = null;
         Object var5 = null;
         if (param1 >= -35) {
           L0: {
@@ -17,26 +16,26 @@ final class ak {
             ak.a(88, (java.applet.Applet) null);
             var4 = (op) (Object) mi.field_Kb.g(72);
             if (var4 == null) {
-              var4_ref = new op();
+              var4 = new op();
               break L0;
             } else {
               break L0;
             }
           }
-          var4_ref.b(false, param2, param0, param3);
-          return var4_ref;
+          var4.b(false, param2, param0, param3);
+          return var4;
         } else {
           L1: {
             var4 = (op) (Object) mi.field_Kb.g(72);
             if (var4 == null) {
-              var4_ref = new op();
+              var4 = new op();
               break L1;
             } else {
               break L1;
             }
           }
-          var4_ref.b(false, param2, param0, param3);
-          return var4_ref;
+          var4.b(false, param2, param0, param3);
+          return var4;
         }
     }
 
@@ -78,30 +77,82 @@ final class ak {
     final static void a(int param0, java.applet.Applet param1) {
         try {
             Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             java.net.URL var4 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-              L0: {
-                var4 = param1.getCodeBase();
-                var3 = gf.a(param1, true, var4).getFile();
-                Object discarded$6 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
-                Object discarded$7 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
-                if (param0 == 14158) {
-                  break L0;
-                } else {
-                  field_a = null;
+              try {
+                L0: {
+                  L1: {
+                    var4 = param1.getCodeBase();
+                    var3 = gf.a(param1, true, var4).getFile();
+                    Object discarded$6 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
+                    Object discarded$7 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
+                    if (param0 == 14158) {
+                      break L1;
+                    } else {
+                      field_a = null;
+                      break L1;
+                    }
+                  }
+                  Object discarded$8 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
+                  Object discarded$9 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
+                  Object discarded$10 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
+                  Object discarded$11 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
                   break L0;
                 }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2 = decompiledCaughtException;
+                return;
               }
-              Object discarded$8 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
-              Object discarded$9 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
-              Object discarded$10 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
-              Object discarded$11 = fo.a(param1, "updatelinks", (byte) 23, new Object[2]);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              return;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L2: {
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref;
+                stackOut_6_1 = new StringBuilder().append("ak.F(").append(param0).append(44);
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param1 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L2;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L2;
+                }
+              }
+              throw fa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -110,18 +161,9 @@ final class ak {
     }
 
     public static void a(int param0) {
-        if (param0 != -5937) {
-          field_a = null;
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          return;
-        }
+        field_c = null;
+        field_a = null;
+        field_d = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

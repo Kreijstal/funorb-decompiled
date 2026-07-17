@@ -22,13 +22,18 @@ final class ng extends sh {
     }
 
     final void a(boolean param0, el param1) {
-        if (!(param1 instanceof dd)) {
-            throw new IllegalArgumentException();
+        dd var3 = null;
+        try {
+            if (!(param1 instanceof dd)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (dd) (Object) param1;
+            ((ng) this).field_C.a((hf) (Object) var3, param0);
+            var3.field_I = true;
+            boolean discarded$0 = var3.a((byte) -37, (el) this);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "ng.N(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        dd var3 = (dd) (Object) param1;
-        ((ng) this).field_C.a((hf) (Object) var3, param0);
-        var3.field_I = true;
-        boolean discarded$0 = var3.a((byte) -37, (el) this);
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
@@ -46,18 +51,12 @@ final class ng extends sh {
     }
 
     final static void g(int param0) {
-        if (param0 != -13912) {
-            return;
-        }
         sl.field_k = new tf();
     }
 
     final static void h(int param0) {
         fj.field_p.b();
         oh.field_a.b();
-        if (param0 <= 9) {
-            field_G = -2;
-        }
     }
 
     final void l(int param0) {

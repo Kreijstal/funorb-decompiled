@@ -34,7 +34,7 @@ abstract class jp {
 
     public static void d(byte param0) {
         field_p = null;
-        int var1 = 10 / ((-1 - param0) / 37);
+        int var1 = 5;
         field_n = null;
         field_e = null;
     }
@@ -97,7 +97,7 @@ abstract class jp {
         int stackOut_3_1 = 0;
         ac stackOut_2_0 = null;
         int stackOut_2_1 = 0;
-        var6 = ((long)param1 << -490022304) + (long)param4;
+        var6 = ((long)param1 << 32) + (long)param4;
         var8 = new ac();
         var8.field_l = var6;
         var8.field_y = param0;
@@ -122,14 +122,14 @@ abstract class jp {
           }
           stackIn_16_0.field_w = stackIn_16_1 != 0;
           if (param2) {
-            if ((((jp) this).c((byte) 0) ^ -1) <= -21) {
+            if (((jp) this).c((byte) 0) >= 20) {
               throw new RuntimeException();
             } else {
               ((jp) this).field_a.a((byte) 119, (ta) (Object) var8);
               return var8;
             }
           } else {
-            if ((((jp) this).c(-6292) ^ -1) > -21) {
+            if (((jp) this).c(-6292) < 20) {
               ((jp) this).field_m.a((byte) 121, (ta) (Object) var8);
               return var8;
             } else {
@@ -158,14 +158,14 @@ abstract class jp {
           }
           stackIn_4_0.field_w = stackIn_4_1 != 0;
           if (param2) {
-            if ((((jp) this).c((byte) 0) ^ -1) <= -21) {
+            if (((jp) this).c((byte) 0) >= 20) {
               throw new RuntimeException();
             } else {
               ((jp) this).field_a.a((byte) 119, (ta) (Object) var8);
               return var8;
             }
           } else {
-            if ((((jp) this).c(-6292) ^ -1) > -21) {
+            if (((jp) this).c(-6292) < 20) {
               ((jp) this).field_m.a((byte) 121, (ta) (Object) var8);
               return var8;
             } else {

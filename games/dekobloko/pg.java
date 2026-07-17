@@ -11,14 +11,7 @@ final class pg {
     static double field_b;
 
     final static Boolean a(int param0) {
-        Boolean var1 = null;
-        if (param0 != 24994) {
-            field_g = null;
-            var1 = wb.field_Ub;
-            wb.field_Ub = null;
-            return var1;
-        }
-        var1 = wb.field_Ub;
+        Boolean var1 = wb.field_Ub;
         wb.field_Ub = null;
         return var1;
     }

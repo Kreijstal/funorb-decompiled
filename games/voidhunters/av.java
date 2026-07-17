@@ -5,10 +5,6 @@ final class av implements dja {
     static ml[] field_a;
 
     final static String a(char param0, int param1) {
-        if (param1 != 6) {
-            field_a = null;
-            return String.valueOf(param0);
-        }
         return String.valueOf(param0);
     }
 
@@ -18,9 +14,6 @@ final class av implements dja {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_a = null;
     }
 

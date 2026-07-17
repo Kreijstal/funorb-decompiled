@@ -7,21 +7,19 @@ final class dh {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 > -100) {
-            return;
-        }
         field_b = null;
     }
 
     final static void a(byte param0, ue param1) {
-        nj var2 = null;
         nj.b(param1.a("headers.packvorbis", (byte) 45, ""));
-        var2 = nj.a(param1, "jagex logo2.packvorbis", "");
+        nj var2 = nj.a(param1, "jagex logo2.packvorbis", "");
         if (param0 != 115) {
-          return;
-        } else {
-          ud discarded$2 = var2.c();
-          return;
+            return;
+        }
+        try {
+            ud discarded$0 = var2.c();
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "dh.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

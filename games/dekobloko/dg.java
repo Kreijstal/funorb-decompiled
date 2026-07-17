@@ -35,268 +35,75 @@ final class dg implements Iterator {
     public static void a(int param0) {
         field_e = null;
         field_d = null;
-        if (param0 != 8) {
-            field_d = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
     final static void a(int param0, w param1, w param2) {
-        if (param2.field_M != null) {
-          if (null != param1.field_M) {
-            if (null != mc.field_a) {
-              if (null != hg.field_e) {
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              } else {
-                hg.field_e = new nk(64);
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              }
-            } else {
-              mc.field_a = new nk(64);
-              if (null != hg.field_e) {
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              } else {
-                hg.field_e = new nk(64);
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              }
+        try {
+            if (param2.field_M == null) {
+                param2.field_M = new vj();
             }
-          } else {
-            param1.field_M = new vj();
-            if (null != mc.field_a) {
-              if (null != hg.field_e) {
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              } else {
-                hg.field_e = new nk(64);
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              }
-            } else {
-              mc.field_a = new nk(64);
-              if (null == hg.field_e) {
-                hg.field_e = new nk(64);
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              } else {
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              }
+            if (null == param1.field_M) {
+                param1.field_M = new vj();
             }
-          }
-        } else {
-          param2.field_M = new vj();
-          if (null == param1.field_M) {
-            param1.field_M = new vj();
             if (null == mc.field_a) {
-              mc.field_a = new nk(64);
-              if (null != hg.field_e) {
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              } else {
-                hg.field_e = new nk(64);
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              }
-            } else {
-              if (null != hg.field_e) {
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              } else {
-                hg.field_e = new nk(64);
-                uf.field_z = param1.field_M;
-                if (param0 == 21014) {
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                } else {
-                  field_c = null;
-                  qi.field_S = param2.field_M;
-                  d.a(true);
-                  return;
-                }
-              }
-            }
-          } else {
-            L0: {
-              if (null != mc.field_a) {
-                break L0;
-              } else {
                 mc.field_a = new nk(64);
-                break L0;
-              }
             }
-            if (null != hg.field_e) {
-              uf.field_z = param1.field_M;
-              if (param0 == 21014) {
-                qi.field_S = param2.field_M;
-                d.a(true);
-                return;
-              } else {
-                field_c = null;
-                qi.field_S = param2.field_M;
-                d.a(true);
-                return;
-              }
-            } else {
-              hg.field_e = new nk(64);
-              uf.field_z = param1.field_M;
-              if (param0 == 21014) {
-                qi.field_S = param2.field_M;
-                d.a(true);
-                return;
-              } else {
-                field_c = null;
-                qi.field_S = param2.field_M;
-                d.a(true);
-                return;
-              }
+            if (null == hg.field_e) {
+                hg.field_e = new nk(64);
             }
-          }
+            uf.field_z = param1.field_M;
+            if (param0 != 21014) {
+                field_c = null;
+            }
+            qi.field_S = param2.field_M;
+            d.a(true);
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "dg.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void a(int param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         kn var4 = null;
         kc var5 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = client.field_A ? 1 : 0;
-        var4 = (kn) (Object) pb.field_c.c((byte) -80);
-        L0: while (true) {
-          if (var4 == null) {
-            if (param0 <= -47) {
-              var5 = (kc) (Object) field_e.c((byte) -121);
-              L1: while (true) {
-                if (var5 == null) {
-                  return;
-                } else {
-                  wb.a(var5, param1, 60);
-                  var5 = (kc) (Object) field_e.d(true);
-                  continue L1;
+        try {
+          L0: {
+            var4 = (kn) (Object) pb.field_c.c((byte) -80);
+            L1: while (true) {
+              if (var4 == null) {
+                L2: {
+                  if (param0 <= -47) {
+                    break L2;
+                  } else {
+                    field_b = 100;
+                    break L2;
+                  }
                 }
-              }
-            } else {
-              field_b = 100;
-              var5 = (kc) (Object) field_e.c((byte) -121);
-              L2: while (true) {
-                if (var5 == null) {
-                  return;
-                } else {
-                  wb.a(var5, param1, 60);
-                  var5 = (kc) (Object) field_e.d(true);
-                  continue L2;
+                var5 = (kc) (Object) field_e.c((byte) -121);
+                L3: while (true) {
+                  if (var5 == null) {
+                    break L0;
+                  } else {
+                    wb.a(var5, 3, 60);
+                    var5 = (kc) (Object) field_e.d(true);
+                    continue L3;
+                  }
                 }
+              } else {
+                fm.a((byte) -125, 3, var4);
+                var4 = (kn) (Object) pb.field_c.d(true);
+                continue L1;
               }
             }
-          } else {
-            fm.a((byte) -125, param1, var4);
-            var4 = (kn) (Object) pb.field_c.d(true);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw dh.a((Throwable) (Object) var2, "dg.C(" + param0 + 44 + 3 + 41);
         }
     }
 
@@ -305,17 +112,18 @@ final class dg implements Iterator {
     }
 
     final static boolean b(int param0) {
-        if (param0 >= -34) {
-            return false;
-        }
         return rg.a(se.h(25144), (byte) -78);
     }
 
     dg(uh param0) {
         ((dg) this).field_g = null;
-        ((dg) this).field_a = param0;
-        ((dg) this).field_f = ((dg) this).field_a.field_a.field_p;
-        ((dg) this).field_g = null;
+        try {
+            ((dg) this).field_a = param0;
+            ((dg) this).field_f = ((dg) this).field_a.field_a.field_p;
+            ((dg) this).field_g = null;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "dg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

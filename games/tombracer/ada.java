@@ -19,23 +19,17 @@ final class ada extends rva implements tsa {
     }
 
     public final void a(int param0, int param1, rj param2, int param3, byte param4) {
-        Object var7 = null;
-        if (param4 >= 44) {
-          if (((ada) this).field_x.a((byte) 124).b(-4666) != uh.field_k) {
+        if (param4 < 44) {
+            Object var7 = null;
+            ((ada) this).a(-16, -96, (ae) null, 107);
+        }
+        if (((ada) this).field_x.a((byte) 124).b(-4666) != uh.field_k) {
             return;
-          } else {
+        }
+        try {
             kv.a(((ada) this).field_x.d(22829), ((ada) this).field_x.a(109), 95, ((ada) this).field_x.j((byte) 110));
-            return;
-          }
-        } else {
-          var7 = null;
-          ((ada) this).a(-16, -96, (ae) null, 107);
-          if (((ada) this).field_x.a((byte) 124).b(-4666) != uh.field_k) {
-            return;
-          } else {
-            kv.a(((ada) this).field_x.d(22829), ((ada) this).field_x.a(109), 95, ((ada) this).field_x.j((byte) 110));
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ada.M(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -55,15 +49,15 @@ final class ada extends rva implements tsa {
     }
 
     final void a(int param0, int param1, ae param2, int param3) {
-        super.a(param0, param1, param2, param3);
-        ((ada) this).field_B.field_y = ((ada) this).field_x.a((byte) 47).b(-4666) == uh.field_k ? true : false;
+        try {
+            super.a(param0, param1, param2, param3);
+            ((ada) this).field_B.field_y = ((ada) this).field_x.a((byte) 47).b(-4666) == uh.field_k ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ada.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     final static int b(boolean param0) {
-        if (param0) {
-            ada.c(-7);
-            return tu.field_h;
-        }
         return tu.field_h;
     }
 
@@ -72,12 +66,12 @@ final class ada extends rva implements tsa {
         var2 = 250;
         if (param0 != 88) {
           field_y = null;
-          ((ada) this).field_x.a((byte) -31, 140, 25, ((ada) this).field_m + -var2 >> -1682148063, ((ada) this).field_p - -20 + -25 >> -797370687);
-          ((ada) this).field_B.a((byte) -31, 100, 30, 10 + (140 + (((ada) this).field_m + -var2 >> -561359551)), (-30 + ((ada) this).field_p - -20 >> 578252321) + 2);
+          ((ada) this).field_x.a((byte) -31, 140, 25, ((ada) this).field_m + -var2 >> 1, ((ada) this).field_p - 5 >> 1);
+          ((ada) this).field_B.a((byte) -31, 100, 30, 10 + (140 + (((ada) this).field_m + -var2 >> 1)), (-30 + ((ada) this).field_p - -20 >> 1) + 2);
           return;
         } else {
-          ((ada) this).field_x.a((byte) -31, 140, 25, ((ada) this).field_m + -var2 >> -1682148063, ((ada) this).field_p - -20 + -25 >> -797370687);
-          ((ada) this).field_B.a((byte) -31, 100, 30, 10 + (140 + (((ada) this).field_m + -var2 >> -561359551)), (-30 + ((ada) this).field_p - -20 >> 578252321) + 2);
+          ((ada) this).field_x.a((byte) -31, 140, 25, ((ada) this).field_m + -var2 >> 1, ((ada) this).field_p - 5 >> 1);
+          ((ada) this).field_B.a((byte) -31, 100, 30, 10 + (140 + (((ada) this).field_m + -var2 >> 1)), (-30 + ((ada) this).field_p - -20 >> 1) + 2);
           return;
         }
     }

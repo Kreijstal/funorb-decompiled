@@ -9,9 +9,6 @@ final class iq extends wf {
 
     public static void a(byte param0) {
         field_e = null;
-        if (param0 >= -119) {
-            return;
-        }
         field_h = null;
         field_g = null;
     }

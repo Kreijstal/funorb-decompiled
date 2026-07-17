@@ -9,17 +9,33 @@ final class fh {
     static String field_d;
 
     final static void b(byte param0) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int var4 = Virogrid.field_F ? 1 : 0;
-        int var1 = da.field_g[0];
-        for (var2 = 1; var2 < da.field_g.length; var2++) {
-            var3 = da.field_g[var2];
-            ek.a(bf.field_m, var2 << 404055524, bf.field_m, var1, var3);
-            var1 = var1 + var3;
-        }
-        if (param0 != -80) {
-            fh.a(-100);
+        int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Virogrid.field_F ? 1 : 0;
+        try {
+          L0: {
+            var1_int = da.field_g[0];
+            var2 = 1;
+            L1: while (true) {
+              if (var2 >= da.field_g.length) {
+                break L0;
+              } else {
+                var3 = da.field_g[var2];
+                ek.a(bf.field_m, var2 << 4, bf.field_m, var1_int, var3);
+                var1_int = var1_int + var3;
+                var2++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw kg.a((Throwable) (Object) var1, "fh.A(" + -80 + 41);
         }
     }
 
@@ -31,23 +47,23 @@ final class fh {
         int var7 = 0;
         int var8 = 0;
         var8 = Virogrid.field_F ? 1 : 0;
-        if ((kf.field_e ^ -1) > -1) {
+        if (kf.field_e < 0) {
           return;
         } else {
           L0: {
-            var3 = -135 + param2;
+            var3 = 185;
             var4 = param0 - 35;
             var5 = 256;
-            if (-76 >= (kf.field_e ^ -1)) {
+            if (kf.field_e >= 75) {
               break L0;
             } else {
-              var5 = (kf.field_e << -944889048) / 75;
+              var5 = (kf.field_e << 8) / 75;
               break L0;
             }
           }
           L1: {
-            if ((kf.field_e ^ -1) < -201) {
-              var5 = (250 + -kf.field_e << -317383896) / 50;
+            if (kf.field_e > 200) {
+              var5 = (250 + -kf.field_e << 8) / 50;
               break L1;
             } else {
               break L1;
@@ -67,7 +83,7 @@ final class fh {
           }
           L3: {
             ai.a(true);
-            if ((kf.field_e ^ -1) > -151) {
+            if (kf.field_e < 150) {
               ag.field_g.e(var3, var4);
               break L3;
             } else {
@@ -77,7 +93,7 @@ final class fh {
           }
           L4: {
             var6 = kf.field_e + -125;
-            if ((var6 ^ -1) >= -1) {
+            if (var6 <= 0) {
               break L4;
             } else {
               if (var6 >= 50) {
@@ -88,7 +104,7 @@ final class fh {
                   cc.field_u.e(var3, var4, var7);
                   break L4;
                 } else {
-                  if ((var6 ^ -1) <= -31) {
+                  if (var6 >= 30) {
                     var7 = 256 * (50 - var6) / 20;
                     cc.field_u.e(var3, var4, var7);
                     break L4;
@@ -105,14 +121,14 @@ final class fh {
             if (var6 > param1) {
               L6: {
                 var7 = 256;
-                if ((var6 ^ -1) > -21) {
+                if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                   break L6;
                 } else {
                   break L6;
                 }
               }
-              dn.field_c.a(var3 + 15, var4 - -10, var5 * var7 >> -214432376);
+              dn.field_c.a(var3 + 15, var4 - -10, var5 * var7 >> 8);
               break L5;
             } else {
               break L5;
@@ -137,9 +153,6 @@ final class fh {
         jk.field_c = 2;
         lj.field_r = 80.0f;
         em.field_c = 80.0f;
-        if (param0 > -83) {
-            field_e = true;
-        }
         vm.field_d[0] = (double)lj.field_r * Math.sin((double)cf.field_c);
         vm.field_d[2] = (double)lj.field_r * Math.cos((double)cf.field_c);
         gb.c((byte) -44);

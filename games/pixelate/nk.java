@@ -284,7 +284,7 @@ final class nk {
                       L5: {
                         L6: {
                           L7: {
-                            if (stackIn_7_0 == (var18 ^ -1)) {
+                            if (stackIn_7_0 == ~var18) {
                               break L7;
                             } else {
                               L8: {
@@ -697,7 +697,7 @@ final class nk {
             L1: while (true) {
               L2: {
                 L3: {
-                  if ((param1 ^ -1) >= (var5 ^ -1)) {
+                  if (~param1 >= ~var5) {
                     break L3;
                   } else {
                     param0.setCharAt(var5, param2);
@@ -805,7 +805,7 @@ final class nk {
                                 }
                               }
                             }
-                            var2.field_n.h(var2.field_p * ia.field_h - -128 >> -708105464);
+                            var2.field_n.h(var2.field_p * ia.field_h - -128 >> 8);
                             break L7;
                           }
                           var2 = (cm) (Object) rg.field_b.f(1504642273);
@@ -839,7 +839,7 @@ final class nk {
                               }
                             }
                           }
-                          var2.field_n.h(128 + var2.field_p * ia.field_h >> 9227304);
+                          var2.field_n.h(128 + var2.field_p * ia.field_h >> 8);
                           break L9;
                         }
                         var2 = (cm) (Object) bo.field_d.f(param0 + 1504642180);
@@ -877,7 +877,7 @@ final class nk {
                                 }
                               }
                             }
-                            var2.field_n.h(var2.field_p * ia.field_h - -128 >> -708105464);
+                            var2.field_n.h(var2.field_p * ia.field_h - -128 >> 8);
                             break L12;
                           }
                           var2 = (cm) (Object) rg.field_b.f(1504642273);

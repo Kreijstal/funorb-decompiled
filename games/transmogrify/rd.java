@@ -10,30 +10,54 @@ final class rd {
     static int[] field_e;
 
     final static void a(boolean param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
-        int var4 = Transmogrify.field_A ? 1 : 0;
-        if (!param0) {
-            rd.a(true);
-        }
-        ka.c();
-        ug.field_c = new int[260];
-        nd.field_m = 11;
-        for (var1 = 0; var1 < 256; var1++) {
-            var2 = 15.0;
-            ug.field_c[var1] = (int)(255.0 * Math.pow((double)((float)var1 / 256.0f), var2));
-        }
-        int var5 = 256;
-        var1 = var5;
-        while (var5 < ug.field_c.length) {
-            ug.field_c[var5] = 255;
-            var5++;
+        int var4 = 0;
+        int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Transmogrify.field_A ? 1 : 0;
+        try {
+          L0: {
+            ka.c();
+            ug.field_c = new int[260];
+            nd.field_m = 11;
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 256) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (var5 >= ug.field_c.length) {
+                    break L0;
+                  } else {
+                    ug.field_c[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2 = 15.0;
+                ug.field_c[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ch.a((Throwable) (Object) var1, "rd.A(" + 1 + 41);
         }
     }
 
     final static void a(String param0, boolean param1) {
-        hi.a(-23883, param0);
-        jj.a(param1, gb.field_c, 1702);
+        try {
+            hi.a(-23883, param0);
+            jj.a(false, gb.field_c, 1702);
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "rd.B(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
+        }
     }
 
     final static boolean b(int param0) {

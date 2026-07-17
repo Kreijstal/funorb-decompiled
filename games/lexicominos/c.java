@@ -12,35 +12,24 @@ final class c extends kd {
     static String field_n;
 
     public static void a(int param0) {
-        if (param0 < 112) {
-          field_n = null;
-          field_o = null;
-          field_m = null;
-          field_i = null;
-          field_n = null;
-          return;
-        } else {
-          field_o = null;
-          field_m = null;
-          field_i = null;
-          field_n = null;
-          return;
-        }
+        field_o = null;
+        field_m = null;
+        field_i = null;
+        field_n = null;
     }
 
     final static db[] a(int param0, int param1, int param2, int param3, int param4) {
-        if (param4 < 82) {
-          field_m = null;
-          return rb.a(1, 1, param0, 1, param2, 1, param3, 3, param1);
-        } else {
-          return rb.a(1, 1, param0, 1, param2, 1, param3, 3, param1);
-        }
+        return rb.a(1, 1, param0, 1, param2, 1, param3, 3, param1);
     }
 
     c(long param0, int param1, byte[] param2) {
-        ((c) this).field_h = param2;
-        ((c) this).field_l = param0;
-        ((c) this).field_k = param1;
+        try {
+            ((c) this).field_h = param2;
+            ((c) this).field_l = param0;
+            ((c) this).field_k = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "c.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

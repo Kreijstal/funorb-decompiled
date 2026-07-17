@@ -20,86 +20,152 @@ final class vl extends em {
     }
 
     final static boolean a(pe param0, pe param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         Object var5 = null;
-        int stackIn_11_0 = 0;
         int stackIn_16_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_15_0 = 0;
         int stackOut_14_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        L0: {
-          var4 = MinerDisturbance.field_ab;
-          var3 = param0.field_tb - param1.field_tb;
-          if (param2 <= -66) {
-            break L0;
-          } else {
-            var5 = null;
-            boolean discarded$2 = vl.a((pe) null, (pe) null, 95);
-            break L0;
-          }
-        }
-        L1: {
-          if (param0.field_nb == bd.field_j) {
-            var3 -= 200;
-            break L1;
-          } else {
-            if (param0.field_nb == null) {
-              var3 += 200;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-        }
-        if (bd.field_j != param1.field_nb) {
-          if (null == param1.field_nb) {
-            L2: {
-              var3 -= 200;
-              if (-1 <= (var3 ^ -1)) {
-                stackOut_19_0 = 0;
-                stackIn_20_0 = stackOut_19_0;
-                break L2;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        var4 = MinerDisturbance.field_ab;
+        try {
+          L0: {
+            L1: {
+              var3_int = param0.field_tb - param1.field_tb;
+              if (param2 <= -66) {
+                break L1;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
-                break L2;
+                var5 = null;
+                boolean discarded$2 = vl.a((pe) null, (pe) null, 95);
+                break L1;
               }
             }
-            return stackIn_20_0 != 0;
-          } else {
+            L2: {
+              if (param0.field_nb == bd.field_j) {
+                var3_int -= 200;
+                break L2;
+              } else {
+                if (param0.field_nb == null) {
+                  var3_int += 200;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+            }
             L3: {
-              if (-1 <= (var3 ^ -1)) {
+              if (bd.field_j != param1.field_nb) {
+                if (null == param1.field_nb) {
+                  var3_int -= 200;
+                  break L3;
+                } else {
+                  break L3;
+                }
+              } else {
+                var3_int += 200;
+                break L3;
+              }
+            }
+            L4: {
+              if (var3_int <= 0) {
                 stackOut_15_0 = 0;
                 stackIn_16_0 = stackOut_15_0;
-                break L3;
+                break L4;
               } else {
                 stackOut_14_0 = 1;
                 stackIn_16_0 = stackOut_14_0;
-                break L3;
+                break L4;
               }
             }
-            return stackIn_16_0 != 0;
+            break L0;
           }
-        } else {
-          L4: {
-            var3 += 200;
-            if (-1 <= (var3 ^ -1)) {
-              stackOut_10_0 = 0;
-              stackIn_11_0 = stackOut_10_0;
-              break L4;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var3 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_1 = new StringBuilder().append("vl.F(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param0 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L5;
             } else {
-              stackOut_9_0 = 1;
-              stackIn_11_0 = stackOut_9_0;
-              break L4;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L5;
             }
           }
-          return stackIn_11_0 != 0;
+          L6: {
+            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param1 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L6;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L6;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 41);
         }
+        return stackIn_16_0 != 0;
     }
 
     final static void h(int param0) {

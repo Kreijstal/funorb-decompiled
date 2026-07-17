@@ -20,9 +20,6 @@ final class uca {
         field_b = null;
         field_d = null;
         field_a = null;
-        if (param0) {
-            field_a = null;
-        }
     }
 
     static {
@@ -30,37 +27,23 @@ final class uca {
     }
 
     private static void $cfr$clinit() {
-        int var0 = 0;
         int var1 = 0;
+        int var0 = 0;
         int var2 = 0;
         field_b = new du(6, 0, 4, 2);
         field_c = "From only <%0>/month";
         field_d = new int[256];
-        var1 = 0;
-        L0: while (true) {
-          if (var1 <= -257) {
-            field_a = new qia();
-          } else {
+        for (var1 = 0; var1 < 256; var1++) {
             var0 = var1;
-            var2 = 0;
-            L1: while (true) {
-              if (-9 <= var2) {
-                field_d[var1] = var0;
-                var1++;
-                continue L0;
-              } else {
-                if (1 == (1 & var0)) {
-                  var0 = var0 >>> 402872513 ^ -306674912;
-                  var2++;
-                  continue L1;
+            for (var2 = 0; var2 < 8; var2++) {
+                if (1 != (1 & var0)) {
+                    var0 = var0 >>> 1;
                 } else {
-                  var0 = var0 >>> 1;
-                  var2++;
-                  continue L1;
+                    var0 = var0 >>> 1 ^ -306674912;
                 }
-              }
             }
-          }
+            field_d[var1] = var0;
         }
+        field_a = new qia();
     }
 }

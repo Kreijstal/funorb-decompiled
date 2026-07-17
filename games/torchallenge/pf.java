@@ -139,24 +139,12 @@ final class pf {
     }
 
     public static void a(int param0) {
-        if (param0 != 0) {
-          field_e = 82;
-          field_d = null;
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          field_f = null;
-          field_g = null;
-          return;
-        } else {
-          field_d = null;
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          field_f = null;
-          field_g = null;
-          return;
-        }
+        field_d = null;
+        field_b = null;
+        field_a = null;
+        field_c = null;
+        field_f = null;
+        field_g = null;
     }
 
     static {

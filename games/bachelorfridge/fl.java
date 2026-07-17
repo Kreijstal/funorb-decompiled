@@ -30,29 +30,9 @@ final class fl extends at {
     }
 
     private final void d(byte param0) {
-        if (param0 != -82) {
-          L0: {
-            field_p = null;
-            if (((fl) this).field_n.field_s.field_y == 31) {
-              ((fl) this).field_n.a(24831, 101, kna.field_g[31]);
-              wf.a(34, (byte) 126);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return;
-        } else {
-          L1: {
-            if (((fl) this).field_n.field_s.field_y == 31) {
-              ((fl) this).field_n.a(24831, 101, kna.field_g[31]);
-              wf.a(34, (byte) 126);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        if (!(((fl) this).field_n.field_s.field_y != 31)) {
+            ((fl) this).field_n.a(24831, 101, kna.field_g[31]);
+            wf.a(34, (byte) 126);
         }
     }
 
@@ -66,9 +46,10 @@ final class fl extends at {
             break L0;
           }
         }
+        int fieldTemp$2 = ((fl) this).field_k - 1;
         ((fl) this).field_k = ((fl) this).field_k - 1;
-        if (-1 <= (((fl) this).field_k - 1 ^ -1)) {
-          if ((((fl) this).field_n.field_j ^ -1) < -1) {
+        if (fieldTemp$2 <= 0) {
+          if (((fl) this).field_n.field_j > 0) {
             return false;
           } else {
             this.d((byte) -82);
@@ -81,9 +62,13 @@ final class fl extends at {
     }
 
     fl(gj param0, ad param1) {
-        ((fl) this).field_n = param1;
-        ((fl) this).field_n.field_f.a((byte) 18, ((fl) this).field_n.field_s.field_o.field_b, 5);
-        ((fl) this).field_k = 25;
+        try {
+            ((fl) this).field_n = param1;
+            ((fl) this).field_n.field_f.a((byte) 18, ((fl) this).field_n.field_s.field_o.field_b, 5);
+            ((fl) this).field_k = 25;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "fl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

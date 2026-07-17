@@ -12,24 +12,19 @@ final class tg {
     static ll[] field_b;
 
     final void a(tf param0, int param1) {
-        L0: {
-          if (param0.field_i != null) {
-            param0.a((byte) 88);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        param0.field_l = ((tg) this).field_h;
-        param0.field_i = ((tg) this).field_h.field_i;
-        param0.field_i.field_l = param0;
-        if (param1 != 15893) {
-          tf discarded$2 = ((tg) this).a((byte) -116);
-          param0.field_l.field_i = param0;
-          return;
-        } else {
-          param0.field_l.field_i = param0;
-          return;
+        try {
+            if (!(param0.field_i == null)) {
+                param0.a((byte) 88);
+            }
+            param0.field_l = ((tg) this).field_h;
+            param0.field_i = ((tg) this).field_h.field_i;
+            param0.field_i.field_l = param0;
+            if (param1 != 15893) {
+                tf discarded$0 = ((tg) this).a((byte) -116);
+            }
+            param0.field_l.field_i = param0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "tg.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -41,9 +36,9 @@ final class tg {
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (param1 < 22) {
           int discarded$2 = tg.a(101, false, -57, -39);
-          return rg.a(param0, param2, 13, param3);
+          return rg.a(param0, param2, 13, 13);
         } else {
-          return rg.a(param0, param2, 13, param3);
+          return rg.a(param0, param2, 13, 13);
         }
     }
 
@@ -133,9 +128,6 @@ final class tg {
         field_f = null;
         field_b = null;
         field_a = null;
-        if (param0 >= -44) {
-            return;
-        }
         field_g = null;
     }
 

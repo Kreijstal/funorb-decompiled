@@ -41,28 +41,52 @@ final class wi {
     }
 
     final static void a(int param0, int param1) {
-        int var3 = Confined.field_J ? 1 : 0;
-        if (param1 >= -39) {
-            wi.a(41, 111);
-        }
-        sf var4 = (sf) (Object) sm.field_y.a(-128);
-        while (var4 != null) {
-            nh.a(var4, 0, param0);
-            var4 = (sf) (Object) sm.field_y.d(2123);
-        }
-        rk var2 = ra.field_d.a(107);
-        while (var2 != null) {
-            fm.a(-87, param0);
-            var2 = ra.field_d.d(2123);
+        rk var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
+        sf var4 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = Confined.field_J ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param1 < -39) {
+                break L1;
+              } else {
+                wi.a(41, 111);
+                break L1;
+              }
+            }
+            var4 = (sf) (Object) sm.field_y.a(-128);
+            L2: while (true) {
+              if (var4 == null) {
+                var2 = ra.field_d.a(107);
+                L3: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    fm.a(-87, param0);
+                    var2 = ra.field_d.d(2123);
+                    continue L3;
+                  }
+                }
+              } else {
+                nh.a(var4, 0, param0);
+                var4 = (sf) (Object) sm.field_y.d(2123);
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var2_ref, "wi.H(" + param0 + 44 + param1 + 41);
         }
     }
 
     public static void b(byte param0) {
         field_b = null;
         field_q = null;
-        if (param0 != 12) {
-            field_b = null;
-        }
     }
 
     final void d(byte param0) {
@@ -70,7 +94,7 @@ final class wi {
           return;
         } else {
           L0: {
-            if ((sg.field_x ^ -1) < -1) {
+            if (sg.field_x > 0) {
               break L0;
             } else {
               ((wi) this).field_n = false;
@@ -80,7 +104,7 @@ final class wi {
           if (!((wi) this).field_n) {
             L1: {
               if (((wi) this).field_h <= wm.field_ab) {
-                if (-1 <= (((wi) this).field_h ^ -1)) {
+                if (((wi) this).field_h <= 0) {
                   break L1;
                 } else {
                   ei.field_kb = 0;
@@ -106,8 +130,9 @@ final class wi {
             }
             return;
           } else {
+            int fieldTemp$1 = ((wi) this).field_l - 1;
             ((wi) this).field_l = ((wi) this).field_l - 1;
-            if ((((wi) this).field_l - 1 ^ -1) < -1) {
+            if (fieldTemp$1 > 0) {
               return;
             } else {
               ((wi) this).field_l = ((wi) this).field_i;
@@ -166,49 +191,82 @@ final class wi {
 
     final static boolean a(boolean param0) {
         dg var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         dg var4 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_22_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_15_0 = 0;
         var3 = Confined.field_J ? 1 : 0;
-        var4 = (dg) (Object) af.field_cb.a(-115);
-        var1 = var4;
-        if (var1 == null) {
-          return false;
-        } else {
-          var2 = 0;
-          L0: while (true) {
-            if (var2 >= var1.field_r) {
-              if (!param0) {
-                return true;
-              } else {
-                return false;
-              }
+        try {
+          L0: {
+            var4 = (dg) (Object) af.field_cb.a(-115);
+            var1 = var4;
+            if (var1 == null) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
             } else {
-              L1: {
-                if (var4.field_m[var2] != null) {
-                  if (var4.field_m[var2].field_g != 0) {
-                    break L1;
+              var2 = 0;
+              L1: while (true) {
+                if (var2 >= var1.field_r) {
+                  if (!param0) {
+                    stackOut_21_0 = 1;
+                    stackIn_22_0 = stackOut_21_0;
+                    break L0;
                   } else {
-                    return false;
+                    stackOut_19_0 = 0;
+                    stackIn_20_0 = stackOut_19_0;
+                    return stackIn_20_0 != 0;
                   }
                 } else {
-                  break L1;
-                }
-              }
-              if (var4.field_q[var2] != null) {
-                if (-1 == (var4.field_q[var2].field_g ^ -1)) {
-                  return false;
-                } else {
+                  L2: {
+                    if (var4.field_m[var2] != null) {
+                      if (var4.field_m[var2].field_g != 0) {
+                        break L2;
+                      } else {
+                        stackOut_10_0 = 0;
+                        stackIn_11_0 = stackOut_10_0;
+                        return stackIn_11_0 != 0;
+                      }
+                    } else {
+                      break L2;
+                    }
+                  }
+                  L3: {
+                    if (var4.field_q[var2] != null) {
+                      if (var4.field_q[var2].field_g != 0) {
+                        break L3;
+                      } else {
+                        stackOut_15_0 = 0;
+                        stackIn_16_0 = stackOut_15_0;
+                        return stackIn_16_0 != 0;
+                      }
+                    } else {
+                      break L3;
+                    }
+                  }
                   var2++;
-                  continue L0;
+                  continue L1;
                 }
-              } else {
-                var2++;
-                continue L0;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var1_ref, "wi.F(" + param0 + 41);
         }
+        return stackIn_22_0 != 0;
     }
 
     final gj a(int param0) {
@@ -238,81 +296,73 @@ final class wi {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        L0: {
-          var5 = Confined.field_J ? 1 : 0;
-          var2 = ((wi) this).field_h;
-          var3 = ((wi) this).field_u;
-          if (param0 <= -115) {
-            break L0;
-          } else {
-            boolean discarded$2 = wi.a(true);
-            break L0;
-          }
-        }
+        var5 = Confined.field_J ? 1 : 0;
+        var2 = ((wi) this).field_h;
+        var3 = ((wi) this).field_u;
         if (((wi) this).b(-116)) {
-          L1: {
+          L0: {
             if (((wi) this).field_g >= var2) {
               if (var2 >= ((wi) this).field_s) {
-                break L1;
+                break L0;
               } else {
                 var2 = ((wi) this).field_s;
-                break L1;
+                break L0;
               }
             } else {
               var2 = ((wi) this).field_g;
-              break L1;
+              break L0;
             }
           }
-          L2: {
+          L1: {
             if (((wi) this).field_f < var3) {
               var3 = ((wi) this).field_f;
-              break L2;
+              break L1;
             } else {
               if (((wi) this).field_j <= var3) {
-                break L2;
+                break L1;
               } else {
                 var3 = ((wi) this).field_j;
-                break L2;
+                break L1;
               }
             }
           }
-          L3: {
+          L2: {
             if (((wi) this).field_d <= 0.0f) {
-              break L3;
+              break L2;
             } else {
               var4 = (int)((float)var3 * ((wi) this).field_d + 0.5f);
               if (var2 < var4) {
                 var3 = (int)((float)var2 / ((wi) this).field_d);
-                break L3;
+                break L2;
               } else {
                 if (var4 >= var2) {
-                  break L3;
+                  break L2;
                 } else {
                   var2 = var4;
-                  break L3;
+                  break L2;
                 }
               }
             }
           }
-          L4: {
+          L3: {
             if (var2 != wm.field_ab) {
               ((wi) this).field_e.a(var2, var3, 1099);
-              break L4;
+              break L3;
             } else {
               if (im.field_b == var3) {
-                break L4;
+                break L3;
               } else {
                 ((wi) this).field_e.a(var2, var3, 1099);
-                break L4;
+                break L3;
               }
             }
           }
-          L5: {
-            if ((((wi) this).field_h ^ -1) >= -1) {
-              break L5;
+          L4: {
+            if (((wi) this).field_h <= 0) {
+              break L4;
             } else {
               ei.field_kb = (-wm.field_ab + ((wi) this).field_h) / 2;
-              break L5;
+              break L4;
             }
           }
           return;

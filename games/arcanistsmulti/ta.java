@@ -42,11 +42,6 @@ final class ta {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 5) {
-            field_e = -50;
-            field_i = null;
-            return;
-        }
         field_i = null;
     }
 

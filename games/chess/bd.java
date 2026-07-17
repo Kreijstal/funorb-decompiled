@@ -13,11 +13,6 @@ final class bd {
         field_a = null;
         field_e = null;
         field_c = null;
-        if (param0 >= -2) {
-            field_b = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

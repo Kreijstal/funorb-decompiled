@@ -68,7 +68,7 @@ final class bn extends IOException {
                 if (i.field_f == 0) {
                   break L2;
                 } else {
-                  if (-1 < (ti.field_e ^ -1)) {
+                  if (ti.field_e < 0) {
                     var4_ref_tc = (tc) (Object) v.field_z.c(false);
                     if (null == var4_ref_tc) {
                       break L2;
@@ -119,7 +119,7 @@ final class bn extends IOException {
               L6: while (true) {
                 L7: {
                   L8: {
-                    if ((ti.field_e ^ -1) <= -1) {
+                    if (ti.field_e >= 0) {
                       break L8;
                     } else {
                       kb.field_q.field_t = 0;
@@ -174,7 +174,7 @@ final class bn extends IOException {
                       L11: while (true) {
                         L12: {
                           L13: {
-                            if ((var6 ^ -1) <= (rl.field_d ^ -1)) {
+                            if (~var6 <= ~rl.field_d) {
                               break L13;
                             } else {
                               var5.field_o[var6] = kb.field_q.field_u[var6];
@@ -299,9 +299,9 @@ final class bn extends IOException {
           L0: {
             if (param1 >= 0) {
               if (1582 <= param1) {
-                if ((param1 % 4 ^ -1) == -1) {
-                  if ((param1 % 100 ^ -1) == -1) {
-                    if ((param1 % 400 ^ -1) == -1) {
+                if (param1 % 4 == 0) {
+                  if (param1 % 100 == 0) {
+                    if (param1 % 400 == 0) {
                       L1: {
                         if (param0 == 1) {
                           break L1;
@@ -344,7 +344,7 @@ final class bn extends IOException {
               }
             } else {
               L3: {
-                if (((param1 + 1) % 4 ^ -1) != -1) {
+                if ((param1 + 1) % 4 != 0) {
                   stackOut_6_0 = 0;
                   stackIn_7_0 = stackOut_6_0;
                   break L3;
@@ -454,7 +454,7 @@ final class bn extends IOException {
             if (a.field_b == null) {
               break L1;
             } else {
-              if ((param21 ^ -1) < (a.field_b.length ^ -1)) {
+              if (~param21 < ~a.field_b.length) {
                 break L1;
               } else {
                 break L0;
@@ -471,7 +471,7 @@ final class bn extends IOException {
             if (rl.field_c == null) {
               break L3;
             } else {
-              if ((rl.field_c.length ^ -1) <= (param7 * 2 ^ -1)) {
+              if (~rl.field_c.length <= ~(param7 * 2)) {
                 break L2;
               } else {
                 break L3;
@@ -505,7 +505,7 @@ final class bn extends IOException {
             if (null == ic.field_c) {
               break L6;
             } else {
-              if ((ic.field_c.length ^ -1) > (param21 ^ -1)) {
+              if (~ic.field_c.length > ~param21) {
                 break L6;
               } else {
                 break L5;
@@ -560,7 +560,7 @@ final class bn extends IOException {
             if (null == am.field_b) {
               break L12;
             } else {
-              if ((param21 ^ -1) >= (am.field_b.length ^ -1)) {
+              if (~param21 >= ~am.field_b.length) {
                 break L11;
               } else {
                 break L12;
@@ -616,7 +616,7 @@ final class bn extends IOException {
         var33 = 0;
         L17: while (true) {
           L18: {
-            if ((param21 ^ -1) >= (var33 ^ -1)) {
+            if (~param21 >= ~var33) {
               break L18;
             } else {
               var24[var33] = -1;
@@ -652,7 +652,7 @@ final class bn extends IOException {
               L21: while (true) {
                 L22: {
                   L23: {
-                    if ((var38 ^ -1) <= (param7 ^ -1)) {
+                    if (~var38 <= ~param7) {
                       break L23;
                     } else {
                       var39 = param2[var38];
@@ -670,7 +670,7 @@ final class bn extends IOException {
                       var51 = param3 * (-param14 + var44) + param4 * (-param1 + var42) - -((-param0 + var43) * param9);
                       var52 = param9 * (var46 + -param0) + ((-param1 + var45) * param4 + param3 * (var47 + -param14));
                       var53 = param4 * (-param1 + var48) - -(param9 * (var49 + -param0)) + param3 * (-param14 + var50);
-                      stackOut_52_0 = (var53 | (var52 | var51)) ^ -1;
+                      stackOut_52_0 = ~(var53 | (var52 | var51));
                       stackOut_52_1 = -1;
                       stackIn_190_0 = stackOut_52_0;
                       stackIn_190_1 = stackOut_52_1;
@@ -685,11 +685,11 @@ final class bn extends IOException {
                               break L25;
                             } else {
                               L26: {
-                                if (((-var53 | (-var52 | -var51)) ^ -1) <= -1) {
+                                if ((-var53 | (-var52 | -var51)) >= 0) {
                                   break L26;
                                 } else {
                                   L27: {
-                                    if ((ic.field_c.length ^ -1) <= (4 + (param21 - -var29) ^ -1)) {
+                                    if (~ic.field_c.length <= ~(4 + (param21 - -var29))) {
                                       break L27;
                                     } else {
                                       var54 = new int[param21 + var29 + 104];
@@ -705,7 +705,7 @@ final class bn extends IOException {
                                     }
                                   }
                                   L28: {
-                                    if ((am.field_b.length ^ -1) <= (var31 + (param21 + 4) ^ -1)) {
+                                    if (~am.field_b.length <= ~(var31 + (param21 + 4))) {
                                       break L28;
                                     } else {
                                       var54 = new int[104 + param21 - -var31];
@@ -743,10 +743,10 @@ final class bn extends IOException {
                                         }
                                         L32: {
                                           L33: {
-                                            if ((param17[var38] ^ -1) == 0) {
+                                            if (param17[var38] == -1) {
                                               break L33;
                                             } else {
-                                              if (1 == (param17[var38] ^ -1)) {
+                                              if (param17[var38] == -2) {
                                                 break L33;
                                               } else {
                                                 stackOut_70_0 = 1;
@@ -768,7 +768,7 @@ final class bn extends IOException {
                                       }
                                     }
                                     L34: {
-                                      if (-1 != (1 & param22[var38] ^ -1)) {
+                                      if ((1 & param22[var38]) != 0) {
                                         stackOut_76_0 = 0;
                                         stackIn_77_0 = stackOut_76_0;
                                         break L34;
@@ -809,7 +809,7 @@ final class bn extends IOException {
                                     if (0 <= var51) {
                                       L38: {
                                         var34 = var24[var39];
-                                        if ((var34 ^ -1) <= -1) {
+                                        if (var34 >= 0) {
                                           break L38;
                                         } else {
                                           int incrementValue$45 = var55;
@@ -822,7 +822,7 @@ final class bn extends IOException {
                                           break L38;
                                         }
                                       }
-                                      var26[var57 + 0] = var34;
+                                      var26[var57] = var34;
                                       var26[8 - -var57] = var35;
                                       var57++;
                                       break L37;
@@ -836,7 +836,7 @@ final class bn extends IOException {
                                     } else {
                                       L40: {
                                         var34 = var25[var39];
-                                        if ((var34 ^ -1) > -1) {
+                                        if (var34 < 0) {
                                           int incrementValue$46 = var56;
                                           var56++;
                                           var34 = incrementValue$46;
@@ -859,10 +859,10 @@ final class bn extends IOException {
                                     if (var51 == 0) {
                                       break L41;
                                     } else {
-                                      if ((var52 ^ -1) == -1) {
+                                      if (var52 == 0) {
                                         break L41;
                                       } else {
-                                        if ((var52 ^ var51 ^ -1) <= -1) {
+                                        if ((var52 ^ var51) >= 0) {
                                           break L41;
                                         } else {
                                           var63 = -var51 + var52;
@@ -876,7 +876,7 @@ final class bn extends IOException {
                                           ic.field_c[var34] = var59;
                                           nn.field_S[var34] = var60;
                                           bd.field_a[var34] = var61;
-                                          var26[0 + var57] = var34;
+                                          var26[var57] = var34;
                                           var26[var57 + 8] = var62;
                                           var57++;
                                           int incrementValue$48 = var56;
@@ -899,7 +899,7 @@ final class bn extends IOException {
                                     } else {
                                       L43: {
                                         var34 = var24[var40];
-                                        if (-1 >= (var34 ^ -1)) {
+                                        if (var34 >= 0) {
                                           break L43;
                                         } else {
                                           int incrementValue$49 = var55;
@@ -912,7 +912,7 @@ final class bn extends IOException {
                                           break L43;
                                         }
                                       }
-                                      var26[0 + var57] = var34;
+                                      var26[var57] = var34;
                                       var26[8 - -var57] = var36;
                                       var57++;
                                       break L42;
@@ -924,7 +924,7 @@ final class bn extends IOException {
                                     } else {
                                       L45: {
                                         var34 = var25[var40];
-                                        if ((var34 ^ -1) <= -1) {
+                                        if (var34 >= 0) {
                                           break L45;
                                         } else {
                                           int incrementValue$50 = var56;
@@ -950,7 +950,7 @@ final class bn extends IOException {
                                       if (0 == var53) {
                                         break L46;
                                       } else {
-                                        if ((var52 ^ var53 ^ -1) <= -1) {
+                                        if ((var52 ^ var53) >= 0) {
                                           break L46;
                                         } else {
                                           var63 = -var52 + var53;
@@ -964,7 +964,7 @@ final class bn extends IOException {
                                           ic.field_c[var34] = var59;
                                           nn.field_S[var34] = var60;
                                           bd.field_a[var34] = var61;
-                                          var26[0 + var57] = var34;
+                                          var26[var57] = var34;
                                           var26[var57 + 8] = var62;
                                           var57++;
                                           int incrementValue$52 = var56;
@@ -987,7 +987,7 @@ final class bn extends IOException {
                                     } else {
                                       L48: {
                                         var34 = var24[var41];
-                                        if ((var34 ^ -1) > -1) {
+                                        if (var34 < 0) {
                                           int incrementValue$53 = var55;
                                           var55++;
                                           var34 = incrementValue$53;
@@ -1000,14 +1000,14 @@ final class bn extends IOException {
                                           break L48;
                                         }
                                       }
-                                      var26[0 + var57] = var34;
+                                      var26[var57] = var34;
                                       var26[8 + var57] = var37;
                                       var57++;
                                       break L47;
                                     }
                                   }
                                   L49: {
-                                    if (-1 > (var53 ^ -1)) {
+                                    if (var53 > 0) {
                                       break L49;
                                     } else {
                                       L50: {
@@ -1035,7 +1035,7 @@ final class bn extends IOException {
                                     if (0 == (var51 | var53)) {
                                       break L51;
                                     } else {
-                                      if ((var51 ^ var53 ^ -1) > -1) {
+                                      if ((var51 ^ var53) < 0) {
                                         var63 = -var53 + var51;
                                         var60 = (-(var53 * var43) + var51 * var49) / var63;
                                         int incrementValue$55 = var55;
@@ -1047,7 +1047,7 @@ final class bn extends IOException {
                                         ic.field_c[var34] = var59;
                                         nn.field_S[var34] = var60;
                                         bd.field_a[var34] = var61;
-                                        var26[var57 + 0] = var34;
+                                        var26[var57] = var34;
                                         var26[8 - -var57] = var62;
                                         var57++;
                                         int incrementValue$56 = var56;
@@ -1069,7 +1069,7 @@ final class bn extends IOException {
                                     var29 = var29 + (-k.field_e + var55);
                                     var33 = fh.field_g;
                                     k.field_e = var55;
-                                    if ((ja.field_l.length ^ -1) <= (-2 + var57 + var30 + param7 ^ -1)) {
+                                    if (~ja.field_l.length <= ~(-2 + var57 + var30 + param7)) {
                                       break L52;
                                     } else {
                                       var54 = new int[param7 + var30 + (var57 + 98)];
@@ -1168,7 +1168,7 @@ final class bn extends IOException {
                                     var31 = var31 + (-mf.field_u + var56);
                                     mf.field_u = var56;
                                     var33 = le.field_Xb;
-                                    if ((var58 + param7 - (-var32 - -2) ^ -1) < (ve.field_a.length ^ -1)) {
+                                    if (~(var58 + param7 - (-var32 - -2)) < ~ve.field_a.length) {
                                       var54 = new int[var58 + (var32 + (param7 + 98))];
                                       rd.a(ve.field_a, 0, var54, 0, var33);
                                       ve.field_a = var54;
@@ -1275,7 +1275,7 @@ final class bn extends IOException {
                                 le.field_Xb = le.field_Xb + 1;
                                 var33 = fieldTemp$61;
                                 var34 = var25[var39];
-                                if (-1 >= (var34 ^ -1)) {
+                                if (var34 >= 0) {
                                   break L64;
                                 } else {
                                   int fieldTemp$62 = mf.field_u;
@@ -1291,7 +1291,7 @@ final class bn extends IOException {
                               L65: {
                                 ve.field_a[var33] = var34;
                                 var34 = var25[var40];
-                                if ((var34 ^ -1) > -1) {
+                                if (var34 < 0) {
                                   int fieldTemp$63 = mf.field_u;
                                   mf.field_u = mf.field_u + 1;
                                   var34 = fieldTemp$63;
@@ -1307,7 +1307,7 @@ final class bn extends IOException {
                               L66: {
                                 hd.field_D[var33] = var34;
                                 var34 = var25[var41];
-                                if ((var34 ^ -1) <= -1) {
+                                if (var34 >= 0) {
                                   break L66;
                                 } else {
                                   int fieldTemp$64 = mf.field_u;
@@ -1344,7 +1344,7 @@ final class bn extends IOException {
                             fh.field_g = fh.field_g + 1;
                             var33 = fieldTemp$65;
                             var34 = var24[var39];
-                            if ((var34 ^ -1) <= -1) {
+                            if (var34 >= 0) {
                               break L68;
                             } else {
                               int fieldTemp$66 = k.field_e;
@@ -1454,7 +1454,7 @@ final class bn extends IOException {
                               if (va.field_q.field_k == null) {
                                 break L78;
                               } else {
-                                if ((param10 ^ -1) < (va.field_q.field_k.length ^ -1)) {
+                                if (~param10 < ~va.field_q.field_k.length) {
                                   break L78;
                                 } else {
                                   break L77;
@@ -1478,7 +1478,7 @@ final class bn extends IOException {
                                   } else {
                                     L82: {
                                       L83: {
-                                        if (-1 == (param6.field_v[var38] ^ -1)) {
+                                        if (param6.field_v[var38] == 0) {
                                           break L83;
                                         } else {
                                           va.field_q.field_k[var38] = param6.field_k[var38];
@@ -1497,7 +1497,7 @@ final class bn extends IOException {
                                       L84: {
                                         var33 = param6.field_k[var38];
                                         var34 = var24[var33];
-                                        if ((var34 ^ -1) <= -1) {
+                                        if (var34 >= 0) {
                                           break L84;
                                         } else {
                                           int fieldTemp$70 = k.field_e;
@@ -1513,7 +1513,7 @@ final class bn extends IOException {
                                       L85: {
                                         fl.field_o.field_k[var38] = (short)var34;
                                         var34 = var25[var33];
-                                        if ((var34 ^ -1) > -1) {
+                                        if (var34 < 0) {
                                           int fieldTemp$71 = mf.field_u;
                                           mf.field_u = mf.field_u + 1;
                                           var34 = fieldTemp$71;
@@ -1530,7 +1530,7 @@ final class bn extends IOException {
                                         va.field_q.field_k[var38] = (short)var34;
                                         var33 = param6.field_N[var38];
                                         var34 = var24[var33];
-                                        if (-1 >= (var34 ^ -1)) {
+                                        if (var34 >= 0) {
                                           break L86;
                                         } else {
                                           int fieldTemp$72 = k.field_e;
@@ -1546,7 +1546,7 @@ final class bn extends IOException {
                                       L87: {
                                         fl.field_o.field_N[var38] = (short)var34;
                                         var34 = var25[var33];
-                                        if (-1 < (var34 ^ -1)) {
+                                        if (var34 < 0) {
                                           int fieldTemp$73 = mf.field_u;
                                           mf.field_u = mf.field_u + 1;
                                           var34 = fieldTemp$73;
@@ -1643,7 +1643,7 @@ final class bn extends IOException {
                           if (bg.field_f == null) {
                             break L91;
                           } else {
-                            if ((param10 ^ -1) < (bg.field_f.length ^ -1)) {
+                            if (~param10 < ~bg.field_f.length) {
                               break L91;
                             } else {
                               break L90;
@@ -1674,7 +1674,7 @@ final class bn extends IOException {
                       }
                       var38 = 0;
                       L94: while (true) {
-                        if ((var38 ^ -1) <= (param10 ^ -1)) {
+                        if (~var38 <= ~param10) {
                           break L73;
                         } else {
                           var33 = param19[var38];
@@ -1699,7 +1699,7 @@ final class bn extends IOException {
                             L96: {
                               bg.field_f[var38] = var34;
                               var34 = var25[var33];
-                              if ((var34 ^ -1) <= -1) {
+                              if (var34 >= 0) {
                                 break L96;
                               } else {
                                 int fieldTemp$85 = mf.field_u;
@@ -1732,7 +1732,7 @@ final class bn extends IOException {
                             L98: {
                               gb.field_r[var38] = var34;
                               var34 = var25[var33];
-                              if (-1 >= (var34 ^ -1)) {
+                              if (var34 >= 0) {
                                 break L98;
                               } else {
                                 int fieldTemp$87 = mf.field_u;
@@ -1765,7 +1765,7 @@ final class bn extends IOException {
                             L100: {
                               ch.field_s[var38] = var34;
                               var34 = var25[var33];
-                              if ((var34 ^ -1) > -1) {
+                              if (var34 < 0) {
                                 int fieldTemp$89 = mf.field_u;
                                 mf.field_u = mf.field_u + 1;
                                 var34 = fieldTemp$89;

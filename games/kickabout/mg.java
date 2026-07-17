@@ -47,22 +47,77 @@ final class mg {
 
     final static gm a(up param0, int param1, int param2, boolean param3, int param4, byte param5) {
         vn var6 = null;
+        RuntimeException var6_ref = null;
         gm var7 = null;
         Object var8 = null;
-        var6 = pi.a(113, param4, param2, param0, param1, param3);
-        if (param5 <= 96) {
-          var8 = null;
-          gm discarded$1 = mg.a((up) null, 111, 43, false, 111, (byte) 15);
-          var7 = new gm(var6, param0.field_q, true);
-          var7.a((byte) -31, 0);
-          var7.field_mb.a(dq.a((byte) -121, var7.field_mb.a(true), new Random()), -38);
-          return var7;
-        } else {
-          var7 = new gm(var6, param0.field_q, true);
-          var7.a((byte) -31, 0);
-          var7.field_mb.a(dq.a((byte) -121, var7.field_mb.a(true), new Random()), -38);
-          return var7;
+        gm stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        gm stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var6 = pi.a(113, param4, param2, param0, param1, param3);
+              if (param5 > 96) {
+                break L1;
+              } else {
+                var8 = null;
+                gm discarded$2 = mg.a((up) null, 111, 43, false, 111, (byte) 15);
+                break L1;
+              }
+            }
+            var7 = new gm(var6, param0.field_q, true);
+            var7.a((byte) -31, 0);
+            var7.field_mb.a(dq.a((byte) -121, var7.field_mb.a(true), new Random()), -38);
+            stackOut_2_0 = (gm) var7;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var6_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var6_ref;
+            stackOut_4_1 = new StringBuilder().append("mg.C(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
+        return stackIn_3_0;
     }
 
     final static ki a(int param0, byte param1, int param2) {

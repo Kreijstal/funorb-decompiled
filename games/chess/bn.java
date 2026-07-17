@@ -431,7 +431,7 @@ final class bn extends gf {
                                         if ((((bn) this).field_x[var44] & 65535) != ((bn) this).field_N[var45]) {
                                           break L17;
                                         } else {
-                                          ((bn) this).field_Q[var45] = (byte)-1;
+                                          ((bn) this).field_Q[var45] = (byte) -1;
                                           var45++;
                                           continue L16;
                                         }
@@ -591,13 +591,13 @@ final class bn extends gf {
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((bn) this).field_Q[var38] = (byte)-1;
-                      ((bn) this).field_B[var38] = (short)-1;
+                      ((bn) this).field_Q[var38] = (byte) -1;
+                      ((bn) this).field_B[var38] = (short) -1;
                       break L25;
                     } else {
                       ((bn) this).field_Q[var38] = (byte)(var39 >> 2);
                       ((bn) this).field_B[var38] = ((bn) this).field_j[var38];
-                      ((bn) this).field_j[var38] = (short)127;
+                      ((bn) this).field_j[var38] = (short) 127;
                       if (((bn) this).field_B[var38] == -1) {
                         break L25;
                       } else {
@@ -1566,7 +1566,7 @@ final class bn extends gf {
                 }
                 if (((bn) this).field_Q != null) {
                   if (((bn) this).field_B[var53] == -1) {
-                    ((bn) this).field_Q[var53] = (byte)-1;
+                    ((bn) this).field_Q[var53] = (byte) -1;
                     var53++;
                     continue L22;
                   } else {
@@ -2056,7 +2056,7 @@ final class bn extends gf {
                           break L22;
                         } else {
                           if (var18.field_B == null) {
-                            ((bn) this).field_B[((bn) this).field_y] = (short)-1;
+                            ((bn) this).field_B[((bn) this).field_y] = (short) -1;
                             break L22;
                           } else {
                             ((bn) this).field_B[((bn) this).field_y] = var15.field_B[var12];

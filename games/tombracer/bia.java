@@ -5,28 +5,89 @@ final class bia extends fqa {
     static u[] field_J;
 
     final fsa a(boolean param0, int param1, la param2) {
-        fsa var10 = new fsa(param2, param0);
-        var10.b((byte) -11, ((bia) this).field_k, ((bia) this).field_l);
-        var10.h(3, param1 ^ param1);
-        var10.a(1, (byte) -12, false);
-        var10.e(false, param1 + 112);
-        var10.b((byte) 17, false);
-        var10.a((byte) -3, 6);
-        var10.a((byte) 83, (nv) (Object) new eq(param2, param0));
-        eia var5 = new eia(param2, param0);
-        var5.a(true, 3, (byte) -122);
-        var5.a(true, 4, -81);
-        var5.a(10, 1, 5, param1 + -2032);
-        ((bia) this).a((ut) (Object) var5, (byte) -118);
-        jma var6 = var5.k((byte) -101);
-        int var7 = 25;
-        var6.a(var7, 0, 0, 0, 5, 0);
-        var10.a((byte) 83, (nv) (Object) var5);
-        mfa var8 = rm.field_a;
-        cv var9 = (cv) (Object) var8.a(9, 123);
-        var9.b(1, (byte) -112);
-        var10.a((gr) (Object) var5, (byte) 124, (dg) (Object) var9);
-        return var10;
+        RuntimeException var4 = null;
+        eia var5 = null;
+        jma var6 = null;
+        int var7 = 0;
+        mfa var8 = null;
+        cv var9 = null;
+        fsa var10 = null;
+        fsa stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        fsa stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var10 = new fsa(param2, param0);
+            var10.b((byte) -11, ((bia) this).field_k, ((bia) this).field_l);
+            var10.h(3, param1 ^ param1);
+            var10.a(1, (byte) -12, false);
+            var10.e(false, param1 + 112);
+            var10.b((byte) 17, false);
+            var10.a((byte) -3, 6);
+            var10.a((byte) 83, (nv) (Object) new eq(param2, param0));
+            var5 = new eia(param2, param0);
+            var5.a(true, 3, (byte) -122);
+            var5.a(true, 4, -81);
+            var5.a(10, 1, 5, param1 + -2032);
+            ((bia) this).a((ut) (Object) var5, (byte) -118);
+            var6 = var5.k((byte) -101);
+            var7 = 25;
+            var6.a(var7, 0, 0, 0, 5, 0);
+            var10.a((byte) 83, (nv) (Object) var5);
+            var8 = rm.field_a;
+            var9 = (cv) (Object) var8.a(9, 123);
+            var9.b(1, (byte) -112);
+            var10.a((gr) (Object) var5, (byte) 124, (dg) (Object) var9);
+            stackOut_0_0 = (fsa) var10;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_1 = new StringBuilder().append("bia.AC(").append(param0).append(44).append(param1).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param2 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+        }
+        return stackIn_1_0;
     }
 
     final boolean z(int param0) {
@@ -62,8 +123,9 @@ final class bia extends fqa {
             } else {
               var2 += 16;
               param1 = param1 >>> 16;
-              if (param0 == 93) {
+              if (param0 != 93) {
                 L1: {
+                  int discarded$2 = bia.a((byte) 58, 116);
                   if (256 > param1) {
                     break L1;
                   } else {
@@ -73,7 +135,7 @@ final class bia extends fqa {
                   }
                 }
                 L2: {
-                  if (param1 <= -17) {
+                  if (param1 >= 16) {
                     var2 += 4;
                     param1 = param1 >>> 4;
                     break L2;
@@ -82,7 +144,7 @@ final class bia extends fqa {
                   }
                 }
                 L3: {
-                  if (-5 > param1) {
+                  if (param1 < 4) {
                     break L3;
                   } else {
                     param1 = param1 >>> 2;
@@ -91,7 +153,7 @@ final class bia extends fqa {
                   }
                 }
                 L4: {
-                  if (-2 < (param1 ^ -1)) {
+                  if (param1 < 1) {
                     break L4;
                   } else {
                     var2++;
@@ -102,7 +164,6 @@ final class bia extends fqa {
                 return var2 - -param1;
               } else {
                 L5: {
-                  int discarded$2 = bia.a((byte) 58, 116);
                   if (256 > param1) {
                     break L5;
                   } else {
@@ -112,7 +173,7 @@ final class bia extends fqa {
                   }
                 }
                 L6: {
-                  if (param1 <= -17) {
+                  if (param1 >= 16) {
                     var2 += 4;
                     param1 = param1 >>> 4;
                     break L6;
@@ -121,7 +182,7 @@ final class bia extends fqa {
                   }
                 }
                 L7: {
-                  if (-5 > param1) {
+                  if (param1 < 4) {
                     break L7;
                   } else {
                     param1 = param1 >>> 2;
@@ -130,7 +191,7 @@ final class bia extends fqa {
                   }
                 }
                 L8: {
-                  if (-2 < (param1 ^ -1)) {
+                  if (param1 < 1) {
                     break L8;
                   } else {
                     var2++;
@@ -143,9 +204,8 @@ final class bia extends fqa {
             }
           }
         }
-        if (param0 != 93) {
+        if (param0 == 93) {
           L9: {
-            int discarded$3 = bia.a((byte) 58, 116);
             if (256 > param1) {
               break L9;
             } else {
@@ -155,7 +215,7 @@ final class bia extends fqa {
             }
           }
           L10: {
-            if (param1 <= -17) {
+            if (param1 >= 16) {
               var2 += 4;
               param1 = param1 >>> 4;
               break L10;
@@ -164,7 +224,7 @@ final class bia extends fqa {
             }
           }
           L11: {
-            if (-5 > param1) {
+            if (param1 < 4) {
               break L11;
             } else {
               param1 = param1 >>> 2;
@@ -173,7 +233,7 @@ final class bia extends fqa {
             }
           }
           L12: {
-            if (-2 < (param1 ^ -1)) {
+            if (param1 < 1) {
               break L12;
             } else {
               var2++;
@@ -184,6 +244,7 @@ final class bia extends fqa {
           return var2 - -param1;
         } else {
           L13: {
+            int discarded$3 = bia.a((byte) 58, 116);
             if (256 > param1) {
               break L13;
             } else {
@@ -193,7 +254,7 @@ final class bia extends fqa {
             }
           }
           L14: {
-            if (param1 <= -17) {
+            if (param1 >= 16) {
               var2 += 4;
               param1 = param1 >>> 4;
               break L14;
@@ -202,7 +263,7 @@ final class bia extends fqa {
             }
           }
           L15: {
-            if (-5 > param1) {
+            if (param1 < 4) {
               break L15;
             } else {
               param1 = param1 >>> 2;
@@ -211,7 +272,7 @@ final class bia extends fqa {
             }
           }
           L16: {
-            if (-2 < (param1 ^ -1)) {
+            if (param1 < 1) {
               break L16;
             } else {
               var2++;
@@ -231,7 +292,11 @@ final class bia extends fqa {
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
+        try {
+            super.a(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "bia.V(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final int t(int param0) {

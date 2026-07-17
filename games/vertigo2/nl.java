@@ -13,19 +13,58 @@ final class nl extends ug {
     static int field_k;
 
     final static er[] a(int param0, int param1, r param2, int param3) {
-        if (param3 == 13416) {
-          if (!hq.a(124, param1, param0, param2)) {
-            return null;
-          } else {
+        RuntimeException var4 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          if (hq.a(124, param1, param0, param2)) {
             return vd.a((byte) 76);
-          }
-        } else {
-          field_k = -9;
-          if (!hq.a(124, param1, param0, param2)) {
-            return null;
           } else {
-            return vd.a((byte) 76);
+            return null;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L0: {
+            var4 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_1 = new StringBuilder().append("nl.K(").append(param0).append(44).append(param1).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param2 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L0;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L0;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 13416 + 41);
         }
     }
 
@@ -40,11 +79,11 @@ final class nl extends ug {
         var4 = var2 + -((nl) this).field_f;
         ((nl) this).field_f = var2;
         if (param0 == -9830) {
-          if ((var4 ^ -1L) < 4999999999L) {
+          if (var4 > -5000000000L) {
             if (5000000000L > var4) {
               ((nl) this).field_l[((nl) this).field_g] = var4;
               ((nl) this).field_g = (1 + ((nl) this).field_g) % 10;
-              if (-2 < (((nl) this).field_i ^ -1)) {
+              if (((nl) this).field_i < 1) {
                 ((nl) this).field_i = ((nl) this).field_i + 1;
                 var6 = 0L;
                 var8 = 1;
@@ -128,44 +167,11 @@ final class nl extends ug {
     }
 
     final static boolean a(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 != 107) {
-          L0: {
-            field_k = -83;
-            if (250 >= hm.field_F) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (250 >= hm.field_F) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return 250 < hm.field_F;
     }
 
     public static void e(int param0) {
-        int var1 = 71 % ((70 - param0) / 39);
+        int var1 = 0;
         field_e = null;
     }
 
@@ -180,7 +186,7 @@ final class nl extends ug {
             break L0;
           }
         }
-        if ((((nl) this).field_j ^ -1L) < (((nl) this).field_h ^ -1L)) {
+        if (~((nl) this).field_j < ~((nl) this).field_h) {
           ((nl) this).field_f = ((nl) this).field_f + (((nl) this).field_j - ((nl) this).field_h);
           ((nl) this).field_h = ((nl) this).field_h + (((nl) this).field_j - ((nl) this).field_h);
           ((nl) this).field_j = ((nl) this).field_j + param1;
@@ -194,7 +200,7 @@ final class nl extends ug {
               if (var4 >= 10) {
                 break L2;
               } else {
-                if ((((nl) this).field_j ^ -1L) > (((nl) this).field_h ^ -1L)) {
+                if (~((nl) this).field_j > ~((nl) this).field_h) {
                   continue L1;
                 } else {
                   break L2;
@@ -202,7 +208,7 @@ final class nl extends ug {
               }
             }
             L3: {
-              if ((((nl) this).field_h ^ -1L) < (((nl) this).field_j ^ -1L)) {
+              if (~((nl) this).field_h < ~((nl) this).field_j) {
                 ((nl) this).field_j = ((nl) this).field_h;
                 break L3;
               } else {

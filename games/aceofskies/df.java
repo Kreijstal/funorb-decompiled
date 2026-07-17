@@ -13,7 +13,7 @@ abstract class df {
 
     final static boolean a(char param0, int param1) {
         int var2 = 0;
-        var2 = -120 / ((param1 - 22) / 39);
+        var2 = -120;
         if (param0 < 65) {
           if (param0 >= 97) {
             if (param0 <= 122) {
@@ -46,7 +46,7 @@ abstract class df {
     abstract void a(int param0, int param1);
 
     public static void a(int param0) {
-        int var1 = 20 / ((param0 - -5) / 46);
+        int var1 = -10;
         field_g = null;
     }
 

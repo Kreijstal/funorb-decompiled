@@ -10,35 +10,28 @@ final class ki {
     static String[][] field_d;
 
     final static wd a(int param0) {
-        if (nb.field_i != oh.field_L) {
-          if (lm.field_d != oh.field_L) {
-            if (param0 == -61440) {
-              return null;
-            } else {
-              field_e = null;
-              return null;
-            }
-          } else {
-            oh.field_L = nb.field_i;
-            return p.field_a;
-          }
-        } else {
-          throw new IllegalStateException();
+        if (nb.field_i == oh.field_L) {
+            throw new IllegalStateException();
         }
+        if (lm.field_d != oh.field_L) {
+            return null;
+        }
+        oh.field_L = nb.field_i;
+        return p.field_a;
     }
 
     final static int a(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        var2 = (param0 * param0 >> 62406156) * param0 >> -1072900884;
+        var2 = (param0 * param0 >> 12) * param0 >> 12;
         var3 = param0 * 6 + -61440;
-        var4 = (var3 * param0 >> -1249041204) + 40960;
+        var4 = (var3 * param0 >> 12) + 40960;
         if (param1 >= -26) {
           int discarded$2 = ki.a(85, -2);
-          return var4 * var2 >> 1795605868;
+          return var4 * var2 >> 12;
         } else {
-          return var4 * var2 >> 1795605868;
+          return var4 * var2 >> 12;
         }
     }
 

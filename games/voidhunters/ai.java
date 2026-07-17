@@ -10,9 +10,9 @@ final class ai {
         rga.field_g.b(-561, (llb) (Object) hra.field_o.field_a);
         rga.field_g.b(-561, nt.field_q);
         jfb.field_o = new llb(0L, fh.field_g);
-        neb.field_o = new llb((long)param1, (llb) null);
-        jfb.field_o.b(param1 ^ -561, sfa.field_d);
-        jfb.field_o.b(param1 ^ -561, neb.field_o);
+        neb.field_o = new llb(0L, (llb) null);
+        jfb.field_o.b(-561, sfa.field_d);
+        jfb.field_o.b(-561, neb.field_o);
         neb.field_o.b(-561, fh.field_f);
         neb.field_o.b(-561, rlb.field_a);
         ok.a((byte) 100, param0);

@@ -39,34 +39,48 @@ final class ph implements jk {
 
     final static void a(int param0) {
         hd var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (null == cb.field_h) {
-          return;
-        } else {
-          var1 = (hd) (Object) cb.field_h.d(param0);
-          L0: while (true) {
-            if (var1 == null) {
-              return;
-            } else {
-              L1: {
-                if (0 <= var1.field_h) {
-                  break L1;
+        try {
+          L0: {
+            if (null != cb.field_h) {
+              var1 = (hd) (Object) cb.field_h.d(param0);
+              L1: while (true) {
+                if (var1 == null) {
+                  break L0;
                 } else {
-                  var1.b((byte) -70);
-                  break L1;
+                  L2: {
+                    if (0 <= var1.field_h) {
+                      break L2;
+                    } else {
+                      var1.b((byte) -70);
+                      break L2;
+                    }
+                  }
+                  var1 = (hd) (Object) cb.field_h.a((byte) -71);
+                  continue L1;
                 }
               }
-              var1 = (hd) (Object) cb.field_h.a((byte) -71);
-              continue L0;
+            } else {
+              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw r.a((Throwable) (Object) var1_ref, "ph.B(" + param0 + 41);
         }
     }
 
     final static void a(bc param0, int param1) {
-        tc.a((byte) 23, param0.a(true, "tutorial.txt", ""));
-        int var2 = -90 / ((param1 - -9) / 32);
+        try {
+            tc.a((byte) 23, param0.a(true, "tutorial.txt", ""));
+            int var2_int = -90 / ((param1 - -9) / 32);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "ph.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void a(byte param0) {
@@ -75,7 +89,7 @@ final class ph implements jk {
         field_c = null;
         field_e = null;
         field_b = null;
-        int var1 = -96 / ((param0 - 53) / 46);
+        int var1 = -96;
     }
 
     ph(int param0) {

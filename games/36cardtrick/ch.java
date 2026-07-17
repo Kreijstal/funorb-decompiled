@@ -18,10 +18,15 @@ abstract class ch {
     abstract void c(byte param0);
 
     final static void a(int param0, qk param1) {
-        ig.a(param1.a((byte) 7, "", "headers.packvorbis"));
-        ig var2 = ig.a(param1, "jagex logo2.packvorbis", "");
-        int var3 = -108 / ((param0 - -29) / 58);
-        ib discarded$0 = var2.c();
+        ig var2 = null;
+        try {
+            ig.a(param1.a((byte) 7, "", "headers.packvorbis"));
+            var2 = ig.a(param1, "jagex logo2.packvorbis", "");
+            int var3 = -108 / ((param0 - -29) / 58);
+            ib discarded$0 = var2.c();
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "ch.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     abstract void a(Object param0, boolean param1, boolean param2);
@@ -45,7 +50,7 @@ abstract class ch {
         if (param0) {
           L0: {
             na discarded$18 = ((ch) this).a(true, -13, 58, (byte) 80, 74);
-            if ((((ch) this).a((byte) 72) ^ -1) > -21) {
+            if (((ch) this).a((byte) 72) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -58,7 +63,7 @@ abstract class ch {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((ch) this).a((byte) 72) ^ -1) > -21) {
+            if (((ch) this).a((byte) 72) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -77,7 +82,7 @@ abstract class ch {
     abstract boolean b(byte param0);
 
     final na a(boolean param0, int param1, int param2, byte param3, int param4) {
-        long var6 = ((long)param4 << -1640279264) + (long)param2;
+        long var6 = ((long)param4 << 32) + (long)param2;
         if (param1 != -1640279264) {
             return null;
         }
@@ -86,7 +91,7 @@ abstract class ch {
         var8.field_j = var6;
         var8.field_u = param3;
         if (!param0) {
-            if (!((((ch) this).b(param1 ^ 1640300272) ^ -1) > -21)) {
+            if (!(((ch) this).b(param1 ^ 1640300272) < 20)) {
                 throw new RuntimeException();
             }
             ((ch) this).field_a.a((byte) -78, (he) (Object) var8);

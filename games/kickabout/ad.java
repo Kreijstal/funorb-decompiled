@@ -78,13 +78,13 @@ final class ad {
         int stackOut_1_0 = 0;
         try {
           L0: {
-            var4 = param0 >> 1441037631;
+            var4 = param0 >> 31;
             if (param1) {
               L1: {
                 param0 = var4 ^ param0 - -var4;
-                var4 = param2 >> -1699257601;
+                var4 = param2 >> 31;
                 param2 = var4 + param2 ^ var4;
-                if ((param0 ^ -1) <= (param2 ^ -1)) {
+                if (~param0 <= ~param2) {
                   break L1;
                 } else {
                   var4 = param0;
@@ -95,11 +95,11 @@ final class ad {
               }
               L2: {
                 var3_int = 0;
-                if (-32769 < (param0 ^ -1)) {
+                if (param0 < 32768) {
                   break L2;
                 } else {
                   L3: {
-                    if (-1073741825 < (param0 ^ -1)) {
+                    if (param0 < 1073741824) {
                       break L3;
                     } else {
                       var3_int += 16;
@@ -135,7 +135,7 @@ final class ad {
                     }
                   }
                   L7: {
-                    if ((param0 ^ -1) > -32769) {
+                    if (param0 < 32768) {
                       break L7;
                     } else {
                       var3_int++;
@@ -147,79 +147,79 @@ final class ad {
                   break L2;
                 }
               }
-              if ((param0 ^ -1) >= (param2 << -157847035 ^ -1)) {
+              if (~param0 >= ~(param2 << 5)) {
                 param0 = param2 * param2 + param0 * param0;
                 if (65536 > param0) {
-                  if ((param0 ^ -1) <= -257) {
+                  if (param0 >= 256) {
                     if (param0 >= 4096) {
                       if (16384 > param0) {
-                        stackOut_90_0 = qk.field_I[param0 >> 610582790] >> 670572233;
+                        stackOut_90_0 = qk.field_I[param0 >> 6] >> 9;
                         stackIn_91_0 = stackOut_90_0;
                         break L0;
                       } else {
-                        stackOut_88_0 = qk.field_I[param0 >> 420477480] >> 1469620072;
+                        stackOut_88_0 = qk.field_I[param0 >> 8] >> 8;
                         stackIn_89_0 = stackOut_88_0;
                         return stackIn_89_0;
                       }
                     } else {
                       if (1024 <= param0) {
-                        stackOut_85_0 = qk.field_I[param0 >> -1265701116] >> -1347842294;
+                        stackOut_85_0 = qk.field_I[param0 >> 4] >> 10;
                         stackIn_86_0 = stackOut_85_0;
                         return stackIn_86_0;
                       } else {
-                        stackOut_83_0 = qk.field_I[param0 >> -1765025918] >> 1706038219;
+                        stackOut_83_0 = qk.field_I[param0 >> 2] >> 11;
                         stackIn_84_0 = stackOut_83_0;
                         return stackIn_84_0;
                       }
                     }
                   } else {
-                    if ((param0 ^ -1) > -1) {
+                    if (param0 < 0) {
                       stackOut_77_0 = -1;
                       stackIn_78_0 = stackOut_77_0;
                       return stackIn_78_0;
                     } else {
-                      stackOut_75_0 = qk.field_I[param0] >> -1082865268;
+                      stackOut_75_0 = qk.field_I[param0] >> 12;
                       stackIn_76_0 = stackOut_75_0;
                       return stackIn_76_0;
                     }
                   }
                 } else {
-                  if ((param0 ^ -1) > -16777217) {
+                  if (param0 < 16777216) {
                     if (1048576 <= param0) {
-                      if (-4194305 < (param0 ^ -1)) {
-                        stackOut_69_0 = qk.field_I[param0 >> -771502354] >> 601648293;
+                      if (param0 < 4194304) {
+                        stackOut_69_0 = qk.field_I[param0 >> 14] >> 5;
                         stackIn_70_0 = stackOut_69_0;
                         return stackIn_70_0;
                       } else {
-                        stackOut_67_0 = qk.field_I[param0 >> -952522192] >> -1758781628;
+                        stackOut_67_0 = qk.field_I[param0 >> 16] >> 4;
                         stackIn_68_0 = stackOut_67_0;
                         return stackIn_68_0;
                       }
                     } else {
-                      if (-262145 < (param0 ^ -1)) {
-                        stackOut_64_0 = qk.field_I[param0 >> 600087178] >> -698373177;
+                      if (param0 < 262144) {
+                        stackOut_64_0 = qk.field_I[param0 >> 10] >> 7;
                         stackIn_65_0 = stackOut_64_0;
                         return stackIn_65_0;
                       } else {
-                        stackOut_62_0 = qk.field_I[param0 >> 857281836] >> -1247379642;
+                        stackOut_62_0 = qk.field_I[param0 >> 12] >> 6;
                         stackIn_63_0 = stackOut_62_0;
                         return stackIn_63_0;
                       }
                     }
                   } else {
-                    if (-268435457 >= (param0 ^ -1)) {
+                    if (param0 >= 268435456) {
                       if (1073741824 <= param0) {
-                        stackOut_56_0 = qk.field_I[param0 >> 2144154648] << var3_int;
+                        stackOut_56_0 = qk.field_I[param0 >> 24] << var3_int;
                         stackIn_57_0 = stackOut_56_0;
                         return stackIn_57_0;
                       } else {
                         L8: {
                           if (1 > var3_int) {
-                            stackOut_54_0 = qk.field_I[param0 >> 451680406] >> -var3_int + 1;
+                            stackOut_54_0 = qk.field_I[param0 >> 22] >> -var3_int + 1;
                             stackIn_55_0 = stackOut_54_0;
                             break L8;
                           } else {
-                            stackOut_52_0 = qk.field_I[param0 >> 744385942] << -1 + var3_int;
+                            stackOut_52_0 = qk.field_I[param0 >> 22] << -1 + var3_int;
                             stackIn_55_0 = stackOut_52_0;
                             break L8;
                           }
@@ -227,14 +227,14 @@ final class ad {
                         return stackIn_55_0;
                       }
                     } else {
-                      if (-67108865 >= (param0 ^ -1)) {
+                      if (param0 >= 67108864) {
                         L9: {
-                          if ((var3_int ^ -1) <= -3) {
-                            stackOut_46_0 = qk.field_I[param0 >> 931932276] << -2 + var3_int;
+                          if (var3_int >= 2) {
+                            stackOut_46_0 = qk.field_I[param0 >> 20] << -2 + var3_int;
                             stackIn_47_0 = stackOut_46_0;
                             break L9;
                           } else {
-                            stackOut_44_0 = qk.field_I[param0 >> 749092020] >> -var3_int + 2;
+                            stackOut_44_0 = qk.field_I[param0 >> 20] >> -var3_int + 2;
                             stackIn_47_0 = stackOut_44_0;
                             break L9;
                           }
@@ -242,12 +242,12 @@ final class ad {
                         return stackIn_47_0;
                       } else {
                         L10: {
-                          if (-4 < (var3_int ^ -1)) {
-                            stackOut_41_0 = qk.field_I[param0 >> 1211023954] >> -var3_int + 3;
+                          if (var3_int < 3) {
+                            stackOut_41_0 = qk.field_I[param0 >> 18] >> -var3_int + 3;
                             stackIn_42_0 = stackOut_41_0;
                             break L10;
                           } else {
-                            stackOut_39_0 = qk.field_I[param0 >> -1840261582] << -3 + var3_int;
+                            stackOut_39_0 = qk.field_I[param0 >> 18] << -3 + var3_int;
                             stackIn_42_0 = stackOut_39_0;
                             break L10;
                           }

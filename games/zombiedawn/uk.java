@@ -16,29 +16,13 @@ final class uk {
     }
 
     final static boolean a(byte param0) {
-        if (param0 != -44) {
-            uk.a(31);
-            if ((ld.field_j ^ -1) > -21) {
-                return true;
-            }
-            if (!bj.d(param0 ^ -18868)) {
-                return true;
-            }
-            if (-1 <= (sd.field_b ^ -1)) {
-                return false;
-            }
-            if (nm.c(-23022)) {
-                return false;
-            }
+        if (ld.field_j < 20) {
             return true;
         }
-        if ((ld.field_j ^ -1) > -21) {
+        if (!bj.d(18840)) {
             return true;
         }
-        if (!bj.d(param0 ^ -18868)) {
-            return true;
-        }
-        if (-1 <= (sd.field_b ^ -1)) {
+        if (sd.field_b <= 0) {
             return false;
         }
         if (nm.c(-23022)) {
@@ -48,19 +32,9 @@ final class uk {
     }
 
     final static void a(boolean param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
         ce.field_r = fj.field_g.a(true);
-        if (param0) {
-          field_b = null;
-          var2 = (CharSequence) (Object) ce.field_r;
-          kf.field_T = fm.a(var2, -122);
-          return;
-        } else {
-          var3 = (CharSequence) (Object) ce.field_r;
-          kf.field_T = fm.a(var3, -122);
-          return;
-        }
+        CharSequence var2 = (CharSequence) (Object) ce.field_r;
+        kf.field_T = fm.a(var2, -122);
     }
 
     final static String a(int param0, byte param1, int param2) {

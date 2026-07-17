@@ -11,9 +11,6 @@ final class pb {
     static a field_d;
 
     final static int a(boolean param0) {
-        if (!param0) {
-            return -49;
-        }
         mb.field_u.b((byte) 111);
         if (!vh.field_e.a(false)) {
             return tn.b(-102);
@@ -22,7 +19,7 @@ final class pb {
     }
 
     public static void a(int param0) {
-        int var1 = 87 / ((param0 - 86) / 37);
+        int var1 = 87;
         field_f = null;
         field_d = null;
         field_b = null;

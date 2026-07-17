@@ -129,13 +129,13 @@ final class qi implements Iterable {
           var2 = ir.field_h * ir.field_h;
           var3 = -(hb.field_a * hb.field_a) + var2;
           ir.field_a.b(90, 2147483647, -(199 * var3 / var2) + var1, 199, -90 + (qh.field_f - 120) - 4);
-          oi.field_n.b(0, 2147483647, var1 + (202 - -(var3 * 438 / var2)), 438, qh.field_f + -120 + -4);
+          oi.field_n.b(0, 2147483647, var1 + (202 - -(var3 * 438 / var2)), 438, qh.field_f - 124);
           return;
         } else {
           var2 = ir.field_h * ir.field_h;
           var3 = -(hb.field_a * hb.field_a) + var2;
           ir.field_a.b(90, 2147483647, -(199 * var3 / var2) + var1, 199, -90 + (qh.field_f - 120) - 4);
-          oi.field_n.b(0, 2147483647, var1 + (202 - -(var3 * 438 / var2)), 438, qh.field_f + -120 + -4);
+          oi.field_n.b(0, 2147483647, var1 + (202 - -(var3 * 438 / var2)), 438, qh.field_f - 124);
           return;
         }
     }
@@ -144,17 +144,16 @@ final class qi implements Iterable {
         if (param0 <= 68) {
             return;
         }
-        na.a(-58, param1);
-        wf.a(false, gg.field_a, -128);
+        try {
+            na.a(-58, param1);
+            wf.a(false, gg.field_a, -128);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "qi.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void b(int param0) {
         field_f = null;
-        if (param0 != 14676) {
-            field_h = null;
-            field_h = null;
-            return;
-        }
         field_h = null;
     }
 
@@ -185,10 +184,70 @@ final class qi implements Iterable {
     }
 
     final static boolean a(byte param0, CharSequence param1) {
-        if (param0 != -64) {
-            return false;
+        RuntimeException var2 = null;
+        int stackIn_2_0 = 0;
+        boolean stackIn_4_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_3_0 = false;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 == -64) {
+              stackOut_3_0 = w.a(false, param1, (byte) -37);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("qi.G(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        return w.a(false, param1, (byte) -37);
+        return stackIn_4_0;
     }
 
     qi() {
@@ -198,37 +257,19 @@ final class qi implements Iterable {
     }
 
     final void a(byte param0, rg param1) {
-        if (param1.field_n == null) {
-          if (param0 > -31) {
-            field_g = -32;
+        try {
+            if (param1.field_n != null) {
+                param1.a(false);
+            }
+            if (param0 > -31) {
+                field_g = -32;
+            }
             param1.field_n = ((qi) this).field_d.field_n;
             param1.field_q = ((qi) this).field_d;
             param1.field_n.field_q = param1;
             param1.field_q.field_n = param1;
-            return;
-          } else {
-            param1.field_n = ((qi) this).field_d.field_n;
-            param1.field_q = ((qi) this).field_d;
-            param1.field_n.field_q = param1;
-            param1.field_q.field_n = param1;
-            return;
-          }
-        } else {
-          param1.a(false);
-          if (param0 <= -31) {
-            param1.field_n = ((qi) this).field_d.field_n;
-            param1.field_q = ((qi) this).field_d;
-            param1.field_n.field_q = param1;
-            param1.field_q.field_n = param1;
-            return;
-          } else {
-            field_g = -32;
-            param1.field_n = ((qi) this).field_d.field_n;
-            param1.field_q = ((qi) this).field_d;
-            param1.field_n.field_q = param1;
-            param1.field_q.field_n = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "qi.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

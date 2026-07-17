@@ -12,131 +12,166 @@ final class mf {
     static String field_h;
 
     final static wa a(int param0, String param1) {
-        String var2 = null;
-        Object var3 = null;
-        wa var3_ref = null;
+        Object var2 = null;
+        wa var3 = null;
         String var4 = null;
         int var5 = 0;
         Object var6 = null;
+        CharSequence var7 = null;
         CharSequence var8 = null;
-        CharSequence var9 = null;
-        CharSequence var10 = null;
-        var3 = null;
+        wa stackIn_17_0 = null;
+        Object stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        Object stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        Object stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        wa stackOut_16_0 = null;
+        Object stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        Object stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        Object stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
-        if (uc.field_c != null) {
-          L0: {
-            var8 = (CharSequence) (Object) param1;
-            var2 = gk.a(var8, -13);
-            if (var2 != null) {
-              break L0;
-            } else {
-              var2 = (String) (Object) var8;
-              break L0;
+        try {
+          if (uc.field_c != null) {
+            L0: {
+              var7 = (CharSequence) (Object) param1;
+              var2 = (Object) (Object) gk.a(var7, -13);
+              if (var2 != null) {
+                break L0;
+              } else {
+                var2 = (Object) (Object) var7;
+                break L0;
+              }
             }
-          }
-          if (param0 == -1) {
-            var3_ref = (wa) (Object) uc.field_c.a((long)var2.hashCode(), (byte) -64);
-            L1: while (true) {
-              if (var3_ref != null) {
-                L2: {
-                  var9 = (CharSequence) (Object) var3_ref.field_Cb;
-                  var4 = gk.a(var9, param0 + -12);
+            L1: {
+              if (param0 == -1) {
+                break L1;
+              } else {
+                var6 = null;
+                wa discarded$2 = mf.a(-34, (String) null);
+                break L1;
+              }
+            }
+            var3 = (wa) (Object) uc.field_c.a((long)((String) var2).hashCode(), (byte) -64);
+            L2: while (true) {
+              if (var3 != null) {
+                L3: {
+                  var8 = (CharSequence) (Object) var3.field_Cb;
+                  var4 = gk.a(var8, param0 + -12);
                   if (var4 == null) {
-                    var4 = var3_ref.field_Cb;
-                    break L2;
+                    var4 = var3.field_Cb;
+                    break L3;
                   } else {
-                    break L2;
+                    break L3;
                   }
                 }
-                if (var4.equals((Object) (Object) var2)) {
-                  return var3_ref;
+                if (var4.equals(var2)) {
+                  stackOut_16_0 = (wa) var3;
+                  stackIn_17_0 = stackOut_16_0;
+                  return stackIn_17_0;
                 } else {
-                  var3_ref = (wa) (Object) uc.field_c.d(param0 ^ 82);
-                  continue L1;
+                  var3 = (wa) (Object) uc.field_c.d(param0 ^ 82);
+                  continue L2;
                 }
               } else {
                 return null;
               }
             }
           } else {
-            var6 = null;
-            wa discarded$1 = mf.a(-34, (String) null);
-            var3_ref = (wa) (Object) uc.field_c.a((long)var2.hashCode(), (byte) -64);
-            L3: while (true) {
-              if (var3_ref != null) {
-                L4: {
-                  var10 = (CharSequence) (Object) var3_ref.field_Cb;
-                  var4 = gk.a(var10, param0 + -12);
-                  if (var4 == null) {
-                    var4 = var3_ref.field_Cb;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                if (var4.equals((Object) (Object) var2)) {
-                  return var3_ref;
-                } else {
-                  var3_ref = (wa) (Object) uc.field_c.d(param0 ^ 82);
-                  continue L3;
-                }
-              } else {
-                return null;
-              }
+            return null;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = (Object) (Object) decompiledCaughtException;
+            stackOut_20_0 = var2;
+            stackOut_20_1 = new StringBuilder().append("mf.C(").append(param0).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param1 == null) {
+              stackOut_22_0 = stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L4;
+            } else {
+              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L4;
             }
           }
-        } else {
-          return null;
+          throw aa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
     }
 
     final static void a(int param0, int param1) {
         fk var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
-        si.field_l = param0;
-        var2 = (fk) (Object) qn.field_mb.b(12623);
-        L0: while (true) {
-          if (var2 == null) {
-            if (param1 == 21298) {
-              if (null == he.field_f) {
-                return;
-              } else {
-                var2 = (fk) (Object) he.field_f.b(12623);
-                L1: while (true) {
-                  if (var2 == null) {
-                    return;
-                  } else {
-                    L2: {
-                      if (!var2.field_n.b((byte) -36)) {
-                        var2.a(true);
-                        break L2;
-                      } else {
-                        var2.field_m.c(var2.field_l * si.field_l - -128 >> 931454088);
-                        break L2;
+        try {
+          L0: {
+            si.field_l = param0;
+            var2 = (fk) (Object) qn.field_mb.b(12623);
+            L1: while (true) {
+              if (var2 == null) {
+                if (null != he.field_f) {
+                  var2 = (fk) (Object) he.field_f.b(12623);
+                  L2: while (true) {
+                    if (var2 == null) {
+                      break L0;
+                    } else {
+                      L3: {
+                        if (!var2.field_n.b((byte) -36)) {
+                          var2.a(true);
+                          break L3;
+                        } else {
+                          var2.field_m.c(var2.field_l * si.field_l - -128 >> 8);
+                          break L3;
+                        }
                       }
+                      var2 = (fk) (Object) he.field_f.a(0);
+                      continue L2;
                     }
-                    var2 = (fk) (Object) he.field_f.a(0);
-                    continue L1;
+                  }
+                } else {
+                  return;
+                }
+              } else {
+                L4: {
+                  if (var2.field_n.b((byte) -119)) {
+                    var2.field_m.c(si.field_l * var2.field_l - -128 >> 8);
+                    break L4;
+                  } else {
+                    var2.a(true);
+                    break L4;
                   }
                 }
-              }
-            } else {
-              return;
-            }
-          } else {
-            L3: {
-              if (var2.field_n.b((byte) -119)) {
-                var2.field_m.c(si.field_l * var2.field_l - -128 >> -1530393656);
-                break L3;
-              } else {
-                var2.a(true);
-                break L3;
+                var2 = (fk) (Object) qn.field_mb.a(0);
+                continue L1;
               }
             }
-            var2 = (fk) (Object) qn.field_mb.a(0);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var2_ref, "mf.B(" + param0 + 44 + 21298 + 41);
         }
     }
 

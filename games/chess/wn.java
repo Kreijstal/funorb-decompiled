@@ -15,11 +15,6 @@ abstract class wn {
     public static void b(boolean param0) {
         field_d = null;
         field_b = null;
-        if (param0) {
-            field_d = null;
-            field_g = null;
-            return;
-        }
         field_g = null;
     }
 

@@ -19,7 +19,7 @@ final class dg {
         field_b = null;
         field_g = null;
         field_e = null;
-        int var1 = -51 % ((param0 - 28) / 50);
+        int var1 = -1;
         field_a = null;
     }
 

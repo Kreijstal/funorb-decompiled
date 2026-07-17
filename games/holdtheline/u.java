@@ -66,7 +66,7 @@ abstract class u extends rl {
                     return;
                   } else {
                     var9 = (-var5 + var6) * var7 / var4 + var5;
-                    var9 = var9 | (var9 << -210151608 | var9 << -1390727920);
+                    var9 = var9 | (var9 << 8 | var9 << 16);
                     tc.b(param0, var8, 6, var9);
                     tc.b(-6 + ((u) this).field_x + param0, var8, 6, var9);
                     var7++;
@@ -76,7 +76,7 @@ abstract class u extends rl {
                 }
               } else {
                 var9 = var5 + (var6 - var5) * var7 / var4;
-                var9 = var9 | (var9 << -1175873936 | var9 << 271832200);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 tc.b(param0, var8, 6, var9);
                 tc.b(-6 + (param0 + ((u) this).field_x), var8, 6, var9);
                 var8++;
@@ -91,18 +91,18 @@ abstract class u extends rl {
                   var9 = var5 - -(var7 * (-var5 + var6) / var4);
                   var10 = 0;
                   var11 = ((u) this).field_x;
-                  if ((var7 ^ -1) >= -21) {
+                  if (var7 <= 20) {
                     L5: while (true) {
                       if (20 < var10) {
                         break L4;
                       } else {
                         var12 = (-var7 + 20) * (20 - var7) + (20 - var10) * (-var10 + 20);
-                        if ((var12 ^ -1) >= -463) {
+                        if (var12 <= 462) {
                           if (var12 < 420) {
                             break L4;
                           } else {
                             var13 = var9 * (-var12 + 462) / 42;
-                            var13 = var13 | (var13 << 1647920720 | var13 << 956272136);
+                            var13 = var13 | (var13 << 16 | var13 << 8);
                             tc.field_b[tc.field_j * var8 - (-param0 - var10)] = var13;
                             var10++;
                             continue L5;
@@ -118,7 +118,7 @@ abstract class u extends rl {
                   }
                 }
                 L6: {
-                  if (-21 <= (var7 ^ -1)) {
+                  if (var7 <= 20) {
                     var12 = var11;
                     var11 -= 21;
                     var13 = 0;
@@ -128,12 +128,12 @@ abstract class u extends rl {
                           break L8;
                         } else {
                           var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
-                          if (-463 > (var14 ^ -1)) {
+                          if (var14 > 462) {
                             break L8;
                           } else {
-                            if ((var14 ^ -1) <= -421) {
+                            if (var14 >= 420) {
                               var15 = (462 + -var14) * var9 / 42;
-                              var15 = var15 | (var15 << -1591223640 | var15 << -364927344);
+                              var15 = var15 | (var15 << 8 | var15 << 16);
                               tc.field_b[param0 + (tc.field_j * var8 - -var11)] = var15;
                               var13++;
                               var11++;
@@ -154,7 +154,7 @@ abstract class u extends rl {
                     break L6;
                   }
                 }
-                var9 = var9 | (var9 << 763680936 | var9 << -132778448);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 tc.b(param0 + var10, var8, -var10 + var11, var9);
                 var7++;
                 var8++;
@@ -195,12 +195,13 @@ abstract class u extends rl {
         if (param0 != 39) {
             ((u) this).field_N = 59;
         }
-        if ((((u) this).field_W ^ -1) >= -1) {
+        if (((u) this).field_W <= 0) {
         } else {
             var2 = ((u) this).field_P;
             var3 = ((u) this).field_N;
+            int fieldTemp$0 = ((u) this).field_L + 1;
             ((u) this).field_L = ((u) this).field_L + 1;
-            if (((u) this).field_L + 1 < ((u) this).field_W) {
+            if (fieldTemp$0 < ((u) this).field_W) {
                 var4 = ((u) this).field_L * (-((u) this).field_L + ((u) this).field_W * 2);
                 var5 = ((u) this).field_W * ((u) this).field_W;
                 var3 = var4 * (((u) this).field_N - ((u) this).field_M) / var5 + ((u) this).field_M;
@@ -232,9 +233,6 @@ abstract class u extends rl {
 
     public static void l(int param0) {
         field_S = null;
-        if (param0 != 6) {
-            field_V = -109;
-        }
         field_U = null;
         field_O = null;
         field_Q = null;
@@ -243,9 +241,6 @@ abstract class u extends rl {
     final static String j(int param0) {
         if (!(ng.field_e != null)) {
             return "";
-        }
-        if (param0 != 21) {
-            field_O = null;
         }
         return ng.field_e;
     }

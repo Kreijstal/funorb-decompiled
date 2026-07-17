@@ -229,12 +229,12 @@ final class vh extends rq {
     }
 
     final void b(int param0) {
-        jagdx.IDirect3DDevice var2_ref = null;
+        jagdx.IDirect3DDevice var2_ref_jagdx_IDirect3DDevice = null;
         ut var3 = null;
         if (!(((vh) this).field_e == null)) {
-            var2_ref = ((vh) this).field_f.field_Cc;
+            var2_ref_jagdx_IDirect3DDevice = ((vh) this).field_f.field_Cc;
             var3 = ((vh) this).field_f.k((byte) 69);
-            int discarded$0 = var2_ref.a(0, var3.a(0, field_g));
+            int discarded$0 = var2_ref_jagdx_IDirect3DDevice.a(0, var3.a(0, field_g));
         }
         int var2 = 67 % ((41 - param0) / 46);
     }
@@ -273,7 +273,7 @@ final class vh extends rq {
           } else {
             L1: {
               var2 = ((vh) this).field_f.field_Cc;
-              if (-1 <= (((vh) this).field_b.field_Kb ^ -1)) {
+              if (((vh) this).field_b.field_Kb <= 0) {
                 int discarded$4 = var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
                 break L1;
               } else {

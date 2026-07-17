@@ -16,27 +16,27 @@ final class pv {
           L0: {
             field_b = 59;
             var2 = param1;
-            if ((var2 ^ -1) != -33) {
-              if ((var2 ^ -1) != -161) {
-                if ((var2 ^ -1) == -96) {
+            if (var2 != 32) {
+              if (var2 != 160) {
+                if (var2 == 95) {
                   break L0;
                 } else {
-                  if (var2 != -46) {
+                  if (var2 != 45) {
                     L1: {
                       if (var2 != 91) {
                         if (93 != var2) {
-                          if (-36 == var2) {
+                          if (var2 == 35) {
                             break L1;
                           } else {
                             L2: {
-                              if (-225 != (var2 ^ -1)) {
+                              if (var2 != 224) {
                                 if (var2 == 225) {
                                   break L2;
                                 } else {
                                   if (var2 == 226) {
                                     break L2;
                                   } else {
-                                    if ((var2 ^ -1) != -229) {
+                                    if (var2 != 228) {
                                       if (227 == var2) {
                                         break L2;
                                       } else {
@@ -53,7 +53,7 @@ final class pv {
                                                 if (195 != var2) {
                                                   if (var2 != 232) {
                                                     L3: {
-                                                      if ((var2 ^ -1) == -234) {
+                                                      if (var2 == 233) {
                                                         break L3;
                                                       } else {
                                                         if (234 != var2) {
@@ -64,7 +64,7 @@ final class pv {
                                                               break L3;
                                                             } else {
                                                               if (var2 != 201) {
-                                                                if ((var2 ^ -1) == -203) {
+                                                                if (var2 == 202) {
                                                                   break L3;
                                                                 } else {
                                                                   if (var2 != 203) {
@@ -72,13 +72,13 @@ final class pv {
                                                                       if (237 == var2) {
                                                                         break L4;
                                                                       } else {
-                                                                        if (var2 == -239) {
+                                                                        if (var2 == 238) {
                                                                           break L4;
                                                                         } else {
-                                                                          if (-240 == var2) {
+                                                                          if (var2 == 239) {
                                                                             break L4;
                                                                           } else {
-                                                                            if (-206 != var2) {
+                                                                            if (var2 != 205) {
                                                                               if (var2 == 206) {
                                                                                 break L4;
                                                                               } else {
@@ -87,17 +87,17 @@ final class pv {
                                                                                 } else {
                                                                                   if (242 != var2) {
                                                                                     L5: {
-                                                                                      if (-244 == var2) {
+                                                                                      if (var2 == 243) {
                                                                                         break L5;
                                                                                       } else {
                                                                                         if (var2 == 244) {
                                                                                           break L5;
                                                                                         } else {
-                                                                                          if (var2 != -247) {
-                                                                                            if (-246 == var2) {
+                                                                                          if (var2 != 246) {
+                                                                                            if (var2 == 245) {
                                                                                               break L5;
                                                                                             } else {
-                                                                                              if ((var2 ^ -1) != -211) {
+                                                                                              if (var2 != 210) {
                                                                                                 if (var2 == 211) {
                                                                                                   break L5;
                                                                                                 } else {
@@ -110,14 +110,14 @@ final class pv {
                                                                                                           if (var2 == 249) {
                                                                                                             break L6;
                                                                                                           } else {
-                                                                                                            if (-251 == (var2 ^ -1)) {
+                                                                                                            if (var2 == 250) {
                                                                                                               break L6;
                                                                                                             } else {
-                                                                                                              if (var2 == -252) {
+                                                                                                              if (var2 == 251) {
                                                                                                                 break L6;
                                                                                                               } else {
                                                                                                                 if (252 != var2) {
-                                                                                                                  if (-218 == var2) {
+                                                                                                                  if (var2 == 217) {
                                                                                                                     break L6;
                                                                                                                   } else {
                                                                                                                     if (218 == var2) {
@@ -130,16 +130,16 @@ final class pv {
                                                                                                                           if (var2 == 231) {
                                                                                                                             return 'c';
                                                                                                                           } else {
-                                                                                                                            if ((var2 ^ -1) != -200) {
+                                                                                                                            if (var2 != 199) {
                                                                                                                               L7: {
-                                                                                                                                if (var2 == -256) {
+                                                                                                                                if (var2 == 255) {
                                                                                                                                   break L7;
                                                                                                                                 } else {
                                                                                                                                   if (var2 == 376) {
                                                                                                                                     break L7;
                                                                                                                                   } else {
                                                                                                                                     if (var2 != 241) {
-                                                                                                                                      if (-210 != var2) {
+                                                                                                                                      if (var2 != 209) {
                                                                                                                                         if (var2 != 223) {
                                                                                                                                           return Character.toLowerCase(param1);
                                                                                                                                         } else {
@@ -267,21 +267,21 @@ final class pv {
         } else {
           L8: {
             var2 = param1;
-            if ((var2 ^ -1) != -33) {
-              if ((var2 ^ -1) != -161) {
-                if ((var2 ^ -1) != -96) {
-                  if (var2 != -46) {
+            if (var2 != 32) {
+              if (var2 != 160) {
+                if (var2 != 95) {
+                  if (var2 != 45) {
                     L9: {
                       if (var2 != 91) {
                         if (93 != var2) {
-                          if (-36 != var2) {
+                          if (var2 != 35) {
                             L10: {
-                              if (-225 != (var2 ^ -1)) {
+                              if (var2 != 224) {
                                 if (var2 != 225) {
                                   if (var2 == 226) {
                                     break L10;
                                   } else {
-                                    if ((var2 ^ -1) != -229) {
+                                    if (var2 != 228) {
                                       if (227 == var2) {
                                         break L10;
                                       } else {
@@ -298,7 +298,7 @@ final class pv {
                                                 if (195 != var2) {
                                                   L11: {
                                                     if (var2 != 232) {
-                                                      if ((var2 ^ -1) == -234) {
+                                                      if (var2 == 233) {
                                                         break L11;
                                                       } else {
                                                         if (234 != var2) {
@@ -309,7 +309,7 @@ final class pv {
                                                               break L11;
                                                             } else {
                                                               if (var2 != 201) {
-                                                                if (var2 == -203) {
+                                                                if (var2 == 202) {
                                                                   break L11;
                                                                 } else {
                                                                   if (var2 != 203) {
@@ -317,13 +317,13 @@ final class pv {
                                                                       if (237 == var2) {
                                                                         break L12;
                                                                       } else {
-                                                                        if (var2 == -239) {
+                                                                        if (var2 == 238) {
                                                                           break L12;
                                                                         } else {
-                                                                          if (-240 == var2) {
+                                                                          if (var2 == 239) {
                                                                             break L12;
                                                                           } else {
-                                                                            if (-206 != var2) {
+                                                                            if (var2 != 205) {
                                                                               if (var2 == 206) {
                                                                                 break L12;
                                                                               } else {
@@ -332,17 +332,17 @@ final class pv {
                                                                                 } else {
                                                                                   L13: {
                                                                                     if (242 != var2) {
-                                                                                      if (-244 == (var2 ^ -1)) {
+                                                                                      if (var2 == 243) {
                                                                                         break L13;
                                                                                       } else {
                                                                                         if (var2 == 244) {
                                                                                           break L13;
                                                                                         } else {
-                                                                                          if (var2 != -247) {
-                                                                                            if (-246 == var2) {
+                                                                                          if (var2 != 246) {
+                                                                                            if (var2 == 245) {
                                                                                               break L13;
                                                                                             } else {
-                                                                                              if ((var2 ^ -1) != -211) {
+                                                                                              if (var2 != 210) {
                                                                                                 if (var2 == 211) {
                                                                                                   break L13;
                                                                                                 } else {
@@ -355,14 +355,14 @@ final class pv {
                                                                                                           if (var2 == 249) {
                                                                                                             break L14;
                                                                                                           } else {
-                                                                                                            if (-251 == (var2 ^ -1)) {
+                                                                                                            if (var2 == 250) {
                                                                                                               break L14;
                                                                                                             } else {
-                                                                                                              if (var2 == -252) {
+                                                                                                              if (var2 == 251) {
                                                                                                                 break L14;
                                                                                                               } else {
                                                                                                                 if (252 != var2) {
-                                                                                                                  if (-218 == var2) {
+                                                                                                                  if (var2 == 217) {
                                                                                                                     break L14;
                                                                                                                   } else {
                                                                                                                     if (218 == var2) {
@@ -375,16 +375,16 @@ final class pv {
                                                                                                                           if (var2 == 231) {
                                                                                                                             return 'c';
                                                                                                                           } else {
-                                                                                                                            if ((var2 ^ -1) != -200) {
+                                                                                                                            if (var2 != 199) {
                                                                                                                               L15: {
-                                                                                                                                if (var2 == -256) {
+                                                                                                                                if (var2 == 255) {
                                                                                                                                   break L15;
                                                                                                                                 } else {
                                                                                                                                   if (var2 == 376) {
                                                                                                                                     break L15;
                                                                                                                                   } else {
                                                                                                                                     if (var2 != 241) {
-                                                                                                                                      if (-210 != var2) {
+                                                                                                                                      if (var2 != 209) {
                                                                                                                                         if (var2 != 223) {
                                                                                                                                           return Character.toLowerCase(param1);
                                                                                                                                         } else {
@@ -519,29 +519,152 @@ final class pv {
     }
 
     final static ru a(String param0, String param1, kl param2, int param3) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        var4 = param2.a(param0, 124);
-        var5 = param2.a((byte) 121, var4, param1);
-        if (param3 != 24914) {
-          return null;
-        } else {
-          return ls.a(var5, param2, var4, -80);
+        ru stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ru stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            var4_int = param2.a(param0, 124);
+            var5 = param2.a((byte) 121, var4_int, param1);
+            stackOut_2_0 = ls.a(var5, param2, var4_int, -80);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_1 = new StringBuilder().append("pv.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param2 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 24914 + 41);
         }
+        return stackIn_3_0;
     }
 
     public static void a(int param0) {
         field_e = null;
-        if (param0 != 213) {
-          field_d = null;
-          field_d = null;
-          field_a = null;
-          return;
-        } else {
-          field_d = null;
-          field_a = null;
-          return;
-        }
+        field_d = null;
+        field_a = null;
     }
 
     static {

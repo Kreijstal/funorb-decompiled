@@ -19,21 +19,7 @@ final class ic {
     }
 
     final static void a(boolean param0, byte param1) {
-        mk stackIn_3_0 = null;
-        mk stackOut_2_0 = null;
-        mk stackOut_1_0 = null;
-        L0: {
-          if (!param0) {
-            stackOut_2_0 = new mk(rl.field_e, qd.field_Q);
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = new mk(qf.field_a, eh.field_q);
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        we.field_e = stackIn_3_0;
+        we.field_e = param0 ? new mk(qf.field_a, eh.field_q) : new mk(rl.field_e, qd.field_Q);
         tl.field_P = new hl(0L, (hl) null);
         tl.field_P.a((byte) -98, (hl) (Object) we.field_e.field_g);
         tl.field_P.a((byte) -114, qi.field_n);
@@ -42,26 +28,18 @@ final class ic {
         fj.field_b.a((byte) -90, dc.field_l);
         fj.field_b.a((byte) -123, wb.field_e);
         wb.field_e.a((byte) 21, hh.field_c);
-        if (param1 != -128) {
-          return;
-        } else {
-          wb.field_e.a((byte) 18, c.field_b);
-          cc.a(param0, true);
-          return;
-        }
+        wb.field_e.a((byte) 18, c.field_b);
+        cc.a(param0, true);
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
         if (!bh.field_r) {
-          throw new IllegalStateException();
-        } else {
-          k.field_c = true;
-          ck.a((byte) 126, false);
-          fn.field_R = 0;
-          var1 = 82 / ((param0 - -51) / 57);
-          return;
+            throw new IllegalStateException();
         }
+        k.field_c = true;
+        ck.a((byte) 126, false);
+        fn.field_R = 0;
+        int var1 = 41;
     }
 
     static {

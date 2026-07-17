@@ -28,28 +28,16 @@ abstract class mc extends ij {
     final static String a(byte param0) {
         if (!co.field_F) {
           if (cl.field_o >= ih.field_a) {
-            if (cl.field_o >= ih.field_a + u.field_a) {
-              if (param0 == 6) {
-                return null;
-              } else {
-                return null;
-              }
-            } else {
+            if (cl.field_o < ih.field_a + u.field_a) {
               return kf.field_f;
+            } else {
+              return null;
             }
           } else {
-            if (param0 == 6) {
-              return null;
-            } else {
-              return null;
-            }
+            return null;
           }
         } else {
-          if (param0 == 6) {
-            return null;
-          } else {
-            return null;
-          }
+          return null;
         }
     }
 

@@ -28,18 +28,9 @@ final class ii {
 
     public static void b(int param0) {
         field_h = null;
-        if (param0 >= -64) {
-          field_d = null;
-          field_c = null;
-          field_d = null;
-          field_f = null;
-          return;
-        } else {
-          field_c = null;
-          field_d = null;
-          field_f = null;
-          return;
-        }
+        field_c = null;
+        field_d = null;
+        field_f = null;
     }
 
     final boolean d(byte param0) {
@@ -91,40 +82,40 @@ final class ii {
 
     final static boolean b(byte param0) {
         if (param0 == 30) {
-          if (-1 != bm.field_c) {
+          if (bm.field_c != 0) {
             if (1 == bm.field_c) {
-              if (-9 != rl.field_c) {
-                return false;
-              } else {
+              if (rl.field_c == 8) {
                 return true;
+              } else {
+                return false;
               }
             } else {
               return false;
             }
           } else {
-            if (-4 != rl.field_c) {
+            if (rl.field_c == 3) {
+              return true;
+            } else {
               if (1 == bm.field_c) {
-                if (-9 != rl.field_c) {
-                  return false;
-                } else {
+                if (rl.field_c == 8) {
                   return true;
+                } else {
+                  return false;
                 }
               } else {
                 return false;
               }
-            } else {
-              return true;
             }
           }
         } else {
           boolean discarded$7 = ii.b((byte) -32);
-          if (-1 == bm.field_c) {
-            if (-4 != rl.field_c) {
+          if (bm.field_c == 0) {
+            if (rl.field_c != 3) {
               if (1 == bm.field_c) {
-                if (-9 != rl.field_c) {
-                  return false;
-                } else {
+                if (rl.field_c == 8) {
                   return true;
+                } else {
+                  return false;
                 }
               } else {
                 return false;
@@ -134,10 +125,10 @@ final class ii {
             }
           } else {
             if (1 == bm.field_c) {
-              if (-9 != rl.field_c) {
-                return false;
-              } else {
+              if (rl.field_c == 8) {
                 return true;
+              } else {
+                return false;
               }
             } else {
               return false;
@@ -153,15 +144,15 @@ final class ii {
             if (qg.field_u + ui.field_e > fb.field_l) {
               return eb.field_d;
             } else {
-              var1 = -97 / ((param0 - 1) / 40);
+              var1 = -97;
               return null;
             }
           } else {
-            var1 = -97 / ((param0 - 1) / 40);
+            var1 = -97;
             return null;
           }
         } else {
-          var1 = -97 / ((param0 - 1) / 40);
+          var1 = -97;
           return null;
         }
     }
@@ -169,7 +160,11 @@ final class ii {
     ii(String param0) {
         ((ii) this).field_a = false;
         ((ii) this).field_b = false;
-        ((ii) this).field_e = param0;
+        try {
+            ((ii) this).field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "ii.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -31,17 +31,17 @@ final class rj extends vo {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var4 = ((rj) this).field_r * param0 >> 1291318284;
-        var5 = param2 * ((rj) this).field_p >> 1774861004;
-        var6 = ((rj) this).field_s * param0 >> -903849492;
+        var4 = ((rj) this).field_r * param0 >> 12;
+        var5 = param2 * ((rj) this).field_p >> 12;
+        var6 = ((rj) this).field_s * param0 >> 12;
         if (param1 != -25222) {
           return;
         } else {
-          var7 = ((rj) this).field_n * param2 >> 837395372;
-          var8 = param0 * ((rj) this).field_g >> 617557900;
-          var9 = ((rj) this).field_h * param2 >> -882733876;
-          var10 = ((rj) this).field_k * param0 >> 503105292;
-          var11 = param2 * ((rj) this).field_m >> -146848180;
+          var7 = ((rj) this).field_n * param2 >> 12;
+          var8 = param0 * ((rj) this).field_g >> 12;
+          var9 = ((rj) this).field_h * param2 >> 12;
+          var10 = ((rj) this).field_k * param0 >> 12;
+          var11 = param2 * ((rj) this).field_m >> 12;
           ok.a(var5, false, var11, var7, var4, var6, var8, var9, var10, ((rj) this).field_f);
           return;
         }
@@ -50,15 +50,77 @@ final class rj extends vo {
     final static void a(int param0, java.applet.Applet param1) {
         try {
             java.net.URL var2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
+            Object var3 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-                if (param0 != -30136) {
-                    Object var3 = null;
-                    rj.a(33, (java.applet.Applet) null);
+              try {
+                L0: {
+                  L1: {
+                    if (param0 == -30136) {
+                      break L1;
+                    } else {
+                      var3 = null;
+                      rj.a(33, (java.applet.Applet) null);
+                      break L1;
+                    }
+                  }
+                  var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
+                  param1.getAppletContext().showDocument(ow.a(var2, (byte) -122, param1), "_top");
+                  break L0;
                 }
-                var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                param1.getAppletContext().showDocument(ow.a(var2, (byte) -122, param1), "_top");
-            } catch (Exception exception) {
-                exception.printStackTrace();
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
+                return;
+              }
+              return;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L2: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_1 = new StringBuilder().append("rj.G(").append(param0).append(44);
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param1 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L2;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L2;
+                }
+              }
+              throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -85,7 +147,7 @@ final class rj extends vo {
 
     public static void b(byte param0) {
         field_q = null;
-        int var1 = -2 % ((param0 - -17) / 59);
+        int var1 = 0;
         field_o = null;
         field_l = null;
     }

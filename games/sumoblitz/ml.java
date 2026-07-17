@@ -78,7 +78,7 @@ class ml extends en {
               stackOut_21_0 = this;
               stackIn_23_0 = stackOut_21_0;
               stackIn_22_0 = stackOut_21_0;
-              if ((param2 ^ -1) <= -1) {
+              if (param2 >= 0) {
                 stackOut_23_0 = this;
                 stackOut_23_1 = param2;
                 stackIn_24_0 = stackOut_23_0;
@@ -93,20 +93,20 @@ class ml extends en {
               }
             }
             ((ml) this).field_q = -stackIn_24_1 + ((ml) this).field_s;
-            ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_q >> 710292556;
+            ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_q >> 12;
             ((ml) this).field_t = 4096;
             ((ml) this).field_m = ((ml) this).field_q;
             break L0;
           } else {
-            ((ml) this).field_t = ((ml) this).field_q * ((ml) this).field_k >> 680930956;
-            if ((((ml) this).field_t ^ -1) <= -1) {
+            ((ml) this).field_t = ((ml) this).field_q * ((ml) this).field_k >> 12;
+            if (((ml) this).field_t >= 0) {
               if (4096 < ((ml) this).field_t) {
                 L2: {
                   ((ml) this).field_t = 4096;
                   stackOut_17_0 = this;
                   stackIn_19_0 = stackOut_17_0;
                   stackIn_18_0 = stackOut_17_0;
-                  if ((param2 ^ -1) > -1) {
+                  if (param2 < 0) {
                     stackOut_19_0 = this;
                     stackOut_19_1 = -param2;
                     stackIn_20_0 = stackOut_19_0;
@@ -121,17 +121,17 @@ class ml extends en {
                   }
                 }
                 ((ml) this).field_q = -stackIn_20_1 + ((ml) this).field_s;
-                ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_q >> -692464628;
-                ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_t >> -1408196340;
-                ((ml) this).field_m = ((ml) this).field_m + (((ml) this).field_v * ((ml) this).field_q >> 1577914572);
-                ((ml) this).field_v = ((ml) this).field_v * ((ml) this).field_r >> 367150284;
+                ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_q >> 12;
+                ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_t >> 12;
+                ((ml) this).field_m = ((ml) this).field_m + (((ml) this).field_v * ((ml) this).field_q >> 12);
+                ((ml) this).field_v = ((ml) this).field_v * ((ml) this).field_r >> 12;
                 break L0;
               } else {
                 L3: {
                   stackOut_10_0 = this;
                   stackIn_12_0 = stackOut_10_0;
                   stackIn_11_0 = stackOut_10_0;
-                  if ((param2 ^ -1) > -1) {
+                  if (param2 < 0) {
                     stackOut_12_0 = this;
                     stackOut_12_1 = -param2;
                     stackIn_13_0 = stackOut_12_0;
@@ -146,10 +146,10 @@ class ml extends en {
                   }
                 }
                 ((ml) this).field_q = -stackIn_13_1 + ((ml) this).field_s;
-                ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_q >> -692464628;
-                ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_t >> -1408196340;
-                ((ml) this).field_m = ((ml) this).field_m + (((ml) this).field_v * ((ml) this).field_q >> 1577914572);
-                ((ml) this).field_v = ((ml) this).field_v * ((ml) this).field_r >> 367150284;
+                ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_q >> 12;
+                ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_t >> 12;
+                ((ml) this).field_m = ((ml) this).field_m + (((ml) this).field_v * ((ml) this).field_q >> 12);
+                ((ml) this).field_v = ((ml) this).field_v * ((ml) this).field_r >> 12;
                 if (param1 != 1157) {
                   ((ml) this).field_n = null;
                   return;
@@ -163,7 +163,7 @@ class ml extends en {
                 stackOut_2_0 = this;
                 stackIn_4_0 = stackOut_2_0;
                 stackIn_3_0 = stackOut_2_0;
-                if ((param2 ^ -1) > -1) {
+                if (param2 < 0) {
                   stackOut_4_0 = this;
                   stackOut_4_1 = -param2;
                   stackIn_5_0 = stackOut_4_0;
@@ -178,10 +178,10 @@ class ml extends en {
                 }
               }
               ((ml) this).field_q = -stackIn_5_1 + ((ml) this).field_s;
-              ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_q >> -692464628;
-              ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_t >> -1408196340;
-              ((ml) this).field_m = ((ml) this).field_m + (((ml) this).field_v * ((ml) this).field_q >> 1577914572);
-              ((ml) this).field_v = ((ml) this).field_v * ((ml) this).field_r >> 367150284;
+              ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_q >> 12;
+              ((ml) this).field_q = ((ml) this).field_q * ((ml) this).field_t >> 12;
+              ((ml) this).field_m = ((ml) this).field_m + (((ml) this).field_v * ((ml) this).field_q >> 12);
+              ((ml) this).field_v = ((ml) this).field_v * ((ml) this).field_r >> 12;
               if (param1 != 1157) {
                 ((ml) this).field_n = null;
                 return;
@@ -202,10 +202,11 @@ class ml extends en {
     final void a(boolean param0) {
         ((ml) this).field_m = ((ml) this).field_m >> 4;
         ((ml) this).field_v = ((ml) this).field_r;
-        if (-1 >= (((ml) this).field_m ^ -1)) {
-          if (-256 <= (((ml) this).field_m ^ -1)) {
+        if (((ml) this).field_m >= 0) {
+          if (((ml) this).field_m <= 255) {
+            int fieldTemp$3 = ((ml) this).field_o;
             ((ml) this).field_o = ((ml) this).field_o + 1;
-            ((ml) this).a((byte)((ml) this).field_m, ((ml) this).field_o, 4096);
+            ((ml) this).a((byte)((ml) this).field_m, fieldTemp$3, 4096);
             ((ml) this).field_m = 0;
             if (param0) {
               ((ml) this).a((byte) -52, 1, -122);
@@ -215,8 +216,9 @@ class ml extends en {
             }
           } else {
             ((ml) this).field_m = 255;
+            int fieldTemp$4 = ((ml) this).field_o;
             ((ml) this).field_o = ((ml) this).field_o + 1;
-            ((ml) this).a((byte)((ml) this).field_m, ((ml) this).field_o, 4096);
+            ((ml) this).a((byte)((ml) this).field_m, fieldTemp$4, 4096);
             ((ml) this).field_m = 0;
             if (!param0) {
               return;
@@ -227,8 +229,9 @@ class ml extends en {
           }
         } else {
           ((ml) this).field_m = 0;
+          int fieldTemp$5 = ((ml) this).field_o;
           ((ml) this).field_o = ((ml) this).field_o + 1;
-          ((ml) this).a((byte)((ml) this).field_m, ((ml) this).field_o, 4096);
+          ((ml) this).a((byte)((ml) this).field_m, fieldTemp$5, 4096);
           ((ml) this).field_m = 0;
           if (!param0) {
             return;
@@ -251,8 +254,9 @@ class ml extends en {
         super(param0, param1, param2, param3, param4);
         ((ml) this).field_k = (int)(4096.0f * param7);
         ((ml) this).field_s = (int)(param6 * 4096.0f);
-        ((ml) this).field_r = (int)(Math.pow(0.5, (double)(-param5)) * 4096.0);
-        ((ml) this).field_v = (int)(Math.pow(0.5, (double)(-param5)) * 4096.0);
+        int dupTemp$0 = (int)(Math.pow(0.5, (double)(-param5)) * 4096.0);
+        ((ml) this).field_r = dupTemp$0;
+        ((ml) this).field_v = dupTemp$0;
     }
 
     static {

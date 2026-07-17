@@ -19,16 +19,8 @@ final class oh extends pg {
     public static void a(int param0) {
         field_k = null;
         field_q = null;
-        if (param0 != -791) {
-          field_r = null;
-          field_h = null;
-          field_r = null;
-          return;
-        } else {
-          field_h = null;
-          field_r = null;
-          return;
-        }
+        field_h = null;
+        field_r = null;
     }
 
     final static int a(byte param0, int param1) {
@@ -54,7 +46,7 @@ final class oh extends pg {
             }
           }
           L2: {
-            if ((param1 ^ -1) != -3) {
+            if (param1 != 2) {
               break L2;
             } else {
               var2 = hd.field_b;

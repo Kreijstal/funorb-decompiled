@@ -7,41 +7,68 @@ final class fpa {
     static boolean field_c;
 
     final static void a(java.awt.Canvas param0, byte param1) {
-        if (param1 != 75) {
+        RuntimeException var2 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
           L0: {
-            field_c = false;
             qma.a((java.awt.Component) (Object) param0, -71);
             ri.a((java.awt.Component) (Object) param0, true);
             if (tja.field_q != null) {
-              tja.field_q.a(param1 ^ -59, (java.awt.Component) (Object) param0);
+              tja.field_q.a(-114, (java.awt.Component) (Object) param0);
               break L0;
             } else {
-              break L0;
+              return;
             }
           }
-          return;
-        } else {
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
-            qma.a((java.awt.Component) (Object) param0, -71);
-            ri.a((java.awt.Component) (Object) param0, true);
-            if (tja.field_q != null) {
-              tja.field_q.a(param1 ^ -59, (java.awt.Component) (Object) param0);
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("fpa.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
               break L1;
             } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          return;
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 75 + 41);
         }
     }
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 1451) {
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

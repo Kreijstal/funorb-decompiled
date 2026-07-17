@@ -12,9 +12,9 @@ abstract class rma {
     final static kv[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param2 != 3) {
           field_c = null;
-          return ec.a(3, 5, param3, param1, 1, param4, 1, param0, 1);
+          return ec.a(3, 5, param3, param1, 1, 0, 1, param0, 1);
         } else {
-          return ec.a(3, 5, param3, param1, 1, param4, 1, param0, 1);
+          return ec.a(3, 5, param3, param1, 1, 0, 1, param0, 1);
         }
     }
 
@@ -22,11 +22,6 @@ abstract class rma {
 
     public static void c(int param0) {
         field_c = null;
-        if (param0 != 1) {
-            field_d = null;
-            field_d = null;
-            return;
-        }
         field_d = null;
     }
 

@@ -25,9 +25,6 @@ final class wo extends wf {
             if (!(null != ft.field_l)) {
                 return false;
             }
-            if (!param1) {
-                field_l = (char[]) null;
-            }
             int var2_int = ft.field_l.b(-118);
             if (!(var2_int <= 0)) {
                 if (!(var2_int <= param0 + -nm.field_c.field_g)) {
@@ -42,15 +39,12 @@ final class wo extends wf {
                 nm.field_c.field_g = 0;
                 return true;
             }
-            try {
-                if (false) throw (IOException) null;
+            {
                 if (var2_int >= 0) {
-                    if (-30001L <= (gm.g(-1) ^ -1L)) {
+                    if (gm.g(-1) <= 30000L) {
                         return false;
                     }
                 }
-                te.b(true);
-            } catch (IOException iOException) {
                 te.b(true);
             }
             return false;
@@ -64,7 +58,7 @@ final class wo extends wf {
     public static void a(int param0) {
         field_n = null;
         field_e = null;
-        int var1 = 101 % ((param0 - -20) / 42);
+        int var1 = 1;
         field_l = null;
         field_h = null;
     }
@@ -77,13 +71,15 @@ final class wo extends wf {
         ((wo) this).field_j = param5;
         ((wo) this).field_m = param4;
         if (param1 != 251) {
-          return;
-        } else {
-          ((wo) this).field_f = param0;
-          ((wo) this).field_i = param7;
-          ((wo) this).field_k = param3;
-          ((wo) this).field_p = param2;
-          return;
+            return;
+        }
+        try {
+            ((wo) this).field_f = param0;
+            ((wo) this).field_i = param7;
+            ((wo) this).field_k = param3;
+            ((wo) this).field_p = param2;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "wo.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
         }
     }
 
@@ -92,7 +88,7 @@ final class wo extends wf {
     }
 
     private static void $cfr$clinit() {
-        field_l = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+        field_l = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
         field_n = new hd(3);
         field_e = "Connection lost - attempting to reconnect";
         field_h = "Unfortunately we are unable to create an account for you at this time.";

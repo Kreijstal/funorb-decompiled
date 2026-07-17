@@ -87,7 +87,7 @@ final class kg extends gh {
                 }
               } else {
                 L5: {
-                  if ((-(((kg) this).field_Ub.field_gb + ((kg) this).field_Ub.field_eb) ^ -1) > -1) {
+                  if (-(((kg) this).field_Ub.field_gb + ((kg) this).field_Ub.field_eb) < 0) {
                     ((kg) this).field_Ub.field_gb = -((kg) this).field_Ub.field_eb;
                     break L5;
                   } else {
@@ -164,7 +164,7 @@ final class kg extends gh {
                 }
               } else {
                 L10: {
-                  if ((-(((kg) this).field_Ub.field_gb + ((kg) this).field_Ub.field_eb) ^ -1) > -1) {
+                  if (-(((kg) this).field_Ub.field_gb + ((kg) this).field_Ub.field_eb) < 0) {
                     ((kg) this).field_Ub.field_gb = -((kg) this).field_Ub.field_eb;
                     break L10;
                   } else {
@@ -227,7 +227,7 @@ final class kg extends gh {
               }
             } else {
               L15: {
-                if ((-(((kg) this).field_Ub.field_gb + ((kg) this).field_Ub.field_eb) ^ -1) > -1) {
+                if (-(((kg) this).field_Ub.field_gb + ((kg) this).field_Ub.field_eb) < 0) {
                   ((kg) this).field_Ub.field_gb = -((kg) this).field_Ub.field_eb;
                   break L15;
                 } else {
@@ -261,49 +261,81 @@ final class kg extends gh {
     }
 
     final static void a(int param0, int param1, int param2, java.awt.Canvas param3) {
-        Exception exception = null;
         java.awt.Graphics var4 = null;
+        Exception var4_ref = null;
+        RuntimeException var4_ref2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var4 = param3.getGraphics();
-                        sb.field_bb.a((byte) -51, var4, param0, param1);
-                        var4.dispose();
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    exception = (Exception) (Object) caughtException;
-                    param3.repaint();
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (param2 != 28594) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                case 5: {
-                    int discarded$2 = kg.a(35, (byte) -13);
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            try {
+              L1: {
+                var4 = param3.getGraphics();
+                sb.field_bb.a((byte) -51, var4, param0, param1);
+                var4.dispose();
+                break L1;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var4_ref = (Exception) (Object) decompiledCaughtException;
+                param3.repaint();
+                break L2;
+              }
             }
+            L3: {
+              if (param2 == 28594) {
+                break L3;
+              } else {
+                int discarded$2 = kg.a(35, (byte) -13);
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L4: {
+            var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4_ref2;
+            stackOut_6_1 = new StringBuilder().append("kg.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param3 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L4;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L4;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -315,25 +347,43 @@ final class kg extends gh {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
         var4 = SteelSentinels.field_G;
-        var3 = 0;
-        L0: while (true) {
-          if (0 >= param1) {
-            if (param2 != 22025) {
-              field_Vb = 1;
-              return var3;
-            } else {
-              return var3;
+        try {
+          L0: {
+            var3_int = 0;
+            L1: while (true) {
+              if (0 >= param1) {
+                L2: {
+                  if (param2 == 22025) {
+                    break L2;
+                  } else {
+                    field_Vb = 1;
+                    break L2;
+                  }
+                }
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var3_int = param0 & 1 | var3_int << 1;
+                param1--;
+                param0 = param0 >>> 1;
+                continue L1;
+              }
             }
-          } else {
-            var3 = param0 & 1 | var3 << -1190708031;
-            param1--;
-            param0 = param0 >>> 1;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var3, "kg.A(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_7_0;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -430,12 +480,16 @@ final class kg extends gh {
 
     kg(long param0, gh param1, gh param2, lb param3) {
         super(param0, (gh) null);
-        ((kg) this).field_Tb = new gh(0L, param2);
-        ((kg) this).field_Sb = new lb(0L, param3);
-        ((kg) this).a(((kg) this).field_Tb, 125);
-        ((kg) this).a((gh) (Object) ((kg) this).field_Sb, 119);
-        ((kg) this).field_Ub = param1;
-        ((kg) this).field_Tb.a(param1, 123);
+        try {
+            ((kg) this).field_Tb = new gh(0L, param2);
+            ((kg) this).field_Sb = new lb(0L, param3);
+            ((kg) this).a(((kg) this).field_Tb, 125);
+            ((kg) this).a((gh) (Object) ((kg) this).field_Sb, 119);
+            ((kg) this).field_Ub = param1;
+            ((kg) this).field_Tb.a(param1, 123);
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "kg.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static boolean d(byte param0) {
@@ -453,33 +507,21 @@ final class kg extends gh {
     }
 
     final static void a(int param0, mi param1, mi param2, int param3) {
-        ud.field_C = param3;
-        if (param0 != 2048) {
-          field_Vb = -50;
-          pa.field_k = param2;
-          wb.field_a = param1;
-          sf.a(74, pb.field_c / 2, pb.field_j / 2);
-          he.a(false, param2.field_U, param1.field_U, param2.field_U - -param2.field_F, param1.field_F + param1.field_U);
-          return;
-        } else {
-          pa.field_k = param2;
-          wb.field_a = param1;
-          sf.a(74, pb.field_c / 2, pb.field_j / 2);
-          he.a(false, param2.field_U, param1.field_U, param2.field_U - -param2.field_F, param1.field_F + param1.field_U);
-          return;
+        try {
+            ud.field_C = param3;
+            if (param0 != 2048) {
+                field_Vb = -50;
+            }
+            pa.field_k = param2;
+            wb.field_a = param1;
+            sf.a(74, pb.field_c / 2, pb.field_j / 2);
+            he.a(false, param2.field_U, param1.field_U, param2.field_U - -param2.field_F, param1.field_F + param1.field_U);
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "kg.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
     private final void a(int param0, int param1, byte param2) {
-        if (param2 < 112) {
-            boolean discarded$0 = ((kg) this).a(35, 96, 82, false, false, (byte) -58);
-            ((kg) this).field_Ub.field_Y = 0;
-            ((kg) this).field_Tb.field_zb = -param1 + ((kg) this).field_zb - param0;
-            ((kg) this).field_Tb.field_Lb = ((kg) this).field_Lb;
-            ((kg) this).field_Ub.field_zb = -param0 + (((kg) this).field_zb + -param1);
-            ((kg) this).field_Sb.a(((kg) this).field_Tb.field_Lb, -((kg) this).field_Ub.field_eb, ((kg) this).field_Ub.field_Lb, -param0 + ((kg) this).field_zb, 0, param0, ((kg) this).field_Lb, 4454);
-            return;
-        }
         ((kg) this).field_Ub.field_Y = 0;
         ((kg) this).field_Tb.field_zb = -param1 + ((kg) this).field_zb - param0;
         ((kg) this).field_Tb.field_Lb = ((kg) this).field_Lb;

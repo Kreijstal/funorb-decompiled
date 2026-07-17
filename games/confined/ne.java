@@ -8,50 +8,41 @@ final class ne {
     static bi field_b;
 
     public static void a(byte param0) {
-        int var1 = -40 / ((-70 - param0) / 52);
+        int var1 = 20;
         field_b = null;
         field_a = null;
         field_d = null;
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        ce var2 = null;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var3 = 0;
-        ce stackIn_8_0 = null;
-        ce stackOut_7_0 = null;
-        ce stackOut_6_0 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = Confined.field_J ? 1 : 0;
-        var1 = 0;
-        if (param0 == -11) {
-          L0: while (true) {
-            if ((var1 ^ -1) <= -11) {
-              return;
-            } else {
-              if (fb.field_d[var1] != null) {
-                L1: {
-                  if ((ih.field_a & 1 << var1) == 0) {
-                    stackOut_7_0 = pn.field_a;
-                    stackIn_8_0 = stackOut_7_0;
-                    break L1;
+        try {
+          L0: {
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 10) {
+                break L0;
+              } else {
+                L2: {
+                  if (fb.field_d[var1_int] == null) {
+                    break L2;
                   } else {
-                    stackOut_6_0 = vg.field_I;
-                    stackIn_8_0 = stackOut_6_0;
-                    break L1;
+                    break L2;
                   }
                 }
-                var2 = stackIn_8_0;
-                var2.c(fb.field_d[var1], sc.field_d[var1], uh.field_g[var1] >> 836370724, 16777215, -1);
-                var1++;
-                continue L0;
-              } else {
-                var1++;
-                continue L0;
+                var1_int++;
+                continue L1;
               }
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var1, "ne.B(" + -11 + 41);
         }
     }
 

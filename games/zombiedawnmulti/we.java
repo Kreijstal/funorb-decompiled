@@ -14,9 +14,6 @@ final class we extends br {
 
     public static void a(byte param0) {
         field_i = null;
-        if (param0 != 103) {
-            return;
-        }
         field_g = null;
         field_l = null;
         field_k = null;
@@ -36,10 +33,14 @@ final class we extends br {
     }
 
     we(uj param0, br param1) {
-        ((we) this).field_f = param0;
-        ((we) this).field_m = param0.h();
-        ((we) this).field_h = param1;
-        ((we) this).field_f.d(((we) this).field_m * db.field_c + 128 >> 694414536);
+        try {
+            ((we) this).field_f = param0;
+            ((we) this).field_m = param0.h();
+            ((we) this).field_h = param1;
+            ((we) this).field_f.d(((we) this).field_m * db.field_c + 128 >> 8);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "we.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

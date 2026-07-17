@@ -42,13 +42,13 @@ abstract class g extends fb {
           if (var7 != null) {
             ((g) this).field_y = ((g) this).field_y + var7.field_h;
             ((g) this).field_x = ((g) this).field_x + var7.field_i;
-            if (!dj.field_e.field_H.a(false, ((g) this).field_x >> -984512976, ((g) this).field_y >> 1785541360, true)) {
+            if (!dj.field_e.field_H.a(false, ((g) this).field_x >> 16, ((g) this).field_y >> 16, true)) {
               ((g) this).field_x = ((g) this).field_x - var7.field_i;
               ((g) this).field_y = ((g) this).field_y - var7.field_h;
               if (((g) this).field_F != 6) {
-                if (-6 != (((g) this).field_F ^ -1)) {
+                if (((g) this).field_F != 5) {
                   if (((g) this).field_F != 1) {
-                    if ((((g) this).field_F ^ -1) != -8) {
+                    if (((g) this).field_F != 7) {
                       return var7;
                     } else {
                       ((g) this).c(0, ((g) this).field_L);
@@ -73,9 +73,9 @@ abstract class g extends fb {
             } else {
               ((g) this).d((byte) 12);
               if (((g) this).field_F != 6) {
-                if (-6 != (((g) this).field_F ^ -1)) {
+                if (((g) this).field_F != 5) {
                   if (((g) this).field_F != 1) {
-                    if ((((g) this).field_F ^ -1) != -8) {
+                    if (((g) this).field_F != 7) {
                       return var7;
                     } else {
                       ((g) this).c(0, ((g) this).field_L);
@@ -298,7 +298,7 @@ abstract class g extends fb {
           }
         }
         L1: {
-          if ((((g) this).field_W ^ -1) == -5) {
+          if (((g) this).field_W == 4) {
             break L1;
           } else {
             break L1;
@@ -361,8 +361,8 @@ abstract class g extends fb {
         ((g) this).field_Z = param1;
         ((g) this).field_W = 2;
         var4 = ((g) this).field_F;
-        if ((var4 ^ -1) != -6) {
-          if (-2 == (var4 ^ -1)) {
+        if (var4 != 5) {
+          if (var4 == 1) {
             ((g) this).c(0, ((g) this).field_D);
             return;
           } else {
@@ -370,11 +370,11 @@ abstract class g extends fb {
               ((g) this).c(0, 114688);
               return;
             } else {
-              if (-3 == (var4 ^ -1)) {
+              if (var4 == 2) {
                 ((g) this).c(0, 401408);
                 return;
               } else {
-                if (-7 == (var4 ^ -1)) {
+                if (var4 == 6) {
                   ((g) this).c(0, 28672);
                   return;
                 } else {
@@ -422,8 +422,8 @@ abstract class g extends fb {
         int var5 = 0;
         int var6 = 0;
         var4 = 114 % ((-28 - param0) / 37);
-        var5 = ((g) this).field_y >> 1701384688;
-        var6 = ((g) this).field_x >> -1445108208;
+        var5 = ((g) this).field_y >> 16;
+        var6 = ((g) this).field_x >> 16;
         if (param1 < -7 + var5 + 24) {
           if (var5 + -17 < param1) {
             if (param2 > 5 + (var6 + -48)) {
@@ -476,7 +476,7 @@ abstract class g extends fb {
         ((g) this).field_J = false;
         ((g) this).field_Z = 0;
         ((g) this).field_F = this instanceof ah ? 0 : 4;
-        ((g) this).field_S = -2 != (pb.a(so.field_a, 2, 1) ^ -1) ? 1 : 3;
+        ((g) this).field_S = pb.a(so.field_a, 2, 1) != 1 ? 1 : 3;
         ((g) this).field_G = 0;
         ((g) this).field_N = 0;
         ((g) this).field_D = param3;
@@ -523,19 +523,19 @@ abstract class g extends fb {
         int stackOut_10_0 = 0;
         int stackOut_43_0 = 0;
         L0: {
-          var2 = ((g) this).field_Y << 1355039824;
-          var3 = ((g) this).field_X << -12768496;
+          var2 = ((g) this).field_Y << 16;
+          var3 = ((g) this).field_X << 16;
           if (((g) this).field_O != 0) {
             break L0;
           } else {
-            if (-1 != (((g) this).field_T ^ -1)) {
+            if (((g) this).field_T != 0) {
               break L0;
             } else {
               return false;
             }
           }
         }
-        if (-1 != (((g) this).field_O ^ -1)) {
+        if (((g) this).field_O != 0) {
           if (((g) this).field_O <= 0) {
             L1: {
               if (((g) this).field_O >= 0) {
@@ -547,11 +547,11 @@ abstract class g extends fb {
                   L2: {
                     L3: {
                       var4 = 1;
-                      if ((((g) this).field_T ^ -1) == -1) {
+                      if (((g) this).field_T == 0) {
                         break L3;
                       } else {
                         L4: {
-                          if (-1 <= (((g) this).field_T ^ -1)) {
+                          if (((g) this).field_T <= 0) {
                             break L4;
                           } else {
                             if (((g) this).field_x > var3) {
@@ -562,7 +562,7 @@ abstract class g extends fb {
                           }
                         }
                         L5: {
-                          if ((((g) this).field_T ^ -1) <= -1) {
+                          if (((g) this).field_T >= 0) {
                             break L5;
                           } else {
                             if (((g) this).field_x >= var3) {
@@ -584,10 +584,10 @@ abstract class g extends fb {
                   L6: {
                     var5 = stackIn_157_0;
                     var6 = 67 % ((-53 - param0) / 32);
-                    if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                    if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                       break L6;
                     } else {
-                      if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                      if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                         break L6;
                       } else {
                         var4 = 1;
@@ -625,8 +625,8 @@ abstract class g extends fb {
                       break L7;
                     } else {
                       if (var5 != 0) {
-                        ((g) this).field_x = ((g) this).field_X << -610966416;
-                        ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                        ((g) this).field_x = ((g) this).field_X << 16;
+                        ((g) this).field_y = ((g) this).field_Y << 16;
                         return true;
                       } else {
                         break L7;
@@ -638,17 +638,17 @@ abstract class g extends fb {
               }
             }
             var4 = 0;
-            if ((((g) this).field_T ^ -1) != -1) {
-              if (-1 <= (((g) this).field_T ^ -1)) {
-                if ((((g) this).field_T ^ -1) > -1) {
+            if (((g) this).field_T != 0) {
+              if (((g) this).field_T <= 0) {
+                if (((g) this).field_T < 0) {
                   if (((g) this).field_x < var3) {
                     L10: {
                       var5 = 1;
                       var6 = 67 % ((-53 - param0) / 32);
-                      if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                      if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                         break L10;
                       } else {
-                        if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                        if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                           break L10;
                         } else {
                           var4 = 1;
@@ -675,8 +675,8 @@ abstract class g extends fb {
                           break L12;
                         } else {
                           if (var5 != 0) {
-                            ((g) this).field_x = ((g) this).field_X << -610966416;
-                            ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                            ((g) this).field_x = ((g) this).field_X << 16;
+                            ((g) this).field_y = ((g) this).field_Y << 16;
                             return true;
                           } else {
                             return false;
@@ -692,8 +692,8 @@ abstract class g extends fb {
                               break L13;
                             } else {
                               if (var5 != 0) {
-                                ((g) this).field_x = ((g) this).field_X << -610966416;
-                                ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                                ((g) this).field_x = ((g) this).field_X << 16;
+                                ((g) this).field_y = ((g) this).field_Y << 16;
                                 return true;
                               } else {
                                 break L13;
@@ -709,10 +709,10 @@ abstract class g extends fb {
                     L14: {
                       var5 = 0;
                       var6 = 67 % ((-53 - param0) / 32);
-                      if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                      if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                         break L14;
                       } else {
-                        if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                        if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                           break L14;
                         } else {
                           var4 = 1;
@@ -739,8 +739,8 @@ abstract class g extends fb {
                           break L16;
                         } else {
                           if (var5 != 0) {
-                            ((g) this).field_x = ((g) this).field_X << -610966416;
-                            ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                            ((g) this).field_x = ((g) this).field_X << 16;
+                            ((g) this).field_y = ((g) this).field_Y << 16;
                             return true;
                           } else {
                             return false;
@@ -755,8 +755,8 @@ abstract class g extends fb {
                             return false;
                           } else {
                             if (var5 != 0) {
-                              ((g) this).field_x = ((g) this).field_X << -610966416;
-                              ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                              ((g) this).field_x = ((g) this).field_X << 16;
+                              ((g) this).field_y = ((g) this).field_Y << 16;
                               return true;
                             } else {
                               return false;
@@ -771,10 +771,10 @@ abstract class g extends fb {
                   L17: {
                     var5 = 0;
                     var6 = 67 % ((-53 - param0) / 32);
-                    if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                    if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                       break L17;
                     } else {
-                      if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                      if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                         break L17;
                       } else {
                         var4 = 1;
@@ -801,8 +801,8 @@ abstract class g extends fb {
                         break L19;
                       } else {
                         if (var5 != 0) {
-                          ((g) this).field_x = ((g) this).field_X << -610966416;
-                          ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                          ((g) this).field_x = ((g) this).field_X << 16;
+                          ((g) this).field_y = ((g) this).field_Y << 16;
                           return true;
                         } else {
                           return false;
@@ -817,8 +817,8 @@ abstract class g extends fb {
                           return false;
                         } else {
                           if (var5 != 0) {
-                            ((g) this).field_x = ((g) this).field_X << -610966416;
-                            ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                            ((g) this).field_x = ((g) this).field_X << 16;
+                            ((g) this).field_y = ((g) this).field_Y << 16;
                             return true;
                           } else {
                             return false;
@@ -833,7 +833,7 @@ abstract class g extends fb {
                 if (((g) this).field_x <= var3) {
                   L20: {
                     L21: {
-                      if ((((g) this).field_T ^ -1) <= -1) {
+                      if (((g) this).field_T >= 0) {
                         break L21;
                       } else {
                         if (((g) this).field_x >= var3) {
@@ -852,10 +852,10 @@ abstract class g extends fb {
                   L22: {
                     var5 = stackIn_217_0;
                     var6 = 67 % ((-53 - param0) / 32);
-                    if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                    if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                       break L22;
                     } else {
-                      if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                      if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                         break L22;
                       } else {
                         var4 = 1;
@@ -893,8 +893,8 @@ abstract class g extends fb {
                       break L23;
                     } else {
                       if (var5 != 0) {
-                        ((g) this).field_x = ((g) this).field_X << -610966416;
-                        ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                        ((g) this).field_x = ((g) this).field_X << 16;
+                        ((g) this).field_y = ((g) this).field_Y << 16;
                         return true;
                       } else {
                         break L23;
@@ -906,10 +906,10 @@ abstract class g extends fb {
                   L26: {
                     var5 = 1;
                     var6 = 67 % ((-53 - param0) / 32);
-                    if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                    if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                       break L26;
                     } else {
-                      if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                      if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                         break L26;
                       } else {
                         var4 = 1;
@@ -936,8 +936,8 @@ abstract class g extends fb {
                         break L28;
                       } else {
                         if (var5 != 0) {
-                          ((g) this).field_x = ((g) this).field_X << -610966416;
-                          ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                          ((g) this).field_x = ((g) this).field_X << 16;
+                          ((g) this).field_y = ((g) this).field_Y << 16;
                           return true;
                         } else {
                           return false;
@@ -953,8 +953,8 @@ abstract class g extends fb {
                             break L29;
                           } else {
                             if (var5 != 0) {
-                              ((g) this).field_x = ((g) this).field_X << -610966416;
-                              ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                              ((g) this).field_x = ((g) this).field_X << 16;
+                              ((g) this).field_y = ((g) this).field_Y << 16;
                               return true;
                             } else {
                               break L29;
@@ -972,10 +972,10 @@ abstract class g extends fb {
               L30: {
                 var5 = 1;
                 var6 = 67 % ((-53 - param0) / 32);
-                if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                   break L30;
                 } else {
-                  if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                  if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                     break L30;
                   } else {
                     var4 = 1;
@@ -1002,8 +1002,8 @@ abstract class g extends fb {
                     break L32;
                   } else {
                     if (var5 != 0) {
-                      ((g) this).field_x = ((g) this).field_X << -610966416;
-                      ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                      ((g) this).field_x = ((g) this).field_X << 16;
+                      ((g) this).field_y = ((g) this).field_Y << 16;
                       return true;
                     } else {
                       return false;
@@ -1019,8 +1019,8 @@ abstract class g extends fb {
                         break L33;
                       } else {
                         if (var5 != 0) {
-                          ((g) this).field_x = ((g) this).field_X << -610966416;
-                          ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                          ((g) this).field_x = ((g) this).field_X << 16;
+                          ((g) this).field_y = ((g) this).field_Y << 16;
                           return true;
                         } else {
                           break L33;
@@ -1034,7 +1034,7 @@ abstract class g extends fb {
               return false;
             }
           } else {
-            if ((var2 ^ -1) <= (((g) this).field_y ^ -1)) {
+            if (~var2 <= ~((g) this).field_y) {
               L34: {
                 L35: {
                   if (((g) this).field_O >= 0) {
@@ -1056,11 +1056,11 @@ abstract class g extends fb {
               L36: {
                 L37: {
                   var4 = stackIn_122_0;
-                  if ((((g) this).field_T ^ -1) == -1) {
+                  if (((g) this).field_T == 0) {
                     break L37;
                   } else {
                     L38: {
-                      if (-1 <= (((g) this).field_T ^ -1)) {
+                      if (((g) this).field_T <= 0) {
                         break L38;
                       } else {
                         if (((g) this).field_x > var3) {
@@ -1071,7 +1071,7 @@ abstract class g extends fb {
                       }
                     }
                     L39: {
-                      if ((((g) this).field_T ^ -1) <= -1) {
+                      if (((g) this).field_T >= 0) {
                         break L39;
                       } else {
                         if (((g) this).field_x >= var3) {
@@ -1093,10 +1093,10 @@ abstract class g extends fb {
               L40: {
                 var5 = stackIn_131_0;
                 var6 = 67 % ((-53 - param0) / 32);
-                if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                   break L40;
                 } else {
-                  if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                  if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                     break L40;
                   } else {
                     var4 = 1;
@@ -1134,8 +1134,8 @@ abstract class g extends fb {
                   break L41;
                 } else {
                   if (var5 != 0) {
-                    ((g) this).field_x = ((g) this).field_X << -610966416;
-                    ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                    ((g) this).field_x = ((g) this).field_X << 16;
+                    ((g) this).field_y = ((g) this).field_Y << 16;
                     return true;
                   } else {
                     break L41;
@@ -1147,12 +1147,12 @@ abstract class g extends fb {
               L44: {
                 L45: {
                   var4 = 1;
-                  if ((((g) this).field_T ^ -1) == -1) {
+                  if (((g) this).field_T == 0) {
                     break L45;
                   } else {
-                    if (-1 <= (((g) this).field_T ^ -1)) {
+                    if (((g) this).field_T <= 0) {
                       L46: {
-                        if ((((g) this).field_T ^ -1) <= -1) {
+                        if (((g) this).field_T >= 0) {
                           break L46;
                         } else {
                           if (((g) this).field_x >= var3) {
@@ -1161,10 +1161,10 @@ abstract class g extends fb {
                             L47: {
                               var5 = 1;
                               var6 = 67 % ((-53 - param0) / 32);
-                              if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                              if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                                 break L47;
                               } else {
-                                if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                                if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                                   break L47;
                                 } else {
                                   var4 = 1;
@@ -1202,8 +1202,8 @@ abstract class g extends fb {
                                 break L48;
                               } else {
                                 if (var5 != 0) {
-                                  ((g) this).field_x = ((g) this).field_X << -610966416;
-                                  ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                                  ((g) this).field_x = ((g) this).field_X << 16;
+                                  ((g) this).field_y = ((g) this).field_Y << 16;
                                   return true;
                                 } else {
                                   break L48;
@@ -1223,7 +1223,7 @@ abstract class g extends fb {
                       } else {
                         L51: {
                           L52: {
-                            if ((((g) this).field_T ^ -1) <= -1) {
+                            if (((g) this).field_T >= 0) {
                               break L52;
                             } else {
                               if (((g) this).field_x >= var3) {
@@ -1242,10 +1242,10 @@ abstract class g extends fb {
                         L53: {
                           var5 = stackIn_69_0;
                           var6 = 67 % ((-53 - param0) / 32);
-                          if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                          if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                             break L53;
                           } else {
-                            if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                            if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                               break L53;
                             } else {
                               var4 = 1;
@@ -1283,8 +1283,8 @@ abstract class g extends fb {
                             break L54;
                           } else {
                             if (var5 != 0) {
-                              ((g) this).field_x = ((g) this).field_X << -610966416;
-                              ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                              ((g) this).field_x = ((g) this).field_X << 16;
+                              ((g) this).field_y = ((g) this).field_Y << 16;
                               return true;
                             } else {
                               break L54;
@@ -1303,10 +1303,10 @@ abstract class g extends fb {
               L57: {
                 var5 = stackIn_103_0;
                 var6 = 67 % ((-53 - param0) / 32);
-                if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                   break L57;
                 } else {
-                  if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                  if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                     break L57;
                   } else {
                     var4 = 1;
@@ -1344,8 +1344,8 @@ abstract class g extends fb {
                   break L58;
                 } else {
                   if (var5 != 0) {
-                    ((g) this).field_x = ((g) this).field_X << -610966416;
-                    ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                    ((g) this).field_x = ((g) this).field_X << 16;
+                    ((g) this).field_y = ((g) this).field_Y << 16;
                     return true;
                   } else {
                     break L58;
@@ -1359,12 +1359,12 @@ abstract class g extends fb {
           L61: {
             L62: {
               var4 = 1;
-              if ((((g) this).field_T ^ -1) == -1) {
+              if (((g) this).field_T == 0) {
                 break L62;
               } else {
-                if (-1 <= (((g) this).field_T ^ -1)) {
+                if (((g) this).field_T <= 0) {
                   L63: {
-                    if ((((g) this).field_T ^ -1) <= -1) {
+                    if (((g) this).field_T >= 0) {
                       break L63;
                     } else {
                       if (((g) this).field_x >= var3) {
@@ -1373,10 +1373,10 @@ abstract class g extends fb {
                         L64: {
                           var5 = 1;
                           var6 = 67 % ((-53 - param0) / 32);
-                          if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                          if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                             break L64;
                           } else {
-                            if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                            if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                               break L64;
                             } else {
                               var4 = 1;
@@ -1414,8 +1414,8 @@ abstract class g extends fb {
                             break L65;
                           } else {
                             if (var5 != 0) {
-                              ((g) this).field_x = ((g) this).field_X << -610966416;
-                              ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                              ((g) this).field_x = ((g) this).field_X << 16;
+                              ((g) this).field_y = ((g) this).field_Y << 16;
                               return true;
                             } else {
                               break L65;
@@ -1435,7 +1435,7 @@ abstract class g extends fb {
                   } else {
                     L68: {
                       L69: {
-                        if ((((g) this).field_T ^ -1) <= -1) {
+                        if (((g) this).field_T >= 0) {
                           break L69;
                         } else {
                           if (((g) this).field_x >= var3) {
@@ -1454,10 +1454,10 @@ abstract class g extends fb {
                     L70: {
                       var5 = stackIn_11_0;
                       var6 = 67 % ((-53 - param0) / 32);
-                      if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+                      if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
                         break L70;
                       } else {
-                        if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+                        if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                           break L70;
                         } else {
                           var4 = 1;
@@ -1495,8 +1495,8 @@ abstract class g extends fb {
                         break L72;
                       } else {
                         if (var5 != 0) {
-                          ((g) this).field_x = ((g) this).field_X << -610966416;
-                          ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                          ((g) this).field_x = ((g) this).field_X << 16;
+                          ((g) this).field_y = ((g) this).field_Y << 16;
                           return true;
                         } else {
                           break L72;
@@ -1515,10 +1515,10 @@ abstract class g extends fb {
           L74: {
             var5 = stackIn_45_0;
             var6 = 67 % ((-53 - param0) / 32);
-            if ((Math.abs(-var2 + ((g) this).field_y) ^ -1) <= (hd.field_y ^ -1)) {
+            if (~Math.abs(-var2 + ((g) this).field_y) <= ~hd.field_y) {
               break L74;
             } else {
-              if ((Math.abs(((g) this).field_x - var3) ^ -1) <= (hd.field_y ^ -1)) {
+              if (~Math.abs(((g) this).field_x - var3) <= ~hd.field_y) {
                 break L74;
               } else {
                 var4 = 1;
@@ -1556,8 +1556,8 @@ abstract class g extends fb {
               break L75;
             } else {
               if (var5 != 0) {
-                ((g) this).field_x = ((g) this).field_X << -610966416;
-                ((g) this).field_y = ((g) this).field_Y << 1214442512;
+                ((g) this).field_x = ((g) this).field_X << 16;
+                ((g) this).field_y = ((g) this).field_Y << 16;
                 return true;
               } else {
                 break L75;
@@ -1616,9 +1616,6 @@ abstract class g extends fb {
     public static void i(int param0) {
         field_P = null;
         field_H = null;
-        if (param0 != 0) {
-            field_H = null;
-        }
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {

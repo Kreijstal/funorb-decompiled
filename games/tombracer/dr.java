@@ -26,9 +26,6 @@ abstract class dr {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 <= 85) {
-            dr.a(102, -17);
-        }
     }
 
     static {

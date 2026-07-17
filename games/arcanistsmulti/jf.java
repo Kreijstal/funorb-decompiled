@@ -16,55 +16,104 @@ final class jf implements Iterator {
     static int field_j;
 
     final static void a(cg param0, byte param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         cg var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        var2 = 63 / ((64 - param1) / 44);
-        param0.a(true);
-        var3 = (cg) (Object) gm.field_j.b(12623);
-        L0: while (true) {
-          if (var3 != null) {
-            if (var3.a((byte) 121, param0)) {
-              var3 = (cg) (Object) gm.field_j.a(0);
-              continue L0;
-            } else {
+        try {
+          L0: {
+            var2_int = 63 / ((64 - param1) / 44);
+            param0.a(true);
+            var3 = (cg) (Object) gm.field_j.b(12623);
+            L1: while (true) {
+              L2: {
+                if (var3 == null) {
+                  break L2;
+                } else {
+                  if (!var3.a((byte) 121, param0)) {
+                    break L2;
+                  } else {
+                    var3 = (cg) (Object) gm.field_j.a(0);
+                    continue L1;
+                  }
+                }
+              }
               if (var3 != null) {
                 da.a((pg) (Object) var3, 20, (pg) (Object) param0);
-                return;
+                break L0;
               } else {
                 gm.field_j.b((pg) (Object) param0, -1);
                 return;
               }
             }
-          } else {
-            if (var3 != null) {
-              da.a((pg) (Object) var3, 20, (pg) (Object) param0);
-              return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var2;
+            stackOut_9_1 = new StringBuilder().append("jf.B(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
             } else {
-              gm.field_j.b((pg) (Object) param0, -1);
-              return;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
+          throw aa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
         }
     }
 
     public final Object next() {
         int var2 = 0;
-        pg var3 = null;
+        Object var3 = null;
+        pg var3_ref = null;
         pg var4 = null;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         if (((jf) this).field_c.field_c[-1 + ((jf) this).field_b] == ((jf) this).field_g) {
           L0: while (true) {
             if (((jf) this).field_c.field_d > ((jf) this).field_b) {
+              int fieldTemp$2 = ((jf) this).field_b;
               ((jf) this).field_b = ((jf) this).field_b + 1;
-              var3 = ((jf) this).field_c.field_c[((jf) this).field_b].field_b;
-              if (((jf) this).field_c.field_c[-1 + ((jf) this).field_b] == var3) {
+              var3_ref = ((jf) this).field_c.field_c[fieldTemp$2].field_b;
+              if (((jf) this).field_c.field_c[-1 + ((jf) this).field_b] == var3_ref) {
                 continue L0;
               } else {
-                ((jf) this).field_h = var3;
-                ((jf) this).field_g = var3.field_b;
-                return (Object) (Object) var3;
+                ((jf) this).field_h = var3_ref;
+                ((jf) this).field_g = var3_ref.field_b;
+                return (Object) (Object) var3_ref;
               }
             } else {
               return null;
@@ -89,12 +138,7 @@ final class jf implements Iterator {
     private final void a(int param0) {
         ((jf) this).field_h = null;
         ((jf) this).field_g = ((jf) this).field_c.field_c[0].field_b;
-        if (param0 != -1) {
-          return;
-        } else {
-          ((jf) this).field_b = 1;
-          return;
-        }
+        ((jf) this).field_b = 1;
     }
 
     public final boolean hasNext() {
@@ -103,8 +147,9 @@ final class jf implements Iterator {
         if (((jf) this).field_c.field_c[((jf) this).field_b + -1] == ((jf) this).field_g) {
           L0: while (true) {
             if (((jf) this).field_c.field_d > ((jf) this).field_b) {
+              int fieldTemp$1 = ((jf) this).field_b;
               ((jf) this).field_b = ((jf) this).field_b + 1;
-              if (((jf) this).field_c.field_c[((jf) this).field_b].field_b == ((jf) this).field_c.field_c[((jf) this).field_b - 1]) {
+              if (((jf) this).field_c.field_c[fieldTemp$1].field_b == ((jf) this).field_c.field_c[((jf) this).field_b - 1]) {
                 ((jf) this).field_g = ((jf) this).field_c.field_c[-1 + ((jf) this).field_b];
                 continue L0;
               } else {
@@ -126,26 +171,30 @@ final class jf implements Iterator {
             String var5 = null;
             String var4 = null;
             String var7 = null;
-            vm.field_b = param0;
             try {
-                var6 = param1.getParameter("cookieprefix");
-                var5 = var6;
-                var5 = var6;
-                var4 = param1.getParameter("cookiehost");
-                var5 = var4;
-                var5 = var4;
-                var7 = var6 + "settings=" + param0 + "; version=1; path=/; domain=" + var4;
-                var5 = var7;
-                var5 = var7;
-                if (param0.length() != param2) {
-                    var5 = var7 + "; Expires=" + di.a(-62, 94608000000L + qj.b(-26572)) + "; Max-Age=" + 94608000L;
-                } else {
-                    var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                vm.field_b = param0;
+                try {
+                    var6 = param1.getParameter("cookieprefix");
+                    var5 = var6;
+                    var5 = var6;
+                    var4 = param1.getParameter("cookiehost");
+                    var5 = var4;
+                    var5 = var4;
+                    var7 = var6 + "settings=" + param0 + "; version=1; path=/; domain=" + var4;
+                    var5 = var7;
+                    var5 = var7;
+                    if (param0.length() != 0) {
+                        var5 = var7 + "; Expires=" + di.a(-62, 94608000000L + qj.b(-26572)) + "; Max-Age=" + 94608000L;
+                    } else {
+                        var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                    }
+                    ei.a("document.cookie=\"" + var5 + "\"", param1, 269);
+                } catch (Throwable throwable) {
                 }
-                ei.a("document.cookie=\"" + var5 + "\"", param1, param2 ^ 269);
-            } catch (Throwable throwable) {
+                ml.a(-122, param1);
+            } catch (RuntimeException runtimeException) {
+                throw aa.a((Throwable) (Object) runtimeException, "jf.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
             }
-            ml.a(-122, param1);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -156,22 +205,18 @@ final class jf implements Iterator {
     public static void a(byte param0) {
         field_a = null;
         field_f = null;
-        if (param0 >= -59) {
-          field_i = null;
-          field_i = null;
-          field_d = null;
-          return;
-        } else {
-          field_i = null;
-          field_d = null;
-          return;
-        }
+        field_i = null;
+        field_d = null;
     }
 
     jf(pk param0) {
         ((jf) this).field_h = null;
-        ((jf) this).field_c = param0;
-        this.a(-1);
+        try {
+            ((jf) this).field_c = param0;
+            this.a(-1);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "jf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

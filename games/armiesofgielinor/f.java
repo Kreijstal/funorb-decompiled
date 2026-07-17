@@ -20,9 +20,6 @@ final class f extends uq {
         field_A = null;
         field_D = null;
         field_C = null;
-        if (!param0) {
-            f.c(true);
-        }
     }
 
     final Object b(boolean param0) {
@@ -34,7 +31,11 @@ final class f extends uq {
 
     f(Object param0, int param1) {
         super(param1);
-        ((f) this).field_B = param0;
+        try {
+            ((f) this).field_B = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "f.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

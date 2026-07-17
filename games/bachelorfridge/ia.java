@@ -19,8 +19,9 @@ final class ia extends pv {
     }
 
     final boolean b(boolean param0) {
+        int fieldTemp$2 = ((ia) this).field_g + 1;
         ((ia) this).field_g = ((ia) this).field_g + 1;
-        if (((ia) this).field_g + 1 > this.d(300)) {
+        if (fieldTemp$2 > this.d(300)) {
           this.b(-1);
           return true;
         } else {
@@ -54,19 +55,19 @@ final class ia extends pv {
     }
 
     private final int d(int param0) {
-        if (param0 != 300) {
-            field_k = null;
-            return 300;
-        }
         return 300;
     }
 
     private final void b(int param0) {
-        ((ia) this).field_f.field_y = param0;
+        ((ia) this).field_f.field_y = -1;
     }
 
     ia(jfa param0) {
-        ((ia) this).field_f = param0;
+        try {
+            ((ia) this).field_f = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ia.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -6,17 +6,16 @@ final class th {
     static String field_a;
 
     final static void a(ui param0, int param1) {
-        wj.field_Ob.a(param0, param1, 0, -1);
-        rc.field_d = param0;
+        try {
+            wj.field_Ob.a(param0, param1, 0, -1);
+            rc.field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "th.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 <= 120) {
-            field_b = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
@@ -43,9 +42,9 @@ final class th {
         var2.a(true, 2);
         var2.a(false, kk.field_l.length, kk.field_l, 0);
         var2.a(true, qa.field_x);
-        var2.a(param1, jb.field_c);
+        var2.a(true, jb.field_c);
         var2.a(false, v.field_a.length, v.field_a, 0);
-        var2.b(var2.field_n - var3, param1);
+        var2.b(var2.field_n - var3, true);
     }
 
     static {

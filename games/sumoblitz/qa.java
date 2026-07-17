@@ -96,7 +96,7 @@ final class qa extends ha {
         byte[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        mj var7 = null;
+        Object var7 = null;
         int[] var8 = null;
         byte[] var9 = null;
         int var10 = 0;
@@ -169,7 +169,7 @@ final class qa extends ha {
                     var10 = 0;
                     L3: while (true) {
                       if (var10 >= var28.length) {
-                        var7 = (mj) (Object) new uh((qa) this, var29, var30, var5, var6);
+                        var7 = (Object) (Object) new uh((qa) this, var29, var30, var5, var6);
                         break L0;
                       } else {
                         var8[var10] = var28[var10];
@@ -205,7 +205,7 @@ final class qa extends ha {
             var10 = 0;
             L5: while (true) {
               if (var10 >= var6) {
-                var7 = new mj((qa) this, var31, var5, var6);
+                var7 = (Object) (Object) new mj((qa) this, var31, var5, var6);
                 break L0;
               } else {
                 var11 = var10 * var5;
@@ -252,7 +252,7 @@ final class qa extends ha {
             var10 = 0;
             L8: while (true) {
               if (var10 >= var6) {
-                var7 = (mj) (Object) new gl((qa) this, var31, var5, var6);
+                var7 = (Object) (Object) new gl((qa) this, var31, var5, var6);
                 break L0;
               } else {
                 var11 = var10 * var5;
@@ -271,8 +271,8 @@ final class qa extends ha {
             }
           }
         }
-        ((hr) (Object) var7).a(param0.field_c, param0.field_d, param0.field_b, param0.field_f);
-        return (hr) (Object) var7;
+        ((hr) var7).a(param0.field_c, param0.field_d, param0.field_b, param0.field_f);
+        return (hr) var7;
     }
 
     private qa(d param0) {
@@ -413,8 +413,9 @@ final class qa extends ha {
                                               ((qa) this).field_o[var14] = var17 - var16 | var16 - (var16 >>> 8);
                                               L7: while (true) {
                                                 L8: {
+                                                  int incrementValue$5 = var11;
                                                   var11++;
-                                                  var12 = var12 + (var11 + var11);
+                                                  var12 = var12 + (incrementValue$5 + var11);
                                                   var6 = var6 - ((qa) this).field_k;
                                                   var7 = var7 + ((qa) this).field_k;
                                                   if (var12 <= param2) {
@@ -586,8 +587,9 @@ final class qa extends ha {
                                     }
                                     L13: while (true) {
                                       L14: {
+                                        int incrementValue$6 = var11;
                                         var11++;
-                                        var12 = var12 + (var11 + var11);
+                                        var12 = var12 + (incrementValue$6 + var11);
                                         var6 = var6 - ((qa) this).field_k;
                                         var7 = var7 + ((qa) this).field_k;
                                         if (var12 <= param2) {
@@ -826,8 +828,9 @@ final class qa extends ha {
                                             ((qa) this).field_o[var14] = var15 + var18;
                                             L23: while (true) {
                                               L24: {
+                                                int incrementValue$7 = var11;
                                                 var11++;
-                                                var12 = var12 + (var11 + var11);
+                                                var12 = var12 + (incrementValue$7 + var11);
                                                 var6 = var6 - ((qa) this).field_k;
                                                 var7 = var7 + ((qa) this).field_k;
                                                 if (var12 <= param2) {
@@ -1011,8 +1014,9 @@ final class qa extends ha {
                                   }
                                   L29: while (true) {
                                     L30: {
+                                      int incrementValue$8 = var11;
                                       var11++;
-                                      var12 = var12 + (var11 + var11);
+                                      var12 = var12 + (incrementValue$8 + var11);
                                       var6 = var6 - ((qa) this).field_k;
                                       var7 = var7 + ((qa) this).field_k;
                                       if (var12 <= param2) {
@@ -1360,8 +1364,9 @@ final class qa extends ha {
                             }
                             L41: while (true) {
                               L42: {
+                                int incrementValue$9 = var11;
                                 var11++;
-                                var12 = var12 + (var11 + var11);
+                                var12 = var12 + (incrementValue$9 + var11);
                                 var6 = var6 - ((qa) this).field_k;
                                 var7 = var7 + ((qa) this).field_k;
                                 if (var12 <= param2) {
@@ -1691,8 +1696,9 @@ final class qa extends ha {
                   var9++;
                   continue L0;
                 } else {
+                  int incrementValue$21 = var8;
                   var8++;
-                  var11 = param0[var8] >>> 24;
+                  var11 = param0[incrementValue$21] >>> 24;
                   if (var11 != 0) {
                     if (var11 != 255) {
                       var7 = 1;
@@ -1718,54 +1724,88 @@ final class qa extends ha {
     }
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
-        ce var4_ref = null;
-        ce var4 = (ce) (Object) ((qa) this).field_K.a(106, (long)((Object) (Object) param0).hashCode());
-        if (var4 == null) {
-            var4_ref = id.a(param1, param2, param0, -101);
-            ((qa) this).field_K.a((ms) (Object) var4_ref, -1, (long)((Object) (Object) param0).hashCode());
-        } else {
-            if (var4_ref.field_n == param1) {
-                // if_icmpeq L90
+        ce var4 = null;
+        L0: {
+          var4 = (ce) (Object) ((qa) this).field_K.a(106, (long)((Object) (Object) param0).hashCode());
+          if (var4 != null) {
+            L1: {
+              if (var4.field_n != param1) {
+                break L1;
+              } else {
+                if (var4.field_k == param2) {
+                  return;
+                } else {
+                  break L1;
+                }
+              }
             }
             this.a(param0, param1, param2);
+            break L0;
+          } else {
+            var4 = id.a(param1, param2, param0, -101);
+            ((qa) this).field_K.a((ms) (Object) var4, -1, (long)((Object) (Object) param0).hashCode());
+            break L0;
+          }
         }
-        return;
     }
 
     private final void a(java.awt.Canvas param0) {
-        java.awt.Dimension var3 = null;
         ce var2 = null;
-        if (param0 != null) {
-            var2 = (ce) (Object) ((qa) this).field_K.a(127, (long)((Object) (Object) param0).hashCode());
-            // ifnull L213
-            ((qa) this).field_l = param0;
-            var3 = param0.getSize();
-            ((qa) this).field_z = var3.width;
-            ((qa) this).field_s = var3.height;
-            ((qa) this).field_n = var2;
-            // ifnonnull L213
-            ((qa) this).field_o = var2.field_m;
-            ((qa) this).field_k = var2.field_n;
-            ((qa) this).field_B = var2.field_k;
-            if (((qa) this).field_k == ((qa) this).field_x) {
-                // if_icmpeq L157
-            }
-            ((qa) this).field_x = ((qa) this).field_k;
-            ((qa) this).field_F = ((qa) this).field_k;
-            ((qa) this).field_m = ((qa) this).field_B;
-            ((qa) this).field_w = ((qa) this).field_B;
-            this.h();
-        } else {
+        java.awt.Dimension var3 = null;
+        L0: {
+          if (param0 == null) {
             ((qa) this).field_l = null;
             ((qa) this).field_n = null;
-            if (((qa) this).field_t == null) {
-                ((qa) this).field_o = null;
-                ((qa) this).field_B = 1;
-                ((qa) this).field_k = 1;
-                ((qa) this).field_m = 1;
-                ((qa) this).field_x = 1;
-                this.h();
+            if (((qa) this).field_t != null) {
+              break L0;
+            } else {
+              ((qa) this).field_o = null;
+              ((qa) this).field_B = 1;
+              ((qa) this).field_k = 1;
+              ((qa) this).field_m = 1;
+              ((qa) this).field_x = 1;
+              this.h();
+              break L0;
             }
+          } else {
+            var2 = (ce) (Object) ((qa) this).field_K.a(127, (long)((Object) (Object) param0).hashCode());
+            if (var2 == null) {
+              break L0;
+            } else {
+              ((qa) this).field_l = param0;
+              var3 = param0.getSize();
+              ((qa) this).field_z = var3.width;
+              ((qa) this).field_s = var3.height;
+              ((qa) this).field_n = var2;
+              if (((qa) this).field_t != null) {
+                break L0;
+              } else {
+                L1: {
+                  L2: {
+                    ((qa) this).field_o = var2.field_m;
+                    ((qa) this).field_k = var2.field_n;
+                    ((qa) this).field_B = var2.field_k;
+                    if (((qa) this).field_k != ((qa) this).field_x) {
+                      break L2;
+                    } else {
+                      if (((qa) this).field_B == ((qa) this).field_m) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  ((qa) this).field_x = ((qa) this).field_k;
+                  ((qa) this).field_F = ((qa) this).field_k;
+                  ((qa) this).field_m = ((qa) this).field_B;
+                  ((qa) this).field_w = ((qa) this).field_B;
+                  break L1;
+                }
+                this.h();
+                break L0;
+              }
+            }
+          }
         }
     }
 
@@ -1863,8 +1903,9 @@ final class qa extends ha {
                                       var13 = param4 + var12;
                                       var14 = (param4 & 16711935) + (var12 & 16711935);
                                       var12 = (var14 & 16777472) + (var13 - var14 & 65536);
+                                      int incrementValue$2 = var8;
                                       var8++;
-                                      ((qa) this).field_o[var8] = var13 - var12 | var12 - (var12 >>> 8);
+                                      ((qa) this).field_o[incrementValue$2] = var13 - var12 | var12 - (var12 >>> 8);
                                       var11++;
                                       continue L10;
                                     }
@@ -1889,8 +1930,9 @@ final class qa extends ha {
                                   } else {
                                     var13 = ((qa) this).field_o[var8];
                                     var13 = ((var13 & 16711935) * var10 >> 8 & 16711935) + (((var13 & -16711936) >>> 8) * var10 & -16711936);
+                                    int incrementValue$3 = var8;
                                     var8++;
-                                    ((qa) this).field_o[var8] = param4 + var13;
+                                    ((qa) this).field_o[incrementValue$3] = param4 + var13;
                                     var12++;
                                     continue L12;
                                   }
@@ -1979,7 +2021,7 @@ final class qa extends ha {
     }
 
     private final void d(int param0) {
-        ((qa) this).field_i[param0].a((Runnable) (Object) Thread.currentThread(), true);
+        ((qa) this).field_i[0].a((Runnable) (Object) Thread.currentThread(), true);
     }
 
     private final void h() {
@@ -2490,8 +2532,9 @@ final class qa extends ha {
         for (var8 = 0; var8 < param3; var8++) {
             var9 = (param1 + var8) * ((qa) this).field_k + param0;
             for (var10 = 0; var10 < param2; var10++) {
+                int incrementValue$0 = param5;
                 param5++;
-                ((qa) this).field_o[var9 + var10] = param4[param5];
+                ((qa) this).field_o[var9 + var10] = param4[incrementValue$0];
             }
             param5 = param5 + param6;
         }
@@ -2499,7 +2542,7 @@ final class qa extends ha {
 
     private final void g(int param0) {
         int var2 = 0;
-        ((qa) this).field_r = param0;
+        ((qa) this).field_r = 1;
         ((qa) this).field_i = new rp[((qa) this).field_r];
         for (var2 = 0; var2 < ((qa) this).field_r; var2++) {
             ((qa) this).field_i[var2] = new rp((qa) this);
@@ -2520,33 +2563,53 @@ final class qa extends ha {
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
-        ce var4_ref = null;
+        ce var4 = null;
         java.awt.Dimension var5 = null;
-        ce var4 = (ce) (Object) ((qa) this).field_K.a(122, (long)((Object) (Object) param0).hashCode());
-        if (var4 != null) {
+        var4 = (ce) (Object) ((qa) this).field_K.a(122, (long)((Object) (Object) param0).hashCode());
+        if (var4 == null) {
+          return;
+        } else {
+          L0: {
             var4.b(false);
-            var4_ref = id.a(param1, param2, param0, -91);
-            ((qa) this).field_K.a((ms) (Object) var4_ref, -1, (long)((Object) (Object) param0).hashCode());
-            if (((qa) this).field_l == param0) {
-                if (((qa) this).field_t == null) {
+            var4 = id.a(param1, param2, param0, -91);
+            ((qa) this).field_K.a((ms) (Object) var4, -1, (long)((Object) (Object) param0).hashCode());
+            if (((qa) this).field_l != param0) {
+              break L0;
+            } else {
+              if (((qa) this).field_t != null) {
+                break L0;
+              } else {
+                L1: {
+                  L2: {
                     var5 = param0.getSize();
                     ((qa) this).field_z = var5.width;
                     ((qa) this).field_s = var5.height;
-                    ((qa) this).field_n = var4_ref;
-                    ((qa) this).field_o = var4_ref.field_m;
-                    ((qa) this).field_k = var4_ref.field_n;
-                    ((qa) this).field_B = var4_ref.field_k;
-                    if (((qa) this).field_k == ((qa) this).field_x) {
-                        // if_icmpeq L196
+                    ((qa) this).field_n = var4;
+                    ((qa) this).field_o = var4.field_m;
+                    ((qa) this).field_k = var4.field_n;
+                    ((qa) this).field_B = var4.field_k;
+                    if (((qa) this).field_k != ((qa) this).field_x) {
+                      break L2;
+                    } else {
+                      if (((qa) this).field_B == ((qa) this).field_m) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
                     }
-                    ((qa) this).field_x = ((qa) this).field_k;
-                    ((qa) this).field_F = ((qa) this).field_k;
-                    ((qa) this).field_m = ((qa) this).field_B;
-                    ((qa) this).field_w = ((qa) this).field_B;
-                    this.h();
+                  }
+                  ((qa) this).field_x = ((qa) this).field_k;
+                  ((qa) this).field_F = ((qa) this).field_k;
+                  ((qa) this).field_m = ((qa) this).field_B;
+                  ((qa) this).field_w = ((qa) this).field_B;
+                  break L1;
                 }
+                this.h();
+                break L0;
+              }
             }
-            return;
+          }
+          return;
         }
     }
 
@@ -2666,13 +2729,20 @@ final class qa extends ha {
           } else {
             if (((qa) this).field_n != null) {
               try {
-                var3 = ((qa) this).field_l.getGraphics();
-                ((qa) this).field_n.a(var3, 0, param1, ((qa) this).field_z, param0, ((qa) this).field_s, 0, (byte) -106);
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
+                L1: {
+                  var3 = ((qa) this).field_l.getGraphics();
+                  ((qa) this).field_n.a(var3, 0, param1, ((qa) this).field_z, param0, ((qa) this).field_s, 0, (byte) -106);
+                  break L1;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L2: {
+                  exception = (Exception) (Object) decompiledCaughtException;
+                  ((qa) this).field_l.repaint();
+                  break L2;
+                }
               }
-              exception = (Exception) (Object) decompiledCaughtException;
-              ((qa) this).field_l.repaint();
+              return;
             } else {
               break L0;
             }

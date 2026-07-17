@@ -12,9 +12,6 @@ abstract class m {
         field_d = null;
         field_b = null;
         field_c = null;
-        if (!param0) {
-            field_d = null;
-        }
     }
 
     static {

@@ -13,16 +13,17 @@ final class hf extends pi {
 
     public static void a(int param0) {
         field_p = null;
-        if (param0 != -16935) {
-            return;
-        }
         field_q = null;
         field_u = null;
         field_s = null;
     }
 
     hf(byte[] param0) {
-        ((hf) this).field_n = param0;
+        try {
+            ((hf) this).field_n = param0;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

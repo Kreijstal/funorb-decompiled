@@ -20,16 +20,16 @@ final class ic {
         var2 = of.field_g;
         of.field_g = lg.field_f;
         var3 = 30 / ((73 - param0) / 38);
-        if ((param1 ^ -1) != -52) {
-          if ((param1 ^ -1) != -51) {
+        if (param1 != 51) {
+          if (param1 != 50) {
             L0: {
               qh.field_c.field_c = 1;
               qh.field_c.field_g = qh.field_c.field_g + 1;
               lg.field_f = var2;
-              if (-3 < (qh.field_c.field_g ^ -1)) {
+              if (qh.field_c.field_g < 2) {
                 break L0;
               } else {
-                if ((param1 ^ -1) != -52) {
+                if (param1 != 51) {
                   break L0;
                 } else {
                   return 2;
@@ -37,16 +37,16 @@ final class ic {
               }
             }
             if (qh.field_c.field_g < 2) {
-              if ((qh.field_c.field_g ^ -1) <= -5) {
+              if (qh.field_c.field_g >= 4) {
                 return 1;
               } else {
                 return -1;
               }
             } else {
-              if (-51 == (param1 ^ -1)) {
+              if (param1 == 50) {
                 return 5;
               } else {
-                if ((qh.field_c.field_g ^ -1) <= -5) {
+                if (qh.field_c.field_g >= 4) {
                   return 1;
                 } else {
                   return -1;
@@ -58,10 +58,10 @@ final class ic {
               qh.field_c.field_c = 5;
               qh.field_c.field_g = qh.field_c.field_g + 1;
               lg.field_f = var2;
-              if (-3 < (qh.field_c.field_g ^ -1)) {
+              if (qh.field_c.field_g < 2) {
                 break L1;
               } else {
-                if ((param1 ^ -1) != -52) {
+                if (param1 != 51) {
                   break L1;
                 } else {
                   return 2;
@@ -69,16 +69,16 @@ final class ic {
               }
             }
             if (qh.field_c.field_g < 2) {
-              if ((qh.field_c.field_g ^ -1) <= -5) {
+              if (qh.field_c.field_g >= 4) {
                 return 1;
               } else {
                 return -1;
               }
             } else {
-              if (-51 == (param1 ^ -1)) {
+              if (param1 == 50) {
                 return 5;
               } else {
-                if ((qh.field_c.field_g ^ -1) <= -5) {
+                if (qh.field_c.field_g >= 4) {
                   return 1;
                 } else {
                   return -1;
@@ -90,21 +90,21 @@ final class ic {
           qh.field_c.field_c = 2;
           qh.field_c.field_g = qh.field_c.field_g + 1;
           lg.field_f = var2;
-          if (-3 >= (qh.field_c.field_g ^ -1)) {
-            if ((param1 ^ -1) == -52) {
+          if (qh.field_c.field_g >= 2) {
+            if (param1 == 51) {
               return 2;
             } else {
               if (qh.field_c.field_g < 2) {
-                if ((qh.field_c.field_g ^ -1) <= -5) {
+                if (qh.field_c.field_g >= 4) {
                   return 1;
                 } else {
                   return -1;
                 }
               } else {
-                if (-51 == (param1 ^ -1)) {
+                if (param1 == 50) {
                   return 5;
                 } else {
-                  if ((qh.field_c.field_g ^ -1) <= -5) {
+                  if (qh.field_c.field_g >= 4) {
                     return 1;
                   } else {
                     return -1;
@@ -114,16 +114,16 @@ final class ic {
             }
           } else {
             if (qh.field_c.field_g < 2) {
-              if ((qh.field_c.field_g ^ -1) <= -5) {
+              if (qh.field_c.field_g >= 4) {
                 return 1;
               } else {
                 return -1;
               }
             } else {
-              if (-51 == (param1 ^ -1)) {
+              if (param1 == 50) {
                 return 5;
               } else {
-                if ((qh.field_c.field_g ^ -1) <= -5) {
+                if (qh.field_c.field_g >= 4) {
                   return 1;
                 } else {
                   return -1;
@@ -138,7 +138,7 @@ final class ic {
         pc.field_Mb = null;
         jc.a(-26285);
         param4 = ah.a((byte) 111, param5, param4, param12, param6, param3, param8);
-        em.a(param13, 2, param0, param9, param11, param4, param7, param3, param1, param10);
+        em.a(16777215, 2, param0, param9, param11, param4, param7, param3, param1, param10);
         ie.a(param10, (byte) -107, param9);
         q.a(-6844, param9, param4, param5);
         if (param2) {
@@ -151,9 +151,6 @@ final class ic {
 
     public static void a(boolean param0) {
         field_d = null;
-        if (param0) {
-            return;
-        }
         field_f = null;
         field_a = null;
         field_e = null;

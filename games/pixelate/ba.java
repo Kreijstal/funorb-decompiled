@@ -27,7 +27,7 @@ final class ba {
           L0: {
             ((ba) this).field_e = null;
             var2 = ((ba) this).field_e.length - 1;
-            if ((var2 ^ -1) > -1) {
+            if (var2 < 0) {
               break L0;
             } else {
               L1: {
@@ -50,7 +50,7 @@ final class ba {
         } else {
           var2 = ((ba) this).field_e.length - 1;
           L2: while (true) {
-            if ((var2 ^ -1) > -1) {
+            if (var2 < 0) {
               return;
             } else {
               if (null == ((ba) this).field_e[var2]) {
@@ -84,7 +84,7 @@ final class ba {
         var2 = param0 ? 1 : 0;
         var3 = ((ba) this).field_e.length - 1;
         L0: while (true) {
-          if (-1 < (var3 ^ -1)) {
+          if (var3 < 0) {
             return var2 != 0;
           } else {
             if (null != ((ba) this).field_e[var3]) {
@@ -103,15 +103,19 @@ final class ba {
     }
 
     ba(int param0, int param1, int param2, int param3, int[] param4) {
-        int var6 = 0;
-        hd.d(-90);
-        ((ba) this).field_b = ok.a(ea.field_b, -119, param2) + param0;
-        ((ba) this).field_a = param1 - -ok.a(ea.field_b, -103, param3);
-        ((ba) this).field_e = new wl[50 + ok.a(ea.field_b, -102, 5)];
-        for (var6 = ((ba) this).field_e.length + -1; (var6 ^ -1) <= -1; var6--) {
-            ((ba) this).field_e[var6] = new wl(((ba) this).field_b, ((ba) this).field_a, ok.a(ea.field_b, -101, 1024), param4);
+        int var6_int = 0;
+        try {
+            hd.d(-90);
+            ((ba) this).field_b = ok.a(ea.field_b, -119, param2) + param0;
+            ((ba) this).field_a = param1 - -ok.a(ea.field_b, -103, param3);
+            ((ba) this).field_e = new wl[50 + ok.a(ea.field_b, -102, 5)];
+            for (var6_int = ((ba) this).field_e.length + -1; var6_int >= 0; var6_int--) {
+                ((ba) this).field_e[var6_int] = new wl(((ba) this).field_b, ((ba) this).field_a, ok.a(ea.field_b, -101, 1024), param4);
+            }
+            ((ba) this).field_c = ok.a(ea.field_b, -100, 3) + 2;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "ba.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
-        ((ba) this).field_c = ok.a(ea.field_b, -100, 3) + 2;
     }
 
     static {

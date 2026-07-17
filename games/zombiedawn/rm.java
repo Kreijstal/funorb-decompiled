@@ -10,56 +10,119 @@ final class rm extends java.awt.Canvas {
     static int field_b;
 
     public final void paint(java.awt.Graphics param0) {
-        ((rm) this).field_a.paint(param0);
+        try {
+            ((rm) this).field_a.paint(param0);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "rm.paint(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            field_f = false;
-        }
         field_e = null;
         field_c = null;
         field_d = null;
     }
 
     final static void a(byte param0, int param1, rc param2) {
+        RuntimeException var3 = null;
+        int var4 = 0;
         int var5 = 0;
-        int var6 = ZombieDawn.field_J;
-        am var7 = dp.field_e;
-        am var8 = var7;
-        var8.j(11, param1);
-        var8.field_j = var8.field_j + 1;
-        int var4 = var8.field_j;
-        var8.i(1, 100);
-        var8.a(param2.field_i, (byte) 105);
-        var8.a(param2.field_o, (byte) 105);
-        var8.a(param2.field_n, (byte) 105);
-        var8.h(104, param2.field_q);
-        var8.h(-124, param2.field_m);
-        var8.h(-118, param2.field_l);
-        if (param0 >= -47) {
-            return;
+        int var6 = 0;
+        am var7 = null;
+        am var8 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var6 = ZombieDawn.field_J;
+        try {
+          L0: {
+            var7 = dp.field_e;
+            var8 = var7;
+            var8.j(11, param1);
+            var8.field_j = var8.field_j + 1;
+            var4 = var8.field_j;
+            var8.i(1, 100);
+            var8.a(param2.field_i, (byte) 105);
+            var8.a(param2.field_o, (byte) 105);
+            var8.a(param2.field_n, (byte) 105);
+            var8.h(104, param2.field_q);
+            var8.h(-124, param2.field_m);
+            var8.h(-118, param2.field_l);
+            if (param0 < -47) {
+              var8.h(40, param2.field_t);
+              var8.i(param2.field_k.length, 87);
+              var5 = 0;
+              L1: while (true) {
+                if (var5 >= param2.field_k.length) {
+                  int discarded$1 = var8.e(-123, var4);
+                  var8.d(50, -var4 + var8.field_j);
+                  break L0;
+                } else {
+                  var7.h(30, param2.field_k[var5]);
+                  var5++;
+                  continue L1;
+                }
+              }
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("rm.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        var8.h(40, param2.field_t);
-        var8.i(param2.field_k.length, 87);
-        for (var5 = 0; var5 < param2.field_k.length; var5++) {
-            var7.h(30, param2.field_k[var5]);
-        }
-        int discarded$0 = var8.e(-123, var4);
-        var8.d(50, -var4 + var8.field_j);
     }
 
     final static int a(int param0, int param1, boolean param2) {
-        if (param2) {
-            Object var4 = null;
-            rm.a((byte) -68, 88, (rc) null);
-        }
-        int var3 = param1 >>> 1802605695;
+        int var3 = param1 >>> 31;
         return (var3 + param1) / param0 - var3;
     }
 
     public final void update(java.awt.Graphics param0) {
-        ((rm) this).field_a.update(param0);
+        try {
+            ((rm) this).field_a.update(param0);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "rm.update(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static boolean a(boolean param0) {
@@ -77,7 +140,7 @@ final class rm extends java.awt.Canvas {
         boolean stackOut_10_1 = false;
         L0: {
           var3 = ZombieDawn.field_J;
-          var1 = param0 ? 1 : 0;
+          var1 = 0;
           if (we.o((byte) -80)) {
             hi.a((byte) 120);
             var1 = 1;
@@ -134,8 +197,8 @@ final class rm extends java.awt.Canvas {
           if (!bg.a(2)) {
             break L3;
           } else {
-            var2 = (ln.field_b + -1 << 1442659304) / 16;
-            if ((var2 ^ -1) >= -1) {
+            var2 = (ln.field_b + -1 << 8) / 16;
+            if (var2 <= 0) {
               break L3;
             } else {
               bi.a(0, 0, bi.field_f, bi.field_a, 0, var2);
@@ -148,7 +211,11 @@ final class rm extends java.awt.Canvas {
     }
 
     rm(java.awt.Component param0) {
-        ((rm) this).field_a = param0;
+        try {
+            ((rm) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "rm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

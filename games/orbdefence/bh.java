@@ -13,27 +13,53 @@ final class bh {
 
     final static void a(int param0, int param1) {
         try {
-            if (p.field_d != null) {
-                // if_icmpgt L31
-                // if_acmpne L23
-            } else {
-                uk.field_b.field_i = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (p.field_d == null) {
+                break L0;
+              } else {
+                L1: {
+                  if (0 > param0) {
+                    break L1;
+                  } else {
+                    if (da.field_r != dh.field_bb) {
+                      break L0;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                L2: {
+                  if (uk.field_b.field_i != 0) {
+                    break L2;
+                  } else {
+                    if (~(10000L + p.field_a) > ~ji.b(param1 ^ -123)) {
+                      uk.field_b.i(param0, 120);
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                L3: {
+                  if (param1 > ~uk.field_b.field_i) {
+                    {
+                      L4: {
+                        p.field_d.a((byte) 30, uk.field_b.field_j, 0, uk.field_b.field_i);
+                        p.field_a = ji.b(-61);
+                        break L4;
+                      }
+                    }
+                    uk.field_b.field_i = 0;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
                 return;
+              }
             }
-            if (uk.field_b.field_i == 0) {
-                if (!((10000L + p.field_a ^ -1L) <= (ji.b(param1 ^ -123) ^ -1L))) {
-                    uk.field_b.i(param0, 120);
-                }
-            }
-            if (!(param1 <= (uk.field_b.field_i ^ -1))) {
-                try {
-                    p.field_d.a((byte) 30, uk.field_b.field_j, 0, uk.field_b.field_i);
-                    p.field_a = ji.b(-61);
-                } catch (IOException iOException) {
-                    th.a(114);
-                }
-                uk.field_b.field_i = 0;
-            }
+            uk.field_b.field_i = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -42,21 +68,16 @@ final class bh {
     }
 
     final static int a(byte param0) {
-        int var1 = 0;
         ed.field_b.b(0);
-        var1 = -118 / ((param0 - 30) / 59);
+        int var1 = -118;
         if (kg.field_h.e(255)) {
-          return 0;
-        } else {
-          return d.d((byte) -123);
+            return 0;
         }
+        return d.d((byte) -123);
     }
 
     public static void a(int param0) {
         field_f = null;
-        if (param0 != -21000) {
-            return;
-        }
         field_a = null;
         field_e = null;
         field_d = null;

@@ -28,7 +28,7 @@ abstract class ob implements ia {
     public final String b(byte param0) {
         if (param0 == -59) {
           if (!((ob) this).a((byte) -41)) {
-            if ((bb.b(-1) ^ -1L) > (350L + ((ob) this).field_a ^ -1L)) {
+            if (~bb.b(-1) > ~(350L + ((ob) this).field_a)) {
               return null;
             } else {
               return ((ob) this).d(97);
@@ -45,7 +45,7 @@ abstract class ob implements ia {
         if (((ob) this).a((byte) -114)) {
           return di.field_q;
         } else {
-          if ((bb.b(-1) ^ -1L) <= (((ob) this).field_a + 350L ^ -1L)) {
+          if (~bb.b(-1) <= ~(((ob) this).field_a + 350L)) {
             if (param0 != -7447) {
               String discarded$2 = ob.d((byte) -36);
               return ((ob) this).c((byte) -92);

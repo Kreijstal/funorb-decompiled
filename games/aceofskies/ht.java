@@ -16,7 +16,7 @@ final class ht extends wf {
         field_h = null;
         field_i = null;
         field_e = null;
-        int var1 = 39 / ((-1 - param0) / 63);
+        int var1 = 39;
         field_j = null;
     }
 

@@ -41,9 +41,6 @@ final class bd {
     public static void a(int param0) {
         field_I = null;
         field_C = null;
-        if (param0 != 16) {
-            field_I = (String) null;
-        }
     }
 
     bd() {

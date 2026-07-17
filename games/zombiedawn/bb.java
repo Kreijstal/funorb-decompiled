@@ -15,16 +15,11 @@ final class bb {
     public static void a(int param0) {
         field_c = null;
         field_h = null;
-        if (param0 > -50) {
-          return;
-        } else {
-          field_e = null;
-          field_b = null;
-          field_a = null;
-          field_g = null;
-          field_d = null;
-          return;
-        }
+        field_e = null;
+        field_b = null;
+        field_a = null;
+        field_g = null;
+        field_d = null;
     }
 
     static {

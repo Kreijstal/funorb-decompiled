@@ -57,7 +57,7 @@ final class sl {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((sl) this).field_c[var6] = var3 ^ -1;
+                      ((sl) this).field_c[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -185,7 +185,7 @@ final class sl {
         while (((sl) this).field_c[var1] >= 0) {
             var1 = ml.a() != 0 ? ((sl) this).field_c[var1] : var1 + 1;
         }
-        return ((sl) this).field_c[var1] ^ -1;
+        return ~((sl) this).field_c[var1];
     }
 
     sl() {
@@ -216,7 +216,7 @@ final class sl {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = ml.f(24);
+          int discarded$2 = ml.f(24);
           ((sl) this).field_a = ml.f(16);
           ((sl) this).field_e = ml.f(24);
           ((sl) this).field_f = new int[((sl) this).field_e];
@@ -283,8 +283,9 @@ final class sl {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((sl) this).field_f[var2] = var3_int;
+                    ((sl) this).field_f[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

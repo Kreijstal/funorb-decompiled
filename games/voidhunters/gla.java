@@ -19,8 +19,12 @@ final class gla {
     }
 
     gla(jp param0, int param1, int param2) {
-        ((gla) this).field_a = param0;
-        ((gla) this).field_c = param2;
+        try {
+            ((gla) this).field_a = param0;
+            ((gla) this).field_c = param2;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "gla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

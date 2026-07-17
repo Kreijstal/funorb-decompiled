@@ -15,9 +15,6 @@ final class ula {
 
     public static void a(int param0) {
         field_h = null;
-        if (param0 != 0) {
-            return;
-        }
         field_j = null;
     }
 
@@ -106,98 +103,40 @@ final class ula {
     }
 
     final static void a(int param0, byte param1, String param2, int param3, boolean param4, long param5) {
-        int var7 = 0;
-        pf stackIn_2_0 = null;
-        pf stackIn_3_0 = null;
-        pf stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        pf stackIn_6_0 = null;
-        pf stackIn_7_0 = null;
-        pf stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        pf stackOut_5_0 = null;
-        pf stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        pf stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        pf stackOut_1_0 = null;
-        pf stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        pf stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        sja.field_fb.c(param0, (byte) 110);
-        sja.field_fb.field_g = sja.field_fb.field_g + 1;
-        if (param1 != 75) {
-          L0: {
-            field_j = null;
-            var7 = sja.field_fb.field_g;
+        int var7_int = 0;
+        try {
+            sja.field_fb.c(param0, (byte) 110);
+            sja.field_fb.field_g = sja.field_fb.field_g + 1;
+            if (param1 != 75) {
+                field_j = null;
+            }
+            var7_int = sja.field_fb.field_g;
             sja.field_fb.b(1686281208, param5);
             sja.field_fb.a((byte) -50, param2);
             sja.field_fb.d(param3, 0);
-            stackOut_5_0 = sja.field_fb;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
-            if (param4) {
-              stackOut_7_0 = (pf) (Object) stackIn_7_0;
-              stackOut_7_1 = 1;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              break L0;
-            } else {
-              stackOut_6_0 = (pf) (Object) stackIn_6_0;
-              stackOut_6_1 = 0;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              break L0;
-            }
-          }
-          ((pf) (Object) stackIn_8_0).d(stackIn_8_1, param1 + -75);
-          sja.field_fb.b((byte) -127, sja.field_fb.field_g + -var7);
-          return;
-        } else {
-          L1: {
-            var7 = sja.field_fb.field_g;
-            sja.field_fb.b(1686281208, param5);
-            sja.field_fb.a((byte) -50, param2);
-            sja.field_fb.d(param3, 0);
-            stackOut_1_0 = sja.field_fb;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
-            if (param4) {
-              stackOut_3_0 = (pf) (Object) stackIn_3_0;
-              stackOut_3_1 = 1;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              break L1;
-            } else {
-              stackOut_2_0 = (pf) (Object) stackIn_2_0;
-              stackOut_2_1 = 0;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              break L1;
-            }
-          }
-          ((pf) (Object) stackIn_4_0).d(stackIn_4_1, param1 + -75);
-          sja.field_fb.b((byte) -127, sja.field_fb.field_g + -var7);
-          return;
+            sja.field_fb.d(!param4 ? 0 : 1, param1 + -75);
+            sja.field_fb.b((byte) -127, sja.field_fb.field_g + -var7_int);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ula.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
     ula(int param0, int param1, jfa param2, int param3, int param4) {
-        ((ula) this).field_c = param2;
-        ((ula) this).field_b = param0;
-        ((ula) this).field_e = param1;
-        ((ula) this).field_a = (float)param1;
-        ((ula) this).field_g = param3;
-        ((ula) this).field_i = (float)param0;
-        ((ula) this).field_c.field_v.a((byte) 46, ((ula) this).field_c.field_g.field_o.field_b, 3);
-        qm.a(5, 7758);
+        try {
+            ((ula) this).field_c = param2;
+            ((ula) this).field_b = param0;
+            ((ula) this).field_e = param1;
+            ((ula) this).field_a = (float)param1;
+            ((ula) this).field_g = param3;
+            ((ula) this).field_i = (float)param0;
+            ((ula) this).field_c.field_v.a((byte) 46, ((ula) this).field_c.field_g.field_o.field_b, 3);
+            qm.a(5, 7758);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ula.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     final static boolean a(char param0, int param1) {
-        if (param1 != 48) {
-            return true;
-        }
         if (48 > param0) {
             return false;
         }

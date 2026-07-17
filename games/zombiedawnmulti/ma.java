@@ -17,65 +17,24 @@ final class ma {
     }
 
     final static void a(cj param0, cj param1, boolean param2) {
-        L0: {
-          if (param0.field_Cb == null) {
+        if (!(param0.field_Cb != null)) {
             param0.field_Cb = new th();
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (null != param1.field_Cb) {
-          L1: {
-            if (ol.field_o == null) {
-              ol.field_o = new sc(64);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          L2: {
-            if (null == bh.field_f) {
-              bh.field_f = new sc(64);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          if (!param2) {
-            return;
-          } else {
-            jf.field_d = param1.field_Cb;
-            ro.field_M = param0.field_Cb;
-            cf.d(-8328);
-            return;
-          }
-        } else {
-          L3: {
+        if (null == param1.field_Cb) {
             param1.field_Cb = new th();
-            if (ol.field_o == null) {
-              ol.field_o = new sc(64);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            if (null == bh.field_f) {
-              bh.field_f = new sc(64);
-              break L4;
-            } else {
-              break L4;
-            }
-          }
-          if (!param2) {
-            return;
-          } else {
+        }
+        if (!(ol.field_o != null)) {
+            ol.field_o = new sc(64);
+        }
+        if (!(null != bh.field_f)) {
+            bh.field_f = new sc(64);
+        }
+        try {
             jf.field_d = param1.field_Cb;
             ro.field_M = param0.field_Cb;
             cf.d(-8328);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ma.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 

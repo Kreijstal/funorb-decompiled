@@ -15,7 +15,7 @@ abstract class rfa extends ug implements sia {
         var4 = TombRacer.field_G ? 1 : 0;
         var2 = kw.b((byte) -97);
         if (wna.c(-127)) {
-          fh.a(vka.A(90), var2, param0 ^ 0);
+          fh.a(vka.A(90), var2, param0);
           return;
         } else {
           dba.a(var2, (byte) 101);
@@ -24,21 +24,31 @@ abstract class rfa extends ug implements sia {
     }
 
     final void a(eb param0, int param1) {
-        dma.field_l = param0;
-        ((rfa) this).b((byte) 106, true);
-        if (param1 <= 34) {
-            return;
+        try {
+            dma.field_l = param0;
+            ((rfa) this).b((byte) 106, true);
+            if (param1 <= 34) {
+                return;
+            }
+            try {
+                ((rfa) this).s(-1);
+                ((rfa) this).j(-13);
+                ((rfa) this).o(9822);
+                ((rfa) this).g((byte) -126);
+                ((rfa) this).p(22);
+                ((rfa) this).d((byte) 87);
+                vca.field_c[9] = -1;
+                vca.field_c[10] = -1;
+                kra.field_c = new Vector();
+                aca.a((sia) this, 19711);
+            } catch (RuntimeException runtimeException) {
+                throw tba.a((Throwable) (Object) runtimeException, "rfa.GB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
-        ((rfa) this).s(-1);
-        ((rfa) this).j(-13);
-        ((rfa) this).o(9822);
-        ((rfa) this).g((byte) -126);
-        ((rfa) this).p(22);
-        ((rfa) this).d((byte) 87);
-        vca.field_c[9] = -1;
-        vca.field_c[10] = -1;
-        kra.field_c = new Vector();
-        aca.a((sia) this, 19711);
     }
 
     protected rfa() {
@@ -59,10 +69,6 @@ abstract class rfa extends ug implements sia {
 
     public static void w(int param0) {
         field_C = null;
-        if (param0 < 105) {
-            Object var2 = null;
-            iu[] discarded$0 = rfa.a((iu[]) null, 100);
-        }
         field_B = null;
     }
 
@@ -152,10 +158,10 @@ abstract class rfa extends ug implements sia {
                 L3: {
                   L4: {
                     var3 = ((rfa) this).a(stackIn_50_1, stackIn_50_2 != 0);
-                    if ((var3 ^ -1) == -2) {
+                    if (var3 == 1) {
                       break L4;
                     } else {
-                      if ((var3 ^ -1) == -3) {
+                      if (var3 == 2) {
                         break L4;
                       } else {
                         break L3;
@@ -220,11 +226,11 @@ abstract class rfa extends ug implements sia {
                         break L1;
                       } else {
                         L9: {
-                          if (0 == (fna.field_h ^ -1)) {
+                          if (fna.field_h == -1) {
                             if (fna.field_h != -1) {
                               break L9;
                             } else {
-                              if (0 != (var3 ^ -1)) {
+                              if (var3 != -1) {
                                 fna.field_h = var3;
                                 var3 = -1;
                                 break L9;
@@ -244,7 +250,7 @@ abstract class rfa extends ug implements sia {
                         var4 = 0;
                         L10: while (true) {
                           L11: {
-                            if ((kra.field_c.size() ^ -1) >= (var4 ^ -1)) {
+                            if (~kra.field_c.size() >= ~var4) {
                               break L11;
                             } else {
                               if (((sia) kra.field_c.elementAt(var4)).a((byte) -72, kda.field_td, fna.field_h)) {
@@ -269,12 +275,12 @@ abstract class rfa extends ug implements sia {
               } else {
                 L12: {
                   var3 = vk.c(107);
-                  if (-3 != (var3 ^ -1)) {
-                    if ((var3 ^ -1) == -4) {
+                  if (var3 != 2) {
+                    if (var3 == 3) {
                       in.a(-30600, true);
                       break L12;
                     } else {
-                      if (-5 == (var3 ^ -1)) {
+                      if (var3 == 4) {
                         ts.a((byte) -63, ck.field_b, false);
                         kpa.field_c = true;
                         break L12;
@@ -297,7 +303,7 @@ abstract class rfa extends ug implements sia {
         if (param0) {
           var3 = 0;
           L13: while (true) {
-            if ((kra.field_c.size() ^ -1) >= (var3 ^ -1)) {
+            if (~kra.field_c.size() >= ~var3) {
               return;
             } else {
               L14: {
@@ -341,28 +347,94 @@ abstract class rfa extends ug implements sia {
     }
 
     final static iu[] a(iu[] param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         iu var3 = null;
         int var4 = 0;
+        Object stackIn_3_0 = null;
+        iu[] stackIn_6_0 = null;
+        iu[] stackIn_10_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        iu[] stackOut_4_0 = null;
+        iu[] stackOut_9_0 = null;
+        iu[] stackOut_5_0 = null;
+        Object stackOut_2_0 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var4 = TombRacer.field_G ? 1 : 0;
-        var2 = 0;
-        if (param1 >= 111) {
-          L0: while (true) {
-            if ((param0.length ^ -1) >= (var2 ^ -1)) {
-              return param0;
+        try {
+          L0: {
+            var2_int = 0;
+            if (param1 >= 111) {
+              stackOut_4_0 = (iu[]) param0;
+              stackIn_6_0 = stackOut_4_0;
+              L1: while (true) {
+                if (~stackIn_6_0.length >= ~var2_int) {
+                  stackOut_9_0 = (iu[]) param0;
+                  stackIn_10_0 = stackOut_9_0;
+                  break L0;
+                } else {
+                  var3 = param0[var2_int];
+                  param0[var2_int].field_p = 0;
+                  var3.field_o = 0;
+                  param0[var2_int].field_n = param0[var2_int].field_m;
+                  param0[var2_int].field_k = param0[var2_int].field_q;
+                  var2_int++;
+                  stackOut_5_0 = (iu[]) param0;
+                  stackIn_6_0 = stackOut_5_0;
+                  continue L1;
+                }
+              }
             } else {
-              var3 = param0[var2];
-              param0[var2].field_p = 0;
-              var3.field_o = 0;
-              param0[var2].field_n = param0[var2].field_m;
-              param0[var2].field_k = param0[var2].field_q;
-              var2++;
-              continue L0;
+              stackOut_2_0 = null;
+              stackIn_3_0 = stackOut_2_0;
+              return (iu[]) (Object) stackIn_3_0;
             }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_1 = new StringBuilder().append("rfa.HB(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L2;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
         }
+        return stackIn_10_0;
     }
 
     final void a(boolean param0) {
@@ -484,7 +556,7 @@ abstract class rfa extends ug implements sia {
                 if (0 == var2) {
                   break L9;
                 } else {
-                  if ((var2 ^ -1) == -2) {
+                  if (var2 == 1) {
                     break L9;
                   } else {
                     break L8;
@@ -535,7 +607,7 @@ abstract class rfa extends ug implements sia {
         int var2 = 0;
         int var3 = 0;
         var3 = TombRacer.field_G ? 1 : 0;
-        var2 = 68 % ((param0 - 52) / 40);
+        var2 = 0;
         L0: while (true) {
           if (!cj.a(vca.field_c, 0)) {
             return;

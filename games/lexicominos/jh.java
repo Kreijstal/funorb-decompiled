@@ -10,9 +10,6 @@ final class jh {
 
     public static void a(boolean param0) {
         field_d = null;
-        if (param0) {
-            return;
-        }
         field_a = null;
         field_b = null;
     }

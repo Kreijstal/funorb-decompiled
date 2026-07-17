@@ -92,14 +92,18 @@ final class ola extends jea {
         ((ola) this).field_Db = new tv[256];
         ((ola) this).field_Fb = new int[256];
         ((ola) this).field_xb = -2;
-        ((ola) this).field_vb = param6;
-        ((ola) this).field_Cb = param1;
-        ((ola) this).field_Hb = param4;
-        ((ola) this).field_tb = param7;
-        ((ola) this).field_ub = param2;
-        ((ola) this).field_Ab = param3;
-        ((ola) this).field_Gb = param8;
-        ((ola) this).field_wb = param5;
+        try {
+            ((ola) this).field_vb = param6;
+            ((ola) this).field_Cb = param1;
+            ((ola) this).field_Hb = param4;
+            ((ola) this).field_tb = param7;
+            ((ola) this).field_ub = param2;
+            ((ola) this).field_Ab = param3;
+            ((ola) this).field_Gb = param8;
+            ((ola) this).field_wb = param5;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ola.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+        }
     }
 
     final static void e(byte param0) {
@@ -136,64 +140,25 @@ final class ola extends jea {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = 1 % ((-53 - param0) / 62);
-                    if (nfa.field_n != null) {
-                        statePc = 2;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var2 = (Object) (Object) nfa.field_n;
-                    // monitorenter nfa.field_n
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        nfa.field_n = null;
-                        // monitorexit var2
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var2
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 7: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          var1 = 1 % ((-53 - param0) / 62);
+          if (nfa.field_n != null) {
+            var2 = (Object) (Object) nfa.field_n;
+            synchronized (var2) {
+              L1: {
+                nfa.field_n = null;
+                break L1;
+              }
             }
+            break L0;
+          } else {
+            break L0;
+          }
         }
     }
 
     public static void d(byte param0) {
-        if (param0 != -39) {
-            ola.f((byte) -65);
-        }
         field_yb = null;
         field_Ib = null;
         field_Bb = null;
@@ -205,30 +170,94 @@ final class ola extends jea {
         if (param0 > -63) {
             return;
         }
-        ((ola) this).field_Db[((ola) this).field_zb].field_eb = true;
-        ((ola) this).field_Db[((ola) this).field_zb].field_bb = 1;
-        ((ola) this).b(-125, (jea) (Object) ((ola) this).field_Db[((ola) this).field_zb]);
-        ((ola) this).field_Fb[((ola) this).field_zb] = param1;
-        ((ola) this).field_zb = ((ola) this).field_zb + 1;
+        try {
+            ((ola) this).field_Db[((ola) this).field_zb].field_eb = true;
+            ((ola) this).field_Db[((ola) this).field_zb].field_bb = 1;
+            ((ola) this).b(-125, (jea) (Object) ((ola) this).field_Db[((ola) this).field_zb]);
+            ((ola) this).field_Fb[((ola) this).field_zb] = param1;
+            ((ola) this).field_zb = ((ola) this).field_zb + 1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ola.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(iu param0, int param1, String param2, boolean param3) {
-        ((ola) this).field_Db[((ola) this).field_zb] = new tv(0L, (jea) null, (jea) null, ((ola) this).field_Ab, param0, param2);
-        ((ola) this).field_Db[((ola) this).field_zb].field_C = ((ola) this).field_Cb;
-        if (param3) {
-            ((ola) this).field_Cb = null;
+        try {
+            ((ola) this).field_Db[((ola) this).field_zb] = new tv(0L, (jea) null, (jea) null, ((ola) this).field_Ab, param0, param2);
+            ((ola) this).field_Db[((ola) this).field_zb].field_C = ((ola) this).field_Cb;
+            if (param3) {
+                ((ola) this).field_Cb = null;
+            }
+            ((ola) this).field_Db[((ola) this).field_zb].field_eb = true;
+            ((ola) this).field_Db[((ola) this).field_zb].field_bb = 1;
+            ((ola) this).b(-128, (jea) (Object) ((ola) this).field_Db[((ola) this).field_zb]);
+            ((ola) this).field_Fb[((ola) this).field_zb] = param1;
+            ((ola) this).field_zb = ((ola) this).field_zb + 1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ola.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
-        ((ola) this).field_Db[((ola) this).field_zb].field_eb = true;
-        ((ola) this).field_Db[((ola) this).field_zb].field_bb = 1;
-        ((ola) this).b(-128, (jea) (Object) ((ola) this).field_Db[((ola) this).field_zb]);
-        ((ola) this).field_Fb[((ola) this).field_zb] = param1;
-        ((ola) this).field_zb = ((ola) this).field_zb + 1;
     }
 
     final static void a(int param0, ena param1) {
-        hba.field_c = param1;
-        if (param0 != 13) {
-            field_Eb = -36;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              hba.field_c = param1;
+              if (param0 == 13) {
+                break L1;
+              } else {
+                field_Eb = -36;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ola.H(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 

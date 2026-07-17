@@ -5,18 +5,17 @@ final class ke {
     static dm[][][] field_a;
 
     final static void a(int param0, boolean param1, int param2, int param3, qc param4) {
-        param4.d((byte) 126, 12);
-        param4.e(17, 28695);
-        param4.e(param2, 28695);
-        if (!param1) {
-          field_a = null;
-          param4.e(param3, 28695);
-          param4.d((byte) 124, param0);
-          return;
-        } else {
-          param4.e(param3, 28695);
-          param4.d((byte) 124, param0);
-          return;
+        try {
+            param4.d((byte) 126, 12);
+            param4.e(17, 28695);
+            param4.e(param2, 28695);
+            if (!param1) {
+                field_a = null;
+            }
+            param4.e(param3, 28695);
+            param4.d((byte) 124, param0);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "ke.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -30,7 +29,7 @@ final class ke {
     }
 
     final static void b(byte param0) {
-        int var1 = 0 % ((27 - param0) / 39);
+        int var1 = 0;
     }
 
     static {

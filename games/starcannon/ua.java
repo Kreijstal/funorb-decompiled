@@ -8,80 +8,85 @@ final class ua {
     static int field_a;
 
     public static void a(int param0) {
-        if (param0 != 128) {
-            return;
-        }
         field_d = null;
         field_b = null;
     }
 
     final static boolean a(char param0, int param1) {
-        char[] var12 = null;
-        char[] var7 = null;
-        char[] var6 = null;
         char[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        char[] var14 = null;
-        char[] var9 = null;
-        int var5 = StarCannon.field_A;
-        if (param1 < param0) {
-            if (128 > param0) {
-                return true;
-            }
-            if (160 > param0) {
-                if (0 == param0) {
-                    return false;
+        int var5 = 0;
+        char[] var6 = null;
+        int stackIn_8_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_17_0 = 0;
+        var5 = StarCannon.field_A;
+        try {
+          L0: {
+            L1: {
+              if (0 >= param0) {
+                break L1;
+              } else {
+                if (128 > param0) {
+                  stackOut_7_0 = 1;
+                  stackIn_8_0 = stackOut_7_0;
+                  return stackIn_8_0 != 0;
+                } else {
+                  break L1;
                 }
-                var12 = ee.field_c;
-                var7 = var12;
-                var6 = var7;
+              }
+            }
+            L2: {
+              if (160 > param0) {
+                break L2;
+              } else {
+                if (255 < param0) {
+                  break L2;
+                } else {
+                  return true;
+                }
+              }
+            }
+            L3: {
+              if (0 != param0) {
+                var6 = ee.field_c;
                 var2 = var6;
-                for (var3 = 0; var12.length > var3; var3++) {
-                    var4 = var12[var3];
-                    if (var4 == param0) {
-                        return true;
+                var3 = 0;
+                L4: while (true) {
+                  if (var6.length <= var3) {
+                    break L3;
+                  } else {
+                    var4 = var6[var3];
+                    if (var4 != param0) {
+                      var3++;
+                      continue L4;
+                    } else {
+                      stackOut_14_0 = 1;
+                      stackIn_15_0 = stackOut_14_0;
+                      return stackIn_15_0 != 0;
                     }
+                  }
                 }
-                return false;
+              } else {
+                break L3;
+              }
             }
-            if (255 < param0) {
-                if (0 == param0) {
-                    return false;
-                }
-                var14 = ee.field_c;
-                var9 = var14;
-                var6 = var9;
-                var2 = var6;
-                for (var3 = 0; var14.length > var3; var3++) {
-                    var4 = var14[var3];
-                    if (var4 == param0) {
-                        return true;
-                    }
-                }
-                return false;
-            }
-            return true;
+            stackOut_17_0 = 0;
+            stackIn_18_0 = stackOut_17_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var2_ref, "ua.B(" + param0 + 44 + 0 + 41);
         }
-        if (160 <= param0) {
-            if (255 >= param0) {
-                return true;
-            }
-        }
-        if (0 == param0) {
-            return false;
-        }
-        char[] var16 = ee.field_c;
-        char[] var11 = var16;
-        var6 = var11;
-        var2 = var6;
-        for (var3 = 0; var16.length > var3; var3++) {
-            var4 = var16[var3];
-            if (var4 == param0) {
-                return true;
-            }
-        }
-        return false;
+        return stackIn_18_0 != 0;
     }
 
     static {

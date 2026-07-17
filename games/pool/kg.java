@@ -33,31 +33,27 @@ final class kg extends ma {
     }
 
     final static void a(int param0, byte param1) {
-        int var2 = 0;
-        hr.field_c = new ro[param0];
-        if (param1 != 49) {
-          kg.d((byte) -107);
-          var2 = 0;
-          L0: while (true) {
-            if (hr.field_c.length <= var2) {
-              return;
-            } else {
-              hr.field_c[var2] = new ro();
-              var2++;
-              continue L0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            hr.field_c = new ro[param0];
+            var2_int = 0;
+            L1: while (true) {
+              if (hr.field_c.length <= var2_int) {
+                break L0;
+              } else {
+                hr.field_c[var2_int] = new ro();
+                var2_int++;
+                continue L1;
+              }
             }
           }
-        } else {
-          var2 = 0;
-          L1: while (true) {
-            if (hr.field_c.length <= var2) {
-              return;
-            } else {
-              hr.field_c[var2] = new ro();
-              var2++;
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var2, "kg.A(" + param0 + 44 + 49 + 41);
         }
     }
 

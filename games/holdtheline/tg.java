@@ -12,7 +12,7 @@ abstract class tg {
 
     final static void a(int param0, int param1, int param2) {
         if (param1 == 5) {
-          if ((d.field_c[param0] ^ -1) != 0) {
+          if (d.field_c[param0] != -1) {
             if (d.field_c[param0] <= param2) {
               return;
             } else {
@@ -40,9 +40,6 @@ abstract class tg {
 
     public static void a(byte param0) {
         field_d = null;
-        if (param0 != -16) {
-            return;
-        }
         field_a = null;
         field_f = null;
         field_g = null;

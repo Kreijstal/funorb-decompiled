@@ -7,12 +7,6 @@ final class sc {
     static boolean field_c;
 
     public static void a(int param0) {
-        if (param0 < 1) {
-            field_a = null;
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_b = null;
         field_a = null;
     }

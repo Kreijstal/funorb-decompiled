@@ -23,7 +23,7 @@ final class cd {
         if (param0 == 0) {
           if (0 == ((cd) this).field_d) {
             if (84 != ((cd) this).field_f) {
-              if (-84 == (((cd) this).field_f ^ -1)) {
+              if (((cd) this).field_f == 83) {
                 return true;
               } else {
                 return false;
@@ -84,7 +84,7 @@ final class cd {
         if (!param0) {
           L0: {
             ((cd) this).b((byte) -61);
-            if ((((cd) this).field_f ^ -1) != -103) {
+            if (((cd) this).field_f != 102) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -97,7 +97,7 @@ final class cd {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((cd) this).field_f ^ -1) != -103) {
+            if (((cd) this).field_f != 102) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -172,7 +172,7 @@ final class cd {
                   break L0;
                 } else {
                   if (0 == ((cd) this).field_l) {
-                    if (-98 == (kg.field_d ^ -1)) {
+                    if (kg.field_d == 97) {
                       ((cd) this).field_e = ((cd) this).field_e + 1;
                       ((cd) this).field_a = false;
                       if (((cd) this).field_e >= ((cd) this).field_i) {
@@ -191,7 +191,7 @@ final class cd {
               }
             }
             if (0 == ((cd) this).field_l) {
-              if (-98 == (kg.field_d ^ -1)) {
+              if (kg.field_d == 97) {
                 ((cd) this).field_e = ((cd) this).field_e + 1;
                 ((cd) this).field_a = false;
                 if (((cd) this).field_e < ((cd) this).field_i) {
@@ -231,7 +231,7 @@ final class cd {
                 }
               }
               if (0 == ((cd) this).field_l) {
-                if (-98 == (kg.field_d ^ -1)) {
+                if (kg.field_d == 97) {
                   ((cd) this).field_e = ((cd) this).field_e + 1;
                   ((cd) this).field_a = false;
                   if (((cd) this).field_e >= ((cd) this).field_i) {
@@ -248,7 +248,7 @@ final class cd {
               }
             } else {
               if (0 == ((cd) this).field_l) {
-                if (-98 == (kg.field_d ^ -1)) {
+                if (kg.field_d == 97) {
                   ((cd) this).field_e = ((cd) this).field_e + 1;
                   ((cd) this).field_a = false;
                   if (((cd) this).field_e >= ((cd) this).field_i) {
@@ -303,7 +303,7 @@ final class cd {
                 return;
               } else {
                 L2: {
-                  if ((((cd) this).field_e ^ -1) >= -1) {
+                  if (((cd) this).field_e <= 0) {
                     ((cd) this).field_e = ((cd) this).field_i;
                     break L2;
                   } else {
@@ -365,7 +365,7 @@ final class cd {
                   break L6;
                 } else {
                   L7: {
-                    if ((((cd) this).field_e ^ -1) >= -1) {
+                    if (((cd) this).field_e <= 0) {
                       ((cd) this).field_e = ((cd) this).field_i;
                       break L7;
                     } else {
@@ -408,7 +408,7 @@ final class cd {
 
     final boolean b(int param0) {
         int var2 = 52 % ((31 - param0) / 56);
-        return -104 == (((cd) this).field_f ^ -1) ? true : false;
+        return ((cd) this).field_f == 103 ? true : false;
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
@@ -464,7 +464,7 @@ final class cd {
         if (param0 != 0) {
           L0: {
             ((cd) this).field_a = false;
-            if ((((cd) this).field_f ^ -1) != -98) {
+            if (((cd) this).field_f != 97) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -477,7 +477,7 @@ final class cd {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((cd) this).field_f ^ -1) != -98) {
+            if (((cd) this).field_f != 97) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -494,9 +494,6 @@ final class cd {
     public static void c(int param0) {
         field_c = null;
         field_h = null;
-        if (param0 != 11352) {
-            field_g = -51;
-        }
     }
 
     final void a(int param0, int param1, int param2) {
@@ -521,7 +518,7 @@ final class cd {
               }
             }
             if (((cd) this).field_l != 0) {
-              if (-1 != (rj.field_a ^ -1)) {
+              if (rj.field_a != 0) {
                 L1: {
                   if (0 >= ((cd) this).field_k) {
                     ((cd) this).field_m = ((cd) this).field_l;
@@ -1093,8 +1090,8 @@ final class cd {
 
     final boolean b(boolean param0) {
         if (!param0) {
-          if (-1 == (((cd) this).field_m ^ -1)) {
-            if ((((cd) this).field_f ^ -1) != -85) {
+          if (((cd) this).field_m == 0) {
+            if (((cd) this).field_f != 84) {
               if (((cd) this).field_f == 83) {
                 return true;
               } else {

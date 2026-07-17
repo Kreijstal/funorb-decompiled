@@ -161,8 +161,10 @@ final class fta extends uda {
                 ((fta) this).field_o = ((fta) this).field_d.a(2, false, 1, (byte) -48, new int[2]);
                 ((fta) this).field_o.a(false, (byte) -98, false);
                 ((fta) this).field_n = true;
+                return;
               } else {
                 ((fta) this).field_n = false;
+                return;
               }
             } else {
               break L0;
@@ -261,7 +263,7 @@ final class fta extends uda {
             var5 = ((fta) this).field_d.g((byte) 20);
             if (((fta) this).field_j) {
               L1: {
-                if (-2147483648 == (var4 ^ -1)) {
+                if (var4 == 2147483647) {
                   stackOut_8_0 = ((fta) this).field_l;
                   stackIn_9_0 = stackOut_8_0;
                   break L1;
@@ -399,35 +401,22 @@ final class fta extends uda {
         oj var2 = null;
         jagdx.IDirect3DDevice var3 = null;
         oj var4 = null;
-        L0: {
-          if (null == ((fta) this).field_h) {
-            break L0;
+        if (null != ((fta) this).field_h) {
+          if (!((fta) this).field_j) {
+            return;
           } else {
-            if (((fta) this).field_j) {
-              var4 = ((fta) this).field_d.z((byte) 90);
-              var2 = var4;
-              var3 = ((fta) this).field_m.field_Mc;
-              int discarded$5 = var3.b(13, ((fta) this).field_d.field_Rb * ((fta) this).field_d.field_Sb, ((fta) this).field_d.field_Rb * ((fta) this).field_d.field_u, ((fta) this).field_d.field_Rb * ((fta) this).field_d.field_x, 1.0f);
-              int discarded$6 = var3.b(14, ((fta) this).field_d.field_oc * ((fta) this).field_d.field_Sb, ((fta) this).field_d.field_oc * ((fta) this).field_d.field_u, ((fta) this).field_d.field_oc * ((fta) this).field_d.field_x, 1.0f);
-              int discarded$7 = var3.b(16, ((fta) this).field_d.field_Sb * ((fta) this).field_d.field_tc, ((fta) this).field_d.field_u * ((fta) this).field_d.field_tc, ((fta) this).field_d.field_x * ((fta) this).field_d.field_tc, 1.0f);
-              var4.a(((fta) this).field_d.field_wc[1], field_k, ((fta) this).field_d.field_wc[2], ((fta) this).field_d.field_wc[0], false);
-              int discarded$8 = var3.SetVertexShaderConstantF(15, field_k, 1);
-              var4.a(((fta) this).field_d.field_cb[1], field_k, ((fta) this).field_d.field_cb[2], ((fta) this).field_d.field_cb[0], false);
-              int discarded$9 = var3.SetVertexShaderConstantF(17, field_k, 1);
-              break L0;
-            } else {
-              if (param0 > 111) {
-                return;
-              } else {
-                ((fta) this).a(3, -77, 116);
-                return;
-              }
-            }
+            var4 = ((fta) this).field_d.z((byte) 90);
+            var2 = var4;
+            var3 = ((fta) this).field_m.field_Mc;
+            int discarded$5 = var3.b(13, ((fta) this).field_d.field_Rb * ((fta) this).field_d.field_Sb, ((fta) this).field_d.field_Rb * ((fta) this).field_d.field_u, ((fta) this).field_d.field_Rb * ((fta) this).field_d.field_x, 1.0f);
+            int discarded$6 = var3.b(14, ((fta) this).field_d.field_oc * ((fta) this).field_d.field_Sb, ((fta) this).field_d.field_oc * ((fta) this).field_d.field_u, ((fta) this).field_d.field_oc * ((fta) this).field_d.field_x, 1.0f);
+            int discarded$7 = var3.b(16, ((fta) this).field_d.field_Sb * ((fta) this).field_d.field_tc, ((fta) this).field_d.field_u * ((fta) this).field_d.field_tc, ((fta) this).field_d.field_x * ((fta) this).field_d.field_tc, 1.0f);
+            var4.a(((fta) this).field_d.field_wc[1], field_k, ((fta) this).field_d.field_wc[2], ((fta) this).field_d.field_wc[0], false);
+            int discarded$8 = var3.SetVertexShaderConstantF(15, field_k, 1);
+            var4.a(((fta) this).field_d.field_cb[1], field_k, ((fta) this).field_d.field_cb[2], ((fta) this).field_d.field_cb[0], false);
+            int discarded$9 = var3.SetVertexShaderConstantF(17, field_k, 1);
+            return;
           }
-        }
-        if (param0 <= 111) {
-          ((fta) this).a(3, -77, 116);
-          return;
         } else {
           return;
         }

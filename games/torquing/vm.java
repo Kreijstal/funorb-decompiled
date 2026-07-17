@@ -146,8 +146,8 @@ final class vm extends ta {
                   var15 = var13 - 1;
                   var16 = var14 - 1;
                   var17 = var13 * var14;
-                  var12 = 1 * var13;
-                  var11 = 1 * var13;
+                  var12 = var13;
+                  var11 = var13;
                   var18 = 2;
                   if (var18 < 0) {
                     break L1;
@@ -329,8 +329,8 @@ final class vm extends ta {
                 var15 = var13 - 1;
                 var16 = var14 - 1;
                 var17 = var13 * var14;
-                var12 = 1 * var13;
-                var11 = 1 * var13;
+                var12 = var13;
+                var11 = var13;
                 var18 = 2;
                 if (var18 < 0) {
                   break L11;

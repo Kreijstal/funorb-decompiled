@@ -17,19 +17,73 @@ final class ch {
     public static void a(int param0) {
         field_g = null;
         field_e = null;
-        if (param0 != -81) {
-            return;
-        }
         field_f = null;
         field_c = null;
         field_d = null;
     }
 
     final static void a(ke param0, byte param1) {
-        ko.field_M = param0;
-        if (param1 < 97) {
-            Object var3 = null;
-            ch.a((ke) null, (byte) -110);
+        RuntimeException runtimeException = null;
+        Object var3 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ko.field_M = param0;
+              if (param1 >= 97) {
+                break L1;
+              } else {
+                var3 = null;
+                ch.a((ke) null, (byte) -110);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ch.A(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
         }
     }
 
@@ -65,10 +119,10 @@ final class ch {
                   L1: {
                     L2: {
                       var4 = stackIn_54_0;
-                      if (-81 == de.field_f) {
+                      if (de.field_f == 80) {
                         break L2;
                       } else {
-                        if (-85 == de.field_f) {
+                        if (de.field_f == 84) {
                           break L2;
                         } else {
                           break L1;
@@ -80,7 +134,7 @@ final class ch {
                     break L1;
                   }
                   L3: {
-                    if ((de.field_f ^ -1) == -14) {
+                    if (de.field_f == 13) {
                       fb.h(0);
                       var4 = 1;
                       il.field_a = false;
@@ -99,10 +153,10 @@ final class ch {
                     if (9 == de.field_f) {
                       break L4;
                     } else {
-                      if (-11 == (de.field_f ^ -1)) {
+                      if (de.field_f == 10) {
                         break L4;
                       } else {
-                        if ((de.field_f ^ -1) == -12) {
+                        if (de.field_f == 11) {
                           break L4;
                         } else {
                           L5: {
@@ -143,11 +197,11 @@ final class ch {
                   }
                 }
                 var4 = stackIn_23_0;
-                if (-81 == de.field_f) {
+                if (de.field_f == 80) {
                   L7: {
                     il.field_a = false;
                     var4 = 1;
-                    if ((de.field_f ^ -1) == -14) {
+                    if (de.field_f == 13) {
                       fb.h(0);
                       var4 = 1;
                       il.field_a = false;
@@ -158,11 +212,11 @@ final class ch {
                   }
                   return var4 != 0;
                 } else {
-                  if (-85 == de.field_f) {
+                  if (de.field_f == 84) {
                     L8: {
                       il.field_a = false;
                       var4 = 1;
-                      if ((de.field_f ^ -1) == -14) {
+                      if (de.field_f == 13) {
                         fb.h(0);
                         var4 = 1;
                         il.field_a = false;
@@ -174,7 +228,7 @@ final class ch {
                     return var4 != 0;
                   } else {
                     L9: {
-                      if ((de.field_f ^ -1) == -14) {
+                      if (de.field_f == 13) {
                         fb.h(0);
                         var4 = 1;
                         il.field_a = false;
@@ -191,10 +245,10 @@ final class ch {
               if (!pm.field_a) {
                 if (9 != de.field_f) {
                   L10: {
-                    if (-11 == de.field_f) {
+                    if (de.field_f == 10) {
                       break L10;
                     } else {
-                      if ((de.field_f ^ -1) == -12) {
+                      if (de.field_f == 11) {
                         break L10;
                       } else {
                         L11: {

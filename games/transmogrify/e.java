@@ -172,9 +172,6 @@ final class e {
     }
 
     public static void b(int param0) {
-        if (param0 <= 38) {
-            field_q = null;
-        }
         field_q = null;
         field_I = null;
         field_x = null;

@@ -106,12 +106,16 @@ final class li extends pib {
 
     li(qfa param0, int param1, int param2, byte[] param3, int param4) {
         super(param0, 3552, param1, param2, false);
-        ((li) this).field_h = param2;
-        ((li) this).field_g.a(104, (pib) this);
-        jaggl.OpenGL.glPixelStorei(3317, 1);
-        jaggl.OpenGL.glTexImage1Dub(((li) this).field_b, 0, ((li) this).field_d, ((li) this).field_h, 0, param4, 5121, param3, 0);
-        jaggl.OpenGL.glPixelStorei(3317, 4);
-        ((li) this).a(-125, true);
+        try {
+            ((li) this).field_h = param2;
+            ((li) this).field_g.a(104, (pib) this);
+            jaggl.OpenGL.glPixelStorei(3317, 1);
+            jaggl.OpenGL.glTexImage1Dub(((li) this).field_b, 0, ((li) this).field_d, ((li) this).field_h, 0, param4, 5121, param3, 0);
+            jaggl.OpenGL.glPixelStorei(3317, 4);
+            ((li) this).a(-125, true);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "li.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+        }
     }
 
     final static int[] a(int param0, int param1, int param2) {
@@ -119,11 +123,11 @@ final class li extends pib {
         int var4 = fc.a(param1, (byte) 106);
         int var5 = eu.a(param2, 108);
         int var6 = fc.a(param2, (byte) -76);
-        int var7 = (int)((long)var3 * (long)var5 >> 881602704);
-        int var8 = (int)((long)var6 * (long)var3 >> 1377484048);
-        int var9 = (int)((long)var5 * (long)var4 >> 1944808144);
+        int var7 = (int)((long)var3 * (long)var5 >> 16);
+        int var8 = (int)((long)var6 * (long)var3 >> 16);
+        int var9 = (int)((long)var5 * (long)var4 >> 16);
         int var11 = 18 % ((param0 - -54) / 51);
-        int var10 = (int)((long)var4 * (long)var6 >> -645796848);
+        int var10 = (int)((long)var4 * (long)var6 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 

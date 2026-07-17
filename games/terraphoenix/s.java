@@ -10,7 +10,7 @@ final class s {
     public static void a(byte param0) {
         field_c = null;
         field_a = null;
-        int var1 = -95 / ((param0 - -11) / 56);
+        int var1 = -95;
         field_b = null;
     }
 

@@ -32,12 +32,6 @@ final class rc {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 >= -116) {
-            boolean discarded$0 = rc.b(7);
-            field_m = null;
-            field_i = null;
-            return;
-        }
         field_m = null;
         field_i = null;
     }

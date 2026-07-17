@@ -10,21 +10,21 @@ class mh extends ag {
     final static void i(byte param0) {
         L0: {
           rk.field_O.q(-256);
-          if (-7 >= mj.field_p) {
+          if (mj.field_p >= 6) {
             if (7 != mj.field_p) {
               gj.a(true, true, 14, mn.field_r);
               df.a((byte) 120, mj.field_p - -1);
               break L0;
             } else {
-              if (param0 == 74) {
+              if (param0 != 74) {
+                mh.g((byte) 11);
                 return;
               } else {
-                mh.g((byte) 11);
                 return;
               }
             }
           } else {
-            if (-1 != co.a(-20675)) {
+            if (co.a(-20675) != 0) {
               break L0;
             } else {
               L1: {
@@ -36,110 +36,126 @@ class mh extends ag {
                   break L1;
                 }
               }
-              if (param0 == 74) {
+              if (param0 != 74) {
+                mh.g((byte) 11);
                 return;
               } else {
-                mh.g((byte) 11);
                 return;
               }
             }
           }
         }
-        if (param0 != 74) {
-          mh.g((byte) 11);
+        if (param0 == 74) {
           return;
         } else {
+          mh.g((byte) 11);
           return;
         }
     }
 
     final boolean a(int param0, qm param1) {
-        if (param0 != 0) {
-          ((mh) this).field_J = null;
-          return ((mh) this).field_J.a(param0 + 0, param1);
-        } else {
-          return ((mh) this).field_J.a(param0 + 0, param1);
+        RuntimeException var3 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_2_0 = false;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 0) {
+                break L1;
+              } else {
+                ((mh) this).field_J = null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = ((mh) this).field_J.a(param0, param1);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("mh.A(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     mh(qm param0) {
-        ((mh) this).field_J = param0;
+        try {
+            ((mh) this).field_J = param0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "mh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void h(byte param0) {
-        int var1 = 53 % ((33 - param0) / 61);
+        int var1 = 0;
         field_I = null;
     }
 
     final static void g(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 == 45) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    mh.i((byte) -22);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (null == ch.field_a) {
-                        statePc = 8;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var1 = (Object) (Object) ch.field_a;
-                    // monitorenter ch.field_a
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        ch.field_a = null;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return;
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (param0 == 45) {
+            break L0;
+          } else {
+            mh.i((byte) -22);
+            break L0;
+          }
+        }
+        if (null == ch.field_a) {
+          return;
+        } else {
+          var1 = (Object) (Object) ch.field_a;
+          synchronized (var1) {
+            L1: {
+              ch.field_a = null;
+              break L1;
             }
+          }
+          return;
         }
     }
 

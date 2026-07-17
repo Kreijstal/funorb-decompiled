@@ -9,16 +9,13 @@ final class sb {
 
     final static void a(byte param0) {
         rg.b(95);
-        int var1 = -29 % ((17 - param0) / 45);
+        int var1 = 0;
     }
 
     public static void a(int param0) {
         field_a = null;
         field_d = null;
         field_c = null;
-        if (param0 <= 65) {
-            field_c = null;
-        }
     }
 
     static {

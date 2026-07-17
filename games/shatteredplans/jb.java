@@ -23,11 +23,6 @@ final class jb {
 
     final static void a(boolean param0, byte param1) {
         ta.a(param0, 121);
-        if (param1 != -27) {
-            jb.a(11);
-            im.a(true, param0);
-            return;
-        }
         im.a(true, param0);
     }
 
@@ -36,7 +31,7 @@ final class jb {
           return;
         } else {
           if (param0 <= -89) {
-            if ((param1 % 10L ^ -1L) != -1L) {
+            if (param1 % 10L != 0L) {
               he.a(true, param1);
               return;
             } else {

@@ -19,7 +19,7 @@ final class kg {
         if (param0 <= 75) {
           L0: {
             boolean discarded$8 = kg.a((byte) 72);
-            if ((k.field_g ^ -1) != -12) {
+            if (k.field_g != 11) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -32,7 +32,7 @@ final class kg {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((k.field_g ^ -1) != -12) {
+            if (k.field_g != 11) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -49,29 +49,20 @@ final class kg {
     public static void b(byte param0) {
         field_d = null;
         field_b = null;
-        if (param0 != 0) {
-            return;
-        }
         field_a = null;
     }
 
     final static void a(String param0, boolean param1, float param2, int param3) {
-        if (param3 == -9089) {
-          if (null == vl.field_f) {
-            vl.field_f = new ul(wg.field_j, rc.field_i);
-            wg.field_j.b((byte) -74, (we) (Object) vl.field_f);
+        try {
+            if (null == vl.field_f) {
+                vl.field_f = new ul(wg.field_j, rc.field_i);
+                wg.field_j.b((byte) -74, (we) (Object) vl.field_f);
+            }
             vl.field_f.a(param1, param0, 4210752, param2);
             ge.d();
             vj.a(1, true);
-            return;
-          } else {
-            vl.field_f.a(param1, param0, 4210752, param2);
-            ge.d();
-            vj.a(1, true);
-            return;
-          }
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "kg.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + -9089 + 41);
         }
     }
 

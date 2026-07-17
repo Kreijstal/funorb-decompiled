@@ -19,51 +19,81 @@ final class gg extends hm {
         if (!(qa.field_v)) {
             throw new IllegalStateException();
         }
-        if (param0 > -5) {
-            return;
-        }
-        if (null != fl.field_u) {
-            fl.field_u.r(-124);
-        }
-        String var1 = hb.c(-8927);
-        ao.field_c = new tl(var1, (String) null, true, false, false);
-        mf.field_s.a((na) (Object) mm.field_u, false);
-        mm.field_u.e((na) (Object) ao.field_c, -27667);
-        mm.field_u.a(true);
     }
 
     final static void d(byte param0) {
         bf var1 = null;
-        int var2 = TetraLink.field_J;
-        ch.field_q.f();
-        hc.field_v.f();
-        ok.field_a = ok.field_a - 1;
-        if (!(ok.field_a != 0)) {
-            ok.field_a = 200;
-            var1 = (bf) (Object) ha.field_b.c(false);
-            while (var1 != null) {
-                if (!(var1.field_q.a((byte) 95))) {
-                    var1.b(false);
-                }
-                var1 = (bf) (Object) ha.field_b.a((byte) -70);
-            }
-            if (gi.field_d != null) {
-                var1 = (bf) (Object) gi.field_d.c(false);
-                while (var1 != null) {
-                    if (!(var1.field_q.a((byte) 95))) {
-                        var1.b(false);
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var2 = TetraLink.field_J;
+        try {
+          L0: {
+            L1: {
+              ch.field_q.f();
+              hc.field_v.f();
+              ok.field_a = ok.field_a - 1;
+              if (ok.field_a == 0) {
+                ok.field_a = 200;
+                var1 = (bf) (Object) ha.field_b.c(false);
+                L2: while (true) {
+                  if (var1 == null) {
+                    if (gi.field_d == null) {
+                      break L1;
+                    } else {
+                      var1 = (bf) (Object) gi.field_d.c(false);
+                      L3: while (true) {
+                        if (var1 == null) {
+                          break L1;
+                        } else {
+                          L4: {
+                            if (!var1.field_q.a((byte) 95)) {
+                              var1.b(false);
+                              break L4;
+                            } else {
+                              break L4;
+                            }
+                          }
+                          var1 = (bf) (Object) gi.field_d.a((byte) -70);
+                          continue L3;
+                        }
+                      }
                     }
-                    var1 = (bf) (Object) gi.field_d.a((byte) -70);
+                  } else {
+                    L5: {
+                      if (!var1.field_q.a((byte) 95)) {
+                        var1.b(false);
+                        break L5;
+                      } else {
+                        break L5;
+                      }
+                    }
+                    var1 = (bf) (Object) ha.field_b.a((byte) -70);
+                    continue L2;
+                  }
                 }
+              } else {
+                break L1;
+              }
             }
-        }
-        if (param0 > -77) {
-            gg.a(true);
-        }
-        if (null != ic.field_b) {
-            if (!ic.field_b.d((byte) 127)) {
-                oa.field_B = null;
+            L6: {
+              if (null == ic.field_b) {
+                break L6;
+              } else {
+                if (ic.field_b.d((byte) 127)) {
+                  break L6;
+                } else {
+                  oa.field_B = null;
+                  break L6;
+                }
+              }
             }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw oi.a((Throwable) (Object) var1_ref, "gg.G(" + -106 + 41);
         }
     }
 
@@ -81,24 +111,44 @@ final class gg extends hm {
     }
 
     final static void b(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
-        int var4 = TetraLink.field_J;
-        vn.b();
-        da.field_g = new int[260];
-        mh.field_a = 11;
-        for (var1 = 0; var1 < 256; var1++) {
-            var2 = 15.0;
-            da.field_g[var1] = (int)(255.0 * Math.pow((double)((float)var1 / 256.0f), var2));
-        }
-        if (param0 <= 87) {
-            gg.c((byte) 127);
-        }
-        int var5 = 256;
-        var1 = var5;
-        while (var5 < da.field_g.length) {
-            da.field_g[var5] = 255;
-            var5++;
+        int var4 = 0;
+        int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = TetraLink.field_J;
+        try {
+          L0: {
+            vn.b();
+            da.field_g = new int[260];
+            mh.field_a = 11;
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 256) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (var5 >= da.field_g.length) {
+                    break L0;
+                  } else {
+                    da.field_g[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2 = 15.0;
+                da.field_g[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw oi.a((Throwable) (Object) var1, "gg.D(" + 120 + 41);
         }
     }
 
@@ -110,18 +160,22 @@ final class gg extends hm {
     }
 
     final void a(int param0, bh param1) {
-        if (param0 != -22017) {
-            df discarded$0 = ((gg) this).a((byte) 84);
+        try {
+            if (param0 != -22017) {
+                df discarded$0 = ((gg) this).a((byte) 84);
+            }
+            param1.a(((gg) this).field_g, (byte) 103);
+            param1.a((byte) 124, ((gg) this).field_h);
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "gg.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        param1.a(((gg) this).field_g, (byte) 103);
-        param1.a((byte) 124, ((gg) this).field_h);
     }
 
     final static void a(int param0, int param1) {
         bc var2 = nd.field_Lb;
         var2.f(param0, (byte) -92);
         var2.a(1, false);
-        var2.a(param1, false);
+        var2.a(0, false);
     }
 
     public static void a(boolean param0) {
@@ -134,8 +188,12 @@ final class gg extends hm {
     }
 
     gg(String param0, String param1) {
-        ((gg) this).field_h = param1;
-        ((gg) this).field_g = param0;
+        try {
+            ((gg) this).field_h = param1;
+            ((gg) this).field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "gg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

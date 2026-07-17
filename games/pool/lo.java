@@ -10,14 +10,7 @@ final class lo extends IOException {
     static boolean field_a;
 
     final static nq b(int param0) {
-        if (null != ae.field_c) {
-          if (param0 != 14) {
-            field_c = null;
-            return ae.field_c;
-          } else {
-            return ae.field_c;
-          }
-        } else {
+        if (null == ae.field_c) {
           ae.field_c = new nq();
           ae.field_c.a(lc.field_O, -76);
           ae.field_c.field_m = 6;
@@ -28,12 +21,9 @@ final class lo extends IOException {
           ae.field_c.field_h = 0;
           ae.field_c.field_g = 14;
           ae.field_c.field_d = 5;
-          if (param0 == 14) {
-            return ae.field_c;
-          } else {
-            field_c = null;
-            return ae.field_c;
-          }
+          return ae.field_c;
+        } else {
+          return ae.field_c;
         }
     }
 
@@ -49,12 +39,7 @@ final class lo extends IOException {
     }
 
     final static String a(long param0, int param1) {
-        if (param1 != 7697781) {
-          field_c = null;
-          return di.a(param0, 16, false, -112, 6, 10);
-        } else {
-          return di.a(param0, 16, false, -112, 6, 10);
-        }
+        return di.a(param0, 16, false, -112, 6, 10);
     }
 
     lo(String param0) {
@@ -64,9 +49,9 @@ final class lo extends IOException {
     final static int a(int param0, int param1, byte param2) {
         if (param2 < 53) {
             lo.a(85);
-            return (param0 << -1339353652) / param1;
+            return (param0 << 12) / param1;
         }
-        return (param0 << -1339353652) / param1;
+        return (param0 << 12) / param1;
     }
 
     final static void a(int param0) {

@@ -20,9 +20,6 @@ final class aka extends ana {
         field_w = null;
         field_E = null;
         field_x = null;
-        if (param0 >= -91) {
-            boolean discarded$0 = aka.a(-64, -126, 88, (byte) 79);
-        }
     }
 
     final boolean c(byte param0) {
@@ -62,8 +59,9 @@ final class aka extends ana {
               break L1;
             }
           }
+          int fieldTemp$2 = ((aka) this).field_l - 1;
           ((aka) this).field_l = ((aka) this).field_l - 1;
-          if ((((aka) this).field_l - 1 ^ -1) >= -1) {
+          if (fieldTemp$2 <= 0) {
             if (fn.field_m == ((aka) this).field_z) {
               ((aka) this).field_v = new taa(((aka) this).field_q, ((aka) this).field_C.field_q, ((aka) this).field_C.field_r);
               ((aka) this).a(27799, (at) (Object) ((aka) this).field_v);
@@ -81,8 +79,9 @@ final class aka extends ana {
                 }
               }
               if (((aka) this).field_D < mp.field_q.length) {
+                int fieldTemp$3 = ((aka) this).field_D;
                 ((aka) this).field_D = ((aka) this).field_D + 1;
-                this.a(-1, ((aka) this).field_D);
+                this.a(-1, fieldTemp$3);
                 ((aka) this).field_l = ((aka) this).field_l + 30;
                 var2 = 96 % ((71 - param0) / 47);
                 return false;
@@ -110,7 +109,7 @@ final class aka extends ana {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        uea var14 = null;
+        Object var14 = null;
         int var15 = 0;
         op var16 = null;
         int stackIn_15_0 = 0;
@@ -164,7 +163,7 @@ final class aka extends ana {
                           stackOut_15_0 = stackIn_15_0;
                           stackIn_17_0 = stackOut_15_0;
                           stackIn_16_0 = stackOut_15_0;
-                          if (-1 >= (var10 ^ -1)) {
+                          if (var10 >= 0) {
                             stackOut_17_0 = stackIn_17_0;
                             stackOut_17_1 = var10;
                             stackIn_18_0 = stackOut_17_0;
@@ -182,14 +181,14 @@ final class aka extends ana {
                         if (var13 == param1) {
                           L4: {
                             if (var13 != 0) {
-                              var14 = new uea(((aka) this).field_q, var11, var12, var7);
+                              var14 = (Object) (Object) new uea(((aka) this).field_q, var11, var12, var7);
                               break L4;
                             } else {
-                              var14 = (uea) (Object) new dw(((aka) this).field_q, var11, var12);
+                              var14 = (Object) (Object) new dw(((aka) this).field_q, var11, var12);
                               break L4;
                             }
                           }
-                          ((kj) (Object) var14).a(param0 + 1);
+                          ((kj) var14).a(param0 + 1);
                           ((aka) this).a(var11, var12, var6, param0 + 1);
                           var10++;
                           continue L1;
@@ -227,7 +226,7 @@ final class aka extends ana {
 
     final void c(int param0) {
         int var2 = 0;
-        ad var3_ref = null;
+        ad var3_ref_ad = null;
         aj var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -238,8 +237,8 @@ final class aka extends ana {
         int var9 = BachelorFridge.field_y;
         if (fn.field_m == ((aka) this).field_z) {
             var2 = ((aka) this).field_l;
-            var3_ref = ((aka) this).field_C.field_l.a(-27449, ((aka) this).field_q);
-            var4 = ((aka) this).field_q.field_s.a(var3_ref.field_s.field_J, (byte) 33, var3_ref.field_s.field_x);
+            var3_ref_ad = ((aka) this).field_C.field_l.a(-27449, ((aka) this).field_q);
+            var4 = ((aka) this).field_q.field_s.a(var3_ref_ad.field_s.field_J, (byte) 33, var3_ref_ad.field_s.field_x);
             var5 = (-var2 + 150) * ((150 + -var2) * 400) / 22500;
             dg.a(fr.field_p);
             var6 = 32 + var4.field_a;
@@ -272,13 +271,18 @@ final class aka extends ana {
 
     aka(gj param0, fk param1) {
         super(param0, (bca) (Object) param1);
-        ((aka) this).field_C = param1;
-        ((aka) this).field_v = ((aka) this).field_m;
-        ((aka) this).field_z = li.field_l;
-        ((aka) this).field_B = de.field_F.a();
-        ((aka) this).field_l = 150;
-        aga var3 = ((aka) this).field_C.field_l.a(34, ((aka) this).field_q.field_h);
-        ((aka) this).field_A = new dda(((aka) this).field_q, var3.field_x, var3.field_J);
+        aga var3 = null;
+        try {
+            ((aka) this).field_C = param1;
+            ((aka) this).field_v = ((aka) this).field_m;
+            ((aka) this).field_z = li.field_l;
+            ((aka) this).field_B = de.field_F.a();
+            ((aka) this).field_l = 150;
+            var3 = ((aka) this).field_C.field_l.a(34, ((aka) this).field_q.field_h);
+            ((aka) this).field_A = new dda(((aka) this).field_q, var3.field_x, var3.field_J);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "aka.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

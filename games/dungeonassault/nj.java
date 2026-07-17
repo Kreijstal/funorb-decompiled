@@ -29,13 +29,12 @@ final class nj {
     }
 
     final static void a(nh param0, nh param1, int param2) {
-        hf.field_pb = param0;
-        if (param2 != -6332) {
-            nj.a((byte) 73);
+        try {
+            hf.field_pb = param0;
             jb.field_Qb = param1;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "nj.B(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + -6332 + 41);
         }
-        jb.field_Qb = param1;
     }
 
     static {

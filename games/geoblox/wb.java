@@ -9,7 +9,7 @@ final class wb {
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = 123 % ((-66 - param0) / 59);
+        int var1 = 1;
     }
 
     static {

@@ -147,17 +147,19 @@ final class oa {
     }
 
     final static void a(java.awt.Component param0, int param1, byte param2, le param3, boolean param4) {
-        gd.a(param1, param4, 10);
+        gd.a(param1, true, 10);
         wd.field_e = gd.a(param3, param0, 0, 22050);
         cb.field_g = gd.a(param3, param0, 1, 1024);
         bg.field_tb = new qj();
         if (param2 <= 66) {
-          return;
-        } else {
-          cb.field_g.b((je) (Object) bg.field_tb);
-          sh.field_e = new qj();
-          wd.field_e.b((je) (Object) sh.field_e);
-          return;
+            return;
+        }
+        try {
+            cb.field_g.b((je) (Object) bg.field_tb);
+            sh.field_e = new qj();
+            wd.field_e.b((je) (Object) sh.field_e);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "oa.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 
@@ -165,9 +167,6 @@ final class oa {
         field_b = null;
         field_c = null;
         field_a = null;
-        if (param0 != 109) {
-            return;
-        }
         field_e = null;
     }
 

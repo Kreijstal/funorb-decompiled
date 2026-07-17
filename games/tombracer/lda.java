@@ -35,7 +35,11 @@ final class lda extends kna {
 
     lda(la param0, int param1, kh param2, csa param3) {
         super(param0, param1, param2, param3);
-        ((lda) this).field_H = param2.b((byte) 44, 4);
+        try {
+            ((lda) this).field_H = param2.b((byte) 44, 4);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "lda.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean n(byte param0) {
@@ -47,170 +51,135 @@ final class lda extends kna {
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        param1.a((byte) -125, ((lda) this).field_H, 4);
+        try {
+            super.a(param0, param1);
+            param1.a((byte) -125, ((lda) this).field_H, 4);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "lda.V(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final fsa a(boolean param0, int param1, la param2) {
-        fsa var4 = null;
+        RuntimeException var4 = null;
+        fsa var4_ref = null;
+        lpa var5 = null;
+        fsa var6 = null;
+        fsa var7 = null;
+        eq var8 = null;
+        eq var9 = null;
+        mfa var10 = null;
+        vsa var11 = null;
         int var12 = 0;
         fsa var13 = null;
-        lpa var14 = null;
-        fsa var15 = null;
-        fsa var16 = null;
-        eq var17 = null;
-        eq var18 = null;
-        mfa var19 = null;
-        Object var20 = null;
-        vsa var20_ref = null;
-        eq var21 = null;
-        eq var22 = null;
-        mfa var23 = null;
-        Object var24 = null;
-        vsa var24_ref = null;
-        lpa var25 = null;
-        fsa var26 = null;
-        fsa var27 = null;
-        eq var28 = null;
-        eq var29 = null;
-        mfa var30 = null;
-        Object var31 = null;
-        vsa var31_ref = null;
-        eq var32 = null;
-        eq var33 = null;
-        mfa var34 = null;
-        Object var35 = null;
-        vsa var35_ref = null;
-        var20 = null;
-        var24 = null;
-        var31 = null;
-        var35 = null;
+        fsa stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        fsa stackOut_7_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var12 = TombRacer.field_G ? 1 : 0;
-        var13 = new fsa(param2, param0);
-        var4 = var13;
-        if ((((lda) this).field_m ^ -1) != -47) {
-          var13.b((byte) -11, ((lda) this).field_k, 4194304);
-          var25 = new lpa(param2, param0);
-          var25.b(-5, ((lda) this).field_H);
-          var13.a((byte) 83, (nv) (Object) var25);
-          var26 = new fsa(param2, param0);
-          var27 = new fsa(param2, param0);
-          if (-47 != (((lda) this).field_m ^ -1)) {
-            var26.b((byte) -11, ((lda) this).field_k, 524288);
-            var26.b(437453352, 0, -1835008);
-            var27.b((byte) -11, ((lda) this).field_k, 524288);
-            var27.b(437453352, 0, 1835008);
-            var26.b((byte) 17, false);
-            var26.h(3, param1 + -3);
-            var28 = new eq(param2, param0);
-            var28.a(true, -45);
-            var28.a(-28592, true);
-            var26.a((byte) 83, (nv) (Object) var28);
-            var27.b((byte) 17, false);
-            var27.h(param1, 0);
-            var29 = new eq(param2, param0);
-            var29.a(true, -128);
-            var29.a(-28592, true);
-            var27.a((byte) 83, (nv) (Object) var29);
-            var13.a(-107, var26);
-            var13.a(param1 ^ -61, var27);
-            var30 = rm.field_a;
-            var31_ref = (vsa) (Object) var30.a(19, param1 ^ 106);
-            var31_ref.b((byte) 80, 0);
-            var13.a((gr) (Object) var25, (byte) 124, (dg) (Object) var31_ref);
-            return var13;
-          } else {
-            var26.b((byte) -11, 524288, ((lda) this).field_l);
-            var26.b(437453352, -1835008, 0);
-            var27.b((byte) -11, 524288, ((lda) this).field_l);
-            var27.b(437453352, 1835008, 0);
-            var26.b((byte) 17, false);
-            var26.h(3, param1 + -3);
-            var32 = new eq(param2, param0);
-            var32.a(true, -45);
-            var32.a(-28592, true);
-            var26.a((byte) 83, (nv) (Object) var32);
-            var27.b((byte) 17, false);
-            var27.h(param1, 0);
-            var33 = new eq(param2, param0);
-            var33.a(true, -128);
-            var33.a(-28592, true);
-            var27.a((byte) 83, (nv) (Object) var33);
-            var13.a(-107, var26);
-            var13.a(param1 ^ -61, var27);
-            var34 = rm.field_a;
-            var35_ref = (vsa) (Object) var34.a(19, param1 ^ 106);
-            var35_ref.b((byte) 80, 0);
-            var13.a((gr) (Object) var25, (byte) 124, (dg) (Object) var35_ref);
-            return var13;
+        try {
+          L0: {
+            L1: {
+              var13 = new fsa(param2, param0);
+              var4_ref = var13;
+              if (((lda) this).field_m != 46) {
+                var13.b((byte) -11, ((lda) this).field_k, 4194304);
+                break L1;
+              } else {
+                var13.b((byte) -11, 4194304, ((lda) this).field_l);
+                break L1;
+              }
+            }
+            L2: {
+              var5 = new lpa(param2, param0);
+              var5.b(-5, ((lda) this).field_H);
+              var13.a((byte) 83, (nv) (Object) var5);
+              var6 = new fsa(param2, param0);
+              var7 = new fsa(param2, param0);
+              if (((lda) this).field_m == 46) {
+                var6.b((byte) -11, 524288, ((lda) this).field_l);
+                var6.b(437453352, -1835008, 0);
+                var7.b((byte) -11, 524288, ((lda) this).field_l);
+                var7.b(437453352, 1835008, 0);
+                break L2;
+              } else {
+                var6.b((byte) -11, ((lda) this).field_k, 524288);
+                var6.b(437453352, 0, -1835008);
+                var7.b((byte) -11, ((lda) this).field_k, 524288);
+                var7.b(437453352, 0, 1835008);
+                break L2;
+              }
+            }
+            var6.b((byte) 17, false);
+            var6.h(3, param1 + -3);
+            var8 = new eq(param2, param0);
+            var8.a(true, -45);
+            var8.a(-28592, true);
+            var6.a((byte) 83, (nv) (Object) var8);
+            var7.b((byte) 17, false);
+            var7.h(param1, 0);
+            var9 = new eq(param2, param0);
+            var9.a(true, -128);
+            var9.a(-28592, true);
+            var7.a((byte) 83, (nv) (Object) var9);
+            var13.a(-107, var6);
+            var13.a(param1 ^ -61, var7);
+            var10 = rm.field_a;
+            var11 = (vsa) (Object) var10.a(19, param1 ^ 106);
+            var11.b((byte) 80, 0);
+            var13.a((gr) (Object) var5, (byte) 124, (dg) (Object) var11);
+            stackOut_7_0 = (fsa) var13;
+            stackIn_8_0 = stackOut_7_0;
+            break L0;
           }
-        } else {
-          var13.b((byte) -11, 4194304, ((lda) this).field_l);
-          var14 = new lpa(param2, param0);
-          var14.b(-5, ((lda) this).field_H);
-          var13.a((byte) 83, (nv) (Object) var14);
-          var15 = new fsa(param2, param0);
-          var16 = new fsa(param2, param0);
-          if (-47 != (((lda) this).field_m ^ -1)) {
-            var15.b((byte) -11, ((lda) this).field_k, 524288);
-            var15.b(437453352, 0, -1835008);
-            var16.b((byte) -11, ((lda) this).field_k, 524288);
-            var16.b(437453352, 0, 1835008);
-            var15.b((byte) 17, false);
-            var15.h(3, param1 + -3);
-            var17 = new eq(param2, param0);
-            var17.a(true, -45);
-            var17.a(-28592, true);
-            var15.a((byte) 83, (nv) (Object) var17);
-            var16.b((byte) 17, false);
-            var16.h(param1, 0);
-            var18 = new eq(param2, param0);
-            var18.a(true, -128);
-            var18.a(-28592, true);
-            var16.a((byte) 83, (nv) (Object) var18);
-            var13.a(-107, var15);
-            var13.a(param1 ^ -61, var16);
-            var19 = rm.field_a;
-            var20_ref = (vsa) (Object) var19.a(19, param1 ^ 106);
-            var20_ref.b((byte) 80, 0);
-            var13.a((gr) (Object) var14, (byte) 124, (dg) (Object) var20_ref);
-            return var13;
-          } else {
-            var15.b((byte) -11, 524288, ((lda) this).field_l);
-            var15.b(437453352, -1835008, 0);
-            var16.b((byte) -11, 524288, ((lda) this).field_l);
-            var16.b(437453352, 1835008, 0);
-            var15.b((byte) 17, false);
-            var15.h(3, param1 + -3);
-            var21 = new eq(param2, param0);
-            var21.a(true, -45);
-            var21.a(-28592, true);
-            var15.a((byte) 83, (nv) (Object) var21);
-            var16.b((byte) 17, false);
-            var16.h(param1, 0);
-            var22 = new eq(param2, param0);
-            var22.a(true, -128);
-            var22.a(-28592, true);
-            var16.a((byte) 83, (nv) (Object) var22);
-            var13.a(-107, var15);
-            var13.a(param1 ^ -61, var16);
-            var23 = rm.field_a;
-            var24_ref = (vsa) (Object) var23.a(19, param1 ^ 106);
-            var24_ref.b((byte) 80, 0);
-            var13.a((gr) (Object) var14, (byte) 124, (dg) (Object) var24_ref);
-            return var13;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var4;
+            stackOut_9_1 = new StringBuilder().append("lda.AC(").append(param0).append(44).append(param1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param2 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
           }
+          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
+        return stackIn_8_0;
     }
 
     public static void r(byte param0) {
         field_G = null;
-        if (param0 >= -38) {
-            field_G = null;
-            field_F = null;
-            field_I = null;
-            return;
-        }
         field_F = null;
         field_I = null;
     }

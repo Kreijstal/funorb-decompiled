@@ -13,18 +13,20 @@ final class jj extends Exception {
 
     final static int a(int param0, byte param1) {
         if (param1 < -56) {
-          if (6406 != param0) {
+          if (6406 == param0) {
+            return 1;
+          } else {
             if (param0 != 6409) {
-              if (param0 != -32842) {
+              if (param0 != 32841) {
                 if (6410 != param0) {
-                  if (-6408 != param0) {
-                    if (6408 == param0) {
-                      return 4;
-                    } else {
-                      throw new IllegalArgumentException("");
-                    }
-                  } else {
+                  if (param0 == 6407) {
                     return 3;
+                  } else {
+                    if (6408 != param0) {
+                      throw new IllegalArgumentException("");
+                    } else {
+                      return 4;
+                    }
                   }
                 } else {
                   return 2;
@@ -35,23 +37,23 @@ final class jj extends Exception {
             } else {
               return 1;
             }
-          } else {
-            return 1;
           }
         } else {
-          boolean discarded$7 = jj.a(-126, -76, -57);
-          if (6406 != param0) {
+          boolean discarded$8 = jj.a(-126, -76, -57);
+          if (6406 == param0) {
+            return 1;
+          } else {
             if (param0 != 6409) {
-              if (param0 != -32842) {
+              if (param0 != 32841) {
                 if (6410 != param0) {
-                  if (-6408 != param0) {
-                    if (6408 == param0) {
-                      return 4;
-                    } else {
-                      throw new IllegalArgumentException("");
-                    }
-                  } else {
+                  if (param0 == 6407) {
                     return 3;
+                  } else {
+                    if (6408 != param0) {
+                      throw new IllegalArgumentException("");
+                    } else {
+                      return 4;
+                    }
                   }
                 } else {
                   return 2;
@@ -62,8 +64,6 @@ final class jj extends Exception {
             } else {
               return 1;
             }
-          } else {
-            return 1;
           }
         }
     }

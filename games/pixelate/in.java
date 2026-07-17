@@ -30,52 +30,32 @@ final class in extends fa {
     static tf field_s;
 
     final static void a(java.awt.Component param0, int param1) {
-        param0.setFocusTraversalKeysEnabled(false);
-        if (param1 <= 34) {
-          field_p = null;
-          param0.addKeyListener((java.awt.event.KeyListener) (Object) mc.field_r);
-          param0.addFocusListener((java.awt.event.FocusListener) (Object) mc.field_r);
-          return;
-        } else {
-          param0.addKeyListener((java.awt.event.KeyListener) (Object) mc.field_r);
-          param0.addFocusListener((java.awt.event.FocusListener) (Object) mc.field_r);
-          return;
+        try {
+            param0.setFocusTraversalKeysEnabled(false);
+            param0.addKeyListener((java.awt.event.KeyListener) (Object) mc.field_r);
+            param0.addFocusListener((java.awt.event.FocusListener) (Object) mc.field_r);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "in.D(" + (param0 != null ? "{...}" : "null") + 44 + 57 + 41);
         }
     }
 
     final static boolean e(int param0) {
-        L0: {
-          if (-1 != jj.field_b) {
-            break L0;
-          } else {
-            if (!rd.a(1, false)) {
-              return false;
-            } else {
-              jj.field_b = vi.field_o.f(255);
-              vi.field_o.field_m = 0;
-              break L0;
+        if (-1 == jj.field_b) {
+            if (!(rd.a(1, false))) {
+                return false;
             }
-          }
+            jj.field_b = vi.field_o.f(255);
+            vi.field_o.field_m = 0;
         }
-        L1: {
-          if (-2 == jj.field_b) {
+        if (!(-2 != jj.field_b)) {
             if (rd.a(2, false)) {
-              jj.field_b = vi.field_o.a((byte) -113);
-              vi.field_o.field_m = 0;
-              break L1;
-            } else {
-              return false;
+                jj.field_b = vi.field_o.a((byte) -113);
+                vi.field_o.field_m = 0;
+                return rd.a(jj.field_b, false);
             }
-          } else {
-            break L1;
-          }
+            return false;
         }
-        if (param0 != -18481) {
-          field_p = null;
-          return rd.a(jj.field_b, false);
-        } else {
-          return rd.a(jj.field_b, false);
-        }
+        return rd.a(jj.field_b, false);
     }
 
     final void a(boolean param0) {
@@ -96,11 +76,6 @@ final class in extends fa {
         field_J = null;
         field_B = null;
         field_s = null;
-        if (param0 >= -1) {
-            field_p = null;
-            field_p = null;
-            return;
-        }
         field_p = null;
     }
 

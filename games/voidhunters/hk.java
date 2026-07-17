@@ -6,11 +6,72 @@ final class hk extends le {
     private int field_j;
 
     final void a(int param0, int param1, ds param2) {
-        if (param1 > -60) {
-            field_i = null;
-        }
-        if (!(0 != param0)) {
-            ((hk) this).field_j = param2.e(1869);
+        RuntimeException var4 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 <= -60) {
+                break L1;
+              } else {
+                field_i = null;
+                break L1;
+              }
+            }
+            L2: {
+              if (0 == param0) {
+                ((hk) this).field_j = param2.e(1869);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("hk.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -50,10 +111,10 @@ final class hk extends le {
                   L2: {
                     var8 = ((hk) this).field_j * (var24[var7] - var25[var7]);
                     var9 = (-var5[gbb.field_q & -1 + var7] + var5[var7 - -1 & gbb.field_q]) * ((hk) this).field_j;
-                    var10 = var9 >> -1225116564;
-                    var11 = var8 >> 1949747916;
-                    var12 = var10 * var10 >> -692120020;
-                    var13 = var11 * var11 >> -1210841460;
+                    var10 = var9 >> 12;
+                    var11 = var8 >> 12;
+                    var12 = var10 * var10 >> 12;
+                    var13 = var11 * var11 >> 12;
                     var14 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var13 + var12)) / 4096.0f)));
                     if (var14 != 0) {
                       stackOut_8_0 = 16777216 / var14;
@@ -83,9 +144,6 @@ final class hk extends le {
 
     final static void b(int param0, int param1) {
         nrb.field_b = new pgb[param0 * 15];
-        if (param1 > -90) {
-            field_i = null;
-        }
         ou.field_q = 0;
         dca.field_q = new int[3];
         hab.field_k = param0;
@@ -93,9 +151,6 @@ final class hk extends le {
 
     public static void d(int param0) {
         field_i = null;
-        if (param0 != -1210841460) {
-            field_i = null;
-        }
     }
 
     public hk() {

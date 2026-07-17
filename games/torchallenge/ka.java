@@ -18,8 +18,9 @@ class ka extends tg {
                 param8++;
                 continue L0;
               } else {
+                int incrementValue$66 = param5;
                 param5++;
-                param0 = param4[param5];
+                param0 = param4[incrementValue$66];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -31,8 +32,9 @@ class ka extends tg {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                  int incrementValue$67 = param7;
                   param7++;
-                  param3[param7] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -226,8 +228,9 @@ class ka extends tg {
                     param2 = param0 + param1;
                     param0 = (param0 & 16711935) + (param1 & 16711935);
                     param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                    int incrementValue$0 = param10;
                     param10++;
-                    param5[param10] = param2 - param1 | param1 - (param1 >>> 8);
+                    param5[incrementValue$0] = param2 - param1 | param1 - (param1 >>> 8);
                 } else {
                     param10++;
                 }
@@ -268,8 +271,9 @@ class ka extends tg {
         int var2 = 0;
         for (var3 = 0; var3 < ((ka) this).field_u; var3++) {
             for (var4 = ((ka) this).field_x - 1; var4 >= 0; var4--) {
+                int incrementValue$0 = var2;
                 var2++;
-                var1[var2] = ((ka) this).field_y[var3 + var4 * ((ka) this).field_u];
+                var1[incrementValue$0] = ((ka) this).field_y[var3 + var4 * ((ka) this).field_u];
             }
         }
         ((ka) this).field_y = var1;
@@ -357,8 +361,9 @@ class ka extends tg {
                     break L5;
                   }
                 }
+                int incrementValue$1 = param2;
                 param2++;
-                qg.field_i[param2] = (var13 & 66847740 | var14 & 261120) >> 2;
+                qg.field_i[incrementValue$1] = (var13 & 66847740 | var14 & 261120) >> 2;
                 var9++;
                 param1 += 2;
                 continue L1;
@@ -382,8 +387,9 @@ class ka extends tg {
                 if (param2 != 0) {
                     var17 = (param2 & 16711935) * param12 & -16711936;
                     var18 = (param2 & 65280) * param12 & 16711680;
+                    int incrementValue$0 = param5;
                     param5++;
-                    param0[param5] = (var17 | var18) >>> 8;
+                    param0[incrementValue$0] = (var17 | var18) >>> 8;
                 } else {
                     param5++;
                 }
@@ -500,14 +506,16 @@ class ka extends tg {
                     var10++;
                     continue L0;
                   } else {
+                    int incrementValue$218 = param3;
                     param3++;
-                    if (param1[param3] == 0) {
+                    if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
+                      int incrementValue$219 = param4;
                       param4++;
-                      param0[param4] = param2;
+                      param0[incrementValue$219] = param2;
                       var11++;
                       continue L2;
                     }
@@ -515,46 +523,54 @@ class ka extends tg {
                 }
               } else {
                 L3: {
+                  int incrementValue$220 = param3;
                   param3++;
-                  if (param1[param3] == 0) {
+                  if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
+                    int incrementValue$221 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$222 = param3;
                   param3++;
-                  if (param1[param3] == 0) {
+                  if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
+                    int incrementValue$223 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$224 = param3;
                   param3++;
-                  if (param1[param3] == 0) {
+                  if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
+                    int incrementValue$225 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
+                int incrementValue$226 = param3;
                 param3++;
-                if (param1[param3] == 0) {
+                if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
+                  int incrementValue$227 = param4;
                   param4++;
-                  param0[param4] = param2;
+                  param0[incrementValue$227] = param2;
                   var11++;
                   continue L1;
                 }
@@ -583,16 +599,18 @@ class ka extends tg {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$14 = param4;
                 param4++;
-                param3 = param2[param4];
+                param3 = param2[incrementValue$14];
                 if (param3 != 0) {
                   param0 = param1[param5];
                   if (param0 != 0) {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
+                    int incrementValue$15 = param5;
                     param5++;
-                    param1[param5] = (var12 << 16) + (var13 << 8) + var14;
+                    param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;
                     continue L1;
                   } else {
@@ -780,22 +798,25 @@ class ka extends tg {
                 param6++;
                 continue L0;
               } else {
+                int incrementValue$403 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$403];
                 if (param2 == 0) {
                   param4++;
                   param5++;
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
+                    int incrementValue$404 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$404] = param2;
                     param5++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
+                    int incrementValue$405 = param4;
                     param4++;
-                    param0[param4] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
+                    param0[incrementValue$405] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
                     param5++;
                     continue L1;
                   }
@@ -1371,8 +1392,9 @@ class ka extends tg {
                                     var34++;
                                     break L21;
                                   } else {
+                                    int incrementValue$9 = var34;
                                     var34++;
-                                    qg.field_i[var34] = var38;
+                                    qg.field_i[incrementValue$9] = var38;
                                     break L21;
                                   }
                                 }
@@ -1451,8 +1473,9 @@ class ka extends tg {
                                     var34++;
                                     break L28;
                                   } else {
+                                    int incrementValue$10 = var34;
                                     var34++;
-                                    qg.field_i[var34] = var38;
+                                    qg.field_i[incrementValue$10] = var38;
                                     break L28;
                                   }
                                 }
@@ -1508,8 +1531,9 @@ class ka extends tg {
                                         var34++;
                                         break L34;
                                       } else {
+                                        int incrementValue$11 = var34;
                                         var34++;
-                                        qg.field_i[var34] = var38;
+                                        qg.field_i[incrementValue$11] = var38;
                                         break L34;
                                       }
                                     }
@@ -1601,8 +1625,9 @@ class ka extends tg {
                                     var34++;
                                     break L41;
                                   } else {
+                                    int incrementValue$12 = var34;
                                     var34++;
-                                    qg.field_i[var34] = var38;
+                                    qg.field_i[incrementValue$12] = var38;
                                     break L41;
                                   }
                                 }
@@ -1682,8 +1707,9 @@ class ka extends tg {
                                     var34++;
                                     break L48;
                                   } else {
+                                    int incrementValue$13 = var34;
                                     var34++;
-                                    qg.field_i[var34] = var38;
+                                    qg.field_i[incrementValue$13] = var38;
                                     break L48;
                                   }
                                 }
@@ -1740,8 +1766,9 @@ class ka extends tg {
                                         var34++;
                                         break L54;
                                       } else {
+                                        int incrementValue$14 = var34;
                                         var34++;
-                                        qg.field_i[var34] = var38;
+                                        qg.field_i[incrementValue$14] = var38;
                                         break L54;
                                       }
                                     }
@@ -1810,8 +1837,9 @@ class ka extends tg {
                                         var34++;
                                         break L60;
                                       } else {
+                                        int incrementValue$15 = var34;
                                         var34++;
-                                        qg.field_i[var34] = var38;
+                                        qg.field_i[incrementValue$15] = var38;
                                         break L60;
                                       }
                                     }
@@ -1877,8 +1905,9 @@ class ka extends tg {
                                         var34++;
                                         break L66;
                                       } else {
+                                        int incrementValue$16 = var34;
                                         var34++;
-                                        qg.field_i[var34] = var38;
+                                        qg.field_i[incrementValue$16] = var38;
                                         break L66;
                                       }
                                     }
@@ -1929,8 +1958,9 @@ class ka extends tg {
                                         var37++;
                                         continue L69;
                                       } else {
+                                        int incrementValue$17 = var34;
                                         var34++;
-                                        qg.field_i[var34] = var38;
+                                        qg.field_i[incrementValue$17] = var38;
                                         var37++;
                                         continue L69;
                                       }
@@ -2248,8 +2278,9 @@ class ka extends tg {
         int var2 = 0;
         for (var3 = ((ka) this).field_u - 1; var3 >= 0; var3--) {
             for (var4 = 0; var4 < ((ka) this).field_x; var4++) {
+                int incrementValue$0 = var2;
                 var2++;
-                var1[var2] = ((ka) this).field_y[var3 + var4 * ((ka) this).field_u];
+                var1[incrementValue$0] = ((ka) this).field_y[var3 + var4 * ((ka) this).field_u];
             }
         }
         ((ka) this).field_y = var1;
@@ -2281,8 +2312,9 @@ class ka extends tg {
                 param2 = param1[(param3 >> 16) + var16];
                 if (param2 != 0) {
                     var18 = param0[param5];
+                    int incrementValue$0 = param5;
                     param5++;
-                    param0[param5] = ((param2 & 16711935) * param12 + (var18 & 16711935) * var13 & -16711936) + ((param2 & 65280) * param12 + (var18 & 65280) * var13 & 16711680) >> 8;
+                    param0[incrementValue$0] = ((param2 & 16711935) * param12 + (var18 & 16711935) * var13 & -16711936) + ((param2 & 65280) * param12 + (var18 & 65280) * var13 & 16711680) >> 8;
                 } else {
                     param5++;
                 }
@@ -2316,15 +2348,17 @@ class ka extends tg {
                     var10++;
                     continue L0;
                   } else {
+                    int incrementValue$218 = param3;
                     param3--;
-                    param2 = param1[param3];
+                    param2 = param1[incrementValue$218];
                     if (param2 == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
+                      int incrementValue$219 = param4;
                       param4++;
-                      param0[param4] = param2;
+                      param0[incrementValue$219] = param2;
                       var11++;
                       continue L2;
                     }
@@ -2332,50 +2366,58 @@ class ka extends tg {
                 }
               } else {
                 L3: {
+                  int incrementValue$220 = param3;
                   param3--;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
+                    int incrementValue$221 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$222 = param3;
                   param3--;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
+                    int incrementValue$223 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$224 = param3;
                   param3--;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
+                    int incrementValue$225 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
+                int incrementValue$226 = param3;
                 param3--;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$226];
                 if (param2 == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
+                  int incrementValue$227 = param4;
                   param4++;
-                  param0[param4] = param2;
+                  param0[incrementValue$227] = param2;
                   var11++;
                   continue L1;
                 }
@@ -2708,8 +2750,9 @@ class ka extends tg {
                     param2 = param0 + param1;
                     param0 = (param0 & 16711935) + (param1 & 16711935);
                     param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                    int incrementValue$0 = param10;
                     param10++;
-                    param5[param10] = param2 - param1 | param1 - (param1 >>> 8);
+                    param5[incrementValue$0] = param2 - param1 | param1 - (param1 >>> 8);
                 } else {
                     param10++;
                 }
@@ -2752,8 +2795,9 @@ class ka extends tg {
             for (var15 = -param7; var15 < 0; var15++) {
                 param2 = param1[(param3 >> 16) + var14];
                 if (param2 != 0) {
+                    int incrementValue$1 = param5;
                     param5++;
-                    param0[param5] = param2;
+                    param0[incrementValue$1] = param2;
                 } else {
                     param5++;
                 }
@@ -3255,8 +3299,9 @@ class ka extends tg {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 if (param2 == 0) {
                   param4++;
                   var11++;
@@ -3264,8 +3309,9 @@ class ka extends tg {
                 } else {
                   var12 = (param2 & 16711935) * param9 & -16711936;
                   var13 = (param2 & 65280) * param9 & 16711680;
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = (var12 | var13) >>> 8;
+                  param0[incrementValue$67] = (var12 | var13) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -3294,16 +3340,18 @@ class ka extends tg {
                 var11++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 if (param2 == 0) {
                   param4++;
                   var12++;
                   continue L1;
                 } else {
                   var13 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
+                  param0[incrementValue$67] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
                   var12++;
                   continue L1;
                 }
@@ -3327,8 +3375,9 @@ class ka extends tg {
                 param8++;
                 continue L0;
               } else {
+                int incrementValue$66 = param5;
                 param5++;
-                param0 = param4[param5];
+                param0 = param4[incrementValue$66];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -3338,8 +3387,9 @@ class ka extends tg {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                  int incrementValue$67 = param7;
                   param7++;
-                  param3[param7] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -3431,9 +3481,11 @@ class ka extends tg {
               if (var13 >= 0) {
                 continue L4;
               } else {
+                int incrementValue$2 = var11;
                 var11++;
+                int incrementValue$3 = var12;
                 var12++;
-                qg.field_i[var11] = ((ka) this).field_y[var12];
+                qg.field_i[incrementValue$2] = ((ka) this).field_y[incrementValue$3];
                 var13++;
                 continue L7;
               }
@@ -3653,15 +3705,17 @@ class ka extends tg {
                     var10++;
                     continue L0;
                   } else {
+                    int incrementValue$218 = param3;
                     param3++;
-                    param2 = param1[param3];
+                    param2 = param1[incrementValue$218];
                     if (param2 == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
+                      int incrementValue$219 = param4;
                       param4++;
-                      param0[param4] = param2;
+                      param0[incrementValue$219] = param2;
                       var11++;
                       continue L2;
                     }
@@ -3669,50 +3723,58 @@ class ka extends tg {
                 }
               } else {
                 L3: {
+                  int incrementValue$220 = param3;
                   param3++;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
+                    int incrementValue$221 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$222 = param3;
                   param3++;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
+                    int incrementValue$223 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$224 = param3;
                   param3++;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
+                    int incrementValue$225 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
+                int incrementValue$226 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$226];
                 if (param2 == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
+                  int incrementValue$227 = param4;
                   param4++;
-                  param0[param4] = param2;
+                  param0[incrementValue$227] = param2;
                   var11++;
                   continue L1;
                 }
@@ -3832,8 +3894,9 @@ class ka extends tg {
                 var14++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 if (param2 == 0) {
                   param4++;
                   var15++;
@@ -3841,8 +3904,9 @@ class ka extends tg {
                 } else {
                   var12 = (param2 & 16711935) * param9 & -16711936;
                   var13 = (param2 & 65280) * param9 & 16711680;
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((var12 | var13) >>> 8) + param10;
+                  param0[incrementValue$67] = ((var12 | var13) >>> 8) + param10;
                   var15++;
                   continue L1;
                 }
@@ -3882,8 +3946,9 @@ class ka extends tg {
                 var15++;
                 continue L0;
               } else {
+                int incrementValue$4 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$4];
                 if (param2 == 0) {
                   param4++;
                   var16++;
@@ -3900,21 +3965,24 @@ class ka extends tg {
                         break L2;
                       } else {
                         if (var17 > 128) {
+                          int incrementValue$5 = param4;
                           param4++;
-                          param0[param4] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
+                          param0[incrementValue$5] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
                           var16++;
                           continue L1;
                         } else {
+                          int incrementValue$6 = param4;
                           param4++;
-                          param0[param4] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
+                          param0[incrementValue$6] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
                           var16++;
                           continue L1;
                         }
                       }
                     }
                   }
+                  int incrementValue$7 = param4;
                   param4++;
-                  param0[param4] = param2;
+                  param0[incrementValue$7] = param2;
                   var16++;
                   continue L1;
                 }
@@ -4028,42 +4096,30 @@ class ka extends tg {
         java.awt.Image var3_ref = null;
         java.awt.MediaTracker var4 = null;
         java.awt.image.PixelGrabber var5 = null;
-        int statePc = 1;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 1: {
-                    try {
-                        var3_ref = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
-                        var4 = new java.awt.MediaTracker(param1);
-                        var4.addImage(var3_ref, 0);
-                        var4.waitForAll();
-                        ((ka) this).field_u = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
-                        ((ka) this).field_x = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
-                        ((ka) this).field_q = ((ka) this).field_u;
-                        ((ka) this).field_v = ((ka) this).field_x;
-                        ((ka) this).field_s = 0;
-                        ((ka) this).field_p = 0;
-                        ((ka) this).field_y = new int[((ka) this).field_u * ((ka) this).field_x];
-                        var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((ka) this).field_u, ((ka) this).field_x, ((ka) this).field_y, 0, ((ka) this).field_u);
-                        boolean discarded$1 = var5.grabPixels();
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    var3 = (InterruptedException) (Object) caughtException;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        try {
+          L0: {
+            var3_ref = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
+            var4 = new java.awt.MediaTracker(param1);
+            var4.addImage(var3_ref, 0);
+            var4.waitForAll();
+            ((ka) this).field_u = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
+            ((ka) this).field_x = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
+            ((ka) this).field_q = ((ka) this).field_u;
+            ((ka) this).field_v = ((ka) this).field_x;
+            ((ka) this).field_s = 0;
+            ((ka) this).field_p = 0;
+            ((ka) this).field_y = new int[((ka) this).field_u * ((ka) this).field_x];
+            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((ka) this).field_u, ((ka) this).field_x, ((ka) this).field_y, 0, ((ka) this).field_u);
+            boolean discarded$1 = var5.grabPixels();
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+            break L1;
+          }
         }
     }
 
@@ -4752,24 +4808,34 @@ class ka extends tg {
         for (var8 = -param5; var8 < 0; var8++) {
             var9 = param3 + param4 - 3;
             while (param3 < var9) {
+                int incrementValue$0 = param3;
                 param3++;
+                int incrementValue$1 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$0] = param1[incrementValue$1];
+                int incrementValue$2 = param3;
                 param3++;
+                int incrementValue$3 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$2] = param1[incrementValue$3];
+                int incrementValue$4 = param3;
                 param3++;
+                int incrementValue$5 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$4] = param1[incrementValue$5];
+                int incrementValue$6 = param3;
                 param3++;
+                int incrementValue$7 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$6] = param1[incrementValue$7];
             }
             var9 += 3;
             while (param3 < var9) {
+                int incrementValue$8 = param3;
                 param3++;
+                int incrementValue$9 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$8] = param1[incrementValue$9];
             }
             param3 = param3 + param6;
             param2 = param2 + param7;

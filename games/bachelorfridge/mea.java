@@ -16,13 +16,14 @@ final class mea extends ana {
         if (((mea) this).field_x.a((byte) -106)) {
             return false;
         }
-        if (!(-101 != (((mea) this).field_l ^ -1))) {
+        if (!(((mea) this).field_l != 100)) {
             var3 = ((mea) this).field_w.field_q.a(-27449, ((mea) this).field_q);
             var4 = new ffa(((mea) this).field_q, ((mea) this).field_w, var3.field_s.field_x, var3.field_s.field_J);
             ((kj) (Object) var4).a(0);
         }
+        int fieldTemp$0 = ((mea) this).field_l - 1;
         ((mea) this).field_l = ((mea) this).field_l - 1;
-        if (!(0 > ((mea) this).field_l - 1)) {
+        if (!(0 > fieldTemp$0)) {
             return false;
         }
         this.d(-66);
@@ -30,16 +31,17 @@ final class mea extends ana {
     }
 
     private final void d(int param0) {
-        if (param0 > -43) {
-            field_v = null;
-        }
     }
 
     mea(gj param0, rb param1) {
         super(param0, (bca) (Object) param1);
-        ((mea) this).field_w = param1;
-        ((mea) this).field_x = new taa(((mea) this).field_q, ((mea) this).field_w.field_q.a(-27449, ((mea) this).field_q));
-        ((mea) this).a(27799, (at) (Object) ((mea) this).field_x);
+        try {
+            ((mea) this).field_w = param1;
+            ((mea) this).field_x = new taa(((mea) this).field_q, ((mea) this).field_w.field_q.a(-27449, ((mea) this).field_q));
+            ((mea) this).a(27799, (at) (Object) ((mea) this).field_x);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "mea.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void e(byte param0) {
@@ -51,22 +53,11 @@ final class mea extends ana {
 
     final static void e(int param0) {
         kk.e((byte) 113);
-        if (param0 != 0) {
-            field_v = null;
-            gha.b(16);
-            og.a(12);
-            return;
-        }
         gha.b(16);
         og.a(12);
     }
 
     public static void f(int param0) {
-        if (param0 <= 78) {
-            mea.e((byte) -99);
-            field_v = null;
-            return;
-        }
         field_v = null;
     }
 

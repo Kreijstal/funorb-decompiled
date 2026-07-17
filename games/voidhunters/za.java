@@ -9,46 +9,68 @@ abstract class za extends ksa {
     }
 
     final static int c(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_10_0 = 0;
+        int stackOut_14_0 = 0;
         var4 = VoidHunters.field_G;
-        if (null != fwa.field_g) {
-          var1 = 0;
-          var2 = 0;
-          L0: while (true) {
-            if (var2 >= 12) {
-              return var1;
-            } else {
-              var3 = fwa.field_g.field_c[var2];
-              if (!fwa.field_g.a(var3, true, false)) {
-                if (!fwa.field_g.c(var3, -40)) {
-                  var2++;
-                  continue L0;
+        try {
+          L0: {
+            if (null != fwa.field_g) {
+              var1_int = 0;
+              var2 = 0;
+              L1: while (true) {
+                if (var2 >= 12) {
+                  stackOut_10_0 = var1_int;
+                  stackIn_11_0 = stackOut_10_0;
+                  return stackIn_11_0;
                 } else {
-                  var1++;
+                  L2: {
+                    L3: {
+                      var3 = fwa.field_g.field_c[var2];
+                      if (fwa.field_g.a(var3, true, false)) {
+                        break L3;
+                      } else {
+                        if (!fwa.field_g.c(var3, -40)) {
+                          break L2;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
+                    var1_int++;
+                    break L2;
+                  }
                   var2++;
-                  continue L0;
+                  continue L1;
                 }
-              } else {
-                var1++;
-                var2++;
-                continue L0;
               }
-            }
-          }
-        } else {
-          L1: {
-            if (param0 == -93) {
-              break L1;
             } else {
-              int discarded$1 = za.c((byte) 43);
-              break L1;
+              L4: {
+                if (param0 == -93) {
+                  break L4;
+                } else {
+                  int discarded$2 = za.c((byte) 43);
+                  break L4;
+                }
+              }
+              stackOut_14_0 = 12;
+              stackIn_15_0 = stackOut_14_0;
+              break L0;
             }
           }
-          return 12;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var1, field_z + param0 + 41);
         }
+        return stackIn_15_0;
     }
 
     static {

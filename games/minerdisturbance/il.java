@@ -16,22 +16,19 @@ final class il extends pi {
     final static boolean e(int param0) {
         if (param0 != -31391) {
             field_t = null;
-            return -16 != (pl.field_h ^ -1) ? true : false;
+            return pl.field_h != 15 ? true : false;
         }
-        return -16 != (pl.field_h ^ -1) ? true : false;
+        return pl.field_h != 15 ? true : false;
     }
 
     public static void a(int param0) {
         field_t = null;
         field_s = null;
-        int var1 = 47 / ((63 - param0) / 55);
+        int var1 = 15;
     }
 
     final static void a(int param0, byte param1) {
-        int discarded$4 = s.a(-27911);
-        if (param1 != -109) {
-            field_t = null;
-        }
+        int discarded$0 = s.a(-27911);
     }
 
     private il() throws Throwable {

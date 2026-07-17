@@ -17,7 +17,7 @@ final class bk {
         field_c = null;
         field_h = null;
         field_a = null;
-        int var1 = -7 / ((32 - param0) / 62);
+        int var1 = -7;
         field_f = null;
     }
 

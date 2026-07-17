@@ -15,7 +15,7 @@ abstract class ig {
         var3 = Vertigo2.field_L ? 1 : 0;
         if (param0 != 9790) {
           ig.a(false, 96, 75, 14, 14, -20, -1);
-          if (-1 <= (q.field_y ^ -1)) {
+          if (q.field_y <= 0) {
             if (!ag.b(49)) {
               L0: {
                 var2 = 1;
@@ -117,7 +117,7 @@ abstract class ig {
             }
           }
         } else {
-          if (-1 <= (q.field_y ^ -1)) {
+          if (q.field_y <= 0) {
             if (!ag.b(49)) {
               var2 = 1;
               if (t.field_m == null) {
@@ -236,32 +236,84 @@ abstract class ig {
     abstract java.net.Socket b(int param0) throws IOException;
 
     final static bk a(String param0, boolean param1) {
+        RuntimeException var2 = null;
         Object var3 = null;
-        if (!param1) {
-          if (cl.field_c.a((byte) -82)) {
-            if (param0.equals((Object) (Object) cl.field_c.d((byte) 105))) {
-              return cl.field_c;
-            } else {
-              cl.field_c = qc.a(0, param0);
-              return cl.field_c;
+        bk stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        bk stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!param1) {
+                break L1;
+              } else {
+                var3 = null;
+                bk discarded$2 = ig.a((String) null, true);
+                break L1;
+              }
             }
-          } else {
-            return cl.field_c;
-          }
-        } else {
-          var3 = null;
-          bk discarded$5 = ig.a((String) null, true);
-          if (cl.field_c.a((byte) -82)) {
-            if (param0.equals((Object) (Object) cl.field_c.d((byte) 105))) {
-              return cl.field_c;
-            } else {
-              cl.field_c = qc.a(0, param0);
-              return cl.field_c;
+            L2: {
+              if (!cl.field_c.a((byte) -82)) {
+                break L2;
+              } else {
+                if (param0.equals((Object) (Object) cl.field_c.d((byte) 105))) {
+                  break L2;
+                } else {
+                  cl.field_c = qc.a(0, param0);
+                  break L2;
+                }
+              }
             }
-          } else {
-            return cl.field_c;
+            stackOut_5_0 = cl.field_c;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_1 = new StringBuilder().append("ig.F(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
+        return stackIn_6_0;
     }
 
     final java.net.Socket a(byte param0) throws IOException {

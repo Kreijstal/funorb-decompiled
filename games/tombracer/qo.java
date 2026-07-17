@@ -20,24 +20,24 @@ final class qo extends rra {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var4 = ((qo) this).field_h * param1 >> -399666100;
-        var5 = param1 * ((qo) this).field_g >> -1930645236;
-        var6 = param2 * ((qo) this).field_j >> 1835988012;
+        var4 = ((qo) this).field_h * param1 >> 12;
+        var5 = param1 * ((qo) this).field_g >> 12;
+        var6 = param2 * ((qo) this).field_j >> 12;
         if (param0 > -117) {
           return;
         } else {
-          var7 = param2 * ((qo) this).field_f >> 1682413004;
+          var7 = param2 * ((qo) this).field_f >> 12;
           rra.a(var4, ((qo) this).field_c, var6, var7, 0, var5, ((qo) this).field_b, ((qo) this).field_d);
           return;
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = ((qo) this).field_h * param2 >> -1350453076;
+        int var4 = ((qo) this).field_h * param2 >> 12;
         int var7 = 30 % ((55 - param1) / 37);
-        int var5 = param2 * ((qo) this).field_g >> -1950766900;
-        int var6 = ((qo) this).field_j * param0 >> 749263340;
-        int var8 = ((qo) this).field_f * param0 >> -1432666324;
+        int var5 = param2 * ((qo) this).field_g >> 12;
+        int var6 = ((qo) this).field_j * param0 >> 12;
+        int var8 = ((qo) this).field_f * param0 >> 12;
         be.a(var4, ((qo) this).field_c, (byte) 71, var8, var5, var6);
     }
 
@@ -51,9 +51,6 @@ final class qo extends rra {
 
     public static void b(boolean param0) {
         field_i = null;
-        if (!param0) {
-            return;
-        }
         field_k = null;
     }
 

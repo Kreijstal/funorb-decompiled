@@ -8,9 +8,6 @@ final class qoa {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 <= 16) {
-            field_b = null;
-        }
     }
 
     static {

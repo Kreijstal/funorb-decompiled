@@ -10,9 +10,6 @@ final class pi {
 
     final static void a(boolean param0) {
         la.field_b = new vn();
-        if (!param0) {
-            pi.a((byte) 83);
-        }
     }
 
     public static void a(byte param0) {

@@ -11,60 +11,86 @@ final class jf {
     static w field_e;
 
     final static void a(java.awt.Canvas param0, boolean param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var4 = client.field_A ? 1 : 0;
-        if (ca.field_vb >= 10) {
-          if (!dl.a(480)) {
-            hk.b();
-            hk.b();
-            hk.b();
-            qc.a(240, 320, param2 ^ -21986);
-            mf.a(1, 0, 0, param0);
-            if (param2 != -6351) {
-              jf.a(-78);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (hc.field_d != 0) {
-              cn.a(true, param0);
-              if (param2 != -6351) {
-                jf.a(-78);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              uc.a(false, param1, 78);
+        try {
+          if (ca.field_vb >= 10) {
+            if (!dl.a(480)) {
+              hk.b();
+              qc.a(240, 320, 19759);
               mf.a(1, 0, 0, param0);
-              if (param2 == -6351) {
+              return;
+            } else {
+              if (hc.field_d != 0) {
+                cn.a(true, param0);
                 return;
               } else {
-                jf.a(-78);
+                uc.a(false, param1, 78);
+                mf.a(1, 0, 0, param0);
                 return;
               }
             }
+          } else {
+            L0: {
+              var3_int = 0;
+              if (cd.field_g) {
+                var3_int = 1;
+                cd.field_g = false;
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            bf.a(cn.b(true), var3_int != 0, 6, cf.a(-11777), fb.field_g);
+            return;
           }
-        } else {
-          L0: {
-            var3 = 0;
-            if (cd.field_g) {
-              var3 = 1;
-              cd.field_g = false;
-              break L0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_1 = new StringBuilder().append("jf.B(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L1;
             } else {
-              break L0;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L1;
             }
           }
-          bf.a(cn.b(true), var3 != 0, 6, cf.a(-11777), fb.field_g);
-          if (param2 == -6351) {
-            return;
-          } else {
-            jf.a(-78);
-            return;
-          }
+          throw dh.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + -6351 + 41);
         }
     }
 

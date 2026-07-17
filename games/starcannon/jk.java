@@ -20,8 +20,12 @@ final class jk {
         if (param0) {
             return;
         }
-        param1.removeFocusListener((java.awt.event.FocusListener) (Object) hj.field_c);
-        ah.field_c = -1;
+        try {
+            param1.removeFocusListener((java.awt.event.FocusListener) (Object) hj.field_c);
+            ah.field_c = -1;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "jk.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
@@ -31,7 +35,7 @@ final class jk {
         field_k = null;
         field_f = null;
         field_b = null;
-        int var1 = -40 % ((param0 - -67) / 47);
+        int var1 = 0;
     }
 
     static {

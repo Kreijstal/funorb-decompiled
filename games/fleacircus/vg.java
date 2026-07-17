@@ -96,7 +96,7 @@ final class vg extends wi {
         } else {
             this.d(-25579);
             if (((vg) this).field_g) {
-                if (-1 != (kc.field_f ^ -1)) {
+                if (kc.field_f != 0) {
                     if (0 != (!((vg) this).field_s ? 1 : 0)) {
                     }
                     ((vg) this).field_s = true;
@@ -104,7 +104,7 @@ final class vg extends wi {
                     ((vg) this).field_s = false;
                 }
             }
-            ((vg) this).field_c = -2 == (kc.field_f ^ -1) ? true : false;
+            ((vg) this).field_c = kc.field_f == 1 ? true : false;
         }
         if (!param0) {
             int discarded$0 = vg.c(114);
@@ -178,14 +178,6 @@ final class vg extends wi {
             }
           }
         }
-        L3: {
-          if (param0 == -25579) {
-            break L3;
-          } else {
-            ((vg) this).b(true);
-            break L3;
-          }
-        }
     }
 
     final void e(int param0) {
@@ -233,7 +225,7 @@ final class vg extends wi {
           }
         }
         L3: {
-          if ((((vg) this).field_A ^ -1) > -256) {
+          if (((vg) this).field_A < 255) {
             if (0 >= ((vg) this).field_A) {
               break L3;
             } else {
@@ -270,7 +262,7 @@ final class vg extends wi {
           }
         }
         gb.a(ia.field_q);
-        ((vg) this).field_G.a(((vg) this).field_t, (((vg) this).field_n >> -836297087) + ((vg) this).field_l + ((vg) this).field_y, ((vg) this).field_a + (((vg) this).field_C - -(((vg) this).field_d >> -270619007)) - -(((vg) this).field_G.field_y >> -815560191), ((vg) this).field_F, ((vg) this).field_x);
+        ((vg) this).field_G.a(((vg) this).field_t, (((vg) this).field_n >> 1) + ((vg) this).field_l + ((vg) this).field_y, ((vg) this).field_a + (((vg) this).field_C - -(((vg) this).field_d >> 1)) - -(((vg) this).field_G.field_y >> 1), ((vg) this).field_F, ((vg) this).field_x);
         gb.b(ia.field_q);
     }
 
@@ -286,12 +278,16 @@ final class vg extends wi {
         ((vg) this).field_F = 16777215;
         ((vg) this).field_A = 255;
         ((vg) this).field_x = 0;
-        ((vg) this).field_t = param0;
-        ((vg) this).field_a = param1;
-        ((vg) this).field_n = 69;
-        ((vg) this).field_G = param3;
-        ((vg) this).field_l = param2;
-        ((vg) this).field_d = ((vg) this).field_G.field_H + ((vg) this).field_G.field_K;
+        try {
+            ((vg) this).field_t = param0;
+            ((vg) this).field_a = param1;
+            ((vg) this).field_n = 69;
+            ((vg) this).field_G = param3;
+            ((vg) this).field_l = param2;
+            ((vg) this).field_d = ((vg) this).field_G.field_H + ((vg) this).field_G.field_K;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "vg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

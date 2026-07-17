@@ -7,7 +7,7 @@ final class al {
 
     public static void a(byte param0) {
         field_b = null;
-        int var1 = -117 % ((8 - param0) / 62);
+        int var1 = 0;
         field_a = null;
     }
 
@@ -19,11 +19,12 @@ final class al {
           if (param0 != 100) {
             break L0;
           } else {
-            if (-1 <= (gd.field_g ^ -1)) {
+            if (gd.field_g <= 0) {
               break L0;
             } else {
+              int fieldTemp$6 = gd.field_g - 1;
               gd.field_g = gd.field_g - 1;
-              var2_ref_byte__ = j.field_a[gd.field_g - 1];
+              var2_ref_byte__ = j.field_a[fieldTemp$6];
               j.field_a[gd.field_g] = null;
               return var2_ref_byte__;
             }
@@ -33,9 +34,10 @@ final class al {
           if (param0 != 5000) {
             break L1;
           } else {
-            if (-1 > (in.field_a ^ -1)) {
+            if (in.field_a > 0) {
+              int fieldTemp$7 = in.field_a - 1;
               in.field_a = in.field_a - 1;
-              var2_ref_byte__ = cd.field_e[in.field_a - 1];
+              var2_ref_byte__ = cd.field_e[fieldTemp$7];
               cd.field_e[in.field_a] = null;
               return var2_ref_byte__;
             } else {
@@ -47,9 +49,10 @@ final class al {
           if (30000 != param0) {
             break L2;
           } else {
-            if (-1 > (nd.field_g ^ -1)) {
+            if (nd.field_g > 0) {
+              int fieldTemp$8 = nd.field_g - 1;
               nd.field_g = nd.field_g - 1;
-              var2_ref_byte__ = ef.field_h[nd.field_g - 1];
+              var2_ref_byte__ = ef.field_h[fieldTemp$8];
               ef.field_h[nd.field_g] = null;
               return var2_ref_byte__;
             } else {
@@ -58,19 +61,11 @@ final class al {
           }
         }
         L3: {
-          if (param1 > 84) {
-            break L3;
-          } else {
-            field_a = null;
-            break L3;
-          }
-        }
-        L4: {
           if (ei.field_c != null) {
             var2 = 0;
-            L5: while (true) {
+            L4: while (true) {
               if (var2 >= di.field_p.length) {
-                break L4;
+                break L3;
               } else {
                 if (di.field_p[var2] == param0) {
                   if (ic.field_f[var2] > 0) {
@@ -80,16 +75,16 @@ final class al {
                     return var3;
                   } else {
                     var2++;
-                    continue L5;
+                    continue L4;
                   }
                 } else {
                   var2++;
-                  continue L5;
+                  continue L4;
                 }
               }
             }
           } else {
-            break L4;
+            break L3;
           }
         }
         return new byte[param0];

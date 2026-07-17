@@ -18,7 +18,7 @@ final class tc extends pi {
         field_o = null;
         field_v = null;
         field_p = null;
-        int var1 = -5 / ((-34 - param0) / 50);
+        int var1 = -5;
     }
 
     final static void a(int param0) {
@@ -45,10 +45,14 @@ final class tc extends pi {
     }
 
     tc(uj param0, int param1, int param2) {
-        ((tc) this).field_u = param0;
-        ((tc) this).field_n = param0.a((byte) -115);
-        ((tc) this).field_q = param1;
-        ((tc) this).field_w = param2;
+        try {
+            ((tc) this).field_u = param0;
+            ((tc) this).field_n = param0.a((byte) -115);
+            ((tc) this).field_q = param1;
+            ((tc) this).field_w = param2;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "tc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

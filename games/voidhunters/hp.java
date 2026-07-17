@@ -39,7 +39,11 @@ final class hp extends OutputStream {
     }
 
     hp(StringBuilder param0) {
-        ((hp) this).field_a = param0;
+        try {
+            ((hp) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "hp.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

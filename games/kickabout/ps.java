@@ -301,21 +301,21 @@ abstract class ps {
         int var2 = 0;
         if (param0 > -60) {
           ps.b(-77);
-          var2 = param1 >>> -673372351;
-          var2 = var2 | var2 >>> -1274273791;
-          var2 = var2 | var2 >>> -881885918;
-          var2 = var2 | var2 >>> -1421992956;
-          var2 = var2 | var2 >>> -549685528;
-          var2 = var2 | var2 >>> -122546384;
-          return (var2 ^ -1) & param1;
+          var2 = param1 >>> 1;
+          var2 = var2 | var2 >>> 1;
+          var2 = var2 | var2 >>> 2;
+          var2 = var2 | var2 >>> 4;
+          var2 = var2 | var2 >>> 8;
+          var2 = var2 | var2 >>> 16;
+          return ~var2 & param1;
         } else {
-          var2 = param1 >>> -673372351;
-          var2 = var2 | var2 >>> -1274273791;
-          var2 = var2 | var2 >>> -881885918;
-          var2 = var2 | var2 >>> -1421992956;
-          var2 = var2 | var2 >>> -549685528;
-          var2 = var2 | var2 >>> -122546384;
-          return (var2 ^ -1) & param1;
+          var2 = param1 >>> 1;
+          var2 = var2 | var2 >>> 1;
+          var2 = var2 | var2 >>> 2;
+          var2 = var2 | var2 >>> 4;
+          var2 = var2 | var2 >>> 8;
+          var2 = var2 | var2 >>> 16;
+          return ~var2 & param1;
         }
     }
 
@@ -340,7 +340,7 @@ abstract class ps {
         if (param0 != 180) {
             return false;
         }
-        if ((ms.field_b ^ -1) != 1) {
+        if (ms.field_b != -2) {
             return uj.a((byte) -114, ms.field_b);
         }
         if (!(uj.a((byte) 29, 2))) {

@@ -24,23 +24,29 @@ final class lf {
         int var14 = 0;
         int var15 = 0;
         int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_38_0 = 0;
-        int stackIn_52_0 = 0;
-        int stackIn_54_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_24_1 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_31_0 = 0;
+        int stackIn_43_0 = 0;
+        int stackIn_60_0 = 0;
+        int stackIn_62_0 = 0;
         int stackOut_2_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_11_0 = 0;
-        byte stackOut_27_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_54_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_23_1 = 0;
+        byte stackOut_30_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_27_0 = 0;
+        int stackOut_27_1 = 0;
+        int stackOut_42_0 = 0;
+        int stackOut_61_0 = 0;
+        int stackOut_62_0 = 0;
         var15 = TetraLink.field_J;
         var9 = param4 + param5 - -param0;
         var10 = new oh[]{new oh(var9, var9), new oh(param6, var9), new oh(var9, var9), new oh(var9, param6), new oh(64, 64), new oh(var9, param6), new oh(var9, var9), new oh(param6, var9), new oh(var9, var9)};
@@ -54,7 +60,7 @@ final class lf {
               } else {
                 var13 = var11_ref_oh__[var12];
                 stackOut_2_0 = 0;
-                stackIn_9_0 = stackOut_2_0;
+                stackIn_11_0 = stackOut_2_0;
                 stackIn_3_0 = stackOut_2_0;
                 if (var15 != 0) {
                   break L1;
@@ -62,19 +68,26 @@ final class lf {
                   var14 = stackIn_3_0;
                   L3: while (true) {
                     L4: {
-                      if (var13.field_C.length <= var14) {
-                        break L4;
-                      } else {
-                        var13.field_C[var14] = param1;
-                        var14++;
-                        if (var15 == 0) {
-                          continue L3;
+                      L5: {
+                        if (var13.field_C.length <= var14) {
+                          break L5;
                         } else {
-                          break L4;
+                          var13.field_C[var14] = param1;
+                          var14++;
+                          if (var15 != 0) {
+                            break L4;
+                          } else {
+                            if (var15 == 0) {
+                              continue L3;
+                            } else {
+                              break L5;
+                            }
+                          }
                         }
                       }
+                      var12++;
+                      break L4;
                     }
-                    var12++;
                     if (var15 == 0) {
                       continue L0;
                     } else {
@@ -84,154 +97,166 @@ final class lf {
                 }
               }
             }
-            stackOut_8_0 = 0;
-            stackIn_9_0 = stackOut_8_0;
+            stackOut_10_0 = 0;
+            stackIn_11_0 = stackOut_10_0;
             break L1;
           }
-          var11 = stackIn_9_0;
-          L5: while (true) {
-            L6: {
+          var11 = stackIn_11_0;
+          L6: while (true) {
+            L7: {
               if (param5 <= var11) {
-                stackOut_17_0 = 0;
-                stackIn_18_0 = stackOut_17_0;
-                break L6;
+                stackOut_21_0 = 0;
+                stackIn_22_0 = stackOut_21_0;
+                break L7;
               } else {
-                stackOut_11_0 = 0;
-                stackIn_18_0 = stackOut_11_0;
-                stackIn_12_0 = stackOut_11_0;
+                stackOut_13_0 = 0;
+                stackIn_22_0 = stackOut_13_0;
+                stackIn_14_0 = stackOut_13_0;
                 if (var15 != 0) {
-                  break L6;
+                  break L7;
                 } else {
-                  var12 = stackIn_12_0;
-                  L7: while (true) {
-                    if (var12 >= var9) {
-                      var11++;
-                      continue L5;
-                    } else {
-                      var10[6].field_C[var12 + (var9 - (var11 + 1)) * var9] = param3;
-                      var10[8].field_C[var12 + (var9 - var11 - 1) * var9] = param3;
-                      var10[2].field_C[var9 * var12 - (-var9 + 1) + -var11] = param3;
-                      var10[8].field_C[-1 + (var9 + -var11) + var12 * var9] = param3;
-                      var12++;
-                      continue L7;
+                  var12 = stackIn_14_0;
+                  L8: while (true) {
+                    L9: {
+                      if (var12 >= var9) {
+                        var11++;
+                        break L9;
+                      } else {
+                        var10[6].field_C[var12 + (var9 - (var11 + 1)) * var9] = param3;
+                        var10[8].field_C[var12 + (var9 - var11 - 1) * var9] = param3;
+                        var10[2].field_C[var9 * var12 - (-var9 + 1) + -var11] = param3;
+                        var10[8].field_C[-1 + (var9 + -var11) + var12 * var9] = param3;
+                        var12++;
+                        if (var15 != 0) {
+                          break L9;
+                        } else {
+                          continue L8;
+                        }
+                      }
                     }
+                    continue L6;
                   }
                 }
               }
             }
-            var11 = stackIn_18_0;
-            L8: while (true) {
-              L9: {
-                if (var11 >= param5) {
-                  var11 = 0;
-                  stackOut_27_0 = param7;
-                  stackIn_28_0 = stackOut_27_0;
-                  break L9;
-                } else {
-                  stackOut_20_0 = 0;
-                  stackIn_28_0 = stackOut_20_0;
-                  stackIn_21_0 = stackOut_20_0;
-                  if (var15 != 0) {
-                    break L9;
+            var11 = stackIn_22_0;
+            L10: while (true) {
+              stackOut_23_0 = var11;
+              stackOut_23_1 = param5;
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              L11: while (true) {
+                L12: {
+                  if (stackIn_24_0 >= stackIn_24_1) {
+                    var11 = 0;
+                    stackOut_30_0 = param7;
+                    stackIn_31_0 = stackOut_30_0;
+                    break L12;
                   } else {
-                    var12 = stackIn_21_0;
-                    L10: while (true) {
+                    stackOut_25_0 = 0;
+                    stackIn_31_0 = stackOut_25_0;
+                    stackIn_26_0 = stackOut_25_0;
+                    if (var15 != 0) {
+                      break L12;
+                    } else {
+                      var12 = stackIn_26_0;
                       if (var12 >= var9) {
                         var11++;
-                        continue L8;
-                      } else {
-                        L11: {
-                          var10[0].field_C[var12 + var9 * var11] = param8;
-                          var10[0].field_C[var9 * var12 - -var11] = param8;
-                          if ((var12 ^ -1) <= (var9 + -var11 ^ -1)) {
-                            break L11;
-                          } else {
-                            var10[2].field_C[var12 - -(var9 * var11)] = param8;
-                            var10[6].field_C[var11 + var9 * var12] = param8;
-                            break L11;
-                          }
-                        }
-                        var12++;
                         continue L10;
+                      } else {
+                        var10[0].field_C[var12 + var9 * var11] = 113;
+                        var10[0].field_C[var9 * var12 - -var11] = 113;
+                        stackOut_27_0 = ~var12;
+                        stackOut_27_1 = ~(var9 + -var11);
+                        stackIn_24_0 = stackOut_27_0;
+                        stackIn_24_1 = stackOut_27_1;
+                        continue L11;
                       }
                     }
                   }
                 }
-              }
-              L12: {
-                if (stackIn_28_0 == -112) {
-                  break L12;
-                } else {
-                  oh[] discarded$1 = lf.a(48, 126, 35, -60, 39, 14, -11, (byte) 26, 113);
-                  break L12;
-                }
-              }
-              L13: while (true) {
-                L14: {
-                  if (param6 <= var11) {
-                    stackOut_37_0 = 0;
-                    stackIn_38_0 = stackOut_37_0;
-                    break L14;
+                L13: {
+                  if (stackIn_31_0 == -112) {
+                    break L13;
                   } else {
-                    stackOut_53_0 = 0;
-                    stackIn_38_0 = stackOut_53_0;
-                    stackIn_54_0 = stackOut_53_0;
-                    if (var15 != 0) {
-                      break L14;
-                    } else {
-                      stackOut_54_0 = stackIn_54_0;
-                      stackIn_52_0 = stackOut_54_0;
-                      var12 = stackIn_52_0;
-                      L15: while (true) {
-                        if (var12 >= param5) {
-                          var11++;
-                          continue L13;
-                        } else {
-                          var10[7].field_C[var11 + (-1 + -var12 + var9) * param6] = param3;
-                          var10[5].field_C[var9 * var11 - (var12 + 1 + -var9)] = param3;
-                          var10[1].field_C[var11 + param6 * var12] = param8;
-                          var10[3].field_C[var12 + var9 * var11] = param8;
-                          var12++;
-                          continue L15;
-                        }
-                      }
-                    }
+                    oh[] discarded$1 = lf.a(48, 126, 35, -60, 39, 14, -11, (byte) 26, 113);
+                    break L13;
                   }
                 }
-                var11 = stackIn_38_0;
-                L16: while (true) {
-                  L17: {
-                    if (param6 >> 161197633 <= var11) {
-                      break L17;
+                L14: while (true) {
+                  L15: {
+                    if (param6 <= var11) {
+                      stackOut_42_0 = 0;
+                      stackIn_43_0 = stackOut_42_0;
+                      break L15;
                     } else {
-                      var12 = 0;
-                      L18: while (true) {
-                        L19: {
-                          if (var12 >= param0) {
-                            var11++;
-                            break L19;
-                          } else {
-                            var10[1].field_C[(-1 + var9 + -var12) * param6 - -var11] = param2;
-                            var10[3].field_C[var11 * var9 - -var9 + -1 - var12] = param2;
-                            var10[7].field_C[param6 * var12 + var11] = param2;
-                            var10[5].field_C[var12 + var9 * var11] = param2;
-                            var12++;
-                            if (var15 != 0) {
-                              break L19;
+                      stackOut_61_0 = 0;
+                      stackIn_43_0 = stackOut_61_0;
+                      stackIn_62_0 = stackOut_61_0;
+                      if (var15 != 0) {
+                        break L15;
+                      } else {
+                        stackOut_62_0 = stackIn_62_0;
+                        stackIn_60_0 = stackOut_62_0;
+                        var12 = stackIn_60_0;
+                        L16: while (true) {
+                          L17: {
+                            if (var12 >= param5) {
+                              var11++;
+                              break L17;
                             } else {
-                              continue L18;
+                              var10[7].field_C[var11 + (-1 + -var12 + var9) * param6] = param3;
+                              var10[5].field_C[var9 * var11 - (var12 + 1 + -var9)] = param3;
+                              var10[1].field_C[var11 + param6 * var12] = 113;
+                              var10[3].field_C[var12 + var9 * var11] = 113;
+                              var12++;
+                              if (var15 != 0) {
+                                break L17;
+                              } else {
+                                continue L16;
+                              }
                             }
                           }
-                        }
-                        if (var15 == 0) {
-                          continue L16;
-                        } else {
-                          break L17;
+                          continue L14;
                         }
                       }
                     }
                   }
-                  return var10;
+                  var11 = stackIn_43_0;
+                  L18: while (true) {
+                    L19: {
+                      if (param6 >> 1 <= var11) {
+                        break L19;
+                      } else {
+                        var12 = 0;
+                        L20: while (true) {
+                          L21: {
+                            if (var12 >= param0) {
+                              var11++;
+                              break L21;
+                            } else {
+                              var10[1].field_C[(-1 + var9 + -var12) * param6 - -var11] = param2;
+                              var10[3].field_C[var11 * var9 - -var9 + -1 - var12] = param2;
+                              var10[7].field_C[param6 * var12 + var11] = param2;
+                              var10[5].field_C[var12 + var9 * var11] = param2;
+                              var12++;
+                              if (var15 != 0) {
+                                break L21;
+                              } else {
+                                continue L20;
+                              }
+                            }
+                          }
+                          if (var15 == 0) {
+                            continue L18;
+                          } else {
+                            break L19;
+                          }
+                        }
+                      }
+                    }
+                    return var10;
+                  }
                 }
               }
             }

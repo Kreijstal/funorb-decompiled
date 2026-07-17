@@ -30,7 +30,7 @@ final class pt {
               return new String(var3);
             }
           } else {
-            var6[var4] = param2;
+            var6[var4] = '*';
             var4++;
             continue L0;
           }

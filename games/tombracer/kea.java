@@ -7,16 +7,8 @@ final class kea {
     static String field_a;
 
     final static void b(int param0) {
-        if (param0 > -17) {
-          field_a = null;
-          wu.field_a.e(true);
-          wu.field_a.c((ae) (Object) new at(wu.field_a), 89);
-          return;
-        } else {
-          wu.field_a.e(true);
-          wu.field_a.c((ae) (Object) new at(wu.field_a), 89);
-          return;
-        }
+        wu.field_a.e(true);
+        wu.field_a.c((ae) (Object) new at(wu.field_a), 89);
     }
 
     public static void a(int param0) {

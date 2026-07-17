@@ -19,9 +19,6 @@ final class iea {
         field_c = null;
         field_a = null;
         field_d = null;
-        if (param0 != 24166) {
-            return;
-        }
         field_b = null;
     }
 

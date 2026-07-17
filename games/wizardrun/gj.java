@@ -12,58 +12,62 @@ final class gj implements Iterable {
     wl[] field_c;
 
     final static aa a(byte param0, String param1) {
-        Object var3 = null;
-        aa var3_ref = null;
+        String var2 = null;
+        RuntimeException var2_ref = null;
+        aa var3 = null;
+        String var4 = null;
         int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        CharSequence var10 = null;
-        CharSequence var11 = null;
-        CharSequence var12 = null;
-        CharSequence var13 = null;
-        var3 = null;
+        CharSequence var6 = null;
+        CharSequence var7 = null;
+        Object stackIn_7_0 = null;
+        Object stackIn_12_0 = null;
+        aa stackIn_19_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        aa stackOut_18_0 = null;
+        Object stackOut_11_0 = null;
+        Object stackOut_6_0 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         var5 = wizardrun.field_H;
-        if (null != lj.field_f) {
-          if (param1 != null) {
-            if (param1.length() != 0) {
-              if (param0 == -116) {
-                var12 = (CharSequence) (Object) param1;
-                var8 = ta.a(-60, var12);
-                if (var8 != null) {
-                  var3_ref = (aa) (Object) lj.field_f.a((long)var8.hashCode(), (byte) 104);
-                  L0: while (true) {
-                    if (var3_ref != null) {
-                      var13 = (CharSequence) (Object) var3_ref.field_mb;
-                      var9 = ta.a(-51, var13);
-                      if (var9.equals((Object) (Object) var8)) {
-                        return var3_ref;
-                      } else {
-                        var3_ref = (aa) (Object) lj.field_f.a(false);
-                        continue L0;
-                      }
-                    } else {
-                      return null;
-                    }
+        try {
+          if (null != lj.field_f) {
+            if (param1 != null) {
+              if (param1.length() != 0) {
+                L0: {
+                  if (param0 == -116) {
+                    break L0;
+                  } else {
+                    field_b = -125;
+                    break L0;
                   }
-                } else {
-                  return null;
                 }
-              } else {
-                field_b = -125;
-                var10 = (CharSequence) (Object) param1;
-                var6 = ta.a(-60, var10);
-                if (var6 != null) {
-                  var3_ref = (aa) (Object) lj.field_f.a((long)var6.hashCode(), (byte) 104);
+                var6 = (CharSequence) (Object) param1;
+                var2 = ta.a(-60, var6);
+                if (var2 != null) {
+                  var3 = (aa) (Object) lj.field_f.a((long)var2.hashCode(), (byte) 104);
                   L1: while (true) {
-                    if (var3_ref != null) {
-                      var11 = (CharSequence) (Object) var3_ref.field_mb;
-                      var7 = ta.a(-51, var11);
-                      if (var7.equals((Object) (Object) var6)) {
-                        return var3_ref;
+                    if (var3 != null) {
+                      var7 = (CharSequence) (Object) var3.field_mb;
+                      var4 = ta.a(-51, var7);
+                      if (var4.equals((Object) (Object) var2)) {
+                        stackOut_18_0 = (aa) var3;
+                        stackIn_19_0 = stackOut_18_0;
+                        return stackIn_19_0;
                       } else {
-                        var3_ref = (aa) (Object) lj.field_f.a(false);
+                        var3 = (aa) (Object) lj.field_f.a(false);
                         continue L1;
                       }
                     } else {
@@ -71,8 +75,14 @@ final class gj implements Iterable {
                     }
                   }
                 } else {
-                  return null;
+                  stackOut_11_0 = null;
+                  stackIn_12_0 = stackOut_11_0;
+                  return (aa) (Object) stackIn_12_0;
                 }
+              } else {
+                stackOut_6_0 = null;
+                stackIn_7_0 = stackOut_6_0;
+                return (aa) (Object) stackIn_7_0;
               }
             } else {
               return null;
@@ -80,8 +90,35 @@ final class gj implements Iterable {
           } else {
             return null;
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2_ref;
+            stackOut_22_1 = new StringBuilder().append("gj.A(").append(param0).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param1 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L2;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L2;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
     }
 
@@ -99,7 +136,7 @@ final class gj implements Iterable {
         var2 = 0;
         var3 = jd.field_f;
         if (5 <= var3) {
-          if (-106 < (var3 ^ -1)) {
+          if (var3 < 105) {
             L0: {
               var2 = (var3 * 16384 + -40960) / 220;
               var4 = 1;
@@ -112,7 +149,7 @@ final class gj implements Iterable {
               }
             }
             L1: {
-              if ((param1 ^ -1) != -2) {
+              if (param1 != 1) {
                 break L1;
               } else {
                 var5 = 1;
@@ -129,7 +166,7 @@ final class gj implements Iterable {
               }
             }
             L3: {
-              if ((param1 ^ -1) != -6) {
+              if (param1 != 5) {
                 break L3;
               } else {
                 var5 = 1;
@@ -158,7 +195,7 @@ final class gj implements Iterable {
                   L6: {
                     var4 = -1;
                     var5 = -1;
-                    if (-12 != (param1 ^ -1)) {
+                    if (param1 != 11) {
                       break L6;
                     } else {
                       var4 = -1;
@@ -166,7 +203,7 @@ final class gj implements Iterable {
                     }
                   }
                   L7: {
-                    if (-13 != (param1 ^ -1)) {
+                    if (param1 != 12) {
                       break L7;
                     } else {
                       var4 = -1;
@@ -185,7 +222,7 @@ final class gj implements Iterable {
                   }
                   if (param0 == 115) {
                     L9: {
-                      if ((param1 ^ -1) == -15) {
+                      if (param1 == 14) {
                         var4 = -1;
                         var5 = 1;
                         break L9;
@@ -194,7 +231,7 @@ final class gj implements Iterable {
                       }
                     }
                     L10: {
-                      if (-16 == (param1 ^ -1)) {
+                      if (param1 == 15) {
                         var4 = 1;
                         var5 = 1;
                         break L10;
@@ -207,7 +244,7 @@ final class gj implements Iterable {
                   } else {
                     L11: {
                       field_a = -119;
-                      if ((param1 ^ -1) == -15) {
+                      if (param1 == 14) {
                         var4 = -1;
                         var5 = 1;
                         break L11;
@@ -216,7 +253,7 @@ final class gj implements Iterable {
                       }
                     }
                     L12: {
-                      if (-16 == (param1 ^ -1)) {
+                      if (param1 == 15) {
                         var4 = 1;
                         var5 = 1;
                         break L12;
@@ -231,7 +268,7 @@ final class gj implements Iterable {
               }
             }
             L13: {
-              if (-12 != (param1 ^ -1)) {
+              if (param1 != 11) {
                 break L13;
               } else {
                 var4 = -1;
@@ -239,7 +276,7 @@ final class gj implements Iterable {
               }
             }
             L14: {
-              if (-13 != (param1 ^ -1)) {
+              if (param1 != 12) {
                 break L14;
               } else {
                 var4 = -1;
@@ -258,7 +295,7 @@ final class gj implements Iterable {
             }
             if (param0 == 115) {
               L16: {
-                if ((param1 ^ -1) == -15) {
+                if (param1 == 14) {
                   var4 = -1;
                   var5 = 1;
                   break L16;
@@ -267,7 +304,7 @@ final class gj implements Iterable {
                 }
               }
               L17: {
-                if (-16 == (param1 ^ -1)) {
+                if (param1 == 15) {
                   var4 = 1;
                   var5 = 1;
                   break L17;
@@ -280,7 +317,7 @@ final class gj implements Iterable {
             } else {
               L18: {
                 field_a = -119;
-                if ((param1 ^ -1) == -15) {
+                if (param1 == 14) {
                   var4 = -1;
                   var5 = 1;
                   break L18;
@@ -289,7 +326,7 @@ final class gj implements Iterable {
                 }
               }
               L19: {
-                if (-16 == (param1 ^ -1)) {
+                if (param1 == 15) {
                   var4 = 1;
                   var5 = 1;
                   break L19;
@@ -301,7 +338,7 @@ final class gj implements Iterable {
               return;
             }
           } else {
-            if ((var3 ^ -1) > -121) {
+            if (var3 < 120) {
               L20: {
                 var3 = 120 + -var3;
                 var2 = 8192 + -(var3 * (var3 * 8192) / 3300);
@@ -315,7 +352,7 @@ final class gj implements Iterable {
                 }
               }
               L21: {
-                if ((param1 ^ -1) != -2) {
+                if (param1 != 1) {
                   break L21;
                 } else {
                   var5 = 1;
@@ -332,7 +369,7 @@ final class gj implements Iterable {
                 }
               }
               L23: {
-                if ((param1 ^ -1) != -6) {
+                if (param1 != 5) {
                   break L23;
                 } else {
                   var5 = 1;
@@ -361,7 +398,7 @@ final class gj implements Iterable {
                     L26: {
                       var4 = -1;
                       var5 = -1;
-                      if (-12 != (param1 ^ -1)) {
+                      if (param1 != 11) {
                         break L26;
                       } else {
                         var4 = -1;
@@ -369,7 +406,7 @@ final class gj implements Iterable {
                       }
                     }
                     L27: {
-                      if (-13 != (param1 ^ -1)) {
+                      if (param1 != 12) {
                         break L27;
                       } else {
                         var4 = -1;
@@ -395,7 +432,7 @@ final class gj implements Iterable {
                       }
                     }
                     L30: {
-                      if ((param1 ^ -1) == -15) {
+                      if (param1 == 14) {
                         var4 = -1;
                         var5 = 1;
                         break L30;
@@ -404,7 +441,7 @@ final class gj implements Iterable {
                       }
                     }
                     L31: {
-                      if (-16 == (param1 ^ -1)) {
+                      if (param1 == 15) {
                         var4 = 1;
                         var5 = 1;
                         break L31;
@@ -418,7 +455,7 @@ final class gj implements Iterable {
                 }
               }
               L32: {
-                if (-12 != (param1 ^ -1)) {
+                if (param1 != 11) {
                   break L32;
                 } else {
                   var4 = -1;
@@ -426,7 +463,7 @@ final class gj implements Iterable {
                 }
               }
               L33: {
-                if (-13 != (param1 ^ -1)) {
+                if (param1 != 12) {
                   break L33;
                 } else {
                   var4 = -1;
@@ -445,7 +482,7 @@ final class gj implements Iterable {
               }
               if (param0 == 115) {
                 L35: {
-                  if ((param1 ^ -1) == -15) {
+                  if (param1 == 14) {
                     var4 = -1;
                     var5 = 1;
                     break L35;
@@ -454,7 +491,7 @@ final class gj implements Iterable {
                   }
                 }
                 L36: {
-                  if (-16 == (param1 ^ -1)) {
+                  if (param1 == 15) {
                     var4 = 1;
                     var5 = 1;
                     break L36;
@@ -467,7 +504,7 @@ final class gj implements Iterable {
               } else {
                 L37: {
                   field_a = -119;
-                  if ((param1 ^ -1) == -15) {
+                  if (param1 == 14) {
                     var4 = -1;
                     var5 = 1;
                     break L37;
@@ -476,7 +513,7 @@ final class gj implements Iterable {
                   }
                 }
                 L38: {
-                  if (-16 == (param1 ^ -1)) {
+                  if (param1 == 15) {
                     var4 = 1;
                     var5 = 1;
                     break L38;
@@ -499,7 +536,7 @@ final class gj implements Iterable {
                 }
               }
               L40: {
-                if ((param1 ^ -1) != -2) {
+                if (param1 != 1) {
                   break L40;
                 } else {
                   var5 = 1;
@@ -516,7 +553,7 @@ final class gj implements Iterable {
                 }
               }
               L42: {
-                if ((param1 ^ -1) != -6) {
+                if (param1 != 5) {
                   break L42;
                 } else {
                   var5 = 1;
@@ -545,7 +582,7 @@ final class gj implements Iterable {
                     L45: {
                       var4 = -1;
                       var5 = -1;
-                      if (-12 != (param1 ^ -1)) {
+                      if (param1 != 11) {
                         break L45;
                       } else {
                         var4 = -1;
@@ -553,7 +590,7 @@ final class gj implements Iterable {
                       }
                     }
                     L46: {
-                      if (-13 != (param1 ^ -1)) {
+                      if (param1 != 12) {
                         break L46;
                       } else {
                         var4 = -1;
@@ -579,7 +616,7 @@ final class gj implements Iterable {
                       }
                     }
                     L49: {
-                      if ((param1 ^ -1) == -15) {
+                      if (param1 == 14) {
                         var4 = -1;
                         var5 = 1;
                         break L49;
@@ -588,7 +625,7 @@ final class gj implements Iterable {
                       }
                     }
                     L50: {
-                      if (-16 == (param1 ^ -1)) {
+                      if (param1 == 15) {
                         var4 = 1;
                         var5 = 1;
                         break L50;
@@ -602,7 +639,7 @@ final class gj implements Iterable {
                 }
               }
               L51: {
-                if (-12 != (param1 ^ -1)) {
+                if (param1 != 11) {
                   break L51;
                 } else {
                   var4 = -1;
@@ -610,7 +647,7 @@ final class gj implements Iterable {
                 }
               }
               L52: {
-                if (-13 != (param1 ^ -1)) {
+                if (param1 != 12) {
                   break L52;
                 } else {
                   var4 = -1;
@@ -629,7 +666,7 @@ final class gj implements Iterable {
               }
               if (param0 == 115) {
                 L54: {
-                  if ((param1 ^ -1) == -15) {
+                  if (param1 == 14) {
                     var4 = -1;
                     var5 = 1;
                     break L54;
@@ -638,7 +675,7 @@ final class gj implements Iterable {
                   }
                 }
                 L55: {
-                  if (-16 == (param1 ^ -1)) {
+                  if (param1 == 15) {
                     var4 = 1;
                     var5 = 1;
                     break L55;
@@ -651,7 +688,7 @@ final class gj implements Iterable {
               } else {
                 L56: {
                   field_a = -119;
-                  if ((param1 ^ -1) == -15) {
+                  if (param1 == 14) {
                     var4 = -1;
                     var5 = 1;
                     break L56;
@@ -660,7 +697,7 @@ final class gj implements Iterable {
                   }
                 }
                 L57: {
-                  if (-16 == (param1 ^ -1)) {
+                  if (param1 == 15) {
                     var4 = 1;
                     var5 = 1;
                     break L57;
@@ -686,7 +723,7 @@ final class gj implements Iterable {
             }
           }
           L59: {
-            if ((param1 ^ -1) != -2) {
+            if (param1 != 1) {
               break L59;
             } else {
               var5 = 1;
@@ -703,7 +740,7 @@ final class gj implements Iterable {
             }
           }
           L61: {
-            if ((param1 ^ -1) != -6) {
+            if (param1 != 5) {
               break L61;
             } else {
               var5 = 1;
@@ -731,7 +768,7 @@ final class gj implements Iterable {
               }
             }
             L64: {
-              if (-12 != (param1 ^ -1)) {
+              if (param1 != 11) {
                 break L64;
               } else {
                 var4 = -1;
@@ -739,7 +776,7 @@ final class gj implements Iterable {
               }
             }
             L65: {
-              if (-13 != (param1 ^ -1)) {
+              if (param1 != 12) {
                 break L65;
               } else {
                 var4 = -1;
@@ -759,7 +796,7 @@ final class gj implements Iterable {
             if (param0 != 115) {
               L67: {
                 field_a = -119;
-                if ((param1 ^ -1) == -15) {
+                if (param1 == 14) {
                   var4 = -1;
                   var5 = 1;
                   break L67;
@@ -768,7 +805,7 @@ final class gj implements Iterable {
                 }
               }
               L68: {
-                if (-16 == (param1 ^ -1)) {
+                if (param1 == 15) {
                   var4 = 1;
                   var5 = 1;
                   break L68;
@@ -780,7 +817,7 @@ final class gj implements Iterable {
               return;
             } else {
               L69: {
-                if ((param1 ^ -1) == -15) {
+                if (param1 == 14) {
                   var4 = -1;
                   var5 = 1;
                   break L69;
@@ -789,7 +826,7 @@ final class gj implements Iterable {
                 }
               }
               L70: {
-                if (-16 == (param1 ^ -1)) {
+                if (param1 == 15) {
                   var4 = 1;
                   var5 = 1;
                   break L70;
@@ -804,7 +841,7 @@ final class gj implements Iterable {
             L71: {
               var4 = -1;
               var5 = -1;
-              if (-12 != (param1 ^ -1)) {
+              if (param1 != 11) {
                 break L71;
               } else {
                 var4 = -1;
@@ -812,7 +849,7 @@ final class gj implements Iterable {
               }
             }
             L72: {
-              if (-13 != (param1 ^ -1)) {
+              if (param1 != 12) {
                 break L72;
               } else {
                 var4 = -1;
@@ -838,7 +875,7 @@ final class gj implements Iterable {
               }
             }
             L75: {
-              if ((param1 ^ -1) == -15) {
+              if (param1 == 14) {
                 var4 = -1;
                 var5 = 1;
                 break L75;
@@ -847,7 +884,7 @@ final class gj implements Iterable {
               }
             }
             L76: {
-              if (-16 == (param1 ^ -1)) {
+              if (param1 == 15) {
                 var4 = 1;
                 var5 = 1;
                 break L76;
@@ -868,8 +905,28 @@ final class gj implements Iterable {
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
+        Object stackIn_5_0 = null;
+        aa stackIn_17_0 = null;
+        Object stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        Object stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        Object stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        aa stackOut_16_0 = null;
+        Object stackOut_4_0 = null;
+        Object stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        Object stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        Object stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var5 = wizardrun.field_H;
-        if (param1 == -30782) {
+        try {
           if (null != wl.field_f) {
             L0: {
               var6 = (CharSequence) (Object) param0;
@@ -886,7 +943,7 @@ final class gj implements Iterable {
               if (var3 != null) {
                 L2: {
                   var7 = (CharSequence) (Object) var3.field_mb;
-                  var4 = ta.a(param1 + 30710, var7);
+                  var4 = ta.a(-72, var7);
                   if (var4 == null) {
                     var4 = var3.field_mb;
                     break L2;
@@ -898,27 +955,53 @@ final class gj implements Iterable {
                   var3 = (aa) (Object) wl.field_f.a(false);
                   continue L1;
                 } else {
-                  return var3;
+                  stackOut_16_0 = (aa) var3;
+                  stackIn_17_0 = stackOut_16_0;
+                  return stackIn_17_0;
                 }
               } else {
                 return null;
               }
             }
           } else {
-            return null;
+            stackOut_4_0 = null;
+            stackIn_5_0 = stackOut_4_0;
+            return (aa) (Object) stackIn_5_0;
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = (Object) (Object) decompiledCaughtException;
+            stackOut_20_0 = var2;
+            stackOut_20_1 = new StringBuilder().append("gj.B(");
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param0 == null) {
+              stackOut_22_0 = stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L3;
+            } else {
+              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L3;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + -30782 + 41);
         }
     }
 
     public static void a(byte param0) {
         field_f = null;
-        if (param0 >= 70) {
-            return;
-        }
-        Object var2 = null;
-        aa discarded$0 = gj.a((byte) -10, (String) null);
     }
 
     final wl a(boolean param0, long param1) {
@@ -965,41 +1048,31 @@ final class gj implements Iterable {
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        if (param1 <= 21) {
-            return;
+        try {
+            param0.addMouseListener((java.awt.event.MouseListener) (Object) tc.field_m);
+            param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) tc.field_m);
+            param0.addFocusListener((java.awt.event.FocusListener) (Object) tc.field_m);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "gj.E(" + (param0 != null ? "{...}" : "null") + 44 + 98 + 41);
         }
-        param0.addMouseListener((java.awt.event.MouseListener) (Object) tc.field_m);
-        param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) tc.field_m);
-        param0.addFocusListener((java.awt.event.FocusListener) (Object) tc.field_m);
     }
 
     final void a(long param0, wl param1, byte param2) {
-        wl var5 = null;
-        if (null == param1.field_c) {
-          var5 = ((gj) this).field_c[(int)((long)(-1 + ((gj) this).field_d) & param0)];
-          param1.field_c = var5.field_c;
-          if (param2 > -84) {
+        if (null != param1.field_c) {
+            param1.a(false);
+        }
+        wl var5 = ((gj) this).field_c[(int)((long)(-1 + ((gj) this).field_d) & param0)];
+        param1.field_c = var5.field_c;
+        if (param2 > -84) {
             return;
-          } else {
+        }
+        try {
             param1.field_b = var5;
             param1.field_c.field_b = param1;
             param1.field_e = param0;
             param1.field_b.field_c = param1;
-            return;
-          }
-        } else {
-          param1.a(false);
-          var5 = ((gj) this).field_c[(int)((long)(-1 + ((gj) this).field_d) & param0)];
-          param1.field_c = var5.field_c;
-          if (param2 > -84) {
-            return;
-          } else {
-            param1.field_b = var5;
-            param1.field_c.field_b = param1;
-            param1.field_e = param0;
-            param1.field_b.field_c = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "gj.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

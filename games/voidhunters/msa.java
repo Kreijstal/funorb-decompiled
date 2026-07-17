@@ -17,14 +17,12 @@ final class msa extends rqa {
         field_p = null;
         field_s = null;
         field_r = null;
-        if (param0 != -61) {
-            return;
-        }
         field_o = null;
     }
 
     final static String a(CharSequence param0, int param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         StringBuilder var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -32,250 +30,238 @@ final class msa extends rqa {
         int var7 = 0;
         int var8 = 0;
         Object var9 = null;
-        StringBuilder var10 = null;
-        StringBuilder var11 = null;
+        String stackIn_40_0 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_44_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_39_0 = null;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
+        String stackOut_43_2 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        String stackOut_42_2 = null;
         var8 = VoidHunters.field_G;
-        if (param1 == 32) {
+        try {
           L0: {
-            var2 = param0.length();
-            var10 = new StringBuilder(var2);
-            var4 = 0;
-            if (var2 <= var4) {
-              break L0;
-            } else {
-              L1: {
-                L2: {
-                  L3: {
-                    var5 = param0.charAt(var4);
-                    if (97 > var5) {
-                      break L3;
-                    } else {
-                      if (var5 <= 122) {
-                        StringBuilder discarded$27 = var10.append(var5);
-                        break L2;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  L4: {
-                    if (65 > var5) {
-                      break L4;
-                    } else {
-                      if (var5 <= 90) {
-                        StringBuilder discarded$28 = var10.append(var5);
-                        break L2;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                  L5: {
-                    if (var5 < 48) {
-                      break L5;
-                    } else {
-                      if (57 >= var5) {
-                        StringBuilder discarded$29 = var10.append(var5);
-                        break L2;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  if (var5 == 46) {
-                    StringBuilder discarded$30 = var10.append(var5);
-                    break L2;
-                  } else {
-                    if (var5 == 45) {
-                      StringBuilder discarded$31 = var10.append(var5);
-                      break L2;
-                    } else {
-                      if (var5 == 42) {
-                        StringBuilder discarded$32 = var10.append(var5);
-                        break L2;
-                      } else {
-                        if (var5 != 95) {
-                          L6: {
-                            L7: {
-                              if (var5 != 32) {
-                                L8: {
-                                  var6 = aea.a(param1 ^ -90, (char) var5);
-                                  StringBuilder discarded$33 = var10.append(37);
-                                  var7 = (var6 & 244) >> -581017148;
-                                  if ((var7 ^ -1) > -11) {
-                                    StringBuilder discarded$34 = var10.append((char)(48 - -var7));
-                                    break L8;
-                                  } else {
-                                    StringBuilder discarded$35 = var10.append((char)(55 - -var7));
-                                    break L8;
-                                  }
-                                }
-                                var7 = var6 & 15;
-                                if (var7 < 10) {
-                                  StringBuilder discarded$36 = var10.append((char)(48 - -var7));
-                                  break L6;
-                                } else {
-                                  StringBuilder discarded$37 = var10.append((char)(55 - -var7));
-                                  break L7;
-                                }
-                              } else {
-                                StringBuilder discarded$38 = var10.append(43);
-                                var4++;
-                                break L7;
-                              }
-                            }
-                            var4++;
-                            break L6;
-                          }
-                          var4++;
-                          break L1;
-                        } else {
-                          StringBuilder discarded$39 = var10.append(var5);
-                          break L2;
-                        }
-                      }
-                    }
-                  }
-                }
-                var4++;
+            L1: {
+              if (param1 == 32) {
+                break L1;
+              } else {
+                var9 = null;
+                String discarded$14 = msa.a((CharSequence) null, -104);
                 break L1;
               }
-              var4++;
-              var4++;
-              var4++;
-              var4++;
-              var4++;
-              break L0;
             }
-          }
-          return var10.toString();
-        } else {
-          var9 = null;
-          String discarded$40 = msa.a((CharSequence) null, -104);
-          L9: {
-            var2 = param0.length();
-            var11 = new StringBuilder(var2);
-            var3 = var11;
+            var2_int = param0.length();
+            var3 = new StringBuilder(var2_int);
             var4 = 0;
-            if (var2 <= var4) {
-              break L9;
-            } else {
-              L10: {
-                L11: {
-                  L12: {
-                    var5 = param0.charAt(var4);
-                    if (97 > var5) {
-                      break L12;
-                    } else {
-                      if (var5 <= 122) {
-                        StringBuilder discarded$41 = var11.append(var5);
-                        break L11;
+            L2: while (true) {
+              if (var2_int <= var4) {
+                stackOut_39_0 = var3.toString();
+                stackIn_40_0 = stackOut_39_0;
+                break L0;
+              } else {
+                L3: {
+                  L4: {
+                    L5: {
+                      var5 = param0.charAt(var4);
+                      if (97 > var5) {
+                        break L5;
                       } else {
-                        break L12;
-                      }
-                    }
-                  }
-                  L13: {
-                    if (65 > var5) {
-                      break L13;
-                    } else {
-                      if (var5 <= 90) {
-                        StringBuilder discarded$42 = var11.append(var5);
-                        break L11;
-                      } else {
-                        break L13;
-                      }
-                    }
-                  }
-                  L14: {
-                    if (var5 < 48) {
-                      break L14;
-                    } else {
-                      if (57 >= var5) {
-                        StringBuilder discarded$43 = var11.append(var5);
-                        break L11;
-                      } else {
-                        break L14;
-                      }
-                    }
-                  }
-                  if (var5 == 46) {
-                    StringBuilder discarded$44 = var11.append(var5);
-                    break L11;
-                  } else {
-                    if (var5 == 45) {
-                      StringBuilder discarded$45 = var11.append(var5);
-                      break L11;
-                    } else {
-                      if (var5 == 42) {
-                        StringBuilder discarded$46 = var11.append(var5);
-                        break L11;
-                      } else {
-                        if (var5 != 95) {
-                          L15: {
-                            L16: {
-                              if (var5 != 32) {
-                                L17: {
-                                  var6 = aea.a(param1 ^ -90, (char) var5);
-                                  StringBuilder discarded$47 = var11.append(37);
-                                  var7 = (var6 & 244) >> -581017148;
-                                  if ((var7 ^ -1) > -11) {
-                                    StringBuilder discarded$48 = var11.append((char)(48 - -var7));
-                                    break L17;
-                                  } else {
-                                    StringBuilder discarded$49 = var11.append((char)(55 - -var7));
-                                    break L17;
-                                  }
-                                }
-                                var7 = var6 & 15;
-                                if (var7 < 10) {
-                                  StringBuilder discarded$50 = var11.append((char)(48 - -var7));
-                                  break L15;
-                                } else {
-                                  StringBuilder discarded$51 = var11.append((char)(55 - -var7));
-                                  break L16;
-                                }
-                              } else {
-                                StringBuilder discarded$52 = var11.append(43);
-                                var4++;
-                                break L16;
-                              }
-                            }
-                            var4++;
-                            break L15;
-                          }
-                          var4++;
-                          break L10;
+                        if (var5 <= 122) {
+                          StringBuilder discarded$15 = var3.append(var5);
+                          break L4;
                         } else {
-                          StringBuilder discarded$53 = var11.append(var5);
-                          break L11;
+                          break L5;
+                        }
+                      }
+                    }
+                    L6: {
+                      if (65 > var5) {
+                        break L6;
+                      } else {
+                        if (var5 <= 90) {
+                          StringBuilder discarded$16 = var3.append(var5);
+                          break L4;
+                        } else {
+                          break L6;
+                        }
+                      }
+                    }
+                    L7: {
+                      if (var5 < 48) {
+                        break L7;
+                      } else {
+                        if (57 >= var5) {
+                          StringBuilder discarded$17 = var3.append(var5);
+                          break L4;
+                        } else {
+                          break L7;
+                        }
+                      }
+                    }
+                    if (var5 == 46) {
+                      StringBuilder discarded$18 = var3.append(var5);
+                      break L4;
+                    } else {
+                      if (var5 == 45) {
+                        StringBuilder discarded$19 = var3.append(var5);
+                        break L4;
+                      } else {
+                        if (var5 == 42) {
+                          StringBuilder discarded$20 = var3.append(var5);
+                          break L4;
+                        } else {
+                          if (var5 != 95) {
+                            if (var5 != 32) {
+                              L8: {
+                                var6 = aea.a(param1 ^ -90, (char) var5);
+                                StringBuilder discarded$21 = var3.append(37);
+                                var7 = (var6 & 244) >> 4;
+                                if (var7 < 10) {
+                                  StringBuilder discarded$22 = var3.append((char)(48 - -var7));
+                                  break L8;
+                                } else {
+                                  StringBuilder discarded$23 = var3.append((char)(55 - -var7));
+                                  break L8;
+                                }
+                              }
+                              var7 = var6 & 15;
+                              if (var7 < 10) {
+                                StringBuilder discarded$24 = var3.append((char)(48 - -var7));
+                                break L3;
+                              } else {
+                                StringBuilder discarded$25 = var3.append((char)(55 - -var7));
+                                var4++;
+                                break L3;
+                              }
+                            } else {
+                              StringBuilder discarded$26 = var3.append(43);
+                              var4++;
+                              break L3;
+                            }
+                          } else {
+                            StringBuilder discarded$27 = var3.append(var5);
+                            break L4;
+                          }
                         }
                       }
                     }
                   }
+                  var4++;
+                  break L3;
                 }
                 var4++;
-                break L10;
+                continue L2;
               }
-              var4++;
-              var4++;
-              var4++;
-              var4++;
-              var4++;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var2 = decompiledCaughtException;
+            stackOut_41_0 = (RuntimeException) var2;
+            stackOut_41_1 = new StringBuilder().append("msa.B(");
+            stackIn_43_0 = stackOut_41_0;
+            stackIn_43_1 = stackOut_41_1;
+            stackIn_42_0 = stackOut_41_0;
+            stackIn_42_1 = stackOut_41_1;
+            if (param0 == null) {
+              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_2 = "null";
+              stackIn_44_0 = stackOut_43_0;
+              stackIn_44_1 = stackOut_43_1;
+              stackIn_44_2 = stackOut_43_2;
+              break L9;
+            } else {
+              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
+              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_2 = "{...}";
+              stackIn_44_0 = stackOut_42_0;
+              stackIn_44_1 = stackOut_42_1;
+              stackIn_44_2 = stackOut_42_2;
               break L9;
             }
           }
-          return var11.toString();
+          throw rta.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + param1 + 41);
         }
+        return stackIn_40_0;
     }
 
     final nc a(nc[] param0, int param1) {
-        if (param1 >= -119) {
-          field_o = null;
-          return new nc((Object) (Object) frb.a(56, 108));
-        } else {
-          return new nc((Object) (Object) frb.a(56, 108));
+        RuntimeException var3 = null;
+        nc stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nc stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 < -119) {
+                break L1;
+              } else {
+                field_o = null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = new nc((Object) (Object) frb.a(56, 108));
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("msa.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
+        return stackIn_3_0;
     }
 
     static {

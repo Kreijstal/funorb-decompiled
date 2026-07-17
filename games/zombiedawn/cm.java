@@ -17,11 +17,8 @@ final class cm {
 
     final static ji a(byte param0) {
         String var1 = we.p((byte) 115);
-        if (param0 != -8) {
-            field_a = null;
-        }
         if (var1 != null) {
-            if (-1 >= (var1.indexOf('@') ^ -1)) {
+            if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }

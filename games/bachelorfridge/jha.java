@@ -10,9 +10,6 @@ final class jha extends kj {
     static eaa field_i;
 
     public static void c(byte param0) {
-        if (param0 <= 95) {
-            field_g = null;
-        }
         field_g = null;
         field_j = null;
         field_i = null;
@@ -20,35 +17,98 @@ final class jha extends kj {
 
     final void a(int param0, int param1, int param2) {
         int var4 = (int)(128.0 * (1.0 - Math.cos(3.141592653589793 * (double)((jha) this).field_f / 32.0)));
-        this.a(param0, param1 + param1, param2);
+        super.a(param0, param1 + param1, param2);
         ((jha) this).field_h.a(param2, param0, var4);
     }
 
     jha(gj param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
-        ((jha) this).field_f = 64;
-        ((jha) this).field_k = param3;
-        kv var5 = param0.field_s.field_p;
-        ((jha) this).field_h = new kv(var5.field_q, var5.field_p);
-        bu.a(0, ((jha) this).field_h);
-        var5.e(0, 0, 16777215);
-        db.b(73);
+        kv var5 = null;
+        try {
+            ((jha) this).field_f = 64;
+            ((jha) this).field_k = param3;
+            var5 = param0.field_s.field_p;
+            ((jha) this).field_h = new kv(var5.field_q, var5.field_p);
+            bu.a(0, ((jha) this).field_h);
+            var5.e(0, 0, 16777215);
+            db.b(73);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "jha.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     final static kv a(vr param0, byte param1, int param2, int param3) {
-        if (!g.a(param2, param3, param1 ^ -30740, param0)) {
-            return null;
+        RuntimeException var4 = null;
+        kv stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        kv stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            if (g.a(param2, param3, param1 ^ -30740, param0)) {
+              L1: {
+                if (param1 == 4) {
+                  break L1;
+                } else {
+                  field_j = null;
+                  break L1;
+                }
+              }
+              stackOut_5_0 = ws.a((byte) 98);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              return null;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_1 = new StringBuilder().append("jha.A(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
-        if (param1 != 4) {
-            field_j = null;
-        }
-        return ws.a((byte) 98);
+        return stackIn_6_0;
     }
 
     final static sna c(int param0) {
-        if (param0 != -31068) {
-            return null;
-        }
         return mt.c(0);
     }
 
@@ -75,8 +135,9 @@ final class jha extends kj {
         int[] var15 = null;
         var6 = BachelorFridge.field_y;
         if (param0 > 21) {
+          int fieldTemp$2 = ((jha) this).field_f - 1;
           ((jha) this).field_f = ((jha) this).field_f - 1;
-          if ((((jha) this).field_f - 1 ^ -1) >= -1) {
+          if (fieldTemp$2 <= 0) {
             return true;
           } else {
             if (32 == ((jha) this).field_f) {
@@ -135,7 +196,7 @@ final class jha extends kj {
     }
 
     private static void $cfr$clinit() {
-        field_j = new byte[]{(byte)5, (byte)3, (byte)4, (byte)3, (byte)4};
+        field_j = new byte[]{(byte) 5, (byte) 3, (byte) 4, (byte) 3, (byte) 4};
         field_i = null;
     }
 }

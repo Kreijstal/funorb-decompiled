@@ -12,15 +12,12 @@ final class wg {
         if (!(null == wh.field_cb)) {
             return (java.awt.Container) (Object) wh.field_cb;
         }
-        if (param0 != -62) {
-            return null;
-        }
         return (java.awt.Container) (Object) ii.b(false);
     }
 
     public static void a(byte param0) {
         field_d = null;
-        int var1 = -12 / ((param0 - -4) / 44);
+        int var1 = 12;
     }
 
     static {

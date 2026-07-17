@@ -29,13 +29,18 @@ final class lb extends nk {
     }
 
     final static void a(int param0, t[] param1, t[] param2, int param3) {
-        wp.field_v = param2;
-        ao.field_a = param1;
-        wp.field_v[4] = null;
-        t[] var5 = ao.field_a;
-        t[] var4 = var5;
-        var5[param3] = null;
-        bo.field_d = param0;
+        t[] var5 = null;
+        try {
+            wp.field_v = param2;
+            ao.field_a = param1;
+            wp.field_v[4] = null;
+            var5 = ao.field_a;
+            t[] var4 = var5;
+            var5[param3] = null;
+            bo.field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "lb.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     final int b(int param0) {

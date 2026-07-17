@@ -14,9 +14,6 @@ final class jb {
     static long[] field_j;
 
     public static void a(int param0) {
-        if (param0 != -730625660) {
-            field_c = null;
-        }
         field_j = null;
         field_h = null;
         field_c = null;
@@ -55,38 +52,41 @@ final class jb {
         int var4 = 0;
         int var5 = 0;
         var2 = -85 / ((-63 - param0) / 46);
+        int fieldTemp$3 = ((jb) this).field_g + 1;
         ((jb) this).field_g = ((jb) this).field_g + 1;
-        ((jb) this).field_f = ((jb) this).field_f + (((jb) this).field_g + 1);
+        ((jb) this).field_f = ((jb) this).field_f + fieldTemp$3;
         var3 = 0;
         L0: while (true) {
-          if (var3 <= -257) {
+          if (var3 >= 256) {
             return;
           } else {
             L1: {
               var4 = ((jb) this).field_a[var3];
               if (0 != (2 & var3)) {
                 if ((var3 & 1) == 0) {
-                  ((jb) this).field_i = ((jb) this).field_i ^ ((jb) this).field_i << -2077604254;
+                  ((jb) this).field_i = ((jb) this).field_i ^ ((jb) this).field_i << 2;
                   break L1;
                 } else {
-                  ((jb) this).field_i = ((jb) this).field_i ^ ((jb) this).field_i >>> -685388400;
+                  ((jb) this).field_i = ((jb) this).field_i ^ ((jb) this).field_i >>> 16;
                   break L1;
                 }
               } else {
-                if (-1 == (var3 & 1)) {
-                  ((jb) this).field_i = ((jb) this).field_i ^ ((jb) this).field_i << 809404717;
+                if ((var3 & 1) == 0) {
+                  ((jb) this).field_i = ((jb) this).field_i ^ ((jb) this).field_i << 13;
                   break L1;
                 } else {
-                  ((jb) this).field_i = ((jb) this).field_i ^ ((jb) this).field_i >>> 1295133254;
+                  ((jb) this).field_i = ((jb) this).field_i ^ ((jb) this).field_i >>> 6;
                   break L1;
                 }
               }
             }
             ((jb) this).field_i = ((jb) this).field_i + ((jb) this).field_a[255 & var3 + 128];
-            var5 = ((jb) this).field_f + ((jb) this).field_i + ((jb) this).field_a[w.a(var4, 1020) >> 1589584706];
-            ((jb) this).field_a[var3] = ((jb) this).field_f + ((jb) this).field_i + ((jb) this).field_a[w.a(var4, 1020) >> 1589584706];
-            ((jb) this).field_f = ((jb) this).field_a[w.a(255, var5 >> -802088856 >> -1211521854)] + var4;
-            ((jb) this).field_d[var3] = ((jb) this).field_a[w.a(255, var5 >> -802088856 >> -1211521854)] + var4;
+            int dupTemp$4 = ((jb) this).field_f + ((jb) this).field_i + ((jb) this).field_a[w.a(var4, 1020) >> 2];
+            var5 = dupTemp$4;
+            ((jb) this).field_a[var3] = dupTemp$4;
+            int dupTemp$5 = ((jb) this).field_a[w.a(255, var5 >> 8 >> 2)] + var4;
+            ((jb) this).field_f = dupTemp$5;
+            ((jb) this).field_d[var3] = dupTemp$5;
             var3++;
             continue L0;
           }
@@ -94,13 +94,17 @@ final class jb {
     }
 
     jb(int[] param0) {
-        int var2 = 0;
-        ((jb) this).field_a = new int[256];
-        ((jb) this).field_d = new int[256];
-        for (var2 = 0; param0.length > var2; var2++) {
-            ((jb) this).field_d[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((jb) this).field_a = new int[256];
+            ((jb) this).field_d = new int[256];
+            for (var2_int = 0; param0.length > var2_int; var2_int++) {
+                ((jb) this).field_d[var2_int] = param0[var2_int];
+            }
+            this.c(119);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "jb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.c(119);
     }
 
     private final void c(int param0) {
@@ -123,21 +127,13 @@ final class jb {
         var6 = -1640531527;
         var2 = 0;
         L0: while (true) {
-          if (-5 >= (var2 ^ -1)) {
+          if (var2 >= 4) {
             var2 = 0;
             L1: while (true) {
-              if (-257 >= (var2 ^ -1)) {
-                L2: {
-                  if (param0 > 97) {
-                    break L2;
-                  } else {
-                    int discarded$1 = ((jb) this).d(-28);
-                    break L2;
-                  }
-                }
+              if (var2 >= 256) {
                 var2 = 0;
-                L3: while (true) {
-                  if ((var2 ^ -1) <= -257) {
+                L2: while (true) {
+                  if (var2 >= 256) {
                     this.a((byte) -122);
                     ((jb) this).field_b = 256;
                     return;
@@ -150,28 +146,28 @@ final class jb {
                     var8 = var8 + ((jb) this).field_a[var2 - -5];
                     var7 = var7 + ((jb) this).field_a[var2 + 4];
                     var10 = var10 + ((jb) this).field_a[7 + var2];
-                    var3 = var3 ^ var4 << -2040401269;
+                    var3 = var3 ^ var4 << 11;
                     var4 = var4 + var5;
                     var6 = var6 + var3;
-                    var4 = var4 ^ var5 >>> 2063195586;
+                    var4 = var4 ^ var5 >>> 2;
                     var7 = var7 + var4;
                     var5 = var5 + var6;
-                    var5 = var5 ^ var6 << -2103324248;
+                    var5 = var5 ^ var6 << 8;
                     var6 = var6 + var7;
                     var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> 352786096;
+                    var6 = var6 ^ var7 >>> 16;
                     var9 = var9 + var6;
                     var7 = var7 + var8;
-                    var7 = var7 ^ var8 << 523163562;
+                    var7 = var7 ^ var8 << 10;
                     var10 = var10 + var7;
                     var8 = var8 + var9;
-                    var8 = var8 ^ var9 >>> -730625660;
+                    var8 = var8 ^ var9 >>> 4;
                     var3 = var3 + var8;
                     var9 = var9 + var10;
-                    var9 = var9 ^ var10 << 531364424;
+                    var9 = var9 ^ var10 << 8;
                     var10 = var10 + var3;
                     var4 = var4 + var9;
-                    var10 = var10 ^ var3 >>> 985416425;
+                    var10 = var10 ^ var3 >>> 9;
                     var3 = var3 + var4;
                     var5 = var5 + var10;
                     ((jb) this).field_a[var2] = var3;
@@ -183,7 +179,7 @@ final class jb {
                     ((jb) this).field_a[var2 + 6] = var9;
                     ((jb) this).field_a[var2 + 7] = var10;
                     var2 += 8;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -195,28 +191,28 @@ final class jb {
                 var7 = var7 + ((jb) this).field_d[var2 - -4];
                 var5 = var5 + ((jb) this).field_d[2 + var2];
                 var3 = var3 + ((jb) this).field_d[var2];
-                var3 = var3 ^ var4 << 1937325579;
+                var3 = var3 ^ var4 << 11;
                 var4 = var4 + var5;
                 var6 = var6 + var3;
-                var4 = var4 ^ var5 >>> 1562072226;
+                var4 = var4 ^ var5 >>> 2;
                 var5 = var5 + var6;
                 var7 = var7 + var4;
-                var5 = var5 ^ var6 << 1753883240;
+                var5 = var5 ^ var6 << 8;
                 var8 = var8 + var5;
                 var6 = var6 + var7;
-                var6 = var6 ^ var7 >>> -691587248;
+                var6 = var6 ^ var7 >>> 16;
                 var7 = var7 + var8;
                 var9 = var9 + var6;
-                var7 = var7 ^ var8 << 1312020810;
+                var7 = var7 ^ var8 << 10;
                 var8 = var8 + var9;
                 var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> 1817930724;
+                var8 = var8 ^ var9 >>> 4;
                 var3 = var3 + var8;
                 var9 = var9 + var10;
-                var9 = var9 ^ var10 << 315814952;
+                var9 = var9 ^ var10 << 8;
                 var10 = var10 + var3;
                 var4 = var4 + var9;
-                var10 = var10 ^ var3 >>> -1563320631;
+                var10 = var10 ^ var3 >>> 9;
                 var3 = var3 + var4;
                 var5 = var5 + var10;
                 ((jb) this).field_a[var2] = var3;
@@ -232,28 +228,28 @@ final class jb {
               }
             }
           } else {
-            var3 = var3 ^ var4 << 1790091851;
+            var3 = var3 ^ var4 << 11;
             var4 = var4 + var5;
             var6 = var6 + var3;
-            var4 = var4 ^ var5 >>> -1126783806;
+            var4 = var4 ^ var5 >>> 2;
             var7 = var7 + var4;
             var5 = var5 + var6;
-            var5 = var5 ^ var6 << -1957745976;
+            var5 = var5 ^ var6 << 8;
             var8 = var8 + var5;
             var6 = var6 + var7;
-            var6 = var6 ^ var7 >>> -1972924752;
+            var6 = var6 ^ var7 >>> 16;
             var7 = var7 + var8;
             var9 = var9 + var6;
-            var7 = var7 ^ var8 << -209115702;
+            var7 = var7 ^ var8 << 10;
             var8 = var8 + var9;
             var10 = var10 + var7;
-            var8 = var8 ^ var9 >>> 1496973252;
+            var8 = var8 ^ var9 >>> 4;
             var9 = var9 + var10;
             var3 = var3 + var8;
-            var9 = var9 ^ var10 << 800835080;
+            var9 = var9 ^ var10 << 8;
             var4 = var4 + var9;
             var10 = var10 + var3;
-            var10 = var10 ^ var3 >>> -1065688375;
+            var10 = var10 ^ var3 >>> 9;
             var5 = var5 + var10;
             var3 = var3 + var4;
             var2++;
@@ -270,8 +266,9 @@ final class jb {
         if (param0 != 3) {
             return 22;
         }
+        int fieldTemp$0 = ((jb) this).field_b - 1;
         ((jb) this).field_b = ((jb) this).field_b - 1;
-        return ((jb) this).field_d[((jb) this).field_b - 1];
+        return ((jb) this).field_d[fieldTemp$0];
     }
 
     static {

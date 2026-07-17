@@ -16,69 +16,90 @@ class wk extends fm {
 
     final static void a(byte param0, tj param1) {
         tj var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var3 = client.field_A ? 1 : 0;
-        param1.b((byte) 111);
-        var2 = (tj) (Object) i.field_b.c((byte) -61);
-        L0: while (true) {
-          if (var2 != null) {
-            if (var2.a(-985, param1)) {
-              var2 = (tj) (Object) i.field_b.d(true);
-              continue L0;
-            } else {
-              if (param0 > 3) {
-                if (var2 == null) {
-                  i.field_b.a((bh) (Object) param1, 2777);
-                  return;
-                } else {
-                  fm.a((byte) 114, (bh) (Object) param1, (bh) (Object) var2);
-                  return;
-                }
+        try {
+          param1.b((byte) 111);
+          var2 = (tj) (Object) i.field_b.c((byte) -61);
+          L0: while (true) {
+            L1: {
+              if (var2 == null) {
+                break L1;
               } else {
-                L1: {
-                  wk.c(31);
-                  if (var2 != null) {
-                    fm.a((byte) 114, (bh) (Object) param1, (bh) (Object) var2);
-                    break L1;
-                  } else {
-                    i.field_b.a((bh) (Object) param1, 2777);
-                    break L1;
-                  }
+                if (!var2.a(-985, param1)) {
+                  break L1;
+                } else {
+                  var2 = (tj) (Object) i.field_b.d(true);
+                  continue L0;
                 }
-                return;
               }
             }
-          } else {
-            if (param0 > 3) {
-              if (var2 == null) {
-                i.field_b.a((bh) (Object) param1, 2777);
-                return;
+            L2: {
+              if (param0 > 3) {
+                break L2;
               } else {
-                fm.a((byte) 114, (bh) (Object) param1, (bh) (Object) var2);
-                return;
-              }
-            } else {
-              L2: {
                 wk.c(31);
-                if (var2 != null) {
-                  fm.a((byte) 114, (bh) (Object) param1, (bh) (Object) var2);
-                  break L2;
-                } else {
-                  i.field_b.a((bh) (Object) param1, 2777);
-                  break L2;
-                }
+                break L2;
               }
+            }
+            if (var2 != null) {
+              fm.a((byte) 114, (bh) (Object) param1, (bh) (Object) var2);
+              return;
+            } else {
+              i.field_b.a((bh) (Object) param1, 2777);
               return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var2_ref;
+            stackOut_11_1 = new StringBuilder().append("wk.H(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
+          }
+          throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
     }
 
     final static int b(int param0) {
-        if (param0 != 3) {
-            field_k = null;
-            return -ad.field_a + fb.field_f;
-        }
         return -ad.field_a + fb.field_f;
     }
 
@@ -92,15 +113,14 @@ class wk extends fm {
     }
 
     final static void a(int param0, int param1, ff param2) {
-        if (param0 != 3) {
-          field_i = false;
-          cd.field_c.a((bh) (Object) param2, 2777);
-          mc.a(true, param2, param1);
-          return;
-        } else {
-          cd.field_c.a((bh) (Object) param2, 2777);
-          mc.a(true, param2, param1);
-          return;
+        try {
+            if (param0 != 3) {
+                field_i = false;
+            }
+            cd.field_c.a((bh) (Object) param2, 2777);
+            mc.a(true, param2, param1);
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "wk.M(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -139,7 +159,11 @@ class wk extends fm {
         if (param1 < 34) {
             return;
         }
-        param0.a(((wk) this).field_h, true);
+        try {
+            param0.a(((wk) this).field_h, true);
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "wk.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void c(int param0) {
@@ -168,8 +192,12 @@ class wk extends fm {
     }
 
     wk(long param0, String param1) {
-        ((wk) this).field_m = param0;
-        ((wk) this).field_h = param1;
+        try {
+            ((wk) this).field_m = param0;
+            ((wk) this).field_h = param1;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "wk.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

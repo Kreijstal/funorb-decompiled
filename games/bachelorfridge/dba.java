@@ -15,16 +15,10 @@ final class dba {
 
     final static int b(byte param0) {
         ga.field_c.b((byte) 102);
-        if (!aka.field_G.c((byte) 69)) {
-          return sca.a(param0 ^ 72);
-        } else {
-          if (param0 != 72) {
-            field_a = null;
+        if (aka.field_G.c((byte) 69)) {
             return 0;
-          } else {
-            return 0;
-          }
         }
+        return sca.a(0);
     }
 
     static {

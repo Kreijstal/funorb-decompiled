@@ -35,58 +35,72 @@ final class nd {
 
     final static pe a(int param0, String param1) {
         String var2 = null;
-        Object var3 = null;
-        pe var3_ref = null;
+        RuntimeException var2_ref = null;
+        pe var3 = null;
+        String var4 = null;
         int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        CharSequence var10 = null;
-        CharSequence var11 = null;
-        CharSequence var12 = null;
-        var3 = null;
+        CharSequence var6 = null;
+        CharSequence var7 = null;
+        Object stackIn_7_0 = null;
+        pe stackIn_19_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        pe stackOut_18_0 = null;
+        Object stackOut_6_0 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         var5 = MinerDisturbance.field_ab;
-        if (ae.field_a != null) {
-          if (param1 != null) {
-            if (param1.length() != 0) {
-              var10 = (CharSequence) (Object) param1;
-              var2 = cl.a(-95, var10);
-              if (var2 != null) {
-                if (param0 == 1) {
-                  var3_ref = (pe) (Object) ae.field_a.a(-7895, (long)var2.hashCode());
-                  L0: while (true) {
-                    if (var3_ref != null) {
-                      var11 = (CharSequence) (Object) var3_ref.field_ob;
-                      var6 = cl.a(-95, var11);
-                      if (var6.equals((Object) (Object) var2)) {
-                        return var3_ref;
-                      } else {
-                        var3_ref = (pe) (Object) ae.field_a.c(1);
-                        continue L0;
-                      }
+        try {
+          if (ae.field_a != null) {
+            if (param1 != null) {
+              if (param1.length() != 0) {
+                var6 = (CharSequence) (Object) param1;
+                var2 = cl.a(-95, var6);
+                if (var2 != null) {
+                  L0: {
+                    if (param0 == 1) {
+                      break L0;
                     } else {
-                      return null;
+                      field_a = null;
+                      break L0;
                     }
                   }
-                } else {
-                  field_a = null;
-                  var3_ref = (pe) (Object) ae.field_a.a(-7895, (long)var2.hashCode());
+                  var3 = (pe) (Object) ae.field_a.a(-7895, (long)var2.hashCode());
                   L1: while (true) {
-                    if (var3_ref != null) {
-                      var12 = (CharSequence) (Object) var3_ref.field_ob;
-                      var7 = cl.a(-95, var12);
-                      if (var7.equals((Object) (Object) var2)) {
-                        return var3_ref;
+                    if (var3 != null) {
+                      var7 = (CharSequence) (Object) var3.field_ob;
+                      var4 = cl.a(-95, var7);
+                      if (var4.equals((Object) (Object) var2)) {
+                        stackOut_18_0 = (pe) var3;
+                        stackIn_19_0 = stackOut_18_0;
+                        return stackIn_19_0;
                       } else {
-                        var3_ref = (pe) (Object) ae.field_a.c(1);
+                        var3 = (pe) (Object) ae.field_a.c(1);
                         continue L1;
                       }
                     } else {
                       return null;
                     }
                   }
+                } else {
+                  return null;
                 }
               } else {
-                return null;
+                stackOut_6_0 = null;
+                stackIn_7_0 = stackOut_6_0;
+                return (pe) (Object) stackIn_7_0;
               }
             } else {
               return null;
@@ -94,15 +108,39 @@ final class nd {
           } else {
             return null;
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2_ref;
+            stackOut_22_1 = new StringBuilder().append("nd.A(").append(param0).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param1 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L2;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L2;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
     }
 
     public static void a(int param0) {
-        if (param0 < 17) {
-            return;
-        }
         field_c = null;
         field_f = null;
         field_d = null;

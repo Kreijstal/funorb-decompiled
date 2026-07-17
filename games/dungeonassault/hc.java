@@ -13,76 +13,35 @@ final class hc {
     static int field_d;
 
     final static boolean b(int param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        if (param0 == 1) {
-          if (!wh.field_d) {
-            if (ed.c(true)) {
-              return true;
-            } else {
-              return false;
-            }
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_2_0 = 0;
+        if (!wh.field_d) {
+          if (ed.c(true)) {
+            return true;
           } else {
-            if (null == gm.field_d) {
-              L0: {
-                if (!ed.c(true)) {
-                  stackOut_20_0 = 0;
-                  stackIn_21_0 = stackOut_20_0;
-                  break L0;
-                } else {
-                  stackOut_19_0 = 1;
-                  stackIn_21_0 = stackOut_19_0;
-                  break L0;
-                }
-              }
-              return stackIn_21_0 != 0;
-            } else {
-              stackOut_15_0 = 1;
-              stackIn_17_0 = stackOut_15_0;
-              return stackIn_17_0 != 0;
-            }
+            return false;
           }
         } else {
-          hc.a(-2);
-          if (wh.field_d) {
-            if (null != gm.field_d) {
-              return true;
-            } else {
-              L1: {
-                if (!ed.c(true)) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
-                  break L1;
-                } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
-                  break L1;
-                }
-              }
-              return stackIn_10_0 != 0;
-            }
-          } else {
-            L2: {
+          if (null == gm.field_d) {
+            L0: {
               if (!ed.c(true)) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L2;
+                stackOut_7_0 = 0;
+                stackIn_8_0 = stackOut_7_0;
+                break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L2;
+                stackOut_6_0 = 1;
+                stackIn_8_0 = stackOut_6_0;
+                break L0;
               }
             }
-            return stackIn_5_0 != 0;
+            return stackIn_8_0 != 0;
+          } else {
+            stackOut_2_0 = 1;
+            stackIn_4_0 = stackOut_2_0;
+            return stackIn_4_0 != 0;
           }
         }
     }
@@ -198,7 +157,7 @@ final class hc {
                 if (-1 == var9) {
                   break L3;
                 } else {
-                  if (0 == (var10 ^ -1)) {
+                  if (var10 == -1) {
                     break L3;
                   } else {
                     var12 = var24.indexOf(".java:", var9);
@@ -276,7 +235,7 @@ final class hc {
                 if (-1 == var9) {
                   break L6;
                 } else {
-                  if (0 == (var10 ^ -1)) {
+                  if (var10 == -1) {
                     break L6;
                   } else {
                     var12 = var34.indexOf(".java:", var9);

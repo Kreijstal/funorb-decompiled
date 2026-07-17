@@ -181,7 +181,7 @@ public final class client extends bd {
         Object var3_ref = null;
         int var3 = 0;
         int var4 = 0;
-        Object var4_ref = null;
+        int[] var4_ref = null;
         int[] var4_ref_int__ = null;
         uf var5_ref_uf = null;
         int var5 = 0;
@@ -259,7 +259,7 @@ public final class client extends bd {
           if (kf.field_I == null) {
             break L0;
           } else {
-            if ((kf.field_I.field_g.field_i ^ -1) > -4) {
+            if (kf.field_I.field_g.field_i < 3) {
               break L0;
             } else {
               var2_int = 1;
@@ -271,7 +271,7 @@ public final class client extends bd {
           if (null == ce.field_C) {
             break L1;
           } else {
-            if (-4 >= (ce.field_C.field_g.field_i ^ -1)) {
+            if (ce.field_C.field_g.field_i >= 3) {
               var2_int = 1;
               break L1;
             } else {
@@ -296,10 +296,10 @@ public final class client extends bd {
               break L2;
             } else {
               L4: {
-                if ((kd.field_u ^ -1) <= -16) {
+                if (kd.field_u >= 15) {
                   break L4;
                 } else {
-                  if ((jf.field_c ^ -1) <= -16) {
+                  if (jf.field_c >= 15) {
                     break L4;
                   } else {
                     if (8 > ak.field_d) {
@@ -315,10 +315,10 @@ public final class client extends bd {
                 if (15 >= kd.field_u) {
                   break L5;
                 } else {
-                  if ((jf.field_c ^ -1) >= -16) {
+                  if (jf.field_c <= 15) {
                     break L5;
                   } else {
-                    if (-2 > (ak.field_d ^ -1)) {
+                    if (ak.field_d > 1) {
                       ak.field_d = ak.field_d - 1;
                       break L5;
                     } else {
@@ -409,15 +409,15 @@ public final class client extends bd {
               break L11;
             } else {
               if (ai.f((byte) -127)) {
-                if ((gb.field_Vb ^ -1) == (gb.field_Ob ^ -1)) {
+                if (~gb.field_Vb == ~gb.field_Ob) {
                   L12: {
                     var3 = tm.a((byte) -117);
-                    if (-3 != (var3 ^ -1)) {
-                      if ((var3 ^ -1) == -4) {
+                    if (var3 != 2) {
+                      if (var3 == 3) {
                         jk.a(2, true);
                         break L12;
                       } else {
-                        if ((var3 ^ -1) != -5) {
+                        if (var3 != 4) {
                           break L12;
                         } else {
                           og.a(true, 3, true);
@@ -478,7 +478,7 @@ public final class client extends bd {
                         break L16;
                       }
                     }
-                    if ((var3 ^ -1) != -3) {
+                    if (var3 != 2) {
                       break L14;
                     } else {
                       pk.a((byte) -17, se.h(25144));
@@ -495,7 +495,7 @@ public final class client extends bd {
                     if (gb.field_Vb == gb.field_Ob) {
                       L17: {
                         var3 = we.a(false);
-                        if ((var3 ^ -1) != -2) {
+                        if (var3 != 1) {
                           break L17;
                         } else {
                           og.a(im.field_f, fe.field_b, true);
@@ -561,7 +561,7 @@ public final class client extends bd {
                 if (null == hh.field_a) {
                   break L24;
                 } else {
-                  if ((ef.field_N ^ -1) >= -1) {
+                  if (ef.field_N <= 0) {
                     stackOut_336_0 = 0;
                     stackIn_337_0 = stackOut_336_0;
                     break L23;
@@ -606,7 +606,7 @@ public final class client extends bd {
                 L29: {
                   L30: {
                     var4 = ((client) this).g((byte) 125);
-                    if ((var4 ^ -1) == -1) {
+                    if (var4 == 0) {
                       break L30;
                     } else {
                       if (var4 == 1) {
@@ -652,7 +652,7 @@ public final class client extends bd {
                 }
                 L33: {
                   var5 = 0;
-                  if ((var4 ^ -1) != -3) {
+                  if (var4 != 2) {
                     break L33;
                   } else {
                     var5 = 1;
@@ -713,9 +713,9 @@ public final class client extends bd {
             }
             return;
           } else {
-            if ((bh.field_k ^ -1) != -10) {
+            if (bh.field_k != 9) {
               if (77 != bh.field_k) {
-                if (-15 == (bh.field_k ^ -1)) {
+                if (bh.field_k == 14) {
                   we.a((byte) 66);
                   cd.a(true);
                   nk.a(id.g(8192), rd.b(-95), 0, 5, oe.b(-10498, 2000), qi.e((byte) 117), vl.field_A, 150, oe.b(-10498, 8), 1024);
@@ -726,7 +726,7 @@ public final class client extends bd {
                   var3_ref = (Object) (Object) j.field_d;
                   var4 = 0;
                   L38: while (true) {
-                    if ((var4 ^ -1) <= -9) {
+                    if (var4 >= 8) {
                       continue L21;
                     } else {
                       ((int[]) var3_ref)[var4] = 0;
@@ -735,9 +735,9 @@ public final class client extends bd {
                     }
                   }
                 } else {
-                  if ((bh.field_k ^ -1) != -16) {
+                  if (bh.field_k != 15) {
                     L39: {
-                      if ((bh.field_k ^ -1) != -11) {
+                      if (bh.field_k != 10) {
                         break L39;
                       } else {
                         if (uh.field_b) {
@@ -748,21 +748,21 @@ public final class client extends bd {
                         }
                       }
                     }
-                    if (-76 == (bh.field_k ^ -1)) {
+                    if (bh.field_k == 75) {
                       var3_ref = (Object) (Object) b.h(-123);
-                      var4_ref = var3_ref;
+                      var4_ref = (int[]) var3_ref;
                       var5_ref_uf = de.field_V;
                       var6_int = ((wl) (Object) var5_ref_uf).d((byte) -45);
                       var7 = 0;
                       L40: while (true) {
-                        if ((var7 ^ -1) <= (var6_int ^ -1)) {
+                        if (~var7 <= ~var6_int) {
                           L41: {
                             if (nm.field_Qb) {
-                              var4_ref = var3_ref;
+                              var4_ref = (int[]) var3_ref;
                               var5_ref_int__ = o.field_g;
                               var6_int = 0;
                               L42: while (true) {
-                                if (-9 >= (var6_int ^ -1)) {
+                                if (var6_int >= 8) {
                                   L43: {
                                     if (null == kf.field_I) {
                                       break L43;
@@ -772,7 +772,7 @@ public final class client extends bd {
                                       } else {
                                         var4 = 0;
                                         L44: while (true) {
-                                          if ((var4 ^ -1) <= -32) {
+                                          if (var4 >= 31) {
                                             break L43;
                                           } else {
                                             L45: {
@@ -794,7 +794,7 @@ public final class client extends bd {
                                   var5_ref_int__ = (int[]) var3_ref;
                                   var6_int = 0;
                                   L46: while (true) {
-                                    if ((var6_int ^ -1) <= -9) {
+                                    if (var6_int >= 8) {
                                       break L41;
                                     } else {
                                       var4_ref_int__[var6_int] = de.b(var4_ref_int__[var6_int], var5_ref_int__[var6_int]);
@@ -803,7 +803,7 @@ public final class client extends bd {
                                     }
                                   }
                                 } else {
-                                  ((int[]) var4_ref)[var6_int] = lb.a(((int[]) var4_ref)[var6_int], var5_ref_int__[var6_int] ^ -1);
+                                  var4_ref[var6_int] = lb.a(var4_ref[var6_int], ~var5_ref_int__[var6_int]);
                                   var6_int++;
                                   continue L42;
                                 }
@@ -816,7 +816,7 @@ public final class client extends bd {
                           var5_ref_int__ = (int[]) var3_ref;
                           var6_int = 0;
                           L47: while (true) {
-                            if (-9 >= (var6_int ^ -1)) {
+                            if (var6_int >= 8) {
                               continue L21;
                             } else {
                               var4_ref_int__[var6_int] = de.b(var4_ref_int__[var6_int], var5_ref_int__[var6_int]);
@@ -825,7 +825,7 @@ public final class client extends bd {
                             }
                           }
                         } else {
-                          ((int[]) var4_ref)[var7] = ((wl) (Object) var5_ref_uf).i(7553);
+                          var4_ref[var7] = ((wl) (Object) var5_ref_uf).i(7553);
                           var7++;
                           continue L40;
                         }
@@ -883,7 +883,7 @@ public final class client extends bd {
                                       stackOut_221_0 = (lk) var5_ref_lk;
                                       stackIn_223_0 = stackOut_221_0;
                                       stackIn_222_0 = stackOut_221_0;
-                                      if ((var4 ^ -1) != (((qc) var3_ref).field_P ^ -1)) {
+                                      if (~var4 != ~((qc) var3_ref).field_P) {
                                         stackOut_223_0 = (lk) (Object) stackIn_223_0;
                                         stackOut_223_1 = 0;
                                         stackIn_224_0 = stackOut_223_0;
@@ -912,7 +912,7 @@ public final class client extends bd {
                                       L54: {
                                         var4 = de.field_V.d((byte) -124);
                                         var5 = de.field_V.d((byte) -116);
-                                        if ((((qc) var3_ref).field_g.field_b ^ -1) >= (var4 ^ -1)) {
+                                        if (~((qc) var3_ref).field_g.field_b >= ~var4) {
                                           break L54;
                                         } else {
                                           if (((qc) var3_ref).field_g.field_p[var4] == null) {
@@ -920,11 +920,11 @@ public final class client extends bd {
                                           } else {
                                             var6 = ((qc) var3_ref).field_g.field_p[var4];
                                             L55: while (true) {
-                                              if ((var6.field_fb ^ -1) <= (var6.field_gb ^ -1)) {
+                                              if (~var6.field_fb <= ~var6.field_gb) {
                                                 L56: {
                                                   ((qc) var3_ref).a(18, var6, var4);
                                                   ((qc) var3_ref).field_g.field_p[var4] = null;
-                                                  ((qc) var3_ref).field_g.field_d = ((qc) var3_ref).field_g.field_d & (1 << var4 ^ -1);
+                                                  ((qc) var3_ref).field_g.field_d = ((qc) var3_ref).field_g.field_d & ~(1 << var4);
                                                   ((qc) var3_ref).field_g.field_i = ((qc) var3_ref).field_g.field_i - 1;
                                                   if (((qc) var3_ref).field_P == var4) {
                                                     cd.a(true);
@@ -960,7 +960,7 @@ public final class client extends bd {
                                       si.a(85);
                                       continue L21;
                                     } else {
-                                      if (-64 == (bh.field_k ^ -1)) {
+                                      if (bh.field_k == 63) {
                                         var4 = de.field_V.d((byte) -53);
                                         var5 = de.field_V.d((byte) -118);
                                         var6_int = sm.field_e + -de.field_V.field_n;
@@ -978,8 +978,8 @@ public final class client extends bd {
                                           continue L21;
                                         }
                                       } else {
-                                        if (-65 != (bh.field_k ^ -1)) {
-                                          if (-66 == (bh.field_k ^ -1)) {
+                                        if (bh.field_k != 64) {
+                                          if (bh.field_k == 65) {
                                             var4 = de.field_V.d((byte) -60);
                                             var5_ref_lk = ((qc) var3_ref).field_g.field_p[var4];
                                             L57: while (true) {
@@ -988,10 +988,10 @@ public final class client extends bd {
                                                 continue L57;
                                               } else {
                                                 L58: {
-                                                  if ((((qc) var3_ref).field_P ^ -1) == (var4 ^ -1)) {
+                                                  if (~((qc) var3_ref).field_P == ~var4) {
                                                     var6_int = 0;
                                                     L59: while (true) {
-                                                      if ((var5_ref_lk.field_jb ^ -1) >= (var6_int ^ -1)) {
+                                                      if (~var5_ref_lk.field_jb >= ~var6_int) {
                                                         break L58;
                                                       } else {
                                                         fh.field_h = fh.field_h + 30000;
@@ -1007,7 +1007,7 @@ public final class client extends bd {
                                                 var5_ref_lk.field_jb = 0;
                                                 var5_ref_lk.k(-9897);
                                                 ((qc) var3_ref).field_w = 0;
-                                                if ((var4 ^ -1) == (((qc) var3_ref).field_P ^ -1)) {
+                                                if (~var4 == ~((qc) var3_ref).field_P) {
                                                   ((qc) var3_ref).field_p.a((bh) (Object) new in(cb.field_i, 13, true), 2777);
                                                   ((qc) var3_ref).field_ob = true;
                                                   continue L21;
@@ -1017,7 +1017,7 @@ public final class client extends bd {
                                               }
                                             }
                                           } else {
-                                            if ((bh.field_k ^ -1) == -67) {
+                                            if (bh.field_k == 66) {
                                               var4 = de.field_V.d((byte) -22);
                                               var5 = de.field_V.d((byte) -76);
                                               var6 = ((qc) var3_ref).field_g.field_p[var4];
@@ -1038,14 +1038,14 @@ public final class client extends bd {
                                                 ((qc) var3_ref).field_g.field_p[var4].a(var5_ref_rf, (byte) -121);
                                                 continue L21;
                                               } else {
-                                                if ((bh.field_k ^ -1) != -69) {
+                                                if (bh.field_k != 68) {
                                                   if (bh.field_k == 69) {
                                                     ((qc) var3_ref).field_T = de.field_V.d((byte) -78);
                                                     ((qc) var3_ref).field_r = true;
                                                     ((qc) var3_ref).field_p.a((bh) (Object) new in(bn.field_c, 8, false), 2777);
                                                     continue L21;
                                                   } else {
-                                                    if ((bh.field_k ^ -1) == -77) {
+                                                    if (bh.field_k == 76) {
                                                       ((qc) var3_ref).field_g.field_f[((qc) var3_ref).field_g.field_o] = de.field_V.g((byte) -89);
                                                       ((qc) var3_ref).field_g.field_o = ((qc) var3_ref).field_g.field_o + 1;
                                                       continue L21;
@@ -1060,12 +1060,12 @@ public final class client extends bd {
                                                               ((qc) var3_ref).field_g.field_a = de.field_V.d((byte) -77);
                                                               continue L21;
                                                             } else {
-                                                              if ((bh.field_k ^ -1) != -75) {
+                                                              if (bh.field_k != 74) {
                                                                 break L52;
                                                               } else {
                                                                 ((qc) var3_ref).field_yb = de.field_V.d((byte) -31);
-                                                                ((qc) var3_ref).field_g.field_d = ((qc) var3_ref).field_g.field_d & (((qc) var3_ref).field_yb ^ -1);
-                                                                ((qc) var3_ref).field_g.field_a = ((qc) var3_ref).field_g.field_a & (((qc) var3_ref).field_yb ^ -1);
+                                                                ((qc) var3_ref).field_g.field_d = ((qc) var3_ref).field_g.field_d & ~((qc) var3_ref).field_yb;
+                                                                ((qc) var3_ref).field_g.field_a = ((qc) var3_ref).field_g.field_a & ~((qc) var3_ref).field_yb;
                                                                 continue L21;
                                                               }
                                                             }
@@ -1078,7 +1078,7 @@ public final class client extends bd {
                                                         var4 = de.field_V.g((byte) -104);
                                                         var5 = 0;
                                                         L61: while (true) {
-                                                          if ((var5 ^ -1) <= (((qc) var3_ref).field_g.field_b ^ -1)) {
+                                                          if (~var5 <= ~((qc) var3_ref).field_g.field_b) {
                                                             L62: {
                                                               ((qc) var3_ref).field_g.a(var4, (byte) -70);
                                                               ((qc) var3_ref).a(100);
@@ -1091,7 +1091,7 @@ public final class client extends bd {
                                                             }
                                                             L63: {
                                                               L64: {
-                                                                if (-1 < (var4 ^ -1)) {
+                                                                if (var4 < 0) {
                                                                   break L64;
                                                                 } else {
                                                                   if (!((qc) var3_ref).field_ob) {
@@ -1151,12 +1151,12 @@ public final class client extends bd {
                                             ((qc) var3_ref).field_v[var4].field_g.a((bh) (Object) var6_ref, 2777);
                                             var7 = de.field_V.a(117);
                                             var8 = de.field_V.a(127) + var7;
-                                            if ((var8 ^ -1) < (var7 ^ -1)) {
+                                            if (~var8 < ~var7) {
                                               var9 = var7;
                                               L68: while (true) {
                                                 if (var8 <= var9) {
                                                   L69: while (true) {
-                                                    if ((var5_ref_lk.field_fb ^ -1) <= (var5_ref_lk.field_gb ^ -1)) {
+                                                    if (~var5_ref_lk.field_fb <= ~var5_ref_lk.field_gb) {
                                                       var5_ref_lk.field_gb = var8;
                                                       var5_ref_lk.field_fb = var7;
                                                       break L67;
@@ -1174,7 +1174,7 @@ public final class client extends bd {
                                                 } else {
                                                   L70: {
                                                     var10 = new rf(var9);
-                                                    if ((var4 ^ -1) == (((qc) var3_ref).field_P ^ -1)) {
+                                                    if (~var4 == ~((qc) var3_ref).field_P) {
                                                       var10.field_m = -var7 + var9;
                                                       break L70;
                                                     } else {
@@ -1224,10 +1224,10 @@ public final class client extends bd {
                       L72: {
                         var3 = de.field_V.e(3);
                         var4 = var3 & 15;
-                        var5 = 3 & var3 >> 1315490500;
-                        var6_int = var3 >> -1189014074 & 7;
-                        var7 = (var3 & 3812) >> -1446042807;
-                        if ((var3 & 4096 ^ -1) == -1) {
+                        var5 = 3 & var3 >> 4;
+                        var6_int = var3 >> 6 & 7;
+                        var7 = (var3 & 3812) >> 9;
+                        if ((var3 & 4096) == 0) {
                           stackOut_158_0 = 0;
                           stackIn_159_0 = stackOut_158_0;
                           break L72;
@@ -1263,7 +1263,7 @@ public final class client extends bd {
                       }
                       L75: {
                         var10_int = stackIn_165_0;
-                        if (-1 == (var3 & 32768 ^ -1)) {
+                        if ((var3 & 32768) == 0) {
                           stackOut_167_0 = 0;
                           stackIn_168_0 = stackOut_167_0;
                           break L75;
@@ -1279,7 +1279,7 @@ public final class client extends bd {
                         var13 = de.field_V.d((byte) -92);
                         var14 = de.field_V.d((byte) -116);
                         var15 = de.field_V.g((byte) -100);
-                        if ((var15 ^ -1) > -1) {
+                        if (var15 < 0) {
                           var15 = -2;
                           break L76;
                         } else {
@@ -1313,7 +1313,7 @@ public final class client extends bd {
                           L79: while (true) {
                             if (var20 >= var18.field_g.field_b) {
                               L80: {
-                                if (-3 > (var19 ^ -1)) {
+                                if (var19 > 2) {
                                   var18.field_Ab = 100;
                                   break L80;
                                 } else {
@@ -1322,7 +1322,7 @@ public final class client extends bd {
                               }
                               L81: {
                                 var20 = var18.field_P;
-                                if (-1 < (var20 ^ -1)) {
+                                if (var20 < 0) {
                                   var20 = 0;
                                   L82: while (true) {
                                     if (200 == var18.field_V[var20]) {
@@ -1355,7 +1355,7 @@ public final class client extends bd {
                                 var18.field_i = var20;
                                 var18.field_D = var20;
                                 var18.field_lb = var20;
-                                if (-59 == (bh.field_k ^ -1)) {
+                                if (bh.field_k == 58) {
                                   kf.field_I = var18;
                                   fm.field_b = true;
                                   eb.a(58);
@@ -1381,7 +1381,7 @@ public final class client extends bd {
                               continue L21;
                             } else {
                               L87: {
-                                if (-1 == (var17 & 1 << var20 ^ -1)) {
+                                if ((var17 & 1 << var20) == 0) {
                                   break L87;
                                 } else {
                                   var18.field_V[var20] = 200;
@@ -1642,7 +1642,7 @@ public final class client extends bd {
                                           if (1 == var5) {
                                             break L8;
                                           } else {
-                                            if ((var5 ^ -1) != -3) {
+                                            if (var5 != 2) {
                                               break L7;
                                             } else {
                                               break L8;
@@ -1767,7 +1767,7 @@ public final class client extends bd {
                                   if (null == hh.field_a) {
                                     break L18;
                                   } else {
-                                    if (-1 <= (ef.field_N ^ -1)) {
+                                    if (ef.field_N <= 0) {
                                       stackOut_204_0 = 0;
                                       stackIn_205_0 = stackOut_204_0;
                                       break L17;
@@ -1868,7 +1868,7 @@ public final class client extends bd {
                       if (hh.field_a == null) {
                         break L26;
                       } else {
-                        if (-1 <= (ef.field_N ^ -1)) {
+                        if (ef.field_N <= 0) {
                           stackOut_250_0 = 0;
                           stackIn_251_0 = stackOut_250_0;
                           break L25;
@@ -1900,14 +1900,14 @@ public final class client extends bd {
                   }
                   L29: {
                     if (var5 != 0) {
-                      if ((ef.field_N ^ -1) > (dl.field_M ^ -1)) {
+                      if (~ef.field_N > ~dl.field_M) {
                         ef.field_N = ef.field_N + 1;
                         break L29;
                       } else {
                         break L29;
                       }
                     } else {
-                      if (-1 > (ef.field_N ^ -1)) {
+                      if (ef.field_N > 0) {
                         ef.field_N = ef.field_N - 1;
                         break L29;
                       } else {
@@ -1944,7 +1944,7 @@ public final class client extends bd {
                             if (kf.field_I == null) {
                               break L31;
                             } else {
-                              if (-39 < (kf.field_I.field_hb ^ -1)) {
+                              if (kf.field_I.field_hb < 38) {
                                 ue.field_b = dn.field_p[kf.field_I.field_g.field_l];
                                 break L31;
                               } else {
@@ -1992,7 +1992,7 @@ public final class client extends bd {
                   }
                 } else {
                   if (ve.field_nc != gb.field_Ob) {
-                    if ((gb.field_Ob ^ -1) == (g.field_L ^ -1)) {
+                    if (~gb.field_Ob == ~g.field_L) {
                       L34: {
                         if (!ph.n(-30146)) {
                           L35: {
@@ -2017,11 +2017,11 @@ public final class client extends bd {
                                 break L34;
                               } else {
                                 if (fe.field_b != 4) {
-                                  if (-6 == (fe.field_b ^ -1)) {
+                                  if (fe.field_b == 5) {
                                     h.field_d = uh.a(o.field_g, false, 0, -111);
                                     break L34;
                                   } else {
-                                    if (-7 != (fe.field_b ^ -1)) {
+                                    if (fe.field_b != 6) {
                                       if (fe.field_b == 8) {
                                         am.field_a = ib.a((byte) 82, false);
                                         break L34;
@@ -2053,7 +2053,7 @@ public final class client extends bd {
                       break L1;
                     } else {
                       rf.field_f = rf.field_f - 1;
-                      if (-1 != (rf.field_f ^ -1)) {
+                      if (rf.field_f != 0) {
                         break L1;
                       } else {
                         gb.field_Ob = gb.field_Vb;
@@ -2501,7 +2501,7 @@ public final class client extends bd {
                     }
                   }
                   L5: {
-                    if (-2 > (ca.field_kb ^ -1)) {
+                    if (ca.field_kb > 1) {
                       sg.field_b.a();
                       break L5;
                     } else {
@@ -2511,7 +2511,7 @@ public final class client extends bd {
                   }
                   L6: while (true) {
                     L7: {
-                      if ((rb.field_e ^ -1) == -1) {
+                      if (rb.field_e == 0) {
                         ai.e((byte) 84);
                         break L7;
                       } else {
@@ -2540,7 +2540,7 @@ public final class client extends bd {
                         if (jb.field_a) {
                           break L10;
                         } else {
-                          if ((ca.field_kb ^ -1) < (rb.field_e ^ -1)) {
+                          if (~ca.field_kb < ~rb.field_e) {
                             continue L6;
                           } else {
                             break L10;
@@ -2769,7 +2769,7 @@ public final class client extends bd {
                     }
                     L30: {
                       if (cn.f((byte) 99)) {
-                        hk.a(320 + -(wk.b(3) / 2) - 34, -(pj.d(20) / 2) + 240 - 24, wk.b(3) + 68, pj.d(126) - -48, 0, 200);
+                        hk.a(320 + -(wk.b(3) / 2) - 34, -(pj.d(20) / 2) + 216, wk.b(3) + 68, pj.d(126) - -48, 0, 200);
                         vk.a(pj.d(param0 + -356) - -60, (byte) 50, a.field_n, wk.b(3) + 80, 240 - pj.d(-5) / 2 + -30, 320 - wk.b(3) / 2 - 40);
                         uh.b(32659);
                         break L30;
@@ -2815,7 +2815,7 @@ public final class client extends bd {
                     L33: {
                       if (gb.field_Ob != gb.field_Vb) {
                         var5_int = 256 * rf.field_f / 16;
-                        if (-1 > (var5_int ^ -1)) {
+                        if (var5_int > 0) {
                           hk.a(0, 0, hk.field_j, hk.field_i, 0, var5_int);
                           break L33;
                         } else {
@@ -3303,7 +3303,7 @@ public final class client extends bd {
                   var12.a(var12.field_zc, -16834);
                   var12.field_fc = new w[j.field_b];
                   var12.field_pc = new w(0L, (w) null);
-                  if ((var14 & 1 << u.field_f ^ -1) != -1) {
+                  if ((var14 & 1 << u.field_f) != 0) {
                     var12.field_zc.a(var12.field_pc, -16834);
                     break L5;
                   } else {
@@ -3312,7 +3312,7 @@ public final class client extends bd {
                 }
                 L6: {
                   var12.field_Ac = new w(0L, (w) null);
-                  if (-1 != (var14 & 1 << u.field_b ^ -1)) {
+                  if ((var14 & 1 << u.field_b) != 0) {
                     var12.field_zc.a(var12.field_Ac, -16834);
                     break L6;
                   } else {
@@ -3321,7 +3321,7 @@ public final class client extends bd {
                 }
                 L7: {
                   var12.field_Tb = new w(0L, (w) null);
-                  if ((1 << rf.field_a & var14 ^ -1) == -1) {
+                  if ((1 << rf.field_a & var14) == 0) {
                     break L7;
                   } else {
                     var12.field_zc.a(var12.field_Tb, -16834);
@@ -3330,7 +3330,7 @@ public final class client extends bd {
                 }
                 L8: {
                   var12.field_Fc = new w(0L, (w) null);
-                  if ((1 << ul.field_f & var14 ^ -1) != -1) {
+                  if ((1 << ul.field_f & var14) != 0) {
                     var12.field_zc.a(var12.field_Fc, -16834);
                     break L8;
                   } else {
@@ -3346,7 +3346,7 @@ public final class client extends bd {
                 var15.field_W = 1;
                 var18_int = 0;
                 L9: while (true) {
-                  if ((j.field_b ^ -1) >= (var18_int ^ -1)) {
+                  if (~j.field_b >= ~var18_int) {
                     L10: {
                       stackOut_29_0 = (ve) var12;
                       stackOut_29_1 = null;
@@ -3405,7 +3405,7 @@ public final class client extends bd {
                   } else {
                     L11: {
                       var12.field_fc[var18_int] = new w(0L, (w) null);
-                      if ((1 << var18_int + um.field_a & var14 ^ -1) == -1) {
+                      if ((1 << var18_int + um.field_a & var14) == 0) {
                         break L11;
                       } else {
                         var12.field_zc.a(var12.field_fc[var18_int], -16834);
@@ -3527,7 +3527,7 @@ public final class client extends bd {
                         var12.field_Yb.field_Y = gb.field_ac;
                         break L15;
                       } else {
-                        if ((var12.field_Nb ^ -1) > -1) {
+                        if (var12.field_Nb < 0) {
                           L17: {
                             if (!var12.field_wc) {
                               break L17;
@@ -3547,7 +3547,7 @@ public final class client extends bd {
                               break L15;
                             }
                           }
-                          if (-3 != (var12.field_qc ^ -1)) {
+                          if (var12.field_qc != 2) {
                             var12.field_Pb.field_Y = ak.field_i;
                             break L15;
                           } else {
@@ -3685,7 +3685,7 @@ public final class client extends bd {
                       }
                     }
                     L29: {
-                      if ((1 << ul.field_f & var14 ^ -1) == -1) {
+                      if ((1 << ul.field_f & var14) == 0) {
                         break L29;
                       } else {
                         L30: {
@@ -3754,7 +3754,7 @@ public final class client extends bd {
                         var12.field_Fc.field_vb = var12.field_Fc.field_vb + var36;
                         var37_int = 0;
                         L35: while (true) {
-                          if ((j.field_b ^ -1) >= (var37_int ^ -1)) {
+                          if (~j.field_b >= ~var37_int) {
                             break L34;
                           } else {
                             var12.field_fc[var37_int].field_vb = var12.field_fc[var37_int].field_vb + var36;
@@ -3772,7 +3772,7 @@ public final class client extends bd {
                       } else {
                         L37: {
                           var37_int = var12.field_Nb;
-                          if (-1 < (var37_int ^ -1)) {
+                          if (var37_int < 0) {
                             var37_int = (int)(var9 + -var12.field_tc);
                             break L37;
                           } else {
@@ -3782,7 +3782,7 @@ public final class client extends bd {
                         var38_int = var37_int / 1000;
                         var39 = var38_int / 60;
                         var38_int = var38_int % 60;
-                        if ((var39 ^ -1) > -61) {
+                        if (var39 < 60) {
                           var12.field_yc.field_Y = var39 + ":" + var38_int / 10 + var38_int % 10;
                           break L36;
                         } else {
@@ -3872,11 +3872,11 @@ public final class client extends bd {
                 }
                 var34_int = 0;
                 L44: while (true) {
-                  if ((var34_int ^ -1) <= (j.field_b ^ -1)) {
+                  if (~var34_int <= ~j.field_b) {
                     L45: {
                       if (var12.field_pc.field_jb) {
                         L46: {
-                          if ((var12.field_Wb ^ -1) != -2) {
+                          if (var12.field_Wb != 1) {
                             var34 = ed.field_b[var12.field_Wb];
                             break L46;
                           } else {
@@ -3961,11 +3961,11 @@ public final class client extends bd {
                       }
                     }
                     L54: {
-                      if ((var12.field_ob ^ -1) == -1) {
+                      if (var12.field_ob == 0) {
                         break L54;
                       } else {
                         if (!var12.i((byte) 100)) {
-                          if (-1 == (var12.field_Yb.field_ob ^ -1)) {
+                          if (var12.field_Yb.field_ob == 0) {
                             hd.a(0, param4, var12, var32);
                             break L54;
                           } else {
@@ -4087,7 +4087,7 @@ public final class client extends bd {
           qi.a(65.0f, param0 + 98, rf.field_p);
           ((client) this).d(320);
           ka.field_N = new pl(jj.field_c, ah.field_d);
-          pg.field_d = ka.field_N.a("", "fruit_step", param0 ^ 0);
+          pg.field_d = ka.field_N.a("", "fruit_step", param0);
           field_F = ka.field_N.a("", "cooked_fruit_step", 0);
           ib.field_ob = ka.field_N.a("", "db_loose_shape_rotate", 0);
           bj.field_e = ka.field_N.a("", "db_loose_shape_land_squish", 0);
@@ -4096,21 +4096,21 @@ public final class client extends bd {
           wd.field_c = ka.field_N.a("", "db_loose_tiles_pop", 0);
           sa.field_w = ka.field_N.a("", "db_solid_tiles_pop2", 0);
           jm.field_v[0] = ka.field_N.a("", "db_combo_1", 0);
-          jm.field_v[1] = ka.field_N.a("", "db_combo_2", param0 + 0);
+          jm.field_v[1] = ka.field_N.a("", "db_combo_2", param0);
           jm.field_v[2] = ka.field_N.a("", "db_combo_3", qm.b(param0, 0));
           jm.field_v[3] = ka.field_N.a("", "db_combo_4", qm.b(param0, 0));
           bf.field_w = ka.field_N.a("", "db_simultaneous_bonus2", 0);
           ob.field_n = ka.field_N.a((byte) 101, "", "db_loose_drill");
           fj.field_k = ka.field_N.a((byte) 101, "", "db_bucket_water_capsule2");
-          pk.field_q = ka.field_N.a("", "db_quake", param0 ^ 0);
-          ee.field_g = ka.field_N.a("", "db_special_item_explode", param0 ^ 0);
+          pk.field_q = ka.field_N.a("", "db_quake", param0);
+          ee.field_g = ka.field_N.a("", "db_special_item_explode", param0);
           var2 = new je(22050, 11025);
           pk.field_q = pk.field_q.a(var2);
           ee.field_g = ee.field_g.a(var2);
-          w.field_Eb = ka.field_N.a("", "db_poison", param0 ^ 0);
+          w.field_Eb = ka.field_N.a("", "db_poison", param0);
           qa.field_s = ka.field_N.a("", "db_glass_lower", 0);
-          ha.field_Pb[2] = ka.field_N.a("", "db_bucket_glass_crack2_2", param0 + 0);
-          ha.field_Pb[1] = ka.field_N.a("", "db_bucket_glass_crack3", param0 + 0);
+          ha.field_Pb[2] = ka.field_N.a("", "db_bucket_glass_crack2_2", param0);
+          ha.field_Pb[1] = ka.field_N.a("", "db_bucket_glass_crack3", param0);
           ha.field_Pb[0] = ka.field_N.a((byte) 101, "", "db_bucket_glass_explode");
           ie.field_e = ka.field_N.a("", "db_bucket_explode", 0);
           jg.field_j = ka.field_N.a("", "db_bucket_debris", 0);
@@ -4118,7 +4118,7 @@ public final class client extends bd {
           rc.field_i = ka.field_N.a("", "db_loose_shape_fall_quake_looped", 0);
           ak.field_b = ka.field_N.a("", "db_suck_into_machine", 0);
           kf.field_P = ka.field_N.a("", "microwave_motor_2", 0);
-          ul.field_i = ka.field_N.a("", "db_shape_out_of_machine2", param0 ^ 0);
+          ul.field_i = ka.field_N.a("", "db_shape_out_of_machine2", param0);
           ig.field_ac = ka.field_N.a("", "db_last_shape_out", 0);
           jj.field_c = null;
           ah.field_d = null;
@@ -4180,23 +4180,23 @@ public final class client extends bd {
               w.field_kb = gg.a(var2_array, 55, var3);
               km.field_A = ge.a((byte) -49, 16777215, 1, var2_array, var3, 1);
               var4 = t.a("tinybloko", ii.field_t, false, "");
-              var5 = ph.field_Db.a(param0 ^ 0, "tinybloko", "");
+              var5 = ph.field_Db.a(param0, "tinybloko", "");
               in.field_n = gg.a(var4, param0 ^ 111, var5);
               var6_int = 0;
               L0: while (true) {
-                if ((var4.length ^ -1) >= (var6_int ^ -1)) {
+                if (~var4.length >= ~var6_int) {
                   var6_int = 0;
                   L1: while (true) {
-                    if ((var6_int ^ -1) <= (var5.length ^ -1)) {
+                    if (~var6_int <= ~var5.length) {
                       a.field_t = gg.a(var4, param0 ^ 103, var5);
                       eh.field_j = ge.a((byte) 100, 16694016, 2, var4, var5, 1);
                       eh.field_j.field_X[1] = new int[3];
                       var6_int = 0;
                       L2: while (true) {
-                        if ((var6_int ^ -1) <= (var4.length ^ -1)) {
+                        if (~var6_int <= ~var4.length) {
                           var6_int = 0;
                           L3: while (true) {
-                            if ((var5.length ^ -1) >= (var6_int ^ -1)) {
+                            if (~var5.length >= ~var6_int) {
                               hn.field_g = gg.a(var4, 121, var5);
                               a.field_n = db.a("ui_frame_vbrick", "ui_frame_hbrick", ii.field_t, true, "ui_frame_corner");
                               on.field_e = ek.a("ui_button_up", "", param0 ^ -95, ii.field_t);
@@ -4226,27 +4226,27 @@ public final class client extends bd {
                               var7_array = bj.a(112, ii.field_t, "", "specialitems");
                               var8_int = 0;
                               L4: while (true) {
-                                if (-7 >= (var8_int ^ -1)) {
+                                if (var8_int >= 6) {
                                   var8_int = 0;
                                   L5: while (true) {
-                                    if ((var8_int ^ -1) <= -9) {
+                                    if (var8_int >= 8) {
                                       le.field_m.a((byte) -114);
                                       var8_int = 0;
                                       L6: while (true) {
                                         if (8 <= var8_int) {
-                                          var8 = eg.field_e.a(param0 + 0, "", "menu2.jpg");
+                                          var8 = eg.field_e.a(param0, "", "menu2.jpg");
                                           tc.field_Tb = new ck(var8, (java.awt.Component) (Object) jh.field_b);
                                           var9 = eg.field_e.a(0, "", "achievements.jpg");
                                           uf.field_y = fc.a(31, new ck(var9, (java.awt.Component) (Object) jh.field_b), -10241);
                                           var10 = bj.a(112, ii.field_t, "", "achievements");
                                           var11_int = 0;
                                           L7: while (true) {
-                                            if (-32 >= (var11_int ^ -1)) {
+                                            if (var11_int >= 31) {
                                               var10 = null;
                                               tl.field_w = new ck[31];
                                               var11_int = 0;
                                               L8: while (true) {
-                                                if (-32 >= (var11_int ^ -1)) {
+                                                if (var11_int >= 31) {
                                                   le.field_m.a((byte) -108);
                                                   pg.field_e = id.a(ii.field_t, "ui_clouds", "", 8192);
                                                   dk.field_h = id.a(ii.field_t, "ui_border_tl", "", 8192);
@@ -4332,7 +4332,7 @@ public final class client extends bd {
                                                   fk.field_G[7] = t.a("eightbit_bottommask", ii.field_t, false, "");
                                                   var11_int = 0;
                                                   L9: while (true) {
-                                                    if (-9 >= (var11_int ^ -1)) {
+                                                    if (var11_int >= 8) {
                                                       uf.field_w = id.a(ii.field_t, "machine_buttons1", "", 8192);
                                                       bn.field_e = id.a(ii.field_t, "machine_front", "", param0 ^ 8192);
                                                       cd.field_k = id.a(ii.field_t, "machine_glass", "", 8192);
@@ -4388,7 +4388,7 @@ public final class client extends bd {
                                                       uh.a(fk.field_G[var11_int], (byte) 114);
                                                       var12_int = 0;
                                                       L10: while (true) {
-                                                        if ((var12_int ^ -1) <= (ve.field_uc[var11_int].length ^ -1)) {
+                                                        if (~var12_int <= ~ve.field_uc[var11_int].length) {
                                                           var11_int++;
                                                           continue L9;
                                                         } else {
@@ -4416,7 +4416,7 @@ public final class client extends bd {
                                             }
                                           }
                                         } else {
-                                          var9 = eg.field_e.a(param0 + 0, "", ri.field_f[var8_int] + ".jpg");
+                                          var9 = eg.field_e.a(param0, "", ri.field_f[var8_int] + ".jpg");
                                           dn.field_p[var8_int] = new ck(var9, (java.awt.Component) (Object) jh.field_b);
                                           var8_int++;
                                           continue L6;
@@ -4430,7 +4430,7 @@ public final class client extends bd {
                                           fb.field_c[var8_int][7] = kd.field_t;
                                           var9_int = 0;
                                           L12: while (true) {
-                                            if (-8 >= (var9_int ^ -1)) {
+                                            if (var9_int >= 7) {
                                               s.field_Qb[var8_int] = id.a(ii.field_t, ri.field_f[var8_int] + "_bucketback", "", 8192);
                                               s.field_Qb[var8_int].b();
                                               var8_int++;
@@ -4439,7 +4439,7 @@ public final class client extends bd {
                                               var10_ref = me.a(var7_array[var9_int + 7], true, (byte) -124, true);
                                               var11_int = 0;
                                               L13: while (true) {
-                                                if (-17 >= (var11_int ^ -1)) {
+                                                if (var11_int >= 16) {
                                                   var9_int++;
                                                   continue L12;
                                                 } else {
@@ -4459,7 +4459,7 @@ public final class client extends bd {
                                                         var15 = var13.field_l[var13.field_k[var14] & 255] & 255;
                                                         var16 = var12.field_D[var14];
                                                         if (var15 <= 128) {
-                                                          var16 = ((var16 & 16711935) * var15 >> 1802741479 & 16711935) + (((65280 & var16) * var15 & 8355876) >> -816570233);
+                                                          var16 = ((var16 & 16711935) * var15 >> 7 & 16711935) + (((65280 & var16) * var15 & 8355876) >> 7);
                                                           break L15;
                                                         } else {
                                                           var17 = 131586 * (var15 - 128);
@@ -4467,7 +4467,7 @@ public final class client extends bd {
                                                           var19 = var18 + var17;
                                                           var17 = (16711935 & var18) + (16711935 & var17);
                                                           var18 = (-var17 + var19 & 65536) + (16777472 & var17);
-                                                          var16 = var19 - var18 | var18 + -(var18 >>> -74352984);
+                                                          var16 = var19 - var18 | var18 + -(var18 >>> 8);
                                                           break L15;
                                                         }
                                                       }
@@ -4521,7 +4521,7 @@ public final class client extends bd {
                           var8 = new byte[var7.field_b * var7.field_i * 9 / 4];
                           var9_int = 0;
                           L18: while (true) {
-                            if ((var7.field_i ^ -1) >= (var9_int ^ -1)) {
+                            if (~var7.field_i >= ~var9_int) {
                               var7.field_d = 3 * var7.field_d / 2;
                               var7.field_i = var7.field_i * 3 / 2;
                               var7.field_k = var8;

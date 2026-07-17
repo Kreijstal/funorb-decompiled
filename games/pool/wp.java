@@ -53,7 +53,7 @@ final class wp implements si {
                 break L1;
               } else {
                 L2: {
-                  if ((sb.field_b ^ -1) == -1) {
+                  if (sb.field_b == 0) {
                     break L2;
                   } else {
                     if (var4 > sb.field_b) {
@@ -239,7 +239,7 @@ final class wp implements si {
                 L3: {
                   ud.field_J.field_pb = false;
                   ba.field_sb.field_nb = cl.field_j;
-                  if (-2 == (th.field_a ^ -1)) {
+                  if (th.field_a == 1) {
                     aj.field_Mb.field_Sb.field_Sb.field_nb = ri.field_Q;
                     break L3;
                   } else {
@@ -353,7 +353,7 @@ final class wp implements si {
                       stackOut_27_0 = var7.field_Pb;
                       stackIn_30_0 = stackOut_27_0;
                       stackIn_28_0 = stackOut_27_0;
-                      if (-1 <= (var14 ^ -1)) {
+                      if (var14 <= 0) {
                         stackOut_30_0 = (vh) (Object) stackIn_30_0;
                         stackOut_30_1 = var7.field_Zb;
                         stackIn_31_0 = stackOut_30_0;

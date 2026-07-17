@@ -116,16 +116,13 @@ final class am {
     final static int b(int param0) {
         if (param0 <= 69) {
           int discarded$2 = am.b(-17);
-          return wl.field_o + (wh.field_d << -19637598) + (qk.field_i << -1631507260);
+          return wl.field_o + (wh.field_d << 2) + (qk.field_i << 4);
         } else {
-          return wl.field_o + (wh.field_d << -19637598) + (qk.field_i << -1631507260);
+          return wl.field_o + (wh.field_d << 2) + (qk.field_i << 4);
         }
     }
 
     public static void a(int param0) {
-        if (param0 < 77) {
-            return;
-        }
         field_d = null;
         field_b = null;
         field_a = null;

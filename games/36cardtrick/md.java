@@ -10,10 +10,6 @@ final class md {
     int field_a;
 
     final static boolean a(byte param0) {
-        if (param0 > -6) {
-            boolean discarded$0 = md.a(122, false);
-            return qe.a(mk.g(-122), (byte) -98);
-        }
         return qe.a(mk.g(-122), (byte) -98);
     }
 
@@ -41,7 +37,7 @@ final class md {
                 long dupTemp$2 = id.a(94);
                 ua.field_E = dupTemp$2;
                 uk.field_a = dupTemp$2;
-                if (-2 == (fe.field_c.field_a ^ -1)) {
+                if (fe.field_c.field_a == 1) {
                   try {
                     L1: {
                       L2: {

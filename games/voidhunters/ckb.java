@@ -28,17 +28,17 @@ final class ckb extends le {
             var7 = var18[1];
             var8 = var18[2];
             for (var9 = 0; var9 < hob.field_d; var9++) {
-                var4 = var19[var9] >> -584503388;
+                var4 = var19[var9] >> 4;
                 if (var4 < 0) {
                     var4 = 0;
                 }
-                if (-257 > (var4 ^ -1)) {
+                if (var4 > 256) {
                     var4 = 256;
                 }
                 var4 = ((ckb) this).field_i[var4];
-                var6[var9] = dla.a(4080, var4 >> -145631348);
-                var7[var9] = dla.a(4080, var4 >> 637054628);
-                var8[var9] = dla.a(var4 << 1169891716, 4080);
+                var6[var9] = dla.a(4080, var4 >> 12);
+                var7[var9] = dla.a(4080, var4 >> 4);
+                var8[var9] = dla.a(var4 << 4, 4080);
             }
         }
         return var11;
@@ -72,23 +72,23 @@ final class ckb extends le {
         L0: {
           var13 = VoidHunters.field_G;
           var5 = ((ckb) this).field_j.length;
-          if (-1 <= var5) {
+          if (var5 <= 0) {
             break L0;
           } else {
             var6 = 0;
             L1: while (true) {
-              if (-258 <= var6) {
+              if (var6 >= 257) {
                 break L0;
               } else {
                 var7 = 0;
-                var8 = var6 << 1641464708;
+                var8 = var6 << 4;
                 var9 = 0;
                 L2: while (true) {
                   L3: {
-                    if (var5 <= var9) {
+                    if (~var5 >= ~var9) {
                       break L3;
                     } else {
-                      if (var8 >= ((ckb) this).field_j[var9][0]) {
+                      if (~var8 <= ~((ckb) this).field_j[var9][0]) {
                         var7++;
                         var9++;
                         continue L2;
@@ -106,18 +106,18 @@ final class ckb extends le {
                       break L4;
                     } else {
                       var17 = ((ckb) this).field_j[var7];
-                      if (-1 <= (var7 ^ -1)) {
+                      if (var7 <= 0) {
                         var4 = var17[3];
                         var3 = var17[2];
                         var2 = var17[1];
                         break L4;
                       } else {
                         var10 = ((ckb) this).field_j[var7 - 1];
-                        var11 = (var8 + -var10[0] << -1349777460) / (-var10[0] + var17[0]);
+                        var11 = (var8 + -var10[0] << 12) / (-var10[0] + var17[0]);
                         var12 = 4096 - var11;
-                        var4 = var10[3] * var12 + var11 * var17[3] >> 646947980;
-                        var2 = var12 * var10[1] + var17[1] * var11 >> 473886284;
-                        var3 = var17[2] * var11 + var10[2] * var12 >> -1170208116;
+                        var4 = var10[3] * var12 + var11 * var17[3] >> 12;
+                        var2 = var12 * var10[1] + var17[1] * var11 >> 12;
+                        var3 = var17[2] * var11 + var10[2] * var12 >> 12;
                         break L4;
                       }
                     }
@@ -139,11 +139,11 @@ final class ckb extends le {
                     }
                   }
                   L6: {
-                    if ((var2 ^ -1) > -1) {
+                    if (var2 < 0) {
                       var2 = 0;
                       break L6;
                     } else {
-                      if ((var2 ^ -1) >= -256) {
+                      if (var2 <= 255) {
                         break L6;
                       } else {
                         var2 = 255;
@@ -152,7 +152,7 @@ final class ckb extends le {
                     }
                   }
                   L7: {
-                    if ((var4 ^ -1) > -1) {
+                    if (var4 < 0) {
                       var4 = 0;
                       break L7;
                     } else {
@@ -164,7 +164,7 @@ final class ckb extends le {
                       }
                     }
                   }
-                  ((ckb) this).field_i[var6] = knb.a(var4, knb.a(var3 << -1859073560, var2 << 149567920));
+                  ((ckb) this).field_i[var6] = knb.a(var4, knb.a(var3 << 8, var2 << 16));
                   var6++;
                   continue L1;
                 }
@@ -172,54 +172,97 @@ final class ckb extends le {
             }
           }
         }
-        L8: {
-          if (param0 >= 93) {
-            break L8;
-          } else {
-            ((ckb) this).c((byte) -97);
-            break L8;
-          }
-        }
     }
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        L0: {
-          var6 = VoidHunters.field_G;
-          if (-1 == param0) {
-            var4 = param2.e((byte) -115);
-            if (-1 != var4) {
-              this.a(true, var4);
-              break L0;
-            } else {
-              ((ckb) this).field_j = new int[param2.e((byte) -124)][4];
-              var5 = 0;
-              L1: while (true) {
-                if (((ckb) this).field_j.length <= var5) {
-                  break L0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var6 = VoidHunters.field_G;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 0) {
+                var4_int = param2.e((byte) -115);
+                if (var4_int != 0) {
+                  this.a(true, var4_int);
+                  break L1;
                 } else {
-                  ((ckb) this).field_j[var5][0] = param2.e(1869);
-                  ((ckb) this).field_j[var5][1] = param2.e((byte) -118) << -1423131804;
-                  ((ckb) this).field_j[var5][2] = param2.e((byte) -101) << 1017672964;
-                  ((ckb) this).field_j[var5][3] = param2.e((byte) -90) << 149704516;
-                  var5++;
-                  continue L1;
+                  ((ckb) this).field_j = new int[param2.e((byte) -124)][4];
+                  var5 = 0;
+                  L2: while (true) {
+                    if (((ckb) this).field_j.length <= var5) {
+                      break L1;
+                    } else {
+                      ((ckb) this).field_j[var5][0] = param2.e(1869);
+                      ((ckb) this).field_j[var5][1] = param2.e((byte) -118) << 4;
+                      ((ckb) this).field_j[var5][2] = param2.e((byte) -101) << 4;
+                      ((ckb) this).field_j[var5][3] = param2.e((byte) -90) << 4;
+                      var5++;
+                      continue L2;
+                    }
+                  }
                 }
+              } else {
+                break L1;
               }
             }
-          } else {
+            L3: {
+              if (param1 <= -60) {
+                break L3;
+              } else {
+                ((ckb) this).field_j = null;
+                break L3;
+              }
+            }
             break L0;
           }
-        }
-        L2: {
-          if (param1 <= -60) {
-            break L2;
-          } else {
-            ((ckb) this).field_j = null;
-            break L2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var4;
+            stackOut_11_1 = new StringBuilder().append("ckb.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param2 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
+            }
           }
+          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
     }
 
@@ -234,7 +277,7 @@ final class ckb extends le {
         var4 = VoidHunters.field_G;
         if (param0) {
           L0: {
-            if (-1 == (param1 ^ -1)) {
+            if (param1 == 0) {
               break L0;
             } else {
               var3 = param1;
@@ -272,8 +315,8 @@ final class ckb extends le {
                     ((ckb) this).field_j[6][0] = 4096;
                     break L0;
                   } else {
-                    if ((var3 ^ -1) != -5) {
-                      if ((var3 ^ -1) == -6) {
+                    if (var3 != 4) {
+                      if (var3 == 5) {
                         ((ckb) this).field_j = new int[16][4];
                         ((ckb) this).field_j[0][3] = 321;
                         ((ckb) this).field_j[0][0] = 0;

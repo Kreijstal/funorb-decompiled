@@ -7,10 +7,6 @@ final class qk {
     static String field_b;
 
     final static int a(byte param0) {
-        if (param0 != -58) {
-            qk.a(9);
-            return ka.field_L;
-        }
         return ka.field_L;
     }
 

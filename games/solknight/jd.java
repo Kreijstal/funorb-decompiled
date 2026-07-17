@@ -113,7 +113,7 @@ final class jd extends gb {
             L2: while (true) {
               L3: {
                 L4: {
-                  if ((param3.field_F ^ -1) >= (var8 ^ -1)) {
+                  if (~param3.field_F >= ~var8) {
                     break L4;
                   } else {
                     var9 = param3.field_K[var8];
@@ -134,7 +134,7 @@ final class jd extends gb {
                             var15 = -var12 + qb.field_ab[var11];
                             var16 = a.field_d[var10] + -var13;
                             var17 = a.field_d[var11] - var13;
-                            if ((-(var15 * var16) + var17 * var14 ^ -1) > -1) {
+                            if (-(var15 * var16) + var17 * var14 < 0) {
                               break L6;
                             } else {
                               if (var19 == 0) {
@@ -156,7 +156,7 @@ final class jd extends gb {
                             break L5;
                           } else {
                             var14 = hl.field_a[var11];
-                            if ((var14 ^ -1) == 2147483647) {
+                            if (var14 == -2147483648) {
                               break L5;
                             } else {
                               L7: {
@@ -183,12 +183,12 @@ final class jd extends gb {
                               L8: while (true) {
                                 L9: {
                                   L10: {
-                                    if ((var17 >> -1410226364 ^ -1) == -1) {
+                                    if (var17 >> 4 == 0) {
                                       break L10;
                                     } else {
                                       var16--;
                                       stackOut_27_0 = -1;
-                                      stackOut_27_1 = var16 ^ -1;
+                                      stackOut_27_1 = ~var16;
                                       stackIn_36_0 = stackOut_27_0;
                                       stackIn_36_1 = stackOut_27_1;
                                       stackIn_28_0 = stackOut_27_0;
@@ -217,7 +217,7 @@ final class jd extends gb {
                                       }
                                     }
                                   }
-                                  stackOut_35_0 = var16 << -518854876;
+                                  stackOut_35_0 = var16 << 4;
                                   stackOut_35_1 = var17;
                                   stackIn_36_0 = stackOut_35_0;
                                   stackIn_36_1 = stackOut_35_1;
@@ -227,7 +227,7 @@ final class jd extends gb {
                                   var18 = stackIn_36_0 + stackIn_36_1;
                                   he.field_a[var18] = var8;
                                   fb.field_b[var16] = 1 + var17;
-                                  if (-1 <= (param3.field_j ^ -1)) {
+                                  if (param3.field_j <= 0) {
                                     break L12;
                                   } else {
                                     if (null == param3.field_k) {
@@ -400,7 +400,7 @@ final class jd extends gb {
                     L3: {
                       L4: {
                         var7 = param0 + "=" + param4 + "; version=1; path=/; domain=" + var6;
-                        if (-1L < (param1 ^ -1L)) {
+                        if (param1 < 0L) {
                           break L4;
                         } else {
                           var7 = var7 + "; Expires=" + hc.a(1000L * param1 + je.a(1), -31289) + "; Max-Age=" + param1;
@@ -705,7 +705,7 @@ final class jd extends gb {
         try {
           L0: {
             L1: {
-              var3_int = ((jd) this).field_o >> -781734205;
+              var3_int = ((jd) this).field_o >> 3;
               var4 = 8 + -(((jd) this).field_o & 7);
               if (param0 == 48) {
                 break L1;
@@ -720,7 +720,7 @@ final class jd extends gb {
               L3: {
                 L4: {
                   L5: {
-                    if ((var4 ^ -1) <= (param1 ^ -1)) {
+                    if (~var4 <= ~param1) {
                       break L5;
                     } else {
                       int incrementValue$2 = var3_int;

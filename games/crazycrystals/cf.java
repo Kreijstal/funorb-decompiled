@@ -47,9 +47,6 @@ final class cf {
         field_b = null;
         field_a = null;
         field_c = null;
-        if (param0 != 0) {
-            sj discarded$0 = cf.a(-12, -56);
-        }
     }
 
     static {

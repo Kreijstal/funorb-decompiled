@@ -69,9 +69,6 @@ final class rl {
         field_m = null;
         field_f = null;
         field_G = null;
-        if (param0 >= -77) {
-            field_f = null;
-        }
     }
 
     final void a(byte param0) {
@@ -194,109 +191,124 @@ final class rl {
     }
 
     final static int b(byte param0) {
-        int var1 = 0;
+        RuntimeException var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
+        int stackIn_31_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_30_0 = 0;
         var7 = Pixelate.field_H ? 1 : 0;
-        var1 = 0;
-        var2 = 0;
-        L0: while (true) {
-          if (!bh.b((byte) 123)) {
-            L1: {
-              mj.field_c.a(mi.a(uo.field_a, ji.field_c, (byte) -82), mi.a(uf.field_d, bg.field_k, (byte) -73), -1);
-              if (param0 > 74) {
-                break L1;
-              } else {
-                int discarded$1 = rl.b((byte) -77);
-                break L1;
-              }
-            }
-            L2: {
-              if (!mj.field_c.a(17)) {
-                break L2;
-              } else {
-                var1 = 1;
-                break L2;
-              }
-            }
-            L3: {
-              L4: {
-                var3 = 0;
-                if (var1 == 0) {
-                  break L4;
-                } else {
-                  if ((mj.field_c.field_j ^ -1) <= -1) {
-                    L5: {
-                      var3 = jj.field_h[mj.field_c.field_j];
-                      if (var3 == 2) {
-                        break L5;
-                      } else {
-                        if (var3 != 5) {
-                          break L3;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    dh.a(0);
+        try {
+          L0: {
+            var1_int = 0;
+            var2 = 0;
+            L1: while (true) {
+              if (!bh.b((byte) 123)) {
+                L2: {
+                  mj.field_c.a(mi.a(uo.field_a, ji.field_c, (byte) -82), mi.a(uf.field_d, bg.field_k, (byte) -73), -1);
+                  if (param0 > 74) {
+                    break L2;
+                  } else {
+                    int discarded$1 = rl.b((byte) -77);
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (!mj.field_c.a(17)) {
                     break L3;
                   } else {
+                    var1_int = 1;
+                    break L3;
+                  }
+                }
+                L4: {
+                  L5: {
+                    var3 = 0;
+                    if (var1_int == 0) {
+                      break L5;
+                    } else {
+                      if (mj.field_c.field_j >= 0) {
+                        L6: {
+                          var3 = jj.field_h[mj.field_c.field_j];
+                          if (var3 == 2) {
+                            break L6;
+                          } else {
+                            if (var3 != 5) {
+                              break L4;
+                            } else {
+                              break L6;
+                            }
+                          }
+                        }
+                        dh.a(0);
+                        break L4;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
+                  if (var2 == 0) {
                     break L4;
-                  }
-                }
-              }
-              if (var2 == 0) {
-                break L3;
-              } else {
-                if (-3 != (ha.field_h ^ -1)) {
-                  dh.a(0);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-            }
-            L6: {
-              if (0 != var3) {
-                break L6;
-              } else {
-                if (ha.field_h == 2) {
-                  var4 = hm.a(64) - pk.field_g;
-                  var6 = (int)((10999L - var4) / 1000L);
-                  if (var6 <= 0) {
-                    var3 = 2;
-                    bq.a(true, (byte) -65, 5);
-                    break L6;
                   } else {
-                    break L6;
+                    if (ha.field_h != 2) {
+                      dh.a(0);
+                      break L4;
+                    } else {
+                      break L4;
+                    }
                   }
+                }
+                L7: {
+                  if (0 != var3) {
+                    break L7;
+                  } else {
+                    if (ha.field_h == 2) {
+                      var4 = hm.a(64) - pk.field_g;
+                      var6 = (int)((10999L - var4) / 1000L);
+                      if (var6 <= 0) {
+                        var3 = 2;
+                        bq.a(true, (byte) -65, 5);
+                        break L7;
+                      } else {
+                        break L7;
+                      }
+                    } else {
+                      break L7;
+                    }
+                  }
+                }
+                stackOut_30_0 = var3;
+                stackIn_31_0 = stackOut_30_0;
+                break L0;
+              } else {
+                L8: {
+                  mj.field_c.a((byte) -48);
+                  if (mj.field_c.a(84)) {
+                    var1_int = 1;
+                    break L8;
+                  } else {
+                    break L8;
+                  }
+                }
+                if (ke.field_a == 13) {
+                  var2 = 1;
+                  continue L1;
                 } else {
-                  break L6;
+                  continue L1;
                 }
               }
-            }
-            return var3;
-          } else {
-            L7: {
-              mj.field_c.a((byte) -48);
-              if (mj.field_c.a(84)) {
-                var1 = 1;
-                break L7;
-              } else {
-                break L7;
-              }
-            }
-            if (ke.field_a == 13) {
-              var2 = 1;
-              continue L0;
-            } else {
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var1, "rl.B(" + param0 + 41);
         }
+        return stackIn_31_0;
     }
 
     rl() {
@@ -314,7 +326,7 @@ final class rl {
         field_e = "Logging in...";
         field_f = new double[65536];
         field_G = new double[65536];
-        for (var0 = 0; (var0 ^ -1) > -65537; var0++) {
+        for (var0 = 0; var0 < 65536; var0++) {
             field_f[var0] = Math.sin((double)var0 * 3.141592653589793 / 32768.0);
             field_G[var0] = Math.cos((double)var0 * 3.141592653589793 / 32768.0);
         }

@@ -10,15 +10,20 @@ final class k {
     private int field_d;
 
     final void a(int param0, o param1, long param2) {
-        if (!(param1.field_g == null)) {
-            param1.c(-1);
+        o var5 = null;
+        try {
+            if (!(param1.field_g == null)) {
+                param1.c(-1);
+            }
+            var5 = ((k) this).field_b[(int)((long)(param0 + ((k) this).field_d) & param2)];
+            param1.field_f = var5;
+            param1.field_g = var5.field_g;
+            param1.field_g.field_f = param1;
+            param1.field_h = param2;
+            param1.field_f.field_g = param1;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "k.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        o var5 = ((k) this).field_b[(int)((long)(param0 + ((k) this).field_d) & param2)];
-        param1.field_f = var5;
-        param1.field_g = var5.field_g;
-        param1.field_g.field_f = param1;
-        param1.field_h = param2;
-        param1.field_f.field_g = param1;
     }
 
     final static void a(int param0) {
@@ -28,16 +33,6 @@ final class k {
         nd.field_a[93] = 43;
         nd.field_a[44] = 71;
         nd.field_a[45] = 26;
-        if (param0 != 0) {
-            Boolean discarded$0 = k.b((byte) 21);
-            nd.field_a[520] = 59;
-            nd.field_a[222] = 58;
-            nd.field_a[192] = 28;
-            nd.field_a[59] = 57;
-            nd.field_a[47] = 73;
-            nd.field_a[46] = 72;
-            return;
-        }
         nd.field_a[520] = 59;
         nd.field_a[222] = 58;
         nd.field_a[192] = 28;
@@ -111,7 +106,7 @@ final class k {
               ((k) this).field_c = null;
               return null;
             } else {
-              if ((((k) this).field_c.field_h ^ -1L) != (param1 ^ -1L)) {
+              if (~((k) this).field_c.field_h != ~param1) {
                 ((k) this).field_c = ((k) this).field_c.field_f;
                 continue L0;
               } else {
@@ -127,7 +122,7 @@ final class k {
               ((k) this).field_c = null;
               return null;
             } else {
-              if ((((k) this).field_c.field_h ^ -1L) != (param1 ^ -1L)) {
+              if (~((k) this).field_c.field_h != ~param1) {
                 ((k) this).field_c = ((k) this).field_c.field_f;
                 continue L1;
               } else {
@@ -148,13 +143,15 @@ final class k {
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            var3 = new o();
-            ((k) this).field_b[var2] = new o();
+            o dupTemp$2 = new o();
+            var3 = dupTemp$2;
+            ((k) this).field_b[var2] = dupTemp$2;
             var3.field_g = var3;
             var3.field_f = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

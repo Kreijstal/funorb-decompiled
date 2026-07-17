@@ -7,15 +7,14 @@ final class rm {
     static int field_a;
 
     final static void a(int param0, int param1, cfa param2) {
-        if (param1 < 91) {
-          field_a = -26;
-          eaa.field_d.a((bw) (Object) param2, true);
-          nr.a(param0, param2, (byte) -48);
-          return;
-        } else {
-          eaa.field_d.a((bw) (Object) param2, true);
-          nr.a(param0, param2, (byte) -48);
-          return;
+        try {
+            if (param1 < 91) {
+                field_a = -26;
+            }
+            eaa.field_d.a((bw) (Object) param2, true);
+            nr.a(param0, param2, (byte) -48);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "rm.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

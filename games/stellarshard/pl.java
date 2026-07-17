@@ -44,10 +44,14 @@ final class pl extends ae implements je {
     }
 
     final void a(byte param0, w param1) {
-        if (param0 != -2) {
-            ((pl) this).field_O = 50;
+        try {
+            if (param0 != -2) {
+                ((pl) this).field_O = 50;
+            }
+            ((pl) this).field_X = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "pl.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((pl) this).field_X = param1;
     }
 
     pl(String param0, lf param1, int param2) {
@@ -58,11 +62,11 @@ final class pl extends ae implements je {
         if (param0 != 105) {
             int discarded$0 = pl.e((byte) -67);
         }
-        lk.field_h = (param1 & 54) >> -1395595708;
-        if (!(-3 <= (lk.field_h ^ -1))) {
+        lk.field_h = (param1 & 54) >> 4;
+        if (!(lk.field_h <= 2)) {
             lk.field_h = 2;
         }
-        ka.field_p = (12 & param1) >> -2070265726;
+        ka.field_p = (12 & param1) >> 2;
         rl.field_a = 3 & param1;
         if (2 < ka.field_p) {
             ka.field_p = 2;
@@ -75,9 +79,6 @@ final class pl extends ae implements je {
     public static void q(int param0) {
         field_S = null;
         field_V = null;
-        if (param0 != 0) {
-            field_S = null;
-        }
         field_Q = null;
         field_T = null;
         field_R = null;
@@ -86,23 +87,58 @@ final class pl extends ae implements je {
     }
 
     final void a(int param0, boolean param1, int param2, rj param3) {
-        super.a(param0, param1, param2, param3);
-        ((pl) this).field_O = -((pl) this).field_w + ni.field_e - param2;
+        try {
+            super.a(param0, param1, param2, param3);
+            ((pl) this).field_O = -((pl) this).field_w + ni.field_e - param2;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "pl.N(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static int e(byte param0) {
-        int var2 = stellarshard.field_B;
-        int var1 = 0;
-        if (param0 != 63) {
-            field_T = null;
-        }
-        while (var1 < 1000) {
-            if (null == a.field_h[var1]) {
-                return var1;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_8_0 = 0;
+        int stackOut_5_0 = 0;
+        var2 = stellarshard.field_B;
+        try {
+          L0: {
+            L1: {
+              var1_int = 0;
+              if (param0 == 63) {
+                break L1;
+              } else {
+                field_T = null;
+                break L1;
+              }
             }
-            var1++;
+            L2: while (true) {
+              if (var1_int >= 1000) {
+                stackOut_8_0 = -1;
+                stackIn_9_0 = stackOut_8_0;
+                break L0;
+              } else {
+                if (null != a.field_h[var1_int]) {
+                  var1_int++;
+                  continue L2;
+                } else {
+                  stackOut_5_0 = var1_int;
+                  stackIn_6_0 = stackOut_5_0;
+                  return stackIn_6_0;
+                }
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var1, "pl.A(" + param0 + 41);
         }
-        return -1;
+        return stackIn_9_0;
     }
 
     static {

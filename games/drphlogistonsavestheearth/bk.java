@@ -15,7 +15,7 @@ final class bk extends m {
     final long a(int param0) {
         if (param0 == 1) {
           ((bk) this).field_h = ((bk) this).field_h + this.c(false);
-          if ((((bk) this).field_h ^ -1L) > (((bk) this).field_f ^ -1L)) {
+          if (~((bk) this).field_h > ~((bk) this).field_f) {
             return (-((bk) this).field_h + ((bk) this).field_f) / 1000000L;
           } else {
             return 0L;
@@ -23,7 +23,7 @@ final class bk extends m {
         } else {
           field_d = null;
           ((bk) this).field_h = ((bk) this).field_h + this.c(false);
-          if ((((bk) this).field_h ^ -1L) > (((bk) this).field_f ^ -1L)) {
+          if (~((bk) this).field_h > ~((bk) this).field_f) {
             return (-((bk) this).field_h + ((bk) this).field_f) / 1000000L;
           } else {
             return 0L;
@@ -41,115 +41,59 @@ final class bk extends m {
         var2 = System.nanoTime();
         var4 = -((bk) this).field_g + var2;
         ((bk) this).field_g = var2;
-        if ((var4 ^ -1L) < 4999999999L) {
-          if (-5000000001L < (var4 ^ -1L)) {
+        if (var4 > -5000000000L) {
+          if (var4 < 5000000000L) {
             ((bk) this).field_l[((bk) this).field_k] = var4;
             ((bk) this).field_k = (1 + ((bk) this).field_k) % 10;
-            if ((((bk) this).field_i ^ -1) <= -2) {
+            if (((bk) this).field_i >= 1) {
               var6 = 0L;
-              if (param0) {
-                int discarded$4 = ((bk) this).a(-62L, 63);
-                var8 = 1;
-                L0: while (true) {
-                  if (((bk) this).field_i < var8) {
-                    return var6 / (long)((bk) this).field_i;
-                  } else {
-                    var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
-                    var8++;
-                    continue L0;
-                  }
-                }
-              } else {
-                var8 = 1;
-                L1: while (true) {
-                  if (((bk) this).field_i < var8) {
-                    return var6 / (long)((bk) this).field_i;
-                  } else {
-                    var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
-                    var8++;
-                    continue L1;
-                  }
+              var8 = 1;
+              L0: while (true) {
+                if (((bk) this).field_i < var8) {
+                  return var6 / (long)((bk) this).field_i;
+                } else {
+                  var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
+                  var8++;
+                  continue L0;
                 }
               }
             } else {
               ((bk) this).field_i = ((bk) this).field_i + 1;
               var6 = 0L;
-              if (param0) {
-                int discarded$5 = ((bk) this).a(-62L, 63);
-                var8 = 1;
-                L2: while (true) {
-                  if (((bk) this).field_i < var8) {
-                    return var6 / (long)((bk) this).field_i;
-                  } else {
-                    var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
-                    var8++;
-                    continue L2;
-                  }
-                }
-              } else {
-                var8 = 1;
-                L3: while (true) {
-                  if (((bk) this).field_i < var8) {
-                    return var6 / (long)((bk) this).field_i;
-                  } else {
-                    var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
-                    var8++;
-                    continue L3;
-                  }
+              var8 = 1;
+              L1: while (true) {
+                if (((bk) this).field_i < var8) {
+                  return var6 / (long)((bk) this).field_i;
+                } else {
+                  var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
+                  var8++;
+                  continue L1;
                 }
               }
             }
           } else {
             var6 = 0L;
-            if (!param0) {
-              var8 = 1;
-              L4: while (true) {
-                if (((bk) this).field_i < var8) {
-                  return var6 / (long)((bk) this).field_i;
-                } else {
-                  var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
-                  var8++;
-                  continue L4;
-                }
-              }
-            } else {
-              int discarded$6 = ((bk) this).a(-62L, 63);
-              var8 = 1;
-              L5: while (true) {
-                if (((bk) this).field_i < var8) {
-                  return var6 / (long)((bk) this).field_i;
-                } else {
-                  var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
-                  var8++;
-                  continue L5;
-                }
+            var8 = 1;
+            L2: while (true) {
+              if (((bk) this).field_i < var8) {
+                return var6 / (long)((bk) this).field_i;
+              } else {
+                var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
+                var8++;
+                continue L2;
               }
             }
           }
         } else {
           var6 = 0L;
-          if (param0) {
-            int discarded$7 = ((bk) this).a(-62L, 63);
-            var8 = 1;
-            L6: while (true) {
-              if (((bk) this).field_i < var8) {
-                return var6 / (long)((bk) this).field_i;
-              } else {
-                var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
-                var8++;
-                continue L6;
-              }
-            }
-          } else {
-            var8 = 1;
-            L7: while (true) {
-              if (((bk) this).field_i < var8) {
-                return var6 / (long)((bk) this).field_i;
-              } else {
-                var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
-                var8++;
-                continue L7;
-              }
+          var8 = 1;
+          L3: while (true) {
+            if (((bk) this).field_i < var8) {
+              return var6 / (long)((bk) this).field_i;
+            } else {
+              var6 = var6 + ((bk) this).field_l[(((bk) this).field_k + (-var8 + 10)) % 10];
+              var8++;
+              continue L3;
             }
           }
         }
@@ -253,7 +197,7 @@ final class bk extends m {
     public static void b(int param0) {
         field_d = null;
         field_e = null;
-        int var1 = -77 / ((param0 - 6) / 44);
+        int var1 = -77;
         field_j = null;
     }
 

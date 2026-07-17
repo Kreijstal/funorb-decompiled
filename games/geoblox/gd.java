@@ -12,8 +12,9 @@ final class gd extends e {
         ((gd) this).field_k = param0.a(99, ((gd) this).field_k);
         ((gd) this).field_h = param0.a(-128, ((gd) this).field_h);
         if (((gd) this).field_g == ((gd) this).field_j) {
-          ((gd) this).field_j = param0.b(((gd) this).field_g, 6);
-          ((gd) this).field_g = param0.b(((gd) this).field_g, 6);
+          int dupTemp$2 = param0.b(((gd) this).field_g, 6);
+          ((gd) this).field_j = dupTemp$2;
+          ((gd) this).field_g = dupTemp$2;
           return (gd) this;
         } else {
           L0: {

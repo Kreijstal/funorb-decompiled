@@ -11,10 +11,7 @@ final class jd {
     public static void a(boolean param0) {
         field_c = null;
         field_a = null;
-        field_d = (vd[][]) null;
-        if (param0) {
-            return;
-        }
+        field_d = null;
         field_b = null;
     }
 

@@ -9,13 +9,13 @@ final class fw {
         if (!(var2 == null)) {
             return var2;
         }
-        byte[] var3 = tq.field_g.a(param1, 0, param0);
-        lp var2_ref = new lp();
+        byte[] var3 = tq.field_g.a(false, 0, param0);
+        var2 = new lp();
         if (!(var3 == null)) {
-            var2_ref.a(-1, param0, new uia(var3));
+            var2.a(-1, param0, new uia(var3));
         }
-        wha.field_J.a(29166, (Object) (Object) var2_ref, (long)param0);
-        return var2_ref;
+        wha.field_J.a(29166, (Object) (Object) var2, (long)param0);
+        return var2;
     }
 
     public static void a(int param0) {

@@ -41,15 +41,12 @@ final class ok {
     static String field_d;
 
     final static m[] b(byte param0) {
-        int var1 = -103 / ((10 - param0) / 62);
+        int var1 = -103;
         return new m[]{bb.field_J, mh.field_B, el.field_b};
     }
 
     public static void a(byte param0) {
         field_k = null;
-        if (param0 != 28) {
-            return;
-        }
         field_b = null;
         field_d = null;
         field_G = null;

@@ -21,21 +21,18 @@ final class el {
 
     final void a(byte param0, vp param1) {
         if (param0 < 9) {
-          return;
-        } else {
-          L0: {
-            if (param1.field_p != null) {
-              param1.d(true);
-              break L0;
-            } else {
-              break L0;
+            return;
+        }
+        try {
+            if (!(param1.field_p == null)) {
+                param1.d(true);
             }
-          }
-          param1.field_q = ((el) this).field_g;
-          param1.field_p = ((el) this).field_g.field_p;
-          param1.field_p.field_q = param1;
-          param1.field_q.field_p = param1;
-          return;
+            param1.field_q = ((el) this).field_g;
+            param1.field_p = ((el) this).field_g.field_p;
+            param1.field_p.field_q = param1;
+            param1.field_q.field_p = param1;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "el.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -56,44 +53,25 @@ final class el {
     }
 
     final static void a(df param0, int param1, df param2) {
-        Object var4 = null;
-        if (param0.field_j == null) {
-          param0.field_j = param2.field_j;
-          param0.field_h = param2;
-          if (param1 != 0) {
-            var4 = null;
-            el.a((df) null, 13, (df) null);
+        try {
+            if (param0.field_j != null) {
+                param0.a(16);
+            }
+            param0.field_j = param2.field_j;
+            param0.field_h = param2;
+            if (param1 != 0) {
+                Object var4 = null;
+                el.a((df) null, 13, (df) null);
+            }
             param0.field_j.field_h = param0;
             param0.field_h.field_j = param0;
-            return;
-          } else {
-            param0.field_j.field_h = param0;
-            param0.field_h.field_j = param0;
-            return;
-          }
-        } else {
-          param0.a(16);
-          param0.field_j = param2.field_j;
-          param0.field_h = param2;
-          if (param1 == 0) {
-            param0.field_j.field_h = param0;
-            param0.field_h.field_j = param0;
-            return;
-          } else {
-            var4 = null;
-            el.a((df) null, 13, (df) null);
-            param0.field_j.field_h = param0;
-            param0.field_h.field_j = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "el.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 != -5731) {
-            field_b = false;
-        }
     }
 
     final int b(int param0) {

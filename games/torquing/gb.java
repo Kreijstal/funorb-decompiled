@@ -7,27 +7,19 @@ final class gb {
     private ta field_b;
 
     final void a(byte param0, ta param1) {
-        if (null == param1.field_j) {
-          param1.field_j = ((gb) this).field_a.field_j;
-          if (param0 <= 116) {
+        if (null != param1.field_j) {
+            param1.h(0);
+        }
+        param1.field_j = ((gb) this).field_a.field_j;
+        if (param0 <= 116) {
             return;
-          } else {
+        }
+        try {
             param1.field_p = ((gb) this).field_a;
             param1.field_j.field_p = param1;
             param1.field_p.field_j = param1;
-            return;
-          }
-        } else {
-          param1.h(0);
-          param1.field_j = ((gb) this).field_a.field_j;
-          if (param0 <= 116) {
-            return;
-          } else {
-            param1.field_p = ((gb) this).field_a;
-            param1.field_j.field_p = param1;
-            param1.field_p.field_j = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "gb.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -121,7 +113,7 @@ final class gb {
 
     public static void d(int param0) {
         field_c = null;
-        int var1 = -51 / ((-42 - param0) / 39);
+        int var1 = -51;
     }
 
     public gb() {

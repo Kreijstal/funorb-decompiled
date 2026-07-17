@@ -56,9 +56,9 @@ final class eg extends um {
         ((eg) this).field_v[((eg) this).field_K] = param1;
         ((eg) this).field_X[((eg) this).field_K] = param2;
         ((eg) this).field_Q[((eg) this).field_K] = (byte)param3;
-        ((eg) this).field_k[((eg) this).field_K] = (byte)-1;
+        ((eg) this).field_k[((eg) this).field_K] = (byte) -1;
         ((eg) this).field_n[((eg) this).field_K] = (short)param4;
-        ((eg) this).field_L[((eg) this).field_K] = (short)-1;
+        ((eg) this).field_L[((eg) this).field_K] = (short) -1;
         ((eg) this).field_f[((eg) this).field_K] = (byte)param5;
         int fieldTemp$0 = ((eg) this).field_K;
         ((eg) this).field_K = ((eg) this).field_K + 1;
@@ -113,7 +113,7 @@ final class eg extends um {
                                     break L4;
                                   }
                                 }
-                                var6.field_Q[var10] = (byte)2;
+                                var6.field_Q[var10] = (byte) 2;
                                 var10++;
                                 continue L3;
                               } else {
@@ -142,7 +142,7 @@ final class eg extends um {
                                 break L5;
                               }
                             }
-                            ((eg) this).field_Q[var10] = (byte)2;
+                            ((eg) this).field_Q[var10] = (byte) 2;
                             var10++;
                             continue L2;
                           } else {
@@ -923,7 +923,7 @@ final class eg extends um {
                                         if ((((eg) this).field_C[var44] & 65535) != ((eg) this).field_X[var45]) {
                                           break L17;
                                         } else {
-                                          ((eg) this).field_k[var45] = (byte)-1;
+                                          ((eg) this).field_k[var45] = (byte) -1;
                                           var45++;
                                           continue L16;
                                         }
@@ -1083,13 +1083,13 @@ final class eg extends um {
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((eg) this).field_k[var38] = (byte)-1;
-                      ((eg) this).field_L[var38] = (short)-1;
+                      ((eg) this).field_k[var38] = (byte) -1;
+                      ((eg) this).field_L[var38] = (short) -1;
                       break L25;
                     } else {
                       ((eg) this).field_k[var38] = (byte)(var39 >> 2);
                       ((eg) this).field_L[var38] = ((eg) this).field_n[var38];
-                      ((eg) this).field_n[var38] = (short)127;
+                      ((eg) this).field_n[var38] = (short) 127;
                       if (((eg) this).field_L[var38] == -1) {
                         break L25;
                       } else {
@@ -1899,7 +1899,7 @@ final class eg extends um {
                 }
                 if (((eg) this).field_k != null) {
                   if (((eg) this).field_L[var53] == -1) {
-                    ((eg) this).field_k[var53] = (byte)-1;
+                    ((eg) this).field_k[var53] = (byte) -1;
                     var53++;
                     continue L22;
                   } else {
@@ -2405,7 +2405,7 @@ final class eg extends um {
                           break L22;
                         } else {
                           if (var18.field_L == null) {
-                            ((eg) this).field_L[((eg) this).field_K] = (short)-1;
+                            ((eg) this).field_L[((eg) this).field_K] = (short) -1;
                             break L22;
                           } else {
                             ((eg) this).field_L[((eg) this).field_K] = var15.field_L[var12];

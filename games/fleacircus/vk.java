@@ -12,24 +12,33 @@ final class vk extends bb {
         field_K = null;
         field_M = null;
         field_N = null;
-        if (param0) {
-            field_L = 18;
-        }
     }
 
     private vk(String param0, ch param1, kd param2) {
         super(param0, param1, param2);
-        ((vk) this).field_p = nf.field_M.field_d;
+        try {
+            ((vk) this).field_p = nf.field_M.field_d;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "vk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     vk(String param0, kd param1, boolean param2) {
         this(param0, param1);
-        ((vk) this).field_G = param2 ? true : false;
+        try {
+            ((vk) this).field_G = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "vk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     private vk(String param0, kd param1) {
         this(param0, nf.field_M.field_p, param1);
-        ((vk) this).field_p = nf.field_M.field_d;
+        try {
+            ((vk) this).field_p = nf.field_M.field_d;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "vk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {

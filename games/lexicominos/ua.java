@@ -426,31 +426,74 @@ final class ua {
     }
 
     final static la a(String param0, int param1) {
-        if (qa.field_c.b(12)) {
-          if (!param0.equals((Object) (Object) qa.field_c.a(false))) {
-            qa.field_c = mb.a((byte) -63, param0);
-            if (param1 <= 51) {
-              field_a = -117;
-              return qa.field_c;
-            } else {
-              return qa.field_c;
+        RuntimeException var2 = null;
+        la stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        la stackOut_3_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!qa.field_c.b(12)) {
+                break L1;
+              } else {
+                if (param0.equals((Object) (Object) qa.field_c.a(false))) {
+                  break L1;
+                } else {
+                  qa.field_c = mb.a((byte) -63, param0);
+                  break L1;
+                }
+              }
             }
-          } else {
-            if (param1 <= 51) {
-              field_a = -117;
-              return qa.field_c;
+            stackOut_3_0 = qa.field_c;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("ua.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
             } else {
-              return qa.field_c;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
             }
           }
-        } else {
-          if (param1 <= 51) {
-            field_a = -117;
-            return qa.field_c;
-          } else {
-            return qa.field_c;
-          }
+          throw ld.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 99 + 41);
         }
+        return stackIn_4_0;
     }
 
     static {

@@ -112,9 +112,6 @@ final class gi extends ki {
         field_t = null;
         field_r = null;
         field_s = null;
-        if (param0 != -417029247) {
-            gi.g(-5);
-        }
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -158,18 +155,22 @@ final class gi extends ki {
 
     gi(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
-        im.field_f = new jp[2][];
-        um.field_l = new jp[2];
-        pk.field_e = new jp[2][];
+        try {
+            im.field_f = new jp[2][];
+            um.field_l = new jp[2];
+            pk.field_e = new jp[2][];
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "gi.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     final boolean b(byte param0) {
         int stackIn_15_0 = 0;
         int stackIn_32_0 = 0;
-        int stackOut_31_0;
-        int stackOut_30_0;
-        int stackOut_14_0;
-        int stackOut_13_0;
+        int stackOut_31_0 = 0;
+        int stackOut_30_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_13_0 = 0;
         if (param0 < -91) {
           if (wn.field_b != null) {
             if (null != lj.field_q) {
@@ -253,7 +254,7 @@ final class gi extends ki {
         int var2 = 0;
         var1 = co.a((byte) -53);
         var2 = ba.b(true);
-        vg.field_c.a(var1 - -(un.field_a << 753437185), var2 - -(vo.field_A << -417029247), nc.field_k + -un.field_a, false, mi.field_d + -vo.field_A);
+        vg.field_c.a(var1 - -(un.field_a << 1), var2 - -(vo.field_A << 1), nc.field_k + -un.field_a, false, mi.field_d + -vo.field_A);
         jq.d(-16085);
         if (param0 != 11184810) {
           field_t = null;

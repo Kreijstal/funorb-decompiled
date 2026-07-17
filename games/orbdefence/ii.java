@@ -10,14 +10,14 @@ class ii extends sh {
     static String field_e;
 
     final void a(mg param0, int param1) {
-        param0.a(((ii) this).field_b, -16943);
-        if (param1 != 27557) {
-          field_d = null;
-          param0.a((byte) 113, ((ii) this).field_f);
-          return;
-        } else {
-          param0.a((byte) 113, ((ii) this).field_f);
-          return;
+        try {
+            param0.a(((ii) this).field_b, -16943);
+            if (param1 != 27557) {
+                field_d = null;
+            }
+            param0.a((byte) 113, ((ii) this).field_f);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "ii.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -42,8 +42,12 @@ class ii extends sh {
     }
 
     ii(long param0, String param1) {
-        ((ii) this).field_b = param0;
-        ((ii) this).field_f = param1;
+        try {
+            ((ii) this).field_b = param0;
+            ((ii) this).field_f = param1;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "ii.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

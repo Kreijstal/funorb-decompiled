@@ -17,7 +17,7 @@ final class kh {
         if (param0 != -3) {
           L0: {
             field_a = null;
-            if ((param1 ^ -1) != -3) {
+            if (param1 != 2) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -30,7 +30,7 @@ final class kh {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((param1 ^ -1) != -3) {
+            if (param1 != 2) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -46,9 +46,6 @@ final class kh {
 
     final static void a(int param0, byte param1) {
         rk.field_A = hn.field_u[param0];
-        if (param1 != -84) {
-            kh.a((byte) 115);
-        }
     }
 
     final static void a(byte param0) {
@@ -65,16 +62,8 @@ final class kh {
     public static void a(boolean param0) {
         field_d = null;
         field_c = null;
-        if (param0) {
-          field_c = null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
-          field_a = null;
-          field_b = null;
-          return;
-        }
+        field_a = null;
+        field_b = null;
     }
 
     static {

@@ -7,7 +7,7 @@ final class wo extends bia {
     private static String field_z;
 
     public static void c(byte param0) {
-        int var1 = 121 / ((36 - param0) / 45);
+        int var1 = -121;
         field_k = null;
     }
 

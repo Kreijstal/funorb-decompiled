@@ -17,8 +17,8 @@ final class vk {
 
     final int b(int param0) {
         if (!((vk) this).field_f) {
-          if ((((vk) this).field_k ^ -1) != -3) {
-            if ((((vk) this).field_d ^ -1L) == (uh.field_p ^ -1L)) {
+          if (((vk) this).field_k != 2) {
+            if (~((vk) this).field_d == ~uh.field_p) {
               return 1;
             } else {
               if (ii.field_c == param0) {
@@ -33,7 +33,7 @@ final class vk {
             }
           } else {
             if (((vk) this).field_l <= 0) {
-              if ((((vk) this).field_d ^ -1L) == (uh.field_p ^ -1L)) {
+              if (~((vk) this).field_d == ~uh.field_p) {
                 return 1;
               } else {
                 if (ii.field_c == param0) {
@@ -56,12 +56,6 @@ final class vk {
     }
 
     public static void a(int param0) {
-        if (param0 != 1) {
-            field_b = -122;
-            field_j = null;
-            field_e = null;
-            return;
-        }
         field_j = null;
         field_e = null;
     }

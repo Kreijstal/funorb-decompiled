@@ -30,16 +30,8 @@ abstract class bb {
         field_t = null;
         field_e = null;
         field_f = null;
-        if (param0 != 127) {
-          field_k = null;
-          field_r = null;
-          field_l = null;
-          return;
-        } else {
-          field_r = null;
-          field_l = null;
-          return;
-        }
+        field_r = null;
+        field_l = null;
     }
 
     final static cn[] a(int param0, boolean param1, int param2, int param3) {
@@ -61,7 +53,7 @@ abstract class bb {
         if (param0 != 20) {
           L0: {
             ((bb) this).field_d = null;
-            if (20 > ((bb) this).e(param0 + 0)) {
+            if (20 > ((bb) this).e(param0)) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -74,7 +66,7 @@ abstract class bb {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if (20 > ((bb) this).e(param0 + 0)) {
+            if (20 > ((bb) this).e(param0)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -132,7 +124,7 @@ abstract class bb {
         em stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = (long)param3 + ((long)param1 << -1369774112);
+          var6 = (long)param3 + ((long)param1 << 32);
           var8 = new em();
           var8.field_E = param2;
           var8.field_o = var6;
@@ -156,14 +148,14 @@ abstract class bb {
         L1: {
           stackIn_3_0.field_B = stackIn_3_1 != 0;
           if (param0) {
-            if ((((bb) this).c(20) ^ -1) > -21) {
+            if (((bb) this).c(20) < 20) {
               ((bb) this).field_g.a((ll) (Object) var8, -32711);
               break L1;
             } else {
               throw new RuntimeException();
             }
           } else {
-            if (-21 >= (((bb) this).e(20) ^ -1)) {
+            if (((bb) this).e(20) >= 20) {
               throw new RuntimeException();
             } else {
               ((bb) this).field_d.a((ll) (Object) var8, -32711);

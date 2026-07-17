@@ -44,18 +44,9 @@ class ne {
 
     public static void b(int param0) {
         field_b = null;
-        if (param0 != -18880) {
-          field_c = null;
-          field_d = null;
-          field_c = null;
-          field_f = null;
-          return;
-        } else {
-          field_d = null;
-          field_c = null;
-          field_f = null;
-          return;
-        }
+        field_d = null;
+        field_c = null;
+        field_f = null;
     }
 
     static {

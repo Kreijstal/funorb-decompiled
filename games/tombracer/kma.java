@@ -53,30 +53,20 @@ abstract class kma implements nua {
     abstract it d(int param0);
 
     final static void a(boolean param0, int param1, int param2) {
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var3 = 32 % ((43 - param1) / 57);
+        int var3 = 32 % ((43 - param1) / 57);
         if (null != fj.field_c) {
-          var4 = fj.field_c.d(-1, param0);
-          if (var4 == 1) {
-            return;
-          } else {
-            L0: {
-              if (0 != var4) {
+            var4 = fj.field_c.d(-1, param0);
+            if (var4 == -2) {
+                return;
+            }
+            if (!(var4 == -1)) {
                 var5 = fj.field_c.c(false) ? 1 : 0;
                 ok.a(var4, param2, (byte) 87, var5 != 0, fj.field_c.field_Db, fj.field_c.f(80));
-                break L0;
-              } else {
-                break L0;
-              }
             }
             fj.field_c = null;
             wp.a(-1);
-            return;
-          }
-        } else {
-          return;
         }
     }
 

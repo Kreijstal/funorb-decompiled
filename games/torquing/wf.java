@@ -12,37 +12,41 @@ abstract class wf extends ta {
     int field_r;
 
     final static void c(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var3_int = 0;
         double[] var4_ref_double__ = null;
         int var5 = 0;
         double[] var3 = null;
         int var4 = 0;
         int var6 = Torquing.field_u;
-        int var2 = 86 % ((-30 - param0) / 41);
-        for (var1 = 0; -9 < (var1 ^ -1); var1++) {
-            for (var3_int = 0; (var3_int ^ -1) > -9; var3_int++) {
-                var4_ref_double__ = jl.field_O[var1];
-                mg.field_a[var1][var3_int] = 0.0;
-                var5 = var3_int;
-                var4_ref_double__[var5] = 0.0;
+        try {
+            int var2 = 0;
+            for (var1_int = 0; var1_int < 8; var1_int++) {
+                for (var3_int = 0; var3_int < 8; var3_int++) {
+                    var4_ref_double__ = jl.field_O[var1_int];
+                    mg.field_a[var1_int][var3_int] = 0.0;
+                    var5 = var3_int;
+                    var4_ref_double__[var5] = 0.0;
+                }
+                var3 = go.field_w;
+                var4 = var1_int;
+                vf.field_e[var1_int] = 0.0;
+                var3[var4] = 0.0;
             }
-            var3 = go.field_w;
-            var4 = var1;
-            vf.field_e[var1] = 0.0;
-            var3[var4] = 0.0;
+            ia.field_i = 0;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "wf.DB(" + 76 + 41);
         }
-        ia.field_i = 0;
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = ((wf) this).field_w << -1563841277;
+        int var6 = ((wf) this).field_w << 3;
         if (param1 != 1326547364) {
             ((wf) this).b(78, 62, -121, -50, -99);
         }
-        param4 = (15 & var6) + (param4 << 1326547364);
-        int var7 = ((wf) this).field_u << -67037501;
-        param3 = (param3 << -620567804) + (var7 & 15);
+        param4 = (15 & var6) + (param4 << 4);
+        int var7 = ((wf) this).field_u << 3;
+        param3 = (param3 << 4) + (var7 & 15);
         ((wf) this).b(var6, var7, param4, param3, param2, param0);
     }
 
@@ -62,19 +66,76 @@ abstract class wf extends ta {
         if (!(param0 == 0)) {
             var6[4] = hj.a((byte) -88, param0, 64);
         }
-        if (param4 != 106) {
-            return null;
-        }
         return var5;
     }
 
     abstract void b(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final static int a(byte param0, int param1, byte[] param2) {
-        if (param0 != -117) {
-            field_x = null;
+        RuntimeException var3 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -117) {
+                break L1;
+              } else {
+                field_x = null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = nn.a(7655, param2, 0, param1);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("wf.AB(").append(param0).append(44).append(param1).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param2 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return nn.a(7655, param2, 0, param1);
+        return stackIn_3_0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

@@ -23,7 +23,7 @@ final class ec {
         int var14 = 0;
         int var15 = 0;
         var15 = BachelorFridge.field_y;
-        var9 = param4 + (param8 - -param6);
+        var9 = param4 + (1 - -param6);
         var10 = new kv[]{new kv(var9, var9), new kv(param0, var9), new kv(var9, var9), new kv(var9, param0), new kv(64, 64), new kv(var9, param0), new kv(var9, var9), new kv(param0, var9), new kv(var9, var9)};
         var11_ref_kv__ = var10;
         var12 = 0;
@@ -39,16 +39,16 @@ final class ec {
             }
             var11 = 0;
             L2: while (true) {
-              if (var11 >= param8) {
+              if (var11 >= 1) {
                 var11 = 0;
                 L3: while (true) {
-                  if (var11 >= param8) {
+                  if (var11 >= 1) {
                     var11 = 0;
                     L4: while (true) {
                       if (var11 >= param0) {
                         var11 = 0;
                         L5: while (true) {
-                          if (param0 >> 1351112865 <= var11) {
+                          if (param0 >> 1 <= var11) {
                             return var10;
                           } else {
                             var12 = 0;
@@ -70,7 +70,7 @@ final class ec {
                       } else {
                         var12 = 0;
                         L7: while (true) {
-                          if (param8 > var12) {
+                          if (1 > var12) {
                             var10[7].field_v[(-1 + (-var12 + var9)) * param0 - -var11] = param2;
                             var10[5].field_v[var9 + (-1 - var12) + var9 * var11] = param2;
                             var10[1].field_v[var12 * param0 - -var11] = param7;

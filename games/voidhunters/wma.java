@@ -44,9 +44,6 @@ final class wma {
     short[] field_G;
 
     public static void b(int param0) {
-        if (param0 < 94) {
-            field_M = null;
-        }
         field_M = null;
     }
 

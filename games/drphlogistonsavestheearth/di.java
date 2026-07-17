@@ -10,12 +10,6 @@ final class di {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 != 27) {
-            field_b = null;
-            field_b = null;
-            field_e = null;
-            return;
-        }
         field_b = null;
         field_e = null;
     }

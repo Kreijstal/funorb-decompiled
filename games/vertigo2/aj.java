@@ -21,7 +21,7 @@ final class aj extends ig {
         int var5 = 0;
         java.net.URISyntaxException var6 = null;
         Object[] var6_array = null;
-        rg var7 = null;
+        Object var7 = null;
         Object[] var8 = null;
         Object[] var8_array = null;
         int var9 = 0;
@@ -59,359 +59,229 @@ final class aj extends ig {
         StringBuilder stackIn_12_3 = null;
         String stackIn_12_4 = null;
         java.net.Socket stackIn_23_0 = null;
-        int stackOut_3_0 = 0;
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
         java.net.ProxySelector stackOut_6_0 = null;
         java.net.URI stackOut_6_1 = null;
         java.net.URI stackOut_6_2 = null;
         StringBuilder stackOut_6_3 = null;
-        java.net.ProxySelector stackOut_7_0 = null;
-        java.net.URI stackOut_7_1 = null;
-        java.net.URI stackOut_7_2 = null;
-        StringBuilder stackOut_7_3 = null;
-        String stackOut_7_4 = null;
         java.net.ProxySelector stackOut_8_0 = null;
         java.net.URI stackOut_8_1 = null;
         java.net.URI stackOut_8_2 = null;
         StringBuilder stackOut_8_3 = null;
         String stackOut_8_4 = null;
+        java.net.ProxySelector stackOut_7_0 = null;
+        java.net.URI stackOut_7_1 = null;
+        java.net.URI stackOut_7_2 = null;
+        StringBuilder stackOut_7_3 = null;
+        String stackOut_7_4 = null;
         java.net.ProxySelector stackOut_9_0 = null;
         java.net.URI stackOut_9_1 = null;
         java.net.URI stackOut_9_2 = null;
         StringBuilder stackOut_9_3 = null;
-        java.net.ProxySelector stackOut_10_0 = null;
-        java.net.URI stackOut_10_1 = null;
-        java.net.URI stackOut_10_2 = null;
-        StringBuilder stackOut_10_3 = null;
-        String stackOut_10_4 = null;
         java.net.ProxySelector stackOut_11_0 = null;
         java.net.URI stackOut_11_1 = null;
         java.net.URI stackOut_11_2 = null;
         StringBuilder stackOut_11_3 = null;
         String stackOut_11_4 = null;
+        java.net.ProxySelector stackOut_10_0 = null;
+        java.net.URI stackOut_10_1 = null;
+        java.net.URI stackOut_10_2 = null;
+        StringBuilder stackOut_10_3 = null;
+        String stackOut_10_4 = null;
         java.net.Socket stackOut_22_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var13 = Vertigo2.field_L ? 1 : 0;
-                    if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if ((((aj) this).field_b ^ -1) != -444) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    stackOut_3_0 = 1;
-                    stackIn_5_0 = stackOut_3_0;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 4: {
-                    stackOut_4_0 = 0;
-                    stackIn_5_0 = stackOut_4_0;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    var5 = stackIn_5_0;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 6: {
-                    try {
-                        stackOut_6_0 = ((aj) this).field_g;
-                        stackOut_6_1 = null;
-                        stackOut_6_2 = null;
-                        stackOut_6_3 = new StringBuilder();
-                        stackIn_8_0 = stackOut_6_0;
-                        stackIn_8_1 = stackOut_6_1;
-                        stackIn_8_2 = stackOut_6_2;
-                        stackIn_8_3 = stackOut_6_3;
-                        stackIn_7_0 = stackOut_6_0;
-                        stackIn_7_1 = stackOut_6_1;
-                        stackIn_7_2 = stackOut_6_2;
-                        stackIn_7_3 = stackOut_6_3;
-                        if (var5 != 0) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        stackOut_7_0 = (java.net.ProxySelector) (Object) stackIn_7_0;
-                        stackOut_7_1 = null;
-                        stackOut_7_2 = null;
-                        stackOut_7_3 = (StringBuilder) (Object) stackIn_7_3;
-                        stackOut_7_4 = "http";
-                        stackIn_9_0 = stackOut_7_0;
-                        stackIn_9_1 = stackOut_7_1;
-                        stackIn_9_2 = stackOut_7_2;
-                        stackIn_9_3 = stackOut_7_3;
-                        stackIn_9_4 = stackOut_7_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        stackOut_8_0 = (java.net.ProxySelector) (Object) stackIn_8_0;
-                        stackOut_8_1 = null;
-                        stackOut_8_2 = null;
-                        stackOut_8_3 = (StringBuilder) (Object) stackIn_8_3;
-                        stackOut_8_4 = "https";
-                        stackIn_9_0 = stackOut_8_0;
-                        stackIn_9_1 = stackOut_8_1;
-                        stackIn_9_2 = stackOut_8_2;
-                        stackIn_9_3 = stackOut_8_3;
-                        stackIn_9_4 = stackOut_8_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        new java.net.URI(stackIn_9_4 + "://" + ((aj) this).field_a);
-                        var3 = ((java.net.ProxySelector) (Object) stackIn_9_0).select(stackIn_9_1);
-                        stackOut_9_0 = ((aj) this).field_g;
-                        stackOut_9_1 = null;
-                        stackOut_9_2 = null;
-                        stackOut_9_3 = new StringBuilder();
-                        stackIn_11_0 = stackOut_9_0;
-                        stackIn_11_1 = stackOut_9_1;
-                        stackIn_11_2 = stackOut_9_2;
-                        stackIn_11_3 = stackOut_9_3;
-                        stackIn_10_0 = stackOut_9_0;
-                        stackIn_10_1 = stackOut_9_1;
-                        stackIn_10_2 = stackOut_9_2;
-                        stackIn_10_3 = stackOut_9_3;
-                        if (var5 == 0) {
-                            statePc = 11;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        stackOut_10_0 = (java.net.ProxySelector) (Object) stackIn_10_0;
-                        stackOut_10_1 = null;
-                        stackOut_10_2 = null;
-                        stackOut_10_3 = (StringBuilder) (Object) stackIn_10_3;
-                        stackOut_10_4 = "http";
-                        stackIn_12_0 = stackOut_10_0;
-                        stackIn_12_1 = stackOut_10_1;
-                        stackIn_12_2 = stackOut_10_2;
-                        stackIn_12_3 = stackOut_10_3;
-                        stackIn_12_4 = stackOut_10_4;
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        stackOut_11_0 = (java.net.ProxySelector) (Object) stackIn_11_0;
-                        stackOut_11_1 = null;
-                        stackOut_11_2 = null;
-                        stackOut_11_3 = (StringBuilder) (Object) stackIn_11_3;
-                        stackOut_11_4 = "https";
-                        stackIn_12_0 = stackOut_11_0;
-                        stackIn_12_1 = stackOut_11_1;
-                        stackIn_12_2 = stackOut_11_2;
-                        stackIn_12_3 = stackOut_11_3;
-                        stackIn_12_4 = stackOut_11_4;
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        new java.net.URI(stackIn_12_4 + "://" + ((aj) this).field_a);
-                        var4 = ((java.net.ProxySelector) (Object) stackIn_12_0).select(stackIn_12_1);
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    var6 = (java.net.URISyntaxException) (Object) caughtException;
-                    return ((aj) this).a((byte) -39);
-                }
-                case 15: {
-                    if (param0 == 640) {
-                        statePc = 17;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 16: {
-                    return null;
-                }
-                case 17: {
-                    boolean discarded$3 = var3.addAll((Collection) (Object) var4);
-                    var6_array = var3.toArray();
-                    var7 = null;
-                    var8_array = var6_array;
-                    var9 = 0;
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 18: {
-                    if (var8_array.length <= var9) {
-                        statePc = 27;
-                    } else {
-                        statePc = 19;
-                    }
-                    continue stateLoop;
-                }
-                case 19: {
-                    var10 = var8_array[var9];
-                    var11 = (java.net.Proxy) var10;
-                    statePc = 20;
-                    continue stateLoop;
-                }
-                case 20: {
-                    try {
-                        var12_ref2 = this.a((byte) 107, var11);
-                        if (var12_ref2 != null) {
-                            statePc = 22;
-                        } else {
-                            statePc = 21;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = (stateCaught_20 instanceof rg ? 24 : 25);
-                        continue stateLoop;
-                    }
-                }
-                case 21: {
-                    try {
-                        var9++;
-                        statePc = 18;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = (stateCaught_21 instanceof rg ? 24 : 25);
-                        continue stateLoop;
-                    }
-                }
-                case 22: {
-                    try {
-                        stackOut_22_0 = (java.net.Socket) var12_ref2;
-                        stackIn_23_0 = stackOut_22_0;
-                        statePc = 23;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_22) {
-                        caughtException = stateCaught_22;
-                        statePc = (stateCaught_22 instanceof rg ? 24 : 25);
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    return stackIn_23_0;
-                }
-                case 24: {
-                    var12 = (rg) (Object) caughtException;
-                    var7 = var12;
-                    var9++;
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 25: {
-                    var12_ref = (IOException) (Object) caughtException;
-                    var9++;
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 27: {
-                    if (var7 != null) {
-                        statePc = 29;
-                    } else {
-                        statePc = 28;
-                    }
-                    continue stateLoop;
-                }
-                case 28: {
-                    return ((aj) this).a((byte) -39);
-                }
-                case 29: {
-                    throw var7;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        L0: {
+          var13 = Vertigo2.field_L ? 1 : 0;
+          if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
+            break L0;
+          } else {
+            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
+            break L0;
+          }
+        }
+        L1: {
+          if (((aj) this).field_b != 443) {
+            stackOut_4_0 = 0;
+            stackIn_5_0 = stackOut_4_0;
+            break L1;
+          } else {
+            stackOut_3_0 = 1;
+            stackIn_5_0 = stackOut_3_0;
+            break L1;
+          }
+        }
+        var5 = stackIn_5_0;
+        try {
+          L2: {
+            L3: {
+              stackOut_6_0 = ((aj) this).field_g;
+              stackOut_6_1 = null;
+              stackOut_6_2 = null;
+              stackOut_6_3 = new StringBuilder();
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_3 = stackOut_6_3;
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              stackIn_7_3 = stackOut_6_3;
+              if (var5 != 0) {
+                stackOut_8_0 = (java.net.ProxySelector) (Object) stackIn_8_0;
+                stackOut_8_1 = null;
+                stackOut_8_2 = null;
+                stackOut_8_3 = (StringBuilder) (Object) stackIn_8_3;
+                stackOut_8_4 = "https";
+                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_1 = stackOut_8_1;
+                stackIn_9_2 = stackOut_8_2;
+                stackIn_9_3 = stackOut_8_3;
+                stackIn_9_4 = stackOut_8_4;
+                break L3;
+              } else {
+                stackOut_7_0 = (java.net.ProxySelector) (Object) stackIn_7_0;
+                stackOut_7_1 = null;
+                stackOut_7_2 = null;
+                stackOut_7_3 = (StringBuilder) (Object) stackIn_7_3;
+                stackOut_7_4 = "http";
+                stackIn_9_0 = stackOut_7_0;
+                stackIn_9_1 = stackOut_7_1;
+                stackIn_9_2 = stackOut_7_2;
+                stackIn_9_3 = stackOut_7_3;
+                stackIn_9_4 = stackOut_7_4;
+                break L3;
+              }
             }
+            L4: {
+              var3 = ((java.net.ProxySelector) (Object) stackIn_9_0).select(new java.net.URI(stackIn_9_4 + "://" + ((aj) this).field_a));
+              stackOut_9_0 = ((aj) this).field_g;
+              stackOut_9_1 = null;
+              stackOut_9_2 = null;
+              stackOut_9_3 = new StringBuilder();
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              stackIn_11_3 = stackOut_9_3;
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              stackIn_10_3 = stackOut_9_3;
+              if (var5 == 0) {
+                stackOut_11_0 = (java.net.ProxySelector) (Object) stackIn_11_0;
+                stackOut_11_1 = null;
+                stackOut_11_2 = null;
+                stackOut_11_3 = (StringBuilder) (Object) stackIn_11_3;
+                stackOut_11_4 = "https";
+                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_1 = stackOut_11_1;
+                stackIn_12_2 = stackOut_11_2;
+                stackIn_12_3 = stackOut_11_3;
+                stackIn_12_4 = stackOut_11_4;
+                break L4;
+              } else {
+                stackOut_10_0 = (java.net.ProxySelector) (Object) stackIn_10_0;
+                stackOut_10_1 = null;
+                stackOut_10_2 = null;
+                stackOut_10_3 = (StringBuilder) (Object) stackIn_10_3;
+                stackOut_10_4 = "http";
+                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_1 = stackOut_10_1;
+                stackIn_12_2 = stackOut_10_2;
+                stackIn_12_3 = stackOut_10_3;
+                stackIn_12_4 = stackOut_10_4;
+                break L4;
+              }
+            }
+            var4 = ((java.net.ProxySelector) (Object) stackIn_12_0).select(new java.net.URI(stackIn_12_4 + "://" + ((aj) this).field_a));
+            break L2;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
+          return ((aj) this).a((byte) -39);
+        }
+        if (param0 == 640) {
+          boolean discarded$3 = var3.addAll((Collection) (Object) var4);
+          var6_array = var3.toArray();
+          var7 = null;
+          var8_array = var6_array;
+          var9 = 0;
+          L5: while (true) {
+            if (var8_array.length <= var9) {
+              if (var7 != null) {
+                throw aj.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+              } else {
+                return ((aj) this).a((byte) -39);
+              }
+            } else {
+              var10 = var8_array[var9];
+              var11 = (java.net.Proxy) var10;
+              try {
+                L6: {
+                  var12_ref2 = this.a((byte) 107, var11);
+                  if (var12_ref2 != null) {
+                    stackOut_22_0 = (java.net.Socket) var12_ref2;
+                    stackIn_23_0 = stackOut_22_0;
+                    decompiledRegionSelector0 = 1;
+                    break L6;
+                  } else {
+                    var9++;
+                    var9++;
+                    decompiledRegionSelector0 = 0;
+                    break L6;
+                  }
+                }
+              } catch (java.io.IOException decompiledCaughtParameter2) {
+                decompiledCaughtException = decompiledCaughtParameter2;
+                L8: {
+                  var12_ref = (IOException) (Object) decompiledCaughtException;
+                  var9++;
+                  decompiledRegionSelector0 = 0;
+                  break L8;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter1) {
+                decompiledCaughtException = decompiledCaughtParameter1;
+                L7: {
+                  var12 = (rg) (Object) decompiledCaughtException;
+                  var7 = (Object) (Object) var12;
+                  var9++;
+                  var9++;
+                  decompiledRegionSelector0 = 0;
+                  break L7;
+                }
+              }
+              if (decompiledRegionSelector0 == 0) {
+                continue L5;
+              } else {
+                return stackIn_23_0;
+              }
+            }
+          }
+        } else {
+          return null;
         }
     }
 
     final static void a(String param0, String param1, byte param2) {
-        if (param2 == 33) {
-          if (df.field_l != null) {
-            df.field_l.h((byte) 64);
+        try {
+            if (df.field_l != null) {
+                df.field_l.h((byte) 64);
+            }
             eb.field_d = new ob(param1, param0, false, true, true);
             n.field_b.a(false, (iq) (Object) eb.field_d);
-            return;
-          } else {
-            eb.field_d = new ob(param1, param0, false, true, true);
-            n.field_b.a(false, (iq) (Object) eb.field_d);
-            return;
-          }
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "aj.I(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 33 + 41);
         }
     }
 
     private final java.net.Socket a(byte param0, java.net.Proxy param1) throws IOException {
-        Object var3 = null;
+        RuntimeException var3 = null;
+        java.net.SocketAddress var3_ref = null;
         Object var4 = null;
         java.net.InetSocketAddress var4_ref = null;
-        java.net.Socket var5 = null;
+        Object var5 = null;
         Exception var6 = null;
         Class var6_ref = null;
         java.lang.reflect.Method var7 = null;
@@ -422,351 +292,259 @@ final class aj extends ig {
         String var12 = null;
         String var13 = null;
         Class var14 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param1.type() != java.net.Proxy.Type.DIRECT) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return ((aj) this).a((byte) -39);
-                }
-                case 2: {
-                    var3 = param1.address();
-                    if (var3 instanceof java.net.InetSocketAddress) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return null;
-                }
-                case 4: {
-                    var4_ref = (java.net.InetSocketAddress) (Object) var3;
-                    if (param0 >= 71) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
+        java.net.Socket stackIn_2_0 = null;
+        java.net.Socket stackIn_17_0 = null;
+        Object stackIn_21_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        Throwable decompiledCaughtException = null;
+        Object stackOut_20_0 = null;
+        java.net.Socket stackOut_16_0 = null;
+        java.net.Socket stackOut_1_0 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        try {
+          L0: {
+            if (param1.type() != java.net.Proxy.Type.DIRECT) {
+              var3_ref = param1.address();
+              if ((Object) var3_ref instanceof java.net.InetSocketAddress) {
+                L1: {
+                  var4_ref = (java.net.InetSocketAddress) (Object) var3_ref;
+                  if (param0 >= 71) {
+                    break L1;
+                  } else {
                     field_e = -16;
-                    statePc = 6;
-                    continue stateLoop;
+                    break L1;
+                  }
                 }
-                case 6: {
-                    if (param1.type() != java.net.Proxy.Type.HTTP) {
-                        statePc = 15;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    var5 = null;
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    try {
+                if (param1.type() != java.net.Proxy.Type.HTTP) {
+                  if (param1.type() == java.net.Proxy.Type.SOCKS) {
+                    var5 = (Object) (Object) new java.net.Socket(param1);
+                    ((java.net.Socket) var5).connect((java.net.SocketAddress) (Object) new java.net.InetSocketAddress(((aj) this).field_a, ((aj) this).field_b));
+                    stackOut_20_0 = var5;
+                    stackIn_21_0 = stackOut_20_0;
+                    break L0;
+                  } else {
+                    return null;
+                  }
+                } else {
+                  var5 = null;
+                  try {
+                    L2: {
+                      L3: {
                         var14 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
                         var6_ref = var14;
                         var7 = var14.getDeclaredMethod("getProxyAuth", new Class[2]);
                         var7.setAccessible(true);
                         var8 = var7.invoke((Object) null, new Object[2]);
                         if (var8 != null) {
-                            statePc = 10;
+                          var9 = var6_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[0]);
+                          var9.setAccessible(true);
+                          if (!((Boolean) var9.invoke(var8, new Object[0])).booleanValue()) {
+                            break L3;
+                          } else {
+                            var10 = var6_ref.getDeclaredMethod("getHeaderName", new Class[0]);
+                            var10.setAccessible(true);
+                            var11 = var14.getDeclaredMethod("getHeaderValue", new Class[2]);
+                            var11.setAccessible(true);
+                            var12 = (String) var10.invoke(var8, new Object[0]);
+                            var13 = (String) var11.invoke(var8, new Object[2]);
+                            var5 = (Object) (Object) (var12 + ": " + var13);
+                            break L3;
+                          }
                         } else {
-                            statePc = 9;
+                          break L3;
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 13;
-                        continue stateLoop;
+                      }
+                      break L2;
                     }
-                }
-                case 9: {
-                    try {
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 13;
-                        continue stateLoop;
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L4: {
+                      var6 = (Exception) (Object) decompiledCaughtException;
+                      break L4;
                     }
+                  }
+                  stackOut_16_0 = this.a(var4_ref.getPort(), 32, var4_ref.getHostName(), (String) var5);
+                  stackIn_17_0 = stackOut_16_0;
+                  return stackIn_17_0;
                 }
-                case 10: {
-                    try {
-                        var9 = var6_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[0]);
-                        var9.setAccessible(true);
-                        if (!((Boolean) var9.invoke(var8, new Object[0])).booleanValue()) {
-                            statePc = 14;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        var10 = var6_ref.getDeclaredMethod("getHeaderName", new Class[0]);
-                        var10.setAccessible(true);
-                        var11 = var14.getDeclaredMethod("getHeaderValue", new Class[2]);
-                        var11.setAccessible(true);
-                        var12 = (String) var10.invoke(var8, new Object[0]);
-                        var13 = (String) var11.invoke(var8, new Object[2]);
-                        var5 = (java.net.Socket) (Object) (var12 + ": " + var13);
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    var6 = (Exception) (Object) caughtException;
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 14: {
-                    return this.a(var4_ref.getPort(), 32, var4_ref.getHostName(), (String) (Object) var5);
-                }
-                case 15: {
-                    if (param1.type() == java.net.Proxy.Type.SOCKS) {
-                        statePc = 17;
-                    } else {
-                        statePc = 18;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    var5 = new java.net.Socket(param1);
-                    var5.connect((java.net.SocketAddress) (Object) new java.net.InetSocketAddress(((aj) this).field_a, ((aj) this).field_b));
-                    return var5;
-                }
-                case 18: {
-                    return null;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                return null;
+              }
+            } else {
+              stackOut_1_0 = ((aj) this).a((byte) -39);
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L5: {
+            var3 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var3;
+            stackOut_22_1 = new StringBuilder().append("aj.K(").append(param0).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param1 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L5;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L5;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
+        return (java.net.Socket) (Object) stackIn_21_0;
     }
 
     private final java.net.Socket a(int param0, int param1, String param2, String param3) throws IOException {
+        RuntimeException var5 = null;
+        OutputStream var6 = null;
         BufferedReader var7 = null;
         String var8 = null;
         int var9 = 0;
         String var10 = null;
         int var11 = 0;
         int var12 = 0;
-        java.net.Socket var13 = null;
-        OutputStream var15 = null;
-        BufferedReader var16 = null;
-        String var17 = null;
-        BufferedReader var18 = null;
-        String var20 = null;
-        String var21 = null;
-        String var22 = null;
-        String var23 = null;
-        String var24 = null;
-        OutputStream var27 = null;
-        BufferedReader var28 = null;
-        String var30 = null;
-        String var39 = null;
-        BufferedReader var40 = null;
-        String var42 = null;
-        String var43 = null;
-        String var44 = null;
-        String var45 = null;
-        String var46 = null;
-        String var49 = null;
-        String var50 = null;
-        String var51 = null;
+        Object var13 = null;
+        java.net.Socket var14 = null;
+        String var15 = null;
+        java.net.Socket stackIn_12_0 = null;
+        Object stackIn_27_0 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        java.net.Socket stackOut_11_0 = null;
+        Object stackOut_26_0 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
         var12 = Vertigo2.field_L ? 1 : 0;
-        var13 = new java.net.Socket(param2, param0);
-        if (param1 != 32) {
-          aj.a(72, 23, (vi) null);
-          var13.setSoTimeout(10000);
-          var27 = var13.getOutputStream();
-          if (param3 == null) {
-            L0: {
-              var27.write(("CONNECT " + ((aj) this).field_a + ":" + ((aj) this).field_b + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
-              var27.flush();
-              var28 = new BufferedReader((Reader) (Object) new InputStreamReader(var13.getInputStream()));
-              var7 = var28;
-              var8 = var28.readLine();
-              var30 = var8;
-              var8 = var30;
-              var50 = var8;
-              var8 = var50;
-              var10 = var8;
-              if (var8 != null) {
-                if (!var8.startsWith("HTTP/1.0 200")) {
-                  if (!var8.startsWith("HTTP/1.1 200")) {
-                    L1: {
-                      if (var8.startsWith("HTTP/1.0 407")) {
-                        var9 = 0;
-                        var10 = "proxy-authenticate: ";
-                        var8 = var28.readLine();
-                        break L1;
-                      } else {
-                        if (var8.startsWith("HTTP/1.1 407")) {
-                          var9 = 0;
-                          var10 = "proxy-authenticate: ";
-                          var8 = var10;
-                          var8 = var10;
-                          var8 = var28.readLine();
-                          break L1;
-                        } else {
-                          break L0;
-                        }
-                      }
-                    }
-                    L2: while (true) {
-                      if (var8 != null) {
-                        if (-51 < (var9 ^ -1)) {
-                          if (var8.toLowerCase().startsWith(var10)) {
-                            L3: {
-                              var39 = var8.substring(var10.length()).trim();
-                              var8 = var39;
-                              var8 = var39;
-                              var11 = var39.indexOf(' ');
-                              if (var11 == -1) {
-                                break L3;
-                              } else {
-                                var8 = var39.substring(0, var11);
-                                break L3;
-                              }
-                            }
-                            throw new rg(var8);
-                          } else {
-                            var9++;
-                            var8 = var28.readLine();
-                            continue L2;
-                          }
-                        } else {
-                          throw new rg("");
-                        }
-                      } else {
-                        throw new rg("");
-                      }
-                    }
-                  } else {
-                    return var13;
-                  }
-                } else {
-                  return var13;
-                }
+        try {
+          L0: {
+            L1: {
+              var14 = new java.net.Socket(param2, param0);
+              if (param1 == 32) {
+                break L1;
               } else {
-                break L0;
+                var13 = null;
+                aj.a(72, 23, (vi) null);
+                break L1;
               }
             }
-            var27.close();
-            var28.close();
-            var13.close();
-            return null;
-          } else {
-            var27.write(("CONNECT " + ((aj) this).field_a + ":" + ((aj) this).field_b + " HTTP/1.0\n" + param3 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
-            var27.flush();
-            var40 = new BufferedReader((Reader) (Object) new InputStreamReader(var13.getInputStream()));
-            var7 = var40;
-            var8 = var40.readLine();
-            var42 = var8;
-            var8 = var42;
-            if (var8 != null) {
-              if (!var8.startsWith("HTTP/1.0 200")) {
-                if (!var8.startsWith("HTTP/1.1 200")) {
-                  if (var8.startsWith("HTTP/1.0 407")) {
-                    var9 = 0;
-                    var43 = "proxy-authenticate: ";
-                    var8 = var43;
-                    var8 = var43;
-                    var8 = var40.readLine();
-                    L4: while (true) {
+            L2: {
+              var14.setSoTimeout(10000);
+              var6 = var14.getOutputStream();
+              if (param3 == null) {
+                var6.write(("CONNECT " + ((aj) this).field_a + ":" + ((aj) this).field_b + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                break L2;
+              } else {
+                var6.write(("CONNECT " + ((aj) this).field_a + ":" + ((aj) this).field_b + " HTTP/1.0\n" + param3 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                break L2;
+              }
+            }
+            L3: {
+              var6.flush();
+              var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var14.getInputStream()));
+              var8 = var7.readLine();
+              if (var8 != null) {
+                L4: {
+                  if (var8.startsWith("HTTP/1.0 200")) {
+                    break L4;
+                  } else {
+                    if (!var8.startsWith("HTTP/1.1 200")) {
                       L5: {
-                        if (var8 == null) {
+                        if (var8.startsWith("HTTP/1.0 407")) {
                           break L5;
                         } else {
-                          if (-51 >= (var9 ^ -1)) {
+                          if (var8.startsWith("HTTP/1.1 407")) {
                             break L5;
                           } else {
-                            if (var8.toLowerCase().startsWith(var43)) {
-                              L6: {
-                                var44 = var8.substring(var43.length()).trim();
-                                var8 = var44;
-                                var8 = var44;
-                                var11 = var44.indexOf(' ');
-                                if (var11 == -1) {
-                                  break L6;
-                                } else {
-                                  var8 = var44.substring(0, var11);
-                                  break L6;
-                                }
-                              }
-                              throw new rg(var8);
-                            } else {
-                              var9++;
-                              var8 = var40.readLine();
-                              continue L4;
-                            }
+                            break L3;
                           }
                         }
                       }
-                      throw new rg("");
-                    }
-                  } else {
-                    if (var8.startsWith("HTTP/1.1 407")) {
                       var9 = 0;
-                      var45 = "proxy-authenticate: ";
-                      var8 = var45;
-                      var8 = var45;
-                      var10 = var45;
+                      var10 = "proxy-authenticate: ";
                       var8 = var10;
                       var8 = var10;
-                      var8 = var40.readLine();
-                      L7: while (true) {
-                        L8: {
+                      var8 = var7.readLine();
+                      L6: while (true) {
+                        L7: {
                           if (var8 == null) {
-                            break L8;
+                            break L7;
                           } else {
-                            if (-51 >= (var9 ^ -1)) {
-                              break L8;
+                            if (var9 >= 50) {
+                              break L7;
                             } else {
-                              if (var8.toLowerCase().startsWith(var45)) {
-                                L9: {
-                                  var46 = var8.substring(var45.length()).trim();
-                                  var8 = var46;
-                                  var8 = var46;
-                                  var11 = var46.indexOf(' ');
+                              if (var8.toLowerCase().startsWith(var10)) {
+                                L8: {
+                                  var15 = var8.substring(var10.length()).trim();
+                                  var8 = var15;
+                                  var8 = var15;
+                                  var11 = var15.indexOf(' ');
                                   if (var11 == -1) {
-                                    break L9;
+                                    break L8;
                                   } else {
-                                    var8 = var46.substring(0, var11);
-                                    break L9;
+                                    var8 = var15.substring(0, var11);
+                                    break L8;
                                   }
                                 }
                                 throw new rg(var8);
                               } else {
                                 var9++;
-                                var8 = var40.readLine();
-                                var51 = var8;
-                                var51 = var8;
-                                continue L7;
+                                var8 = var7.readLine();
+                                continue L6;
                               }
                             }
                           }
@@ -774,252 +552,168 @@ final class aj extends ig {
                         throw new rg("");
                       }
                     } else {
-                      var27.close();
-                      var40.close();
-                      var13.close();
-                      return null;
+                      break L4;
                     }
                   }
-                } else {
-                  return var13;
                 }
+                stackOut_11_0 = (java.net.Socket) var14;
+                stackIn_12_0 = stackOut_11_0;
+                return stackIn_12_0;
               } else {
-                return var13;
+                break L3;
               }
+            }
+            var6.close();
+            var7.close();
+            var14.close();
+            stackOut_26_0 = null;
+            stackIn_27_0 = stackOut_26_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var5 = decompiledCaughtException;
+            stackOut_28_0 = (RuntimeException) var5;
+            stackOut_28_1 = new StringBuilder().append("aj.G(").append(param0).append(44).append(param1).append(44);
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
+            if (param2 == null) {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L9;
             } else {
-              var27.close();
-              var40.close();
-              var13.close();
-              return null;
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L9;
             }
           }
-        } else {
-          var13.setSoTimeout(10000);
-          var15 = var13.getOutputStream();
-          if (param3 == null) {
-            L10: {
-              var15.write(("CONNECT " + ((aj) this).field_a + ":" + ((aj) this).field_b + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
-              var15.flush();
-              var16 = new BufferedReader((Reader) (Object) new InputStreamReader(var13.getInputStream()));
-              var8 = var16.readLine();
-              var10 = var8;
-              var8 = var10;
-              var10 = var8;
-              if (var8 != null) {
-                L11: {
-                  if (var8.startsWith("HTTP/1.0 200")) {
-                    break L11;
-                  } else {
-                    if (!var8.startsWith("HTTP/1.1 200")) {
-                      L12: {
-                        if (var8.startsWith("HTTP/1.0 407")) {
-                          var9 = 0;
-                          var10 = "proxy-authenticate: ";
-                          var8 = var16.readLine();
-                          break L12;
-                        } else {
-                          if (var8.startsWith("HTTP/1.1 407")) {
-                            var9 = 0;
-                            var10 = "proxy-authenticate: ";
-                            var8 = var10;
-                            var8 = var10;
-                            var8 = var16.readLine();
-                            break L12;
-                          } else {
-                            break L10;
-                          }
-                        }
-                      }
-                      L13: while (true) {
-                        if (var8 != null) {
-                          if (-51 < (var9 ^ -1)) {
-                            if (var8.toLowerCase().startsWith(var10)) {
-                              L14: {
-                                var17 = var8.substring(var10.length()).trim();
-                                var8 = var17;
-                                var8 = var17;
-                                var11 = var17.indexOf(' ');
-                                if (var11 == -1) {
-                                  break L14;
-                                } else {
-                                  var8 = var17.substring(0, var11);
-                                  break L14;
-                                }
-                              }
-                              throw new rg(var8);
-                            } else {
-                              var9++;
-                              var8 = var16.readLine();
-                              continue L13;
-                            }
-                          } else {
-                            throw new rg("");
-                          }
-                        } else {
-                          throw new rg("");
-                        }
-                      }
-                    } else {
-                      break L11;
-                    }
-                  }
-                }
-                return var13;
-              } else {
-                break L10;
-              }
-            }
-            var15.close();
-            var16.close();
-            var13.close();
-            return null;
-          } else {
-            var15.write(("CONNECT " + ((aj) this).field_a + ":" + ((aj) this).field_b + " HTTP/1.0\n" + param3 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
-            var15.flush();
-            var18 = new BufferedReader((Reader) (Object) new InputStreamReader(var13.getInputStream()));
-            var7 = var18;
-            var8 = var18.readLine();
-            var20 = var8;
-            var8 = var20;
-            if (var8 != null) {
-              if (!var8.startsWith("HTTP/1.0 200")) {
-                if (!var8.startsWith("HTTP/1.1 200")) {
-                  if (var8.startsWith("HTTP/1.0 407")) {
-                    var9 = 0;
-                    var21 = "proxy-authenticate: ";
-                    var8 = var21;
-                    var8 = var21;
-                    var8 = var18.readLine();
-                    L15: while (true) {
-                      if (var8 != null) {
-                        if (-51 < (var9 ^ -1)) {
-                          if (var8.toLowerCase().startsWith(var21)) {
-                            L16: {
-                              var22 = var8.substring(var21.length()).trim();
-                              var8 = var22;
-                              var8 = var22;
-                              var11 = var22.indexOf(' ');
-                              if (var11 == -1) {
-                                break L16;
-                              } else {
-                                var8 = var22.substring(0, var11);
-                                break L16;
-                              }
-                            }
-                            throw new rg(var8);
-                          } else {
-                            var9++;
-                            var8 = var18.readLine();
-                            continue L15;
-                          }
-                        } else {
-                          throw new rg("");
-                        }
-                      } else {
-                        throw new rg("");
-                      }
-                    }
-                  } else {
-                    if (var8.startsWith("HTTP/1.1 407")) {
-                      var9 = 0;
-                      var23 = "proxy-authenticate: ";
-                      var8 = var23;
-                      var8 = var23;
-                      var10 = var23;
-                      var8 = var10;
-                      var8 = var10;
-                      var8 = var18.readLine();
-                      L17: while (true) {
-                        if (var8 != null) {
-                          if (-51 < (var9 ^ -1)) {
-                            if (var8.toLowerCase().startsWith(var23)) {
-                              L18: {
-                                var24 = var8.substring(var23.length()).trim();
-                                var8 = var24;
-                                var8 = var24;
-                                var11 = var24.indexOf(' ');
-                                if (var11 == -1) {
-                                  break L18;
-                                } else {
-                                  var8 = var24.substring(0, var11);
-                                  break L18;
-                                }
-                              }
-                              throw new rg(var8);
-                            } else {
-                              var9++;
-                              var8 = var18.readLine();
-                              var49 = var8;
-                              var8 = var49;
-                              var49 = var8;
-                              continue L17;
-                            }
-                          } else {
-                            throw new rg("");
-                          }
-                        } else {
-                          throw new rg("");
-                        }
-                      }
-                    } else {
-                      var15.close();
-                      var18.close();
-                      var13.close();
-                      return null;
-                    }
-                  }
-                } else {
-                  return var13;
-                }
-              } else {
-                return var13;
-              }
+          L10: {
+            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44);
+            stackIn_33_0 = stackOut_31_0;
+            stackIn_33_1 = stackOut_31_1;
+            stackIn_32_0 = stackOut_31_0;
+            stackIn_32_1 = stackOut_31_1;
+            if (param3 == null) {
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "null";
+              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_1 = stackOut_33_1;
+              stackIn_34_2 = stackOut_33_2;
+              break L10;
             } else {
-              var15.close();
-              var18.close();
-              var13.close();
-              return null;
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "{...}";
+              stackIn_34_0 = stackOut_32_0;
+              stackIn_34_1 = stackOut_32_1;
+              stackIn_34_2 = stackOut_32_2;
+              break L10;
             }
           }
+          throw wn.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
         }
+        return (java.net.Socket) (Object) stackIn_27_0;
     }
 
     final static void a(int param0, int param1, vi param2) {
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         mi var7 = null;
         mi var8 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var6 = Vertigo2.field_L ? 1 : 0;
-        var7 = uh.field_Wb;
-        var8 = var7;
-        var8.j(param0, 120);
-        var8.field_u = var8.field_u + 1;
-        var4 = var8.field_u;
-        var8.f(1, 85);
-        var8.d(param2.field_u, -1783);
-        var8.d(param2.field_v, -1783);
-        var8.d(param2.field_y, -1783);
-        var8.e(param2.field_t, 0);
-        var8.e(param2.field_p, 0);
-        var8.e(param2.field_q, 0);
-        if (param1 <= 6) {
-          return;
-        } else {
-          var8.e(param2.field_A, 0);
-          var8.f(param2.field_o.length, -76);
-          var5 = 0;
-          L0: while (true) {
-            if (param2.field_o.length <= var5) {
-              int discarded$2 = var8.c(var4, 25);
-              var8.b((byte) -95, -var4 + var8.field_u);
-              return;
+        try {
+          L0: {
+            var7 = uh.field_Wb;
+            var8 = var7;
+            var8.j(param0, 120);
+            var8.field_u = var8.field_u + 1;
+            var4 = var8.field_u;
+            var8.f(1, 85);
+            var8.d(param2.field_u, -1783);
+            var8.d(param2.field_v, -1783);
+            var8.d(param2.field_y, -1783);
+            var8.e(param2.field_t, 0);
+            var8.e(param2.field_p, 0);
+            var8.e(param2.field_q, 0);
+            if (param1 > 6) {
+              var8.e(param2.field_A, 0);
+              var8.f(param2.field_o.length, -76);
+              var5 = 0;
+              L1: while (true) {
+                if (param2.field_o.length <= var5) {
+                  int discarded$1 = var8.c(var4, 25);
+                  var8.b((byte) -95, -var4 + var8.field_u);
+                  break L0;
+                } else {
+                  var7.e(param2.field_o[var5], 0);
+                  var5++;
+                  continue L1;
+                }
+              }
             } else {
-              var7.e(param2.field_o[var5], 0);
-              var5++;
-              continue L0;
+              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("aj.L(").append(param0).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
@@ -1028,20 +722,19 @@ final class aj extends ig {
     }
 
     final static void a(boolean param0, float param1, String param2) {
-        if (param0) {
-            aj.a(false, -0.6848612427711487f, (String) null);
+        try {
+            if (param0) {
+                Object var4 = null;
+                aj.a(false, -0.6848612427711487f, (String) null);
+            }
             d.field_C = param1;
             li.field_h = param2;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "aj.H(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        d.field_C = param1;
-        li.field_h = param2;
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_f = null;
         field_i = null;
     }
@@ -1053,5 +746,10 @@ final class aj extends ig {
     private static void $cfr$clinit() {
         field_h = 50;
         field_i = "Level View - jump to exit";
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

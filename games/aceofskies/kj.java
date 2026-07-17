@@ -59,18 +59,29 @@ final class kj extends ha {
     }
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
-        oe var4_ref = null;
-        oe var4 = (oe) ((kj) this).field_g.a((byte) 106, (long)((Object) (Object) param0).hashCode());
-        if (var4 == null) {
-            var4_ref = oi.a(param0, -30, param1, param2);
-            ((kj) this).field_g.a(123, (long)((Object) (Object) param0).hashCode(), (wf) (Object) var4_ref);
-        } else {
-            if (((oe) var4_ref).field_g == param1) {
-                // if_icmpeq L91
+        oe var4 = null;
+        L0: {
+          var4 = (oe) (Object) ((kj) this).field_g.a((byte) 106, (long)((Object) (Object) param0).hashCode());
+          if (var4 != null) {
+            L1: {
+              if (var4.field_g != param1) {
+                break L1;
+              } else {
+                if (var4.field_h == param2) {
+                  return;
+                } else {
+                  break L1;
+                }
+              }
             }
             this.a(param0, param1, param2);
+            break L0;
+          } else {
+            var4 = oi.a(param0, -30, param1, param2);
+            ((kj) this).field_g.a(123, (long)((Object) (Object) param0).hashCode(), (wf) (Object) var4);
+            break L0;
+          }
         }
-        return;
     }
 
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
@@ -81,8 +92,9 @@ final class kj extends ha {
         for (var8 = 0; var8 < param3; var8++) {
             var9 = (param1 + var8) * ((kj) this).field_f + param0;
             for (var10 = 0; var10 < param2; var10++) {
+                int incrementValue$0 = param5;
                 param5++;
-                ((kj) this).field_E[var9 + var10] = param4[param5];
+                ((kj) this).field_E[var9 + var10] = param4[incrementValue$0];
             }
             param5 = param5 + param6;
         }
@@ -115,13 +127,13 @@ final class kj extends ha {
         Object var3 = ((kj) this).field_F.a((byte) -16);
         while (var3 != null) {
             var4 = (ui) var3;
-            if (((ui) var4).field_e) {
-                ((ui) var4).field_i = ((ui) var4).field_i + var2;
-                var5 = ((ui) var4).field_i / 20;
+            if (var4.field_e) {
+                var4.field_i = var4.field_i + var2;
+                var5 = var4.field_i / 20;
                 if (var5 > 0) {
-                    var6 = ((kj) this).field_a.a(false, ((ui) var4).field_h);
-                    var4.a(((uh) var6).field_n * var2 * 50 / 1000, ((uh) var6).field_j * var2 * 50 / 1000);
-                    ((ui) var4).field_i = ((ui) var4).field_i - var5 * 20;
+                    var6 = ((kj) this).field_a.a(false, var4.field_h);
+                    var4.a(var6.field_n * var2 * 50 / 1000, var6.field_j * var2 * 50 / 1000);
+                    var4.field_i = var4.field_i - var5 * 20;
                 }
                 var4.field_e = false;
             }
@@ -133,13 +145,13 @@ final class kj extends ha {
     }
 
     final void a(sm param0) {
-        lb var2 = (lb) param0;
-        ((kj) this).field_f = ((lb) var2).field_c;
-        ((kj) this).field_v = ((lb) var2).field_b;
-        ((kj) this).field_E = ((lb) var2).field_d;
+        lb var2 = (lb) (Object) param0;
+        ((kj) this).field_f = var2.field_c;
+        ((kj) this).field_v = var2.field_b;
+        ((kj) this).field_E = var2.field_d;
         ((kj) this).field_C = var2;
-        ((kj) this).field_x = ((lb) var2).field_c;
-        ((kj) this).field_m = ((lb) var2).field_b;
+        ((kj) this).field_x = var2.field_c;
+        ((kj) this).field_m = var2.field_b;
         this.g();
     }
 
@@ -148,7 +160,7 @@ final class kj extends ha {
         byte[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        vh var7 = null;
+        Object var7 = null;
         int[] var8 = null;
         byte[] var9 = null;
         int var10 = 0;
@@ -190,18 +202,18 @@ final class kj extends ha {
         int stackOut_25_2 = 0;
         L0: {
           L1: {
-            var28 = ((vd) param0).field_f;
+            var28 = param0.field_f;
             var24 = var28;
             var20 = var24;
             var16 = var20;
             var3 = var16;
-            var4 = ((vd) param0).field_d;
-            var5 = ((vd) param0).field_h;
-            var6 = ((vd) param0).field_c;
+            var4 = param0.field_d;
+            var5 = param0.field_h;
+            var6 = param0.field_c;
             if (!param1) {
               break L1;
             } else {
-              if (((vd) param0).field_e != null) {
+              if (param0.field_e != null) {
                 break L1;
               } else {
                 var30 = new int[var28.length];
@@ -221,7 +233,7 @@ final class kj extends ha {
                     var10 = 0;
                     L3: while (true) {
                       if (var10 >= var28.length) {
-                        var7 = (vh) (Object) new mt((kj) this, var29, var30, var5, var6);
+                        var7 = (Object) (Object) new mt((kj) this, var29, var30, var5, var6);
                         break L0;
                       } else {
                         var8[var10] = var28[var10];
@@ -252,12 +264,12 @@ final class kj extends ha {
           var23 = var27;
           var19 = var23;
           var15 = var19;
-          var9 = ((vd) param0).field_e;
+          var9 = param0.field_e;
           if (var9 == null) {
             var10 = 0;
             L5: while (true) {
               if (var10 >= var6) {
-                var7 = new vh((kj) this, var31, var5, var6);
+                var7 = (Object) (Object) new vh((kj) this, var31, var5, var6);
                 break L0;
               } else {
                 var11 = var10 * var5;
@@ -304,7 +316,7 @@ final class kj extends ha {
             var10 = 0;
             L8: while (true) {
               if (var10 >= var6) {
-                var7 = (vh) (Object) new jg((kj) this, var31, var5, var6);
+                var7 = (Object) (Object) new jg((kj) this, var31, var5, var6);
                 break L0;
               } else {
                 var11 = var10 * var5;
@@ -323,8 +335,8 @@ final class kj extends ha {
             }
           }
         }
-        ((pa) (Object) var7).a(((vd) param0).field_a, ((vd) param0).field_i, ((vd) param0).field_g, ((vd) param0).field_b);
-        return (pa) (Object) var7;
+        ((pa) var7).a(param0.field_a, param0.field_i, param0.field_g, param0.field_b);
+        return (pa) var7;
     }
 
     final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -421,8 +433,9 @@ final class kj extends ha {
                                       var13 = param4 + var12;
                                       var14 = (param4 & 16711935) + (var12 & 16711935);
                                       var12 = (var14 & 16777472) + (var13 - var14 & 65536);
+                                      int incrementValue$2 = var8;
                                       var8++;
-                                      ((kj) this).field_E[var8] = var13 - var12 | var12 - (var12 >>> 8);
+                                      ((kj) this).field_E[incrementValue$2] = var13 - var12 | var12 - (var12 >>> 8);
                                       var11++;
                                       continue L10;
                                     }
@@ -447,8 +460,9 @@ final class kj extends ha {
                                   } else {
                                     var13 = ((kj) this).field_E[var8];
                                     var13 = ((var13 & 16711935) * var10 >> 8 & 16711935) + (((var13 & -16711936) >>> 8) * var10 & -16711936);
+                                    int incrementValue$3 = var8;
                                     var8++;
-                                    ((kj) this).field_E[var8] = param4 + var13;
+                                    ((kj) this).field_E[incrementValue$3] = param4 + var13;
                                     var12++;
                                     continue L12;
                                   }
@@ -918,7 +932,7 @@ final class kj extends ha {
 
     private final void f(int param0) {
         int var2 = 0;
-        ((kj) this).field_A = param0;
+        ((kj) this).field_A = 1;
         ((kj) this).field_e = new it[((kj) this).field_A];
         for (var2 = 0; var2 < ((kj) this).field_A; var2++) {
             ((kj) this).field_e[var2] = new it((kj) this);
@@ -935,13 +949,20 @@ final class kj extends ha {
           } else {
             if (((kj) this).field_p != null) {
               try {
-                var3 = ((kj) this).field_l.getGraphics();
-                ((kj) this).field_p.a(((kj) this).field_q, param1, 0, ((kj) this).field_n, -57, var3, param0, 0);
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
+                L1: {
+                  var3 = ((kj) this).field_l.getGraphics();
+                  ((kj) this).field_p.a(((kj) this).field_q, param1, 0, ((kj) this).field_n, -57, var3, param0, 0);
+                  break L1;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L2: {
+                  exception = (Exception) (Object) decompiledCaughtException;
+                  ((kj) this).field_l.repaint();
+                  break L2;
+                }
               }
-              exception = (Exception) (Object) decompiledCaughtException;
-              ((kj) this).field_l.repaint();
+              return;
             } else {
               break L0;
             }
@@ -1089,33 +1110,53 @@ final class kj extends ha {
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
-        oe var4_ref = null;
+        oe var4 = null;
         java.awt.Dimension var5 = null;
-        oe var4 = (oe) ((kj) this).field_g.a((byte) 106, (long)((Object) (Object) param0).hashCode());
-        if (var4 != null) {
+        var4 = (oe) (Object) ((kj) this).field_g.a((byte) 106, (long)((Object) (Object) param0).hashCode());
+        if (var4 == null) {
+          return;
+        } else {
+          L0: {
             var4.c(-128);
-            var4_ref = oi.a(param0, -43, param1, param2);
-            ((kj) this).field_g.a(-32, (long)((Object) (Object) param0).hashCode(), (wf) (Object) var4_ref);
-            if (((kj) this).field_l == param0) {
-                if (((kj) this).field_C == null) {
+            var4 = oi.a(param0, -43, param1, param2);
+            ((kj) this).field_g.a(-32, (long)((Object) (Object) param0).hashCode(), (wf) (Object) var4);
+            if (((kj) this).field_l != param0) {
+              break L0;
+            } else {
+              if (((kj) this).field_C != null) {
+                break L0;
+              } else {
+                L1: {
+                  L2: {
                     var5 = param0.getSize();
-                    ((kj) this).field_q = ((java.awt.Dimension) var5).width;
-                    ((kj) this).field_n = ((java.awt.Dimension) var5).height;
-                    ((kj) this).field_p = var4_ref;
-                    ((kj) this).field_E = ((oe) var4_ref).field_e;
-                    ((kj) this).field_f = ((oe) var4_ref).field_g;
-                    ((kj) this).field_v = ((oe) var4_ref).field_h;
-                    if (((kj) this).field_f == ((kj) this).field_x) {
-                        // if_icmpeq L198
+                    ((kj) this).field_q = var5.width;
+                    ((kj) this).field_n = var5.height;
+                    ((kj) this).field_p = var4;
+                    ((kj) this).field_E = var4.field_e;
+                    ((kj) this).field_f = var4.field_g;
+                    ((kj) this).field_v = var4.field_h;
+                    if (((kj) this).field_f != ((kj) this).field_x) {
+                      break L2;
+                    } else {
+                      if (((kj) this).field_v == ((kj) this).field_m) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
                     }
-                    ((kj) this).field_x = ((kj) this).field_f;
-                    ((kj) this).field_s = ((kj) this).field_f;
-                    ((kj) this).field_m = ((kj) this).field_v;
-                    ((kj) this).field_t = ((kj) this).field_v;
-                    this.g();
+                  }
+                  ((kj) this).field_x = ((kj) this).field_f;
+                  ((kj) this).field_s = ((kj) this).field_f;
+                  ((kj) this).field_m = ((kj) this).field_v;
+                  ((kj) this).field_t = ((kj) this).field_v;
+                  break L1;
                 }
+                this.g();
+                break L0;
+              }
             }
-            return;
+          }
+          return;
         }
     }
 
@@ -1134,39 +1175,62 @@ final class kj extends ha {
     }
 
     private final void a(java.awt.Canvas param0) {
-        java.awt.Dimension var3 = null;
         oe var2 = null;
-        if (param0 != null) {
-            var2 = (oe) ((kj) this).field_g.a((byte) 106, (long)((Object) (Object) param0).hashCode());
-            // ifnull L213
-            ((kj) this).field_l = param0;
-            var3 = param0.getSize();
-            ((kj) this).field_q = ((java.awt.Dimension) var3).width;
-            ((kj) this).field_n = ((java.awt.Dimension) var3).height;
-            ((kj) this).field_p = var2;
-            // ifnonnull L213
-            ((kj) this).field_E = ((oe) var2).field_e;
-            ((kj) this).field_f = ((oe) var2).field_g;
-            ((kj) this).field_v = ((oe) var2).field_h;
-            if (((kj) this).field_f == ((kj) this).field_x) {
-                // if_icmpeq L157
-            }
-            ((kj) this).field_x = ((kj) this).field_f;
-            ((kj) this).field_s = ((kj) this).field_f;
-            ((kj) this).field_m = ((kj) this).field_v;
-            ((kj) this).field_t = ((kj) this).field_v;
-            this.g();
-        } else {
+        java.awt.Dimension var3 = null;
+        L0: {
+          if (param0 == null) {
             ((kj) this).field_l = null;
             ((kj) this).field_p = null;
-            if (((kj) this).field_C == null) {
-                ((kj) this).field_E = null;
-                ((kj) this).field_v = 1;
-                ((kj) this).field_f = 1;
-                ((kj) this).field_m = 1;
-                ((kj) this).field_x = 1;
-                this.g();
+            if (((kj) this).field_C != null) {
+              break L0;
+            } else {
+              ((kj) this).field_E = null;
+              ((kj) this).field_v = 1;
+              ((kj) this).field_f = 1;
+              ((kj) this).field_m = 1;
+              ((kj) this).field_x = 1;
+              this.g();
+              break L0;
             }
+          } else {
+            var2 = (oe) (Object) ((kj) this).field_g.a((byte) 106, (long)((Object) (Object) param0).hashCode());
+            if (var2 == null) {
+              break L0;
+            } else {
+              ((kj) this).field_l = param0;
+              var3 = param0.getSize();
+              ((kj) this).field_q = var3.width;
+              ((kj) this).field_n = var3.height;
+              ((kj) this).field_p = var2;
+              if (((kj) this).field_C != null) {
+                break L0;
+              } else {
+                L1: {
+                  L2: {
+                    ((kj) this).field_E = var2.field_e;
+                    ((kj) this).field_f = var2.field_g;
+                    ((kj) this).field_v = var2.field_h;
+                    if (((kj) this).field_f != ((kj) this).field_x) {
+                      break L2;
+                    } else {
+                      if (((kj) this).field_v == ((kj) this).field_m) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  ((kj) this).field_x = ((kj) this).field_f;
+                  ((kj) this).field_s = ((kj) this).field_f;
+                  ((kj) this).field_m = ((kj) this).field_v;
+                  ((kj) this).field_t = ((kj) this).field_v;
+                  break L1;
+                }
+                this.g();
+                break L0;
+              }
+            }
+          }
         }
     }
 
@@ -1190,8 +1254,9 @@ final class kj extends ha {
                   var9++;
                   continue L0;
                 } else {
+                  int incrementValue$21 = var8;
                   var8++;
-                  var11 = param0[var8] >>> 24;
+                  var11 = param0[incrementValue$21] >>> 24;
                   if (var11 != 0) {
                     if (var11 != 255) {
                       var7 = 1;
@@ -1243,7 +1308,7 @@ final class kj extends ha {
     }
 
     private final void d(int param0) {
-        ((kj) this).field_e[param0].a((Runnable) (Object) Thread.currentThread(), 6);
+        ((kj) this).field_e[0].a((Runnable) (Object) Thread.currentThread(), 6);
     }
 
     final void T(int param0, int param1, int param2, int param3) {
@@ -1413,7 +1478,7 @@ final class kj extends ha {
     }
 
     final sm a(ra param0, gd param1) {
-        return (sm) (Object) new lb((kj) this, (pa) param0, (ac) param1);
+        return (sm) (Object) new lb((kj) this, (pa) (Object) param0, (ac) (Object) param1);
     }
 
     static {

@@ -34,7 +34,7 @@ final class vb {
 
     final static void a(byte param0) {
         he.field_Xb = null;
-        int var1 = -40 % ((param0 - 23) / 51);
+        int var1 = 0;
     }
 
     public static void b(byte param0) {
@@ -82,10 +82,10 @@ final class vb {
         field_j = new int[256];
         field_a = new int[256];
         for (var0 = 0; 256 > var0; var0++) {
-            field_a[var0] = var0 * 1 - -(65536 * (var0 / 4)) - -(var0 / 4 * 256);
+            field_a[var0] = var0 - -(65536 * (var0 / 4)) - -(var0 / 4 * 256);
         }
         for (var0 = 0; 256 > var0; var0++) {
-            field_j[var0] = var0 / 2 * 256 + 1 * (var0 / 2) - -(var0 / 2 * 65536);
+            field_j[var0] = var0 / 2 * 256 + var0 / 2 - -(var0 / 2 * 65536);
         }
         field_i = "Zoom out";
         field_d = "Show all lobby chat";

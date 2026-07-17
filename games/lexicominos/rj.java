@@ -9,9 +9,6 @@ final class rj {
 
     public static void b(byte param0) {
         field_b = null;
-        if (param0 != 88) {
-            field_b = null;
-        }
     }
 
     final int a(int param0, byte param1) {
@@ -35,7 +32,7 @@ final class rj {
               if (var3 >= ((rj) this).field_a.length) {
                 return -1 + ((rj) this).field_a.length;
               } else {
-                if (param0 < ((rj) this).field_a[var3] + ((rj) this).field_a[-1 + var3] >> 525366881) {
+                if (param0 < ((rj) this).field_a[var3] + ((rj) this).field_a[-1 + var3] >> 1) {
                   return var3 - 1;
                 } else {
                   var3++;

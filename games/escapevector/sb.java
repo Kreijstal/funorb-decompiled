@@ -78,11 +78,6 @@ abstract class sb {
 
     public static void e(int param0) {
         field_i = null;
-        if (param0 != -4470) {
-            field_b = 100;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
@@ -131,7 +126,7 @@ abstract class sb {
 
     final s a(int param0, boolean param1, byte param2, int param3, byte param4) {
         s var8 = null;
-        long var6 = (long)param3 + ((long)param0 << -1318677728);
+        long var6 = (long)param3 + ((long)param0 << 32);
         if (param2 != 0) {
             ((sb) this).field_f = -16;
             var8 = new s();
@@ -139,7 +134,7 @@ abstract class sb {
             var8.field_r = param1 ? true : false;
             var8.field_p = var6;
             if (!param1) {
-                if (!((((sb) this).a((byte) 88) ^ -1) > -21)) {
+                if (!(((sb) this).a((byte) 88) < 20)) {
                     throw new RuntimeException();
                 }
                 ((sb) this).field_j.a((int) param2, (fl) (Object) var8);
@@ -156,7 +151,7 @@ abstract class sb {
         var8.field_r = param1 ? true : false;
         var8.field_p = var6;
         if (!param1) {
-            if (!((((sb) this).a((byte) 88) ^ -1) > -21)) {
+            if (!(((sb) this).a((byte) 88) < 20)) {
                 throw new RuntimeException();
             }
             ((sb) this).field_j.a((int) param2, (fl) (Object) var8);

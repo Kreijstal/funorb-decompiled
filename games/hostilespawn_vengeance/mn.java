@@ -9,14 +9,7 @@ final class mn {
     int[] field_d;
 
     final static void a(byte param0) {
-        if (param0 != -126) {
-          mn.c((byte) -27);
-          ke.field_s.b((ag) (Object) new nb(), (byte) 110);
-          return;
-        } else {
-          ke.field_s.b((ag) (Object) new nb(), (byte) 110);
-          return;
-        }
+        ke.field_s.b((ag) (Object) new nb(), (byte) 110);
     }
 
     final static void c(byte param0) {
@@ -44,7 +37,7 @@ final class mn {
 
     public static void b(byte param0) {
         field_a = null;
-        int var1 = -20 % ((-5 - param0) / 55);
+        int var1 = 0;
         field_b = null;
         field_e = null;
     }

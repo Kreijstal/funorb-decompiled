@@ -27,7 +27,7 @@ final class iq extends lw {
             return;
           }
         } else {
-          vg.a(sia.field_j, 8640, 22997, 48000, 4096, 1120, 4096, sia.field_j.field_o << 1725058147, sia.field_j.field_n << 123028291);
+          vg.a(sia.field_j, 8640, 22997, 48000, 4096, 1120, 4096, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
           if (param0 > 103) {
             return;
           } else {
@@ -42,34 +42,34 @@ final class iq extends lw {
         var4 = BachelorFridge.field_y;
         if (param1 != 73) {
           iq.d((byte) -86);
-          if ((param0 ^ -1) == -39) {
+          if (param0 == 38) {
             L0: {
-              if ((((iq) this).field_e ^ -1) == -6) {
+              if (((iq) this).field_e == 5) {
                 break L0;
               } else {
-                if (0 != ((iq) this).field_e) {
-                  break L0;
-                } else {
+                if (0 == ((iq) this).field_e) {
                   ((iq) this).b(param1 + -72);
                   ((iq) this).c(param1 + -2);
                   return;
+                } else {
+                  break L0;
                 }
               }
             }
             L1: {
-              if ((param0 ^ -1) != -22) {
+              if (param0 != 21) {
                 break L1;
               } else {
-                if (((iq) this).field_e == -6) {
+                if (((iq) this).field_e == 5) {
                   break L1;
                 } else {
-                  if (((iq) this).field_e != 1) {
-                    break L1;
-                  } else {
+                  if (((iq) this).field_e == 1) {
                     ((iq) this).b(1);
                     ((iq) this).c(param1 ^ 42);
                     cm.field_v = true;
                     return;
+                  } else {
+                    break L1;
                   }
                 }
               }
@@ -93,13 +93,18 @@ final class iq extends lw {
               }
             }
             L3: {
-              if (-23 != param0) {
+              if (param0 != 22) {
                 break L3;
               } else {
                 if (5 == ((iq) this).field_e) {
                   break L3;
                 } else {
-                  if (-3 != (((iq) this).field_e ^ -1)) {
+                  if (((iq) this).field_e == 2) {
+                    ((iq) this).b(1);
+                    ((iq) this).b((byte) 112);
+                    cm.field_v = false;
+                    return;
+                  } else {
                     L4: {
                       if (param0 != 23) {
                         break L4;
@@ -116,13 +121,16 @@ final class iq extends lw {
                       if (20 != param0) {
                         break L5;
                       } else {
-                        if ((((iq) this).field_e ^ -1) == -3) {
+                        if (((iq) this).field_e == 2) {
                           break L5;
                         } else {
                           if (5 == ((iq) this).field_e) {
                             break L5;
                           } else {
-                            if (((iq) this).field_e != 3) {
+                            if (((iq) this).field_e == 3) {
+                              ((iq) this).b(1);
+                              return;
+                            } else {
                               L6: {
                                 L7: {
                                   if (param0 != 24) {
@@ -142,27 +150,27 @@ final class iq extends lw {
                                   }
                                 }
                                 L8: {
-                                  if (param0 != -26) {
+                                  if (param0 != 25) {
                                     break L8;
                                   } else {
-                                    if (-5 != ((iq) this).field_e) {
+                                    if (((iq) this).field_e != 4) {
                                       break L8;
                                     } else {
-                                      if (5 == ((iq) this).field_e) {
-                                        break L8;
-                                      } else {
+                                      if (5 != ((iq) this).field_e) {
                                         ((iq) this).b(1);
                                         ((iq) this).c(param1 + 27);
                                         cm.field_v = true;
-                                        return;
+                                        break L6;
+                                      } else {
+                                        break L8;
                                       }
                                     }
                                   }
                                 }
-                                if (-35 != param0) {
+                                if (param0 != 34) {
                                   break L6;
                                 } else {
-                                  if (-6 != ((iq) this).field_e) {
+                                  if (((iq) this).field_e != 5) {
                                     return;
                                   } else {
                                     ((iq) this).b((byte) 112);
@@ -175,9 +183,6 @@ final class iq extends lw {
                                   }
                                 }
                               }
-                              return;
-                            } else {
-                              ((iq) this).b(1);
                               return;
                             }
                           }
@@ -202,10 +207,10 @@ final class iq extends lw {
                       }
                     }
                     L10: {
-                      if (param0 != -26) {
+                      if (param0 != 25) {
                         break L10;
                       } else {
-                        if (-5 != ((iq) this).field_e) {
+                        if (((iq) this).field_e != 4) {
                           break L10;
                         } else {
                           if (5 != ((iq) this).field_e) {
@@ -215,10 +220,10 @@ final class iq extends lw {
                             return;
                           } else {
                             L11: {
-                              if (-35 != param0) {
+                              if (param0 != 34) {
                                 break L11;
                               } else {
-                                if (-6 != ((iq) this).field_e) {
+                                if (((iq) this).field_e != 5) {
                                   return;
                                 } else {
                                   ((iq) this).b((byte) 112);
@@ -237,10 +242,10 @@ final class iq extends lw {
                       }
                     }
                     L12: {
-                      if (-35 != param0) {
+                      if (param0 != 34) {
                         break L12;
                       } else {
-                        if (-6 != ((iq) this).field_e) {
+                        if (((iq) this).field_e != 5) {
                           return;
                         } else {
                           ((iq) this).b((byte) 112);
@@ -253,11 +258,6 @@ final class iq extends lw {
                         }
                       }
                     }
-                    return;
-                  } else {
-                    ((iq) this).b(1);
-                    ((iq) this).b((byte) 112);
-                    cm.field_v = false;
                     return;
                   }
                 }
@@ -276,7 +276,7 @@ final class iq extends lw {
               }
             }
             if (20 == param0) {
-              if ((((iq) this).field_e ^ -1) != -3) {
+              if (((iq) this).field_e != 2) {
                 if (5 == ((iq) this).field_e) {
                   L14: {
                     if (param0 != 24) {
@@ -296,10 +296,10 @@ final class iq extends lw {
                     }
                   }
                   L15: {
-                    if (param0 != -26) {
+                    if (param0 != 25) {
                       break L15;
                     } else {
-                      if (-5 != ((iq) this).field_e) {
+                      if (((iq) this).field_e != 4) {
                         break L15;
                       } else {
                         if (5 != ((iq) this).field_e) {
@@ -309,10 +309,10 @@ final class iq extends lw {
                           return;
                         } else {
                           L16: {
-                            if (-35 != param0) {
+                            if (param0 != 34) {
                               break L16;
                             } else {
-                              if (-6 != ((iq) this).field_e) {
+                              if (((iq) this).field_e != 5) {
                                 return;
                               } else {
                                 ((iq) this).b((byte) 112);
@@ -331,10 +331,10 @@ final class iq extends lw {
                     }
                   }
                   L17: {
-                    if (-35 != param0) {
+                    if (param0 != 34) {
                       break L17;
                     } else {
-                      if (-6 != ((iq) this).field_e) {
+                      if (((iq) this).field_e != 5) {
                         return;
                       } else {
                         ((iq) this).b((byte) 112);
@@ -371,10 +371,10 @@ final class iq extends lw {
                       }
                     }
                     L19: {
-                      if (param0 != -26) {
+                      if (param0 != 25) {
                         break L19;
                       } else {
-                        if (-5 != ((iq) this).field_e) {
+                        if (((iq) this).field_e != 4) {
                           break L19;
                         } else {
                           if (5 != ((iq) this).field_e) {
@@ -384,10 +384,10 @@ final class iq extends lw {
                             return;
                           } else {
                             L20: {
-                              if (-35 != param0) {
+                              if (param0 != 34) {
                                 break L20;
                               } else {
-                                if (-6 != ((iq) this).field_e) {
+                                if (((iq) this).field_e != 5) {
                                   return;
                                 } else {
                                   ((iq) this).b((byte) 112);
@@ -406,10 +406,10 @@ final class iq extends lw {
                       }
                     }
                     L21: {
-                      if (-35 != param0) {
+                      if (param0 != 34) {
                         break L21;
                       } else {
-                        if (-6 != ((iq) this).field_e) {
+                        if (((iq) this).field_e != 5) {
                           return;
                         } else {
                           ((iq) this).b((byte) 112);
@@ -444,10 +444,10 @@ final class iq extends lw {
                   }
                 }
                 L23: {
-                  if (param0 != -26) {
+                  if (param0 != 25) {
                     break L23;
                   } else {
-                    if (-5 != ((iq) this).field_e) {
+                    if (((iq) this).field_e != 4) {
                       break L23;
                     } else {
                       if (5 != ((iq) this).field_e) {
@@ -457,10 +457,10 @@ final class iq extends lw {
                         return;
                       } else {
                         L24: {
-                          if (-35 != param0) {
+                          if (param0 != 34) {
                             break L24;
                           } else {
-                            if (-6 != ((iq) this).field_e) {
+                            if (((iq) this).field_e != 5) {
                               return;
                             } else {
                               ((iq) this).b((byte) 112);
@@ -479,10 +479,10 @@ final class iq extends lw {
                   }
                 }
                 L25: {
-                  if (-35 != param0) {
+                  if (param0 != 34) {
                     break L25;
                   } else {
-                    if (-6 != ((iq) this).field_e) {
+                    if (((iq) this).field_e != 5) {
                       return;
                     } else {
                       ((iq) this).b((byte) 112);
@@ -516,10 +516,10 @@ final class iq extends lw {
                 }
               }
               L27: {
-                if (param0 != -26) {
+                if (param0 != 25) {
                   break L27;
                 } else {
-                  if (-5 != ((iq) this).field_e) {
+                  if (((iq) this).field_e != 4) {
                     break L27;
                   } else {
                     if (5 != ((iq) this).field_e) {
@@ -529,10 +529,10 @@ final class iq extends lw {
                       return;
                     } else {
                       L28: {
-                        if (-35 != param0) {
+                        if (param0 != 34) {
                           break L28;
                         } else {
-                          if (-6 != ((iq) this).field_e) {
+                          if (((iq) this).field_e != 5) {
                             return;
                           } else {
                             ((iq) this).b((byte) 112);
@@ -551,10 +551,10 @@ final class iq extends lw {
                 }
               }
               L29: {
-                if (-35 != param0) {
+                if (param0 != 34) {
                   break L29;
                 } else {
-                  if (-6 != ((iq) this).field_e) {
+                  if (((iq) this).field_e != 5) {
                     return;
                   } else {
                     ((iq) this).b((byte) 112);
@@ -571,19 +571,19 @@ final class iq extends lw {
             }
           } else {
             L30: {
-              if ((param0 ^ -1) != -22) {
+              if (param0 != 21) {
                 break L30;
               } else {
-                if (((iq) this).field_e == -6) {
+                if (((iq) this).field_e == 5) {
                   break L30;
                 } else {
-                  if (((iq) this).field_e != 1) {
-                    break L30;
-                  } else {
+                  if (((iq) this).field_e == 1) {
                     ((iq) this).b(1);
                     ((iq) this).c(param1 ^ 42);
                     cm.field_v = true;
                     return;
+                  } else {
+                    break L30;
                   }
                 }
               }
@@ -595,10 +595,10 @@ final class iq extends lw {
                 if (5 == ((iq) this).field_e) {
                   ((iq) this).b(1);
                   ((iq) this).b((byte) 112);
-                  if (!((iq) this).c((byte) 95)) {
+                  if (((iq) this).c((byte) 95)) {
+                    fla.b(23621);
                     return;
                   } else {
-                    fla.b(23621);
                     return;
                   }
                 } else {
@@ -607,19 +607,19 @@ final class iq extends lw {
               }
             }
             L32: {
-              if (-23 != param0) {
+              if (param0 != 22) {
                 break L32;
               } else {
                 if (5 == ((iq) this).field_e) {
                   break L32;
                 } else {
-                  if (-3 != (((iq) this).field_e ^ -1)) {
-                    break L32;
-                  } else {
+                  if (((iq) this).field_e == 2) {
                     ((iq) this).b(1);
                     ((iq) this).b((byte) 112);
                     cm.field_v = false;
                     return;
+                  } else {
+                    break L32;
                   }
                 }
               }
@@ -638,16 +638,16 @@ final class iq extends lw {
                 }
               }
               if (20 == param0) {
-                if ((((iq) this).field_e ^ -1) != -3) {
+                if (((iq) this).field_e != 2) {
                   L35: {
                     if (5 == ((iq) this).field_e) {
                       break L35;
                     } else {
-                      if (((iq) this).field_e != 3) {
-                        break L35;
-                      } else {
+                      if (((iq) this).field_e == 3) {
                         ((iq) this).b(1);
                         return;
+                      } else {
+                        break L35;
                       }
                     }
                   }
@@ -669,10 +669,10 @@ final class iq extends lw {
                     }
                   }
                   L37: {
-                    if (param0 != -26) {
+                    if (param0 != 25) {
                       break L37;
                     } else {
-                      if (-5 != ((iq) this).field_e) {
+                      if (((iq) this).field_e != 4) {
                         break L37;
                       } else {
                         if (5 != ((iq) this).field_e) {
@@ -686,20 +686,20 @@ final class iq extends lw {
                       }
                     }
                   }
-                  if (-35 == param0) {
-                    if (-6 != ((iq) this).field_e) {
+                  if (param0 != 34) {
+                    break L33;
+                  } else {
+                    if (((iq) this).field_e != 5) {
                       return;
                     } else {
                       ((iq) this).b((byte) 112);
-                      if (((iq) this).c((byte) 95)) {
-                        fla.b(23621);
+                      if (!((iq) this).c((byte) 95)) {
                         break L33;
                       } else {
-                        return;
+                        fla.b(23621);
+                        break L33;
                       }
                     }
-                  } else {
-                    return;
                   }
                 } else {
                   L38: {
@@ -721,25 +721,27 @@ final class iq extends lw {
                       }
                     }
                     L40: {
-                      if (param0 != -26) {
+                      if (param0 != 25) {
                         break L40;
                       } else {
-                        if (-5 != ((iq) this).field_e) {
+                        if (((iq) this).field_e != 4) {
                           break L40;
                         } else {
-                          if (5 == ((iq) this).field_e) {
-                            break L40;
-                          } else {
+                          if (5 != ((iq) this).field_e) {
                             ((iq) this).b(1);
                             ((iq) this).c(param1 + 27);
                             cm.field_v = true;
-                            return;
+                            break L38;
+                          } else {
+                            break L40;
                           }
                         }
                       }
                     }
-                    if (-35 == param0) {
-                      if (-6 != ((iq) this).field_e) {
+                    if (param0 != 34) {
+                      break L38;
+                    } else {
+                      if (((iq) this).field_e != 5) {
                         return;
                       } else {
                         ((iq) this).b((byte) 112);
@@ -750,8 +752,6 @@ final class iq extends lw {
                           break L38;
                         }
                       }
-                    } else {
-                      return;
                     }
                   }
                   return;
@@ -776,25 +776,27 @@ final class iq extends lw {
                     }
                   }
                   L43: {
-                    if (param0 != -26) {
+                    if (param0 != 25) {
                       break L43;
                     } else {
-                      if (-5 != ((iq) this).field_e) {
+                      if (((iq) this).field_e != 4) {
                         break L43;
                       } else {
-                        if (5 == ((iq) this).field_e) {
-                          break L43;
-                        } else {
+                        if (5 != ((iq) this).field_e) {
                           ((iq) this).b(1);
                           ((iq) this).c(param1 + 27);
                           cm.field_v = true;
-                          return;
+                          break L41;
+                        } else {
+                          break L43;
                         }
                       }
                     }
                   }
-                  if (-35 == param0) {
-                    if (-6 != ((iq) this).field_e) {
+                  if (param0 != 34) {
+                    break L41;
+                  } else {
+                    if (((iq) this).field_e != 5) {
                       return;
                     } else {
                       ((iq) this).b((byte) 112);
@@ -805,8 +807,6 @@ final class iq extends lw {
                         break L41;
                       }
                     }
-                  } else {
-                    return;
                   }
                 }
                 return;
@@ -816,36 +816,36 @@ final class iq extends lw {
           }
         } else {
           L44: {
-            if ((param0 ^ -1) != -39) {
+            if (param0 != 38) {
               break L44;
             } else {
-              if ((((iq) this).field_e ^ -1) == -6) {
+              if (((iq) this).field_e == 5) {
                 break L44;
               } else {
-                if (0 != ((iq) this).field_e) {
-                  break L44;
-                } else {
+                if (0 == ((iq) this).field_e) {
                   ((iq) this).b(param1 + -72);
                   ((iq) this).c(param1 + -2);
                   return;
+                } else {
+                  break L44;
                 }
               }
             }
           }
           L45: {
-            if ((param0 ^ -1) != -22) {
+            if (param0 != 21) {
               break L45;
             } else {
-              if (((iq) this).field_e == -6) {
+              if (((iq) this).field_e == 5) {
                 break L45;
               } else {
-                if (((iq) this).field_e != 1) {
-                  break L45;
-                } else {
+                if (((iq) this).field_e == 1) {
                   ((iq) this).b(1);
                   ((iq) this).c(param1 ^ 42);
                   cm.field_v = true;
                   return;
+                } else {
+                  break L45;
                 }
               }
             }
@@ -857,10 +857,10 @@ final class iq extends lw {
               if (5 == ((iq) this).field_e) {
                 ((iq) this).b(1);
                 ((iq) this).b((byte) 112);
-                if (!((iq) this).c((byte) 95)) {
+                if (((iq) this).c((byte) 95)) {
+                  fla.b(23621);
                   return;
                 } else {
-                  fla.b(23621);
                   return;
                 }
               } else {
@@ -869,19 +869,19 @@ final class iq extends lw {
             }
           }
           L47: {
-            if (-23 != param0) {
+            if (param0 != 22) {
               break L47;
             } else {
               if (5 == ((iq) this).field_e) {
                 break L47;
               } else {
-                if (-3 != (((iq) this).field_e ^ -1)) {
-                  break L47;
-                } else {
+                if (((iq) this).field_e == 2) {
                   ((iq) this).b(1);
                   ((iq) this).b((byte) 112);
                   cm.field_v = false;
                   return;
+                } else {
+                  break L47;
                 }
               }
             }
@@ -903,17 +903,17 @@ final class iq extends lw {
               if (20 != param0) {
                 break L50;
               } else {
-                if ((((iq) this).field_e ^ -1) == -3) {
+                if (((iq) this).field_e == 2) {
                   break L50;
                 } else {
                   if (5 == ((iq) this).field_e) {
                     break L50;
                   } else {
-                    if (((iq) this).field_e != 3) {
-                      break L50;
-                    } else {
+                    if (((iq) this).field_e == 3) {
                       ((iq) this).b(1);
                       return;
+                    } else {
+                      break L50;
                     }
                   }
                 }
@@ -937,10 +937,10 @@ final class iq extends lw {
               }
             }
             L52: {
-              if (param0 != -26) {
+              if (param0 != 25) {
                 break L52;
               } else {
-                if (-5 != ((iq) this).field_e) {
+                if (((iq) this).field_e != 4) {
                   break L52;
                 } else {
                   if (5 != ((iq) this).field_e) {
@@ -954,20 +954,20 @@ final class iq extends lw {
                 }
               }
             }
-            if (-35 == param0) {
-              if (-6 != ((iq) this).field_e) {
+            if (param0 != 34) {
+              break L48;
+            } else {
+              if (((iq) this).field_e != 5) {
                 return;
               } else {
                 ((iq) this).b((byte) 112);
-                if (((iq) this).c((byte) 95)) {
-                  fla.b(23621);
+                if (!((iq) this).c((byte) 95)) {
                   break L48;
                 } else {
-                  return;
+                  fla.b(23621);
+                  break L48;
                 }
               }
-            } else {
-              return;
             }
           }
           return;

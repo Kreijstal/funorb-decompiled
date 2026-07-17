@@ -10,41 +10,19 @@ final class wa {
 
     public static void a(boolean param0) {
         field_e = null;
-        if (param0) {
-          field_b = null;
-          field_a = null;
-          field_d = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
-          field_a = null;
-          field_d = null;
-          field_c = null;
-          field_b = null;
-          return;
-        }
+        field_a = null;
+        field_d = null;
+        field_c = null;
+        field_b = null;
     }
 
     final static void a(int param0, int param1) {
-        if (null != ni.field_N) {
-          L0: {
-            if (kn.field_b > param0) {
-              kn.field_b = param0;
-              ni.field_N.d(kc.field_b * kn.field_b / 64);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (param1 != 32471) {
-            wa.a(false);
+        if (null == ni.field_N) {
             return;
-          } else {
-            return;
-          }
-        } else {
-          return;
+        }
+        if (!(kn.field_b <= param0)) {
+            kn.field_b = param0;
+            ni.field_N.d(kc.field_b * kn.field_b / 64);
         }
     }
 

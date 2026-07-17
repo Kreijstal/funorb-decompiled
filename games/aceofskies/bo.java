@@ -38,12 +38,62 @@ final class bo {
     }
 
     final static rh a(al[] param0, int param1, int param2) {
-        if (param2 != 23187) {
-          field_g = (String) null;
-          return gg.a(param0[qq.a(20, param0.length)], param1, -27227);
-        } else {
-          return gg.a(param0[qq.a(20, param0.length)], param1, -27227);
+        RuntimeException var3 = null;
+        rh stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        rh stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            stackOut_0_0 = gg.a(param0[qq.a(20, param0.length)], param1, -27227);
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("bo.A(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 23187 + 41);
         }
+        return stackIn_1_0;
     }
 
     final void a(boolean param0) {
@@ -123,31 +173,21 @@ final class bo {
 
     private final void b(int param0) {
         fo var2 = null;
-        L0: {
-          ((bo) this).field_c.K(((bo) this).field_e);
-          if (null == ((bo) this).field_f) {
-            var2 = new fo();
-            break L0;
-          } else {
+        ((bo) this).field_c.K(((bo) this).field_e);
+        if (null != ((bo) this).field_f) {
             var2 = ((bo) this).field_f;
             ((bo) this).field_f = ((bo) this).field_f.field_c;
-            break L0;
-          }
+        } else {
+            var2 = new fo();
         }
         var2.a((byte) 46, ((bo) this).field_e[3], ((bo) this).field_e[2], ((bo) this).field_b, ((bo) this).field_e[1], ((bo) this).field_d, ((bo) this).field_e[0]);
-        ((bo) this).field_b = (fo) var2;
-        if (param0 != 884) {
-          field_h = -21;
-          return;
-        } else {
-          return;
-        }
+        ((bo) this).field_b = var2;
     }
 
     public static void a(int param0) {
         field_i = null;
         if (param0 != 18598) {
-            field_i = (kp) null;
+            field_i = null;
             field_g = null;
             field_a = null;
             return;
@@ -165,7 +205,11 @@ final class bo {
     bo(ha param0) {
         ((bo) this).field_d = null;
         ((bo) this).field_e = new int[4];
-        ((bo) this).field_c = param0;
+        try {
+            ((bo) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "bo.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

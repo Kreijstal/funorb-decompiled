@@ -20,7 +20,7 @@ final class fo {
     final static void b(int param0) {
         nl.field_o = -1;
         ht.field_g = false;
-        ok.field_o = param0;
+        ok.field_o = 0;
         we.field_c = -1;
         qj.field_s = null;
     }
@@ -31,11 +31,13 @@ final class fo {
         ((fo) this).field_g = param4;
         ((fo) this).field_e = param1;
         if (param0 != 46) {
-          return;
-        } else {
-          ((fo) this).field_c = param3;
-          ((fo) this).field_a = param2;
-          return;
+            return;
+        }
+        try {
+            ((fo) this).field_c = param3;
+            ((fo) this).field_a = param2;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "fo.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 41);
         }
     }
 

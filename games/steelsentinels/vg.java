@@ -30,7 +30,7 @@ final class vg extends IOException {
 
     final static void a(int param0, byte param1) {
         ud.field_v = 1000000000L / (long)param0;
-        int var2 = -47 / ((58 - param1) / 61);
+        int var2 = -15;
     }
 
     static {

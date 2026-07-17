@@ -13,7 +13,7 @@ final class dp extends ki {
 
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
-        if ((param1 ^ -1) < 0) {
+        if (param1 > -1) {
           L0: {
             lb.g(param2, param3, 153, 238, kg.field_d[param1], 22953);
             if (((dp) this).b((byte) -115)) {
@@ -121,29 +121,29 @@ final class dp extends ki {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, jp param4, pb param5) {
-        Object var7 = null;
-        fc.a(-95, param5.field_p);
-        lb.d();
-        param4.b(-(60 / param0) + (-param4.field_x + param5.field_i) / 2, -param4.field_z + param1 - (-param5.field_q - -(130 / param0)), 0, 208);
-        la.a(0, 0, param5.field_i, param5.field_q, 0, nj.field_G[param3], 96);
-        if (param2) {
-            var7 = null;
-            dp.a(82, 29, true, -26, (jp) null, (pb) null);
-        } else {
+        try {
+            fc.a(-95, param5.field_p);
+            lb.d();
+            param4.b(-(60 / param0) + (-param4.field_x + param5.field_i) / 2, -param4.field_z + param1 - (-param5.field_q - -(130 / param0)), 0, 208);
+            la.a(0, 0, param5.field_i, param5.field_q, 0, nj.field_G[param3], 96);
+            if (param2) {
+                Object var7 = null;
+                dp.a(82, 29, true, -26, (jp) null, (pb) null);
+            }
             sc.b(-80);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "dp.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
-        sc.b(-80);
     }
 
     final boolean b(byte param0) {
         Object var3 = null;
         int stackIn_19_0 = 0;
         int stackIn_40_0 = 0;
-        int stackOut_39_0;
-        int stackOut_38_0;
-        int stackOut_18_0;
-        int stackOut_17_0;
+        int stackOut_39_0 = 0;
+        int stackOut_38_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_17_0 = 0;
         if (param0 <= -91) {
           if (nf.field_U != null) {
             if (null != ni.field_Ub) {
@@ -241,9 +241,13 @@ final class dp extends ki {
 
     dp(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
-        qg.field_r = new jp[2][];
-        ej.field_L = new jp[2][];
-        ap.field_c = new jp[2];
+        try {
+            qg.field_r = new jp[2][];
+            ej.field_L = new jp[2][];
+            ap.field_c = new jp[2];
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "dp.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -309,9 +313,6 @@ final class dp extends ki {
         field_u = null;
         field_v = null;
         field_x = null;
-        if (param0 != 1) {
-            field_w = null;
-        }
     }
 
     final jp[] a(byte param0, int param1) {

@@ -10,18 +10,18 @@ final class wo implements Iterator {
     private ta field_b;
 
     final static void a(byte param0, int param1, int[] param2) {
-        int var3 = 0;
-        var3 = fo.a(param2[param1], (byte) -18, param2[param1 - -1]);
-        var3 = fo.a(param2[param1 + 2], (byte) -128, var3);
-        param2[param1] = param2[param1] / var3;
-        param2[1 + param1] = param2[1 + param1] / var3;
-        if (param0 != 49) {
-          wo.a(-112, 3, 4, -83, true, -82);
-          param2[2 + param1] = param2[2 + param1] / var3;
-          return;
-        } else {
-          param2[2 + param1] = param2[2 + param1] / var3;
-          return;
+        int var3_int = 0;
+        try {
+            var3_int = fo.a(param2[param1], (byte) -18, param2[param1 - -1]);
+            var3_int = fo.a(param2[param1 + 2], (byte) -128, var3_int);
+            param2[param1] = param2[param1] / var3_int;
+            param2[1 + param1] = param2[1 + param1] / var3_int;
+            if (param0 != 49) {
+                wo.a(-112, 3, 4, -83, true, -82);
+            }
+            param2[2 + param1] = param2[2 + param1] / var3_int;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "wo.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -65,9 +65,6 @@ final class wo implements Iterator {
 
     public static void a(boolean param0) {
         field_d = null;
-        if (!param0) {
-            wo.a(-30, 57, -96, -102, false, -105);
-        }
     }
 
     public final void remove() {
@@ -123,39 +120,53 @@ final class wo implements Iterator {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
-        int var6 = 0;
+        int var6_int = 0;
+        RuntimeException var6 = null;
         int[] var7 = null;
         int var8 = 0;
+        RuntimeException decompiledCaughtException = null;
         var8 = Torquing.field_u;
-        int incrementValue$4 = param5;
-        param5++;
-        di.a(param0, (byte) -118, param1, qd.field_a[incrementValue$4], param3);
-        if (!param4) {
-          return;
-        } else {
-          int incrementValue$5 = param2;
-          param2--;
-          di.a(param0, (byte) -122, param1, qd.field_a[incrementValue$5], param3);
-          var6 = param5;
-          L0: while (true) {
-            if (param2 < var6) {
-              return;
+        try {
+          L0: {
+            int incrementValue$4 = param5;
+            param5++;
+            di.a(param0, (byte) -118, param1, qd.field_a[incrementValue$4], param3);
+            if (param4) {
+              int incrementValue$5 = param2;
+              param2--;
+              di.a(param0, (byte) -122, param1, qd.field_a[incrementValue$5], param3);
+              var6_int = param5;
+              L1: while (true) {
+                if (param2 < var6_int) {
+                  break L0;
+                } else {
+                  var7 = qd.field_a[var6_int];
+                  var7[param3] = param1;
+                  var7[param0] = param1;
+                  var6_int++;
+                  continue L1;
+                }
+              }
             } else {
-              var7 = qd.field_a[var6];
-              var7[param3] = param1;
-              var7[param0] = param1;
-              var6++;
-              continue L0;
+              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw rb.a((Throwable) (Object) var6, "wo.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
     wo(lj param0) {
         ((wo) this).field_b = null;
-        ((wo) this).field_a = param0;
-        ((wo) this).field_c = ((wo) this).field_a.field_a.field_p;
-        ((wo) this).field_b = null;
+        try {
+            ((wo) this).field_a = param0;
+            ((wo) this).field_c = ((wo) this).field_a.field_a.field_p;
+            ((wo) this).field_b = null;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "wo.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

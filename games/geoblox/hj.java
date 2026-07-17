@@ -8,40 +8,77 @@ final class hj {
 
     final static int a(byte param0, int param1) {
         int var2 = 0;
-        if (0 <= param1) {
-            // if_icmplt L24
+        L0: {
+          L1: {
+            var2 = 0;
+            if (0 > param1) {
+              break L1;
+            } else {
+              if (param1 < 65536) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          param1 = param1 >>> 16;
+          var2 += 16;
+          break L0;
         }
-        param1 = param1 >>> 16;
-        var2 += 16;
-        if (!(-257 > param1)) {
+        L2: {
+          if (param1 >= 256) {
             var2 += 8;
             param1 = param1 >>> 8;
+            break L2;
+          } else {
+            break L2;
+          }
         }
-        if (!(16 > param1)) {
+        L3: {
+          if (16 <= param1) {
             var2 += 4;
             param1 = param1 >>> 4;
+            break L3;
+          } else {
+            break L3;
+          }
         }
-        if (-5 >= (param1 ^ -1)) {
+        L4: {
+          if (param1 < 4) {
+            break L4;
+          } else {
             var2 += 2;
             param1 = param1 >>> 2;
+            break L4;
+          }
         }
-        if (1 <= param1) {
+        L5: {
+          if (1 > param1) {
+            break L5;
+          } else {
             param1 = param1 >>> 1;
             var2++;
+            break L5;
+          }
         }
-        if (param0 != 58) {
-            return -21;
+        if (param0 == 58) {
+          return param1 + var2;
+        } else {
+          return -21;
         }
-        return param1 + var2;
     }
 
     final static void a(byte param0, java.awt.Component param1) {
-        if (param0 != -85) {
-            field_c = false;
+        try {
+            if (param0 != -85) {
+                field_c = false;
+            }
+            param1.setFocusTraversalKeysEnabled(false);
+            param1.addKeyListener((java.awt.event.KeyListener) (Object) je.field_j);
+            param1.addFocusListener((java.awt.event.FocusListener) (Object) je.field_j);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "hj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        param1.setFocusTraversalKeysEnabled(false);
-        param1.addKeyListener((java.awt.event.KeyListener) (Object) je.field_j);
-        param1.addFocusListener((java.awt.event.FocusListener) (Object) je.field_j);
     }
 
     final static dm[] a(int param0) {
@@ -65,18 +102,10 @@ final class hj {
         byte[] var24 = null;
         int[] var25 = null;
         int[] var26 = null;
-        L0: {
-          var8 = Geoblox.field_C;
-          var1 = new dm[sb.field_a];
-          if (param0 > 60) {
-            break L0;
-          } else {
-            field_a = 2;
-            break L0;
-          }
-        }
+        var8 = Geoblox.field_C;
+        var1 = new dm[sb.field_a];
         var2 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (sb.field_a <= var2) {
             kj.c(true);
             return var1;
@@ -87,15 +116,15 @@ final class hj {
               var10 = new int[var3];
               var26 = var10;
               var6 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var3 <= var6) {
                   var1[var2] = new dm(pg.field_b, dd.field_C, gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], var26);
                   var2++;
-                  continue L1;
+                  continue L0;
                 } else {
                   var10[var6] = cm.field_j[cd.a((int) var24[var6], 255)];
                   var6++;
-                  continue L2;
+                  continue L1;
                 }
               }
             } else {
@@ -111,15 +140,15 @@ final class hj {
               var13 = var17;
               var6_ref_int__ = var13;
               var7 = 0;
-              L3: while (true) {
+              L2: while (true) {
                 if (var7 >= var3) {
                   var1[var2] = (dm) (Object) new il(pg.field_b, dd.field_C, gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], var25);
                   var2++;
-                  continue L1;
+                  continue L0;
                 } else {
-                  var6_ref_int__[var7] = lb.a(cd.a(var23[var7] << -1753349800, -16777216), cm.field_j[cd.a((int) var24[var7], 255)]);
+                  var6_ref_int__[var7] = lb.a(cd.a(var23[var7] << 24, -16777216), cm.field_j[cd.a((int) var24[var7], 255)]);
                   var7++;
-                  continue L3;
+                  continue L2;
                 }
               }
             }

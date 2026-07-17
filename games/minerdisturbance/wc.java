@@ -8,7 +8,7 @@ final class wc implements uj {
     static String field_d;
 
     final static boolean b(byte param0) {
-        int var1 = -108 / ((-67 - param0) / 51);
+        int var1 = 36;
         return !wm.field_f.a(0) ? true : false;
     }
 
@@ -45,31 +45,99 @@ final class wc implements uj {
     }
 
     final static void a(int param0, java.awt.Canvas param1, boolean param2) {
-        int var3 = 0;
-        int var4 = MinerDisturbance.field_ab;
-        if (af.field_u < 10) {
-            var3 = 0;
-            if (bh.field_cb) {
-                bh.field_cb = false;
-                var3 = 1;
-            }
-            MinerDisturbance.a(qm.field_j, (byte) 36, k.g(-22962), var3 != 0, te.a(-105));
-        } else {
-            if (!fe.j(-63)) {
-                eh.d();
-                pd.a(10853, 320, 240);
-                cl.a(param1, 0, 0, 310);
-            } else {
-                if (fh.field_b == 0) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var4 = MinerDisturbance.field_ab;
+        try {
+          L0: {
+            L1: {
+              if (af.field_u >= 10) {
+                if (fe.j(-63)) {
+                  if (fh.field_b != 0) {
+                    mf.a(-752960408, param1);
+                    break L1;
+                  } else {
                     g.a(false, -47, param2);
                     cl.a(param1, 0, 0, 310);
+                    break L1;
+                  }
                 } else {
-                    mf.a(-752960408, param1);
+                  eh.d();
+                  pd.a(10853, 320, 240);
+                  cl.a(param1, 0, 0, 310);
+                  break L1;
                 }
+              } else {
+                L2: {
+                  var3_int = 0;
+                  if (!bh.field_cb) {
+                    break L2;
+                  } else {
+                    bh.field_cb = false;
+                    var3_int = 1;
+                    break L2;
+                  }
+                }
+                MinerDisturbance.a(qm.field_j, (byte) 36, k.g(-22962), var3_int != 0, te.a(-105));
+                break L1;
+              }
             }
-        }
-        if (param0 != 240) {
-            field_d = null;
+            L3: {
+              if (param0 == 240) {
+                break L3;
+              } else {
+                field_d = null;
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("wc.F(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
         }
     }
 
@@ -79,33 +147,43 @@ final class wc implements uj {
     }
 
     final static void c(byte param0) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int var4 = MinerDisturbance.field_ab;
-        int var1 = mg.field_e[0];
-        for (var2 = 1; var2 < mg.field_e.length; var2++) {
-            var3 = mg.field_e[var2];
-            ai.a(ta.field_d, var2 << 594636836, ta.field_d, var1, var3);
-            var1 = var1 + var3;
-        }
-        if (param0 != -29) {
-            field_a = null;
+        int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = MinerDisturbance.field_ab;
+        try {
+          L0: {
+            var1_int = mg.field_e[0];
+            var2 = 1;
+            L1: while (true) {
+              if (var2 >= mg.field_e.length) {
+                break L0;
+              } else {
+                var3 = mg.field_e[var2];
+                ai.a(ta.field_d, var2 << 4, ta.field_d, var1_int, var3);
+                var1_int = var1_int + var3;
+                var2++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var1, "wc.H(" + -29 + 41);
         }
     }
 
     public static void b(int param0) {
         field_d = null;
         field_c = null;
-        if (param0 != 0) {
-            boolean discarded$0 = wc.b(false);
-        }
         field_a = null;
     }
 
     final static boolean b(boolean param0) {
-        if (param0) {
-            return false;
-        }
         return true;
     }
 

@@ -65,7 +65,7 @@ final class c {
                           }
                         }
                         qh.field_c = qh.field_c + 1;
-                        if ((ah.field_e ^ -1) > -1) {
+                        if (ah.field_e < 0) {
                           if (ah.field_e >= 0) {
                             break L3;
                           } else {
@@ -98,7 +98,7 @@ final class c {
                 } else {
                   if (0 > ah.field_e) {
                     qh.field_c = qh.field_c + 1;
-                    if ((ah.field_e ^ -1) > -1) {
+                    if (ah.field_e < 0) {
                       if (ah.field_e >= 0) {
                         break L5;
                       } else {
@@ -122,7 +122,7 @@ final class c {
                       break L5;
                     } else {
                       qh.field_c = qh.field_c + 1;
-                      if ((ah.field_e ^ -1) > -1) {
+                      if (ah.field_e < 0) {
                         L6: {
                           if (ah.field_e >= 0) {
                             break L6;
@@ -184,7 +184,7 @@ final class c {
                     }
                   }
                   qh.field_c = qh.field_c + 1;
-                  if ((ah.field_e ^ -1) > -1) {
+                  if (ah.field_e < 0) {
                     if (ah.field_e >= 0) {
                       break L8;
                     } else {
@@ -238,7 +238,7 @@ final class c {
                           }
                         }
                         qh.field_c = qh.field_c + 1;
-                        if ((ah.field_e ^ -1) > -1) {
+                        if (ah.field_e < 0) {
                           if (ah.field_e >= 0) {
                             break L11;
                           } else {
@@ -268,7 +268,7 @@ final class c {
               if (0 == (fieldTemp$31 & 3)) {
                 if (0 > ah.field_e) {
                   qh.field_c = qh.field_c + 1;
-                  if ((ah.field_e ^ -1) > -1) {
+                  if (ah.field_e < 0) {
                     L13: {
                       if (ah.field_e >= 0) {
                         break L13;
@@ -294,7 +294,7 @@ final class c {
                   if (0 <= qh.field_c) {
                     L14: {
                       qh.field_c = qh.field_c + 1;
-                      if ((ah.field_e ^ -1) > -1) {
+                      if (ah.field_e < 0) {
                         if (ah.field_e >= 0) {
                           break L14;
                         } else {
@@ -357,7 +357,7 @@ final class c {
                     }
                   }
                   qh.field_c = qh.field_c + 1;
-                  if ((ah.field_e ^ -1) > -1) {
+                  if (ah.field_e < 0) {
                     if (ah.field_e >= 0) {
                       break L16;
                     } else {
@@ -434,7 +434,7 @@ final class c {
                         }
                       }
                       qh.field_c = qh.field_c + 1;
-                      if ((ah.field_e ^ -1) > -1) {
+                      if (ah.field_e < 0) {
                         if (ah.field_e >= 0) {
                           break L20;
                         } else {
@@ -467,7 +467,7 @@ final class c {
               } else {
                 if (0 > ah.field_e) {
                   qh.field_c = qh.field_c + 1;
-                  if ((ah.field_e ^ -1) > -1) {
+                  if (ah.field_e < 0) {
                     if (ah.field_e >= 0) {
                       break L22;
                     } else {
@@ -492,7 +492,7 @@ final class c {
                   } else {
                     L23: {
                       qh.field_c = qh.field_c + 1;
-                      if ((ah.field_e ^ -1) > -1) {
+                      if (ah.field_e < 0) {
                         if (ah.field_e >= 0) {
                           break L23;
                         } else {
@@ -553,7 +553,7 @@ final class c {
                   }
                 }
                 qh.field_c = qh.field_c + 1;
-                if ((ah.field_e ^ -1) > -1) {
+                if (ah.field_e < 0) {
                   if (ah.field_e >= 0) {
                     break L25;
                   } else {
@@ -581,12 +581,6 @@ final class c {
 
     public static void b(byte param0) {
         field_b = null;
-        if (param0 > -1) {
-            field_b = null;
-            field_c = null;
-            field_a = null;
-            return;
-        }
         field_c = null;
         field_a = null;
     }

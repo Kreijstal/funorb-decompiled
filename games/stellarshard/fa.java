@@ -19,12 +19,6 @@ final class fa extends gg {
 
     public static void a(boolean param0) {
         field_p = null;
-        if (param0) {
-            int discarded$0 = fa.d(64);
-            field_k = null;
-            field_n = null;
-            return;
-        }
         field_k = null;
         field_n = null;
     }
@@ -45,29 +39,43 @@ final class fa extends gg {
     }
 
     final static void a(int param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         u var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = stellarshard.field_B;
-        var4 = (u) (Object) i.field_c.b(-79);
-        if (param1 <= -49) {
-          L0: while (true) {
-            if (var4 != null) {
-              ii.a(var4, param0, (byte) 107);
-              var4 = (u) (Object) i.field_c.b((byte) 95);
-              continue L0;
+        try {
+          L0: {
+            var4 = (u) (Object) i.field_c.b(-79);
+            if (param1 <= -49) {
+              L1: while (true) {
+                if (var4 == null) {
+                  break L0;
+                } else {
+                  ii.a(var4, param0, (byte) 107);
+                  var4 = (u) (Object) i.field_c.b((byte) 95);
+                  continue L1;
+                }
+              }
             } else {
               return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var2, "fa.B(" + param0 + 44 + param1 + 41);
         }
     }
 
     fa(long param0, int param1, byte[] param2) {
-        ((fa) this).field_m = param0;
-        ((fa) this).field_l = param2;
-        ((fa) this).field_o = param1;
+        try {
+            ((fa) this).field_m = param0;
+            ((fa) this).field_l = param2;
+            ((fa) this).field_o = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "fa.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -31,11 +31,6 @@ final class cc extends ab {
 
     public static void e(byte param0) {
         field_v = null;
-        if (param0 < 17) {
-            field_z = 70;
-            field_A = null;
-            return;
-        }
         field_A = null;
     }
 

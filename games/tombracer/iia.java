@@ -19,7 +19,8 @@ final class iia extends ci {
     private int field_t;
 
     private final void a(int param0, int param1, int[][] param2, byte param3, int param4, int param5, Random param6) {
-        int var8 = 0;
+        RuntimeException var8 = null;
+        int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -36,406 +37,508 @@ final class iia extends ci {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        int stackIn_3_0 = 0;
         int stackIn_4_0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_6_1 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_28_0 = 0;
-        int[] stackIn_38_0 = null;
-        int stackIn_38_1 = 0;
-        int[] stackIn_38_2 = null;
-        int stackIn_38_3 = 0;
-        int[] stackIn_39_0 = null;
-        int stackIn_39_1 = 0;
-        int[] stackIn_39_2 = null;
-        int stackIn_39_3 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_7_1 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_30_0 = 0;
         int[] stackIn_40_0 = null;
         int stackIn_40_1 = 0;
         int[] stackIn_40_2 = null;
         int stackIn_40_3 = 0;
-        int stackIn_40_4 = 0;
-        int[] stackIn_49_0 = null;
-        int stackIn_49_1 = 0;
-        int[] stackIn_49_2 = null;
-        int stackIn_49_3 = 0;
-        int[] stackIn_50_0 = null;
-        int stackIn_50_1 = 0;
-        int[] stackIn_50_2 = null;
-        int stackIn_50_3 = 0;
+        int[] stackIn_41_0 = null;
+        int stackIn_41_1 = 0;
+        int[] stackIn_41_2 = null;
+        int stackIn_41_3 = 0;
+        int[] stackIn_42_0 = null;
+        int stackIn_42_1 = 0;
+        int[] stackIn_42_2 = null;
+        int stackIn_42_3 = 0;
+        int stackIn_42_4 = 0;
         int[] stackIn_51_0 = null;
         int stackIn_51_1 = 0;
         int[] stackIn_51_2 = null;
         int stackIn_51_3 = 0;
-        int stackIn_51_4 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int[] stackIn_52_0 = null;
+        int stackIn_52_1 = 0;
+        int[] stackIn_52_2 = null;
+        int stackIn_52_3 = 0;
+        int[] stackIn_53_0 = null;
+        int stackIn_53_1 = 0;
+        int[] stackIn_53_2 = null;
+        int stackIn_53_3 = 0;
+        int stackIn_53_4 = 0;
+        RuntimeException stackIn_69_0 = null;
+        StringBuilder stackIn_69_1 = null;
+        RuntimeException stackIn_70_0 = null;
+        StringBuilder stackIn_70_1 = null;
+        RuntimeException stackIn_71_0 = null;
+        StringBuilder stackIn_71_1 = null;
+        String stackIn_71_2 = null;
+        RuntimeException stackIn_72_0 = null;
+        StringBuilder stackIn_72_1 = null;
+        RuntimeException stackIn_73_0 = null;
+        StringBuilder stackIn_73_1 = null;
+        RuntimeException stackIn_74_0 = null;
+        StringBuilder stackIn_74_1 = null;
+        String stackIn_74_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_6_1 = 0;
         int stackOut_5_0 = 0;
         int stackOut_5_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_27_0 = 0;
         int stackOut_26_0 = 0;
-        int[] stackOut_48_0 = null;
-        int stackOut_48_1 = 0;
-        int[] stackOut_48_2 = null;
-        int stackOut_48_3 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_28_0 = 0;
         int[] stackOut_50_0 = null;
         int stackOut_50_1 = 0;
         int[] stackOut_50_2 = null;
         int stackOut_50_3 = 0;
-        int stackOut_50_4 = 0;
-        int[] stackOut_49_0 = null;
-        int stackOut_49_1 = 0;
-        int[] stackOut_49_2 = null;
-        int stackOut_49_3 = 0;
-        int stackOut_49_4 = 0;
-        int[] stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        int[] stackOut_37_2 = null;
-        int stackOut_37_3 = 0;
+        int[] stackOut_52_0 = null;
+        int stackOut_52_1 = 0;
+        int[] stackOut_52_2 = null;
+        int stackOut_52_3 = 0;
+        int stackOut_52_4 = 0;
+        int[] stackOut_51_0 = null;
+        int stackOut_51_1 = 0;
+        int[] stackOut_51_2 = null;
+        int stackOut_51_3 = 0;
+        int stackOut_51_4 = 0;
         int[] stackOut_39_0 = null;
         int stackOut_39_1 = 0;
         int[] stackOut_39_2 = null;
         int stackOut_39_3 = 0;
-        int stackOut_39_4 = 0;
-        int[] stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        int[] stackOut_38_2 = null;
-        int stackOut_38_3 = 0;
-        int stackOut_38_4 = 0;
-        L0: {
-          var23 = TombRacer.field_G ? 1 : 0;
-          if (((iia) this).field_m <= 0) {
-            stackOut_2_0 = 4096;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = 4096 + -jqa.a(((iia) this).field_m, param6, 66);
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        L1: {
-          var8 = stackIn_3_0;
-          var9 = ((iia) this).field_u * ((iia) this).field_o >> -860281044;
-          stackOut_3_0 = ((iia) this).field_o;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_4_0 = stackOut_3_0;
-          if (var9 > 0) {
-            stackOut_5_0 = stackIn_5_0;
-            stackOut_5_1 = jqa.a(var9, param6, 83);
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            break L1;
-          } else {
-            stackOut_4_0 = stackIn_4_0;
-            stackOut_4_1 = 0;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            break L1;
-          }
-        }
-        L2: {
-          var10 = stackIn_6_0 - stackIn_6_1;
-          if (param3 <= -30) {
-            break L2;
-          } else {
-            ((iia) this).field_y = -123;
-            break L2;
-          }
-        }
-        L3: {
-          if (ns.field_g <= param1) {
-            param1 = param1 - ns.field_g;
-            break L3;
-          } else {
-            break L3;
-          }
-        }
-        L4: {
-          if (0 < var10) {
-            if (param0 >= -1) {
-              return;
-            } else {
-              if (-1 < param4) {
-                L5: {
-                  var11 = param4 / 2;
-                  var12 = param0 / 2;
-                  if (var11 < var10) {
-                    stackOut_24_0 = var11;
-                    stackIn_25_0 = stackOut_24_0;
-                    break L5;
-                  } else {
-                    stackOut_23_0 = var10;
-                    stackIn_25_0 = stackOut_23_0;
-                    break L5;
-                  }
-                }
+        int[] stackOut_41_0 = null;
+        int stackOut_41_1 = 0;
+        int[] stackOut_41_2 = null;
+        int stackOut_41_3 = 0;
+        int stackOut_41_4 = 0;
+        int[] stackOut_40_0 = null;
+        int stackOut_40_1 = 0;
+        int[] stackOut_40_2 = null;
+        int stackOut_40_3 = 0;
+        int stackOut_40_4 = 0;
+        RuntimeException stackOut_68_0 = null;
+        StringBuilder stackOut_68_1 = null;
+        RuntimeException stackOut_70_0 = null;
+        StringBuilder stackOut_70_1 = null;
+        String stackOut_70_2 = null;
+        RuntimeException stackOut_69_0 = null;
+        StringBuilder stackOut_69_1 = null;
+        String stackOut_69_2 = null;
+        RuntimeException stackOut_71_0 = null;
+        StringBuilder stackOut_71_1 = null;
+        RuntimeException stackOut_73_0 = null;
+        StringBuilder stackOut_73_1 = null;
+        String stackOut_73_2 = null;
+        RuntimeException stackOut_72_0 = null;
+        StringBuilder stackOut_72_1 = null;
+        String stackOut_72_2 = null;
+        var23 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (((iia) this).field_m <= 0) {
+                stackOut_3_0 = 4096;
+                stackIn_4_0 = stackOut_3_0;
+                break L1;
+              } else {
+                stackOut_2_0 = 4096 + -jqa.a(((iia) this).field_m, param6, 66);
+                stackIn_4_0 = stackOut_2_0;
+                break L1;
+              }
+            }
+            L2: {
+              var8_int = stackIn_4_0;
+              var9 = ((iia) this).field_u * ((iia) this).field_o >> 12;
+              stackOut_4_0 = ((iia) this).field_o;
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_5_0 = stackOut_4_0;
+              if (var9 > 0) {
+                stackOut_6_0 = stackIn_6_0;
+                stackOut_6_1 = jqa.a(var9, param6, 83);
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                break L2;
+              } else {
+                stackOut_5_0 = stackIn_5_0;
+                stackOut_5_1 = 0;
+                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_1 = stackOut_5_1;
+                break L2;
+              }
+            }
+            L3: {
+              var10 = stackIn_7_0 - stackIn_7_1;
+              if (param3 <= -30) {
+                break L3;
+              } else {
+                ((iia) this).field_y = -123;
+                break L3;
+              }
+            }
+            L4: {
+              if (~ns.field_g >= ~param1) {
+                param1 = param1 - ns.field_g;
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            L5: {
+              if (0 < var10) {
                 L6: {
-                  var13 = stackIn_25_0;
-                  if (var12 < var10) {
-                    stackOut_27_0 = var12;
-                    stackIn_28_0 = stackOut_27_0;
+                  if (param0 <= 0) {
                     break L6;
                   } else {
-                    stackOut_26_0 = var10;
-                    stackIn_28_0 = stackOut_26_0;
-                    break L6;
-                  }
-                }
-                var14 = stackIn_28_0;
-                var15 = param1 - -var13;
-                var16 = -(2 * var13) + param4;
-                var17 = 0;
-                L7: while (true) {
-                  if (var17 >= param0) {
-                    break L4;
-                  } else {
-                    var18 = param2[var17 + param5];
-                    if (var14 <= var17) {
-                      var19 = -var17 + param0 + -1;
-                      if (var14 <= var19) {
-                        var20 = 0;
-                        L8: while (true) {
-                          if (var13 <= var20) {
-                            if (var16 + var15 > ns.field_g) {
-                              var20 = ns.field_g - var15;
-                              lua.a(var18, var15, var20, var8);
-                              lua.a(var18, 0, -var20 + var16, var8);
-                              var17++;
-                              continue L7;
-                            } else {
-                              lua.a(var18, var15, var16, var8);
-                              var17++;
-                              continue L7;
-                            }
-                          } else {
-                            var18[sea.c(una.field_b, -var20 + param4 + param1 - 1)] = var8 * var20 / var13;
-                            var18[sea.c(una.field_b, param1 - -var20)] = var8 * var20 / var13;
-                            var20++;
-                            continue L8;
-                          }
+                    if (param4 > 0) {
+                      L7: {
+                        var11 = param4 / 2;
+                        var12 = param0 / 2;
+                        if (~var11 > ~var10) {
+                          stackOut_26_0 = var11;
+                          stackIn_27_0 = stackOut_26_0;
+                          break L7;
+                        } else {
+                          stackOut_25_0 = var10;
+                          stackIn_27_0 = stackOut_25_0;
+                          break L7;
                         }
-                      } else {
-                        L9: {
-                          var20 = var8 * var19 / var14;
-                          if (((iia) this).field_t == 0) {
-                            var21 = 0;
-                            L10: while (true) {
-                              if (var21 >= var13) {
-                                break L9;
-                              } else {
-                                var22 = var21 * var8 / var13;
-                                var18[sea.c(una.field_b, -1 + param4 + param1 - var21)] = var20 * var22 >> -901914740;
-                                var18[sea.c(var21 + param1, una.field_b)] = var20 * var22 >> -901914740;
-                                var21++;
-                                continue L10;
-                              }
-                            }
-                          } else {
-                            var21 = 0;
-                            L11: while (true) {
-                              if (var13 <= var21) {
-                                break L9;
-                              } else {
-                                L12: {
-                                  var22 = var8 * var21 / var13;
-                                  stackOut_48_0 = (int[]) var18;
-                                  stackOut_48_1 = sea.c(param1 - -var21, una.field_b);
-                                  stackOut_48_2 = (int[]) var18;
-                                  stackOut_48_3 = sea.c(-1 + -var21 + param1 - -param4, una.field_b);
-                                  stackIn_50_0 = stackOut_48_0;
-                                  stackIn_50_1 = stackOut_48_1;
-                                  stackIn_50_2 = stackOut_48_2;
-                                  stackIn_50_3 = stackOut_48_3;
-                                  stackIn_49_0 = stackOut_48_0;
-                                  stackIn_49_1 = stackOut_48_1;
-                                  stackIn_49_2 = stackOut_48_2;
-                                  stackIn_49_3 = stackOut_48_3;
-                                  if (var22 < var20) {
-                                    stackOut_50_0 = (int[]) (Object) stackIn_50_0;
-                                    stackOut_50_1 = stackIn_50_1;
-                                    stackOut_50_2 = (int[]) (Object) stackIn_50_2;
-                                    stackOut_50_3 = stackIn_50_3;
-                                    stackOut_50_4 = var22;
-                                    stackIn_51_0 = stackOut_50_0;
-                                    stackIn_51_1 = stackOut_50_1;
-                                    stackIn_51_2 = stackOut_50_2;
-                                    stackIn_51_3 = stackOut_50_3;
-                                    stackIn_51_4 = stackOut_50_4;
-                                    break L12;
+                      }
+                      L8: {
+                        var13 = stackIn_27_0;
+                        if (var12 < var10) {
+                          stackOut_29_0 = var12;
+                          stackIn_30_0 = stackOut_29_0;
+                          break L8;
+                        } else {
+                          stackOut_28_0 = var10;
+                          stackIn_30_0 = stackOut_28_0;
+                          break L8;
+                        }
+                      }
+                      var14 = stackIn_30_0;
+                      var15 = param1 - -var13;
+                      var16 = -(2 * var13) + param4;
+                      var17 = 0;
+                      L9: while (true) {
+                        if (~var17 <= ~param0) {
+                          break L5;
+                        } else {
+                          L10: {
+                            var18 = param2[var17 + param5];
+                            if (var14 <= var17) {
+                              var19 = -var17 + param0 + -1;
+                              if (~var14 >= ~var19) {
+                                var20 = 0;
+                                L11: while (true) {
+                                  if (var13 <= var20) {
+                                    if (~(var16 + var15) < ~ns.field_g) {
+                                      var20 = ns.field_g - var15;
+                                      lua.a(var18, var15, var20, var8_int);
+                                      lua.a(var18, 0, -var20 + var16, var8_int);
+                                      break L10;
+                                    } else {
+                                      lua.a(var18, var15, var16, var8_int);
+                                      break L10;
+                                    }
                                   } else {
-                                    stackOut_49_0 = (int[]) (Object) stackIn_49_0;
-                                    stackOut_49_1 = stackIn_49_1;
-                                    stackOut_49_2 = (int[]) (Object) stackIn_49_2;
-                                    stackOut_49_3 = stackIn_49_3;
-                                    stackOut_49_4 = var20;
-                                    stackIn_51_0 = stackOut_49_0;
-                                    stackIn_51_1 = stackOut_49_1;
-                                    stackIn_51_2 = stackOut_49_2;
-                                    stackIn_51_3 = stackOut_49_3;
-                                    stackIn_51_4 = stackOut_49_4;
-                                    break L12;
+                                    int dupTemp$5 = sea.c(una.field_b, -var20 + param4 + param1 - 1);
+                                    var18[dupTemp$5] = var8_int * var20 / var13;
+                                    var18[sea.c(una.field_b, param1 - -var20)] = var8_int * var20 / var13;
+                                    var20++;
+                                    continue L11;
                                   }
                                 }
-                                stackIn_51_2[stackIn_51_3] = stackIn_51_4;
-                                stackIn_51_0[stackIn_51_1] = stackIn_51_4;
-                                var21++;
-                                continue L11;
+                              } else {
+                                L12: {
+                                  var20 = var8_int * var19 / var14;
+                                  if (((iia) this).field_t == 0) {
+                                    var21 = 0;
+                                    L13: while (true) {
+                                      if (var21 >= var13) {
+                                        break L12;
+                                      } else {
+                                        var22 = var21 * var8_int / var13;
+                                        int dupTemp$6 = sea.c(una.field_b, -1 + param4 + param1 - var21);
+                                        var18[dupTemp$6] = var20 * var22 >> 12;
+                                        var18[sea.c(var21 + param1, una.field_b)] = var20 * var22 >> 12;
+                                        var21++;
+                                        continue L13;
+                                      }
+                                    }
+                                  } else {
+                                    var21 = 0;
+                                    L14: while (true) {
+                                      if (var13 <= var21) {
+                                        break L12;
+                                      } else {
+                                        L15: {
+                                          var22 = var8_int * var21 / var13;
+                                          stackOut_50_0 = (int[]) var18;
+                                          stackOut_50_1 = sea.c(param1 - -var21, una.field_b);
+                                          stackOut_50_2 = (int[]) var18;
+                                          stackOut_50_3 = sea.c(-1 + -var21 + param1 - -param4, una.field_b);
+                                          stackIn_52_0 = stackOut_50_0;
+                                          stackIn_52_1 = stackOut_50_1;
+                                          stackIn_52_2 = stackOut_50_2;
+                                          stackIn_52_3 = stackOut_50_3;
+                                          stackIn_51_0 = stackOut_50_0;
+                                          stackIn_51_1 = stackOut_50_1;
+                                          stackIn_51_2 = stackOut_50_2;
+                                          stackIn_51_3 = stackOut_50_3;
+                                          if (var22 < var20) {
+                                            stackOut_52_0 = (int[]) (Object) stackIn_52_0;
+                                            stackOut_52_1 = stackIn_52_1;
+                                            stackOut_52_2 = (int[]) (Object) stackIn_52_2;
+                                            stackOut_52_3 = stackIn_52_3;
+                                            stackOut_52_4 = var22;
+                                            stackIn_53_0 = stackOut_52_0;
+                                            stackIn_53_1 = stackOut_52_1;
+                                            stackIn_53_2 = stackOut_52_2;
+                                            stackIn_53_3 = stackOut_52_3;
+                                            stackIn_53_4 = stackOut_52_4;
+                                            break L15;
+                                          } else {
+                                            stackOut_51_0 = (int[]) (Object) stackIn_51_0;
+                                            stackOut_51_1 = stackIn_51_1;
+                                            stackOut_51_2 = (int[]) (Object) stackIn_51_2;
+                                            stackOut_51_3 = stackIn_51_3;
+                                            stackOut_51_4 = var20;
+                                            stackIn_53_0 = stackOut_51_0;
+                                            stackIn_53_1 = stackOut_51_1;
+                                            stackIn_53_2 = stackOut_51_2;
+                                            stackIn_53_3 = stackOut_51_3;
+                                            stackIn_53_4 = stackOut_51_4;
+                                            break L15;
+                                          }
+                                        }
+                                        stackIn_53_2[stackIn_53_3] = stackIn_53_4;
+                                        stackIn_53_0[stackIn_53_1] = stackIn_53_4;
+                                        var21++;
+                                        continue L14;
+                                      }
+                                    }
+                                  }
+                                }
+                                if (var16 + var15 > ns.field_g) {
+                                  var21 = -var15 + ns.field_g;
+                                  lua.a(var18, var15, var21, var20);
+                                  lua.a(var18, 0, -var21 + var16, var20);
+                                  break L10;
+                                } else {
+                                  lua.a(var18, var15, var16, var20);
+                                  break L10;
+                                }
+                              }
+                            } else {
+                              L16: {
+                                var19 = var17 * var8_int / var14;
+                                if (((iia) this).field_t != 0) {
+                                  var20 = 0;
+                                  L17: while (true) {
+                                    if (~var20 <= ~var13) {
+                                      break L16;
+                                    } else {
+                                      L18: {
+                                        var21 = var8_int * var20 / var13;
+                                        stackOut_39_0 = (int[]) var18;
+                                        stackOut_39_1 = sea.c(var20 + param1, una.field_b);
+                                        stackOut_39_2 = (int[]) var18;
+                                        stackOut_39_3 = sea.c(-var20 + (param1 - -param4 + -1), una.field_b);
+                                        stackIn_41_0 = stackOut_39_0;
+                                        stackIn_41_1 = stackOut_39_1;
+                                        stackIn_41_2 = stackOut_39_2;
+                                        stackIn_41_3 = stackOut_39_3;
+                                        stackIn_40_0 = stackOut_39_0;
+                                        stackIn_40_1 = stackOut_39_1;
+                                        stackIn_40_2 = stackOut_39_2;
+                                        stackIn_40_3 = stackOut_39_3;
+                                        if (var21 < var19) {
+                                          stackOut_41_0 = (int[]) (Object) stackIn_41_0;
+                                          stackOut_41_1 = stackIn_41_1;
+                                          stackOut_41_2 = (int[]) (Object) stackIn_41_2;
+                                          stackOut_41_3 = stackIn_41_3;
+                                          stackOut_41_4 = var21;
+                                          stackIn_42_0 = stackOut_41_0;
+                                          stackIn_42_1 = stackOut_41_1;
+                                          stackIn_42_2 = stackOut_41_2;
+                                          stackIn_42_3 = stackOut_41_3;
+                                          stackIn_42_4 = stackOut_41_4;
+                                          break L18;
+                                        } else {
+                                          stackOut_40_0 = (int[]) (Object) stackIn_40_0;
+                                          stackOut_40_1 = stackIn_40_1;
+                                          stackOut_40_2 = (int[]) (Object) stackIn_40_2;
+                                          stackOut_40_3 = stackIn_40_3;
+                                          stackOut_40_4 = var19;
+                                          stackIn_42_0 = stackOut_40_0;
+                                          stackIn_42_1 = stackOut_40_1;
+                                          stackIn_42_2 = stackOut_40_2;
+                                          stackIn_42_3 = stackOut_40_3;
+                                          stackIn_42_4 = stackOut_40_4;
+                                          break L18;
+                                        }
+                                      }
+                                      stackIn_42_2[stackIn_42_3] = stackIn_42_4;
+                                      stackIn_42_0[stackIn_42_1] = stackIn_42_4;
+                                      var20++;
+                                      continue L17;
+                                    }
+                                  }
+                                } else {
+                                  var20 = 0;
+                                  L19: while (true) {
+                                    if (~var13 >= ~var20) {
+                                      break L16;
+                                    } else {
+                                      var21 = var8_int * var20 / var13;
+                                      int dupTemp$7 = sea.c(-var20 + (param4 + (param1 - 1)), una.field_b);
+                                      var18[dupTemp$7] = var21 * var19 >> 12;
+                                      var18[sea.c(var20 + param1, una.field_b)] = var21 * var19 >> 12;
+                                      var20++;
+                                      continue L19;
+                                    }
+                                  }
+                                }
+                              }
+                              if (ns.field_g >= var15 + var16) {
+                                lua.a(var18, var15, var16, var19);
+                                break L10;
+                              } else {
+                                var20 = -var15 + ns.field_g;
+                                lua.a(var18, var15, var20, var19);
+                                lua.a(var18, 0, var16 + -var20, var19);
+                                break L10;
                               }
                             }
                           }
-                        }
-                        if (var16 + var15 > ns.field_g) {
-                          var21 = -var15 + ns.field_g;
-                          lua.a(var18, var15, var21, var20);
-                          lua.a(var18, 0, -var21 + var16, var20);
                           var17++;
-                          continue L7;
-                        } else {
-                          lua.a(var18, var15, var16, var20);
-                          var17++;
-                          continue L7;
+                          continue L9;
                         }
                       }
                     } else {
-                      L13: {
-                        var19 = var17 * var8 / var14;
-                        if (-1 != (((iia) this).field_t ^ -1)) {
-                          var20 = 0;
-                          L14: while (true) {
-                            if (var20 >= var13) {
-                              break L13;
-                            } else {
-                              L15: {
-                                var21 = var8 * var20 / var13;
-                                stackOut_37_0 = (int[]) var18;
-                                stackOut_37_1 = sea.c(var20 + param1, una.field_b);
-                                stackOut_37_2 = (int[]) var18;
-                                stackOut_37_3 = sea.c(-var20 + (param1 - -param4 + -1), una.field_b);
-                                stackIn_39_0 = stackOut_37_0;
-                                stackIn_39_1 = stackOut_37_1;
-                                stackIn_39_2 = stackOut_37_2;
-                                stackIn_39_3 = stackOut_37_3;
-                                stackIn_38_0 = stackOut_37_0;
-                                stackIn_38_1 = stackOut_37_1;
-                                stackIn_38_2 = stackOut_37_2;
-                                stackIn_38_3 = stackOut_37_3;
-                                if (var21 < var19) {
-                                  stackOut_39_0 = (int[]) (Object) stackIn_39_0;
-                                  stackOut_39_1 = stackIn_39_1;
-                                  stackOut_39_2 = (int[]) (Object) stackIn_39_2;
-                                  stackOut_39_3 = stackIn_39_3;
-                                  stackOut_39_4 = var21;
-                                  stackIn_40_0 = stackOut_39_0;
-                                  stackIn_40_1 = stackOut_39_1;
-                                  stackIn_40_2 = stackOut_39_2;
-                                  stackIn_40_3 = stackOut_39_3;
-                                  stackIn_40_4 = stackOut_39_4;
-                                  break L15;
-                                } else {
-                                  stackOut_38_0 = (int[]) (Object) stackIn_38_0;
-                                  stackOut_38_1 = stackIn_38_1;
-                                  stackOut_38_2 = (int[]) (Object) stackIn_38_2;
-                                  stackOut_38_3 = stackIn_38_3;
-                                  stackOut_38_4 = var19;
-                                  stackIn_40_0 = stackOut_38_0;
-                                  stackIn_40_1 = stackOut_38_1;
-                                  stackIn_40_2 = stackOut_38_2;
-                                  stackIn_40_3 = stackOut_38_3;
-                                  stackIn_40_4 = stackOut_38_4;
-                                  break L15;
-                                }
-                              }
-                              stackIn_40_2[stackIn_40_3] = stackIn_40_4;
-                              stackIn_40_0[stackIn_40_1] = stackIn_40_4;
-                              var20++;
-                              continue L14;
-                            }
-                          }
-                        } else {
-                          var20 = 0;
-                          L16: while (true) {
-                            if (var13 <= var20) {
-                              break L13;
-                            } else {
-                              var21 = var8 * var20 / var13;
-                              var18[sea.c(-var20 + (param4 + (param1 - 1)), una.field_b)] = var21 * var19 >> 148820524;
-                              var18[sea.c(var20 + param1, una.field_b)] = var21 * var19 >> 148820524;
-                              var20++;
-                              continue L16;
-                            }
-                          }
-                        }
-                      }
-                      if (ns.field_g >= var15 + var16) {
-                        lua.a(var18, var15, var16, var19);
-                        var17++;
-                        continue L7;
-                      } else {
-                        var20 = -var15 + ns.field_g;
-                        lua.a(var18, var15, var20, var19);
-                        lua.a(var18, 0, var16 + -var20, var19);
-                        var17++;
-                        continue L7;
-                      }
+                      break L6;
                     }
                   }
                 }
-              } else {
                 return;
+              } else {
+                if (ns.field_g >= param1 - -param4) {
+                  var11 = 0;
+                  L20: while (true) {
+                    if (~var11 <= ~param0) {
+                      break L5;
+                    } else {
+                      lua.a(param2[param5 + var11], param1, param4, var8_int);
+                      var11++;
+                      continue L20;
+                    }
+                  }
+                } else {
+                  var11 = -param1 + ns.field_g;
+                  var12 = 0;
+                  L21: while (true) {
+                    if (param0 <= var12) {
+                      break L5;
+                    } else {
+                      var13_ref_int__ = param2[var12 + param5];
+                      lua.a(var13_ref_int__, param1, var11, var8_int);
+                      lua.a(var13_ref_int__, 0, param4 - var11, var8_int);
+                      var12++;
+                      continue L21;
+                    }
+                  }
+                }
               }
             }
-          } else {
-            if (ns.field_g >= param1 - -param4) {
-              var11 = 0;
-              L17: while (true) {
-                if (var11 >= param0) {
-                  break L4;
-                } else {
-                  lua.a(param2[param5 + var11], param1, param4, var8);
-                  var11++;
-                  continue L17;
-                }
-              }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L22: {
+            var8 = decompiledCaughtException;
+            stackOut_68_0 = (RuntimeException) var8;
+            stackOut_68_1 = new StringBuilder().append("iia.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_70_0 = stackOut_68_0;
+            stackIn_70_1 = stackOut_68_1;
+            stackIn_69_0 = stackOut_68_0;
+            stackIn_69_1 = stackOut_68_1;
+            if (param2 == null) {
+              stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
+              stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
+              stackOut_70_2 = "null";
+              stackIn_71_0 = stackOut_70_0;
+              stackIn_71_1 = stackOut_70_1;
+              stackIn_71_2 = stackOut_70_2;
+              break L22;
             } else {
-              var11 = -param1 + ns.field_g;
-              var12 = 0;
-              L18: while (true) {
-                if (param0 <= var12) {
-                  break L4;
-                } else {
-                  var13_ref_int__ = param2[var12 + param5];
-                  lua.a(var13_ref_int__, param1, var11, var8);
-                  lua.a(var13_ref_int__, 0, param4 - var11, var8);
-                  var12++;
-                  continue L18;
-                }
-              }
+              stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
+              stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+              stackOut_69_2 = "{...}";
+              stackIn_71_0 = stackOut_69_0;
+              stackIn_71_1 = stackOut_69_1;
+              stackIn_71_2 = stackOut_69_2;
+              break L22;
             }
           }
+          L23: {
+            stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
+            stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackIn_73_0 = stackOut_71_0;
+            stackIn_73_1 = stackOut_71_1;
+            stackIn_72_0 = stackOut_71_0;
+            stackIn_72_1 = stackOut_71_1;
+            if (param6 == null) {
+              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
+              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_2 = "null";
+              stackIn_74_0 = stackOut_73_0;
+              stackIn_74_1 = stackOut_73_1;
+              stackIn_74_2 = stackOut_73_2;
+              break L23;
+            } else {
+              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
+              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_2 = "{...}";
+              stackIn_74_0 = stackOut_72_0;
+              stackIn_74_1 = stackOut_72_1;
+              stackIn_74_2 = stackOut_72_2;
+              break L23;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + 41);
         }
     }
 
     final static int d(int param0, int param1) {
-        int var2 = 0;
-        if (param1 == 22972) {
-          var2 = 1;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int stackIn_6_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        try {
+          var2_int = 1;
           L0: while (true) {
-            if (1 << var2 > param0) {
-              return var2;
+            if (1 << var2_int > param0) {
+              stackOut_5_0 = var2_int;
+              stackIn_6_0 = stackOut_5_0;
+              return stackIn_6_0;
             } else {
-              var2++;
+              var2_int++;
               continue L0;
             }
           }
-        } else {
-          return -94;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var2, "iia.E(" + param0 + 44 + 22972 + 41);
         }
     }
 
@@ -450,65 +553,116 @@ final class iia extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
-        L0: {
-          var5 = TombRacer.field_G ? 1 : 0;
-          if (param0 == 107) {
-            break L0;
-          } else {
-            ((iia) this).field_y = 101;
-            break L0;
-          }
-        }
-        L1: {
-          var4 = param2;
-          if (-1 != var4) {
-            if (1 == var4) {
-              ((iia) this).field_p = param1.d(param0 ^ 21);
-              break L1;
-            } else {
-              if (2 != var4) {
-                if (-4 != var4) {
-                  if (4 == var4) {
-                    ((iia) this).field_w = param1.d(126);
-                    break L1;
-                  } else {
-                    if (5 == var4) {
-                      ((iia) this).field_n = param1.d(122);
-                      break L1;
-                    } else {
-                      if (-7 == var4) {
-                        ((iia) this).field_t = param1.h(255);
-                        break L1;
-                      } else {
-                        if (-8 == var4) {
-                          ((iia) this).field_u = param1.d(125);
-                          break L1;
-                        } else {
-                          if (8 == var4) {
-                            ((iia) this).field_m = param1.d(126);
-                            break L1;
-                          } else {
-                            break L1;
-                          }
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  ((iia) this).field_y = param1.d(param0 ^ 22);
-                  break L1;
-                }
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 107) {
+                break L1;
               } else {
-                ((iia) this).field_s = param1.d(124);
+                ((iia) this).field_y = 101;
                 break L1;
               }
             }
-          } else {
-            ((iia) this).field_x = param1.h(255);
-            break L1;
+            L2: {
+              var4_int = param2;
+              if (var4_int != 0) {
+                if (1 == var4_int) {
+                  ((iia) this).field_p = param1.d(param0 ^ 21);
+                  break L2;
+                } else {
+                  if (2 != var4_int) {
+                    if (var4_int != 3) {
+                      if (4 == var4_int) {
+                        ((iia) this).field_w = param1.d(126);
+                        break L2;
+                      } else {
+                        if (5 == var4_int) {
+                          ((iia) this).field_n = param1.d(122);
+                          break L2;
+                        } else {
+                          if (var4_int == 6) {
+                            ((iia) this).field_t = param1.h(255);
+                            break L2;
+                          } else {
+                            if (var4_int == 7) {
+                              ((iia) this).field_u = param1.d(125);
+                              break L2;
+                            } else {
+                              if (8 == var4_int) {
+                                ((iia) this).field_m = param1.d(126);
+                                break L2;
+                              } else {
+                                break L2;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      ((iia) this).field_y = param1.d(param0 ^ 22);
+                      break L2;
+                    }
+                  } else {
+                    ((iia) this).field_s = param1.d(124);
+                    break L2;
+                  }
+                }
+              } else {
+                ((iia) this).field_x = param1.h(255);
+                break L2;
+              }
+            }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_26_0 = (RuntimeException) var4;
+            stackOut_26_1 = new StringBuilder().append("iia.A(").append(param0).append(44);
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
+            if (param1 == null) {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              break L3;
+            } else {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 41);
         }
     }
 
@@ -602,14 +756,14 @@ final class iia extends ci {
               var11 = 1;
               var12 = 0;
               var13 = 0;
-              var14 = ((iia) this).field_p * ns.field_g >> 1850047884;
-              var15 = ns.field_g * ((iia) this).field_s >> 43974156;
-              var16 = qda.field_i * ((iia) this).field_y >> -1955949556;
-              var17 = ((iia) this).field_w * qda.field_i >> 2127772780;
-              if (-2 <= (var17 ^ -1)) {
+              var14 = ((iia) this).field_p * ns.field_g >> 12;
+              var15 = ns.field_g * ((iia) this).field_s >> 12;
+              var16 = qda.field_i * ((iia) this).field_y >> 12;
+              var17 = ((iia) this).field_w * qda.field_i >> 12;
+              if (var17 <= 1) {
                 return var54[param1];
               } else {
-                ((iia) this).field_o = ns.field_g / 8 * ((iia) this).field_n >> 1588390636;
+                ((iia) this).field_o = ns.field_g / 8 * ((iia) this).field_n >> 12;
                 var18 = ns.field_g / var14 + 1;
                 var19 = new int[var18][3];
                 var55 = new int[var18][3];
@@ -669,7 +823,7 @@ final class iia extends ci {
                                 } else {
                                   L9: {
                                     var30 = var5 + var8;
-                                    if (-1 >= (var30 ^ -1)) {
+                                    if (var30 >= 0) {
                                       break L9;
                                     } else {
                                       var30 = var30 + ns.field_g;
@@ -760,8 +914,9 @@ final class iia extends ci {
                     }
                   }
                   if (ns.field_g != var25) {
+                    int incrementValue$2 = var13;
                     var13++;
-                    var45 = var19[var13];
+                    var45 = var19[incrementValue$2];
                     var26 = var45;
                     var45[0] = var8;
                     var45[1] = var25;
@@ -774,8 +929,9 @@ final class iia extends ci {
                     if (var10 == 0) {
                       L15: {
                         var10 = 1;
+                        int incrementValue$3 = var13;
                         var13++;
-                        var43 = var19[var13];
+                        var43 = var19[incrementValue$3];
                         var26 = var43;
                         var26[2] = var22 - -var24;
                         var43[0] = var8;
@@ -790,7 +946,7 @@ final class iia extends ci {
                         var5 = var6 - var7;
                         var8 = 0;
                         var28 = var5;
-                        if (-1 < (var28 ^ -1)) {
+                        if (var28 < 0) {
                           var28 = var28 + ns.field_g;
                           break L15;
                         } else {
@@ -846,9 +1002,6 @@ final class iia extends ci {
 
     public static void c(int param0) {
         field_r = null;
-        if (param0 != -1) {
-            return;
-        }
         field_q = null;
         field_v = null;
     }

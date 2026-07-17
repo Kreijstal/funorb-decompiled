@@ -63,7 +63,7 @@ final class v implements Runnable {
                       break L2;
                     } else {
                       var1_int = ((v) this).field_i.read(((v) this).field_h.field_r, ((v) this).field_h.field_k, ((v) this).field_h.field_r.length + -((v) this).field_h.field_k);
-                      if ((var1_int ^ -1) > -1) {
+                      if (var1_int < 0) {
                         break L2;
                       } else {
                         ((v) this).field_h.field_k = ((v) this).field_h.field_k + var1_int;
@@ -109,9 +109,6 @@ final class v implements Runnable {
     }
 
     final static java.awt.Container a(boolean param0) {
-        if (!param0) {
-            java.awt.Container discarded$0 = v.a(true);
-        }
         if (!(ah.field_q == null)) {
             return (java.awt.Container) (Object) ah.field_q;
         }
@@ -159,7 +156,7 @@ final class v implements Runnable {
             }
           }
           L3: {
-            if ((((v) this).field_c ^ -1) == -2) {
+            if (((v) this).field_c == 1) {
               L4: {
                 if (null == ((v) this).field_a) {
                   ((v) this).field_a = ((v) this).field_d.a(((v) this).field_f.getHost(), (byte) 34, 443);
@@ -251,13 +248,14 @@ final class v implements Runnable {
     }
 
     final ka b(int param0) {
-        if (!((((v) this).field_c ^ -1) != param0)) {
+        if (!(~((v) this).field_c != param0)) {
             return ((v) this).field_h;
         }
         return null;
     }
 
     final static void a(byte param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         af var4 = null;
@@ -272,97 +270,111 @@ final class v implements Runnable {
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
-        L0: {
-          var8 = stellarshard.field_B;
-          var10 = ae.field_N;
-          var2 = var10.f(4);
-          var3 = var10.f(4);
-          if (var2 == 0) {
-            var4 = (af) (Object) pf.field_b.b(-79);
-            if (var4 == null) {
-              oj.c(-2290);
-              return;
-            } else {
-              L1: {
-                var5 = -var10.field_k + ue.field_b;
-                var14 = var4.field_s;
-                var13 = var14;
-                var12 = var13;
-                var11 = var12;
-                var6 = var11;
-                if (var5 > var14.length << 622211330) {
-                  var5 = var14.length << -757553534;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              var7 = 0;
-              L2: while (true) {
-                if (var7 >= var5) {
-                  var4.field_m = true;
-                  var4.c(20);
-                  break L0;
-                } else {
-                  var6[var7 >> -1520503422] = var6[var7 >> -1520503422] + (var10.f(4) << sa.a(768, var7 << -618275800));
-                  var7++;
-                  continue L2;
-                }
-              }
-            }
-          } else {
-            if (var2 != 1) {
-              qe.a(-115, "LR1: " + bh.b((byte) -96), (Throwable) null);
-              oj.c(-2290);
-              break L0;
-            } else {
-              var4_int = var10.e(-64);
-              var5_ref_fk = (fk) (Object) ib.field_c.b(-93);
-              L3: while (true) {
-                L4: {
-                  if (var5_ref_fk == null) {
-                    break L4;
-                  } else {
-                    L5: {
-                      if (var3 != var5_ref_fk.field_l) {
-                        break L5;
-                      } else {
-                        if (var5_ref_fk.field_p == var4_int) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    var5_ref_fk = (fk) (Object) ib.field_c.b((byte) 72);
-                    continue L3;
-                  }
-                }
-                if (var5_ref_fk == null) {
+        RuntimeException decompiledCaughtException = null;
+        var8 = stellarshard.field_B;
+        try {
+          L0: {
+            L1: {
+              var10 = ae.field_N;
+              var2 = var10.f(4);
+              var3 = var10.f(4);
+              if (var2 == 0) {
+                var4 = (af) (Object) pf.field_b.b(-79);
+                if (var4 == null) {
                   oj.c(-2290);
                   return;
                 } else {
-                  var5_ref_fk.c(20);
-                  break L0;
+                  L2: {
+                    var5 = -var10.field_k + ue.field_b;
+                    var14 = var4.field_s;
+                    var13 = var14;
+                    var12 = var13;
+                    var11 = var12;
+                    var6 = var11;
+                    if (var5 > var14.length << 2) {
+                      var5 = var14.length << 2;
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                  var7 = 0;
+                  L3: while (true) {
+                    if (var7 >= var5) {
+                      var4.field_m = true;
+                      var4.c(20);
+                      break L1;
+                    } else {
+                      var6[var7 >> 2] = var6[var7 >> 2] + (var10.f(4) << sa.a(768, var7 << 8));
+                      var7++;
+                      continue L3;
+                    }
+                  }
+                }
+              } else {
+                if (var2 != 1) {
+                  qe.a(-115, "LR1: " + bh.b((byte) -96), (Throwable) null);
+                  oj.c(-2290);
+                  break L1;
+                } else {
+                  var4_int = var10.e(-64);
+                  var5_ref_fk = (fk) (Object) ib.field_c.b(-93);
+                  L4: while (true) {
+                    L5: {
+                      if (var5_ref_fk == null) {
+                        break L5;
+                      } else {
+                        L6: {
+                          if (var3 != var5_ref_fk.field_l) {
+                            break L6;
+                          } else {
+                            if (var5_ref_fk.field_p == var4_int) {
+                              break L5;
+                            } else {
+                              break L6;
+                            }
+                          }
+                        }
+                        var5_ref_fk = (fk) (Object) ib.field_c.b((byte) 72);
+                        continue L4;
+                      }
+                    }
+                    if (var5_ref_fk == null) {
+                      oj.c(-2290);
+                      return;
+                    } else {
+                      var5_ref_fk.c(20);
+                      break L1;
+                    }
+                  }
                 }
               }
             }
+            L7: {
+              if (param0 < -41) {
+                break L7;
+              } else {
+                v.a((byte) -96);
+                break L7;
+              }
+            }
+            break L0;
           }
-        }
-        L6: {
-          if (param0 < -41) {
-            break L6;
-          } else {
-            v.a((byte) -96);
-            break L6;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var1, "v.B(" + param0 + 41);
         }
     }
 
     v(ej param0, java.net.URL param1, int param2) {
-        ((v) this).field_d = param0;
-        ((v) this).field_f = param1;
-        ((v) this).field_h = new ka(param2);
+        try {
+            ((v) this).field_d = param0;
+            ((v) this).field_f = param1;
+            ((v) this).field_h = new ka(param2);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "v.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

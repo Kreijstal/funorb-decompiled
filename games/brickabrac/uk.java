@@ -26,14 +26,14 @@ final class uk extends km {
         int stackIn_23_0 = 0;
         int stackIn_39_0 = 0;
         int stackIn_54_0 = 0;
-        int stackOut_53_0;
-        int stackOut_52_0;
-        int stackOut_38_0;
-        int stackOut_37_0;
-        int stackOut_22_0;
-        int stackOut_21_0;
-        int stackOut_7_0;
-        int stackOut_6_0;
+        int stackOut_53_0 = 0;
+        int stackOut_52_0 = 0;
+        int stackOut_38_0 = 0;
+        int stackOut_37_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         if (param3 == -19824) {
           cf.field_c[wi.field_m] = param2;
           fj.field_Pb[wi.field_m] = wi.field_m;
@@ -238,12 +238,17 @@ final class uk extends km {
     }
 
     final static void a(String param0, long param1, int param2) {
-        ng.field_b = param2;
-        tk.field_p = param0;
-        CharSequence var5 = (CharSequence) (Object) param0;
-        kb.field_Qb = gb.a(var5, param2 ^ 103);
-        qn.field_n = param1;
-        ld.field_s = true;
+        CharSequence var5 = null;
+        try {
+            ng.field_b = param2;
+            tk.field_p = param0;
+            var5 = (CharSequence) (Object) param0;
+            kb.field_Qb = gb.a(var5, param2 ^ 103);
+            qn.field_n = param1;
+            ld.field_s = true;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "uk.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     uk() {
@@ -264,26 +269,85 @@ final class uk extends km {
     }
 
     final static StringBuilder a(char param0, StringBuilder param1, int param2, boolean param3) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
+        Object stackIn_3_0 = null;
+        StringBuilder stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        StringBuilder stackOut_6_0 = null;
+        Object stackOut_2_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var6 = BrickABrac.field_J ? 1 : 0;
-        var4 = param1.length();
-        param1.setLength(param2);
-        var5 = var4;
-        if (!param3) {
-          L0: while (true) {
-            if (param2 <= var5) {
-              return param1;
+        try {
+          L0: {
+            var4_int = param1.length();
+            param1.setLength(param2);
+            var5 = var4_int;
+            if (!param3) {
+              L1: while (true) {
+                if (param2 <= var5) {
+                  stackOut_6_0 = (StringBuilder) param1;
+                  stackIn_7_0 = stackOut_6_0;
+                  break L0;
+                } else {
+                  param1.setCharAt(var5, param0);
+                  var5++;
+                  continue L1;
+                }
+              }
             } else {
-              param1.setCharAt(var5, param0);
-              var5++;
-              continue L0;
+              stackOut_2_0 = null;
+              stackIn_3_0 = stackOut_2_0;
+              return (StringBuilder) (Object) stackIn_3_0;
             }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("uk.C(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw qb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_7_0;
     }
 
     final void b(byte param0) {

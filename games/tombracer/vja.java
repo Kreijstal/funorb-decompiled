@@ -13,10 +13,10 @@ final class vja extends ib {
     }
 
     final static void a(int param0, long param1) {
-        if ((param1 ^ -1L) >= -1L) {
+        if (param1 <= 0L) {
           return;
         } else {
-          if ((param1 % 10L ^ -1L) == -1L) {
+          if (param1 % 10L == 0L) {
             fsa.a(9, param1 + -1L);
             fsa.a(9, 1L);
             if (param0 == 0) {
@@ -39,26 +39,28 @@ final class vja extends ib {
 
     vja(la param0, kh param1) {
         super(param0, param1);
-        ((vja) this).field_c = new fsa(((vja) this).field_a, param1, false);
-        ((vja) this).field_c.c((byte) 50, false);
+        try {
+            ((vja) this).field_c = new fsa(((vja) this).field_a, param1, false);
+            ((vja) this).field_c.c((byte) 50, false);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "vja.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 30000) {
-            field_b = null;
-        }
     }
 
     final void a(byte param0, ui param1, boolean param2, ui param3) {
-        int var5 = -11 % ((param0 - 31) / 61);
-        ((vja) this).field_c.a(true, param2, param3, param1);
+        try {
+            int var5_int = -11 % ((param0 - 31) / 61);
+            ((vja) this).field_c.a(true, param2, param3, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "vja.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static kia b(int param0) {
-        if (param0 != 30000) {
-            return null;
-        }
         return la.field_k;
     }
 
@@ -78,8 +80,12 @@ final class vja extends ib {
     }
 
     final void a(kh param0, byte param1) {
-        super.a(param0, param1);
-        ((vja) this).field_c.a(param0, 8);
+        try {
+            super.a(param0, param1);
+            ((vja) this).field_c.a(param0, 8);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "vja.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -119,9 +125,6 @@ final class vja extends ib {
     final static void b(boolean param0) {
         wg.field_l.field_a = 0;
         wg.field_l.field_n = 0;
-        if (!param0) {
-            vja.a(-52, -43L);
-        }
     }
 
     static {

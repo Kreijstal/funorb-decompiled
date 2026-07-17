@@ -10,9 +10,6 @@ final class mg {
     private int[] field_b;
 
     public static void a(byte param0) {
-        if (param0 != -28) {
-            return;
-        }
         field_e = null;
     }
 
@@ -57,7 +54,7 @@ final class mg {
         var14 = var15;
         var7 = var14;
         var8 = param0 & 16711935;
-        var9 = param0 >> -1582457240 & 255;
+        var9 = param0 >> 8 & 255;
         var10 = 0;
         L0: while (true) {
           if (((mg) this).field_b.length <= var10) {
@@ -67,7 +64,7 @@ final class mg {
               } else {
                 sb.a(ic.field_d);
                 ((mg) this).field_a[0].a(param4, param1);
-                var10 = param4 + (-((mg) this).field_a[4].field_f + -((mg) this).field_a[2].field_f + param3 + ((mg) this).field_a[0].field_f >> 2139130593);
+                var10 = param4 + (-((mg) this).field_a[4].field_f + -((mg) this).field_a[2].field_f + param3 + ((mg) this).field_a[0].field_f >> 1);
                 sb.g(param4 - -((mg) this).field_a[0].field_f, 0, var10, 480);
                 var11 = param4 - -((mg) this).field_a[0].field_f;
                 L1: while (true) {
@@ -102,7 +99,7 @@ final class mg {
               } else {
                 sb.a(ic.field_d);
                 ((mg) this).field_a[0].a(param4, param1);
-                var10 = param4 + (-((mg) this).field_a[4].field_f + -((mg) this).field_a[2].field_f + param3 + ((mg) this).field_a[0].field_f >> 2139130593);
+                var10 = param4 + (-((mg) this).field_a[4].field_f + -((mg) this).field_a[2].field_f + param3 + ((mg) this).field_a[0].field_f >> 1);
                 sb.g(param4 - -((mg) this).field_a[0].field_f, 0, var10, 480);
                 var11 = param4 - -((mg) this).field_a[0].field_f;
                 L3: while (true) {
@@ -133,7 +130,7 @@ final class mg {
             }
           } else {
             var11 = ((mg) this).field_b[var10];
-            if ((var11 & 65535) != var11 >> 870552456) {
+            if ((var11 & 65535) != var11 >> 8) {
               if (((mg) this).field_f == var10) {
                 var18 = var17;
                 var18[var10] = param5;
@@ -145,7 +142,7 @@ final class mg {
               }
             } else {
               var12 = var11 & 255;
-              var14[var10] = cl.b(vg.c(var12 * var8 >> -413372120, 16711935), vg.c(var9 * var12, 65280));
+              var14[var10] = cl.b(vg.c(var12 * var8 >> 8, 16711935), vg.c(var9 * var12, 65280));
               var10++;
               continue L0;
             }
@@ -154,10 +151,6 @@ final class mg {
     }
 
     final static int a(int param0, boolean param1, int param2, boolean param3) {
-        if (!param3) {
-            int discarded$0 = mg.a(124, true, 121, true);
-            return wf.a(-1);
-        }
         return wf.a(-1);
     }
 
@@ -169,34 +162,91 @@ final class mg {
     }
 
     mg(ii[] param0) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
-        ((mg) this).field_a = param0;
-        ((mg) this).field_b = new int[param0[0].field_j.length];
-        ji.a(param0[0].field_j, 0, ((mg) this).field_b, 0, ((mg) this).field_b.length);
-        var2 = 0;
-        L0: while (true) {
-          if (((mg) this).field_b.length <= var2) {
-            ((mg) this).field_f = var2;
-          } else {
-            var3 = ((mg) this).field_b[var2];
-            if ((16756717 & var3) >> 705536496 >= -129) {
-              var2++;
-              continue L0;
-            } else {
-              if ((var3 & 65455) >> 1449862344 <= 128) {
-                var2++;
-                continue L0;
-              } else {
-                if (-129 > (255 & var3)) {
-                  ((mg) this).field_f = var2;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
+          L0: {
+            ((mg) this).field_a = param0;
+            ((mg) this).field_b = new int[param0[0].field_j.length];
+            ji.a(param0[0].field_j, 0, ((mg) this).field_b, 0, ((mg) this).field_b.length);
+            var2_int = 0;
+            L1: while (true) {
+              L2: {
+                if (((mg) this).field_b.length <= var2_int) {
+                  break L2;
                 } else {
-                  var2++;
-                  continue L0;
+                  L3: {
+                    var3 = ((mg) this).field_b[var2_int];
+                    if ((16756717 & var3) >> 16 >= -129) {
+                      var2_int++;
+                      break L3;
+                    } else {
+                      if ((var3 & 65455) >> 8 <= 128) {
+                        break L3;
+                      } else {
+                        if (-129 <= (255 & var3)) {
+                          var2_int++;
+                          continue L1;
+                        } else {
+                          break L2;
+                        }
+                      }
+                    }
+                  }
+                  var2_int++;
+                  continue L1;
                 }
               }
+              ((mg) this).field_f = var2_int;
+              break L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var2;
+            stackOut_12_1 = new StringBuilder().append("mg.<init>(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
+            }
+          }
+          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
     }
 

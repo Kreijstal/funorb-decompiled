@@ -17,36 +17,40 @@ final class ke {
     static ja[] field_i;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
+        RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
-        ah.field_e.field_P[param1] = new int[ah.field_e.field_P[0].length];
-        ah.field_e.field_P[param1][ia.field_s] = param0;
-        ah.field_e.field_P[param1][rj.field_F] = param3;
-        ah.field_e.field_P[param1][wm.field_Q[0]] = param4;
-        if (param2 != -17895) {
-          String discarded$2 = ke.a(92, -5L);
-          var5 = 1;
-          L0: while (true) {
-            if (wm.field_Q.length <= var5) {
-              return;
-            } else {
-              ah.field_e.field_P[param1][wm.field_Q[var5]] = ui.a(ah.field_e.field_P[param1][wm.field_Q[var5 + -1]], false);
-              var5++;
-              continue L0;
+        try {
+          L0: {
+            L1: {
+              ah.field_e.field_P[param1] = new int[ah.field_e.field_P[0].length];
+              ah.field_e.field_P[param1][ia.field_s] = param0;
+              ah.field_e.field_P[param1][rj.field_F] = param3;
+              ah.field_e.field_P[param1][wm.field_Q[0]] = param4;
+              if (param2 == -17895) {
+                break L1;
+              } else {
+                String discarded$2 = ke.a(92, -5L);
+                break L1;
+              }
+            }
+            var5_int = 1;
+            L2: while (true) {
+              if (wm.field_Q.length <= var5_int) {
+                break L0;
+              } else {
+                ah.field_e.field_P[param1][wm.field_Q[var5_int]] = ui.a(ah.field_e.field_P[param1][wm.field_Q[var5_int + -1]], false);
+                var5_int++;
+                continue L2;
+              }
             }
           }
-        } else {
-          var5 = 1;
-          L1: while (true) {
-            if (wm.field_Q.length <= var5) {
-              return;
-            } else {
-              ah.field_e.field_P[param1][wm.field_Q[var5]] = ui.a(ah.field_e.field_P[param1][wm.field_Q[var5 + -1]], false);
-              var5++;
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw fa.a((Throwable) (Object) var5, "ke.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -78,19 +82,14 @@ final class ke {
     public static void a(boolean param0) {
         field_i = null;
         field_c = null;
-        if (param0) {
-          return;
-        } else {
-          field_h = null;
-          field_f = null;
-          field_j = null;
-          field_k = null;
-          field_e = null;
-          field_g = null;
-          field_d = null;
-          field_a = null;
-          return;
-        }
+        field_h = null;
+        field_f = null;
+        field_j = null;
+        field_k = null;
+        field_e = null;
+        field_g = null;
+        field_d = null;
+        field_a = null;
     }
 
     static {

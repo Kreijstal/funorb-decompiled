@@ -35,43 +35,93 @@ abstract class ff extends te {
     }
 
     final static f a(int param0, int param1, int param2, int param3, DataInputStream param4) throws IOException {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8_int = 0;
         f var8 = null;
         int var9 = 0;
         Object var10 = null;
+        f stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        f stackOut_6_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var9 = CrazyCrystals.field_B;
-        var5 = param4.readUnsignedByte();
-        var6 = 0;
-        var7 = kf.field_d[0];
-        var8_int = param2;
-        L0: while (true) {
-          if (var8_int >= kf.field_d.length) {
-            var8 = (f) lm.field_d[var6].clone();
-            var8.a(var5 + -var7, 89);
-            var8.a(param0, param1, param3, param4, (byte) -35);
-            var10 = null;
-            var8.a(param2 ^ 393988, param3, param1, (f[][]) null);
-            return var8;
-          } else {
-            if (kf.field_d[var8_int] <= var5) {
-              if (kf.field_d[var8_int] > var7) {
-                var6 = var8_int;
-                var7 = kf.field_d[var8_int];
-                var8_int++;
-                continue L0;
+        try {
+          L0: {
+            var5_int = param4.readUnsignedByte();
+            var6 = 0;
+            var7 = kf.field_d[0];
+            var8_int = param2;
+            L1: while (true) {
+              if (var8_int >= kf.field_d.length) {
+                var8 = (f) lm.field_d[var6].clone();
+                var8.a(var5_int + -var7, 89);
+                var8.a(param0, param1, param3, param4, (byte) -35);
+                var10 = null;
+                var8.a(param2 ^ 393988, param3, param1, (f[][]) null);
+                stackOut_6_0 = (f) var8;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
               } else {
+                L2: {
+                  if (kf.field_d[var8_int] > var5_int) {
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
                 var8_int++;
-                continue L0;
+                continue L1;
               }
-            } else {
-              var8_int++;
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_1 = new StringBuilder().append("ff.M(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param4 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
+        return stackIn_7_0;
     }
 
     ff() {
@@ -83,7 +133,7 @@ abstract class ff extends te {
         if (param0 != -39) {
             return null;
         }
-        if ((kb.field_g ^ -1) > -193) {
+        if (kb.field_g < 192) {
             kb.field_g = kb.field_g + 12;
         }
         nj.field_k = kk.field_a[0].length;
@@ -114,6 +164,6 @@ abstract class ff extends te {
     private static void $cfr$clinit() {
         field_d = "Score";
         field_b = new int[8192];
-        field_e = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+        field_e = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
     }
 }

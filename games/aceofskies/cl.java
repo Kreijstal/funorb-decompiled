@@ -19,17 +19,77 @@ final class cl extends di {
     }
 
     final static int a(int param0, byte[] param1, int param2, byte param3) {
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        int var6 = AceOfSkies.field_G ? 1 : 0;
-        int var4 = -1;
-        for (var5 = param0; var5 < param2; var5++) {
-            var4 = var4 >>> -2039566584 ^ vg.field_e[(param1[var5] ^ var4) & 255];
+        int var6 = 0;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        var6 = AceOfSkies.field_G ? 1 : 0;
+        try {
+          L0: {
+            var4_int = -1;
+            var5 = param0;
+            L1: while (true) {
+              if (var5 >= param2) {
+                var4_int = ~var4_int;
+                stackOut_4_0 = var4_int;
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
+              } else {
+                var4_int = var4_int >>> 8 ^ vg.field_e[(param1[var5] ^ var4_int) & 255];
+                var5++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("cl.D(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw pn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + -105 + 41);
         }
-        var4 = var4 ^ -1;
-        if (param3 != -105) {
-            cl.a((byte) -28);
-        }
-        return var4;
+        return stackIn_5_0;
     }
 
     cl() {

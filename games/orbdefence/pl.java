@@ -20,8 +20,10 @@ final class pl implements Iterator {
         if (((pl) this).field_c == ((pl) this).field_e.field_b[-1 + ((pl) this).field_b]) {
           L0: while (true) {
             if (((pl) this).field_e.field_d > ((pl) this).field_b) {
+              ca[] fieldTemp$2 = ((pl) this).field_e.field_b;
+              int fieldTemp$3 = ((pl) this).field_b;
               ((pl) this).field_b = ((pl) this).field_b + 1;
-              if (((pl) this).field_e.field_b[((pl) this).field_b].field_e != ((pl) this).field_e.field_b[-1 + ((pl) this).field_b]) {
+              if (fieldTemp$2[fieldTemp$3].field_e != ((pl) this).field_e.field_b[-1 + ((pl) this).field_b]) {
                 ((pl) this).field_c = ((pl) this).field_e.field_b[((pl) this).field_b + -1].field_e;
                 return true;
               } else {
@@ -45,8 +47,10 @@ final class pl implements Iterator {
         if (((pl) this).field_e.field_b[((pl) this).field_b - 1] == ((pl) this).field_c) {
           L0: while (true) {
             if (((pl) this).field_b < ((pl) this).field_e.field_d) {
+              ca[] fieldTemp$4 = ((pl) this).field_e.field_b;
+              int fieldTemp$5 = ((pl) this).field_b;
               ((pl) this).field_b = ((pl) this).field_b + 1;
-              var3 = ((pl) this).field_e.field_b[((pl) this).field_b].field_e;
+              var3 = fieldTemp$4[fieldTemp$5].field_e;
               if (((pl) this).field_e.field_b[-1 + ((pl) this).field_b] != var3) {
                 ((pl) this).field_c = var3.field_e;
                 ((pl) this).field_g = var3;
@@ -70,12 +74,6 @@ final class pl implements Iterator {
         ((pl) this).field_b = 1;
         ((pl) this).field_c = ((pl) this).field_e.field_b[0].field_e;
         ((pl) this).field_g = null;
-        if (param0 == 103) {
-          return;
-        } else {
-          ((pl) this).field_e = null;
-          return;
-        }
     }
 
     public static void a(int param0) {
@@ -95,8 +93,12 @@ final class pl implements Iterator {
 
     pl(ek param0) {
         ((pl) this).field_g = null;
-        ((pl) this).field_e = param0;
-        this.a((byte) 103);
+        try {
+            ((pl) this).field_e = param0;
+            this.a((byte) 103);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "pl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void remove() {

@@ -17,22 +17,16 @@ final class wh {
 
     final static int a(int param0, int param1) {
         param0--;
-        param0 = param0 | param0 >>> -327065503;
-        param0 = param0 | param0 >>> -1057549438;
-        param0 = param0 | param0 >>> -469438012;
-        param0 = param0 | param0 >>> 220093928;
-        if (param1 != 678231216) {
-            field_k = null;
-        }
-        param0 = param0 | param0 >>> 678231216;
+        param0 = param0 | param0 >>> 1;
+        param0 = param0 | param0 >>> 2;
+        param0 = param0 | param0 >>> 4;
+        param0 = param0 | param0 >>> 8;
+        param0 = param0 | param0 >>> 16;
         return 1 + param0;
     }
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 > -83) {
-            qb discarded$0 = wh.a(-29);
-        }
         field_e = null;
         field_h = null;
         field_i = null;

@@ -8,18 +8,20 @@ final class ah extends qd {
 
     final void b(int param0, int param1, byte param2) {
         int var4 = 0;
-        param2 = (byte)(127 + (127 & param2 >> 1512442177));
+        param2 = (byte)(127 + (127 & param2 >> 1));
         if (param0 != 255) {
-          field_r = (String) null;
+          field_r = null;
           var4 = param1 * 2;
+          int incrementValue$4 = var4;
           var4++;
-          ((ah) this).field_q[var4] = (byte)param2;
+          ((ah) this).field_q[incrementValue$4] = (byte)param2;
           ((ah) this).field_q[var4] = (byte)param2;
           return;
         } else {
           var4 = param1 * 2;
+          int incrementValue$5 = var4;
           var4++;
-          ((ah) this).field_q[var4] = (byte)param2;
+          ((ah) this).field_q[incrementValue$5] = (byte)param2;
           ((ah) this).field_q[var4] = (byte)param2;
           return;
         }

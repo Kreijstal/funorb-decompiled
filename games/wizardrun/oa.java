@@ -17,11 +17,6 @@ final class oa {
     public static void a(boolean param0) {
         field_a = null;
         field_b = null;
-        if (!param0) {
-            field_a = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

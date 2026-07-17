@@ -20,10 +20,10 @@ final class tb extends rq {
           if (((tb) this).field_e) {
             var4 = ((tb) this).field_h.field_Cc;
             var5 = 1 << (3 & param2);
-            var6 = (float)(1 << ((param2 & 59) >> 1951967843)) / 32.0f;
+            var6 = (float)(1 << ((param2 & 59) >> 3)) / 32.0f;
             var7 = 65535 & param1;
             int discarded$8 = var4.b(14, (float)(((tb) this).field_b.field_kc * var5 % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
-            var8 = (float)((param1 & 199087) >> -303163120) / 8.0f;
+            var8 = (float)((param1 & 199087) >> 16) / 8.0f;
             int discarded$9 = var4.b(15, var6, 0.0f, 0.0f, 0.0f);
             int discarded$10 = var4.a(4, (float)var7, 0.0f, 0.0f, 0.0f);
             int discarded$11 = var4.a(5, var8, 0.0f, 0.0f, 0.0f);
@@ -60,7 +60,7 @@ final class tb extends rq {
                 break L1;
               }
             }
-            int discarded$9 = var2.a(0, (float)(255 & ((tb) this).field_b.field_C >> 1993507248) / 255.0f, (float)((65348 & ((tb) this).field_b.field_C) >> -382859768) / 255.0f, (float)(255 & ((tb) this).field_b.field_C) / 255.0f, 0.0f);
+            int discarded$9 = var2.a(0, (float)(255 & ((tb) this).field_b.field_C >> 16) / 255.0f, (float)((65348 & ((tb) this).field_b.field_C) >> 8) / 255.0f, (float)(255 & ((tb) this).field_b.field_C) / 255.0f, 0.0f);
             break L0;
           }
         }
@@ -196,15 +196,15 @@ final class tb extends rq {
     }
 
     final void b(int param0) {
-        jagdx.IDirect3DDevice var2_ref = null;
+        jagdx.IDirect3DDevice var2_ref_jagdx_IDirect3DDevice = null;
         ut var3 = null;
         ut var4 = null;
         if (((tb) this).field_e) {
-            var2_ref = ((tb) this).field_h.field_Cc;
+            var2_ref_jagdx_IDirect3DDevice = ((tb) this).field_h.field_Cc;
             var3 = ((tb) this).field_h.g((byte) -28);
             var4 = ((tb) this).field_h.k((byte) 106);
-            int discarded$0 = var2_ref.a(0, var4.a(0, field_f));
-            int discarded$1 = var2_ref.a(4, var3.b(field_f, (byte) 86));
+            int discarded$0 = var2_ref_jagdx_IDirect3DDevice.a(0, var4.a(0, field_f));
+            int discarded$1 = var2_ref_jagdx_IDirect3DDevice.a(4, var3.b(field_f, (byte) 86));
         }
         int var2 = 49 / ((param0 - 41) / 46);
     }
@@ -257,18 +257,21 @@ final class tb extends rq {
           ((tb) this).field_g = null;
           ((tb) this).field_i = null;
           ((tb) this).field_j = false;
+          return;
         } else {
           if (!((tb) this).field_b.field_W) {
             ((tb) this).field_g = null;
             ((tb) this).field_i = null;
             ((tb) this).field_j = false;
+            return;
           } else {
             if (!((tb) this).field_b.field_Eb) {
               ((tb) this).field_g = null;
               ((tb) this).field_i = null;
               ((tb) this).field_j = false;
+              return;
             } else {
-              if ((((tb) this).field_h.field_Kc.VertexShaderVersion & 65535 ^ -1) <= -258) {
+              if ((((tb) this).field_h.field_Kc.VertexShaderVersion & 65535) >= 257) {
                 L0: {
                   L1: {
                     ((tb) this).field_g = ((tb) this).field_h.field_Cc.a(param1.a("environment_mapped_water_v", "dx", -1));
@@ -307,10 +310,12 @@ final class tb extends rq {
                   break L0;
                 }
                 ((tb) this).field_j = stackIn_14_1 != 0;
+                return;
               } else {
                 ((tb) this).field_g = null;
                 ((tb) this).field_i = null;
                 ((tb) this).field_j = false;
+                return;
               }
             }
           }

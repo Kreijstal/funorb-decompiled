@@ -14,9 +14,13 @@ final class wg extends dg implements qk {
             pc.a(false, true, false);
             return;
         }
-        ul.e((byte) -25);
-        ((wg) this).g((byte) -5);
-        int var6 = 22 % ((param4 - -63) / 52);
+        try {
+            ul.e((byte) -25);
+            ((wg) this).g((byte) -5);
+            int var6_int = 22 % ((param4 - -63) / 52);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "wg.E(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+        }
     }
 
     final static void c(int param0, int param1) {
@@ -29,9 +33,9 @@ final class wg extends dg implements qk {
           var6 = HostileSpawn.field_I ? 1 : 0;
           var2 = 0;
           var3 = tk.field_e;
-          if ((var3 ^ -1) <= -6) {
-            if ((var3 ^ -1) <= -106) {
-              if ((var3 ^ -1) > -121) {
+          if (var3 >= 5) {
+            if (var3 >= 105) {
+              if (var3 < 120) {
                 var3 = 120 + -var3;
                 var2 = 8192 + -(var3 * (var3 * 8192) / 3300);
                 break L0;
@@ -48,145 +52,193 @@ final class wg extends dg implements qk {
           }
         }
         L1: {
-          if (param1 == -5878) {
+          var4 = 1;
+          var5 = 0;
+          if (param0 == 3) {
+            var4 = -1;
             break L1;
           } else {
-            field_zb = null;
             break L1;
           }
         }
         L2: {
-          var4 = 1;
-          var5 = 0;
-          if (-4 == (param0 ^ -1)) {
-            var4 = -1;
+          if (1 != param0) {
             break L2;
           } else {
+            var5 = 1;
             break L2;
           }
         }
         L3: {
-          if (1 != param0) {
+          if (param0 != 4) {
             break L3;
           } else {
             var5 = 1;
+            var4 = 1;
             break L3;
           }
         }
         L4: {
-          if ((param0 ^ -1) != -5) {
+          if (5 == param0) {
+            var4 = -1;
+            var5 = 1;
             break L4;
           } else {
-            var5 = 1;
-            var4 = 1;
             break L4;
           }
         }
         L5: {
-          if (5 == param0) {
-            var4 = -1;
-            var5 = 1;
+          if (6 == param0) {
+            var5 = -1;
+            var4 = 1;
             break L5;
           } else {
             break L5;
           }
         }
         L6: {
-          if (6 == param0) {
-            var5 = -1;
-            var4 = 1;
-            break L6;
-          } else {
-            break L6;
-          }
-        }
-        L7: {
-          L8: {
+          L7: {
             if (param0 == 7) {
-              break L8;
+              break L7;
             } else {
-              if ((param0 ^ -1) == -9) {
-                break L8;
-              } else {
+              if (param0 == 8) {
                 break L7;
+              } else {
+                break L6;
               }
             }
           }
           var5 = -1;
           var4 = -1;
-          break L7;
+          break L6;
+        }
+        L8: {
+          if (param0 == 11) {
+            var4 = -1;
+            break L8;
+          } else {
+            break L8;
+          }
         }
         L9: {
-          if ((param0 ^ -1) == -12) {
-            var4 = -1;
+          if (12 != param0) {
             break L9;
           } else {
+            var5 = -1;
+            var4 = -1;
             break L9;
           }
         }
         L10: {
-          if (12 != param0) {
+          if (param0 != 13) {
             break L10;
           } else {
             var5 = -1;
-            var4 = -1;
+            var4 = 1;
             break L10;
           }
         }
         L11: {
-          if ((param0 ^ -1) != -14) {
+          if (14 != param0) {
             break L11;
           } else {
-            var5 = -1;
-            var4 = 1;
+            var5 = 1;
+            var4 = -1;
             break L11;
           }
         }
         L12: {
-          if (14 != param0) {
-            break L12;
-          } else {
-            var5 = 1;
-            var4 = -1;
-            break L12;
-          }
-        }
-        L13: {
-          if ((param0 ^ -1) == -16) {
+          if (param0 == 15) {
             var4 = 1;
             var5 = 1;
-            break L13;
+            break L12;
           } else {
-            break L13;
+            break L12;
           }
         }
         vg.field_a = jd.a(var5 * var2, var2 * var4, (byte) -79);
     }
 
     final static kc a(Throwable param0, String param1) {
-        kc var2_ref = null;
         kc var2 = null;
         if (param0 instanceof kc) {
             var2 = (kc) (Object) param0;
             var2.field_a = var2.field_a + 32 + param1;
         } else {
-            var2_ref = new kc(param0, param1);
+            var2 = new kc(param0, param1);
         }
-        return var2_ref;
+        return var2;
     }
 
     public static void b(boolean param0) {
-        if (!param0) {
-            field_ub = false;
-        }
         field_zb = null;
     }
 
     final static String a(byte param0, CharSequence[] param1) {
-        if (param0 != -21) {
-            return null;
+        RuntimeException var2 = null;
+        Object stackIn_2_0 = null;
+        String stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 == -21) {
+              stackOut_3_0 = ig.a((byte) 28, param1, 0, param1.length);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (String) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("wg.O(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw wg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        return ig.a((byte) 28, param1, 0, param1.length);
+        return stackIn_4_0;
     }
 
     final void r(int param0) {
@@ -203,19 +255,19 @@ final class wg extends dg implements qk {
         int var12 = HostileSpawn.field_I ? 1 : 0;
         int[] var14 = new int[256];
         int[] var3 = var14;
-        int var4 = (16713328 & param1) >> -2138583056;
-        int var5 = (65487 & param1) >> -517893528;
+        int var4 = (16713328 & param1) >> 16;
+        int var5 = (65487 & param1) >> 8;
         if (!param0) {
             Object var13 = null;
             String discarded$0 = wg.a((byte) -45, (CharSequence[]) null);
         }
         int var6 = param1 & 255;
-        int var7 = (param2 & 16754703) >> 14741968;
-        int var8 = (65393 & param2) >> -1655900728;
+        int var7 = (param2 & 16754703) >> 16;
+        int var8 = (65393 & param2) >> 8;
         int var9 = 255 & param2;
         for (var10 = 0; var10 < 256; var10++) {
             var11 = -var10 + 256;
-            var14[var10] = (var9 * var11 >> 1325880424) - -(var6 * var10 >> -1116179896) + (((var4 * var10 >> 1430281032) + (var7 * var11 >> 1669879592) << 1108166928) + ((var8 * var11 >> -1835618136) + (var10 * var5 >> -205609784) << 543264072));
+            var14[var10] = (var9 * var11 >> 8) - -(var6 * var10 >> 8) + (((var4 * var10 >> 8) + (var7 * var11 >> 8) << 16) + ((var8 * var11 >> 8) + (var10 * var5 >> 8) << 8));
         }
         return var3;
     }
@@ -247,143 +299,198 @@ final class wg extends dg implements qk {
     }
 
     private final void a(jj param0, boolean param1, boolean param2) {
-        String var4 = null;
+        RuntimeException var4 = null;
+        String var4_ref = null;
         qi var5 = null;
         int var6 = 0;
-        Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        mk stackIn_8_0 = null;
+        Object stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
         mk stackIn_9_0 = null;
         mk stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
-        Object stackOut_0_0 = null;
+        mk stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_40_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_1_0 = null;
+        Object stackOut_3_0 = null;
+        int stackOut_3_1 = 0;
         Object stackOut_2_0 = null;
         int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        mk stackOut_7_0 = null;
+        mk stackOut_8_0 = null;
+        mk stackOut_10_0 = null;
+        int stackOut_10_1 = 0;
         mk stackOut_9_0 = null;
         int stackOut_9_1 = 0;
-        mk stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        L0: {
-          var6 = HostileSpawn.field_I ? 1 : 0;
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
-          if (!param1) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            break L0;
-          } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            break L0;
-          }
-        }
-        L1: {
-          ((wg) this).field_vb = stackIn_3_1 != 0;
-          if (param0.field_b) {
-            var4 = vf.field_J;
-            break L1;
-          } else {
-            if (null == param0.field_e) {
-              var4 = param0.field_l;
-              if (248 == param0.field_a) {
-                L2: {
-                  if (!param2) {
-                    md.c(-125);
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                ((wg) this).field_wb = true;
-                var4 = dg.field_sb;
+        RuntimeException stackOut_37_0 = null;
+        StringBuilder stackOut_37_1 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        String stackOut_39_2 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        String stackOut_38_2 = null;
+        var6 = HostileSpawn.field_I ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              stackOut_1_0 = this;
+              stackIn_3_0 = stackOut_1_0;
+              stackIn_2_0 = stackOut_1_0;
+              if (!param1) {
+                stackOut_3_0 = this;
+                stackOut_3_1 = 0;
+                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_1 = stackOut_3_1;
                 break L1;
               } else {
-                break L1;
-              }
-            } else {
-              var4 = om.field_f;
-              if (null != ((wg) this).field_xb) {
-                L3: {
-                  stackOut_7_0 = ((wg) this).field_xb;
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_8_0 = stackOut_7_0;
-                  if (param1) {
-                    stackOut_9_0 = (mk) (Object) stackIn_9_0;
-                    stackOut_9_1 = 0;
-                    stackIn_10_0 = stackOut_9_0;
-                    stackIn_10_1 = stackOut_9_1;
-                    break L3;
-                  } else {
-                    stackOut_8_0 = (mk) (Object) stackIn_8_0;
-                    stackOut_8_1 = 1;
-                    stackIn_10_0 = stackOut_8_0;
-                    stackIn_10_1 = stackOut_8_1;
-                    break L3;
-                  }
-                }
-                ((mk) (Object) stackIn_10_0).a(stackIn_10_1 != 0);
-                break L1;
-              } else {
+                stackOut_2_0 = this;
+                stackOut_2_1 = 1;
+                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_1 = stackOut_2_1;
                 break L1;
               }
             }
-          }
-        }
-        L4: {
-          var5 = new qi((dg) this, pe.field_eb, var4);
-          if (!param0.field_b) {
-            L5: {
-              if (((wg) this).field_wb) {
-                ph discarded$2 = var5.a((mh) this, jf.field_e, 30);
-                break L5;
+            L2: {
+              ((wg) this).field_vb = stackIn_4_1 != 0;
+              if (param0.field_b) {
+                var4_ref = vf.field_J;
+                break L2;
               } else {
-                if (-6 == (param0.field_a ^ -1)) {
-                  var5.a(22770, 11, im.field_b);
-                  var5.a(22770, 17, sc.field_k);
-                  break L5;
+                if (null == param0.field_e) {
+                  var4_ref = param0.field_l;
+                  if (248 == param0.field_a) {
+                    L3: {
+                      if (!param2) {
+                        md.c(-125);
+                        break L3;
+                      } else {
+                        break L3;
+                      }
+                    }
+                    ((wg) this).field_wb = true;
+                    var4_ref = dg.field_sb;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
                 } else {
-                  var5.a(22770, -1, hg.field_d);
+                  var4_ref = om.field_f;
+                  if (null != ((wg) this).field_xb) {
+                    L4: {
+                      stackOut_8_0 = ((wg) this).field_xb;
+                      stackIn_10_0 = stackOut_8_0;
+                      stackIn_9_0 = stackOut_8_0;
+                      if (param1) {
+                        stackOut_10_0 = (mk) (Object) stackIn_10_0;
+                        stackOut_10_1 = 0;
+                        stackIn_11_0 = stackOut_10_0;
+                        stackIn_11_1 = stackOut_10_1;
+                        break L4;
+                      } else {
+                        stackOut_9_0 = (mk) (Object) stackIn_9_0;
+                        stackOut_9_1 = 1;
+                        stackIn_11_0 = stackOut_9_0;
+                        stackIn_11_1 = stackOut_9_1;
+                        break L4;
+                      }
+                    }
+                    ((mk) (Object) stackIn_11_0).a(stackIn_11_1 != 0);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+            }
+            L5: {
+              var5 = new qi((dg) this, pe.field_eb, var4_ref);
+              if (!param0.field_b) {
+                L6: {
+                  if (((wg) this).field_wb) {
+                    ph discarded$2 = var5.a((mh) this, jf.field_e, 30);
+                    break L6;
+                  } else {
+                    if (param0.field_a == 5) {
+                      var5.a(22770, 11, im.field_b);
+                      var5.a(22770, 17, sc.field_k);
+                      break L6;
+                    } else {
+                      var5.a(22770, -1, hg.field_d);
+                      break L6;
+                    }
+                  }
+                }
+                if (param0.field_a != 3) {
+                  if (6 == param0.field_a) {
+                    var5.a(22770, 9, wc.field_k);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                } else {
+                  var5.a(22770, 7, pf.field_N);
+                  break L5;
+                }
+              } else {
+                if (param0.field_c) {
+                  ((wg) this).b((ag) (Object) new te((wg) this), (byte) 110);
+                  return;
+                } else {
+                  ph discarded$3 = var5.a((mh) this, jf.field_e, 30);
                   break L5;
                 }
               }
             }
-            if ((param0.field_a ^ -1) != -4) {
-              if (6 == param0.field_a) {
-                var5.a(22770, 9, wc.field_k);
-                break L4;
-              } else {
-                break L4;
-              }
+            ((wg) this).b((ag) (Object) var5, (byte) 110);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var4 = decompiledCaughtException;
+            stackOut_37_0 = (RuntimeException) var4;
+            stackOut_37_1 = new StringBuilder().append("wg.B(");
+            stackIn_39_0 = stackOut_37_0;
+            stackIn_39_1 = stackOut_37_1;
+            stackIn_38_0 = stackOut_37_0;
+            stackIn_38_1 = stackOut_37_1;
+            if (param0 == null) {
+              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_2 = "null";
+              stackIn_40_0 = stackOut_39_0;
+              stackIn_40_1 = stackOut_39_1;
+              stackIn_40_2 = stackOut_39_2;
+              break L7;
             } else {
-              var5.a(22770, 7, pf.field_N);
-              break L4;
-            }
-          } else {
-            if (param0.field_c) {
-              ((wg) this).b((ag) (Object) new te((wg) this), (byte) 110);
-              return;
-            } else {
-              ph discarded$3 = var5.a((mh) this, jf.field_e, 30);
-              break L4;
+              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
+              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_2 = "{...}";
+              stackIn_40_0 = stackOut_38_0;
+              stackIn_40_1 = stackOut_38_1;
+              stackIn_40_2 = stackOut_38_2;
+              break L7;
             }
           }
+          throw wg.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + param1 + 44 + param2 + 41);
         }
-        ((wg) this).b((ag) (Object) var5, (byte) 110);
     }
 
     wg(gg param0, mk param1) {
         super(param0, pe.field_eb, ud.field_a, false, false);
-        ((wg) this).field_xb = param1;
+        try {
+            ((wg) this).field_xb = param1;
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

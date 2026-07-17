@@ -109,6 +109,7 @@ final class kb {
           if (var2 >= 10) {
             ((kb) this).field_b = param0.j(-788751192);
             ((kb) this).field_a = param0.j(-788751192);
+            return;
           } else {
             var3 = param0.l(31760);
             if (var3 != 0) {

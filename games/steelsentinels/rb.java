@@ -18,16 +18,16 @@ final class rb {
     final static int a(int param0, int param1, int param2) {
         if (param1 == 2048) {
           if (param0 >= param2) {
-            return df.a(-3720, (param2 << -1458335632) / param0);
+            return df.a(-3720, (param2 << 16) / param0);
           } else {
-            return 2048 - df.a(-3720, (param0 << -969794512) / param2);
+            return 2048 - df.a(-3720, (param0 << 16) / param2);
           }
         } else {
           int discarded$7 = rb.a(-3, -22, 110);
           if (param0 >= param2) {
-            return df.a(-3720, (param2 << -1458335632) / param0);
+            return df.a(-3720, (param2 << 16) / param0);
           } else {
-            return 2048 - df.a(-3720, (param0 << -969794512) / param2);
+            return 2048 - df.a(-3720, (param0 << 16) / param2);
           }
         }
     }

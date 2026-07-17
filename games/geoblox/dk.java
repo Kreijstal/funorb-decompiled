@@ -73,193 +73,181 @@ abstract class dk {
     }
 
     final int a(int param0, int param1, int param2, String param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_14_0 = 0;
+        int stackOut_12_0 = 0;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         var11 = Geoblox.field_C;
-        var5 = 0;
-        var6 = 0;
-        var7 = param3.length();
-        var8 = 20 / ((-30 - param0) / 56);
-        var9 = 0;
-        L0: while (true) {
-          if (var9 >= var7) {
-            if (var5 <= 0) {
-              return 0;
-            } else {
-              return (param2 - param1 << -125164472) / var5;
-            }
-          } else {
-            var10 = param3.charAt(var9);
-            if (var10 != 60) {
-              if (var10 != 62) {
-                if (var6 == 0) {
-                  if (32 == var10) {
-                    var5++;
-                    var9++;
-                    continue L0;
-                  } else {
-                    var9++;
-                    continue L0;
-                  }
+        try {
+          L0: {
+            var5_int = 0;
+            var6 = 0;
+            var7 = param3.length();
+            var8 = 20 / ((-30 - param0) / 56);
+            var9 = 0;
+            L1: while (true) {
+              if (var9 >= var7) {
+                if (var5_int <= 0) {
+                  stackOut_14_0 = 0;
+                  stackIn_15_0 = stackOut_14_0;
+                  break L0;
                 } else {
-                  var9++;
-                  continue L0;
+                  stackOut_12_0 = (param2 - param1 << 8) / var5_int;
+                  stackIn_13_0 = stackOut_12_0;
+                  return stackIn_13_0;
                 }
               } else {
-                var6 = 0;
+                L2: {
+                  var10 = param3.charAt(var9);
+                  if (var10 != 60) {
+                    if (var10 != 62) {
+                      if (var6 != 0) {
+                        break L2;
+                      } else {
+                        if (32 != var10) {
+                          break L2;
+                        } else {
+                          var5_int++;
+                          break L2;
+                        }
+                      }
+                    } else {
+                      var6 = 0;
+                      break L2;
+                    }
+                  } else {
+                    var6 = 1;
+                    break L2;
+                  }
+                }
                 var9++;
-                continue L0;
+                continue L1;
               }
-            } else {
-              var6 = 1;
-              var9++;
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var5;
+            stackOut_16_1 = new StringBuilder().append("dk.J(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param3 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L3;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L3;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
         }
+        return stackIn_15_0;
     }
 
     final static void a(byte param0) {
         try {
-            IOException iOException = null;
-            int var1 = 0;
-            IOException var2 = null;
+            int var1_int = 0;
+            RuntimeException var1 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = Geoblox.field_C;
-                        if (null == wg.field_i) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        wg.field_i.h(-70);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (param0 < -65) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        field_b = 18;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        if (cl.field_c == null) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        cl.field_c.a((byte) 51);
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (null == af.field_d) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        try {
-                            af.field_d.b(27034);
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 9;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        if (null == je.field_h) {
-                            statePc = 19;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        var1 = 0;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        if (je.field_h.length <= var1) {
-                            statePc = 19;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        if (null != je.field_h[var1]) {
-                            statePc = 16;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        var1++;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        try {
-                            je.field_h[var1].b(27034);
-                            statePc = 17;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 17: {
-                        var1++;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 19: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            var3 = Geoblox.field_C;
+            try {
+              L0: {
+                L1: {
+                  if (null == wg.field_i) {
+                    break L1;
+                  } else {
+                    wg.field_i.h(-70);
+                    break L1;
+                  }
                 }
+                L2: {
+                  if (cl.field_c == null) {
+                    break L2;
+                  } else {
+                    cl.field_c.a((byte) 51);
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (null == af.field_d) {
+                    break L3;
+                  } else {
+                    {
+                      L4: {
+                        af.field_d.b(27034);
+                        break L4;
+                      }
+                    }
+                    break L3;
+                  }
+                }
+                L6: {
+                  if (null == je.field_h) {
+                    break L6;
+                  } else {
+                    var1_int = 0;
+                    L7: while (true) {
+                      if (je.field_h.length <= var1_int) {
+                        break L6;
+                      } else {
+                        L8: {
+                          if (null == je.field_h[var1_int]) {
+                            break L8;
+                          } else {
+                            break L8;
+                          }
+                        }
+                        var1_int++;
+                        continue L7;
+                      }
+                    }
+                  }
+                }
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var1 = (RuntimeException) (Object) decompiledCaughtException;
+              throw t.a((Throwable) (Object) var1, "dk.O(" + -121 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -285,7 +273,7 @@ abstract class dk {
             if (null == ((dk) this).field_a) {
               break L2;
             } else {
-              if (-1 > (((dk) this).field_a.length ^ -1)) {
+              if (((dk) this).field_a.length > 0) {
                 stackOut_6_0 = ((dk) this).field_a[((dk) this).field_a.length - 1].field_a + -((dk) this).field_a[0].field_d;
                 stackIn_7_0 = stackOut_6_0;
                 break L1;
@@ -319,36 +307,63 @@ abstract class dk {
     }
 
     final int a(int param0, int param1, int param2) {
+        int var4 = 0;
+        int var5 = 0;
         int var6 = 0;
         lk var7 = null;
         int var8 = 0;
-        int var9 = Geoblox.field_C;
-        if (null != ((dk) this).field_a) {
-            // ifeq L37
-            // if_icmpgt L37
-        } else {
-            return -1;
-        }
-        if (!(((dk) this).field_a[-1 + ((dk) this).field_a.length].field_a >= param2)) {
-            return -1;
-        }
-        if (-2 == (((dk) this).field_a.length ^ -1)) {
-            return ((dk) this).field_a[0].a(71, param0);
-        }
-        int var4 = 0;
-        int var5 = -2 % ((15 - param1) / 32);
-        for (var6 = 0; var6 < ((dk) this).field_a.length; var6++) {
-            var7 = ((dk) this).field_a[var6];
-            if (param2 >= var7.field_d) {
-                if (var7.field_a >= param2) {
-                    var8 = var7.a(-79, param0);
-                    if (-1 == var8) {
+        int var9 = 0;
+        L0: {
+          var9 = Geoblox.field_C;
+          if (null == ((dk) this).field_a) {
+            break L0;
+          } else {
+            if (((dk) this).field_a.length == 0) {
+              break L0;
+            } else {
+              if (((dk) this).field_a[0].field_d > param2) {
+                break L0;
+              } else {
+                if (((dk) this).field_a[-1 + ((dk) this).field_a.length].field_a < param2) {
+                  return -1;
+                } else {
+                  if (((dk) this).field_a.length != 1) {
+                    var4 = 0;
+                    var5 = -2 % ((15 - param1) / 32);
+                    var6 = 0;
+                    L1: while (true) {
+                      if (var6 >= ((dk) this).field_a.length) {
                         return -1;
+                      } else {
+                        L2: {
+                          var7 = ((dk) this).field_a[var6];
+                          if (param2 < var7.field_d) {
+                            break L2;
+                          } else {
+                            if (var7.field_a < param2) {
+                              break L2;
+                            } else {
+                              var8 = var7.a(-79, param0);
+                              if (-1 != var8) {
+                                return var4 + var8;
+                              } else {
+                                return -1;
+                              }
+                            }
+                          }
+                        }
+                        var4 = var4 + (var7.field_c.length - 1);
+                        var6++;
+                        continue L1;
+                      }
                     }
-                    return var4 + var8;
+                  } else {
+                    return ((dk) this).field_a[0].a(71, param0);
+                  }
                 }
+              }
             }
-            var4 = var4 + (var7.field_c.length - 1);
+          }
         }
         return -1;
     }

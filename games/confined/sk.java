@@ -182,11 +182,17 @@ final class sk extends wj {
         Exception var1 = null;
         Throwable decompiledCaughtException = null;
         try {
-          this.d();
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
+          L0: {
+            this.d();
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var1 = (Exception) (Object) decompiledCaughtException;
+            break L1;
+          }
         }
-        var1 = (Exception) (Object) decompiledCaughtException;
     }
 
     private final void b() {
@@ -353,8 +359,9 @@ final class sk extends wj {
                 var14 = (50 - var8) * ti.field_i[var10 - var8];
                 field_k[var4] = var2 + (var11 + ((field_H[var7] - var11) * var14 >> 16) << 9) / 50;
                 field_ab[var4] = var3 + (var12 + ((field_V[var7] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$9 = var4;
                 var4++;
-                field_o[var4] = var13 + (((((sk) this).field_l[param0] & 65535) - var13) * var14 >> 16);
+                field_o[incrementValue$9] = var13 + (((((sk) this).field_l[param0] & 65535) - var13) * var14 >> 16);
                 break L2;
               }
             }
@@ -364,15 +371,17 @@ final class sk extends wj {
               var14 = (50 - var8) * ti.field_i[var9 - var8];
               field_k[var4] = var2 + (var11 + ((field_H[var6] - var11) * var14 >> 16) << 9) / 50;
               field_ab[var4] = var3 + (var12 + ((field_V[var6] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$10 = var4;
               var4++;
-              field_o[var4] = var13 + (((((sk) this).field_q[param0] & 65535) - var13) * var14 >> 16);
+              field_o[incrementValue$10] = var13 + (((((sk) this).field_q[param0] & 65535) - var13) * var14 >> 16);
               break L1;
             }
           } else {
             field_k[var4] = field_eb[var5];
             field_ab[var4] = field_J[var5];
+            int incrementValue$11 = var4;
             var4++;
-            field_o[var4] = ((sk) this).field_i[param0] & 65535;
+            field_o[incrementValue$11] = ((sk) this).field_i[param0] & 65535;
             break L1;
           }
         }
@@ -388,8 +397,9 @@ final class sk extends wj {
                 var14 = (50 - var9) * ti.field_i[var8 - var9];
                 field_k[var4] = var2 + (var11 + ((field_H[var5] - var11) * var14 >> 16) << 9) / 50;
                 field_ab[var4] = var3 + (var12 + ((field_V[var5] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$12 = var4;
                 var4++;
-                field_o[var4] = var13 + (((((sk) this).field_i[param0] & 65535) - var13) * var14 >> 16);
+                field_o[incrementValue$12] = var13 + (((((sk) this).field_i[param0] & 65535) - var13) * var14 >> 16);
                 break L4;
               }
             }
@@ -399,15 +409,17 @@ final class sk extends wj {
               var14 = (50 - var9) * ti.field_i[var10 - var9];
               field_k[var4] = var2 + (var11 + ((field_H[var7] - var11) * var14 >> 16) << 9) / 50;
               field_ab[var4] = var3 + (var12 + ((field_V[var7] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$13 = var4;
               var4++;
-              field_o[var4] = var13 + (((((sk) this).field_l[param0] & 65535) - var13) * var14 >> 16);
+              field_o[incrementValue$13] = var13 + (((((sk) this).field_l[param0] & 65535) - var13) * var14 >> 16);
               break L3;
             }
           } else {
             field_k[var4] = field_eb[var6];
             field_ab[var4] = field_J[var6];
+            int incrementValue$14 = var4;
             var4++;
-            field_o[var4] = ((sk) this).field_q[param0] & 65535;
+            field_o[incrementValue$14] = ((sk) this).field_q[param0] & 65535;
             break L3;
           }
         }
@@ -423,8 +435,9 @@ final class sk extends wj {
                 var14 = (50 - var10) * ti.field_i[var9 - var10];
                 field_k[var4] = var2 + (var11 + ((field_H[var6] - var11) * var14 >> 16) << 9) / 50;
                 field_ab[var4] = var3 + (var12 + ((field_V[var6] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$15 = var4;
                 var4++;
-                field_o[var4] = var13 + (((((sk) this).field_q[param0] & 65535) - var13) * var14 >> 16);
+                field_o[incrementValue$15] = var13 + (((((sk) this).field_q[param0] & 65535) - var13) * var14 >> 16);
                 break L6;
               }
             }
@@ -434,15 +447,17 @@ final class sk extends wj {
               var14 = (50 - var10) * ti.field_i[var8 - var10];
               field_k[var4] = var2 + (var11 + ((field_H[var5] - var11) * var14 >> 16) << 9) / 50;
               field_ab[var4] = var3 + (var12 + ((field_V[var5] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$16 = var4;
               var4++;
-              field_o[var4] = var13 + (((((sk) this).field_i[param0] & 65535) - var13) * var14 >> 16);
+              field_o[incrementValue$16] = var13 + (((((sk) this).field_i[param0] & 65535) - var13) * var14 >> 16);
               break L5;
             }
           } else {
             field_k[var4] = field_eb[var7];
             field_ab[var4] = field_J[var7];
+            int incrementValue$17 = var4;
             var4++;
-            field_o[var4] = ((sk) this).field_l[param0] & 65535;
+            field_o[incrementValue$17] = ((sk) this).field_l[param0] & 65535;
             break L5;
           }
         }
@@ -781,7 +796,7 @@ final class sk extends wj {
                               }
                             }
                             if (var9 > 64) {
-                              var10 = field_cb[var8] - 64 - 1;
+                              var10 = field_cb[var8] - 65;
                               var48 = field_A[var10];
                               var12 = 0;
                               L10: while (true) {
@@ -861,7 +876,7 @@ final class sk extends wj {
                           }
                         }
                         if (var9 > 64) {
-                          var10 = field_cb[var8] - 64 - 1;
+                          var10 = field_cb[var8] - 65;
                           var46 = field_A[var10];
                           var12 = 0;
                           L15: while (true) {
@@ -1016,8 +1031,9 @@ final class sk extends wj {
                       return;
                     } else {
                       L29: {
+                        int incrementValue$7 = var12;
                         var12++;
-                        this.e(var14[var12]);
+                        this.e(var14[incrementValue$7]);
                         if (var12 != var13) {
                           break L29;
                         } else {
@@ -1051,8 +1067,9 @@ final class sk extends wj {
                           break L31;
                         } else {
                           L32: {
+                            int incrementValue$8 = var12;
                             var12++;
-                            this.e(var14[var12]);
+                            this.e(var14[incrementValue$8]);
                             if (var12 != var13) {
                               break L32;
                             } else {
@@ -1086,8 +1103,9 @@ final class sk extends wj {
                             break L34;
                           } else {
                             L35: {
+                              int incrementValue$9 = var12;
                               var12++;
-                              this.e(var14[var12]);
+                              this.e(var14[incrementValue$9]);
                               if (var12 != var13) {
                                 break L35;
                               } else {
@@ -1121,8 +1139,9 @@ final class sk extends wj {
                               break L37;
                             } else {
                               L38: {
+                                int incrementValue$10 = var12;
                                 var12++;
-                                this.e(var14[var12]);
+                                this.e(var14[incrementValue$10]);
                                 if (var12 != var13) {
                                   break L38;
                                 } else {
@@ -1245,8 +1264,9 @@ final class sk extends wj {
                         }
                       } else {
                         field_I[var7] = (field_g[var9] + field_g[var10] + field_g[var11]) / 3;
+                        int incrementValue$11 = var7;
                         var7++;
-                        field_n[var7] = var8;
+                        field_n[incrementValue$11] = var8;
                         var8++;
                         continue L3;
                       }
@@ -1263,8 +1283,9 @@ final class sk extends wj {
                     if (!this.a(on.field_a + ti.field_k, bj.field_q + ti.field_f, field_J[var9], field_J[var10], field_J[var11], var12, var13, var14_int)) {
                       break L43;
                     } else {
+                      int fieldTemp$12 = tk.field_g;
                       tk.field_g = tk.field_g + 1;
-                      la.field_S[tk.field_g] = param2;
+                      la.field_S[fieldTemp$12] = param2;
                       param1 = false;
                       break L43;
                     }
@@ -1336,8 +1357,9 @@ final class sk extends wj {
                     }
                   } else {
                     field_I[var7] = (field_g[var9] + field_g[var10] + field_g[var11]) / 3;
+                    int incrementValue$13 = var7;
                     var7++;
-                    field_n[var7] = var8;
+                    field_n[incrementValue$13] = var8;
                     var8++;
                     continue L3;
                   }
@@ -1459,7 +1481,7 @@ final class sk extends wj {
                     }
                   }
                   if (var2 > 64) {
-                    var3 = field_cb[var1] - 64 - 1;
+                    var3 = field_cb[var1] - 65;
                     var12 = field_A[var3];
                     var8 = 0;
                     var5 = var8;
@@ -1642,13 +1664,20 @@ final class sk extends wj {
                   L3: while (true) {
                     if (var27 >= ((sk) this).field_S) {
                       try {
-                        this.a((var20 & var16) != 0, false, 0L, (int) ((sk) this).field_O, ((sk) this).field_O << 1);
-                      } catch (java.lang.Exception decompiledCaughtParameter) {
-                        decompiledCaughtException = decompiledCaughtParameter;
+                        L4: {
+                          this.a((var20 & var16) != 0, false, 0L, (int) ((sk) this).field_O, ((sk) this).field_O << 1);
+                          break L4;
+                        }
+                      } catch (java.lang.Exception decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L5: {
+                          var21 = (Exception) (Object) decompiledCaughtException;
+                          break L5;
+                        }
                       }
-                      var21 = (Exception) (Object) decompiledCaughtException;
+                      return;
                     } else {
-                      L4: {
+                      L6: {
                         var22 = ((sk) this).field_W[var27];
                         var23 = ((sk) this).field_C[var27];
                         var24 = ((sk) this).field_B[var27];
@@ -1664,11 +1693,11 @@ final class sk extends wj {
                         if (var24 < 50) {
                           field_eb[var27] = -5000;
                           var20 = 1;
-                          break L4;
+                          break L6;
                         } else {
                           field_eb[var27] = var18 + (var22 << 9) / var24;
                           field_J[var27] = var19 + (var23 << 9) / var24;
-                          break L4;
+                          break L6;
                         }
                       }
                       if (var17 != 0) {
@@ -1888,7 +1917,7 @@ final class sk extends wj {
                     }
                   }
                 }
-                ((sk) this).field_F[var9] = (short)-1;
+                ((sk) this).field_F[var9] = (short) -1;
                 var9++;
                 continue L1;
               }
@@ -1928,14 +1957,14 @@ final class sk extends wj {
                               break L3;
                             } else {
                               if (param0.field_y[var11] == -1) {
-                                ((sk) this).field_db[var11] = (byte)-1;
+                                ((sk) this).field_db[var11] = (byte) -1;
                                 var11++;
                                 continue L7;
                               } else {
                                 ((sk) this).field_db[var11] = (byte)var9_ref_int__[param0.field_y[var11] & 255];
                                 if (((sk) this).field_db[var11] == -1) {
                                   if (((sk) this).field_F != null) {
-                                    ((sk) this).field_F[var11] = (short)-1;
+                                    ((sk) this).field_F[var11] = (short) -1;
                                     var11++;
                                     continue L7;
                                   } else {
@@ -1960,8 +1989,9 @@ final class sk extends wj {
                                 ((sk) this).field_Y[var10] = param0.field_g[var11] & 65535;
                                 ((sk) this).field_R[var10] = param0.field_U[var11] & 65535;
                                 ((sk) this).field_x[var10] = param0.field_T[var11] & 65535;
+                                int incrementValue$1 = var10;
                                 var10++;
-                                var9_ref_int__[var11] = var10;
+                                var9_ref_int__[var11] = incrementValue$1;
                                 var11++;
                                 continue L6;
                               }
@@ -2006,6 +2036,7 @@ final class sk extends wj {
         var9 = var16;
         L9: while (true) {
           if (var16 >= ((sk) this).field_E) {
+            return;
           } else {
             L10: {
               if (param0.field_C != null) {

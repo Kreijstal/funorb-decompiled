@@ -27,7 +27,7 @@ abstract class dj extends qt {
         if (param1 != -95) {
             return true;
         }
-        if ((((dj) this).field_i[param0].field_m ^ -1) == -23) {
+        if (((dj) this).field_i[param0].field_m == 22) {
             if (!this.b(false)) {
                 return false;
             }
@@ -58,16 +58,16 @@ abstract class dj extends qt {
         if (!(this.g((byte) -120))) {
             var3_int = ((dj) this).field_i[0].field_d;
             var4_int = ((dj) this).field_i[0].field_h;
-            var5_int = ((dj) this).b(0, -22667) + (((dj) this).field_j + -(var3_int >> -1522629823));
-            var6 = ((dj) this).a(-124, 0) - (var4_int >> 758989121);
+            var5_int = ((dj) this).b(0, -22667) + (((dj) this).field_j + -(var3_int >> 1));
+            var6 = ((dj) this).a(-124, 0) - (var4_int >> 1);
             on.a(var5_int - 4, -4 + var6, 8 + var3_int, var4_int + 8, 10, 0, 128);
             eo.field_r[0][3].c(var5_int, var6);
         }
         if (!(this.b(false))) {
             var3_int = ((dj) this).field_i[2].field_d;
             var4_int = ((dj) this).field_i[2].field_h;
-            var5_int = -(var3_int >> 1468389729) + (((dj) this).b(2, param0 ^ 22670) - -((dj) this).field_j);
-            var6 = -(var4_int >> 1779281729) + ((dj) this).a(101, 2);
+            var5_int = -(var3_int >> 1) + (((dj) this).b(2, param0 ^ 22670) - -((dj) this).field_j);
+            var6 = -(var4_int >> 1) + ((dj) this).a(101, 2);
             on.a(-4 + var5_int, -4 + var6, 8 + var3_int, var4_int - -8, 10, 0, 128);
             eo.field_c[0][3].c(var5_int, var6);
         }
@@ -82,17 +82,85 @@ abstract class dj extends qt {
     }
 
     final static StringBuilder a(int param0, char param1, int param2, StringBuilder param3) {
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        int var6 = Kickabout.field_G;
-        int var4 = param3.length();
-        param3.setLength(param0);
-        if (param2 != -11407) {
-            field_B = null;
+        int var6 = 0;
+        StringBuilder stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        StringBuilder stackOut_6_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var6 = Kickabout.field_G;
+        try {
+          L0: {
+            L1: {
+              var4_int = param3.length();
+              param3.setLength(param0);
+              if (param2 == -11407) {
+                break L1;
+              } else {
+                field_B = null;
+                break L1;
+              }
+            }
+            var5 = var4_int;
+            L2: while (true) {
+              if (var5 >= param0) {
+                stackOut_6_0 = (StringBuilder) param3;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                param3.setCharAt(var5, param1);
+                var5++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("dj.GA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param3 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        for (var5 = var4; var5 < param0; var5++) {
-            param3.setCharAt(var5, param1);
-        }
-        return param3;
+        return stackIn_7_0;
     }
 
     void a(byte param0, boolean param1) {
@@ -103,7 +171,7 @@ abstract class dj extends qt {
                 ((dj) this).field_x.a((byte) 68, 1);
             }
         }
-        if ((((dj) this).field_x.field_e ^ -1) == -3) {
+        if (((dj) this).field_x.field_e == 2) {
             if (!(this.b(false))) {
                 ((dj) this).field_x.a((byte) 68, 1);
             }
@@ -117,13 +185,10 @@ abstract class dj extends qt {
         if (!(20 != ((dj) this).field_c)) {
             return uv.field_d;
         }
-        if (!param0) {
-            return null;
-        }
         if (((dj) this).field_c == 21) {
             return ue.field_g;
         }
-        if (!((((dj) this).field_c ^ -1) != -23)) {
+        if (!(((dj) this).field_c != 22)) {
             return pt.field_l;
         }
         return null;
@@ -150,9 +215,7 @@ abstract class dj extends qt {
         if (!(((dj) this).field_C != -1 + this.a(true).length)) {
             return false;
         }
-        if (param0) {
-            ((dj) this).a((byte) -54, true);
-        }
+        ((dj) this).a((byte) -54, true);
         return true;
     }
 

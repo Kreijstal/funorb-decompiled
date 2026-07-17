@@ -12,7 +12,11 @@ final class ae {
         if (param0 < 107) {
             return;
         }
-        wc.field_p = param1;
+        try {
+            wc.field_p = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "ae.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(boolean param0, byte param1) {
@@ -27,7 +31,7 @@ final class ae {
     public static void a(byte param0) {
         field_d = null;
         field_b = null;
-        int var1 = 12 / ((19 - param0) / 58);
+        int var1 = 6;
         field_a = null;
     }
 

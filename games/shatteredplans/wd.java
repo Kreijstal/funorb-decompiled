@@ -13,15 +13,14 @@ final class wd extends ji {
     static String field_K;
 
     private final void a(int param0, boolean param1, vg param2, String param3, int param4) {
-        Object var7 = null;
-        if (param1) {
-          var7 = null;
-          ((wd) this).a((ja) null, -116);
-          mf.field_x.c(param3, param0 - (-param2.field_m - (param2.field_x >> -764999743)), param2.field_q + param4 + -5, 16777215, -1);
-          return;
-        } else {
-          mf.field_x.c(param3, param0 - (-param2.field_m - (param2.field_x >> -764999743)), param2.field_q + param4 + -5, 16777215, -1);
-          return;
+        try {
+            if (param1) {
+                Object var7 = null;
+                ((wd) this).a((ja) null, -116);
+            }
+            mf.field_x.c(param3, param0 - (-param2.field_m - (param2.field_x >> 1)), param2.field_q + param4 + -5, 16777215, -1);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "wd.M(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 
@@ -29,7 +28,7 @@ final class wd extends ji {
         int var6 = 0;
         super.a(param0, param1, (byte) 119, param3, param4);
         if (param2 > 99) {
-          var6 = -130 + param4 >> -914328031;
+          var6 = -130 + param4 >> 1;
           if (!((wd) this).field_J) {
             ((wd) this).field_O.a(0, param1, (byte) 108, var6, 25);
             ((wd) this).field_M.a(0, param1, (byte) 122, var6 - -45, 25);
@@ -43,7 +42,7 @@ final class wd extends ji {
           }
         } else {
           ((wd) this).field_M = null;
-          var6 = -130 + param4 >> -914328031;
+          var6 = -130 + param4 >> 1;
           if (!((wd) this).field_J) {
             ((wd) this).field_O.a(0, param1, (byte) 108, var6, 25);
             ((wd) this).field_M.a(0, param1, (byte) 122, var6 - -45, 25);
@@ -121,105 +120,99 @@ final class wd extends ji {
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_1_0 = 0;
         int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
         try {
-          if (param0 >= 65) {
-            return stackIn_2_0;
-          } else {
-            stackOut_1_0 = -36;
-            stackIn_2_0 = stackOut_1_0;
+          L0: {
+            if (param0 >= 65) {
+              stackOut_3_0 = Integer.parseInt(((wd) this).field_R.field_s);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = -36;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
+            }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          stackOut_3_0 = Integer.parseInt(((wd) this).field_R.field_s);
-          stackIn_4_0 = stackOut_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_4_0;
     }
 
     final int f(byte param0) {
         int var2 = 0;
         NumberFormatException var3 = null;
         int stackIn_2_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_1_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var2 = 74 / ((param0 - 48) / 42);
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        stackOut_1_0 = Integer.parseInt(((wd) this).field_M.field_s) - 1;
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return stackIn_2_0;
-                }
-                case 3: {
-                    var3 = (NumberFormatException) (Object) caughtException;
-                    return -1;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        var2 = 74 / ((param0 - 48) / 42);
+        try {
+          L0: {
+            stackOut_1_0 = Integer.parseInt(((wd) this).field_M.field_s) - 1;
+            stackIn_2_0 = stackOut_1_0;
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
+        return stackIn_2_0;
     }
 
     final void a(ja param0, int param1) {
-        super.a(param0, -93);
-        if (param1 >= -47) {
-          ((wd) this).field_M = null;
-          ((wd) this).field_O.field_u = (ko) (Object) param0;
-          ((wd) this).field_M.field_u = (ko) (Object) param0;
-          ((wd) this).field_R.field_u = (ko) (Object) param0;
-          return;
-        } else {
-          ((wd) this).field_O.field_u = (ko) (Object) param0;
-          ((wd) this).field_M.field_u = (ko) (Object) param0;
-          ((wd) this).field_R.field_u = (ko) (Object) param0;
-          return;
+        try {
+            super.a(param0, -93);
+            if (param1 >= -47) {
+                ((wd) this).field_M = null;
+            }
+            ((wd) this).field_O.field_u = (ko) (Object) param0;
+            ((wd) this).field_M.field_u = (ko) (Object) param0;
+            ((wd) this).field_R.field_u = (ko) (Object) param0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "wd.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     wd(iq param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
-        ((wd) this).a(param3, param5, (byte) 110, param2, param4);
+        try {
+            ((wd) this).a(param3, param5, (byte) 110, param2, param4);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "wd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     private wd(iq param0, boolean param1) {
         super(0, 0, 0, 0, (iq) null);
-        ((wd) this).field_O = (go) (Object) new fa("", (ko) null, 2);
-        ((wd) this).field_M = (go) (Object) new fa("", (ko) null, 2);
-        ((wd) this).field_R = (go) (Object) new fa("", (ko) null, 4);
-        ((wd) this).field_R.field_p = param0;
-        ((wd) this).field_M.field_p = param0;
-        ((wd) this).field_O.field_p = param0;
-        ((wd) this).field_J = param1 ? true : false;
-        if (!((wd) this).field_J) {
-            ((wd) this).b((byte) -57, (vg) (Object) ((wd) this).field_O);
-            ((wd) this).b((byte) -62, (vg) (Object) ((wd) this).field_M);
-        } else {
-            ((wd) this).b((byte) -124, (vg) (Object) ((wd) this).field_M);
-            ((wd) this).b((byte) -121, (vg) (Object) ((wd) this).field_O);
+        try {
+            ((wd) this).field_O = (go) (Object) new fa("", (ko) null, 2);
+            ((wd) this).field_M = (go) (Object) new fa("", (ko) null, 2);
+            ((wd) this).field_R = (go) (Object) new fa("", (ko) null, 4);
+            ((wd) this).field_R.field_p = param0;
+            ((wd) this).field_M.field_p = param0;
+            ((wd) this).field_O.field_p = param0;
+            ((wd) this).field_J = param1 ? true : false;
+            if (!((wd) this).field_J) {
+                ((wd) this).b((byte) -57, (vg) (Object) ((wd) this).field_O);
+                ((wd) this).b((byte) -62, (vg) (Object) ((wd) this).field_M);
+            } else {
+                ((wd) this).b((byte) -124, (vg) (Object) ((wd) this).field_M);
+                ((wd) this).b((byte) -121, (vg) (Object) ((wd) this).field_O);
+            }
+            ((wd) this).b((byte) -71, (vg) (Object) ((wd) this).field_R);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "wd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((wd) this).b((byte) -71, (vg) (Object) ((wd) this).field_R);
     }
 
     final static int a(int param0, byte param1, int param2) {
         int var3 = 0;
         var3 = 26 % ((80 - param1) / 43);
-        if (-3 < (param2 ^ -1)) {
+        if (param2 < 2) {
           if (param0 < 5) {
             return 0;
           } else {
@@ -231,7 +224,7 @@ final class wd extends ji {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1 + 0, param2, param3);
+        super.a(param0, param1, param2, param3);
         if (0 != param0) {
           return;
         } else {
@@ -256,18 +249,9 @@ final class wd extends ji {
 
     public static void e(boolean param0) {
         field_L = null;
-        if (param0) {
-          field_Q = null;
-          field_K = null;
-          field_Q = null;
-          field_P = null;
-          return;
-        } else {
-          field_K = null;
-          field_Q = null;
-          field_P = null;
-          return;
-        }
+        field_K = null;
+        field_Q = null;
+        field_P = null;
     }
 
     final int d(boolean param0) {
@@ -275,21 +259,26 @@ final class wd extends ji {
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_1_0 = 0;
         int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
         try {
-          if (!param0) {
-            return stackIn_2_0;
-          } else {
-            stackOut_1_0 = 121;
-            stackIn_2_0 = stackOut_1_0;
+          L0: {
+            if (!param0) {
+              stackOut_3_0 = Integer.parseInt(((wd) this).field_O.field_s);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 121;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
+            }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          stackOut_3_0 = Integer.parseInt(((wd) this).field_O.field_s);
-          stackIn_4_0 = stackOut_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_4_0;
     }
 
     static {
@@ -297,7 +286,7 @@ final class wd extends ji {
     }
 
     private static void $cfr$clinit() {
-        field_L = new char[]{(char)91, (char)93, (char)35};
+        field_L = new char[]{'[', ']', '#'};
         field_P = new pf();
         field_Q = "Sound: ";
         field_K = "No spectators";

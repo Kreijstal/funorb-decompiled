@@ -7,7 +7,11 @@ final class jc extends java.awt.Canvas {
     private java.awt.Component field_a;
 
     public final void paint(java.awt.Graphics param0) {
-        ((jc) this).field_a.paint(param0);
+        try {
+            ((jc) this).field_a.paint(param0);
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "jc.paint(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(byte param0) {
@@ -17,20 +21,23 @@ final class jc extends java.awt.Canvas {
     }
 
     public static void a(int param0) {
-        if (param0 >= -14) {
-            field_b = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
     public final void update(java.awt.Graphics param0) {
-        ((jc) this).field_a.update(param0);
+        try {
+            ((jc) this).field_a.update(param0);
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "jc.update(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     jc(java.awt.Component param0) {
-        ((jc) this).field_a = param0;
+        try {
+            ((jc) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "jc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

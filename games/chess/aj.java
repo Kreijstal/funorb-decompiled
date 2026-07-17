@@ -14,86 +14,100 @@ final class aj {
     public static void a(int param0) {
         field_b = null;
         field_d = null;
-        if (param0 != 0) {
-            Object var2 = null;
-            ci discarded$0 = aj.a(-104, 12, 19, -21, -33, 26, (lh) null, 114, 23, (byte) 6, -99, -41, -16);
-        }
     }
 
     final static void a(boolean param0, boolean param1) {
-        id stackIn_3_0 = null;
-        id stackOut_2_0 = null;
-        id stackOut_1_0 = null;
-        L0: {
-          if (!param0) {
-            stackOut_2_0 = new id(sg.field_b, de.field_d);
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = new id(jf.field_d, ao.field_b);
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        qa.field_f = stackIn_3_0;
+        qa.field_f = param0 ? new id(jf.field_d, ao.field_b) : new id(sg.field_b, de.field_d);
         fm.field_T = new ci(0L, (ci) null);
         fm.field_T.a((byte) 127, (ci) (Object) qa.field_f.field_a);
         fm.field_T.a((byte) 123, sc.field_d);
         ah.field_i = new ci(0L, ki.field_P);
-        if (!param1) {
-          aj.a(false, true);
-          dn.field_c = new ci(0L, (ci) null);
-          ah.field_i.a((byte) 123, qf.field_f);
-          ah.field_i.a((byte) 126, dn.field_c);
-          dn.field_c.a((byte) 126, bh.field_G);
-          dn.field_c.a((byte) 123, hn.field_d);
-          cf.a(122, param0);
-          return;
-        } else {
-          dn.field_c = new ci(0L, (ci) null);
-          ah.field_i.a((byte) 123, qf.field_f);
-          ah.field_i.a((byte) 126, dn.field_c);
-          dn.field_c.a((byte) 126, bh.field_G);
-          dn.field_c.a((byte) 123, hn.field_d);
-          cf.a(122, param0);
-          return;
-        }
+        dn.field_c = new ci(0L, (ci) null);
+        ah.field_i.a((byte) 123, qf.field_f);
+        ah.field_i.a((byte) 126, dn.field_c);
+        dn.field_c.a((byte) 126, bh.field_G);
+        dn.field_c.a((byte) 123, hn.field_d);
+        cf.a(122, param0);
     }
 
     final static void a(byte param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
-        ci.field_J = tk.field_h.d(param0 ^ 49);
-        if (param0 != 49) {
-          field_d = null;
-          var2 = (CharSequence) (Object) ci.field_J;
-          cc.field_A = ad.a(var2, -2);
-          return;
-        } else {
-          var3 = (CharSequence) (Object) ci.field_J;
-          cc.field_A = ad.a(var3, -2);
-          return;
-        }
+        ci.field_J = tk.field_h.d(0);
+        CharSequence var2 = (CharSequence) (Object) ci.field_J;
+        cc.field_A = ad.a(var2, -2);
     }
 
     final static ci a(boolean param0) {
-        if (param0) {
-            return null;
-        }
         return uc.b(-17260);
     }
 
     final static ci a(int param0, int param1, int param2, int param3, int param4, int param5, lh param6, int param7, int param8, byte param9, int param10, int param11, int param12) {
-        ci var13 = new ci(0L, (ci) null);
-        var13.field_Ab = tf.a(param0, (byte) -46, param1);
-        int var14 = 38 % ((param9 - 54) / 62);
-        var13.field_Q = tf.a(param11, (byte) -46, param10);
-        var13.field_Z = tf.a(param2, (byte) -46, param12);
-        var13.field_ab = tf.a(param5, (byte) -46, param7);
-        var13.field_D = tf.a(param8, (byte) -46, param3);
-        var13.field_xb = param6;
-        var13.field_ib = param4;
-        return var13;
+        ci var13 = null;
+        RuntimeException var13_ref = null;
+        int var14 = 0;
+        ci stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ci stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var13 = new ci(0L, (ci) null);
+            var13.field_Ab = tf.a(param0, (byte) -46, param1);
+            var14 = 38 % ((param9 - 54) / 62);
+            var13.field_Q = tf.a(param11, (byte) -46, param10);
+            var13.field_Z = tf.a(param2, (byte) -46, param12);
+            var13.field_ab = tf.a(param5, (byte) -46, param7);
+            var13.field_D = tf.a(param8, (byte) -46, param3);
+            var13.field_xb = param6;
+            var13.field_ib = param4;
+            stackOut_0_0 = (ci) var13;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var13_ref = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var13_ref;
+            stackOut_2_1 = new StringBuilder().append("aj.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param6 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 41);
+        }
+        return stackIn_1_0;
     }
 
     aj(boolean param0) {

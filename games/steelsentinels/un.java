@@ -23,20 +23,15 @@ final class un {
         field_f = null;
         field_m = null;
         field_c = null;
-        if (param0) {
-          return;
-        } else {
-          field_e = null;
-          field_j = null;
-          field_o = null;
-          field_d = null;
-          field_k = null;
-          field_a = null;
-          field_h = null;
-          field_l = null;
-          field_b = null;
-          return;
-        }
+        field_e = null;
+        field_j = null;
+        field_o = null;
+        field_d = null;
+        field_k = null;
+        field_a = null;
+        field_h = null;
+        field_l = null;
+        field_b = null;
     }
 
     final static void a(int param0, int param1) {
@@ -44,30 +39,18 @@ final class un {
         uc.field_a = 0;
         uf.field_a = new int[3];
         ph.field_e = new na[15 * param0];
-        int var2 = -4 % ((param1 - 79) / 34);
+        int var2 = 0;
     }
 
     final static void a(byte param0) {
         int var1 = 0;
-        if (param0 >= 34) {
-          if (224 > ll.field_q) {
-            var1 = ll.field_q % 32;
-            ef.a(1, -var1 + (ll.field_q + 32));
-            return;
-          } else {
-            ef.a(1, 256);
-            return;
-          }
+        if (224 > ll.field_q) {
+          var1 = ll.field_q % 32;
+          ef.a(1, -var1 + (ll.field_q + 32));
+          return;
         } else {
-          field_g = null;
-          if (224 > ll.field_q) {
-            var1 = ll.field_q % 32;
-            ef.a(1, -var1 + (ll.field_q + 32));
-            return;
-          } else {
-            ef.a(1, 256);
-            return;
-          }
+          ef.a(1, 256);
+          return;
         }
     }
 

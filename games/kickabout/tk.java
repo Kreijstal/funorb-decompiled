@@ -221,7 +221,7 @@ final class tk extends hd {
         L10: {
           if (param0) {
             L11: {
-              if (-1 >= (-(((tk) this).field_Db.field_v + ((tk) this).field_Db.field_J) ^ -1)) {
+              if (-(((tk) this).field_Db.field_v + ((tk) this).field_Db.field_J) >= 0) {
                 break L11;
               } else {
                 ((tk) this).field_Db.field_v = -((tk) this).field_Db.field_J;
@@ -229,7 +229,7 @@ final class tk extends hd {
               }
             }
             L12: {
-              if ((-(((tk) this).field_Db.field_fb + ((tk) this).field_Db.field_s) ^ -1) <= -1) {
+              if (-(((tk) this).field_Db.field_fb + ((tk) this).field_Db.field_s) >= 0) {
                 break L12;
               } else {
                 ((tk) this).field_Db.field_fb = -((tk) this).field_Db.field_s;
@@ -275,7 +275,7 @@ final class tk extends hd {
                 break L16;
               }
             }
-            if (-1 >= (-(((tk) this).field_Db.field_fb + ((tk) this).field_Db.field_s) ^ -1)) {
+            if (-(((tk) this).field_Db.field_fb + ((tk) this).field_Db.field_s) >= 0) {
               break L10;
             } else {
               ((tk) this).field_Db.field_fb = -((tk) this).field_Db.field_s;
@@ -307,26 +307,34 @@ final class tk extends hd {
 
     tk(long param0, hd param1, hd param2, ji param3) {
         super(param0, (hd) null);
-        ((tk) this).field_Gb = new hd(0L, param2);
-        ((tk) this).field_Eb = new ji(0L, param3, true);
-        ((tk) this).field_Kb = new ji(0L, param3, false);
-        ((tk) this).a((byte) -126, ((tk) this).field_Gb);
-        ((tk) this).a((byte) -115, (hd) (Object) ((tk) this).field_Eb);
-        ((tk) this).a((byte) -128, (hd) (Object) ((tk) this).field_Kb);
-        ((tk) this).field_Db = param1;
-        ((tk) this).field_Gb.a((byte) -117, param1);
+        try {
+            ((tk) this).field_Gb = new hd(0L, param2);
+            ((tk) this).field_Eb = new ji(0L, param3, true);
+            ((tk) this).field_Kb = new ji(0L, param3, false);
+            ((tk) this).a((byte) -126, ((tk) this).field_Gb);
+            ((tk) this).a((byte) -115, (hd) (Object) ((tk) this).field_Eb);
+            ((tk) this).a((byte) -128, (hd) (Object) ((tk) this).field_Kb);
+            ((tk) this).field_Db = param1;
+            ((tk) this).field_Gb.a((byte) -117, param1);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "tk.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     tk(long param0, hd param1, hd param2, ji param3, ji param4) {
         super(param0, (hd) null);
-        ((tk) this).field_Gb = new hd(0L, param2);
-        ((tk) this).field_Eb = new ji(0L, param3, true);
-        ((tk) this).field_Kb = new ji(0L, param4, false);
-        ((tk) this).a((byte) -115, ((tk) this).field_Gb);
-        ((tk) this).a((byte) -105, (hd) (Object) ((tk) this).field_Eb);
-        ((tk) this).a((byte) -117, (hd) (Object) ((tk) this).field_Kb);
-        ((tk) this).field_Db = param1;
-        ((tk) this).field_Gb.a((byte) -110, param1);
+        try {
+            ((tk) this).field_Gb = new hd(0L, param2);
+            ((tk) this).field_Eb = new ji(0L, param3, true);
+            ((tk) this).field_Kb = new ji(0L, param4, false);
+            ((tk) this).a((byte) -115, ((tk) this).field_Gb);
+            ((tk) this).a((byte) -105, (hd) (Object) ((tk) this).field_Eb);
+            ((tk) this).a((byte) -117, (hd) (Object) ((tk) this).field_Kb);
+            ((tk) this).field_Db = param1;
+            ((tk) this).field_Gb.a((byte) -110, param1);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "tk.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void i(byte param0) {

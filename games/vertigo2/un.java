@@ -16,9 +16,9 @@ final class un extends cr {
         if (0 != ((un) this).field_Ob) {
           return false;
         } else {
-          if ((de.field_f ^ -1) == -86) {
+          if (de.field_f == 85) {
             L0: {
-              if ((((un) this).field_Kb.length() ^ -1) < -1) {
+              if (((un) this).field_Kb.length() > 0) {
                 StringBuilder discarded$25 = w.a(true, ' ', -1 + ((un) this).field_Kb.length(), ((un) this).field_Kb);
                 break L0;
               } else {
@@ -51,7 +51,7 @@ final class un extends cr {
                       if (0 >= ((un) this).field_Kb.length()) {
                         L3: {
                           ((un) this).field_Ob = 1;
-                          if ((de.field_f ^ -1) == -14) {
+                          if (de.field_f == 13) {
                             ((un) this).field_Ob = 1;
                             break L3;
                           } else {
@@ -63,7 +63,7 @@ final class un extends cr {
                         ((un) this).field_S = ((un) this).field_Kb.toString();
                         ((un) this).field_Ob = 2;
                         L4: {
-                          if ((de.field_f ^ -1) == -14) {
+                          if (de.field_f == 13) {
                             ((un) this).field_Ob = 1;
                             break L4;
                           } else {
@@ -74,7 +74,7 @@ final class un extends cr {
                       }
                     } else {
                       L5: {
-                        if ((de.field_f ^ -1) == -14) {
+                        if (de.field_f == 13) {
                           ((un) this).field_Ob = 1;
                           break L5;
                         } else {
@@ -91,7 +91,7 @@ final class un extends cr {
                           if (0 >= ((un) this).field_Kb.length()) {
                             L6: {
                               ((un) this).field_Ob = 1;
-                              if ((de.field_f ^ -1) == -14) {
+                              if (de.field_f == 13) {
                                 ((un) this).field_Ob = 1;
                                 break L6;
                               } else {
@@ -103,7 +103,7 @@ final class un extends cr {
                             L7: {
                               ((un) this).field_S = ((un) this).field_Kb.toString();
                               ((un) this).field_Ob = 2;
-                              if ((de.field_f ^ -1) == -14) {
+                              if (de.field_f == 13) {
                                 ((un) this).field_Ob = 1;
                                 break L7;
                               } else {
@@ -114,7 +114,7 @@ final class un extends cr {
                           }
                         } else {
                           L8: {
-                            if ((de.field_f ^ -1) == -14) {
+                            if (de.field_f == 13) {
                               ((un) this).field_Ob = 1;
                               break L8;
                             } else {
@@ -140,7 +140,7 @@ final class un extends cr {
                           }
                         }
                         L10: {
-                          if ((de.field_f ^ -1) == -14) {
+                          if (de.field_f == 13) {
                             ((un) this).field_Ob = 1;
                             break L10;
                           } else {
@@ -155,7 +155,7 @@ final class un extends cr {
                           if (0 >= ((un) this).field_Kb.length()) {
                             L11: {
                               ((un) this).field_Ob = 1;
-                              if ((de.field_f ^ -1) == -14) {
+                              if (de.field_f == 13) {
                                 ((un) this).field_Ob = 1;
                                 break L11;
                               } else {
@@ -167,7 +167,7 @@ final class un extends cr {
                             L12: {
                               ((un) this).field_S = ((un) this).field_Kb.toString();
                               ((un) this).field_Ob = 2;
-                              if ((de.field_f ^ -1) == -14) {
+                              if (de.field_f == 13) {
                                 ((un) this).field_Ob = 1;
                                 break L12;
                               } else {
@@ -178,7 +178,7 @@ final class un extends cr {
                           }
                         } else {
                           L13: {
-                            if ((de.field_f ^ -1) == -14) {
+                            if (de.field_f == 13) {
                               ((un) this).field_Ob = 1;
                               break L13;
                             } else {
@@ -194,7 +194,7 @@ final class un extends cr {
                             L14: {
                               ((un) this).field_S = ((un) this).field_Kb.toString();
                               ((un) this).field_Ob = 2;
-                              if ((de.field_f ^ -1) == -14) {
+                              if (de.field_f == 13) {
                                 ((un) this).field_Ob = 1;
                                 break L14;
                               } else {
@@ -205,7 +205,7 @@ final class un extends cr {
                           } else {
                             L15: {
                               ((un) this).field_Ob = 1;
-                              if ((de.field_f ^ -1) == -14) {
+                              if (de.field_f == 13) {
                                 ((un) this).field_Ob = 1;
                                 break L15;
                               } else {
@@ -216,7 +216,7 @@ final class un extends cr {
                           }
                         } else {
                           L16: {
-                            if ((de.field_f ^ -1) == -14) {
+                            if (de.field_f == 13) {
                               ((un) this).field_Ob = 1;
                               break L16;
                             } else {
@@ -266,7 +266,7 @@ final class un extends cr {
                     }
                   }
                   L20: {
-                    if ((de.field_f ^ -1) == -14) {
+                    if (de.field_f == 13) {
                       ((un) this).field_Ob = 1;
                       break L20;
                     } else {
@@ -301,7 +301,7 @@ final class un extends cr {
                     }
                   }
                   L23: {
-                    if ((de.field_f ^ -1) == -14) {
+                    if (de.field_f == 13) {
                       ((un) this).field_Ob = 1;
                       break L23;
                     } else {
@@ -317,7 +317,7 @@ final class un extends cr {
                           L24: {
                             ((un) this).field_S = ((un) this).field_Kb.toString();
                             ((un) this).field_Ob = 2;
-                            if ((de.field_f ^ -1) == -14) {
+                            if (de.field_f == 13) {
                               ((un) this).field_Ob = 1;
                               break L24;
                             } else {
@@ -328,7 +328,7 @@ final class un extends cr {
                         } else {
                           L25: {
                             ((un) this).field_Ob = 1;
-                            if ((de.field_f ^ -1) == -14) {
+                            if (de.field_f == 13) {
                               ((un) this).field_Ob = 1;
                               break L25;
                             } else {
@@ -339,7 +339,7 @@ final class un extends cr {
                         }
                       } else {
                         L26: {
-                          if ((de.field_f ^ -1) == -14) {
+                          if (de.field_f == 13) {
                             ((un) this).field_Ob = 1;
                             break L26;
                           } else {
@@ -365,7 +365,7 @@ final class un extends cr {
                         }
                       }
                       L28: {
-                        if ((de.field_f ^ -1) == -14) {
+                        if (de.field_f == 13) {
                           ((un) this).field_Ob = 1;
                           break L28;
                         } else {
@@ -399,7 +399,7 @@ final class un extends cr {
                       }
                     }
                     L31: {
-                      if ((de.field_f ^ -1) == -14) {
+                      if (de.field_f == 13) {
                         ((un) this).field_Ob = 1;
                         break L31;
                       } else {
@@ -414,7 +414,7 @@ final class un extends cr {
               if (param0 == 1) {
                 if (84 != de.field_f) {
                   L32: {
-                    if ((de.field_f ^ -1) == -14) {
+                    if (de.field_f == 13) {
                       ((un) this).field_Ob = 1;
                       break L32;
                     } else {
@@ -426,7 +426,7 @@ final class un extends cr {
                   if (0 >= ((un) this).field_Kb.length()) {
                     L33: {
                       ((un) this).field_Ob = 1;
-                      if ((de.field_f ^ -1) == -14) {
+                      if (de.field_f == 13) {
                         ((un) this).field_Ob = 1;
                         break L33;
                       } else {
@@ -438,7 +438,7 @@ final class un extends cr {
                     L34: {
                       ((un) this).field_S = ((un) this).field_Kb.toString();
                       ((un) this).field_Ob = 2;
-                      if ((de.field_f ^ -1) == -14) {
+                      if (de.field_f == 13) {
                         ((un) this).field_Ob = 1;
                         break L34;
                       } else {
@@ -455,7 +455,7 @@ final class un extends cr {
                     L35: {
                       ((un) this).field_S = ((un) this).field_Kb.toString();
                       ((un) this).field_Ob = 2;
-                      if ((de.field_f ^ -1) == -14) {
+                      if (de.field_f == 13) {
                         ((un) this).field_Ob = 1;
                         break L35;
                       } else {
@@ -466,7 +466,7 @@ final class un extends cr {
                   } else {
                     L36: {
                       ((un) this).field_Ob = 1;
-                      if ((de.field_f ^ -1) == -14) {
+                      if (de.field_f == 13) {
                         ((un) this).field_Ob = 1;
                         break L36;
                       } else {
@@ -477,7 +477,7 @@ final class un extends cr {
                   }
                 } else {
                   L37: {
-                    if ((de.field_f ^ -1) == -14) {
+                    if (de.field_f == 13) {
                       ((un) this).field_Ob = 1;
                       break L37;
                     } else {
@@ -543,7 +543,7 @@ final class un extends cr {
                           }
                         }
                       }
-                      if ((de.field_f ^ -1) != -14) {
+                      if (de.field_f != 13) {
                         return true;
                       } else {
                         ((un) this).field_Ob = 1;
@@ -577,7 +577,7 @@ final class un extends cr {
                     }
                   }
                   L46: {
-                    if ((de.field_f ^ -1) == -14) {
+                    if (de.field_f == 13) {
                       ((un) this).field_Ob = 1;
                       break L46;
                     } else {
@@ -613,7 +613,7 @@ final class un extends cr {
                       }
                     }
                     L49: {
-                      if ((de.field_f ^ -1) == -14) {
+                      if (de.field_f == 13) {
                         ((un) this).field_Ob = 1;
                         break L49;
                       } else {
@@ -633,7 +633,7 @@ final class un extends cr {
                   L50: {
                     ((un) this).field_S = ((un) this).field_Kb.toString();
                     ((un) this).field_Ob = 2;
-                    if ((de.field_f ^ -1) == -14) {
+                    if (de.field_f == 13) {
                       ((un) this).field_Ob = 1;
                       break L50;
                     } else {
@@ -644,7 +644,7 @@ final class un extends cr {
                 } else {
                   L51: {
                     ((un) this).field_Ob = 1;
-                    if ((de.field_f ^ -1) == -14) {
+                    if (de.field_f == 13) {
                       ((un) this).field_Ob = 1;
                       break L51;
                     } else {
@@ -655,7 +655,7 @@ final class un extends cr {
                 }
               } else {
                 L52: {
-                  if ((de.field_f ^ -1) == -14) {
+                  if (de.field_f == 13) {
                     ((un) this).field_Ob = 1;
                     break L52;
                   } else {
@@ -681,7 +681,7 @@ final class un extends cr {
                 }
               }
               L54: {
-                if ((de.field_f ^ -1) == -14) {
+                if (de.field_f == 13) {
                   ((un) this).field_Ob = 1;
                   break L54;
                 } else {
@@ -695,13 +695,6 @@ final class un extends cr {
     }
 
     public static void k(int param0) {
-        if (param0 >= -58) {
-            field_Hb = null;
-            field_Hb = null;
-            field_Mb = null;
-            field_Lb = null;
-            return;
-        }
         field_Hb = null;
         field_Mb = null;
         field_Lb = null;
@@ -715,97 +708,107 @@ final class un extends cr {
           if (!param0) {
             ((un) this).field_Jb.field_S = ((un) this).field_Kb.toString();
             if (param0) {
-              if (kf.field_c != -1) {
-                if (-1 == ((un) this).field_tb) {
-                  ((un) this).field_Ob = 1;
-                  return ((un) this).field_Ob;
+              L0: {
+                if (kf.field_c == 0) {
+                  break L0;
                 } else {
-                  return ((un) this).field_Ob;
+                  if (((un) this).field_tb == 0) {
+                    ((un) this).field_Ob = 1;
+                    break L0;
+                  } else {
+                    return ((un) this).field_Ob;
+                  }
                 }
-              } else {
-                return ((un) this).field_Ob;
               }
+              return ((un) this).field_Ob;
             } else {
               return ((un) this).field_Ob;
             }
           } else {
-            L0: while (true) {
+            L1: while (true) {
               if (gf.a(false)) {
-                L1: {
-                  if ((de.field_f ^ -1) != -86) {
-                    break L1;
+                L2: {
+                  if (de.field_f != 85) {
+                    break L2;
                   } else {
-                    if ((((un) this).field_Kb.length() ^ -1) < -1) {
+                    if (((un) this).field_Kb.length() > 0) {
                       StringBuilder discarded$5 = w.a(true, ' ', ((un) this).field_Kb.length() + -1, ((un) this).field_Kb);
-                      break L1;
+                      break L2;
                     } else {
-                      break L1;
+                      break L2;
                     }
                   }
                 }
-                L2: {
+                L3: {
                   if (gi.a((CharSequence) (Object) ((un) this).field_Kb, ji.field_r, (byte) 31)) {
                     StringBuilder discarded$6 = ((un) this).field_Kb.append(ji.field_r);
-                    break L2;
+                    break L3;
                   } else {
-                    L3: {
+                    L4: {
                       if (0 != ((un) this).field_Kb.length()) {
-                        break L3;
+                        break L4;
                       } else {
                         if (ji.field_r == 91) {
                           StringBuilder discarded$7 = ((un) this).field_Kb.append(ji.field_r);
-                          break L2;
-                        } else {
                           break L3;
-                        }
-                      }
-                    }
-                    L4: {
-                      if (1 != ((un) this).field_Kb.length()) {
-                        break L4;
-                      } else {
-                        if (35 == ji.field_r) {
-                          StringBuilder discarded$8 = ((un) this).field_Kb.append(ji.field_r);
-                          break L2;
                         } else {
                           break L4;
                         }
                       }
                     }
+                    L5: {
+                      if (1 != ((un) this).field_Kb.length()) {
+                        break L5;
+                      } else {
+                        if (35 == ji.field_r) {
+                          StringBuilder discarded$8 = ((un) this).field_Kb.append(ji.field_r);
+                          break L3;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    }
                     if (93 == ji.field_r) {
                       StringBuilder discarded$9 = ((un) this).field_Kb.append(ji.field_r);
-                      break L2;
+                      break L3;
                     } else {
-                      break L2;
+                      break L3;
                     }
                   }
                 }
-                if ((de.field_f ^ -1) != -85) {
+                if (de.field_f != 84) {
                   if (de.field_f == 13) {
                     return 1;
                   } else {
-                    continue L0;
+                    continue L1;
                   }
                 } else {
-                  if ((((un) this).field_Kb.length() ^ -1) < -1) {
+                  if (((un) this).field_Kb.length() <= 0) {
+                    return 1;
+                  } else {
                     ((un) this).field_S = ((un) this).field_Kb.toString();
                     return 2;
-                  } else {
-                    return 1;
                   }
                 }
               } else {
-                ((un) this).field_Jb.field_S = ((un) this).field_Kb.toString();
-                if (kf.field_c != -1) {
-                  if (-1 != ((un) this).field_tb) {
-                    return ((un) this).field_Ob;
+                L6: {
+                  ((un) this).field_Jb.field_S = ((un) this).field_Kb.toString();
+                  if (!param0) {
+                    break L6;
                   } else {
-                    ((un) this).field_Ob = 1;
-                    return ((un) this).field_Ob;
+                    if (kf.field_c == 0) {
+                      break L6;
+                    } else {
+                      if (((un) this).field_tb == 0) {
+                        ((un) this).field_Ob = 1;
+                        break L6;
+                      } else {
+                        return ((un) this).field_Ob;
+                      }
+                    }
                   }
-                } else {
-                  return ((un) this).field_Ob;
                 }
+                return ((un) this).field_Ob;
               }
             }
           }
@@ -816,22 +819,198 @@ final class un extends cr {
 
     un(int param0, int param1, int param2, int param3, String param4, cr param5, cr param6, cr param7) {
         super(0L, param5);
+        RuntimeException var9 = null;
+        int var9_int = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         ((un) this).field_Ob = 0;
-        ((un) this).field_Nb = new cr(0L, param6, param4);
-        ((un) this).b(((un) this).field_Nb, 127);
-        ((un) this).field_Jb = new cr(0L, param7);
-        ((un) this).field_Jb.field_A = 16764006;
-        ((un) this).b(((un) this).field_Jb, 123);
-        ((un) this).field_Jb.field_J = "|";
-        ((un) this).field_Kb = new StringBuilder(12);
-        int var9 = ((un) this).field_Nb.j(-21391);
-        ((un) this).field_Nb.a(80, var9, r.field_f, 3, 5);
-        ((un) this).field_Jb.a(81, var9, r.field_f, r.field_f + 3, 5);
-        int var10 = 5 + var9 + 5;
-        int var11 = 3 + (3 - -(2 * r.field_f));
-        int var12 = jf.a(var10, param2, param0, 1);
-        int var13 = dm.a(param3, 0, var11, param1);
-        ((un) this).a(123, var10, var11, var13, var12);
+        try {
+          L0: {
+            ((un) this).field_Nb = new cr(0L, param6, param4);
+            ((un) this).b(((un) this).field_Nb, 127);
+            ((un) this).field_Jb = new cr(0L, param7);
+            ((un) this).field_Jb.field_A = 16764006;
+            ((un) this).b(((un) this).field_Jb, 123);
+            ((un) this).field_Jb.field_J = "|";
+            ((un) this).field_Kb = new StringBuilder(12);
+            var9_int = ((un) this).field_Nb.j(-21391);
+            ((un) this).field_Nb.a(80, var9_int, r.field_f, 3, 5);
+            ((un) this).field_Jb.a(81, var9_int, r.field_f, r.field_f + 3, 5);
+            var10 = 5 + var9_int + 5;
+            var11 = 3 + (3 - -(2 * r.field_f));
+            var12 = jf.a(var10, param2, param0, 1);
+            var13 = dm.a(param3, 0, var11, param1);
+            ((un) this).a(123, var10, var11, var13, var12);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var9 = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) var9;
+            stackOut_3_1 = new StringBuilder().append("un.<init>(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param4 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L1;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param5 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param6 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param7 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+        }
     }
 
     final static boolean a(byte param0) {
@@ -860,7 +1039,7 @@ final class un extends cr {
     }
 
     final static cr b(byte param0) {
-        int var1 = -13 / ((37 - param0) / 47);
+        int var1 = 13;
         return pk.e(2);
     }
 

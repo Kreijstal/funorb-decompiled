@@ -24,22 +24,22 @@ final class ci extends ki {
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
         int stackIn_18_2 = 0;
-        int stackOut_15_0;
-        int stackOut_15_1;
-        int stackOut_17_0;
-        int stackOut_17_1;
-        int stackOut_17_2;
-        int stackOut_16_0;
-        int stackOut_16_1;
-        int stackOut_16_2;
-        int stackOut_5_0;
-        int stackOut_5_1;
-        int stackOut_7_0;
-        int stackOut_7_1;
-        int stackOut_7_2;
-        int stackOut_6_0;
-        int stackOut_6_1;
-        int stackOut_6_2;
+        int stackOut_15_0 = 0;
+        int stackOut_15_1 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_17_1 = 0;
+        int stackOut_17_2 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_16_1 = 0;
+        int stackOut_16_2 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_5_1 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_7_1 = 0;
+        int stackOut_7_2 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_6_1 = 0;
+        int stackOut_6_2 = 0;
         if (!param0) {
           jp discarded$1 = ((ci) this).c((byte) 70);
           if (((ci) this).b((byte) -102)) {
@@ -192,7 +192,7 @@ final class ci extends ki {
 
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
-        if ((param1 ^ -1) < 0) {
+        if (param1 > -1) {
           L0: {
             la.a(param2, param3, 153, 238, 0, nj.field_G[param1], 96);
             if (((ci) this).b((byte) -103)) {
@@ -259,10 +259,10 @@ final class ci extends ki {
     final boolean b(byte param0) {
         int stackIn_11_0 = 0;
         int stackIn_24_0 = 0;
-        int stackOut_23_0;
-        int stackOut_22_0;
-        int stackOut_10_0;
-        int stackOut_9_0;
+        int stackOut_23_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_9_0 = 0;
         if (param0 <= -91) {
           if (om.field_fc != null) {
             if (null != pn.field_m) {
@@ -326,16 +326,72 @@ final class ci extends ki {
     }
 
     final static boolean a(String param0, int param1) {
+        RuntimeException var2 = null;
         CharSequence var3 = null;
-        CharSequence var4 = null;
-        if (param1 >= -6) {
-          field_u = -69;
-          var3 = (CharSequence) (Object) param0;
-          return ih.field_d.equals((Object) (Object) gb.a(var3, 92));
-        } else {
-          var4 = (CharSequence) (Object) param0;
-          return ih.field_d.equals((Object) (Object) gb.a(var4, 92));
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_2_0 = false;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 < -6) {
+                break L1;
+              } else {
+                field_u = -69;
+                break L1;
+              }
+            }
+            var3 = (CharSequence) (Object) param0;
+            stackOut_2_0 = ih.field_d.equals((Object) (Object) gb.a(var3, 92));
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("ci.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw qb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
+        return stackIn_3_0;
     }
 
     public static void d(byte param0) {

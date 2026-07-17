@@ -22,9 +22,6 @@ final class ma extends gg {
         int var6 = 0;
         int var7 = stellarshard.field_B;
         pb[] var1 = new pb[sb.field_b];
-        if (param0) {
-            return null;
-        }
         for (var2 = 0; sb.field_b > var2; var2++) {
             var3 = vc.field_b[var2] * ih.field_d[var2];
             var4 = ih.field_b[var2];
@@ -78,8 +75,8 @@ final class ma extends gg {
     final static int a(byte param0, int param1) {
         if (65536L > (long)param1) {
           if (256L > (long)param1) {
-            if ((param1 ^ -1) <= -1) {
-              return ih.field_c[param1] >> 2024515852;
+            if (param1 >= 0) {
+              return ih.field_c[param1] >> 12;
             } else {
               L0: {
                 if (param0 <= -109) {
@@ -92,47 +89,47 @@ final class ma extends gg {
               return -1;
             }
           } else {
-            if (((long)param1 ^ -1L) <= -4097L) {
-              if (-16385L >= ((long)param1 ^ -1L)) {
-                return ih.field_c[param1 >> 2133465032] >> 173214440;
+            if ((long)param1 >= 4096L) {
+              if ((long)param1 >= 16384L) {
+                return ih.field_c[param1 >> 8] >> 8;
               } else {
-                return ih.field_c[param1 >> -733483610] >> -1601561207;
+                return ih.field_c[param1 >> 6] >> 9;
               }
             } else {
-              if (((long)param1 ^ -1L) > -1025L) {
-                return ih.field_c[param1 >> 1121515362] >> 1294266955;
+              if ((long)param1 < 1024L) {
+                return ih.field_c[param1 >> 2] >> 11;
               } else {
-                return ih.field_c[param1 >> 252121668] >> 1055807338;
+                return ih.field_c[param1 >> 4] >> 10;
               }
             }
           }
         } else {
           if (16777216L <= (long)param1) {
             if (268435456L <= (long)param1) {
-              if (((long)param1 ^ -1L) <= -1073741825L) {
-                return ih.field_c[param1 >> 403567960];
+              if ((long)param1 >= 1073741824L) {
+                return ih.field_c[param1 >> 24];
               } else {
-                return ih.field_c[param1 >> 1241439638] >> -1469302271;
+                return ih.field_c[param1 >> 22] >> 1;
               }
             } else {
-              if (-67108865L >= ((long)param1 ^ -1L)) {
-                return ih.field_c[param1 >> -1104637324] >> -2087127678;
+              if ((long)param1 >= 67108864L) {
+                return ih.field_c[param1 >> 20] >> 2;
               } else {
-                return ih.field_c[param1 >> 1024122514] >> 543992579;
+                return ih.field_c[param1 >> 18] >> 3;
               }
             }
           } else {
             if ((long)param1 < 1048576L) {
               if ((long)param1 >= 262144L) {
-                return ih.field_c[param1 >> -768523860] >> -1362527130;
+                return ih.field_c[param1 >> 12] >> 6;
               } else {
-                return ih.field_c[param1 >> 809090442] >> 1750770951;
+                return ih.field_c[param1 >> 10] >> 7;
               }
             } else {
               if (4194304L > (long)param1) {
-                return ih.field_c[param1 >> 178982094] >> 137622405;
+                return ih.field_c[param1 >> 14] >> 5;
               } else {
-                return ih.field_c[param1 >> -85720080] >> -1367985372;
+                return ih.field_c[param1 >> 16] >> 4;
               }
             }
           }
@@ -149,11 +146,15 @@ final class ma extends gg {
         if (param0 != 543992579) {
             return;
         }
-        ((ma) this).field_t = param3;
+        try {
+            ((ma) this).field_t = param3;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "ma.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+        }
     }
 
     public static void a(byte param0) {
-        int var1 = -80 % ((48 - param0) / 32);
+        int var1 = 0;
         field_m = null;
         field_o = null;
         field_s = null;

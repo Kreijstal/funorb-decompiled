@@ -12,10 +12,6 @@ abstract class ta extends l {
     public static void a(boolean param0) {
         field_i = null;
         field_h = null;
-        if (!param0) {
-            Object var2 = null;
-            ta.a((java.applet.Applet) null, -18);
-        }
     }
 
     private final int b(int param0) {
@@ -133,13 +129,13 @@ abstract class ta extends l {
         if (param0 > -119) {
             ((ta) this).field_j = -76;
         }
-        return -1 > (this.b(-126) ^ -1) ? this : this.e((byte) -56).d((byte) -123);
+        return this.b(-126) > 0 ? (ta) this : this.e((byte) -56).d((byte) -123);
     }
 
     final l a(int param0) {
         int var2 = this.b(-115);
         if (!(var2 <= 0)) {
-            return new o(var2, (l) this).a(param0 ^ 0);
+            return new o(var2, (l) this).a(param0);
         }
         if (param0 != -2) {
             ((ta) this).field_e = null;
@@ -154,14 +150,79 @@ abstract class ta extends l {
     final static void a(java.applet.Applet param0, int param1) {
         try {
             java.net.URL var2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-                if (param1 != 19) {
-                    ta.a(true);
+              L0: {
+                try {
+                  L1: {
+                    L2: {
+                      if (param1 == 19) {
+                        break L2;
+                      } else {
+                        ta.a(true);
+                        break L2;
+                      }
+                    }
+                    var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
+                    param0.getAppletContext().showDocument(gh.a(param0, var2, (byte) 67), "_top");
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L3: {
+                    var2_ref = (Exception) (Object) decompiledCaughtException;
+                    var2_ref.printStackTrace();
+                    break L3;
+                  }
                 }
-                var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                param0.getAppletContext().showDocument(gh.a(param0, var2, (byte) 67), "_top");
-            } catch (Exception exception) {
-                exception.printStackTrace();
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_1 = new StringBuilder().append("ta.L(");
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param0 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L4;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L4;
+                }
+              }
+              throw dn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -174,8 +235,12 @@ abstract class ta extends l {
         ((ta) this).field_f = 0;
         ((ta) this).field_g = 19;
         ((ta) this).field_j = 0;
-        ((ta) this).field_e = param0;
-        param0.a((byte) 19, (ta) this);
+        try {
+            ((ta) this).field_e = param0;
+            param0.a((byte) 19, (ta) this);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "ta.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

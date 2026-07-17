@@ -18,16 +18,20 @@ abstract class jb extends tf {
     static int[] field_s;
 
     final static void a(wk param0, int param1, int param2, int param3, int param4) {
-        param0.f(12, (byte) -120);
-        param0.c(17, (byte) -59);
-        int var5 = 76 % ((-70 - param4) / 32);
-        param0.c(param1, (byte) -119);
-        param0.c(param3, (byte) -88);
-        param0.f(param2, (byte) -97);
+        try {
+            param0.f(12, (byte) -120);
+            param0.c(17, (byte) -59);
+            int var5_int = 76 % ((-70 - param4) / 32);
+            param0.c(param1, (byte) -119);
+            param0.c(param3, (byte) -88);
+            param0.f(param2, (byte) -97);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "jb.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     public static void c(int param0) {
-        int var1 = 95 / ((53 - param0) / 55);
+        int var1 = -95;
         field_z = null;
         field_u = null;
         field_m = null;
@@ -39,10 +43,10 @@ abstract class jb extends tf {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var8 = 116 / ((81 - param2) / 39);
-        int var6 = ((jb) this).field_n << 1634213347;
-        param3 = (var6 & 15) + (param3 << -589035420);
-        int var7 = ((jb) this).field_w << 121130179;
-        param1 = (var7 & 15) + (param1 << 1819411940);
+        int var6 = ((jb) this).field_n << 3;
+        param3 = (var6 & 15) + (param3 << 4);
+        int var7 = ((jb) this).field_w << 3;
+        param1 = (var7 & 15) + (param1 << 4);
         ((jb) this).a(var6, var7, param3, param1, param4, param0);
     }
 

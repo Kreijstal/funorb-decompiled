@@ -43,9 +43,6 @@ final class da {
     public static void b(int param0) {
         field_m = null;
         field_r = null;
-        if (param0 != 16) {
-            field_r = null;
-        }
     }
 
     final static String a(int param0) {

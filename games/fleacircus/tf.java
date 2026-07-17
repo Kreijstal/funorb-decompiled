@@ -9,9 +9,13 @@ final class tf extends dk {
 
     tf(qa param0) {
         super(param0.field_y, param0.field_z, param0.field_u, param0.field_j, (ch) null, (kd) null);
-        param0.a(0, ((tf) this).field_u, 0, ((tf) this).field_j, 80);
-        ((tf) this).field_A = param0;
-        ((tf) this).field_F = 256;
+        try {
+            param0.a(0, ((tf) this).field_u, 0, ((tf) this).field_j, 80);
+            ((tf) this).field_A = param0;
+            ((tf) this).field_F = 256;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "tf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public tf() {
@@ -22,20 +26,38 @@ final class tf extends dk {
     final static String a(ni param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
+        RuntimeException var3_ref = null;
         byte[] var4 = null;
         String var5 = null;
         String stackIn_3_0 = null;
+        String stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
         String stackOut_2_0 = null;
+        String stackOut_4_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
-          L0: {
-            L1: {
+          try {
+            L0: {
               var3_int = param0.d(-13583);
               if (var3_int <= param2) {
-                break L1;
+                break L0;
               } else {
                 var3_int = param2;
-                break L1;
+                break L0;
               }
             }
             var4 = new byte[var3_int];
@@ -43,38 +65,63 @@ final class tf extends dk {
             var5 = pg.a(var3_int, 0, var4, param1);
             stackOut_2_0 = (String) var5;
             stackIn_3_0 = stackOut_2_0;
-            break L0;
+            return stackIn_3_0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            stackOut_4_0 = "Cabbage";
+            stackIn_5_0 = stackOut_4_0;
+            return stackIn_5_0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (Exception) (Object) decompiledCaughtException;
-          return "Cabbage";
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L1: {
+            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3_ref;
+            stackOut_6_1 = new StringBuilder().append("tf.DA(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L1;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L1;
+            }
+          }
+          throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_3_0;
     }
 
     public static void i(int param0) {
         field_G = null;
         field_H = null;
         field_E = null;
-        if (param0 == 0) {
-            return;
-        }
-        Object var2 = null;
-        String discarded$0 = tf.a((ni) null, 24, -4);
     }
 
     final void b(int param0, int param1, boolean param2, int param3) {
-        if (!((param3 ^ -1) == -1)) {
+        if (!(param3 == 0)) {
             return;
         }
         if (!(((tf) this).field_A != null)) {
             return;
         }
-        if ((((tf) this).field_F ^ -1) == -1) {
+        if (((tf) this).field_F == 0) {
             return;
         }
-        if (!(-257 != (((tf) this).field_F ^ -1))) {
+        if (!(((tf) this).field_F != 256)) {
             ((tf) this).field_A.b(((tf) this).field_z + param0, ((tf) this).field_y + param1, true, param3);
             return;
         }
@@ -86,11 +133,70 @@ final class tf extends dk {
     }
 
     final static byte[] a(int param0, String param1) {
-        if (param0 != 0) {
-            field_G = null;
-            return em.field_c.a(0, param1, "");
+        RuntimeException var2 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 0) {
+                break L1;
+              } else {
+                field_G = null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = em.field_c.a(0, param1, "");
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("tf.EA(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw pf.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return em.field_c.a(0, param1, "");
+        return stackIn_3_0;
     }
 
     final static void d(boolean param0) {
@@ -125,56 +231,50 @@ final class tf extends dk {
     }
 
     final static int b(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
+        int stackOut_11_0 = 0;
         var4 = fleas.field_A ? 1 : 0;
-        var3 = 1;
-        if (param2 != -2) {
-          tf.d(false);
-          L0: while (true) {
-            if ((param1 ^ -1) >= -2) {
-              if (1 == param1) {
-                return var3 * param0;
-              } else {
-                return var3;
-              }
-            } else {
-              L1: {
-                if (-1 != (1 & param1 ^ -1)) {
-                  var3 = var3 * param0;
-                  break L1;
+        try {
+          L0: {
+            var3_int = 1;
+            L1: while (true) {
+              if (param1 <= 1) {
+                if (1 == param1) {
+                  stackOut_9_0 = var3_int * param0;
+                  stackIn_10_0 = stackOut_9_0;
+                  return stackIn_10_0;
                 } else {
-                  break L1;
+                  stackOut_11_0 = var3_int;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L0;
                 }
+              } else {
+                L2: {
+                  if ((1 & param1) != 0) {
+                    var3_int = var3_int * param0;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                param0 = param0 * param0;
+                param1 = param1 >> 1;
+                continue L1;
               }
-              param0 = param0 * param0;
-              param1 = param1 >> 1;
-              continue L0;
             }
           }
-        } else {
-          L2: while (true) {
-            if ((param1 ^ -1) >= -2) {
-              if (1 == param1) {
-                return var3 * param0;
-              } else {
-                return var3;
-              }
-            } else {
-              L3: {
-                if (-1 != (1 & param1 ^ -1)) {
-                  var3 = var3 * param0;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              param0 = param0 * param0;
-              param1 = param1 >> 1;
-              continue L2;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var3, "tf.CA(" + param0 + 44 + param1 + 44 + -2 + 41);
         }
+        return stackIn_12_0;
     }
 
     static {

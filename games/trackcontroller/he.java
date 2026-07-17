@@ -27,9 +27,6 @@ final class he {
         field_e = null;
         field_f = null;
         field_c = null;
-        if (param0 >= -12) {
-            field_b = -26;
-        }
     }
 
     static {

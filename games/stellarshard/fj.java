@@ -18,17 +18,65 @@ final class fj {
     static long field_j;
 
     private final void a(int param0, vc param1, byte param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         float var5 = 0.0f;
-        var4 = 72 % ((6 - param2) / 39);
-        var5 = (float)(1 + ((fj) this).field_h) + (float)param0 / 100.0f;
-        ((fj) this).field_a = var5 * (float)((fj) this).field_e / (float)(((fj) this).field_c - -1);
-        if (-1 == (param0 ^ -1)) {
-          ((fj) this).field_g = param1.field_d;
-          return;
-        } else {
-          ((fj) this).field_g = param1.field_c + " - " + param0 + "%";
-          return;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          var4_int = 72 % ((6 - param2) / 39);
+          var5 = (float)(1 + ((fj) this).field_h) + (float)param0 / 100.0f;
+          ((fj) this).field_a = var5 * (float)((fj) this).field_e / (float)(((fj) this).field_c - -1);
+          if (param0 != 0) {
+            ((fj) this).field_g = param1.field_c + " - " + param0 + "%";
+            return;
+          } else {
+            ((fj) this).field_g = param1.field_d;
+            return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L0: {
+            var4 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_1 = new StringBuilder().append("fj.A(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L0;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L0;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 41);
         }
     }
 
@@ -75,7 +123,7 @@ final class fj {
                 }
               }
               L3: {
-                if (-1 >= (var4.field_i ^ -1)) {
+                if (var4.field_i >= 0) {
                   break L3;
                 } else {
                   if (var4.field_j != null) {

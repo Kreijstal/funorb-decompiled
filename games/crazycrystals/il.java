@@ -52,7 +52,7 @@ final class il extends l {
                       if (var7 <= 0) {
                         var9 = 9 + (m.field_l[var6] + -1);
                         L4: while (true) {
-                          if ((var8 ^ -1) > -9) {
+                          if (var8 < 8) {
                             if (var8 >= 4) {
                               kk.field_a[14][var9] = (f) (Object) var5;
                               var6++;
@@ -105,7 +105,7 @@ final class il extends l {
               L7: {
                 var6 = 10;
                 var7 = pd.field_g[var5_int];
-                if ((var7 ^ -1) <= -1) {
+                if (var7 >= 0) {
                   break L7;
                 } else {
                   var7 = -var7;
@@ -115,8 +115,8 @@ final class il extends l {
               L8: while (true) {
                 if (var7 < 2000) {
                   L9: {
-                    if ((var7 ^ -1) > -1001) {
-                      if ((var7 ^ -1) <= -501) {
+                    if (var7 < 1000) {
+                      if (var7 >= 500) {
                         var6 = var6 * 2;
                         break L9;
                       } else {
@@ -180,7 +180,7 @@ final class il extends l {
     private final void a(byte param0, int param1) {
         int var3 = 0;
         if (uo.field_o <= ke.field_b[jo.field_o]) {
-            if (!((jo.field_o ^ -1) > -2)) {
+            if (!(jo.field_o < 1)) {
                 var3 = q.field_a[ma.field_n[param1]].field_i;
                 if (!(1000 > var3)) {
                     rc.a(1, fn.field_j, mb.field_g, 247, wd.field_j, 8, ob.field_l);
@@ -201,9 +201,6 @@ final class il extends l {
     }
 
     final static boolean b(int param0) {
-        if (param0 >= -108) {
-            return false;
-        }
         return hl.a(le.b((byte) -20), -94);
     }
 
@@ -247,9 +244,6 @@ final class il extends l {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
-        if (param5) {
-            field_h = null;
-        }
         dl[] var6 = h.field_d;
         if (!(!param1)) {
             var6 = af.field_c;

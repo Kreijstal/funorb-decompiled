@@ -411,10 +411,10 @@ public final class TetraLink extends ph {
               }
               L5: {
                 L6: {
-                  if ((kb.field_t ^ -1) != (ed.field_O ^ -1)) {
+                  if (~kb.field_t != ~ed.field_O) {
                     break L6;
                   } else {
-                    if ((af.field_h ^ -1) != (hm.field_a ^ -1)) {
+                    if (~af.field_h != ~hm.field_a) {
                       break L6;
                     } else {
                       break L5;
@@ -422,7 +422,7 @@ public final class TetraLink extends ph {
                   }
                 }
                 L7: {
-                  if (1 == (kb.field_t ^ -1)) {
+                  if (kb.field_t == -2) {
                     break L7;
                   } else {
                     if (ed.field_O == -2) {
@@ -545,7 +545,7 @@ public final class TetraLink extends ph {
                 }
               }
               L16: {
-                if (-3 >= (dd.field_c ^ -1)) {
+                if (dd.field_c >= 2) {
                   mk.field_b.b(Integer.toString(tc.field_v), 4, 24, 16777215, -1);
                   break L16;
                 } else {
@@ -605,80 +605,72 @@ public final class TetraLink extends ph {
         int[] var32 = null;
         int[] var33 = null;
         int[] var34 = null;
-        int stackIn_27_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_23_0 = 0;
         L0: {
-          var8 = field_J;
-          var2 = 1;
-          if (param0 == 10) {
-            break L0;
-          } else {
-            ((TetraLink) this).field_K = -53;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
+            var8 = field_J;
+            var2 = 1;
             if (ed.field_O != kb.field_t) {
-              break L2;
+              break L1;
             } else {
               if (af.field_h == hm.field_a) {
-                if (1 == (kb.field_t ^ -1)) {
+                if (kb.field_t == -2) {
                   var2 = 0;
                   qf.a(1, false);
-                  break L1;
+                  break L0;
                 } else {
                   c.a(hm.field_a, true, true, -1, kb.field_t);
-                  break L1;
+                  break L0;
                 }
               } else {
-                break L2;
+                break L1;
               }
             }
           }
-          if ((kb.field_t ^ -1) != 1) {
-            if (1 == (ed.field_O ^ -1)) {
+          if (kb.field_t != -2) {
+            if (ed.field_O == -2) {
               if (16 > hd.field_v) {
                 c.a(hm.field_a, true, false, -1, kb.field_t);
-                break L1;
+                break L0;
               } else {
                 qf.a(1, false);
                 var2 = 0;
-                break L1;
+                break L0;
               }
             } else {
-              if (-17 >= (hd.field_v ^ -1)) {
+              if (hd.field_v >= 16) {
                 c.a(af.field_h, true, false, -hd.field_v + 33, ed.field_O);
-                break L1;
+                break L0;
               } else {
                 c.a(hm.field_a, true, false, 1 + hd.field_v, kb.field_t);
-                break L1;
+                break L0;
               }
             }
           } else {
-            if (-17 < (hd.field_v ^ -1)) {
+            if (hd.field_v < 16) {
               qf.a(1, false);
               var2 = 0;
-              break L1;
+              break L0;
             } else {
               c.a(af.field_h, true, false, -1, ed.field_O);
-              break L1;
+              break L0;
             }
           }
         }
-        L3: {
+        L2: {
           if (var2 == 0) {
-            break L3;
+            break L2;
           } else {
-            L4: {
+            L3: {
               if (qd.field_P != null) {
-                break L4;
+                break L3;
               } else {
                 qd.field_P = new oh(640, 480);
-                bd.a(qd.field_P, param0 + -4);
+                bd.a(qd.field_P, 6);
                 ra.c(0, 0, 640, 480, 3158064);
-                var3_int = (dh.field_e % 20480 << 817608748) % 83886080;
+                var3_int = (dh.field_e % 20480 << 12) % 83886080;
                 var4 = md.field_G;
                 var5 = ik.field_a;
                 kd.a(320, 240, (byte) -121);
@@ -688,25 +680,25 @@ public final class TetraLink extends ph {
                 mf.field_w.a(bd.field_b, ti.field_d);
                 fh.a(true);
                 kd.a(var4, var5, (byte) -121);
-                break L4;
+                break L3;
               }
             }
-            L5: {
+            L4: {
               qd.field_P.b(0, -240 + ik.field_a);
               if (wk.field_i.field_j) {
-                L6: {
+                L5: {
                   var3_int = dh.field_e % 64;
                   if (var3_int >= 32) {
-                    stackOut_26_0 = -var3_int + 48;
-                    stackIn_27_0 = stackOut_26_0;
-                    break L6;
+                    stackOut_24_0 = -var3_int + 48;
+                    stackIn_25_0 = stackOut_24_0;
+                    break L5;
                   } else {
-                    stackOut_25_0 = -16 + var3_int;
-                    stackIn_27_0 = stackOut_25_0;
-                    break L6;
+                    stackOut_23_0 = -16 + var3_int;
+                    stackIn_25_0 = stackOut_23_0;
+                    break L5;
                   }
                 }
-                var3_int = stackIn_27_0;
+                var3_int = stackIn_25_0;
                 var3_int = var3_int << 2;
                 var30 = new int[3];
                 var24 = var30;
@@ -726,11 +718,11 @@ public final class TetraLink extends ph {
                 var6_ref_int__ = var13;
                 var4_ref_int__[0] = (int)s.field_c;
                 var29[0] = 50;
-                var6_ref_int__[0] = (var3_int >> -687527196) + 128;
+                var6_ref_int__[0] = (var3_int >> 4) + 128;
                 var4_ref_int__[1] = -(int)s.field_c;
                 var29[1] = 50;
                 var30[2] = 0;
-                var6_ref_int__[1] = 128 + (var3_int >> -1188963996);
+                var6_ref_int__[1] = 128 + (var3_int >> 4);
                 var29[2] = 80;
                 var31[2] = 128;
                 var7 = ta.a(8437759);
@@ -745,14 +737,14 @@ public final class TetraLink extends ph {
                 var6_ref_int__[0] = var31[1];
                 var31[1] = var3_int;
                 mj.a(240, 0, 0, var30, var32, var31, var7, var7, var7);
-                break L5;
+                break L4;
               } else {
-                break L5;
+                break L4;
               }
             }
-            L7: {
+            L6: {
               if (wk.field_i.field_n) {
-                L8: {
+                L7: {
                   var33 = bl.field_Lb.field_C;
                   var27 = var33;
                   var21 = var27;
@@ -763,13 +755,13 @@ public final class TetraLink extends ph {
                   var22 = var28;
                   var16 = var22;
                   var3 = var16;
-                  if (-1 <= (sk.field_c ^ -1)) {
-                    break L8;
+                  if (sk.field_c <= 0) {
+                    break L7;
                   } else {
                     var6 = 256000;
-                    L9: while (true) {
-                      if (-1 <= (var6 ^ -1)) {
-                        break L8;
+                    L8: while (true) {
+                      if (var6 <= 0) {
+                        break L7;
                       } else {
                         var6--;
                         var5 = var33[var6] & 65280;
@@ -780,75 +772,75 @@ public final class TetraLink extends ph {
                         var4 = var4 + (-16711936 & 16711935 * sk.field_c);
                         var5 = var5 & 16711680;
                         var5 = var5 + (65280 * sk.field_c & 16711680);
-                        var10[var6] = mc.a(var5, var4) >>> 1333751848;
-                        continue L9;
+                        var10[var6] = mc.a(var5, var4) >>> 8;
+                        continue L8;
                       }
                     }
                   }
                 }
                 var5 = 200;
-                L10: while (true) {
+                L9: while (true) {
                   if (0 >= var5) {
-                    bd.a(bl.field_Lb, param0 + -4);
+                    bd.a(bl.field_Lb, 6);
                     var5_ref_ko = (ko) (Object) eg.field_J.c(false);
-                    L11: while (true) {
+                    L10: while (true) {
                       if (var5_ref_ko == null) {
                         fh.a(true);
-                        bl.field_Lb.c(md.field_G + -(bl.field_Lb.field_u >> -1895251135), -(bl.field_Lb.field_E >> -494393151) + ik.field_a);
-                        if ((wk.field_i.field_l ^ -1) >= -1) {
-                          break L7;
+                        bl.field_Lb.c(md.field_G + -(bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a);
+                        if (wk.field_i.field_l <= 0) {
+                          break L6;
                         } else {
-                          rf.a(-(bl.field_Lb.field_u >> -819576959) + md.field_G, -(bl.field_Lb.field_E >> -6699903) + ik.field_a, (bl.field_Lb.field_u >> 363553089) + md.field_G, -(bl.field_Lb.field_E >> -1966121535) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
-                          rf.a(md.field_G + (bl.field_Lb.field_u >> -1216349791), -(bl.field_Lb.field_E >> 668378817) + ik.field_a, (bl.field_Lb.field_u >> -1102109727) + md.field_G, (bl.field_Lb.field_E >> 399508961) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
-                          rf.a(md.field_G - -(bl.field_Lb.field_u >> 2044930977), ik.field_a - -(bl.field_Lb.field_E >> -215875807), -(bl.field_Lb.field_u >> -1388128799) + md.field_G, ik.field_a + (bl.field_Lb.field_E >> -2133439039), 40, wk.field_i.field_l, oi.field_n);
-                          rf.a(md.field_G + -(bl.field_Lb.field_u >> -731138495), (bl.field_Lb.field_E >> 1624999393) + ik.field_a, md.field_G + -(bl.field_Lb.field_u >> 788927521), ik.field_a + -(bl.field_Lb.field_E >> 1480941345), 40, wk.field_i.field_l, oi.field_n);
-                          break L7;
+                          rf.a(-(bl.field_Lb.field_u >> 1) + md.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + md.field_G, -(bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
+                          rf.a(md.field_G + (bl.field_Lb.field_u >> 1), -(bl.field_Lb.field_E >> 1) + ik.field_a, (bl.field_Lb.field_u >> 1) + md.field_G, (bl.field_Lb.field_E >> 1) + ik.field_a, 40, wk.field_i.field_l, oi.field_n);
+                          rf.a(md.field_G - -(bl.field_Lb.field_u >> 1), ik.field_a - -(bl.field_Lb.field_E >> 1), -(bl.field_Lb.field_u >> 1) + md.field_G, ik.field_a + (bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
+                          rf.a(md.field_G + -(bl.field_Lb.field_u >> 1), (bl.field_Lb.field_E >> 1) + ik.field_a, md.field_G + -(bl.field_Lb.field_u >> 1), ik.field_a + -(bl.field_Lb.field_E >> 1), 40, wk.field_i.field_l, oi.field_n);
+                          break L6;
                         }
                       } else {
-                        rf.a(var5_ref_ko.field_r, var5_ref_ko.field_p, var5_ref_ko.field_n << 1311745091, 10000);
+                        rf.a(var5_ref_ko.field_r, var5_ref_ko.field_p, var5_ref_ko.field_n << 3, 10000);
                         var5_ref_ko = (ko) (Object) eg.field_J.a((byte) -70);
-                        continue L11;
+                        continue L10;
                       }
                     }
                   } else {
                     var5--;
                     var6 = 1280 * var5 + 110;
                     var4 = 420;
-                    L12: while (true) {
+                    L11: while (true) {
                       var4--;
                       if (0 >= var4) {
-                        continue L10;
+                        continue L9;
                       } else {
                         var3[var6] = pl.a(var34[var6], 16711422);
                         var3[var6] = var3[var6] >> 1;
                         var6++;
-                        continue L12;
+                        continue L11;
                       }
                     }
                   }
                 }
               } else {
-                break L7;
+                break L6;
               }
             }
             var3_ref = (qi) (Object) nd.field_Sb.c(false);
-            L13: while (true) {
+            L12: while (true) {
               if (var3_ref == null) {
-                break L3;
+                break L2;
               } else {
-                L14: {
-                  var4 = var3_ref.field_t >> -414767252;
-                  var6 = 512 + (var3_ref.field_y >> -475787636);
-                  var5 = var3_ref.field_v >> 120792428;
-                  if (-1 > (var6 ^ -1)) {
-                    ra.a((md.field_G << 841830756) - -((var4 << 2112709869) / var6), (var5 << 1257771085) / var6 + (ik.field_a << -64181020), 65536 / var6, 5 * var3_ref.field_s / 3, oi.field_n);
-                    break L14;
+                L13: {
+                  var4 = var3_ref.field_t >> 12;
+                  var6 = 512 + (var3_ref.field_y >> 12);
+                  var5 = var3_ref.field_v >> 12;
+                  if (var6 > 0) {
+                    ra.a((md.field_G << 4) - -((var4 << 13) / var6), (var5 << 13) / var6 + (ik.field_a << 4), 65536 / var6, 5 * var3_ref.field_s / 3, oi.field_n);
+                    break L13;
                   } else {
-                    break L14;
+                    break L13;
                   }
                 }
                 var3_ref = (qi) (Object) nd.field_Sb.a((byte) -70);
-                continue L13;
+                continue L12;
               }
             }
           }
@@ -866,7 +858,7 @@ public final class TetraLink extends ph {
         var2 = 400 - dh.field_e % 400;
         var4 = 0;
         L0: while (true) {
-          if ((var4 ^ -1) <= -401) {
+          if (var4 >= 400) {
             L1: {
               ra.g(110, var2, 420, 16777215);
               ra.e(110, (var2 - -3) % 400, 420, 16777215, 192);
@@ -899,7 +891,7 @@ public final class TetraLink extends ph {
                 var6 = ra.field_f * var4 + 100;
                 var3 = 440;
                 L3: while (true) {
-                  if (-1 <= (var3 ^ -1)) {
+                  if (var3 <= 0) {
                     break L2;
                   } else {
                     ra.field_b[var6 + -var5] = ra.field_b[var6];
@@ -909,7 +901,7 @@ public final class TetraLink extends ph {
                   }
                 }
               } else {
-                if ((var5 ^ -1) <= -1) {
+                if (var5 >= 0) {
                   break L2;
                 } else {
                   var6 = ra.field_f * var4 + 539;
@@ -1061,7 +1053,7 @@ public final class TetraLink extends ph {
           if (dh.field_e != 200) {
             break L3;
           } else {
-            if ((ed.field_O ^ -1) != -11) {
+            if (ed.field_O != 10) {
               break L3;
             } else {
               bf discarded$5 = lb.a(oa.field_x, 573509761);
@@ -1142,7 +1134,7 @@ public final class TetraLink extends ph {
                   L9: {
                     L10: {
                       var2 = ((TetraLink) this).a(stackIn_45_1 != 0, (byte) -108);
-                      if ((var2 ^ -1) == -2) {
+                      if (var2 == 1) {
                         break L10;
                       } else {
                         if (var2 == 2) {
@@ -1180,7 +1172,7 @@ public final class TetraLink extends ph {
                     } else {
                       L12: {
                         var2 = kk.i(-91);
-                        if ((var2 ^ -1) != -2) {
+                        if (var2 != 1) {
                           break L12;
                         } else {
                           kf.field_d = true;
@@ -1194,11 +1186,11 @@ public final class TetraLink extends ph {
                   }
                 }
               } else {
-                if ((ko.field_s ^ -1) == -1) {
+                if (ko.field_s == 0) {
                   L13: {
                     var2 = mf.b(1000);
-                    if ((var2 ^ -1) != -3) {
-                      if (-4 != (var2 ^ -1)) {
+                    if (var2 != 2) {
+                      if (var2 != 3) {
                         if (4 != var2) {
                           break L13;
                         } else {
@@ -1367,9 +1359,9 @@ public final class TetraLink extends ph {
                 jo.field_e = false;
                 continue L14;
               } else {
-                if (-16 != (ua.field_c ^ -1)) {
+                if (ua.field_c != 15) {
                   L26: {
-                    if (-11 != (ua.field_c ^ -1)) {
+                    if (ua.field_c != 10) {
                       break L26;
                     } else {
                       if (mi.field_Pb) {
@@ -1394,7 +1386,7 @@ public final class TetraLink extends ph {
                         if (ua.field_c == 58) {
                           break L27;
                         } else {
-                          if (-60 == (ua.field_c ^ -1)) {
+                          if (ua.field_c == 59) {
                             L28: {
                               L29: {
                                 if (ph.field_s) {
@@ -1447,41 +1439,41 @@ public final class TetraLink extends ph {
                               if (var2_ref == null) {
                                 break L32;
                               } else {
-                                if (-61 == (ua.field_c ^ -1)) {
+                                if (ua.field_c == 60) {
                                   L33: {
                                     var3 = kb.field_q.d((byte) -99);
                                     var4_int = kb.field_q.d((byte) -99);
                                     var5 = kb.field_q.e(127);
                                     ((ei) var2_ref).field_a.a(var4_int, 18936, var3);
                                     ((ei) var2_ref).field_d = var5 - 50;
-                                    if (0 != (((ei) var2_ref).field_a.field_g ^ -1)) {
+                                    if (((ei) var2_ref).field_a.field_g != -1) {
                                       break L33;
                                     } else {
                                       ((ei) var2_ref).field_a.field_g = var3;
                                       break L33;
                                     }
                                   }
-                                  if (-2 >= (((ei) var2_ref).field_d ^ -1)) {
+                                  if (((ei) var2_ref).field_d >= 1) {
                                     continue L14;
                                   } else {
                                     ((ei) var2_ref).field_d = 1;
                                     continue L14;
                                   }
                                 } else {
-                                  if (-62 == (ua.field_c ^ -1)) {
+                                  if (ua.field_c == 61) {
                                     var3 = kb.field_q.d((byte) -99);
                                     var4_int = kb.field_q.d((byte) -99);
-                                    ((ei) var2_ref).field_a.a(var4_int >> 1291493667, var4_int & 7, var3, -28067);
+                                    ((ei) var2_ref).field_a.a(var4_int >> 3, var4_int & 7, var3, -28067);
                                     ((ei) var2_ref).field_g.a((byte) 56);
                                     continue L14;
                                   } else {
-                                    if ((ua.field_c ^ -1) == -63) {
+                                    if (ua.field_c == 62) {
                                       L34: {
                                         var3 = kb.field_q.g(-1772093437);
                                         ((ei) var2_ref).field_a.a(var3, 4);
                                         var15 = var2_ref;
                                         var4_ref = var15;
-                                        if (1 == (((ei) var15).field_i ^ -1)) {
+                                        if (((ei) var15).field_i == -2) {
                                           break L34;
                                         } else {
                                           ((ei) var15).a(false, -112, false, -1);
@@ -1491,7 +1483,7 @@ public final class TetraLink extends ph {
                                       ((ei) var4_ref).field_p = 0;
                                       continue L14;
                                     } else {
-                                      if ((ua.field_c ^ -1) == -64) {
+                                      if (ua.field_c == 63) {
                                         ((ei) var2_ref).field_a.field_h = kb.field_q.d((byte) -99);
                                         if (aa.field_bc != null) {
                                           ci.c(63);
@@ -1500,7 +1492,7 @@ public final class TetraLink extends ph {
                                           continue L14;
                                         }
                                       } else {
-                                        if ((ua.field_c ^ -1) == -65) {
+                                        if (ua.field_c == 64) {
                                           ((ei) var2_ref).field_a.field_j = kb.field_q.d((byte) -99);
                                           continue L14;
                                         } else {
@@ -1674,7 +1666,7 @@ public final class TetraLink extends ph {
                           if (aa.field_bc == null) {
                             break L44;
                           } else {
-                            if ((aa.field_bc.field_i ^ -1) != -2) {
+                            if (aa.field_bc.field_i != 1) {
                               break L44;
                             } else {
                               stackOut_69_0 = 0.0;
@@ -1788,13 +1780,13 @@ public final class TetraLink extends ph {
           L1: {
             var18 = null;
             var16 = field_J;
-            var3 = 72 / ((param0 - 23) / 54);
+            var3 = 72;
             var2 = 1;
-            if ((kb.field_t ^ -1) != (ed.field_O ^ -1)) {
+            if (~kb.field_t != ~ed.field_O) {
               break L1;
             } else {
               if (af.field_h == hm.field_a) {
-                if (1 == (kb.field_t ^ -1)) {
+                if (kb.field_t == -2) {
                   var2 = 0;
                   qf.a(1, false);
                   break L0;
@@ -1813,7 +1805,7 @@ public final class TetraLink extends ph {
                 qk.a(7230, hd.field_v - -1, hm.field_a, false, kb.field_t);
                 break L0;
               } else {
-                qk.a(7230, -hd.field_v + 32 - -1, af.field_h, false, ed.field_O);
+                qk.a(7230, -hd.field_v + 33, af.field_h, false, ed.field_O);
                 break L0;
               }
             } else {
@@ -1843,17 +1835,17 @@ public final class TetraLink extends ph {
             break L2;
           } else {
             L3: {
-              var5 = bl.field_Xb >> -920530301;
+              var5 = bl.field_Xb >> 3;
               var6 = le.d(var5, -28583);
               var7_int = ua.a(82, var5);
-              var8_int = var6 * 300 >> -178192752;
-              var9_int = var7_int * 300 >> 1217603600;
+              var8_int = var6 * 300 >> 16;
+              var9_int = var7_int * 300 >> 16;
               var10 = 210;
               if (!jo.field_a) {
-                var5 = var5 - (il.field_S << -1305431386);
+                var5 = var5 - (il.field_S << 6);
                 break L3;
               } else {
-                var5 = var5 + (il.field_S << 1732671174);
+                var5 = var5 + (il.field_S << 6);
                 break L3;
               }
             }
@@ -1869,13 +1861,13 @@ public final class TetraLink extends ph {
         L4: {
           lh.field_t = new ob();
           la.field_g = new ob();
-          ui.a(la.field_g, 0, 0, lh.field_t, 0, bd.field_b[10] >> -1153399510, 100, var4, bd.field_b[11] >> -1647919094, bd.field_b[9] >> 1242404170);
+          ui.a(la.field_g, 0, 0, lh.field_t, 0, bd.field_b[10] >> 10, 100, var4, bd.field_b[11] >> 10, bd.field_b[9] >> 10);
           if (var2 == 0) {
             break L4;
           } else {
             L5: {
               ra.c(0, 0, 640, 480, 3158064);
-              var5 = (dh.field_e % 20480 << -1191170036) % 83886080;
+              var5 = (dh.field_e % 20480 << 12) % 83886080;
               ta.a(ka.field_h, new double[3], new double[3], 600.0, 200.0, ja.field_i, 23967451 + var5, 59918628 + var5, 0, 16711680, wk.field_i.field_g);
               ta.a(ka.field_h, new double[3], new double[3], 400.0, 200.0, ja.field_i, var5 - -59918628, 83820544 + var5, 0, 16711680, wk.field_i.field_g);
               ta.a(ka.field_h, new double[3], new double[3], 400.0, 200.0, ja.field_i, var5, var5 + 23967451, 0, 16711680, wk.field_i.field_g);
@@ -1914,7 +1906,7 @@ public final class TetraLink extends ph {
               var26 = var33;
               var19 = var26;
               var8 = var19;
-              var7[0] = (int)s.field_c << 2143642084;
+              var7[0] = (int)s.field_c << 4;
               var41 = new int[3];
               var34 = var41;
               var27 = var34;
@@ -1922,7 +1914,7 @@ public final class TetraLink extends ph {
               var9 = var20;
               var40[0] = 800;
               var41[0] = var6;
-              var7[1] = -(int)s.field_c << -2092280860;
+              var7[1] = -(int)s.field_c << 4;
               var40[1] = 800;
               var41[1] = var6;
               var42[2] = 0;
@@ -1934,7 +1926,7 @@ public final class TetraLink extends ph {
               } else {
                 L8: {
                   var10 = dh.field_e % 128;
-                  if ((var10 ^ -1) > -65) {
+                  if (var10 < 64) {
                     stackOut_31_0 = var10;
                     stackIn_32_0 = stackOut_31_0;
                     break L8;
@@ -1973,7 +1965,7 @@ public final class TetraLink extends ph {
                   var32 = var39;
                   var25 = var32;
                   var10_ref_int__ = var25;
-                  if ((sk.field_c ^ -1) < -1) {
+                  if (sk.field_c > 0) {
                     var14 = -sk.field_c + 256;
                     var13 = 256000;
                     L11: while (true) {
@@ -1990,7 +1982,7 @@ public final class TetraLink extends ph {
                         var12 = var12 & 16711680;
                         var11 = var11 + (16711935 * sk.field_c & -16711936);
                         var12 = var12 + (16711680 & sk.field_c * 65280);
-                        var17[var13] = mc.a(var12, var11) >>> -1694871576;
+                        var17[var13] = mc.a(var12, var11) >>> 8;
                         continue L11;
                       }
                     }
@@ -2003,7 +1995,7 @@ public final class TetraLink extends ph {
                     if (256.0f < rn.field_d) {
                       var11 = 256000;
                       L13: while (true) {
-                        if ((var11 ^ -1) >= -1) {
+                        if (var11 <= 0) {
                           break L12;
                         } else {
                           var11--;
@@ -2107,7 +2099,7 @@ public final class TetraLink extends ph {
                       }
                     }
                   } else {
-                    rf.a(var11_ref_ko.field_r, var11_ref_ko.field_p, var11_ref_ko.field_n << -1774853789, 10000);
+                    rf.a(var11_ref_ko.field_r, var11_ref_ko.field_p, var11_ref_ko.field_n << 3, 10000);
                     var11_ref_ko = (ko) (Object) eg.field_J.a((byte) -70);
                     continue L18;
                   }
@@ -2131,7 +2123,7 @@ public final class TetraLink extends ph {
                       if (var15_int <= 0) {
                         var15_int = 256000;
                         L24: while (true) {
-                          if ((var15_int ^ -1) >= -1) {
+                          if (var15_int <= 0) {
                             break L22;
                           } else {
                             var15_int--;
@@ -2144,7 +2136,7 @@ public final class TetraLink extends ph {
                             var13 = var13 + (sk.field_c * 16711935 & -16711936);
                             var14 = var14 & 16711680;
                             var14 = var14 + (sk.field_c * 65280 & 16711680);
-                            rh.field_M.field_C[var15_int] = mc.a(var13, var14) >>> -1161568760;
+                            rh.field_M.field_C[var15_int] = mc.a(var13, var14) >>> 8;
                             continue L24;
                           }
                         }
@@ -2159,7 +2151,7 @@ public final class TetraLink extends ph {
                         var13 = var13 + (sk.field_c * 16711935 & -16711936);
                         var14 = var14 & 16711680;
                         var14 = var14 + (16711680 & 65280 * sk.field_c);
-                        bl.field_Lb.field_C[var15_int] = mc.a(var14, var13) >>> 1268416040;
+                        bl.field_Lb.field_C[var15_int] = mc.a(var14, var13) >>> 8;
                         continue L23;
                       }
                     }
@@ -2173,25 +2165,25 @@ public final class TetraLink extends ph {
                       var13 = 110;
                       var14 = -100;
                       L26: while (true) {
-                        if (-1 >= (var14 ^ -1)) {
+                        if (var14 >= 0) {
                           break L25;
                         } else {
                           var12 = 420;
                           L27: while (true) {
                             var12--;
-                            if (-1 < (var12 ^ -1)) {
+                            if (var12 < 0) {
                               var12 = 420;
                               var13 += 220;
                               L28: while (true) {
                                 var12--;
-                                if ((var12 ^ -1) > -1) {
+                                if (var12 < 0) {
                                   var13 += 1500;
                                   var14++;
                                   continue L26;
                                 } else {
                                   L29: {
-                                    var10_ref_int__[var13] = pl.a(8355711, var43[var13] >> -178412927);
-                                    if (-16777216 == (var44[var13] ^ -1)) {
+                                    var10_ref_int__[var13] = pl.a(8355711, var43[var13] >> 1);
+                                    if (var44[var13] == 16777215) {
                                       var11_ref_int__[var13] = 13619151;
                                       break L29;
                                     } else {
@@ -2206,7 +2198,7 @@ public final class TetraLink extends ph {
                               }
                             } else {
                               L30: {
-                                var10_ref_int__[var13] = pl.a(var43[var13] >> -323422623, 8355711);
+                                var10_ref_int__[var13] = pl.a(var43[var13] >> 1, 8355711);
                                 if (16777215 != var44[var13]) {
                                   var11_ref_int__[var13] = pl.a(var44[var13], 16711422);
                                   var11_ref_int__[var13] = var11_ref_int__[var13] >> 1;
@@ -2239,14 +2231,14 @@ public final class TetraLink extends ph {
                             } else {
                               L33: {
                                 var12--;
-                                var10_ref_int__[var12] = (pl.a(16579836, var43[var12]) >> -572118078) * 3;
+                                var10_ref_int__[var12] = (pl.a(16579836, var43[var12]) >> 2) * 3;
                                 stackOut_57_0 = (int[]) var11_ref_int__;
                                 stackOut_57_1 = var12;
                                 stackIn_59_0 = stackOut_57_0;
                                 stackIn_59_1 = stackOut_57_1;
                                 stackIn_58_0 = stackOut_57_0;
                                 stackIn_58_1 = stackOut_57_1;
-                                if (-16777216 == (var44[var12] ^ -1)) {
+                                if (var44[var12] == 16777215) {
                                   stackOut_59_0 = (int[]) (Object) stackIn_59_0;
                                   stackOut_59_1 = stackIn_59_1;
                                   stackOut_59_2 = 15263976;
@@ -2257,7 +2249,7 @@ public final class TetraLink extends ph {
                                 } else {
                                   stackOut_58_0 = (int[]) (Object) stackIn_58_0;
                                   stackOut_58_1 = stackIn_58_1;
-                                  stackOut_58_2 = 3 * (pl.a(16579836, var44[var12]) >> -365011614);
+                                  stackOut_58_2 = 3 * (pl.a(16579836, var44[var12]) >> 2);
                                   stackIn_60_0 = stackOut_58_0;
                                   stackIn_60_1 = stackOut_58_1;
                                   stackIn_60_2 = stackOut_58_2;
@@ -2289,7 +2281,7 @@ public final class TetraLink extends ph {
                             L36: {
                               var10_ref_int__[var13] = pl.a(var43[var13], 16711422);
                               var10_ref_int__[var13] = var10_ref_int__[var13] >> 1;
-                              if (-16777216 != (var44[var13] ^ -1)) {
+                              if (var44[var13] != 16777215) {
                                 var11_ref_int__[var13] = pl.a(var44[var13], 16711422);
                                 var11_ref_int__[var13] = var11_ref_int__[var13] >> 1;
                                 break L36;
@@ -2337,7 +2329,7 @@ public final class TetraLink extends ph {
                               L42: {
                                 ta.a(ka.field_h, new double[3], hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 529, 110, 0, 399, wk.field_i.field_g, false);
                                 ta.a(ka.field_h, new double[3], hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 529, 110, 0, 399, wk.field_i.field_g, false);
-                                if ((wk.field_i.field_l ^ -1) < -1) {
+                                if (wk.field_i.field_l > 0) {
                                   ta.a(ka.field_h, new double[3], hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
                                   break L42;
                                 } else {
@@ -2350,7 +2342,7 @@ public final class TetraLink extends ph {
                               L43: {
                                 ta.a(ka.field_h, new double[3], hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 110, 529, 0, 399, wk.field_i.field_g, false);
                                 ta.a(ka.field_h, new double[3], hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, false);
-                                if (-1 > (wk.field_i.field_l ^ -1)) {
+                                if (wk.field_i.field_l > 0) {
                                   ta.a(ka.field_h, new double[3], hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
                                   break L43;
                                 } else {
@@ -2365,7 +2357,7 @@ public final class TetraLink extends ph {
                               L44: {
                                 ta.a(ka.field_h, new double[3], hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 100, 539, 0, 399, wk.field_i.field_g, false);
                                 ta.a(ka.field_h, new double[3], hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 100, 539, 0, 399, wk.field_i.field_g, false);
-                                if ((wk.field_i.field_l ^ -1) < -1) {
+                                if (wk.field_i.field_l > 0) {
                                   ta.a(ka.field_h, new double[3], hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
                                   break L44;
                                 } else {
@@ -2390,20 +2382,20 @@ public final class TetraLink extends ph {
                             }
                           }
                         }
-                        if ((var41[2] ^ -1) >= -1) {
+                        if (var41[2] <= 0) {
                           break L9;
                         } else {
-                          ra.a((md.field_G << 2056281124) - -((var42[2] << 260060651) / var41[2]), (var40[2] << 1251633389) / var41[2] + (ik.field_a << 208527108), 65536 / var41[2], 255, oi.field_n);
+                          ra.a((md.field_G << 4) - -((var42[2] << 11) / var41[2]), (var40[2] << 13) / var41[2] + (ik.field_a << 4), 65536 / var41[2], 255, oi.field_n);
                           break L9;
                         }
                       } else {
-                        rf.a(var12_ref_ko.field_r, var12_ref_ko.field_p, var12_ref_ko.field_n << 1243767587, 10000);
+                        rf.a(var12_ref_ko.field_r, var12_ref_ko.field_p, var12_ref_ko.field_n << 3, 10000);
                         var12_ref_ko = (ko) (Object) eg.field_J.a((byte) -70);
                         continue L39;
                       }
                     }
                   } else {
-                    rf.a(var12_ref_ko.field_r, var12_ref_ko.field_p, var12_ref_ko.field_n << 1685357891, 10000);
+                    rf.a(var12_ref_ko.field_r, var12_ref_ko.field_p, var12_ref_ko.field_n << 3, 10000);
                     var12_ref_ko = (ko) (Object) eg.field_J.a((byte) -70);
                     continue L37;
                   }
@@ -2417,17 +2409,17 @@ public final class TetraLink extends ph {
                 break L4;
               } else {
                 L47: {
-                  var6 = (var15.field_y >> 523026824) + -(bd.field_b[2] << 346675334);
-                  var10 = (var15.field_t >> -2058591896) - (bd.field_b[0] << -920961146);
-                  var11 = -(bd.field_b[1] << -350560698) + (var15.field_v >> -178241752);
+                  var6 = (var15.field_y >> 8) + -(bd.field_b[2] << 6);
+                  var10 = (var15.field_t >> 8) - (bd.field_b[0] << 6);
+                  var11 = -(bd.field_b[1] << 6) + (var15.field_v >> 8);
                   var14 = bd.field_b[9] * var10 + (bd.field_b[10] * var11 - -(bd.field_b[11] * var6));
                   var13 = var6 * bd.field_b[8] + var11 * bd.field_b[7] + bd.field_b[6] * var10;
                   var12 = bd.field_b[5] * var6 + var10 * bd.field_b[3] + bd.field_b[4] * var11;
-                  var6 = var14 >> 303565206;
+                  var6 = var14 >> 22;
                   if (var14 <= 0) {
                     break L47;
                   } else {
-                    ra.a((md.field_G << -1508522300) + (var12 >> -553808919) / var6, (ik.field_a << 13076804) + (var13 >> -1298684375) / var6, 16384 / var6, 5 * var15.field_s / 3, oi.field_n);
+                    ra.a((md.field_G << 4) + (var12 >> 9) / var6, (ik.field_a << 4) + (var13 >> 9) / var6, 16384 / var6, 5 * var15.field_s / 3, oi.field_n);
                     break L47;
                   }
                 }
@@ -2443,58 +2435,278 @@ public final class TetraLink extends ph {
         try {
             String var3 = null;
             Throwable var3_ref = null;
+            RuntimeException var3_ref2 = null;
             String[] var4 = null;
             int var5 = 0;
             int var6 = 0;
             int var7 = 0;
             Object stackIn_3_0 = null;
             String stackIn_10_0 = null;
-            Throwable decompiledCaughtException = null;
-            String stackOut_9_0 = null;
+            Object stackIn_15_0 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            String stackIn_19_2 = null;
+            RuntimeException stackIn_20_0 = null;
+            StringBuilder stackIn_20_1 = null;
+            RuntimeException stackIn_21_0 = null;
+            StringBuilder stackIn_21_1 = null;
+            RuntimeException stackIn_22_0 = null;
+            StringBuilder stackIn_22_1 = null;
+            String stackIn_22_2 = null;
             Object stackOut_2_0 = null;
-            var7 = field_J;
-            try {
-              L0: {
-                if (param1 == -28536) {
-                  var3 = (String) ii.a((byte) 121, "getcookies", param2);
-                  var4 = hi.a(var3, ';', 783);
-                  var5 = 0;
-                  L1: while (true) {
-                    if (var4.length <= var5) {
-                      break L0;
-                    } else {
-                      L2: {
-                        var6 = var4[var5].indexOf('=');
-                        if (-1 < (var6 ^ -1)) {
-                          break L2;
-                        } else {
-                          if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param0)) {
+            String stackOut_9_0 = null;
+            Object stackOut_14_0 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            String stackOut_18_2 = null;
+            RuntimeException stackOut_19_0 = null;
+            StringBuilder stackOut_19_1 = null;
+            RuntimeException stackOut_20_0 = null;
+            StringBuilder stackOut_20_1 = null;
+            String stackOut_20_2 = null;
+            RuntimeException stackOut_21_0 = null;
+            StringBuilder stackOut_21_1 = null;
+            String stackOut_21_2 = null;
+            int statePc = 0;
+            Throwable caughtException = null;
+            stateLoop: while (true) {
+                switch (statePc) {
+                    case 0: {
+                        var7 = field_J;
+                        statePc = 1;
+                        continue stateLoop;
+                    }
+                    case 1: {
+                        try {
+                            if (param1 == -28536) {
+                                statePc = 4;
+                            } else {
+                                statePc = 2;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_1) {
+                            caughtException = stateCaught_1;
+                            statePc = 13;
+                            continue stateLoop;
+                        }
+                    }
+                    case 2: {
+                        try {
+                            stackOut_2_0 = null;
+                            stackIn_3_0 = stackOut_2_0;
+                            statePc = 3;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_2) {
+                            caughtException = stateCaught_2;
+                            statePc = 13;
+                            continue stateLoop;
+                        }
+                    }
+                    case 3: {
+                        return (String) (Object) stackIn_3_0;
+                    }
+                    case 4: {
+                        try {
+                            var3 = (String) ii.a((byte) 121, "getcookies", param2);
+                            var4 = hi.a(var3, ';', 783);
+                            var5 = 0;
+                            statePc = 5;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_4) {
+                            caughtException = stateCaught_4;
+                            statePc = 13;
+                            continue stateLoop;
+                        }
+                    }
+                    case 5: {
+                        try {
+                            if (var4.length <= var5) {
+                                statePc = 14;
+                            } else {
+                                statePc = 6;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_5) {
+                            caughtException = stateCaught_5;
+                            statePc = 13;
+                            continue stateLoop;
+                        }
+                    }
+                    case 6: {
+                        try {
+                            var6 = var4[var5].indexOf('=');
+                            if (var6 < 0) {
+                                statePc = 11;
+                            } else {
+                                statePc = 7;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_6) {
+                            caughtException = stateCaught_6;
+                            statePc = 13;
+                            continue stateLoop;
+                        }
+                    }
+                    case 7: {
+                        try {
+                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param0)) {
+                                statePc = 9;
+                            } else {
+                                statePc = 8;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_7) {
+                            caughtException = stateCaught_7;
+                            statePc = 13;
+                            continue stateLoop;
+                        }
+                    }
+                    case 8: {
+                        try {
+                            statePc = 11;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_8) {
+                            caughtException = stateCaught_8;
+                            statePc = 13;
+                            continue stateLoop;
+                        }
+                    }
+                    case 9: {
+                        try {
                             stackOut_9_0 = var4[var5].substring(1 + var6).trim();
                             stackIn_10_0 = stackOut_9_0;
-                            return stackIn_10_0;
-                          } else {
-                            break L2;
-                          }
+                            statePc = 10;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_9) {
+                            caughtException = stateCaught_9;
+                            statePc = 13;
+                            continue stateLoop;
                         }
-                      }
-                      var5++;
-                      continue L1;
                     }
-                  }
-                } else {
-                  stackOut_2_0 = null;
-                  stackIn_3_0 = stackOut_2_0;
-                  return (String) (Object) stackIn_3_0;
+                    case 10: {
+                        return stackIn_10_0;
+                    }
+                    case 11: {
+                        try {
+                            var5++;
+                            statePc = 5;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_11) {
+                            caughtException = stateCaught_11;
+                            statePc = 13;
+                            continue stateLoop;
+                        }
+                    }
+                    case 13: {
+                        try {
+                            var3_ref = caughtException;
+                            statePc = 14;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_13) {
+                            caughtException = stateCaught_13;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
+                    case 14: {
+                        try {
+                            stackOut_14_0 = null;
+                            stackIn_15_0 = stackOut_14_0;
+                            statePc = 15;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_14) {
+                            caughtException = stateCaught_14;
+                            statePc = 16;
+                            continue stateLoop;
+                        }
+                    }
+                    case 15: {
+                        return (String) (Object) stackIn_15_0;
+                    }
+                    case 16: {
+                        var3_ref2 = (RuntimeException) (Object) caughtException;
+                        stackOut_16_0 = (RuntimeException) var3_ref2;
+                        stackOut_16_1 = new StringBuilder().append("TetraLink.M(");
+                        stackIn_18_0 = stackOut_16_0;
+                        stackIn_18_1 = stackOut_16_1;
+                        stackIn_17_0 = stackOut_16_0;
+                        stackIn_17_1 = stackOut_16_1;
+                        if (param0 == null) {
+                            statePc = 18;
+                        } else {
+                            statePc = 17;
+                        }
+                        continue stateLoop;
+                    }
+                    case 17: {
+                        stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                        stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                        stackOut_17_2 = "{...}";
+                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_1 = stackOut_17_1;
+                        stackIn_19_2 = stackOut_17_2;
+                        statePc = 19;
+                        continue stateLoop;
+                    }
+                    case 18: {
+                        stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+                        stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                        stackOut_18_2 = "null";
+                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_1 = stackOut_18_1;
+                        stackIn_19_2 = stackOut_18_2;
+                        statePc = 19;
+                        continue stateLoop;
+                    }
+                    case 19: {
+                        stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+                        stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param1).append(44);
+                        stackIn_21_0 = stackOut_19_0;
+                        stackIn_21_1 = stackOut_19_1;
+                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_1 = stackOut_19_1;
+                        if (param2 == null) {
+                            statePc = 21;
+                        } else {
+                            statePc = 20;
+                        }
+                        continue stateLoop;
+                    }
+                    case 20: {
+                        stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+                        stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+                        stackOut_20_2 = "{...}";
+                        stackIn_22_0 = stackOut_20_0;
+                        stackIn_22_1 = stackOut_20_1;
+                        stackIn_22_2 = stackOut_20_2;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                    case 21: {
+                        stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+                        stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+                        stackOut_21_2 = "null";
+                        stackIn_22_0 = stackOut_21_0;
+                        stackIn_22_1 = stackOut_21_1;
+                        stackIn_22_2 = stackOut_21_2;
+                        statePc = 22;
+                        continue stateLoop;
+                    }
+                    case 22: {
+                        throw oi.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+                    }
+                    default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L3: {
-                var3_ref = decompiledCaughtException;
-                break L3;
-              }
             }
-            return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -2520,7 +2732,7 @@ public final class TetraLink extends ph {
           if (ko.field_s != 0) {
             if (1 == ko.field_s) {
               ai.field_i = ai.field_i + 1;
-              if (-17 != (ai.field_i ^ -1)) {
+              if (ai.field_i != 16) {
                 break L0;
               } else {
                 L1: {
@@ -2564,7 +2776,7 @@ public final class TetraLink extends ph {
                 break L0;
               } else {
                 ai.field_i = ai.field_i - 1;
-                if (-1 == (ai.field_i ^ -1)) {
+                if (ai.field_i == 0) {
                   ko.field_s = 0;
                   break L0;
                 } else {
@@ -2583,9 +2795,9 @@ public final class TetraLink extends ph {
                   if (kb.field_t != ed.field_O) {
                     break L5;
                   } else {
-                    if ((hm.field_a ^ -1) == (af.field_h ^ -1)) {
-                      if (0 != (kb.field_t ^ -1)) {
-                        if (1 == (kb.field_t ^ -1)) {
+                    if (~hm.field_a == ~af.field_h) {
+                      if (kb.field_t != -1) {
+                        if (kb.field_t == -2) {
                           var3 = 1;
                           break L4;
                         } else {
@@ -2730,7 +2942,7 @@ public final class TetraLink extends ph {
               } else {
                 int fieldTemp$5 = ((TetraLink) this).field_K + 1;
                 ((TetraLink) this).field_K = ((TetraLink) this).field_K + 1;
-                if ((fieldTemp$5 ^ -1) != -336) {
+                if (fieldTemp$5 != 335) {
                   break L17;
                 } else {
                   ((TetraLink) this).field_K = 0;
@@ -2748,7 +2960,7 @@ public final class TetraLink extends ph {
           }
         }
         L18: {
-          if ((ed.field_O ^ -1) == 2) {
+          if (ed.field_O == -3) {
             L19: {
               var8 = new String[]{me.field_c, vh.field_a};
               aa.field_bc = new ei(false, (int) sb.field_b[0], var8, 0, false);
@@ -2772,7 +2984,7 @@ public final class TetraLink extends ph {
           }
         }
         L20: {
-          if ((ed.field_O ^ -1) == 3) {
+          if (ed.field_O == -4) {
             nd.field_Lb.f(9, (byte) -92);
             ed.field_O = kb.field_t;
             jo.field_e = true;
@@ -2853,19 +3065,79 @@ public final class TetraLink extends ph {
 
     private final void a(boolean param0, ah param1) {
         kc var3 = null;
-        vn.b(1.0f);
-        vn.b();
-        af.field_c = kc.a(param1, "", "scenery");
-        if (cf.a(0, (byte) 117)) {
-            mf.field_w = (ob) (Object) af.field_c.a(32, 2184, 0, 256, 0);
-            var3 = kc.a(param1, "", "ghost_untextured");
-            ec.field_l = (ob) (Object) var3.a(64, 728, 0, 256, 0);
-        } else {
-            mf.field_w = (ob) (Object) af.field_c.a(64, 728, 0, 256, 0);
-        }
-        mf.field_w.a(gk.field_e);
-        if (param0) {
-            TetraLink.p(-81);
+        RuntimeException var3_ref = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              vn.b(1.0f);
+              vn.b();
+              af.field_c = kc.a(param1, "", "scenery");
+              if (!cf.a(0, (byte) 117)) {
+                mf.field_w = (ob) (Object) af.field_c.a(64, 728, 0, 256, 0);
+                break L1;
+              } else {
+                mf.field_w = (ob) (Object) af.field_c.a(32, 2184, 0, 256, 0);
+                var3 = kc.a(param1, "", "ghost_untextured");
+                ec.field_l = (ob) (Object) var3.a(64, 728, 0, 256, 0);
+                break L1;
+              }
+            }
+            L2: {
+              mf.field_w.a(gk.field_e);
+              if (!param0) {
+                break L2;
+              } else {
+                TetraLink.p(-81);
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3_ref;
+            stackOut_6_1 = new StringBuilder().append("TetraLink.N(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -2881,16 +3153,8 @@ public final class TetraLink extends ph {
     private final void e(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        L0: {
-          var3 = field_J;
-          oi.field_c = 3;
-          if (param0 == 67) {
-            break L0;
-          } else {
-            field_O = null;
-            break L0;
-          }
-        }
+        var3 = field_J;
+        oi.field_c = 3;
         qe.field_g = 3;
         vn.field_b = false;
         va.field_p = 3;
@@ -2914,73 +3178,309 @@ public final class TetraLink extends ph {
         rh.field_M = new oh(640, 400);
         kn.field_d = new oh(200, 400);
         var2 = 0;
-        L1: while (true) {
-          if (-257 >= (var2 ^ -1)) {
+        L0: while (true) {
+          if (var2 >= 256) {
             kd.a(320, 240, (byte) -121);
             dd.field_a = -1;
             return;
           } else {
-            oi.field_n[var2] = pl.a(-486473984, 143 * var2) << 867435208;
+            oi.field_n[var2] = pl.a(-486473984, 143 * var2) << 8;
             oi.field_n[var2] = mc.a(oi.field_n[var2], pl.a(65280, 191 * var2));
             oi.field_n[var2] = mc.a(oi.field_n[var2], var2);
             var2++;
-            continue L1;
+            continue L0;
           }
         }
     }
 
     private final void a(ah param0, ah param1, boolean param2, ah param3, ah param4, ah param5) {
+        RuntimeException var7 = null;
+        int var8 = 0;
         int var9_int = 0;
+        oh[][] var9 = null;
         oh var10_ref_oh = null;
         int var10 = 0;
-        int var11 = field_J;
-        mk.field_b = pm.a("", "font", param1, param3, -89);
-        go.field_g = pm.a("kartika13", "", param0, param4, -63);
-        oh var12 = ug.a(param1, (byte) -45, "starfield", "");
-        ja.field_i = new oh(2560, 256);
-        ja.field_i.c();
-        var12.b(0, 0);
-        var12.b(1280, 0);
-        pk.field_O.a(-117);
-        bg.field_c = qk.a((byte) 79, param1, "", "logo");
-        ef.field_k = ug.a(param1, (byte) -45, "splash", "");
-        of.field_f = el.a(param1, "walk1", "", -1409);
-        th.field_p = el.a(param1, "walk2", "", -1409);
-        qd.field_cb = el.a(param1, "walk3", "", -1409);
-        li.field_l = oc.a("frame", true, param1, "");
-        sd.field_qb = bf.a((byte) -69, param1, "", "achievements_large");
-        ek.field_p = ug.a(param0, (byte) -45, "unachieved", "basic");
-        w.field_r = ug.a(param0, (byte) -45, "orbcoin", "basic");
-        int var8 = sd.field_qb.length;
-        hl.field_G = new oh[var8];
-        me.a(false);
-        for (var9_int = 0; var9_int < var8; var9_int++) {
-            var10_ref_oh = new oh(32, 32);
-            var10_ref_oh.c();
-            sd.field_qb[var9_int].b(0, 0, 32, 32);
-            hl.field_G[var9_int] = var10_ref_oh;
-        }
-        cm.field_F = new oh(32, 32);
-        cm.field_F.c();
-        ek.field_p.b(0, 0, 32, 32);
-        fh.a(true);
-        l.field_c = bf.a((byte) -97, param1, "", "viewicons");
-        e.field_f = this.a(8388608, 262144, (byte) -107);
-        ho.field_M = this.a(6316128, 263172, (byte) -107);
-        if (!(!cf.a(0, (byte) 119))) {
-            me.field_e = ug.a(param1, (byte) -45, "red_counter", "allhallowseve");
-            qd.field_X = ug.a(param1, (byte) -45, "white_counter", "allhallowseve");
-        }
-        oh[][] var9 = new oh[ua.field_b.length][];
-        for (var10 = 0; (ua.field_b.length ^ -1) < (var10 ^ -1); var10++) {
-            var9[var10] = bf.a((byte) -126, param1, "", ua.field_b[var10]);
-        }
-        qn.a(false, pl.field_a, sb.field_b, d.field_c, var9, param2, var9, d.field_c, rc.field_U, param4, qn.field_s, 1, 2, a.field_i, param0);
-        hd.field_r = ug.a(param1, (byte) -45, "lobbyicon", "");
-        if (!cf.a(0, (byte) 116)) {
-            vn.a((m) (Object) new dh(param5, param1, 8, 128));
-        } else {
-            vn.a((m) (Object) new ja(param5, param1));
+        int var11 = 0;
+        oh var12 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        var11 = field_J;
+        try {
+          L0: {
+            mk.field_b = pm.a("", "font", param1, param3, -89);
+            go.field_g = pm.a("kartika13", "", param0, param4, -63);
+            var12 = ug.a(param1, (byte) -45, "starfield", "");
+            ja.field_i = new oh(2560, 256);
+            ja.field_i.c();
+            var12.b(0, 0);
+            var12.b(1280, 0);
+            pk.field_O.a(-117);
+            bg.field_c = qk.a((byte) 79, param1, "", "logo");
+            ef.field_k = ug.a(param1, (byte) -45, "splash", "");
+            of.field_f = el.a(param1, "walk1", "", -1409);
+            th.field_p = el.a(param1, "walk2", "", -1409);
+            qd.field_cb = el.a(param1, "walk3", "", -1409);
+            li.field_l = oc.a("frame", true, param1, "");
+            sd.field_qb = bf.a((byte) -69, param1, "", "achievements_large");
+            ek.field_p = ug.a(param0, (byte) -45, "unachieved", "basic");
+            w.field_r = ug.a(param0, (byte) -45, "orbcoin", "basic");
+            var8 = sd.field_qb.length;
+            hl.field_G = new oh[var8];
+            me.a(false);
+            var9_int = 0;
+            L1: while (true) {
+              if (var9_int >= var8) {
+                L2: {
+                  cm.field_F = new oh(32, 32);
+                  cm.field_F.c();
+                  ek.field_p.b(0, 0, 32, 32);
+                  fh.a(true);
+                  l.field_c = bf.a((byte) -97, param1, "", "viewicons");
+                  e.field_f = this.a(8388608, 262144, (byte) -107);
+                  ho.field_M = this.a(6316128, 263172, (byte) -107);
+                  if (cf.a(0, (byte) 119)) {
+                    me.field_e = ug.a(param1, (byte) -45, "red_counter", "allhallowseve");
+                    qd.field_X = ug.a(param1, (byte) -45, "white_counter", "allhallowseve");
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                var9 = new oh[ua.field_b.length][];
+                var10 = 0;
+                L3: while (true) {
+                  if (~ua.field_b.length >= ~var10) {
+                    L4: {
+                      qn.a(false, pl.field_a, sb.field_b, d.field_c, var9, param2, var9, d.field_c, rc.field_U, param4, qn.field_s, 1, 2, a.field_i, param0);
+                      hd.field_r = ug.a(param1, (byte) -45, "lobbyicon", "");
+                      if (cf.a(0, (byte) 116)) {
+                        vn.a((m) (Object) new ja(param5, param1));
+                        break L4;
+                      } else {
+                        vn.a((m) (Object) new dh(param5, param1, 8, 128));
+                        break L4;
+                      }
+                    }
+                    break L0;
+                  } else {
+                    var9[var10] = bf.a((byte) -126, param1, "", ua.field_b[var10]);
+                    var10++;
+                    continue L3;
+                  }
+                }
+              } else {
+                var10_ref_oh = new oh(32, 32);
+                var10_ref_oh.c();
+                sd.field_qb[var9_int].b(0, 0, 32, 32);
+                hl.field_G[var9_int] = var10_ref_oh;
+                var9_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var7 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var7;
+            stackOut_14_1 = new StringBuilder().append("TetraLink.I(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
+            }
+          }
+          L6: {
+            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param1 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L6;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L6;
+            }
+          }
+          L7: {
+            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param2).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param3 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L7;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44);
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
+            if (param4 == null) {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L8;
+            } else {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L8;
+            }
+          }
+          L9: {
+            stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44);
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
+            if (param5 == null) {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              break L9;
+            } else {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
+              break L9;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
         }
     }
 
@@ -2992,9 +3492,6 @@ public final class TetraLink extends ph {
         }
         nl.field_b = ve.b(108, 3);
         cd.field_b = ve.b(-84, 5);
-        if (param0 <= 16) {
-            field_P = null;
-        }
         ll.field_x = ve.b(-47, 6);
         n.field_N = ve.b(-64, 7);
         oa.field_p = ve.b(92, 8);
@@ -3018,10 +3515,6 @@ public final class TetraLink extends ph {
         ra.f(29, 29, 27, 263172);
         for (var5 = 23; var5 >= 0; var5--) {
             ra.f(29, 29, var5, param1 * var5 + param0);
-        }
-        if (param2 != -107) {
-            Object var7 = null;
-            this.a(false, (ah) null);
         }
         for (var5 = 0; 57 > var5; var5 += 2) {
             ra.e(0, var5, 57, 0, 128);
@@ -3387,7 +3880,7 @@ public final class TetraLink extends ph {
             qc.field_bb[3] = ri.a(nl.field_g, "", "tetralink ingame 3");
             var3 = 0;
             L23: while (true) {
-              if (-5 >= (var3 ^ -1)) {
+              if (var3 >= 4) {
                 ic.field_b.e((byte) 115);
                 jo.field_f = null;
                 nl.field_g = null;

@@ -29,134 +29,59 @@ public class ri {
 
     public static void a(String param0, byte param1, int param2) {
         Exception var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    field_c = param0;
-                    field_b = param2;
-                    if (param1 == -94) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    field_d = true;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        field_e = System.getProperty("user.home");
-                        if (null != field_e) {
-                            statePc = 7;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (null == field_e) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        field_e = "~/";
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        field_d = true;
-                        return;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        field_e = field_e + "/";
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    if (null == field_e) {
-                        statePc = 10;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
-                    field_e = "~/";
-                    statePc = 11;
-                    continue stateLoop;
-                }
-                case 11: {
-                    field_d = true;
-                    return;
-                }
-                case 12: {
-                    var3 = (Exception) (Object) caughtException;
-                    if (null == field_e) {
-                        statePc = 14;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 14: {
-                    field_e = "~/";
-                    statePc = 15;
-                    continue stateLoop;
-                }
-                case 15: {
-                    field_d = true;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        L0: {
+          field_c = param0;
+          field_b = param2;
+          if (param1 == -94) {
+            break L0;
+          } else {
+            field_d = true;
+            break L0;
+          }
         }
+        try {
+          L1: {
+            field_e = System.getProperty("user.home");
+            if (null != field_e) {
+              field_e = field_e + "/";
+              break L1;
+            } else {
+              L2: {
+                if (null == field_e) {
+                  field_e = "~/";
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              field_d = true;
+              return;
+            }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = (Exception) (Object) decompiledCaughtException;
+            if (null == field_e) {
+              field_e = "~/";
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          field_d = true;
+          return;
+        }
+        L4: {
+          if (null == field_e) {
+            field_e = "~/";
+            break L4;
+          } else {
+            break L4;
+          }
+        }
+        field_d = true;
     }
 
     static {

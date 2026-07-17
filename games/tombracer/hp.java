@@ -6,9 +6,6 @@ final class hp {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 32) {
-            float discarded$0 = hp.a(-1.4429486989974976f, -0.21872800588607788f, (byte) 122, 0.9918611645698547f, 90);
-        }
     }
 
     final static float a(float param0, float param1, byte param2, float param3, int param4) {
@@ -27,20 +24,6 @@ final class hp {
         gda var7 = null;
         if (param4 != -1918106173) {
             field_a = null;
-            if (!(param3 != null)) {
-                param3 = qi.field_O;
-            }
-            if (!(param3 != null)) {
-                return;
-            }
-            tga.field_a.ya();
-            tga.field_a.DA(param6, param5, 32, 32);
-            var7 = tga.field_a.e();
-            var7.a();
-            var7.d(param1 << -1918106173);
-            var7.c(-param2 << -499629181);
-            param3.a(var7, (el) null, param0 * 128 / 2048, 0);
-            return;
         }
         if (!(param3 != null)) {
             param3 = qi.field_O;
@@ -48,13 +31,17 @@ final class hp {
         if (!(param3 != null)) {
             return;
         }
-        tga.field_a.ya();
-        tga.field_a.DA(param6, param5, 32, 32);
-        var7 = tga.field_a.e();
-        var7.a();
-        var7.d(param1 << -1918106173);
-        var7.c(-param2 << -499629181);
-        param3.a(var7, (el) null, param0 * 128 / 2048, 0);
+        try {
+            tga.field_a.ya();
+            tga.field_a.DA(param6, param5, 32, 32);
+            var7 = tga.field_a.e();
+            var7.a();
+            var7.d(param1 << 3);
+            var7.c(-param2 << 3);
+            param3.a(var7, (el) null, param0 * 128 / 2048, 0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hp.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     static {

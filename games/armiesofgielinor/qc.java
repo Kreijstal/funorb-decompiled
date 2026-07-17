@@ -17,59 +17,29 @@ abstract class qc {
         field_i = null;
         field_b = null;
         field_e = null;
-        if (param0 != -108) {
-          field_c = null;
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          field_g = null;
-          field_h = null;
-          field_f = null;
-          return;
-        } else {
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          field_g = null;
-          field_h = null;
-          field_f = null;
-          return;
-        }
+        field_c = null;
+        field_a = null;
+        field_d = null;
+        field_g = null;
+        field_h = null;
+        field_f = null;
     }
 
     final static wk a(int param0, int param1) {
         co var2 = null;
-        if (param1 == 8806) {
-          if (vc.field_m != null) {
-            if ((param0 ^ -1) <= -1) {
-              if (mc.field_d.length <= param0) {
-                return null;
-              } else {
-                var2 = mc.field_d[param0];
-                return var2.c((byte) -116);
-              }
-            } else {
+        if (vc.field_m != null) {
+          if (param0 >= 0) {
+            if (mc.field_d.length <= param0) {
               return null;
+            } else {
+              var2 = mc.field_d[param0];
+              return var2.c((byte) -116);
             }
           } else {
             return null;
           }
         } else {
-          field_h = null;
-          if (vc.field_m != null) {
-            if ((param0 ^ -1) <= -1) {
-              if (mc.field_d.length <= param0) {
-                return null;
-              } else {
-                var2 = mc.field_d[param0];
-                return var2.c((byte) -116);
-              }
-            } else {
-              return null;
-            }
-          } else {
-            return null;
-          }
+          return null;
         }
     }
 
@@ -82,7 +52,7 @@ abstract class qc {
         } else {
           L0: {
             var4 = ((qc) this).b((byte) -103);
-            if ((var4 ^ -1L) < -1L) {
+            if (var4 > 0L) {
               nu.a(var4, 0);
               break L0;
             } else {

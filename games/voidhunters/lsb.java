@@ -7,9 +7,6 @@ final class lsb {
     int field_b;
 
     final static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
         kva.d((byte) -48);
     }
 

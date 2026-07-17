@@ -13,36 +13,30 @@ final class ga extends rl {
     }
 
     final static void a(int[] param0, int param1, int param2) {
-        Object var4 = null;
-        oj.field_O[param1] = param0;
-        if (param2 <= 40) {
-          var4 = null;
-          ga.a((int[]) null, -31, 97);
-          fh.field_y[param1] = new fo(param1);
-          return;
-        } else {
-          fh.field_y[param1] = new fo(param1);
-          return;
+        try {
+            oj.field_O[param1] = param0;
+            if (param2 <= 40) {
+                Object var4 = null;
+                ga.a((int[]) null, -31, 97);
+            }
+            fh.field_y[param1] = new fo(param1);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "ga.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
     public static void m(int param0) {
-        Object var2 = null;
         field_ib = null;
         field_jb = null;
-        if (param0 != 11840) {
-          var2 = null;
-          ga.a((int[]) null, 11, 116);
-          field_hb = null;
-          return;
-        } else {
-          field_hb = null;
-          return;
-        }
+        field_hb = null;
     }
 
     final void a(boolean param0, iq param1) {
-        super.a(param0, param1);
+        try {
+            super.a(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "ga.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -13,12 +13,6 @@ final class dda extends dg implements uq {
     }
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            field_d = null;
-            field_d = null;
-            field_c = null;
-            return;
-        }
         field_d = null;
         field_c = null;
     }
@@ -55,10 +49,10 @@ final class dda extends dg implements uq {
     final static void a(int param0, boolean param1) {
         if (param0 != 18090) {
             field_d = null;
-            ll.field_o = param1;
+            ll.field_o = false;
             return;
         }
-        ll.field_o = param1;
+        ll.field_o = false;
     }
 
     dda(qfa param0, int param1, byte[] param2, int param3) {

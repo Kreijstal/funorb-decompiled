@@ -20,13 +20,13 @@ final class hi {
             return 2;
           } else {
             if (2 == ((hi) this).field_f) {
-              if ((((hi) this).field_d ^ -1) < -1) {
+              if (((hi) this).field_d > 0) {
                 return 2;
               } else {
-                if ((((hi) this).field_g ^ -1L) == (ke.field_b ^ -1L)) {
+                if (~((hi) this).field_g == ~ke.field_b) {
                   return 1;
                 } else {
-                  if (-3 != (cn.field_b ^ -1)) {
+                  if (cn.field_b != 2) {
                     return 0;
                   } else {
                     if (bi.a((byte) 83, ((hi) this).field_e)) {
@@ -38,10 +38,10 @@ final class hi {
                 }
               }
             } else {
-              if ((((hi) this).field_g ^ -1L) == (ke.field_b ^ -1L)) {
+              if (~((hi) this).field_g == ~ke.field_b) {
                 return 1;
               } else {
-                if (-3 != (cn.field_b ^ -1)) {
+                if (cn.field_b != 2) {
                   return 0;
                 } else {
                   if (bi.a((byte) 83, ((hi) this).field_e)) {
@@ -57,11 +57,11 @@ final class hi {
           ((hi) this).field_g = 0L;
           if (!((hi) this).field_i) {
             if (2 == ((hi) this).field_f) {
-              if ((((hi) this).field_d ^ -1) >= -1) {
-                if ((((hi) this).field_g ^ -1L) == (ke.field_b ^ -1L)) {
+              if (((hi) this).field_d <= 0) {
+                if (~((hi) this).field_g == ~ke.field_b) {
                   return 1;
                 } else {
-                  if (-3 != (cn.field_b ^ -1)) {
+                  if (cn.field_b != 2) {
                     return 0;
                   } else {
                     if (bi.a((byte) 83, ((hi) this).field_e)) {
@@ -75,10 +75,10 @@ final class hi {
                 return 2;
               }
             } else {
-              if ((((hi) this).field_g ^ -1L) == (ke.field_b ^ -1L)) {
+              if (~((hi) this).field_g == ~ke.field_b) {
                 return 1;
               } else {
-                if (-3 != (cn.field_b ^ -1)) {
+                if (cn.field_b != 2) {
                   return 0;
                 } else {
                   if (bi.a((byte) 83, ((hi) this).field_e)) {
@@ -98,9 +98,6 @@ final class hi {
     public static void a(int param0) {
         field_j = null;
         field_h = null;
-        if (param0 != 2) {
-            field_j = null;
-        }
     }
 
     hi(boolean param0) {

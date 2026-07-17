@@ -10,25 +10,18 @@ final class vi {
     static String field_f;
 
     final static void a(String param0, int param1, String param2) {
-        Object var4 = null;
-        L0: {
-          if (null != qc.field_a) {
-            qc.field_a.b(true);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param1 != 640) {
-          var4 = null;
-          vi.a((String) null, -8, (String) null);
-          np.field_Qb = new df(param0, param2, false, true, true);
-          lt.field_g.a((kb) (Object) np.field_Qb, (byte) -77);
-          return;
-        } else {
-          np.field_Qb = new df(param0, param2, false, true, true);
-          lt.field_g.a((kb) (Object) np.field_Qb, (byte) -77);
-          return;
+        try {
+            if (!(null == qc.field_a)) {
+                qc.field_a.b(true);
+            }
+            if (param1 != 640) {
+                Object var4 = null;
+                vi.a((String) null, -8, (String) null);
+            }
+            np.field_Qb = new df(param0, param2, false, true, true);
+            lt.field_g.a((kb) (Object) np.field_Qb, (byte) -77);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "vi.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -50,9 +43,6 @@ final class vi {
 
     public static void a(boolean param0) {
         field_f = null;
-        if (!param0) {
-            return;
-        }
         field_a = null;
         field_c = null;
         field_b = null;

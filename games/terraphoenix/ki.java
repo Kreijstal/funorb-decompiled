@@ -13,13 +13,13 @@ final class ki extends vj {
     private rc field_X;
 
     final static void i(int param0) {
-        ci var1_ref = null;
-        int var1 = 0;
+        ci var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        String var5_ref = null;
+        String var5_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -144,7 +144,7 @@ final class ki extends vj {
                       var12.b(18 + -hb.field_m.field_p, 241 + -hb.field_m.field_v);
                       var7 = 0;
                       L2: while (true) {
-                        if (var7 >= vi.field_j.length) {
+                        if (~var7 <= ~vi.field_j.length) {
                           vi.field_j = null;
                           kb.field_s = sb.field_p.d();
                           kb.field_s.a();
@@ -159,7 +159,7 @@ final class ki extends vj {
                           break L1;
                         } else {
                           wg.field_l[var7].a();
-                          int discarded$6 = ja.field_m.a(vi.field_j[var7], 3, 3, -6 + wg.field_l[var7].field_r, wg.field_l[var7].field_t - 6, me.field_k, -1, 1, 1, ja.field_m.field_s + ja.field_m.field_p);
+                          int discarded$3 = ja.field_m.a(vi.field_j[var7], 3, 3, -6 + wg.field_l[var7].field_r, wg.field_l[var7].field_t - 6, me.field_k, -1, 1, 1, ja.field_m.field_s + ja.field_m.field_p);
                           wa.a(wg.field_l[var7], 0, wg.field_l[var7].field_t, 69, 1, 0, 3, wg.field_l[var7].field_r);
                           var7++;
                           continue L2;
@@ -194,7 +194,7 @@ final class ki extends vj {
                   var8 = (fg.field_a - var6) / 2 + ee.field_h;
                   var7 -= 3;
                   var5 += 6;
-                  if ((var7 ^ -1) <= -1) {
+                  if (var7 >= 0) {
                     break L4;
                   } else {
                     var9_int = -var7;
@@ -210,7 +210,7 @@ final class ki extends vj {
                 L5: {
                   var8 -= 3;
                   var6 += 6;
-                  if (var5 + var7 > p.field_e.field_q) {
+                  if (~(var5 + var7) < ~p.field_e.field_q) {
                     var9_int = var5 + var7 - p.field_e.field_q;
                     var5 = var5 + 2 * var9_int;
                     fi.field_q = fi.field_q - var9_int;
@@ -224,7 +224,7 @@ final class ki extends vj {
                   }
                 }
                 L6: {
-                  if ((var8 ^ -1) > -1) {
+                  if (var8 < 0) {
                     var9_int = -var8;
                     ee.field_h = ee.field_h + var9_int;
                     p.field_e.field_u = p.field_e.field_u + var9_int * 2;
@@ -238,7 +238,7 @@ final class ki extends vj {
                   }
                 }
                 L7: {
-                  if (var8 - -var6 <= p.field_e.field_u) {
+                  if (~(var8 - -var6) >= ~p.field_e.field_u) {
                     break L7;
                   } else {
                     var9_int = -p.field_e.field_u + (var6 + var8);
@@ -254,13 +254,13 @@ final class ki extends vj {
                 p.field_e.f();
                 var9 = new ci(p.field_e.field_q, p.field_e.field_u);
                 var9.a();
-                int discarded$7 = fa.field_i.a(var14, lm.field_b, ee.field_h, nl.field_a, fg.field_a, 16777215, -1, 1, 1, fa.field_i.field_p + fa.field_i.field_s);
+                int discarded$4 = fa.field_i.a(var14, lm.field_b, ee.field_h, nl.field_a, fg.field_a, 16777215, -1, 1, 1, fa.field_i.field_p + fa.field_i.field_s);
                 wa.a(var9, 0, var9.field_u, -86, 1, 0, 3, var9.field_q);
                 p.field_e.a();
                 var9.b(0, 0);
                 eh.field_b = new ci(640, 480);
                 eh.field_b.a();
-                p.field_e.b(fi.field_q + (p.field_e.field_q >> 1247386305), ad.field_h + (p.field_e.field_u >> 1184629793), ha.field_p, 4096);
+                p.field_e.b(fi.field_q + (p.field_e.field_q >> 1), ad.field_h + (p.field_e.field_u >> 1), ha.field_p, 4096);
                 p.field_e = null;
                 eh.field_b.c();
                 l.a(var28, var2, var3);
@@ -283,10 +283,10 @@ final class ki extends vj {
                 var3 = l.field_j;
                 l.b(rb.field_a);
                 var16 = new ci(412, 43);
-                var5_ref = ij.a(new String[1], param0 + -28419, ia.field_p);
+                var5_ref_String = ij.a(new String[1], param0 + -28419, ia.field_p);
                 jh.field_p = null;
                 var16.a();
-                int discarded$8 = ja.field_m.a(var5_ref, 3, 3, -6 + var16.field_r, -6 + var16.field_t, 16777215, -1, 0, 1, ja.field_m.field_s - -ja.field_m.field_p);
+                int discarded$5 = ja.field_m.a(var5_ref_String, 3, 3, -6 + var16.field_r, -6 + var16.field_t, 16777215, -1, 0, 1, ja.field_m.field_s - -ja.field_m.field_p);
                 wa.a(var16, 0, var16.field_t, -101, 1, 0, 3, var16.field_r);
                 fa.field_d.a();
                 var16.b(199 - fa.field_d.field_p, 83 - fa.field_d.field_v);
@@ -360,16 +360,16 @@ final class ki extends vj {
               } else {
                 L14: {
                   lm.field_e.b(231, 390);
-                  var1_ref = sb.field_p;
+                  var1 = sb.field_p;
                   if (0 == si.field_ob.field_h) {
-                    var1_ref = kb.field_s;
+                    var1 = kb.field_s;
                     break L14;
                   } else {
                     break L14;
                   }
                 }
                 L15: {
-                  var1_ref.b(0, 0);
+                  var1.b(0, 0);
                   stackOut_48_0 = 40;
                   stackOut_48_1 = 2;
                   stackOut_48_2 = el.field_e;
@@ -379,7 +379,7 @@ final class ki extends vj {
                   stackIn_49_0 = stackOut_48_0;
                   stackIn_49_1 = stackOut_48_1;
                   stackIn_49_2 = stackOut_48_2;
-                  if (si.field_ob.field_h != -1) {
+                  if (si.field_ob.field_h != 0) {
                     stackOut_50_0 = stackIn_50_0;
                     stackOut_50_1 = stackIn_50_1;
                     stackOut_50_2 = stackIn_50_2;
@@ -402,18 +402,18 @@ final class ki extends vj {
                   }
                 }
                 L16: {
-                  var2 = (stackIn_51_0 * ij.a(stackIn_51_1, stackIn_51_2 << stackIn_51_3) >> -2088798224) + 40;
-                  if (-1 >= var2) {
+                  var2 = (stackIn_51_0 * ij.a(stackIn_51_1, stackIn_51_2 << stackIn_51_3) >> 16) + 40;
+                  if (var2 <= 0) {
                     break L16;
                   } else {
                     lm.field_e.d(230, 389, var2);
                     lm.field_e.d(232, 389, var2);
                     lm.field_e.d(232, 391, var2);
                     lm.field_e.d(230, 391, var2);
-                    var1_ref.d(1, 1, var2);
-                    var1_ref.d(-1, 1, var2);
-                    var1_ref.d(1, -1, var2);
-                    var1_ref.d(-1, -1, var2);
+                    var1.d(1, 1, var2);
+                    var1.d(-1, 1, var2);
+                    var1.d(1, -1, var2);
+                    var1.d(-1, -1, var2);
                     break L16;
                   }
                 }
@@ -471,7 +471,7 @@ final class ki extends vj {
                   stackIn_64_1 = stackOut_62_1;
                   stackIn_63_0 = stackOut_62_0;
                   stackIn_63_1 = stackOut_62_1;
-                  if ((si.field_ob.field_h ^ -1) != -2) {
+                  if (si.field_ob.field_h != 1) {
                     stackOut_64_0 = stackIn_64_0;
                     stackOut_64_1 = stackIn_64_1;
                     stackOut_64_2 = 0;
@@ -499,16 +499,16 @@ final class ki extends vj {
               if (null == ig.field_a) {
                 break L22;
               } else {
-                var1 = 357 - ig.field_a.field_u / 2;
-                ig.field_a.b(-ig.field_a.field_q + 269, var1);
-                ve.field_a.b(586, var1);
-                if (var1 >= jb.field_b) {
+                var1_int = 357 - ig.field_a.field_u / 2;
+                ig.field_a.b(-ig.field_a.field_q + 269, var1_int);
+                ve.field_a.b(586, var1_int);
+                if (~var1_int <= ~jb.field_b) {
                   break L22;
                 } else {
-                  if (jb.field_b >= var1 + ig.field_a.field_t) {
+                  if (~jb.field_b <= ~(var1_int + ig.field_a.field_t)) {
                     break L22;
                   } else {
-                    var2 = (40 * ij.a(2, el.field_e << -1057361020) >> -759589520) + 40;
+                    var2 = (40 * ij.a(2, el.field_e << 4) >> 16) + 40;
                     if (0 >= var2) {
                       break L22;
                     } else {
@@ -516,30 +516,26 @@ final class ki extends vj {
                         if (ef.field_j <= -ig.field_a.field_r + 269) {
                           break L23;
                         } else {
-                          if ((ef.field_j ^ -1) > -270) {
-                            ig.field_a.d(-1 + (-ig.field_a.field_q + 269), var1 + -1, var2);
-                            ig.field_a.d(269 + -ig.field_a.field_q - -1, -1 + var1, var2);
-                            ig.field_a.d(268 - ig.field_a.field_q, var1 - -1, var2);
-                            ig.field_a.d(1 + (269 - ig.field_a.field_q), var1 - -1, var2);
-                            mh.a((byte) -85);
-                            wg.field_l[vi.field_q].b(269, 340);
-                            break L21;
+                          if (ef.field_j < 269) {
+                            ig.field_a.d(-1 + (-ig.field_a.field_q + 269), var1_int + -1, var2);
+                            ig.field_a.d(269 + -ig.field_a.field_q - -1, -1 + var1_int, var2);
+                            ig.field_a.d(268 - ig.field_a.field_q, var1_int - -1, var2);
+                            ig.field_a.d(1 + (269 - ig.field_a.field_q), var1_int - -1, var2);
+                            break L22;
                           } else {
                             break L23;
                           }
                         }
                       }
-                      if ((ef.field_j ^ -1) >= -587) {
+                      if (ef.field_j <= 586) {
                         break L22;
                       } else {
                         if (ef.field_j < ig.field_a.field_r + 586) {
-                          ve.field_a.d(585, -1 + var1, var2);
-                          ve.field_a.d(587, -1 + var1, var2);
-                          ve.field_a.d(585, 1 + var1, var2);
-                          ve.field_a.d(587, 1 + var1, var2);
-                          mh.a((byte) -85);
-                          wg.field_l[vi.field_q].b(269, 340);
-                          break L21;
+                          ve.field_a.d(585, -1 + var1_int, var2);
+                          ve.field_a.d(587, -1 + var1_int, var2);
+                          ve.field_a.d(585, 1 + var1_int, var2);
+                          ve.field_a.d(587, 1 + var1_int, var2);
+                          break L22;
                         } else {
                           mh.a((byte) -85);
                           wg.field_l[vi.field_q].b(269, 340);
@@ -561,17 +557,77 @@ final class ki extends vj {
 
     ki(rc param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, (cj) (Object) k.a(60));
-        ((ki) this).field_X = param0;
-        ((ki) this).field_V = param1;
-        ((ki) this).a(param3, (byte) 64, param4, param2, param5);
+        try {
+            ((ki) this).field_X = param0;
+            ((ki) this).field_V = param1;
+            ((ki) this).a(param3, (byte) 64, param4, param2, param5);
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     final boolean a(byte param0, gl param1) {
-        if (param0 < 2) {
-            field_Y = null;
-            return false;
+        RuntimeException var3 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            if (param0 >= 2) {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            } else {
+              field_Y = null;
+              return false;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("ki.F(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw qk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return false;
+        return stackIn_3_0 != 0;
     }
 
     final String f(int param0) {
@@ -583,10 +639,66 @@ final class ki extends vj {
     }
 
     final void a(gl param0, int param1, int param2, int param3) {
-        ((ki) this).field_W = ((ki) this).field_W + 1;
-        super.a(param0, param1, param2, 95);
-        if (param3 < 25) {
-            field_Y = null;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((ki) this).field_W = ((ki) this).field_W + 1;
+              super.a(param0, param1, param2, 95);
+              if (param3 >= 25) {
+                break L1;
+              } else {
+                field_Y = null;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ki.B(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw qk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -648,7 +760,7 @@ final class ki extends vj {
             var6 = ((ki) this).field_X.a(-16323);
             var8 = (w) (Object) ((ki) this).field_l;
             var9 = param0 - -((ki) this).field_w;
-            var10 = var8.a((gl) this, param3, (byte) -72) + (var8.a((gl) this, -19302).c(5859) >> -13252191);
+            var10 = var8.a((gl) this, param3, (byte) -72) + (var8.a((gl) this, -19302).c(5859) >> 1);
             if (kj.field_d == var6) {
               break L5;
             } else {
@@ -660,12 +772,12 @@ final class ki extends vj {
                     break L4;
                   } else {
                     var15 = og.field_c[1];
-                    var15.d(var9, -(var15.field_t >> 1296426049) + var10, 256);
+                    var15.d(var9, -(var15.field_t >> 1) + var10, 256);
                     break L4;
                   }
                 } else {
                   var14 = og.field_c[2];
-                  var14.d(var9, -(var14.field_t >> 1268636225) + var10, 256);
+                  var14.d(var9, -(var14.field_t >> 1) + var10, 256);
                   break L4;
                 }
               }
@@ -674,8 +786,8 @@ final class ki extends vj {
           L6: {
             L7: {
               var16 = og.field_c[0];
-              var11 = var16.field_q << 237774177;
-              var12 = var16.field_u << 1419601057;
+              var11 = var16.field_q << 1;
+              var12 = var16.field_u << 1;
               if (((ki) this).field_U == null) {
                 break L7;
               } else {
@@ -696,9 +808,9 @@ final class ki extends vj {
             il.a(1, ((ki) this).field_U);
             break L6;
           }
-          var16.b(112, 144, var16.field_q << -1172984028, var16.field_u << 79025124, -((ki) this).field_W << 1799355402, 4096);
+          var16.b(112, 144, var16.field_q << 4, var16.field_u << 4, -((ki) this).field_W << 10, 4096);
           ij.a(false);
-          ((ki) this).field_U.d(-(var16.field_q >> 1509019009) + var9, -var16.field_u + var10, 256);
+          ((ki) this).field_U.d(-(var16.field_q >> 1) + var9, -var16.field_u + var10, 256);
           break L4;
         }
     }

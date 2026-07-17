@@ -35,7 +35,11 @@ final class ib extends rq {
     ib(aw param0, sk param1) {
         super(param0);
         ((ib) this).field_e = 0.0f;
-        ((ib) this).field_f = param1;
+        try {
+            ((ib) this).field_f = param1;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "ib.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean b(byte param0) {
@@ -47,11 +51,6 @@ final class ib extends rq {
     }
 
     public static void e(int param0) {
-        if (param0 != 1) {
-            ib.d(48);
-            field_g = null;
-            return;
-        }
         field_g = null;
     }
 
@@ -72,13 +71,13 @@ final class ib extends rq {
     }
 
     final void a(int param0, int param1, ed param2) {
-        if (param1 != 18834) {
-          ((ib) this).field_f = null;
-          ((ib) this).field_b.a(param2, 126);
-          return;
-        } else {
-          ((ib) this).field_b.a(param2, 126);
-          return;
+        try {
+            if (param1 != 18834) {
+                ((ib) this).field_f = null;
+            }
+            ((ib) this).field_b.a(param2, 126);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "ib.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

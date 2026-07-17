@@ -12,20 +12,10 @@ abstract class mb {
 
     public static void c(int param0) {
         field_c = null;
-        if (param0 != 4) {
-          field_f = null;
-          field_d = null;
-          field_g = null;
-          field_b = null;
-          field_f = null;
-          return;
-        } else {
-          field_d = null;
-          field_g = null;
-          field_b = null;
-          field_f = null;
-          return;
-        }
+        field_d = null;
+        field_g = null;
+        field_b = null;
+        field_f = null;
     }
 
     final static void b(int param0) {
@@ -41,7 +31,7 @@ abstract class mb {
     abstract byte[] a(int param0);
 
     final static void d(int param0) {
-        if (-1 == (un.field_e ^ -1)) {
+        if (un.field_e == 0) {
           dp.field_c.field_hb = dq.a(3, 0, jc.field_f);
           if (param0 <= -97) {
             return;

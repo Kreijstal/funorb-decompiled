@@ -18,10 +18,6 @@ final class wc {
     }
 
     final static int d(int param0) {
-        if (param0 != 20) {
-            boolean discarded$0 = wc.a(-3, 'E');
-            return ef.field_b;
-        }
         return ef.field_b;
     }
 
@@ -52,9 +48,6 @@ final class wc {
 
     public static void c(int param0) {
         field_g = null;
-        if (param0 != -1) {
-            return;
-        }
         field_c = null;
         field_b = null;
         field_d = null;
@@ -65,30 +58,26 @@ final class wc {
     final static gj b(int param0) {
         try {
             Throwable var1 = null;
-            gj stackIn_3_0 = null;
+            gj stackIn_1_0 = null;
             Throwable decompiledCaughtException = null;
-            gj stackOut_2_0 = null;
+            gj stackOut_0_0 = null;
             try {
               L0: {
-                if (param0 == 5220) {
-                  break L0;
-                } else {
-                  boolean discarded$2 = wc.a(14, '￉');
-                  break L0;
-                }
+                stackOut_0_0 = (gj) Class.forName("me").newInstance();
+                stackIn_1_0 = stackOut_0_0;
+                break L0;
               }
-              stackOut_2_0 = (gj) Class.forName("me").newInstance();
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_1_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     static {

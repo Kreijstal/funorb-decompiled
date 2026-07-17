@@ -12,9 +12,6 @@ class kg extends rc {
 
     public static void e(byte param0) {
         field_m = null;
-        if (param0 < 54) {
-            field_m = null;
-        }
     }
 
     static {

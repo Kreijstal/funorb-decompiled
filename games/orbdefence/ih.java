@@ -6,18 +6,16 @@ final class ih {
     static int field_a;
 
     final static void a(String param0, int param1, float param2, boolean param3) {
-        if (na.field_c == null) {
-          na.field_c = new ve(bm.field_d, bm.field_a);
-          bm.field_d.b((byte) 74, (pj) (Object) na.field_c);
-          na.field_c.a(param3, param0, param2, 2113632);
-          ul.d();
-          m.a(true, param1);
-          return;
-        } else {
-          na.field_c.a(param3, param0, param2, 2113632);
-          ul.d();
-          m.a(true, param1);
-          return;
+        try {
+            if (na.field_c == null) {
+                na.field_c = new ve(bm.field_d, bm.field_a);
+                bm.field_d.b((byte) 74, (pj) (Object) na.field_c);
+            }
+            na.field_c.a(param3, param0, param2, 2113632);
+            ul.d();
+            m.a(true, param1);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "ih.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

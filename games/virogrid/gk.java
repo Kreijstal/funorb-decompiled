@@ -255,7 +255,7 @@ final class gk implements Iterable {
               var3_int = ((um) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3 != 0, stackIn_8_4, stackIn_8_5, stackIn_8_6 != 0) ? 1 : 0;
               var4 = ve.field_q.field_Lb.field_W;
               var5 = null;
-              if (-3 != (oa.field_q ^ -1)) {
+              if (oa.field_q != 2) {
                 L4: {
                   L5: {
                     dg.field_E.field_Y = false;
@@ -384,7 +384,7 @@ final class gk implements Iterable {
                             stackOut_34_0 = var7.field_Eb;
                             stackIn_37_0 = stackOut_34_0;
                             stackIn_35_0 = stackOut_34_0;
-                            if (-1 <= (var14 ^ -1)) {
+                            if (var14 <= 0) {
                               stackOut_37_0 = (km) (Object) stackIn_37_0;
                               stackOut_37_1 = var7.field_Hb;
                               stackIn_38_0 = stackOut_37_0;
@@ -467,7 +467,7 @@ final class gk implements Iterable {
                               }
                             }
                             L22: {
-                              if (-1 != (var7.field_nb ^ -1)) {
+                              if (var7.field_nb != 0) {
                                 break L22;
                               } else {
                                 if (!var7.field_Eb.field_S) {
@@ -534,7 +534,7 @@ final class gk implements Iterable {
                     break L7;
                   }
                   L25: {
-                    if ((((km) (Object) stackIn_87_0).field_nb ^ -1) == -1) {
+                    if (((km) (Object) stackIn_87_0).field_nb == 0) {
                       break L25;
                     } else {
                       he.field_Xb = new fe(ve.field_q.field_Fb.field_Bb, ve.field_q.field_Fb.field_J, ve.field_q.field_Fb.field_K, ve.field_q.field_Fb.field_ub, jd.field_e, s.field_f, ti.field_h, ti.field_h);

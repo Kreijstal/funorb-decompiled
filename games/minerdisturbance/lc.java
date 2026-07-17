@@ -25,7 +25,7 @@ final class lc extends pi {
         var7[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        int var6 = -81 % ((param4 - 40) / 61);
+        int var6 = 0;
         if (!(param0 == 0)) {
             var7[4] = hb.a(64, 32768, param0);
         }
@@ -44,13 +44,18 @@ final class lc extends pi {
     }
 
     final static void a(byte param0, int param1, lc param2) {
-        ld var3 = sn.field_c;
-        var3.d((byte) -111, param1);
-        var3.c(5, param0 + 25438);
-        var3.c(0, 25564);
-        var3.b(param0, param2.field_q);
-        var3.c(param2.field_r, 25564);
-        var3.c(param2.field_v, 25564);
+        ld var3 = null;
+        try {
+            var3 = sn.field_c;
+            var3.d((byte) -111, param1);
+            var3.c(5, param0 + 25438);
+            var3.c(0, 25564);
+            var3.b(param0, param2.field_q);
+            var3.c(param2.field_r, 25564);
+            var3.c(param2.field_v, 25564);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "lc.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     lc() {

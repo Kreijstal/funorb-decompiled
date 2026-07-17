@@ -25,14 +25,72 @@ abstract class wd extends wc {
     abstract qm a(float param0, boolean param1);
 
     final static hj b(String param0, byte param1) {
+        RuntimeException var2 = null;
         Object var3 = null;
-        if (param1 != -63) {
-          var3 = null;
-          hj discarded$2 = wd.b((String) null, (byte) -20);
-          return dl.a(fb.field_i, param0, false, "");
-        } else {
-          return dl.a(fb.field_i, param0, false, "");
+        hj stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        hj stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == -63) {
+                break L1;
+              } else {
+                var3 = null;
+                hj discarded$2 = wd.b((String) null, (byte) -20);
+                break L1;
+              }
+            }
+            stackOut_2_0 = dl.a(fb.field_i, param0, false, "");
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("wd.TA(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
+        return stackIn_3_0;
     }
 
     abstract qm a(int param0, float param1);
@@ -40,46 +98,54 @@ abstract class wd extends wc {
     abstract qm o(int param0);
 
     final static void a(boolean param0, byte param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
-        int[][] stackIn_3_0 = null;
+        int[][] stackIn_4_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        int[][] stackOut_3_0 = null;
         int[][] stackOut_2_0 = null;
-        int[][] stackOut_1_0 = null;
-        L0: {
-          var3 = HoldTheLine.field_D;
-          if (!param0) {
-            stackOut_2_0 = fk.field_b;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = dl.field_k;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        em.field_i = stackIn_3_0;
-        if (param1 != 97) {
-          return;
-        } else {
-          var2 = 0;
-          L1: while (true) {
-            if (l.field_a.length <= var2) {
-              return;
-            } else {
-              if (-14 != (var2 ^ -1)) {
-                ((ti) (Object) l.field_a[var2]).e(-127);
-                var2++;
-                var2++;
-                continue L1;
+        var3 = HoldTheLine.field_D;
+        try {
+          L0: {
+            L1: {
+              if (!param0) {
+                stackOut_3_0 = fk.field_b;
+                stackIn_4_0 = stackOut_3_0;
+                break L1;
               } else {
-                ((ec) (Object) l.field_a[var2]).a(true, 6267);
-                var2++;
-                var2++;
-                var2++;
-                continue L1;
+                stackOut_2_0 = dl.field_k;
+                stackIn_4_0 = stackOut_2_0;
+                break L1;
+              }
+            }
+            em.field_i = stackIn_4_0;
+            var2_int = 0;
+            L2: while (true) {
+              if (l.field_a.length <= var2_int) {
+                break L0;
+              } else {
+                L3: {
+                  if (var2_int != 13) {
+                    ((ti) (Object) l.field_a[var2_int]).e(-127);
+                    var2_int++;
+                    break L3;
+                  } else {
+                    ((ec) (Object) l.field_a[var2_int]).a(true, 6267);
+                    var2_int++;
+                    var2_int++;
+                    break L3;
+                  }
+                }
+                var2_int++;
+                continue L2;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw kk.a((Throwable) (Object) var2, "wd.VA(" + param0 + 44 + 97 + 41);
         }
     }
 
@@ -88,17 +154,11 @@ abstract class wd extends wc {
     public static void i(int param0) {
         field_u = null;
         field_v = null;
-        if (param0 != -3369) {
-            return;
-        }
         field_p = null;
         field_l = null;
     }
 
     final static String j(int param0) {
-        if (param0 != -14) {
-            return null;
-        }
         return sg.field_Y;
     }
 

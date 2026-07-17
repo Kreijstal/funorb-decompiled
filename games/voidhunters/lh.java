@@ -7,24 +7,20 @@ final class lh {
 
     final static void a(byte param0, int param1, String param2, String param3, String param4, int param5) {
         pgb var6 = null;
-        if (param0 >= -12) {
-          field_a = null;
-          var6 = new pgb(param5, param3, param1, param2, param4);
-          fpb.a(var6, 0);
-          return;
-        } else {
-          var6 = new pgb(param5, param3, param1, param2, param4);
-          fpb.a(var6, 0);
-          return;
+        try {
+            if (param0 >= -12) {
+                field_a = null;
+            }
+            var6 = new pgb(2, param3, param1, param2, param4);
+            fpb.a(var6, 0);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "lh.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 2 + 41);
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 != 15261) {
-            field_b = null;
-        }
     }
 
     static {

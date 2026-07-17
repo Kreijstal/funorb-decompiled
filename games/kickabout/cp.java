@@ -12,35 +12,98 @@ final class cp implements Runnable {
     volatile uh[] field_b;
 
     final static wn a(int param0, String param1) {
-        int var2 = 0;
-        var2 = 16 / ((param0 - 46) / 47);
-        if (mj.field_a != nr.field_f) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        Object stackIn_2_0 = null;
+        Object stackIn_7_0 = null;
+        wn stackIn_9_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        wn stackOut_8_0 = null;
+        Object stackOut_6_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
           L0: {
-            if (mj.field_a != cr.field_d) {
-              break L0;
-            } else {
-              if (param1.equals((Object) (Object) pr.field_c)) {
-                mj.field_a = vj.field_a;
-                return u.field_h;
-              } else {
-                break L0;
+            var2_int = 16 / ((param0 - 46) / 47);
+            if (mj.field_a != nr.field_f) {
+              L1: {
+                if (mj.field_a != cr.field_d) {
+                  break L1;
+                } else {
+                  if (param1.equals((Object) (Object) pr.field_c)) {
+                    mj.field_a = vj.field_a;
+                    stackOut_8_0 = u.field_h;
+                    stackIn_9_0 = stackOut_8_0;
+                    break L0;
+                  } else {
+                    break L1;
+                  }
+                }
               }
+              mj.field_a = nr.field_f;
+              pr.field_c = param1;
+              u.field_h = null;
+              stackOut_6_0 = null;
+              stackIn_7_0 = stackOut_6_0;
+              return (wn) (Object) stackIn_7_0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (wn) (Object) stackIn_2_0;
             }
           }
-          mj.field_a = nr.field_f;
-          pr.field_c = param1;
-          u.field_h = null;
-          return null;
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_1 = new StringBuilder().append("cp.D(").append(param0).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param1 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L2;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L2;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
+        return stackIn_9_0;
     }
 
     public static void a(byte param0) {
         field_d = null;
         field_h = null;
         field_g = null;
-        int var1 = 20 % ((param0 - -1) / 41);
+        int var1 = 0;
         field_a = null;
     }
 
@@ -51,7 +114,7 @@ final class cp implements Runnable {
         ((cp) this).field_c = true;
         try {
             while (!((cp) this).field_e) {
-                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
+                for (var1_int = 0; var1_int < 2; var1_int++) {
                     var2 = ((cp) this).field_b[var1_int];
                     if (var2 == null) {
                     } else {
@@ -80,7 +143,7 @@ final class cp implements Runnable {
                 var4 = 522;
             }
         }
-        if (!(-1 != (param2 ^ -1))) {
+        if (!(param2 != 0)) {
             var4 = 1344 + -var4;
         }
         return var4;
@@ -88,14 +151,10 @@ final class cp implements Runnable {
 
     final static int a(int param0) {
         al.field_Ab.a(0);
-        if (!(gt.field_t.a((byte) -46))) {
-            return fw.h((byte) 66);
-        }
-        if (param0 != 522) {
-            field_h = null;
+        if (gt.field_t.a((byte) -46)) {
             return 0;
         }
-        return 0;
+        return fw.h((byte) 66);
     }
 
     cp() {

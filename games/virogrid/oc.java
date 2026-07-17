@@ -12,12 +12,6 @@ final class oc extends l {
     static String field_h;
 
     public static void c(boolean param0) {
-        if (param0) {
-            oc.c(false);
-            field_h = null;
-            field_i = null;
-            return;
-        }
         field_h = null;
         field_i = null;
     }

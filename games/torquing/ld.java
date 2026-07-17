@@ -77,7 +77,7 @@ final class ld implements el {
               var7 = param2 - -param4.field_w - -var6_ref.field_G;
               var8 = var6_ref.field_F + (param1 - -param4.field_k);
               ph.d(var7, var8, var6_ref.field_C, ((ld) this).field_a);
-              if (0 != (var6_ref.field_I ^ -1)) {
+              if (var6_ref.field_I != -1) {
                 var9 = 2.0 * ((double)var6_ref.field_I * 3.141592653589793) / (double)var6_ref.field_E;
                 var11 = (int)(-Math.sin(var9) * (double)var6_ref.field_C);
                 var12 = (int)(Math.cos(var9) * (double)var6_ref.field_C);
@@ -95,7 +95,7 @@ final class ld implements el {
               ph.a(var7, var8, var7 + var11, var12 + var8, 1);
               if (((ld) this).field_j != null) {
                 var13 = ((ld) this).field_c + var6_ref.field_C + var6_ref.field_G;
-                int discarded$1 = ((ld) this).field_j.a(param4.field_m, var13 + (param2 + param4.field_w), ((ld) this).field_d + (param1 - -param4.field_k), -((ld) this).field_c + -var13 + param4.field_p, -(((ld) this).field_c << -725819935) + param4.field_o, ((ld) this).field_i, ((ld) this).field_f, 1, 1, 0);
+                int discarded$1 = ((ld) this).field_j.a(param4.field_m, var13 + (param2 + param4.field_w), ((ld) this).field_d + (param1 - -param4.field_k), -((ld) this).field_c + -var13 + param4.field_p, -(((ld) this).field_c << 1) + param4.field_o, ((ld) this).field_i, ((ld) this).field_f, 1, 1, 0);
                 break L5;
               } else {
                 break L5;
@@ -167,7 +167,7 @@ final class ld implements el {
               }
             }
             var2 = var1_ref.i((byte) -101);
-            if (-1 == (var2 ^ -1)) {
+            if (var2 == 0) {
               L2: {
                 if (ed.field_c != null) {
                   break L2;
@@ -178,7 +178,7 @@ final class ld implements el {
                 }
               }
               L3: {
-                if ((var1_ref.i((byte) -101) ^ -1) != -2) {
+                if (var1_ref.i((byte) -101) != 1) {
                   stackOut_13_0 = 0;
                   stackIn_14_0 = stackOut_13_0;
                   break L3;
@@ -238,8 +238,8 @@ final class ld implements el {
               var5.field_ob = var4_ref_String;
               return;
             } else {
-              if (-2 != (var2 ^ -1)) {
-                if ((var2 ^ -1) != -3) {
+              if (var2 != 1) {
+                if (var2 != 2) {
                   if (3 == var2) {
                     L8: {
                       if (cn.field_b != 2) {

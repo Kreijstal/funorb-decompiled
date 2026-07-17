@@ -14,7 +14,8 @@ final class qh extends vd {
     static boolean field_v;
 
     final static bi a(bi param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -23,100 +24,154 @@ final class qh extends vd {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        L0: {
-          var14 = ShatteredPlansClient.field_F ? 1 : 0;
-          var6 = 0;
-          if (0 > param3) {
-            param2 = param2 + param3;
-            var6 = var6 - param3;
-            param3 = 0;
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        L1: {
-          var7 = 0;
-          if (param4 < param1) {
-            param5 = param5 + param1;
-            var7 = var7 - param1;
-            param1 = 0;
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        L2: {
-          if (-641 < param3 - -param2) {
-            param2 = -param3 + 640;
-            break L2;
-          } else {
-            break L2;
-          }
-        }
-        L3: {
-          if (-481 > param1 - -param5) {
-            param5 = -param1 + 480;
-            break L3;
-          } else {
-            break L3;
-          }
-        }
-        if (-1 <= param2) {
-          if ((param5 ^ -1) <= -1) {
+        bi stackIn_30_0 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        bi stackOut_29_0 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
+        var14 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var6_int = 0;
+              if (0 > param3) {
+                param2 = param2 + param3;
+                var6_int = var6_int - param3;
+                param3 = 0;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              var7 = 0;
+              if (param4 < param1) {
+                param5 = param5 + param1;
+                var7 = var7 - param1;
+                param1 = 0;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (-641 < param3 - -param2) {
+                param2 = -param3 + 640;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
             L4: {
-              L5: {
-                if (param0 == null) {
-                  break L5;
-                } else {
-                  if (param0.field_z < param2) {
-                    break L5;
-                  } else {
-                    if (param5 > param0.field_w) {
-                      break L5;
+              if (-481 > param1 - -param5) {
+                param5 = -param1 + 480;
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            if (-1 <= param2) {
+              if (param5 >= 0) {
+                L5: {
+                  L6: {
+                    if (param0 == null) {
+                      break L6;
                     } else {
-                      break L4;
+                      if (param0.field_z < param2) {
+                        break L6;
+                      } else {
+                        if (param5 > param0.field_w) {
+                          break L6;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    }
+                  }
+                  param0 = new bi(param2, param5);
+                  break L5;
+                }
+                var8 = gf.field_b - param2;
+                var9 = param0.field_z + -param2;
+                var10 = -1 + param1 * gf.field_b + param3;
+                var11 = -1;
+                var12 = -param5;
+                L7: while (true) {
+                  if (0 <= var12) {
+                    param0.field_x = var7;
+                    param0.field_t = var6_int;
+                    stackOut_29_0 = (bi) param0;
+                    stackIn_30_0 = stackOut_29_0;
+                    break L0;
+                  } else {
+                    var13 = -param2;
+                    L8: while (true) {
+                      if (0 <= var13) {
+                        var10 = var10 + var8;
+                        var11 = var11 + var9;
+                        var12++;
+                        continue L7;
+                      } else {
+                        var11++;
+                        var10++;
+                        param0.field_B[var11] = gf.field_h[var10];
+                        var13++;
+                        continue L8;
+                      }
                     }
                   }
                 }
-              }
-              param0 = new bi(param2, param5);
-              break L4;
-            }
-            var8 = gf.field_b - param2;
-            var9 = param0.field_z + -param2;
-            var10 = -1 + param1 * gf.field_b + param3;
-            var11 = -1;
-            var12 = -param5;
-            L6: while (true) {
-              if (0 <= var12) {
-                param0.field_x = var7;
-                param0.field_t = var6;
-                return param0;
               } else {
-                var13 = -param2;
-                L7: while (true) {
-                  if (0 <= var13) {
-                    var10 = var10 + var8;
-                    var11 = var11 + var9;
-                    var12++;
-                    continue L6;
-                  } else {
-                    var11++;
-                    var10++;
-                    param0.field_B[var11] = gf.field_h[var10];
-                    var13++;
-                    continue L7;
-                  }
-                }
+                return null;
               }
+            } else {
+              return null;
             }
-          } else {
-            return null;
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var6 = decompiledCaughtException;
+            stackOut_31_0 = (RuntimeException) var6;
+            stackOut_31_1 = new StringBuilder().append("qh.O(");
+            stackIn_33_0 = stackOut_31_0;
+            stackIn_33_1 = stackOut_31_1;
+            stackIn_32_0 = stackOut_31_0;
+            stackIn_32_1 = stackOut_31_1;
+            if (param0 == null) {
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "null";
+              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_1 = stackOut_33_1;
+              stackIn_34_2 = stackOut_33_2;
+              break L9;
+            } else {
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "{...}";
+              stackIn_34_0 = stackOut_32_0;
+              stackIn_34_1 = stackOut_32_1;
+              stackIn_34_2 = stackOut_32_2;
+              break L9;
+            }
+          }
+          throw r.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
+        return stackIn_30_0;
     }
 
     final void a(int param0) {
@@ -145,10 +200,10 @@ final class qh extends vd {
             } else {
               L1: {
                 var6 = cl.field_n % 64;
-                if (-25 <= var6) {
+                if (var6 <= 24) {
                   break L1;
                 } else {
-                  if (-41 < var6) {
+                  if (var6 > 40) {
                     break L1;
                   } else {
                     var6 = 24;
@@ -182,26 +237,26 @@ final class qh extends vd {
           gf.d(((qh) this).field_k, -10 + ((qh) this).field_t + ((qh) this).field_i, ((qh) this).field_k + 10, ((qh) this).field_t + ((qh) this).field_i);
           gf.b(10 + ((qh) this).field_k, -1 + (-10 + (((qh) this).field_t - -((qh) this).field_i)), 10, 0);
           gf.d(((qh) this).field_m + ((qh) this).field_k + -10, ((qh) this).field_t + ((qh) this).field_i - 10, ((qh) this).field_m + ((qh) this).field_k, ((qh) this).field_t + ((qh) this).field_i);
-          gf.b(((qh) this).field_k - -((qh) this).field_m - 11, ((qh) this).field_i + (((qh) this).field_t - 10 + -1), 10, 0);
+          gf.b(((qh) this).field_k - -((qh) this).field_m - 11, ((qh) this).field_i + (((qh) this).field_t - 11), 10, 0);
           gf.a();
           var6 = 0;
           L3: while (true) {
-            if (var6 >= ((qh) this).field_i + -20) {
+            if (~var6 <= ~(((qh) this).field_i + -20)) {
               gf.a(3 + ((qh) this).field_k, 15 + ((qh) this).field_t, ((qh) this).field_m - 6, -3 + (((qh) this).field_i - 15), 10, 0);
               gf.f(3 + (10 + ((qh) this).field_k), 15 + ((qh) this).field_t, -20 + ((qh) this).field_m + -6, var3);
               gf.f(10 + (((qh) this).field_k + 3), -3 + ((qh) this).field_t - (-((qh) this).field_i - -1), -6 + (((qh) this).field_m - 20), var4);
               gf.d(((qh) this).field_k + 3, ((qh) this).field_t + 15, 3 + (((qh) this).field_k + 10), ((qh) this).field_t + 25);
               gf.b(13 + ((qh) this).field_k, 25 + ((qh) this).field_t, 10, var3);
-              gf.d(-3 + ((qh) this).field_m + (((qh) this).field_k - 10), 15 + ((qh) this).field_t, -3 + ((qh) this).field_k + ((qh) this).field_m, ((qh) this).field_t - -15 - -10);
+              gf.d(-3 + ((qh) this).field_m + (((qh) this).field_k - 10), 15 + ((qh) this).field_t, -3 + ((qh) this).field_k + ((qh) this).field_m, ((qh) this).field_t + 25);
               gf.b(((qh) this).field_m + (((qh) this).field_k - 14), ((qh) this).field_t - -25, 10, var3);
-              gf.d(3 + ((qh) this).field_k, ((qh) this).field_i + ((qh) this).field_t - 13, ((qh) this).field_k - -10 + 3, -3 + (((qh) this).field_t + ((qh) this).field_i));
+              gf.d(3 + ((qh) this).field_k, ((qh) this).field_i + ((qh) this).field_t - 13, ((qh) this).field_k + 13, -3 + (((qh) this).field_t + ((qh) this).field_i));
               gf.b(3 + ((qh) this).field_k - -10, -4 + (-10 + ((qh) this).field_t - -((qh) this).field_i), 10, var4);
               gf.d(((qh) this).field_m + ((qh) this).field_k - 13, -13 + (((qh) this).field_i + ((qh) this).field_t), -3 + ((qh) this).field_m + ((qh) this).field_k, ((qh) this).field_t - (-((qh) this).field_i + 3));
-              gf.b(-10 + ((qh) this).field_m + (((qh) this).field_k - 4), -3 + ((qh) this).field_t + ((qh) this).field_i - 10 - 1, 10, var4);
+              gf.b(-10 + ((qh) this).field_m + (((qh) this).field_k - 4), -3 + ((qh) this).field_t + ((qh) this).field_i - 11, 10, var4);
               gf.a();
               var6 = 0;
               L4: while (true) {
-                if (2 * (-38 + ((qh) this).field_i) / 3 <= var6) {
+                if (~(2 * (-38 + ((qh) this).field_i) / 3) >= ~var6) {
                   var6 = (((qh) this).field_i * 2 - 76) / 3;
                   var7 = 0;
                   L5: while (true) {
@@ -242,7 +297,7 @@ final class qh extends vd {
                 } else {
                   var7 = ui.a(var3, 0, -82, 256 * var6 / ((-76 + 2 * ((qh) this).field_i) / 3));
                   gf.a(((qh) this).field_k + 3, ((qh) this).field_t + 25 + var6, var7);
-                  gf.a(-1 + ((qh) this).field_k - (-((qh) this).field_m - -3), var6 + (((qh) this).field_t + 15 + 10), var7);
+                  gf.a(-1 + ((qh) this).field_k - (-((qh) this).field_m - -3), var6 + (((qh) this).field_t + 25), var7);
                   var6++;
                   continue L4;
                 }
@@ -273,9 +328,6 @@ final class qh extends vd {
     }
 
     public static void d(byte param0) {
-        if (param0 != 6) {
-            return;
-        }
         field_u = null;
         field_C = null;
         field_D = null;
@@ -284,25 +336,19 @@ final class qh extends vd {
     }
 
     final static boolean f(int param0) {
-        if (param0 != 29443) {
-            field_B = null;
-        }
         return null != bj.field_K ? true : br.field_i;
     }
 
     final static void g(int param0) {
-        if (!((pg.field_J ^ -1) >= -1)) {
+        if (!(pg.field_J <= 0)) {
             pg.field_J = pg.field_J - 1;
         }
         if (pc.field_m != so.field_q.field_d) {
             fl.field_f = fl.field_f + (-pc.field_m + so.field_q.field_d);
             pc.field_m = so.field_q.field_d;
         }
-        if (!((pg.field_J ^ -1) >= -1)) {
+        if (!(pg.field_J <= 0)) {
             bq.a(125);
-        }
-        if (param0 < 57) {
-            field_B = null;
         }
     }
 
@@ -310,7 +356,7 @@ final class qh extends vd {
         if (!(39 <= param1)) {
             param1 = 39;
         }
-        if ((param2 ^ -1) > -28) {
+        if (param2 < 27) {
             param2 = 27;
         }
         if (!(param2 >= 40 + rs.field_Cb.c(((qh) this).field_y + "X"))) {
@@ -337,7 +383,7 @@ final class qh extends vd {
         if (-(((qh) this).field_m / 2) + 640 < var6 + ((qh) this).field_k) {
             var6 = -(((qh) this).field_m / 2) + (640 - ((qh) this).field_k);
         }
-        if (!((((qh) this).field_t + var7 ^ -1) <= -1)) {
+        if (!(((qh) this).field_t + var7 >= 0)) {
             var7 = -((qh) this).field_t;
         }
         if (!(var7 + ((qh) this).field_t <= 465)) {
@@ -348,12 +394,16 @@ final class qh extends vd {
 
     qh(int param0, int param1, int param2, int param3, String param4) {
         super(param0, param1, param2, param3);
-        ((qh) this).field_y = param4;
-        ((qh) this).a(true, param3, param2);
-        ((qh) this).field_l = new pf();
-        ((qh) this).field_p = true;
-        ((qh) this).field_s = false;
-        ((qh) this).field_A = false;
+        try {
+            ((qh) this).field_y = param4;
+            ((qh) this).a(true, param3, param2);
+            ((qh) this).field_l = new pf();
+            ((qh) this).field_p = true;
+            ((qh) this).field_s = false;
+            ((qh) this).field_A = false;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "qh.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

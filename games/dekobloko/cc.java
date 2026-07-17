@@ -12,16 +12,10 @@ final class cc {
     static String field_e;
 
     final static f a(int param0, byte param1) {
-        f var2 = null;
-        var2 = new f();
+        f var2 = new f();
         rc.field_e.a((bh) (Object) var2, 2777);
         gm.b(param0, 65);
-        if (param1 > -81) {
-          field_a = 118;
-          return var2;
-        } else {
-          return var2;
-        }
+        return var2;
     }
 
     public static void a(byte param0) {
@@ -42,13 +36,14 @@ final class cc {
 
     final static void a(int param0) {
         kb.field_i = new bk(ui.field_x, tg.field_h, ib.field_nb, ua.field_H, (w) (Object) al.field_h, df.field_ab);
-        if (param0 != 8) {
-            cc.a((byte) 88);
-        }
     }
 
     cc(ck[] param0) {
-        ((cc) this).field_c = param0;
+        try {
+            ((cc) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {

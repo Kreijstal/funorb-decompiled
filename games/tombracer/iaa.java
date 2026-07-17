@@ -7,7 +7,7 @@ final class iaa {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 82 % ((29 - param0) / 57);
+        int var1 = 0;
     }
 
     static {

@@ -31,7 +31,7 @@ final class eb {
         if (!(3 > ((eb) this).field_m)) {
             var2 = 4;
         }
-        if (!((((eb) this).field_m ^ -1) > -5)) {
+        if (!(((eb) this).field_m < 4)) {
             var2 = 6;
         }
         return ka.a((byte) 81, var2, tf.field_cb) + 24;
@@ -55,7 +55,7 @@ final class eb {
         be.field_w[46] = 72;
         be.field_w[61] = 27;
         be.field_w[92] = 74;
-        int var1 = 118 % ((param0 - 62) / 56);
+        int var1 = 0;
         be.field_w[520] = 59;
         be.field_w[192] = 28;
         be.field_w[222] = 58;
@@ -99,26 +99,27 @@ final class eb {
 
     final static void a(int param0) {
         j.a(8225);
-        if (param0 != 58) {
-            eb.b(-112);
-        }
     }
 
     eb(int param0, boolean param1, int param2, int param3, int param4, int param5, String[] param6) {
-        int var8 = 0;
-        ((eb) this).field_l = param0;
-        ((eb) this).field_m = param5;
-        ((eb) this).field_b = param6 != null ? param6.length : 1;
-        ((eb) this).field_f = new int[((eb) this).field_b];
-        ((eb) this).field_o = 0;
-        ((eb) this).field_q = param6;
-        ((eb) this).field_p = new lk[((eb) this).field_b];
-        for (var8 = 0; ((eb) this).field_b > var8; var8++) {
-            ((eb) this).field_p[var8] = new lk(param1, param2, param3, param4, ((eb) this).field_m);
-            ((eb) this).field_p[var8].field_Q = var8;
-            ((eb) this).field_f[var8] = -1;
+        int var8_int = 0;
+        try {
+            ((eb) this).field_l = param0;
+            ((eb) this).field_m = param5;
+            ((eb) this).field_b = param6 != null ? param6.length : 1;
+            ((eb) this).field_f = new int[((eb) this).field_b];
+            ((eb) this).field_o = 0;
+            ((eb) this).field_q = param6;
+            ((eb) this).field_p = new lk[((eb) this).field_b];
+            for (var8_int = 0; ((eb) this).field_b > var8_int; var8_int++) {
+                ((eb) this).field_p[var8_int] = new lk(param1, param2, param3, param4, ((eb) this).field_m);
+                ((eb) this).field_p[var8_int].field_Q = var8_int;
+                ((eb) this).field_f[var8_int] = -1;
+            }
+            ((eb) this).field_i = ((eb) this).field_b;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "eb.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
         }
-        ((eb) this).field_i = ((eb) this).field_b;
     }
 
     static {

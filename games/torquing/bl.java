@@ -15,9 +15,6 @@ final class bl {
         field_b = null;
         field_e = null;
         field_g = null;
-        if (param0 > -87) {
-            field_g = null;
-        }
     }
 
     static {

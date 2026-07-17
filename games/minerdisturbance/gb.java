@@ -38,109 +38,86 @@ final class gb implements Iterator {
 
     final static void b(int param0) {
         sa var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = MinerDisturbance.field_ab;
-        mj.field_o.e();
-        im.field_b.e();
-        sa.field_s = sa.field_s - 1;
-        if (sa.field_s == 0) {
-          sa.field_s = 200;
-          var1 = (sa) (Object) hj.field_b.b(114);
-          L0: while (true) {
-            if (var1 == null) {
-              if (null != m.field_c) {
-                var1 = (sa) (Object) m.field_c.b(114);
-                L1: while (true) {
-                  if (var1 != null) {
-                    L2: {
-                      if (var1.field_p.c(122)) {
-                        break L2;
-                      } else {
-                        var1.b(34);
-                        break L2;
-                      }
-                    }
-                    var1 = (sa) (Object) m.field_c.b((byte) 56);
-                    continue L1;
-                  } else {
-                    if (param0 == -6129) {
-                      if (null == km.field_a) {
-                        return;
-                      } else {
-                        L3: {
-                          if (!km.field_a.b((byte) -114)) {
-                            de.field_b = null;
-                            break L3;
-                          } else {
-                            break L3;
-                          }
-                        }
-                        return;
-                      }
+        try {
+          L0: {
+            L1: {
+              mj.field_o.e();
+              im.field_b.e();
+              sa.field_s = sa.field_s - 1;
+              if (sa.field_s == 0) {
+                sa.field_s = 200;
+                var1 = (sa) (Object) hj.field_b.b(114);
+                L2: while (true) {
+                  if (var1 == null) {
+                    if (null == m.field_c) {
+                      break L1;
                     } else {
-                      return;
+                      var1 = (sa) (Object) m.field_c.b(114);
+                      L3: while (true) {
+                        if (var1 == null) {
+                          break L1;
+                        } else {
+                          L4: {
+                            if (var1.field_p.c(122)) {
+                              break L4;
+                            } else {
+                              var1.b(34);
+                              break L4;
+                            }
+                          }
+                          var1 = (sa) (Object) m.field_c.b((byte) 56);
+                          continue L3;
+                        }
+                      }
                     }
+                  } else {
+                    L5: {
+                      if (var1.field_p.c(121)) {
+                        break L5;
+                      } else {
+                        var1.b(param0 + 6163);
+                        break L5;
+                      }
+                    }
+                    var1 = (sa) (Object) hj.field_b.b((byte) 56);
+                    continue L2;
                   }
                 }
               } else {
-                if (param0 == -6129) {
-                  if (null == km.field_a) {
-                    return;
+                break L1;
+              }
+            }
+            if (param0 == -6129) {
+              L6: {
+                if (null == km.field_a) {
+                  break L6;
+                } else {
+                  if (!km.field_a.b((byte) -114)) {
+                    de.field_b = null;
+                    break L6;
                   } else {
-                    L4: {
-                      if (!km.field_a.b((byte) -114)) {
-                        de.field_b = null;
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
                     return;
                   }
-                } else {
-                  return;
                 }
               }
+              break L0;
             } else {
-              L5: {
-                if (var1.field_p.c(121)) {
-                  break L5;
-                } else {
-                  var1.b(param0 + 6163);
-                  break L5;
-                }
-              }
-              var1 = (sa) (Object) hj.field_b.b((byte) 56);
-              continue L0;
-            }
-          }
-        } else {
-          if (param0 == -6129) {
-            if (null == km.field_a) {
-              return;
-            } else {
-              L6: {
-                if (!km.field_a.b((byte) -114)) {
-                  de.field_b = null;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
               return;
             }
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var1_ref, "gb.D(" + param0 + 41);
         }
     }
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 <= -77) {
-            return;
-        }
-        gb.b(92);
     }
 
     public final Object next() {
@@ -175,16 +152,8 @@ final class gb implements Iterator {
 
     private final void c(int param0) {
         ((gb) this).field_c = null;
-        if (param0 <= 113) {
-          ((gb) this).field_c = null;
-          ((gb) this).field_d = ((gb) this).field_f.field_b[0].field_f;
-          ((gb) this).field_b = 1;
-          return;
-        } else {
-          ((gb) this).field_d = ((gb) this).field_f.field_b[0].field_f;
-          ((gb) this).field_b = 1;
-          return;
-        }
+        ((gb) this).field_d = ((gb) this).field_f.field_b[0].field_f;
+        ((gb) this).field_b = 1;
     }
 
     final static void a(int param0, String param1) {
@@ -192,13 +161,21 @@ final class gb implements Iterator {
         if (param0 > -110) {
             return;
         }
-        t.a(false, rf.field_a, 0);
+        try {
+            t.a(false, rf.field_a, 0);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "gb.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     gb(sd param0) {
         ((gb) this).field_c = null;
-        ((gb) this).field_f = param0;
-        this.c(123);
+        try {
+            ((gb) this).field_f = param0;
+            this.c(123);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "gb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void remove() {

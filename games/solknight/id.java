@@ -9,9 +9,6 @@ final class id {
     public static void a(byte param0) {
         field_b = null;
         field_c = null;
-        if (param0 <= 94) {
-            field_c = null;
-        }
     }
 
     final static void a(int param0) {

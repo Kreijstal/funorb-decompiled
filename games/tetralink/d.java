@@ -17,78 +17,132 @@ abstract class d implements vm {
         try {
             String var2 = null;
             Throwable var2_ref = null;
+            RuntimeException var2_ref2 = null;
             String var3 = null;
             String[] var4 = null;
             int var5 = 0;
             int var6 = 0;
             int var7 = 0;
-            int stackIn_10_0 = 0;
-            int stackIn_17_0 = 0;
+            int stackIn_3_0 = 0;
+            int stackIn_12_0 = 0;
+            int stackIn_19_0 = 0;
+            RuntimeException stackIn_21_0 = null;
+            StringBuilder stackIn_21_1 = null;
+            RuntimeException stackIn_22_0 = null;
+            StringBuilder stackIn_22_1 = null;
+            RuntimeException stackIn_23_0 = null;
+            StringBuilder stackIn_23_1 = null;
+            String stackIn_23_2 = null;
             Throwable decompiledCaughtException = null;
-            int stackOut_9_0 = 0;
-            int stackOut_16_0 = 0;
-            int stackOut_15_0 = 0;
+            int stackOut_11_0 = 0;
+            int stackOut_18_0 = 0;
+            int stackOut_17_0 = 0;
+            int stackOut_2_0 = 0;
+            RuntimeException stackOut_20_0 = null;
+            StringBuilder stackOut_20_1 = null;
+            RuntimeException stackOut_22_0 = null;
+            StringBuilder stackOut_22_1 = null;
+            String stackOut_22_2 = null;
+            RuntimeException stackOut_21_0 = null;
+            StringBuilder stackOut_21_1 = null;
+            String stackOut_21_2 = null;
             var7 = TetraLink.field_J;
-            if (!kn.field_e) {
+            try {
               L0: {
-                if (param0 == -17840) {
-                  break L0;
-                } else {
-                  field_c = null;
-                  break L0;
-                }
-              }
-              try {
-                L1: {
-                  var2 = "tuhstatbut";
-                  var3 = (String) ii.a((byte) 122, "getcookies", param1);
-                  var4 = hi.a(var3, ';', 783);
-                  var5 = 0;
-                  L2: while (true) {
-                    if (var4.length <= var5) {
+                if (!kn.field_e) {
+                  L1: {
+                    if (param0 == -17840) {
                       break L1;
                     } else {
-                      L3: {
-                        var6 = var4[var5].indexOf('=');
-                        if (var6 < 0) {
-                          break L3;
-                        } else {
-                          if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
-                            stackOut_9_0 = 1;
-                            stackIn_10_0 = stackOut_9_0;
-                            return stackIn_10_0 != 0;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                      var5++;
-                      continue L2;
+                      field_c = null;
+                      break L1;
                     }
                   }
-                }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                L4: {
-                  var2_ref = decompiledCaughtException;
-                  break L4;
-                }
-              }
-              L5: {
-                if (null == param1.getParameter("tuhstatbut")) {
-                  stackOut_16_0 = 0;
-                  stackIn_17_0 = stackOut_16_0;
-                  break L5;
+                  try {
+                    L2: {
+                      var2 = "tuhstatbut";
+                      var3 = (String) ii.a((byte) 122, "getcookies", param1);
+                      var4 = hi.a(var3, ';', 783);
+                      var5 = 0;
+                      L3: while (true) {
+                        if (var4.length <= var5) {
+                          break L2;
+                        } else {
+                          L4: {
+                            var6 = var4[var5].indexOf('=');
+                            if (var6 < 0) {
+                              break L4;
+                            } else {
+                              if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
+                                stackOut_11_0 = 1;
+                                stackIn_12_0 = stackOut_11_0;
+                                return stackIn_12_0 != 0;
+                              } else {
+                                break L4;
+                              }
+                            }
+                          }
+                          var5++;
+                          continue L3;
+                        }
+                      }
+                    }
+                  } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L5: {
+                      var2_ref = decompiledCaughtException;
+                      break L5;
+                    }
+                  }
+                  L6: {
+                    if (null == param1.getParameter("tuhstatbut")) {
+                      stackOut_18_0 = 0;
+                      stackIn_19_0 = stackOut_18_0;
+                      break L6;
+                    } else {
+                      stackOut_17_0 = 1;
+                      stackIn_19_0 = stackOut_17_0;
+                      break L6;
+                    }
+                  }
+                  break L0;
                 } else {
-                  stackOut_15_0 = 1;
-                  stackIn_17_0 = stackOut_15_0;
-                  break L5;
+                  stackOut_2_0 = 1;
+                  stackIn_3_0 = stackOut_2_0;
+                  return stackIn_3_0 != 0;
                 }
               }
-              return stackIn_17_0 != 0;
-            } else {
-              return true;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L7: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_20_0 = (RuntimeException) var2_ref2;
+                stackOut_20_1 = new StringBuilder().append("d.M(").append(param0).append(44);
+                stackIn_22_0 = stackOut_20_0;
+                stackIn_22_1 = stackOut_20_1;
+                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_1 = stackOut_20_1;
+                if (param1 == null) {
+                  stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+                  stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+                  stackOut_22_2 = "null";
+                  stackIn_23_0 = stackOut_22_0;
+                  stackIn_23_1 = stackOut_22_1;
+                  stackIn_23_2 = stackOut_22_2;
+                  break L7;
+                } else {
+                  stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+                  stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+                  stackOut_21_2 = "{...}";
+                  stackIn_23_0 = stackOut_21_0;
+                  stackIn_23_1 = stackOut_21_1;
+                  stackIn_23_2 = stackOut_21_2;
+                  break L7;
+                }
+              }
+              throw oi.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
             }
+            return stackIn_19_0 != 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -97,44 +151,7 @@ abstract class d implements vm {
     }
 
     final static boolean c(byte param0) {
-        Object var2 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        if (param0 > 32) {
-          if (null == sj.field_g) {
-            if (hi.field_a) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
-            return stackIn_11_0 != 0;
-          }
-        } else {
-          var2 = null;
-          boolean discarded$4 = d.a(114, (java.applet.Applet) null);
-          if (null != sj.field_g) {
-            return true;
-          } else {
-            L0: {
-              if (!hi.field_a) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L0;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
-          }
-        }
+        return null != sj.field_g || hi.field_a;
     }
 
     public final jk c(int param0) {
@@ -200,86 +217,63 @@ abstract class d implements vm {
 
     final static void d(int param0) {
         int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
+        RuntimeException decompiledCaughtException = null;
         var4 = TetraLink.field_J;
-        var7 = ug.field_bb;
-        var6 = var7;
-        var5 = var6;
-        var1 = var5;
-        if (param0 > -65) {
-          field_g = null;
-          var2 = 0;
-          var3 = var7.length;
-          L0: while (true) {
-            if (var2 >= var3) {
-              return;
-            } else {
-              int incrementValue$32 = var2;
-              var2++;
-              var5[incrementValue$32] = 0;
-              int incrementValue$33 = var2;
-              var2++;
-              var5[incrementValue$33] = 0;
-              int incrementValue$34 = var2;
-              var2++;
-              var5[incrementValue$34] = 0;
-              int incrementValue$35 = var2;
-              var2++;
-              var5[incrementValue$35] = 0;
-              int incrementValue$36 = var2;
-              var2++;
-              var5[incrementValue$36] = 0;
-              int incrementValue$37 = var2;
-              var2++;
-              var5[incrementValue$37] = 0;
-              int incrementValue$38 = var2;
-              var2++;
-              var5[incrementValue$38] = 0;
-              int incrementValue$39 = var2;
-              var2++;
-              var5[incrementValue$39] = 0;
-              continue L0;
+        try {
+          L0: {
+            L1: {
+              var5 = ug.field_bb;
+              var1 = var5;
+              if (param0 <= -65) {
+                break L1;
+              } else {
+                field_g = null;
+                break L1;
+              }
+            }
+            var2 = 0;
+            var3 = var5.length;
+            L2: while (true) {
+              if (var2 >= var3) {
+                break L0;
+              } else {
+                int incrementValue$40 = var2;
+                var2++;
+                var5[incrementValue$40] = 0;
+                int incrementValue$41 = var2;
+                var2++;
+                var5[incrementValue$41] = 0;
+                int incrementValue$42 = var2;
+                var2++;
+                var5[incrementValue$42] = 0;
+                int incrementValue$43 = var2;
+                var2++;
+                var5[incrementValue$43] = 0;
+                int incrementValue$44 = var2;
+                var2++;
+                var5[incrementValue$44] = 0;
+                int incrementValue$45 = var2;
+                var2++;
+                var5[incrementValue$45] = 0;
+                int incrementValue$46 = var2;
+                var2++;
+                var5[incrementValue$46] = 0;
+                int incrementValue$47 = var2;
+                var2++;
+                var5[incrementValue$47] = 0;
+                continue L2;
+              }
             }
           }
-        } else {
-          var2 = 0;
-          var3 = var7.length;
-          L1: while (true) {
-            if (var2 >= var3) {
-              return;
-            } else {
-              int incrementValue$40 = var2;
-              var2++;
-              var5[incrementValue$40] = 0;
-              int incrementValue$41 = var2;
-              var2++;
-              var5[incrementValue$41] = 0;
-              int incrementValue$42 = var2;
-              var2++;
-              var5[incrementValue$42] = 0;
-              int incrementValue$43 = var2;
-              var2++;
-              var5[incrementValue$43] = 0;
-              int incrementValue$44 = var2;
-              var2++;
-              var5[incrementValue$44] = 0;
-              int incrementValue$45 = var2;
-              var2++;
-              var5[incrementValue$45] = 0;
-              int incrementValue$46 = var2;
-              var2++;
-              var5[incrementValue$46] = 0;
-              int incrementValue$47 = var2;
-              var2++;
-              var5[incrementValue$47] = 0;
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw oi.a((Throwable) (Object) var1_ref, "d.J(" + param0 + 41);
         }
     }
 

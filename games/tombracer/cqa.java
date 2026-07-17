@@ -49,12 +49,6 @@ final class cqa extends vw {
             }
           }
         }
-        if (param0 != 1) {
-          ((cqa) this).field_g = null;
-          return;
-        } else {
-          return;
-        }
     }
 
     final void a(int param0, boolean param1) {
@@ -208,7 +202,7 @@ final class cqa extends vw {
           if (param1 == null) {
             break L0;
           } else {
-            if (-258 >= (((cqa) this).field_i.field_ld.VertexShaderVersion & 65535 ^ -1)) {
+            if ((((cqa) this).field_i.field_ld.VertexShaderVersion & 65535) >= 257) {
               L1: {
                 ((cqa) this).field_m = ((cqa) this).field_i.field_jd.b(param1.a("dx", (byte) 125, "uw_ground_unlit"));
                 ((cqa) this).field_o = ((cqa) this).field_i.field_jd.b(param1.a("dx", (byte) 127, "uw_ground_lit"));
@@ -282,8 +276,10 @@ final class cqa extends vw {
                 ((cqa) this).field_g = ((cqa) this).field_c.a(true, 1, false, 2, new int[2]);
                 ((cqa) this).field_g.a((byte) -128, false, false);
                 ((cqa) this).field_n = true;
+                return;
               } else {
                 ((cqa) this).field_n = false;
+                return;
               }
             } else {
               break L0;
@@ -398,127 +394,65 @@ final class cqa extends vw {
 
     private final void d(int param0) {
         jagdx.IDirect3DVertexShader var2 = null;
+        jagdx.IDirect3DDevice var3 = null;
         int var4 = 0;
         asa var5 = null;
-        jagdx.IDirect3DDevice var6 = null;
-        jagdx.IDirect3DDevice var7 = null;
-        jagdx.IDirect3DVertexShader stackIn_5_0 = null;
-        jagdx.IDirect3DVertexShader stackIn_9_0 = null;
-        jagdx.IDirect3DVertexShader stackIn_18_0 = null;
-        jagdx.IDirect3DVertexShader stackIn_22_0 = null;
-        jagdx.IDirect3DVertexShader stackOut_21_0 = null;
-        jagdx.IDirect3DVertexShader stackOut_20_0 = null;
-        jagdx.IDirect3DVertexShader stackOut_17_0 = null;
-        jagdx.IDirect3DVertexShader stackOut_16_0 = null;
-        jagdx.IDirect3DVertexShader stackOut_8_0 = null;
+        jagdx.IDirect3DVertexShader stackIn_4_0 = null;
+        jagdx.IDirect3DVertexShader stackIn_8_0 = null;
         jagdx.IDirect3DVertexShader stackOut_7_0 = null;
-        jagdx.IDirect3DVertexShader stackOut_4_0 = null;
+        jagdx.IDirect3DVertexShader stackOut_6_0 = null;
         jagdx.IDirect3DVertexShader stackOut_3_0 = null;
-        if (param0 >= 83) {
-          L0: {
-            var7 = ((cqa) this).field_i.field_jd;
-            var4 = ((cqa) this).field_c.d(false);
-            var5 = ((cqa) this).field_c.E(8);
-            if (((cqa) this).field_d) {
-              L1: {
-                if (var4 != 2147483647) {
-                  stackOut_21_0 = ((cqa) this).field_k;
-                  stackIn_22_0 = stackOut_21_0;
-                  break L1;
-                } else {
-                  stackOut_20_0 = ((cqa) this).field_o;
-                  stackIn_22_0 = stackOut_20_0;
-                  break L1;
-                }
+        jagdx.IDirect3DVertexShader stackOut_2_0 = null;
+        L0: {
+          var3 = ((cqa) this).field_i.field_jd;
+          var4 = ((cqa) this).field_c.d(false);
+          var5 = ((cqa) this).field_c.E(8);
+          if (((cqa) this).field_d) {
+            L1: {
+              if (var4 != 2147483647) {
+                stackOut_7_0 = ((cqa) this).field_k;
+                stackIn_8_0 = stackOut_7_0;
+                break L1;
+              } else {
+                stackOut_6_0 = ((cqa) this).field_o;
+                stackIn_8_0 = stackOut_6_0;
+                break L1;
               }
-              var2 = stackIn_22_0;
-              break L0;
-            } else {
-              L2: {
-                if (var4 == 2147483647) {
-                  stackOut_17_0 = ((cqa) this).field_m;
-                  stackIn_18_0 = stackOut_17_0;
-                  break L2;
-                } else {
-                  stackOut_16_0 = ((cqa) this).field_l;
-                  stackIn_18_0 = stackOut_16_0;
-                  break L2;
-                }
-              }
-              var2 = stackIn_18_0;
-              break L0;
             }
-          }
-          if (var2 != ((cqa) this).field_j) {
-            ((cqa) this).field_j = var2;
-            ((cqa) this).field_i.a(var2, -1);
-            this.e(1);
-            ((cqa) this).b(125);
-            ((cqa) this).c(true);
-            ((cqa) this).b((byte) 107);
-            ((cqa) this).b(true);
-            ((cqa) this).a(true);
-            var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
-            int discarded$4 = var7.a(12, field_h);
-            return;
+            var2 = stackIn_8_0;
+            break L0;
           } else {
-            var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
-            int discarded$5 = var7.a(12, field_h);
-            return;
+            L2: {
+              if (var4 == 2147483647) {
+                stackOut_3_0 = ((cqa) this).field_m;
+                stackIn_4_0 = stackOut_3_0;
+                break L2;
+              } else {
+                stackOut_2_0 = ((cqa) this).field_l;
+                stackIn_4_0 = stackOut_2_0;
+                break L2;
+              }
+            }
+            var2 = stackIn_4_0;
+            break L0;
           }
+        }
+        if (var2 != ((cqa) this).field_j) {
+          ((cqa) this).field_j = var2;
+          ((cqa) this).field_i.a(var2, -1);
+          this.e(1);
+          ((cqa) this).b(125);
+          ((cqa) this).c(true);
+          ((cqa) this).b((byte) 107);
+          ((cqa) this).b(true);
+          ((cqa) this).a(true);
+          var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
+          int discarded$2 = var3.a(12, field_h);
+          return;
         } else {
-          L3: {
-            ((cqa) this).b(false);
-            var6 = ((cqa) this).field_i.field_jd;
-            var4 = ((cqa) this).field_c.d(false);
-            var5 = ((cqa) this).field_c.E(8);
-            if (((cqa) this).field_d) {
-              L4: {
-                if (var4 != 2147483647) {
-                  stackOut_8_0 = ((cqa) this).field_k;
-                  stackIn_9_0 = stackOut_8_0;
-                  break L4;
-                } else {
-                  stackOut_7_0 = ((cqa) this).field_o;
-                  stackIn_9_0 = stackOut_7_0;
-                  break L4;
-                }
-              }
-              var2 = stackIn_9_0;
-              break L3;
-            } else {
-              L5: {
-                if (var4 == 2147483647) {
-                  stackOut_4_0 = ((cqa) this).field_m;
-                  stackIn_5_0 = stackOut_4_0;
-                  break L5;
-                } else {
-                  stackOut_3_0 = ((cqa) this).field_l;
-                  stackIn_5_0 = stackOut_3_0;
-                  break L5;
-                }
-              }
-              var2 = stackIn_5_0;
-              break L3;
-            }
-          }
-          if (var2 != ((cqa) this).field_j) {
-            ((cqa) this).field_j = var2;
-            ((cqa) this).field_i.a(var2, -1);
-            this.e(1);
-            ((cqa) this).b(125);
-            ((cqa) this).c(true);
-            ((cqa) this).b((byte) 107);
-            ((cqa) this).b(true);
-            ((cqa) this).a(true);
-            var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
-            int discarded$6 = var6.a(12, field_h);
-            return;
-          } else {
-            var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
-            int discarded$7 = var6.a(12, field_h);
-            return;
-          }
+          var5.a(32560, 0.0f, 0.0f, field_h, (float)var4, -1.0f);
+          int discarded$3 = var3.a(12, field_h);
+          return;
         }
     }
 

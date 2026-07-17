@@ -15,10 +15,6 @@ final class ll {
     static int[][] field_k;
 
     final static int b(int param0) {
-        if (param0 != -10365) {
-            field_h = null;
-            return sj.field_L;
-        }
         return sj.field_L;
     }
 
@@ -28,7 +24,6 @@ final class ll {
         int var14 = 0;
         int var15 = 0;
         ka var16 = null;
-        ka var16_ref = null;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -54,15 +49,15 @@ final class ll {
           if (1 != param1) {
             break L1;
           } else {
-            var16_ref = kj.field_C[0];
+            var16 = kj.field_C[0];
             break L1;
           }
         }
         L2: {
-          if (-3 != (param1 ^ -1)) {
+          if (param1 != 2) {
             break L2;
           } else {
-            var16_ref = kj.field_C[1];
+            var16 = kj.field_C[1];
             break L2;
           }
         }
@@ -109,8 +104,8 @@ final class ll {
               }
             }
             L7: {
-              var17 = var13 * var12 >> -83063422;
-              var18 = var14 << -1738496254;
+              var17 = var13 * var12 >> 2;
+              var18 = var14 << 2;
               var19 = var18 * var17 / var12;
               var20 = -var19 + param2;
               var21 = param2;
@@ -126,7 +121,7 @@ final class ll {
               return;
             } else {
               if (var22 >= var20) {
-                if (param0 <= param7 - -var16_ref.field_v) {
+                if (param0 <= param7 - -var16.field_v) {
                   if (param7 <= param9) {
                     if (param10) {
                       if (var13 >= 0) {
@@ -139,7 +134,7 @@ final class ll {
                                 cj.field_c.d();
                                 je.field_g.e(0, 0, param8);
                                 od.a(cj.field_c, 33, 30, 68, 90);
-                                var16_ref.g(0, 0);
+                                var16.g(0, 0);
                                 la.field_f.a(119);
                                 je.field_i = true;
                                 break L8;
@@ -152,7 +147,7 @@ final class ll {
                             qg.a(vd.field_e);
                             qg.a(var21, param0, var22, param9);
                             if (2 != param1) {
-                              var16_ref.d(var20, param7, var18, var16_ref.field_v);
+                              var16.d(var20, param7, var18, var16.field_v);
                               break L9;
                             } else {
                               cj.field_c.d(var20, param7, var18, cj.field_c.field_v);
@@ -173,12 +168,12 @@ final class ll {
                           }
                           if (1 != var13) {
                             if (2 == var13) {
-                              if (c.field_b.field_u >> 682698945 <= var14) {
-                                c.field_b.g(param2 - (c.field_b.field_q >> 1751718305), param7);
+                              if (c.field_b.field_u >> 1 <= var14) {
+                                c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
                                 qg.b(vd.field_e);
                                 return;
                               } else {
-                                c.field_b.d(-((c.field_b.field_q >> 1612647009) * var14 / (c.field_b.field_u >> -53810111)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> -1782666399), c.field_b.field_v);
+                                c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
                                 qg.b(vd.field_e);
                                 return;
                               }
@@ -187,15 +182,15 @@ final class ll {
                               return;
                             }
                           } else {
-                            if (var14 < c.field_b.field_u >> 727028481) {
-                              c.field_b.d(-(var14 * (c.field_b.field_q >> 225611873) / (c.field_b.field_u >> 1994794017)) + param11, param7, var14 * c.field_b.field_q / (c.field_b.field_u >> -1711514047), c.field_b.field_v);
+                            if (var14 < c.field_b.field_u >> 1) {
+                              c.field_b.d(-(var14 * (c.field_b.field_q >> 1) / (c.field_b.field_u >> 1)) + param11, param7, var14 * c.field_b.field_q / (c.field_b.field_u >> 1), c.field_b.field_v);
                               if (2 == var13) {
-                                if (c.field_b.field_u >> 682698945 <= var14) {
-                                  c.field_b.g(param2 - (c.field_b.field_q >> 1751718305), param7);
+                                if (c.field_b.field_u >> 1 <= var14) {
+                                  c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
                                   qg.b(vd.field_e);
                                   return;
                                 } else {
-                                  c.field_b.d(-((c.field_b.field_q >> 1612647009) * var14 / (c.field_b.field_u >> -53810111)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> -1782666399), c.field_b.field_v);
+                                  c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
                                   qg.b(vd.field_e);
                                   return;
                                 }
@@ -204,14 +199,14 @@ final class ll {
                                 return;
                               }
                             } else {
-                              c.field_b.g(param11 - (c.field_b.field_q >> -262429407), param7);
+                              c.field_b.g(param11 - (c.field_b.field_q >> 1), param7);
                               if (2 == var13) {
-                                if (c.field_b.field_u >> 682698945 <= var14) {
-                                  c.field_b.g(param2 - (c.field_b.field_q >> 1751718305), param7);
+                                if (c.field_b.field_u >> 1 <= var14) {
+                                  c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
                                   qg.b(vd.field_e);
                                   return;
                                 } else {
-                                  c.field_b.d(-((c.field_b.field_q >> 1612647009) * var14 / (c.field_b.field_u >> -53810111)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> -1782666399), c.field_b.field_v);
+                                  c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
                                   qg.b(vd.field_e);
                                   return;
                                 }
@@ -262,8 +257,8 @@ final class ll {
               }
             }
             L13: {
-              var17 = var13 * var12 >> -83063422;
-              var18 = var14 << -1738496254;
+              var17 = var13 * var12 >> 2;
+              var18 = var14 << 2;
               var19 = var18 * var17 / var12;
               var20 = -var19 + param2;
               var21 = param2;
@@ -279,7 +274,7 @@ final class ll {
               return;
             } else {
               if (var22 >= var20) {
-                if (param0 <= param7 - -var16_ref.field_v) {
+                if (param0 <= param7 - -var16.field_v) {
                   if (param7 <= param9) {
                     if (param10) {
                       if (var13 >= 0) {
@@ -292,7 +287,7 @@ final class ll {
                                 cj.field_c.d();
                                 je.field_g.e(0, 0, param8);
                                 od.a(cj.field_c, 33, 30, 68, 90);
-                                var16_ref.g(0, 0);
+                                var16.g(0, 0);
                                 la.field_f.a(119);
                                 je.field_i = true;
                                 break L14;
@@ -305,7 +300,7 @@ final class ll {
                             qg.a(vd.field_e);
                             qg.a(var21, param0, var22, param9);
                             if (2 != param1) {
-                              var16_ref.d(var20, param7, var18, var16_ref.field_v);
+                              var16.d(var20, param7, var18, var16.field_v);
                               break L15;
                             } else {
                               cj.field_c.d(var20, param7, var18, cj.field_c.field_v);
@@ -326,12 +321,12 @@ final class ll {
                           }
                           if (1 != var13) {
                             if (2 == var13) {
-                              if (c.field_b.field_u >> 682698945 <= var14) {
-                                c.field_b.g(param2 - (c.field_b.field_q >> 1751718305), param7);
+                              if (c.field_b.field_u >> 1 <= var14) {
+                                c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
                                 qg.b(vd.field_e);
                                 return;
                               } else {
-                                c.field_b.d(-((c.field_b.field_q >> 1612647009) * var14 / (c.field_b.field_u >> -53810111)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> -1782666399), c.field_b.field_v);
+                                c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
                                 qg.b(vd.field_e);
                                 return;
                               }
@@ -340,16 +335,16 @@ final class ll {
                               return;
                             }
                           } else {
-                            if (var14 >= c.field_b.field_u >> 727028481) {
+                            if (var14 >= c.field_b.field_u >> 1) {
                               L17: {
-                                c.field_b.g(param11 - (c.field_b.field_q >> -262429407), param7);
+                                c.field_b.g(param11 - (c.field_b.field_q >> 1), param7);
                                 if (2 == var13) {
-                                  if (c.field_b.field_u >> 682698945 <= var14) {
-                                    c.field_b.g(param2 - (c.field_b.field_q >> 1751718305), param7);
+                                  if (c.field_b.field_u >> 1 <= var14) {
+                                    c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
                                     qg.b(vd.field_e);
                                     break L17;
                                   } else {
-                                    c.field_b.d(-((c.field_b.field_q >> 1612647009) * var14 / (c.field_b.field_u >> -53810111)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> -1782666399), c.field_b.field_v);
+                                    c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
                                     qg.b(vd.field_e);
                                     break L17;
                                   }
@@ -361,14 +356,14 @@ final class ll {
                               return;
                             } else {
                               L18: {
-                                c.field_b.d(-(var14 * (c.field_b.field_q >> 225611873) / (c.field_b.field_u >> 1994794017)) + param11, param7, var14 * c.field_b.field_q / (c.field_b.field_u >> -1711514047), c.field_b.field_v);
+                                c.field_b.d(-(var14 * (c.field_b.field_q >> 1) / (c.field_b.field_u >> 1)) + param11, param7, var14 * c.field_b.field_q / (c.field_b.field_u >> 1), c.field_b.field_v);
                                 if (2 == var13) {
-                                  if (c.field_b.field_u >> 682698945 <= var14) {
-                                    c.field_b.g(param2 - (c.field_b.field_q >> 1751718305), param7);
+                                  if (c.field_b.field_u >> 1 <= var14) {
+                                    c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
                                     qg.b(vd.field_e);
                                     break L18;
                                   } else {
-                                    c.field_b.d(-((c.field_b.field_q >> 1612647009) * var14 / (c.field_b.field_u >> -53810111)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> -1782666399), c.field_b.field_v);
+                                    c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
                                     qg.b(vd.field_e);
                                     break L18;
                                   }
@@ -438,8 +433,8 @@ final class ll {
             }
           }
           L22: {
-            var17 = var13 * var12 >> -83063422;
-            var18 = var14 << -1738496254;
+            var17 = var13 * var12 >> 2;
+            var18 = var14 << 2;
             var19 = var18 * var17 / var12;
             var20 = -var19 + param2;
             var21 = param2;
@@ -455,7 +450,7 @@ final class ll {
             return;
           } else {
             if (var22 >= var20) {
-              if (param0 <= param7 - -var16_ref.field_v) {
+              if (param0 <= param7 - -var16.field_v) {
                 if (param7 <= param9) {
                   if (param10) {
                     if (var13 >= 0) {
@@ -468,7 +463,7 @@ final class ll {
                               cj.field_c.d();
                               je.field_g.e(0, 0, param8);
                               od.a(cj.field_c, 33, 30, 68, 90);
-                              var16_ref.g(0, 0);
+                              var16.g(0, 0);
                               la.field_f.a(119);
                               je.field_i = true;
                               break L23;
@@ -481,7 +476,7 @@ final class ll {
                           qg.a(vd.field_e);
                           qg.a(var21, param0, var22, param9);
                           if (2 != param1) {
-                            var16_ref.d(var20, param7, var18, var16_ref.field_v);
+                            var16.d(var20, param7, var18, var16.field_v);
                             break L24;
                           } else {
                             cj.field_c.d(var20, param7, var18, cj.field_c.field_v);
@@ -502,12 +497,12 @@ final class ll {
                         }
                         if (1 != var13) {
                           if (2 == var13) {
-                            if (c.field_b.field_u >> 682698945 <= var14) {
-                              c.field_b.g(param2 - (c.field_b.field_q >> 1751718305), param7);
+                            if (c.field_b.field_u >> 1 <= var14) {
+                              c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
                               qg.b(vd.field_e);
                               return;
                             } else {
-                              c.field_b.d(-((c.field_b.field_q >> 1612647009) * var14 / (c.field_b.field_u >> -53810111)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> -1782666399), c.field_b.field_v);
+                              c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
                               qg.b(vd.field_e);
                               return;
                             }
@@ -516,16 +511,16 @@ final class ll {
                             return;
                           }
                         } else {
-                          if (var14 >= c.field_b.field_u >> 727028481) {
+                          if (var14 >= c.field_b.field_u >> 1) {
                             L26: {
-                              c.field_b.g(param11 - (c.field_b.field_q >> -262429407), param7);
+                              c.field_b.g(param11 - (c.field_b.field_q >> 1), param7);
                               if (2 == var13) {
-                                if (c.field_b.field_u >> 682698945 <= var14) {
-                                  c.field_b.g(param2 - (c.field_b.field_q >> 1751718305), param7);
+                                if (c.field_b.field_u >> 1 <= var14) {
+                                  c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
                                   qg.b(vd.field_e);
                                   break L26;
                                 } else {
-                                  c.field_b.d(-((c.field_b.field_q >> 1612647009) * var14 / (c.field_b.field_u >> -53810111)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> -1782666399), c.field_b.field_v);
+                                  c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
                                   qg.b(vd.field_e);
                                   break L26;
                                 }
@@ -537,14 +532,14 @@ final class ll {
                             return;
                           } else {
                             L27: {
-                              c.field_b.d(-(var14 * (c.field_b.field_q >> 225611873) / (c.field_b.field_u >> 1994794017)) + param11, param7, var14 * c.field_b.field_q / (c.field_b.field_u >> -1711514047), c.field_b.field_v);
+                              c.field_b.d(-(var14 * (c.field_b.field_q >> 1) / (c.field_b.field_u >> 1)) + param11, param7, var14 * c.field_b.field_q / (c.field_b.field_u >> 1), c.field_b.field_v);
                               if (2 == var13) {
-                                if (c.field_b.field_u >> 682698945 <= var14) {
-                                  c.field_b.g(param2 - (c.field_b.field_q >> 1751718305), param7);
+                                if (c.field_b.field_u >> 1 <= var14) {
+                                  c.field_b.g(param2 - (c.field_b.field_q >> 1), param7);
                                   qg.b(vd.field_e);
                                   break L27;
                                 } else {
-                                  c.field_b.d(-((c.field_b.field_q >> 1612647009) * var14 / (c.field_b.field_u >> -53810111)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> -1782666399), c.field_b.field_v);
+                                  c.field_b.d(-((c.field_b.field_q >> 1) * var14 / (c.field_b.field_u >> 1)) + param2, param7, c.field_b.field_q * var14 / (c.field_b.field_u >> 1), c.field_b.field_v);
                                   qg.b(vd.field_e);
                                   break L27;
                                 }
@@ -582,18 +577,18 @@ final class ll {
         param1--;
         if (!param0) {
           field_e = null;
-          param1 = param1 | param1 >>> 506104897;
-          param1 = param1 | param1 >>> 620623810;
-          param1 = param1 | param1 >>> -456856828;
-          param1 = param1 | param1 >>> 920353736;
-          param1 = param1 | param1 >>> -1719265296;
+          param1 = param1 | param1 >>> 1;
+          param1 = param1 | param1 >>> 2;
+          param1 = param1 | param1 >>> 4;
+          param1 = param1 | param1 >>> 8;
+          param1 = param1 | param1 >>> 16;
           return 1 + param1;
         } else {
-          param1 = param1 | param1 >>> 506104897;
-          param1 = param1 | param1 >>> 620623810;
-          param1 = param1 | param1 >>> -456856828;
-          param1 = param1 | param1 >>> 920353736;
-          param1 = param1 | param1 >>> -1719265296;
+          param1 = param1 | param1 >>> 1;
+          param1 = param1 | param1 >>> 2;
+          param1 = param1 | param1 >>> 4;
+          param1 = param1 | param1 >>> 8;
+          param1 = param1 | param1 >>> 16;
           return 1 + param1;
         }
     }
@@ -624,18 +619,9 @@ final class ll {
         field_j = null;
         field_e = null;
         field_h = null;
-        if (param0 != 256) {
-          field_h = null;
-          field_k = null;
-          field_f = null;
-          field_c = null;
-          return;
-        } else {
-          field_k = null;
-          field_f = null;
-          field_c = null;
-          return;
-        }
+        field_k = null;
+        field_f = null;
+        field_c = null;
     }
 
     public final String toString() {

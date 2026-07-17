@@ -20,37 +20,78 @@ final class ci {
     }
 
     final static String a(String param0, byte param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
+        String stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_4_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         var5 = Lexicominos.field_L ? 1 : 0;
-        var2 = param0.length();
-        var3 = new char[var2];
-        if (param1 != -79) {
-          field_f = null;
-          var4 = 0;
-          L0: while (true) {
-            if (var2 <= var4) {
-              return new String(var3);
-            } else {
-              var3[-1 + (var2 - var4)] = param0.charAt(var4);
-              var4++;
-              continue L0;
+        try {
+          L0: {
+            var2_int = param0.length();
+            var3 = new char[var2_int];
+            var4 = 0;
+            L1: while (true) {
+              if (var2_int <= var4) {
+                stackOut_4_0 = new String(var3);
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
+              } else {
+                var3[-1 + (var2_int - var4)] = param0.charAt(var4);
+                var4++;
+                continue L1;
+              }
             }
           }
-        } else {
-          var4 = 0;
-          L1: while (true) {
-            if (var2 <= var4) {
-              return new String(var3);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_1 = new StringBuilder().append("ci.B(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
             } else {
-              var3[-1 + (var2 - var4)] = param0.charAt(var4);
-              var4++;
-              continue L1;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
             }
           }
+          throw ld.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -79 + 41);
         }
+        return stackIn_5_0;
     }
 
     final ca a(byte param0) {
@@ -69,14 +110,18 @@ final class ci {
     }
 
     final void a(int param0, ca param1) {
-        int var3 = 110 / ((0 - param0) / 61);
-        if (!(param1.field_m == null)) {
-            param1.b(12);
+        try {
+            int var3_int = 110 / ((0 - param0) / 61);
+            if (!(param1.field_m == null)) {
+                param1.b(12);
+            }
+            param1.field_l = ((ci) this).field_d;
+            param1.field_m = ((ci) this).field_d.field_m;
+            param1.field_m.field_l = param1;
+            param1.field_l.field_m = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "ci.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        param1.field_l = ((ci) this).field_d;
-        param1.field_m = ((ci) this).field_d.field_m;
-        param1.field_m.field_l = param1;
-        param1.field_l.field_m = param1;
     }
 
     final ca a(boolean param0) {

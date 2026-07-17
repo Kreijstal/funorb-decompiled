@@ -10,27 +10,18 @@ final class tq extends fa {
     static String[] field_e;
 
     final static boolean c(boolean param0) {
-        if (!ei.a("jaclib", (byte) -16)) {
-          return false;
-        } else {
-          if (!param0) {
-            field_d = (kp) null;
-            return ei.a("hw3d", (byte) -16);
-          } else {
-            return ei.a("hw3d", (byte) -16);
-          }
+        if (!(ei.a("jaclib", (byte) -16))) {
+            return false;
         }
+        return ei.a("hw3d", (byte) -16);
     }
 
     public static void b(int param0) {
-        field_f = (byte[][]) null;
+        field_f = null;
         field_h = null;
         field_d = null;
         field_e = null;
         field_i = null;
-        if (param0 != 400) {
-            field_f = (byte[][]) (byte[][]) null;
-        }
     }
 
     final static void b(boolean param0) {
@@ -60,7 +51,7 @@ final class tq extends fa {
           }
           co.field_b = 0;
           if ((64 & hg.field_D) == 0) {
-            if ((ln.field_d ^ -1) > -3) {
+            if (ln.field_d < 2) {
               return;
             } else {
               si.c(true);
@@ -73,7 +64,7 @@ final class tq extends fa {
         } else {
           co.field_b = 0;
           if ((64 & hg.field_D) == 0) {
-            if ((ln.field_d ^ -1) <= -3) {
+            if (ln.field_d >= 2) {
               si.c(true);
               return;
             } else {
@@ -87,7 +78,11 @@ final class tq extends fa {
     }
 
     tq(pl[] param0) {
-        ((tq) this).field_g = (pl[]) param0;
+        try {
+            ((tq) this).field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "tq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

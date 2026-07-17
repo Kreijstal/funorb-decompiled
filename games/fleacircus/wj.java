@@ -11,7 +11,7 @@ abstract class wj {
         long var4 = 0L;
         if (param0 == 0) {
           var4 = ((wj) this).b(-31887);
-          if ((var4 ^ -1L) < -1L) {
+          if (var4 > 0L) {
             vh.a(var4, param0 + 87);
             return ((wj) this).a(-23124, param1);
           } else {
@@ -20,7 +20,7 @@ abstract class wj {
         } else {
           field_b = null;
           var4 = ((wj) this).b(-31887);
-          if ((var4 ^ -1L) >= -1L) {
+          if (var4 <= 0L) {
             return ((wj) this).a(-23124, param1);
           } else {
             vh.a(var4, param0 + 87);

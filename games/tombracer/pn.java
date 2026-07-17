@@ -6,9 +6,6 @@ final class pn extends or {
     private byte[] field_p;
 
     final static void f(int param0) {
-        if (param0 != -804227775) {
-            iu[] discarded$0 = pn.i(-62);
-        }
         Object var2 = null;
         pr.a(0, "", (String) null);
     }
@@ -18,9 +15,10 @@ final class pn extends or {
             return;
         }
         int var4 = param0 * 2;
-        param2 = (byte)(((255 & param2) >> -804227775) + 127);
+        param2 = (byte)(((255 & param2) >> 1) + 127);
+        int incrementValue$0 = var4;
         var4++;
-        ((pn) this).field_p[var4] = (byte)param2;
+        ((pn) this).field_p[incrementValue$0] = (byte)param2;
         ((pn) this).field_p[var4] = (byte)param2;
     }
 
@@ -38,9 +36,6 @@ final class pn extends or {
     }
 
     public static void g(int param0) {
-        if (param0 > -26) {
-            return;
-        }
         field_o = null;
     }
 
@@ -110,7 +105,7 @@ final class pn extends or {
                     var2++;
                     continue L0;
                   } else {
-                    var6_ref_int__[var7] = fh.a(sea.c(-16777216, var23[var7] << -1203922312), mga.field_g[sea.c(255, (int) var24[var7])]);
+                    var6_ref_int__[var7] = fh.a(sea.c(-16777216, var23[var7] << 24), mga.field_g[sea.c(255, (int) var24[var7])]);
                     var7++;
                     continue L2;
                   }

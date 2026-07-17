@@ -8,9 +8,6 @@ final class qeb {
     int field_b;
 
     public static void a(byte param0) {
-        if (param0 >= -115) {
-            return;
-        }
         field_c = null;
     }
 

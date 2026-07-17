@@ -12,12 +12,6 @@ abstract class go extends eo {
     static String field_r;
 
     public static void e(int param0) {
-        if (param0 < 93) {
-            go.a(-26, (byte) -48, 12);
-            field_s = null;
-            field_r = null;
-            return;
-        }
         field_s = null;
         field_r = null;
     }
@@ -39,17 +33,17 @@ abstract class go extends eo {
         int var7 = 0;
         if (param3 != -1049413117) {
           ((go) this).field_p = -3;
-          var6 = ((go) this).field_n << -1049413117;
-          var7 = ((go) this).field_o << -1657772093;
-          param2 = (var6 & 15) + (param2 << -1730830236);
-          param1 = (var7 & 15) + (param1 << -966370396);
+          var6 = ((go) this).field_n << 3;
+          var7 = ((go) this).field_o << 3;
+          param2 = (var6 & 15) + (param2 << 4);
+          param1 = (var7 & 15) + (param1 << 4);
           ((go) this).a(var6, var7, param2, param1, param0, param4);
           return;
         } else {
-          var6 = ((go) this).field_n << -1049413117;
-          var7 = ((go) this).field_o << -1657772093;
-          param2 = (var6 & 15) + (param2 << -1730830236);
-          param1 = (var7 & 15) + (param1 << -966370396);
+          var6 = ((go) this).field_n << 3;
+          var7 = ((go) this).field_o << 3;
+          param2 = (var6 & 15) + (param2 << 4);
+          param1 = (var7 & 15) + (param1 << 4);
           ((go) this).a(var6, var7, param2, param1, param0, param4);
           return;
         }

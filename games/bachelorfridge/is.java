@@ -13,9 +13,6 @@ final class is {
         field_a = null;
         field_b = null;
         field_d = null;
-        if (param0 != 12836) {
-            field_c = null;
-        }
     }
 
     static {

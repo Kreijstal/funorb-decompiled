@@ -7,7 +7,7 @@ final class eqa implements os {
     final static boolean a(int param0, boolean param1, int param2) {
         int var3 = 0;
         int var4 = 0;
-        String var4_ref = null;
+        String var4_ref_String = null;
         int var5 = 0;
         String var7 = null;
         int var9 = 0;
@@ -50,7 +50,7 @@ final class eqa implements os {
           }
         }
         L1: {
-          if (-1 != (bta.field_q ^ -1)) {
+          if (bta.field_q != 0) {
             break L1;
           } else {
             if (ifa.field_n != null) {
@@ -73,8 +73,8 @@ final class eqa implements os {
             }
           }
         }
-        if ((fna.field_h ^ -1) != -85) {
-          if ((fna.field_h ^ -1) == -86) {
+        if (fna.field_h != 84) {
+          if (fna.field_h == 85) {
             if (var3 != 0) {
               if (vc.field_n.length() > 0) {
                 StringBuilder discarded$6 = ana.a(-1 + vc.field_n.length(), ' ', -11, vc.field_n);
@@ -211,9 +211,9 @@ final class eqa implements os {
           }
         } else {
           if (var3 != 0) {
-            if ((vc.field_n.length() ^ -1) < -1) {
-              var4_ref = vc.field_n.toString();
-              if (!lt.a(var4_ref, -1)) {
+            if (vc.field_n.length() > 0) {
+              var4_ref_String = vc.field_n.toString();
+              if (!lt.a(var4_ref_String, -1)) {
                 L9: {
                   var5 = bta.field_q;
                   if (var5 != 0) {
@@ -227,13 +227,13 @@ final class eqa implements os {
                     }
                   }
                 }
-                if ((gda.a(var5, -20011) ^ -1) != -3) {
-                  opa.a(bta.field_q, var4_ref, param0, 32371, wp.field_a, -1);
+                if (gda.a(var5, -20011) != 2) {
+                  opa.a(bta.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
                   ufa.a(true);
                   return true;
                 } else {
                   loa.a(var5, param2, (byte) 108, 1);
-                  opa.a(bta.field_q, var4_ref, param0, 32371, wp.field_a, -1);
+                  opa.a(bta.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
                   ufa.a(true);
                   return true;
                 }

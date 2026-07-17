@@ -26,17 +26,21 @@ final class ce {
         RuntimeException decompiledCaughtException = null;
         vi stackOut_0_0 = null;
         try {
-          var2 = new vi();
-          var3 = -126 % ((param1 - -11) / 51);
-          ci.field_f.b(109, (kd) (Object) var2);
-          ck.a(param0, 2);
-          stackOut_0_0 = (vi) var2;
-          stackIn_1_0 = stackOut_0_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_1_0;
+          L0: {
+            var2 = new vi();
+            var3 = -126 % ((param1 - -11) / 51);
+            ci.field_f.b(109, (kd) (Object) var2);
+            ck.a(param0, 2);
+            stackOut_0_0 = (vi) var2;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw ld.a((Throwable) (Object) var2_ref, "ce.C(" + param0 + 44 + param1 + 41);
         }
-        return null;
+        return stackIn_1_0;
     }
 
     final static void a(boolean param0, sh param1) {
@@ -1092,25 +1096,25 @@ final class ce {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          try {
-            L0: {
+          L0: {
+            L1: {
               field_c = null;
               if (param0 == -5602) {
-                break L0;
+                break L1;
               } else {
                 ce.b(52);
-                break L0;
+                break L1;
               }
             }
-          } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
+            field_a = null;
+            field_b = null;
+            field_d = null;
+            break L0;
           }
-          throw decompiledCaughtException;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          field_a = null;
-          field_b = null;
-          field_d = null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ld.a((Throwable) (Object) var1, "ce.B(" + param0 + 41);
         }
     }
 

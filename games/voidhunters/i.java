@@ -52,16 +52,20 @@ final class i extends ka implements e {
         int[] var22 = var24;
         int[] var11 = var22;
         for (var12 = 0; var12 < var8; var12++) {
+            int incrementValue$0 = var10;
             var10++;
-            var11[var10] = ((i) this).field_a[var12].field_d;
+            var11[incrementValue$0] = ((i) this).field_a[var12].field_d;
+            int incrementValue$1 = var10;
             var10++;
-            var11[var10] = ((i) this).field_a[var12].field_a;
+            var11[incrementValue$1] = ((i) this).field_a[var12].field_a;
+            int incrementValue$2 = var10;
             var10++;
-            var11[var10] = ((i) this).field_a[var12].field_b;
+            var11[incrementValue$2] = ((i) this).field_a[var12].field_b;
         }
         for (var12 = 0; var12 < var9; var12++) {
+            int incrementValue$3 = var10;
             var10++;
-            var11[var10] = ((i) this).field_c[var12].field_a;
+            var11[incrementValue$3] = ((i) this).field_c[var12].field_a;
         }
         var12 = param2.field_g == null ? 0 : param2.field_g.length;
         int[] var29 = new int[var12 * 8];
@@ -74,27 +78,35 @@ final class i extends ka implements e {
             var18 = param2.field_g[var15];
             var21 = var18;
             var17 = jm.a(var21.field_e, 0);
+            int incrementValue$4 = var14;
             var14++;
-            var13[var14] = var18.field_b;
+            var13[incrementValue$4] = var18.field_b;
+            int incrementValue$5 = var14;
             var14++;
-            var13[var14] = var17.field_g;
+            var13[incrementValue$5] = var17.field_g;
+            int incrementValue$6 = var14;
             var14++;
-            var13[var14] = var17.field_b;
+            var13[incrementValue$6] = var17.field_b;
+            int incrementValue$7 = var14;
             var14++;
-            var13[var14] = var17.field_e;
+            var13[incrementValue$7] = var17.field_e;
+            int incrementValue$8 = var14;
             var14++;
-            var13[var14] = var17.field_d;
+            var13[incrementValue$8] = var17.field_d;
+            int incrementValue$9 = var14;
             var14++;
-            var13[var14] = var17.field_f;
+            var13[incrementValue$9] = var17.field_f;
+            int incrementValue$10 = var14;
             var14++;
-            var13[var14] = var17.field_a ? -1 : 0;
+            var13[incrementValue$10] = var17.field_a ? -1 : 0;
         }
         int var20 = 0;
         var15 = var20;
         while (var20 < var12) {
             var19 = param2.field_g[var20];
+            int incrementValue$11 = var14;
             var14++;
-            var13[var14] = var19.field_a;
+            var13[incrementValue$11] = var19.field_a;
             var20++;
         }
         this.R(((i) this).field_d, ((i) this).field_b, param2.field_s, param2.field_D, param2.field_v, param2.field_G, param2.field_x, param2.field_p, param2.field_z, param2.field_j, param2.field_k, param2.field_o, param2.field_K, param2.field_E, param2.field_m, param2.field_r, param2.field_M, param2.field_b, param2.field_u, param2.field_y, param2.field_d, param2.field_w, param2.field_B, param2.field_e, param2.field_t, param2.field_i, param2.field_H, param2.field_F, param2.field_a, param2.field_C, param2.field_J, param2.field_n, param2.field_L, param2.field_f, param2.field_I, var28, var8, var9, param3, param4, param5, param6, var29);

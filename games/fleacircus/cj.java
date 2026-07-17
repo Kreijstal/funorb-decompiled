@@ -21,9 +21,6 @@ final class cj {
 
     public static void a(boolean param0) {
         field_a = null;
-        if (param0) {
-            field_b = 31;
-        }
     }
 
     static {

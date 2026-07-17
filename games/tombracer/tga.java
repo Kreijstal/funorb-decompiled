@@ -14,9 +14,6 @@ final class tga {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 < 40) {
-            field_a = null;
-        }
     }
 
     static {

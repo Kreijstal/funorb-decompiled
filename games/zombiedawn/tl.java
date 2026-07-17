@@ -23,7 +23,7 @@ final class tl implements ug {
 
     final void b(int param0, int param1) {
         int var3 = 26 / ((-33 - param0) / 58);
-        if (!(-2 != (param1 ^ -1))) {
+        if (!(param1 != 1)) {
             boolean discarded$0 = a.field_h.a(-1, "menusuk");
             boolean discarded$1 = ((tl) this).a(false, 12);
         }
@@ -48,7 +48,7 @@ final class tl implements ug {
     }
 
     public static void d(int param0) {
-        int var1 = 56 / ((param0 - 0) / 50);
+        int var1 = 56 / (param0 / 50);
         field_e = null;
         field_k = null;
         field_g = null;
@@ -167,7 +167,7 @@ final class tl implements ug {
               ph.field_a = new ka(gm.field_h, qn.field_i);
               var4_int = 0;
               L2: while (true) {
-                if ((tc.field_t ^ -1) >= (var4_int ^ -1)) {
+                if (~tc.field_t >= ~var4_int) {
                   rm.field_f = true;
                   ep.c((byte) -50);
                   return;
@@ -176,10 +176,10 @@ final class tl implements ug {
                     if (0 == tc.field_y[var4_int]) {
                       L4: {
                         var5_int = tc.field_s[var4_int];
-                        if (-70 == (var5_int ^ -1)) {
+                        if (var5_int == 69) {
                           break L4;
                         } else {
-                          if (-69 == (var5_int ^ -1)) {
+                          if (var5_int == 68) {
                             break L4;
                           } else {
                             if (47 == var5_int) {
@@ -306,7 +306,7 @@ final class tl implements ug {
                       bj.field_q = gb.a("font_medium", -1, ZombieDawn.field_H, "basic", a.field_h);
                       rg.a(bj.field_q, false);
                       tf.a((byte) 119);
-                      if ((be.field_j ^ -1) < -1) {
+                      if (be.field_j > 0) {
                         break L10;
                       } else {
                         var16 = dd.a("membersexpansion", "screenshots", -1864, a.field_h);
@@ -366,7 +366,7 @@ final class tl implements ug {
                     var7 = var17;
                     var8 = 0;
                     L11: while (true) {
-                      if ((var8 ^ -1) <= -33) {
+                      if (var8 >= 32) {
                         this.a(var5, 0, var6, var4);
                         ((tl) this).field_n = true;
                         if (!((tl) this).a(0, 11)) {
@@ -377,7 +377,7 @@ final class tl implements ug {
                               if (be.field_j > 0) {
                                 break L13;
                               } else {
-                                if (-3 >= (lo.field_j ^ -1)) {
+                                if (lo.field_j >= 2) {
                                   break L13;
                                 } else {
                                   break L12;
@@ -395,7 +395,7 @@ final class tl implements ug {
                           var8_ref_vn__ = var17;
                           var9 = 0;
                           L14: while (true) {
-                            if ((var9 ^ -1) <= (var8_ref_vn__.length ^ -1)) {
+                            if (~var9 <= ~var8_ref_vn__.length) {
                               bd.a(e.field_G, false);
                               ed.field_b = new vn[f.field_j.length];
                               var12 = 0;
@@ -510,14 +510,14 @@ final class tl implements ug {
             } else {
               var4_int = 0;
               L21: while (true) {
-                if ((var4_int ^ -1) <= -9) {
+                if (var4_int >= 8) {
                   this.a(800, ji.field_a, 75.0f, false, 3.0f);
                   np.field_E = new vn(nm.field_e.a("map.jpg", param0 ^ -26, "jpg/"), (java.awt.Component) (Object) cj.field_d);
                   break L20;
                 } else {
                   var5_int = 0;
                   L22: while (true) {
-                    if (-7 >= (var5_int ^ -1)) {
+                    if (var5_int >= 6) {
                       try {
                         L23: {
                           cl.field_c[var4_int][6] = nm.field_e.a("BONUS.zdl", -110, "" + var4_int + "/");
@@ -667,35 +667,90 @@ final class tl implements ug {
         if (param0 < 84) {
             ((tl) this).b(102);
         }
-        return (((tl) this).field_f ^ -1) == -1 ? true : false;
+        return ((tl) this).field_f == 0 ? true : false;
     }
 
     private final boolean a(String param0, int param1, int param2) {
         IllegalArgumentException var4 = null;
-        if (null == w.field_a[param2]) {
-          ((tl) this).field_d = e.field_I;
-          w.field_a[param2] = wj.a(((tl) this).field_h, param0, "");
-          return false;
-        } else {
+        RuntimeException var4_ref = null;
+        boolean stackIn_10_0 = false;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_9_0 = false;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
           L0: {
-            if (cc.field_c[param2]) {
-              break L0;
+            if (null == w.field_a[param2]) {
+              ((tl) this).field_d = e.field_I;
+              w.field_a[param2] = wj.a(((tl) this).field_h, param0, "");
+              return false;
             } else {
-              ((tl) this).field_d = d.field_c;
-              cc.field_c[param2] = uh.field_o.a(w.field_a[param2], (byte) 20, an.field_B, 88200, ph.field_a);
+              L1: {
+                if (cc.field_c[param2]) {
+                  break L1;
+                } else {
+                  ((tl) this).field_d = d.field_c;
+                  cc.field_c[param2] = uh.field_o.a(w.field_a[param2], (byte) 20, an.field_B, 88200, ph.field_a);
+                  break L1;
+                }
+              }
+              L2: {
+                if (param1 == 0) {
+                  break L2;
+                } else {
+                  ((tl) this).field_p = 29;
+                  break L2;
+                }
+              }
+              stackOut_9_0 = cc.field_c[param2];
+              stackIn_10_0 = stackOut_9_0;
               break L0;
             }
           }
-          L1: {
-            if (param1 == 0) {
-              break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4_ref = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var4_ref;
+            stackOut_11_1 = new StringBuilder().append("tl.F(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
             } else {
-              ((tl) this).field_p = 29;
-              break L1;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
             }
           }
-          return cc.field_c[param2];
+          throw sh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_10_0;
     }
 
     private final void a(float param0, int param1, int param2, float param3) {
@@ -706,30 +761,82 @@ final class tl implements ug {
     }
 
     private final void a(float param0, int param1, String param2) {
-        L0: {
-          ((tl) this).field_b = Math.min(100.0f, Math.max(0.0f, param0));
-          if (param2 != null) {
-            ((tl) this).field_d = param2;
+        RuntimeException var4 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((tl) this).field_b = Math.min(100.0f, Math.max(0.0f, param0));
+              if (param2 != null) {
+                ((tl) this).field_d = param2;
+                break L1;
+              } else {
+                if (null != ((tl) this).field_d) {
+                  break L1;
+                } else {
+                  ((tl) this).field_d = jh.field_l;
+                  break L1;
+                }
+              }
+            }
+            L2: {
+              eh.a(((tl) this).field_d, ((tl) this).field_b, -1);
+              if (param1 <= 122) {
+                boolean discarded$2 = this.b((byte) 10);
+                sa.field_Y.c((byte) 81);
+                break L2;
+              } else {
+                sa.field_Y.c((byte) 81);
+                break L2;
+              }
+            }
             break L0;
-          } else {
-            if (null != ((tl) this).field_d) {
-              break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var4;
+            stackOut_9_1 = new StringBuilder().append("tl.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param2 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
             } else {
-              ((tl) this).field_d = jh.field_l;
-              break L0;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
+          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
-        L1: {
-          eh.a(((tl) this).field_d, ((tl) this).field_b, -1);
-          if (param1 > 122) {
-            break L1;
-          } else {
-            boolean discarded$2 = this.b((byte) 10);
-            break L1;
-          }
-        }
-        sa.field_Y.c((byte) 81);
     }
 
     private final boolean b(byte param0) {
@@ -765,7 +872,7 @@ final class tl implements ug {
         var2 = 1;
         var3 = 0;
         L3: while (true) {
-          if (-3 >= (var3 ^ -1)) {
+          if (var3 >= 2) {
             return var2 != 0;
           } else {
             if (null != ((tl) this).field_q[var3]) {
@@ -828,21 +935,29 @@ final class tl implements ug {
     }
 
     private final void a(int param0, String param1, float param2, boolean param3, float param4) {
+        long var6_long = 0L;
+        long var8 = 0L;
+        float var10 = 0.0f;
+        float var11 = 0.0f;
         if (param3) {
             return;
         }
-        if (!(0L != vj.field_n)) {
-            long dupTemp$0 = pd.a(-22826);
-            vj.field_n = dupTemp$0;
-            ap.field_m = dupTemp$0;
+        try {
+            if (!(0L != vj.field_n)) {
+                long dupTemp$0 = pd.a(-22826);
+                vj.field_n = dupTemp$0;
+                ap.field_m = dupTemp$0;
+            }
+            var6_long = pd.a(-22826);
+            var8 = var6_long - ap.field_m;
+            vj.field_n = var6_long;
+            var10 = (float)var8 / (float)param0;
+            var10 = Math.min(Math.max(var10, 0.0f), 1.0f);
+            var11 = param2 + var10 * param4;
+            this.a(var11, 124, param1);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "tl.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
-        long var6 = pd.a(-22826);
-        long var8 = var6 - ap.field_m;
-        vj.field_n = var6;
-        float var10 = (float)var8 / (float)param0;
-        var10 = Math.min(Math.max(var10, 0.0f), 1.0f);
-        float var11 = param2 + var10 * param4;
-        this.a(var11, 124, param1);
     }
 
     public final boolean a(boolean param0) {
@@ -913,7 +1028,7 @@ final class tl implements ug {
                 if (var4 >= -1 + ((tl) this).field_f) {
                   ((tl) this).field_f = ((tl) this).field_f - 1;
                   ((tl) this).field_o = 0;
-                  if ((((tl) this).field_f ^ -1) >= -1) {
+                  if (((tl) this).field_f <= 0) {
                     ((tl) this).field_n = false;
                     ((tl) this).field_a = 0;
                     break L0;
@@ -930,7 +1045,7 @@ final class tl implements ug {
               L5: {
                 var4_long = pd.a(-22826);
                 ((tl) this).field_o = (int)((long)((tl) this).field_o - (var4_long - ((tl) this).field_l));
-                if (-2 < (((tl) this).field_o ^ -1)) {
+                if (((tl) this).field_o < 1) {
                   ((tl) this).field_o = 1;
                   break L5;
                 } else {
@@ -999,7 +1114,7 @@ final class tl implements ug {
                 L2: {
                   var6 = tc.field_s[var5];
                   if (vb.field_D[var6] == null) {
-                    if ((param1 ^ -1) == (tc.field_w[var5] ^ -1)) {
+                    if (~param1 == ~tc.field_w[var5]) {
                       L3: {
                         if (1 == tk.a(param1, 101)) {
                           stackOut_9_0 = "uk";
@@ -1012,7 +1127,7 @@ final class tl implements ug {
                         }
                       }
                       var7_ref_String = stackIn_10_0;
-                      if (-1 == (tc.field_y[var5] ^ -1)) {
+                      if (tc.field_y[var5] == 0) {
                         var11 = ml.a(gm.field_h, var7_ref_String, tc.field_x[var5]);
                         var8 = var11;
                         if (var8 != null) {
@@ -1140,7 +1255,7 @@ final class tl implements ug {
             } else {
               var7 = 0;
               L9: while (true) {
-                if ((ld.field_l.length ^ -1) >= (var7 ^ -1)) {
+                if (~ld.field_l.length >= ~var7) {
                   var7 = 0;
                   L10: while (true) {
                     if (ad.field_g.length <= var7) {
@@ -1168,7 +1283,7 @@ final class tl implements ug {
               }
             }
           } else {
-            if ((var7 ^ -1) == -15) {
+            if (var7 == 14) {
               ((tl) this).field_d = dh.field_g;
               ld.field_l[21] = vm.a((byte) 108, "character_human21", "gameuk", a.field_h);
               if (ld.field_l[21] != null) {
@@ -1194,9 +1309,9 @@ final class tl implements ug {
                 return false;
               }
             } else {
-              if ((var7 ^ -1) != -11) {
-                if (-5 != (var7 ^ -1)) {
-                  if ((var7 ^ -1) == -2) {
+              if (var7 != 10) {
+                if (var7 != 4) {
+                  if (var7 == 1) {
                     break L4;
                   } else {
                     if (var7 == 2) {
@@ -1206,7 +1321,7 @@ final class tl implements ug {
                         break L4;
                       } else {
                         if (7 != var7) {
-                          if (-6 == (var7 ^ -1)) {
+                          if (var7 == 5) {
                             break L4;
                           } else {
                             if (8 == var7) {
@@ -1230,7 +1345,7 @@ final class tl implements ug {
                               break L4;
                             } else {
                               if (var7 != 6) {
-                                if ((var7 ^ -1) == -1) {
+                                if (var7 == 0) {
                                   break L4;
                                 } else {
                                   if (12 != var7) {
@@ -1331,7 +1446,7 @@ final class tl implements ug {
               break L18;
             } else {
               L19: {
-                if (-2 == (tk.a(param1, 126) ^ -1)) {
+                if (tk.a(param1, 126) == 1) {
                   stackOut_102_0 = "gameuk";
                   stackIn_103_0 = stackOut_102_0;
                   break L19;
@@ -1351,10 +1466,10 @@ final class tl implements ug {
           }
         }
         L20: {
-          if (-16 < (param1 ^ -1)) {
+          if (param1 < 15) {
             break L20;
           } else {
-            if ((param1 ^ -1) > -30) {
+            if (param1 < 29) {
               var5 = param1 + -15;
               if (param0) {
                 break L20;

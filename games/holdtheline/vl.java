@@ -38,9 +38,6 @@ final class vl implements Iterator {
         field_a = null;
         field_d = null;
         field_g = null;
-        if (param0 != 68) {
-            return;
-        }
         field_c = null;
     }
 
@@ -49,65 +46,59 @@ final class vl implements Iterator {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
-        if (param0 == 0) {
-          if (bl.field_r == null) {
-            tc.c();
-            tc.c();
-            tc.c();
-            ra.field_hb.a(224, 112, 192, 256);
-            var1 = 0;
-            L0: while (true) {
-              if (32 <= var1) {
-                nm.field_c.b(ek.field_q, 320, 392, 0, -1);
-                return;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 0) {
+                break L1;
               } else {
-                var2 = ce.a(-14646, nm.field_b);
-                tc.b(var1 / 2 + 184, 398 - var1, var2, 12517567);
-                tc.b(var2 + (var1 / 2 + 184), 398 + -var1, -var2 + 256, 7274607);
-                var1++;
-                continue L0;
+                field_h = null;
+                break L1;
               }
             }
-          } else {
-            bl.field_r.a();
-            return;
-          }
-        } else {
-          field_h = null;
-          if (bl.field_r == null) {
-            tc.c();
-            tc.c();
-            tc.c();
-            ra.field_hb.a(224, 112, 192, 256);
-            var1 = 0;
-            L1: while (true) {
-              if (32 <= var1) {
-                nm.field_c.b(ek.field_q, 320, 392, 0, -1);
-                return;
-              } else {
-                var2 = ce.a(-14646, nm.field_b);
-                tc.b(var1 / 2 + 184, 398 - var1, var2, 12517567);
-                tc.b(var2 + (var1 / 2 + 184), 398 + -var1, -var2 + 256, 7274607);
-                var1++;
-                continue L1;
+            if (bl.field_r == null) {
+              tc.c();
+              ra.field_hb.a(224, 112, 192, 256);
+              var1_int = 0;
+              L2: while (true) {
+                if (32 <= var1_int) {
+                  nm.field_c.b(ek.field_q, 320, 392, 0, -1);
+                  break L0;
+                } else {
+                  var2 = ce.a(-14646, nm.field_b);
+                  tc.b(var1_int / 2 + 184, 398 - var1_int, var2, 12517567);
+                  tc.b(var2 + (var1_int / 2 + 184), 398 + -var1_int, -var2 + 256, 7274607);
+                  var1_int++;
+                  continue L2;
+                }
               }
+            } else {
+              bl.field_r.a();
+              return;
             }
-          } else {
-            bl.field_r.a();
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw kk.a((Throwable) (Object) var1, "vl.A(" + param0 + 41);
         }
     }
 
     vl(lk param0) {
         ((vl) this).field_f = null;
-        ((vl) this).field_e = param0;
-        ((vl) this).field_b = ((vl) this).field_e.field_i.field_n;
-        ((vl) this).field_f = null;
+        try {
+            ((vl) this).field_e = param0;
+            ((vl) this).field_b = ((vl) this).field_e.field_i.field_n;
+            ((vl) this).field_f = null;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "vl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

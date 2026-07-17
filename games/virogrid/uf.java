@@ -41,12 +41,9 @@ final class uf {
         int var5 = 0;
         int var6 = Virogrid.field_F ? 1 : 0;
         ((uf) this).field_C = new byte[param0][param1];
-        if (param2 != -108) {
-            ((uf) this).field_G = null;
-        }
         for (var4 = 0; var4 < param0; var4++) {
             for (var5 = 0; var5 < param1; var5++) {
-                ((uf) this).field_C[var4][var5] = (byte)-1;
+                ((uf) this).field_C[var4][var5] = (byte) -1;
             }
         }
         ((uf) this).field_C[0][0] = (byte) 0;
@@ -146,7 +143,7 @@ final class uf {
           if (param3 >= ((uf) this).field_C.length) {
             break L1;
           } else {
-            if (-1 >= (param3 ^ -1)) {
+            if (param3 >= 0) {
               L2: {
                 if (((uf) this).field_C[0].length <= param0) {
                   break L2;
@@ -157,7 +154,7 @@ final class uf {
                         L4: {
                           var6 = Math.abs(-param1 + param3);
                           var7 = Math.abs(param0 + -param4);
-                          if ((var6 ^ -1) < -2) {
+                          if (var6 > 1) {
                             break L4;
                           } else {
                             if (1 >= var7) {
@@ -169,7 +166,7 @@ final class uf {
                         }
                         L5: {
                           L6: {
-                            if (-3 != (var6 ^ -1)) {
+                            if (var6 != 2) {
                               break L6;
                             } else {
                               if (2 == var7) {
@@ -183,7 +180,7 @@ final class uf {
                             if (var6 != 0) {
                               break L7;
                             } else {
-                              if (-3 == (var7 ^ -1)) {
+                              if (var7 == 2) {
                                 break L5;
                               } else {
                                 break L7;
@@ -257,7 +254,7 @@ final class uf {
               } else {
                 if (1 == var9) {
                   if (param0) {
-                    ((uf) this).field_C[param7][param3] = (byte)-1;
+                    ((uf) this).field_C[param7][param3] = (byte) -1;
                     ((uf) this).field_C[param6][param1] = (byte)param2;
                     break L2;
                   } else {
@@ -289,7 +286,7 @@ final class uf {
                     }
                     L6: {
                       var13 = -1 + param1;
-                      if ((var13 ^ -1) <= -1) {
+                      if (var13 >= 0) {
                         break L6;
                       } else {
                         var13 = 0;
@@ -310,26 +307,126 @@ final class uf {
                       break L0;
                     } else {
                       var16 = var13;
-                      L8: while (true) {
-                        if (var16 <= var14) {
-                          if (((uf) this).field_C[var15][var16] == -param2 + 1) {
-                            var10++;
-                            if (param5) {
-                              var10++;
-                              var16++;
-                              continue L8;
-                            } else {
-                              var16++;
-                              continue L8;
+                      if (var16 <= var14) {
+                        if (((uf) this).field_C[var15][var16] == -param2 + 1) {
+                          var10++;
+                          if (param0) {
+                            L8: while (true) {
+                              ((uf) this).field_C[var15][var16] = (byte)param2;
+                              L9: while (true) {
+                                L10: {
+                                  if (param5) {
+                                    var10++;
+                                    var16++;
+                                    break L10;
+                                  } else {
+                                    var16++;
+                                    break L10;
+                                  }
+                                }
+                                L11: while (true) {
+                                  if (var16 <= var14) {
+                                    if (((uf) this).field_C[var15][var16] == -param2 + 1) {
+                                      var10++;
+                                      if (param0) {
+                                        continue L8;
+                                      } else {
+                                        continue L9;
+                                      }
+                                    } else {
+                                      var16++;
+                                      continue L11;
+                                    }
+                                  } else {
+                                    var15++;
+                                    if (var12 < var15) {
+                                      break L0;
+                                    } else {
+                                      var16 = var13;
+                                      continue L11;
+                                    }
+                                  }
+                                }
+                              }
                             }
                           } else {
-                            var16++;
-                            continue L8;
+                            L12: while (true) {
+                              L13: {
+                                if (param5) {
+                                  var10++;
+                                  var16++;
+                                  break L13;
+                                } else {
+                                  var16++;
+                                  break L13;
+                                }
+                              }
+                              L14: while (true) {
+                                if (var16 <= var14) {
+                                  if (((uf) this).field_C[var15][var16] == -param2 + 1) {
+                                    var10++;
+                                    if (param0) {
+                                      ((uf) this).field_C[var15][var16] = (byte)param2;
+                                      continue L12;
+                                    } else {
+                                      continue L12;
+                                    }
+                                  } else {
+                                    var16++;
+                                    continue L14;
+                                  }
+                                } else {
+                                  var15++;
+                                  if (var12 < var15) {
+                                    break L0;
+                                  } else {
+                                    var16 = var13;
+                                    continue L14;
+                                  }
+                                }
+                              }
+                            }
                           }
                         } else {
-                          var15++;
-                          break L1;
+                          var16++;
+                          L15: while (true) {
+                            if (var16 <= var14) {
+                              if (((uf) this).field_C[var15][var16] == -param2 + 1) {
+                                L16: {
+                                  var10++;
+                                  if (param0) {
+                                    ((uf) this).field_C[var15][var16] = (byte)param2;
+                                    break L16;
+                                  } else {
+                                    break L16;
+                                  }
+                                }
+                                if (param5) {
+                                  var10++;
+                                  var16++;
+                                  continue L15;
+                                } else {
+                                  var16++;
+                                  continue L15;
+                                }
+                              } else {
+                                var16++;
+                                continue L15;
+                              }
+                            } else {
+                              var15++;
+                              if (var12 < var15) {
+                                break L0;
+                              } else {
+                                var16 = var13;
+                                continue L15;
+                              }
+                            }
+                          }
                         }
+                      } else {
+                        var15++;
+                        break L1;
                       }
                     }
                   }
@@ -338,85 +435,85 @@ final class uf {
                 }
               }
             }
-            L9: {
+            L17: {
               var11 = -1 + param6;
               if (var11 >= 0) {
-                break L9;
+                break L17;
               } else {
                 var11 = 0;
-                break L9;
+                break L17;
               }
             }
-            L10: {
+            L18: {
               if (param4 > 38) {
-                break L10;
+                break L18;
               } else {
                 ((uf) this).a((byte) 123);
-                break L10;
+                break L18;
               }
             }
-            L11: {
+            L19: {
               var12 = 1 + param6;
               if (var12 < ((uf) this).field_C.length) {
-                break L11;
+                break L19;
               } else {
                 var12 = -1 + ((uf) this).field_C.length;
-                break L11;
+                break L19;
               }
             }
-            L12: {
+            L20: {
               var13 = -1 + param1;
-              if ((var13 ^ -1) <= -1) {
-                break L12;
+              if (var13 >= 0) {
+                break L20;
               } else {
                 var13 = 0;
-                break L12;
+                break L20;
               }
             }
-            L13: {
+            L21: {
               var14 = param1 + 1;
               if (var14 >= ((uf) this).field_C[0].length) {
                 var14 = ((uf) this).field_C[0].length + -1;
-                break L13;
+                break L21;
               } else {
-                break L13;
+                break L21;
               }
             }
             var15 = var11;
             break L1;
           }
-          L14: while (true) {
+          L22: while (true) {
             if (var12 < var15) {
               break L0;
             } else {
               var16 = var13;
-              L15: while (true) {
+              L23: while (true) {
                 if (var16 <= var14) {
                   if (((uf) this).field_C[var15][var16] == -param2 + 1) {
-                    L16: {
+                    L24: {
                       var10++;
                       if (param0) {
                         ((uf) this).field_C[var15][var16] = (byte)param2;
-                        break L16;
+                        break L24;
                       } else {
-                        break L16;
+                        break L24;
                       }
                     }
                     if (param5) {
                       var10++;
                       var16++;
-                      continue L15;
+                      continue L23;
                     } else {
                       var16++;
-                      continue L15;
+                      continue L23;
                     }
                   } else {
                     var16++;
-                    continue L15;
+                    continue L23;
                   }
                 } else {
                   var15++;
-                  continue L14;
+                  continue L22;
                 }
               }
             }
@@ -465,7 +562,7 @@ final class uf {
                   var6++;
                   continue L1;
                 } else {
-                  if ((((uf) this).field_C[var6][var7] ^ -1) == 0) {
+                  if (((uf) this).field_C[var6][var7] == -1) {
                     var5 = 0;
                     break L2;
                   } else {
@@ -634,7 +731,7 @@ final class uf {
           ((uf) this).field_n = false;
           ((uf) this).field_x = false;
           var3 = param0;
-          if ((var3 ^ -1) == -2) {
+          if (var3 == 1) {
             ((uf) this).field_x = true;
             break L0;
           } else {
@@ -769,19 +866,94 @@ final class uf {
     }
 
     final void a(jc param0, byte param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = Virogrid.field_F ? 1 : 0;
-        if (param1 <= 34) {
-            uf.a(-104);
-        }
-        int var3 = param0.g(11132);
-        if (!((var3 & 2) == 0)) {
-            for (var4 = 0; var4 < ((uf) this).field_C.length; var4++) {
-                for (var5 = 0; ((uf) this).field_C[0].length > var5; var5++) {
-                    ((uf) this).field_C[var4][var5] = param0.a((byte) -101);
-                }
+        int var6 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        var6 = Virogrid.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param1 > 34) {
+                break L1;
+              } else {
+                uf.a(-104);
+                break L1;
+              }
             }
+            L2: {
+              var3_int = param0.g(11132);
+              if ((var3_int & 2) != 0) {
+                var4 = 0;
+                L3: while (true) {
+                  if (var4 >= ((uf) this).field_C.length) {
+                    break L2;
+                  } else {
+                    var5 = 0;
+                    L4: while (true) {
+                      if (((uf) this).field_C[0].length <= var5) {
+                        var4++;
+                        continue L3;
+                      } else {
+                        ((uf) this).field_C[var4][var5] = param0.a((byte) -101);
+                        var5++;
+                        continue L4;
+                      }
+                    }
+                  }
+                }
+              } else {
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var3 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_1 = new StringBuilder().append("uf.S(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L5;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L5;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
         }
     }
 
@@ -856,7 +1028,7 @@ final class uf {
                     var3++;
                     continue L1;
                   } else {
-                    if (0 != (((uf) this).field_C[var3][var4] ^ -1)) {
+                    if (((uf) this).field_C[var3][var4] != -1) {
                       ((uf) this).field_z[((uf) this).field_C[var3][var4]] = ((uf) this).field_z[((uf) this).field_C[var3][var4]] + 1;
                       var4++;
                       continue L5;
@@ -897,12 +1069,12 @@ final class uf {
         if (!((uf) this).field_E) {
           L0: {
             var7 = ((uf) this).a(param5, param0, (byte) 99, param4, param1);
-            if (-1 != (var7 ^ -1)) {
+            if (var7 != 0) {
               if (var7 != 1) {
                 return 0;
               } else {
                 ((uf) this).field_C[param4][param5] = (byte)param3;
-                ((uf) this).field_C[param0][param1] = (byte)-1;
+                ((uf) this).field_C[param0][param1] = (byte) -1;
                 break L0;
               }
             } else {
@@ -914,7 +1086,7 @@ final class uf {
           if (param2 == 119) {
             L1: {
               var8 = param4 - 1;
-              if (-1 < (var8 ^ -1)) {
+              if (var8 < 0) {
                 var8 = 0;
                 break L1;
               } else {
@@ -980,7 +1152,7 @@ final class uf {
                                 var14++;
                                 continue L8;
                               } else {
-                                if (-1 >= (((uf) this).field_C[var14][var15] ^ -1)) {
+                                if (((uf) this).field_C[var14][var15] >= 0) {
                                   var13[((uf) this).field_C[var14][var15]] = var13[((uf) this).field_C[var14][var15]] + 1;
                                   var15++;
                                   continue L9;
@@ -999,7 +1171,7 @@ final class uf {
                             var13_int++;
                             continue L7;
                           } else {
-                            if ((((uf) this).field_C[var13_int][var14] ^ -1) == 0) {
+                            if (((uf) this).field_C[var13_int][var14] == -1) {
                               ((uf) this).field_C[var13_int][var14] = (byte)param3;
                               var14++;
                               continue L10;
@@ -1048,7 +1220,7 @@ final class uf {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        if (!((((uf) this).a(param5, param4, (byte) 99, param1, param2) ^ -1) != 0)) {
+        if (!(((uf) this).a(param5, param4, (byte) 99, param1, param2) != -1)) {
             return false;
         }
         if (!(param0 == ((uf) this).field_C[param4][param2])) {
@@ -1086,6 +1258,7 @@ final class uf {
     }
 
     final void a(boolean[][] param0, int param1, byte param2) {
+        RuntimeException var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -1094,75 +1267,124 @@ final class uf {
         int var10 = 0;
         int var11 = 0;
         int[] var12 = null;
-        L0: {
-          var11 = Virogrid.field_F ? 1 : 0;
-          var12 = new int[]{-1, -1, -1, 0, 0, 1, 1, 1, 2, 2, 2, 0, 0, -2, -2, -2};
-          var5 = new int[]{-1, 0, 1, -1, 1, -1, 0, 1, 0, -2, 2, -2, 2, -2, 0, 2};
-          if (param2 == 14) {
-            break L0;
-          } else {
-            boolean discarded$1 = ((uf) this).a(59, 84, 4, 79, -14, 66);
-            break L0;
-          }
-        }
-        var8 = 0;
-        L1: while (true) {
-          if (((uf) this).field_C.length <= var8) {
-            return;
-          } else {
-            var9 = 0;
-            L2: while (true) {
-              if (((uf) this).field_C[0].length <= var9) {
-                var8++;
-                continue L1;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        var11 = Virogrid.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var12 = new int[]{-1, -1, -1, 0, 0, 1, 1, 1, 2, 2, 2, 0, 0, -2, -2, -2};
+              var5 = new int[]{-1, 0, 1, -1, 1, -1, 0, 1, 0, -2, 2, -2, 2, -2, 0, 2};
+              if (param2 == 14) {
+                break L1;
               } else {
-                param0[var8][var9] = false;
-                if (param1 == ((uf) this).field_C[var8][var9]) {
-                  var10 = 0;
-                  L3: while (true) {
-                    if (var12.length > var10) {
-                      var6 = var8 + var12[var10];
-                      var7 = var5[var10] + var9;
-                      if ((var6 ^ -1) <= -1) {
-                        if (var6 < ((uf) this).field_C.length) {
-                          if ((var7 ^ -1) <= -1) {
-                            if (((uf) this).field_C[0].length > var7) {
-                              if (-1 == ((uf) this).field_C[var6][var7]) {
-                                param0[var8][var9] = true;
-                                var9++;
-                                continue L2;
-                              } else {
-                                var10++;
-                                continue L3;
-                              }
-                            } else {
-                              var10++;
-                              continue L3;
-                            }
+                boolean discarded$1 = ((uf) this).a(59, 84, 4, 79, -14, 66);
+                break L1;
+              }
+            }
+            var8 = 0;
+            L2: while (true) {
+              if (((uf) this).field_C.length <= var8) {
+                break L0;
+              } else {
+                var9 = 0;
+                L3: while (true) {
+                  if (((uf) this).field_C[0].length <= var9) {
+                    var8++;
+                    continue L2;
+                  } else {
+                    L4: {
+                      param0[var8][var9] = false;
+                      if (param1 == ((uf) this).field_C[var8][var9]) {
+                        var10 = 0;
+                        L5: while (true) {
+                          if (var12.length <= var10) {
+                            break L4;
                           } else {
+                            L6: {
+                              var6 = var8 + var12[var10];
+                              var7 = var5[var10] + var9;
+                              if (var6 < 0) {
+                                break L6;
+                              } else {
+                                if (var6 >= ((uf) this).field_C.length) {
+                                  break L6;
+                                } else {
+                                  if (var7 < 0) {
+                                    break L6;
+                                  } else {
+                                    if (((uf) this).field_C[0].length <= var7) {
+                                      break L6;
+                                    } else {
+                                      if (-1 == ((uf) this).field_C[var6][var7]) {
+                                        param0[var8][var9] = true;
+                                        break L4;
+                                      } else {
+                                        break L6;
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
                             var10++;
-                            continue L3;
+                            continue L5;
                           }
-                        } else {
-                          var10++;
-                          continue L3;
                         }
                       } else {
-                        var10++;
-                        continue L3;
+                        break L4;
                       }
-                    } else {
-                      var9++;
-                      continue L2;
                     }
+                    var9++;
+                    continue L3;
                   }
-                } else {
-                  var9++;
-                  continue L2;
                 }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var4 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var4;
+            stackOut_22_1 = new StringBuilder().append("uf.P(");
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param0 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L7;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L7;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -1200,7 +1422,7 @@ final class uf {
           ((uf) this).field_f = 0;
           ((uf) this).field_l = -2147483648;
           var5 = (byte)((uf) this).field_A;
-          if ((param0 ^ -1) != -2) {
+          if (param0 != 1) {
             if (2 != param0) {
               if (param0 == 3) {
                 var27 = new byte[((uf) this).field_C.length][((uf) this).field_C[0].length];
@@ -1418,15 +1640,19 @@ final class uf {
         ((uf) this).field_k = -1;
         ((uf) this).field_w = -1;
         ((uf) this).field_a = -1;
-        ((uf) this).field_y = param0;
-        if (-3 != (param1.length ^ -1)) {
-            throw new RuntimeException();
+        try {
+            ((uf) this).field_y = param0;
+            if (param1.length != 2) {
+                throw new RuntimeException();
+            }
+            ((uf) this).field_v = param2;
+            ((uf) this).field_A = param2;
+            ((uf) this).field_c = param1;
+            ((uf) this).field_s = param3;
+            this.a(ra.field_a[((uf) this).field_s], ra.field_a[((uf) this).field_s], (byte) -108);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "uf.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
-        ((uf) this).field_v = param2;
-        ((uf) this).field_A = param2;
-        ((uf) this).field_c = param1;
-        ((uf) this).field_s = param3;
-        this.a(ra.field_a[((uf) this).field_s], ra.field_a[((uf) this).field_s], (byte) -108);
     }
 
     static {

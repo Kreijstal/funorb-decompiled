@@ -30,17 +30,21 @@ final class jja extends nh {
         ((jja) this).field_c.e(1, true);
         ((jja) this).field_c.a(true, (kl) null);
         ((jja) this).field_c.b(8448, 8960, 8448);
-        ((jja) this).field_c.c(1, param0, 34168, 768);
+        ((jja) this).field_c.c(1, 0, 34168, 768);
         ((jja) this).field_c.b(5890, 3, 0, 770);
         ((jja) this).field_c.e(0, true);
         ((jja) this).field_c.c(1, 0, 34168, 768);
     }
 
     private final void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
-        if (param2 != 0) {
-            this.b(-64, -35);
+        try {
+            if (param2 != 0) {
+                this.b(-64, -35);
+            }
+            ((jja) this).field_a.a(param3, param5, param7, param0, param6, param4, (byte) -111, true, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "jja.I(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
-        ((jja) this).field_a.a(param3, param5, param7, param0, param6, param4, (byte) -111, true, param1);
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -117,7 +121,7 @@ final class jja extends nh {
           ((qk) (Object) stackIn_3_0).b(stackIn_3_1 != 0, 3);
           ((jja) this).field_c.q(2);
           ((jja) this).field_c.a((byte) 25, param6);
-          jaggl.OpenGL.glColor4ub((byte)(param5 >> -632846160), (byte)(param5 >> 1521648776), (byte)param5, (byte)(param5 >> -1775118696));
+          jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
           if (((jja) this).field_b) {
             var9 = (float)param2 / (float)((jja) this).d();
             var10 = (float)param3 / (float)((jja) this).b();
@@ -274,7 +278,7 @@ final class jja extends nh {
         ((jja) this).field_c.a(true, (kl) (Object) ((jja) this).field_a);
         ((jja) this).field_c.a((byte) 96, param8);
         ((jja) this).field_c.d(1, param6);
-        jaggl.OpenGL.glColor4ub((byte)(param7 >> -1390111024), (byte)(param7 >> -1911587416), (byte)param7, (byte)(param7 >> 1241225880));
+        jaggl.OpenGL.glColor4ub((byte)(param7 >> 16), (byte)(param7 >> 8), (byte)param7, (byte)(param7 >> 24));
         jaggl.OpenGL.glBegin(7);
         jaggl.OpenGL.glTexCoord2f(0.0f, ((jja) this).field_a.field_v);
         jaggl.OpenGL.glVertex2f(param0, param1);
@@ -326,13 +330,13 @@ final class jja extends nh {
                 stackOut_2_0 = this;
                 stackIn_5_0 = stackOut_2_0;
                 stackIn_3_0 = stackOut_2_0;
-                if (((jja) this).field_i != -1) {
+                if (((jja) this).field_i != 0) {
                   break L1;
                 } else {
                   stackOut_3_0 = this;
                   stackIn_6_0 = stackOut_3_0;
                   stackIn_4_0 = stackOut_3_0;
-                  if (-1 == ((jja) this).field_m) {
+                  if (((jja) this).field_m == 0) {
                     stackOut_6_0 = this;
                     stackOut_6_1 = 0;
                     stackIn_7_0 = stackOut_6_0;
@@ -361,7 +365,7 @@ final class jja extends nh {
           ((jja) this).field_a.b(false, 3);
           ((jja) this).field_c.q(2);
           ((jja) this).field_c.a((byte) 46, param4);
-          jaggl.OpenGL.glColor4ub((byte)(param3 >> 446922992), (byte)(param3 >> -494088536), (byte)param3, (byte)(param3 >> 1997670296));
+          jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
           param0 = param0 + ((jja) this).field_h;
           param1 = param1 + ((jja) this).field_e;
           if (((jja) this).field_f != null) {
@@ -428,7 +432,7 @@ final class jja extends nh {
               ((jja) this).field_c.a(1.0f, 0.5f, 0.5f, (byte) -76, 0.0f);
               break L0;
             } else {
-              if ((((jja) this).field_g ^ -1) != -3) {
+              if (((jja) this).field_g != 2) {
                 if (3 != ((jja) this).field_g) {
                   break L0;
                 } else {
@@ -455,8 +459,12 @@ final class jja extends nh {
         ((jja) this).field_m = 0;
         ((jja) this).field_i = 0;
         ((jja) this).field_b = false;
-        ((jja) this).field_c = param0;
-        ((jja) this).field_a = mga.a(param2, param1, param3, param5, true, param4, false, param0);
+        try {
+            ((jja) this).field_c = param0;
+            ((jja) this).field_a = mga.a(param2, param1, param3, param5, true, param4, false, param0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "jja.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     static {

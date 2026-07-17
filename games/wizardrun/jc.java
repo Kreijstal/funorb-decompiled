@@ -7,9 +7,6 @@ final class jc extends mi {
     static hi field_H;
 
     public static void g(byte param0) {
-        if (param0 != -19) {
-            return;
-        }
         field_H = null;
     }
 
@@ -26,10 +23,10 @@ final class jc extends mi {
         o var6 = null;
         if (param2 == param1) {
           if (null != ((jc) this).field_F) {
-            if (-1 == (((jc) this).field_G ^ -1)) {
+            if (((jc) this).field_G == 0) {
               return;
             } else {
-              if ((((jc) this).field_G ^ -1) == -257) {
+              if (((jc) this).field_G == 256) {
                 ((jc) this).field_F.a(((jc) this).field_o + param0, 0, param2, ((jc) this).field_l + param3);
                 return;
               } else {
@@ -56,9 +53,13 @@ final class jc extends mi {
 
     jc(ub param0) {
         super(param0.field_o, param0.field_l, param0.field_r, param0.field_n, (bf) null, (ce) null);
-        param0.a(114, 0, ((jc) this).field_n, ((jc) this).field_r, 0);
-        ((jc) this).field_F = param0;
-        ((jc) this).field_G = 256;
+        try {
+            param0.a(114, 0, ((jc) this).field_n, ((jc) this).field_r, 0);
+            ((jc) this).field_F = param0;
+            ((jc) this).field_G = 256;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "jc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

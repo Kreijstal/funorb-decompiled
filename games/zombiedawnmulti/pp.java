@@ -25,19 +25,23 @@ class pp extends ic {
     }
 
     pp(long param0, String param1) {
-        ((pp) this).field_p = param0;
-        ((pp) this).field_m = param1;
+        try {
+            ((pp) this).field_p = param0;
+            ((pp) this).field_m = param1;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "pp.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(k param0, int param1) {
-        param0.a(((pp) this).field_p, true);
-        if (param1 != -1) {
-          pi discarded$2 = ((pp) this).b(-111);
-          param0.a(13066, ((pp) this).field_m);
-          return;
-        } else {
-          param0.a(13066, ((pp) this).field_m);
-          return;
+        try {
+            param0.a(((pp) this).field_p, true);
+            if (param1 != -1) {
+                pi discarded$0 = ((pp) this).b(-111);
+            }
+            param0.a(13066, ((pp) this).field_m);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "pp.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

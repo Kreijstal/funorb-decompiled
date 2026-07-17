@@ -19,8 +19,8 @@ final class fi {
         }
         cb.b(true);
         rd.c(false);
-        sc.b(param0);
-        if (bd.a(param0 + 25951)) {
+        sc.b(0);
+        if (bd.a(25951)) {
           gf.field_c.b(true, 1);
           al.a((byte) -71, 0);
           gk.a(-1);
@@ -33,9 +33,6 @@ final class fi {
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 > -125) {
-            return;
-        }
         field_b = null;
         field_a = null;
         field_d = null;

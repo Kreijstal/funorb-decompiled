@@ -53,18 +53,9 @@ final class ba {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-          field_w = null;
-          field_w = null;
-          field_g = null;
-          field_e = null;
-          return;
-        } else {
-          field_w = null;
-          field_g = null;
-          field_e = null;
-          return;
-        }
+        field_w = null;
+        field_g = null;
+        field_e = null;
     }
 
     ba() {

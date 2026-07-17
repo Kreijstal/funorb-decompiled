@@ -375,7 +375,7 @@ final class ap extends ob {
               L0: {
                 var2_int = -62 % ((19 - param0) / 51);
                 if (null != ((ap) this).field_q) {
-                  try {
+                  {
                     L1: {
                       ((ap) this).field_n.field_f = 0;
                       ((ap) this).field_n.a(true, 6);
@@ -383,27 +383,6 @@ final class ap extends ob {
                       ((ap) this).field_n.c(-161478600, 0);
                       ((ap) this).field_q.a(0, 124, ((ap) this).field_n.field_h, ((ap) this).field_n.field_h.length);
                       break L1;
-                    }
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L2: {
-                      var3 = (IOException) (Object) decompiledCaughtException;
-                      try {
-                        L3: {
-                          ((ap) this).field_q.b((byte) -118);
-                          break L3;
-                        }
-                      } catch (java.lang.Exception decompiledCaughtParameter1) {
-                        decompiledCaughtException = decompiledCaughtParameter1;
-                        L4: {
-                          var4 = (Exception) (Object) decompiledCaughtException;
-                          break L4;
-                        }
-                      }
-                      ((ap) this).field_j = ((ap) this).field_j + 1;
-                      ((ap) this).field_p = -2;
-                      ((ap) this).field_q = null;
-                      break L2;
                     }
                   }
                   break L0;
@@ -652,7 +631,7 @@ final class ap extends ob {
                   return;
                 }
               } else {
-                if ((var2 ^ -1) != -3) {
+                if (var2 != 2) {
                   if (var2 == 3) {
                     L19: {
                       if (2 == mh.field_h) {
@@ -788,7 +767,7 @@ final class ap extends ob {
               }
               if (null == ((ap) this).field_q) {
                 L4: {
-                  if (-1 != (((ap) this).b(20) ^ -1)) {
+                  if (((ap) this).b(20) != 0) {
                     break L4;
                   } else {
                     if (0 == ((ap) this).d(20)) {
@@ -866,7 +845,7 @@ final class ap extends ob {
                             break L13;
                           } else {
                             var3_int = ((ap) this).field_q.c(0);
-                            stackOut_35_0 = var3_int ^ -1;
+                            stackOut_35_0 = ~var3_int;
                             stackIn_137_0 = stackOut_35_0;
                             stackIn_36_0 = stackOut_35_0;
                             if (var16 != 0) {
@@ -900,7 +879,7 @@ final class ap extends ob {
                                   }
                                   L16: {
                                     L17: {
-                                      if (-1 > (var4 ^ -1)) {
+                                      if (var4 > 0) {
                                         break L17;
                                       } else {
                                         L18: {
@@ -965,7 +944,7 @@ final class ap extends ob {
                                             }
                                           }
                                         }
-                                        if (-513 != (((ap) this).field_h.field_t ^ -1)) {
+                                        if (((ap) this).field_h.field_t != 512) {
                                           break L16;
                                         } else {
                                           ((ap) this).field_h.field_t = 0;
@@ -989,12 +968,12 @@ final class ap extends ob {
                                     L25: {
                                       L26: {
                                         ((ap) this).field_q.a(((ap) this).field_i.field_h, var5, 2034, ((ap) this).field_i.field_f);
-                                        if ((((ap) this).field_d ^ -1) == -1) {
+                                        if (((ap) this).field_d == 0) {
                                           break L26;
                                         } else {
                                           var6 = 0;
                                           L27: while (true) {
-                                            if ((var5 ^ -1) >= (var6 ^ -1)) {
+                                            if (~var5 >= ~var6) {
                                               break L26;
                                             } else {
                                               ((ap) this).field_i.field_h[((ap) this).field_i.field_f - -var6] = (byte)oe.a((int) ((ap) this).field_i.field_h[((ap) this).field_i.field_f + var6], (int) ((ap) this).field_d);
@@ -1027,7 +1006,7 @@ final class ap extends ob {
                                             var8 = ((ap) this).field_i.h(255);
                                             var9 = ((ap) this).field_i.b((byte) 127);
                                             var10 = 127 & var8;
-                                            if (-1 == (var8 & 128 ^ -1)) {
+                                            if ((var8 & 128) == 0) {
                                               stackOut_94_0 = 0;
                                               stackIn_95_0 = stackOut_94_0;
                                               break L29;
@@ -1040,7 +1019,7 @@ final class ap extends ob {
                                           L30: {
                                             L31: {
                                               var11 = stackIn_95_0;
-                                              var12 = (long)var7 + ((long)var6 << -643036640);
+                                              var12 = (long)var7 + ((long)var6 << 32);
                                               var14 = null;
                                               if (var11 == 0) {
                                                 var14_ref = (ld) (Object) ((ap) this).field_f.b(114);
@@ -1073,7 +1052,7 @@ final class ap extends ob {
                                                   if (var14_ref == null) {
                                                     break L31;
                                                   } else {
-                                                    stackOut_98_0 = ((var14_ref.field_k ^ -1L) < (var12 ^ -1L) ? -1 : ((var14_ref.field_k ^ -1L) == (var12 ^ -1L) ? 0 : 1));
+                                                    stackOut_98_0 = (~var14_ref.field_k < ~var12 ? -1 : (~var14_ref.field_k == ~var12 ? 0 : 1));
                                                     stackIn_116_0 = stackOut_98_0;
                                                     stackIn_99_0 = stackOut_98_0;
                                                     if (var16 != 0) {
@@ -1101,7 +1080,7 @@ final class ap extends ob {
                                             }
                                           }
                                           L34: {
-                                            if (stackIn_116_0 == (var10 ^ -1)) {
+                                            if (stackIn_116_0 == ~var10) {
                                               stackOut_119_0 = 5;
                                               stackIn_120_0 = stackOut_119_0;
                                               break L34;
@@ -1130,7 +1109,7 @@ final class ap extends ob {
                                       L35: {
                                         if (0 == ((ap) this).field_h.field_t) {
                                           L36: {
-                                            if ((((ap) this).field_i.field_h[0] ^ -1) == 0) {
+                                            if (((ap) this).field_i.field_h[0] == -1) {
                                               break L36;
                                             } else {
                                               ((ap) this).field_h = null;

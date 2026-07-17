@@ -29,9 +29,6 @@ final class lp extends br {
         field_f = null;
         field_s = null;
         field_h = null;
-        if (param0 > -76) {
-            field_k = null;
-        }
     }
 
     final static void a(byte param0, int param1, boolean param2, int param3) {
@@ -57,7 +54,7 @@ final class lp extends br {
             if (!param2) {
               if (var4 == 0) {
                 var5 = mj.field_Ib.i(param0 ^ 29767) - -mj.field_Ib.field_w;
-                if ((var5 ^ -1) < -641) {
+                if (var5 > 640) {
                   ti.field_Y = ti.field_Y + 5;
                   return;
                 } else {
@@ -65,7 +62,7 @@ final class lp extends br {
                     if (var5 >= 635) {
                       break L1;
                     } else {
-                      if (-1 <= (ti.field_Y ^ -1)) {
+                      if (ti.field_Y <= 0) {
                         break L1;
                       } else {
                         ti.field_Y = ti.field_Y - 5;
@@ -78,7 +75,7 @@ final class lp extends br {
               } else {
                 rp.field_l.a(-11838, param2);
                 var5 = mj.field_Ib.i(param0 ^ 29767) - -mj.field_Ib.field_w;
-                if ((var5 ^ -1) < -641) {
+                if (var5 > 640) {
                   ti.field_Y = ti.field_Y + 5;
                   return;
                 } else {
@@ -86,7 +83,7 @@ final class lp extends br {
                     if (var5 >= 635) {
                       break L2;
                     } else {
-                      if (-1 <= (ti.field_Y ^ -1)) {
+                      if (ti.field_Y <= 0) {
                         break L2;
                       } else {
                         ti.field_Y = ti.field_Y - 5;
@@ -101,7 +98,7 @@ final class lp extends br {
               mj.field_Ib.b(param3, 255, param1);
               if (var4 == 0) {
                 var5 = mj.field_Ib.i(param0 ^ 29767) - -mj.field_Ib.field_w;
-                if ((var5 ^ -1) < -641) {
+                if (var5 > 640) {
                   ti.field_Y = ti.field_Y + 5;
                   return;
                 } else {
@@ -109,7 +106,7 @@ final class lp extends br {
                     if (var5 >= 635) {
                       break L3;
                     } else {
-                      if (-1 <= (ti.field_Y ^ -1)) {
+                      if (ti.field_Y <= 0) {
                         break L3;
                       } else {
                         ti.field_Y = ti.field_Y - 5;
@@ -122,7 +119,7 @@ final class lp extends br {
               } else {
                 rp.field_l.a(-11838, param2);
                 var5 = mj.field_Ib.i(param0 ^ 29767) - -mj.field_Ib.field_w;
-                if ((var5 ^ -1) < -641) {
+                if (var5 > 640) {
                   ti.field_Y = ti.field_Y + 5;
                   return;
                 } else {
@@ -130,7 +127,7 @@ final class lp extends br {
                     if (var5 >= 635) {
                       break L4;
                     } else {
-                      if (-1 <= (ti.field_Y ^ -1)) {
+                      if (ti.field_Y <= 0) {
                         break L4;
                       } else {
                         ti.field_Y = ti.field_Y - 5;
@@ -168,12 +165,12 @@ final class lp extends br {
               if (var4 != 0) {
                 rp.field_l.a(-11838, param2);
                 var5 = mj.field_Ib.i(param0 ^ 29767) - -mj.field_Ib.field_w;
-                if ((var5 ^ -1) < -641) {
+                if (var5 > 640) {
                   ti.field_Y = ti.field_Y + 5;
                   return;
                 } else {
                   if (var5 < 635) {
-                    if (-1 > (ti.field_Y ^ -1)) {
+                    if (ti.field_Y > 0) {
                       ti.field_Y = ti.field_Y - 5;
                       return;
                     } else {
@@ -185,12 +182,12 @@ final class lp extends br {
                 }
               } else {
                 var5 = mj.field_Ib.i(param0 ^ 29767) - -mj.field_Ib.field_w;
-                if ((var5 ^ -1) < -641) {
+                if (var5 > 640) {
                   ti.field_Y = ti.field_Y + 5;
                   return;
                 } else {
                   if (var5 < 635) {
-                    if (-1 > (ti.field_Y ^ -1)) {
+                    if (ti.field_Y > 0) {
                       ti.field_Y = ti.field_Y - 5;
                       return;
                     } else {
@@ -204,7 +201,7 @@ final class lp extends br {
             } else {
               if (var4 == 0) {
                 var5 = mj.field_Ib.i(param0 ^ 29767) - -mj.field_Ib.field_w;
-                if ((var5 ^ -1) < -641) {
+                if (var5 > 640) {
                   ti.field_Y = ti.field_Y + 5;
                   return;
                 } else {
@@ -212,7 +209,7 @@ final class lp extends br {
                     if (var5 >= 635) {
                       break L6;
                     } else {
-                      if (-1 <= (ti.field_Y ^ -1)) {
+                      if (ti.field_Y <= 0) {
                         break L6;
                       } else {
                         ti.field_Y = ti.field_Y - 5;
@@ -226,14 +223,14 @@ final class lp extends br {
                 L7: {
                   rp.field_l.a(-11838, param2);
                   var5 = mj.field_Ib.i(param0 ^ 29767) - -mj.field_Ib.field_w;
-                  if ((var5 ^ -1) < -641) {
+                  if (var5 > 640) {
                     ti.field_Y = ti.field_Y + 5;
                     break L7;
                   } else {
                     if (var5 >= 635) {
                       break L7;
                     } else {
-                      if (-1 <= (ti.field_Y ^ -1)) {
+                      if (ti.field_Y <= 0) {
                         break L7;
                       } else {
                         ti.field_Y = ti.field_Y - 5;
@@ -257,7 +254,7 @@ final class lp extends br {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 >= -27) {
           lp.a((byte) -56, false);
-          if ((vl.field_h ^ -1) >= -1) {
+          if (vl.field_h <= 0) {
             if (!wc.j(100)) {
               L0: {
                 var2 = 1;
@@ -356,7 +353,7 @@ final class lp extends br {
             }
           }
         } else {
-          if ((vl.field_h ^ -1) >= -1) {
+          if (vl.field_h <= 0) {
             if (!wc.j(100)) {
               L4: {
                 var2 = 1;
@@ -462,9 +459,6 @@ final class lp extends br {
         uk.field_M = new ka[param0 * 15];
         sj.field_m = param0;
         ub.field_ub = new int[3];
-        if (param1 > -11) {
-            field_f = null;
-        }
     }
 
     lp() {

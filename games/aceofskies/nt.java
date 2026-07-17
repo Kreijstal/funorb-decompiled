@@ -53,6 +53,7 @@ final class nt extends ib implements bp {
                     continue L1;
                   } else {
                     boolean discarded$4 = ((nt) this).field_g.UnlockBox(0);
+                    return;
                   }
                 }
               } else {
@@ -72,6 +73,7 @@ final class nt extends ib implements bp {
                     }
                   } else {
                     boolean discarded$5 = ((nt) this).field_g.UnlockBox(0);
+                    return;
                   }
                 }
               }
@@ -88,6 +90,6 @@ final class nt extends ib implements bp {
     }
 
     public final void a(ke param0, int param1) {
-        this.a(param0, param1);
+        super.a(param0, param1);
     }
 }

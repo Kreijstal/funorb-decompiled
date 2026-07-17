@@ -12,32 +12,82 @@ final class wp extends am {
     static int field_y;
 
     final void a(fj param0, int param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var5 = Torquing.field_u;
-        if (param1 == 35) {
+        try {
           L0: {
-            var4 = param2;
-            if (-1 == (var4 ^ -1)) {
-              ((wp) this).field_x = param0.i((byte) -101);
+            if (param1 == 35) {
+              L1: {
+                var4_int = param2;
+                if (var4_int == 0) {
+                  ((wp) this).field_x = param0.i((byte) -101);
+                  break L1;
+                } else {
+                  if (var4_int != 1) {
+                    if (var4_int == 2) {
+                      ((wp) this).field_z = param0.i((byte) -101);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  } else {
+                    ((wp) this).field_s = param0.i(param1 ^ 7059);
+                    break L1;
+                  }
+                }
+              }
               break L0;
             } else {
-              if ((var4 ^ -1) != -2) {
-                if (-3 == (var4 ^ -1)) {
-                  ((wp) this).field_z = param0.i((byte) -101);
-                  break L0;
-                } else {
-                  break L0;
-                }
-              } else {
-                ((wp) this).field_s = param0.i(param1 ^ 7059);
-                break L0;
-              }
+              return;
             }
           }
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_1 = new StringBuilder().append("wp.H(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L2;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L2;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -49,35 +99,101 @@ final class wp extends am {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, t[] param5) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int var11 = Torquing.field_u;
-        if (param5 != null) {
-            if (0 >= param2) {
-                return;
+        int var11 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var11 = Torquing.field_u;
+        try {
+          L0: {
+            L1: {
+              if (param5 == null) {
+                break L1;
+              } else {
+                if (0 < param2) {
+                  L2: {
+                    var6_int = param5[0].field_w;
+                    var7 = param5[2].field_w;
+                    var8 = param5[1].field_w;
+                    param5[0].c(param4, param0, param1);
+                    param5[2].c(param2 + param4 - var7, param0, param1);
+                    ph.b(lj.field_c);
+                    ph.f(var6_int + param4, param0, -var7 + param4 + param2, param0 + param5[1].field_u);
+                    var9 = var6_int + param4;
+                    var10 = -var7 + (param4 - -param2);
+                    param4 = var9;
+                    if (!param3) {
+                      break L2;
+                    } else {
+                      field_v = null;
+                      break L2;
+                    }
+                  }
+                  L3: while (true) {
+                    if (var10 <= param4) {
+                      ph.a(lj.field_c);
+                      break L0;
+                    } else {
+                      param5[1].c(param4, param0, param1);
+                      param4 = param4 + var8;
+                      continue L3;
+                    }
+                  }
+                } else {
+                  break L1;
+                }
+              }
             }
-            var6 = param5[0].field_w;
-            var7 = param5[2].field_w;
-            var8 = param5[1].field_w;
-            param5[0].c(param4, param0, param1);
-            param5[2].c(param2 + param4 - var7, param0, param1);
-            ph.b(lj.field_c);
-            ph.f(var6 + param4, param0, -var7 + param4 + param2, param0 + param5[1].field_u);
-            var9 = var6 + param4;
-            var10 = -var7 + (param4 - -param2);
-            param4 = var9;
-            if (param3) {
-                field_v = null;
-            }
-            while (var10 > param4) {
-                param5[1].c(param4, param0, param1);
-                param4 = param4 + var8;
-            }
-            ph.a(lj.field_c);
             return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var6 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var6;
+            stackOut_10_1 = new StringBuilder().append("wp.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param5 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 
@@ -88,7 +204,7 @@ final class wp extends am {
         int var2 = 0;
         ((wp) this).field_t = new int[((wp) this).field_x + 1];
         int var3 = 4096 / ((wp) this).field_x;
-        int var4 = ((wp) this).field_s * var3 >> -657712948;
+        int var4 = ((wp) this).field_s * var3 >> 12;
         for (var5 = 0; ((wp) this).field_x > var5; var5++) {
             ((wp) this).field_t[var5] = var2;
             ((wp) this).field_u[var5] = var2 - -var4;
@@ -96,9 +212,6 @@ final class wp extends am {
         }
         ((wp) this).field_t[((wp) this).field_x] = 4096;
         ((wp) this).field_u[((wp) this).field_x] = 4096 - -((wp) this).field_u[0];
-        if (param0 != 39) {
-            ((wp) this).a((byte) 98);
-        }
     }
 
     final int[] a(byte param0, int param1) {
@@ -175,19 +288,19 @@ final class wp extends am {
                     var7 = 0;
                     var8 = q.field_b[var5];
                     var9 = ((wp) this).field_z;
-                    if ((var9 ^ -1) == -2) {
+                    if (var9 == 1) {
                       var6 = var8;
                       break L5;
                     } else {
                       if (var9 != 2) {
-                        if ((var9 ^ -1) != -4) {
+                        if (var9 != 3) {
                           break L5;
                         } else {
-                          var6 = (var8 + -var4 >> 611861953) + 2048;
+                          var6 = (var8 + -var4 >> 1) + 2048;
                           break L5;
                         }
                       } else {
-                        var6 = (var4 + -4096 + var8 >> -149594879) + 2048;
+                        var6 = (var4 + -4096 + var8 >> 1) + 2048;
                         break L5;
                       }
                     }
@@ -246,9 +359,6 @@ final class wp extends am {
 
     public static void a(boolean param0) {
         field_v = null;
-        if (!param0) {
-            da discarded$0 = wp.b(110);
-        }
     }
 
     static {

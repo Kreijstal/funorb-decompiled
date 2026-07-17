@@ -17,62 +17,27 @@ final class ea implements Iterable {
     public static void a(int param0) {
         field_b = null;
         field_c = null;
-        if (param0 != -4099) {
-            return;
-        }
         field_h = null;
         field_f = null;
     }
 
     final void a(long param0, mc param1, boolean param2) {
         mc var5 = null;
-        mc var6 = null;
-        mc var7 = null;
-        mc var8 = null;
-        mc var9 = null;
-        if (null == param1.field_e) {
-          if (!param2) {
-            var9 = ((ea) this).field_d[(int)(param0 & (long)(-1 + ((ea) this).field_i))];
-            var5 = var9;
+        try {
+            if (null != param1.field_e) {
+                param1.b(false);
+            }
+            if (param2) {
+                ((ea) this).field_g = null;
+            }
+            var5 = ((ea) this).field_d[(int)(param0 & (long)(-1 + ((ea) this).field_i))];
             param1.field_j = var5;
-            param1.field_e = var9.field_e;
+            param1.field_e = var5.field_e;
             param1.field_e.field_j = param1;
             param1.field_j.field_e = param1;
             param1.field_c = param0;
-            return;
-          } else {
-            ((ea) this).field_g = null;
-            var8 = ((ea) this).field_d[(int)(param0 & (long)(-1 + ((ea) this).field_i))];
-            var5 = var8;
-            param1.field_j = var5;
-            param1.field_e = var8.field_e;
-            param1.field_e.field_j = param1;
-            param1.field_j.field_e = param1;
-            param1.field_c = param0;
-            return;
-          }
-        } else {
-          param1.b(false);
-          if (param2) {
-            ((ea) this).field_g = null;
-            var7 = ((ea) this).field_d[(int)(param0 & (long)(-1 + ((ea) this).field_i))];
-            var5 = var7;
-            param1.field_j = var5;
-            param1.field_e = var7.field_e;
-            param1.field_e.field_j = param1;
-            param1.field_j.field_e = param1;
-            param1.field_c = param0;
-            return;
-          } else {
-            var6 = ((ea) this).field_d[(int)(param0 & (long)(-1 + ((ea) this).field_i))];
-            var5 = var6;
-            param1.field_j = var5;
-            param1.field_e = var6.field_e;
-            param1.field_e.field_j = param1;
-            param1.field_j.field_e = param1;
-            param1.field_c = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "ea.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

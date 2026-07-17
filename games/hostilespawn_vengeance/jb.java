@@ -12,8 +12,9 @@ final class jb extends ef {
         ((jb) this).field_k = param0.a(((jb) this).field_k, 0);
         ((jb) this).field_j = param0.a(((jb) this).field_j, true);
         if (((jb) this).field_l == ((jb) this).field_i) {
-          ((jb) this).field_i = param0.a(((jb) this).field_l, (byte) -59);
-          ((jb) this).field_l = param0.a(((jb) this).field_l, (byte) -59);
+          int dupTemp$2 = param0.a(((jb) this).field_l, (byte) -59);
+          ((jb) this).field_i = dupTemp$2;
+          ((jb) this).field_l = dupTemp$2;
           return (jb) this;
         } else {
           L0: {

@@ -13,9 +13,6 @@ final class k extends si {
         field_M = null;
         field_J = null;
         field_H = null;
-        if (param0 != 52) {
-            field_J = null;
-        }
         field_I = null;
     }
 
@@ -123,16 +120,21 @@ final class k extends si {
     }
 
     final void a(byte param0, vg param1) {
-        if (!(param1 instanceof bd)) {
-            throw new IllegalArgumentException();
+        bd var3 = null;
+        try {
+            if (!(param1 instanceof bd)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (bd) (Object) param1;
+            ((k) this).field_K.a(48, (gi) (Object) var3);
+            if (param0 > -82) {
+                field_M = null;
+            }
+            var3.field_Q = true;
+            boolean discarded$0 = var3.a(false, (vg) this);
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "k.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        bd var3 = (bd) (Object) param1;
-        ((k) this).field_K.a(48, (gi) (Object) var3);
-        if (param0 > -82) {
-            field_M = null;
-        }
-        var3.field_Q = true;
-        boolean discarded$0 = var3.a(false, (vg) this);
     }
 
     final vg h(int param0) {

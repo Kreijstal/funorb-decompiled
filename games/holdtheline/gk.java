@@ -23,16 +23,15 @@ final class gk {
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        param0.addMouseListener((java.awt.event.MouseListener) (Object) ic.field_d);
-        if (param1 <= 26) {
-          field_d = null;
-          param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ic.field_d);
-          param0.addFocusListener((java.awt.event.FocusListener) (Object) ic.field_d);
-          return;
-        } else {
-          param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ic.field_d);
-          param0.addFocusListener((java.awt.event.FocusListener) (Object) ic.field_d);
-          return;
+        try {
+            param0.addMouseListener((java.awt.event.MouseListener) (Object) ic.field_d);
+            if (param1 <= 26) {
+                field_d = null;
+            }
+            param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ic.field_d);
+            param0.addFocusListener((java.awt.event.FocusListener) (Object) ic.field_d);
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "gk.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

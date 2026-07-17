@@ -15,26 +15,94 @@ final class ada extends k {
     }
 
     final void a(byte param0, lu param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        int var6 = BachelorFridge.field_y;
-        if (param2 != 0) {
-        } else {
-            var4 = param1.b(16711935);
-            if (0 != var4) {
-                this.a(var4, (byte) 33);
-            } else {
-                ((ada) this).field_n = new int[param1.b(16711935)][4];
-                for (var5 = 0; var5 < ((ada) this).field_n.length; var5++) {
-                    ((ada) this).field_n[var5][0] = param1.e((byte) 124);
-                    ((ada) this).field_n[var5][1] = param1.b(16711935) << 545506308;
-                    ((ada) this).field_n[var5][2] = param1.b(16711935) << 780197380;
-                    ((ada) this).field_n[var5][3] = param1.b(16711935) << 1361065956;
+        int var6 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var6 = BachelorFridge.field_y;
+        try {
+          L0: {
+            L1: {
+              if (param2 == 0) {
+                var4_int = param1.b(16711935);
+                if (0 == var4_int) {
+                  ((ada) this).field_n = new int[param1.b(16711935)][4];
+                  var5 = 0;
+                  L2: while (true) {
+                    if (var5 >= ((ada) this).field_n.length) {
+                      break L1;
+                    } else {
+                      ((ada) this).field_n[var5][0] = param1.e((byte) 124);
+                      ((ada) this).field_n[var5][1] = param1.b(16711935) << 4;
+                      ((ada) this).field_n[var5][2] = param1.b(16711935) << 4;
+                      ((ada) this).field_n[var5][3] = param1.b(16711935) << 4;
+                      var5++;
+                      continue L2;
+                    }
+                  }
+                } else {
+                  this.a(var4_int, (byte) 33);
+                  break L1;
                 }
+              } else {
+                break L1;
+              }
             }
-        }
-        if (param0 != -71) {
-            int[][] discarded$0 = ((ada) this).a(false, -103);
+            L3: {
+              if (param0 == -71) {
+                break L3;
+              } else {
+                int[][] discarded$2 = ((ada) this).a(false, -103);
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var4;
+            stackOut_11_1 = new StringBuilder().append("ada.E(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
         }
     }
 
@@ -64,14 +132,14 @@ final class ada extends k {
         }
         L1: {
           var5 = ((ada) this).field_n.length;
-          if (-1 > (var5 ^ -1)) {
+          if (var5 > 0) {
             var6 = 0;
             L2: while (true) {
               if (257 <= var6) {
                 break L1;
               } else {
                 var7 = 0;
-                var8 = var6 << -1474029628;
+                var8 = var6 << 4;
                 var9 = 0;
                 L3: while (true) {
                   L4: {
@@ -90,13 +158,13 @@ final class ada extends k {
                   L5: {
                     if (var5 > var7) {
                       var17 = ((ada) this).field_n[var7];
-                      if ((var7 ^ -1) < -1) {
+                      if (var7 > 0) {
                         var10 = ((ada) this).field_n[var7 + -1];
-                        var11 = (-var10[0] + var8 << -1625085460) / (-var10[0] + var17[0]);
+                        var11 = (-var10[0] + var8 << 12) / (-var10[0] + var17[0]);
                         var12 = -var11 + 4096;
-                        var3 = var11 * var17[2] - -(var12 * var10[2]) >> 608326572;
-                        var4 = var12 * var10[3] + var11 * var17[3] >> -1609343572;
-                        var2 = var10[1] * var12 + var11 * var17[1] >> -1020156788;
+                        var3 = var11 * var17[2] - -(var12 * var10[2]) >> 12;
+                        var4 = var12 * var10[3] + var11 * var17[3] >> 12;
+                        var2 = var10[1] * var12 + var11 * var17[1] >> 12;
                         break L5;
                       } else {
                         var3 = var17[2];
@@ -120,7 +188,7 @@ final class ada extends k {
                       var3 = 0;
                       break L6;
                     } else {
-                      if (-256 > (var3 ^ -1)) {
+                      if (var3 > 255) {
                         var3 = 255;
                         break L6;
                       } else {
@@ -142,7 +210,7 @@ final class ada extends k {
                     }
                   }
                   L8: {
-                    if ((var4 ^ -1) <= -1) {
+                    if (var4 >= 0) {
                       if (var4 <= 255) {
                         break L8;
                       } else {
@@ -154,7 +222,7 @@ final class ada extends k {
                       break L8;
                     }
                   }
-                  ((ada) this).field_o[var6] = mp.a(mp.a(var2 << -1121695792, var3 << -576008440), var4);
+                  ((ada) this).field_o[var6] = mp.a(mp.a(var2 << 16, var3 << 8), var4);
                   var6++;
                   continue L2;
                 }
@@ -254,7 +322,7 @@ final class ada extends k {
         int stackOut_21_2 = 0;
         L0: {
           pm.f(199);
-          if (-1 >= (wk.field_a ^ -1)) {
+          if (wk.field_a >= 0) {
             dea.field_m.field_Z = lga.a(true, new String[1], bla.field_q);
             break L0;
           } else {
@@ -459,12 +527,12 @@ final class ada extends k {
           }
         }
         L8: {
-          if (ae.field_a.field_R != -1) {
+          if (ae.field_a.field_R != 0) {
             L9: {
               if (bha.field_l) {
                 break L9;
               } else {
-                if (-1 < dm.field_f) {
+                if (dm.field_f > 0) {
                   break L9;
                 } else {
                   if (hea.field_r < 2) {
@@ -488,10 +556,10 @@ final class ada extends k {
         L10: {
           if (vh.field_y.field_R != 0) {
             L11: {
-              if (-2 != (qha.field_c.length ^ -1)) {
+              if (qha.field_c.length != 1) {
                 break L11;
               } else {
-                if (mt.field_s == qha.field_c[0]) {
+                if (~mt.field_s == ~qha.field_c[0]) {
                   break L11;
                 } else {
                   mt.field_s = qha.field_c[0];
@@ -545,17 +613,17 @@ final class ada extends k {
             var7 = var18[1];
             var8 = var18[2];
             for (var9 = 0; hh.field_d > var9; var9++) {
-                var4 = var19[var9] >> -594843292;
-                if (-1 < (var4 ^ -1)) {
+                var4 = var19[var9] >> 4;
+                if (var4 < 0) {
                     var4 = 0;
                 }
-                if (!((var4 ^ -1) >= -257)) {
+                if (!(var4 <= 256)) {
                     var4 = 256;
                 }
                 var4 = ((ada) this).field_o[var4];
-                var6[var9] = dda.a(var4, 16711680) >> -1691556020;
-                var7[var9] = dda.a(4080, var4 >> -267088572);
-                var8[var9] = dda.a(var4 << -1455597468, 4080);
+                var6[var9] = dda.a(var4, 16711680) >> 12;
+                var7[var9] = dda.a(4080, var4 >> 4);
+                var8[var9] = dda.a(var4 << 4, 4080);
             }
         }
         if (param0) {
@@ -565,43 +633,54 @@ final class ada extends k {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        L0: {
-          var6 = BachelorFridge.field_y;
-          if (param4 >= param0) {
-            var7 = param0;
-            var5 = var7;
-            L1: while (true) {
-              if (var7 >= param4) {
-                break L0;
+        RuntimeException decompiledCaughtException = null;
+        var6 = BachelorFridge.field_y;
+        try {
+          L0: {
+            L1: {
+              if (param4 >= param0) {
+                var7 = param0;
+                var5_int = var7;
+                L2: while (true) {
+                  if (var7 >= param4) {
+                    break L1;
+                  } else {
+                    tj.field_b[var7][param2] = param1;
+                    var7++;
+                    continue L2;
+                  }
+                }
               } else {
-                tj.field_b[var7][param2] = param1;
-                var7++;
-                continue L1;
+                var5_int = param4;
+                L3: while (true) {
+                  if (param0 <= var5_int) {
+                    break L1;
+                  } else {
+                    tj.field_b[var5_int][param2] = param1;
+                    var5_int++;
+                    continue L3;
+                  }
+                }
               }
             }
-          } else {
-            var5 = param4;
-            L2: while (true) {
-              if (param0 <= var5) {
-                break L0;
+            L4: {
+              if (param3 > 72) {
+                break L4;
               } else {
-                tj.field_b[var5][param2] = param1;
-                var5++;
-                continue L2;
+                field_m = null;
+                break L4;
               }
             }
+            break L0;
           }
-        }
-        L3: {
-          if (param3 > 72) {
-            break L3;
-          } else {
-            field_m = null;
-            break L3;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw pe.a((Throwable) (Object) var5, "ada.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -610,19 +689,11 @@ final class ada extends k {
         int var4 = 0;
         L0: {
           var4 = BachelorFridge.field_y;
-          if (param1 == 33) {
-            break L0;
-          } else {
-            ((ada) this).field_o = null;
-            break L0;
-          }
-        }
-        L1: {
           if (param0 == 0) {
-            break L1;
+            break L0;
           } else {
             var3 = param0;
-            if ((var3 ^ -1) == -2) {
+            if (var3 == 1) {
               ((ada) this).field_n = new int[2][4];
               ((ada) this).field_n[0][1] = 0;
               ((ada) this).field_n[0][2] = 0;
@@ -632,9 +703,9 @@ final class ada extends k {
               ((ada) this).field_n[1][0] = 4096;
               ((ada) this).field_n[1][3] = 4096;
               ((ada) this).field_n[1][2] = 4096;
-              break L1;
+              break L0;
             } else {
-              if ((var3 ^ -1) != -3) {
+              if (var3 != 2) {
                 if (var3 != 3) {
                   if (var3 == 4) {
                     ((ada) this).field_n = new int[6][4];
@@ -662,10 +733,10 @@ final class ada extends k {
                     ((ada) this).field_n[5][0] = 4096;
                     ((ada) this).field_n[5][2] = 4096;
                     ((ada) this).field_n[5][1] = 4096;
-                    break L1;
+                    break L0;
                   } else {
                     if (var3 != 5) {
-                      if ((var3 ^ -1) == -7) {
+                      if (var3 == 6) {
                         ((ada) this).field_n = new int[4][4];
                         ((ada) this).field_n[0][2] = 4096;
                         ((ada) this).field_n[0][1] = 0;
@@ -683,7 +754,7 @@ final class ada extends k {
                         ((ada) this).field_n[3][2] = 0;
                         ((ada) this).field_n[3][3] = 0;
                         ((ada) this).field_n[3][1] = 4096;
-                        break L1;
+                        break L0;
                       } else {
                         throw new RuntimeException("Invalid gradient preset");
                       }
@@ -753,7 +824,7 @@ final class ada extends k {
                       ((ada) this).field_n[15][1] = 2377;
                       ((ada) this).field_n[15][3] = 2746;
                       ((ada) this).field_n[15][2] = 2505;
-                      break L1;
+                      break L0;
                     }
                   }
                 } else {
@@ -786,7 +857,7 @@ final class ada extends k {
                   ((ada) this).field_n[6][2] = 0;
                   ((ada) this).field_n[6][0] = 4096;
                   ((ada) this).field_n[6][1] = 0;
-                  break L1;
+                  break L0;
                 }
               } else {
                 ((ada) this).field_n = new int[8][4];
@@ -822,7 +893,7 @@ final class ada extends k {
                 ((ada) this).field_n[7][3] = 1140;
                 ((ada) this).field_n[7][1] = 1686;
                 ((ada) this).field_n[7][0] = 4096;
-                break L1;
+                break L0;
               }
             }
           }
@@ -833,9 +904,6 @@ final class ada extends k {
         field_m = null;
         field_p = null;
         field_l = null;
-        if (param0 != -15840) {
-            ada.a(false, -12, 60, true);
-        }
     }
 
     static {

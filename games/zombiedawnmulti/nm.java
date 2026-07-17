@@ -48,116 +48,112 @@ final class nm {
         float var3 = 0.0f;
         int var4 = 0;
         int var5 = 0;
-        float stackIn_6_0 = 0.0f;
-        float stackIn_24_0 = 0.0f;
-        float stackOut_23_0 = 0.0f;
-        float stackOut_22_0 = 0.0f;
-        float stackOut_5_0 = 0.0f;
-        float stackOut_4_0 = 0.0f;
+        float stackIn_4_0 = 0.0f;
+        float stackIn_22_0 = 0.0f;
+        float stackOut_21_0 = 0.0f;
+        float stackOut_20_0 = 0.0f;
+        float stackOut_3_0 = 0.0f;
+        float stackOut_2_0 = 0.0f;
         var2 = 320.0f * ((nm) this).field_d;
-        if (param0 == 27) {
-          if (var2 <= (float)((nm) this).field_k) {
-            L0: {
-              if (!he.field_a) {
-                stackOut_23_0 = ((nm) this).field_d * 200.0f;
-                stackIn_24_0 = stackOut_23_0;
-                break L0;
+        if (var2 <= (float)((nm) this).field_k) {
+          L0: {
+            if (!he.field_a) {
+              stackOut_21_0 = ((nm) this).field_d * 200.0f;
+              stackIn_22_0 = stackOut_21_0;
+              break L0;
+            } else {
+              stackOut_20_0 = ((nm) this).field_d * 240.0f;
+              stackIn_22_0 = stackOut_20_0;
+              break L0;
+            }
+          }
+          var3 = stackIn_22_0;
+          if (var3 <= (float)((nm) this).field_g) {
+            L1: {
+              var4 = (int)((float)(320 + ((nm) this).field_q) - var2);
+              if (var4 < ((nm) this).field_k) {
+                ((nm) this).field_k = var4;
+                break L1;
               } else {
-                stackOut_22_0 = ((nm) this).field_d * 240.0f;
-                stackIn_24_0 = stackOut_22_0;
-                break L0;
+                break L1;
               }
             }
-            var3 = stackIn_24_0;
-            if (var3 <= (float)((nm) this).field_g) {
-              L1: {
-                var4 = (int)((float)(320 + ((nm) this).field_q) - var2);
-                if (var4 < ((nm) this).field_k) {
-                  ((nm) this).field_k = var4;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              var5 = (int)((float)(((nm) this).field_j + 240) - var3);
-              if (((nm) this).field_g > var5) {
-                ((nm) this).field_g = var5;
-                return;
-              } else {
-                return;
-              }
+            var5 = (int)((float)(((nm) this).field_j + 240) - var3);
+            if (((nm) this).field_g > var5) {
+              ((nm) this).field_g = var5;
+              return;
             } else {
-              L2: {
-                ((nm) this).field_g = (int)var3;
-                var4 = (int)((float)(320 + ((nm) this).field_q) - var2);
-                if (var4 < ((nm) this).field_k) {
-                  ((nm) this).field_k = var4;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              var5 = (int)((float)(((nm) this).field_j + 240) - var3);
-              if (((nm) this).field_g > var5) {
-                ((nm) this).field_g = var5;
-                return;
-              } else {
-                return;
-              }
+              return;
             }
           } else {
-            L3: {
-              ((nm) this).field_k = (int)var2;
-              if (!he.field_a) {
-                stackOut_5_0 = ((nm) this).field_d * 200.0f;
-                stackIn_6_0 = stackOut_5_0;
-                break L3;
+            L2: {
+              ((nm) this).field_g = (int)var3;
+              var4 = (int)((float)(320 + ((nm) this).field_q) - var2);
+              if (var4 < ((nm) this).field_k) {
+                ((nm) this).field_k = var4;
+                break L2;
               } else {
-                stackOut_4_0 = ((nm) this).field_d * 240.0f;
-                stackIn_6_0 = stackOut_4_0;
-                break L3;
+                break L2;
               }
             }
-            var3 = stackIn_6_0;
-            if (var3 <= (float)((nm) this).field_g) {
-              L4: {
-                var4 = (int)((float)(320 + ((nm) this).field_q) - var2);
-                if (var4 < ((nm) this).field_k) {
-                  ((nm) this).field_k = var4;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              var5 = (int)((float)(((nm) this).field_j + 240) - var3);
-              if (((nm) this).field_g > var5) {
-                ((nm) this).field_g = var5;
-                return;
-              } else {
-                return;
-              }
+            var5 = (int)((float)(((nm) this).field_j + 240) - var3);
+            if (((nm) this).field_g > var5) {
+              ((nm) this).field_g = var5;
+              return;
             } else {
-              L5: {
-                ((nm) this).field_g = (int)var3;
-                var4 = (int)((float)(320 + ((nm) this).field_q) - var2);
-                if (var4 < ((nm) this).field_k) {
-                  ((nm) this).field_k = var4;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              var5 = (int)((float)(((nm) this).field_j + 240) - var3);
-              if (((nm) this).field_g <= var5) {
-                return;
-              } else {
-                ((nm) this).field_g = var5;
-                return;
-              }
+              return;
             }
           }
         } else {
-          return;
+          L3: {
+            ((nm) this).field_k = (int)var2;
+            if (!he.field_a) {
+              stackOut_3_0 = ((nm) this).field_d * 200.0f;
+              stackIn_4_0 = stackOut_3_0;
+              break L3;
+            } else {
+              stackOut_2_0 = ((nm) this).field_d * 240.0f;
+              stackIn_4_0 = stackOut_2_0;
+              break L3;
+            }
+          }
+          var3 = stackIn_4_0;
+          if (var3 <= (float)((nm) this).field_g) {
+            L4: {
+              var4 = (int)((float)(320 + ((nm) this).field_q) - var2);
+              if (var4 < ((nm) this).field_k) {
+                ((nm) this).field_k = var4;
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            var5 = (int)((float)(((nm) this).field_j + 240) - var3);
+            if (((nm) this).field_g > var5) {
+              ((nm) this).field_g = var5;
+              return;
+            } else {
+              return;
+            }
+          } else {
+            L5: {
+              ((nm) this).field_g = (int)var3;
+              var4 = (int)((float)(320 + ((nm) this).field_q) - var2);
+              if (var4 < ((nm) this).field_k) {
+                ((nm) this).field_k = var4;
+                break L5;
+              } else {
+                break L5;
+              }
+            }
+            var5 = (int)((float)(((nm) this).field_j + 240) - var3);
+            if (((nm) this).field_g <= var5) {
+              return;
+            } else {
+              ((nm) this).field_g = var5;
+              return;
+            }
+          }
         }
     }
 
@@ -183,9 +179,6 @@ final class nm {
     public static void a(int param0) {
         field_b = null;
         field_u = null;
-        if (param0 != 6) {
-            return;
-        }
         field_w = null;
         field_m = null;
     }
@@ -315,7 +308,7 @@ final class nm {
             }
           }
         } else {
-          if (-1 <= (((nm) this).field_r ^ -1)) {
+          if (((nm) this).field_r <= 0) {
             if (0 >= ((nm) this).field_a) {
               L1: {
                 if (((nm) this).field_a < 0) {
@@ -326,7 +319,7 @@ final class nm {
                 }
               }
               L2: {
-                if (-1 < (((nm) this).field_r ^ -1)) {
+                if (((nm) this).field_r < 0) {
                   ((nm) this).field_r = ((nm) this).field_r + 1;
                   break L2;
                 } else {
@@ -436,7 +429,7 @@ final class nm {
                 }
               }
               L11: {
-                if (-1 < (((nm) this).field_r ^ -1)) {
+                if (((nm) this).field_r < 0) {
                   ((nm) this).field_r = ((nm) this).field_r + 1;
                   break L11;
                 } else {
@@ -515,7 +508,7 @@ final class nm {
               }
             }
             L19: {
-              if (-1 < (((nm) this).field_r ^ -1)) {
+              if (((nm) this).field_r < 0) {
                 ((nm) this).field_r = ((nm) this).field_r + 1;
                 break L19;
               } else {

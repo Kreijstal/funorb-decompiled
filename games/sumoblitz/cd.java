@@ -15,20 +15,11 @@ final class cd {
             fq.field_f.b(0);
             return true;
         }
-        if (param0) {
-            field_c = null;
-            return false;
-        }
+        field_c = null;
         return false;
     }
 
     public static void a(byte param0) {
-        if (param0 >= -82) {
-            field_d = -61;
-            field_c = null;
-            field_f = null;
-            return;
-        }
         field_c = null;
         field_f = null;
     }

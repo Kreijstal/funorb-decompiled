@@ -12,10 +12,14 @@ final class sj {
     static int field_f;
 
     final void a(java.applet.Applet param0, int param1) {
-        if (param1 != 447616545) {
-            String discarded$0 = ((sj) this).toString();
+        try {
+            if (param1 != 447616545) {
+                String discarded$0 = ((sj) this).toString();
+            }
+            eg.a("jagex-last-login-method", param1 + -447616669, ((sj) this).field_b, 31536000L, param0);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "sj.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        eg.a("jagex-last-login-method", param1 + -447616669, ((sj) this).field_b, 31536000L, param0);
     }
 
     public final String toString() {
@@ -23,11 +27,72 @@ final class sj {
     }
 
     final boolean a(int param0, String param1) {
-        if (param0 != 2) {
-            Object var4 = null;
-            sj.a((String) null, 17, (String) null);
+        RuntimeException var3 = null;
+        Object var4 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_2_0 = false;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 2) {
+                break L1;
+              } else {
+                var4 = null;
+                sj.a((String) null, 17, (String) null);
+                break L1;
+              }
+            }
+            stackOut_2_0 = ((sj) this).field_b.equals((Object) (Object) param1);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("sj.E(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return ((sj) this).field_b.equals((Object) (Object) param1);
+        return stackIn_3_0;
     }
 
     public static void a(byte param0) {
@@ -35,64 +100,90 @@ final class sj {
         field_d = null;
         field_g = null;
         field_e = null;
-        if (param0 <= 10) {
-            field_f = 60;
-        }
         field_a = null;
     }
 
     sj(String param0) {
-        ((sj) this).field_b = param0;
+        try {
+            ((sj) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "sj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_13_0 = 0;
+        int stackOut_7_0 = 0;
         var8 = MinerDisturbance.field_ab;
-        var3 = 0;
-        var4 = lj.field_p;
-        L0: while (true) {
-          if (var3 >= ne.field_K.length) {
-            L1: {
-              if (param1 > 123) {
-                break L1;
+        try {
+          L0: {
+            var3_int = 0;
+            var4 = lj.field_p;
+            L1: while (true) {
+              if (var3_int >= ne.field_K.length) {
+                L2: {
+                  if (param1 > 123) {
+                    break L2;
+                  } else {
+                    int discarded$2 = sj.a(-11, (byte) 112, -37);
+                    break L2;
+                  }
+                }
+                stackOut_13_0 = -1;
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
               } else {
-                int discarded$1 = sj.a(-11, (byte) 112, -37);
-                break L1;
+                L3: {
+                  var5 = mf.field_m[var3_int];
+                  if (0 <= var5) {
+                    var6 = hl.a(ne.field_K[var3_int], true, -15388);
+                    var7 = -(var6 >> 1) + rj.field_e;
+                    var4 = var4 + hi.field_z;
+                    if (hc.a(103, var4, nk.field_u - -(sn.field_d << 1), var7 - ka.field_a, param0, (ka.field_a << 1) + var6, param2)) {
+                      stackOut_7_0 = var5;
+                      stackIn_8_0 = stackOut_7_0;
+                      return stackIn_8_0;
+                    } else {
+                      var4 = var4 + (nk.field_u + (hi.field_z + (sn.field_d << 1)));
+                      break L3;
+                    }
+                  } else {
+                    var4 = var4 + vd.field_z;
+                    break L3;
+                  }
+                }
+                var3_int++;
+                continue L1;
               }
-            }
-            return -1;
-          } else {
-            var5 = mf.field_m[var3];
-            if (0 <= var5) {
-              var6 = hl.a(ne.field_K[var3], true, -15388);
-              var7 = -(var6 >> -310215615) + rj.field_e;
-              var4 = var4 + hi.field_z;
-              if (hc.a(103, var4, nk.field_u - -(sn.field_d << 447616545), var7 - ka.field_a, param0, (ka.field_a << 418362849) + var6, param2)) {
-                return var5;
-              } else {
-                var4 = var4 + (nk.field_u + (hi.field_z + (sn.field_d << 1554695361)));
-                var3++;
-                continue L0;
-              }
-            } else {
-              var4 = var4 + vd.field_z;
-              var3++;
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var3, "sj.B(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_14_0;
     }
 
     final static void a(String param0, int param1, String param2) {
-        if (param1 != 19260) {
-            field_g = null;
+        try {
+            if (param1 != 19260) {
+                field_g = null;
+            }
+            jg.a(param0, param2, param1 + -19380, false);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "sj.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        jg.a(param0, param2, param1 + -19380, false);
     }
 
     static {

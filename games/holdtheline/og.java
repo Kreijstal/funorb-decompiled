@@ -18,7 +18,7 @@ final class og {
           ((og) this).field_b = var4.field_h;
           L0: while (true) {
             if (var4 != ((og) this).field_b) {
-              if ((((og) this).field_b.field_f ^ -1L) == (param1 ^ -1L)) {
+              if (~((og) this).field_b.field_f == ~param1) {
                 var5 = ((og) this).field_b;
                 ((og) this).field_b = ((og) this).field_b.field_h;
                 return var5;
@@ -38,38 +38,25 @@ final class og {
 
     final void a(hl param0, long param1, boolean param2) {
         hl var5 = null;
-        if (param0.field_a == null) {
-          if (param2) {
+        if (param0.field_a != null) {
+            param0.d(0);
+        }
+        if (param2) {
             return;
-          } else {
+        }
+        try {
             var5 = ((og) this).field_a[(int)((long)(((og) this).field_d - 1) & param1)];
             param0.field_a = var5.field_a;
             param0.field_h = var5;
             param0.field_a.field_h = param0;
             param0.field_f = param1;
             param0.field_h.field_a = param0;
-            return;
-          }
-        } else {
-          param0.d(0);
-          if (param2) {
-            return;
-          } else {
-            var5 = ((og) this).field_a[(int)((long)(((og) this).field_d - 1) & param1)];
-            param0.field_a = var5.field_a;
-            param0.field_h = var5;
-            param0.field_a.field_h = param0;
-            param0.field_f = param1;
-            param0.field_h.field_a = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "og.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
     final static void a(byte param0) {
-        if (param0 != 44) {
-            return;
-        }
         sm.field_c.a((n) (Object) new pk(), (byte) 87);
     }
 
@@ -96,8 +83,9 @@ final class og {
                   return null;
                 }
               } else {
+                int fieldTemp$2 = ((og) this).field_e;
                 ((og) this).field_e = ((og) this).field_e + 1;
-                var4 = ((og) this).field_a[((og) this).field_e].field_h;
+                var4 = ((og) this).field_a[fieldTemp$2].field_h;
                 var6 = var4;
                 if (var4 != ((og) this).field_a[-1 + ((og) this).field_e]) {
                   ((og) this).field_c = var6.field_h;
@@ -122,8 +110,9 @@ final class og {
                 return null;
               }
             } else {
+              int fieldTemp$3 = ((og) this).field_e;
               ((og) this).field_e = ((og) this).field_e + 1;
-              var4 = ((og) this).field_a[((og) this).field_e].field_h;
+              var4 = ((og) this).field_a[fieldTemp$3].field_h;
               var5 = var4;
               if (var4 != ((og) this).field_a[-1 + ((og) this).field_e]) {
                 ((og) this).field_c = var5.field_h;
@@ -145,13 +134,15 @@ final class og {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new hl();
-            ((og) this).field_a[var2] = new hl();
+            hl dupTemp$2 = new hl();
+            var3 = dupTemp$2;
+            ((og) this).field_a[var2] = dupTemp$2;
             var3.field_h = var3;
             var3.field_a = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

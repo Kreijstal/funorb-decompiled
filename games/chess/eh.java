@@ -45,7 +45,7 @@ abstract class eh extends ma {
         if (param0 <= -4) {
           var2 = this.h(0);
           var3 = var2 - ((eh) this).field_N;
-          if ((var3 ^ -1) >= -1) {
+          if (var3 <= 0) {
             if (var3 < 0) {
               L0: {
                 L1: {
@@ -153,7 +153,7 @@ abstract class eh extends ma {
           field_M = null;
           var2 = this.h(0);
           var3 = var2 - ((eh) this).field_N;
-          if ((var3 ^ -1) < -1) {
+          if (var3 > 0) {
             ((eh) this).field_N = ((eh) this).field_N + (-1 + (8 + var3)) / 8;
             if (var3 >= 0) {
               L8: {
@@ -284,7 +284,7 @@ abstract class eh extends ma {
     }
 
     final void a(int param0, byte param1, int param2) {
-        ((eh) this).a(e.field_O - param2 >> 614085633, 34, param2, param0, hk.field_I + -param0 >> 888706465);
+        ((eh) this).a(e.field_O - param2 >> 1, 34, param2, param0, hk.field_I + -param0 >> 1);
         if (param1 < 70) {
             ((eh) this).field_P = false;
         }
@@ -302,10 +302,14 @@ abstract class eh extends ma {
     }
 
     eh(fm param0, int param1, int param2) {
-        super(-param1 + hk.field_I >> -1571733311, e.field_O - param2 >> 1557988001, param1, param2, (jm) null);
-        ((eh) this).field_N = 0;
-        ((eh) this).field_P = false;
-        ((eh) this).field_Q = param0;
+        super(-param1 + hk.field_I >> 1, e.field_O - param2 >> 1, param1, param2, (jm) null);
+        try {
+            ((eh) this).field_N = 0;
+            ((eh) this).field_P = false;
+            ((eh) this).field_Q = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "eh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -398,38 +402,92 @@ abstract class eh extends ma {
     }
 
     final static int a(int param0, Random param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
-        if (0 < param2) {
-          if (ua.a(param2, 14)) {
-            return (int)((long)param2 * ((long)param1.nextInt() & 4294967295L) >> -2098730976);
-          } else {
-            if (param0 != 28207) {
-              field_R = null;
-              var3 = -(int)(4294967296L % (long)param2) + -2147483648;
-              L0: while (true) {
-                var4 = param1.nextInt();
-                if (var3 > var4) {
-                  return am.a(var4, param2, (byte) -40);
-                } else {
-                  continue L0;
+        int stackIn_5_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        int stackOut_11_0 = 0;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        try {
+          L0: {
+            if (0 < param2) {
+              if (ua.a(param2, 14)) {
+                stackOut_4_0 = (int)((long)param2 * ((long)param1.nextInt() & 4294967295L) >> 32);
+                stackIn_5_0 = stackOut_4_0;
+                return stackIn_5_0;
+              } else {
+                L1: {
+                  if (param0 == 28207) {
+                    break L1;
+                  } else {
+                    field_R = null;
+                    break L1;
+                  }
+                }
+                var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
+                L2: while (true) {
+                  var4 = param1.nextInt();
+                  if (var3_int > var4) {
+                    stackOut_11_0 = am.a(var4, param2, (byte) -40);
+                    stackIn_12_0 = stackOut_11_0;
+                    break L0;
+                  } else {
+                    continue L2;
+                  }
                 }
               }
             } else {
-              var3 = -(int)(4294967296L % (long)param2) + -2147483648;
-              L1: while (true) {
-                var4 = param1.nextInt();
-                if (var3 > var4) {
-                  return am.a(var4, param2, (byte) -40);
-                } else {
-                  continue L1;
-                }
-              }
+              throw new IllegalArgumentException();
             }
           }
-        } else {
-          throw new IllegalArgumentException();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("eh.MA(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L3;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L3;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
         }
+        return stackIn_12_0;
     }
 
     final mf e(byte param0) {

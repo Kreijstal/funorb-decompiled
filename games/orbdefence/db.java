@@ -11,7 +11,7 @@ final class db {
     private static String field_z;
 
     public static void a(int param0) {
-        int var1 = 3 % ((param0 - 12) / 58);
+        int var1 = 0;
         field_c = null;
     }
 

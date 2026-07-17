@@ -11,12 +11,6 @@ final class kd {
 
     public static void a(boolean param0) {
         field_e = null;
-        if (!param0) {
-            field_d = null;
-            field_a = null;
-            field_d = null;
-            return;
-        }
         field_a = null;
         field_d = null;
     }

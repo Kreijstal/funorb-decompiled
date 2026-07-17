@@ -12,23 +12,27 @@ final class ob extends fm {
     static nk field_i;
 
     final static jg b(byte param0) {
-        int var1 = 82 % ((param0 - -59) / 56);
+        int var1 = 0;
         return new jg(f.a(116), em.b((byte) -126));
     }
 
     final void a(wl param0, byte param1) {
-        param0.b(8, ((ob) this).field_m);
-        if (param1 < 34) {
-            ve discarded$0 = ob.a(-10, 21);
+        try {
+            param0.b(8, ((ob) this).field_m);
+            if (param1 < 34) {
+                ve discarded$0 = ob.a(-10, 21);
+            }
+            param0.a(((ob) this).field_h, true);
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "ob.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        param0.a(((ob) this).field_h, true);
     }
 
     final static ve a(int param0, int param1) {
         if (param1 != 8) {
             field_l = null;
         }
-        return (ve) (Object) (tg.field_b != null ? tg.field_b.a(param1 ^ 24718, (long)param0) : null);
+        return tg.field_b != null ? (ve) (Object) tg.field_b.a(param1 ^ 24718, (long)param0) : null;
     }
 
     final static ck[] a(int param0, int param1, int param2, int param3) {
@@ -55,38 +59,81 @@ final class ob extends fm {
     }
 
     final static void a(int param0, ui param1, byte param2) {
+        RuntimeException var3 = null;
         int var4 = 0;
-        L0: {
-          var4 = client.field_A ? 1 : 0;
-          if (rc.field_d != param1) {
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var4 = client.field_A ? 1 : 0;
+        try {
+          L0: {
             L1: {
-              if (rc.field_d == null) {
+              if (rc.field_d != param1) {
+                L2: {
+                  if (rc.field_d == null) {
+                    break L2;
+                  } else {
+                    if (param1 == null) {
+                      break L2;
+                    } else {
+                      wj.field_Ob.a(param1, 0, 0, 16);
+                      rc.field_d = param1;
+                      wj.field_Ob.c(param0);
+                      break L1;
+                    }
+                  }
+                }
+                nn.a(param0, param1, true);
                 break L1;
               } else {
-                if (param1 == null) {
-                  break L1;
-                } else {
-                  wj.field_Ob.a(param1, 0, 0, 16);
-                  rc.field_d = param1;
-                  wj.field_Ob.c(param0);
-                  break L0;
-                }
+                wj.field_Ob.c(param0);
+                break L1;
               }
             }
-            nn.a(param0, param1, true);
-            break L0;
-          } else {
-            wj.field_Ob.c(param0);
             break L0;
           }
-        }
-        L2: {
-          if (param2 >= 45) {
-            break L2;
-          } else {
-            field_g = 64;
-            break L2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("ob.C(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
           }
+          throw dh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 118 + 41);
         }
     }
 
@@ -104,7 +151,7 @@ final class ob extends fm {
         if (256 == param2) {
             pg.field_e.f(param0, param3, 64);
         } else {
-            pg.field_e.f(param0, param3, param2 >> -299374302);
+            pg.field_e.f(param0, param3, param2 >> 2);
         }
         if (param1 != -299374302) {
             ob.a((byte) 0);
@@ -112,8 +159,12 @@ final class ob extends fm {
     }
 
     ob(String param0, String param1) {
-        ((ob) this).field_m = param0;
-        ((ob) this).field_h = param1;
+        try {
+            ((ob) this).field_m = param0;
+            ((ob) this).field_h = param1;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "ob.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

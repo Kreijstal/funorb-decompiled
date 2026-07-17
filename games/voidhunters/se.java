@@ -9,21 +9,19 @@ final class se extends ps {
     }
 
     final static int a(boolean param0) {
-        if (param0) {
-            se.c(-109);
-            return 495;
-        }
         return 495;
     }
 
     final void a(byte param0, byte[] param1) {
         if (param0 != -28) {
-          return;
-        } else {
-          ((se) this).field_c = java.nio.ByteBuffer.allocateDirect(param1.length);
-          java.nio.Buffer discarded$4 = ((se) this).field_c.position(0);
-          java.nio.ByteBuffer discarded$5 = ((se) this).field_c.put(param1);
-          return;
+            return;
+        }
+        try {
+            ((se) this).field_c = java.nio.ByteBuffer.allocateDirect(param1.length);
+            java.nio.Buffer discarded$0 = ((se) this).field_c.position(0);
+            java.nio.ByteBuffer discarded$1 = ((se) this).field_c.put(param1);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "se.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

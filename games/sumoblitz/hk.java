@@ -8,14 +8,11 @@ final class hk {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 0) {
-            field_c = 88;
-        }
     }
 
     final static java.awt.Canvas b(int param0) {
         int var1 = 30 / ((param0 - 33) / 43);
-        return (java.awt.Canvas) (null == gk.field_o ? qn.field_f : gk.field_o);
+        return null == gk.field_o ? qn.field_f : (java.awt.Canvas) (Object) gk.field_o;
     }
 
     static {

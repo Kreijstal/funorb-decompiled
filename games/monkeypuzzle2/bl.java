@@ -24,12 +24,14 @@ final class bl extends ug {
     }
 
     final static void a(int param0, lg param1) {
-        if (param0 != 50) {
-            bl.a(87);
+        try {
+            if (param0 != 50) {
+                bl.a(87);
+            }
             ve.a(82, 0, 0, param1);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "bl.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ve.a(82, 0, 0, param1);
     }
 
     bl(int param0, int param1, int param2, int param3, int param4) {

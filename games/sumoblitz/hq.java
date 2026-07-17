@@ -10,7 +10,7 @@ abstract class hq {
     public static void a(byte param0) {
         field_a = null;
         field_c = null;
-        int var1 = -20 / ((param0 - -13) / 39);
+        int var1 = -10;
     }
 
     static {

@@ -16,38 +16,95 @@ final class ob extends ck {
     static boolean field_v;
 
     final static boolean a(byte param0, String param1) {
+        RuntimeException var2 = null;
         CharSequence var3 = null;
-        if (param0 != -38) {
-            ob.d(118);
-            if (!(jn.field_g)) {
-                return false;
+        int stackIn_5_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        int stackOut_10_0 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -38) {
+                break L1;
+              } else {
+                ob.d(118);
+                break L1;
+              }
             }
-            if ((ib.field_b ^ -1) != -3) {
-                return false;
+            if (!jn.field_g) {
+              stackOut_4_0 = 0;
+              stackIn_5_0 = stackOut_4_0;
+              return stackIn_5_0 != 0;
+            } else {
+              L2: {
+                if (ib.field_b != 2) {
+                  break L2;
+                } else {
+                  if (bk.field_U == null) {
+                    break L2;
+                  } else {
+                    var3 = (CharSequence) (Object) param1;
+                    if (!bk.field_U.equals((Object) (Object) ui.a(1, var3))) {
+                      break L2;
+                    } else {
+                      return true;
+                    }
+                  }
+                }
+              }
+              stackOut_10_0 = 0;
+              stackIn_11_0 = stackOut_10_0;
+              break L0;
             }
-            if (bk.field_U == null) {
-                return false;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var2;
+            stackOut_12_1 = new StringBuilder().append("ob.B(").append(param0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
             }
-            var3 = (CharSequence) (Object) param1;
-            if (!(bk.field_U.equals((Object) (Object) ui.a(1, var3)))) {
-                return false;
-            }
-            return true;
+          }
+          throw ci.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
-        if (!(jn.field_g)) {
-            return false;
-        }
-        if ((ib.field_b ^ -1) != -3) {
-            return false;
-        }
-        if (bk.field_U == null) {
-            return false;
-        }
-        CharSequence var4 = (CharSequence) (Object) param1;
-        if (!(bk.field_U.equals((Object) (Object) ui.a(1, var4)))) {
-            return false;
-        }
-        return true;
+        return stackIn_11_0 != 0;
     }
 
     public static void d(int param0) {

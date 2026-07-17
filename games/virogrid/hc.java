@@ -8,37 +8,52 @@ final class hc {
     static String field_b;
 
     public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
         field_b = null;
     }
 
     final static String a(int param0, int param1, jc param2) {
         int var3_int = 0;
         Exception var3 = null;
+        RuntimeException var3_ref = null;
         byte[] var4 = null;
         String var5 = null;
         String stackIn_6_0 = null;
+        String stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
         Throwable decompiledCaughtException = null;
         String stackOut_5_0 = null;
+        String stackOut_7_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         try {
-          L0: {
-            L1: {
+          try {
+            L0: {
               var3_int = param2.c(false);
               if (var3_int > param1) {
                 var3_int = param1;
-                break L1;
+                break L0;
               } else {
-                break L1;
+                break L0;
               }
             }
-            L2: {
+            L1: {
               if (param0 == 128) {
-                break L2;
+                break L1;
               } else {
                 field_b = null;
-                break L2;
+                break L1;
               }
             }
             var4 = new byte[var3_int];
@@ -46,83 +61,121 @@ final class hc {
             var5 = nf.a(var3_int, (byte) -128, 0, var4);
             stackOut_5_0 = (String) var5;
             stackIn_6_0 = stackOut_5_0;
-            break L0;
+            return stackIn_6_0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            stackOut_7_0 = "Cabbage";
+            stackIn_8_0 = stackOut_7_0;
+            return stackIn_8_0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (Exception) (Object) decompiledCaughtException;
-          return "Cabbage";
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L2: {
+            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var3_ref;
+            stackOut_9_1 = new StringBuilder().append("hc.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param2 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L2;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L2;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
-        return stackIn_6_0;
     }
 
     final static boolean a(char param0, int param1) {
-        char[] var12 = null;
-        char[] var7 = null;
-        char[] var6 = null;
         char[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        char[] var14 = null;
-        char[] var9 = null;
-        int var5 = Virogrid.field_F ? 1 : 0;
-        if ((param0 ^ -1) < param1) {
-            if (128 > param0) {
-                return true;
-            }
-            if (param0 < 160) {
-                if (param0 == 0) {
-                    return false;
+        int var5 = 0;
+        char[] var6 = null;
+        int stackIn_8_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_17_0 = 0;
+        var5 = Virogrid.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 <= 0) {
+                break L1;
+              } else {
+                if (128 > param0) {
+                  stackOut_7_0 = 1;
+                  stackIn_8_0 = stackOut_7_0;
+                  return stackIn_8_0 != 0;
+                } else {
+                  break L1;
                 }
-                var12 = cg.field_f;
-                var7 = var12;
-                var6 = var7;
+              }
+            }
+            L2: {
+              if (param0 < 160) {
+                break L2;
+              } else {
+                if (param0 > 255) {
+                  break L2;
+                } else {
+                  return true;
+                }
+              }
+            }
+            L3: {
+              if (param0 != 0) {
+                var6 = cg.field_f;
                 var2 = var6;
-                for (var3 = 0; var12.length > var3; var3++) {
-                    var4 = var12[var3];
-                    if (param0 == var4) {
-                        return true;
+                var3 = 0;
+                L4: while (true) {
+                  if (var6.length <= var3) {
+                    break L3;
+                  } else {
+                    var4 = var6[var3];
+                    if (param0 != var4) {
+                      var3++;
+                      continue L4;
+                    } else {
+                      stackOut_14_0 = 1;
+                      stackIn_15_0 = stackOut_14_0;
+                      return stackIn_15_0 != 0;
                     }
+                  }
                 }
-                return false;
+              } else {
+                break L3;
+              }
             }
-            if (param0 > 255) {
-                if (param0 == 0) {
-                    return false;
-                }
-                var14 = cg.field_f;
-                var9 = var14;
-                var6 = var9;
-                var2 = var6;
-                for (var3 = 0; var14.length > var3; var3++) {
-                    var4 = var14[var3];
-                    if (param0 == var4) {
-                        return true;
-                    }
-                }
-                return false;
-            }
-            return true;
+            stackOut_17_0 = 0;
+            stackIn_18_0 = stackOut_17_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw kg.a((Throwable) (Object) var2_ref, "hc.A(" + param0 + 44 + -1 + 41);
         }
-        if (param0 >= 160) {
-            if (param0 <= 255) {
-                return true;
-            }
-        }
-        if (param0 == 0) {
-            return false;
-        }
-        char[] var16 = cg.field_f;
-        char[] var11 = var16;
-        var6 = var11;
-        var2 = var6;
-        for (var3 = 0; var16.length > var3; var3++) {
-            var4 = var16[var3];
-            if (param0 == var4) {
-                return true;
-            }
-        }
-        return false;
+        return stackIn_18_0 != 0;
     }
 
     final synchronized static long a(int param0) {

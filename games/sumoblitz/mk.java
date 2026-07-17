@@ -22,8 +22,12 @@ final class mk {
     }
 
     mk(fr param0, long param1, int param2) {
-        ((mk) this).field_c = param0;
-        ((mk) this).field_b = param1;
+        try {
+            ((mk) this).field_c = param0;
+            ((mk) this).field_b = param1;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "mk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

@@ -6,70 +6,56 @@ final class hoa extends rqa {
     static String field_p;
 
     final static boolean a(char param0, boolean param1) {
-        int stackIn_27_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_25_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;
-        if (!param1) {
-          if (param0 < 48) {
-            if (param0 < 65) {
-              L0: {
-                if (param0 < 97) {
-                  break L0;
-                } else {
-                  if (param0 > 122) {
-                    break L0;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-              return false;
-            } else {
-              if (param0 <= 90) {
-                stackOut_28_0 = 1;
-                stackIn_30_0 = stackOut_28_0;
-                return stackIn_30_0 != 0;
+        int stackOut_23_0 = 0;
+        int stackOut_24_0 = 0;
+        if (param0 < 48) {
+          if (param0 < 65) {
+            L0: {
+              if (param0 < 97) {
+                break L0;
               } else {
-                L1: {
-                  L2: {
-                    if (param0 < 97) {
-                      break L2;
-                    } else {
-                      if (param0 > 122) {
-                        break L2;
-                      } else {
-                        stackOut_25_0 = 1;
-                        stackIn_27_0 = stackOut_25_0;
-                        break L1;
-                      }
-                    }
-                  }
-                  stackOut_26_0 = 0;
-                  stackIn_27_0 = stackOut_26_0;
-                  break L1;
-                }
-                return stackIn_27_0 != 0;
-              }
-            }
-          } else {
-            if (param0 > 57) {
-              if (param0 >= 65) {
-                if (param0 > 90) {
-                  if (param0 >= 97) {
-                    if (param0 > 122) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return false;
-                  }
+                if (param0 > 122) {
+                  break L0;
                 } else {
                   return true;
                 }
-              } else {
+              }
+            }
+            return false;
+          } else {
+            if (param0 <= 90) {
+              stackOut_26_0 = 1;
+              stackIn_28_0 = stackOut_26_0;
+              return stackIn_28_0 != 0;
+            } else {
+              L1: {
+                L2: {
+                  if (param0 < 97) {
+                    break L2;
+                  } else {
+                    if (param0 > 122) {
+                      break L2;
+                    } else {
+                      stackOut_23_0 = 1;
+                      stackIn_25_0 = stackOut_23_0;
+                      break L1;
+                    }
+                  }
+                }
+                stackOut_24_0 = 0;
+                stackIn_25_0 = stackOut_24_0;
+                break L1;
+              }
+              return stackIn_25_0 != 0;
+            }
+          }
+        } else {
+          if (param0 > 57) {
+            if (param0 >= 65) {
+              if (param0 > 90) {
                 if (param0 >= 97) {
                   if (param0 > 122) {
                     return false;
@@ -79,26 +65,94 @@ final class hoa extends rqa {
                 } else {
                   return false;
                 }
+              } else {
+                return true;
               }
             } else {
-              return true;
+              if (param0 >= 97) {
+                if (param0 > 122) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
             }
+          } else {
+            return true;
           }
-        } else {
-          return true;
         }
     }
 
     final nc a(nc[] param0, int param1) {
+        RuntimeException var3 = null;
         Object var4 = null;
-        si.a(149, 62, param0[0].a(68));
-        if (param1 > -119) {
-          var4 = null;
-          nc discarded$2 = ((hoa) this).a((nc[]) null, 72);
-          return new nc((Object) (Object) "void");
-        } else {
-          return new nc((Object) (Object) "void");
+        nc stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nc stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              si.a(149, 62, param0[0].a(68));
+              if (param1 <= -119) {
+                break L1;
+              } else {
+                var4 = null;
+                nc discarded$2 = ((hoa) this).a((nc[]) null, 72);
+                break L1;
+              }
+            }
+            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("hoa.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
+        return stackIn_3_0;
     }
 
     hoa(String param0, Class[] param1, String param2) {
@@ -107,17 +161,67 @@ final class hoa extends rqa {
 
     final static void a(String param0, int param1, boolean param2) {
         String var3 = null;
+        RuntimeException var3_ref = null;
         String var4 = null;
-        var4 = hp.field_b.field_R;
-        var3 = var4;
-        hp.field_b.field_R = param0;
-        qw.field_l.b(param2, 80);
-        hp.field_b.field_R = var4;
-        if (param1 != 0) {
-          hoa.a(77);
-          return;
-        } else {
-          return;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            var4 = hp.field_b.field_R;
+            var3 = var4;
+            hp.field_b.field_R = param0;
+            qw.field_l.b(param2, 80);
+            hp.field_b.field_R = var4;
+            if (param1 == 0) {
+              break L0;
+            } else {
+              hoa.a(77);
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) var3_ref;
+            stackOut_3_1 = new StringBuilder().append("hoa.D(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L1;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L1;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 

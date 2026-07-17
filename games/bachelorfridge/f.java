@@ -11,7 +11,7 @@ final class f {
         if (param0 != 73) {
           L0: {
             var1 = System.currentTimeMillis();
-            if ((var1 ^ -1L) > (fw.field_l ^ -1L)) {
+            if (~var1 > ~fw.field_l) {
               oia.field_f = oia.field_f + (fw.field_l - var1);
               break L0;
             } else {
@@ -23,7 +23,7 @@ final class f {
         } else {
           L1: {
             var1 = System.currentTimeMillis();
-            if ((var1 ^ -1L) > (fw.field_l ^ -1L)) {
+            if (~var1 > ~fw.field_l) {
               oia.field_f = oia.field_f + (fw.field_l - var1);
               break L1;
             } else {
@@ -36,18 +36,11 @@ final class f {
     }
 
     final static void a(byte param0) {
-        if (param0 < 88) {
-            return;
-        }
         ep.a(4, 8192);
     }
 
     public static void a(boolean param0) {
         field_a = null;
-        if (!param0) {
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

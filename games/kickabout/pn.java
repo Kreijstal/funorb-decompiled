@@ -38,15 +38,16 @@ final class pn extends ij {
     }
 
     final static boolean g(int param0) {
-        if (param0 != 2368) {
-            return false;
-        }
         return null == e.field_m ? vb.field_k : true;
     }
 
     pn(Object param0, int param1) {
         super(param1);
-        ((pn) this).field_x = param0;
+        try {
+            ((pn) this).field_x = param0;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "pn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final boolean h(byte param0) {

@@ -25,7 +25,7 @@ final class jo extends qk {
         qh var10 = null;
         L0: {
           var9 = ZombieDawn.field_J;
-          if (-24 == (((jo) this).field_F ^ -1)) {
+          if (((jo) this).field_F == 23) {
             ((jo) this).field_F = 0;
             break L0;
           } else {
@@ -52,10 +52,10 @@ final class jo extends qk {
                   }
                 }
               } else {
-                if (0 == (((jo) this).field_Rb ^ -1)) {
+                if (((jo) this).field_Rb == -1) {
                   L2: {
                     var2 = ((jo) this).l(param0 + -178) & 127;
-                    if (-61 < (var2 ^ -1)) {
+                    if (var2 < 60) {
                       break L2;
                     } else {
                       var3_int = var2 - 60;
@@ -64,9 +64,9 @@ final class jo extends qk {
                       var6 = 0;
                       var7 = 0;
                       var8 = var3_int;
-                      if ((var8 ^ -1) != -1) {
-                        if (-3 != (var8 ^ -1)) {
-                          if (-2 == (var8 ^ -1)) {
+                      if (var8 != 0) {
+                        if (var8 != 2) {
+                          if (var8 == 1) {
                             var6 = 24;
                             L3: while (true) {
                               var4 = var4 + var6;
@@ -81,7 +81,7 @@ final class jo extends qk {
                               }
                             }
                           } else {
-                            if ((var8 ^ -1) == -4) {
+                            if (var8 == 3) {
                               var6 = -24;
                               L4: while (true) {
                                 var4 = var4 + var6;
@@ -162,20 +162,16 @@ final class jo extends qk {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (param0 == -2) {
-          if (null == ng.field_b) {
-            return;
-          } else {
-            var1 = (Object) (Object) ng.field_b;
-            synchronized (var1) {
-              L0: {
-                ng.field_b = null;
-                break L0;
-              }
-            }
-            return;
-          }
+        if (null == ng.field_b) {
+          return;
         } else {
+          var1 = (Object) (Object) ng.field_b;
+          synchronized (var1) {
+            L0: {
+              ng.field_b = null;
+              break L0;
+            }
+          }
           return;
         }
     }
@@ -215,7 +211,7 @@ final class jo extends qk {
           stackOut_0_0 = this;
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
-          if ((((jo) this).field_F ^ -1) != -24) {
+          if (((jo) this).field_F != 23) {
             stackOut_2_0 = this;
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -343,11 +339,11 @@ final class jo extends qk {
             int stackOut_23_0 = 0;
             int stackOut_33_0 = 0;
             int stackOut_31_0 = 0;
-            if ((tf.field_c.field_h ^ -1) > -5) {
+            if (tf.field_c.field_h < 4) {
               try {
                 L0: {
                   L1: {
-                    var1_int = -73 / ((param0 - 36) / 39);
+                    var1_int = -73;
                     if (jd.field_a == 0) {
                       hi.field_O = lc.field_a.a(2, gd.field_u, bd.field_j);
                       jd.field_a = jd.field_a + 1;
@@ -357,15 +353,15 @@ final class jo extends qk {
                     }
                   }
                   L2: {
-                    if ((jd.field_a ^ -1) != -2) {
+                    if (jd.field_a != 1) {
                       break L2;
                     } else {
-                      if (-3 == (hi.field_O.field_f ^ -1)) {
+                      if (hi.field_O.field_f == 2) {
                         stackOut_12_0 = k.a(-1, 50);
                         stackIn_13_0 = stackOut_12_0;
                         return stackIn_13_0;
                       } else {
-                        if ((hi.field_O.field_f ^ -1) == -2) {
+                        if (hi.field_O.field_f == 1) {
                           jd.field_a = jd.field_a + 1;
                           break L2;
                         } else {
@@ -375,7 +371,7 @@ final class jo extends qk {
                     }
                   }
                   L3: {
-                    if (-3 != (jd.field_a ^ -1)) {
+                    if (jd.field_a != 2) {
                       break L3;
                     } else {
                       sb.field_a = new gm((java.net.Socket) hi.field_O.field_d, lc.field_a);
@@ -390,11 +386,11 @@ final class jo extends qk {
                     }
                   }
                   L4: {
-                    if ((jd.field_a ^ -1) != -4) {
+                    if (jd.field_a != 3) {
                       break L4;
                     } else {
                       if (sb.field_a.b((byte) -80) <= 0) {
-                        if ((pd.a(-22826) ^ -1L) < (ul.field_e ^ -1L)) {
+                        if (~pd.a(-22826) < ~ul.field_e) {
                           stackOut_28_0 = k.a(-2, 50);
                           stackIn_29_0 = stackOut_28_0;
                           return stackIn_29_0;
@@ -435,8 +431,8 @@ final class jo extends qk {
               }
               return stackIn_34_0;
             } else {
-              if ((tf.field_c.field_e ^ -1) != 0) {
-                if ((tf.field_c.field_e ^ -1) != 1) {
+              if (tf.field_c.field_e != -1) {
+                if (tf.field_c.field_e != -2) {
                   return 1;
                 } else {
                   return 4;
@@ -453,7 +449,8 @@ final class jo extends qk {
     }
 
     final void a(wk param0, int param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5_int = 0;
         String var5 = null;
@@ -462,75 +459,99 @@ final class jo extends qk {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var9 = ZombieDawn.field_J;
-        if (param1 == 5060) {
-          var3 = param0.a(((jo) this).a(true), (byte) -107);
-          var4 = param0.a(((jo) this).f(237239984), 0);
-          bi.d(var3, var4, ((jo) this).field_Eb, 65535);
-          if ((((jo) this).field_Rb ^ -1) != 0) {
-            L0: {
-              bi.e(var3, var4, param0.a(((jo) this).field_Rb, (byte) -74), param0.a(((jo) this).field_Pb, 0), 16711680);
-              if (((jo) this).field_yb != null) {
-                var5_int = param0.a(((jo) this).field_yb.a(true), (byte) -59);
-                var6 = param0.a(((jo) this).field_yb.f(237239984), 0);
-                bi.e(var3, 10 + var4 - 48, var5_int, -48 + (var6 - -10), 16776960);
-                bj.field_q.c(Integer.toString(((jo) this).field_yb.field_F), var5_int, -48 + var6, 16777215, 0);
-                break L0;
-              } else {
-                break L0;
+        try {
+          L0: {
+            if (param1 == 5060) {
+              L1: {
+                var3_int = param0.a(((jo) this).a(true), (byte) -107);
+                var4 = param0.a(((jo) this).f(237239984), 0);
+                bi.d(var3_int, var4, ((jo) this).field_Eb, 65535);
+                if (((jo) this).field_Rb == -1) {
+                  break L1;
+                } else {
+                  bi.e(var3_int, var4, param0.a(((jo) this).field_Rb, (byte) -74), param0.a(((jo) this).field_Pb, 0), 16711680);
+                  break L1;
+                }
               }
-            }
-            var5 = Integer.toString(((jo) this).field_F);
-            var5 = Integer.toString(((jo) this).l(-111) & 127);
-            var10 = 0;
-            var6 = var10;
-            L1: while (true) {
-              if (((jo) this).field_ub <= var10) {
-                bi.g(var3, var4, 3, 16776960);
-                bj.field_q.c(var5, var3, -48 + var4, 16777215, 0);
-                return;
-              } else {
-                var7 = param0.a(((jo) this).field_jb[var10], (byte) -62);
-                var8 = param0.a(((jo) this).field_gb[var10], 0);
-                bi.b(-1 + var7, var8 - 1, 3, 3, 0);
-                bi.a(var7, var8, 65280);
-                var10++;
-                continue L1;
+              L2: {
+                if (((jo) this).field_yb != null) {
+                  var5_int = param0.a(((jo) this).field_yb.a(true), (byte) -59);
+                  var6 = param0.a(((jo) this).field_yb.f(237239984), 0);
+                  bi.e(var3_int, 10 + var4 - 48, var5_int, -48 + (var6 - -10), 16776960);
+                  bj.field_q.c(Integer.toString(((jo) this).field_yb.field_F), var5_int, -48 + var6, 16777215, 0);
+                  break L2;
+                } else {
+                  break L2;
+                }
               }
-            }
-          } else {
-            L2: {
-              if (((jo) this).field_yb != null) {
-                var5_int = param0.a(((jo) this).field_yb.a(true), (byte) -59);
-                var6 = param0.a(((jo) this).field_yb.f(237239984), 0);
-                bi.e(var3, 10 + var4 - 48, var5_int, -48 + (var6 - -10), 16776960);
-                bj.field_q.c(Integer.toString(((jo) this).field_yb.field_F), var5_int, -48 + var6, 16777215, 0);
-                break L2;
-              } else {
-                break L2;
+              var5 = Integer.toString(((jo) this).field_F);
+              var5 = Integer.toString(((jo) this).l(-111) & 127);
+              var10 = 0;
+              var6 = var10;
+              L3: while (true) {
+                if (((jo) this).field_ub <= var10) {
+                  bi.g(var3_int, var4, 3, 16776960);
+                  bj.field_q.c(var5, var3_int, -48 + var4, 16777215, 0);
+                  break L0;
+                } else {
+                  var7 = param0.a(((jo) this).field_jb[var10], (byte) -62);
+                  var8 = param0.a(((jo) this).field_gb[var10], 0);
+                  bi.b(-1 + var7, var8 - 1, 3, 3, 0);
+                  bi.a(var7, var8, 65280);
+                  var10++;
+                  continue L3;
+                }
               }
-            }
-            var5 = Integer.toString(((jo) this).field_F);
-            var5 = Integer.toString(((jo) this).l(-111) & 127);
-            var10 = 0;
-            var6 = var10;
-            L3: while (true) {
-              if (((jo) this).field_ub <= var10) {
-                bi.g(var3, var4, 3, 16776960);
-                bj.field_q.c(var5, var3, -48 + var4, 16777215, 0);
-                return;
-              } else {
-                var7 = param0.a(((jo) this).field_jb[var10], (byte) -62);
-                var8 = param0.a(((jo) this).field_gb[var10], 0);
-                bi.b(-1 + var7, var8 - 1, 3, 3, 0);
-                bi.a(var7, var8, 65280);
-                var10++;
-                continue L3;
-              }
+            } else {
+              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("jo.L(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param0 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
         }
     }
 
@@ -540,7 +561,7 @@ final class jo extends qk {
 
     private static void $cfr$clinit() {
         field_Qb = 5;
-        field_Nb = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
+        field_Nb = new char[]{'_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
         field_Tb = new vn[2][];
     }
 }

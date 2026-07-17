@@ -12,20 +12,10 @@ final class ld extends wl {
     static int field_y;
 
     public static void f(int param0) {
-        if (param0 != 100) {
-          field_x = null;
-          field_r = null;
-          field_v = null;
-          field_x = null;
-          field_w = null;
-          return;
-        } else {
-          field_r = null;
-          field_v = null;
-          field_x = null;
-          field_w = null;
-          return;
-        }
+        field_r = null;
+        field_v = null;
+        field_x = null;
+        field_w = null;
     }
 
     final static char a(int param0, byte param1) {
@@ -79,19 +69,9 @@ final class ld extends wl {
     }
 
     final static void g(int param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
         je.field_g = kd.field_n.i(111);
-        if (param0 != -1266) {
-          field_r = null;
-          var2 = (CharSequence) (Object) je.field_g;
-          lk.field_b = fe.a(60136, var2);
-          return;
-        } else {
-          var3 = (CharSequence) (Object) je.field_g;
-          lk.field_b = fe.a(60136, var3);
-          return;
-        }
+        CharSequence var2 = (CharSequence) (Object) je.field_g;
+        lk.field_b = fe.a(60136, var2);
     }
 
     final byte[] e(int param0) {

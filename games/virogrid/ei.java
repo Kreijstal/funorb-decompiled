@@ -10,15 +10,14 @@ final class ei {
     static boolean field_a;
 
     final static void a(int param0, sc param1) {
-        Object var3 = null;
-        if (param0 != 0) {
-          var3 = null;
-          ei.a(-102, (sc) null);
-          di.a(param1, param0 ^ 109, true);
-          return;
-        } else {
-          di.a(param1, param0 ^ 109, true);
-          return;
+        try {
+            if (param0 != 0) {
+                Object var3 = null;
+                ei.a(-102, (sc) null);
+            }
+            di.a(param1, param0 ^ 109, true);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "ei.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -27,9 +26,6 @@ final class ei {
         field_c = null;
         field_e = null;
         field_d = null;
-        if (param0 > -54) {
-            field_a = false;
-        }
     }
 
     static {

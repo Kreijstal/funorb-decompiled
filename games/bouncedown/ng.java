@@ -30,36 +30,7 @@ abstract class ng {
     }
 
     final static boolean a(int param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 > 108) {
-            break L0;
-          } else {
-            ng.b(51);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (vd.field_b == null) {
-              break L2;
-            } else {
-              if (!vd.field_b.b((byte) 121)) {
-                break L2;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            }
-          }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+        return vd.field_b != null && vd.field_b.b((byte) 121);
     }
 
     abstract sb b(byte param0);
@@ -210,34 +181,89 @@ abstract class ng {
     }
 
     final static boolean a(byte param0, char param1) {
+        char[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        int var5 = Bounce.field_N;
-        if (!(!Character.isISOControl(param1))) {
-            return false;
-        }
-        if (!(!md.a(106, param1))) {
-            return true;
-        }
-        char[] var6 = a.field_b;
-        char[] var2 = var6;
-        if (param0 != -95) {
-            field_a = null;
-        }
-        for (var3 = 0; var6.length > var3; var3++) {
-            var4 = var6[var3];
-            if (!(param1 != var4)) {
-                return true;
+        int var5 = 0;
+        char[] var6 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_26_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_15_0 = 0;
+        var5 = Bounce.field_N;
+        try {
+          L0: {
+            if (Character.isISOControl(param1)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              if (md.a(106, param1)) {
+                stackOut_7_0 = 1;
+                stackIn_8_0 = stackOut_7_0;
+                return stackIn_8_0 != 0;
+              } else {
+                L1: {
+                  var6 = a.field_b;
+                  var2 = var6;
+                  if (param0 == -95) {
+                    break L1;
+                  } else {
+                    field_a = null;
+                    break L1;
+                  }
+                }
+                var3 = 0;
+                L2: while (true) {
+                  if (var6.length <= var3) {
+                    var2 = nh.field_O;
+                    var3 = 0;
+                    L3: while (true) {
+                      if (var2.length <= var3) {
+                        stackOut_25_0 = 0;
+                        stackIn_26_0 = stackOut_25_0;
+                        break L0;
+                      } else {
+                        var4 = var2[var3];
+                        if (param1 == var4) {
+                          stackOut_22_0 = 1;
+                          stackIn_23_0 = stackOut_22_0;
+                          return stackIn_23_0 != 0;
+                        } else {
+                          var3++;
+                          continue L3;
+                        }
+                      }
+                    }
+                  } else {
+                    var4 = var6[var3];
+                    if (param1 == var4) {
+                      stackOut_15_0 = 1;
+                      stackIn_16_0 = stackOut_15_0;
+                      return stackIn_16_0 != 0;
+                    } else {
+                      var3++;
+                      continue L2;
+                    }
+                  }
+                }
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw ii.a((Throwable) (Object) var2_ref, "ng.D(" + param0 + 44 + param1 + 41);
         }
-        var2 = nh.field_O;
-        for (var3 = 0; var2.length > var3; var3++) {
-            var4 = var2[var3];
-            if (!(param1 != var4)) {
-                return true;
-            }
-        }
-        return false;
+        return stackIn_26_0 != 0;
     }
 
     static {

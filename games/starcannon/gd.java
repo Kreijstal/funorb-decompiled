@@ -18,7 +18,11 @@ final class gd {
     }
 
     final void a(Object param0, int param1, long param2) {
-        this.a((byte) 121, param0, param2, param1);
+        try {
+            this.a((byte) 121, param0, param2, param1);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "gd.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final Object a(long param0, int param1) {
@@ -61,45 +65,25 @@ final class gd {
     final static void a(int param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (null != mf.field_c) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        se.field_p.field_g = se.field_p.field_g + param0;
-                        return;
-                    }
-                    case 2: {
-                        try {
-                            mf.field_c.a(0L, 0);
-                            mf.field_c.a(se.field_p.field_g, 24, false, se.field_p.field_f);
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 4;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        se.field_p.field_g = se.field_p.field_g + param0;
-                        return;
-                    }
-                    case 4: {
-                        var1 = (Exception) (Object) caughtException;
-                        se.field_p.field_g = se.field_p.field_g + param0;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            if (null != mf.field_c) {
+              try {
+                L0: {
+                  mf.field_c.a(0L, 0);
+                  mf.field_c.a(se.field_p.field_g, 24, false, se.field_p.field_f);
+                  break L0;
                 }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = (Exception) (Object) decompiledCaughtException;
+                se.field_p.field_g = se.field_p.field_g + param0;
+                return;
+              }
+              se.field_p.field_g = se.field_p.field_g + param0;
+              return;
+            } else {
+              se.field_p.field_g = se.field_p.field_g + param0;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -109,47 +93,28 @@ final class gd {
     }
 
     private final void a(byte param0, Object param1, long param2, int param3) {
-        ej var6 = null;
-        int var7 = 0;
-        mi var8 = null;
-        mi var10 = null;
-        var7 = StarCannon.field_A;
-        if (((gd) this).field_c < param3) {
-          throw new IllegalStateException();
-        } else {
-          this.b(param2, -31649);
-          if (param0 >= 113) {
-            ((gd) this).field_f = ((gd) this).field_f - param3;
-            L0: while (true) {
-              if (((gd) this).field_f >= 0) {
-                var6 = new ej(param1, param3);
-                ((gd) this).field_b.a(param2, -1, (rf) (Object) var6);
-                ((gd) this).field_e.a((uh) (Object) var6, 25184);
-                ((mi) (Object) var6).field_j = 0L;
-                return;
-              } else {
-                var10 = (mi) (Object) ((gd) this).field_e.b(-57);
-                this.a((byte) 23, var10);
-                continue L0;
-              }
+        mi var6 = null;
+        ej var6_ref = null;
+        int var7 = StarCannon.field_A;
+        try {
+            if (!(((gd) this).field_c >= param3)) {
+                throw new IllegalStateException();
             }
-          } else {
-            ((gd) this).field_c = 73;
-            ((gd) this).field_f = ((gd) this).field_f - param3;
-            L1: while (true) {
-              if (((gd) this).field_f >= 0) {
-                var6 = new ej(param1, param3);
-                ((gd) this).field_b.a(param2, -1, (rf) (Object) var6);
-                ((gd) this).field_e.a((uh) (Object) var6, 25184);
-                ((mi) (Object) var6).field_j = 0L;
-                return;
-              } else {
-                var8 = (mi) (Object) ((gd) this).field_e.b(-57);
-                this.a((byte) 23, var8);
-                continue L1;
-              }
+            this.b(param2, -31649);
+            if (param0 < 113) {
+                ((gd) this).field_c = 73;
             }
-          }
+            ((gd) this).field_f = ((gd) this).field_f - param3;
+            while (((gd) this).field_f < 0) {
+                var6 = (mi) (Object) ((gd) this).field_e.b(-57);
+                this.a((byte) 23, var6);
+            }
+            var6_ref = new ej(param1, param3);
+            ((gd) this).field_b.a(param2, -1, (rf) (Object) var6_ref);
+            ((gd) this).field_e.a((uh) (Object) var6_ref, 25184);
+            ((mi) (Object) var6_ref).field_j = 0L;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "gd.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -158,46 +123,81 @@ final class gd {
     }
 
     private final void b(long param0, int param1) {
-        mi var4 = null;
-        var4 = (mi) (Object) ((gd) this).field_b.a(param0, 1);
-        if (param1 != -31649) {
-          int discarded$2 = gd.a(false);
-          this.a((byte) 23, var4);
-          return;
-        } else {
-          this.a((byte) 23, var4);
-          return;
-        }
+        mi var4 = (mi) (Object) ((gd) this).field_b.a(param0, 1);
+        this.a((byte) 23, var4);
     }
 
     private final void a(byte param0, mi param1) {
-        if (param0 == 23) {
-          if (param1 != null) {
-            param1.b(param0 + -19);
-            param1.a(-6242);
-            ((gd) this).field_f = ((gd) this).field_f + param1.field_p;
-            return;
-          } else {
-            return;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 23) {
+                break L1;
+              } else {
+                this.a((byte) 101, (Object) null, -29L, -99);
+                break L1;
+              }
+            }
+            if (param1 == null) {
+              break L0;
+            } else {
+              param1.b(param0 + -19);
+              param1.a(-6242);
+              ((gd) this).field_f = ((gd) this).field_f + param1.field_p;
+              return;
+            }
           }
-        } else {
-          this.a((byte) 101, (Object) null, -29L, -99);
-          if (param1 == null) {
-            return;
-          } else {
-            param1.b(param0 + -19);
-            param1.a(-6242);
-            ((gd) this).field_f = ((gd) this).field_f + param1.field_p;
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("gd.A(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
           }
+          throw sd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 <= 82) {
-            gd.a(87);
-        }
     }
 
     static {

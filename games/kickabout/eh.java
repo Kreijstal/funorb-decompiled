@@ -219,7 +219,7 @@ final class eh implements pk {
                     var9++;
                 }
             }
-            for (var10_int = 0; (var10_int ^ -1) > -7; var10_int++) {
+            for (var10_int = 0; var10_int < 6; var10_int++) {
                 tk.field_Fb[3][var10_int] = (ot) (Object) var8[var9];
             }
             ca.field_c = new ot[4];
@@ -344,6 +344,7 @@ final class eh implements pk {
     }
 
     final static void a(byte param0) {
+        RuntimeException var1 = null;
         ut var2 = null;
         ut var3 = null;
         int var4 = 0;
@@ -354,210 +355,216 @@ final class eh implements pk {
         Object var9 = null;
         ut var10 = null;
         ut var11 = null;
-        L0: {
-          var8 = Kickabout.field_G;
-          if (param0 < -42) {
-            break L0;
-          } else {
-            var9 = null;
-            eh.a(-123, -22, (StringBuilder) null);
-            break L0;
-          }
-        }
-        L1: {
-          var10 = tv.field_b[2];
-          var11 = var10;
-          var2 = nh.a((ot) (Object) c.field_e);
-          var3 = nh.a((ot) (Object) st.field_q);
-          if (rm.field_C != 0) {
-            if ((rm.field_C ^ -1) == -2) {
-              oi.field_e = new oh[34];
-              var4 = 0;
-              int incrementValue$93 = var4;
-              var4++;
-              oi.field_e[incrementValue$93] = new oh(el.field_D, 0, 1375);
-              var5 = 0;
-              L2: while (true) {
-                if (12 <= var5) {
-                  int incrementValue$94 = var4;
+        RuntimeException decompiledCaughtException = null;
+        var8 = Kickabout.field_G;
+        try {
+          L0: {
+            L1: {
+              if (param0 < -42) {
+                break L1;
+              } else {
+                var9 = null;
+                eh.a(-123, -22, (StringBuilder) null);
+                break L1;
+              }
+            }
+            L2: {
+              var10 = tv.field_b[2];
+              var11 = var10;
+              var2 = nh.a((ot) (Object) c.field_e);
+              var3 = nh.a((ot) (Object) st.field_q);
+              if (rm.field_C != 0) {
+                if (rm.field_C == 1) {
+                  oi.field_e = new oh[34];
+                  var4 = 0;
+                  int incrementValue$30 = var4;
                   var4++;
-                  oi.field_e[incrementValue$94] = new oh(var3, -203, 169);
-                  int incrementValue$95 = var4;
-                  var4++;
-                  oi.field_e[incrementValue$95] = new oh(je.field_h, -219, 292);
-                  int incrementValue$96 = var4;
-                  var4++;
-                  oi.field_e[incrementValue$96] = new oh(ns.field_c, 824, -60);
-                  int incrementValue$97 = var4;
-                  var4++;
-                  oi.field_e[incrementValue$97] = new oh(je.field_h, 753, -69);
-                  int incrementValue$98 = var4;
-                  var4++;
-                  oi.field_e[incrementValue$98] = new oh(el.field_D, 1030, 568);
+                  oi.field_e[incrementValue$30] = new oh(el.field_D, 0, 1375);
                   var5 = 0;
                   L3: while (true) {
-                    if ((var5 ^ -1) <= -9) {
-                      break L1;
-                    } else {
-                      L4: {
-                        var6 = el.a(29430, 20, -170);
-                        var7 = -50 - -(var5 / 2 * 400);
-                        if ((1 & var5) != 0) {
-                          var7 = var7 + el.a(29430, 20, 60);
-                          break L4;
+                    if (12 <= var5) {
+                      int incrementValue$31 = var4;
+                      var4++;
+                      oi.field_e[incrementValue$31] = new oh(var3, -203, 169);
+                      int incrementValue$32 = var4;
+                      var4++;
+                      oi.field_e[incrementValue$32] = new oh(je.field_h, -219, 292);
+                      int incrementValue$33 = var4;
+                      var4++;
+                      oi.field_e[incrementValue$33] = new oh(ns.field_c, 824, -60);
+                      int incrementValue$34 = var4;
+                      var4++;
+                      oi.field_e[incrementValue$34] = new oh(je.field_h, 753, -69);
+                      int incrementValue$35 = var4;
+                      var4++;
+                      oi.field_e[incrementValue$35] = new oh(el.field_D, 1030, 568);
+                      var5 = 0;
+                      L4: while (true) {
+                        if (var5 >= 8) {
+                          break L2;
                         } else {
-                          break L4;
+                          L5: {
+                            var6 = el.a(29430, 20, -170);
+                            var7 = -50 - -(var5 / 2 * 400);
+                            if ((1 & var5) != 0) {
+                              var7 = var7 + el.a(29430, 20, 60);
+                              break L5;
+                            } else {
+                              break L5;
+                            }
+                          }
+                          int incrementValue$36 = var4;
+                          var4++;
+                          oi.field_e[incrementValue$36] = new oh(wn.field_a[p.a((byte) -24, wn.field_a.length)], var6, var7);
+                          int incrementValue$37 = var4;
+                          var4++;
+                          oi.field_e[incrementValue$37] = new oh(wn.field_a[p.a((byte) -24, wn.field_a.length)], -var6 + 876, var7);
+                          var5++;
+                          continue L4;
                         }
                       }
-                      int incrementValue$99 = var4;
+                    } else {
+                      L6: {
+                        var6 = el.a(29430, 30, -300 - -(100 * var5));
+                        var7 = el.a(29430, 60, -290);
+                        if (p.a((byte) -24, 2) != 0) {
+                          break L6;
+                        } else {
+                          var6 = -var6 + 896;
+                          var7 += 1724;
+                          break L6;
+                        }
+                      }
+                      int incrementValue$38 = var4;
                       var4++;
-                      oi.field_e[incrementValue$99] = new oh(wn.field_a[p.a((byte) -24, wn.field_a.length)], var6, var7);
-                      int incrementValue$100 = var4;
-                      var4++;
-                      oi.field_e[incrementValue$100] = new oh(wn.field_a[p.a((byte) -24, wn.field_a.length)], -var6 + 876, var7);
+                      oi.field_e[incrementValue$38] = new oh(c.field_e, var6, var7);
                       var5++;
                       continue L3;
                     }
                   }
                 } else {
-                  L5: {
-                    var6 = el.a(29430, 30, -300 - -(100 * var5));
-                    var7 = el.a(29430, 60, -290);
-                    if (p.a((byte) -24, 2) != 0) {
-                      break L5;
+                  if (rm.field_C == 2) {
+                    oi.field_e = new oh[9];
+                    oi.field_e[0] = new oh(var3, -142, 231);
+                    oi.field_e[1] = new oh(c.field_e, -140, 549);
+                    oi.field_e[2] = new oh(var3, -154, 1331);
+                    oi.field_e[3] = new oh(c.field_e, -245, 1384);
+                    oi.field_e[4] = new oh(c.field_e, 901, -252);
+                    oi.field_e[5] = new oh(var3, 1095, 963);
+                    oi.field_e[6] = new oh(c.field_e, 925, 1294);
+                    oi.field_e[7] = new oh(el.field_D, -131, 957);
+                    oi.field_e[8] = new oh(el.field_D, 924, 240);
+                    break L2;
+                  } else {
+                    if (rm.field_C == 3) {
+                      oi.field_e = new oh[]{};
+                      break L2;
                     } else {
-                      var6 = -var6 + 896;
-                      var7 += 1724;
-                      break L5;
+                      break L2;
                     }
                   }
-                  int incrementValue$101 = var4;
-                  var4++;
-                  oi.field_e[incrementValue$101] = new oh(c.field_e, var6, var7);
-                  var5++;
-                  continue L2;
                 }
-              }
-            } else {
-              if ((rm.field_C ^ -1) == -3) {
-                oi.field_e = new oh[9];
-                oi.field_e[0] = new oh(var3, -142, 231);
-                oi.field_e[1] = new oh(c.field_e, -140, 549);
-                oi.field_e[2] = new oh(var3, -154, 1331);
-                oi.field_e[3] = new oh(c.field_e, -245, 1384);
-                oi.field_e[4] = new oh(c.field_e, 901, -252);
-                oi.field_e[5] = new oh(var3, 1095, 963);
-                oi.field_e[6] = new oh(c.field_e, 925, 1294);
-                oi.field_e[7] = new oh(el.field_D, -131, 957);
-                oi.field_e[8] = new oh(el.field_D, 924, 240);
-                break L1;
               } else {
-                if (-4 == (rm.field_C ^ -1)) {
-                  oi.field_e = new oh[]{};
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-            }
-          } else {
-            oi.field_e = new oh[30];
-            var4 = 0;
-            var5 = 0;
-            L6: while (true) {
-              if (4 <= var5) {
-                int incrementValue$102 = var4;
-                var4++;
-                oi.field_e[incrementValue$102] = new oh(ns.field_c, 50, -100);
-                int incrementValue$103 = var4;
-                var4++;
-                oi.field_e[incrementValue$103] = new oh(je.field_h, 80, -150);
-                int incrementValue$104 = var4;
-                var4++;
-                oi.field_e[incrementValue$104] = new oh(je.field_h, 120, -105);
-                int incrementValue$105 = var4;
-                var4++;
-                oi.field_e[incrementValue$105] = new oh(var3, -100, -170);
-                int incrementValue$106 = var4;
-                var4++;
-                oi.field_e[incrementValue$106] = new oh(var2, 530, -240);
-                int incrementValue$107 = var4;
-                var4++;
-                oi.field_e[incrementValue$107] = new oh(var3, 670, -170);
-                int incrementValue$108 = var4;
-                var4++;
-                oi.field_e[incrementValue$108] = new oh(var2, 790, -195);
-                int incrementValue$109 = var4;
-                var4++;
-                oi.field_e[incrementValue$109] = new oh(ns.field_c, 700, 1354);
-                int incrementValue$110 = var4;
-                var4++;
-                oi.field_e[incrementValue$110] = new oh(je.field_h, 720, 1394);
-                int incrementValue$111 = var4;
-                var4++;
-                oi.field_e[incrementValue$111] = new oh(je.field_h, 780, 1374);
-                int incrementValue$112 = var4;
-                var4++;
-                oi.field_e[incrementValue$112] = new oh(var3, -171, 1037);
-                int incrementValue$113 = var4;
-                var4++;
-                oi.field_e[incrementValue$113] = new oh(vq.field_a, -51, 1082);
-                int incrementValue$114 = var4;
-                var4++;
-                oi.field_e[incrementValue$114] = new oh(vq.field_a, -30, 1105);
-                int incrementValue$115 = var4;
-                var4++;
-                oi.field_e[incrementValue$115] = new oh(vq.field_a, -20, 1055);
-                int incrementValue$116 = var4;
-                var4++;
-                oi.field_e[incrementValue$116] = new oh(ns.field_c, -68, 1143);
+                oi.field_e = new oh[30];
+                var4 = 0;
                 var5 = 0;
                 L7: while (true) {
-                  if (7 <= var5) {
-                    int incrementValue$117 = var4;
+                  if (4 <= var5) {
+                    int incrementValue$39 = var4;
                     var4++;
-                    oi.field_e[incrementValue$117] = new oh(var2, -111, 138);
-                    int incrementValue$118 = var4;
+                    oi.field_e[incrementValue$39] = new oh(ns.field_c, 50, -100);
+                    int incrementValue$40 = var4;
                     var4++;
-                    oi.field_e[incrementValue$118] = new oh(var2, -191, 290);
-                    int incrementValue$119 = var4;
+                    oi.field_e[incrementValue$40] = new oh(je.field_h, 80, -150);
+                    int incrementValue$41 = var4;
                     var4++;
-                    oi.field_e[incrementValue$119] = new oh(var2, 30, 1324);
-                    int incrementValue$120 = var4;
+                    oi.field_e[incrementValue$41] = new oh(je.field_h, 120, -105);
+                    int incrementValue$42 = var4;
                     var4++;
-                    oi.field_e[incrementValue$120] = new oh(var2, 170, 1364);
-                    break L1;
+                    oi.field_e[incrementValue$42] = new oh(var3, -100, -170);
+                    int incrementValue$43 = var4;
+                    var4++;
+                    oi.field_e[incrementValue$43] = new oh(var2, 530, -240);
+                    int incrementValue$44 = var4;
+                    var4++;
+                    oi.field_e[incrementValue$44] = new oh(var3, 670, -170);
+                    int incrementValue$45 = var4;
+                    var4++;
+                    oi.field_e[incrementValue$45] = new oh(var2, 790, -195);
+                    int incrementValue$46 = var4;
+                    var4++;
+                    oi.field_e[incrementValue$46] = new oh(ns.field_c, 700, 1354);
+                    int incrementValue$47 = var4;
+                    var4++;
+                    oi.field_e[incrementValue$47] = new oh(je.field_h, 720, 1394);
+                    int incrementValue$48 = var4;
+                    var4++;
+                    oi.field_e[incrementValue$48] = new oh(je.field_h, 780, 1374);
+                    int incrementValue$49 = var4;
+                    var4++;
+                    oi.field_e[incrementValue$49] = new oh(var3, -171, 1037);
+                    int incrementValue$50 = var4;
+                    var4++;
+                    oi.field_e[incrementValue$50] = new oh(vq.field_a, -51, 1082);
+                    int incrementValue$51 = var4;
+                    var4++;
+                    oi.field_e[incrementValue$51] = new oh(vq.field_a, -30, 1105);
+                    int incrementValue$52 = var4;
+                    var4++;
+                    oi.field_e[incrementValue$52] = new oh(vq.field_a, -20, 1055);
+                    int incrementValue$53 = var4;
+                    var4++;
+                    oi.field_e[incrementValue$53] = new oh(ns.field_c, -68, 1143);
+                    var5 = 0;
+                    L8: while (true) {
+                      if (7 <= var5) {
+                        int incrementValue$54 = var4;
+                        var4++;
+                        oi.field_e[incrementValue$54] = new oh(var2, -111, 138);
+                        int incrementValue$55 = var4;
+                        var4++;
+                        oi.field_e[incrementValue$55] = new oh(var2, -191, 290);
+                        int incrementValue$56 = var4;
+                        var4++;
+                        oi.field_e[incrementValue$56] = new oh(var2, 30, 1324);
+                        int incrementValue$57 = var4;
+                        var4++;
+                        oi.field_e[incrementValue$57] = new oh(var2, 170, 1364);
+                        break L2;
+                      } else {
+                        var6 = el.a(29430, 40, 956);
+                        var7 = el.a(29430, 70, var5 * 150 + 200);
+                        int incrementValue$58 = var4;
+                        var4++;
+                        oi.field_e[incrementValue$58] = new oh(c.field_e, var6, var7);
+                        var5++;
+                        continue L8;
+                      }
+                    }
                   } else {
-                    var6 = el.a(29430, 40, 956);
-                    var7 = el.a(29430, 70, var5 * 150 + 200);
-                    int incrementValue$121 = var4;
+                    var6 = p.a((byte) -24, 896 + -var11.field_o);
+                    var7 = p.a((byte) -24, 1344 - var11.field_v);
+                    int incrementValue$59 = var4;
                     var4++;
-                    oi.field_e[incrementValue$121] = new oh(c.field_e, var6, var7);
+                    oi.field_e[incrementValue$59] = new oh(var10, var6, var7);
                     var5++;
                     continue L7;
                   }
                 }
-              } else {
-                var6 = p.a((byte) -24, 896 + -var11.field_o);
-                var7 = p.a((byte) -24, 1344 - var11.field_v);
-                int incrementValue$122 = var4;
-                var4++;
-                oi.field_e[incrementValue$122] = new oh(var10, var6, var7);
-                var5++;
-                continue L6;
               }
             }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var1, "eh.H(" + param0 + 41);
         }
     }
 
     public static void d(int param0) {
         field_f = null;
         field_b = null;
-        if (param0 != 1) {
-            Object var2 = null;
-            eh.a(58, 40, (StringBuilder) null);
-        }
     }
 
     public final void b(int param0) {
@@ -699,7 +706,7 @@ final class eh implements pk {
                       if (-1 != jm.field_g.field_q) {
                         break L2;
                       } else {
-                        if (0 != (jm.field_g.field_w ^ -1)) {
+                        if (jm.field_g.field_w != -1) {
                           break L2;
                         } else {
                           jm.field_g = null;
@@ -796,7 +803,7 @@ final class eh implements pk {
           }
         }
         L4: {
-          if (-3 == (ih.field_c ^ -1)) {
+          if (ih.field_c == 2) {
             mp.field_h.a(bo.field_Cb, h.field_d, param0 + -14181, "street", nu.field_M);
             mp.field_h.a(bo.field_Cb, h.field_d, -6869, "beach_surface0", nu.field_M);
             break L4;
@@ -817,50 +824,268 @@ final class eh implements pk {
     }
 
     private final void a(int param0, ot param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        ot[] var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = Kickabout.field_G;
-        int var3 = param1.field_q / 8;
-        int var4 = param1.field_w / 10;
-        ot[] var5 = new ot[80];
-        if (param0 != 11264) {
-            field_f = null;
-        }
-        for (var6 = 0; qe.field_i.length > var6; var6++) {
-            var5[var6] = new ot(var3, var4);
-            var7 = param1.field_q * var4 * (var6 / 8) + var3 * (var6 % 8);
-            for (var8 = 0; var8 < var5[var6].field_y.length; var8++) {
-                var9 = var8 % var3 + param1.field_q * (var8 / var3);
-                var5[var6].field_y[var8] = param1.field_y[var7 + var9];
+        int var10 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var10 = Kickabout.field_G;
+        try {
+          L0: {
+            L1: {
+              var3_int = param1.field_q / 8;
+              var4 = param1.field_w / 10;
+              var5 = new ot[80];
+              if (param0 == 11264) {
+                break L1;
+              } else {
+                field_f = null;
+                break L1;
+              }
             }
-            qe.field_i[var6] = var5[var6];
+            var6 = 0;
+            L2: while (true) {
+              if (qe.field_i.length <= var6) {
+                break L0;
+              } else {
+                var5[var6] = new ot(var3_int, var4);
+                var7 = param1.field_q * var4 * (var6 / 8) + var3_int * (var6 % 8);
+                var8 = 0;
+                L3: while (true) {
+                  if (var8 >= var5[var6].field_y.length) {
+                    qe.field_i[var6] = var5[var6];
+                    var6++;
+                    continue L2;
+                  } else {
+                    var9 = var8 % var3_int + param1.field_q * (var8 / var3_int);
+                    var5[var6].field_y[var8] = param1.field_y[var7 + var9];
+                    var8++;
+                    continue L3;
+                  }
+                }
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_1 = new StringBuilder().append("eh.K(").append(param0).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param1 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 
     private final ut[] a(String param0, sj param1, byte param2, String param3) {
-        if (param2 < 16) {
-            eh.a((byte) 120);
+        ut[] var5 = null;
+        RuntimeException var5_ref = null;
+        ut[] var6 = null;
+        ut[] stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ut[] stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param2 >= 16) {
+                break L1;
+              } else {
+                eh.a((byte) 120);
+                break L1;
+              }
+            }
+            var6 = se.a(param1, -42, param0, param3);
+            var5 = var6;
+            var6[3].field_v = var6[3].field_w;
+            var6[1].field_o = var6[1].field_q;
+            var6[5].field_v = var6[5].field_w;
+            var6[7].field_o = var6[7].field_q;
+            stackOut_2_0 = (ut[]) var5;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var5_ref;
+            stackOut_4_1 = new StringBuilder().append("eh.F(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param3 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
-        ut[] var6 = se.a(param1, -42, param0, param3);
-        ut[] var5 = var6;
-        var6[3].field_v = var6[3].field_w;
-        var6[1].field_o = var6[1].field_q;
-        var6[5].field_v = var6[5].field_w;
-        var6[7].field_o = var6[7].field_q;
-        return var5;
+        return stackIn_3_0;
     }
 
     final static void a(int param0, int param1, StringBuilder param2) {
-        int var3 = param0 >> 758424112;
-        StringBuilder discarded$0 = param2.append(var3);
+        int var3_int = param0 >> 16;
+        StringBuilder discarded$0 = param2.append(var3_int);
         int var4 = (int)(1000.0f * ((float)(65535 & param0) / 65536.0f));
         StringBuilder discarded$6 = param2.append(46);
         if (param1 != 100) {
             return;
         }
-        StringBuilder discarded$7 = param2.append(var4);
+        try {
+            StringBuilder discarded$7 = param2.append(var4);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "eh.I(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

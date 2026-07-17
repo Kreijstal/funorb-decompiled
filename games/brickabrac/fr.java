@@ -47,9 +47,6 @@ final class fr {
     short[] field_t;
 
     final static boolean a(byte param0) {
-        if (param0 <= 33) {
-            fr.d(-80);
-        }
         return cg.field_l;
     }
 
@@ -65,43 +62,95 @@ final class fr {
     }
 
     final static void a(mf param0, byte param1) {
-        ok.field_g = pl.a("basic", "display_name_changed", (byte) 109, param0);
-        gf.field_f = new hj(0L, rq.field_b, hk.field_J, oo.field_y);
-        f.field_c = new hj(0L, rq.field_b, ab.field_z, ng.field_e);
-        rg.field_c = new mh(0L, (mh) null);
-        sj.field_d = new mh(0L, ad.field_l);
-        sj.field_d.field_S = 1;
-        gk.field_c = new mh(0L, rp.field_t, n.field_a);
-        qj.field_u = new mh(0L, ik.field_a, bc.field_c);
-        mo.field_R = new mh(0L, tk.field_t);
-        rg.field_c.a(sj.field_d, 0);
-        rg.field_c.a(gk.field_c, 0);
-        rg.field_c.a(qj.field_u, 0);
-        rg.field_c.a((mh) (Object) gf.field_f, 0);
-        rg.field_c.a(mo.field_R, 0);
-        gf.field_f.field_Qb.field_Qb.a((byte) -102, ad.field_l);
-        mh var5 = gf.field_f.field_Qb.field_Qb;
-        mh var6 = var5;
-        gf.field_f.field_Qb.field_Qb.field_Q = 1;
-        if (param1 <= 58) {
-            field_k = 109;
+        RuntimeException var2 = null;
+        mh var3 = null;
+        mh var5 = null;
+        mh var6 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            ok.field_g = pl.a("basic", "display_name_changed", (byte) 109, param0);
+            gf.field_f = new hj(0L, rq.field_b, hk.field_J, oo.field_y);
+            f.field_c = new hj(0L, rq.field_b, ab.field_z, ng.field_e);
+            rg.field_c = new mh(0L, (mh) null);
+            sj.field_d = new mh(0L, ad.field_l);
+            sj.field_d.field_S = 1;
+            gk.field_c = new mh(0L, rp.field_t, n.field_a);
+            qj.field_u = new mh(0L, ik.field_a, bc.field_c);
+            mo.field_R = new mh(0L, tk.field_t);
+            rg.field_c.a(sj.field_d, 0);
+            rg.field_c.a(gk.field_c, 0);
+            rg.field_c.a(qj.field_u, 0);
+            rg.field_c.a((mh) (Object) gf.field_f, 0);
+            rg.field_c.a(mo.field_R, 0);
+            gf.field_f.field_Qb.field_Qb.a((byte) -102, ad.field_l);
+            var5 = gf.field_f.field_Qb.field_Qb;
+            var6 = var5;
+            gf.field_f.field_Qb.field_Qb.field_Q = 1;
+            var6.field_S = 1;
+            f.field_c.field_Qb.field_Qb.a((byte) -115, ad.field_l);
+            var3 = f.field_c.field_Qb.field_Qb;
+            f.field_c.field_Qb.field_Qb.field_Q = 1;
+            var3.field_S = 1;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("fr.I(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 121 + 41);
         }
-        var6.field_S = 1;
-        f.field_c.field_Qb.field_Qb.a((byte) -115, ad.field_l);
-        mh var3 = f.field_c.field_Qb.field_Qb;
-        f.field_c.field_Qb.field_Qb.field_Q = 1;
-        var3.field_S = 1;
     }
 
     final static void a(int param0, dh param1, dh param2, boolean param3) {
-        m.field_b = param0;
-        kp.field_b = param1;
-        ni.field_Wb = param2;
-        pp.a(lb.field_c / 2, lb.field_d / 2, (byte) 19);
-        if (!param3) {
-            field_k = -98;
+        try {
+            m.field_b = param0;
+            kp.field_b = param1;
+            ni.field_Wb = param2;
+            pp.a(lb.field_c / 2, lb.field_d / 2, (byte) 19);
+            tn.a(param1.field_B, param1.field_P + param1.field_B, 256, param2.field_B, param2.field_P + param2.field_B);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "fr.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
-        tn.a(param1.field_B, param1.field_P + param1.field_B, 256, param2.field_B, param2.field_P + param2.field_B);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -120,9 +169,6 @@ final class fr {
 
     public static void b(byte param0) {
         field_M = null;
-        if (param0 != -52) {
-            field_l = null;
-        }
         field_e = null;
         field_l = null;
     }
@@ -286,11 +332,15 @@ final class fr {
     }
 
     final static void a(boolean param0, String param1, String param2) {
-        if (null != ej.field_I) {
-            ej.field_I.m(17);
+        try {
+            if (null != ej.field_I) {
+                ej.field_I.m(17);
+            }
+            eo.field_k = new hk(param2, param1, false, true, param0);
+            rj.field_c.b((byte) 114, (oc) (Object) eo.field_k);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "fr.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        eo.field_k = new hk(param2, param1, false, true, param0);
-        rj.field_c.b((byte) 114, (oc) (Object) eo.field_k);
     }
 
     final static void d(int param0) {

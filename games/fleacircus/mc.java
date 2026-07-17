@@ -16,19 +16,18 @@ final class mc {
     }
 
     final static void a(dd param0, String param1, int param2) {
-        pa.field_k = param1;
-        if (param2 != 0) {
-            field_c = null;
+        try {
+            pa.field_k = param1;
             cd.field_b = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "mc.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
-        cd.field_b = param0;
     }
 
     final static boolean b(byte param0) {
         int var1 = 0;
         var1 = -121 % ((-69 - param0) / 40);
-        if (-21 >= (ib.field_k ^ -1)) {
+        if (ib.field_k >= 20) {
           if (nl.a(99)) {
             if (0 < nb.field_h) {
               if (lk.a(95)) {
@@ -48,40 +47,7 @@ final class mc {
     }
 
     final static boolean a(int param0, byte param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param1 != -124) {
-          L0: {
-            field_b = -97;
-            if ((-param0 & param0) != param0) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if ((-param0 & param0) != param0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return ~(-param0 & param0) == ~param0;
     }
 
     static {

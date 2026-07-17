@@ -12,66 +12,18 @@ abstract class ik {
     abstract int a(int param0);
 
     final static void a(String param0, byte param1) {
-        Object var3 = null;
-        if (param1 >= 33) {
-          if (null != rd.field_j) {
-            L0: {
-              rd.field_j.field_pc.b(87);
-              if (null != bc.field_a) {
-                bc.field_a.field_pc.b(93);
-                break L0;
-              } else {
-                break L0;
-              }
+        try {
+            if (null != rd.field_j) {
+                rd.field_j.field_pc.b(87);
             }
-            var3 = null;
+            if (!(null == bc.field_a)) {
+                bc.field_a.field_pc.b(93);
+            }
+            Object var3 = null;
             af.a((Throwable) null, -63, param0);
             dj.a((byte) -124);
-            return;
-          } else {
-            L1: {
-              if (null != bc.field_a) {
-                bc.field_a.field_pc.b(93);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            var3 = null;
-            af.a((Throwable) null, -63, param0);
-            dj.a((byte) -124);
-            return;
-          }
-        } else {
-          ik.b(-9);
-          if (null == rd.field_j) {
-            L2: {
-              if (null != bc.field_a) {
-                bc.field_a.field_pc.b(93);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            var3 = null;
-            af.a((Throwable) null, -63, param0);
-            dj.a((byte) -124);
-            return;
-          } else {
-            L3: {
-              rd.field_j.field_pc.b(87);
-              if (null != bc.field_a) {
-                bc.field_a.field_pc.b(93);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            var3 = null;
-            af.a((Throwable) null, -63, param0);
-            dj.a((byte) -124);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "ik.B(" + (param0 != null ? "{...}" : "null") + 44 + 40 + 41);
         }
     }
 
@@ -101,7 +53,7 @@ abstract class ik {
         if (param2 != -1700635440) {
             return 126;
         }
-        return (int)(param0 * param1 >> -1700635440);
+        return (int)(param0 * param1 >> 16);
     }
 
     static {

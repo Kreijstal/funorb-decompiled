@@ -16,7 +16,7 @@ final class ok {
         }
         ci.field_t = true;
         lf.a((byte) -78, false);
-        i.field_j = param0;
+        i.field_j = 0;
     }
 
     public static void b(int param0) {
@@ -25,9 +25,6 @@ final class ok {
         field_a = null;
         field_e = null;
         field_b = null;
-        if (param0 > -2) {
-            boolean discarded$0 = ok.a(false);
-        }
     }
 
     final static boolean a(boolean param0) {

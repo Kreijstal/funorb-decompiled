@@ -8,7 +8,7 @@ abstract class tn {
     final int a(byte param0, long param1) {
         long var4 = 0L;
         var4 = ((tn) this).a((byte) 63);
-        if (-1L <= (var4 ^ -1L)) {
+        if (var4 <= 0L) {
           if (param0 != 109) {
             int discarded$4 = ((tn) this).a(-82L, 55);
             return ((tn) this).a(param1, 0);
@@ -29,9 +29,6 @@ abstract class tn {
     public static void a(int param0) {
         field_b = null;
         field_a = null;
-        if (param0 != 0) {
-            field_a = null;
-        }
     }
 
     final static boolean a(int param0, int param1) {

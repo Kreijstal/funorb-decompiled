@@ -21,29 +21,68 @@ abstract class vw {
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
-        if (param0 != 101) {
-            Object var2 = null;
-            q discarded$0 = vw.a(-92, (ffa) null, -43, true);
-        }
     }
 
     final static q a(int param0, ffa param1, int param2, boolean param3) {
         q var4 = null;
-        q var4_ref = null;
-        L0: {
-          var4 = (q) (Object) vga.field_n.c(27);
-          if (var4 == null) {
-            var4_ref = new q(param1, param0, param2);
-            break L0;
-          } else {
-            var4.a(param0, param1, (byte) 116, param2);
-            break L0;
+        RuntimeException var4_ref = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            var4 = (q) (Object) vga.field_n.c(27);
+            if (var4 == null) {
+              var4 = new q(param1, param0, param2);
+              break L0;
+            } else {
+              var4.a(param0, param1, (byte) 116, param2);
+              break L0;
+            }
           }
-        }
-        if (!param3) {
-          return null;
-        } else {
-          return var4_ref;
+          return var4;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var4_ref;
+            stackOut_5_1 = new StringBuilder().append("vw.Q(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + 1 + 41);
         }
     }
 
@@ -66,7 +105,11 @@ abstract class vw {
     }
 
     vw(eo param0) {
-        ((vw) this).field_c = param0;
+        try {
+            ((vw) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "vw.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     abstract void a(boolean param0, int param1);

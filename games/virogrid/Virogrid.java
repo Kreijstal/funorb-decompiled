@@ -24,112 +24,323 @@ public final class Virogrid extends od {
     private final void r(int param0) {
         int var2 = 0;
         int var3 = 0;
-        L0: {
-          var3 = field_F ? 1 : 0;
-          bc.field_c = 3;
-          ln.field_g = 3;
-          co.field_l = 3;
-          jf dupTemp$2 = new jf();
-          gb.field_H = dupTemp$2;
-          ke.field_p = dupTemp$2;
-          ad.field_g = new double[]{1.0, 0.0, 0.0};
-          vm.field_d = new double[]{0.0, 0.0, -128.0};
-          da.field_k = new double[3];
-          gb.c((byte) -44);
-          ke.field_p.field_d = true;
-          ce.field_E = 0;
-          bi.field_c = new int[]{0, 154, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-          gb.field_H.field_d = true;
-          c.field_d = new mg(640, 400);
-          we.field_e = new mg(640, 400);
-          mk.field_bb = new mg(200, 400);
-          var2 = 0;
-          if (param0 > 59) {
-            break L0;
-          } else {
-            ck discarded$3 = Virogrid.b((byte) -64, false);
-            break L0;
-          }
-        }
-        L1: while (true) {
+        var3 = field_F ? 1 : 0;
+        bc.field_c = 3;
+        ln.field_g = 3;
+        co.field_l = 3;
+        jf dupTemp$1 = new jf();
+        gb.field_H = dupTemp$1;
+        ke.field_p = dupTemp$1;
+        ad.field_g = new double[]{1.0, 0.0, 0.0};
+        vm.field_d = new double[]{0.0, 0.0, -128.0};
+        da.field_k = new double[3];
+        gb.c((byte) -44);
+        ke.field_p.field_d = true;
+        ce.field_E = 0;
+        bi.field_c = new int[]{0, 154, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
+        gb.field_H.field_d = true;
+        c.field_d = new mg(640, 400);
+        we.field_e = new mg(640, 400);
+        mk.field_bb = new mg(200, 400);
+        var2 = 0;
+        L0: while (true) {
           if (var2 >= 256) {
             jm.a(320, 240, -2);
             qa.field_e = -1;
             return;
           } else {
-            pj.field_d[var2] = rb.a(16711872, 143 * var2 << -1617433272);
+            pj.field_d[var2] = rb.a(16711872, 143 * var2 << 8);
             pj.field_d[var2] = oh.a(pj.field_d[var2], rb.a(65280, var2 * 191));
             pj.field_d[var2] = oh.a(pj.field_d[var2], var2);
             var2++;
-            continue L1;
+            continue L0;
           }
         }
     }
 
     private final void e(byte param0) {
-        int var2 = (id.field_r % 20480 << -2083455892) % 83886080;
+        int var2 = (id.field_r % 20480 << 12) % 83886080;
         si.a(nk.field_K, new double[3], new double[3], 700.0, 200.0, sj.field_j, 23967451 + var2, var2 - -59918628, 0, 16711680, ke.field_p.field_k);
         si.a(nk.field_K, new double[3], new double[3], 500.0, 200.0, sj.field_j, var2 - -59918628, 83820544 + var2, 0, 16711680, ke.field_p.field_k);
-        if (param0 != -62) {
-            return;
-        }
         this.s(-1933);
     }
 
     private final void a(eh param0, byte param1, eh param2, eh param3, eh param4, eh param5) {
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9_int = 0;
+        mg[][] var9 = null;
         int var10 = 0;
         mg var11 = null;
-        int var12 = field_F ? 1 : 0;
-        hd.field_b = a.a("", param5, -110, "font", param4);
-        vg.field_H = a.a("", param5, -95, "smallfont", param4);
-        mc.field_b = a.a("", param5, -120, "menufont", param4);
-        re.field_o = a.a("", param5, -110, "tinyfont", param4);
-        mg var13 = sn.a(param5, "starfield", "", false);
-        sj.field_j = new mg(2560, 256);
-        sj.field_j.b();
-        var13.b(0, 0);
-        var13.b(1280, 0);
-        ca.field_M.a((byte) 29);
-        eh.field_l = vc.a(param5, "logo", "", (byte) 114);
-        mg discarded$0 = sn.a(param5, "splash", "", false);
-        tk.field_d = ke.a("walk1", "", param5, 32370);
-        ic.field_y = ke.a("walk2", "", param5, 32370);
-        wh.field_b = ke.a("walk3", "", param5, 32370);
-        vb.field_l = new mg(640, 480);
-        ib.field_b = b.a("", param5, 7, "frame");
-        wf.a(100, (e) (Object) mc.field_b, 0, (e) (Object) vg.field_H);
-        en.field_Kb = 16777215;
-        la.field_k = 16777215;
-        sf.field_I = 16777215;
-        na.field_Hb = 8437759;
-        jl.field_E = 16777215;
-        ti.field_b = 8437759;
-        cb.field_d = ke.a(32, param5, "", "achievements_large");
-        mj.field_F = sn.a(param2, "unachieved", "basic", false);
-        ad.field_b = sn.a(param2, "orbcoin", "basic", false);
-        int var8 = cb.field_d.length;
-        vd.field_Y = new mg[var8];
-        qc.a(123);
-        int var9_int = -67 / ((param1 - -11) / 58);
-        for (var10 = 0; var8 > var10; var10++) {
-            var11 = new mg(32, 32);
-            var11.b();
-            cb.field_d[var10].b(0, 0, 32, 32);
-            vd.field_Y[var10] = var11;
+        int var12 = 0;
+        mg var13 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        var12 = field_F ? 1 : 0;
+        try {
+          L0: {
+            hd.field_b = a.a("", param5, -110, "font", param4);
+            vg.field_H = a.a("", param5, -95, "smallfont", param4);
+            mc.field_b = a.a("", param5, -120, "menufont", param4);
+            re.field_o = a.a("", param5, -110, "tinyfont", param4);
+            var13 = sn.a(param5, "starfield", "", false);
+            sj.field_j = new mg(2560, 256);
+            sj.field_j.b();
+            var13.b(0, 0);
+            var13.b(1280, 0);
+            ca.field_M.a((byte) 29);
+            eh.field_l = vc.a(param5, "logo", "", (byte) 114);
+            mg discarded$3 = sn.a(param5, "splash", "", false);
+            tk.field_d = ke.a("walk1", "", param5, 32370);
+            ic.field_y = ke.a("walk2", "", param5, 32370);
+            wh.field_b = ke.a("walk3", "", param5, 32370);
+            vb.field_l = new mg(640, 480);
+            ib.field_b = b.a("", param5, 7, "frame");
+            wf.a(100, (e) (Object) mc.field_b, 0, (e) (Object) vg.field_H);
+            en.field_Kb = 16777215;
+            la.field_k = 16777215;
+            sf.field_I = 16777215;
+            na.field_Hb = 8437759;
+            jl.field_E = 16777215;
+            ti.field_b = 8437759;
+            cb.field_d = ke.a(32, param5, "", "achievements_large");
+            mj.field_F = sn.a(param2, "unachieved", "basic", false);
+            ad.field_b = sn.a(param2, "orbcoin", "basic", false);
+            var8 = cb.field_d.length;
+            vd.field_Y = new mg[var8];
+            qc.a(123);
+            var9_int = -67 / ((param1 - -11) / 58);
+            var10 = 0;
+            L1: while (true) {
+              if (var8 <= var10) {
+                tn.field_b = new mg(32, 32);
+                tn.field_b.b();
+                mj.field_F.b(0, 0, 32, 32);
+                ul.b((byte) 108);
+                kd.field_p = ke.a(32, param5, "", "viewicons");
+                mg discarded$4 = this.b(131586, -9105, 30136);
+                mg discarded$5 = this.b(263172, -9105, 6316128);
+                var9 = new mg[2][];
+                var9[0] = ke.a(32, param5, "", "turntime_icons");
+                var9[1] = ke.a(32, param5, "", "gridwidth_icons");
+                nn.a(var9, var9, 2, ra.field_e, m.field_a, param3, param2, true, -27871, wc.field_c, wc.field_c, wf.field_e, wn.field_j, 2, ng.field_T);
+                ak.field_e = sn.a(param5, "lobbyicon", "", false);
+                fk.a((kj) (Object) new vl(param0, param5, 8, 128));
+                break L0;
+              } else {
+                var11 = new mg(32, 32);
+                var11.b();
+                cb.field_d[var10].b(0, 0, 32, 32);
+                vd.field_Y[var10] = var11;
+                var10++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var7 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var7;
+            stackOut_6_1 = new StringBuilder().append("Virogrid.KB(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param2 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param3 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param4 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L5;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L5;
+            }
+          }
+          L6: {
+            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param5 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L6;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L6;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
-        tn.field_b = new mg(32, 32);
-        tn.field_b.b();
-        mj.field_F.b(0, 0, 32, 32);
-        ul.b((byte) 108);
-        kd.field_p = ke.a(32, param5, "", "viewicons");
-        mg discarded$1 = this.b(131586, -9105, 30136);
-        mg discarded$2 = this.b(263172, -9105, 6316128);
-        mg[][] var9 = new mg[2][];
-        var9[0] = ke.a(32, param5, "", "turntime_icons");
-        var9[1] = ke.a(32, param5, "", "gridwidth_icons");
-        nn.a(var9, var9, 2, ra.field_e, m.field_a, param3, param2, true, -27871, wc.field_c, wc.field_c, wf.field_e, wn.field_j, 2, ng.field_T);
-        ak.field_e = sn.a(param5, "lobbyicon", "", false);
-        fk.a((kj) (Object) new vl(param0, param5, 8, 128));
     }
 
     final static ck b(byte param0, boolean param1) {
@@ -232,7 +443,7 @@ public final class Virogrid extends od {
             oi.field_c[3] = sc.a(wm.field_w, "", "tetralink ingame 3");
             var3 = 0;
             L2: while (true) {
-              if ((var3 ^ -1) <= -5) {
+              if (var3 >= 4) {
                 vg.field_B.e(-1);
                 af.field_g = null;
                 el.field_d = null;
@@ -502,9 +713,6 @@ public final class Virogrid extends od {
                 ri.field_a.c();
             }
         }
-        if (param0 != -1933) {
-            ((Virogrid) this).field_D = null;
-        }
     }
 
     private final void f(byte param0) {
@@ -553,11 +761,11 @@ public final class Virogrid extends od {
           L1: {
             var8 = field_F ? 1 : 0;
             var2 = 1;
-            if ((hm.field_c ^ -1) != (i.field_y ^ -1)) {
+            if (~hm.field_c != ~i.field_y) {
               break L1;
             } else {
               if (nf.field_g == pg.field_g) {
-                if (1 == (i.field_y ^ -1)) {
+                if (i.field_y == -2) {
                   ej.a(false, 25680);
                   var2 = 0;
                   break L0;
@@ -571,8 +779,8 @@ public final class Virogrid extends od {
             }
           }
           if (i.field_y != -2) {
-            if (1 == (hm.field_c ^ -1)) {
-              if ((we.field_l ^ -1) > -17) {
+            if (hm.field_c == -2) {
+              if (we.field_l < 16) {
                 dj.a(nf.field_g, false, -1, 3, i.field_y);
                 break L0;
               } else {
@@ -636,10 +844,10 @@ public final class Virogrid extends od {
               var5_ref_int__ = var13;
               var6 = 0;
               L5: while (true) {
-                if ((var6 ^ -1) <= -4) {
+                if (var6 >= 3) {
                   var6 = 3;
                   L6: while (true) {
-                    if ((var34.length ^ -1) >= (var6 ^ -1)) {
+                    if (~var34.length >= ~var6) {
                       this.e((byte) -62);
                       kg.field_c.a(pe.field_j, bi.field_c);
                       nb.field_x.a(pe.field_j, bi.field_c);
@@ -667,7 +875,7 @@ public final class Virogrid extends od {
                     }
                   }
                 } else {
-                  var9[var6] = pe.field_j[var6] << -412966013;
+                  var9[var6] = pe.field_j[var6] << 3;
                   var6++;
                   continue L5;
                 }
@@ -680,7 +888,7 @@ public final class Virogrid extends od {
               } else {
                 L8: {
                   var3 = id.field_r % 64;
-                  if (-33 >= (var3 ^ -1)) {
+                  if (var3 >= 32) {
                     stackOut_31_0 = 48 - var3;
                     stackIn_32_0 = stackOut_31_0;
                     break L8;
@@ -712,10 +920,10 @@ public final class Virogrid extends od {
                 var10[0] = (int)ao.field_Hb;
                 var35[0] = 50;
                 var10[1] = -(int)ao.field_Hb;
-                var6_ref_int__[0] = (var3 >> -498345404) + 128;
+                var6_ref_int__[0] = (var3 >> 4) + 128;
                 var35[1] = 50;
                 var36[2] = 0;
-                var6_ref_int__[1] = (var3 >> 903526148) + 128;
+                var6_ref_int__[1] = (var3 >> 4) + 128;
                 var35[2] = 80;
                 var37[2] = 128;
                 var7 = si.a(8437759);
@@ -742,12 +950,12 @@ public final class Virogrid extends od {
                   var19 = var26;
                   var12 = var19;
                   var3_ref_int__ = var12;
-                  if (-1 <= (co.field_h ^ -1)) {
+                  if (co.field_h <= 0) {
                     break L10;
                   } else {
                     var6 = 256000;
                     L11: while (true) {
-                      if (-1 <= (var6 ^ -1)) {
+                      if (var6 <= 0) {
                         break L10;
                       } else {
                         var6--;
@@ -759,7 +967,7 @@ public final class Virogrid extends od {
                         var5 = var5 & 16711680;
                         var4 = var4 + (co.field_h * 16711935 & -16711936);
                         var5 = var5 + (16711680 & co.field_h * 65280);
-                        var12[var6] = oh.a(var5, var4) >>> -307183480;
+                        var12[var6] = oh.a(var5, var4) >>> 8;
                         continue L11;
                       }
                     }
@@ -770,18 +978,18 @@ public final class Virogrid extends od {
                 L12: while (true) {
                   if (var4_ref_pm == null) {
                     ul.b((byte) 86);
-                    c.field_d.d(j.field_b + -(c.field_d.field_w >> -520710623), -(c.field_d.field_p >> -80635967) + tm.field_g);
-                    if ((ke.field_p.field_f ^ -1) < -1) {
-                      rk.a(j.field_b - (c.field_d.field_w >> 1175213633), tm.field_g - (c.field_d.field_p >> -1532224799), (c.field_d.field_w >> 754109761) + j.field_b, -(c.field_d.field_p >> -1055677983) + tm.field_g, 40, ke.field_p.field_f, pj.field_d);
-                      rk.a((c.field_d.field_w >> 1488812609) + j.field_b, -(c.field_d.field_p >> -1740488575) + tm.field_g, (c.field_d.field_w >> 878374113) + j.field_b, tm.field_g + (c.field_d.field_p >> -709682687), 40, ke.field_p.field_f, pj.field_d);
-                      rk.a((c.field_d.field_w >> -524379871) + j.field_b, tm.field_g + (c.field_d.field_p >> -1496783103), -(c.field_d.field_w >> -798391391) + j.field_b, tm.field_g - -(c.field_d.field_p >> 1947554369), 40, ke.field_p.field_f, pj.field_d);
-                      rk.a(j.field_b + -(c.field_d.field_w >> -1295443103), tm.field_g - -(c.field_d.field_p >> -1354931231), j.field_b - (c.field_d.field_w >> -1365650591), tm.field_g - (c.field_d.field_p >> -1493913631), 40, ke.field_p.field_f, pj.field_d);
+                    c.field_d.d(j.field_b + -(c.field_d.field_w >> 1), -(c.field_d.field_p >> 1) + tm.field_g);
+                    if (ke.field_p.field_f > 0) {
+                      rk.a(j.field_b - (c.field_d.field_w >> 1), tm.field_g - (c.field_d.field_p >> 1), (c.field_d.field_w >> 1) + j.field_b, -(c.field_d.field_p >> 1) + tm.field_g, 40, ke.field_p.field_f, pj.field_d);
+                      rk.a((c.field_d.field_w >> 1) + j.field_b, -(c.field_d.field_p >> 1) + tm.field_g, (c.field_d.field_w >> 1) + j.field_b, tm.field_g + (c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
+                      rk.a((c.field_d.field_w >> 1) + j.field_b, tm.field_g + (c.field_d.field_p >> 1), -(c.field_d.field_w >> 1) + j.field_b, tm.field_g - -(c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
+                      rk.a(j.field_b + -(c.field_d.field_w >> 1), tm.field_g - -(c.field_d.field_p >> 1), j.field_b - (c.field_d.field_w >> 1), tm.field_g - (c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
                       break L9;
                     } else {
                       break L9;
                     }
                   } else {
-                    rk.a(var4_ref_pm.field_m, var4_ref_pm.field_h, var4_ref_pm.field_r << -949217277, 10000);
+                    rk.a(var4_ref_pm.field_m, var4_ref_pm.field_h, var4_ref_pm.field_r << 3, 10000);
                     var4_ref_pm = (pm) (Object) gd.field_n.a(16213);
                     continue L12;
                   }
@@ -796,11 +1004,11 @@ public final class Virogrid extends od {
                 break L2;
               } else {
                 L14: {
-                  var4 = var3_ref_fl.field_n >> 1113140140;
-                  var6 = 512 + (var3_ref_fl.field_m >> -2081407860);
-                  var5 = var3_ref_fl.field_p >> 926962540;
-                  if (-1 > (var6 ^ -1)) {
-                    df.a((var4 << 872440237) / var6 + (j.field_b << 709710660), (tm.field_g << -1694155324) + (var5 << 2046275885) / var6, 65536 / var6, var3_ref_fl.field_o * 5 / 3, pj.field_d);
+                  var4 = var3_ref_fl.field_n >> 12;
+                  var6 = 512 + (var3_ref_fl.field_m >> 12);
+                  var5 = var3_ref_fl.field_p >> 12;
+                  if (var6 > 0) {
+                    df.a((var4 << 13) / var6 + (j.field_b << 4), (tm.field_g << 4) + (var5 << 13) / var6, 65536 / var6, var3_ref_fl.field_o * 5 / 3, pj.field_d);
                     break L14;
                   } else {
                     break L14;
@@ -851,6 +1059,7 @@ public final class Virogrid extends od {
     }
 
     private final void a(int param0, eh param1) {
+        RuntimeException var3 = null;
         qb var4 = null;
         qb var5 = null;
         qb var6 = null;
@@ -875,90 +1084,139 @@ public final class Virogrid extends od {
         int var25 = 0;
         qb var26 = null;
         qb var27 = null;
-        fk.a(1.0f);
-        fk.a();
-        if (param0 == 1053) {
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
           L0: {
-            var27 = qb.a(param1, "", "scenery_walls");
-            var4 = qb.a(param1, "", "scenery_walls2");
-            var5 = qb.a(param1, "", "scenery_game-table");
-            var6 = qb.a(param1, "", "scenery_floor");
-            var7 = qb.a(param1, "", "scenery_props1");
-            var8 = qb.a(param1, "", "scenery_props2");
-            var9 = qb.a(param1, "", "scenery_ceiling");
-            var10 = qb.a(param1, "", "scenery_door");
-            var11 = qb.a(param1, "", "scenery_game-screen_back");
-            var12 = qb.a(param1, "", "scenery_game-screen_front");
-            var13 = qb.a(param1, "", "scenery_game-screen_front-left");
-            var14 = qb.a(param1, "", "scenery_game-screen_back-left");
-            var15 = qb.a(param1, "", "scenery_game-screen_back-top");
-            var16 = qb.a(param1, "", "scenery_game-screen_front-right");
-            var17 = qb.a(param1, "", "scenery_game-screen_back-right");
-            var18 = qb.a(param1, "", "scenery_game-screen_front-top");
-            var19 = qb.a(param1, "", "scenery_game-screen_front-black");
-            var20 = qb.a(param1, "", "scenery_game-screen_back-black");
-            this.a(var11, (byte) 69);
-            this.a(var12, (byte) 69);
-            this.a(var13, (byte) 69);
-            this.a(var14, (byte) 69);
-            this.a(var16, (byte) 69);
-            this.a(var17, (byte) 69);
-            this.a(var15, (byte) 69);
-            this.a(var18, (byte) 69);
-            this.a(var19, (byte) 69);
-            this.a(var20, (byte) 69);
-            ((Virogrid) this).field_J = this.a((byte) 124, var11);
-            ((Virogrid) this).field_K = this.a((byte) 118, var12);
-            ((Virogrid) this).field_D = this.a((byte) 94, var13);
-            ((Virogrid) this).field_B = this.a((byte) 116, var16);
-            ((Virogrid) this).field_C = this.a((byte) 74, var18);
-            ((Virogrid) this).field_L = this.a((byte) 116, var19);
-            ((Virogrid) this).field_M = this.a((byte) 64, var14);
-            ((Virogrid) this).field_G = this.a((byte) 69, var17);
-            ((Virogrid) this).field_H = this.a((byte) 107, var15);
-            ((Virogrid) this).field_N = this.a((byte) 69, var20);
-            var21 = 96;
-            var22 = 2260;
-            var23 = 0;
-            var24 = 256;
-            var25 = 0;
-            if (db.b((byte) 13, 0)) {
-              var26 = qb.a(param1, "", "ghost_untextured");
-              ri.field_a = (il) (Object) var26.a(var21, var22, var23, var24, var25);
-              var23 = 64;
-              var21 = 42;
+            fk.a(1.0f);
+            fk.a();
+            if (param0 == 1053) {
+              L1: {
+                var27 = qb.a(param1, "", "scenery_walls");
+                var4 = qb.a(param1, "", "scenery_walls2");
+                var5 = qb.a(param1, "", "scenery_game-table");
+                var6 = qb.a(param1, "", "scenery_floor");
+                var7 = qb.a(param1, "", "scenery_props1");
+                var8 = qb.a(param1, "", "scenery_props2");
+                var9 = qb.a(param1, "", "scenery_ceiling");
+                var10 = qb.a(param1, "", "scenery_door");
+                var11 = qb.a(param1, "", "scenery_game-screen_back");
+                var12 = qb.a(param1, "", "scenery_game-screen_front");
+                var13 = qb.a(param1, "", "scenery_game-screen_front-left");
+                var14 = qb.a(param1, "", "scenery_game-screen_back-left");
+                var15 = qb.a(param1, "", "scenery_game-screen_back-top");
+                var16 = qb.a(param1, "", "scenery_game-screen_front-right");
+                var17 = qb.a(param1, "", "scenery_game-screen_back-right");
+                var18 = qb.a(param1, "", "scenery_game-screen_front-top");
+                var19 = qb.a(param1, "", "scenery_game-screen_front-black");
+                var20 = qb.a(param1, "", "scenery_game-screen_back-black");
+                this.a(var11, (byte) 69);
+                this.a(var12, (byte) 69);
+                this.a(var13, (byte) 69);
+                this.a(var14, (byte) 69);
+                this.a(var16, (byte) 69);
+                this.a(var17, (byte) 69);
+                this.a(var15, (byte) 69);
+                this.a(var18, (byte) 69);
+                this.a(var19, (byte) 69);
+                this.a(var20, (byte) 69);
+                ((Virogrid) this).field_J = this.a((byte) 124, var11);
+                ((Virogrid) this).field_K = this.a((byte) 118, var12);
+                ((Virogrid) this).field_D = this.a((byte) 94, var13);
+                ((Virogrid) this).field_B = this.a((byte) 116, var16);
+                ((Virogrid) this).field_C = this.a((byte) 74, var18);
+                ((Virogrid) this).field_L = this.a((byte) 116, var19);
+                ((Virogrid) this).field_M = this.a((byte) 64, var14);
+                ((Virogrid) this).field_G = this.a((byte) 69, var17);
+                ((Virogrid) this).field_H = this.a((byte) 107, var15);
+                ((Virogrid) this).field_N = this.a((byte) 69, var20);
+                var21 = 96;
+                var22 = 2260;
+                var23 = 0;
+                var24 = 256;
+                var25 = 0;
+                if (db.b((byte) 13, 0)) {
+                  var26 = qb.a(param1, "", "ghost_untextured");
+                  ri.field_a = (il) (Object) var26.a(var21, var22, var23, var24, var25);
+                  var23 = 64;
+                  var21 = 42;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              kf.field_c = (il) (Object) var27.a(var21, var22, var23, var24, var25);
+              cm.field_k = (il) (Object) var4.a(var21, var22, var23, var24, var25);
+              fl.field_s = (il) (Object) var5.a(var21, var22, var23, var24, var25);
+              nb.field_x = (il) (Object) var6.a(var21, var22, var23, var24, var25);
+              ba.field_c = (il) (Object) var7.a(var21, var22, var23, var24, var25);
+              wf.field_j = (il) (Object) var8.a(var21, var22, var23, var24, var25);
+              kg.field_c = (il) (Object) var9.a(var21, var22, var23, var24, var25);
+              lk.field_Qb = (il) (Object) var10.a(var21, var22, var23, var24, var25);
+              var13.d();
+              var14.d();
+              var14.a((ll) (Object) var13, 0, 0, 0, false);
+              var16.d();
+              var17.d();
+              var17.a((ll) (Object) var16, 0, 0, 0, false);
+              th.field_y = (il) (Object) var11.a(var21, var22, var23, var24, var25);
+              ee.field_a = (il) (Object) var12.a(var21, var22, var23, var24, var25);
+              qg.field_h = (il) (Object) var14.a(var21, var22, var23, var24, var25);
+              jg.field_i = (il) (Object) var17.a(var21, var22, var23, var24, var25);
+              pj.field_a = (il) (Object) var15.a(var21, var22, var23, var24, var25);
+              ab.field_L = (il) (Object) var13.a(var21, var22, var23, var24, var25);
+              rc.field_o = (il) (Object) var16.a(var21, var22, var23, var24, var25);
+              og.field_l = (il) (Object) var18.a(var21, var22, var23, var24, var25);
+              hn.field_x = (il) (Object) var20.a(var21, var22, var23, var24, var25);
+              td.field_i = (il) (Object) var19.a(var21, var22, var23, var24, var25);
               break L0;
             } else {
-              break L0;
+              return;
             }
           }
-          kf.field_c = (il) (Object) var27.a(var21, var22, var23, var24, var25);
-          cm.field_k = (il) (Object) var4.a(var21, var22, var23, var24, var25);
-          fl.field_s = (il) (Object) var5.a(var21, var22, var23, var24, var25);
-          nb.field_x = (il) (Object) var6.a(var21, var22, var23, var24, var25);
-          ba.field_c = (il) (Object) var7.a(var21, var22, var23, var24, var25);
-          wf.field_j = (il) (Object) var8.a(var21, var22, var23, var24, var25);
-          kg.field_c = (il) (Object) var9.a(var21, var22, var23, var24, var25);
-          lk.field_Qb = (il) (Object) var10.a(var21, var22, var23, var24, var25);
-          var13.d();
-          var14.d();
-          var14.a((ll) (Object) var13, 0, 0, 0, false);
-          var16.d();
-          var17.d();
-          var17.a((ll) (Object) var16, 0, 0, 0, false);
-          th.field_y = (il) (Object) var11.a(var21, var22, var23, var24, var25);
-          ee.field_a = (il) (Object) var12.a(var21, var22, var23, var24, var25);
-          qg.field_h = (il) (Object) var14.a(var21, var22, var23, var24, var25);
-          jg.field_i = (il) (Object) var17.a(var21, var22, var23, var24, var25);
-          pj.field_a = (il) (Object) var15.a(var21, var22, var23, var24, var25);
-          ab.field_L = (il) (Object) var13.a(var21, var22, var23, var24, var25);
-          rc.field_o = (il) (Object) var16.a(var21, var22, var23, var24, var25);
-          og.field_l = (il) (Object) var18.a(var21, var22, var23, var24, var25);
-          hn.field_x = (il) (Object) var20.a(var21, var22, var23, var24, var25);
-          td.field_i = (il) (Object) var19.a(var21, var22, var23, var24, var25);
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("Virogrid.GB(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
     }
 
@@ -1135,7 +1393,7 @@ public final class Virogrid extends od {
                     }
                   }
                   ti.c(114);
-                  if ((var2 ^ -1) != -2) {
+                  if (var2 != 1) {
                     L12: {
                       if (aj.field_a) {
                         L13: {
@@ -1221,7 +1479,7 @@ public final class Virogrid extends od {
               kn.field_J = sh.field_qb.h(-117);
               continue L6;
             } else {
-              if (-15 == (ci.field_q ^ -1)) {
+              if (ci.field_q == 14) {
                 pe discarded$6 = vm.a((byte) 30, ih.field_d);
                 wm.c((byte) -86);
                 jj.a(ra.a(8742, 2), ci.j(param0 + -126), ra.field_e, 8, eg.d(1048576), 1024, 150, ra.a(8742, 2000), wn.field_j.length, ri.b((byte) 51));
@@ -1279,7 +1537,7 @@ public final class Virogrid extends od {
                   continue L6;
                 } else {
                   L20: {
-                    if ((ci.field_q ^ -1) != -11) {
+                    if (ci.field_q != 10) {
                       break L20;
                     } else {
                       if (!aj.field_a) {
@@ -1298,7 +1556,7 @@ public final class Virogrid extends od {
                         if (ci.field_q == 58) {
                           break L21;
                         } else {
-                          if (-60 != (ci.field_q ^ -1)) {
+                          if (ci.field_q != 59) {
                             L22: {
                               var2_ref = null;
                               if (dd.field_a) {
@@ -1315,7 +1573,7 @@ public final class Virogrid extends od {
                             }
                             L23: {
                               if (var2_ref != null) {
-                                if (-61 == (ci.field_q ^ -1)) {
+                                if (ci.field_q == 60) {
                                   L24: {
                                     var3 = sh.field_qb.g(11132);
                                     var4_int = sh.field_qb.g(11132);
@@ -1350,8 +1608,8 @@ public final class Virogrid extends od {
                                     ((ic) var2_ref).field_A.field_c = -1;
                                     continue L6;
                                   } else {
-                                    if (-63 != (ci.field_q ^ -1)) {
-                                      if (-64 != (ci.field_q ^ -1)) {
+                                    if (ci.field_q != 62) {
+                                      if (ci.field_q != 63) {
                                         if (64 != ci.field_q) {
                                           if (ci.field_q == 65) {
                                             ((ic) var2_ref).field_C.field_b = sh.field_qb.g(param0 ^ 11132);
@@ -1393,7 +1651,7 @@ public final class Virogrid extends od {
                                         ((ic) var2_ref).field_C.d(-39, var3);
                                         ((ic) var2_ref).field_C.c((int) sh.field_qb.a((byte) -103), 2);
                                         var4 = var2_ref;
-                                        if (1 == (((ic) var4).field_e ^ -1)) {
+                                        if (((ic) var4).field_e == -2) {
                                           break L25;
                                         } else {
                                           ((ic) var4).a(false, -1, 22273, false);
@@ -1453,7 +1711,7 @@ public final class Virogrid extends od {
                       wm.c((byte) -86);
                       var2 = sh.field_qb.g(11132);
                       var3 = sh.field_qb.g(11132);
-                      if ((sh.field_qb.g(11132) ^ -1) == -1) {
+                      if (sh.field_qb.g(11132) == 0) {
                         stackOut_45_0 = 0;
                         stackIn_46_0 = stackOut_45_0;
                         break L29;
@@ -1467,15 +1725,15 @@ public final class Virogrid extends od {
                     var5_ref_String__ = new String[2];
                     var7 = 0;
                     L30: while (true) {
-                      if ((var5_ref_String__.length ^ -1) >= (var7 ^ -1)) {
+                      if (~var5_ref_String__.length >= ~var7) {
                         L31: {
                           var6 = -2;
                           var6 = sh.field_qb.a((byte) 62);
-                          var6 = var6 - (var6 >>> 677961951);
+                          var6 = var6 - (var6 >>> 31);
                           var7_ref_ic = new ic(true, var2, var5_ref_String__, var6, var4_int != 0, var3, 0);
                           var7_ref_ic.field_C.a((jc) (Object) sh.field_qb, (byte) 57);
                           var7_ref_ic.field_A.a(false);
-                          if (-58 != (ci.field_q ^ -1)) {
+                          if (ci.field_q != 57) {
                             ei.field_b = var7_ref_ic;
                             on.field_d = true;
                             var8 = var7_ref_ic.field_C.field_c[0];
@@ -1515,7 +1773,7 @@ public final class Virogrid extends od {
                               stackIn_56_0 = stackOut_55_0;
                               stackIn_56_1 = stackOut_55_1;
                               stackIn_56_2 = stackOut_55_2;
-                              if (-1 != (var6 ^ -1)) {
+                              if (var6 != 0) {
                                 stackOut_57_0 = (String[]) (Object) stackIn_57_0;
                                 stackOut_57_1 = (String[]) (Object) stackIn_57_1;
                                 stackOut_57_2 = stackIn_57_2;
@@ -1573,10 +1831,70 @@ public final class Virogrid extends od {
     }
 
     private final int[] a(byte param0, qb param1) {
-        if (param0 <= 61) {
-            ck discarded$0 = Virogrid.b((byte) 94, false);
+        RuntimeException var3 = null;
+        int[] stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int[] stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 > 61) {
+                break L1;
+              } else {
+                ck discarded$2 = Virogrid.b((byte) 94, false);
+                break L1;
+              }
+            }
+            stackOut_2_0 = bi.field_c;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("Virogrid.VA(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return bi.field_c;
+        return stackIn_3_0;
     }
 
     private final void e(boolean param0) {
@@ -1623,30 +1941,6 @@ public final class Virogrid extends od {
         int stackIn_35_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_71_0 = 0;
-        il stackIn_90_0 = null;
-        il stackIn_91_0 = null;
-        il stackIn_92_0 = null;
-        int stackIn_92_1 = 0;
-        il stackIn_100_0 = null;
-        il stackIn_101_0 = null;
-        il stackIn_102_0 = null;
-        int stackIn_102_1 = 0;
-        il stackIn_105_0 = null;
-        il stackIn_106_0 = null;
-        il stackIn_107_0 = null;
-        int stackIn_107_1 = 0;
-        il stackIn_110_0 = null;
-        il stackIn_111_0 = null;
-        il stackIn_112_0 = null;
-        int stackIn_112_1 = 0;
-        il stackIn_115_0 = null;
-        il stackIn_116_0 = null;
-        il stackIn_117_0 = null;
-        int stackIn_117_1 = 0;
-        il stackIn_119_0 = null;
-        il stackIn_120_0 = null;
-        il stackIn_121_0 = null;
-        int stackIn_121_1 = 0;
         int stackOut_26_0 = 0;
         int stackOut_25_0 = 0;
         int stackOut_29_0 = 0;
@@ -1657,46 +1951,16 @@ public final class Virogrid extends od {
         int stackOut_62_0 = 0;
         int stackOut_70_0 = 0;
         int stackOut_69_0 = 0;
-        il stackOut_99_0 = null;
-        il stackOut_101_0 = null;
-        int stackOut_101_1 = 0;
-        il stackOut_100_0 = null;
-        int stackOut_100_1 = 0;
-        il stackOut_109_0 = null;
-        il stackOut_111_0 = null;
-        int stackOut_111_1 = 0;
-        il stackOut_110_0 = null;
-        int stackOut_110_1 = 0;
-        il stackOut_114_0 = null;
-        il stackOut_116_0 = null;
-        int stackOut_116_1 = 0;
-        il stackOut_115_0 = null;
-        int stackOut_115_1 = 0;
-        il stackOut_118_0 = null;
-        il stackOut_120_0 = null;
-        int stackOut_120_1 = 0;
-        il stackOut_119_0 = null;
-        int stackOut_119_1 = 0;
-        il stackOut_104_0 = null;
-        il stackOut_106_0 = null;
-        int stackOut_106_1 = 0;
-        il stackOut_105_0 = null;
-        int stackOut_105_1 = 0;
-        il stackOut_89_0 = null;
-        il stackOut_91_0 = null;
-        int stackOut_91_1 = 0;
-        il stackOut_90_0 = null;
-        int stackOut_90_1 = 0;
         L0: {
           L1: {
             var16 = null;
             var17 = field_F ? 1 : 0;
-            var2 = param0 ? 1 : 0;
+            var2 = 1;
             if (i.field_y != hm.field_c) {
               break L1;
             } else {
               if (pg.field_g == nf.field_g) {
-                if ((i.field_y ^ -1) == 1) {
+                if (i.field_y == -2) {
                   ej.a(false, 25680);
                   var2 = 0;
                   break L0;
@@ -1709,9 +1973,9 @@ public final class Virogrid extends od {
               }
             }
           }
-          if (1 != (i.field_y ^ -1)) {
-            if (1 != (hm.field_c ^ -1)) {
-              if ((we.field_l ^ -1) <= -17) {
+          if (i.field_y != -2) {
+            if (hm.field_c != -2) {
+              if (we.field_l >= 16) {
                 lm.a(hm.field_c, 1 + (-we.field_l + 32), false, pg.field_g, 0);
                 break L0;
               } else {
@@ -1729,7 +1993,7 @@ public final class Virogrid extends od {
               }
             }
           } else {
-            if (-17 >= (we.field_l ^ -1)) {
+            if (we.field_l >= 16) {
               lm.a(hm.field_c, -1, false, pg.field_g, 0);
               break L0;
             } else {
@@ -1758,7 +2022,7 @@ public final class Virogrid extends od {
               if (var4 >= 3) {
                 var4 = 3;
                 L4: while (true) {
-                  if ((var4 ^ -1) <= (var33.length ^ -1)) {
+                  if (~var4 <= ~var33.length) {
                     L5: {
                       if (vm.field_d[2] <= 0.0) {
                         stackOut_26_0 = 0;
@@ -1804,7 +2068,7 @@ public final class Virogrid extends od {
                     L9: {
                       L10: {
                         var6 = stackIn_35_0;
-                        if ((we.field_c.field_F ^ -1) != (((Virogrid) this).field_E ^ -1)) {
+                        if (~we.field_c.field_F != ~((Virogrid) this).field_E) {
                           break L10;
                         } else {
                           if (da.field_k[0] != vm.field_d[0]) {
@@ -1942,9 +2206,9 @@ public final class Virogrid extends od {
                       var25 = var30;
                       var20 = var25;
                       var10 = var20;
-                      var8[0] = (int)ao.field_Hb << 2115963748;
+                      var8[0] = (int)ao.field_Hb << 4;
                       var34[0] = 800;
-                      var8[1] = -(int)ao.field_Hb << 62284740;
+                      var8[1] = -(int)ao.field_Hb << 4;
                       var35[0] = var7;
                       var34[1] = 800;
                       var36[2] = 0;
@@ -1955,7 +2219,7 @@ public final class Virogrid extends od {
                       if (ke.field_p.field_m) {
                         L20: {
                           var11 = id.field_r % 128;
-                          if (-65 < (var11 ^ -1)) {
+                          if (var11 < 64) {
                             stackOut_70_0 = var11;
                             stackIn_71_0 = stackOut_70_0;
                             break L20;
@@ -1997,7 +2261,7 @@ public final class Virogrid extends od {
                             var11_ref_double__ = var22;
                             var12 = 0;
                             L23: while (true) {
-                              if ((var12 ^ -1) <= (var37.length ^ -1)) {
+                              if (~var12 <= ~var37.length) {
                                 si.a(nk.field_K, new double[3], var11_ref_double__, (double)ao.field_Hb, (double)we.field_k, c.field_d, 7208960, 34668544, 0, 26148864, ke.field_p.field_k);
                                 break L22;
                               } else {
@@ -2023,164 +2287,56 @@ public final class Virogrid extends od {
                     L24: while (true) {
                       if (var16_ref == null) {
                         if (var4 != 0) {
-                          L25: {
-                            stackOut_99_0 = th.field_y;
-                            stackIn_101_0 = stackOut_99_0;
-                            stackIn_100_0 = stackOut_99_0;
-                            if (param0) {
-                              stackOut_101_0 = (il) (Object) stackIn_101_0;
-                              stackOut_101_1 = 0;
-                              stackIn_102_0 = stackOut_101_0;
-                              stackIn_102_1 = stackOut_101_1;
-                              break L25;
-                            } else {
-                              stackOut_100_0 = (il) (Object) stackIn_100_0;
-                              stackOut_100_1 = 1;
-                              stackIn_102_0 = stackOut_100_0;
-                              stackIn_102_1 = stackOut_100_1;
-                              break L25;
-                            }
-                          }
-                          sj.a(stackIn_102_0, stackIn_102_1 != 0, var33, ((Virogrid) this).field_J);
+                          sj.a(th.field_y, false, var33, ((Virogrid) this).field_J);
                           sj.a(pj.field_a, false, var33, ((Virogrid) this).field_H);
                           if (var5 != 0) {
-                            L26: {
-                              stackOut_109_0 = qg.field_h;
-                              stackIn_111_0 = stackOut_109_0;
-                              stackIn_110_0 = stackOut_109_0;
-                              if (param0) {
-                                stackOut_111_0 = (il) (Object) stackIn_111_0;
-                                stackOut_111_1 = 0;
-                                stackIn_112_0 = stackOut_111_0;
-                                stackIn_112_1 = stackOut_111_1;
-                                break L26;
-                              } else {
-                                stackOut_110_0 = (il) (Object) stackIn_110_0;
-                                stackOut_110_1 = 1;
-                                stackIn_112_0 = stackOut_110_0;
-                                stackIn_112_1 = stackOut_110_1;
-                                break L26;
-                              }
-                            }
-                            L27: {
-                              sj.a(stackIn_112_0, stackIn_112_1 != 0, var33, ((Virogrid) this).field_M);
+                            L25: {
+                              sj.a(qg.field_h, false, var33, ((Virogrid) this).field_M);
                               if (var6 != 0) {
-                                L28: {
-                                  stackOut_114_0 = rc.field_o;
-                                  stackIn_116_0 = stackOut_114_0;
-                                  stackIn_115_0 = stackOut_114_0;
-                                  if (param0) {
-                                    stackOut_116_0 = (il) (Object) stackIn_116_0;
-                                    stackOut_116_1 = 0;
-                                    stackIn_117_0 = stackOut_116_0;
-                                    stackIn_117_1 = stackOut_116_1;
-                                    break L28;
-                                  } else {
-                                    stackOut_115_0 = (il) (Object) stackIn_115_0;
-                                    stackOut_115_1 = 1;
-                                    stackIn_117_0 = stackOut_115_0;
-                                    stackIn_117_1 = stackOut_115_1;
-                                    break L28;
-                                  }
-                                }
-                                sj.a(stackIn_117_0, stackIn_117_1 != 0, var33, ((Virogrid) this).field_B);
-                                break L27;
+                                sj.a(rc.field_o, false, var33, ((Virogrid) this).field_B);
+                                break L25;
                               } else {
-                                break L27;
+                                break L25;
                               }
                             }
-                            L29: {
-                              stackOut_118_0 = jg.field_i;
-                              stackIn_120_0 = stackOut_118_0;
-                              stackIn_119_0 = stackOut_118_0;
-                              if (param0) {
-                                stackOut_120_0 = (il) (Object) stackIn_120_0;
-                                stackOut_120_1 = 0;
-                                stackIn_121_0 = stackOut_120_0;
-                                stackIn_121_1 = stackOut_120_1;
-                                break L29;
-                              } else {
-                                stackOut_119_0 = (il) (Object) stackIn_119_0;
-                                stackOut_119_1 = 1;
-                                stackIn_121_0 = stackOut_119_0;
-                                stackIn_121_1 = stackOut_119_1;
-                                break L29;
-                              }
-                            }
-                            sj.a(stackIn_121_0, stackIn_121_1 != 0, var33, ((Virogrid) this).field_G);
+                            sj.a(jg.field_i, false, var33, ((Virogrid) this).field_G);
                             break L2;
                           } else {
-                            L30: {
+                            L26: {
                               sj.a(jg.field_i, false, var33, ((Virogrid) this).field_G);
                               if (var6 == 0) {
-                                break L30;
+                                break L26;
                               } else {
-                                L31: {
-                                  stackOut_104_0 = ab.field_L;
-                                  stackIn_106_0 = stackOut_104_0;
-                                  stackIn_105_0 = stackOut_104_0;
-                                  if (param0) {
-                                    stackOut_106_0 = (il) (Object) stackIn_106_0;
-                                    stackOut_106_1 = 0;
-                                    stackIn_107_0 = stackOut_106_0;
-                                    stackIn_107_1 = stackOut_106_1;
-                                    break L31;
-                                  } else {
-                                    stackOut_105_0 = (il) (Object) stackIn_105_0;
-                                    stackOut_105_1 = 1;
-                                    stackIn_107_0 = stackOut_105_0;
-                                    stackIn_107_1 = stackOut_105_1;
-                                    break L31;
-                                  }
-                                }
-                                sj.a(stackIn_107_0, stackIn_107_1 != 0, var33, ((Virogrid) this).field_D);
-                                break L30;
+                                sj.a(ab.field_L, false, var33, ((Virogrid) this).field_D);
+                                break L26;
                               }
                             }
                             sj.a(qg.field_h, false, var33, ((Virogrid) this).field_M);
                             break L2;
                           }
                         } else {
-                          L32: {
-                            stackOut_89_0 = ee.field_a;
-                            stackIn_91_0 = stackOut_89_0;
-                            stackIn_90_0 = stackOut_89_0;
-                            if (param0) {
-                              stackOut_91_0 = (il) (Object) stackIn_91_0;
-                              stackOut_91_1 = 0;
-                              stackIn_92_0 = stackOut_91_0;
-                              stackIn_92_1 = stackOut_91_1;
-                              break L32;
-                            } else {
-                              stackOut_90_0 = (il) (Object) stackIn_90_0;
-                              stackOut_90_1 = 1;
-                              stackIn_92_0 = stackOut_90_0;
-                              stackIn_92_1 = stackOut_90_1;
-                              break L32;
-                            }
-                          }
-                          sj.a(stackIn_92_0, stackIn_92_1 != 0, var33, ((Virogrid) this).field_K);
+                          sj.a(ee.field_a, false, var33, ((Virogrid) this).field_K);
                           sj.a(og.field_l, false, var33, ((Virogrid) this).field_C);
                           if (var5 == 0) {
-                            L33: {
+                            L27: {
                               sj.a(rc.field_o, false, var33, ((Virogrid) this).field_B);
                               if (var6 == 0) {
-                                break L33;
+                                break L27;
                               } else {
                                 sj.a(qg.field_h, false, var33, ((Virogrid) this).field_M);
-                                break L33;
+                                break L27;
                               }
                             }
                             sj.a(ab.field_L, false, var33, ((Virogrid) this).field_D);
                             break L2;
                           } else {
-                            L34: {
+                            L28: {
                               sj.a(ab.field_L, false, var33, ((Virogrid) this).field_D);
                               if (var6 == 0) {
-                                break L34;
+                                break L28;
                               } else {
                                 sj.a(jg.field_i, false, var33, ((Virogrid) this).field_G);
-                                break L34;
+                                break L28;
                               }
                             }
                             sj.a(rc.field_o, false, var33, ((Virogrid) this).field_B);
@@ -2188,19 +2344,19 @@ public final class Virogrid extends od {
                           }
                         }
                       } else {
-                        L35: {
-                          var11 = -(pe.field_j[0] << -603747578) + (var16_ref.field_n >> 664161928);
-                          var7 = -(pe.field_j[2] << -1367555290) + (var16_ref.field_m >> -435917880);
-                          var12 = -(pe.field_j[1] << 533482790) + (var16_ref.field_p >> 1925002888);
+                        L29: {
+                          var11 = -(pe.field_j[0] << 6) + (var16_ref.field_n >> 8);
+                          var7 = -(pe.field_j[2] << 6) + (var16_ref.field_m >> 8);
+                          var12 = -(pe.field_j[1] << 6) + (var16_ref.field_p >> 8);
                           var13 = pe.field_j[5] * var7 + var12 * pe.field_j[4] + var11 * pe.field_j[3];
                           var15 = var7 * pe.field_j[11] + (var12 * pe.field_j[10] + var11 * pe.field_j[9]);
                           var14 = var7 * pe.field_j[8] + var12 * pe.field_j[7] + pe.field_j[6] * var11;
-                          var7 = var15 >> 144557622;
-                          if (-1 <= (var15 ^ -1)) {
-                            break L35;
+                          var7 = var15 >> 22;
+                          if (var15 <= 0) {
+                            break L29;
                           } else {
-                            df.a((j.field_b << 903978180) - -((var13 >> 1501989897) / var7), (var14 >> -890619063) / var7 + (tm.field_g << -1979774556), 16384 / var7, var16_ref.field_o * 5 / 3, pj.field_d);
-                            break L35;
+                            df.a((j.field_b << 4) - -((var13 >> 9) / var7), (var14 >> 9) / var7 + (tm.field_g << 4), 16384 / var7, var16_ref.field_o * 5 / 3, pj.field_d);
+                            break L29;
                           }
                         }
                         var16_ref = (fl) (Object) sh.field_tb.a(16213);
@@ -2214,22 +2370,22 @@ public final class Virogrid extends od {
                   }
                 }
               } else {
-                var3[var4] = pe.field_j[var4] << -188484317;
+                var3[var4] = pe.field_j[var4] << 3;
                 var4++;
                 continue L3;
               }
             }
           }
         }
-        L36: {
+        L30: {
           if (i.field_y != 10) {
-            break L36;
+            break L30;
           } else {
-            if (-11 != (hm.field_c ^ -1)) {
-              break L36;
+            if (hm.field_c != 10) {
+              break L30;
             } else {
               ij.a((byte) 105);
-              break L36;
+              break L30;
             }
           }
         }
@@ -2251,7 +2407,7 @@ public final class Virogrid extends od {
         var7 = field_F ? 1 : 0;
         if (!param0) {
           L0: {
-            if (-1 == (tg.field_x ^ -1)) {
+            if (tg.field_x == 0) {
               L1: {
                 var3 = 0;
                 var4 = 0;
@@ -2261,7 +2417,7 @@ public final class Virogrid extends od {
                       if (i.field_y != hm.field_c) {
                         break L3;
                       } else {
-                        if ((pg.field_g ^ -1) == (nf.field_g ^ -1)) {
+                        if (~pg.field_g == ~nf.field_g) {
                           if (i.field_y == -1) {
                             if (!aj.field_a) {
                               vg.field_I.a(-104, true);
@@ -2279,7 +2435,7 @@ public final class Virogrid extends od {
                               break L2;
                             }
                           } else {
-                            if ((i.field_y ^ -1) != 1) {
+                            if (i.field_y != -2) {
                               if (!mf.a(107, i.field_y)) {
                                 break L2;
                               } else {
@@ -2297,7 +2453,7 @@ public final class Virogrid extends od {
                       }
                     }
                     we.field_l = we.field_l + 1;
-                    if (-33 == (we.field_l ^ -1)) {
+                    if (we.field_l == 32) {
                       wm.c((byte) -86);
                       break L2;
                     } else {
@@ -2481,9 +2637,9 @@ public final class Virogrid extends od {
                 break L0;
               }
             } else {
-              if (-2 == (tg.field_x ^ -1)) {
+              if (tg.field_x == 1) {
                 wa.field_K = wa.field_K + 1;
-                if ((wa.field_K ^ -1) == -17) {
+                if (wa.field_K == 16) {
                   L20: {
                     if (!a.field_D) {
                       dn.a(8192);
@@ -2501,7 +2657,7 @@ public final class Virogrid extends od {
               } else {
                 if (2 != tg.field_x) {
                   wa.field_K = wa.field_K - 1;
-                  if ((wa.field_K ^ -1) == -1) {
+                  if (wa.field_K == 0) {
                     tg.field_x = 0;
                     break L0;
                   } else {
@@ -2562,7 +2718,7 @@ public final class Virogrid extends od {
             }
           }
           L25: {
-            if ((hm.field_c ^ -1) != 3) {
+            if (hm.field_c != -4) {
               break L25;
             } else {
               gk.field_g.g(9, 8);
@@ -2594,7 +2750,7 @@ public final class Virogrid extends od {
                     if (!vg.field_I.field_t) {
                       break L28;
                     } else {
-                      if ((vg.field_I.field_C.field_u ^ -1) >= (sh.a(4712, 40000) ^ -1)) {
+                      if (~vg.field_I.field_C.field_u >= ~sh.a(4712, 40000)) {
                         break L28;
                       } else {
                         if (!vg.field_I.field_l) {
@@ -2610,7 +2766,7 @@ public final class Virogrid extends od {
                   }
                 }
               }
-              if (-1 <= (hj.field_h ^ -1)) {
+              if (hj.field_h <= 0) {
                 var3 = 1 + c.field_a;
                 if (ca.field_G < var3) {
                   ca.field_G = 0;
@@ -2623,7 +2779,7 @@ public final class Virogrid extends od {
                 L29: {
                   hj.field_h = hj.field_h - 1;
                   var3 = c.field_a + -4;
-                  if (-1 >= (var3 ^ -1)) {
+                  if (var3 >= 0) {
                     break L29;
                   } else {
                     var3 = 0;
@@ -2639,7 +2795,7 @@ public final class Virogrid extends od {
                 }
               }
             } else {
-              if (-1 != (sh.a(4712, 1000) ^ -1)) {
+              if (sh.a(4712, 1000) != 0) {
                 break L27;
               } else {
                 pe discarded$11 = gi.a(dj.field_f[sh.a(4712, 3)], 100, 24);
@@ -2659,7 +2815,7 @@ public final class Virogrid extends od {
         mg var4 = new mg(57, 57);
         pj.a(var4, 256);
         df.c(29, 29, 27, 263172);
-        for (var5 = 23; -1 >= (var5 ^ -1); var5--) {
+        for (var5 = 23; var5 >= 0; var5--) {
             df.c(29, 29, var5, param2 - -(var5 * param0));
         }
         ul.b((byte) 93);
@@ -2670,19 +2826,26 @@ public final class Virogrid extends od {
     }
 
     final static void a(eh param0, byte param1) {
-        mg var2 = new mg(param0.a("final_frame.jpg", 100, ""), (java.awt.Component) (Object) fi.field_v);
-        int var3 = var2.field_w;
-        int var4 = var2.field_p;
-        lm.a(0);
-        int var5 = 120 / ((33 - param1) / 33);
-        nd.field_d = new mg(var3, 3 * var4 / 4);
-        nd.field_d.b();
-        var2.b(0, 0);
-        dn.field_c = new mg(var3, -nd.field_d.field_p + var4);
-        dn.field_c.b();
-        var2.b(0, -nd.field_d.field_p);
-        dn.field_c.field_x = nd.field_d.field_p;
-        ai.a(true);
+        mg var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        try {
+            var2 = new mg(param0.a("final_frame.jpg", 100, ""), (java.awt.Component) (Object) fi.field_v);
+            var3 = var2.field_w;
+            var4 = var2.field_p;
+            lm.a(0);
+            int var5 = 120 / ((33 - param1) / 33);
+            nd.field_d = new mg(var3, 3 * var4 / 4);
+            nd.field_d.b();
+            var2.b(0, 0);
+            dn.field_c = new mg(var3, -nd.field_d.field_p + var4);
+            dn.field_c.b();
+            var2.b(0, -nd.field_d.field_p);
+            dn.field_c.field_x = nd.field_d.field_p;
+            ai.a(true);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "Virogrid.CB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     private final void t(int param0) {
@@ -2734,7 +2897,7 @@ public final class Virogrid extends od {
         rg.a(param0 ^ 64);
         uk.b(param0 + -6490);
         og.b(param0 + 74);
-        me.a(param0 + 0);
+        me.a(param0);
         cb.b(3981);
         df.a();
         eh.a((byte) -104);
@@ -2794,9 +2957,9 @@ public final class Virogrid extends od {
         an.a((byte) 26);
         pl.a((byte) -120);
         pj.a(false);
-        oe.b(param0 + 0);
+        oe.b(param0);
         hk.d(false);
-        jm.a(param0 + 0);
+        jm.a(param0);
         he.g(7);
         fk.c();
         vl.a(false);
@@ -2895,7 +3058,7 @@ public final class Virogrid extends od {
         dc.h(-126);
         gg.g(-1);
         fd.e(1);
-        ma.d(param0 ^ 0);
+        ma.d(param0);
         jk.a((byte) 110);
         nj.b();
         tk.a(0);
@@ -2968,7 +3131,7 @@ public final class Virogrid extends od {
         cc.b(false);
         a.c(false);
         ae.a((byte) -125);
-        kn.h(param0 ^ 0);
+        kn.h(param0);
         oc.c(false);
         hn.a((byte) -9);
         ai.b(false);
@@ -3021,13 +3184,13 @@ public final class Virogrid extends od {
     }
 
     private final void a(qb param0, byte param1) {
-        param0.a(0, 154, 0);
-        if (param1 != 69) {
-            Object var4 = null;
-            int[] discarded$0 = this.a((byte) -76, (qb) null);
+        try {
+            param0.a(0, 154, 0);
+            param0.a(256, 256, 256, 32);
+            param0.a(0, -154, 0);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "Virogrid.TA(" + (param0 != null ? "{...}" : "null") + 44 + 69 + 41);
         }
-        param0.a(256, 256, 256, 32);
-        param0.a(0, -154, 0);
     }
 
     public Virogrid() {

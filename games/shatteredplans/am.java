@@ -32,15 +32,19 @@ final class am extends qr {
 
     am(long param0, qr param1, qr param2, ur param3, qr param4, String param5, String param6) {
         super(param0, param1);
-        ((am) this).field_Eb = new qr(0L, (qr) null);
-        ((am) this).field_Db = new ub(0L, ((am) this).field_Eb, param2, param3);
-        ((am) this).field_Fb = new qr(0L, param4);
-        ((am) this).field_yb = new qr(0L, param4);
-        ((am) this).field_Fb.field_z = param5;
-        ((am) this).field_yb.field_z = param6;
-        ((am) this).a(4, (qr) (Object) ((am) this).field_Db);
-        ((am) this).a(4, ((am) this).field_Fb);
-        ((am) this).a(4, ((am) this).field_yb);
+        try {
+            ((am) this).field_Eb = new qr(0L, (qr) null);
+            ((am) this).field_Db = new ub(0L, ((am) this).field_Eb, param2, param3);
+            ((am) this).field_Fb = new qr(0L, param4);
+            ((am) this).field_yb = new qr(0L, param4);
+            ((am) this).field_Fb.field_z = param5;
+            ((am) this).field_yb.field_z = param6;
+            ((am) this).a(4, (qr) (Object) ((am) this).field_Db);
+            ((am) this).a(4, ((am) this).field_Fb);
+            ((am) this).a(4, ((am) this).field_yb);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "am.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -74,36 +78,116 @@ final class am extends qr {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
         int var9 = 0;
-        int var10 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var6 = param3 / 10 + 1;
-        int var7 = 96 / var6;
-        if (param2 >= -14) {
-            return;
-        }
-        jq.a(96, 127, param0, 96 - var7, param4, param5, false, param1);
-        int var8 = 96;
-        for (var9 = 1; var9 < var6; var9++) {
-            var8 = var8 - var7;
-            jq.a(var8, 78, param0, -var7 + var8, param4, var9 * 10 + param5, true, param1);
+        int var10 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var10 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          L0: {
+            var6_int = param3 / 10 + 1;
+            var7 = 96 / var6_int;
+            if (param2 < -14) {
+              jq.a(96, 127, param0, 96 - var7, param4, param5, false, param1);
+              var8 = 96;
+              var9 = 1;
+              L1: while (true) {
+                if (var9 >= var6_int) {
+                  break L0;
+                } else {
+                  var8 = var8 - var7;
+                  jq.a(var8, 78, param0, -var7 + var8, param4, var9 * 10 + param5, true, param1);
+                  var9++;
+                  continue L1;
+                }
+              }
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw r.a((Throwable) (Object) var6, "am.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
     final static void a(int param0, int param1, bi param2, int param3, int param4, int param5, byte param6) {
-        int var10 = ShatteredPlansClient.field_F ? 1 : 0;
-        param1 = param1 - param2.field_x;
-        param3 = param3 - param2.field_t;
-        int var8 = 103 / ((param6 - 72) / 52);
-        int var7 = param1 * param2.field_z - -param3;
-        int var9 = gf.field_b * param5 + param0;
-        while (true) {
-            param4--;
-            if (param4 < 0) {
-                break;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        var10 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          L0: {
+            param1 = param1 - param2.field_x;
+            param3 = param3 - param2.field_t;
+            var8 = 103 / ((param6 - 72) / 52);
+            var7_int = param1 * param2.field_z - -param3;
+            var9 = gf.field_b * param5 + param0;
+            L1: while (true) {
+              param4--;
+              if (param4 < 0) {
+                break L0;
+              } else {
+                int incrementValue$8 = var9;
+                var9++;
+                int incrementValue$9 = var7_int;
+                var7_int++;
+                gf.field_h[incrementValue$8] = param2.field_B[incrementValue$9];
+                continue L1;
+              }
             }
-            var9++;
-            var7++;
-            gf.field_h[var9] = param2.field_B[var7];
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var7 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var7;
+            stackOut_5_1 = new StringBuilder().append("am.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param2 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

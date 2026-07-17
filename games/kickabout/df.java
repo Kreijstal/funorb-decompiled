@@ -11,11 +11,8 @@ final class df extends dj {
     final static void d(boolean param0) {
         nl var1 = null;
         nl var2 = null;
-        if (!param0) {
-            int discarded$0 = df.g(57);
-        }
         if (!(0 == et.field_d.field_R[1].field_g)) {
-            if (!((et.field_d.field_V.field_m ^ -1) != -2)) {
+            if (!(et.field_d.field_V.field_m != 1)) {
                 var1 = et.field_d.a((byte) 104, 0);
                 var2 = et.field_d.a((byte) -71, 1);
                 ej.b(var1.f(-121) + -var2.f(-99), -2, var1.a(true) + -var2.a(true), 10);
@@ -215,10 +212,10 @@ final class df extends dj {
               }
             }
           } else {
-            if ((((df) this).field_C ^ -1) == -2) {
+            if (((df) this).field_C == 1) {
               var3 = 0;
               L2: while (true) {
-                if ((var3 ^ -1) <= -3) {
+                if (var3 >= 2) {
                   var3 = 0;
                   L3: while (true) {
                     if (var3 >= 4) {
@@ -243,7 +240,7 @@ final class df extends dj {
                   }
                 } else {
                   L5: {
-                    if ((var3 ^ -1) != -2) {
+                    if (var3 != 1) {
                       stackOut_7_0 = 0;
                       stackIn_8_0 = stackOut_7_0;
                       break L5;
@@ -308,59 +305,74 @@ final class df extends dj {
     }
 
     final static int g(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
+        int stackIn_16_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_15_0 = 0;
         var3 = Kickabout.field_G;
-        var1 = 0;
-        L0: while (true) {
-          if (!nk.b((byte) -59)) {
-            L1: {
-              if (param0 < -35) {
-                break L1;
-              } else {
-                df.c(true);
-                break L1;
-              }
-            }
-            L2: {
-              re.field_c.a(-21174, ts.b(n.field_m, el.field_A, 16756), ts.b(vc.field_y, sm.field_q, 16756));
-              if (!re.field_c.c(-1)) {
-                break L2;
-              } else {
-                var1 = 1;
-                break L2;
-              }
-            }
-            L3: {
-              var2 = 0;
-              if (var1 == 0) {
-                break L3;
-              } else {
-                if ((re.field_c.field_e ^ -1) <= -1) {
-                  var2 = gl.field_d[re.field_c.field_e];
-                  if (2 == var2) {
-                    dh.c((byte) -77);
+        try {
+          L0: {
+            var1_int = 0;
+            L1: while (true) {
+              if (!nk.b((byte) -59)) {
+                L2: {
+                  if (param0 < -35) {
+                    break L2;
+                  } else {
+                    df.c(true);
+                    break L2;
+                  }
+                }
+                L3: {
+                  re.field_c.a(-21174, ts.b(n.field_m, el.field_A, 16756), ts.b(vc.field_y, sm.field_q, 16756));
+                  if (!re.field_c.c(-1)) {
                     break L3;
                   } else {
+                    var1_int = 1;
                     break L3;
                   }
+                }
+                L4: {
+                  var2 = 0;
+                  if (var1_int == 0) {
+                    break L4;
+                  } else {
+                    if (re.field_c.field_e >= 0) {
+                      var2 = gl.field_d[re.field_c.field_e];
+                      if (2 == var2) {
+                        dh.c((byte) -77);
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    } else {
+                      break L4;
+                    }
+                  }
+                }
+                stackOut_15_0 = var2;
+                stackIn_16_0 = stackOut_15_0;
+                break L0;
+              } else {
+                re.field_c.d(105);
+                if (!re.field_c.c(-1)) {
+                  continue L1;
                 } else {
-                  break L3;
+                  var1_int = 1;
+                  continue L1;
                 }
               }
             }
-            return var2;
-          } else {
-            re.field_c.d(105);
-            if (!re.field_c.c(-1)) {
-              continue L0;
-            } else {
-              var1 = 1;
-              continue L0;
-            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var1, "df.K(" + param0 + 41);
         }
+        return stackIn_16_0;
     }
 
     static {

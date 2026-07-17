@@ -14,7 +14,7 @@ final class ae {
         while (((ae) this).field_d[var1] >= 0) {
             var1 = ua.b() != 0 ? ((ae) this).field_d[var1] : var1 + 1;
         }
-        return ((ae) this).field_d[var1] ^ -1;
+        return ~((ae) this).field_d[var1];
     }
 
     private final void c() {
@@ -58,7 +58,7 @@ final class ae {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ae) this).field_d[var6] = var3 ^ -1;
+                      ((ae) this).field_d[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -216,7 +216,7 @@ final class ae {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = ua.b(24);
+          int discarded$2 = ua.b(24);
           ((ae) this).field_e = ua.b(16);
           ((ae) this).field_f = ua.b(24);
           ((ae) this).field_a = new int[((ae) this).field_f];
@@ -283,8 +283,9 @@ final class ae {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((ae) this).field_a[var2] = var3_int;
+                    ((ae) this).field_a[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

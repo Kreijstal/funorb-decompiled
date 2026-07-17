@@ -54,7 +54,7 @@ final class tn {
         int stackOut_5_0 = 0;
         if (!param0) {
           if (0 == ((tn) this).field_a) {
-            if ((((tn) this).field_f ^ -1) != -85) {
+            if (((tn) this).field_f != 84) {
               if (((tn) this).field_f == 83) {
                 return true;
               } else {
@@ -69,7 +69,7 @@ final class tn {
         } else {
           boolean discarded$7 = ((tn) this).e((byte) 58);
           if (0 == ((tn) this).field_a) {
-            if ((((tn) this).field_f ^ -1) == -85) {
+            if (((tn) this).field_f == 84) {
               return true;
             } else {
               L0: {
@@ -198,14 +198,14 @@ final class tn {
     final void a(int param0, boolean param1, int param2) {
         if (param0 < ((tn) this).field_o) {
           if (!param1) {
-            if ((param2 ^ -1) <= (((tn) this).field_o ^ -1)) {
+            if (~param2 <= ~((tn) this).field_o) {
               throw new IllegalArgumentException();
             } else {
               L0: {
                 ((tn) this).field_k = 0;
                 ((tn) this).field_f = 0;
                 ((tn) this).field_a = 0;
-                if (-1 != (oi.field_g ^ -1)) {
+                if (oi.field_g != 0) {
                   ((tn) this).field_k = oi.field_g;
                   ((tn) this).field_a = oi.field_g;
                   ((tn) this).field_c = we.field_d;
@@ -221,7 +221,7 @@ final class tn {
                 if (0 == ((tn) this).field_n) {
                   break L1;
                 } else {
-                  if ((j.field_e ^ -1) != -1) {
+                  if (j.field_e != 0) {
                     L2: {
                       if (0 >= ((tn) this).field_c) {
                         ((tn) this).field_k = ((tn) this).field_n;
@@ -235,7 +235,7 @@ final class tn {
                     break L1;
                   } else {
                     L3: {
-                      if ((oi.field_g ^ -1) != -1) {
+                      if (oi.field_g != 0) {
                         break L3;
                       } else {
                         if (j.field_e != 0) {
@@ -243,7 +243,7 @@ final class tn {
                         } else {
                           L4: {
                             ((tn) this).field_n = 0;
-                            if (-1 != (((tn) this).field_n ^ -1)) {
+                            if (((tn) this).field_n != 0) {
                               break L4;
                             } else {
                               L5: {
@@ -257,8 +257,8 @@ final class tn {
                                   }
                                 }
                               }
-                              if ((param0 ^ -1) <= -1) {
-                                if ((param0 ^ -1) != (((tn) this).field_d ^ -1)) {
+                              if (param0 >= 0) {
+                                if (~param0 != ~((tn) this).field_d) {
                                   ((tn) this).field_d = param0;
                                   ((tn) this).field_m = true;
                                   return;
@@ -281,10 +281,10 @@ final class tn {
                         }
                       }
                     }
-                    if (-1 == (((tn) this).field_n ^ -1)) {
+                    if (((tn) this).field_n == 0) {
                       if (((tn) this).field_m) {
-                        if ((param0 ^ -1) <= -1) {
-                          if ((param0 ^ -1) != (((tn) this).field_d ^ -1)) {
+                        if (param0 >= 0) {
+                          if (~param0 != ~((tn) this).field_d) {
                             ((tn) this).field_d = param0;
                             ((tn) this).field_m = true;
                             return;
@@ -303,8 +303,8 @@ final class tn {
                         }
                       } else {
                         if (w.field_J) {
-                          if ((param0 ^ -1) <= -1) {
-                            if ((param0 ^ -1) != (((tn) this).field_d ^ -1)) {
+                          if (param0 >= 0) {
+                            if (~param0 != ~((tn) this).field_d) {
                               ((tn) this).field_d = param0;
                               ((tn) this).field_m = true;
                               return;
@@ -335,7 +335,7 @@ final class tn {
                 }
               }
               L7: {
-                if ((oi.field_g ^ -1) != -1) {
+                if (oi.field_g != 0) {
                   break L7;
                 } else {
                   if (j.field_e != 0) {
@@ -343,12 +343,12 @@ final class tn {
                   } else {
                     L8: {
                       ((tn) this).field_n = 0;
-                      if (-1 != (((tn) this).field_n ^ -1)) {
+                      if (((tn) this).field_n != 0) {
                         break L8;
                       } else {
                         if (((tn) this).field_m) {
-                          if ((param0 ^ -1) <= -1) {
-                            if ((param0 ^ -1) != (((tn) this).field_d ^ -1)) {
+                          if (param0 >= 0) {
+                            if (~param0 != ~((tn) this).field_d) {
                               ((tn) this).field_d = param0;
                               ((tn) this).field_m = true;
                               return;
@@ -369,8 +369,8 @@ final class tn {
                           if (!w.field_J) {
                             break L8;
                           } else {
-                            if ((param0 ^ -1) <= -1) {
-                              if ((param0 ^ -1) != (((tn) this).field_d ^ -1)) {
+                            if (param0 >= 0) {
+                              if (~param0 != ~((tn) this).field_d) {
                                 ((tn) this).field_d = param0;
                                 ((tn) this).field_m = true;
                                 return;
@@ -396,12 +396,12 @@ final class tn {
                 }
               }
               L9: {
-                if (-1 != (((tn) this).field_n ^ -1)) {
+                if (((tn) this).field_n != 0) {
                   break L9;
                 } else {
                   if (((tn) this).field_m) {
-                    if ((param0 ^ -1) <= -1) {
-                      if ((param0 ^ -1) != (((tn) this).field_d ^ -1)) {
+                    if (param0 >= 0) {
+                      if (~param0 != ~((tn) this).field_d) {
                         ((tn) this).field_d = param0;
                         ((tn) this).field_m = true;
                         return;
@@ -422,8 +422,8 @@ final class tn {
                     if (!w.field_J) {
                       break L9;
                     } else {
-                      if ((param0 ^ -1) <= -1) {
-                        if ((param0 ^ -1) != (((tn) this).field_d ^ -1)) {
+                      if (param0 >= 0) {
+                        if (~param0 != ~((tn) this).field_d) {
                           ((tn) this).field_d = param0;
                           ((tn) this).field_m = true;
                           return;
@@ -448,14 +448,14 @@ final class tn {
             }
           } else {
             ((tn) this).field_a = 15;
-            if ((param2 ^ -1) <= (((tn) this).field_o ^ -1)) {
+            if (~param2 <= ~((tn) this).field_o) {
               throw new IllegalArgumentException();
             } else {
               L10: {
                 ((tn) this).field_k = 0;
                 ((tn) this).field_f = 0;
                 ((tn) this).field_a = 0;
-                if (-1 != (oi.field_g ^ -1)) {
+                if (oi.field_g != 0) {
                   ((tn) this).field_k = oi.field_g;
                   ((tn) this).field_a = oi.field_g;
                   ((tn) this).field_c = we.field_d;
@@ -469,7 +469,7 @@ final class tn {
               }
               if (0 != ((tn) this).field_n) {
                 L11: {
-                  if ((j.field_e ^ -1) != -1) {
+                  if (j.field_e != 0) {
                     L12: {
                       if (0 >= ((tn) this).field_c) {
                         ((tn) this).field_k = ((tn) this).field_n;
@@ -485,7 +485,7 @@ final class tn {
                     break L11;
                   }
                 }
-                if ((oi.field_g ^ -1) == -1) {
+                if (oi.field_g == 0) {
                   L13: {
                     if (j.field_e != 0) {
                       break L13;
@@ -495,7 +495,7 @@ final class tn {
                     }
                   }
                   L14: {
-                    if (-1 != (((tn) this).field_n ^ -1)) {
+                    if (((tn) this).field_n != 0) {
                       break L14;
                     } else {
                       L15: {
@@ -509,8 +509,8 @@ final class tn {
                           }
                         }
                       }
-                      if ((param0 ^ -1) <= -1) {
-                        if ((param0 ^ -1) != (((tn) this).field_d ^ -1)) {
+                      if (param0 >= 0) {
+                        if (~param0 != ~((tn) this).field_d) {
                           ((tn) this).field_d = param0;
                           ((tn) this).field_m = true;
                           return;
@@ -532,7 +532,7 @@ final class tn {
                   return;
                 } else {
                   L16: {
-                    if (-1 != (((tn) this).field_n ^ -1)) {
+                    if (((tn) this).field_n != 0) {
                       break L16;
                     } else {
                       L17: {
@@ -546,8 +546,8 @@ final class tn {
                           }
                         }
                       }
-                      if ((param0 ^ -1) <= -1) {
-                        if ((param0 ^ -1) != (((tn) this).field_d ^ -1)) {
+                      if (param0 >= 0) {
+                        if (~param0 != ~((tn) this).field_d) {
                           ((tn) this).field_d = param0;
                           ((tn) this).field_m = true;
                           return;
@@ -570,7 +570,7 @@ final class tn {
                 }
               } else {
                 L18: {
-                  if ((oi.field_g ^ -1) != -1) {
+                  if (oi.field_g != 0) {
                     break L18;
                   } else {
                     if (j.field_e != 0) {
@@ -582,7 +582,7 @@ final class tn {
                   }
                 }
                 L19: {
-                  if (-1 != (((tn) this).field_n ^ -1)) {
+                  if (((tn) this).field_n != 0) {
                     break L19;
                   } else {
                     L20: {
@@ -596,8 +596,8 @@ final class tn {
                         }
                       }
                     }
-                    if ((param0 ^ -1) <= -1) {
-                      if ((param0 ^ -1) != (((tn) this).field_d ^ -1)) {
+                    if (param0 >= 0) {
+                      if (~param0 != ~((tn) this).field_d) {
                         ((tn) this).field_d = param0;
                         ((tn) this).field_m = true;
                         return;
@@ -713,7 +713,7 @@ final class tn {
         int stackOut_3_0 = 0;
         if (param0 == 26505) {
           if (2 != ((tn) this).field_k) {
-            if (-97 == (((tn) this).field_f ^ -1)) {
+            if (((tn) this).field_f == 96) {
               return true;
             } else {
               return false;
@@ -741,9 +741,9 @@ final class tn {
             break L0;
           }
         }
-        if ((((tn) this).field_n ^ -1) == -1) {
-          if ((um.field_Gb ^ -1) == -99) {
-            if ((((tn) this).field_d ^ -1) < -1) {
+        if (((tn) this).field_n == 0) {
+          if (um.field_Gb == 98) {
+            if (((tn) this).field_d > 0) {
               L1: {
                 ((tn) this).field_m = false;
                 ((tn) this).field_d = ((tn) this).field_d - 1;
@@ -751,12 +751,12 @@ final class tn {
                 if (0 != ((tn) this).field_n) {
                   break L1;
                 } else {
-                  if (-100 != (um.field_Gb ^ -1)) {
+                  if (um.field_Gb != 99) {
                     break L1;
                   } else {
                     ((tn) this).field_d = ((tn) this).field_d + 1;
                     ((tn) this).field_m = false;
-                    if ((((tn) this).field_d ^ -1) > (((tn) this).field_o ^ -1)) {
+                    if (~((tn) this).field_d > ~((tn) this).field_o) {
                       break L1;
                     } else {
                       ((tn) this).field_d = 0;
@@ -775,12 +775,12 @@ final class tn {
                 if (0 != ((tn) this).field_n) {
                   break L2;
                 } else {
-                  if (-100 != (um.field_Gb ^ -1)) {
+                  if (um.field_Gb != 99) {
                     break L2;
                   } else {
                     ((tn) this).field_d = ((tn) this).field_d + 1;
                     ((tn) this).field_m = false;
-                    if ((((tn) this).field_d ^ -1) > (((tn) this).field_o ^ -1)) {
+                    if (~((tn) this).field_d > ~((tn) this).field_o) {
                       break L2;
                     } else {
                       ((tn) this).field_d = 0;
@@ -797,12 +797,12 @@ final class tn {
               if (0 != ((tn) this).field_n) {
                 break L3;
               } else {
-                if (-100 != (um.field_Gb ^ -1)) {
+                if (um.field_Gb != 99) {
                   break L3;
                 } else {
                   ((tn) this).field_d = ((tn) this).field_d + 1;
                   ((tn) this).field_m = false;
-                  if ((((tn) this).field_d ^ -1) > (((tn) this).field_o ^ -1)) {
+                  if (~((tn) this).field_d > ~((tn) this).field_o) {
                     break L3;
                   } else {
                     ((tn) this).field_d = 0;
@@ -816,10 +816,10 @@ final class tn {
         } else {
           var2 = 70 / ((-6 - param0) / 32);
           if (0 == ((tn) this).field_n) {
-            if (-100 == (um.field_Gb ^ -1)) {
+            if (um.field_Gb == 99) {
               ((tn) this).field_d = ((tn) this).field_d + 1;
               ((tn) this).field_m = false;
-              if ((((tn) this).field_d ^ -1) > (((tn) this).field_o ^ -1)) {
+              if (~((tn) this).field_d > ~((tn) this).field_o) {
                 return;
               } else {
                 ((tn) this).field_d = 0;
@@ -900,7 +900,7 @@ final class tn {
 
     final static void a(int param0) {
         int var1 = 0;
-        var1 = -34 % ((param0 - -22) / 38);
+        var1 = -1;
         if (p.field_h == ca.field_M.field_b) {
           L0: {
             if (0 < db.field_D) {
@@ -910,7 +910,7 @@ final class tn {
               break L0;
             }
           }
-          if ((db.field_D ^ -1) < -1) {
+          if (db.field_D > 0) {
             ib.b(-81);
             return;
           } else {
@@ -927,7 +927,7 @@ final class tn {
               break L1;
             }
           }
-          if ((db.field_D ^ -1) >= -1) {
+          if (db.field_D <= 0) {
             return;
           } else {
             ib.b(-81);

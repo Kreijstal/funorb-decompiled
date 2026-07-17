@@ -23,38 +23,27 @@ final class cr extends ma {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
-        iq.field_j = true;
-        var2 = "tuhstatbut";
-        var3 = "rvnadlm";
-        if (param0 != 16) {
-          field_p = null;
-          var4 = -1L;
-          nn.a(var4, (byte) -120, param1, var3, var2);
-          return;
-        } else {
-          var4 = -1L;
-          nn.a(var4, (byte) -120, param1, var3, var2);
-          return;
+        try {
+            iq.field_j = true;
+            var2 = "tuhstatbut";
+            var3 = "rvnadlm";
+            if (param0 != 16) {
+                field_p = null;
+            }
+            var4 = -1L;
+            nn.a(var4, (byte) -120, param1, var3, var2);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "cr.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     public static void c(byte param0) {
         field_o = null;
         field_p = null;
-        if (param0 < 45) {
-          field_o = null;
-          field_t = null;
-          field_m = null;
-          field_q = null;
-          field_s = null;
-          return;
-        } else {
-          field_t = null;
-          field_m = null;
-          field_q = null;
-          field_s = null;
-          return;
-        }
+        field_t = null;
+        field_m = null;
+        field_q = null;
+        field_s = null;
     }
 
     final static double a(byte param0, long param1) {

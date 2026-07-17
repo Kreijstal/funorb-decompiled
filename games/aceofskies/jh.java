@@ -21,7 +21,7 @@ final class jh extends sk {
           }
         }
         if (param0 != -25) {
-          ((jh) this).field_f = (jagdx.IDirect3DVertexShader) null;
+          ((jh) this).field_f = null;
           return;
         } else {
           return;
@@ -115,7 +115,7 @@ final class jh extends sk {
         ((jh) this).c(404277666);
         ((jh) this).a(10);
         if (param1 <= 2) {
-            ((jh) this).field_g = (kr) null;
+            ((jh) this).field_g = null;
         }
     }
 
@@ -172,7 +172,7 @@ final class jh extends sk {
               if (!((jh) this).field_i.b(false)) {
                 break L1;
               } else {
-                if (-258 >= (65535 & ((jh) this).field_g.field_Bc.VertexShaderVersion ^ -1)) {
+                if ((65535 & ((jh) this).field_g.field_Bc.VertexShaderVersion) >= 257) {
                   ((jh) this).field_f = ((jh) this).field_g.field_Rc.b(param1.a("dx", (byte) -71, "transparent_water"));
                   break L0;
                 } else {
@@ -215,7 +215,7 @@ final class jh extends sk {
 
     final void a(int param0, int param1, jj param2) {
         if (param1 < 66) {
-            ((jh) this).field_i = (em) null;
+            ((jh) this).field_i = null;
         }
     }
 

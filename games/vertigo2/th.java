@@ -22,13 +22,18 @@ final class th {
     }
 
     private final void a(qp param0, int param1, int param2) {
-        float var4 = (float)(1 + ((th) this).field_d) + (float)param2 / 100.0f;
-        if (param2 == 0) {
-            ((th) this).field_h = param0.field_f;
-        } else {
-            ((th) this).field_h = param0.field_a + " - " + param2 + "%";
+        float var4_float = 0.0f;
+        try {
+            var4_float = (float)(1 + ((th) this).field_d) + (float)param2 / 100.0f;
+            if (param2 == 0) {
+                ((th) this).field_h = param0.field_f;
+            } else {
+                ((th) this).field_h = param0.field_a + " - " + param2 + "%";
+            }
+            ((th) this).field_j = (float)((th) this).field_i * var4_float / (float)(param1 + ((th) this).field_b);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "th.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        ((th) this).field_j = (float)((th) this).field_i * var4 / (float)(param1 + ((th) this).field_b);
     }
 
     public static void a(byte param0) {
@@ -41,6 +46,7 @@ final class th {
     }
 
     final static bn a(boolean param0, int[] param1, int param2) {
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -60,216 +66,171 @@ final class th {
         int var20 = 0;
         int var21 = 0;
         lg var22 = null;
-        L0: {
-          var21 = Vertigo2.field_L ? 1 : 0;
-          if (param2 == -27911) {
-            break L0;
-          } else {
-            cr discarded$3 = th.a(false);
-            break L0;
-          }
-        }
-        var22 = new lg(672, 192, 96);
-        var4 = 0;
-        L1: while (true) {
-          L2: {
-            if (6 <= var4) {
-              break L2;
-            } else {
-              var5 = 0;
-              L3: while (true) {
-                L4: {
+        bn stackIn_31_0 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_35_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        bn stackOut_30_0 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        RuntimeException stackOut_34_0 = null;
+        StringBuilder stackOut_34_1 = null;
+        String stackOut_34_2 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
+        var21 = Vertigo2.field_L ? 1 : 0;
+        try {
+          L0: {
+            var22 = new lg(672, 192, 96);
+            var4 = 0;
+            L1: while (true) {
+              if (6 <= var4) {
+                stackOut_30_0 = var22.a(126, 43690, 1, 0, 0);
+                stackIn_31_0 = stackOut_30_0;
+                break L0;
+              } else {
+                var5 = 0;
+                L2: while (true) {
                   if (var5 >= 4) {
-                    break L4;
+                    var4++;
+                    continue L1;
                   } else {
                     var6 = 0;
-                    L5: while (true) {
-                      L6: {
-                        if (var6 >= 4) {
-                          break L6;
-                        } else {
-                          L7: {
-                            L8: {
-                              var7 = var5 + 1;
-                              var8 = var6 + 1;
-                              if (!param0) {
-                                break L8;
-                              } else {
-                                var9 = (int)Math.round(384.0 * Math.tan(-0.7853981633974483 + (double)var6 * 3.141592653589793 / 2.0 / 4.0));
-                                var10 = (int)Math.round(Math.tan(-0.7853981633974483 + (double)var8 * 3.141592653589793 / 2.0 / 4.0) * 384.0);
-                                var11 = (int)Math.round(384.0 * Math.tan(3.141592653589793 * (double)var5 / 2.0 / 4.0 - 0.7853981633974483));
-                                var12 = (int)Math.round(Math.tan(3.141592653589793 * (double)var7 / 2.0 / 4.0 - 0.7853981633974483) * 384.0);
-                                if (0 == 0) {
-                                  break L7;
-                                } else {
-                                  break L8;
-                                }
-                              }
-                            }
+                    L3: while (true) {
+                      if (var6 >= 4) {
+                        var5++;
+                        continue L2;
+                      } else {
+                        L4: {
+                          var7 = var5 + 1;
+                          var8 = var6 + 1;
+                          if (!param0) {
                             var9 = var6 * 192 + -384;
                             var11 = var5 * 192 + -384;
                             var10 = -384 + var8 * 192;
                             var12 = var7 * 192 - 384;
-                            break L7;
-                          }
-                          L9: {
-                            L10: {
-                              L11: {
-                                L12: {
-                                  L13: {
-                                    L14: {
-                                      L15: {
-                                        var13 = -384;
-                                        var14 = 384;
-                                        var15 = -1;
-                                        var16 = -1;
-                                        var17 = -1;
-                                        var18 = -1;
-                                        var19 = -1;
-                                        var20 = var4;
-                                        if (var20 != 0) {
-                                          break L15;
-                                        } else {
-                                          if (0 == 0) {
-                                            var15 = var22.a(var9, var12, var13);
-                                            var16 = var22.a(var10, var12, var13);
-                                            var17 = var22.a(var9, var11, var13);
-                                            var18 = var22.a(var10, var11, var13);
-                                            var19 = id.a(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
-                                            if (0 == 0) {
-                                              break L9;
-                                            } else {
-                                              break L14;
-                                            }
-                                          } else {
-                                            break L15;
-                                          }
-                                        }
-                                      }
-                                      L16: {
-                                        if (var20 != 1) {
-                                          break L16;
-                                        } else {
-                                          if (0 == 0) {
-                                            break L14;
-                                          } else {
-                                            break L16;
-                                          }
-                                        }
-                                      }
-                                      if (var20 == 2) {
-                                        break L13;
-                                      } else {
-                                        L17: {
-                                          if (var20 != 3) {
-                                            break L17;
-                                          } else {
-                                            if (0 == 0) {
-                                              break L12;
-                                            } else {
-                                              break L17;
-                                            }
-                                          }
-                                        }
-                                        L18: {
-                                          if (4 != var20) {
-                                            break L18;
-                                          } else {
-                                            if (0 == 0) {
-                                              break L11;
-                                            } else {
-                                              break L18;
-                                            }
-                                          }
-                                        }
-                                        if (var20 == 5) {
-                                          break L10;
-                                        } else {
-                                          break L9;
-                                        }
-                                      }
-                                    }
-                                    var15 = var22.a(var10, var12, var14);
-                                    var16 = var22.a(var9, var12, var14);
-                                    var17 = var22.a(var10, var11, var14);
-                                    var18 = var22.a(var9, var11, var14);
-                                    var19 = id.a(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
-                                    if (0 == 0) {
-                                      break L9;
-                                    } else {
-                                      break L13;
-                                    }
-                                  }
-                                  var15 = var22.a(var9, var14, var12);
-                                  var16 = var22.a(var10, var14, var12);
-                                  var17 = var22.a(var9, var14, var11);
-                                  var18 = var22.a(var10, var14, var11);
-                                  var19 = id.a(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
-                                  if (0 == 0) {
-                                    break L9;
-                                  } else {
-                                    break L12;
-                                  }
-                                }
-                                var15 = var22.a(var10, var13, var12);
-                                var16 = var22.a(var9, var13, var12);
-                                var17 = var22.a(var10, var13, var11);
-                                var18 = var22.a(var9, var13, var11);
-                                var19 = id.a(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
-                                if (0 == 0) {
-                                  break L9;
-                                } else {
-                                  break L11;
-                                }
-                              }
-                              var15 = var22.a(var13, var9, var12);
-                              var16 = var22.a(var13, var10, var12);
-                              var17 = var22.a(var13, var9, var11);
-                              var18 = var22.a(var13, var10, var11);
-                              var19 = id.a(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
-                              if (0 == 0) {
-                                break L9;
-                              } else {
-                                break L10;
-                              }
-                            }
-                            var15 = var22.a(var14, var10, var12);
-                            var16 = var22.a(var14, var9, var12);
-                            var17 = var22.a(var14, var10, var11);
-                            var18 = var22.a(var14, var9, var11);
-                            var19 = id.a(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
-                            break L9;
-                          }
-                          int discarded$4 = var22.a(var15, var17, var16, (byte) 1, (byte)var19, (short) 128, (short)(4 * (var4 * 4 + var5) - -var6));
-                          int discarded$5 = var22.a(var18, var16, var17, (byte) 1, (byte)var19, (short) 128, (short)((var5 + var4 * 4) * 4 + var6));
-                          var6++;
-                          if (0 == 0) {
-                            continue L5;
+                            break L4;
                           } else {
-                            break L6;
+                            var9 = (int)Math.round(384.0 * Math.tan(-0.7853981633974483 + (double)var6 * 3.141592653589793 / 2.0 / 4.0));
+                            var10 = (int)Math.round(Math.tan(-0.7853981633974483 + (double)var8 * 3.141592653589793 / 2.0 / 4.0) * 384.0);
+                            var11 = (int)Math.round(384.0 * Math.tan(3.141592653589793 * (double)var5 / 2.0 / 4.0 - 0.7853981633974483));
+                            var12 = (int)Math.round(Math.tan(3.141592653589793 * (double)var7 / 2.0 / 4.0 - 0.7853981633974483) * 384.0);
+                            break L4;
                           }
                         }
-                      }
-                      var5++;
-                      if (0 == 0) {
+                        L5: {
+                          var13 = -384;
+                          var14 = 384;
+                          var15 = -1;
+                          var16 = -1;
+                          var17 = -1;
+                          var18 = -1;
+                          var19 = -1;
+                          var20 = var4;
+                          if (var20 != 0) {
+                            if (var20 != 1) {
+                              if (var20 == 2) {
+                                var15 = var22.a(var9, var14, var12);
+                                var16 = var22.a(var10, var14, var12);
+                                var17 = var22.a(var9, var14, var11);
+                                var18 = var22.a(var10, var14, var11);
+                                var19 = id.a(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
+                                break L5;
+                              } else {
+                                if (var20 != 3) {
+                                  if (4 != var20) {
+                                    if (var20 == 5) {
+                                      var15 = var22.a(var14, var10, var12);
+                                      var16 = var22.a(var14, var9, var12);
+                                      var17 = var22.a(var14, var10, var11);
+                                      var18 = var22.a(var14, var9, var11);
+                                      var19 = id.a(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
+                                      break L5;
+                                    } else {
+                                      break L5;
+                                    }
+                                  } else {
+                                    var15 = var22.a(var13, var9, var12);
+                                    var16 = var22.a(var13, var10, var12);
+                                    var17 = var22.a(var13, var9, var11);
+                                    var18 = var22.a(var13, var10, var11);
+                                    var19 = id.a(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
+                                    break L5;
+                                  }
+                                } else {
+                                  var15 = var22.a(var10, var13, var12);
+                                  var16 = var22.a(var9, var13, var12);
+                                  var17 = var22.a(var10, var13, var11);
+                                  var18 = var22.a(var9, var13, var11);
+                                  var19 = id.a(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
+                                  break L5;
+                                }
+                              }
+                            } else {
+                              var15 = var22.a(var10, var12, var14);
+                              var16 = var22.a(var9, var12, var14);
+                              var17 = var22.a(var10, var11, var14);
+                              var18 = var22.a(var9, var11, var14);
+                              var19 = id.a(param1[var4], (short)var17, (short)var18, var22, false, (short)var16);
+                              break L5;
+                            }
+                          } else {
+                            var15 = var22.a(var9, var12, var13);
+                            var16 = var22.a(var10, var12, var13);
+                            var17 = var22.a(var9, var11, var13);
+                            var18 = var22.a(var10, var11, var13);
+                            var19 = id.a(param1[var4], (short)var18, (short)var17, var22, false, (short)var15);
+                            break L5;
+                          }
+                        }
+                        int discarded$2 = var22.a(var15, var17, var16, (byte) 1, (byte)var19, (short) 128, (short)(4 * (var4 * 4 + var5) - -var6));
+                        int discarded$3 = var22.a(var18, var16, var17, (byte) 1, (byte)var19, (short) 128, (short)((var5 + var4 * 4) * 4 + var6));
+                        var6++;
                         continue L3;
-                      } else {
-                        break L4;
                       }
                     }
                   }
                 }
-                var4++;
-                if (0 == 0) {
-                  continue L1;
-                } else {
-                  break L2;
-                }
               }
             }
           }
-          return var22.a(126, 43690, 1, 0, 0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var3 = decompiledCaughtException;
+            stackOut_32_0 = (RuntimeException) var3;
+            stackOut_32_1 = new StringBuilder().append("th.E(").append(param0).append(44);
+            stackIn_34_0 = stackOut_32_0;
+            stackIn_34_1 = stackOut_32_1;
+            stackIn_33_0 = stackOut_32_0;
+            stackIn_33_1 = stackOut_32_1;
+            if (param1 == null) {
+              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
+              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_2 = "null";
+              stackIn_35_0 = stackOut_34_0;
+              stackIn_35_1 = stackOut_34_1;
+              stackIn_35_2 = stackOut_34_2;
+              break L6;
+            } else {
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "{...}";
+              stackIn_35_0 = stackOut_33_0;
+              stackIn_35_1 = stackOut_33_1;
+              stackIn_35_2 = stackOut_33_2;
+              break L6;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + -27911 + 41);
         }
+        return stackIn_31_0;
     }
 
     final boolean a(int param0) {
@@ -279,17 +240,17 @@ final class th {
         var3 = Vertigo2.field_L ? 1 : 0;
         L0: while (true) {
           if (((th) this).field_d >= ((th) this).field_b) {
-            if (param0 != -21493) {
-              return false;
-            } else {
+            if (param0 == -21493) {
               return true;
+            } else {
+              return false;
             }
           } else {
             var4 = ((th) this).field_c[((th) this).field_d];
             var2 = var4;
             if (var4.field_i.b(0)) {
               L1: {
-                if ((var4.field_b ^ -1) > -1) {
+                if (var4.field_b < 0) {
                   break L1;
                 } else {
                   if (!var4.field_i.c(11321, var4.field_b)) {
@@ -313,7 +274,7 @@ final class th {
                 }
               }
               L3: {
-                if ((var4.field_b ^ -1) <= -1) {
+                if (var4.field_b >= 0) {
                   break L3;
                 } else {
                   if (null != var4.field_e) {

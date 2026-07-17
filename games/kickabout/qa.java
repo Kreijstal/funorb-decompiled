@@ -8,55 +8,102 @@ final class qa extends dj {
     static String field_G;
 
     final static int a(tv param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
-        L0: {
-          var3 = Kickabout.field_G;
-          if (param1 == 31100) {
-            break L0;
-          } else {
-            field_G = null;
-            break L0;
-          }
-        }
-        L1: {
-          var2 = ag.field_e;
-          if (-3 == (param0.field_c ^ -1)) {
-            if (param0.field_m) {
-              var2 = ag.field_e;
-              break L1;
-            } else {
-              L2: {
-                if (-1 != (param0.field_j ^ -1)) {
-                  break L2;
+        int stackIn_15_0 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_14_0 = 0;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        var3 = Kickabout.field_G;
+        try {
+          L0: {
+            L1: {
+              var2_int = ag.field_e;
+              if (param0.field_c == 2) {
+                if (param0.field_m) {
+                  var2_int = ag.field_e;
+                  break L1;
                 } else {
-                  if (param0.field_p == 0) {
-                    var2 = sg.field_c[param0.field_c];
+                  L2: {
+                    if (param0.field_j != 0) {
+                      break L2;
+                    } else {
+                      if (param0.field_p == 0) {
+                        var2_int = sg.field_c[param0.field_c];
+                        break L1;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  var2_int = sb.field_h[param0.field_c];
+                  break L1;
+                }
+              } else {
+                if (4 == param0.field_c) {
+                  var2_int = sb.field_h[param0.field_c];
+                  break L1;
+                } else {
+                  if (param0.field_d == dd.field_c) {
+                    var2_int = sg.field_c[param0.field_c];
                     break L1;
                   } else {
-                    break L2;
+                    var2_int = sb.field_h[param0.field_c];
+                    break L1;
                   }
                 }
               }
-              var2 = sb.field_h[param0.field_c];
-              break L1;
             }
-          } else {
-            if (4 == param0.field_c) {
-              var2 = sb.field_h[param0.field_c];
-              break L1;
+            stackOut_14_0 = var2_int;
+            stackIn_15_0 = stackOut_14_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var2;
+            stackOut_16_1 = new StringBuilder().append("qa.I(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param0 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L3;
             } else {
-              if (param0.field_d == dd.field_c) {
-                var2 = sg.field_c[param0.field_c];
-                break L1;
-              } else {
-                var2 = sb.field_h[param0.field_c];
-                break L1;
-              }
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L3;
             }
           }
+          throw nb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 31100 + 41);
         }
-        return var2;
+        return stackIn_15_0;
     }
 
     qa() {
@@ -66,9 +113,6 @@ final class qa extends dj {
         field_E = null;
         field_F = null;
         field_H = null;
-        if (param0 != 60) {
-            wc discarded$0 = qa.h(-115);
-        }
         field_G = null;
     }
 
@@ -125,7 +169,7 @@ final class qa extends dj {
                 on.f(var3 + 127, 186, 174, 16777215, 128);
                 var4 = 0;
                 L2: while (true) {
-                  if ((var4 ^ -1) <= -6) {
+                  if (var4 >= 5) {
                     lo.a(206, ((qa) this).field_j + 180, 100);
                     break L0;
                   } else {
@@ -136,7 +180,7 @@ final class qa extends dj {
                 }
               } else {
                 pb.field_C.c(q.field_h[var4 + 1], 120 + var3, 180 + (var4 + 1) * 28, 16777215, -1);
-                pb.field_C.a(Integer.toString(ps.field_d[1 + var4]), 134 + var3, var4 * 28 - -28 + 180, 16777215, -1);
+                pb.field_C.a(Integer.toString(ps.field_d[1 + var4]), 134 + var3, var4 * 28 + 208, 16777215, -1);
                 var4++;
                 continue L1;
               }
@@ -144,7 +188,7 @@ final class qa extends dj {
           }
         }
         L3: {
-          if (-2 != (((qa) this).field_C ^ -1)) {
+          if (((qa) this).field_C != 1) {
             break L3;
           } else {
             var11 = 0;
@@ -222,62 +266,59 @@ final class qa extends dj {
     }
 
     final static void i(int param0) {
-        int var1 = 0;
+        RuntimeException var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         gm var2_ref_gm = null;
         Object var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
+        RuntimeException decompiledCaughtException = null;
         var9 = Kickabout.field_G;
-        var1 = 0;
-        L0: while (true) {
-          if (var1 >= mn.field_b.length) {
-            var2 = 118 / ((param0 - -70) / 44);
-            return;
-          } else {
-            L1: {
-              var2_ref_gm = (gm) (Object) sh.field_a.field_P[ae.field_G][1 + var1];
-              var3 = null;
-              var4 = 0;
-              if (var2_ref_gm.field_C > 0) {
-                var5 = Math.min(-1 + kj.field_b.length, 210 * var2_ref_gm.field_C / var2_ref_gm.a((byte) -99));
-                var4 = 72;
-                var3 = (Object) (Object) kj.field_b[var5];
-                break L1;
+        try {
+          L0: {
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= mn.field_b.length) {
+                var2 = -118;
+                break L0;
               } else {
-                if (-1 > (mn.field_b[var1] ^ -1)) {
-                  var4 = qi.field_n[-1 + mn.field_b[var1]];
-                  var3 = (Object) (Object) ac.field_a[mn.field_b[var1] - 1];
-                  break L1;
-                } else {
-                  break L1;
+                L2: {
+                  var2_ref_gm = (gm) (Object) sh.field_a.field_P[ae.field_G][1 + var1_int];
+                  var3 = null;
+                  var4 = 0;
+                  if (var2_ref_gm.field_C > 0) {
+                    var5 = Math.min(-1 + kj.field_b.length, 210 * var2_ref_gm.field_C / var2_ref_gm.a((byte) -99));
+                    var4 = 72;
+                    var3 = (Object) (Object) kj.field_b[var5];
+                    break L2;
+                  } else {
+                    if (mn.field_b[var1_int] > 0) {
+                      var4 = qi.field_n[-1 + mn.field_b[var1_int]];
+                      var3 = (Object) (Object) ac.field_a[mn.field_b[var1_int] - 1];
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
+                L3: {
+                  if (var3 == null) {
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                var1_int++;
+                continue L1;
               }
-            }
-            if (var3 != null) {
-              var5 = ug.a(0, var2_ref_gm.field_kb >> 725111984);
-              var6 = lf.a((byte) -114, var2_ref_gm.field_bb >> 491129232);
-              if (hw.field_i == 256) {
-                var7 = var4 >> 260263585;
-                eo.a((byte[]) var3, -var7 + var5, -var7 + var6, var4);
-                var1++;
-                continue L0;
-              } else {
-                var7 = hw.field_i * var4 >> -39051064;
-                var8 = var7 >> 1021409345;
-                eo.a((byte[]) var3, -var8 + var5, -var8 + var6, var4, var7);
-                var1++;
-                continue L0;
-              }
-            } else {
-              var1++;
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var1, "qa.K(" + -126 + 41);
         }
     }
 

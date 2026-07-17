@@ -20,10 +20,6 @@ final class ml {
     }
 
     final static int b(int param0) {
-        if (param0 != 20719) {
-            ml.a(108);
-            return lb.field_v;
-        }
         return lb.field_v;
     }
 

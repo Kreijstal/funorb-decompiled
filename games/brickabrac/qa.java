@@ -74,7 +74,7 @@ final class qa extends ki {
         field_s = null;
         field_v = null;
         field_x = null;
-        int var1 = -103 % ((-61 - param0) / 57);
+        int var1 = 0;
         field_t = null;
         field_w = null;
         field_y = null;
@@ -83,10 +83,10 @@ final class qa extends ki {
     final boolean b(byte param0) {
         int stackIn_11_0 = 0;
         int stackIn_24_0 = 0;
-        int stackOut_23_0;
-        int stackOut_22_0;
-        int stackOut_10_0;
-        int stackOut_9_0;
+        int stackOut_23_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_9_0 = 0;
         if (param0 < -91) {
           if (null != mj.field_d) {
             if (ap.field_f != null) {
@@ -150,22 +150,70 @@ final class qa extends ki {
     }
 
     final static jp[] a(int param0, int param1, mf param2, boolean param3) {
-        Object var5 = null;
-        if (param3) {
-          if (!ln.a(-97, param0, param2, param1)) {
-            return null;
-          } else {
-            return v.a(-835);
+        RuntimeException var4 = null;
+        Object stackIn_2_0 = null;
+        jp[] stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        jp[] stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (ln.a(-97, param0, param2, param1)) {
+              stackOut_3_0 = v.a(-835);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (jp[]) (Object) stackIn_2_0;
+            }
           }
-        } else {
-          var5 = null;
-          jp[] discarded$5 = qa.a(-20, -51, (mf) null, true);
-          if (!ln.a(-97, param0, param2, param1)) {
-            return null;
-          } else {
-            return v.a(-835);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("qa.M(").append(param0).append(44).append(param1).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param2 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
           }
+          throw qb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 1 + 41);
         }
+        return stackIn_4_0;
     }
 
     final static void e(byte param0) {

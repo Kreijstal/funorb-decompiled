@@ -27,11 +27,6 @@ final class bg implements Iterable {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 > -74) {
-            field_c = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
@@ -69,7 +64,7 @@ final class bg implements Iterable {
               wb.field_e[fh.field_b] = param3;
               vc.field_f[fh.field_b] = param2;
               var6 = param4 - (-param3 - param2);
-              if (-1 != (var6 ^ -1)) {
+              if (var6 != 0) {
                 stackOut_56_0 = 1000 * param4 / var6;
                 stackIn_57_0 = stackOut_56_0;
                 break L1;
@@ -121,7 +116,7 @@ final class bg implements Iterable {
               wb.field_e[fh.field_b] = param3;
               vc.field_f[fh.field_b] = param2;
               var6 = param4 - (-param3 - param2);
-              if (-1 != (var6 ^ -1)) {
+              if (var6 != 0) {
                 stackOut_40_0 = 1000 * param4 / var6;
                 stackIn_41_0 = stackOut_40_0;
                 break L5;
@@ -176,7 +171,7 @@ final class bg implements Iterable {
               wb.field_e[fh.field_b] = param3;
               vc.field_f[fh.field_b] = param2;
               var6 = param4 - (-param3 - param2);
-              if (-1 != (var6 ^ -1)) {
+              if (var6 != 0) {
                 stackOut_23_0 = 1000 * param4 / var6;
                 stackIn_24_0 = stackOut_23_0;
                 break L9;
@@ -226,7 +221,7 @@ final class bg implements Iterable {
               wb.field_e[fh.field_b] = param3;
               vc.field_f[fh.field_b] = param2;
               var6 = param4 - (-param3 - param2);
-              if (-1 != (var6 ^ -1)) {
+              if (var6 != 0) {
                 stackOut_7_0 = 1000 * param4 / var6;
                 stackIn_8_0 = stackOut_7_0;
                 break L13;
@@ -267,27 +262,24 @@ final class bg implements Iterable {
     }
 
     final static void a(int param0, int param1, int param2, int param3, ej param4, int param5, String param6, int param7, int param8) {
-        Object var10 = null;
-        n.field_d = param1;
-        ld.field_C = param2;
-        ll.field_b = param3;
-        fd.field_nb = param5;
-        sk.field_b = param7;
-        l.field_b = param8;
-        vc.field_g = param6;
-        fa.field_p = param4;
-        if (param0 < 39) {
-          var10 = null;
-          int discarded$2 = bg.a(7, (byte[]) null, -15);
-          od.field_v = (fb) (Object) new wj();
-          ib.field_k = new rk(param4);
-          mc.field_c = new vh(od.field_v, ib.field_k);
-          return;
-        } else {
-          od.field_v = (fb) (Object) new wj();
-          ib.field_k = new rk(param4);
-          mc.field_c = new vh(od.field_v, ib.field_k);
-          return;
+        try {
+            n.field_d = param1;
+            ld.field_C = param2;
+            ll.field_b = param3;
+            fd.field_nb = param5;
+            sk.field_b = param7;
+            l.field_b = param8;
+            vc.field_g = param6;
+            fa.field_p = param4;
+            if (param0 < 39) {
+                Object var10 = null;
+                int discarded$0 = bg.a(7, (byte[]) null, -15);
+            }
+            od.field_v = (fb) (Object) new wj();
+            ib.field_k = new rk(param4);
+            mc.field_c = new vh(od.field_v, ib.field_k);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "bg.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + param8 + 41);
         }
     }
 
@@ -296,51 +288,89 @@ final class bg implements Iterable {
     }
 
     final static int a(int param0, byte[] param1, int param2) {
+        RuntimeException var3 = null;
         Object var4 = null;
-        if (param2 != 0) {
-          var4 = null;
-          int discarded$2 = bg.a(-89, (byte[]) null, 45);
-          return jj.a(0, param1, param0, -64);
-        } else {
-          return jj.a(0, param1, param0, -64);
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param2 == 0) {
+                break L1;
+              } else {
+                var4 = null;
+                int discarded$2 = bg.a(-89, (byte[]) null, 45);
+                break L1;
+              }
+            }
+            stackOut_2_0 = jj.a(0, param1, param0, -64);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("bg.B(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 41);
         }
+        return stackIn_3_0;
     }
 
     final void a(boolean param0, ah param1) {
-        Object var4 = null;
-        if (param1.field_l == null) {
-          if (!param0) {
-            var4 = null;
-            ((bg) this).a(false, (ah) null);
+        try {
+            if (param1.field_l != null) {
+                param1.c((byte) 36);
+            }
+            if (!param0) {
+                Object var4 = null;
+                ((bg) this).a(false, (ah) null);
+            }
             param1.field_m = ((bg) this).field_b;
             param1.field_l = ((bg) this).field_b.field_l;
             param1.field_l.field_m = param1;
             param1.field_m.field_l = param1;
-            return;
-          } else {
-            param1.field_m = ((bg) this).field_b;
-            param1.field_l = ((bg) this).field_b.field_l;
-            param1.field_l.field_m = param1;
-            param1.field_m.field_l = param1;
-            return;
-          }
-        } else {
-          param1.c((byte) 36);
-          if (param0) {
-            param1.field_m = ((bg) this).field_b;
-            param1.field_l = ((bg) this).field_b.field_l;
-            param1.field_l.field_m = param1;
-            param1.field_m.field_l = param1;
-            return;
-          } else {
-            var4 = null;
-            ((bg) this).a(false, (ah) null);
-            param1.field_m = ((bg) this).field_b;
-            param1.field_l = ((bg) this).field_b.field_l;
-            param1.field_l.field_m = param1;
-            param1.field_m.field_l = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "bg.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

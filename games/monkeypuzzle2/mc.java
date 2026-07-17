@@ -15,6 +15,7 @@ final class mc implements ml {
     private int field_g;
 
     public final void a(boolean param0, we param1, int param2, int param3, int param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -22,86 +23,106 @@ final class mc implements ml {
         int var11 = 0;
         Object var12 = null;
         qj var13 = null;
-        we stackIn_3_0 = null;
-        Object stackOut_2_0 = null;
-        we stackOut_1_0 = null;
-        L0: {
-          var11 = MonkeyPuzzle2.field_F ? 1 : 0;
-          if (!(param1 instanceof qj)) {
-            stackOut_2_0 = null;
-            stackIn_3_0 = (we) (Object) stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = (we) param1;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        var13 = (qj) (Object) stackIn_3_0;
-        if (param4 < 19) {
-          L1: {
-            var12 = null;
-            ((mc) this).a(false, (we) null, 106, 30, 56);
-            ge.d(param3 - -param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, ((mc) this).field_g);
-            if (var13 == null) {
-              break L1;
-            } else {
-              break L1;
+        we stackIn_4_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_3_0 = null;
+        we stackOut_2_0 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        var11 = MonkeyPuzzle2.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (!(param1 instanceof qj)) {
+                stackOut_3_0 = null;
+                stackIn_4_0 = (we) (Object) stackOut_3_0;
+                break L1;
+              } else {
+                stackOut_2_0 = (we) param1;
+                stackIn_4_0 = stackOut_2_0;
+                break L1;
+              }
             }
-          }
-          var7 = -(2 * var13.field_B) + param1.field_l;
-          var8 = var13.field_B + param1.field_r + param3;
-          var9 = var13.field_F + (param1.field_e + param2);
-          ge.e(var8, var9, var8 - -var7, var9, ((mc) this).field_k);
-          var10 = -1 + var13.a(true);
-          L2: while (true) {
-            if ((var10 ^ -1) > -1) {
-              L3: {
+            L2: {
+              var13 = (qj) (Object) stackIn_4_0;
+              if (param4 >= 19) {
+                break L2;
+              } else {
+                var12 = null;
+                ((mc) this).a(false, (we) null, 106, 30, 56);
+                break L2;
+              }
+            }
+            L3: {
+              ge.d(param3 - -param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, ((mc) this).field_g);
+              if (var13 == null) {
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            var7 = -(2 * var13.field_B) + param1.field_l;
+            var8 = var13.field_B + param1.field_r + param3;
+            var9 = var13.field_F + (param1.field_e + param2);
+            ge.e(var8, var9, var8 - -var7, var9, ((mc) this).field_k);
+            var10 = -1 + var13.a(true);
+            L4: while (true) {
+              if (var10 < 0) {
                 if (null != ((mc) this).field_f) {
                   ((mc) this).field_f.a(var13.field_s, var7 / 2 + var8, ((mc) this).field_f.field_t + (var9 - -var13.field_F), ((mc) this).field_j, ((mc) this).field_c);
-                  break L3;
+                  break L0;
                 } else {
-                  break L3;
+                  return;
                 }
+              } else {
+                ge.f(var13.a(false, var10) * var7 / var13.k(-64) + var8, var9, ((mc) this).field_h, ((mc) this).field_d);
+                var10--;
+                continue L4;
               }
-              return;
-            } else {
-              ge.f(var13.a(false, var10) * var7 / var13.k(-64) + var8, var9, ((mc) this).field_h, ((mc) this).field_d);
-              var10--;
-              continue L2;
             }
           }
-        } else {
-          L4: {
-            ge.d(param3 - -param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, ((mc) this).field_g);
-            if (var13 == null) {
-              break L4;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var6 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var6;
+            stackOut_14_1 = new StringBuilder().append("mc.C(").append(param0).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param1 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
             } else {
-              break L4;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
             }
           }
-          var7 = -(2 * var13.field_B) + param1.field_l;
-          var8 = var13.field_B + param1.field_r + param3;
-          var9 = var13.field_F + (param1.field_e + param2);
-          ge.e(var8, var9, var8 - -var7, var9, ((mc) this).field_k);
-          var10 = -1 + var13.a(true);
-          L5: while (true) {
-            if ((var10 ^ -1) > -1) {
-              L6: {
-                if (null != ((mc) this).field_f) {
-                  ((mc) this).field_f.a(var13.field_s, var7 / 2 + var8, ((mc) this).field_f.field_t + (var9 - -var13.field_F), ((mc) this).field_j, ((mc) this).field_c);
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              return;
-            } else {
-              ge.f(var13.a(false, var10) * var7 / var13.k(-64) + var8, var9, ((mc) this).field_h, ((mc) this).field_d);
-              var10--;
-              continue L5;
-            }
-          }
+          throw la.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -121,26 +142,29 @@ final class mc implements ml {
     }
 
     final static void a(int param0, le param1) {
-        if (param0 != -8497) {
-          mc.a(100);
-          vf.a((byte) 109);
-          ge.a(param1.field_s, param1.field_m, param1.field_n);
-          return;
-        } else {
-          vf.a((byte) 109);
-          ge.a(param1.field_s, param1.field_m, param1.field_n);
-          return;
+        try {
+            if (param0 != -8497) {
+                mc.a(100);
+            }
+            vf.a((byte) 109);
+            ge.a(param1.field_s, param1.field_m, param1.field_n);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "mc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     mc(ta param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ((mc) this).field_f = param0;
-        ((mc) this).field_c = param2;
-        ((mc) this).field_d = param6;
-        ((mc) this).field_k = param3;
-        ((mc) this).field_h = param5;
-        ((mc) this).field_g = param4;
-        ((mc) this).field_j = param1;
+        try {
+            ((mc) this).field_f = param0;
+            ((mc) this).field_c = param2;
+            ((mc) this).field_d = param6;
+            ((mc) this).field_k = param3;
+            ((mc) this).field_h = param5;
+            ((mc) this).field_g = param4;
+            ((mc) this).field_j = param1;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "mc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     static {

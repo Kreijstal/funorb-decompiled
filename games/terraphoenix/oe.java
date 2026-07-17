@@ -71,35 +71,19 @@ final class oe {
               break L0;
             }
           }
-          L1: {
-            if (param3) {
-              var4++;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
           if (param1 <= 97) {
             return null;
           } else {
             return kf.field_e[var4];
           }
         } else {
-          L2: {
+          L1: {
             var4 += 4;
             if (param0) {
               var4 += 2;
-              break L2;
+              break L1;
             } else {
-              break L2;
-            }
-          }
-          L3: {
-            if (param3) {
-              var4++;
-              break L3;
-            } else {
-              break L3;
+              break L1;
             }
           }
           if (param1 <= 97) {
@@ -113,7 +97,7 @@ final class oe {
     public static void b(int param0) {
         field_b = null;
         field_a = null;
-        int var1 = 41 / ((44 - param0) / 57);
+        int var1 = 20;
         field_d = null;
     }
 

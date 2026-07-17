@@ -18,25 +18,7 @@ final class u {
 
     final static void a(boolean param0, boolean param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (param1) {
-            u.b(58);
-            if (2 == (vr.field_c ^ -1)) {
-                ts.a(6493);
-            } else {
-                if (null != ce.field_x) {
-                    on.a(1, param0);
-                    return;
-                }
-                if (null == in.field_g) {
-                    fr.f((byte) -99);
-                    return;
-                }
-                on.a(1, param0);
-                return;
-            }
-            return;
-        }
-        if (2 == (vr.field_c ^ -1)) {
+        if (vr.field_c == -3) {
             ts.a(6493);
         } else {
             if (null != ce.field_x) {
@@ -97,48 +79,31 @@ final class u {
     }
 
     final static void c(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        var2 = ShatteredPlansClient.field_F ? 1 : 0;
+        int var1_int = 0;
+        int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         oe.field_d.b(-1432175600);
-        var1 = 0;
-        L0: while (true) {
-          if (-33 >= (var1 ^ -1)) {
-            var1 = 0;
-            L1: while (true) {
-              if (32 <= var1) {
-                if (param0 <= 120) {
-                  return;
-                } else {
-                  hp.field_p = 0;
-                  return;
-                }
-              } else {
-                fb.field_Cb[var1] = 0L;
-                var1++;
-                continue L1;
-              }
-            }
-          } else {
-            nm.field_b[var1] = 0L;
-            var1++;
-            continue L0;
-          }
+        for (var1_int = 0; var1_int < 32; var1_int++) {
+            nm.field_b[var1_int] = 0L;
+        }
+        for (var1_int = 0; 32 > var1_int; var1_int++) {
+            fb.field_Cb[var1_int] = 0L;
+        }
+        if (param0 <= 120) {
+            return;
+        }
+        try {
+            hp.field_p = 0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "u.A(" + param0 + 41);
         }
     }
 
     final static int a(int param0) {
         lg.field_c.c(123);
-        if (vp.field_o.d(0)) {
-          if (param0 >= -28) {
-            field_a = -120;
-            return 0;
-          } else {
-            return 0;
-          }
-        } else {
-          return mh.b((byte) 115);
+        if (!vp.field_o.d(0)) {
+            return mh.b((byte) 115);
         }
+        return 0;
     }
 
     static {

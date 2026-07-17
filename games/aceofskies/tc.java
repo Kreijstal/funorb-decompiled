@@ -13,7 +13,7 @@ final class tc extends ib implements go {
     }
 
     public final void a(ke param0, int param1) {
-        this.a(param0, param1);
+        super.a(param0, param1);
     }
 
     final jagdx.IDirect3DBaseTexture b(int param0) {
@@ -95,7 +95,7 @@ final class tc extends ib implements go {
               stackIn_2_1 = stackOut_1_1;
               stackIn_2_2 = stackOut_1_2;
               stackIn_2_3 = stackOut_1_3;
-              if (!((kr) param0).field_rc) {
+              if (!param0.field_rc) {
                 break L1;
               } else {
                 stackOut_2_0 = this;
@@ -139,6 +139,7 @@ final class tc extends ib implements go {
         var6 = 0;
         L3: while (true) {
           if (6 <= var6) {
+            return;
           } else {
             var7 = ((tc) this).field_f.LockRect(var6, 0, 0, 0, ((tc) this).field_g, ((tc) this).field_g, 0, var11);
             if (jagdx.gf.a((byte) 86, var7)) {

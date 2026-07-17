@@ -14,14 +14,14 @@ final class o extends ora implements sca {
     }
 
     public final void a(int param0, int param1, byte[] param2, int param3) {
-        ((o) this).a(param2, param0);
-        if (param1 != -11783) {
-          int discarded$2 = ((o) this).a(100);
-          ((o) this).field_c = param3;
-          return;
-        } else {
-          ((o) this).field_c = param3;
-          return;
+        try {
+            ((o) this).a(param2, param0);
+            if (param1 != -11783) {
+                int discarded$0 = ((o) this).a(100);
+            }
+            ((o) this).field_c = param3;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "o.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -37,7 +37,7 @@ final class o extends ora implements sca {
         if (param0 != -1) {
             return true;
         }
-        return -1 != (540800 & param2 ^ -1) ? true : false;
+        return (540800 & param2) != 0 ? true : false;
     }
 
     final static boolean e(int param0) {
@@ -70,7 +70,11 @@ final class o extends ora implements sca {
 
     o(cka param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
-        ((o) this).field_c = param1;
+        try {
+            ((o) this).field_c = param1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "o.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     static {

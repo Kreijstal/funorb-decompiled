@@ -14,14 +14,14 @@ final class qpa implements bo {
     }
 
     public final void a(int param0, kh param1) {
-        param1.i(((qpa) this).field_a, param0 + -200);
-        if (param0 != 200) {
-          ((qpa) this).field_a = -84;
-          param1.i(((qpa) this).field_c, 0);
-          return;
-        } else {
-          param1.i(((qpa) this).field_c, 0);
-          return;
+        try {
+            param1.i(((qpa) this).field_a, param0 + -200);
+            if (param0 != 200) {
+                ((qpa) this).field_a = -84;
+            }
+            param1.i(((qpa) this).field_c, 0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qpa.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -31,14 +31,14 @@ final class qpa implements bo {
     }
 
     public final void a(kh param0, byte param1) {
-        ((qpa) this).field_a = param0.h(255);
-        if (param1 != -19) {
-          qpa.a(false);
-          ((qpa) this).field_c = param0.h(255);
-          return;
-        } else {
-          ((qpa) this).field_c = param0.h(255);
-          return;
+        try {
+            ((qpa) this).field_a = param0.h(255);
+            if (param1 != -19) {
+                qpa.a(false);
+            }
+            ((qpa) this).field_c = param0.h(255);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qpa.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -53,169 +53,137 @@ final class qpa implements bo {
     }
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6) {
+        RuntimeException var7 = null;
         int var8 = 0;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        String stackIn_33_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
         var8 = TombRacer.field_G ? 1 : 0;
-        if (param5 < 123) {
-          qpa.a(true);
-          if (-1 != (param2 ^ -1)) {
-            if (1 != param2) {
-              if (-3 != (param2 ^ -1)) {
-                if (-4 != (param2 ^ -1)) {
-                  if (4 != param2) {
-                    if ((param2 ^ -1) != -13) {
-                      if (param2 != 5) {
-                        if (param2 != 6) {
-                          if (param2 != 7) {
-                            if (-9 != param2) {
-                              if (-10 != param2) {
-                                if (-11 != (param2 ^ -1)) {
-                                  if (param2 != 11) {
-                                    uw.field_g[param2].field_p = pm.field_h[param2];
-                                    return;
-                                  } else {
-                                    uw.field_g[param2] = (wv) (Object) new rd(param2, param6, param4, param0, param3, param1);
-                                    uw.field_g[param2].field_p = pm.field_h[param2];
-                                    return;
-                                  }
-                                } else {
-                                  uw.field_g[param2] = (wv) (Object) new vv(param2, param6, param4, param0, param3, param1);
-                                  uw.field_g[param2].field_p = pm.field_h[param2];
-                                  return;
-                                }
-                              } else {
-                                uw.field_g[param2] = (wv) (Object) new oka(param2, param6, param4, param0, param3, param1);
-                                uw.field_g[param2].field_p = pm.field_h[param2];
-                                return;
-                              }
-                            } else {
-                              uw.field_g[param2] = (wv) (Object) new jn(param2, param6, param4, param0, param3, param1);
-                              uw.field_g[param2].field_p = pm.field_h[param2];
-                              return;
-                            }
-                          } else {
-                            uw.field_g[param2] = (wv) (Object) new ow(param2, param6, param4, param0, param3, param1);
-                            uw.field_g[param2].field_p = pm.field_h[param2];
-                            return;
-                          }
-                        } else {
-                          uw.field_g[param2] = (wv) (Object) new vba(param2, param6, param4, param0, param3, param1);
-                          uw.field_g[param2].field_p = pm.field_h[param2];
-                          return;
-                        }
-                      } else {
-                        uw.field_g[param2] = (wv) (Object) new qp(param2, param6, param4, param0, param3, param1);
-                        uw.field_g[param2].field_p = pm.field_h[param2];
-                        return;
-                      }
-                    } else {
-                      uw.field_g[param2] = (wv) (Object) new epa(param2, param6, param4, param0, param3, param1);
-                      uw.field_g[param2].field_p = pm.field_h[param2];
-                      return;
-                    }
-                  } else {
-                    uw.field_g[param2] = (wv) (Object) new epa(param2, param6, param4, param0, param3, param1);
-                    uw.field_g[param2].field_p = pm.field_h[param2];
-                    return;
-                  }
-                } else {
-                  uw.field_g[param2] = (wv) (Object) new pk(param2, param6, param4, param0, param3, param1);
-                  uw.field_g[param2].field_p = pm.field_h[param2];
-                  return;
-                }
-              } else {
-                uw.field_g[param2] = (wv) (Object) new jn(param2, param6, param4, param0, param3, param1);
-                uw.field_g[param2].field_p = pm.field_h[param2];
-                return;
-              }
-            } else {
-              uw.field_g[param2] = (wv) (Object) new se(param2, param6, param4, param0, param3, param1);
-              uw.field_g[param2].field_p = pm.field_h[param2];
-              return;
-            }
-          } else {
-            uw.field_g[param2] = (wv) (Object) new sv(param2, param6, param4, param0, param3, param1);
-            uw.field_g[param2].field_p = pm.field_h[param2];
-            return;
-          }
-        } else {
+        try {
           L0: {
-            if (-1 != (param2 ^ -1)) {
-              if (1 != param2) {
-                if (-3 != param2) {
-                  if (-4 != param2) {
-                    if (4 != param2) {
-                      if ((param2 ^ -1) != -13) {
-                        if (param2 != 5) {
-                          if (param2 != 6) {
-                            if (param2 != 7) {
-                              if (-9 != param2) {
-                                if (-10 != param2) {
-                                  if (-11 == (param2 ^ -1)) {
-                                    uw.field_g[param2] = (wv) (Object) new vv(param2, param6, param4, param0, param3, param1);
-                                    break L0;
+            L1: {
+              if (param5 >= 123) {
+                break L1;
+              } else {
+                qpa.a(true);
+                break L1;
+              }
+            }
+            L2: {
+              if (param2 != 0) {
+                if (1 == param2) {
+                  uw.field_g[param2] = (wv) (Object) new se(param2, param6, param4, param0, param3, param1);
+                  break L2;
+                } else {
+                  if (param2 != 2) {
+                    if (param2 == 3) {
+                      uw.field_g[param2] = (wv) (Object) new pk(param2, param6, param4, param0, param3, param1);
+                      break L2;
+                    } else {
+                      L3: {
+                        if (4 == param2) {
+                          break L3;
+                        } else {
+                          if (param2 == 12) {
+                            break L3;
+                          } else {
+                            if (param2 == 5) {
+                              uw.field_g[param2] = (wv) (Object) new qp(param2, param6, param4, param0, param3, param1);
+                              break L2;
+                            } else {
+                              if (param2 == 6) {
+                                uw.field_g[param2] = (wv) (Object) new vba(param2, param6, param4, param0, param3, param1);
+                                break L2;
+                              } else {
+                                if (param2 != 7) {
+                                  if (param2 == 8) {
+                                    uw.field_g[param2] = (wv) (Object) new jn(param2, param6, param4, param0, param3, param1);
+                                    break L2;
                                   } else {
-                                    if (param2 == 11) {
-                                      uw.field_g[param2] = (wv) (Object) new rd(param2, param6, param4, param0, param3, param1);
-                                      break L0;
+                                    if (param2 != 9) {
+                                      if (param2 == 10) {
+                                        uw.field_g[param2] = (wv) (Object) new vv(param2, param6, param4, param0, param3, param1);
+                                        break L2;
+                                      } else {
+                                        if (param2 != 11) {
+                                          break L2;
+                                        } else {
+                                          uw.field_g[param2] = (wv) (Object) new rd(param2, param6, param4, param0, param3, param1);
+                                          break L2;
+                                        }
+                                      }
                                     } else {
-                                      uw.field_g[param2].field_p = pm.field_h[param2];
-                                      return;
+                                      uw.field_g[param2] = (wv) (Object) new oka(param2, param6, param4, param0, param3, param1);
+                                      break L2;
                                     }
                                   }
                                 } else {
-                                  uw.field_g[param2] = (wv) (Object) new oka(param2, param6, param4, param0, param3, param1);
-                                  break L0;
+                                  uw.field_g[param2] = (wv) (Object) new ow(param2, param6, param4, param0, param3, param1);
+                                  break L2;
                                 }
-                              } else {
-                                uw.field_g[param2] = (wv) (Object) new jn(param2, param6, param4, param0, param3, param1);
-                                uw.field_g[param2].field_p = pm.field_h[param2];
-                                return;
                               }
-                            } else {
-                              uw.field_g[param2] = (wv) (Object) new ow(param2, param6, param4, param0, param3, param1);
-                              break L0;
                             }
-                          } else {
-                            uw.field_g[param2] = (wv) (Object) new vba(param2, param6, param4, param0, param3, param1);
-                            uw.field_g[param2].field_p = pm.field_h[param2];
-                            return;
                           }
-                        } else {
-                          uw.field_g[param2] = (wv) (Object) new qp(param2, param6, param4, param0, param3, param1);
-                          uw.field_g[param2].field_p = pm.field_h[param2];
-                          return;
                         }
-                      } else {
-                        uw.field_g[param2] = (wv) (Object) new epa(param2, param6, param4, param0, param3, param1);
-                        uw.field_g[param2].field_p = pm.field_h[param2];
-                        return;
                       }
-                    } else {
                       uw.field_g[param2] = (wv) (Object) new epa(param2, param6, param4, param0, param3, param1);
-                      uw.field_g[param2].field_p = pm.field_h[param2];
-                      return;
+                      break L2;
                     }
                   } else {
-                    uw.field_g[param2] = (wv) (Object) new pk(param2, param6, param4, param0, param3, param1);
-                    uw.field_g[param2].field_p = pm.field_h[param2];
-                    return;
+                    uw.field_g[param2] = (wv) (Object) new jn(param2, param6, param4, param0, param3, param1);
+                    break L2;
                   }
-                } else {
-                  uw.field_g[param2] = (wv) (Object) new jn(param2, param6, param4, param0, param3, param1);
-                  break L0;
                 }
               } else {
-                uw.field_g[param2] = (wv) (Object) new se(param2, param6, param4, param0, param3, param1);
-                uw.field_g[param2].field_p = pm.field_h[param2];
-                return;
+                uw.field_g[param2] = (wv) (Object) new sv(param2, param6, param4, param0, param3, param1);
+                break L2;
               }
+            }
+            uw.field_g[param2].field_p = pm.field_h[param2];
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var7 = decompiledCaughtException;
+            stackOut_30_0 = (RuntimeException) var7;
+            stackOut_30_1 = new StringBuilder().append("qpa.D(").append(param0).append(44);
+            stackIn_32_0 = stackOut_30_0;
+            stackIn_32_1 = stackOut_30_1;
+            stackIn_31_0 = stackOut_30_0;
+            stackIn_31_1 = stackOut_30_1;
+            if (param1 == null) {
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "null";
+              stackIn_33_0 = stackOut_32_0;
+              stackIn_33_1 = stackOut_32_1;
+              stackIn_33_2 = stackOut_32_2;
+              break L4;
             } else {
-              uw.field_g[param2] = (wv) (Object) new sv(param2, param6, param4, param0, param3, param1);
-              break L0;
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "{...}";
+              stackIn_33_0 = stackOut_31_0;
+              stackIn_33_1 = stackOut_31_1;
+              stackIn_33_2 = stackOut_31_2;
+              break L4;
             }
           }
-          uw.field_g[param2].field_p = pm.field_h[param2];
-          return;
+          throw tba.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

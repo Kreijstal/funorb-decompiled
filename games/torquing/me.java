@@ -23,7 +23,7 @@ abstract class me {
         String stackOut_15_0 = null;
         var5 = Torquing.field_u;
         var6 = "(" + mm.field_d + " " + eb.field_f + " " + wk.field_h + ") " + fa.field_e;
-        if (param0 > (oo.field_a ^ -1)) {
+        if (oo.field_a > 63) {
           var1 = var6 + ":";
           var2 = 0;
           L0: while (true) {
@@ -39,9 +39,9 @@ abstract class me {
                     L3: {
                       var7 = stackIn_6_0;
                       var3 = kj.field_d.field_j[var2] & 255;
-                      var4 = var3 >> -12710428;
+                      var4 = var3 >> 4;
                       var3 = var3 & 15;
-                      if ((var4 ^ -1) <= -11) {
+                      if (var4 >= 10) {
                         break L3;
                       } else {
                         var4 += 48;

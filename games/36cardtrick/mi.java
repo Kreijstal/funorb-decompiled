@@ -14,9 +14,6 @@ class mi extends ff {
     }
 
     public static void c(int param0) {
-        if (param0 != -3731) {
-            return;
-        }
         field_c = null;
     }
 
@@ -24,18 +21,30 @@ class mi extends ff {
         if (param0 != -1) {
             return;
         }
-        param1.a(((mi) this).field_d, (byte) 98);
-        param1.b(((mi) this).field_e, 15045);
+        try {
+            param1.a(((mi) this).field_d, (byte) 98);
+            param1.b(((mi) this).field_e, 15045);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "mi.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, ib param1, int param2, int param3) {
-        gh.a(li.a(param1, param2, param3), (byte) -111);
-        int var4 = 81 % ((31 - param0) / 46);
+        try {
+            gh.a(li.a(param1, param2, param3), (byte) -111);
+            int var4_int = 81 % ((31 - param0) / 46);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "mi.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     mi(long param0, String param1) {
-        ((mi) this).field_d = param0;
-        ((mi) this).field_e = param1;
+        try {
+            ((mi) this).field_d = param0;
+            ((mi) this).field_e = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "mi.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -16,9 +16,6 @@ final class qa extends RuntimeException {
         field_f = null;
         field_b = null;
         field_g = null;
-        if (!param0) {
-            tf[] discarded$0 = qa.a(62, -2, 14, -125);
-        }
     }
 
     final static tf[] a(int param0, int param1, int param2, int param3) {

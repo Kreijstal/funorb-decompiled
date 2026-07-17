@@ -15,13 +15,13 @@ final class q extends rt {
         ((q) this).field_n = -1;
         ((q) this).field_m = -1;
         if (param0 != 11) {
-            field_q = (gk) null;
+            field_q = null;
         }
     }
 
     public static void d(int param0) {
         field_p = null;
-        int var1 = -126 / ((-5 - param0) / 53);
+        int var1 = -126;
         field_o = null;
         field_k = null;
         field_q = null;
@@ -30,14 +30,18 @@ final class q extends rt {
 
     q(wl param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
         super(param0, 34067, param1, 6 * param2 * param2, param3);
-        int var7 = 0;
+        int var7_int = 0;
         ((q) this).field_m = -1;
         ((q) this).field_n = -1;
-        ((q) this).field_j.a((rt) this, 1);
-        for (var7 = 0; var7 < 6; var7++) {
-            jaggl.OpenGL.glTexImage2Dub(var7 + 34069, 0, ((q) this).field_b, param2, param2, 0, param5, 5121, param4[var7], 0);
+        try {
+            ((q) this).field_j.a((rt) this, 1);
+            for (var7_int = 0; var7_int < 6; var7_int++) {
+                jaggl.OpenGL.glTexImage2Dub(var7_int + 34069, 0, ((q) this).field_b, param2, param2, 0, param5, 5121, param4[var7_int], 0);
+            }
+            ((q) this).a(true, -128);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "q.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
-        ((q) this).a(true, -128);
     }
 
     static {

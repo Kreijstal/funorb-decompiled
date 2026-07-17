@@ -71,16 +71,8 @@ final class s extends ke {
     public static void b(byte param0) {
         field_d = null;
         field_h = null;
-        if (param0 != 118) {
-          dl[] discarded$2 = s.a(-125, -56, 33, (byte) -7);
-          field_f = null;
-          field_o = null;
-          return;
-        } else {
-          field_f = null;
-          field_o = null;
-          return;
-        }
+        field_f = null;
+        field_o = null;
     }
 
     final void a(int param0) {
@@ -100,22 +92,40 @@ final class s extends ke {
     final static String a(ng param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
         byte[] var5 = null;
         String var6 = null;
         String stackIn_3_0 = null;
+        String stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
         String stackOut_2_0 = null;
+        String stackOut_4_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
-          L0: {
-            L1: {
+          try {
+            L0: {
               var4 = 36 % ((param1 - 40) / 56);
               var3_int = param0.c(false);
-              if (param2 >= var3_int) {
-                break L1;
+              if (80 >= var3_int) {
+                break L0;
               } else {
-                var3_int = param2;
-                break L1;
+                var3_int = 80;
+                break L0;
               }
             }
             var5 = new byte[var3_int];
@@ -123,19 +133,49 @@ final class s extends ke {
             var6 = gd.a((byte) 61, var5, 0, var3_int);
             stackOut_2_0 = (String) var6;
             stackIn_3_0 = stackOut_2_0;
-            break L0;
+            return stackIn_3_0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            stackOut_4_0 = "Cabbage";
+            stackIn_5_0 = stackOut_4_0;
+            return stackIn_5_0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (Exception) (Object) decompiledCaughtException;
-          return "Cabbage";
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L1: {
+            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3_ref;
+            stackOut_6_1 = new StringBuilder().append("s.I(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L1;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L1;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + 80 + 41);
         }
-        return stackIn_3_0;
     }
 
     final long a(boolean param0) {
         ((s) this).field_i = ((s) this).field_i + this.c((byte) 14);
-        if ((((s) this).field_e ^ -1L) >= (((s) this).field_i ^ -1L)) {
+        if (~((s) this).field_e >= ~((s) this).field_i) {
           if (!param0) {
             return 27L;
           } else {
@@ -152,95 +192,63 @@ final class s extends ke {
         long var6 = 0L;
         int var8 = 0;
         int var9 = 0;
-        L0: {
-          var9 = CrazyCrystals.field_B;
-          var2 = System.nanoTime();
-          var4 = var2 - ((s) this).field_m;
-          ((s) this).field_m = var2;
-          if ((var4 ^ -1L) >= 4999999999L) {
-            break L0;
-          } else {
-            if (5000000000L > var4) {
-              ((s) this).field_n[((s) this).field_j] = var4;
-              ((s) this).field_j = (1 + ((s) this).field_j) % 10;
-              if ((((s) this).field_g ^ -1) > -2) {
-                ((s) this).field_g = ((s) this).field_g + 1;
-                break L0;
-              } else {
-                var6 = 0L;
-                var8 = 1;
-                if (param0 == 14) {
-                  L1: while (true) {
-                    if (((s) this).field_g < var8) {
-                      return var6 / (long)((s) this).field_g;
-                    } else {
-                      var6 = var6 + ((s) this).field_n[(10 + ((s) this).field_j + -var8) % 10];
-                      var8++;
-                      continue L1;
-                    }
-                  }
+        var9 = CrazyCrystals.field_B;
+        var2 = System.nanoTime();
+        var4 = var2 - ((s) this).field_m;
+        ((s) this).field_m = var2;
+        if (var4 > -5000000000L) {
+          if (5000000000L > var4) {
+            ((s) this).field_n[((s) this).field_j] = var4;
+            ((s) this).field_j = (1 + ((s) this).field_j) % 10;
+            if (((s) this).field_g >= 1) {
+              var6 = 0L;
+              var8 = 1;
+              L0: while (true) {
+                if (((s) this).field_g < var8) {
+                  return var6 / (long)((s) this).field_g;
                 } else {
-                  ((s) this).a(25);
-                  L2: while (true) {
-                    if (((s) this).field_g < var8) {
-                      return var6 / (long)((s) this).field_g;
-                    } else {
-                      var6 = var6 + ((s) this).field_n[(10 + ((s) this).field_j + -var8) % 10];
-                      var8++;
-                      continue L2;
-                    }
-                  }
+                  var6 = var6 + ((s) this).field_n[(10 + ((s) this).field_j + -var8) % 10];
+                  var8++;
+                  continue L0;
                 }
               }
             } else {
+              ((s) this).field_g = ((s) this).field_g + 1;
               var6 = 0L;
               var8 = 1;
-              if (param0 == 14) {
-                L3: while (true) {
-                  if (((s) this).field_g < var8) {
-                    return var6 / (long)((s) this).field_g;
-                  } else {
-                    var6 = var6 + ((s) this).field_n[(10 + ((s) this).field_j + -var8) % 10];
-                    var8++;
-                    continue L3;
-                  }
-                }
-              } else {
-                ((s) this).a(25);
-                L4: while (true) {
-                  if (((s) this).field_g < var8) {
-                    return var6 / (long)((s) this).field_g;
-                  } else {
-                    var6 = var6 + ((s) this).field_n[(10 + ((s) this).field_j + -var8) % 10];
-                    var8++;
-                    continue L4;
-                  }
+              L1: while (true) {
+                if (((s) this).field_g < var8) {
+                  return var6 / (long)((s) this).field_g;
+                } else {
+                  var6 = var6 + ((s) this).field_n[(10 + ((s) this).field_j + -var8) % 10];
+                  var8++;
+                  continue L1;
                 }
               }
             }
-          }
-        }
-        var6 = 0L;
-        var8 = 1;
-        if (param0 == 14) {
-          L5: while (true) {
-            if (((s) this).field_g < var8) {
-              return var6 / (long)((s) this).field_g;
-            } else {
-              var6 = var6 + ((s) this).field_n[(10 + ((s) this).field_j + -var8) % 10];
-              var8++;
-              continue L5;
+          } else {
+            var6 = 0L;
+            var8 = 1;
+            L2: while (true) {
+              if (((s) this).field_g < var8) {
+                return var6 / (long)((s) this).field_g;
+              } else {
+                var6 = var6 + ((s) this).field_n[(10 + ((s) this).field_j + -var8) % 10];
+                var8++;
+                continue L2;
+              }
             }
           }
         } else {
-          ((s) this).a(25);
-          L6: while (true) {
+          var6 = 0L;
+          var8 = 1;
+          L3: while (true) {
             if (((s) this).field_g < var8) {
               return var6 / (long)((s) this).field_g;
             } else {
               var6 = var6 + ((s) this).field_n[(10 + ((s) this).field_j + -var8) % 10];
               var8++;
-              continue L6;
+              continue L3;
             }
           }
         }
@@ -262,7 +270,7 @@ final class s extends ke {
     }
 
     private static void $cfr$clinit() {
-        field_d = new char[]{(char)91, (char)93, (char)35};
+        field_d = new char[]{'[', ']', '#'};
         field_k = 20000000L;
         field_f = "EXCLUSIVE";
     }

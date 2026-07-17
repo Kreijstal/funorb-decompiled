@@ -32,10 +32,10 @@ final class ad {
         if (param0) {
           return null;
         } else {
-          var7 = (int)((long)var5 * (long)var3 >> 1821388688);
-          var8 = (int)((long)var6 * (long)var3 >> -1422335856);
-          var9 = (int)((long)var4 * (long)var5 >> -1873163888);
-          var10 = (int)((long)var4 * (long)var6 >> 2049016272);
+          var7 = (int)((long)var5 * (long)var3 >> 16);
+          var8 = (int)((long)var6 * (long)var3 >> 16);
+          var9 = (int)((long)var4 * (long)var5 >> 16);
+          var10 = (int)((long)var4 * (long)var6 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
     }

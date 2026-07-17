@@ -18,7 +18,11 @@ final class oh extends bl {
 
     oh(Object param0, int param1) {
         super(param1);
-        ((oh) this).field_B = param0;
+        try {
+            ((oh) this).field_B = param0;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "oh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final static String a(long param0, int param1) {
@@ -30,49 +34,45 @@ final class oh extends bl {
         int var10 = 0;
         int var11 = 0;
         var11 = MinerDisturbance.field_ab;
-        if (param1 == 95) {
-          if (-1L > (param0 ^ -1L)) {
-            if (-6582952005840035282L < (param0 ^ -1L)) {
-              if ((param0 % 37L ^ -1L) == -1L) {
-                return null;
-              } else {
-                var3 = 0;
-                var4 = param0;
-                L0: while (true) {
-                  if (0L == var4) {
-                    var6 = new StringBuilder(var3);
-                    L1: while (true) {
-                      if (param0 == 0L) {
-                        StringBuilder discarded$2 = var6.reverse();
-                        var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-                        return var6.toString();
-                      } else {
-                        L2: {
-                          var7 = param0;
-                          param0 = param0 / 37L;
-                          var9 = bh.field_db[(int)(-(param0 * 37L) + var7)];
-                          if (var9 == 95) {
-                            var10 = var6.length() - 1;
-                            var9 = 160;
-                            var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
-                            break L2;
-                          } else {
-                            break L2;
-                          }
+        if (param0 > 0L) {
+          if (param0 < 6582952005840035281L) {
+            if (param0 % 37L == 0L) {
+              return null;
+            } else {
+              var3 = 0;
+              var4 = param0;
+              L0: while (true) {
+                if (0L == var4) {
+                  var6 = new StringBuilder(var3);
+                  L1: while (true) {
+                    if (param0 == 0L) {
+                      StringBuilder discarded$2 = var6.reverse();
+                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+                      return var6.toString();
+                    } else {
+                      L2: {
+                        var7 = param0;
+                        param0 = param0 / 37L;
+                        var9 = bh.field_db[(int)(-(param0 * 37L) + var7)];
+                        if (var9 == 95) {
+                          var10 = var6.length() - 1;
+                          var9 = 160;
+                          var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
+                          break L2;
+                        } else {
+                          break L2;
                         }
-                        StringBuilder discarded$3 = var6.append(var9);
-                        continue L1;
                       }
+                      StringBuilder discarded$3 = var6.append(var9);
+                      continue L1;
                     }
-                  } else {
-                    var3++;
-                    var4 = var4 / 37L;
-                    continue L0;
                   }
+                } else {
+                  var3++;
+                  var4 = var4 / 37L;
+                  continue L0;
                 }
               }
-            } else {
-              return null;
             }
           } else {
             return null;
@@ -84,7 +84,7 @@ final class oh extends bl {
 
     public static void i(int param0) {
         field_A = null;
-        int var1 = -128 % ((54 - param0) / 48);
+        int var1 = -2;
         field_C = null;
     }
 
@@ -95,27 +95,79 @@ final class oh extends bl {
 
     final static vc a(int param0, int param1, bj param2) {
         byte[] var3 = null;
+        RuntimeException var3_ref = null;
         Object var4 = null;
         byte[] var5 = null;
-        if (param0 < -86) {
-          var5 = param2.e(param1, 1);
-          var3 = var5;
-          if (var5 == null) {
-            return null;
-          } else {
-            return new vc(var5);
+        vc stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        vc stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 < -86) {
+                break L1;
+              } else {
+                var4 = null;
+                vc discarded$2 = oh.a(-87, 94, (bj) null);
+                break L1;
+              }
+            }
+            var5 = param2.e(param1, 1);
+            var3 = var5;
+            if (var5 != null) {
+              stackOut_5_0 = new vc(var5);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              return null;
+            }
           }
-        } else {
-          var4 = null;
-          vc discarded$2 = oh.a(-87, 94, (bj) null);
-          var5 = param2.e(param1, 1);
-          var3 = var5;
-          if (var5 == null) {
-            return null;
-          } else {
-            return new vc(var5);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3_ref;
+            stackOut_7_1 = new StringBuilder().append("oh.D(").append(param0).append(44).append(param1).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param2 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
           }
+          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
+        return stackIn_6_0;
     }
 
     final static oe c(byte param0) {

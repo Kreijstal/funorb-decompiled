@@ -25,44 +25,97 @@ final class cd {
     }
 
     final static void a(kc[] param0, int param1, byte param2, int param3, int param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var10 = Main.field_T;
-        if (param0 != null) {
-          if (-1 <= (param1 ^ -1)) {
-            return;
-          } else {
-            var5 = param0[0].field_l;
-            var6 = param0[2].field_l;
-            var7 = param0[1].field_l;
-            param0[0].d(param3, param4);
-            param0[2].d(param1 + param3 + -var6, param4);
-            vj.a(sg.field_c);
-            vj.f(var5 + param3, param4, -var6 + param1 + param3, param4 - -param0[1].field_k);
-            if (param2 != -94) {
-              return;
-            } else {
-              var8 = var5 + param3;
-              var9 = -var6 + param3 - -param1;
-              param3 = var8;
-              L0: while (true) {
-                if (var9 <= param3) {
-                  vj.b(sg.field_c);
-                  return;
+        try {
+          L0: {
+            L1: {
+              if (param0 == null) {
+                break L1;
+              } else {
+                if (param1 <= 0) {
+                  break L1;
                 } else {
-                  param0[1].d(param3, param4);
-                  param3 = param3 + var7;
-                  continue L0;
+                  var5_int = param0[0].field_l;
+                  var6 = param0[2].field_l;
+                  var7 = param0[1].field_l;
+                  param0[0].d(param3, param4);
+                  param0[2].d(param1 + param3 + -var6, param4);
+                  vj.a(sg.field_c);
+                  vj.f(var5_int + param3, param4, -var6 + param1 + param3, param4 - -param0[1].field_k);
+                  if (param2 == -94) {
+                    var8 = var5_int + param3;
+                    var9 = -var6 + param3 - -param1;
+                    param3 = var8;
+                    L2: while (true) {
+                      if (var9 <= param3) {
+                        vj.b(sg.field_c);
+                        break L0;
+                      } else {
+                        param0[1].d(param3, param4);
+                        param3 = param3 + var7;
+                        continue L2;
+                      }
+                    }
+                  } else {
+                    return;
+                  }
                 }
               }
             }
+            return;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_1 = new StringBuilder().append("cd.E(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -189,22 +242,19 @@ final class cd {
     }
 
     final void a(byte param0, he param1) {
-        L0: {
-          if (null != param1.field_i) {
+        if (!(null == param1.field_i)) {
             param1.d(12);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         param1.field_i = ((cd) this).field_d.field_i;
         if (param0 >= -62) {
-          return;
-        } else {
-          param1.field_h = ((cd) this).field_d;
-          param1.field_i.field_h = param1;
-          param1.field_h.field_i = param1;
-          return;
+            return;
+        }
+        try {
+            param1.field_h = ((cd) this).field_d;
+            param1.field_i.field_h = param1;
+            param1.field_h.field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "cd.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -216,7 +266,7 @@ final class cd {
 
     public static void a(byte param0) {
         field_b = null;
-        int var1 = 46 % ((-45 - param0) / 58);
+        int var1 = 0;
         field_g = null;
         field_f = null;
     }

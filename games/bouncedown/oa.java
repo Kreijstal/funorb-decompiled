@@ -29,7 +29,7 @@ abstract class oa {
     }
 
     final static java.awt.Container a(byte param0) {
-        int var1 = -65 % ((69 - param0) / 53);
+        int var1 = 0;
         if (!(null == i.field_h)) {
             return (java.awt.Container) (Object) i.field_h;
         }

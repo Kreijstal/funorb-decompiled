@@ -15,14 +15,6 @@ final class qu extends tc {
     final static void e(int param0) {
         if (iu.field_h) {
             e.a((byte) -93);
-            if (param0 == -3) {
-                return;
-            }
-            field_q = false;
-            return;
-        }
-        if (param0 != -3) {
-            field_q = false;
             return;
         }
     }
@@ -61,13 +53,13 @@ final class qu extends tc {
                 }
               }
               hc.field_b = Math.abs(hc.field_b);
-              var5 = var3 + 0;
-              var6 = var4 - 0;
+              var5 = var3;
+              var6 = var4;
               var7 = hc.field_b % 4;
               var8 = var7;
               if (0 != var8) {
                 if (var8 != 1) {
-                  if (-3 != (var8 ^ -1)) {
+                  if (var8 != 2) {
                     if (var8 == 3) {
                       ii.field_b = ii.field_b - (-var6 + var5);
                       return "Done.";
@@ -890,9 +882,13 @@ final class qu extends tc {
     }
 
     qu(long param0, int param1, byte[] param2) {
-        ((qu) this).field_o = param1;
-        ((qu) this).field_l = param0;
-        ((qu) this).field_m = param2;
+        try {
+            ((qu) this).field_o = param1;
+            ((qu) this).field_l = param0;
+            ((qu) this).field_m = param2;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "qu.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

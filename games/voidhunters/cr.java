@@ -25,7 +25,7 @@ final class cr {
         while (((cr) this).field_a[var1] >= 0) {
             var1 = fca.c() != 0 ? ((cr) this).field_a[var1] : var1 + 1;
         }
-        return ((cr) this).field_a[var1] ^ -1;
+        return ~((cr) this).field_a[var1];
     }
 
     cr() {
@@ -56,7 +56,7 @@ final class cr {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = fca.c(24);
+          int discarded$2 = fca.c(24);
           ((cr) this).field_f = fca.c(16);
           ((cr) this).field_e = fca.c(24);
           ((cr) this).field_c = new int[((cr) this).field_e];
@@ -123,8 +123,9 @@ final class cr {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((cr) this).field_c[var2] = var3_int;
+                    ((cr) this).field_c[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }
@@ -282,7 +283,7 @@ final class cr {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((cr) this).field_a[var6] = var3 ^ -1;
+                      ((cr) this).field_a[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;

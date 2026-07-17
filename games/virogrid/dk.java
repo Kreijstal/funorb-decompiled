@@ -43,12 +43,12 @@ abstract class dk {
             int stackOut_22_0 = 0;
             int stackOut_31_0 = 0;
             int stackOut_7_0 = 0;
-            if (-5 < (ji.field_e.field_l ^ -1)) {
+            if (ji.field_e.field_l < 4) {
               try {
                 L0: {
                   if (param0 == 108) {
                     L1: {
-                      if ((ij.field_q ^ -1) != -1) {
+                      if (ij.field_q != 0) {
                         break L1;
                       } else {
                         vm.field_b = ii.field_a.a(ok.field_G, 27402, co.field_g);
@@ -57,11 +57,11 @@ abstract class dk {
                       }
                     }
                     L2: {
-                      if (-2 != (ij.field_q ^ -1)) {
+                      if (ij.field_q != 1) {
                         break L2;
                       } else {
                         if (2 != vm.field_b.field_a) {
-                          if (-2 != (vm.field_b.field_a ^ -1)) {
+                          if (vm.field_b.field_a != 1) {
                             break L2;
                           } else {
                             ij.field_q = ij.field_q + 1;
@@ -90,7 +90,7 @@ abstract class dk {
                       }
                     }
                     L4: {
-                      if ((ij.field_q ^ -1) != -4) {
+                      if (ij.field_q != 3) {
                         break L4;
                       } else {
                         if (0 < ng.field_N.f(31479)) {
@@ -104,7 +104,7 @@ abstract class dk {
                             break L4;
                           }
                         } else {
-                          if ((hc.a(-9986) ^ -1L) >= (sg.field_l ^ -1L)) {
+                          if (~hc.a(-9986) >= ~sg.field_l) {
                             break L4;
                           } else {
                             stackOut_22_0 = bk.a(-2, 1);
@@ -139,7 +139,7 @@ abstract class dk {
               return stackIn_32_0;
             } else {
               if (ji.field_e.field_b != -1) {
-                if ((ji.field_e.field_b ^ -1) == 1) {
+                if (ji.field_e.field_b == -2) {
                   return 4;
                 } else {
                   return 1;
@@ -156,7 +156,7 @@ abstract class dk {
     }
 
     final ub a(byte param0, int param1, boolean param2, int param3, int param4) {
-        long var6 = (long)param1 + ((long)param4 << -1150070304);
+        long var6 = (long)param1 + ((long)param4 << 32);
         ub var8 = new ub();
         var8.field_j = var6;
         var8.field_A = param0;
@@ -170,7 +170,7 @@ abstract class dk {
             }
             ((dk) this).field_i.a((wb) (Object) var8, (byte) 96);
         } else {
-            if (-21 < (((dk) this).e(114) ^ -1)) {
+            if (((dk) this).e(114) < 20) {
                 ((dk) this).field_p.a((wb) (Object) var8, (byte) 112);
                 return var8;
             }
@@ -235,7 +235,7 @@ abstract class dk {
         if (param0 != 113) {
           L0: {
             ((dk) this).field_k = -48;
-            if ((((dk) this).a((byte) -11) ^ -1) > -21) {
+            if (((dk) this).a((byte) -11) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -248,7 +248,7 @@ abstract class dk {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((dk) this).a((byte) -11) ^ -1) > -21) {
+            if (((dk) this).a((byte) -11) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -267,7 +267,7 @@ abstract class dk {
         field_q = null;
         field_m = null;
         field_j = null;
-        int var1 = 68 % ((param0 - -29) / 43);
+        int var1 = 0;
         field_o = null;
         field_e = null;
         field_s = null;

@@ -16,6 +16,7 @@ final class rj implements ol {
     static int field_h;
 
     public final void a(int param0, fi param1, boolean param2, int param3, int param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -23,98 +24,106 @@ final class rj implements ol {
         int var11 = 0;
         Object var12 = null;
         gb var13 = null;
-        gb var14 = null;
-        gb var15 = null;
-        fi stackIn_4_0 = null;
-        fi stackIn_15_0 = null;
-        Object stackOut_14_0 = null;
-        fi stackOut_13_0 = null;
-        Object stackOut_3_0 = null;
-        fi stackOut_2_0 = null;
+        fi stackIn_6_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_5_0 = null;
+        fi stackOut_4_0 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var11 = Virogrid.field_F ? 1 : 0;
-        if (param4 == -23294) {
+        try {
           L0: {
-            if (!(param1 instanceof gb)) {
-              stackOut_14_0 = null;
-              stackIn_15_0 = (fi) (Object) stackOut_14_0;
-              break L0;
-            } else {
-              stackOut_13_0 = (fi) param1;
-              stackIn_15_0 = stackOut_13_0;
-              break L0;
-            }
-          }
-          L1: {
-            var15 = (gb) (Object) stackIn_15_0;
-            if (var15 == null) {
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          df.b(param0 + param1.field_l, param3 - -param1.field_u, param1.field_g, param1.field_m, ((rj) this).field_k);
-          var7 = param1.field_g + -(var15.field_J * 2);
-          var8 = param1.field_l + (param0 - -var15.field_J);
-          var9 = var15.field_K + param1.field_u + param3;
-          df.a(var8, var9, var8 + var7, var9, ((rj) this).field_a);
-          var10 = -1 + var15.d((byte) -108);
-          L2: while (true) {
-            if (-1 < (var10 ^ -1)) {
-              if (((rj) this).field_g != null) {
-                ((rj) this).field_g.c(var15.field_n, var8 - -(var7 / 2), ((rj) this).field_g.field_J + var9 - -var15.field_K, ((rj) this).field_f, ((rj) this).field_c);
-                return;
+            L1: {
+              if (param4 == -23294) {
+                break L1;
               } else {
-                return;
+                var12 = null;
+                ((rj) this).a(62, (fi) null, true, -29, -102);
+                break L1;
               }
-            } else {
-              df.c(var7 * var15.a(-1, var10) / var15.a(2147483647) + var8, var9, ((rj) this).field_b, ((rj) this).field_e);
-              var10--;
-              continue L2;
             }
-          }
-        } else {
-          L3: {
-            var12 = null;
-            ((rj) this).a(62, (fi) null, true, -29, -102);
-            if (!(param1 instanceof gb)) {
-              stackOut_3_0 = null;
-              stackIn_4_0 = (fi) (Object) stackOut_3_0;
-              break L3;
-            } else {
-              stackOut_2_0 = (fi) param1;
-              stackIn_4_0 = stackOut_2_0;
-              break L3;
-            }
-          }
-          L4: {
-            var14 = (gb) (Object) stackIn_4_0;
-            var13 = var14;
-            if (var14 == null) {
-              break L4;
-            } else {
-              break L4;
-            }
-          }
-          df.b(param0 + param1.field_l, param3 - -param1.field_u, param1.field_g, param1.field_m, ((rj) this).field_k);
-          var7 = param1.field_g + -(var14.field_J * 2);
-          var8 = param1.field_l + (param0 - -var14.field_J);
-          var9 = var14.field_K + param1.field_u + param3;
-          df.a(var8, var9, var8 + var7, var9, ((rj) this).field_a);
-          var10 = -1 + var14.d((byte) -108);
-          L5: while (true) {
-            if (-1 < (var10 ^ -1)) {
-              if (((rj) this).field_g != null) {
-                ((rj) this).field_g.c(var14.field_n, var8 - -(var7 / 2), ((rj) this).field_g.field_J + var9 - -var14.field_K, ((rj) this).field_f, ((rj) this).field_c);
-                return;
+            L2: {
+              if (!(param1 instanceof gb)) {
+                stackOut_5_0 = null;
+                stackIn_6_0 = (fi) (Object) stackOut_5_0;
+                break L2;
               } else {
-                return;
+                stackOut_4_0 = (fi) param1;
+                stackIn_6_0 = stackOut_4_0;
+                break L2;
               }
-            } else {
-              df.c(var7 * var14.a(-1, var10) / var14.a(2147483647) + var8, var9, ((rj) this).field_b, ((rj) this).field_e);
-              var10--;
-              continue L5;
+            }
+            L3: {
+              var13 = (gb) (Object) stackIn_6_0;
+              if (var13 == null) {
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            df.b(param0 + param1.field_l, param3 - -param1.field_u, param1.field_g, param1.field_m, ((rj) this).field_k);
+            var7 = param1.field_g + -(var13.field_J * 2);
+            var8 = param1.field_l + (param0 - -var13.field_J);
+            var9 = var13.field_K + param1.field_u + param3;
+            df.a(var8, var9, var8 + var7, var9, ((rj) this).field_a);
+            var10 = -1 + var13.d((byte) -108);
+            L4: while (true) {
+              if (var10 < 0) {
+                if (((rj) this).field_g == null) {
+                  break L0;
+                } else {
+                  ((rj) this).field_g.c(var13.field_n, var8 - -(var7 / 2), ((rj) this).field_g.field_J + var9 - -var13.field_K, ((rj) this).field_f, ((rj) this).field_c);
+                  return;
+                }
+              } else {
+                df.c(var7 * var13.a(-1, var10) / var13.a(2147483647) + var8, var9, ((rj) this).field_b, ((rj) this).field_e);
+                var10--;
+                continue L4;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var6 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_1 = new StringBuilder().append("rj.E(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -140,24 +149,12 @@ final class rj implements ol {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
             try {
-              L0: {
-                L1: {
-                  Object discarded$1 = q.a(mb.g((byte) 6), -8582, new Object[1], "resizing");
-                  if (param1 < -65) {
-                    break L1;
-                  } else {
-                    field_d = null;
-                    break L1;
-                  }
-                }
-                break L0;
-              }
+              Object discarded$1 = q.a(mb.g((byte) 6), -8582, new Object[1], "resizing");
+              return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                var2 = decompiledCaughtException;
-                break L2;
-              }
+              var2 = decompiledCaughtException;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -167,23 +164,21 @@ final class rj implements ol {
     }
 
     rj(e param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ((rj) this).field_k = param4;
-        ((rj) this).field_c = param2;
-        ((rj) this).field_b = param5;
-        ((rj) this).field_g = param0;
-        ((rj) this).field_a = param3;
-        ((rj) this).field_f = param1;
-        ((rj) this).field_e = param6;
+        try {
+            ((rj) this).field_k = param4;
+            ((rj) this).field_c = param2;
+            ((rj) this).field_b = param5;
+            ((rj) this).field_g = param0;
+            ((rj) this).field_a = param3;
+            ((rj) this).field_f = param1;
+            ((rj) this).field_e = param6;
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "rj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     public static void a(int param0) {
         field_i = null;
-        if (param0 != 6) {
-            field_h = -10;
-            field_j = null;
-            field_d = null;
-            return;
-        }
         field_j = null;
         field_d = null;
     }

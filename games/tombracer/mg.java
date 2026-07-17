@@ -28,17 +28,21 @@ final class mg {
     }
 
     final void a(int param0, kh param1) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
-        param1.a((byte) 86, ((mg) this).field_i.length, 4);
-        for (var3 = 0; ((mg) this).field_i.length > var3; var3++) {
-            param1.a((byte) -25, ((mg) this).field_i[var3], 12);
+        try {
+            param1.a((byte) 86, ((mg) this).field_i.length, 4);
+            for (var3_int = 0; ((mg) this).field_i.length > var3_int; var3_int++) {
+                param1.a((byte) -25, ((mg) this).field_i[var3_int], 12);
+            }
+            if (param0 != 15637) {
+                Object var5 = null;
+                ((mg) this).a(-109, (kh) null);
+            }
+            param1.a((byte) -36, ((mg) this).field_c, 12);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "mg.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        if (param0 != 15637) {
-            Object var5 = null;
-            ((mg) this).a(-109, (kh) null);
-        }
-        param1.a((byte) -36, ((mg) this).field_c, 12);
     }
 
     final boolean c(int param0) {
@@ -78,7 +82,7 @@ final class mg {
             ((mg) this).field_a = true;
         }
         if (!(!((mg) this).field_j)) {
-            if ((((mg) this).field_f ^ -1) == 0) {
+            if (((mg) this).field_f == -1) {
                 ((mg) this).field_a = true;
                 ((mg) this).field_f = 0;
                 return;
@@ -90,7 +94,7 @@ final class mg {
             ((mg) this).field_f = ((mg) this).field_i[0];
         }
         ((mg) this).field_f = ((mg) this).field_f - 1;
-        if (-1 > (((mg) this).field_f ^ -1)) {
+        if (((mg) this).field_f > 0) {
             return;
         }
         do {
@@ -100,7 +104,7 @@ final class mg {
             }
             ((mg) this).field_f = ((mg) this).field_i[((mg) this).field_l];
             ((mg) this).field_a = !((mg) this).field_a ? true : false;
-        } while (-1 == (((mg) this).field_f ^ -1));
+        } while (((mg) this).field_f == 0);
     }
 
     final int a(byte param0) {
@@ -115,24 +119,85 @@ final class mg {
 
     final void a(boolean param0, int param1) {
         int var3 = 0;
-        int var4 = TombRacer.field_G ? 1 : 0;
-        if (!(!((mg) this).field_j)) {
-            return;
-        }
-        ((mg) this).field_c = param1;
-        if (param0) {
-            ((mg) this).field_l = 38;
-        }
-        if (!(-1 <= param1)) {
-            param1 = param1 % jna.a(10, ((mg) this).field_i);
-            var3 = 0;
-            while (-1 < param1) {
-                ((mg) this).d(0);
-                param1--;
-                // ifeq L56
-                var3 = var3 == 0 ? 1 : 0;
+        int var4 = 0;
+        int stackIn_13_0 = 0;
+        Object stackIn_15_0 = null;
+        Object stackIn_16_0 = null;
+        Object stackIn_17_0 = null;
+        int stackIn_17_1 = 0;
+        Object stackOut_14_0 = null;
+        Object stackOut_16_0 = null;
+        int stackOut_16_1 = 0;
+        Object stackOut_15_0 = null;
+        int stackOut_15_1 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_11_0 = 0;
+        var4 = TombRacer.field_G ? 1 : 0;
+        if (((mg) this).field_j) {
+          return;
+        } else {
+          L0: {
+            ((mg) this).field_c = param1;
+            if (!param0) {
+              break L0;
+            } else {
+              ((mg) this).field_l = 38;
+              break L0;
             }
-            ((mg) this).field_d = var3 != 0 ? true : false;
+          }
+          L1: {
+            if (param1 > 0) {
+              param1 = param1 % jna.a(10, ((mg) this).field_i);
+              var3 = 0;
+              L2: while (true) {
+                if (param1 <= 0) {
+                  L3: {
+                    stackOut_14_0 = this;
+                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_15_0 = stackOut_14_0;
+                    if (var3 == 0) {
+                      stackOut_16_0 = this;
+                      stackOut_16_1 = 0;
+                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_1 = stackOut_16_1;
+                      break L3;
+                    } else {
+                      stackOut_15_0 = this;
+                      stackOut_15_1 = 1;
+                      stackIn_17_0 = stackOut_15_0;
+                      stackIn_17_1 = stackOut_15_1;
+                      break L3;
+                    }
+                  }
+                  ((mg) this).field_d = stackIn_17_1 != 0;
+                  break L1;
+                } else {
+                  ((mg) this).d(0);
+                  param1--;
+                  if (!((mg) this).field_a) {
+                    continue L2;
+                  } else {
+                    L4: {
+                      if (var3 != 0) {
+                        stackOut_12_0 = 0;
+                        stackIn_13_0 = stackOut_12_0;
+                        break L4;
+                      } else {
+                        stackOut_11_0 = 1;
+                        stackIn_13_0 = stackOut_11_0;
+                        break L4;
+                      }
+                    }
+                    var3 = stackIn_13_0;
+                    continue L2;
+                  }
+                }
+              }
+            } else {
+              break L1;
+            }
+          }
+          return;
         }
     }
 
@@ -168,29 +233,38 @@ final class mg {
 
     private mg(int[] param0, int param1) {
         ((mg) this).field_f = -1;
-        ((mg) this).field_c = param1;
-        ((mg) this).field_i = param0;
-        ((mg) this).field_j = 0 == ((mg) this).a((byte) -94) ? true : false;
-        ((mg) this).a(false, param1);
+        try {
+            ((mg) this).field_c = param1;
+            ((mg) this).field_i = param0;
+            ((mg) this).field_j = 0 == ((mg) this).a((byte) -94) ? true : false;
+            ((mg) this).a(false, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "mg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     mg(int param0, kh param1) {
+        int var3_int = 0;
         int var4 = 0;
         ((mg) this).field_f = -1;
-        int var3 = param1.b((byte) 44, 4);
-        ((mg) this).field_i = new int[var3];
-        if (-10 <= (param0 ^ -1)) {
-            for (var4 = 0; var3 > var4; var4++) {
-                ((mg) this).field_i[var4] = param1.b((byte) 44, 8);
+        try {
+            var3_int = param1.b((byte) 44, 4);
+            ((mg) this).field_i = new int[var3_int];
+            if (param0 <= 9) {
+                for (var4 = 0; var3_int > var4; var4++) {
+                    ((mg) this).field_i[var4] = param1.b((byte) 44, 8);
+                }
+                ((mg) this).field_c = param1.b((byte) 44, 8);
+            } else {
+                for (var4 = 0; var4 < var3_int; var4++) {
+                    ((mg) this).field_i[var4] = param1.b((byte) 44, 12);
+                }
+                ((mg) this).field_c = param1.b((byte) 44, 12);
             }
-            ((mg) this).field_c = param1.b((byte) 44, 8);
-        } else {
-            for (var4 = 0; var4 < var3; var4++) {
-                ((mg) this).field_i[var4] = param1.b((byte) 44, 12);
-            }
-            ((mg) this).field_c = param1.b((byte) 44, 12);
+            ((mg) this).a(false, ((mg) this).field_c);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "mg.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((mg) this).a(false, ((mg) this).field_c);
     }
 
     mg(int param0) {

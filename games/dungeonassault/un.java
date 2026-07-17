@@ -14,14 +14,11 @@ abstract class un {
         field_b = null;
         field_e = null;
         field_d = null;
-        int var1 = 113 % ((85 - param0) / 33);
+        int var1 = 0;
     }
 
     final static void a(boolean param0, byte param1) {
         lg.field_w.a(0, 0, 452);
-        if (param1 != -106) {
-            un.a(-99, (byte) -119, 66, 70, false);
-        }
     }
 
     final static void a(int param0, byte param1, int param2, int param3, boolean param4) {

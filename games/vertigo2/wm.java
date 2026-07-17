@@ -15,13 +15,13 @@ class wm extends mo {
         if (param1 < 47) {
           field_k = null;
           var2 = param0;
-          if (var2 != -33) {
+          if (var2 != 32) {
             L0: {
               if (160 == var2) {
                 break L0;
               } else {
-                if (-96 != var2) {
-                  if ((var2 ^ -1) != -46) {
+                if (var2 != 95) {
+                  if (var2 != 45) {
                     L1: {
                       if (var2 == 91) {
                         break L1;
@@ -29,7 +29,7 @@ class wm extends mo {
                         if (var2 == 93) {
                           break L1;
                         } else {
-                          if ((var2 ^ -1) == -36) {
+                          if (var2 == 35) {
                             break L1;
                           } else {
                             L2: {
@@ -45,7 +45,7 @@ class wm extends mo {
                                         break L2;
                                       } else {
                                         if (192 != var2) {
-                                          if (var2 == -194) {
+                                          if (var2 == 193) {
                                             break L2;
                                           } else {
                                             if (194 != var2) {
@@ -54,32 +54,32 @@ class wm extends mo {
                                                   break L2;
                                                 } else {
                                                   L3: {
-                                                    if (-233 == var2) {
+                                                    if (var2 == 232) {
                                                       break L3;
                                                     } else {
                                                       if (233 != var2) {
-                                                        if (var2 == -235) {
+                                                        if (var2 == 234) {
                                                           break L3;
                                                         } else {
-                                                          if (-236 == var2) {
+                                                          if (var2 == 235) {
                                                             break L3;
                                                           } else {
                                                             if (200 == var2) {
                                                               break L3;
                                                             } else {
                                                               if (201 != var2) {
-                                                                if (-203 != var2) {
-                                                                  if (-204 != var2) {
-                                                                    if (var2 != -238) {
+                                                                if (var2 != 202) {
+                                                                  if (var2 != 203) {
+                                                                    if (var2 != 237) {
                                                                       if (238 != var2) {
                                                                         L4: {
-                                                                          if (-240 == var2) {
+                                                                          if (var2 == 239) {
                                                                             break L4;
                                                                           } else {
-                                                                            if ((var2 ^ -1) == -206) {
+                                                                            if (var2 == 205) {
                                                                               break L4;
                                                                             } else {
-                                                                              if (var2 == -207) {
+                                                                              if (var2 == 206) {
                                                                                 break L4;
                                                                               } else {
                                                                                 if (var2 == 207) {
@@ -89,53 +89,53 @@ class wm extends mo {
                                                                                     if (var2 == 242) {
                                                                                       break L5;
                                                                                     } else {
-                                                                                      if (-244 != var2) {
-                                                                                        if ((var2 ^ -1) == -245) {
+                                                                                      if (var2 != 243) {
+                                                                                        if (var2 == 244) {
                                                                                           break L5;
                                                                                         } else {
-                                                                                          if (var2 == -247) {
+                                                                                          if (var2 == 246) {
                                                                                             break L5;
                                                                                           } else {
                                                                                             if (245 == var2) {
                                                                                               break L5;
                                                                                             } else {
-                                                                                              if (-211 == var2) {
+                                                                                              if (var2 == 210) {
                                                                                                 break L5;
                                                                                               } else {
-                                                                                                if ((var2 ^ -1) != -212) {
+                                                                                                if (var2 != 211) {
                                                                                                   if (var2 == 212) {
                                                                                                     break L5;
                                                                                                   } else {
-                                                                                                    if ((var2 ^ -1) == -215) {
+                                                                                                    if (var2 == 214) {
                                                                                                       break L5;
                                                                                                     } else {
-                                                                                                      if (var2 == -214) {
+                                                                                                      if (var2 == 213) {
                                                                                                         break L5;
                                                                                                       } else {
-                                                                                                        if (var2 != -250) {
-                                                                                                          if (-251 != var2) {
+                                                                                                        if (var2 != 249) {
+                                                                                                          if (var2 != 250) {
                                                                                                             L6: {
                                                                                                               if (var2 == 251) {
                                                                                                                 break L6;
                                                                                                               } else {
-                                                                                                                if (-253 != var2) {
-                                                                                                                  if (-218 != (var2 ^ -1)) {
-                                                                                                                    if ((var2 ^ -1) == -219) {
+                                                                                                                if (var2 != 252) {
+                                                                                                                  if (var2 != 217) {
+                                                                                                                    if (var2 == 218) {
                                                                                                                       break L6;
                                                                                                                     } else {
-                                                                                                                      if (var2 != -220) {
+                                                                                                                      if (var2 != 219) {
                                                                                                                         if (var2 != 220) {
                                                                                                                           if (var2 != 231) {
-                                                                                                                            if (-200 == var2) {
+                                                                                                                            if (var2 == 199) {
                                                                                                                               return 'c';
                                                                                                                             } else {
                                                                                                                               if (255 != var2) {
-                                                                                                                                if (-377 != (var2 ^ -1)) {
+                                                                                                                                if (var2 != 376) {
                                                                                                                                   if (241 == var2) {
                                                                                                                                     return 'n';
                                                                                                                                   } else {
-                                                                                                                                    if (var2 != -210) {
-                                                                                                                                      if (-224 != var2) {
+                                                                                                                                    if (var2 != 209) {
+                                                                                                                                      if (var2 != 223) {
                                                                                                                                         return Character.toLowerCase(param0);
                                                                                                                                       } else {
                                                                                                                                         return 'b';
@@ -263,14 +263,14 @@ class wm extends mo {
           }
         } else {
           var2 = param0;
-          if (var2 != -33) {
+          if (var2 != 32) {
             if (160 != var2) {
               L7: {
-                if (-96 != (var2 ^ -1)) {
-                  if (var2 != -46) {
+                if (var2 != 95) {
+                  if (var2 != 45) {
                     if (var2 != 91) {
                       if (var2 != 93) {
-                        if ((var2 ^ -1) == -36) {
+                        if (var2 == 35) {
                           return param0;
                         } else {
                           L8: {
@@ -286,7 +286,7 @@ class wm extends mo {
                                       break L8;
                                     } else {
                                       if (192 != var2) {
-                                        if (var2 == -194) {
+                                        if (var2 == 193) {
                                           break L8;
                                         } else {
                                           if (194 != var2) {
@@ -295,32 +295,32 @@ class wm extends mo {
                                                 break L8;
                                               } else {
                                                 L9: {
-                                                  if (-233 == var2) {
+                                                  if (var2 == 232) {
                                                     break L9;
                                                   } else {
                                                     if (233 != var2) {
-                                                      if (var2 == -235) {
+                                                      if (var2 == 234) {
                                                         break L9;
                                                       } else {
-                                                        if (-236 == var2) {
+                                                        if (var2 == 235) {
                                                           break L9;
                                                         } else {
                                                           if (200 == var2) {
                                                             break L9;
                                                           } else {
                                                             if (201 != var2) {
-                                                              if (-203 != var2) {
-                                                                if (-204 != var2) {
+                                                              if (var2 != 202) {
+                                                                if (var2 != 203) {
                                                                   L10: {
-                                                                    if (var2 != -238) {
+                                                                    if (var2 != 237) {
                                                                       if (238 != var2) {
-                                                                        if (-240 == var2) {
+                                                                        if (var2 == 239) {
                                                                           break L10;
                                                                         } else {
-                                                                          if ((var2 ^ -1) == -206) {
+                                                                          if (var2 == 205) {
                                                                             break L10;
                                                                           } else {
-                                                                            if (var2 == -207) {
+                                                                            if (var2 == 206) {
                                                                               break L10;
                                                                             } else {
                                                                               if (var2 == 207) {
@@ -330,53 +330,53 @@ class wm extends mo {
                                                                                   if (var2 == 242) {
                                                                                     break L11;
                                                                                   } else {
-                                                                                    if (-244 != var2) {
-                                                                                      if ((var2 ^ -1) == -245) {
+                                                                                    if (var2 != 243) {
+                                                                                      if (var2 == 244) {
                                                                                         break L11;
                                                                                       } else {
-                                                                                        if (var2 == -247) {
+                                                                                        if (var2 == 246) {
                                                                                           break L11;
                                                                                         } else {
                                                                                           if (245 == var2) {
                                                                                             break L11;
                                                                                           } else {
-                                                                                            if (-211 == var2) {
+                                                                                            if (var2 == 210) {
                                                                                               break L11;
                                                                                             } else {
-                                                                                              if ((var2 ^ -1) != -212) {
+                                                                                              if (var2 != 211) {
                                                                                                 if (var2 == 212) {
                                                                                                   break L11;
                                                                                                 } else {
-                                                                                                  if ((var2 ^ -1) == -215) {
+                                                                                                  if (var2 == 214) {
                                                                                                     break L11;
                                                                                                   } else {
-                                                                                                    if (var2 == -214) {
+                                                                                                    if (var2 == 213) {
                                                                                                       break L11;
                                                                                                     } else {
                                                                                                       L12: {
-                                                                                                        if (var2 != -250) {
-                                                                                                          if (-251 != var2) {
+                                                                                                        if (var2 != 249) {
+                                                                                                          if (var2 != 250) {
                                                                                                             if (var2 == 251) {
                                                                                                               break L12;
                                                                                                             } else {
-                                                                                                              if (-253 != var2) {
-                                                                                                                if (-218 != (var2 ^ -1)) {
-                                                                                                                  if ((var2 ^ -1) == -219) {
+                                                                                                              if (var2 != 252) {
+                                                                                                                if (var2 != 217) {
+                                                                                                                  if (var2 == 218) {
                                                                                                                     break L12;
                                                                                                                   } else {
-                                                                                                                    if (var2 != -220) {
+                                                                                                                    if (var2 != 219) {
                                                                                                                       if (var2 != 220) {
                                                                                                                         if (var2 != 231) {
-                                                                                                                          if (-200 == var2) {
+                                                                                                                          if (var2 == 199) {
                                                                                                                             return 'c';
                                                                                                                           } else {
                                                                                                                             if (255 != var2) {
-                                                                                                                              if (-377 != (var2 ^ -1)) {
+                                                                                                                              if (var2 != 376) {
                                                                                                                                 if (241 == var2) {
                                                                                                                                   return 'n';
                                                                                                                                 } else {
-                                                                                                                                  if (var2 != -210) {
-                                                                                                                                    if (-224 != var2) {
+                                                                                                                                  if (var2 != 209) {
+                                                                                                                                    if (var2 != 223) {
                                                                                                                                       return Character.toLowerCase(param0);
                                                                                                                                     } else {
                                                                                                                                       return 'b';
@@ -511,11 +511,6 @@ class wm extends mo {
 
     public static void b(int param0) {
         field_k = null;
-        if (param0 < 80) {
-            char discarded$0 = wm.a(' ', (byte) 92);
-            field_j = null;
-            return;
-        }
         field_j = null;
     }
 

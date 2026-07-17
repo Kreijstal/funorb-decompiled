@@ -43,7 +43,7 @@ final class dw extends Exception {
         var3 = Kickabout.field_G;
         if (param1 != 0) {
           dw.a(-109);
-          if ((eq.field_d ^ -1) >= -1) {
+          if (eq.field_d <= 0) {
             if (!la.a(100)) {
               L0: {
                 var2 = 1;
@@ -77,7 +77,7 @@ final class dw extends Exception {
             }
           } else {
             if (kl.field_h == null) {
-              e.field_m = gf.a(oo.field_c, param1 + 0, 480, 0, 640, 0);
+              e.field_m = gf.a(oo.field_c, param1, 480, 0, 640, 0);
               if (null != e.field_m) {
                 var2 = 2;
                 lp.a((java.awt.Canvas) (Object) e.field_m, (byte) -64);
@@ -136,7 +136,7 @@ final class dw extends Exception {
             }
           }
         } else {
-          if ((eq.field_d ^ -1) >= -1) {
+          if (eq.field_d <= 0) {
             if (!la.a(100)) {
               var2 = 1;
               if (kl.field_h == null) {
@@ -164,7 +164,7 @@ final class dw extends Exception {
             }
           } else {
             if (kl.field_h == null) {
-              e.field_m = gf.a(oo.field_c, param1 + 0, 480, 0, 640, 0);
+              e.field_m = gf.a(oo.field_c, param1, 480, 0, 640, 0);
               if (null == e.field_m) {
                 L2: {
                   var2 = 3;
@@ -235,7 +235,11 @@ final class dw extends Exception {
     }
 
     dw(String param0) {
-        ((dw) this).field_c = param0;
+        try {
+            ((dw) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "dw.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

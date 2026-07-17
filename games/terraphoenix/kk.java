@@ -86,19 +86,13 @@ final class kk {
     }
 
     final static void a(int param0, int param1) {
-        ke.field_e = (param0 << 81695984) / 150;
+        ke.field_e = (param0 << 16) / 150;
         ke.field_c = param1 * param0 / 150;
         ke.field_f = param0 * 400 / 150;
     }
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 < 67) {
-            kk.a(-26, -65);
-            field_b = null;
-            field_c = null;
-            return;
-        }
         field_b = null;
         field_c = null;
     }

@@ -14,18 +14,8 @@ final class ll extends lk {
     }
 
     public static void d(byte param0) {
-        Object var2 = null;
-        if (param0 != 104) {
-          var2 = null;
-          ll.a(61, (String) null);
-          field_p = null;
-          field_o = null;
-          return;
-        } else {
-          field_p = null;
-          field_o = null;
-          return;
-        }
+        field_p = null;
+        field_o = null;
     }
 
     final static void a(int param0, String param1) {

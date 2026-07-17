@@ -12,13 +12,6 @@ final class ve {
         if (!gm.field_x.a(false)) {
             return gm.field_x.b(2);
         }
-        if (!param0) {
-            ve.a((byte) -55, 101);
-            if (!(jq.field_fb != nb.field_c)) {
-                return gm.field_x.b(2);
-            }
-            return se.field_a;
-        }
         if (!(jq.field_fb != nb.field_c)) {
             return gm.field_x.b(2);
         }
@@ -28,7 +21,7 @@ final class ve {
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
-        int var1 = 101 % ((-44 - param0) / 35);
+        int var1 = 2;
     }
 
     final static void a(byte param0, int param1) {

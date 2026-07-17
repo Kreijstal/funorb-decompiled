@@ -141,7 +141,7 @@ final class jb {
                       L5: while (true) {
                         L6: {
                           L7: {
-                            if ((var12_int ^ -1) <= (ia.field_i ^ -1)) {
+                            if (~var12_int <= ~ia.field_i) {
                               break L7;
                             } else {
                               stackOut_9_0 = (((double[]) var10)[var12_int] < -(1.5 * vf.field_e[var12_int]) + 5.0 / param4 ? -1 : (((double[]) var10)[var12_int] == -(1.5 * vf.field_e[var12_int]) + 5.0 / param4 ? 0 : 1));
@@ -194,7 +194,7 @@ final class jb {
                         var11_int = 0;
                         L11: while (true) {
                           L12: {
-                            if (-9 >= (var11_int ^ -1)) {
+                            if (var11_int >= 8) {
                               break L12;
                             } else {
                               var12_ref_double__ = mg.field_a[var11_int];
@@ -228,7 +228,7 @@ final class jb {
                     L13: while (true) {
                       L14: {
                         L15: {
-                          if ((var14 ^ -1) <= (ia.field_i ^ -1)) {
+                          if (~var14 <= ~ia.field_i) {
                             break L15;
                           } else {
                             stackOut_36_0 = (0.0 < vf.field_e[var14] ? -1 : (0.0 == vf.field_e[var14] ? 0 : 1));
@@ -302,7 +302,7 @@ final class jb {
               L19: while (true) {
                 L20: {
                   L21: {
-                    if ((ia.field_i ^ -1) >= (var11_int ^ -1)) {
+                    if (~ia.field_i >= ~var11_int) {
                       break L21;
                     } else {
                       var12 = ((double[]) var10)[var11_int];

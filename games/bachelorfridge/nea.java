@@ -29,14 +29,6 @@ final class nea extends sna {
         if (tn.field_a == ola.field_p) {
             throw new IllegalStateException();
         }
-        if (param0 != 94) {
-            nea.f(67);
-            if (!(ola.field_p != ki.field_w)) {
-                ola.field_p = tn.field_a;
-                return sg.field_p;
-            }
-            return null;
-        }
         if (!(ola.field_p != ki.field_w)) {
             ola.field_p = tn.field_a;
             return sg.field_p;

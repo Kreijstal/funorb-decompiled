@@ -15,51 +15,133 @@ abstract class rf extends ii {
     static String[] field_N;
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (((rf) this).field_U == -1) {
-            return;
-        }
-        if (-257 <= ((rf) this).field_U) {
-            if (!(param0 == 0)) {
-                return;
+        if (((rf) this).field_U != 0) {
+          if (((rf) this).field_U < 256) {
+            L0: {
+              L1: {
+                if (np.field_F == null) {
+                  break L1;
+                } else {
+                  if (((rf) this).field_x > np.field_F.field_y) {
+                    break L1;
+                  } else {
+                    if (~np.field_F.field_v > ~((rf) this).field_s) {
+                      break L1;
+                    } else {
+                      break L0;
+                    }
+                  }
+                }
+              }
+              np.field_F = new cn(((rf) this).field_x, ((rf) this).field_s);
+              break L0;
             }
-            ((rf) this).a(param3 + ((rf) this).field_v, param1 + ((rf) this).field_q, false);
-            super.a(param0, param1, param2 ^ 0, param3);
+            lm.a(np.field_F, (byte) -102);
+            gf.a();
+            ((rf) this).a(0, 0, false);
+            super.a(param0, -param1 + -((rf) this).field_q, param2, -((rf) this).field_v + -param3);
+            ti.c(true);
+            np.field_F.d(param1 + ((rf) this).field_q, param3 + ((rf) this).field_v, ((rf) this).field_U);
             return;
-        }
-        if (np.field_F != null) {
-            // if_icmpgt L92
-            // if_icmplt L92
+          } else {
+            if (param0 != 0) {
+              return;
+            } else {
+              ((rf) this).a(param3 + ((rf) this).field_v, param1 + ((rf) this).field_q, false);
+              super.a(param0, param1, param2, param3);
+              return;
+            }
+          }
         } else {
-            np.field_F = new cn(((rf) this).field_x, ((rf) this).field_s);
+          return;
         }
-        lm.a(np.field_F, (byte) -102);
-        gf.a();
-        ((rf) this).a(0, 0, false);
-        super.a(param0, -param1 + -((rf) this).field_q, param2, -((rf) this).field_v + -param3);
-        ti.c(true);
-        np.field_F.d(param1 + ((rf) this).field_q, param3 + ((rf) this).field_v, ((rf) this).field_U);
     }
 
     final void b(int param0, int param1, int param2) {
         int var4 = -125 % ((param0 - 70) / 48);
-        ((rf) this).b(0, param2, -param1 + vf.field_x >> 1848386273, -param2 + hn.field_t >> -1321271839, param1);
+        ((rf) this).b(0, param2, -param1 + vf.field_x >> 1, -param2 + hn.field_t >> 1, param1);
     }
 
     final static q[] a(int param0, byte param1, nh param2, int param3) {
-        if (!kk.a(param2, 1, param3, param0)) {
-            return null;
+        RuntimeException var4 = null;
+        Object stackIn_5_0 = null;
+        q[] stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        q[] stackOut_6_0 = null;
+        Object stackOut_4_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            if (kk.a(param2, 1, param3, param0)) {
+              if (param1 == -71) {
+                stackOut_6_0 = vl.d(-89);
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                stackOut_4_0 = null;
+                stackIn_5_0 = stackOut_4_0;
+                return (q[]) (Object) stackIn_5_0;
+              }
+            } else {
+              return null;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("rf.HA(").append(param0).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L1;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L1;
+            }
+          }
+          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
         }
-        if (param1 != -71) {
-            return null;
-        }
-        return vl.d(-89);
+        return stackIn_7_0;
     }
 
     rf(ji param0, int param1, int param2) {
-        super(hn.field_t - param1 >> 1971152417, -param2 + vf.field_x >> 1519541057, param1, param2, (ca) null);
-        ((rf) this).field_R = param0;
-        ((rf) this).field_U = 0;
-        ((rf) this).field_T = false;
+        super(hn.field_t - param1 >> 1, -param2 + vf.field_x >> 1, param1, param2, (ca) null);
+        try {
+            ((rf) this).field_R = param0;
+            ((rf) this).field_U = 0;
+            ((rf) this).field_T = false;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "rf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final static q a(int param0) {
@@ -71,7 +153,7 @@ abstract class rf extends ii {
         q var4 = new q(14, 11, 2);
         q var1 = var4;
         var4.field_i[1] = 65793;
-        for (var2 = 0; (var2 ^ -1) > -7; var2++) {
+        for (var2 = 0; var2 < 6; var2++) {
             og.a(var2 * 2 + 1, (byte) -75, 10 + -var2, var1, 5 - var2, (byte) 1);
         }
         for (var2 = 6; var2 < 11; var2++) {
@@ -109,7 +191,7 @@ abstract class rf extends ii {
         }
         L1: {
           var3 = -((rf) this).field_U + var2;
-          if ((var3 ^ -1) < -1) {
+          if (var3 > 0) {
             ((rf) this).field_U = ((rf) this).field_U + (8 + var3 - 1) / 8;
             break L1;
           } else {
@@ -129,7 +211,7 @@ abstract class rf extends ii {
             if (0 != ((rf) this).field_U) {
               break L4;
             } else {
-              if (-1 != (var2 ^ -1)) {
+              if (var2 != 0) {
                 break L4;
               } else {
                 if (((rf) this).field_T) {
@@ -221,7 +303,7 @@ abstract class rf extends ii {
     abstract void a(int param0, int param1, boolean param2);
 
     final lm g(int param0) {
-        lm var2 = super.g(param0 ^ 0);
+        lm var2 = super.g(param0);
         if (!(var2 == null)) {
             return var2;
         }

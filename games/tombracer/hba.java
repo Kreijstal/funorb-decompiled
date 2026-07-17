@@ -7,9 +7,6 @@ final class hba {
     static float[] field_a;
 
     public static void a(int param0) {
-        if (param0 != 1) {
-            return;
-        }
         field_a = null;
         field_c = null;
     }

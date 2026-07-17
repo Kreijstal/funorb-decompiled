@@ -11,18 +11,9 @@ final class lk {
     public static void a(int param0) {
         field_c = null;
         field_e = null;
-        if (param0 != 5540) {
-          lk.b(23);
-          field_b = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
-          field_b = null;
-          field_a = null;
-          field_d = null;
-          return;
-        }
+        field_b = null;
+        field_a = null;
+        field_d = null;
     }
 
     final static void b(int param0) {
@@ -95,9 +86,6 @@ final class lk {
     }
 
     final static void d(int param0) {
-        if (param0 < 79) {
-            String discarded$0 = lk.c(-88);
-        }
     }
 
     static {

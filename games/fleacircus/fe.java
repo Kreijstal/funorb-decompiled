@@ -103,7 +103,7 @@ final class fe {
         synchronized (var5) {
           L0: {
             field_a.field_c = param2;
-            field_a.field_p = param4;
+            field_a.field_p = 9;
             field_a.field_r = param0;
             field_a.field_u = 0;
             field_a.field_k = param1;
@@ -344,7 +344,7 @@ final class fe {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_b[var31] = param0.field_b[var31] - 1;
-                                                                                param0.field_f[param0.field_b[var31]] = param0.field_f[param0.field_b[var31 - 1] + 16 - 1];
+                                                                                param0.field_f[param0.field_b[var31]] = param0.field_f[param0.field_b[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -430,7 +430,7 @@ final class fe {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -608,11 +608,11 @@ final class fe {
                                                 var1 = fe.c(param0);
                                                 if (var1 != 0) {
                                                   var1 = fe.c(param0);
-                                                  if (var1 == 0) {
+                                                  if (var1 != 0) {
                                                     var17--;
                                                     continue L39;
                                                   } else {
-                                                    var17--;
+                                                    var17++;
                                                     continue L39;
                                                   }
                                                 } else {

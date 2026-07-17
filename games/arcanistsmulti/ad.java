@@ -12,9 +12,6 @@ final class ad {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 <= 89) {
-            return;
-        }
         field_c = null;
         field_g = null;
         field_e = null;

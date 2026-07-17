@@ -16,9 +16,6 @@ final class un {
 
     final static int a(int param0) {
         no.field_n.a(false);
-        if (param0 != 0) {
-            return -2;
-        }
         if (!nn.field_c.b(20)) {
             return hm.c(3);
         }

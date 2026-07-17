@@ -13,16 +13,8 @@ final class ab {
         field_c = null;
         field_a = null;
         field_e = null;
-        if (param0 >= -38) {
-          field_b = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
-          field_d = null;
-          field_b = null;
-          return;
-        }
+        field_d = null;
+        field_b = null;
     }
 
     static {

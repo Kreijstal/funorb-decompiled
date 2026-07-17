@@ -22,35 +22,19 @@ final class up implements Iterable {
     }
 
     final void a(df param0, int param1) {
-        if (null == param0.field_j) {
-          param0.field_j = ((up) this).field_a.field_j;
-          if (param1 != 6) {
-            df discarded$2 = ((up) this).a((byte) 95);
+        try {
+            if (null != param0.field_j) {
+                param0.a(param1 ^ 22);
+            }
+            param0.field_j = ((up) this).field_a.field_j;
+            if (param1 != 6) {
+                df discarded$0 = ((up) this).a((byte) 95);
+            }
             param0.field_h = ((up) this).field_a;
             param0.field_j.field_h = param0;
             param0.field_h.field_j = param0;
-            return;
-          } else {
-            param0.field_h = ((up) this).field_a;
-            param0.field_j.field_h = param0;
-            param0.field_h.field_j = param0;
-            return;
-          }
-        } else {
-          param0.a(param1 ^ 22);
-          param0.field_j = ((up) this).field_a.field_j;
-          if (param1 == 6) {
-            param0.field_h = ((up) this).field_a;
-            param0.field_j.field_h = param0;
-            param0.field_h.field_j = param0;
-            return;
-          } else {
-            df discarded$3 = ((up) this).a((byte) 95);
-            param0.field_h = ((up) this).field_a;
-            param0.field_j.field_h = param0;
-            param0.field_h.field_j = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "up.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

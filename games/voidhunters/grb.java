@@ -74,7 +74,7 @@ final class grb extends le {
                     var11 = 0;
                     L4: while (true) {
                       if (var4 <= var11) {
-                        var3[var9] = var10 * var5 >> 1600430576;
+                        var3[var9] = var10 * var5 >> 16;
                         var9++;
                         continue L3;
                       } else {
@@ -104,7 +104,7 @@ final class grb extends le {
                         var9++;
                         continue L2;
                       } else {
-                        var11_ref_int__[var15] = var12 * var7 >> -1845368240;
+                        var11_ref_int__[var15] = var12 * var7 >> 16;
                         var12 = var12 - var10_ref_int__[gbb.field_q & var15 + -((grb) this).field_m];
                         var15++;
                         var12 = var12 + var10_ref_int__[((grb) this).field_m + var15 & gbb.field_q];
@@ -133,62 +133,113 @@ final class grb extends le {
     }
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        Object stackOut_6_0 = null;
+        Object stackIn_10_0 = null;
+        int stackIn_10_1 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_7_0 = null;
+        Object stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
         Object stackOut_8_0 = null;
         int stackOut_8_1 = 0;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        L0: {
-          var5 = VoidHunters.field_G;
-          var4 = param0;
-          if (var4 == 0) {
-            ((grb) this).field_m = param2.e((byte) -119);
-            break L0;
-          } else {
-            if ((var4 ^ -1) == -2) {
-              ((grb) this).field_k = param2.e((byte) -123);
-              break L0;
-            } else {
-              if (2 == var4) {
-                L1: {
-                  stackOut_6_0 = this;
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_7_0 = stackOut_6_0;
-                  if (-2 != (param2.e((byte) -121) ^ -1)) {
-                    stackOut_8_0 = this;
-                    stackOut_8_1 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    stackIn_9_1 = stackOut_8_1;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        var5 = VoidHunters.field_G;
+        try {
+          L0: {
+            L1: {
+              var4_int = param0;
+              if (var4_int == 0) {
+                ((grb) this).field_m = param2.e((byte) -119);
+                break L1;
+              } else {
+                if (var4_int == 1) {
+                  ((grb) this).field_k = param2.e((byte) -123);
+                  break L1;
+                } else {
+                  if (2 == var4_int) {
+                    L2: {
+                      stackOut_7_0 = this;
+                      stackIn_9_0 = stackOut_7_0;
+                      stackIn_8_0 = stackOut_7_0;
+                      if (param2.e((byte) -121) != 1) {
+                        stackOut_9_0 = this;
+                        stackOut_9_1 = 0;
+                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_1 = stackOut_9_1;
+                        break L2;
+                      } else {
+                        stackOut_8_0 = this;
+                        stackOut_8_1 = 1;
+                        stackIn_10_0 = stackOut_8_0;
+                        stackIn_10_1 = stackOut_8_1;
+                        break L2;
+                      }
+                    }
+                    ((grb) this).field_g = stackIn_10_1 != 0;
                     break L1;
                   } else {
-                    stackOut_7_0 = this;
-                    stackOut_7_1 = 1;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
                     break L1;
                   }
                 }
-                ((grb) this).field_g = stackIn_9_1 != 0;
-                break L0;
-              } else {
-                break L0;
               }
             }
+            L3: {
+              if (param1 <= -60) {
+                break L3;
+              } else {
+                grb.e((byte) -106);
+                break L3;
+              }
+            }
+            break L0;
           }
-        }
-        L2: {
-          if (param1 <= -60) {
-            break L2;
-          } else {
-            grb.e((byte) -106);
-            break L2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_1 = new StringBuilder().append("grb.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param2 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
+            }
           }
+          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 
@@ -266,9 +317,9 @@ final class grb extends le {
                     var16 = 0;
                     L3: while (true) {
                       if (var4 <= var16) {
-                        var9[var12] = var5 * var13 >> -775821776;
-                        var10[var12] = var14 * var5 >> 109355792;
-                        var11[var12] = var15 * var5 >> 1070671088;
+                        var9[var12] = var5 * var13 >> 16;
+                        var10[var12] = var14 * var5 >> 16;
+                        var11[var12] = var15 * var5 >> 16;
                         var12++;
                         continue L2;
                       } else {
@@ -304,9 +355,9 @@ final class grb extends le {
                         var9_int++;
                         continue L1;
                       } else {
-                        var18[var21] = var7 * var12 >> -2027696400;
-                        var19[var21] = var7 * var13 >> -1486867408;
-                        var20[var21] = var7 * var14 >> -305495184;
+                        var18[var21] = var7 * var12 >> 16;
+                        var19[var21] = var7 * var13 >> 16;
+                        var20[var21] = var7 * var14 >> 16;
                         var22 = -((grb) this).field_m + var21 & gbb.field_q;
                         var21++;
                         var12 = var12 - var50[var22];

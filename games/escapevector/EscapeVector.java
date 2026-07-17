@@ -249,7 +249,7 @@ public final class EscapeVector extends g {
                             }
                             L22: {
                               var3 = fn.b(-14);
-                              if ((var3 ^ -1) != -3) {
+                              if (var3 != 2) {
                                 break L22;
                               } else {
                                 ri.a(-25123);
@@ -265,7 +265,7 @@ public final class EscapeVector extends g {
                               }
                             }
                             L24: {
-                              if (-5 != (var3 ^ -1)) {
+                              if (var3 != 4) {
                                 break L24;
                               } else {
                                 da.a((byte) -112);
@@ -898,7 +898,7 @@ public final class EscapeVector extends g {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if ((mc.field_d.length ^ -1) >= (var2_int ^ -1)) {
+                    if (~mc.field_d.length >= ~var2_int) {
                       break L4;
                     } else {
                       mi.field_m[var2_int] = new ed(32, 32);
@@ -1308,7 +1308,7 @@ public final class EscapeVector extends g {
               break L4;
             }
             L6: {
-              if ((var3_int ^ -1) >= -1) {
+              if (var3_int <= 0) {
                 stackOut_25_0 = 0;
                 stackIn_26_0 = stackOut_25_0;
                 break L6;
@@ -1520,7 +1520,7 @@ public final class EscapeVector extends g {
                         break L6;
                       } else {
                         L7: {
-                          if (-1 < (od.field_q ^ -1)) {
+                          if (od.field_q < 0) {
                             break L7;
                           } else {
                             hn.field_l.e(3);
@@ -2129,7 +2129,7 @@ public final class EscapeVector extends g {
               stackIn_31_4 = stackOut_30_4;
               stackIn_31_5 = stackOut_30_5;
               stackIn_31_6 = stackOut_30_6;
-              if (-1 == (di.field_d.field_h ^ -1)) {
+              if (di.field_d.field_h == 0) {
                 stackOut_33_0 = stackIn_33_0;
                 stackOut_33_1 = stackIn_33_1;
                 stackOut_33_2 = stackIn_33_2;
@@ -2268,7 +2268,7 @@ public final class EscapeVector extends g {
               stackIn_43_4 = stackOut_42_4;
               stackIn_43_5 = stackOut_42_5;
               stackIn_43_6 = stackOut_42_6;
-              if (-2 == (di.field_d.field_h ^ -1)) {
+              if (di.field_d.field_h == 1) {
                 stackOut_45_0 = stackIn_45_0;
                 stackOut_45_1 = stackIn_45_1;
                 stackOut_45_2 = stackIn_45_2;
@@ -2384,7 +2384,7 @@ public final class EscapeVector extends g {
               stackIn_53_1 = stackOut_50_1;
               stackIn_51_0 = stackOut_50_0;
               stackIn_51_1 = stackOut_50_1;
-              if ((di.field_d.field_h ^ -1) != -1) {
+              if (di.field_d.field_h != 0) {
                 stackOut_53_0 = stackIn_53_0;
                 stackOut_53_1 = (String) (Object) stackIn_53_1;
                 stackOut_53_2 = 6340704;
@@ -2544,7 +2544,7 @@ public final class EscapeVector extends g {
                       break L2;
                     } else {
                       L3: {
-                        if ((lf.field_H ^ -1) == -2) {
+                        if (lf.field_H == 1) {
                           break L3;
                         } else {
                           vc.a(40, ul.field_O, true, (byte) -101);
@@ -2594,7 +2594,7 @@ public final class EscapeVector extends g {
                   }
                 }
                 L6: {
-                  if ((lf.field_H ^ -1) == -3) {
+                  if (lf.field_H == 2) {
                     stackOut_36_0 = 0;
                     stackIn_37_0 = stackOut_36_0;
                     break L6;

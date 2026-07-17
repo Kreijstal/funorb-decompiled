@@ -10,26 +10,105 @@ final class jr implements Runnable {
     volatile dd[] field_d;
 
     final static String[] a(byte param0, char param1, String param2) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = Vertigo2.field_L ? 1 : 0;
-        CharSequence var10 = (CharSequence) (Object) param2;
-        int var3 = gb.a((byte) -49, param1, var10);
-        if (param0 != -9) {
-            return null;
-        }
-        String[] var4 = new String[var3 - -1];
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        String[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        for (var7 = 0; var3 > var7; var7++) {
-            for (var8 = var6; param1 != param2.charAt(var8); var8++) {
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        CharSequence var10 = null;
+        Object stackIn_3_0 = null;
+        String[] stackIn_11_0 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String[] stackOut_10_0 = null;
+        Object stackOut_2_0 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        var9 = Vertigo2.field_L ? 1 : 0;
+        try {
+          L0: {
+            var10 = (CharSequence) (Object) param2;
+            var3_int = gb.a((byte) -49, param1, var10);
+            if (param0 == -9) {
+              var4 = new String[var3_int - -1];
+              var5 = 0;
+              var6 = 0;
+              var7 = 0;
+              L1: while (true) {
+                if (var3_int <= var7) {
+                  var4[var3_int] = param2.substring(var6);
+                  stackOut_10_0 = (String[]) var4;
+                  stackIn_11_0 = stackOut_10_0;
+                  break L0;
+                } else {
+                  var8 = var6;
+                  L2: while (true) {
+                    if (param1 == param2.charAt(var8)) {
+                      int incrementValue$2 = var5;
+                      var5++;
+                      var4[incrementValue$2] = param2.substring(var6, var8);
+                      var6 = var8 - -1;
+                      var7++;
+                      continue L1;
+                    } else {
+                      var8++;
+                      continue L2;
+                    }
+                  }
+                }
+              }
+            } else {
+              stackOut_2_0 = null;
+              stackIn_3_0 = stackOut_2_0;
+              return (String[]) (Object) stackIn_3_0;
             }
-            var5++;
-            var4[var5] = param2.substring(var6, var8);
-            var6 = var8 - -1;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_1 = new StringBuilder().append("jr.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param2 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
-        var4[var3] = param2.substring(var6);
-        return var4;
+        return stackIn_11_0;
     }
 
     public final void run() {
@@ -39,7 +118,7 @@ final class jr implements Runnable {
         ((jr) this).field_b = true;
         try {
             while (!((jr) this).field_a) {
-                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
+                for (var1_int = 0; var1_int < 2; var1_int++) {
                     var2 = ((jr) this).field_d[var1_int];
                     if (var2 == null) {
                     } else {
@@ -59,19 +138,38 @@ final class jr implements Runnable {
     }
 
     final static void a(int param0, int param1) {
-        int var3 = Vertigo2.field_L ? 1 : 0;
-        nf var4 = (nf) (Object) ki.field_a.a((byte) 100);
-        while (var4 != null) {
-            jc.a(-14499, param0, var4);
-            var4 = (nf) (Object) ki.field_a.b(71);
-        }
-        li var2 = mo.field_h.a((byte) 100);
-        while (var2 != null) {
-            hm.d(0, param0);
-            var2 = mo.field_h.b(41);
-        }
-        if (param1 != 2) {
-            field_e = null;
+        li var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
+        nf var4 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = Vertigo2.field_L ? 1 : 0;
+        try {
+          L0: {
+            var4 = (nf) (Object) ki.field_a.a((byte) 100);
+            L1: while (true) {
+              if (var4 == null) {
+                var2 = mo.field_h.a((byte) 100);
+                L2: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    hm.d(0, param0);
+                    var2 = mo.field_h.b(41);
+                    continue L2;
+                  }
+                }
+              } else {
+                jc.a(-14499, param0, var4);
+                var4 = (nf) (Object) ki.field_a.b(71);
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var2_ref, "jr.D(" + param0 + 44 + 2 + 41);
         }
     }
 
@@ -254,7 +352,7 @@ final class jr implements Runnable {
           var3 = stackIn_9_0;
           tp.field_Nb.a(98, 363 + -var3, 30, 5, var3 + 5);
           sa.field_b.a(72, -365 + (-5 + (ud.field_A.field_Fb - 5)), 30, 5, 370);
-          uk.field_v.a(37, 2, re.field_k, -5 + (ja.field_b.field_db + -5 + -32), 5, ja.field_b.field_Fb - 10, 3124);
+          uk.field_v.a(37, 2, re.field_k, -5 + (ja.field_b.field_db - 37), 5, ja.field_b.field_Fb - 10, 3124);
           var4 = (ud.field_A.field_Fb - -2) / 2;
           b.field_h.a(125, -2 + var4, 40, -40 + ud.field_A.field_db, 0);
           if (db.field_S) {

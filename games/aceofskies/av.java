@@ -28,16 +28,8 @@ final class av {
               break L0;
             }
           }
-          L1: {
-            var2 = 4 + dp.field_h.field_a - -dp.field_h.field_i;
-            bk.field_e[6] = var2 + 200 + (dp.field_h.field_j - -dp.field_h.field_i);
-            if (param0) {
-              break L1;
-            } else {
-              av.a((byte) -119);
-              break L1;
-            }
-          }
+          var2 = 4 + dp.field_h.field_a - -dp.field_h.field_i;
+          bk.field_e[6] = var2 + 200 + (dp.field_h.field_j - -dp.field_h.field_i);
           oo.field_Y[6] = 30 + 2 * var2;
           return true;
         } else {
@@ -53,16 +45,14 @@ final class av {
         if (param2) {
             var4 += 2;
         }
-        if (param3) {
-            var4++;
-        }
+        var4++;
         int var5 = -111 / ((-32 - param0) / 57);
         return qh.field_a[var4];
     }
 
     final static boolean a(int param0, int param1, int param2) {
         if (param0 != 22847) {
-            field_b = (int[]) null;
+            field_b = null;
         }
         return mi.b(param1, param2, 22547) & ta.a(param2, param1, (byte) 82);
     }
@@ -90,16 +80,17 @@ final class av {
         field_b = new int[128];
         var0 = 0;
         L0: while (true) {
-          if ((var0 ^ -1) <= -65) {
+          if (var0 >= 64) {
             var0 = 0;
             L1: while (true) {
-              if (-65 >= (var0 ^ -1)) {
+              if (var0 >= 64) {
                 var0 = 16711935 & field_b[63];
                 var1 = 65280 & field_b[63];
                 var2 = 0;
                 L2: while (true) {
-                  if (-3 >= (var2 ^ -1)) {
+                  if (var2 >= 2) {
                     field_a = new ej(2, 4, 4, 0);
+                    return;
                   } else {
                     var3 = field_b[64 - -var2];
                     var4 = 256 + -(256 * var2 / 2);
@@ -109,7 +100,7 @@ final class av {
                     var6 = var6 * (-var4 + 256);
                     var5 = var5 + var0 * var4;
                     var6 = var6 + var1 * var4;
-                    var3 = (var6 & 16711680 | -16711936 & var5) >>> 1805483048;
+                    var3 = (var6 & 16711680 | -16711936 & var5) >>> 8;
                     field_b[64 - -var2] = var3;
                     var2++;
                     continue L2;
@@ -119,7 +110,7 @@ final class av {
                 var1 = 96 * (var0 * var0) / 4096;
                 var2 = 32 * (var0 * (var0 * var0)) / 262144;
                 var3 = var0 * var0 * 128 / 4096;
-                field_b[-var0 + 127] = (var1 << -709126672) - (-(var2 << 1924794792) + -var3);
+                field_b[-var0 + 127] = (var1 << 16) - (-(var2 << 8) + -var3);
                 var0++;
                 continue L1;
               }
@@ -128,7 +119,7 @@ final class av {
             var1 = var0 * (var0 * 192) / 4096;
             var2 = 128 * var0 * (var0 * (var0 * var0)) / 16777216;
             var3 = 255 * (var0 * (var0 * var0)) / 262144;
-            field_b[var0] = (var2 << 841758184) + (var1 << 1219902800) + var3;
+            field_b[var0] = (var2 << 8) + (var1 << 16) + var3;
             var0++;
             continue L0;
           }

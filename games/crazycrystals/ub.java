@@ -17,9 +17,6 @@ final class ub extends RuntimeException {
     public static void a(boolean param0) {
         field_b = null;
         field_d = null;
-        if (!param0) {
-            field_b = null;
-        }
     }
 
     ub(Throwable param0, String param1) {
@@ -39,24 +36,10 @@ final class ub extends RuntimeException {
               break L0;
             }
           }
-          L1: {
-            if (param0 == 0) {
-              break L1;
-            } else {
-              int discarded$5 = ub.a(-12);
-              break L1;
-            }
-          }
+          int discarded$5 = ub.a(-12);
           return;
         } else {
-          L2: {
-            if (param0 == 0) {
-              break L2;
-            } else {
-              int discarded$6 = ub.a(-12);
-              break L2;
-            }
-          }
+          int discarded$6 = ub.a(-12);
           return;
         }
     }

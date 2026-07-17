@@ -55,7 +55,7 @@ final class lh extends vd {
 
     final void a(boolean param0, int param1, int param2) {
         L0: {
-          if (-11 >= (param1 ^ -1)) {
+          if (param1 >= 10) {
             break L0;
           } else {
             param1 = 10;
@@ -75,56 +75,32 @@ final class lh extends vd {
     }
 
     public static void f(int param0) {
-        if (param0 != 5) {
-          return;
-        } else {
-          field_G = null;
-          field_H = null;
-          field_u = null;
-          field_v = null;
-          field_D = null;
-          field_y = null;
-          field_A = null;
-          field_E = null;
-          return;
-        }
+        field_G = null;
+        field_H = null;
+        field_u = null;
+        field_v = null;
+        field_D = null;
+        field_y = null;
+        field_A = null;
+        field_E = null;
     }
 
     final static void d(byte param0) {
+        int fieldTemp$2 = di.field_m + 1;
         di.field_m = di.field_m + 1;
-        if ((di.field_m + 1 ^ -1) <= -201) {
+        if (fieldTemp$2 >= 200) {
           if (jn.field_a) {
-            if (!p.field_n) {
-              jc.a(1, (byte) 127);
-              if (param0 != 44) {
-                field_E = null;
-                return;
-              } else {
-                return;
-              }
+            if (p.field_n) {
+              return;
             } else {
-              if (param0 != 44) {
-                field_E = null;
-                return;
-              } else {
-                return;
-              }
+              jc.a(1, (byte) 127);
+              return;
             }
           } else {
-            if (param0 != 44) {
-              field_E = null;
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         } else {
-          if (param0 != 44) {
-            field_E = null;
-            return;
-          } else {
-            return;
-          }
+          return;
         }
     }
 
@@ -141,8 +117,12 @@ final class lh extends vd {
     }
 
     final static void a(byte param0, int[] param1, int[] param2) {
-        rg.a(0, -2147483648, param2.length + -1, param1, param2);
-        int var3 = -92 % ((-25 - param0) / 57);
+        try {
+            rg.a(0, -2147483648, param2.length + -1, param1, param2);
+            int var3_int = -92 % ((-25 - param0) / 57);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "lh.U(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0) {

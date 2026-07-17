@@ -40,14 +40,72 @@ final class mc {
     }
 
     final int a(int param0, byte[] param1, int param2, int param3) throws IOException {
-        int var5 = 0;
-        var5 = ((mc) this).field_f.read(param1, param3, param0);
-        if ((var5 ^ -1) < param2) {
-          ((mc) this).field_c = ((mc) this).field_c + (long)var5;
-          return var5;
-        } else {
-          return var5;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var5_int = ((mc) this).field_f.read(param1, param3, param0);
+              if (~var5_int >= param2) {
+                break L1;
+              } else {
+                ((mc) this).field_c = ((mc) this).field_c + (long)var5_int;
+                break L1;
+              }
+            }
+            stackOut_2_0 = var5_int;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var5;
+            stackOut_4_1 = new StringBuilder().append("mc.G(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_3_0;
     }
 
     protected final void finalize() throws Throwable {
@@ -65,67 +123,38 @@ final class mc {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        StringBuilder var12 = null;
-        StringBuilder var13 = null;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (-1L > (param0 ^ -1L)) {
-          if (-6582952005840035282L < (param0 ^ -1L)) {
-            if (-1L != (param0 % 37L ^ -1L)) {
+        if (param0 > 0L) {
+          if (param0 < 6582952005840035281L) {
+            if (param0 % 37L == 0L) {
+              return null;
+            } else {
               var3 = 0;
               var4 = param0;
               L0: while (true) {
-                if ((var4 ^ -1L) == -1L) {
-                  if (param1 == 26) {
-                    var12 = new StringBuilder(var3);
-                    L1: while (true) {
-                      if (param0 == 0L) {
-                        StringBuilder discarded$4 = var12.reverse();
-                        var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
-                        return var12.toString();
-                      } else {
-                        L2: {
-                          var7 = param0;
-                          param0 = param0 / 37L;
-                          var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
-                          if (var9 == 95) {
-                            var10 = -1 + var12.length();
-                            var12.setCharAt(var10, Character.toUpperCase(var12.charAt(var10)));
-                            var9 = 160;
-                            break L2;
-                          } else {
-                            break L2;
-                          }
+                if (var4 == 0L) {
+                  var6 = new StringBuilder(var3);
+                  L1: while (true) {
+                    if (param0 == 0L) {
+                      StringBuilder discarded$2 = var6.reverse();
+                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+                      return var6.toString();
+                    } else {
+                      L2: {
+                        var7 = param0;
+                        param0 = param0 / 37L;
+                        var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
+                        if (var9 == 95) {
+                          var10 = -1 + var6.length();
+                          var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
+                          var9 = 160;
+                          break L2;
+                        } else {
+                          break L2;
                         }
-                        StringBuilder discarded$5 = var12.append(var9);
-                        continue L1;
                       }
-                    }
-                  } else {
-                    mc.a((byte) 85);
-                    var13 = new StringBuilder(var3);
-                    var6 = var13;
-                    L3: while (true) {
-                      if (param0 == 0L) {
-                        StringBuilder discarded$6 = var13.reverse();
-                        var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
-                        return var13.toString();
-                      } else {
-                        L4: {
-                          var7 = param0;
-                          param0 = param0 / 37L;
-                          var9 = hq.field_o[(int)(-(param0 * 37L) + var7)];
-                          if (var9 == 95) {
-                            var10 = -1 + var13.length();
-                            var13.setCharAt(var10, Character.toUpperCase(var13.charAt(var10)));
-                            var9 = 160;
-                            break L4;
-                          } else {
-                            break L4;
-                          }
-                        }
-                        StringBuilder discarded$7 = var13.append(var9);
-                        continue L3;
-                      }
+                      StringBuilder discarded$3 = var6.append(var9);
+                      continue L1;
                     }
                   }
                 } else {
@@ -134,8 +163,6 @@ final class mc {
                   continue L0;
                 }
               }
-            } else {
-              return null;
             }
           } else {
             return null;
@@ -146,18 +173,19 @@ final class mc {
     }
 
     final void a(byte param0, int param1, int param2, byte[] param3) throws IOException {
-        if (((mc) this).field_d >= ((mc) this).field_c + (long)param2) {
-          ((mc) this).field_f.write(param3, param1, param2);
-          if (param0 <= 9) {
+        if (((mc) this).field_d < ((mc) this).field_c + (long)param2) {
+            ((mc) this).field_f.seek(((mc) this).field_d);
+            ((mc) this).field_f.write(1);
+            throw new EOFException();
+        }
+        ((mc) this).field_f.write(param3, param1, param2);
+        if (param0 <= 9) {
             return;
-          } else {
+        }
+        try {
             ((mc) this).field_c = ((mc) this).field_c + (long)param2;
-            return;
-          }
-        } else {
-          ((mc) this).field_f.seek(((mc) this).field_d);
-          ((mc) this).field_f.write(1);
-          throw new EOFException();
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "mc.D(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -191,25 +219,28 @@ final class mc {
     }
 
     mc(File param0, String param1, long param2) throws IOException {
-        if (0L == (param2 ^ -1L)) {
-            param2 = 9223372036854775807L;
-        }
-        if (param2 < param0.length()) {
-            boolean discarded$0 = param0.delete();
-        }
-        ((mc) this).field_f = new RandomAccessFile(param0, param1);
-        ((mc) this).field_c = 0L;
-        ((mc) this).field_d = param2;
-        int var5 = ((mc) this).field_f.read();
-        if (-1 != var5) {
-            // ifne L108
+        int var5_int = 0;
+        try {
+            if (param2 == -1L) {
+                param2 = 9223372036854775807L;
+            }
+            if (param2 < param0.length()) {
+                boolean discarded$0 = param0.delete();
+            }
+            ((mc) this).field_f = new RandomAccessFile(param0, param1);
+            ((mc) this).field_c = 0L;
+            ((mc) this).field_d = param2;
+            var5_int = ((mc) this).field_f.read();
+            if (-1 != var5_int) {
+                if (!param1.equals((Object) (Object) "r")) {
+                    ((mc) this).field_f.seek(0L);
+                    ((mc) this).field_f.write(var5_int);
+                }
+            }
             ((mc) this).field_f.seek(0L);
-            ((mc) this).field_f.write(var5);
-        } else {
-            ((mc) this).field_f.seek(0L);
-            ((mc) this).field_f.seek(0L);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "mc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        ((mc) this).field_f.seek(0L);
     }
 
     static {

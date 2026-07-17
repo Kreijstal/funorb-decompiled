@@ -18,7 +18,7 @@ final class vj {
         field_c = null;
         field_a = null;
         field_b = null;
-        int var1 = -106 % ((-70 - param0) / 40);
+        int var1 = 0;
     }
 
     static {

@@ -6,11 +6,6 @@ final class af extends qb {
     static dl[] field_c;
 
     public static void c(int param0) {
-        if (param0 != 0) {
-            field_c = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
@@ -23,10 +18,14 @@ final class af extends qb {
     }
 
     final void a(byte[] param0, int param1) {
-        ((af) this).field_d = java.nio.ByteBuffer.allocateDirect(param0.length);
-        java.nio.Buffer discarded$0 = ((af) this).field_d.position(0);
-        int var3 = 81 / ((-54 - param1) / 37);
-        java.nio.ByteBuffer discarded$1 = ((af) this).field_d.put(param0);
+        try {
+            ((af) this).field_d = java.nio.ByteBuffer.allocateDirect(param0.length);
+            java.nio.Buffer discarded$0 = ((af) this).field_d.position(0);
+            int var3_int = 81 / ((-54 - param1) / 37);
+            java.nio.ByteBuffer discarded$1 = ((af) this).field_d.put(param0);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "af.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     af() {

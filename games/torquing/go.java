@@ -116,30 +116,81 @@ final class go extends am {
     }
 
     final void a(fj param0, int param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        L0: {
-          var5 = Torquing.field_u;
-          var4 = param2;
-          if (-1 != (var4 ^ -1)) {
-            if ((var4 ^ -1) == -2) {
-              ((go) this).field_t = param0.i((byte) -101);
-              break L0;
-            } else {
-              break L0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var5 = Torquing.field_u;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2;
+              if (var4_int != 0) {
+                if (var4_int == 1) {
+                  ((go) this).field_t = param0.i((byte) -101);
+                  break L1;
+                } else {
+                  break L1;
+                }
+              } else {
+                ((go) this).field_u = param0.i((byte) -101);
+                break L1;
+              }
             }
-          } else {
-            ((go) this).field_u = param0.i((byte) -101);
+            L2: {
+              if (param1 == 35) {
+                break L2;
+              } else {
+                field_v = null;
+                break L2;
+              }
+            }
             break L0;
           }
-        }
-        L1: {
-          if (param1 == 35) {
-            break L1;
-          } else {
-            field_v = null;
-            break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var4;
+            stackOut_10_1 = new StringBuilder().append("go.H(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param0 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
+            }
           }
+          throw rb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -175,7 +226,7 @@ final class go extends am {
             L2: {
               var5 = ci.field_c / ((go) this).field_u;
               var6 = um.field_o / ((go) this).field_t;
-              if ((var6 ^ -1) >= -1) {
+              if (var6 <= 0) {
                 var4 = ((go) this).b(0, 0, 0);
                 break L2;
               } else {
@@ -190,7 +241,7 @@ final class go extends am {
               if (var10 >= ci.field_c) {
                 break L1;
               } else {
-                if (-1 > (var5 ^ -1)) {
+                if (var5 > 0) {
                   var8 = var10 % var5;
                   var3[var10] = var4[ci.field_c * var8 / var5];
                   var10++;
@@ -208,24 +259,103 @@ final class go extends am {
     }
 
     final static he a(boolean param0, java.applet.Applet param1) {
+        String var2 = null;
+        RuntimeException var2_ref = null;
+        he[] var3 = null;
         int var4 = 0;
         he var5 = null;
-        int var6 = Torquing.field_u;
-        String var2 = nb.a("jagex-last-login-method", param1, (byte) -118);
-        if (!(var2 != null)) {
-            return jf.field_c;
-        }
-        he[] var3 = ji.b(21169);
-        for (var4 = 0; var3.length > var4; var4++) {
-            var5 = var3[var4];
-            if (var5.b(0, var2)) {
-                return var5;
+        int var6 = 0;
+        he stackIn_4_0 = null;
+        he stackIn_9_0 = null;
+        he stackIn_14_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        he stackOut_3_0 = null;
+        he stackOut_13_0 = null;
+        he stackOut_8_0 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var6 = Torquing.field_u;
+        try {
+          L0: {
+            var2 = nb.a("jagex-last-login-method", param1, (byte) -118);
+            if (var2 == null) {
+              stackOut_3_0 = jf.field_c;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
+            } else {
+              var3 = ji.b(21169);
+              var4 = 0;
+              L1: while (true) {
+                if (var3.length <= var4) {
+                  L2: {
+                    if (!param0) {
+                      break L2;
+                    } else {
+                      go.b(104);
+                      break L2;
+                    }
+                  }
+                  stackOut_13_0 = jf.field_c;
+                  stackIn_14_0 = stackOut_13_0;
+                  break L0;
+                } else {
+                  var5 = var3[var4];
+                  if (!var5.b(0, var2)) {
+                    var4++;
+                    continue L1;
+                  } else {
+                    stackOut_8_0 = (he) var5;
+                    stackIn_9_0 = stackOut_8_0;
+                    return stackIn_9_0;
+                  }
+                }
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var2_ref;
+            stackOut_15_1 = new StringBuilder().append("go.L(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L3;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L3;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
         }
-        if (param0) {
-            go.b(104);
-        }
-        return jf.field_c;
+        return stackIn_14_0;
     }
 
     static {

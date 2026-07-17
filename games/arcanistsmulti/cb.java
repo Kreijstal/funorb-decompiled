@@ -21,41 +21,82 @@ final class cb {
 
     final static void a(na param0, int param1) {
         na var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        param0.a(true);
-        var3 = 19 % ((-78 - param1) / 48);
-        var2 = (na) (Object) vh.field_a.b(12623);
-        L0: while (true) {
-          if (var2 != null) {
-            if (var2.a(param0, 2)) {
-              var2 = (na) (Object) vh.field_a.a(0);
-              continue L0;
-            } else {
-              L1: {
-                if (var2 != null) {
-                  da.a((pg) (Object) var2, 20, (pg) (Object) param0);
-                  break L1;
+        try {
+          L0: {
+            param0.a(true);
+            var3 = 19 % ((-78 - param1) / 48);
+            var2 = (na) (Object) vh.field_a.b(12623);
+            L1: while (true) {
+              L2: {
+                if (var2 == null) {
+                  break L2;
                 } else {
-                  vh.field_a.b((pg) (Object) param0, -1);
-                  break L1;
+                  if (!var2.a(param0, 2)) {
+                    break L2;
+                  } else {
+                    var2 = (na) (Object) vh.field_a.a(0);
+                    continue L1;
+                  }
                 }
               }
-              return;
-            }
-          } else {
-            L2: {
               if (var2 != null) {
                 da.a((pg) (Object) var2, 20, (pg) (Object) param0);
-                break L2;
+                break L0;
               } else {
                 vh.field_a.b((pg) (Object) param0, -1);
-                break L2;
+                return;
               }
             }
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var2_ref;
+            stackOut_9_1 = new StringBuilder().append("cb.A(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
         }
     }
 

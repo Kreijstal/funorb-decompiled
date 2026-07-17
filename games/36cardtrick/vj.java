@@ -16,8 +16,8 @@ final class vj {
     private static int[] field_e;
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        vj.a(field_j, 0, param2 + param3 * field_l, param0, param2, param4, field_l - param4, param5);
-        vj.a(field_j, 0, param2 + param3 * field_l, param1, param3, param5, field_l - param4, param2, param4);
+        vj.a(field_j, 0, param2 + param3 * field_l, param0, param2, param4, field_l - param4, 140);
+        vj.a(field_j, 0, param2 + param3 * field_l, param1, param3, 140, field_l - param4, param2, param4);
     }
 
     private final static void b() {
@@ -192,8 +192,8 @@ final class vj {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            vj.a(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            vj.d(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            vj.a(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            vj.d(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 

@@ -15,9 +15,6 @@ final class cf {
         field_f = null;
         field_c = null;
         field_g = null;
-        if (param0 != 1) {
-            return;
-        }
         field_b = null;
         field_d = null;
     }

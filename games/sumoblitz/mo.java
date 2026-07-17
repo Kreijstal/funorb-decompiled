@@ -17,7 +17,8 @@ final class mo extends tt {
     static float[] field_n;
 
     final void a(int param0, int param1, int[] param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -33,183 +34,233 @@ final class mo extends tt {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        String stackOut_42_2 = null;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
+        String stackOut_41_2 = null;
         var19 = Sumoblitz.field_L ? 1 : 0;
-        var5 = ((mo) this).field_q * uv.field_o[param1];
-        if (param0 == -28696) {
+        try {
           L0: {
-            if (1 == ((mo) this).field_s) {
+            var5 = ((mo) this).field_q * uv.field_o[param1];
+            if (param0 == -28696) {
               L1: {
-                var9 = ((mo) this).field_u[0];
-                var8 = ((mo) this).field_y[0] << -535821108;
-                var13 = var8 * ((mo) this).field_q >> -1931918548;
-                var11 = var5 * var8 >> 1855295884;
-                var12 = var8 * ((mo) this).field_r >> 1909617708;
-                var15 = var11 >> -1954321780;
-                var16 = 1 + var15;
-                if (var16 < var13) {
-                  break L1;
-                } else {
-                  var16 = 0;
-                  break L1;
-                }
-              }
-              var11 = var11 & 4095;
-              var17 = ((mo) this).field_x[255 & var15] & 255;
-              var18 = ((mo) this).field_x[var16 & 255] & 255;
-              var14 = mu.field_y[var11];
-              if (((mo) this).field_m) {
-                var10 = 0;
-                L2: while (true) {
-                  if (var10 >= ws.field_b) {
-                    break L0;
-                  } else {
-                    var4 = ((mo) this).field_r * gs.field_b[var10];
-                    var6 = this.a(var18, var14, 3, var12, var11, var8 * var4 >> -1023763156, var17);
-                    var6 = var6 * var9 >> 568209964;
-                    param2[var10] = (var6 >> 1198045857) + 2048;
-                    var10++;
-                    continue L2;
-                  }
-                }
-              } else {
-                var10 = 0;
-                L3: while (true) {
-                  if (ws.field_b <= var10) {
-                    break L0;
-                  } else {
-                    var4 = gs.field_b[var10] * ((mo) this).field_r;
-                    var6 = this.a(var18, var14, 3, var12, var11, var4 * var8 >> 753545836, var17);
-                    param2[var10] = var6 * var9 >> 1909070316;
-                    var10++;
-                    continue L3;
-                  }
-                }
-              }
-            } else {
-              L4: {
-                L5: {
-                  var9 = ((mo) this).field_u[0];
-                  if (8 < var9) {
-                    break L5;
-                  } else {
-                    if (-8 > var9) {
-                      break L5;
+                if (1 == ((mo) this).field_s) {
+                  L2: {
+                    var9 = ((mo) this).field_u[0];
+                    var8 = ((mo) this).field_y[0] << 12;
+                    var13 = var8 * ((mo) this).field_q >> 12;
+                    var11 = var5 * var8 >> 12;
+                    var12 = var8 * ((mo) this).field_r >> 12;
+                    var15 = var11 >> 12;
+                    var16 = 1 + var15;
+                    if (var16 < var13) {
+                      break L2;
                     } else {
-                      break L4;
+                      var16 = 0;
+                      break L2;
                     }
                   }
-                }
-                L6: {
-                  var8 = ((mo) this).field_y[0] << -1866152852;
-                  var12 = var8 * ((mo) this).field_r >> -1945068020;
-                  var13 = ((mo) this).field_q * var8 >> 1744224332;
-                  var11 = var5 * var8 >> 1888261644;
-                  var15 = var11 >> 1206933964;
-                  var16 = var15 - -1;
-                  if (var13 > var16) {
-                    break L6;
-                  } else {
-                    var16 = 0;
-                    break L6;
-                  }
-                }
-                var11 = var11 & 4095;
-                var18 = 255 & ((mo) this).field_x[255 & var16];
-                var17 = 255 & ((mo) this).field_x[255 & var15];
-                var14 = mu.field_y[var11];
-                var10 = 0;
-                L7: while (true) {
-                  if (ws.field_b <= var10) {
-                    break L4;
-                  } else {
-                    var4 = gs.field_b[var10] * ((mo) this).field_r;
-                    var6 = this.a(var18, var14, param0 + 28699, var12, var11, var8 * var4 >> 132977964, var17);
-                    param2[var10] = var9 * var6 >> -1441008468;
-                    var10++;
-                    continue L7;
-                  }
-                }
-              }
-              var7 = 1;
-              L8: while (true) {
-                if (var7 >= ((mo) this).field_s) {
-                  break L0;
-                } else {
-                  L9: {
-                    var9 = ((mo) this).field_u[var7];
-                    if (-9 > var9) {
-                      break L9;
-                    } else {
-                      if (7 > var9) {
-                        break L9;
+                  var11 = var11 & 4095;
+                  var17 = ((mo) this).field_x[255 & var15] & 255;
+                  var18 = ((mo) this).field_x[var16 & 255] & 255;
+                  var14 = mu.field_y[var11];
+                  if (((mo) this).field_m) {
+                    var10 = 0;
+                    L3: while (true) {
+                      if (var10 >= ws.field_b) {
+                        break L1;
                       } else {
-                        var7++;
+                        var4_int = ((mo) this).field_r * gs.field_b[var10];
+                        var6 = this.a(var18, var14, 3, var12, var11, var8 * var4_int >> 12, var17);
+                        var6 = var6 * var9 >> 12;
+                        param2[var10] = (var6 >> 1) + 2048;
+                        var10++;
+                        continue L3;
+                      }
+                    }
+                  } else {
+                    var10 = 0;
+                    L4: while (true) {
+                      if (ws.field_b <= var10) {
+                        break L1;
+                      } else {
+                        var4_int = gs.field_b[var10] * ((mo) this).field_r;
+                        var6 = this.a(var18, var14, 3, var12, var11, var4_int * var8 >> 12, var17);
+                        param2[var10] = var6 * var9 >> 12;
+                        var10++;
+                        continue L4;
+                      }
+                    }
+                  }
+                } else {
+                  L5: {
+                    L6: {
+                      var9 = ((mo) this).field_u[0];
+                      if (8 < var9) {
+                        break L6;
+                      } else {
+                        if (-8 > var9) {
+                          break L6;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    }
+                    L7: {
+                      var8 = ((mo) this).field_y[0] << 12;
+                      var12 = var8 * ((mo) this).field_r >> 12;
+                      var13 = ((mo) this).field_q * var8 >> 12;
+                      var11 = var5 * var8 >> 12;
+                      var15 = var11 >> 12;
+                      var16 = var15 - -1;
+                      if (var13 > var16) {
+                        break L7;
+                      } else {
+                        var16 = 0;
+                        break L7;
+                      }
+                    }
+                    var11 = var11 & 4095;
+                    var18 = 255 & ((mo) this).field_x[255 & var16];
+                    var17 = 255 & ((mo) this).field_x[255 & var15];
+                    var14 = mu.field_y[var11];
+                    var10 = 0;
+                    L8: while (true) {
+                      if (ws.field_b <= var10) {
+                        break L5;
+                      } else {
+                        var4_int = gs.field_b[var10] * ((mo) this).field_r;
+                        var6 = this.a(var18, var14, param0 + 28699, var12, var11, var8 * var4_int >> 12, var17);
+                        param2[var10] = var9 * var6 >> 12;
+                        var10++;
                         continue L8;
                       }
                     }
                   }
-                  L10: {
-                    var8 = ((mo) this).field_y[var7] << 762384140;
-                    var12 = ((mo) this).field_r * var8 >> -517827860;
-                    var13 = var8 * ((mo) this).field_q >> -1999007476;
-                    var11 = var5 * var8 >> -1916821332;
-                    var15 = var11 >> -623826260;
-                    var16 = 1 + var15;
-                    if (var16 >= var13) {
-                      var16 = 0;
-                      break L10;
+                  var7 = 1;
+                  L9: while (true) {
+                    if (var7 >= ((mo) this).field_s) {
+                      break L1;
                     } else {
-                      break L10;
-                    }
-                  }
-                  L11: {
-                    var11 = var11 & 4095;
-                    var17 = 255 & ((mo) this).field_x[var15 & 255];
-                    var14 = mu.field_y[var11];
-                    var18 = 255 & ((mo) this).field_x[255 & var16];
-                    if (!((mo) this).field_m) {
-                      break L11;
-                    } else {
-                      if (((mo) this).field_s - 1 == var7) {
-                        var10 = 0;
-                        L12: while (true) {
-                          if (ws.field_b > var10) {
-                            var4 = gs.field_b[var10] * ((mo) this).field_r;
-                            var6 = this.a(var18, var14, 3, var12, var11, var4 * var8 >> 2097570764, var17);
-                            var6 = param2[var10] - -(var9 * var6 >> 1879223340);
-                            param2[var10] = 2048 + (var6 >> -1628903231);
-                            var10++;
-                            continue L12;
+                      L10: {
+                        L11: {
+                          var9 = ((mo) this).field_u[var7];
+                          if (var9 > 8) {
+                            break L11;
                           } else {
-                            var7++;
-                            continue L8;
+                            if (var9 < -8) {
+                              break L11;
+                            } else {
+                              break L10;
+                            }
                           }
                         }
-                      } else {
-                        break L11;
+                        L12: {
+                          var8 = ((mo) this).field_y[var7] << 12;
+                          var12 = ((mo) this).field_r * var8 >> 12;
+                          var13 = var8 * ((mo) this).field_q >> 12;
+                          var11 = var5 * var8 >> 12;
+                          var15 = var11 >> 12;
+                          var16 = 1 + var15;
+                          if (~var16 <= ~var13) {
+                            var16 = 0;
+                            break L12;
+                          } else {
+                            break L12;
+                          }
+                        }
+                        L13: {
+                          var11 = var11 & 4095;
+                          var17 = 255 & ((mo) this).field_x[var15 & 255];
+                          var14 = mu.field_y[var11];
+                          var18 = 255 & ((mo) this).field_x[255 & var16];
+                          if (!((mo) this).field_m) {
+                            break L13;
+                          } else {
+                            if (((mo) this).field_s - 1 == var7) {
+                              var10 = 0;
+                              L14: while (true) {
+                                if (~ws.field_b >= ~var10) {
+                                  break L10;
+                                } else {
+                                  var4_int = gs.field_b[var10] * ((mo) this).field_r;
+                                  var6 = this.a(var18, var14, 3, var12, var11, var4_int * var8 >> 12, var17);
+                                  var6 = param2[var10] - -(var9 * var6 >> 12);
+                                  param2[var10] = 2048 + (var6 >> 1);
+                                  var10++;
+                                  continue L14;
+                                }
+                              }
+                            } else {
+                              break L13;
+                            }
+                          }
+                        }
+                        var10 = 0;
+                        L15: while (true) {
+                          if (var10 >= ws.field_b) {
+                            break L10;
+                          } else {
+                            var4_int = ((mo) this).field_r * gs.field_b[var10];
+                            var6 = this.a(var18, var14, 3, var12, var11, var8 * var4_int >> 12, var17);
+                            param2[var10] = param2[var10] + (var9 * var6 >> 12);
+                            var10++;
+                            continue L15;
+                          }
+                        }
                       }
-                    }
-                  }
-                  var10 = 0;
-                  L13: while (true) {
-                    if (var10 < ws.field_b) {
-                      var4 = ((mo) this).field_r * gs.field_b[var10];
-                      var6 = this.a(var18, var14, 3, var12, var11, var8 * var4 >> 1823988716, var17);
-                      param2[var10] = param2[var10] + (var9 * var6 >> -1133736628);
-                      var10++;
-                      continue L13;
-                    } else {
                       var7++;
-                      continue L8;
+                      continue L9;
                     }
                   }
                 }
               }
+              break L0;
+            } else {
+              return;
             }
           }
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L16: {
+            var4 = decompiledCaughtException;
+            stackOut_40_0 = (RuntimeException) var4;
+            stackOut_40_1 = new StringBuilder().append("mo.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_42_0 = stackOut_40_0;
+            stackIn_42_1 = stackOut_40_1;
+            stackIn_41_0 = stackOut_40_0;
+            stackIn_41_1 = stackOut_40_1;
+            if (param2 == null) {
+              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
+              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_2 = "null";
+              stackIn_43_0 = stackOut_42_0;
+              stackIn_43_1 = stackOut_42_1;
+              stackIn_43_2 = stackOut_42_2;
+              break L16;
+            } else {
+              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
+              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_2 = "{...}";
+              stackIn_43_0 = stackOut_41_0;
+              stackIn_43_1 = stackOut_41_1;
+              stackIn_43_2 = stackOut_41_2;
+              break L16;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + 41);
         }
     }
 
@@ -221,20 +272,41 @@ final class mo extends tt {
     final void c(int param0) {
         int var2 = 0;
         int var3 = 0;
-        int var4 = Sumoblitz.field_L ? 1 : 0;
+        int var4 = 0;
+        Object var5 = null;
+        var4 = Sumoblitz.field_L ? 1 : 0;
         ((mo) this).field_x = td.a(((mo) this).field_v, -50);
         this.d(param0 + 126);
-        for (var2 = ((mo) this).field_s + -1; -2 >= (var2 ^ -1); var2--) {
-            var3 = ((mo) this).field_u[var2];
-            // if_icmplt L81
-            if (var3 < -8) {
-                break;
+        var2 = ((mo) this).field_s + -1;
+        L0: while (true) {
+          L1: {
+            if (var2 < 1) {
+              break L1;
+            } else {
+              var3 = ((mo) this).field_u[var2];
+              if (var3 > 8) {
+                break L1;
+              } else {
+                if (var3 >= -8) {
+                  ((mo) this).field_s = ((mo) this).field_s - 1;
+                  var2--;
+                  continue L0;
+                } else {
+                  break L1;
+                }
+              }
             }
-            ((mo) this).field_s = ((mo) this).field_s - 1;
-        }
-        if (param0 != -8) {
-            Object var5 = null;
-            ((mo) this).a(14, 34, (int[]) null);
+          }
+          L2: {
+            if (param0 == -8) {
+              break L2;
+            } else {
+              var5 = null;
+              ((mo) this).a(14, 34, (int[]) null);
+              break L2;
+            }
+          }
+          return;
         }
     }
 
@@ -250,10 +322,7 @@ final class mo extends tt {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param2 != 30643) {
-            return false;
-        }
-        return bj.a(param1, (byte) -113, param0) & (((8192 & param1) != 0 ? true : false) | lg.a(param1, param2 ^ -30697, param0) | mb.a(true, param0, param1));
+        return bj.a(param1, (byte) -113, param0) & (((8192 & param1) != 0 ? true : false) | lg.a(param1, -92, param0) | mb.a(true, param0, param1));
     }
 
     private final int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -294,7 +363,7 @@ final class mo extends tt {
         int stackOut_31_0 = 0;
         L0: {
           var18 = Sumoblitz.field_L ? 1 : 0;
-          var13 = param5 >> 641172492;
+          var13 = param5 >> 12;
           var12 = var13 + 1;
           param5 = param5 & 4095;
           var13 = var13 & 255;
@@ -311,9 +380,9 @@ final class mo extends tt {
           var11 = -4096 + param5;
           var15 = mu.field_y[param5];
           var14 = 3 & ((mo) this).field_x[param6 + var13];
-          if (var14 < -2) {
+          if (var14 > 1) {
             L2: {
-              if ((var14 ^ -1) == -3) {
+              if (var14 == 2) {
                 stackOut_9_0 = param5 - param4;
                 stackIn_10_0 = stackOut_9_0;
                 break L2;
@@ -327,7 +396,7 @@ final class mo extends tt {
             break L1;
           } else {
             L3: {
-              if (-1 == var14) {
+              if (var14 == 0) {
                 stackOut_5_0 = param4 + param5;
                 stackIn_6_0 = stackOut_5_0;
                 break L3;
@@ -374,7 +443,7 @@ final class mo extends tt {
           }
         }
         L7: {
-          var16 = var8 + ((-var8 + var9) * var15 >> -851995892);
+          var16 = var8 + ((-var8 + var9) * var15 >> 12);
           var14 = param2 & ((mo) this).field_x[var13 + param0];
           if (var14 > 1) {
             L8: {
@@ -408,7 +477,7 @@ final class mo extends tt {
         }
         L10: {
           var14 = ((mo) this).field_x[param0 + var12] & 3;
-          if (-2 <= (var14 ^ -1)) {
+          if (var14 <= 1) {
             L11: {
               if (0 != var14) {
                 stackOut_36_0 = -var11 + var10;
@@ -424,7 +493,7 @@ final class mo extends tt {
             break L10;
           } else {
             L12: {
-              if ((var14 ^ -1) == -3) {
+              if (var14 == 2) {
                 stackOut_32_0 = var11 - var10;
                 stackIn_33_0 = stackOut_32_0;
                 break L12;
@@ -438,17 +507,14 @@ final class mo extends tt {
             break L10;
           }
         }
-        var17 = var8 - -((var9 + -var8) * var15 >> -689057044);
-        return (param1 * (-var16 + var17) >> 2099378828) + var16;
+        var17 = var8 - -((var9 + -var8) * var15 >> 12);
+        return (param1 * (-var16 + var17) >> 12) + var16;
     }
 
     public static void e(int param0) {
         field_w = null;
         field_t = null;
         field_n = null;
-        if (param0 != 2) {
-            field_o = null;
-        }
         field_o = null;
     }
 

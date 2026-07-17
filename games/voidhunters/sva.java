@@ -50,7 +50,7 @@ final class sva extends le {
           var27 = VoidHunters.field_G;
           var3 = ((sva) this).field_f.a((byte) 117, param0);
           if (((sva) this).field_f.field_e) {
-            var4 = ((sva) this).field_j >> -532029343;
+            var4 = ((sva) this).field_j >> 1;
             var31 = ((sva) this).field_f.b(73);
             var6 = new Random((long)((sva) this).field_n);
             var7 = 0;
@@ -71,17 +71,17 @@ final class sva extends le {
                 }
                 L3: {
                   var8 = stackIn_7_0;
-                  var8 = var8 >> 1189200676 & 255;
+                  var8 = var8 >> 4 & 255;
                   var9 = hob.a(var6, hob.field_d, 127);
                   var10 = hob.a(var6, noa.field_o, 117);
-                  var11 = var9 - -(jmb.field_q[var8] * ((sva) this).field_l >> 1177164684);
-                  var12 = var10 + (qta.field_o[var8] * ((sva) this).field_l >> 1109056556);
+                  var11 = var9 - -(jmb.field_q[var8] * ((sva) this).field_l >> 12);
+                  var12 = var10 + (qta.field_o[var8] * ((sva) this).field_l >> 12);
                   var13 = -var10 + var12;
                   var14 = -var9 + var11;
                   if (var14 != 0) {
                     break L3;
                   } else {
-                    if (-1 != (var13 ^ -1)) {
+                    if (var13 != 0) {
                       break L3;
                     } else {
                       var7++;
@@ -98,7 +98,7 @@ final class sva extends le {
                   }
                 }
                 L5: {
-                  if ((var13 ^ -1) > -1) {
+                  if (var13 < 0) {
                     var13 = -var13;
                     break L5;
                   } else {
@@ -149,7 +149,7 @@ final class sva extends le {
                   var18 = var12 - var10;
                   var19 = -var17 / 2;
                   var20 = 2048 / var17;
-                  var21 = 1024 + -(hob.a(var6, 4096, 127) >> -1241200286);
+                  var21 = 1024 + -(hob.a(var6, 4096, 127) >> 2);
                   if (var12 > var10) {
                     stackOut_25_0 = 1;
                     stackIn_26_0 = stackOut_25_0;
@@ -185,7 +185,7 @@ final class sva extends le {
                         break L12;
                       }
                     }
-                    if ((var19 ^ -1) < -1) {
+                    if (var19 > 0) {
                       var19 = -var17 + var19;
                       var16 = var16 - -var22;
                       var23++;
@@ -226,45 +226,96 @@ final class sva extends le {
     }
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        L0: {
-          var5 = VoidHunters.field_G;
-          if (param1 < -60) {
-            break L0;
-          } else {
-            int[] discarded$2 = ((sva) this).a(66, true);
-            break L0;
-          }
-        }
-        L1: {
-          var4 = param0;
-          if (var4 == 0) {
-            ((sva) this).field_n = param2.e((byte) -101);
-            break L1;
-          } else {
-            if (var4 == -2) {
-              ((sva) this).field_k = param2.e(1869);
-              break L1;
-            } else {
-              if (-3 != var4) {
-                if (var4 == -4) {
-                  ((sva) this).field_i = param2.e(1869);
-                  break L1;
-                } else {
-                  if (-5 == var4) {
-                    ((sva) this).field_j = param2.e(1869);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        var5 = VoidHunters.field_G;
+        try {
+          L0: {
+            L1: {
+              if (param1 < -60) {
+                break L1;
               } else {
-                ((sva) this).field_l = param2.e((byte) -117);
+                int[] discarded$2 = ((sva) this).a(66, true);
                 break L1;
               }
             }
+            L2: {
+              var4_int = param0;
+              if (var4_int == 0) {
+                ((sva) this).field_n = param2.e((byte) -101);
+                break L2;
+              } else {
+                if (var4_int == 1) {
+                  ((sva) this).field_k = param2.e(1869);
+                  break L2;
+                } else {
+                  if (var4_int != 2) {
+                    if (var4_int == 3) {
+                      ((sva) this).field_i = param2.e(1869);
+                      break L2;
+                    } else {
+                      if (var4_int == 4) {
+                        ((sva) this).field_j = param2.e(1869);
+                        break L2;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  } else {
+                    ((sva) this).field_l = param2.e((byte) -117);
+                    break L2;
+                  }
+                }
+              }
+            }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var4;
+            stackOut_16_1 = new StringBuilder().append("sva.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param2 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L3;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L3;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
         }
     }
 

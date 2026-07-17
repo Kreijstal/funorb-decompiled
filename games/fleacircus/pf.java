@@ -1,6 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.awt.Frame;
 import java.lang.String;
 
 final class pf {
@@ -19,103 +20,141 @@ final class pf {
     }
 
     final static java.awt.Frame a(int param0, int param1, int param2, ce param3, int param4, int param5) {
-        hf[] var6 = null;
+        RuntimeException var6 = null;
+        hf[] var6_array = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var8 = 0;
         int var9 = 0;
         hf[] var10 = null;
         od var11 = null;
+        Object stackIn_7_0 = null;
+        Object stackIn_24_0 = null;
+        Object stackIn_27_0 = null;
+        java.awt.Frame stackIn_29_0 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        String stackIn_33_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_6_0 = null;
+        java.awt.Frame stackOut_28_0 = null;
+        Object stackOut_26_0 = null;
+        Object stackOut_23_0 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
         var9 = fleas.field_A ? 1 : 0;
-        if (param3.a(107)) {
+        try {
           L0: {
-            if (param5 != 0) {
-              break L0;
-            } else {
-              var10 = nd.a(true, param3);
-              var6 = var10;
-              if (var6 != null) {
-                var7_int = 0;
-                var8 = 0;
-                L1: while (true) {
-                  if (var8 >= var10.length) {
-                    if (var7_int != 0) {
-                      break L0;
-                    } else {
-                      return null;
-                    }
-                  } else {
-                    if (var10[var8].field_c == param4) {
-                      if (param2 == var10[var8].field_a) {
-                        L2: {
-                          if (0 == param1) {
-                            break L2;
-                          } else {
-                            if (var10[var8].field_j == param1) {
-                              break L2;
-                            } else {
-                              var8++;
-                              continue L1;
-                            }
-                          }
+            if (param3.a(107)) {
+              L1: {
+                if (param5 != 0) {
+                  break L1;
+                } else {
+                  var10 = nd.a(true, param3);
+                  var6_array = var10;
+                  if (var6_array != null) {
+                    var7_int = 0;
+                    var8 = 0;
+                    L2: while (true) {
+                      if (var8 >= var10.length) {
+                        if (var7_int != 0) {
+                          break L1;
+                        } else {
+                          return null;
                         }
+                      } else {
                         L3: {
-                          if (var7_int == 0) {
+                          if (var10[var8].field_c != param4) {
                             break L3;
                           } else {
-                            if (param5 < var10[var8].field_i) {
-                              break L3;
-                            } else {
-                              var8++;
-                              continue L1;
-                            }
+                            break L3;
                           }
                         }
-                        param5 = var10[var8].field_i;
-                        var7_int = 1;
                         var8++;
-                        continue L1;
-                      } else {
-                        var8++;
-                        continue L1;
+                        continue L2;
                       }
-                    } else {
-                      var8++;
-                      continue L1;
                     }
+                  } else {
+                    stackOut_6_0 = null;
+                    stackIn_7_0 = stackOut_6_0;
+                    return (java.awt.Frame) (Object) stackIn_7_0;
                   }
                 }
-              } else {
-                return null;
               }
-            }
-          }
-          var11 = param3.a(param4, (byte) -50, param2, param5, param1);
-          L4: while (true) {
-            if (-1 != (var11.field_b ^ -1)) {
-              var7 = (java.awt.Frame) var11.field_e;
-              if (var7 != null) {
-                if (-3 != (var11.field_b ^ -1)) {
-                  if (param0 == 18316) {
-                    return var7;
+              var11 = param3.a(param4, (byte) -50, param2, param5, param1);
+              L4: while (true) {
+                if (var11.field_b != 0) {
+                  var7 = (java.awt.Frame) var11.field_e;
+                  if (var7 != null) {
+                    if (var11.field_b != 2) {
+                      if (param0 == 18316) {
+                        stackOut_28_0 = (java.awt.Frame) var7;
+                        stackIn_29_0 = stackOut_28_0;
+                        break L0;
+                      } else {
+                        stackOut_26_0 = null;
+                        stackIn_27_0 = stackOut_26_0;
+                        return (java.awt.Frame) (Object) stackIn_27_0;
+                      }
+                    } else {
+                      hi.a(param3, var7, (byte) 52);
+                      stackOut_23_0 = null;
+                      stackIn_24_0 = stackOut_23_0;
+                      return (java.awt.Frame) (Object) stackIn_24_0;
+                    }
                   } else {
                     return null;
                   }
                 } else {
-                  hi.a(param3, var7, (byte) 52);
-                  return null;
+                  vh.a(10L, -88);
+                  continue L4;
                 }
-              } else {
-                return null;
               }
             } else {
-              vh.a(10L, -88);
-              continue L4;
+              return null;
             }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var6 = decompiledCaughtException;
+            stackOut_30_0 = (RuntimeException) var6;
+            stackOut_30_1 = new StringBuilder().append("pf.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_32_0 = stackOut_30_0;
+            stackIn_32_1 = stackOut_30_1;
+            stackIn_31_0 = stackOut_30_0;
+            stackIn_31_1 = stackOut_30_1;
+            if (param3 == null) {
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "null";
+              stackIn_33_0 = stackOut_32_0;
+              stackIn_33_1 = stackOut_32_1;
+              stackIn_33_2 = stackOut_32_2;
+              break L5;
+            } else {
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "{...}";
+              stackIn_33_0 = stackOut_31_0;
+              stackIn_33_1 = stackOut_31_1;
+              stackIn_33_2 = stackOut_31_2;
+              break L5;
+            }
+          }
+          throw pf.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param4 + 44 + param5 + 41);
         }
+        return stackIn_29_0;
     }
 
     final static int a(int param0, int param1) {
@@ -131,7 +170,7 @@ final class pf {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -165,10 +204,10 @@ final class pf {
         int stackIn_89_0 = 0;
         String stackIn_89_1 = null;
         int stackIn_89_2 = 0;
+        int stackIn_106_0 = 0;
         int stackIn_107_0 = 0;
         int stackIn_108_0 = 0;
-        int stackIn_109_0 = 0;
-        int stackIn_109_1 = 0;
+        int stackIn_108_1 = 0;
         int stackOut_27_0 = 0;
         int stackOut_26_0 = 0;
         int stackOut_30_0 = 0;
@@ -189,11 +228,11 @@ final class pf {
         String[] stackOut_37_0 = null;
         int stackOut_37_1 = 0;
         String stackOut_37_2 = null;
-        int stackOut_106_0 = 0;
-        int stackOut_108_0 = 0;
-        int stackOut_108_1 = 0;
+        int stackOut_105_0 = 0;
         int stackOut_107_0 = 0;
         int stackOut_107_1 = 0;
+        int stackOut_106_0 = 0;
+        int stackOut_106_1 = 0;
         int stackOut_86_0 = 0;
         String stackOut_86_1 = null;
         int stackOut_88_0 = 0;
@@ -207,9 +246,9 @@ final class pf {
           vc.field_a = param0;
           d.field_L = true;
           if (vc.field_a != 0) {
-            if ((vc.field_a ^ -1) == -2) {
-              var3 = nb.a(rh.field_o, vh.field_l, pb.field_e, sc.field_d, 1);
-              var4 = 2 + var3;
+            if (vc.field_a == 1) {
+              var3_int = nb.a(rh.field_o, vh.field_l, pb.field_e, sc.field_d, 1);
+              var4 = 2 + var3_int;
               fb.field_d = new String[var4];
               m.field_c = new int[var4];
               var5 = 0;
@@ -218,7 +257,7 @@ final class pf {
                   em.field_e = new int[1];
                   var5 = 0;
                   L2: while (true) {
-                    if (var3 <= var5) {
+                    if (var3_int <= var5) {
                       fb.field_d[-2 + var4] = "";
                       fb.field_d[-1 + var4] = ja.field_O;
                       m.field_c[var4 + -1] = 0;
@@ -241,14 +280,14 @@ final class pf {
                 if (vc.field_a == 3) {
                   L3: {
                     if (!fg.field_q.field_e) {
-                      var3 = nb.a(sa.field_b, vh.field_l, pb.field_e, sc.field_d, 1);
+                      var3_int = nb.a(sa.field_b, vh.field_l, pb.field_e, sc.field_d, 1);
                       break L3;
                     } else {
-                      var3 = nb.a(aj.field_x, vh.field_l, pb.field_e, sc.field_d, 1);
+                      var3_int = nb.a(aj.field_x, vh.field_l, pb.field_e, sc.field_d, 1);
                       break L3;
                     }
                   }
-                  var4 = 2 + var3;
+                  var4 = 2 + var3_int;
                   m.field_c = new int[var4];
                   fb.field_d = new String[var4];
                   var5 = 0;
@@ -257,7 +296,7 @@ final class pf {
                       em.field_e = new int[1];
                       var5 = 0;
                       L5: while (true) {
-                        if (var5 >= var3) {
+                        if (var5 >= var3_int) {
                           fb.field_d[-2 + var4] = "";
                           fb.field_d[var4 + -1] = ja.field_O;
                           m.field_c[-1 + var4] = 0;
@@ -276,9 +315,9 @@ final class pf {
                     }
                   }
                 } else {
-                  if (-5 == (vc.field_a ^ -1)) {
-                    var3 = nb.a(oc.field_c, vh.field_l, pb.field_e, sc.field_d, 1);
-                    var4 = var3 + 2;
+                  if (vc.field_a == 4) {
+                    var3_int = nb.a(oc.field_c, vh.field_l, pb.field_e, sc.field_d, 1);
+                    var4 = var3_int + 2;
                     fb.field_d = new String[var4];
                     m.field_c = new int[var4];
                     var5 = 0;
@@ -287,7 +326,7 @@ final class pf {
                         em.field_e = new int[1];
                         var5 = 0;
                         L7: while (true) {
-                          if (var5 >= var3) {
+                          if (var5 >= var3_int) {
                             fb.field_d[-2 + var4] = "";
                             fb.field_d[-1 + var4] = ja.field_O;
                             m.field_c[-1 + var4] = 0;
@@ -307,8 +346,8 @@ final class pf {
                     }
                   } else {
                     if (vc.field_a == 5) {
-                      var3 = nb.a(tg.field_a, vh.field_l, pb.field_e, sc.field_d, 1);
-                      var4 = var3 + 3;
+                      var3_int = nb.a(tg.field_a, vh.field_l, pb.field_e, sc.field_d, 1);
+                      var4 = var3_int + 3;
                       m.field_c = new int[var4];
                       fb.field_d = new String[var4];
                       var5 = 0;
@@ -317,7 +356,7 @@ final class pf {
                           em.field_e = new int[2];
                           var5 = 0;
                           L9: while (true) {
-                            if (var3 <= var5) {
+                            if (var3_int <= var5) {
                               fb.field_d[var4 - 3] = "";
                               fb.field_d[var4 - 2] = s.field_a;
                               m.field_c[var4 + -2] = 0;
@@ -344,12 +383,12 @@ final class pf {
                   }
                 }
               } else {
-                var3 = nb.a(db.a(wa.field_q, new String[1], true), vh.field_l, pb.field_e, sc.field_d, 1);
+                var3_int = nb.a(db.a(wa.field_q, new String[1], true), vh.field_l, pb.field_e, sc.field_d, 1);
                 var4 = -1;
                 var5 = 0;
                 L10: while (true) {
                   L11: {
-                    if (var5 >= var3) {
+                    if (var5 >= var3_int) {
                       break L11;
                     } else {
                       if (!"<%0>".equals((Object) (Object) sc.field_d[var5])) {
@@ -361,17 +400,17 @@ final class pf {
                       }
                     }
                   }
-                  if ((var4 ^ -1) != 0) {
+                  if (var4 != -1) {
                     j.field_o = new String[var4];
                     dm.a((Object[]) (Object) sc.field_d, 0, (Object[]) (Object) j.field_o, 0, var4);
-                    oe.field_c = new String[var3 - (var4 + 1)];
-                    dm.a((Object[]) (Object) sc.field_d, var4 - -1, (Object[]) (Object) oe.field_c, 0, -var4 + (var3 - 1));
+                    oe.field_c = new String[var3_int - (var4 + 1)];
+                    dm.a((Object[]) (Object) sc.field_d, var4 - -1, (Object[]) (Object) oe.field_c, 0, -var4 + (var3_int - 1));
                     var4 = -1;
-                    var3 = nb.a(db.a(cd.field_g, new String[1], true), vh.field_l, pb.field_e, sc.field_d, 1);
+                    var3_int = nb.a(db.a(cd.field_g, new String[1], true), vh.field_l, pb.field_e, sc.field_d, 1);
                     var5 = 0;
                     L12: while (true) {
                       L13: {
-                        if (var5 >= var3) {
+                        if (var5 >= var3_int) {
                           break L13;
                         } else {
                           if ("<%0>".equals((Object) (Object) sc.field_d[var5])) {
@@ -387,8 +426,8 @@ final class pf {
                         L14: {
                           uk.field_a = new String[var4];
                           dm.a((Object[]) (Object) sc.field_d, 0, (Object[]) (Object) uk.field_a, 0, var4);
-                          rc.field_g = new String[-1 + -var4 + var3];
-                          dm.a((Object[]) (Object) sc.field_d, 1 + var4, (Object[]) (Object) rc.field_g, 0, -1 + -var4 + var3);
+                          rc.field_g = new String[-1 + -var4 + var3_int];
+                          dm.a((Object[]) (Object) sc.field_d, 1 + var4, (Object[]) (Object) rc.field_g, 0, -1 + -var4 + var3_int);
                           if (j.field_o.length >= uk.field_a.length) {
                             stackOut_27_0 = j.field_o.length;
                             stackIn_28_0 = stackOut_27_0;
@@ -478,7 +517,7 @@ final class pf {
                                   stackIn_38_1 = stackOut_36_1;
                                   stackIn_37_0 = stackOut_36_0;
                                   stackIn_37_1 = stackOut_36_1;
-                                  if (-1 < (-var5 + (uk.field_a.length + var8) ^ -1)) {
+                                  if (-var5 + (uk.field_a.length + var8) < 0) {
                                     stackOut_38_0 = (String[]) (Object) stackIn_38_0;
                                     stackOut_38_1 = stackIn_38_1;
                                     stackOut_38_2 = "";
@@ -518,8 +557,8 @@ final class pf {
               }
             }
           } else {
-            var3 = nb.a(rh.field_o, vh.field_l, pb.field_e, sc.field_d, 1);
-            var4 = var3 + 3;
+            var3_int = nb.a(rh.field_o, vh.field_l, pb.field_e, sc.field_d, 1);
+            var4 = var3_int + 3;
             m.field_c = new int[var4];
             fb.field_d = new String[var4];
             var5 = 0;
@@ -528,7 +567,7 @@ final class pf {
                 em.field_e = new int[2];
                 var5 = 0;
                 L22: while (true) {
-                  if (var3 <= var5) {
+                  if (var3_int <= var5) {
                     fb.field_d[var4 + -3] = "";
                     fb.field_d[-2 + var4] = md.field_M;
                     m.field_c[var4 + -2] = 0;
@@ -560,12 +599,12 @@ final class pf {
           }
         }
         bk.field_a.field_m = em.field_e.length;
-        var3 = 0;
+        var3_int = 0;
         var4 = 0;
         L24: while (true) {
           if (var4 >= fb.field_d.length) {
             L25: {
-              if (-3 == (vc.field_a ^ -1)) {
+              if (vc.field_a == 2) {
                 var10 = j.field_o;
                 var5 = 0;
                 L26: while (true) {
@@ -576,104 +615,108 @@ final class pf {
                       if (var11.length <= var5) {
                         break L25;
                       } else {
-                        var13 = var11[var5];
-                        var7 = se.a(param1 ^ 2, var13, false);
-                        if (var7 > var3) {
-                          var3 = var7;
-                          var5++;
-                          continue L27;
-                        } else {
-                          var5++;
-                          continue L27;
+                        L28: {
+                          var13 = var11[var5];
+                          var7 = se.a(param1 ^ 2, var13, false);
+                          if (var7 <= var3_int) {
+                            break L28;
+                          } else {
+                            break L28;
+                          }
                         }
+                        var5++;
+                        continue L27;
                       }
                     }
                   } else {
-                    var12 = var10[var5];
-                    var7 = se.a(3, var12, false);
-                    if (var3 < var7) {
-                      var3 = var7;
-                      var5++;
-                      continue L26;
-                    } else {
-                      var5++;
-                      continue L26;
+                    L29: {
+                      var12 = var10[var5];
+                      var7 = se.a(3, var12, false);
+                      if (var3_int >= var7) {
+                        break L29;
+                      } else {
+                        break L29;
+                      }
                     }
+                    var5++;
+                    continue L26;
                   }
                 }
               } else {
                 break L25;
               }
             }
-            em.field_d = bk.field_a.field_m * (id.field_c + ge.field_h << -437442015);
-            bm.field_K = af.field_b + (var3 - (var3 >> 155126785));
-            ei.field_M = -(var3 >> -846725215) + af.field_b;
+            em.field_d = bk.field_a.field_m * (id.field_c + ge.field_h << 1);
+            bm.field_K = af.field_b + (var3_int - (var3_int >> 1));
+            ei.field_M = -(var3_int >> 1) + af.field_b;
             var4 = 0;
-            L28: while (true) {
+            L30: while (true) {
               if (var4 >= fb.field_d.length) {
-                rb.field_H = vc.field_f - (em.field_d >> -650894943);
+                rb.field_H = vc.field_f - (em.field_d >> 1);
                 vh.field_j = new int[fb.field_d.length][];
                 var4 = 0;
                 var5 = rb.field_H;
-                L29: while (true) {
+                L31: while (true) {
                   if (fb.field_d.length <= var4) {
-                    L30: {
+                    L32: {
                       if (vc.field_a == 2) {
                         bk.field_a.a(-1, -1, param2, -101);
-                        break L30;
+                        break L32;
                       } else {
                         bk.field_a.a(bg.a(ag.field_f, kc.field_b, 112), 0, param2, param1 + -85);
-                        break L30;
+                        break L32;
                       }
                     }
                     return;
                   } else {
-                    var6 = m.field_c[var4];
-                    if (-1 >= (var6 ^ -1)) {
-                      var7 = se.a(3, fb.field_d[var4], true);
-                      var5 = var5 + id.field_c;
-                      var8 = af.field_b + -(var7 >> -1817673599);
-                      vh.field_j[var4] = new int[4];
-                      vh.field_j[var4][0] = -ae.field_c + var8;
-                      vh.field_j[var4][1] = var5;
-                      vh.field_j[var4][2] = (ae.field_c << -1862173087) + var7;
-                      var5 = var5 + ((ge.field_h << -1455016543) + (id.field_c + hb.field_t));
-                      vh.field_j[var4][3] = hb.field_t + (ge.field_h << -1461306399);
-                      var4++;
-                      continue L29;
-                    } else {
-                      var5 = var5 + cm.field_f;
-                      var4++;
-                      continue L29;
+                    L33: {
+                      var6 = m.field_c[var4];
+                      if (var6 >= 0) {
+                        var7 = se.a(3, fb.field_d[var4], true);
+                        var5 = var5 + id.field_c;
+                        var8 = af.field_b + -(var7 >> 1);
+                        vh.field_j[var4] = new int[4];
+                        vh.field_j[var4][0] = -ae.field_c + var8;
+                        vh.field_j[var4][1] = var5;
+                        vh.field_j[var4][2] = (ae.field_c << 1) + var7;
+                        var5 = var5 + ((ge.field_h << 1) + (id.field_c + hb.field_t));
+                        vh.field_j[var4][3] = hb.field_t + (ge.field_h << 1);
+                        break L33;
+                      } else {
+                        var5 = var5 + cm.field_f;
+                        break L33;
+                      }
                     }
+                    var4++;
+                    continue L31;
                   }
                 }
               } else {
-                L31: {
-                  stackOut_106_0 = em.field_d;
-                  stackIn_108_0 = stackOut_106_0;
-                  stackIn_107_0 = stackOut_106_0;
+                L34: {
+                  stackOut_105_0 = em.field_d;
+                  stackIn_107_0 = stackOut_105_0;
+                  stackIn_106_0 = stackOut_105_0;
                   if (0 > m.field_c[var4]) {
-                    stackOut_108_0 = stackIn_108_0;
-                    stackOut_108_1 = cm.field_f;
-                    stackIn_109_0 = stackOut_108_0;
-                    stackIn_109_1 = stackOut_108_1;
-                    break L31;
-                  } else {
                     stackOut_107_0 = stackIn_107_0;
-                    stackOut_107_1 = hb.field_t;
-                    stackIn_109_0 = stackOut_107_0;
-                    stackIn_109_1 = stackOut_107_1;
-                    break L31;
+                    stackOut_107_1 = cm.field_f;
+                    stackIn_108_0 = stackOut_107_0;
+                    stackIn_108_1 = stackOut_107_1;
+                    break L34;
+                  } else {
+                    stackOut_106_0 = stackIn_106_0;
+                    stackOut_106_1 = hb.field_t;
+                    stackIn_108_0 = stackOut_106_0;
+                    stackIn_108_1 = stackOut_106_1;
+                    break L34;
                   }
                 }
-                em.field_d = stackIn_109_0 + stackIn_109_1;
+                em.field_d = stackIn_108_0 + stackIn_108_1;
                 var4++;
-                continue L28;
+                continue L30;
               }
             }
           } else {
-            L32: {
+            L35: {
               stackOut_86_0 = 3;
               stackOut_86_1 = fb.field_d[var4];
               stackIn_88_0 = stackOut_86_0;
@@ -687,7 +730,7 @@ final class pf {
                 stackIn_89_0 = stackOut_88_0;
                 stackIn_89_1 = stackOut_88_1;
                 stackIn_89_2 = stackOut_88_2;
-                break L32;
+                break L35;
               } else {
                 stackOut_87_0 = stackIn_87_0;
                 stackOut_87_1 = (String) (Object) stackIn_87_1;
@@ -695,18 +738,20 @@ final class pf {
                 stackIn_89_0 = stackOut_87_0;
                 stackIn_89_1 = stackOut_87_1;
                 stackIn_89_2 = stackOut_87_2;
-                break L32;
+                break L35;
               }
             }
-            var5 = se.a(stackIn_89_0, stackIn_89_1, stackIn_89_2 != 0);
-            if (var5 > var3) {
-              var3 = var5;
-              var4++;
-              continue L24;
-            } else {
-              var4++;
-              continue L24;
+            L36: {
+              var5 = se.a(stackIn_89_0, stackIn_89_1, stackIn_89_2 != 0);
+              if (var5 > var3_int) {
+                var3_int = var5;
+                break L36;
+              } else {
+                break L36;
+              }
             }
+            var4++;
+            continue L24;
           }
         }
     }

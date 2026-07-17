@@ -10,37 +10,42 @@ final class hi {
         field_c = null;
         field_a = null;
         field_b = null;
-        if (param0 > -81) {
-            field_c = null;
-        }
     }
 
     final static void b(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         lk var3 = null;
+        RuntimeException decompiledCaughtException = null;
         var2 = DungeonAssault.field_K;
-        if (null != og.field_e) {
-          if (og.field_e.field_J != null) {
-            var3 = (lk) (Object) og.field_e.field_J.e(-24172);
-            L0: while (true) {
-              if (var3 == null) {
-                if (param0 != 1) {
-                  field_c = null;
-                  return;
-                } else {
-                  return;
-                }
+        try {
+          L0: {
+            L1: {
+              if (null == og.field_e) {
+                break L1;
               } else {
-                var3.g(255);
-                var3 = (lk) (Object) og.field_e.field_J.a(param0 + 3);
-                continue L0;
+                if (og.field_e.field_J == null) {
+                  break L1;
+                } else {
+                  var3 = (lk) (Object) og.field_e.field_J.e(-24172);
+                  L2: while (true) {
+                    if (var3 == null) {
+                      break L0;
+                    } else {
+                      var3.g(255);
+                      var3 = (lk) (Object) og.field_e.field_J.a(4);
+                      continue L2;
+                    }
+                  }
+                }
               }
             }
-          } else {
             return;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw vk.a((Throwable) (Object) var1, "hi.A(" + 1 + 41);
         }
     }
 

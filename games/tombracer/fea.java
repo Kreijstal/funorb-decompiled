@@ -4,7 +4,7 @@
 final class fea {
     final static void a(boolean param0, int param1) {
         L0: {
-          if (-1 == (param1 ^ -1)) {
+          if (param1 == 0) {
             bia.field_J[0] = ns.field_j.a("tr_ceramic_knock_01", 121, "");
             break L0;
           } else {
@@ -28,7 +28,7 @@ final class fea {
           }
         }
         L3: {
-          if (-4 == (param1 ^ -1)) {
+          if (param1 == 3) {
             bia.field_J[3] = ns.field_j.a("tr_ceramic_knock_04", 94, "");
             break L3;
           } else {
@@ -44,7 +44,7 @@ final class fea {
           }
         }
         L5: {
-          if (param1 != -6) {
+          if (param1 != 5) {
             break L5;
           } else {
             bia.field_J[5] = ns.field_j.a("tr_ceramic_knock_06", 71, "");
@@ -52,7 +52,7 @@ final class fea {
           }
         }
         L6: {
-          if (-7 != param1) {
+          if (param1 != 6) {
             break L6;
           } else {
             bia.field_J[6] = ns.field_j.a("tr_ceramic_knock_07", 111, "");
@@ -100,7 +100,7 @@ final class fea {
           }
         }
         L12: {
-          if ((param1 ^ -1) == -13) {
+          if (param1 == 12) {
             bia.field_J[12] = ns.field_j.a("", (byte) 52, "tr_large_block_destroy_03");
             break L12;
           } else {
@@ -132,7 +132,7 @@ final class fea {
           }
         }
         L16: {
-          if (-17 != (param1 ^ -1)) {
+          if (param1 != 16) {
             break L16;
           } else {
             bia.field_J[16] = ns.field_j.a("", (byte) 52, "tr_small_block_destroy_02");
@@ -156,7 +156,7 @@ final class fea {
           }
         }
         L19: {
-          if (-20 == (param1 ^ -1)) {
+          if (param1 == 19) {
             bia.field_J[19] = ns.field_j.a("", (byte) 52, "tr_small_block_destroy_05");
             break L19;
           } else {
@@ -164,7 +164,7 @@ final class fea {
           }
         }
         L20: {
-          if ((param1 ^ -1) == -21) {
+          if (param1 == 20) {
             bia.field_J[20] = ns.field_j.a("", (byte) 52, "tr_mirror_block_drag_loop");
             break L20;
           } else {
@@ -172,7 +172,7 @@ final class fea {
           }
         }
         L21: {
-          if ((param1 ^ -1) == -22) {
+          if (param1 == 21) {
             bia.field_J[21] = ns.field_j.a("", (byte) 52, "tr_large_object_fall_01");
             break L21;
           } else {
@@ -188,7 +188,7 @@ final class fea {
           }
         }
         L23: {
-          if (-24 != param1) {
+          if (param1 != 23) {
             break L23;
           } else {
             bia.field_J[23] = ns.field_j.a("tr_object_fell_into_lava_02", 45, "");
@@ -196,7 +196,7 @@ final class fea {
           }
         }
         L24: {
-          if (-25 == param1) {
+          if (param1 == 24) {
             bia.field_J[24] = ns.field_j.a("tr_object_fell_into_lava_03", 35, "");
             break L24;
           } else {
@@ -204,7 +204,7 @@ final class fea {
           }
         }
         L25: {
-          if (param1 == -26) {
+          if (param1 == 25) {
             bia.field_J[25] = ns.field_j.a("", (byte) 52, "tr_teleport_hum_loop");
             break L25;
           } else {
@@ -212,7 +212,7 @@ final class fea {
           }
         }
         L26: {
-          if (-27 != param1) {
+          if (param1 != 26) {
             break L26;
           } else {
             bia.field_J[26] = ns.field_j.a("", (byte) 52, "teleport");
@@ -228,7 +228,7 @@ final class fea {
           }
         }
         L28: {
-          if ((param1 ^ -1) == -29) {
+          if (param1 == 28) {
             bia.field_J[28] = ns.field_j.a("", (byte) 52, "tr_flamethrower_all_loop");
             break L28;
           } else {
@@ -244,7 +244,7 @@ final class fea {
           }
         }
         L30: {
-          if ((param1 ^ -1) == -31) {
+          if (param1 == 30) {
             bia.field_J[30] = ns.field_j.a("", (byte) 52, "tr_blade_fire_01");
             break L30;
           } else {
@@ -260,7 +260,7 @@ final class fea {
           }
         }
         L32: {
-          if (-33 == (param1 ^ -1)) {
+          if (param1 == 32) {
             bia.field_J[32] = ns.field_j.a("", (byte) 52, "tr_blade_fire_03");
             break L32;
           } else {
@@ -268,7 +268,7 @@ final class fea {
           }
         }
         L33: {
-          if ((param1 ^ -1) != -34) {
+          if (param1 != 33) {
             break L33;
           } else {
             bia.field_J[33] = ns.field_j.a("", (byte) 52, "tr_blade_fire_04");
@@ -284,7 +284,7 @@ final class fea {
           }
         }
         L35: {
-          if (-36 != param1) {
+          if (param1 != 35) {
             break L35;
           } else {
             bia.field_J[35] = ns.field_j.a("", (byte) 52, "tr_blade_small_fire_02");
@@ -292,7 +292,7 @@ final class fea {
           }
         }
         L36: {
-          if (-37 == param1) {
+          if (param1 == 36) {
             bia.field_J[36] = ns.field_j.a("", (byte) 52, "tr_blade_small_fire_03");
             break L36;
           } else {
@@ -300,7 +300,7 @@ final class fea {
           }
         }
         L37: {
-          if (-38 == (param1 ^ -1)) {
+          if (param1 == 37) {
             bia.field_J[37] = ns.field_j.a("", (byte) 52, "tr_blade_small_fire_04");
             break L37;
           } else {
@@ -332,7 +332,7 @@ final class fea {
           }
         }
         L41: {
-          if ((param1 ^ -1) == -42) {
+          if (param1 == 41) {
             bia.field_J[41] = ns.field_j.a("", (byte) 52, "tr_blade_ricochet_04");
             break L41;
           } else {
@@ -356,7 +356,7 @@ final class fea {
           }
         }
         L44: {
-          if (-45 == param1) {
+          if (param1 == 44) {
             bia.field_J[44] = ns.field_j.a("tr_large_blade_cut_01", 61, "");
             break L44;
           } else {
@@ -364,7 +364,7 @@ final class fea {
           }
         }
         L45: {
-          if (-46 == param1) {
+          if (param1 == 45) {
             bia.field_J[45] = ns.field_j.a("tr_small_blade_cut_01", 84, "");
             break L45;
           } else {
@@ -372,7 +372,7 @@ final class fea {
           }
         }
         L46: {
-          if (-47 == (param1 ^ -1)) {
+          if (param1 == 46) {
             bia.field_J[46] = ns.field_j.a("", (byte) 52, "tr_blade_spin_loop_01");
             break L46;
           } else {
@@ -412,7 +412,7 @@ final class fea {
           }
         }
         L51: {
-          if (-52 == (param1 ^ -1)) {
+          if (param1 == 51) {
             bia.field_J[51] = ns.field_j.a("", (byte) 52, "tr_small_blade_spin_loop_02");
             break L51;
           } else {
@@ -420,7 +420,7 @@ final class fea {
           }
         }
         L52: {
-          if ((param1 ^ -1) == -53) {
+          if (param1 == 52) {
             bia.field_J[52] = ns.field_j.a("", (byte) 52, "tr_small_blade_spin_loop_03");
             break L52;
           } else {
@@ -436,7 +436,7 @@ final class fea {
           }
         }
         L54: {
-          if (-55 == (param1 ^ -1)) {
+          if (param1 == 54) {
             bia.field_J[54] = ns.field_j.a("", (byte) 52, "tr_boulder_slow_loop");
             break L54;
           } else {
@@ -484,7 +484,7 @@ final class fea {
           }
         }
         L60: {
-          if ((param1 ^ -1) != -61) {
+          if (param1 != 60) {
             break L60;
           } else {
             bia.field_J[60] = ns.field_j.a("", (byte) 52, "tr_stonefall_01");
@@ -500,7 +500,7 @@ final class fea {
           }
         }
         L62: {
-          if ((param1 ^ -1) != -63) {
+          if (param1 != 62) {
             break L62;
           } else {
             bia.field_J[62] = ns.field_j.a("", (byte) 52, "tr_stonefall_03");
@@ -516,7 +516,7 @@ final class fea {
           }
         }
         L64: {
-          if (-65 != param1) {
+          if (param1 != 64) {
             break L64;
           } else {
             bia.field_J[64] = ns.field_j.a("", (byte) 52, "tr_stonefall_05");
@@ -524,7 +524,7 @@ final class fea {
           }
         }
         L65: {
-          if (-66 != param1) {
+          if (param1 != 65) {
             break L65;
           } else {
             bia.field_J[65] = ns.field_j.a("", (byte) 52, "tr_stonefall_06");
@@ -540,7 +540,7 @@ final class fea {
           }
         }
         L67: {
-          if (param1 != -68) {
+          if (param1 != 67) {
             break L67;
           } else {
             bia.field_J[67] = ns.field_j.a("", (byte) 52, "tr_stonefall_08");
@@ -548,7 +548,7 @@ final class fea {
           }
         }
         L68: {
-          if (-69 != param1) {
+          if (param1 != 68) {
             break L68;
           } else {
             bia.field_J[68] = ns.field_j.a("", (byte) 52, "tr_stonefall_09");
@@ -564,7 +564,7 @@ final class fea {
           }
         }
         L70: {
-          if (param1 != -71) {
+          if (param1 != 70) {
             break L70;
           } else {
             bia.field_J[70] = ns.field_j.a("", (byte) 52, "tr_stonefall_11");
@@ -572,7 +572,7 @@ final class fea {
           }
         }
         L71: {
-          if (-72 != param1) {
+          if (param1 != 71) {
             break L71;
           } else {
             bia.field_J[71] = ns.field_j.a("", (byte) 52, "tr_stonefall_12");
@@ -580,7 +580,7 @@ final class fea {
           }
         }
         L72: {
-          if ((param1 ^ -1) == -73) {
+          if (param1 == 72) {
             bia.field_J[72] = ns.field_j.a("", (byte) 52, "tr_moving_wall_click_01");
             break L72;
           } else {
@@ -620,7 +620,7 @@ final class fea {
           }
         }
         L77: {
-          if (-78 == (param1 ^ -1)) {
+          if (param1 == 77) {
             bia.field_J[77] = ns.field_j.a("tr_sliding_stone_01", 46, "");
             break L77;
           } else {
@@ -636,7 +636,7 @@ final class fea {
           }
         }
         L79: {
-          if ((param1 ^ -1) == -80) {
+          if (param1 == 79) {
             bia.field_J[79] = ns.field_j.a("", (byte) 52, "tr_snake_01");
             break L79;
           } else {
@@ -660,7 +660,7 @@ final class fea {
           }
         }
         L82: {
-          if (-83 != param1) {
+          if (param1 != 82) {
             break L82;
           } else {
             bia.field_J[82] = ns.field_j.a("", (byte) 52, "tr_snake_04");
@@ -668,7 +668,7 @@ final class fea {
           }
         }
         L83: {
-          if (-84 != param1) {
+          if (param1 != 83) {
             break L83;
           } else {
             bia.field_J[83] = ns.field_j.a("", (byte) 52, "tr_snake_scared_01");
@@ -692,7 +692,7 @@ final class fea {
           }
         }
         L86: {
-          if (-87 != param1) {
+          if (param1 != 86) {
             break L86;
           } else {
             bia.field_J[86] = ns.field_j.a("", (byte) 52, "tr_snake_scared_04");
@@ -700,7 +700,7 @@ final class fea {
           }
         }
         L87: {
-          if (-88 == param1) {
+          if (param1 == 87) {
             bia.field_J[87] = ns.field_j.a("", (byte) 52, "tr_arrow_fire_01");
             break L87;
           } else {
@@ -708,7 +708,7 @@ final class fea {
           }
         }
         L88: {
-          if (param1 != -89) {
+          if (param1 != 88) {
             break L88;
           } else {
             bia.field_J[88] = ns.field_j.a("", (byte) 52, "tr_arrow_fire_02");
@@ -716,7 +716,7 @@ final class fea {
           }
         }
         L89: {
-          if (-90 == param1) {
+          if (param1 == 89) {
             bia.field_J[89] = ns.field_j.a("", (byte) 52, "tr_arrow_fire_03");
             break L89;
           } else {
@@ -724,7 +724,7 @@ final class fea {
           }
         }
         L90: {
-          if (-91 != (param1 ^ -1)) {
+          if (param1 != 90) {
             break L90;
           } else {
             bia.field_J[90] = ns.field_j.a("tr_pistol_01", 30, "");
@@ -732,7 +732,7 @@ final class fea {
           }
         }
         L91: {
-          if ((param1 ^ -1) != -92) {
+          if (param1 != 91) {
             break L91;
           } else {
             bia.field_J[91] = ns.field_j.a("tr_pistol_02", 118, "");
@@ -756,7 +756,7 @@ final class fea {
           }
         }
         L94: {
-          if ((param1 ^ -1) != -95) {
+          if (param1 != 94) {
             break L94;
           } else {
             bia.field_J[94] = ns.field_j.a("tr_bullet_hit_stone_01", 24, "");
@@ -812,7 +812,7 @@ final class fea {
           }
         }
         L101: {
-          if (-101 == (param1 ^ -1)) {
+          if (param1 == 100) {
             bia.field_J[100] = ns.field_j.a("", (byte) 52, "tr_lazer_change_01");
             break L101;
           } else {
@@ -836,7 +836,7 @@ final class fea {
           }
         }
         L104: {
-          if ((param1 ^ -1) == -104) {
+          if (param1 == 103) {
             bia.field_J[103] = ns.field_j.a("", (byte) 52, "tr_lazer_change_04");
             break L104;
           } else {
@@ -860,7 +860,7 @@ final class fea {
           }
         }
         L107: {
-          if (param1 == -107) {
+          if (param1 == 106) {
             bia.field_J[106] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_02");
             break L107;
           } else {
@@ -868,7 +868,7 @@ final class fea {
           }
         }
         L108: {
-          if (-108 != param1) {
+          if (param1 != 107) {
             break L108;
           } else {
             bia.field_J[107] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_03");
@@ -884,7 +884,7 @@ final class fea {
           }
         }
         L110: {
-          if ((param1 ^ -1) != -110) {
+          if (param1 != 109) {
             break L110;
           } else {
             bia.field_J[109] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_loop_05");
@@ -900,7 +900,7 @@ final class fea {
           }
         }
         L112: {
-          if (-112 == (param1 ^ -1)) {
+          if (param1 == 111) {
             bia.field_J[111] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_02");
             break L112;
           } else {
@@ -916,7 +916,7 @@ final class fea {
           }
         }
         L114: {
-          if ((param1 ^ -1) != -114) {
+          if (param1 != 113) {
             break L114;
           } else {
             bia.field_J[113] = ns.field_j.a("", (byte) 52, "tr_deadly_lazer_change_04");
@@ -932,7 +932,7 @@ final class fea {
           }
         }
         L116: {
-          if ((param1 ^ -1) == -116) {
+          if (param1 == 115) {
             bia.field_J[115] = ns.field_j.a("", (byte) 52, "tr_lazer_loop_complete");
             break L116;
           } else {
@@ -964,7 +964,7 @@ final class fea {
           }
         }
         L120: {
-          if (-120 != (param1 ^ -1)) {
+          if (param1 != 119) {
             break L120;
           } else {
             bia.field_J[119] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_off_01");
@@ -972,7 +972,7 @@ final class fea {
           }
         }
         L121: {
-          if ((param1 ^ -1) == -121) {
+          if (param1 == 120) {
             bia.field_J[120] = ns.field_j.a("", (byte) 52, "tr_puzzle_click_off_02");
             break L121;
           } else {
@@ -988,7 +988,7 @@ final class fea {
           }
         }
         L123: {
-          if ((param1 ^ -1) == -123) {
+          if (param1 == 122) {
             bia.field_J[122] = ns.field_j.a("", (byte) 52, "tr_cauldron_hit_by_beam");
             break L123;
           } else {
@@ -1004,7 +1004,7 @@ final class fea {
           }
         }
         L125: {
-          if (-125 == (param1 ^ -1)) {
+          if (param1 == 124) {
             bia.field_J[124] = ns.field_j.a("", (byte) 52, "tr_cauldron_bubble_off");
             break L125;
           } else {
@@ -1020,7 +1020,7 @@ final class fea {
           }
         }
         L127: {
-          if ((param1 ^ -1) != -127) {
+          if (param1 != 126) {
             break L127;
           } else {
             bia.field_J[126] = ns.field_j.a("tr_crane_move_start", 38, "");
@@ -1052,7 +1052,7 @@ final class fea {
           }
         }
         L131: {
-          if (-131 != (param1 ^ -1)) {
+          if (param1 != 130) {
             break L131;
           } else {
             bia.field_J[130] = ns.field_j.a("tr_crane_drop", 104, "");
@@ -1076,7 +1076,7 @@ final class fea {
           }
         }
         L134: {
-          if ((param1 ^ -1) != -134) {
+          if (param1 != 133) {
             break L134;
           } else {
             bia.field_J[133] = ns.field_j.a("tr_male_wobble_02", 12, "");
@@ -1092,7 +1092,7 @@ final class fea {
           }
         }
         L136: {
-          if ((param1 ^ -1) != -136) {
+          if (param1 != 135) {
             break L136;
           } else {
             bia.field_J[135] = ns.field_j.a("tr_female_wobble_01", 42, "");
@@ -1108,7 +1108,7 @@ final class fea {
           }
         }
         L138: {
-          if ((param1 ^ -1) == -138) {
+          if (param1 == 137) {
             bia.field_J[137] = ns.field_j.a("tr_female_wobble_03", 52, "");
             break L138;
           } else {
@@ -1116,7 +1116,7 @@ final class fea {
           }
         }
         L139: {
-          if ((param1 ^ -1) == -139) {
+          if (param1 == 138) {
             bia.field_J[138] = ns.field_j.a("tr_sand_footstep_01", 46, "");
             break L139;
           } else {
@@ -1124,7 +1124,7 @@ final class fea {
           }
         }
         L140: {
-          if ((param1 ^ -1) != -140) {
+          if (param1 != 139) {
             break L140;
           } else {
             bia.field_J[139] = ns.field_j.a("tr_sand_footstep_02", 110, "");
@@ -1132,7 +1132,7 @@ final class fea {
           }
         }
         L141: {
-          if ((param1 ^ -1) != -141) {
+          if (param1 != 140) {
             break L141;
           } else {
             bia.field_J[140] = ns.field_j.a("tr_sand_footstep_03", 74, "");
@@ -1156,7 +1156,7 @@ final class fea {
           }
         }
         L144: {
-          if (-144 == (param1 ^ -1)) {
+          if (param1 == 143) {
             bia.field_J[143] = ns.field_j.a("tr_invisible_path_footstep_01", 23, "");
             break L144;
           } else {
@@ -1164,7 +1164,7 @@ final class fea {
           }
         }
         L145: {
-          if (param1 == -145) {
+          if (param1 == 144) {
             bia.field_J[144] = ns.field_j.a("tr_invisible_path_footstep_02", 101, "");
             break L145;
           } else {
@@ -1172,7 +1172,7 @@ final class fea {
           }
         }
         L146: {
-          if (-146 == param1) {
+          if (param1 == 145) {
             bia.field_J[145] = ns.field_j.a("tr_invisible_path_footstep_03", 98, "");
             break L146;
           } else {
@@ -1180,7 +1180,7 @@ final class fea {
           }
         }
         L147: {
-          if (-147 == param1) {
+          if (param1 == 146) {
             bia.field_J[146] = ns.field_j.a("tr_male_push_01", 76, "");
             break L147;
           } else {
@@ -1188,7 +1188,7 @@ final class fea {
           }
         }
         L148: {
-          if (-148 != param1) {
+          if (param1 != 147) {
             break L148;
           } else {
             bia.field_J[147] = ns.field_j.a("tr_male_push_02", 12, "");
@@ -1204,7 +1204,7 @@ final class fea {
           }
         }
         L150: {
-          if (-150 != param1) {
+          if (param1 != 149) {
             break L150;
           } else {
             bia.field_J[149] = ns.field_j.a("tr_male_push_04", 20, "");
@@ -1212,7 +1212,7 @@ final class fea {
           }
         }
         L151: {
-          if (-151 == param1) {
+          if (param1 == 150) {
             bia.field_J[150] = ns.field_j.a("tr_female_push_01", 116, "");
             break L151;
           } else {
@@ -1236,7 +1236,7 @@ final class fea {
           }
         }
         L154: {
-          if ((param1 ^ -1) != -154) {
+          if (param1 != 153) {
             break L154;
           } else {
             bia.field_J[153] = ns.field_j.a("tr_female_push_04", 117, "");
@@ -1244,7 +1244,7 @@ final class fea {
           }
         }
         L155: {
-          if ((param1 ^ -1) != -155) {
+          if (param1 != 154) {
             break L155;
           } else {
             bia.field_J[154] = ns.field_j.a("tr_male_fall_01", 121, "");
@@ -1260,7 +1260,7 @@ final class fea {
           }
         }
         L157: {
-          if (-157 != (param1 ^ -1)) {
+          if (param1 != 156) {
             break L157;
           } else {
             bia.field_J[156] = ns.field_j.a("tr_male_fall_03", 56, "");
@@ -1276,7 +1276,7 @@ final class fea {
           }
         }
         L159: {
-          if (param1 != -159) {
+          if (param1 != 158) {
             break L159;
           } else {
             bia.field_J[158] = ns.field_j.a("tr_male_fall_05", 49, "");
@@ -1284,7 +1284,7 @@ final class fea {
           }
         }
         L160: {
-          if (-160 != param1) {
+          if (param1 != 159) {
             break L160;
           } else {
             bia.field_J[159] = ns.field_j.a("tr_female_fall_01", 80, "");
@@ -1308,7 +1308,7 @@ final class fea {
           }
         }
         L163: {
-          if (-163 != (param1 ^ -1)) {
+          if (param1 != 162) {
             break L163;
           } else {
             bia.field_J[162] = ns.field_j.a("tr_female_fall_04", 79, "");
@@ -1372,7 +1372,7 @@ final class fea {
           }
         }
         L171: {
-          if ((param1 ^ -1) != -171) {
+          if (param1 != 170) {
             break L171;
           } else {
             bia.field_J[170] = ns.field_j.a("tr_female_pain_02", 62, "");
@@ -1388,7 +1388,7 @@ final class fea {
           }
         }
         L173: {
-          if (-173 == param1) {
+          if (param1 == 172) {
             bia.field_J[172] = ns.field_j.a("tr_female_pain_04", 105, "");
             break L173;
           } else {
@@ -1396,7 +1396,7 @@ final class fea {
           }
         }
         L174: {
-          if (-174 == param1) {
+          if (param1 == 173) {
             bia.field_J[173] = ns.field_j.a("tr_female_pain_05", 116, "");
             break L174;
           } else {
@@ -1412,7 +1412,7 @@ final class fea {
           }
         }
         L176: {
-          if (-176 == (param1 ^ -1)) {
+          if (param1 == 175) {
             bia.field_J[175] = ns.field_j.a("", (byte) 52, "tr_playerfall_02");
             break L176;
           } else {
@@ -1420,7 +1420,7 @@ final class fea {
           }
         }
         L177: {
-          if ((param1 ^ -1) != -177) {
+          if (param1 != 176) {
             break L177;
           } else {
             bia.field_J[176] = ns.field_j.a("", (byte) 52, "tr_playerfall_03");
@@ -1452,7 +1452,7 @@ final class fea {
           }
         }
         L181: {
-          if (param1 == -181) {
+          if (param1 == 180) {
             bia.field_J[180] = ns.field_j.a("tr_player_squash_03", 61, "");
             break L181;
           } else {
@@ -1460,7 +1460,7 @@ final class fea {
           }
         }
         L182: {
-          if (-182 != param1) {
+          if (param1 != 181) {
             break L182;
           } else {
             bia.field_J[181] = ns.field_j.a("tr_laser_burn_player_01", 34, "");
@@ -1468,7 +1468,7 @@ final class fea {
           }
         }
         L183: {
-          if ((param1 ^ -1) == -183) {
+          if (param1 == 182) {
             bia.field_J[182] = ns.field_j.a("tr_snake_bite_01", 20, "");
             break L183;
           } else {
@@ -1476,7 +1476,7 @@ final class fea {
           }
         }
         L184: {
-          if (param1 == -184) {
+          if (param1 == 183) {
             bia.field_J[183] = ns.field_j.a("tr_snake_bite_02", 73, "");
             break L184;
           } else {
@@ -1484,7 +1484,7 @@ final class fea {
           }
         }
         L185: {
-          if (-185 != param1) {
+          if (param1 != 184) {
             break L185;
           } else {
             bia.field_J[184] = ns.field_j.a("tr_arrow_hit_player_01", 72, "");
@@ -1492,7 +1492,7 @@ final class fea {
           }
         }
         L186: {
-          if ((param1 ^ -1) == -186) {
+          if (param1 == 185) {
             bia.field_J[185] = ns.field_j.a("tr_arrow_hit_player_02", 53, "");
             break L186;
           } else {
@@ -1508,7 +1508,7 @@ final class fea {
           }
         }
         L188: {
-          if (-188 == (param1 ^ -1)) {
+          if (param1 == 187) {
             bia.field_J[187] = ns.field_j.a("tr_arrow_hit_player_04", 116, "");
             break L188;
           } else {
@@ -1524,7 +1524,7 @@ final class fea {
           }
         }
         L190: {
-          if (-190 == param1) {
+          if (param1 == 189) {
             bia.field_J[189] = ns.field_j.a("tr_player_splat_gory_02", 66, "");
             break L190;
           } else {
@@ -1532,7 +1532,7 @@ final class fea {
           }
         }
         L191: {
-          if (-191 != param1) {
+          if (param1 != 190) {
             break L191;
           } else {
             bia.field_J[190] = ns.field_j.a("", (byte) 52, "tr_lava_haze_01_loop");
@@ -1556,7 +1556,7 @@ final class fea {
           }
         }
         L194: {
-          if ((param1 ^ -1) != -194) {
+          if (param1 != 193) {
             break L194;
           } else {
             bia.field_J[193] = ns.field_j.a("", (byte) 52, "tr_temple_eerie_effect_02");
@@ -1588,7 +1588,7 @@ final class fea {
           }
         }
         L198: {
-          if ((param1 ^ -1) == -198) {
+          if (param1 == 197) {
             bia.field_J[197] = ns.field_j.a("", (byte) 52, "tr_key_putdown");
             break L198;
           } else {
@@ -1612,7 +1612,7 @@ final class fea {
           }
         }
         L201: {
-          if ((param1 ^ -1) != -201) {
+          if (param1 != 200) {
             break L201;
           } else {
             bia.field_J[200] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_03");
@@ -1636,7 +1636,7 @@ final class fea {
           }
         }
         L204: {
-          if (-204 == param1) {
+          if (param1 == 203) {
             bia.field_J[203] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_06");
             break L204;
           } else {
@@ -1644,7 +1644,7 @@ final class fea {
           }
         }
         L205: {
-          if (-205 != param1) {
+          if (param1 != 204) {
             break L205;
           } else {
             bia.field_J[204] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_07");
@@ -1668,7 +1668,7 @@ final class fea {
           }
         }
         L208: {
-          if ((param1 ^ -1) != -208) {
+          if (param1 != 207) {
             break L208;
           } else {
             bia.field_J[207] = ns.field_j.a("", (byte) 52, "tr_coin_pickup_10");
@@ -1684,7 +1684,7 @@ final class fea {
           }
         }
         L210: {
-          if (-210 == (param1 ^ -1)) {
+          if (param1 == 209) {
             bia.field_J[209] = ns.field_j.a("", (byte) 52, "tr_loot_pickup_02");
             break L210;
           } else {
@@ -1700,7 +1700,7 @@ final class fea {
           }
         }
         L212: {
-          if ((param1 ^ -1) == -212) {
+          if (param1 == 211) {
             bia.field_J[211] = ns.field_j.a("tr_speed_boost_01", 54, "");
             break L212;
           } else {
@@ -1708,7 +1708,7 @@ final class fea {
           }
         }
         L213: {
-          if ((param1 ^ -1) == -213) {
+          if (param1 == 212) {
             bia.field_J[212] = ns.field_j.a("tr_sk_foot_01", 78, "");
             break L213;
           } else {
@@ -1716,7 +1716,7 @@ final class fea {
           }
         }
         L214: {
-          if ((param1 ^ -1) != -214) {
+          if (param1 != 213) {
             break L214;
           } else {
             bia.field_J[213] = ns.field_j.a("tr_sk_foot_02", 92, "");
@@ -1732,7 +1732,7 @@ final class fea {
           }
         }
         L216: {
-          if ((param1 ^ -1) != -216) {
+          if (param1 != 215) {
             break L216;
           } else {
             bia.field_J[215] = ns.field_j.a("tr_sk_foot_04", 89, "");
@@ -1748,7 +1748,7 @@ final class fea {
           }
         }
         L218: {
-          if (param1 != -218) {
+          if (param1 != 217) {
             break L218;
           } else {
             bia.field_J[217] = ns.field_j.a("tr_sk_foot_06", 55, "");
@@ -1756,7 +1756,7 @@ final class fea {
           }
         }
         L219: {
-          if (-219 != param1) {
+          if (param1 != 218) {
             break L219;
           } else {
             bia.field_J[218] = ns.field_j.a("tr_sk_foot_07", 127, "");
@@ -1764,7 +1764,7 @@ final class fea {
           }
         }
         L220: {
-          if ((param1 ^ -1) != -220) {
+          if (param1 != 219) {
             break L220;
           } else {
             bia.field_J[219] = ns.field_j.a("tr_sk_foot_08", 34, "");
@@ -1780,7 +1780,7 @@ final class fea {
           }
         }
         L222: {
-          if (-222 != param1) {
+          if (param1 != 221) {
             break L222;
           } else {
             bia.field_J[221] = ns.field_j.a("", (byte) 52, "tr_generic_unlock_01");
@@ -1788,7 +1788,7 @@ final class fea {
           }
         }
         L223: {
-          if (-223 == param1) {
+          if (param1 == 222) {
             bia.field_J[222] = ns.field_j.a("", (byte) 52, "tr_generic_unlock_01_short");
             break L223;
           } else {
@@ -1796,7 +1796,7 @@ final class fea {
           }
         }
         L224: {
-          if ((param1 ^ -1) == -224) {
+          if (param1 == 223) {
             bia.field_J[223] = ns.field_j.a("", (byte) 52, "tr_generic_unlock_02");
             break L224;
           } else {
@@ -1812,7 +1812,7 @@ final class fea {
           }
         }
         L226: {
-          if (param1 == -226) {
+          if (param1 == 225) {
             bia.field_J[225] = ns.field_j.a("", (byte) 52, "tr_spooky_unlock_04");
             break L226;
           } else {
@@ -1820,7 +1820,7 @@ final class fea {
           }
         }
         L227: {
-          if (-227 != param1) {
+          if (param1 != 226) {
             break L227;
           } else {
             bia.field_J[226] = ns.field_j.a("", (byte) 52, "tr_spooky_unlock_05");
@@ -1828,7 +1828,7 @@ final class fea {
           }
         }
         L228: {
-          if (-228 == (param1 ^ -1)) {
+          if (param1 == 227) {
             bia.field_J[227] = ns.field_j.a("tr_death_jingle_01", 46, "");
             break L228;
           } else {
@@ -1844,7 +1844,7 @@ final class fea {
           }
         }
         L230: {
-          if (-230 != (param1 ^ -1)) {
+          if (param1 != 229) {
             break L230;
           } else {
             bia.field_J[229] = ns.field_j.a("tr_death_jingle_03", 93, "");
@@ -1860,7 +1860,7 @@ final class fea {
           }
         }
         L232: {
-          if ((param1 ^ -1) == -232) {
+          if (param1 == 231) {
             bia.field_J[231] = ns.field_j.a("TR_count_loop_01_LQ", 29, "");
             break L232;
           } else {
@@ -1876,7 +1876,7 @@ final class fea {
           }
         }
         L234: {
-          if ((param1 ^ -1) != -234) {
+          if (param1 != 233) {
             break L234;
           } else {
             bia.field_J[233] = ns.field_j.a("TR_count_loop_03_LQ", 72, "");
@@ -1892,7 +1892,7 @@ final class fea {
           }
         }
         L236: {
-          if ((param1 ^ -1) != -236) {
+          if (param1 != 235) {
             break L236;
           } else {
             bia.field_J[235] = ns.field_j.a("TR_achievement_jingle_01_mono", 33, "");
@@ -1910,142 +1910,196 @@ final class fea {
     }
 
     final static void a(byte param0, String param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
-        int stackIn_16_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_44_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_15_0 = 0;
         int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_9_0 = 0;
-        L0: {
-          var3 = TombRacer.field_G ? 1 : 0;
-          if ((eq.field_r ^ -1) != 0) {
-            break L0;
-          } else {
-            if ((tqa.field_g ^ -1) == 0) {
-              eq.field_r = jba.field_j;
-              tqa.field_g = sta.field_B;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-        }
-        L1: {
-          L2: {
-            fr.field_c = fr.field_c + 1;
-            if (param1 != null) {
-              if (param1.equals((Object) (Object) hn.field_F)) {
+        int stackOut_12_0 = 0;
+        int stackOut_10_0 = 0;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
+        String stackOut_43_2 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        String stackOut_42_2 = null;
+        var3 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (eq.field_r != -1) {
                 break L1;
               } else {
-                break L2;
-              }
-            } else {
-              if (null != hn.field_F) {
-                break L1;
-              } else {
-                break L2;
-              }
-            }
-          }
-          L3: {
-            if (!kda.field_pd) {
-              if (fr.field_c >= bda.field_m) {
-                if (fr.field_c < bda.field_m - -gaa.field_p) {
-                  stackOut_14_0 = 1;
-                  stackIn_16_0 = stackOut_14_0;
-                  break L3;
+                if (tqa.field_g == -1) {
+                  eq.field_r = jba.field_j;
+                  tqa.field_g = sta.field_B;
+                  break L1;
                 } else {
-                  stackOut_13_0 = 0;
-                  stackIn_16_0 = stackOut_13_0;
-                  break L3;
+                  break L1;
                 }
-              } else {
-                stackOut_11_0 = 0;
-                stackIn_16_0 = stackOut_11_0;
-                break L3;
               }
-            } else {
-              stackOut_9_0 = 0;
-              stackIn_16_0 = stackOut_9_0;
-              break L3;
             }
-          }
-          L4: {
-            var2 = stackIn_16_0;
-            if (param1 != null) {
-              if (!kda.field_pd) {
-                if (var2 == 0) {
-                  fr.field_c = 0;
-                  break L4;
+            L2: {
+              L3: {
+                fr.field_c = fr.field_c + 1;
+                if (param1 != null) {
+                  if (param1.equals((Object) (Object) hn.field_F)) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
                 } else {
-                  fr.field_c = bda.field_m;
+                  if (null != hn.field_F) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              L4: {
+                if (!kda.field_pd) {
+                  if (fr.field_c >= bda.field_m) {
+                    if (fr.field_c < bda.field_m - -gaa.field_p) {
+                      stackOut_15_0 = 1;
+                      stackIn_17_0 = stackOut_15_0;
+                      break L4;
+                    } else {
+                      stackOut_14_0 = 0;
+                      stackIn_17_0 = stackOut_14_0;
+                      break L4;
+                    }
+                  } else {
+                    stackOut_12_0 = 0;
+                    stackIn_17_0 = stackOut_12_0;
+                    break L4;
+                  }
+                } else {
+                  stackOut_10_0 = 0;
+                  stackIn_17_0 = stackOut_10_0;
                   break L4;
                 }
-              } else {
-                fr.field_c = bda.field_m;
-                break L4;
               }
+              L5: {
+                L6: {
+                  var2_int = stackIn_17_0;
+                  if (param1 == null) {
+                    break L6;
+                  } else {
+                    L7: {
+                      if (kda.field_pd) {
+                        break L7;
+                      } else {
+                        if (var2_int == 0) {
+                          break L6;
+                        } else {
+                          break L7;
+                        }
+                      }
+                    }
+                    fr.field_c = bda.field_m;
+                    break L5;
+                  }
+                }
+                fr.field_c = 0;
+                break L5;
+              }
+              L8: {
+                if (param1 == null) {
+                  if (var2_int != 0) {
+                    kda.field_pd = true;
+                    break L8;
+                  } else {
+                    break L8;
+                  }
+                } else {
+                  kda.field_pd = false;
+                  break L8;
+                }
+              }
+              mi.field_f = tqa.field_g;
+              vf.field_f = eq.field_r;
+              break L2;
+            }
+            L9: {
+              if (kda.field_pd) {
+                break L9;
+              } else {
+                if (bda.field_m <= fr.field_c) {
+                  break L9;
+                } else {
+                  if (qma.field_c) {
+                    vf.field_f = eq.field_r;
+                    mi.field_f = tqa.field_g;
+                    fr.field_c = 0;
+                    break L9;
+                  } else {
+                    break L9;
+                  }
+                }
+              }
+            }
+            hn.field_F = param1;
+            tqa.field_g = -1;
+            if (param0 <= -32) {
+              L10: {
+                eq.field_r = -1;
+                if (!kda.field_pd) {
+                  break L10;
+                } else {
+                  if (qha.field_f == fr.field_c) {
+                    kda.field_pd = false;
+                    fr.field_c = 0;
+                    break L10;
+                  } else {
+                    break L10;
+                  }
+                }
+              }
+              break L0;
             } else {
-              fr.field_c = 0;
-              break L4;
+              return;
             }
           }
-          L5: {
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L11: {
+            var2 = decompiledCaughtException;
+            stackOut_41_0 = (RuntimeException) var2;
+            stackOut_41_1 = new StringBuilder().append("fea.B(").append(param0).append(44);
+            stackIn_43_0 = stackOut_41_0;
+            stackIn_43_1 = stackOut_41_1;
+            stackIn_42_0 = stackOut_41_0;
+            stackIn_42_1 = stackOut_41_1;
             if (param1 == null) {
-              if (var2 != 0) {
-                kda.field_pd = true;
-                break L5;
-              } else {
-                break L5;
-              }
+              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_2 = "null";
+              stackIn_44_0 = stackOut_43_0;
+              stackIn_44_1 = stackOut_43_1;
+              stackIn_44_2 = stackOut_43_2;
+              break L11;
             } else {
-              kda.field_pd = false;
-              break L5;
+              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
+              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_2 = "{...}";
+              stackIn_44_0 = stackOut_42_0;
+              stackIn_44_1 = stackOut_42_1;
+              stackIn_44_2 = stackOut_42_2;
+              break L11;
             }
           }
-          mi.field_f = tqa.field_g;
-          vf.field_f = eq.field_r;
-          break L1;
-        }
-        L6: {
-          if (kda.field_pd) {
-            break L6;
-          } else {
-            if (bda.field_m <= fr.field_c) {
-              break L6;
-            } else {
-              if (qma.field_c) {
-                vf.field_f = eq.field_r;
-                mi.field_f = tqa.field_g;
-                fr.field_c = 0;
-                break L6;
-              } else {
-                break L6;
-              }
-            }
-          }
-        }
-        hn.field_F = param1;
-        tqa.field_g = -1;
-        if (param0 > -32) {
-          return;
-        } else {
-          L7: {
-            eq.field_r = -1;
-            if (!kda.field_pd) {
-              break L7;
-            } else {
-              if (qha.field_f == fr.field_c) {
-                kda.field_pd = false;
-                fr.field_c = 0;
-                break L7;
-              } else {
-                break L7;
-              }
-            }
-          }
-          return;
+          throw tba.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 41);
         }
     }
 

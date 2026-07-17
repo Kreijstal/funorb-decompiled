@@ -18,29 +18,39 @@ abstract class uda {
     abstract void b(int param0, boolean param1);
 
     final static void b(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = VoidHunters.field_G;
-        if (!po.field_o) {
-          return;
-        } else {
-          nma.field_b = new da[5];
-          var1 = 0;
-          L0: while (true) {
-            if (nma.field_b.length <= var1) {
-              nkb.a(false, "Finished building fonts");
-              if (param0 != -2283) {
-                uda.b((byte) 81);
-                return;
-              } else {
-                return;
-              }
+        try {
+          L0: {
+            if (!po.field_o) {
+              return;
             } else {
-              nma.field_b[var1] = og.field_r.a(ok.field_b[var1], djb.field_s[var1], smb.a((byte) -26, var1));
-              var1++;
-              continue L0;
+              nma.field_b = new da[5];
+              var1_int = 0;
+              L1: while (true) {
+                if (nma.field_b.length <= var1_int) {
+                  nkb.a(false, "Finished building fonts");
+                  if (param0 == -2283) {
+                    break L0;
+                  } else {
+                    uda.b((byte) 81);
+                    return;
+                  }
+                } else {
+                  nma.field_b[var1_int] = og.field_r.a(ok.field_b[var1_int], djb.field_s[var1_int], smb.a((byte) -26, var1_int));
+                  var1_int++;
+                  continue L1;
+                }
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var1, "uda.L(" + param0 + 41);
         }
     }
 
@@ -81,7 +91,11 @@ abstract class uda {
     abstract void a(byte param0, int param1, ura param2);
 
     uda(pf param0) {
-        ((uda) this).field_d = param0;
+        try {
+            ((uda) this).field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "uda.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     void d(int param0) {

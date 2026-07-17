@@ -33,27 +33,27 @@ final class fcb implements oob {
         L1: {
           sl.field_b = true;
           fka.a("common wordpackj", (byte) -102);
-          ((fcb) this).field_f = bea.a(param0 + 0, gn.field_k.field_a);
+          ((fcb) this).field_f = bea.a((int) param0, gn.field_k.field_a);
           fka.a("graphicsj", (byte) -103);
-          ((fcb) this).field_i = bea.a(param0 + 0, 16);
+          ((fcb) this).field_i = bea.a((int) param0, 16);
           fka.a("fontmetricsj", (byte) -66);
           ((fcb) this).field_e = bea.a(1, 17);
           fka.a("jagfxj", (byte) -93);
-          ((fcb) this).field_l = bea.a(param0 + 0, 18);
+          ((fcb) this).field_l = bea.a((int) param0, 18);
           fka.a("vorbisj", (byte) -64);
           ((fcb) this).field_k = bea.a(1, 19);
           fka.a("patchesj", (byte) -106);
-          ((fcb) this).field_j = bea.a(param0 + 0, 20);
+          ((fcb) this).field_j = bea.a((int) param0, 20);
           fka.a("midij", (byte) -100);
           ((fcb) this).field_h = bea.a(1, 21);
           fka.a("common quickchatj", (byte) -64);
           ((fcb) this).field_b = bea.a(1, eva.field_o.field_a);
           fka.a("texturemetricsj", (byte) -108);
-          ((fcb) this).field_m = bea.a(param0 ^ 0, 24);
+          ((fcb) this).field_m = bea.a((int) param0, 24);
           fka.a("texturesj", (byte) -91);
           ((fcb) this).field_a = bea.a(1, 25);
           fka.a("jpegj", (byte) -52);
-          ((fcb) this).field_d = bea.a(param0 ^ 0, 26);
+          ((fcb) this).field_d = bea.a((int) param0, 26);
           var4 = kwa.field_o;
           var3 = jta.field_r;
           fka.a("creating request queue", (byte) -84);
@@ -418,7 +418,7 @@ final class fcb implements oob {
 
     public static void a(int param0) {
         field_g = null;
-        int var1 = -13 / ((59 - param0) / 48);
+        int var1 = 13;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
@@ -445,14 +445,6 @@ final class fcb implements oob {
           }
           cl.a(-3518, param0, param1, param2, param4, param3);
           break L0;
-        }
-        L2: {
-          if (param5 < -1) {
-            break L2;
-          } else {
-            field_g = null;
-            break L2;
-          }
         }
     }
 

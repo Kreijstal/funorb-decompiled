@@ -23,8 +23,9 @@ final class ra extends at {
         } else {
           L0: {
             var2 = -46 / ((param0 - 71) / 47);
+            int fieldTemp$2 = ((ra) this).field_m - 1;
             ((ra) this).field_m = ((ra) this).field_m - 1;
-            if (-1 > (((ra) this).field_m - 1 ^ -1)) {
+            if (fieldTemp$2 > 0) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -39,33 +40,25 @@ final class ra extends at {
     }
 
     ra(gj param0, ew param1) {
-        ((ra) this).field_o = param0;
-        ((ra) this).field_n = param1.field_l.a(-27449, ((ra) this).field_o);
-        ((ra) this).field_q = new taa(((ra) this).field_o, ((ra) this).field_n);
-        ((ra) this).a(27799, (at) (Object) ((ra) this).field_q);
-        ((ra) this).field_n.a(16761024, 65, fb.field_q);
-        ((ra) this).field_m = 100;
+        try {
+            ((ra) this).field_o = param0;
+            ((ra) this).field_n = param1.field_l.a(-27449, ((ra) this).field_o);
+            ((ra) this).field_q = new taa(((ra) this).field_o, ((ra) this).field_n);
+            ((ra) this).a(27799, (at) (Object) ((ra) this).field_q);
+            ((ra) this).field_n.a(16761024, 65, fb.field_q);
+            ((ra) this).field_m = 100;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ra.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void d(int param0) {
-        if (param0 != 11919) {
-          field_p = null;
-          field_k = null;
-          field_j = null;
-          field_r = null;
-          field_s = null;
-          field_l = null;
-          field_p = null;
-          return;
-        } else {
-          field_k = null;
-          field_j = null;
-          field_r = null;
-          field_s = null;
-          field_l = null;
-          field_p = null;
-          return;
-        }
+        field_k = null;
+        field_j = null;
+        field_r = null;
+        field_s = null;
+        field_l = null;
+        field_p = null;
     }
 
     static {
@@ -78,6 +71,6 @@ final class ra extends at {
         field_s = new int[8192];
         field_p = "OVER <%0>";
         field_k = new String[]{"special", "range", "attack", "hp", "move"};
-        field_r = new char[]{(char)91, (char)93, (char)35};
+        field_r = new char[]{'[', ']', '#'};
     }
 }

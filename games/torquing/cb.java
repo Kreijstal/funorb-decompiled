@@ -14,7 +14,7 @@ final class cb extends q {
 
     public static void a(int param0) {
         field_m = null;
-        int var1 = 7 % ((-37 - param0) / 59);
+        int var1 = 1;
     }
 
     cb() {

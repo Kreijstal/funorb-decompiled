@@ -14,9 +14,6 @@ final class ia {
         field_f = null;
         field_a = null;
         field_d = null;
-        if (param0 != 25268) {
-            return;
-        }
         field_b = null;
     }
 

@@ -57,7 +57,7 @@ final class bo {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((bo) this).field_a[var6] = var3 ^ -1;
+                      ((bo) this).field_a[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -185,7 +185,7 @@ final class bo {
         while (((bo) this).field_a[var1] >= 0) {
             var1 = dv.a() != 0 ? ((bo) this).field_a[var1] : var1 + 1;
         }
-        return ((bo) this).field_a[var1] ^ -1;
+        return ~((bo) this).field_a[var1];
     }
 
     bo() {
@@ -216,7 +216,7 @@ final class bo {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = dv.a(24);
+          int discarded$2 = dv.a(24);
           ((bo) this).field_f = dv.a(16);
           ((bo) this).field_b = dv.a(24);
           ((bo) this).field_c = new int[((bo) this).field_b];
@@ -283,8 +283,9 @@ final class bo {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((bo) this).field_c[var2] = var3_int;
+                    ((bo) this).field_c[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

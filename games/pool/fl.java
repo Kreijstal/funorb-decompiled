@@ -29,22 +29,11 @@ final class fl extends ma {
         el.field_H[520] = 59;
         el.field_H[91] = 42;
         el.field_H[93] = 43;
-        if (!param0) {
-          field_q = null;
-          el.field_H[59] = 57;
-          el.field_H[46] = 72;
-          el.field_H[45] = 26;
-          el.field_H[92] = 74;
-          el.field_H[61] = 27;
-          return;
-        } else {
-          el.field_H[59] = 57;
-          el.field_H[46] = 72;
-          el.field_H[45] = 26;
-          el.field_H[92] = 74;
-          el.field_H[61] = 27;
-          return;
-        }
+        el.field_H[59] = 57;
+        el.field_H[46] = 72;
+        el.field_H[45] = 26;
+        el.field_H[92] = 74;
+        el.field_H[61] = 27;
     }
 
     private fl() throws Throwable {

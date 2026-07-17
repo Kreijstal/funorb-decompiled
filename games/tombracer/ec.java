@@ -10,28 +10,22 @@ final class ec extends ija {
     private java.awt.Canvas field_m;
 
     final void a(java.awt.Canvas param0, int param1, int param2, int param3) {
-        try {
-            java.awt.image.DataBufferInt var5 = null;
-            java.awt.image.DirectColorModel var6 = null;
-            java.awt.image.WritableRaster var7 = null;
-            ((ec) this).field_m = param0;
-            ((ec) this).field_l = new java.awt.Rectangle();
-            ((ec) this).field_h = param1;
-            ((ec) this).field_f = param3;
-            ((ec) this).field_g = new int[((ec) this).field_h * ((ec) this).field_f];
-            var5 = new java.awt.image.DataBufferInt(((ec) this).field_g, ((ec) this).field_g.length);
-            if (param2 != 11329) {
-              return;
-            } else {
-              var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-              var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) (Object) var6).createCompatibleSampleModel(((ec) this).field_h, ((ec) this).field_f), (java.awt.image.DataBuffer) (Object) var5, (java.awt.Point) null);
-              ((ec) this).field_k = (java.awt.Image) (Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) (Object) var6, var7, false, new Hashtable());
-              return;
-            }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        java.awt.image.DataBufferInt var5 = null;
+        java.awt.image.DirectColorModel var6 = null;
+        java.awt.image.WritableRaster var7 = null;
+        ((ec) this).field_m = param0;
+        ((ec) this).field_l = new java.awt.Rectangle();
+        ((ec) this).field_h = param1;
+        ((ec) this).field_f = param3;
+        ((ec) this).field_g = new int[((ec) this).field_h * ((ec) this).field_f];
+        var5 = new java.awt.image.DataBufferInt(((ec) this).field_g, ((ec) this).field_g.length);
+        if (param2 != 11329) {
+          return;
+        } else {
+          var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) (Object) var6).createCompatibleSampleModel(((ec) this).field_h, ((ec) this).field_f), (java.awt.image.DataBuffer) (Object) var5, (java.awt.Point) null);
+          ((ec) this).field_k = (java.awt.Image) (Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) (Object) var6, var7, false, new Hashtable());
+          return;
         }
     }
 

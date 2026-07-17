@@ -27,13 +27,17 @@ final class fe extends paa {
 
     fe(isa param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
-        ((fe) this).a((byte) -31, param4, param5, param2, param3);
+        try {
+            ((fe) this).a((byte) -31, param4, param5, param2, param3);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fe.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         super.a((byte) -31, param1, param2, param3, param4);
-        var6 = -130 + param1 >> -556902431;
+        var6 = -130 + param1 >> 1;
         if (((fe) this).field_G) {
           ((fe) this).field_E.a((byte) -31, 25, param2, var6, 0);
           ((fe) this).field_B.a((byte) -31, 25, param2, var6 + 45, 0);
@@ -49,21 +53,25 @@ final class fe extends paa {
 
     private fe(isa param0, boolean param1) {
         super(0, 0, 0, 0, (isa) null);
-        ((fe) this).field_B = (tra) (Object) new so("", (qc) null, 2);
-        ((fe) this).field_E = (tra) (Object) new so("", (qc) null, 2);
-        ((fe) this).field_D = (tra) (Object) new so("", (qc) null, 4);
-        ((fe) this).field_G = param1 ? true : false;
-        ((fe) this).field_D.field_r = param0;
-        ((fe) this).field_E.field_r = param0;
-        ((fe) this).field_B.field_r = param0;
-        if (!((fe) this).field_G) {
-            ((fe) this).a((ae) (Object) ((fe) this).field_B, -1);
-            ((fe) this).a((ae) (Object) ((fe) this).field_E, -1);
-        } else {
-            ((fe) this).a((ae) (Object) ((fe) this).field_E, -1);
-            ((fe) this).a((ae) (Object) ((fe) this).field_B, -1);
+        try {
+            ((fe) this).field_B = (tra) (Object) new so("", (qc) null, 2);
+            ((fe) this).field_E = (tra) (Object) new so("", (qc) null, 2);
+            ((fe) this).field_D = (tra) (Object) new so("", (qc) null, 4);
+            ((fe) this).field_G = param1 ? true : false;
+            ((fe) this).field_D.field_r = param0;
+            ((fe) this).field_E.field_r = param0;
+            ((fe) this).field_B.field_r = param0;
+            if (!((fe) this).field_G) {
+                ((fe) this).a((ae) (Object) ((fe) this).field_B, -1);
+                ((fe) this).a((ae) (Object) ((fe) this).field_E, -1);
+            } else {
+                ((fe) this).a((ae) (Object) ((fe) this).field_E, -1);
+                ((fe) this).a((ae) (Object) ((fe) this).field_B, -1);
+            }
+            ((fe) this).a((ae) (Object) ((fe) this).field_D, -1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fe.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((fe) this).a((ae) (Object) ((fe) this).field_D, -1);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -94,13 +102,17 @@ final class fe extends paa {
           }
         }
         try {
-          stackOut_2_0 = Integer.parseInt(((fe) this).field_D.field_o);
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+          L1: {
+            stackOut_2_0 = Integer.parseInt(((fe) this).field_D.field_o);
+            stackIn_3_0 = stackOut_2_0;
+            break L1;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_3_0;
     }
 
     final String d(byte param0) {
@@ -116,13 +128,13 @@ final class fe extends paa {
     }
 
     private final void a(int param0, int param1, ae param2, int param3, String param4) {
-        if (param0 > -25) {
-          ((fe) this).field_B = null;
-          eka.field_o.a(param4, (param2.field_m >> 2097792929) + (param2.field_i + param1), param3 + param2.field_n + -5, 16777215, -1);
-          return;
-        } else {
-          eka.field_o.a(param4, (param2.field_m >> 2097792929) + (param2.field_i + param1), param3 + param2.field_n + -5, 16777215, -1);
-          return;
+        try {
+            if (param0 > -25) {
+                ((fe) this).field_B = null;
+            }
+            eka.field_o.a(param4, (param2.field_m >> 1) + (param2.field_i + param1), param3 + param2.field_n + -5, 16777215, -1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fe.LA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -131,21 +143,26 @@ final class fe extends paa {
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_1_0 = 0;
         int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
         try {
-          if (param0 > 103) {
-            return stackIn_2_0;
-          } else {
-            stackOut_1_0 = -6;
-            stackIn_2_0 = stackOut_1_0;
+          L0: {
+            if (param0 > 103) {
+              stackOut_3_0 = Integer.parseInt(((fe) this).field_B.field_o);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = -6;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
+            }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          stackOut_3_0 = Integer.parseInt(((fe) this).field_B.field_o);
-          stackIn_4_0 = stackOut_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_4_0;
     }
 
     final boolean i(byte param0) {
@@ -179,11 +196,15 @@ final class fe extends paa {
     }
 
     final void a(byte param0, uba param1) {
-        super.a((byte) -95, param1);
-        ((fe) this).field_B.field_h = (qc) (Object) param1;
-        int var3 = 118 / ((-36 - param0) / 59);
-        ((fe) this).field_E.field_h = (qc) (Object) param1;
-        ((fe) this).field_D.field_h = (qc) (Object) param1;
+        try {
+            super.a((byte) -95, param1);
+            ((fe) this).field_B.field_h = (qc) (Object) param1;
+            int var3_int = 118 / ((-36 - param0) / 59);
+            ((fe) this).field_E.field_h = (qc) (Object) param1;
+            ((fe) this).field_D.field_h = (qc) (Object) param1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fe.AA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final int d(int param0) {
@@ -193,16 +214,20 @@ final class fe extends paa {
         int stackOut_2_0 = 0;
         if (param0 == 22829) {
           try {
-            stackOut_2_0 = Integer.parseInt(((fe) this).field_E.field_o) + -1;
-            stackIn_3_0 = stackOut_2_0;
-          } catch (java.lang.Exception decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
-            return stackIn_3_0;
+            L0: {
+              stackOut_2_0 = Integer.parseInt(((fe) this).field_E.field_o) + -1;
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            return -1;
           }
+          return stackIn_3_0;
         } else {
           return -70;
         }
-        return 0;
     }
 
     static {

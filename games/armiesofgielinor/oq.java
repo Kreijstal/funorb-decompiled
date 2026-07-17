@@ -33,9 +33,6 @@ final class oq extends wv {
     }
 
     final static int a(boolean param0) {
-        if (param0) {
-            return -112;
-        }
         return ii.field_b;
     }
 
@@ -44,8 +41,12 @@ final class oq extends wv {
         if (param0 != 27080) {
             return;
         }
-        param1.addKeyListener((java.awt.event.KeyListener) (Object) va.field_w);
-        param1.addFocusListener((java.awt.event.FocusListener) (Object) va.field_w);
+        try {
+            param1.addKeyListener((java.awt.event.KeyListener) (Object) va.field_w);
+            param1.addFocusListener((java.awt.event.FocusListener) (Object) va.field_w);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "oq.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -11,7 +11,11 @@ final class ta extends sk {
         if (param1 < 66) {
             return;
         }
-        ((ta) this).field_b.b(param0, false);
+        try {
+            ((ta) this).field_b.b(param0, false);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "ta.I(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     ta(bf param0) {
@@ -104,7 +108,7 @@ final class ta extends sk {
     }
 
     final void a(boolean param0, boolean param1) {
-        jj var4 = null;
+        Object var4 = null;
         bf stackIn_1_0 = null;
         as stackIn_1_1 = null;
         bf stackIn_2_0 = null;
@@ -145,9 +149,9 @@ final class ta extends sk {
             break L0;
           }
         }
-        ((bf) (Object) stackIn_3_0).a((as) (Object) stackIn_3_1, stackIn_3_2 != 0, bd.field_C);
+        ((bf) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2 != 0, bd.field_C);
         if (param0) {
-          var4 = (jj) null;
+          var4 = null;
           ((ta) this).a(-60, 36, (jj) null);
           return;
         } else {

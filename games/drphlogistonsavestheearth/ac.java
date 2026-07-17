@@ -18,16 +18,8 @@ final class ac {
         field_b = null;
         field_j = null;
         field_h = null;
-        if (param0 >= -52) {
-          int discarded$2 = ac.a(115);
-          field_g = null;
-          field_f = null;
-          return;
-        } else {
-          field_g = null;
-          field_f = null;
-          return;
-        }
+        field_g = null;
+        field_f = null;
     }
 
     final ai a(int param0, byte param1) {

@@ -9,20 +9,10 @@ final class sd {
     static String field_c;
 
     public static void a(int param0) {
-        if (param0 != -1) {
-          field_e = null;
-          field_e = null;
-          field_d = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
-          field_e = null;
-          field_d = null;
-          field_a = null;
-          field_c = null;
-          return;
-        }
+        field_e = null;
+        field_d = null;
+        field_a = null;
+        field_c = null;
     }
 
     static long a(long param0, long param1) {
@@ -30,32 +20,22 @@ final class sd {
     }
 
     final static void a(ut param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
-        var3 = Kickabout.field_G;
-        var2 = 0;
-        L0: while (true) {
-          if (param0.field_y.length <= var2) {
-            param0.field_y[0] = 0;
-            if (param1 != -51) {
-              return;
+        int var2_int = 0;
+        int var3 = Kickabout.field_G;
+        for (var2_int = 0; param0.field_y.length > var2_int; var2_int++) {
+            if (param0.field_y[var2_int] == 0) {
+                param0.field_y[var2_int] = 65793;
             } else {
-              param0.field_y[-1 + param0.field_o] = 0;
-              param0.field_y[(-1 + param0.field_v) * param0.field_o] = 0;
-              param0.field_y[-1 + param0.field_y.length] = 0;
-              return;
+                var2_int++;
             }
-          } else {
-            if (param0.field_y[var2] != 0) {
-              var2++;
-              var2++;
-              continue L0;
-            } else {
-              param0.field_y[var2] = 65793;
-              var2++;
-              continue L0;
-            }
-          }
+        }
+        param0.field_y[0] = 0;
+        try {
+            param0.field_y[-1 + param0.field_o] = 0;
+            param0.field_y[(-1 + param0.field_v) * param0.field_o] = 0;
+            param0.field_y[-1 + param0.field_y.length] = 0;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "sd.A(" + (param0 != null ? "{...}" : "null") + 44 + -51 + 41);
         }
     }
 

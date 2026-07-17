@@ -20,7 +20,6 @@ final class kk {
 
     final int[][] a(int param0, int param1) {
         mn var3 = null;
-        mn var3_ref = null;
         mn var4 = null;
         int var5 = 0;
         Object stackIn_4_0 = null;
@@ -51,7 +50,7 @@ final class kk {
           }
         }
         if (((kk) this).field_k != ((kk) this).field_g) {
-          if (-2 != (((kk) this).field_g ^ -1)) {
+          if (((kk) this).field_g != 1) {
             L1: {
               var3 = ((kk) this).field_m[param0];
               if (var3 == null) {
@@ -59,25 +58,25 @@ final class kk {
                   ((kk) this).field_c = true;
                   if (((kk) this).field_g <= ((kk) this).field_d) {
                     var4 = (mn) (Object) ((kk) this).field_i.c((byte) -45);
-                    var3_ref = new mn(param0, var4.field_s);
+                    var3 = new mn(param0, var4.field_s);
                     ((kk) this).field_m[var4.field_r] = null;
                     var4.c(param1 ^ -4);
                     break L2;
                   } else {
-                    var3_ref = new mn(param0, ((kk) this).field_d);
+                    var3 = new mn(param0, ((kk) this).field_d);
                     ((kk) this).field_d = ((kk) this).field_d + 1;
                     break L2;
                   }
                 }
-                ((kk) this).field_m[param0] = var3_ref;
+                ((kk) this).field_m[param0] = var3;
                 break L1;
               } else {
                 ((kk) this).field_c = false;
                 break L1;
               }
             }
-            ((kk) this).field_i.a((li) (Object) var3_ref, (byte) 27);
-            return ((kk) this).field_l[var3_ref.field_s];
+            ((kk) this).field_i.a((li) (Object) var3, (byte) 27);
+            return ((kk) this).field_l[var3.field_s];
           } else {
             L3: {
               stackOut_8_0 = this;
@@ -135,7 +134,6 @@ final class kk {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        km var2_ref = null;
         int var9 = Vertigo2.field_L ? 1 : 0;
         km var2 = (km) (Object) bj.field_c.a((long)param0, false);
         if (var2 == null) {
@@ -154,19 +152,16 @@ final class kk {
                 var3[511 + -var5] = (byte) var8;
                 var3[var6] = (byte) var8;
             }
-            var2_ref = new km(var11);
-            bj.field_c.a(-1, (gp) (Object) var2_ref, (long)param0);
+            var2 = new km(var11);
+            bj.field_c.a(-1, (gp) (Object) var2, (long)param0);
         }
         if (param1 != 38) {
             kk.a((byte) 22);
         }
-        return var2_ref.field_t;
+        return var2.field_t;
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            kk.b((byte) -122);
-        }
         field_f = null;
         field_e = null;
         field_h = null;
@@ -194,13 +189,67 @@ final class kk {
     }
 
     final static byte[] a(byte[] param0, byte param1) {
-        int var2 = param0.length;
-        byte[] var3 = new byte[var2];
-        qq.a(param0, 0, var3, 0, var2);
-        if (param1 != 103) {
-            field_h = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var3 = null;
+        byte[] stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var2_int = param0.length;
+            var3 = new byte[var2_int];
+            qq.a(param0, 0, var3, 0, var2_int);
+            stackOut_0_0 = (byte[]) var3;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("kk.H(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 103 + 41);
         }
-        return var3;
+        return stackIn_1_0;
     }
 
     final static void b(byte param0) {

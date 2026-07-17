@@ -24,7 +24,7 @@ final class ud {
     }
 
     public static void a(byte param0) {
-        int var1 = -33 / ((-41 - param0) / 48);
+        int var1 = -33;
         field_a = null;
     }
 

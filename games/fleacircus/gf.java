@@ -15,9 +15,9 @@ final class gf {
         int var2 = 0;
         byte[] var3 = null;
         if (100 != param1) {
-          if (-5001 != (param1 ^ -1)) {
+          if (param1 != 5000) {
             L0: {
-              if ((param1 ^ -1) != -30001) {
+              if (param1 != 30000) {
                 break L0;
               } else {
                 if (pg.field_a <= 0) {
@@ -45,7 +45,7 @@ final class gf {
                       var2++;
                       continue L2;
                     } else {
-                      if (-1 > (pj.field_x[var2] ^ -1)) {
+                      if (pj.field_x[var2] > 0) {
                         pj.field_x[var2] = pj.field_x[var2] - 1;
                         var3 = pc.field_h[var2][pj.field_x[var2] - 1];
                         pc.field_h[var2][pj.field_x[var2]] = null;
@@ -64,7 +64,7 @@ final class gf {
           } else {
             if (0 >= field_c) {
               L3: {
-                if ((param1 ^ -1) != -30001) {
+                if (param1 != 30000) {
                   break L3;
                 } else {
                   if (pg.field_a <= 0) {
@@ -90,7 +90,7 @@ final class gf {
                       var2++;
                       continue L4;
                     } else {
-                      if (-1 > (pj.field_x[var2] ^ -1)) {
+                      if (pj.field_x[var2] > 0) {
                         pj.field_x[var2] = pj.field_x[var2] - 1;
                         var3 = pc.field_h[var2][pj.field_x[var2] - 1];
                         pc.field_h[var2][pj.field_x[var2]] = null;
@@ -115,14 +115,14 @@ final class gf {
           }
         } else {
           if (th.field_n <= 0) {
-            if (-5001 == (param1 ^ -1)) {
+            if (param1 == 5000) {
               if (0 < field_c) {
                 field_c = field_c - 1;
                 var2_ref_byte__ = v.field_U[field_c - 1];
                 v.field_U[field_c] = null;
                 return var2_ref_byte__;
               } else {
-                if ((param1 ^ -1) == -30001) {
+                if (param1 == 30000) {
                   if (pg.field_a <= 0) {
                     if (null != pc.field_h) {
                       var2 = 0;
@@ -133,7 +133,7 @@ final class gf {
                             var2++;
                             continue L5;
                           } else {
-                            if (-1 > (pj.field_x[var2] ^ -1)) {
+                            if (pj.field_x[var2] > 0) {
                               pj.field_x[var2] = pj.field_x[var2] - 1;
                               var3 = pc.field_h[var2][pj.field_x[var2] - 1];
                               pc.field_h[var2][pj.field_x[var2]] = null;
@@ -169,7 +169,7 @@ final class gf {
                           var2++;
                           continue L6;
                         } else {
-                          if (-1 > (pj.field_x[var2] ^ -1)) {
+                          if (pj.field_x[var2] > 0) {
                             pj.field_x[var2] = pj.field_x[var2] - 1;
                             var3 = pc.field_h[var2][pj.field_x[var2] - 1];
                             pc.field_h[var2][pj.field_x[var2]] = null;
@@ -192,7 +192,7 @@ final class gf {
               }
             } else {
               L7: {
-                if ((param1 ^ -1) != -30001) {
+                if (param1 != 30000) {
                   break L7;
                 } else {
                   if (pg.field_a <= 0) {
@@ -210,7 +210,7 @@ final class gf {
                 var2 = 0;
                 if (a.field_g.length > var2) {
                   if (param1 == a.field_g[var2]) {
-                    if (-1 > (pj.field_x[var2] ^ -1)) {
+                    if (pj.field_x[var2] > 0) {
                       pj.field_x[var2] = pj.field_x[var2] - 1;
                       var3 = pc.field_h[var2][pj.field_x[var2] - 1];
                       pc.field_h[var2][pj.field_x[var2]] = null;
@@ -251,31 +251,16 @@ final class gf {
     }
 
     final static void a(int param0) {
-        ih var2 = null;
         vh var1 = (vh) (Object) al.field_e.c((byte) 47);
-        if (param0 > -5) {
-            gf.c(126);
-            if (!(var1 != null)) {
-                k.c(-28354);
-                return;
-            }
-            var2 = ae.field_a;
-            int discarded$0 = var2.c((byte) -32);
-            int discarded$1 = var2.c((byte) 122);
-            int discarded$2 = var2.c((byte) 127);
-            int discarded$3 = var2.c((byte) 124);
-            var1.c(-1);
-            return;
-        }
         if (!(var1 != null)) {
             k.c(-28354);
             return;
         }
-        var2 = ae.field_a;
-        int discarded$4 = var2.c((byte) -32);
-        int discarded$5 = var2.c((byte) 122);
-        int discarded$6 = var2.c((byte) 127);
-        int discarded$7 = var2.c((byte) 124);
+        ih var2 = ae.field_a;
+        int discarded$0 = var2.c((byte) -32);
+        int discarded$1 = var2.c((byte) 122);
+        int discarded$2 = var2.c((byte) 127);
+        int discarded$3 = var2.c((byte) 124);
         var1.c(-1);
     }
 
@@ -298,7 +283,7 @@ final class gf {
 
     final static boolean b(int param0) {
         int var1 = 0;
-        if (0 == (pd.field_l ^ -1)) {
+        if (pd.field_l == -1) {
             if (!(gi.a(1, true))) {
                 return false;
             }

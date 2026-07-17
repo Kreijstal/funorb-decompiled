@@ -52,7 +52,7 @@ final class np extends hd {
                     break L4;
                   }
                 }
-                if (-1 >= (-(((np) this).field_Ab.field_v + ((np) this).field_Ab.field_J) ^ -1)) {
+                if (-(((np) this).field_Ab.field_v + ((np) this).field_Ab.field_J) >= 0) {
                   break L3;
                 } else {
                   L5: {
@@ -74,7 +74,7 @@ final class np extends hd {
                   }
                 }
               } else {
-                if ((-(((np) this).field_Ab.field_J - -((np) this).field_Ab.field_v) ^ -1) <= -1) {
+                if (-(((np) this).field_Ab.field_J - -((np) this).field_Ab.field_v) >= 0) {
                   if (-((np) this).field_zb.field_mb + ((np) this).field_Ab.field_mb + ((np) this).field_Ab.field_L >= -(((np) this).field_Ab.field_v + ((np) this).field_Ab.field_J)) {
                     break L3;
                   } else {
@@ -168,7 +168,7 @@ final class np extends hd {
                     break L12;
                   }
                 }
-                if (-1 < (-(((np) this).field_Ab.field_v + ((np) this).field_Ab.field_J) ^ -1)) {
+                if (-(((np) this).field_Ab.field_v + ((np) this).field_Ab.field_J) < 0) {
                   ((np) this).field_Ab.field_v = -((np) this).field_Ab.field_J;
                   break L11;
                 } else {
@@ -194,7 +194,7 @@ final class np extends hd {
                 }
               } else {
                 L15: {
-                  if ((-(((np) this).field_Ab.field_J - -((np) this).field_Ab.field_v) ^ -1) <= -1) {
+                  if (-(((np) this).field_Ab.field_J - -((np) this).field_Ab.field_v) >= 0) {
                     break L15;
                   } else {
                     ((np) this).field_Ab.field_v = -((np) this).field_Ab.field_J;
@@ -264,7 +264,7 @@ final class np extends hd {
                   break L21;
                 }
               }
-              if (-1 >= (-(((np) this).field_Ab.field_v + ((np) this).field_Ab.field_J) ^ -1)) {
+              if (-(((np) this).field_Ab.field_v + ((np) this).field_Ab.field_J) >= 0) {
                 break L20;
               } else {
                 ((np) this).field_Ab.field_v = -((np) this).field_Ab.field_J;
@@ -272,7 +272,7 @@ final class np extends hd {
               }
             } else {
               L22: {
-                if ((-(((np) this).field_Ab.field_J - -((np) this).field_Ab.field_v) ^ -1) <= -1) {
+                if (-(((np) this).field_Ab.field_J - -((np) this).field_Ab.field_v) >= 0) {
                   break L22;
                 } else {
                   ((np) this).field_Ab.field_v = -((np) this).field_Ab.field_J;
@@ -348,38 +348,28 @@ final class np extends hd {
     }
 
     public static void i(byte param0) {
-        if (param0 > -19) {
-          field_yb = null;
-          field_Eb = null;
-          field_Hb = null;
-          field_Jb = null;
-          field_Db = null;
-          field_yb = null;
-          field_Gb = null;
-          field_Cb = null;
-          field_Ib = null;
-          return;
-        } else {
-          field_Eb = null;
-          field_Hb = null;
-          field_Jb = null;
-          field_Db = null;
-          field_yb = null;
-          field_Gb = null;
-          field_Cb = null;
-          field_Ib = null;
-          return;
-        }
+        field_Eb = null;
+        field_Hb = null;
+        field_Jb = null;
+        field_Db = null;
+        field_yb = null;
+        field_Gb = null;
+        field_Cb = null;
+        field_Ib = null;
     }
 
     np(long param0, hd param1, hd param2, na param3) {
         super(param0, (hd) null);
-        ((np) this).field_zb = new hd(0L, param2);
-        ((np) this).field_Fb = new na(0L, param3);
-        ((np) this).a((byte) -109, ((np) this).field_zb);
-        ((np) this).a((byte) -113, (hd) (Object) ((np) this).field_Fb);
-        ((np) this).field_Ab = param1;
-        ((np) this).field_zb.a((byte) -125, param1);
+        try {
+            ((np) this).field_zb = new hd(0L, param2);
+            ((np) this).field_Fb = new na(0L, param3);
+            ((np) this).a((byte) -109, ((np) this).field_zb);
+            ((np) this).a((byte) -113, (hd) (Object) ((np) this).field_Fb);
+            ((np) this).field_Ab = param1;
+            ((np) this).field_zb.a((byte) -125, param1);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "np.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean a(int param0, boolean param1, boolean param2, int param3, boolean param4, int param5) {
@@ -433,7 +423,7 @@ final class np extends hd {
           if (we.field_c == eq.field_a) {
             int fieldTemp$6 = vo.field_bb;
             vo.field_bb = vo.field_bb + 1;
-            if ((fieldTemp$6 ^ -1) <= -17) {
+            if (fieldTemp$6 >= 16) {
               if (!sq.field_G) {
                 pq.g((byte) 66);
                 eq.field_a = vu.field_Hb;

@@ -14,7 +14,7 @@ final class qp extends we {
 
     final static boolean a(int param0, byte param1, int param2) {
         int var3 = -13 / ((24 - param1) / 57);
-        return -1 != (param0 & 16 ^ -1) ? true : false;
+        return (param0 & 16) != 0 ? true : false;
     }
 
     final int g(int param0, int param1) {
@@ -36,90 +36,136 @@ final class qp extends we {
     }
 
     private final void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, String param8) {
-        int var10 = 0;
+        int var10_int = 0;
+        RuntimeException var10 = null;
         String var11 = null;
         da var12 = null;
         String var13 = null;
-        String stackIn_6_0 = null;
-        String stackIn_9_0 = null;
+        String stackIn_7_0 = null;
+        String stackIn_10_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_6_0 = null;
         String stackOut_5_0 = null;
-        String stackOut_4_0 = null;
+        String stackOut_9_0 = null;
         String stackOut_8_0 = null;
-        String stackOut_7_0 = null;
-        L0: {
-          var10 = param5 + param2 + param3;
-          if (var10 == 0) {
-            break L0;
-          } else {
-            param2 = (200 * param2 + var10) / (var10 * 2);
-            param5 = (var10 + 200 * param5) / (var10 * 2);
-            break L0;
-          }
-        }
-        if (param1 != 127) {
-          return;
-        } else {
-          L1: {
-            if (500 <= var10) {
-              stackOut_5_0 = kha.field_a;
-              stackIn_6_0 = stackOut_5_0;
-              break L1;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            L1: {
+              var10_int = param5 + param2 + param3;
+              if (var10_int == 0) {
+                break L1;
+              } else {
+                param2 = (200 * param2 + var10_int) / (var10_int * 2);
+                param5 = (var10_int + 200 * param5) / (var10_int * 2);
+                break L1;
+              }
+            }
+            if (param1 == 127) {
+              L2: {
+                if (500 <= var10_int) {
+                  stackOut_6_0 = kha.field_a;
+                  stackIn_7_0 = stackOut_6_0;
+                  break L2;
+                } else {
+                  stackOut_5_0 = Integer.toString(var10_int);
+                  stackIn_7_0 = stackOut_5_0;
+                  break L2;
+                }
+              }
+              L3: {
+                var11 = stackIn_7_0;
+                var13 = var11;
+                var13 = var11;
+                var12 = kn.field_p;
+                if (param0 < 10) {
+                  stackOut_9_0 = "0" + (char)(48 - -param0);
+                  stackIn_10_0 = stackOut_9_0;
+                  break L3;
+                } else {
+                  stackOut_8_0 = Integer.toString(param0);
+                  stackIn_10_0 = stackOut_8_0;
+                  break L3;
+                }
+              }
+              L4: {
+                var13 = stackIn_10_0;
+                if (param0 != -1) {
+                  break L4;
+                } else {
+                  var13 = "";
+                  break L4;
+                }
+              }
+              var12.a(-1, -1, es.field_h[0], param7, param4, var13);
+              var12.a(param4, false, param8, es.field_h[1], param7, -1);
+              var12.a(param4, false, Integer.toString(param6), es.field_h[2], param7, -1);
+              var12.a(param4, false, var11, es.field_h[3], param7, -1);
+              var12.a(param4, false, param2 + "%", es.field_h[4], param7, -1);
+              var12.a(param4, false, param5 + "%", es.field_h[5], param7, -1);
+              break L0;
             } else {
-              stackOut_4_0 = Integer.toString(var10);
-              stackIn_6_0 = stackOut_4_0;
-              break L1;
+              return;
             }
           }
-          L2: {
-            var11 = stackIn_6_0;
-            var13 = var11;
-            var13 = var11;
-            var12 = kn.field_p;
-            if ((param0 ^ -1) > -11) {
-              stackOut_8_0 = "0" + (char)(48 - -param0);
-              stackIn_9_0 = stackOut_8_0;
-              break L2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var10 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var10;
+            stackOut_14_1 = new StringBuilder().append("qp.FA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param8 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
             } else {
-              stackOut_7_0 = Integer.toString(param0);
-              stackIn_9_0 = stackOut_7_0;
-              break L2;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
             }
           }
-          L3: {
-            var13 = stackIn_9_0;
-            if (param0 != -1) {
-              break L3;
-            } else {
-              var13 = "";
-              break L3;
-            }
-          }
-          var12.a(-1, -1, es.field_h[0], param7, param4, var13);
-          var12.a(param4, false, param8, es.field_h[1], param7, -1);
-          var12.a(param4, false, Integer.toString(param6), es.field_h[2], param7, -1);
-          var12.a(param4, false, var11, es.field_h[3], param7, -1);
-          var12.a(param4, false, param2 + "%", es.field_h[4], param7, -1);
-          var12.a(param4, false, param5 + "%", es.field_h[5], param7, -1);
-          return;
+          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 
     final static int c(int param0, int param1, int param2) {
-        if (param2 > 116) {
-          param1 = (127 & param0) * param1 >> 1747666919;
-          if (2 <= param1) {
-            if (-127 <= (param1 ^ -1)) {
-              return (65408 & param0) - -param1;
-            } else {
-              param1 = 126;
-              return (65408 & param0) - -param1;
-            }
+        param1 = (127 & param0) * param1 >> 7;
+        if (2 <= param1) {
+          if (param1 <= 126) {
+            return (65408 & param0) - -param1;
           } else {
-            param1 = 2;
+            param1 = 126;
             return (65408 & param0) - -param1;
           }
         } else {
-          return -119;
+          param1 = 2;
+          return (65408 & param0) - -param1;
         }
     }
 
@@ -127,7 +173,7 @@ final class qp extends we {
         if (param0 <= 111) {
           return 100;
         } else {
-          return -80 + (aaa.a(false) >> 1519033153) - ((((qp) this).field_m[0].e(-163) >> -456821343) * ((qp) this).field_m.length - param1 * ((qp) this).field_m[0].e(-163));
+          return -80 + (aaa.a(false) >> 1) - ((((qp) this).field_m[0].e(-163) >> 1) * ((qp) this).field_m.length - param1 * ((qp) this).field_m[0].e(-163));
         }
     }
 
@@ -149,7 +195,11 @@ final class qp extends we {
         super(param0, param1, param2, param3, param4, param5);
         ((qp) this).field_x = 0;
         ((qp) this).field_w = 0;
-        ((qp) this).field_o = false;
+        try {
+            ((qp) this).field_o = false;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qp.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final boolean a(byte param0, int param1, int param2) {
@@ -244,7 +294,7 @@ final class qp extends we {
           var10 = 0;
           var11 = 140 + param2;
           L1: while (true) {
-            if (-11 >= (var10 ^ -1)) {
+            if (var10 >= 10) {
               L2: {
                 if (var8 != 0) {
                   break L2;
@@ -364,9 +414,6 @@ final class qp extends we {
     public static void d(int param0) {
         field_r = null;
         field_v = null;
-        if (param0 <= 63) {
-            field_v = null;
-        }
     }
 
     final void a(boolean param0, int param1, byte param2) {
@@ -399,17 +446,17 @@ final class qp extends we {
         if (0 == var6) {
           var8 = dt.field_n;
           if (var8 != null) {
-            oka.a(var8.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> -1552513311, -1);
+            oka.a(var8.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
             return;
           } else {
             boolean discarded$3 = this.a((byte) 106, ((qp) this).field_x, param1);
             return;
           }
         } else {
-          if ((var6 ^ -1) == -2) {
+          if (var6 == 1) {
             var9 = kt.field_H;
             if (var9 != null) {
-              oka.a(var9.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> -1552513311, -1);
+              oka.a(var9.toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
               return;
             } else {
               boolean discarded$4 = this.a((byte) 106, ((qp) this).field_x, param1);
@@ -417,7 +464,7 @@ final class qp extends we {
             }
           } else {
             if (var5 != null) {
-              oka.a(((String) var7).toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> -1552513311, -1);
+              oka.a(((String) var7).toUpperCase(), 65793, eda.field_f, -1, param1 + 240, aaa.a(false) >> 1, -1);
               return;
             } else {
               boolean discarded$5 = this.a((byte) 106, ((qp) this).field_x, param1);
@@ -442,7 +489,7 @@ final class qp extends we {
         upa var8 = null;
         upa var9 = null;
         var5 = TombRacer.field_G ? 1 : 0;
-        super.a(param0, param1, param2 + 0);
+        super.a(param0, param1, param2);
         if (param2 == 15283) {
           if (param0) {
             if (!vpa.a(111)) {

@@ -10,56 +10,46 @@ final class eda {
     int field_d;
 
     final static void a(int param0, boolean param1) {
-        kia var2 = null;
         kea var3 = null;
-        int var4 = 0;
-        var4 = TombRacer.field_G ? 1 : 0;
-        if (-1 != param0) {
-          if (-2 != param0) {
-            if (param0 != -5) {
-              if (2 != param0) {
-                if (-4 == param0) {
-                  var2 = vk.field_d;
-                  var3 = tia.field_d;
-                  kh.a(param1, var2, var3);
-                  return;
-                } else {
-                  var3 = kva.field_s;
-                  var2 = vk.field_d;
-                  kh.a(param1, var2, var3);
-                  return;
-                }
-              } else {
-                var2 = vk.field_d;
-                var3 = baa.field_e;
-                kh.a(param1, var2, var3);
-                return;
-              }
-            } else {
-              var3 = kva.field_s;
-              var2 = ska.field_r;
-              kh.a(param1, var2, var3);
-              return;
-            }
-          } else {
+        kia var2 = null;
+        int var4 = TombRacer.field_G ? 1 : 0;
+        if (param0 == 0) {
+            var3 = baa.field_e;
+            var2 = ska.field_r;
+            kh.a(true, var2, var3);
+            return;
+        }
+        if (param0 == 1) {
             var3 = tia.field_d;
             var2 = ska.field_r;
-            kh.a(param1, var2, var3);
+            kh.a(true, var2, var3);
             return;
-          }
-        } else {
-          var3 = baa.field_e;
-          var2 = ska.field_r;
-          kh.a(param1, var2, var3);
-          return;
         }
+        if (param0 != 4) {
+            if (2 == param0) {
+                var2 = vk.field_d;
+                var3 = baa.field_e;
+                kh.a(true, var2, var3);
+                return;
+            }
+            if (param0 == 3) {
+                var2 = vk.field_d;
+                var3 = tia.field_d;
+                kh.a(true, var2, var3);
+                return;
+            }
+            var3 = kva.field_s;
+            var2 = vk.field_d;
+            kh.a(true, var2, var3);
+            return;
+        }
+        var3 = kva.field_s;
+        var2 = ska.field_r;
+        kh.a(true, var2, var3);
     }
 
     public static void a(int param0) {
         field_f = null;
-        if (param0 < 24) {
-            field_e = 15;
-        }
     }
 
     static {

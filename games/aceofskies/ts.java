@@ -35,13 +35,13 @@ final class ts extends da {
         int stackOut_3_0 = 0;
         L0: {
           var16 = null;
-          var16_ref = (nj) param12;
-          var34 = ((nj) var16_ref).field_h;
+          var16_ref = (nj) (Object) param12;
+          var34 = var16_ref.field_h;
           var33 = var34;
           var32 = var33;
           var31 = var32;
           var17 = var31;
-          var18 = ((nj) var16_ref).field_g;
+          var18 = var16_ref.field_g;
           var19 = param9 - ((ts) this).field_f.field_z;
           var20 = param10;
           if (param14 <= var20) {
@@ -118,8 +118,9 @@ final class ts extends da {
                 var22++;
                 continue L2;
               } else {
+                int incrementValue$2 = param3;
                 param3++;
-                var28 = param0[param3] & 255;
+                var28 = param0[incrementValue$2] & 255;
                 if (var28 == 0) {
                   param4++;
                   var27++;
@@ -128,8 +129,9 @@ final class ts extends da {
                   var29 = ((param2 & 16711935) * var28 & -16711936) + ((param2 & 65280) * var28 & 16711680) >> 8;
                   var28 = 256 - var28;
                   var30 = param1[param4];
+                  int incrementValue$3 = param4;
                   param4++;
-                  param1[param4] = (((var30 & 16711935) * var28 & -16711936) + ((var30 & 65280) * var28 & 16711680) >> 8) + var29;
+                  param1[incrementValue$3] = (((var30 & 16711935) * var28 & -16711936) + ((var30 & 65280) * var28 & 16711680) >> 8) + var29;
                   var27++;
                   continue L5;
                 }
@@ -238,18 +240,18 @@ final class ts extends da {
         ((ts) this).field_h = new int[param2.length];
         for (var6 = 0; var6 < param2.length; var6++) {
             var7 = param2[var6];
-            if (((vd) var7).field_e != null) {
-                ((ts) this).field_g[var6] = ((vd) var7).field_e;
+            if (var7.field_e != null) {
+                ((ts) this).field_g[var6] = var7.field_e;
             } else {
-                var14 = ((vd) var7).field_d;
+                var14 = var7.field_d;
                 ((ts) this).field_g[var6] = new byte[var14.length];
                 var9 = new byte[var14.length];
                 for (var10 = 0; var10 < var14.length; var10++) {
                     var9[var10] = (byte)(var14[var10] == 0 ? 0 : -1);
                 }
             }
-            ((ts) this).field_i[var6] = ((vd) var7).field_i;
-            ((ts) this).field_h[var6] = ((vd) var7).field_a;
+            ((ts) this).field_i[var6] = var7.field_i;
+            ((ts) this).field_h[var6] = var7.field_a;
         }
     }
 
@@ -272,8 +274,9 @@ final class ts extends da {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                var12 = param0[param3] & 255;
+                var12 = param0[incrementValue$66] & 255;
                 if (var12 == 0) {
                   param4++;
                   var11++;
@@ -282,8 +285,9 @@ final class ts extends da {
                   var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
                   var12 = 256 - var12;
                   var14 = param1[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param1[param4] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
+                  param1[incrementValue$67] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
                   var11++;
                   continue L1;
                 }

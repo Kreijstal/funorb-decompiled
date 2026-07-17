@@ -29,7 +29,7 @@ public final class TrackController extends ch {
         int stackOut_19_0 = 0;
         L0: {
           var3 = field_F ? 1 : 0;
-          if (dd.field_o == param0) {
+          if (dd.field_o == 0) {
             L1: {
               int fieldTemp$1 = na.field_b + 1;
               na.field_b = na.field_b + 1;
@@ -51,10 +51,10 @@ public final class TrackController extends ch {
                 break L1;
               }
             }
-            if (-81 >= (na.field_b ^ -1)) {
+            if (na.field_b >= 80) {
               L3: {
                 L4: {
-                  if ((ib.field_a ^ -1) != (sc.field_g ^ -1)) {
+                  if (~ib.field_a != ~sc.field_g) {
                     break L4;
                   } else {
                     if (0 != id.field_g) {
@@ -69,7 +69,7 @@ public final class TrackController extends ch {
                           break L5;
                         }
                       }
-                      if ((ib.field_a ^ -1) != 0) {
+                      if (ib.field_a != -1) {
                         tk.field_p[ib.field_a].c(-99);
                         if (null == ua.field_L) {
                           break L3;
@@ -86,7 +86,7 @@ public final class TrackController extends ch {
                           if (ni.field_m[13]) {
                             L7: {
                               si.a((byte) -68, 5);
-                              if (-1 <= (hk.field_d ^ -1)) {
+                              if (hk.field_d <= 0) {
                                 stackOut_49_0 = 13;
                                 stackIn_50_0 = stackOut_49_0;
                                 break L7;
@@ -103,7 +103,7 @@ public final class TrackController extends ch {
                           }
                         }
                         L8: {
-                          if (0 != (ib.field_a ^ -1)) {
+                          if (ib.field_a != -1) {
                             break L8;
                           } else {
                             ua.field_L.a(true, 90);
@@ -125,15 +125,15 @@ public final class TrackController extends ch {
                   vl.n(-27145);
                   vg.field_p = true;
                   id.field_g = id.field_g + 1;
-                  if ((id.field_g ^ -1) == -32) {
-                    if (1 != (sc.field_g ^ -1)) {
-                      if (0 != (sc.field_g ^ -1)) {
+                  if (id.field_g == 31) {
+                    if (sc.field_g != -2) {
+                      if (sc.field_g != -1) {
                         L11: {
                           var2 = 0;
-                          if (-1 < (ib.field_a ^ -1)) {
+                          if (ib.field_a < 0) {
                             break L11;
                           } else {
-                            if ((tk.field_p.length ^ -1) >= (ib.field_a ^ -1)) {
+                            if (~tk.field_p.length >= ~ib.field_a) {
                               break L11;
                             } else {
                               L12: {
@@ -152,7 +152,7 @@ public final class TrackController extends ch {
                             }
                           }
                         }
-                        tk.field_p[sc.field_g].a(param0 ^ 10412, var2 != 0);
+                        tk.field_p[sc.field_g].a(10412, var2 != 0);
                         break L10;
                       } else {
                         break L10;
@@ -167,9 +167,9 @@ public final class TrackController extends ch {
                   }
                 }
                 L13: {
-                  if (-64 == (id.field_g ^ -1)) {
+                  if (id.field_g == 63) {
                     L14: {
-                      if ((ib.field_a ^ -1) == -12) {
+                      if (ib.field_a == 11) {
                         g.field_w = null;
                         break L14;
                       } else {
@@ -193,19 +193,19 @@ public final class TrackController extends ch {
               }
               break L0;
             } else {
-              he.field_f[ib.field_a].a(false, param0 + 83);
+              he.field_f[ib.field_a].a(false, 83);
               break L0;
             }
           } else {
             if (1 != dd.field_o) {
-              if ((dd.field_o ^ -1) == -3) {
+              if (dd.field_o == 2) {
                 L16: {
                   if (!jj.s(106)) {
                     L17: {
                       if (null == ua.field_L) {
                         break L17;
                       } else {
-                        ua.field_L.g(param0 + 122);
+                        ua.field_L.g(122);
                         break L17;
                       }
                     }
@@ -237,16 +237,16 @@ public final class TrackController extends ch {
                   }
                 }
                 L20: {
-                  if ((ib.field_a ^ -1) == 2) {
+                  if (ib.field_a == -3) {
                     if (jj.s(123)) {
                       ib.field_a = 15;
                       break L20;
                     } else {
-                      if ((oe.field_e ^ -1) != -1) {
+                      if (oe.field_e != 0) {
                         ib.field_a = 16;
                         break L20;
                       } else {
-                        if (-1 != (ua.field_L.field_O ^ -1)) {
+                        if (ua.field_L.field_O != 0) {
                           ib.field_a = 11;
                           break L20;
                         } else {
@@ -267,7 +267,7 @@ public final class TrackController extends ch {
                 break L0;
               } else {
                 id.field_g = id.field_g - 1;
-                if (-1 == (id.field_g ^ -1)) {
+                if (id.field_g == 0) {
                   dd.field_o = 0;
                   break L0;
                 } else {
@@ -277,7 +277,7 @@ public final class TrackController extends ch {
             } else {
               vl.n(-27145);
               id.field_g = id.field_g + 1;
-              if ((id.field_g ^ -1) != -33) {
+              if (id.field_g != 32) {
                 break L0;
               } else {
                 L21: {
@@ -358,7 +358,7 @@ public final class TrackController extends ch {
                     break L1;
                   } else {
                     L2: {
-                      if ((na.field_b ^ -1) > -81) {
+                      if (na.field_b < 80) {
                         cd.field_c.h(0, 0);
                         var3 = 640 * na.field_b / 160;
                         var4 = 480 * na.field_b / 160;
@@ -372,7 +372,7 @@ public final class TrackController extends ch {
                       L4: {
                         db.a(480, 0, na.field_c, 640, 0, (byte) -128);
                         gd.field_x = false;
-                        if ((sc.field_g ^ -1) != (ib.field_a ^ -1)) {
+                        if (~sc.field_g != ~ib.field_a) {
                           break L4;
                         } else {
                           L5: {
@@ -396,7 +396,7 @@ public final class TrackController extends ch {
                         }
                       }
                       L6: {
-                        if ((id.field_g ^ -1) <= -33) {
+                        if (id.field_g >= 32) {
                           L7: {
                             L8: {
                               if (-1 == sc.field_g) {
@@ -429,7 +429,7 @@ public final class TrackController extends ch {
                           break L6;
                         }
                       }
-                      ci.a(var3 + 1, -(var3 << 805118979) + 256, 16769381, false, false);
+                      ci.a(var3 + 1, -(var3 << 3) + 256, 16769381, false, false);
                       break L3;
                     }
                     L10: {
@@ -458,7 +458,7 @@ public final class TrackController extends ch {
                           }
                         }
                         var5 = ii.b(false);
-                        cl.a(nd.field_L, -(var3 >> -1431342687) + 320 + -nd.field_L[0].field_t, nd.field_L[0].field_q + var5 + nd.field_L[6].field_q, -(var5 >> 1112669313) + 240 - nd.field_L[0].field_q, var3 - (-nd.field_L[0].field_t + -nd.field_L[2].field_t), 4);
+                        cl.a(nd.field_L, -(var3 >> 1) + 320 + -nd.field_L[0].field_t, nd.field_L[0].field_q + var5 + nd.field_L[6].field_q, -(var5 >> 1) + 240 - nd.field_L[0].field_q, var3 - (-nd.field_L[0].field_t + -nd.field_L[2].field_t), 4);
                         nl.a(-77);
                         break L11;
                       }
@@ -467,8 +467,8 @@ public final class TrackController extends ch {
                       if (0 == dd.field_o) {
                         break L13;
                       } else {
-                        var3 = id.field_g << 1350553731;
-                        if (-1 <= (var3 ^ -1)) {
+                        var3 = id.field_g << 3;
+                        if (var3 <= 0) {
                           break L13;
                         } else {
                           ll.c(0, 0, ll.field_d, ll.field_k, 0, var3);
@@ -921,7 +921,7 @@ public final class TrackController extends ch {
                     }
                     L6: {
                       var2 = ((TrackController) this).b(stackIn_47_1 != 0, 119);
-                      if ((var2 ^ -1) == -2) {
+                      if (var2 == 1) {
                         if (og.field_rb != null) {
                           oj.a(-108);
                           break L6;
@@ -929,7 +929,7 @@ public final class TrackController extends ch {
                           break L4;
                         }
                       } else {
-                        if ((var2 ^ -1) != -3) {
+                        if (var2 != 2) {
                           break L6;
                         } else {
                           L7: {
@@ -959,7 +959,7 @@ public final class TrackController extends ch {
                         break L8;
                       } else {
                         if (2 != var2) {
-                          if ((var2 ^ -1) == -5) {
+                          if (var2 == 4) {
                             ad.a(-4, -4, (byte) -110);
                             break L8;
                           } else {
@@ -984,7 +984,7 @@ public final class TrackController extends ch {
                   break L4;
                 } else {
                   L9: {
-                    if ((vd.field_G.field_m[0] ^ -1) >= (pc.field_i ^ -1)) {
+                    if (~vd.field_G.field_m[0] >= ~pc.field_i) {
                       break L9;
                     } else {
                       pc.field_i = vd.field_G.field_m[0];
@@ -1001,7 +1001,7 @@ public final class TrackController extends ch {
                 break L4;
               } else {
                 th.field_l = th.field_l | il.field_e.field_m;
-                oe.field_e = oe.field_e & (il.field_e.field_m ^ -1);
+                oe.field_e = oe.field_e & ~il.field_e.field_m;
                 il.field_e = null;
                 if (oe.field_e == 0) {
                   if (16 == ib.field_a) {
@@ -1105,9 +1105,6 @@ public final class TrackController extends ch {
         lh.field_C = mf.a(5, (byte) 86);
         si.field_c = mf.a(6, (byte) -77);
         rl.field_D = mf.a(8, (byte) -29);
-        if (param0 >= -8) {
-            return;
-        }
         o.a((byte) -46);
     }
 
@@ -1205,13 +1202,13 @@ public final class TrackController extends ch {
                       va.field_d[10] = new ik(oa.field_h, var4_ref_byte__, 0, var43.length);
                       var5 = 0;
                       L1: while (true) {
-                        if (-14 >= (var5 ^ -1)) {
+                        if (var5 >= 13) {
                           j.field_h = null;
                           qi.d(-123);
                           return false;
                         } else {
                           L2: {
-                            if (-1 != (nd.field_G[var5] ^ -1)) {
+                            if (nd.field_G[var5] != 0) {
                               break L2;
                             } else {
                               nd.field_G[var5] = 96;
@@ -1263,7 +1260,7 @@ public final class TrackController extends ch {
                             var5 = var4 * 65536 / 32;
                             var6 = 0;
                             L5: while (true) {
-                              if ((var6 ^ -1) <= -5) {
+                              if (var6 >= 4) {
                                 var4++;
                                 continue L4;
                               } else {
@@ -1305,7 +1302,7 @@ public final class TrackController extends ch {
                                 rl.field_D = null;
                                 var5 = 0;
                                 L9: while (true) {
-                                  if (-18 >= (var5 ^ -1)) {
+                                  if (var5 >= 17) {
                                     L10: {
                                       if (jj.s(125)) {
                                         ib.field_a = 0;
@@ -1362,13 +1359,13 @@ public final class TrackController extends ch {
                 var20 = bb.field_b;
                 var5 = 0;
                 L11: while (true) {
-                  if ((var5 ^ -1) <= (var20.length ^ -1)) {
+                  if (~var5 <= ~var20.length) {
                     na.field_c = ab.a("", -15383, "bgtile", sg.field_a);
                     cd.field_c = new qj(640, 480);
                     cd.field_c.a();
                     var4 = 0;
                     L12: while (true) {
-                      if (-481 >= (var4 ^ -1)) {
+                      if (var4 >= 480) {
                         ll.b(20, 30, 600, 383, 3894145, 11980506);
                         ll.f(0, 0, 640, 480, 0);
                         ab.a("", -15383, "titlescreen2", sg.field_a).e(0, 0);
@@ -1384,7 +1381,7 @@ public final class TrackController extends ch {
                             ha.field_m[4] = ii.field_r[0];
                             var4 = 0;
                             L14: while (true) {
-                              if ((var4 ^ -1) <= -10) {
+                              if (var4 >= 9) {
                                 L15: {
                                   if (ui.a(0, true)) {
                                     stackOut_90_0 = "halloween";
@@ -1409,7 +1406,7 @@ public final class TrackController extends ch {
                                 al.field_z = new qj[1 + var7.length];
                                 var8 = 0;
                                 L16: while (true) {
-                                  if ((var7.length ^ -1) >= (var8 ^ -1)) {
+                                  if (~var7.length >= ~var8) {
                                     var8_ref_qj = ab.a("", -15383, "titlegameach", sg.field_a);
                                     qj dupTemp$6 = new qj(var8_ref_qj.field_s, var8_ref_qj.field_v);
                                     al.field_z[var7.length] = dupTemp$6;
@@ -1504,7 +1501,7 @@ public final class TrackController extends ch {
                                     }
                                     L20: {
                                       var8 = 2;
-                                      if ((var4 % 3 ^ -1) != -2) {
+                                      if (var4 % 3 != 1) {
                                         break L20;
                                       } else {
                                         var7_int = ll.field_d;
@@ -1676,7 +1673,7 @@ public final class TrackController extends ch {
                                                                             ((de) (Object) var5_ref_oh).field_M[0] = var41;
                                                                             var7_int = 1;
                                                                             L35: while (true) {
-                                                                              if (-10 >= (var7_int ^ -1)) {
+                                                                              if (var7_int >= 9) {
                                                                                 ((de) (Object) var5_ref_oh).field_M[1][1] = 8110658;
                                                                                 ((de) (Object) var5_ref_oh).field_M[2][1] = 4473924;
                                                                                 ((de) (Object) var5_ref_oh).field_M[2][2] = 12303291;

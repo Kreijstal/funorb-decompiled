@@ -39,7 +39,7 @@ final class va {
             return stackIn_19_0;
           } else {
             L1: {
-              if ((param0 ^ -1) > -2049) {
+              if (param0 < 2048) {
                 stackOut_14_0 = ta.field_b[param0];
                 stackIn_15_0 = stackOut_14_0;
                 break L1;
@@ -69,7 +69,7 @@ final class va {
             return stackIn_9_0;
           } else {
             L3: {
-              if ((param0 ^ -1) > -2049) {
+              if (param0 < 2048) {
                 stackOut_4_0 = ta.field_b[param0];
                 stackIn_5_0 = stackOut_4_0;
                 break L3;
@@ -114,7 +114,7 @@ final class va {
             if (param1 == -85) {
               L0: while (true) {
                 if (((va) this).field_b.length > var3) {
-                  if (param0 < ((va) this).field_b[var3 - 1] + ((va) this).field_b[var3] >> -1111895295) {
+                  if (param0 < ((va) this).field_b[var3 - 1] + ((va) this).field_b[var3] >> 1) {
                     return -1 + var3;
                   } else {
                     var3++;
@@ -137,16 +137,8 @@ final class va {
 
     public static void c(int param0) {
         field_d = null;
-        if (param0 != 20300) {
-          int discarded$2 = va.a(92, (byte) -42);
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
-          field_a = null;
-          field_e = null;
-          return;
-        }
+        field_a = null;
+        field_e = null;
     }
 
     va(int param0, int param1, int param2) {
@@ -156,17 +148,73 @@ final class va {
     }
 
     final static byte[] a(int param0, String param1) {
-        if (param0 != 0) {
-            return null;
+        RuntimeException var2 = null;
+        Object stackIn_2_0 = null;
+        byte[] stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 == 0) {
+              stackOut_3_0 = fk.field_e.a("", -1, param1);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (byte[]) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("va.C(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw sl.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        return fk.field_e.a("", -1, param1);
+        return stackIn_4_0;
     }
 
     final static int a(int param0) {
-        if (param0 < 70) {
-            field_a = null;
-            return 1;
-        }
         return 1;
     }
 

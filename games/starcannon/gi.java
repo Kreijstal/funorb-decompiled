@@ -28,58 +28,36 @@ final class gi {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int var6 = 0;
-        var6 = StarCannon.field_A;
-        var1 = ki.field_j;
-        var2 = ki.field_f;
-        var3 = -1 + var2 * var1;
-        L0: while (true) {
-          if ((var3 ^ -1) > -1) {
-            jj.field_A.e();
-            sc.a(3, bi.field_a.field_B, 3, 30603);
-            hg.field_y.b(33);
-            if (param0 != 4) {
-              return;
-            } else {
-              jj.field_A.b(0, 0, 640, 480, se.field_u);
-              return;
-            }
-          } else {
-            L1: {
-              var4 = ki.field_a[var3];
-              var5 = 0;
-              if ((var4 & 8388608) != 8388608) {
-                break L1;
-              } else {
+        int var6 = StarCannon.field_A;
+        int var1_int = ki.field_j;
+        int var2 = ki.field_f;
+        for (var3 = -1 + var2 * var1_int; var3 >= 0; var3--) {
+            var4 = ki.field_a[var3];
+            var5 = 0;
+            if ((var4 & 8388608) == 8388608) {
                 var5 = var5 | var4 & 8323072;
-                break L1;
-              }
             }
-            L2: {
-              if ((var4 & 32768 ^ -1) != -32769) {
-                break L2;
-              } else {
+            if ((var4 & 32768) == 32768) {
                 var5 = var5 | var4 & 32512;
-                break L2;
-              }
             }
-            L3: {
-              if ((128 & var4) != 128) {
-                break L3;
-              } else {
+            if ((128 & var4) == 128) {
                 var5 = var5 | var4 & 127;
-                break L3;
-              }
             }
-            bi.field_a.field_B[var3] = var5 << -814369855;
-            var3--;
-            continue L0;
-          }
+            bi.field_a.field_B[var3] = var5 << 1;
+        }
+        jj.field_A.e();
+        sc.a(3, bi.field_a.field_B, 3, 30603);
+        hg.field_y.b(33);
+        if (param0 != 4) {
+            return;
+        }
+        try {
+            jj.field_A.b(0, 0, 640, 480, se.field_u);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "gi.A(" + param0 + 41);
         }
     }
 
@@ -88,13 +66,14 @@ final class gi {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (param0 != 640) {
-            hl[] discarded$0 = gi.a(-22, -65);
-        }
     }
 
     gi(hl[] param0) {
-        ((gi) this).field_d = param0;
+        try {
+            ((gi) this).field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "gi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {

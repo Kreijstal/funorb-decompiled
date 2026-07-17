@@ -261,7 +261,7 @@ final class ri {
             L2: while (true) {
               L3: {
                 L4: {
-                  if ((var8 ^ -1) <= (param3.field_I ^ -1)) {
+                  if (~var8 <= ~param3.field_I) {
                     break L4;
                   } else {
                     var9 = param3.field_e[var8];
@@ -296,12 +296,12 @@ final class ri {
                           }
                         }
                         var12 = oc.field_l[var9];
-                        if (2147483647 == (var12 ^ -1)) {
+                        if (var12 == -2147483648) {
                           break L5;
                         } else {
                           L7: {
                             var13 = oc.field_l[var10];
-                            if (2147483647 != (var13 ^ -1)) {
+                            if (var13 != -2147483648) {
                               break L7;
                             } else {
                               if (var19 == 0) {
@@ -317,7 +317,7 @@ final class ri {
                           } else {
                             L8: {
                               var15 = -var6 + (var14 + var13 + var12);
-                              if ((var7 ^ -1) > -1) {
+                              if (var7 < 0) {
                                 stackOut_27_0 = var15 << -var7;
                                 stackIn_28_0 = stackOut_27_0;
                                 break L8;
@@ -332,11 +332,11 @@ final class ri {
                             L9: while (true) {
                               L10: {
                                 L11: {
-                                  if (var17 >> 1990494372 == 0) {
+                                  if (var17 >> 4 == 0) {
                                     break L11;
                                   } else {
                                     var16--;
-                                    stackOut_30_0 = var16 ^ -1;
+                                    stackOut_30_0 = ~var16;
                                     stackOut_30_1 = -1;
                                     stackIn_38_0 = stackOut_30_0;
                                     stackIn_38_1 = stackOut_30_1;
@@ -367,7 +367,7 @@ final class ri {
                                   }
                                 }
                                 stackOut_37_0 = var17;
-                                stackOut_37_1 = var16 << 1611167972;
+                                stackOut_37_1 = var16 << 4;
                                 stackIn_38_0 = stackOut_37_0;
                                 stackIn_38_1 = stackOut_37_1;
                                 break L10;
@@ -415,7 +415,7 @@ final class ri {
                       var8 = 0;
                       var9 = 0;
                       L16: while (true) {
-                        if ((di.field_V.length ^ -1) >= (var9 ^ -1)) {
+                        if (~di.field_V.length >= ~var9) {
                           break L15;
                         } else {
                           var10 = di.field_V[var9];
@@ -521,8 +521,8 @@ final class ri {
         String stackOut_25_2 = null;
         try {
           L0: {
-            var5_int = param2 ^ (param3 >>> -2053549844 | param3 << -682120124 & 65532);
-            var5_int = var5_int | param3 << 1460899344;
+            var5_int = param2 ^ (param3 >>> 12 | param3 << 4 & 65532);
+            var5_int = var5_int | param3 << 16;
             var6 = (long)var5_int;
             var8 = (ji) (Object) ((ri) this).field_g.a(var6, -27109);
             if (var8 == null) {
@@ -628,7 +628,7 @@ final class ri {
         String stackOut_11_2 = null;
         try {
           if (((ri) this).field_d.b((byte) -71) != 1) {
-            if (-2 != (((ri) this).field_d.b(param0, -26727) ^ -1)) {
+            if (((ri) this).field_d.b(param0, -26727) != 1) {
               L0: {
                 if (param2 >= 57) {
                   break L0;
@@ -742,13 +742,13 @@ final class ri {
                   stackIn_23_0 = stackOut_22_0;
                   return stackIn_23_0 != 0;
                 } else {
-                  if ((pi.field_h[param2] ^ -1) < (pi.field_h[param3] ^ -1)) {
+                  if (~pi.field_h[param2] < ~pi.field_h[param3]) {
                     stackOut_27_0 = 0;
                     stackIn_28_0 = stackOut_27_0;
                     return stackIn_28_0 != 0;
                   } else {
                     if (cc.field_L[param3] <= cc.field_L[param2]) {
-                      if ((cc.field_L[param3] ^ -1) > (cc.field_L[param2] ^ -1)) {
+                      if (~cc.field_L[param3] > ~cc.field_L[param2]) {
                         stackOut_35_0 = 0;
                         stackIn_36_0 = stackOut_35_0;
                         return stackIn_36_0 != 0;
@@ -763,13 +763,13 @@ final class ri {
                   }
                 }
               } else {
-                if ((cc.field_L[param2] ^ -1) <= (cc.field_L[param3] ^ -1)) {
-                  if ((cc.field_L[param3] ^ -1) > (cc.field_L[param2] ^ -1)) {
+                if (~cc.field_L[param2] <= ~cc.field_L[param3]) {
+                  if (~cc.field_L[param3] > ~cc.field_L[param2]) {
                     stackOut_9_0 = 0;
                     stackIn_10_0 = stackOut_9_0;
                     return stackIn_10_0 != 0;
                   } else {
-                    if ((pi.field_h[param2] ^ -1) <= (pi.field_h[param3] ^ -1)) {
+                    if (~pi.field_h[param2] <= ~pi.field_h[param3]) {
                       if (pi.field_h[param2] > pi.field_h[param3]) {
                         stackOut_17_0 = 0;
                         stackIn_18_0 = stackOut_17_0;
@@ -805,7 +805,7 @@ final class ri {
                   break L2;
                 }
               }
-              if ((var5 ^ -1) > (var4_int ^ -1)) {
+              if (~var5 > ~var4_int) {
                 stackOut_48_0 = 0;
                 stackIn_49_0 = stackOut_48_0;
                 return stackIn_49_0 != 0;
@@ -869,8 +869,8 @@ final class ri {
         String stackOut_27_2 = null;
         try {
           L0: {
-            var5_int = param2 ^ ((param1 & -1610608641) << 2103043524 | param1 >>> 1289314924);
-            var5_int = var5_int | param1 << 1735359152;
+            var5_int = param2 ^ ((param1 & -1610608641) << 4 | param1 >>> 12);
+            var5_int = var5_int | param1 << 16;
             var6 = 4294967296L ^ (long)var5_int;
             if (param0 == -31093) {
               var8 = (ji) (Object) ((ri) this).field_g.a(var6, -27109);
@@ -879,7 +879,7 @@ final class ri {
                   if (param3 == null) {
                     break L1;
                   } else {
-                    if ((param3[0] ^ -1) >= -1) {
+                    if (param3[0] <= 0) {
                       stackOut_12_0 = null;
                       stackIn_13_0 = stackOut_12_0;
                       return (ji) (Object) stackIn_13_0;

@@ -14,7 +14,7 @@ final class oi extends gn {
         int var1 = 0;
         var1 = 66 % ((param0 - -43) / 35);
         if (!jd.f(-1)) {
-          if (-1 <= (eq.field_d ^ -1)) {
+          if (eq.field_d <= 0) {
             return false;
           } else {
             return true;
@@ -28,18 +28,9 @@ final class oi extends gn {
         field_h = null;
         field_e = null;
         field_f = null;
-        if (param0) {
-          oi.a(-54);
-          field_i = null;
-          field_k = null;
-          field_g = null;
-          return;
-        } else {
-          field_i = null;
-          field_k = null;
-          field_g = null;
-          return;
-        }
+        field_i = null;
+        field_k = null;
+        field_g = null;
     }
 
     final static void a(int param0) {

@@ -11,9 +11,6 @@ final class st {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 < 77) {
-            return;
-        }
         field_b = null;
         field_a = null;
         field_e = null;

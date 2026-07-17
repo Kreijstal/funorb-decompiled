@@ -61,49 +61,71 @@ final class hd {
     }
 
     final void a(boolean param0) {
-        int var4 = Vertigo2.field_L ? 1 : 0;
-        mi var2 = uh.field_Wb;
-        if (param0) {
-            return;
-        }
-        bo var3 = (bo) (Object) ((hd) this).field_e.a((byte) 100);
-        while (var3 != null) {
-            // if_icmple L114
-            if (!var3.field_n) {
-                // iflt L114
-                // ifeq L114
-                var3.a(0, var2);
-                var3.field_n = true;
+        mi var2 = null;
+        bo var3 = null;
+        int var4 = 0;
+        var4 = Vertigo2.field_L ? 1 : 0;
+        var2 = uh.field_Wb;
+        if (!param0) {
+          var3 = (bo) (Object) ((hd) this).field_e.a((byte) 100);
+          L0: while (true) {
+            L1: {
+              if (var3 == null) {
+                break L1;
+              } else {
+                if (-var2.field_u + var2.field_p.length <= 9) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (var3.field_n) {
+                      break L2;
+                    } else {
+                      if (Math.random() < 0.7) {
+                        break L1;
+                      } else {
+                        if (!var3.a((byte) 76)) {
+                          break L1;
+                        } else {
+                          var3.a(0, var2);
+                          var3.field_n = true;
+                          break L2;
+                        }
+                      }
+                    }
+                  }
+                  var3 = (bo) (Object) ((hd) this).field_e.b(57);
+                  continue L0;
+                }
+              }
             }
-            var3 = (bo) (Object) ((hd) this).field_e.b(57);
+            return;
+          }
+        } else {
+          return;
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        bo var4_ref = null;
         if (param2 != 7829367) {
             field_h = null;
         }
-        if ((((hd) this).field_e.c(true) ^ -1) <= -255) {
+        if (((hd) this).field_e.c(true) >= 254) {
             return;
         }
         bo var4 = (bo) (Object) ((hd) this).field_e.c((byte) -125);
         if (var4 == null) {
-            var4_ref = new bo(((hd) this).field_a, param0);
-            ((hd) this).field_e.a((li) (Object) var4_ref, false);
+            var4 = new bo(((hd) this).field_a, param0);
+            ((hd) this).field_e.a((li) (Object) var4, false);
         } else {
-            if (var4_ref.a((byte) 76)) {
-                var4_ref = new bo(((hd) this).field_a, param0);
-                ((hd) this).field_e.a((li) (Object) var4_ref, false);
+            if (var4.a((byte) 76)) {
+                var4 = new bo(((hd) this).field_a, param0);
+                ((hd) this).field_e.a((li) (Object) var4, false);
             }
         }
-        boolean discarded$0 = var4_ref.b(param1, param2 + -7829378);
+        boolean discarded$0 = var4.b(param1, param2 + -7829378);
     }
 
     final static int b(boolean param0) {
-        if (param0) {
-            return -24;
-        }
         return 1900 + new Date().getYear();
     }
 
@@ -113,9 +135,6 @@ final class hd {
         field_c = null;
         field_d = null;
         field_h = null;
-        if (param0 != 1) {
-            return;
-        }
         field_f = null;
     }
 
@@ -147,7 +166,7 @@ final class hd {
           var8 = (640 - 2 * var6) / (param4 - -var6);
           var9 = ((hd) this).field_e.c(true) / var8;
           var10 = ((hd) this).field_e.c(true) - var9 * var8;
-          if (-1 != (var9 ^ -1)) {
+          if (var9 != 0) {
             break L0;
           } else {
             if (var10 == 0) {
@@ -248,7 +267,7 @@ final class hd {
             L6: {
               var15--;
               var14 = var14 - (param4 + var6);
-              if (-1 == (var15 ^ -1)) {
+              if (var15 == 0) {
                 param3 = param3 - (var7 + param1);
                 var15 = var8;
                 var14 = -param4 + (640 - var6);
@@ -269,14 +288,11 @@ final class hd {
         bl.field_z = null;
         jo.field_g = null;
         ba.field_b = null;
-        if (param0 != 47) {
-            field_f = null;
-        }
     }
 
     hd(int param0, int param1) {
         ((hd) this).field_a = param0;
-        if ((((hd) this).field_a ^ -1) <= -1) {
+        if (((hd) this).field_a >= 0) {
             ((hd) this).field_e = new nj();
         }
     }

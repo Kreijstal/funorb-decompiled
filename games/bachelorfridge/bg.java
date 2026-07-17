@@ -9,12 +9,20 @@ final class bg extends jm {
     }
 
     final void a(boolean param0, op param1) {
-        param1.field_K = 0;
-        param1.field_x = param0 ? true : false;
+        try {
+            param1.field_K = 0;
+            param1.field_x = param0 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "bg.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     bg(lu param0) {
-        ((bg) this).field_j = 5;
+        try {
+            ((bg) this).field_j = 5;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "bg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void b(int param0) {

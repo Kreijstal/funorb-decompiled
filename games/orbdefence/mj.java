@@ -15,16 +15,8 @@ final class mj extends ca {
         field_i = null;
         field_l = null;
         field_k = null;
-        if (param0 <= 73) {
-          mj.c(-85);
-          field_j = null;
-          field_m = null;
-          return;
-        } else {
-          field_j = null;
-          field_m = null;
-          return;
-        }
+        field_j = null;
+        field_m = null;
     }
 
     final static void c(int param0) {

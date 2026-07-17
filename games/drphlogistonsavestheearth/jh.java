@@ -50,7 +50,7 @@ final class jh {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((jh) this).field_a[var6] = var3 ^ -1;
+                      ((jh) this).field_a[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -174,7 +174,7 @@ final class jh {
         while (((jh) this).field_a[var1] >= 0) {
             var1 = tk.a() != 0 ? ((jh) this).field_a[var1] : var1 + 1;
         }
-        return ((jh) this).field_a[var1] ^ -1;
+        return ~((jh) this).field_a[var1];
     }
 
     final float[] a() {
@@ -216,7 +216,7 @@ final class jh {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = tk.d(24);
+          int discarded$2 = tk.d(24);
           ((jh) this).field_e = tk.d(16);
           ((jh) this).field_b = tk.d(24);
           ((jh) this).field_f = new int[((jh) this).field_b];
@@ -283,8 +283,9 @@ final class jh {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((jh) this).field_f[var2] = var3_int;
+                    ((jh) this).field_f[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

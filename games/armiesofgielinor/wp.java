@@ -25,7 +25,7 @@ final class wp extends ms {
         int var6 = 0;
         vh var8 = null;
         int var9 = 0;
-        ig var10 = null;
+        Object var10 = null;
         ig var11 = null;
         int var12 = 0;
         int var13 = 0;
@@ -97,21 +97,21 @@ final class wp extends ms {
                             var11 = (ig) (Object) var3.a((byte) 123);
                             continue L5;
                           } else {
-                            var10 = var11;
+                            var10 = (Object) (Object) var11;
                             break L6;
                           }
                         }
                       }
                       L7: {
                         if (var10 == null) {
-                          var10 = new ig(var9, up.field_e.c(var9, (byte) 81));
-                          var3.a((byte) -119, (tc) (Object) var10);
+                          var10 = (Object) (Object) new ig(var9, up.field_e.c(var9, (byte) 81));
+                          var3.a((byte) -119, (tc) var10);
                           break L7;
                         } else {
                           break L7;
                         }
                       }
-                      ((wp) this).field_A[var29[var6]] = new ht(var30, var10);
+                      ((wp) this).field_A[var29[var6]] = new ht(var30, (ig) var10);
                       var6++;
                       continue L4;
                     }
@@ -148,9 +148,6 @@ final class wp extends ms {
     public static void e(byte param0) {
         field_z = null;
         field_H = null;
-        if (param0 >= -54) {
-            field_B = null;
-        }
         field_F = null;
         field_y = null;
         field_v = null;

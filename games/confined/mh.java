@@ -12,10 +12,6 @@ final class mh {
     }
 
     final static String a(boolean param0) {
-        if (!param0) {
-            field_a = null;
-            return e.field_c.d(true);
-        }
         return e.field_c.d(true);
     }
 

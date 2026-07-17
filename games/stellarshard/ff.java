@@ -61,7 +61,7 @@ final class ff extends nh {
           eh.field_d = stackIn_3_0 != 0;
           ha.field_t = var9.f(4);
           k.field_d = var9.d(0);
-          if (-3 != (ii.field_J ^ -1)) {
+          if (ii.field_J != 2) {
             il.field_w = 0;
             mg.field_y = 0;
             break L1;
@@ -72,7 +72,7 @@ final class ff extends nh {
           }
         }
         L2: {
-          if (-2 != (var9.f(4) ^ -1)) {
+          if (var9.f(4) != 1) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
             break L2;
@@ -85,7 +85,7 @@ final class ff extends nh {
         L3: {
           var4 = stackIn_9_0;
           ld.field_z = var9.e((byte) 122);
-          var5 = -101 % ((param1 - 46) / 36);
+          var5 = 0;
           if (var4 == 0) {
             oe.field_d = ld.field_z;
             break L3;
@@ -95,7 +95,7 @@ final class ff extends nh {
           }
         }
         L4: {
-          if (-2 == (ii.field_J ^ -1)) {
+          if (ii.field_J == 1) {
             int discarded$4 = var9.c((byte) 105);
             String discarded$5 = var9.e((byte) 106);
             break L4;

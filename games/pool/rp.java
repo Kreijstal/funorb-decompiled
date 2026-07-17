@@ -24,78 +24,25 @@ final class rp {
     }
 
     final static void a(vh param0, vh param1, int param2) {
-        int var3 = 0;
-        L0: {
-          if (null == param0.field_T) {
-            param0.field_T = new ko();
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param1.field_T != null) {
-          if (null == df.field_b) {
-            L1: {
-              df.field_b = new tk(64);
-              if (gd.field_c == null) {
+        try {
+            if (!(null != param0.field_T)) {
+                param0.field_T = new ko();
+            }
+            if (param1.field_T == null) {
+                param1.field_T = new ko();
+            }
+            if (null == df.field_b) {
+                df.field_b = new tk(64);
+            }
+            if (!(gd.field_c != null)) {
                 gd.field_c = new tk(64);
-                break L1;
-              } else {
-                break L1;
-              }
             }
             cf.field_k = param0.field_T;
             jq.field_c = param1.field_T;
             lq.l(-65);
-            var3 = 107 / ((param2 - 50) / 36);
-            return;
-          } else {
-            L2: {
-              if (gd.field_c == null) {
-                gd.field_c = new tk(64);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            cf.field_k = param0.field_T;
-            jq.field_c = param1.field_T;
-            lq.l(-65);
-            var3 = 107 / ((param2 - 50) / 36);
-            return;
-          }
-        } else {
-          param1.field_T = new ko();
-          if (null != df.field_b) {
-            L3: {
-              if (gd.field_c == null) {
-                gd.field_c = new tk(64);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            cf.field_k = param0.field_T;
-            jq.field_c = param1.field_T;
-            lq.l(-65);
-            var3 = 107 / ((param2 - 50) / 36);
-            return;
-          } else {
-            L4: {
-              df.field_b = new tk(64);
-              if (gd.field_c == null) {
-                gd.field_c = new tk(64);
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            cf.field_k = param0.field_T;
-            jq.field_c = param1.field_T;
-            lq.l(-65);
-            var3 = 107 / ((param2 - 50) / 36);
-            return;
-          }
+            int var3_int = -53;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "rp.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + -36 + 41);
         }
     }
 
@@ -148,7 +95,7 @@ final class rp {
             var23.e();
             qh.f(0, 0, 16, param1, param5);
             var14 = null;
-            if (-1 <= (param2 ^ -1)) {
+            if (param2 <= 0) {
               break L0;
             } else {
               var24 = new dd(16, 16);
@@ -179,7 +126,7 @@ final class rp {
             var30.e();
             qh.f(0, 0, 16, param1, param5);
             var14 = null;
-            if (-1 <= (param2 ^ -1)) {
+            if (param2 <= 0) {
               break L1;
             } else {
               var31 = new dd(16, 16);

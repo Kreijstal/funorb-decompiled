@@ -12,22 +12,18 @@ final class s extends gf {
     }
 
     final void c(int param0, rc param1) {
-        Object var4 = null;
-        if (param0 != -3399) {
-          var4 = null;
-          ((s) this).c(-9, (rc) null);
-          super.c(param0 + 0, param1);
-          return;
-        } else {
-          super.c(param0 + 0, param1);
-          return;
+        try {
+            if (param0 != -3399) {
+                Object var4 = null;
+                ((s) this).c(-9, (rc) null);
+            }
+            super.c(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "s.NA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     public static void m(int param0) {
-        if (param0 != -1) {
-            return;
-        }
         field_ib = null;
         field_hb = null;
         field_jb = null;
@@ -42,36 +38,19 @@ final class s extends gf {
         if (var1.length() == 0) {
             var1 = qe.a((byte) 127);
         }
-        if (!(-1 != (var1.length() ^ -1))) {
+        if (!(var1.length() != 0)) {
             var1 = je.field_a;
         }
         return var1;
     }
 
     final static void n(int param0) {
-        L0: {
-          if (null != kj.field_P) {
+        if (!(null == kj.field_P)) {
             kj.field_P.a();
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param0 == 0) {
-          if (null != ql.field_r) {
+        if (null != ql.field_r) {
             ql.field_r.a();
             return;
-          } else {
-            return;
-          }
-        } else {
-          String discarded$6 = s.o(-8);
-          if (null == ql.field_r) {
-            return;
-          } else {
-            ql.field_r.a();
-            return;
-          }
         }
     }
 

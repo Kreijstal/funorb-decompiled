@@ -188,9 +188,6 @@ final class jk {
     public static void a(int param0) {
         field_M = null;
         field_a = null;
-        if (param0 != -19800) {
-            int discarded$0 = jk.a((byte) -29);
-        }
         field_m = null;
     }
 
@@ -305,7 +302,7 @@ final class jk {
         int var14 = 0;
         int var15 = 0;
         var15 = Bounce.field_N;
-        var9 = param1 + (param5 - -param8);
+        var9 = param1 + (param5 - -1);
         var10 = new tg[]{new tg(var9, var9), new tg(param6, var9), new tg(var9, var9), new tg(var9, param6), new tg(64, 64), new tg(var9, param6), new tg(var9, var9), new tg(param6, var9), new tg(var9, var9)};
         var11_ref_tg__ = var10;
         var12 = 0;
@@ -331,12 +328,12 @@ final class jk {
                       if (var11 >= param6) {
                         var11 = 0;
                         L5: while (true) {
-                          if (param6 >> -498441599 <= var11) {
+                          if (param6 >> 1 <= var11) {
                             return var10;
                           } else {
                             var12 = 0;
                             L6: while (true) {
-                              if (param8 <= var12) {
+                              if (1 <= var12) {
                                 var11++;
                                 continue L5;
                               } else {

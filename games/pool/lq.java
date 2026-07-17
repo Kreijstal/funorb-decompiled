@@ -44,11 +44,11 @@ final class lq extends ud {
                     }
                     if (0 >= var2_int) {
                       L2: {
-                        if (-1 < (var2_int ^ -1)) {
+                        if (var2_int < 0) {
                           dn.c(64);
                           break L2;
                         } else {
-                          if ((bf.d((byte) 127) ^ -1L) >= -30001L) {
+                          if (bf.d((byte) 127) <= 30000L) {
                             decompiledRegionSelector0 = 0;
                             break L0;
                           } else {
@@ -126,100 +126,100 @@ final class lq extends ud {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         vh var5 = null;
-        int var6 = 0;
         int var7 = 0;
         String var8 = null;
         pn var9 = null;
-        L0: {
-          var7 = Pool.field_O;
-          if (sh.field_P.field_k == cb.field_g) {
-            break L0;
-          } else {
-            fd.field_J = fd.field_J + (sh.field_P.field_k + -cb.field_g);
-            cb.field_g = sh.field_P.field_k;
-            break L0;
-          }
-        }
-        L1: {
-          if (ir.field_h <= em.field_P) {
-            break L1;
-          } else {
-            em.field_P = em.field_P + 1;
-            break L1;
-          }
-        }
-        if ((em.field_P ^ -1) >= -1) {
-          return;
-        } else {
-          L2: {
-            wa.l(23323);
-            fl.field_q.a(param1, false);
-            if (null == sg.field_J) {
-              break L2;
-            } else {
-              if (!ea.field_z) {
-                sg.field_J = null;
+        RuntimeException decompiledCaughtException = null;
+        var7 = Pool.field_O;
+        try {
+          L0: {
+            L1: {
+              if (sh.field_P.field_k == cb.field_g) {
+                break L1;
+              } else {
+                fd.field_J = fd.field_J + (sh.field_P.field_k + -cb.field_g);
+                cb.field_g = sh.field_P.field_k;
+                break L1;
+              }
+            }
+            L2: {
+              if (ir.field_h <= em.field_P) {
                 break L2;
               } else {
-                boolean discarded$1 = sg.field_J.a(-125, fl.field_q.field_sb, param1, fl.field_q.field_ib);
+                em.field_P = em.field_P + 1;
                 break L2;
               }
             }
-          }
-          var4 = 0;
-          L3: while (true) {
-            if (5 <= var4) {
-              L4: {
-                if (param2 == d.field_e.field_R) {
-                  break L4;
-                } else {
-                  fc.field_b = new wm(d.field_e.field_sb, d.field_e.field_ib, d.field_e.field_gb, d.field_e.field_Db, param3, tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A, (String) null, 0L);
-                  break L4;
-                }
-              }
-              L5: {
-                var9 = uk.a(param0, (byte) -126, ad.field_x, kj.field_j);
-                if (var9 != null) {
-                  na.a(var9, 122);
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              L6: {
-                var8 = dk.a(1);
-                if (var8 != null) {
-                  kk.field_B = var8;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
+            if (em.field_P <= 0) {
               return;
             } else {
-              var5 = il.field_g[var4];
-              if (var5 != null) {
-                L7: {
-                  if (-1 == (var5.field_R ^ -1)) {
-                    break L7;
+              L3: {
+                wa.l(23323);
+                fl.field_q.a(param1, false);
+                if (null == sg.field_J) {
+                  break L3;
+                } else {
+                  if (!ea.field_z) {
+                    sg.field_J = null;
+                    break L3;
                   } else {
-                    hb.a(27937, var5, var4);
-                    break L7;
+                    boolean discarded$1 = sg.field_J.a(-125, fl.field_q.field_sb, param1, fl.field_q.field_ib);
+                    break L3;
                   }
                 }
-                var6 = f.a(param2 ^ 5, var4);
-                uo.field_Mb[var4].field_hb = sg.field_M[var6];
-                ta.field_b[var4].field_nb = nk.field_i[var6];
-                var4++;
-                continue L3;
-              } else {
-                var4++;
-                continue L3;
+              }
+              var4_int = 0;
+              L4: while (true) {
+                if (5 <= var4_int) {
+                  L5: {
+                    if (param2 == d.field_e.field_R) {
+                      break L5;
+                    } else {
+                      fc.field_b = new wm(d.field_e.field_sb, d.field_e.field_ib, d.field_e.field_gb, d.field_e.field_Db, param3, tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A, (String) null, 0L);
+                      break L5;
+                    }
+                  }
+                  L6: {
+                    var9 = uk.a(param0, (byte) -126, ad.field_x, kj.field_j);
+                    if (var9 != null) {
+                      na.a(var9, 122);
+                      break L6;
+                    } else {
+                      break L6;
+                    }
+                  }
+                  L7: {
+                    var8 = dk.a(1);
+                    if (var8 != null) {
+                      kk.field_B = var8;
+                      break L7;
+                    } else {
+                      break L7;
+                    }
+                  }
+                  break L0;
+                } else {
+                  L8: {
+                    var5 = il.field_g[var4_int];
+                    if (var5 == null) {
+                      break L8;
+                    } else {
+                      break L8;
+                    }
+                  }
+                  var4_int++;
+                  continue L4;
+                }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var4, "lq.JA(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -238,10 +238,7 @@ final class lq extends ud {
     }
 
     final static boolean a(String param0, int param1) {
-        if (param1 != -1) {
-            lq.i(82);
-        }
-        return gf.a(param1 ^ 88, param0) != null ? true : false;
+        return gf.a(-89, param0) != null;
     }
 
     final ei g(int param0) {
@@ -295,9 +292,6 @@ final class lq extends ud {
         wa.m(8421504);
         nk.b(-31384);
         fc.field_b = null;
-        if (!param0) {
-            lq.i(114);
-        }
         lq.i(15975);
     }
 
@@ -307,9 +301,6 @@ final class lq extends ud {
         field_T = null;
         field_O = null;
         field_S = null;
-        if (param0 != -47) {
-            return;
-        }
         field_R = null;
         field_Q = null;
     }
@@ -356,37 +347,47 @@ final class lq extends ud {
     }
 
     final static void l(int param0) {
+        rg var2 = null;
         int var3 = Pool.field_O;
-        gi.field_t = 0;
-        int var1 = 83 % ((17 - param0) / 34);
-        cm.field_J = null;
-        nr.field_S = 0;
-        cf.field_k.d((byte) 69);
-        jq.field_c.d((byte) 48);
-        rg var2 = df.field_b.a((byte) -125);
-        while (var2 != null) {
-            var2.a(false);
-            var2 = df.field_b.b(83);
+        try {
+            gi.field_t = 0;
+            int var1_int = 83 % ((17 - param0) / 34);
+            cm.field_J = null;
+            nr.field_S = 0;
+            cf.field_k.d((byte) 69);
+            jq.field_c.d((byte) 48);
+            var2 = df.field_b.a((byte) -125);
+            while (var2 != null) {
+                var2.a(false);
+                var2 = df.field_b.b(83);
+            }
+            var2 = gd.field_c.a((byte) -125);
+            while (var2 != null) {
+                var2.a(false);
+                var2 = gd.field_c.b(68);
+            }
+            th.field_a = 0;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "lq.GA(" + param0 + 41);
         }
-        var2 = gd.field_c.a((byte) -125);
-        while (var2 != null) {
-            var2.a(false);
-            var2 = gd.field_c.b(68);
-        }
-        th.field_a = 0;
     }
 
     final void b(ei param0, int param1) {
-        if (!(param0 instanceof oe)) {
-            throw new IllegalArgumentException();
+        oe var3 = null;
+        try {
+            if (!(param0 instanceof oe)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (oe) (Object) param0;
+            if (param1 != 30000) {
+                field_W = 61;
+            }
+            ((lq) this).field_P.a((byte) -84, (ma) (Object) var3);
+            var3.field_R = true;
+            boolean discarded$0 = var3.a((ei) this, (byte) 66);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "lq.O(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        oe var3 = (oe) (Object) param0;
-        if (param1 != 30000) {
-            field_W = 61;
-        }
-        ((lq) this).field_P.a((byte) -84, (ma) (Object) var3);
-        var3.field_R = true;
-        boolean discarded$0 = var3.a((ei) this, (byte) 66);
     }
 
     static {

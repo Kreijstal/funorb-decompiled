@@ -13,16 +13,20 @@ abstract class kk extends qa {
     static String field_s;
 
     final static void a(int param0, boolean param1, int param2, byte param3, java.awt.Component param4, go param5, int param6, gd param7) {
-        gp.a(param0, param1, 10);
-        rm.field_b = gp.a(param5, param4, 0, param2);
-        ga.field_u = gp.a(param5, param4, 1, param6);
-        bh.field_a = new vp();
-        lq.field_d = param6 * 1000 / param0;
-        ga.field_u.a((gq) (Object) bh.field_a);
-        wd.field_L = param7;
-        wd.field_L.a(uk.field_S, (byte) 116);
-        int var8 = 37 / ((param3 - 49) / 49);
-        rm.field_b.a((gq) (Object) wd.field_L);
+        try {
+            gp.a(param0, param1, 10);
+            rm.field_b = gp.a(param5, param4, 0, param2);
+            ga.field_u = gp.a(param5, param4, 1, param6);
+            bh.field_a = new vp();
+            lq.field_d = param6 * 1000 / param0;
+            ga.field_u.a((gq) (Object) bh.field_a);
+            wd.field_L = param7;
+            wd.field_L.a(uk.field_S, (byte) 116);
+            int var8_int = 37 / ((param3 - 49) / 49);
+            rm.field_b.a((gq) (Object) wd.field_L);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "kk.M(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + (param7 != null ? "{...}" : "null") + 41);
+        }
     }
 
     abstract boolean f(int param0);
@@ -32,9 +36,6 @@ abstract class kk extends qa {
     }
 
     public static void b(boolean param0) {
-        if (!param0) {
-            return;
-        }
         field_v = null;
         field_r = null;
         field_y = null;

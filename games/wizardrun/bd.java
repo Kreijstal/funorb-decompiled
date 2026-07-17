@@ -28,7 +28,7 @@ final class bd {
             gd.field_c = nk.field_N.f(255);
             nk.field_N.field_m = 0;
         }
-        if (!(1 != (gd.field_c ^ -1))) {
+        if (!(gd.field_c != -2)) {
             if (hc.a(2, -28266)) {
                 gd.field_c = nk.field_N.j(-14477);
                 nk.field_N.field_m = 0;
@@ -40,33 +40,15 @@ final class bd {
     }
 
     public static void c(int param0) {
-        Object var2 = null;
-        if (param0 != 1) {
-          var2 = null;
-          eb discarded$2 = bd.a((Throwable) null, (String) null);
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          return;
-        }
+        field_b = null;
+        field_a = null;
+        field_c = null;
     }
 
     final static void a(int param0) {
         kc.field_H = jl.c(4);
         u.field_A = new wi();
-        if (param0 > -26) {
-          field_b = null;
-          di.a(true, true, 117);
-          return;
-        } else {
-          di.a(true, true, 117);
-          return;
-        }
+        di.a(true, true, 117);
     }
 
     static {

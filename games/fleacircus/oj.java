@@ -17,7 +17,11 @@ final class oj extends lh {
     }
 
     oj(byte[] param0) {
-        ((oj) this).field_l = param0;
+        try {
+            ((oj) this).field_l = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {

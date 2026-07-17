@@ -47,67 +47,118 @@ final class od {
     }
 
     final static void a(dc param0, byte param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         dc var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var4 = Terraphoenix.field_V;
-        if (param0.field_h == null) {
-          return;
-        } else {
+        try {
           L0: {
-            L1: {
-              if (param0.field_f != 0) {
-                break L1;
-              } else {
-                if (param0.field_j == 0) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            var2 = 0;
-            L2: while (true) {
-              if (var2 >= am.field_J) {
-                break L0;
-              } else {
-                var3 = ra.field_i[var2];
-                if ((var3.field_l ^ -1) == -3) {
-                  if (var3.field_f == param0.field_f) {
-                    if (var3.field_j == param0.field_j) {
-                      return;
-                    } else {
-                      var2++;
-                      continue L2;
-                    }
+            if (param0.field_h == null) {
+              return;
+            } else {
+              L1: {
+                L2: {
+                  if (param0.field_f != 0) {
+                    break L2;
                   } else {
-                    var2++;
-                    continue L2;
+                    if (param0.field_j == 0) {
+                      break L1;
+                    } else {
+                      break L2;
+                    }
                   }
-                } else {
-                  var2++;
-                  continue L2;
+                }
+                var2_int = 0;
+                L3: while (true) {
+                  if (var2_int >= am.field_J) {
+                    break L1;
+                  } else {
+                    L4: {
+                      var3 = ra.field_i[var2_int];
+                      if (var3.field_l != 2) {
+                        break L4;
+                      } else {
+                        if (var3.field_f != param0.field_f) {
+                          break L4;
+                        } else {
+                          if (var3.field_j != param0.field_j) {
+                            break L4;
+                          } else {
+                            return;
+                          }
+                        }
+                      }
+                    }
+                    var2_int++;
+                    continue L3;
+                  }
                 }
               }
+              L5: {
+                if (param0.field_i != null) {
+                  break L5;
+                } else {
+                  break L5;
+                }
+              }
+              L6: {
+                if (param1 <= -92) {
+                  break L6;
+                } else {
+                  field_b = null;
+                  break L6;
+                }
+              }
+              jd.a(param0, (byte) -119);
+              break L0;
             }
           }
-          L3: {
-            if (param0.field_i != null) {
-              break L3;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var2 = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var2;
+            stackOut_20_1 = new StringBuilder().append("od.A(");
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param0 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L7;
             } else {
-              break L3;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L7;
             }
           }
-          L4: {
-            if (param1 <= -92) {
-              break L4;
-            } else {
-              field_b = null;
-              break L4;
-            }
-          }
-          jd.a(param0, (byte) -119);
-          return;
+          throw qk.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 41);
         }
     }
 
@@ -118,9 +169,6 @@ final class od {
         field_d = null;
         field_g = null;
         field_h = null;
-        if (param0 != 21) {
-            boolean discarded$0 = od.b(-64);
-        }
         field_c = null;
     }
 

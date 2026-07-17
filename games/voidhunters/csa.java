@@ -6,13 +6,13 @@ final class csa {
     static String field_b;
 
     final static void b(byte param0) {
-        int var1 = -44 % ((param0 - -41) / 58);
+        int var1 = 0;
     }
 
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
-        int var1 = -55 % ((67 - param0) / 55);
+        int var1 = 0;
     }
 
     static {

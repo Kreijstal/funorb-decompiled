@@ -21,11 +21,6 @@ final class cga extends vg {
     public static void a(boolean param0) {
         field_i = null;
         field_l = null;
-        if (!param0) {
-            boolean discarded$0 = cga.a(67, -110, -111);
-            field_g = null;
-            return;
-        }
         field_g = null;
     }
 

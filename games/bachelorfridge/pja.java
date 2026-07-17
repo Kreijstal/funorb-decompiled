@@ -12,7 +12,7 @@ final class pja {
 
     public static void a(byte param0) {
         field_f = null;
-        int var1 = -126 / ((param0 - -54) / 35);
+        int var1 = 126;
         field_e = null;
         field_a = null;
         field_b = null;
@@ -36,14 +36,12 @@ final class pja {
     }
 
     final static void a(boolean param0, int param1) {
-        ph.field_E = param1 * 100 / 150;
-        ph.field_G = 400 * param1 / 150;
+        ph.field_E = 33;
+        ph.field_G = 133;
         if (param0) {
-          return;
-        } else {
-          ph.field_D = (param1 << -306306736) / 150;
-          return;
+            return;
         }
+        ph.field_D = 21845;
     }
 
     static {

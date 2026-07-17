@@ -13,47 +13,76 @@ final class apb {
 
     final static boolean a(int param0) {
         mv var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         mv var5 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_20_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_16_0 = 0;
         var4 = VoidHunters.field_G;
-        var5 = (mv) (Object) tma.field_r.d(0);
-        var1 = var5;
-        if (var1 == null) {
-          return false;
-        } else {
-          var3 = 58 % ((param0 - -10) / 48);
-          var2 = 0;
-          L0: while (true) {
-            if (var2 >= var1.field_i) {
-              return true;
+        try {
+          L0: {
+            var5 = (mv) (Object) tma.field_r.d(0);
+            var1 = var5;
+            if (var1 == null) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
             } else {
-              L1: {
-                if (null == var5.field_g[var2]) {
-                  break L1;
+              var3 = 0;
+              var2 = 0;
+              L1: while (true) {
+                if (var2 >= var1.field_i) {
+                  stackOut_19_0 = 1;
+                  stackIn_20_0 = stackOut_19_0;
+                  break L0;
                 } else {
-                  if (var5.field_g[var2].field_f == 0) {
-                    return false;
-                  } else {
-                    break L1;
+                  L2: {
+                    if (null == var5.field_g[var2]) {
+                      break L2;
+                    } else {
+                      if (var5.field_g[var2].field_f == 0) {
+                        stackOut_10_0 = 0;
+                        stackIn_11_0 = stackOut_10_0;
+                        return stackIn_11_0 != 0;
+                      } else {
+                        break L2;
+                      }
+                    }
                   }
-                }
-              }
-              if (null != var5.field_e[var2]) {
-                if (0 == var5.field_e[var2].field_f) {
-                  return false;
-                } else {
+                  L3: {
+                    if (null != var5.field_e[var2]) {
+                      if (0 == var5.field_e[var2].field_f) {
+                        stackOut_16_0 = 0;
+                        stackIn_17_0 = stackOut_16_0;
+                        return stackIn_17_0 != 0;
+                      } else {
+                        break L3;
+                      }
+                    } else {
+                      break L3;
+                    }
+                  }
                   var2++;
-                  continue L0;
+                  continue L1;
                 }
-              } else {
-                var2++;
-                continue L0;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var1_ref, "apb.B(" + 57 + 41);
         }
+        return stackIn_20_0 != 0;
     }
 
     static {

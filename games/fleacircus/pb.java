@@ -13,78 +13,69 @@ final class pb {
     static dd field_c;
 
     final static void a(int param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
-        Object var4 = null;
-        bh var4_ref = null;
+        bh var4 = null;
         ll var5 = null;
-        var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = fleas.field_A ? 1 : 0;
-        if (param1 == 0) {
-          var4_ref = (bh) (Object) wi.field_j.c((byte) 47);
-          L0: while (true) {
-            if (var4_ref == null) {
-              var5 = (ll) (Object) jj.field_S.c((byte) 47);
-              L1: while (true) {
-                if (var5 == null) {
-                  return;
-                } else {
-                  ak.a(-14722, var5, param0);
-                  var5 = (ll) (Object) jj.field_S.b((byte) -105);
-                  continue L1;
+        try {
+          L0: {
+            var4 = (bh) (Object) wi.field_j.c((byte) 47);
+            L1: while (true) {
+              if (var4 == null) {
+                var5 = (ll) (Object) jj.field_S.c((byte) 47);
+                L2: while (true) {
+                  if (var5 == null) {
+                    break L0;
+                  } else {
+                    ak.a(-14722, var5, param0);
+                    var5 = (ll) (Object) jj.field_S.b((byte) -105);
+                    continue L2;
+                  }
                 }
+              } else {
+                s.a(-4471, param0, var4);
+                var4 = (bh) (Object) wi.field_j.b((byte) -105);
+                continue L1;
               }
-            } else {
-              s.a(param1 ^ -4471, param0, var4_ref);
-              var4_ref = (bh) (Object) wi.field_j.b((byte) -105);
-              continue L0;
             }
           }
-        } else {
-          field_b = null;
-          var4_ref = (bh) (Object) wi.field_j.c((byte) 47);
-          L2: while (true) {
-            if (var4_ref == null) {
-              var5 = (ll) (Object) jj.field_S.c((byte) 47);
-              L3: while (true) {
-                if (var5 == null) {
-                  return;
-                } else {
-                  ak.a(-14722, var5, param0);
-                  var5 = (ll) (Object) jj.field_S.b((byte) -105);
-                  continue L3;
-                }
-              }
-            } else {
-              s.a(param1 ^ -4471, param0, var4_ref);
-              var4_ref = (bh) (Object) wi.field_j.b((byte) -105);
-              continue L2;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var2, "pb.A(" + param0 + 44 + 0 + 41);
         }
     }
 
     final static void b(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
         var4 = fleas.field_A ? 1 : 0;
-        var1 = ed.field_c[0];
-        if (param0 <= 42) {
-          return;
-        } else {
-          var2 = 1;
-          L0: while (true) {
-            if (ed.field_c.length <= var2) {
-              return;
-            } else {
-              var3 = ed.field_c[var2];
-              dm.a(pk.field_J, var2 << 800311396, pk.field_J, var1, var3);
-              var1 = var1 + var3;
-              var2++;
-              continue L0;
+        try {
+          L0: {
+            var1_int = ed.field_c[0];
+            var2 = 1;
+            L1: while (true) {
+              if (ed.field_c.length <= var2) {
+                break L0;
+              } else {
+                var3 = ed.field_c[var2];
+                dm.a(pk.field_J, var2 << 4, pk.field_J, var1_int, var3);
+                var1_int = var1_int + var3;
+                var2++;
+                continue L1;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var1, "pb.B(" + 124 + 41);
         }
     }
 
@@ -96,9 +87,6 @@ final class pb {
         field_g = null;
         field_e = null;
         field_c = null;
-        if (param0 >= -80) {
-            field_c = null;
-        }
     }
 
     static {

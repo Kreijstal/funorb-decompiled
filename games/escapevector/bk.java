@@ -69,8 +69,8 @@ final class bk extends sb {
                         var4_ref3 = (s) (Object) ((bk) this).field_n.b((byte) -75);
                         if (var4_ref3 == null) {
                           L6: {
-                            if (-1 != (((bk) this).field_m ^ -1)) {
-                              try {
+                            if (((bk) this).field_m != 0) {
+                              {
                                 L7: {
                                   ((bk) this).field_e.field_m = 0;
                                   ((bk) this).field_e.f(4, -123);
@@ -78,27 +78,6 @@ final class bk extends sb {
                                   ((bk) this).field_e.a((byte) 125, 0);
                                   ((bk) this).field_t.a(((bk) this).field_e.field_g.length, 0, ((bk) this).field_e.field_g, 5000);
                                   break L7;
-                                }
-                              } catch (java.io.IOException decompiledCaughtParameter1) {
-                                decompiledCaughtException = decompiledCaughtParameter1;
-                                L8: {
-                                  var4_ref = (IOException) (Object) decompiledCaughtException;
-                                  try {
-                                    L9: {
-                                      ((bk) this).field_t.c(12497);
-                                      break L9;
-                                    }
-                                  } catch (java.lang.Exception decompiledCaughtParameter2) {
-                                    decompiledCaughtException = decompiledCaughtParameter2;
-                                    L10: {
-                                      var5 = (Exception) (Object) decompiledCaughtException;
-                                      break L10;
-                                    }
-                                  }
-                                  ((bk) this).field_g = ((bk) this).field_g + 1;
-                                  ((bk) this).field_d = -2;
-                                  ((bk) this).field_t = null;
-                                  break L8;
                                 }
                               }
                               break L6;
@@ -308,7 +287,7 @@ final class bk extends sb {
                 stackIn_13_0 = stackOut_12_0;
                 break L0;
               } else {
-                if ((param0 ^ -1) != (var5.field_n ^ -1)) {
+                if (~param0 != ~var5.field_n) {
                   var5 = (ij) (Object) qd.field_n.b((byte) 70);
                   continue L1;
                 } else {
@@ -407,7 +386,7 @@ final class bk extends sb {
         try {
           L0: {
             if (!param1) {
-              var3_int = param2 >>> 960105023;
+              var3_int = param2 >>> 31;
               stackOut_3_0 = (param2 - -var3_int) / param0 + -var3_int;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -454,7 +433,7 @@ final class bk extends sb {
         try {
           L0: {
             var1_ref = om.field_g;
-            var2 = var1_ref.e(param0 ^ 0);
+            var2 = var1_ref.e(param0);
             if (param0 == var2) {
               L1: {
                 if (null == ml.field_a) {
@@ -466,7 +445,7 @@ final class bk extends sb {
                 }
               }
               L2: {
-                if ((var1_ref.e(0) ^ -1) != -2) {
+                if (var1_ref.e(0) != 1) {
                   stackOut_11_0 = 0;
                   stackIn_12_0 = stackOut_11_0;
                   break L2;
@@ -526,7 +505,7 @@ final class bk extends sb {
               var5.field_ob = var4_ref_String;
               return;
             } else {
-              if ((var2 ^ -1) == -2) {
+              if (var2 == 1) {
                 L7: {
                   if (bm.field_b == null) {
                     bm.field_b = new nn(128);
@@ -617,9 +596,9 @@ final class bk extends sb {
                   return;
                 }
               } else {
-                if (-3 == (var2 ^ -1)) {
+                if (var2 == 2) {
                   L15: {
-                    if (-2 != (mi.field_g ^ -1)) {
+                    if (mi.field_g != 1) {
                       break L15;
                     } else {
                       mi.field_g = 2;
@@ -628,9 +607,9 @@ final class bk extends sb {
                   }
                   return;
                 } else {
-                  if ((var2 ^ -1) == -4) {
+                  if (var2 == 3) {
                     L16: {
-                      if ((mi.field_g ^ -1) != -3) {
+                      if (mi.field_g != 2) {
                         break L16;
                       } else {
                         mi.field_g = 1;
@@ -673,7 +652,7 @@ final class bk extends sb {
             try {
               L0: {
                 if (null != ((bk) this).field_t) {
-                  try {
+                  {
                     L1: {
                       ((bk) this).field_e.field_m = 0;
                       ((bk) this).field_e.f(6, -123);
@@ -682,27 +661,6 @@ final class bk extends sb {
                       ((bk) this).field_e.h(82, 0);
                       ((bk) this).field_t.a(((bk) this).field_e.field_g.length, 0, ((bk) this).field_e.field_g, 5000);
                       break L1;
-                    }
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L2: {
-                      var2 = (IOException) (Object) decompiledCaughtException;
-                      try {
-                        L3: {
-                          ((bk) this).field_t.c(12497);
-                          break L3;
-                        }
-                      } catch (java.lang.Exception decompiledCaughtParameter1) {
-                        decompiledCaughtException = decompiledCaughtParameter1;
-                        L4: {
-                          var3 = (Exception) (Object) decompiledCaughtException;
-                          break L4;
-                        }
-                      }
-                      ((bk) this).field_g = ((bk) this).field_g + 1;
-                      ((bk) this).field_d = -2;
-                      ((bk) this).field_t = null;
-                      break L2;
                     }
                   }
                   break L0;
@@ -772,7 +730,7 @@ final class bk extends sb {
                     var2_long = td.b(param0 + 4122);
                     var4 = (int)(-((bk) this).field_k + var2_long);
                     ((bk) this).field_k = var2_long;
-                    if (-201 <= (var4 ^ -1)) {
+                    if (var4 <= 200) {
                       break L1;
                     } else {
                       var4 = 200;
@@ -830,14 +788,14 @@ final class bk extends sb {
                         var2_int = 0;
                         L7: while (true) {
                           L8: {
-                            if (-101 >= (var2_int ^ -1)) {
+                            if (var2_int >= 100) {
                               break L8;
                             } else {
                               var3_int = ((bk) this).field_t.b(param0 + 3876);
                               if (var3_int < 0) {
                                 throw new IOException();
                               } else {
-                                if ((var3_int ^ -1) == -1) {
+                                if (var3_int == 0) {
                                   break L8;
                                 } else {
                                   L9: {
@@ -856,7 +814,7 @@ final class bk extends sb {
                                     }
                                   }
                                   L10: {
-                                    if (-1 > (var4 ^ -1)) {
+                                    if (var4 > 0) {
                                       L11: {
                                         var5 = var4 + -((bk) this).field_o.field_m;
                                         if (var3_int >= var5) {
@@ -868,7 +826,7 @@ final class bk extends sb {
                                       }
                                       L12: {
                                         ((bk) this).field_t.a(((bk) this).field_o.field_m, var5, ((bk) this).field_o.field_g, (byte) -49);
-                                        if ((((bk) this).field_m ^ -1) == -1) {
+                                        if (((bk) this).field_m == 0) {
                                           break L12;
                                         } else {
                                           var6 = 0;
@@ -884,12 +842,12 @@ final class bk extends sb {
                                         }
                                       }
                                       ((bk) this).field_o.field_m = ((bk) this).field_o.field_m + var5;
-                                      if ((((bk) this).field_o.field_m ^ -1) > (var4 ^ -1)) {
+                                      if (~((bk) this).field_o.field_m > ~var4) {
                                         break L10;
                                       } else {
                                         if (((bk) this).field_c != null) {
                                           if (0 == ((bk) this).field_c.field_F) {
-                                            if (0 == (((bk) this).field_o.field_g[0] ^ -1)) {
+                                            if (((bk) this).field_o.field_g[0] == -1) {
                                               ((bk) this).field_o.field_m = 0;
                                               ((bk) this).field_c.field_F = 1;
                                               break L10;
@@ -920,7 +878,7 @@ final class bk extends sb {
                                           }
                                           L15: {
                                             var11 = stackIn_89_0;
-                                            var12 = (long)var7 + ((long)var6 << 75841248);
+                                            var12 = (long)var7 + ((long)var6 << 32);
                                             var14 = null;
                                             if (var11 == 0) {
                                               var14_ref = (s) (Object) ((bk) this).field_l.a(0);
@@ -928,7 +886,7 @@ final class bk extends sb {
                                                 if (null == var14_ref) {
                                                   break L15;
                                                 } else {
-                                                  if ((var12 ^ -1L) != (var14_ref.field_p ^ -1L)) {
+                                                  if (~var12 != ~var14_ref.field_p) {
                                                     var14_ref = (s) (Object) ((bk) this).field_l.a((byte) -52);
                                                     continue L16;
                                                   } else {
@@ -957,7 +915,7 @@ final class bk extends sb {
                                           if (null != var14_ref) {
                                             L18: {
                                               ((bk) this).field_c = var14_ref;
-                                              if (-1 != (var10 ^ -1)) {
+                                              if (var10 != 0) {
                                                 stackOut_116_0 = 9;
                                                 stackIn_117_0 = stackOut_116_0;
                                                 break L18;
@@ -983,7 +941,7 @@ final class bk extends sb {
                                       L19: {
                                         var5 = ((bk) this).field_c.field_A.field_g.length - ((bk) this).field_c.field_y;
                                         var6 = -((bk) this).field_c.field_F + 512;
-                                        if ((-((bk) this).field_c.field_A.field_m + var5 ^ -1) <= (var6 ^ -1)) {
+                                        if (~(-((bk) this).field_c.field_A.field_m + var5) <= ~var6) {
                                           break L19;
                                         } else {
                                           var6 = var5 + -((bk) this).field_c.field_A.field_m;
@@ -991,7 +949,7 @@ final class bk extends sb {
                                         }
                                       }
                                       L20: {
-                                        if ((var6 ^ -1) < (var3_int ^ -1)) {
+                                        if (~var6 < ~var3_int) {
                                           var6 = var3_int;
                                           break L20;
                                         } else {
@@ -1003,7 +961,7 @@ final class bk extends sb {
                                         if (((bk) this).field_m != 0) {
                                           var7 = 0;
                                           L22: while (true) {
-                                            if ((var6 ^ -1) >= (var7 ^ -1)) {
+                                            if (~var6 >= ~var7) {
                                               break L21;
                                             } else {
                                               ((bk) this).field_c.field_A.field_g[var7 + ((bk) this).field_c.field_A.field_m] = (byte)n.a((int) ((bk) this).field_c.field_A.field_g[var7 + ((bk) this).field_c.field_A.field_m], (int) ((bk) this).field_m);
@@ -1017,8 +975,8 @@ final class bk extends sb {
                                       }
                                       ((bk) this).field_c.field_F = ((bk) this).field_c.field_F + var6;
                                       ((bk) this).field_c.field_A.field_m = ((bk) this).field_c.field_A.field_m + var6;
-                                      if ((var5 ^ -1) != (((bk) this).field_c.field_A.field_m ^ -1)) {
-                                        if ((((bk) this).field_c.field_F ^ -1) == -513) {
+                                      if (~var5 != ~((bk) this).field_c.field_A.field_m) {
+                                        if (((bk) this).field_c.field_F == 512) {
                                           ((bk) this).field_c.field_F = 0;
                                           break L10;
                                         } else {
@@ -1082,7 +1040,7 @@ final class bk extends sb {
                 ((bk) this).field_t = null;
                 ((bk) this).field_d = -2;
                 ((bk) this).field_g = ((bk) this).field_g + 1;
-                if ((((bk) this).a(true) ^ -1) != -1) {
+                if (((bk) this).a(true) != 0) {
                   break L25;
                 } else {
                   if (((bk) this).a((byte) 88) != 0) {
@@ -1142,7 +1100,7 @@ final class bk extends sb {
           L0: {
             if (param2 == 9) {
               if (null != param1) {
-                if ((param1.length ^ -1) >= -137) {
+                if (param1.length <= 136) {
                   if (param0) {
                     stackOut_12_0 = pn.a(param2 + -9, param1);
                     stackIn_13_0 = stackOut_12_0;

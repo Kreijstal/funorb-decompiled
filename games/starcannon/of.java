@@ -11,9 +11,6 @@ final class of extends rf {
     public static void a(boolean param0) {
         field_j = null;
         field_g = null;
-        if (!param0) {
-            field_j = null;
-        }
     }
 
     private of() throws Throwable {

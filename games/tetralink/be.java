@@ -180,7 +180,7 @@ final class be extends com.ms.dll.Callback {
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 == ((be) this).field_d) {
-          if (-33 != (param1 ^ -1)) {
+          if (param1 != 32) {
             if (param1 == 101024) {
               L0: {
                 if (((be) this).field_e) {
@@ -196,7 +196,7 @@ final class be extends com.ms.dll.Callback {
               int discarded$3 = com.ms.win32.User32.SetCursor(stackIn_23_0);
               return 0;
             } else {
-              if ((param1 ^ -1) == -2) {
+              if (param1 == 1) {
                 ((be) this).field_d = 0;
                 ((be) this).field_e = true;
                 return com.ms.win32.User32.CallWindowProc(((be) this).field_b, param0, param1, param2, param3);
@@ -222,7 +222,7 @@ final class be extends com.ms.dll.Callback {
                 int discarded$4 = com.ms.win32.User32.SetCursor(stackIn_13_0);
                 return 0;
               } else {
-                if ((param1 ^ -1) == -2) {
+                if (param1 == 1) {
                   ((be) this).field_d = 0;
                   ((be) this).field_e = true;
                   return com.ms.win32.User32.CallWindowProc(((be) this).field_b, param0, param1, param2, param3);

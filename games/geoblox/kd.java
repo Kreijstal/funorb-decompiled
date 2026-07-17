@@ -10,7 +10,7 @@ final class kd {
     static int field_c;
 
     public static void a(byte param0) {
-        int var1 = -73 % ((26 - param0) / 53);
+        int var1 = 0;
         field_e = null;
         field_a = null;
         field_d = null;

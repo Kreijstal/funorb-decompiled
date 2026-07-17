@@ -25,7 +25,7 @@ final class rj {
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         if (param0 == 28404) {
-          if (-11 >= (rk.field_e ^ -1)) {
+          if (rk.field_e >= 10) {
             if (fd.field_j) {
               return false;
             } else {
@@ -47,7 +47,7 @@ final class rj {
           }
         } else {
           rj.a(58);
-          if (-11 >= (rk.field_e ^ -1)) {
+          if (rk.field_e >= 10) {
             if (fd.field_j) {
               return false;
             } else {

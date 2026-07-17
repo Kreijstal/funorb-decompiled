@@ -50,7 +50,7 @@ final class gi {
     }
 
     public static void a(int param0) {
-        int var1 = -114 % ((param0 - -21) / 55);
+        int var1 = 0;
         field_d = null;
     }
 
@@ -75,11 +75,15 @@ final class gi {
     }
 
     final static void a(int param0, int param1, int param2, wl param3, int param4) {
-        param3.a(true, 12);
-        param3.d(-1, param2);
-        param3.d(-1, param4);
-        param3.d(-1, param0);
-        param3.a(true, param1);
+        try {
+            param3.a(true, 12);
+            param3.d(-1, param2);
+            param3.d(-1, param4);
+            param3.d(-1, param0);
+            param3.a(true, param1);
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "gi.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+        }
     }
 
     static {

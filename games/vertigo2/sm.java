@@ -37,12 +37,16 @@ final class sm extends cr {
 
     private sm(long param0, cr param1, cr param2, String param3) {
         super(param0, (cr) null);
-        ((sm) this).field_Hb = new cr(0L, param1);
-        ((sm) this).field_Jb = new cr(0L, param2);
-        ((sm) this).field_Jb.field_S = param3;
-        ((sm) this).b(((sm) this).field_Hb, 126);
-        ((sm) this).b(((sm) this).field_Jb, 121);
-        ((sm) this).i(-2147483648);
+        try {
+            ((sm) this).field_Hb = new cr(0L, param1);
+            ((sm) this).field_Jb = new cr(0L, param2);
+            ((sm) this).field_Jb.field_S = param3;
+            ((sm) this).b(((sm) this).field_Hb, 126);
+            ((sm) this).b(((sm) this).field_Jb, 121);
+            ((sm) this).i(-2147483648);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "sm.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -55,9 +59,13 @@ final class sm extends cr {
 
     sm(long param0, er param1, er param2, int param3, cr param4, String param5) {
         this(param0, (cr) null, param4, param5);
-        ((sm) this).field_Hb.field_Db = param2;
-        ((sm) this).field_Hb.field_ab = param3;
-        ((sm) this).field_Hb.field_mb = param1;
+        try {
+            ((sm) this).field_Hb.field_Db = param2;
+            ((sm) this).field_Hb.field_ab = param3;
+            ((sm) this).field_Hb.field_mb = param1;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "sm.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void k(int param0) {
@@ -90,9 +98,6 @@ final class sm extends cr {
     }
 
     public static void a(byte param0) {
-        if (param0 != 76) {
-            return;
-        }
         field_Ib = null;
         field_Kb = null;
     }

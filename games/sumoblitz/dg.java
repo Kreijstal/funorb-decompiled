@@ -123,15 +123,73 @@ final class dg extends ie {
     }
 
     final void a(byte param0, pk param1) {
-        if (!(param1 instanceof rg)) {
-            throw new IllegalArgumentException();
-        }
-        rg var3 = (rg) (Object) param1;
-        ((dg) this).field_z.a((ms) (Object) var3, -10295);
-        var3.field_D = true;
-        boolean discarded$5 = var3.a((pk) this, (byte) 61);
-        if (param0 <= 90) {
-            ((dg) this).field_z = null;
+        rg var3 = null;
+        RuntimeException var3_ref = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            if (!(param1 instanceof rg)) {
+              throw new IllegalArgumentException();
+            } else {
+              L1: {
+                var3 = (rg) (Object) param1;
+                ((dg) this).field_z.a((ms) (Object) var3, -10295);
+                var3.field_D = true;
+                boolean discarded$7 = var3.a((pk) this, (byte) 61);
+                if (param0 > 90) {
+                  break L1;
+                } else {
+                  ((dg) this).field_z = null;
+                  break L1;
+                }
+              }
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3_ref;
+            stackOut_6_1 = new StringBuilder().append("dg.F(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -165,12 +223,13 @@ final class dg extends ie {
           if (64 <= var0) {
             var0 = 0;
             L1: while (true) {
-              if ((var0 ^ -1) <= -65) {
+              if (var0 >= 64) {
                 var0 = 16711935 & field_B[63];
                 var1 = field_B[63] & 65280;
                 var2 = 0;
                 L2: while (true) {
-                  if ((var2 ^ -1) <= -3) {
+                  if (var2 >= 2) {
+                    return;
                   } else {
                     var3 = field_B[64 + var2];
                     var4 = -(256 * var2 / 2) + 256;
@@ -180,7 +239,7 @@ final class dg extends ie {
                     var6 = var6 * (256 - var4);
                     var5 = var5 + var0 * var4;
                     var6 = var6 + var1 * var4;
-                    var3 = (16711680 & var6 | -16711936 & var5) >>> 1579638600;
+                    var3 = (16711680 & var6 | -16711936 & var5) >>> 8;
                     field_B[64 + var2] = var3;
                     var2++;
                     continue L2;
@@ -190,7 +249,7 @@ final class dg extends ie {
                 var1 = 96 * var0 * var0 / 4096;
                 var2 = 32 * var0 * var0 * var0 / 262144;
                 var3 = var0 * var0 * 128 / 4096;
-                field_B[-var0 + 127] = (var2 << -163313464) + (var1 << 1698194544) + var3;
+                field_B[-var0 + 127] = (var2 << 8) + (var1 << 16) + var3;
                 var0++;
                 continue L1;
               }
@@ -199,7 +258,7 @@ final class dg extends ie {
             var1 = 192 * var0 * var0 / 4096;
             var2 = var0 * var0 * (var0 * var0) * 128 / 16777216;
             var3 = var0 * var0 * var0 * 255 / 262144;
-            field_B[var0] = var3 + ((var2 << -1866516056) + (var1 << -1220767536));
+            field_B[var0] = var3 + ((var2 << 8) + (var1 << 16));
             var0++;
             continue L0;
           }

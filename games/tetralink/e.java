@@ -14,9 +14,6 @@ final class e {
         field_b = null;
         field_f = null;
         field_a = null;
-        if (param0 <= 70) {
-            return;
-        }
         field_c = null;
         field_d = null;
     }
@@ -25,10 +22,14 @@ final class e {
         if (param1 != -92) {
             return;
         }
-        nm.field_o = new ve(param3);
-        ng.field_D = param0;
-        fl.field_b = param2;
-        ca.b(-69);
+        try {
+            nm.field_o = new ve(param3);
+            ng.field_D = param0;
+            fl.field_b = param2;
+            ca.b(-69);
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "e.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static kh[] a(byte param0) {

@@ -7,47 +7,11 @@ final class us {
     static String[] field_b;
 
     final static boolean b(int param0) {
-        if (param0 <= 74) {
-            return true;
-        }
         return oi.field_c.a((byte) 14);
     }
 
     final static boolean a(boolean param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (!param0) {
-          L0: {
-            us.a(125);
-            if (null == jl.field_b) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (null == jl.field_b) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return null != jl.field_b;
     }
 
     final static int a(int param0, byte param1) {
@@ -61,7 +25,7 @@ final class us {
         int stackOut_14_0 = 0;
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
-        var2 = -69 % ((param1 - -61) / 59);
+        var2 = -1;
         if (null != jf.field_C.field_T) {
           if ((4 & jf.field_C.field_vb.field_e[param0]) == 0) {
             return 0;

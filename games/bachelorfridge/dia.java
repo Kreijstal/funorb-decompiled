@@ -7,22 +7,34 @@ final class dia extends hf {
 
     private dia(String param0, qda param1, pl param2) {
         super(param0, param1, param2);
-        ((dia) this).field_f = fda.field_i.field_h;
+        try {
+            ((dia) this).field_f = fda.field_i.field_h;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "dia.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
         ((dia) this).field_B = !((dia) this).field_B ? true : false;
-        this.a(param0, param1, param2, param3);
+        super.a(param0, param1, param2, param3);
     }
 
     dia(String param0, pl param1, boolean param2) {
         this(param0, param1);
-        ((dia) this).field_B = param2 ? true : false;
+        try {
+            ((dia) this).field_B = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "dia.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     private dia(String param0, pl param1) {
         this(param0, fda.field_i.field_r, param1);
-        ((dia) this).field_f = fda.field_i.field_h;
+        try {
+            ((dia) this).field_f = fda.field_i.field_h;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "dia.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {

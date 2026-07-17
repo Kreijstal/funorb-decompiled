@@ -12,9 +12,13 @@ final class rj extends kc {
     static boolean field_n;
 
     final void a(ni param0, byte param1) {
-        param0.a(((rj) this).field_l, (byte) 81);
-        int var3 = 110 % ((param1 - -62) / 38);
-        param0.b(((rj) this).field_h, (byte) 94);
+        try {
+            param0.a(((rj) this).field_l, (byte) 81);
+            int var3_int = 110 % ((param1 - -62) / 38);
+            param0.b(((rj) this).field_h, (byte) 94);
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "rj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final uj a(boolean param0) {
@@ -26,8 +30,12 @@ final class rj extends kc {
     }
 
     rj(String param0, String param1) {
-        ((rj) this).field_h = param1;
-        ((rj) this).field_l = param0;
+        try {
+            ((rj) this).field_h = param1;
+            ((rj) this).field_l = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "rj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(byte param0) {

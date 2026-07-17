@@ -1283,11 +1283,11 @@ final class bi {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        bi.a(param0, param1, param2, param4, param5);
-        bi.a(param0, param1 + param3 - 1, param2, param4, param5);
+        bi.a(param0, param1, param2, param4, 32);
+        bi.a(param0, param1 + param3 - 1, param2, param4, 32);
         if (param3 >= 3) {
-            bi.g(param0, param1 + 1, param3 - 2, param4, param5);
-            bi.g(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+            bi.g(param0, param1 + 1, param3 - 2, param4, 32);
+            bi.g(param0 + param2 - 1, param1 + 1, param3 - 2, param4, 32);
             return;
         }
     }
@@ -2530,10 +2530,10 @@ final class bi {
                 break L0;
               }
             }
-            var6 = 256 - param5;
-            var7 = (param4 >> 16 & 255) * param5;
-            var8 = (param4 >> 8 & 255) * param5;
-            var9 = (param4 & 255) * param5;
+            var6 = 208;
+            var7 = (param4 >> 16 & 255) * 48;
+            var8 = (param4 >> 8 & 255) * 48;
+            var9 = (param4 & 255) * 48;
             if (param2 <= param3) {
               L1: {
                 param0 = param0 << 16;
@@ -2638,10 +2638,10 @@ final class bi {
           } else {
             L9: {
               if (param3 < 0) {
-                bi.g(param0, param1 + param3, -param3 + 1, param4, param5);
+                bi.g(param0, param1 + param3, -param3 + 1, param4, 48);
                 break L9;
               } else {
-                bi.g(param0, param1, param3 + 1, param4, param5);
+                bi.g(param0, param1, param3 + 1, param4, 48);
                 break L9;
               }
             }
@@ -2650,10 +2650,10 @@ final class bi {
         } else {
           L10: {
             if (param2 < 0) {
-              bi.a(param0 + param2, param1, -param2 + 1, param4, param5);
+              bi.a(param0 + param2, param1, -param2 + 1, param4, 48);
               break L10;
             } else {
-              bi.a(param0, param1, param2 + 1, param4, param5);
+              bi.a(param0, param1, param2 + 1, param4, 48);
               break L10;
             }
           }
@@ -2703,8 +2703,8 @@ final class bi {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            bi.a(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            bi.g(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            bi.a(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            bi.g(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 

@@ -42,7 +42,7 @@ class ba {
         kd var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = param1;
+          var3 = 256;
           if (!field_d) {
             break L0;
           } else {
@@ -52,7 +52,7 @@ class ba {
         }
         L1: {
           ri.a(param0, 0, var3);
-          ((ba) this).field_k = ((ba) this).field_k - param1;
+          ((ba) this).field_k = ((ba) this).field_k - 256;
           if (((ba) this).field_r == null) {
             break L1;
           } else {
@@ -86,7 +86,7 @@ class ba {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & (1 << var7_int ^ -1);
+                            var5 = var5 & ~(1 << var7_int);
                             var10 = null;
                             var11 = ((ba) this).field_t[var7_int];
                             var14 = var11;
@@ -219,7 +219,7 @@ class ba {
           if (((ba) this).field_r == null) {
             break L17;
           } else {
-            ((ba) this).field_r.b(param0, 0, param1);
+            ((ba) this).field_r.b(param0, 0, 256);
             break L17;
           }
         }
@@ -598,12 +598,12 @@ class ba {
     }
 
     private final void a(int param0) {
-        ((ba) this).field_k = ((ba) this).field_k - param0;
+        ((ba) this).field_k = ((ba) this).field_k - 256;
         if (((ba) this).field_k < 0) {
             ((ba) this).field_k = 0;
         }
         if (((ba) this).field_r != null) {
-            ((ba) this).field_r.a(param0);
+            ((ba) this).field_r.a(256);
             return;
         }
     }
@@ -630,7 +630,7 @@ class ba {
                 }
               }
               field_d = stackIn_7_0 != 0;
-              field_l = param2;
+              field_l = 10;
               return;
             } else {
               break L0;

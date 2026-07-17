@@ -31,7 +31,7 @@ final class epa extends wv {
     }
 
     final int g(int param0, int param1) {
-        if (!((param0 ^ -1) <= -4)) {
+        if (!(param0 >= 3)) {
             return -cq.field_d.field_w + ((epa) this).field_n;
         }
         if (param1 != 30) {
@@ -39,191 +39,162 @@ final class epa extends wv {
             if (!(param0 >= 5)) {
                 return ((epa) this).field_n - -((epa) this).e(0, 125) - cq.field_d.field_w;
             }
-            return ((param0 ^ -1) < -5 ? 30 : -1 + ((epa) this).field_m.length == param0 ? 60 : 30) + -cq.field_d.field_w + (((epa) this).field_n + (-2 + param0) * ((epa) this).field_i);
+            return (param0 > 4 ? 30 : -1 + ((epa) this).field_m.length == param0 ? 60 : 30) + -cq.field_d.field_w + (((epa) this).field_n + (-2 + param0) * ((epa) this).field_i);
         }
         if (!(param0 >= 5)) {
             return ((epa) this).field_n - -((epa) this).e(0, 125) - cq.field_d.field_w;
         }
-        return ((param0 ^ -1) < -5 ? 30 : -1 + ((epa) this).field_m.length == param0 ? 60 : 30) + -cq.field_d.field_w + (((epa) this).field_n + (-2 + param0) * ((epa) this).field_i);
+        return (param0 > 4 ? 30 : -1 + ((epa) this).field_m.length == param0 ? 60 : 30) + -cq.field_d.field_w + (((epa) this).field_n + (-2 + param0) * ((epa) this).field_i);
     }
 
     final static void a(int param0, byte param1, String param2) {
-        int var3 = 0;
-        if (param1 == -84) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        try {
           L0: {
-            gj.field_r = false;
-            nfa.field_p = false;
-            if (ci.field_l == null) {
-              break L0;
-            } else {
-              if (!ci.field_l.field_B) {
-                break L0;
+            L1: {
+              if (param1 == -84) {
+                break L1;
               } else {
-                L1: {
-                  var3 = 1;
-                  if ((param0 ^ -1) != -9) {
-                    break L1;
+                field_q = null;
+                break L1;
+              }
+            }
+            L2: {
+              gj.field_r = false;
+              nfa.field_p = false;
+              if (ci.field_l == null) {
+                break L2;
+              } else {
+                if (!ci.field_l.field_B) {
+                  break L2;
+                } else {
+                  L3: {
+                    var3_int = 1;
+                    if (param0 != 8) {
+                      break L3;
+                    } else {
+                      L4: {
+                        if (jf.field_r) {
+                          param2 = nda.field_d;
+                          break L4;
+                        } else {
+                          param2 = ria.field_n;
+                          break L4;
+                        }
+                      }
+                      param0 = 2;
+                      vn.field_b.a(jo.field_E, 123);
+                      break L3;
+                    }
+                  }
+                  L5: {
+                    if (param0 == 10) {
+                      ka.a((byte) -33);
+                      var3_int = 0;
+                      break L5;
+                    } else {
+                      break L5;
+                    }
+                  }
+                  L6: {
+                    if (var3_int != 0) {
+                      L7: {
+                        if (gj.field_r) {
+                          param2 = gl.a((byte) 94, nka.field_a, new String[1]);
+                          break L7;
+                        } else {
+                          break L7;
+                        }
+                      }
+                      L8: {
+                        if (bga.field_d) {
+                          param2 = mj.field_K;
+                          break L8;
+                        } else {
+                          break L8;
+                        }
+                      }
+                      ci.field_l.a(param0, (byte) 94, param2);
+                      break L6;
+                    } else {
+                      break L6;
+                    }
+                  }
+                  if (param0 == 256) {
+                    break L2;
                   } else {
-                    L2: {
+                    if (10 != param0) {
                       if (jf.field_r) {
-                        param2 = nda.field_d;
                         break L2;
                       } else {
-                        param2 = ria.field_n;
-                        break L2;
+                        vn.field_b.a((byte) -92);
+                        return;
                       }
-                    }
-                    param0 = 2;
-                    vn.field_b.a(jo.field_E, 123);
-                    break L1;
-                  }
-                }
-                L3: {
-                  if (param0 == 10) {
-                    ka.a((byte) -33);
-                    var3 = 0;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (var3 != 0) {
-                    L5: {
-                      if (gj.field_r) {
-                        param2 = gl.a((byte) 94, nka.field_a, new String[1]);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                    L6: {
-                      if (bga.field_d) {
-                        param2 = mj.field_K;
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    ci.field_l.a(param0, (byte) 94, param2);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                if ((param0 ^ -1) == -257) {
-                  break L0;
-                } else {
-                  if (10 != param0) {
-                    if (jf.field_r) {
-                      break L0;
                     } else {
-                      vn.field_b.a((byte) -92);
                       return;
                     }
-                  } else {
-                    return;
                   }
                 }
               }
             }
+            break L0;
           }
-          return;
-        } else {
-          field_q = null;
-          gj.field_r = false;
-          nfa.field_p = false;
-          if (ci.field_l != null) {
-            if (ci.field_l.field_B) {
-              L7: {
-                var3 = 1;
-                if ((param0 ^ -1) != -9) {
-                  break L7;
-                } else {
-                  L8: {
-                    if (jf.field_r) {
-                      param2 = nda.field_d;
-                      break L8;
-                    } else {
-                      param2 = ria.field_n;
-                      break L8;
-                    }
-                  }
-                  param0 = 2;
-                  vn.field_b.a(jo.field_E, 123);
-                  break L7;
-                }
-              }
-              L9: {
-                if (param0 == 10) {
-                  ka.a((byte) -33);
-                  var3 = 0;
-                  break L9;
-                } else {
-                  break L9;
-                }
-              }
-              L10: {
-                if (var3 != 0) {
-                  L11: {
-                    if (gj.field_r) {
-                      param2 = gl.a((byte) 94, nka.field_a, new String[1]);
-                      break L11;
-                    } else {
-                      break L11;
-                    }
-                  }
-                  L12: {
-                    if (bga.field_d) {
-                      param2 = mj.field_K;
-                      break L12;
-                    } else {
-                      break L12;
-                    }
-                  }
-                  ci.field_l.a(param0, (byte) 94, param2);
-                  break L10;
-                } else {
-                  break L10;
-                }
-              }
-              L13: {
-                if ((param0 ^ -1) == -257) {
-                  break L13;
-                } else {
-                  if (10 != param0) {
-                    if (jf.field_r) {
-                      break L13;
-                    } else {
-                      vn.field_b.a((byte) -92);
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              }
-              return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var3 = decompiledCaughtException;
+            stackOut_27_0 = (RuntimeException) var3;
+            stackOut_27_1 = new StringBuilder().append("epa.CA(").append(param0).append(44).append(param1).append(44);
+            stackIn_29_0 = stackOut_27_0;
+            stackIn_29_1 = stackOut_27_1;
+            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_1 = stackOut_27_1;
+            if (param2 == null) {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
+              break L9;
             } else {
-              return;
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "{...}";
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
+              break L9;
             }
-          } else {
-            return;
           }
+          throw tba.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
         }
     }
 
     final static en d(byte param0) {
-        if (param0 != -91) {
-            epa.d(15);
-            return kva.field_n;
-        }
         return kva.field_n;
     }
 
     final int a(int param0, byte param1) {
         if (param1 == -48) {
-          if (-1 == (param0 ^ -1)) {
+          if (param0 == 0) {
             return -110 + ((epa) this).field_f;
           } else {
             if (param0 != 1) {
@@ -254,7 +225,7 @@ final class epa extends wv {
           }
         } else {
           field_r = null;
-          if (-1 == (param0 ^ -1)) {
+          if (param0 == 0) {
             return -110 + ((epa) this).field_f;
           } else {
             if (param0 != 1) {
@@ -287,18 +258,18 @@ final class epa extends wv {
     }
 
     final int a(byte param0, int param1) {
-        if (-1 == (param1 ^ -1)) {
+        if (param1 == 0) {
           return ((epa) this).field_g + -80;
         } else {
-          if ((param1 ^ -1) != -2) {
+          if (param1 != 1) {
             if (param0 >= 111) {
-              if ((param1 ^ -1) != -3) {
+              if (param1 != 2) {
                 if (param1 != 3) {
                   if (4 == param1) {
                     return ((epa) this).field_g - -60;
                   } else {
                     if (param1 != 6) {
-                      if (-8 == (param1 ^ -1)) {
+                      if (param1 == 7) {
                         return ((epa) this).field_g + -10;
                       } else {
                         return ((epa) this).field_g;

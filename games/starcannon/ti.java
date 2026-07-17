@@ -22,40 +22,40 @@ abstract class ti {
 
     public static void a(byte param0) {
         field_f = null;
-        if (param0 != 13) {
-          int discarded$2 = ti.b(-127, 29);
-          field_b = null;
-          field_g = null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
-          field_b = null;
-          field_g = null;
-          field_a = null;
-          field_e = null;
-          return;
-        }
+        field_b = null;
+        field_g = null;
+        field_a = null;
+        field_e = null;
     }
 
     final static void a(int param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         rh var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = StarCannon.field_A;
-        var4 = (rh) (Object) a.field_f.c(-3905);
-        L0: while (true) {
-          if (var4 == null) {
-            if (param0 <= 32) {
-              field_d = false;
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            var4 = (rh) (Object) a.field_f.c(-3905);
+            L1: while (true) {
+              if (var4 == null) {
+                if (param0 > 32) {
+                  break L0;
+                } else {
+                  field_d = false;
+                  return;
+                }
+              } else {
+                ha.a(2, 121, var4);
+                var4 = (rh) (Object) a.field_f.a(-16913);
+                continue L1;
+              }
             }
-          } else {
-            ha.a(param1, 121, var4);
-            var4 = (rh) (Object) a.field_f.a(-16913);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var2, "ti.B(" + param0 + 44 + 2 + 41);
         }
     }
 

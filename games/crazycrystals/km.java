@@ -42,35 +42,24 @@ final class km {
     }
 
     final void a(byte param0, ij param1) {
-        if (param1.field_g == null) {
-          param1.field_g = ((km) this).field_a.field_g;
-          param1.field_j = ((km) this).field_a;
-          if (param0 < 69) {
+        if (param1.field_g != null) {
+            param1.a(1);
+        }
+        param1.field_g = ((km) this).field_a.field_g;
+        param1.field_j = ((km) this).field_a;
+        if (param0 < 69) {
             return;
-          } else {
+        }
+        try {
             param1.field_g.field_j = param1;
             param1.field_j.field_g = param1;
-            return;
-          }
-        } else {
-          param1.a(1);
-          param1.field_g = ((km) this).field_a.field_g;
-          param1.field_j = ((km) this).field_a;
-          if (param0 < 69) {
-            return;
-          } else {
-            param1.field_g.field_j = param1;
-            param1.field_j.field_g = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "km.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static boolean a(byte param0) {
-        if (param0 >= -95) {
-            return true;
-        }
-        return !gk.field_e.b(-45) ? true : false;
+        return !gk.field_e.b(-45);
     }
 
     final ij d(int param0) {

@@ -579,11 +579,11 @@ final class wb {
     }
 
     final static void g(int param0, int param1, int param2, int param3, int param4, int param5) {
-        wb.e(param0, param1, param2, param4, param5);
-        wb.e(param0, param1 + param3 - 1, param2, param4, param5);
+        wb.e(param0, param1, param2, param4, 64);
+        wb.e(param0, param1 + param3 - 1, param2, param4, 64);
         if (param3 >= 3) {
-            wb.a(param0, param1 + 1, param3 - 2, param4, param5);
-            wb.a(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+            wb.a(param0, param1 + 1, param3 - 2, param4, 64);
+            wb.a(param0 + param2 - 1, param1 + 1, param3 - 2, param4, 64);
             return;
         }
     }
@@ -1256,7 +1256,7 @@ final class wb {
     final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6 = 0;
         for (var6 = 0; var6 < param4; var6++) {
-            wb.d(param0 + var6, param1 + var6, param2 - (var6 << 1), param3 - (var6 << 1), param5);
+            wb.d(param0 + var6, param1 + var6, param2 - (var6 << 1), param3 - (var6 << 1), 1);
         }
     }
 

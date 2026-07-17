@@ -47,18 +47,18 @@ final class dg extends IOException {
               if (32 > param1) {
                 L0: {
                   L1: {
-                    if (-49 < (param1 ^ -1)) {
-                      if (-65 < (param1 ^ -1)) {
+                    if (param1 < 48) {
+                      if (param1 < 64) {
                         if (param1 == 80) {
                           break L1;
                         } else {
                           if (83 == param1) {
                             break L1;
                           } else {
-                            if ((param1 ^ -1) == -85) {
+                            if (param1 == 84) {
                               break L1;
                             } else {
-                              if (-86 == (param1 ^ -1)) {
+                              if (param1 == 85) {
                                 break L1;
                               } else {
                                 if (59 == param1) {
@@ -81,7 +81,7 @@ final class dg extends IOException {
                           }
                         }
                       } else {
-                        if (-74 <= (param1 ^ -1)) {
+                        if (param1 <= 73) {
                           break L1;
                         } else {
                           L2: {
@@ -92,10 +92,10 @@ final class dg extends IOException {
                                 if (83 == param1) {
                                   break L3;
                                 } else {
-                                  if ((param1 ^ -1) == -85) {
+                                  if (param1 == 84) {
                                     break L3;
                                   } else {
-                                    if (-86 == (param1 ^ -1)) {
+                                    if (param1 == 85) {
                                       break L3;
                                     } else {
                                       if (59 == param1) {
@@ -126,22 +126,22 @@ final class dg extends IOException {
                         }
                       }
                     } else {
-                      if ((param1 ^ -1) >= -59) {
+                      if (param1 <= 58) {
                         break L1;
                       } else {
                         L4: {
                           L5: {
-                            if (-65 < (param1 ^ -1)) {
+                            if (param1 < 64) {
                               if (param1 == 80) {
                                 break L5;
                               } else {
                                 if (83 == param1) {
                                   break L5;
                                 } else {
-                                  if ((param1 ^ -1) == -85) {
+                                  if (param1 == 84) {
                                     break L5;
                                   } else {
-                                    if (-86 == (param1 ^ -1)) {
+                                    if (param1 == 85) {
                                       break L5;
                                     } else {
                                       if (59 == param1) {
@@ -164,7 +164,7 @@ final class dg extends IOException {
                                 }
                               }
                             } else {
-                              if (-74 <= (param1 ^ -1)) {
+                              if (param1 <= 73) {
                                 break L5;
                               } else {
                                 L6: {
@@ -175,10 +175,10 @@ final class dg extends IOException {
                                       if (83 == param1) {
                                         break L7;
                                       } else {
-                                        if ((param1 ^ -1) == -85) {
+                                        if (param1 == 84) {
                                           break L7;
                                         } else {
-                                          if (-86 == (param1 ^ -1)) {
+                                          if (param1 == 85) {
                                             break L7;
                                           } else {
                                             if (59 == param1) {
@@ -224,20 +224,20 @@ final class dg extends IOException {
                 return stackIn_136_0 != 0;
               } else {
                 if (param1 > 43) {
-                  if (-49 < (param1 ^ -1)) {
+                  if (param1 < 48) {
                     L8: {
                       L9: {
-                        if (-65 < (param1 ^ -1)) {
+                        if (param1 < 64) {
                           if (param1 == 80) {
                             break L9;
                           } else {
                             if (83 == param1) {
                               break L9;
                             } else {
-                              if ((param1 ^ -1) == -85) {
+                              if (param1 == 84) {
                                 break L9;
                               } else {
-                                if (-86 == (param1 ^ -1)) {
+                                if (param1 == 85) {
                                   break L9;
                                 } else {
                                   if (59 == param1) {
@@ -260,7 +260,7 @@ final class dg extends IOException {
                             }
                           }
                         } else {
-                          if (-74 <= (param1 ^ -1)) {
+                          if (param1 <= 73) {
                             break L9;
                           } else {
                             L10: {
@@ -271,10 +271,10 @@ final class dg extends IOException {
                                   if (83 == param1) {
                                     break L11;
                                   } else {
-                                    if ((param1 ^ -1) == -85) {
+                                    if (param1 == 84) {
                                       break L11;
                                     } else {
-                                      if (-86 == (param1 ^ -1)) {
+                                      if (param1 == 85) {
                                         break L11;
                                       } else {
                                         if (59 == param1) {
@@ -311,14 +311,14 @@ final class dg extends IOException {
                     }
                     return stackIn_86_0 != 0;
                   } else {
-                    if ((param1 ^ -1) < -59) {
+                    if (param1 > 58) {
                       L12: {
                         L13: {
                           L14: {
-                            if (-65 < (param1 ^ -1)) {
+                            if (param1 < 64) {
                               break L14;
                             } else {
-                              if (-74 <= (param1 ^ -1)) {
+                              if (param1 <= 73) {
                                 break L13;
                               } else {
                                 break L14;
@@ -331,10 +331,10 @@ final class dg extends IOException {
                             if (83 == param1) {
                               break L13;
                             } else {
-                              if ((param1 ^ -1) == -85) {
+                              if (param1 == 84) {
                                 break L13;
                               } else {
-                                if (-86 == (param1 ^ -1)) {
+                                if (param1 == 85) {
                                   break L13;
                                 } else {
                                   if (59 == param1) {
@@ -379,10 +379,10 @@ final class dg extends IOException {
                         break L16;
                       } else {
                         L17: {
-                          if (-49 < (param1 ^ -1)) {
+                          if (param1 < 48) {
                             break L17;
                           } else {
-                            if ((param1 ^ -1) >= -59) {
+                            if (param1 <= 58) {
                               break L16;
                             } else {
                               break L17;
@@ -390,10 +390,10 @@ final class dg extends IOException {
                           }
                         }
                         L18: {
-                          if (-65 < (param1 ^ -1)) {
+                          if (param1 < 64) {
                             break L18;
                           } else {
-                            if (-74 <= (param1 ^ -1)) {
+                            if (param1 <= 73) {
                               break L16;
                             } else {
                               break L18;
@@ -406,10 +406,10 @@ final class dg extends IOException {
                           if (83 == param1) {
                             break L16;
                           } else {
-                            if ((param1 ^ -1) == -85) {
+                            if (param1 == 84) {
                               break L16;
                             } else {
-                              if (-86 == (param1 ^ -1)) {
+                              if (param1 == 85) {
                                 break L16;
                               } else {
                                 if (59 == param1) {
@@ -442,10 +442,10 @@ final class dg extends IOException {
                   L19: {
                     L20: {
                       L21: {
-                        if (-49 < (param1 ^ -1)) {
+                        if (param1 < 48) {
                           break L21;
                         } else {
-                          if ((param1 ^ -1) >= -59) {
+                          if (param1 <= 58) {
                             break L20;
                           } else {
                             break L21;
@@ -453,10 +453,10 @@ final class dg extends IOException {
                         }
                       }
                       L22: {
-                        if (-65 < (param1 ^ -1)) {
+                        if (param1 < 64) {
                           break L22;
                         } else {
-                          if (-74 <= (param1 ^ -1)) {
+                          if (param1 <= 73) {
                             break L20;
                           } else {
                             break L22;
@@ -469,10 +469,10 @@ final class dg extends IOException {
                         if (83 == param1) {
                           break L20;
                         } else {
-                          if ((param1 ^ -1) == -85) {
+                          if (param1 == 84) {
                             break L20;
                           } else {
-                            if (-86 == (param1 ^ -1)) {
+                            if (param1 == 85) {
                               break L20;
                             } else {
                               if (59 == param1) {
@@ -514,73 +514,172 @@ final class dg extends IOException {
     }
 
     final static boolean a(am param0, boolean param1) {
-        if (param1) {
-            return true;
+        RuntimeException var2 = null;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0.k(111, 1) != 1) {
+                stackOut_4_0 = 0;
+                stackIn_5_0 = stackOut_4_0;
+                break L1;
+              } else {
+                stackOut_3_0 = 1;
+                stackIn_5_0 = stackOut_3_0;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_1 = new StringBuilder().append("dg.B(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 41);
         }
-        return param0.k(111, 1) == 1 ? true : false;
+        return stackIn_5_0 != 0;
     }
 
     final static void a(java.awt.Canvas param0, int param1, boolean param2) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var4 = ZombieDawn.field_J;
-        if ((ld.field_j ^ -1) > -11) {
+        try {
           L0: {
-            var3 = 0;
-            if (nd.field_b) {
-              nd.field_b = false;
-              var3 = 1;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          ja.a(jb.a((byte) -58), ud.field_c, var3 != 0, dp.a(param1 + -103), (byte) -90);
-          if (param1 != 0) {
-            field_b = false;
-            return;
-          } else {
-            return;
-          }
-        } else {
-          if (!kk.a(param1 ^ -251)) {
-            bi.d();
-            dp.a(320, -12138, 240);
-            uh.a(40, 0, 0, param0);
-            if (param1 != 0) {
-              field_b = false;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (fl.field_a == 0) {
-              uo.a(false, -28518, param2);
-              uh.a(param1 ^ -120, 0, 0, param0);
-              if (param1 == 0) {
-                return;
+            L1: {
+              if (ld.field_j < 10) {
+                L2: {
+                  var3_int = 0;
+                  if (nd.field_b) {
+                    nd.field_b = false;
+                    var3_int = 1;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                ja.a(jb.a((byte) -58), ud.field_c, var3_int != 0, dp.a(param1 + -103), (byte) -90);
+                break L1;
               } else {
-                field_b = false;
-                return;
-              }
-            } else {
-              am.a(param0, (byte) -94);
-              if (param1 == 0) {
-                return;
-              } else {
-                field_b = false;
-                return;
+                if (!kk.a(param1 ^ -251)) {
+                  bi.d();
+                  dp.a(320, -12138, 240);
+                  uh.a(40, 0, 0, param0);
+                  break L1;
+                } else {
+                  if (fl.field_a == 0) {
+                    uo.a(false, -28518, param2);
+                    uh.a(param1 ^ -120, 0, 0, param0);
+                    break L1;
+                  } else {
+                    am.a(param0, (byte) -94);
+                    break L1;
+                  }
+                }
               }
             }
+            L3: {
+              if (param1 == 0) {
+                break L3;
+              } else {
+                field_b = false;
+                break L3;
+              }
+            }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var3;
+            stackOut_14_1 = new StringBuilder().append("dg.D(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
     final static int a(byte param0) {
-        if (param0 != -120) {
-            field_a = false;
-            return nl.field_s;
-        }
         return nl.field_s;
     }
 

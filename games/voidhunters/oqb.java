@@ -18,14 +18,14 @@ final class oqb extends le {
         int stackIn_6_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_5_0 = 0;
-        var4 = ((oqb) this).field_q * (param2 - -param0) >> -1354488756;
+        var4 = ((oqb) this).field_q * (param2 - -param0) >> 12;
         if (param1 == 1047718) {
           L0: {
             L1: {
-              var5 = jmb.field_q[(255 * var4 & 1046912) >> -422708276];
-              var5 = (var5 << -1205133428) / ((oqb) this).field_q;
-              var5 = (var5 << 800317100) / ((oqb) this).field_m;
-              var5 = ((oqb) this).field_p * var5 >> 425999628;
+              var5 = jmb.field_q[(255 * var4 & 1046912) >> 12];
+              var5 = (var5 << 12) / ((oqb) this).field_q;
+              var5 = (var5 << 12) / ((oqb) this).field_m;
+              var5 = ((oqb) this).field_p * var5 >> 12;
               if (var5 <= param2 - param0) {
                 break L1;
               } else {
@@ -142,7 +142,7 @@ final class oqb extends le {
             var4 = sj.field_p[param0] + -2048;
             var5 = 0;
             L2: while (true) {
-              if (var5 >= hob.field_d) {
+              if (~var5 <= ~hob.field_d) {
                 break L1;
               } else {
                 L3: {
@@ -160,7 +160,7 @@ final class oqb extends le {
                 }
                 L4: {
                   var7 = stackIn_8_0;
-                  if (-2049 <= var7) {
+                  if (var7 <= 2048) {
                     stackOut_10_0 = var7;
                     stackIn_11_0 = stackOut_10_0;
                     break L4;
@@ -173,7 +173,7 @@ final class oqb extends le {
                 L5: {
                   var7 = stackIn_11_0;
                   var8 = var4 + ((oqb) this).field_j;
-                  if (2047 > var8) {
+                  if (var8 < -2048) {
                     stackOut_13_0 = var8 - -4096;
                     stackIn_14_0 = stackOut_13_0;
                     break L5;
@@ -185,7 +185,7 @@ final class oqb extends le {
                 }
                 L6: {
                   var8 = stackIn_14_0;
-                  if (-2049 <= (var8 ^ -1)) {
+                  if (var8 <= 2048) {
                     stackOut_16_0 = var8;
                     stackIn_17_0 = stackOut_16_0;
                     break L6;
@@ -223,7 +223,7 @@ final class oqb extends le {
                 L9: {
                   var9 = stackIn_23_0;
                   var10 = var4 - -((oqb) this).field_i;
-                  if ((var10 ^ -1) <= 2047) {
+                  if (var10 >= -2048) {
                     stackOut_25_0 = var10;
                     stackIn_26_0 = stackOut_25_0;
                     break L9;
@@ -301,61 +301,109 @@ final class oqb extends le {
     public static void e(byte param0) {
         field_k = null;
         field_n = null;
-        if (param0 > -117) {
-            field_n = null;
-        }
     }
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        L0: {
-          var5 = VoidHunters.field_G;
-          var4 = param0;
-          if (var4 != 0) {
-            if (var4 == 1) {
-              ((oqb) this).field_j = param2.e(1869);
-              break L0;
-            } else {
-              if (-3 != var4) {
-                if (var4 != -4) {
-                  if (-5 == var4) {
-                    ((oqb) this).field_q = param2.e(1869);
-                    break L0;
-                  } else {
-                    if (5 != var4) {
-                      if (-7 == var4) {
-                        ((oqb) this).field_m = param2.e(1869);
-                        break L0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        var5 = VoidHunters.field_G;
+        try {
+          L0: {
+            L1: {
+              var4_int = param0;
+              if (var4_int != 0) {
+                if (var4_int == 1) {
+                  ((oqb) this).field_j = param2.e(1869);
+                  break L1;
+                } else {
+                  if (var4_int != 2) {
+                    if (var4_int != 3) {
+                      if (var4_int == 4) {
+                        ((oqb) this).field_q = param2.e(1869);
+                        break L1;
                       } else {
-                        break L0;
+                        if (5 != var4_int) {
+                          if (var4_int == 6) {
+                            ((oqb) this).field_m = param2.e(1869);
+                            break L1;
+                          } else {
+                            break L1;
+                          }
+                        } else {
+                          ((oqb) this).field_p = param2.e(1869);
+                          break L1;
+                        }
                       }
                     } else {
-                      ((oqb) this).field_p = param2.e(1869);
-                      break L0;
+                      ((oqb) this).field_i = param2.e(1869);
+                      break L1;
                     }
+                  } else {
+                    ((oqb) this).field_l = param2.e(1869);
+                    break L1;
                   }
-                } else {
-                  ((oqb) this).field_i = param2.e(1869);
-                  break L0;
                 }
               } else {
-                ((oqb) this).field_l = param2.e(1869);
-                break L0;
+                ((oqb) this).field_o = param2.e(1869);
+                break L1;
               }
             }
-          } else {
-            ((oqb) this).field_o = param2.e(1869);
+            L2: {
+              if (param1 <= -60) {
+                break L2;
+              } else {
+                int[] discarded$1 = ((oqb) this).a(116, true);
+                break L2;
+              }
+            }
             break L0;
           }
-        }
-        L1: {
-          if (param1 <= -60) {
-            break L1;
-          } else {
-            int[] discarded$1 = ((oqb) this).a(116, true);
-            break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_23_0 = (RuntimeException) var4;
+            stackOut_23_1 = new StringBuilder().append("oqb.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
+            if (param2 == null) {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L3;
+            } else {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L3;
+            }
           }
+          throw rta.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
         }
     }
 
@@ -365,14 +413,14 @@ final class oqb extends le {
         int stackIn_6_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_5_0 = 0;
-        var4 = (-param2 + param0) * ((oqb) this).field_q >> 619212300;
-        var5 = jmb.field_q[(var4 * 255 & 1047718) >> -1249142644];
-        var5 = (var5 << 807292172) / ((oqb) this).field_q;
+        var4 = (-param2 + param0) * ((oqb) this).field_q >> 12;
+        var5 = jmb.field_q[(var4 * 255 & 1047718) >> 12];
+        var5 = (var5 << 12) / ((oqb) this).field_q;
         if (param1 == -23429) {
           L0: {
             L1: {
-              var5 = (var5 << 85288460) / ((oqb) this).field_m;
-              var5 = var5 * ((oqb) this).field_p >> -1192175284;
+              var5 = (var5 << 12) / ((oqb) this).field_m;
+              var5 = var5 * ((oqb) this).field_p >> 12;
               if (var5 <= param2 - -param0) {
                 break L1;
               } else {

@@ -8,11 +8,6 @@ class nl extends gm {
 
     public static void b(int param0) {
         field_n = null;
-        if (param0 != 2147483647) {
-            field_n = null;
-            field_p = null;
-            return;
-        }
         field_p = null;
     }
 
@@ -21,13 +16,13 @@ class nl extends gm {
     }
 
     public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
-        if (param3) {
-          nn.a(param0.field_p, param0.field_r + param4, param0.field_q, (byte) -84, param1 + param0.field_v);
-          super.a(param0, param1, param2, param3, param4);
-          return;
-        } else {
-          super.a(param0, param1, param2, param3, param4);
-          return;
+        try {
+            if (param3) {
+                nn.a(param0.field_p, param0.field_r + param4, param0.field_q, (byte) -84, param1 + param0.field_v);
+            }
+            super.a(param0, param1, param2, param3, param4);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "nl.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

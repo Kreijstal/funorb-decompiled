@@ -9,10 +9,6 @@ final class im {
     static String field_a;
 
     final static fg a(int param0) {
-        if (param0 != 28357) {
-            im.a((byte) 91);
-            return u.field_g;
-        }
         return u.field_g;
     }
 

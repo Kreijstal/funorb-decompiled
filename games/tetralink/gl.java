@@ -42,16 +42,11 @@ final class gl extends ka {
         field_n = null;
         field_o = null;
         field_q = null;
-        if (param0 != 24943) {
-            field_n = null;
-            field_p = null;
-            return;
-        }
         field_p = null;
     }
 
     final static void a(byte param0, int param1) {
-        mb.field_B = 1000000000L / (long)param1;
+        mb.field_B = 20000000L;
         if (param0 <= 121) {
             field_p = null;
         }

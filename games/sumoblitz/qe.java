@@ -27,9 +27,6 @@ final class qe {
     }
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            field_a = null;
-        }
         field_b = null;
         field_a = null;
     }

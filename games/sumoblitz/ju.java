@@ -9,13 +9,11 @@ final class ju extends ua implements cr {
 
     public final void b(int param0) {
         if (param0 != 12001) {
-          boolean discarded$2 = ((ju) this).a(-31);
-          super.b(param0 + 0);
-          return;
-        } else {
-          super.b(param0 + 0);
-          return;
+            boolean discarded$0 = ((ju) this).a(-31);
+            super.b(param0);
+            return;
         }
+        super.b(param0);
     }
 
     public final boolean a(int param0) {
@@ -39,9 +37,6 @@ final class ju extends ua implements cr {
         wt.field_h[0] = ki.field_f;
         wt.field_h[2] = hc.field_f;
         pl.field_u = wt.field_h[1] + wt.field_h[0] - 2 + (wt.field_h[2] + -1);
-        if (param0 < 100) {
-            boolean discarded$0 = ju.b(46, -94);
-        }
     }
 
     final static boolean b(int param0, int param1) {
@@ -53,218 +48,59 @@ final class ju extends ua implements cr {
             Throwable decompiledCaughtException = null;
             int stackOut_12_0 = 0;
             int stackOut_14_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (ig.field_a.field_p < param1) {
-                            statePc = 2;
+            if (ig.field_a.field_p < param1) {
+              if (null == qk.field_O) {
+                return false;
+              } else {
+                try {
+                  L0: {
+                    var2_int = qk.field_O.c(param0 ^ 36);
+                    if (0 < var2_int) {
+                      L1: {
+                        if (-ig.field_a.field_p + param1 < var2_int) {
+                          var2_int = -ig.field_a.field_p + param1;
+                          break L1;
                         } else {
-                            statePc = 1;
+                          break L1;
                         }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        return true;
-                    }
-                    case 2: {
-                        if (null == qk.field_O) {
-                            statePc = 4;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return false;
-                    }
-                    case 5: {
-                        try {
-                            var2_int = qk.field_O.c(param0 ^ 36);
-                            if (0 < var2_int) {
-                                statePc = 7;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            statePc = 16;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            if (-ig.field_a.field_p + param1 < var2_int) {
-                                statePc = 9;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            var2_int = -ig.field_a.field_p + param1;
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            qk.field_O.a(param0 ^ 99, ig.field_a.field_p, var2_int, ig.field_a.field_n);
-                            jt.field_x = wq.a(-47);
-                            ig.field_a.field_p = ig.field_a.field_p + var2_int;
-                            if (ig.field_a.field_p < param1) {
-                                statePc = 12;
-                            } else {
-                                statePc = 11;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        try {
-                            statePc = 14;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        try {
-                            stackOut_12_0 = 0;
-                            stackIn_13_0 = stackOut_12_0;
-                            statePc = 13;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
+                      }
+                      qk.field_O.a(param0 ^ 99, ig.field_a.field_p, var2_int, ig.field_a.field_n);
+                      jt.field_x = wq.a(-47);
+                      ig.field_a.field_p = ig.field_a.field_p + var2_int;
+                      if (ig.field_a.field_p < param1) {
+                        stackOut_12_0 = 0;
+                        stackIn_13_0 = stackOut_12_0;
                         return stackIn_13_0 != 0;
-                    }
-                    case 14: {
-                        try {
-                            ig.field_a.field_p = 0;
-                            stackOut_14_0 = 1;
-                            stackIn_15_0 = stackOut_14_0;
-                            statePc = 15;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_14) {
-                            caughtException = stateCaught_14;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 15: {
+                      } else {
+                        ig.field_a.field_p = 0;
+                        stackOut_14_0 = 1;
+                        stackIn_15_0 = stackOut_14_0;
                         return stackIn_15_0 != 0;
-                    }
-                    case 16: {
-                        try {
-                            if ((var2_int ^ -1) > param0) {
-                                statePc = 19;
-                            } else {
-                                statePc = 17;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 17: {
-                        try {
-                            if (-30001L <= (uc.b(26560) ^ -1L)) {
-                                statePc = 21;
-                            } else {
-                                statePc = 18;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_17) {
-                            caughtException = stateCaught_17;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        try {
-                            statePc = 20;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        try {
-                            kk.a((byte) -118);
-                            return false;
-                        } catch (Throwable stateCaught_19) {
-                            caughtException = stateCaught_19;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 20: {
-                        try {
-                            kk.a((byte) -118);
-                            return false;
-                        } catch (Throwable stateCaught_20) {
-                            caughtException = stateCaught_20;
-                            statePc = 22;
-                            continue stateLoop;
-                        }
-                    }
-                    case 21: {
+                      }
+                    } else {
+                      if (~var2_int > param0) {
+                        kk.a((byte) -118);
                         return false;
+                      } else {
+                        if (uc.b(26560) <= 30000L) {
+                          break L0;
+                        } else {
+                          kk.a((byte) -118);
+                          return false;
+                        }
+                      }
                     }
-                    case 22: {
-                        var2 = (IOException) (Object) caughtException;
-                        kk.a((byte) -127);
-                        return false;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = (IOException) (Object) decompiledCaughtException;
+                  kk.a((byte) -127);
+                  return false;
                 }
+                return false;
+              }
+            } else {
+              return true;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -286,7 +122,11 @@ final class ju extends ua implements cr {
 
     ju(on param0, io param1, boolean param2) {
         super(param0, 34963, param2);
-        ((ju) this).field_o = param1;
+        try {
+            ((ju) this).field_o = param1;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "ju.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public final jaclib.memory.Buffer a(boolean param0, int param1) {

@@ -10,9 +10,6 @@ final class fs extends ci {
     private int[][] field_n;
 
     public static void c(int param0) {
-        if (param0 >= -91) {
-            field_p = null;
-        }
         field_p = null;
     }
 
@@ -33,13 +30,18 @@ final class fs extends ci {
     }
 
     final static void a(byte param0, long param1, String param2) {
-        wp.field_a = param2;
-        int var4 = 93 / ((param0 - -33) / 53);
-        bta.field_q = 2;
-        CharSequence var5 = (CharSequence) (Object) param2;
-        mn.field_n = jd.a(1, var5);
-        ica.field_b = param1;
-        bb.a(-21844);
+        CharSequence var5 = null;
+        try {
+            wp.field_a = param2;
+            int var4_int = 93 / ((param0 - -33) / 53);
+            bta.field_q = 2;
+            var5 = (CharSequence) (Object) param2;
+            mn.field_n = jd.a(1, var5);
+            ica.field_b = param1;
+            bb.a(-21844);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fs.G(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void d(byte param0) {
@@ -77,14 +79,14 @@ final class fs extends ci {
                 if (257 <= var2) {
                   break L0;
                 } else {
-                  var4 = var2 << -2038277884;
+                  var4 = var2 << 4;
                   var3 = 1;
                   L2: while (true) {
                     L3: {
                       if (-1 + ((fs) this).field_n.length <= var3) {
                         break L3;
                       } else {
-                        if (var4 < ((fs) this).field_n[var3][0]) {
+                        if (~var4 > ~((fs) this).field_n[var3][0]) {
                           break L3;
                         } else {
                           var3++;
@@ -95,11 +97,11 @@ final class fs extends ci {
                     L4: {
                       var24 = ((fs) this).field_n[-1 + var3];
                       var35 = ((fs) this).field_n[var3];
-                      var7 = (-var24[0] + var4 << -76075860) / (-var24[0] + var35[0]);
-                      var8 = 4096 - lm.field_r[var7 >> -1557130555 & 255] >> 463104865;
+                      var7 = (-var24[0] + var4 << 12) / (-var24[0] + var35[0]);
+                      var8 = 4096 - lm.field_r[var7 >> 5 & 255] >> 1;
                       var9 = -var8 + 4096;
-                      var10 = var8 * var35[1] + var9 * var24[1] >> 947813388;
-                      if (32767 > var10) {
+                      var10 = var8 * var35[1] + var9 * var24[1] >> 12;
+                      if (var10 > -32768) {
                         break L4;
                       } else {
                         var10 = -32767;
@@ -107,7 +109,7 @@ final class fs extends ci {
                       }
                     }
                     L5: {
-                      if (-32769 > var10) {
+                      if (var10 < 32768) {
                         break L5;
                       } else {
                         var10 = 32767;
@@ -126,7 +128,7 @@ final class fs extends ci {
                 if (257 <= var2) {
                   break L0;
                 } else {
-                  var4 = var2 << 516201444;
+                  var4 = var2 << 4;
                   var3 = 1;
                   L7: while (true) {
                     L8: {
@@ -144,10 +146,10 @@ final class fs extends ci {
                     L9: {
                       var26 = ((fs) this).field_n[var3 - 1];
                       var36 = ((fs) this).field_n[var3];
-                      var7 = (var4 - var26[0] << 204886124) / (var36[0] - var26[0]);
+                      var7 = (var4 - var26[0] << 12) / (var36[0] - var26[0]);
                       var8 = -var7 + 4096;
-                      var9 = var36[1] * var7 + var8 * var26[1] >> 2067492076;
-                      if ((var9 ^ -1) >= 32767) {
+                      var9 = var36[1] * var7 + var8 * var26[1] >> 12;
+                      if (var9 <= -32768) {
                         var9 = -32767;
                         break L9;
                       } else {
@@ -172,10 +174,10 @@ final class fs extends ci {
           } else {
             var2 = 0;
             L11: while (true) {
-              if (-258 >= (var2 ^ -1)) {
+              if (var2 >= 257) {
                 break L0;
               } else {
-                var4 = var2 << 782254020;
+                var4 = var2 << 4;
                 var3 = 1;
                 L12: while (true) {
                   L13: {
@@ -197,15 +199,15 @@ final class fs extends ci {
                     var8 = var22[1];
                     var9 = var34[1];
                     var10 = this.d(0, var3 + 1)[1];
-                    var11 = (-var22[0] + var4 << 1398147340) / (var34[0] + -var22[0]);
-                    var12 = var11 * var11 >> 260446764;
+                    var11 = (-var22[0] + var4 << 12) / (var34[0] + -var22[0]);
+                    var12 = var11 * var11 >> 12;
                     var13 = var8 + -var7 + (-var9 + var10);
                     var14 = -var13 + (var7 - var8);
                     var15 = var9 - var7;
                     var16 = var8;
-                    var17 = var12 * (var11 * var13 >> -223934260) >> 2111480108;
-                    var18 = var12 * var14 >> 1658844204;
-                    var19 = var11 * var15 >> 1198129004;
+                    var17 = var12 * (var11 * var13 >> 12) >> 12;
+                    var18 = var12 * var14 >> 12;
+                    var19 = var11 * var15 >> 12;
                     var20 = var16 + (var19 + (var17 - -var18));
                     if (-32768 >= var20) {
                       var20 = -32767;
@@ -253,11 +255,11 @@ final class fs extends ci {
         if (((fs) this).field_i.field_d) {
             var5 = ((fs) this).c(0, param0 ^ -33, param1);
             for (var6 = 0; var6 < ns.field_g; var6++) {
-                var4 = var5[var6] >> -2005568540;
+                var4 = var5[var6] >> 4;
                 if (0 > var4) {
                     var4 = 0;
                 }
-                if ((var4 ^ -1) < -257) {
+                if (var4 > 256) {
                     var4 = 256;
                 }
                 var8[var6] = ((fs) this).field_m[var4];
@@ -283,7 +285,7 @@ final class fs extends ci {
         if (2 > ((fs) this).field_n.length) {
             throw new RuntimeException("Curve operation requires at least two markers");
         }
-        if (-3 == (((fs) this).field_r ^ -1)) {
+        if (((fs) this).field_r == 2) {
             this.a(false);
         }
         tka.b((byte) 59);
@@ -291,33 +293,173 @@ final class fs extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
-        int var5 = TombRacer.field_G ? 1 : 0;
-        if (param2 == 0) {
-            ((fs) this).field_r = param1.h(255);
-            ((fs) this).field_n = new int[param1.h(255)][2];
-            for (var4 = 0; ((fs) this).field_n.length > var4; var4++) {
-                ((fs) this).field_n[var4][0] = param1.d(126);
-                ((fs) this).field_n[var4][1] = param1.d(126);
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param2 != 0) {
+                break L1;
+              } else {
+                ((fs) this).field_r = param1.h(255);
+                ((fs) this).field_n = new int[param1.h(255)][2];
+                var4_int = 0;
+                L2: while (true) {
+                  if (((fs) this).field_n.length <= var4_int) {
+                    break L1;
+                  } else {
+                    ((fs) this).field_n[var4_int][0] = param1.d(126);
+                    ((fs) this).field_n[var4_int][1] = param1.d(126);
+                    var4_int++;
+                    continue L2;
+                  }
+                }
+              }
             }
-        }
-        if (param0 != 107) {
-            ((fs) this).field_r = -36;
+            L3: {
+              if (param0 == 107) {
+                break L3;
+              } else {
+                ((fs) this).field_r = -36;
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("fs.A(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L4;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 41);
         }
     }
 
     final static boolean a(boolean param0, CharSequence param1) {
-        int var2 = 0;
-        int var3 = TombRacer.field_G ? 1 : 0;
-        if (!(ej.a(false, param0, param1))) {
-            return false;
-        }
-        for (var2 = 0; var2 < param1.length(); var2++) {
-            if (!ov.a(16, param1.charAt(var2))) {
-                return false;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_8_0 = 0;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var3 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            if (!ej.a(false, param0, param1)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              var2_int = 0;
+              L1: while (true) {
+                if (var2_int >= param1.length()) {
+                  stackOut_11_0 = 1;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L0;
+                } else {
+                  if (ov.a(16, param1.charAt(var2_int))) {
+                    var2_int++;
+                    continue L1;
+                  } else {
+                    stackOut_8_0 = 0;
+                    stackIn_9_0 = stackOut_8_0;
+                    return stackIn_9_0 != 0;
+                  }
+                }
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var2;
+            stackOut_13_1 = new StringBuilder().append("fs.E(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L2;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
-        return true;
+        return stackIn_12_0 != 0;
     }
 
     private final void a(boolean param0) {
@@ -327,9 +469,6 @@ final class fs extends ci {
         int[] var7 = var9;
         int[] var6 = var7;
         int[] var2 = var6;
-        if (param0) {
-            this.d((byte) -128);
-        }
         int[] var14 = ((fs) this).field_n[1];
         int[] var4 = ((fs) this).field_n[((fs) this).field_n.length - 2];
         int[] var5 = ((fs) this).field_n[((fs) this).field_n.length - 1];

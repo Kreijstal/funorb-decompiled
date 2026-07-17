@@ -172,10 +172,10 @@ class gm extends q {
                       break L5;
                     }
                   }
-                  if (-1 != (ul.field_d ^ -1)) {
+                  if (ul.field_d != 0) {
                     break L2;
                   } else {
-                    if ((v.field_b ^ -1) == -1) {
+                    if (v.field_b == 0) {
                       break L2;
                     } else {
                       L7: {
@@ -208,7 +208,7 @@ class gm extends q {
               if (var5_int == 0) {
                 break L2;
               } else {
-                if ((ta.field_o ^ -1) == -1) {
+                if (ta.field_o == 0) {
                   break L2;
                 } else {
                   ((gm) this).c((byte) 113);
@@ -381,7 +381,7 @@ class gm extends q {
                     } else {
                       var15 = 0;
                       L7: while (true) {
-                        if ((var15 ^ -1) <= (ia.field_i ^ -1)) {
+                        if (~var15 <= ~ia.field_i) {
                           break L6;
                         } else {
                           stackOut_9_0 = (5.0 + 1.5 * -go.field_w[var15] < var14[var15] * param5 ? -1 : (5.0 + 1.5 * -go.field_w[var15] == var14[var15] * param5 ? 0 : 1));
@@ -535,7 +535,7 @@ class gm extends q {
                 break L12;
               }
               L17: {
-                if (stackIn_58_0 != (var15 ^ -1)) {
+                if (stackIn_58_0 != ~var15) {
                   jb.a(param7, param6, param8, param3, param5, 25152);
                   break L17;
                 } else {
@@ -1715,16 +1715,16 @@ class gm extends q {
             if (param4 >= 57) {
               L1: {
                 L2: {
-                  if ((param2 - -((gm) this).field_w ^ -1) < (param1 ^ -1)) {
+                  if (~(param2 - -((gm) this).field_w) < ~param1) {
                     break L2;
                   } else {
                     if (((gm) this).field_k + param3 > param0) {
                       break L2;
                     } else {
-                      if ((((gm) this).field_p + (param2 + ((gm) this).field_w) ^ -1) >= (param1 ^ -1)) {
+                      if (~(((gm) this).field_p + (param2 + ((gm) this).field_w)) >= ~param1) {
                         break L2;
                       } else {
-                        if ((param0 ^ -1) <= (((gm) this).field_o + (param3 - -((gm) this).field_k) ^ -1)) {
+                        if (~param0 <= ~(((gm) this).field_o + (param3 - -((gm) this).field_k))) {
                           break L2;
                         } else {
                           stackOut_13_0 = 1;
@@ -1761,7 +1761,7 @@ class gm extends q {
           L0: {
             if (param1 <= -7) {
               L1: {
-                if ((param0 ^ -1) != -1) {
+                if (param0 != 0) {
                   break L1;
                 } else {
                   if (null == ((gm) this).field_q) {

@@ -221,7 +221,7 @@ final class ap {
     }
 
     final static double b(double[] param0, int param1, double[] param2, int param3) {
-        return ap.a(param0[param1], param0[param1 + 1], param0[param1 + 2], param2[param3], param2[param3 + 1], param2[param3 + 2]);
+        return ap.a(param0[param1], param0[param1 + 1], param0[param1 + 2], param2[0], param2[1], param2[2]);
     }
 
     final static int[] a(int[] param0, int[] param1) {
@@ -302,7 +302,7 @@ final class ap {
         param2 = param2 * 2;
         param3 = param3 * 2;
         param4 = param4 * 2;
-        param0[param1 + 0] = param2;
+        param0[param1] = param2;
         param0[param1 + 1] = param3;
         param0[param1 + 2] = param4;
     }

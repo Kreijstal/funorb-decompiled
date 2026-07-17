@@ -36,9 +36,6 @@ final class ek extends mc {
     }
 
     final static hl a(boolean param0) {
-        if (!param0) {
-            return null;
-        }
         return v.field_x.field_Pb;
     }
 

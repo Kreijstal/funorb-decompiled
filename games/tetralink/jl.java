@@ -20,45 +20,74 @@ final class jl {
 
     final static boolean a(boolean param0) {
         nm var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         nm var4 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_15_0 = 0;
         var3 = TetraLink.field_J;
-        var4 = (nm) (Object) bo.field_C.c(param0);
-        var1 = var4;
-        if (var1 == null) {
-          return false;
-        } else {
-          var2 = 0;
-          L0: while (true) {
-            if (var2 >= var1.field_r) {
-              return true;
+        try {
+          L0: {
+            var4 = (nm) (Object) bo.field_C.c(false);
+            var1 = var4;
+            if (var1 == null) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
             } else {
-              L1: {
-                if (null != var4.field_x[var2]) {
-                  if (-1 != (var4.field_x[var2].field_d ^ -1)) {
-                    break L1;
-                  } else {
-                    return false;
+              var2 = 0;
+              L1: while (true) {
+                if (var2 >= var1.field_r) {
+                  stackOut_18_0 = 1;
+                  stackIn_19_0 = stackOut_18_0;
+                  break L0;
+                } else {
+                  L2: {
+                    if (null != var4.field_x[var2]) {
+                      if (var4.field_x[var2].field_d != 0) {
+                        break L2;
+                      } else {
+                        stackOut_10_0 = 0;
+                        stackIn_11_0 = stackOut_10_0;
+                        return stackIn_11_0 != 0;
+                      }
+                    } else {
+                      break L2;
+                    }
                   }
-                } else {
-                  break L1;
-                }
-              }
-              if (null != var4.field_u[var2]) {
-                if (var4.field_u[var2].field_d == 0) {
-                  return false;
-                } else {
+                  L3: {
+                    if (null != var4.field_u[var2]) {
+                      if (var4.field_u[var2].field_d != 0) {
+                        break L3;
+                      } else {
+                        stackOut_15_0 = 0;
+                        stackIn_16_0 = stackOut_15_0;
+                        return stackIn_16_0 != 0;
+                      }
+                    } else {
+                      break L3;
+                    }
+                  }
                   var2++;
-                  continue L0;
+                  continue L1;
                 }
-              } else {
-                var2++;
-                continue L0;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw oi.a((Throwable) (Object) var1_ref, "jl.D(" + 0 + 41);
         }
+        return stackIn_19_0 != 0;
     }
 
     final static void a(int param0) {
@@ -90,23 +119,42 @@ final class jl {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = TetraLink.field_J;
-        ra.c(640 + -param1 >> 1484464961, param2 - param0 >> 699148417, param1, param0, 9408511);
-        for (var3 = -param0; (var3 ^ -1) > -1; var3 += 2) {
-            var4 = 640 * (var3 + (480 - -param0 >> -74386943)) + (640 - param1 >> 319873761);
-            var5 = param1;
-            while (true) {
-                var5--;
-                if (0 > var5) {
-                    break;
+        int var6 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var6 = TetraLink.field_J;
+        try {
+          L0: {
+            ra.c(640 + -param1 >> 1, 480 - param0 >> 1, param1, param0, 9408511);
+            var3_int = -param0;
+            L1: while (true) {
+              if (var3_int >= 0) {
+                break L0;
+              } else {
+                var4 = 640 * (var3_int + (480 - -param0 >> 1)) + (640 - param1 >> 1);
+                var5 = param1;
+                L2: while (true) {
+                  var5--;
+                  if (0 > var5) {
+                    var3_int += 2;
+                    continue L1;
+                  } else {
+                    int incrementValue$7 = var4;
+                    var4++;
+                    ra.field_b[incrementValue$7] = 11513855;
+                    continue L2;
+                  }
                 }
-                int incrementValue$0 = var4;
-                var4++;
-                ra.field_b[incrementValue$0] = 11513855;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw oi.a((Throwable) (Object) var3, "jl.B(" + param0 + 44 + param1 + 44 + 480 + 41);
         }
     }
 

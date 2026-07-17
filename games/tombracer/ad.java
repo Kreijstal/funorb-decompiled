@@ -51,7 +51,7 @@ final class ad extends vg {
     }
 
     public static void b(int param0) {
-        int var1 = -85 / ((42 - param0) / 45);
+        int var1 = -85;
         field_i = null;
         field_h = null;
         field_j = null;
@@ -66,49 +66,135 @@ final class ad extends vg {
         if (param0 != -64) {
             return true;
         }
-        return (((ad) this).field_f ^ -1) == 0 ? true : false;
+        return ((ad) this).field_f == -1 ? true : false;
     }
 
     final static up a(byte param0, kh param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         up var4 = null;
         Object var5 = null;
-        var2 = param1.b((byte) 44, 4);
-        if (param0 != 87) {
-          var5 = null;
-          up discarded$2 = ad.a((byte) -125, (kh) null);
-          var3 = param1.b((byte) 44, 10);
-          var4 = new up(var2, var3);
-          return var4;
-        } else {
-          var3 = param1.b((byte) 44, 10);
-          var4 = new up(var2, var3);
-          return var4;
+        up stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        up stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2_int = param1.b((byte) 44, 4);
+              if (param0 == 87) {
+                break L1;
+              } else {
+                var5 = null;
+                up discarded$2 = ad.a((byte) -125, (kh) null);
+                break L1;
+              }
+            }
+            var3 = param1.b((byte) 44, 10);
+            var4 = new up(var2_int, var3);
+            stackOut_2_0 = (up) var4;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("ad.E(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     final static boolean a(int param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        int stackIn_3_0 = 0;
+        int[] stackIn_6_0 = null;
+        int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int[] stackOut_4_0 = null;
+        int stackOut_12_0 = 0;
+        int stackOut_9_0 = 0;
+        int[] stackOut_5_0 = null;
+        int stackOut_2_0 = 0;
         var3 = TombRacer.field_G ? 1 : 0;
-        var2 = 0;
-        if (param0 == -13545) {
-          L0: while (true) {
-            if (bca.field_a.length > var2) {
-              if (param1 == bca.field_a[var2]) {
-                return true;
-              } else {
-                var2++;
-                continue L0;
+        try {
+          L0: {
+            var2_int = 0;
+            if (param0 == -13545) {
+              stackOut_4_0 = bca.field_a;
+              stackIn_6_0 = stackOut_4_0;
+              L1: while (true) {
+                if (stackIn_6_0.length <= var2_int) {
+                  stackOut_12_0 = 0;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L0;
+                } else {
+                  if (param1 == bca.field_a[var2_int]) {
+                    stackOut_9_0 = 1;
+                    stackIn_10_0 = stackOut_9_0;
+                    return stackIn_10_0 != 0;
+                  } else {
+                    var2_int++;
+                    stackOut_5_0 = bca.field_a;
+                    stackIn_6_0 = stackOut_5_0;
+                    continue L1;
+                  }
+                }
               }
             } else {
-              return false;
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var2, "ad.B(" + param0 + 44 + param1 + 41);
         }
+        return stackIn_13_0 != 0;
     }
 
     final void a(byte param0, boolean param1) {

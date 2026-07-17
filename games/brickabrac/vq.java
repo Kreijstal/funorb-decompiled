@@ -70,12 +70,13 @@ final class vq extends oq {
         field_D = new int[256];
         var1 = 0;
         L0: while (true) {
-          if ((var1 ^ -1) <= -257) {
+          if (var1 >= 256) {
             field_E = new String[]{"By rating", "By win percentage"};
             field_z = "Please send me news and updates (I can unsubscribe at any time)";
             field_J = null;
             field_B = new String[255];
             field_G = new int[8192];
+            return;
           } else {
             var0 = var1;
             var2 = 0;
@@ -86,7 +87,7 @@ final class vq extends oq {
                 continue L0;
               } else {
                 if ((var0 & 1) == 1) {
-                  var0 = var0 >>> 1273378209 ^ -306674912;
+                  var0 = var0 >>> 1 ^ -306674912;
                   var2++;
                   continue L1;
                 } else {

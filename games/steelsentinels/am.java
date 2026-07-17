@@ -36,14 +36,13 @@ final class am {
         mg.a(id.field_cc, 7411, 14);
         mg.a(ql.field_ac, 7411, 20);
         gd.field_sb = null;
-        if ((rd.field_b ^ -1) < -1) {
+        if (rd.field_b > 0) {
           mg.a(bj.field_b, 7411, 6);
           mg.a(ji.field_d, 7411, 8);
-          var1 = 111 / ((param0 - -35) / 35);
-          if (-1 > (rd.field_b ^ -1)) {
+          var1 = -111;
+          if (rd.field_b <= 0) {
             L0: {
-              mg.a(ra.field_c, 7411, 0);
-              mg.a(fa.field_c, 7411, 19);
+              mg.a(nc.field_h, 7411, 19);
               if (nk.f((byte) -128)) {
                 ti.field_A[34] = oe.field_l;
                 break L0;
@@ -65,7 +64,8 @@ final class am {
             return;
           } else {
             L2: {
-              mg.a(nc.field_h, 7411, 19);
+              mg.a(ra.field_c, 7411, 0);
+              mg.a(fa.field_c, 7411, 19);
               if (nk.f((byte) -128)) {
                 ti.field_A[34] = oe.field_l;
                 break L2;
@@ -89,11 +89,10 @@ final class am {
         } else {
           mg.a(od.field_k, 7411, 6);
           mg.a(ug.field_H, 7411, 8);
-          var1 = 111 / ((param0 - -35) / 35);
-          if (-1 > (rd.field_b ^ -1)) {
+          var1 = -111;
+          if (rd.field_b <= 0) {
             L4: {
-              mg.a(ra.field_c, 7411, 0);
-              mg.a(fa.field_c, 7411, 19);
+              mg.a(nc.field_h, 7411, 19);
               if (nk.f((byte) -128)) {
                 ti.field_A[34] = oe.field_l;
                 break L4;
@@ -115,7 +114,8 @@ final class am {
             return;
           } else {
             L6: {
-              mg.a(nc.field_h, 7411, 19);
+              mg.a(ra.field_c, 7411, 0);
+              mg.a(fa.field_c, 7411, 19);
               if (nk.f((byte) -128)) {
                 ti.field_A[34] = oe.field_l;
                 break L6;

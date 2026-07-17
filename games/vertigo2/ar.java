@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.net.URL;
+
 final class ar {
     private int field_i;
     private int field_j;
@@ -29,7 +31,7 @@ final class ar {
           return;
         } else {
           L0: {
-            if (-1 <= (q.field_y ^ -1)) {
+            if (q.field_y <= 0) {
               ((ar) this).field_b = false;
               break L0;
             } else {
@@ -79,8 +81,9 @@ final class ar {
               }
             }
           } else {
+            int fieldTemp$1 = ((ar) this).field_m - 1;
             ((ar) this).field_m = ((ar) this).field_m - 1;
-            if (((ar) this).field_m - 1 <= 0) {
+            if (fieldTemp$1 <= 0) {
               ((ar) this).field_m = ((ar) this).field_d;
               if (param0 == 16671) {
                 if (ci.field_a < ((ar) this).field_e) {
@@ -112,14 +115,14 @@ final class ar {
         if (param0 != 953354214) {
           ar.a(-18, (byte) -22, -75, 35, 98);
           var2.f(gd.field_j.field_uc, -116);
-          var4 = (gd.field_j.field_xc << 953354214) + gd.field_j.field_Ub;
+          var4 = (gd.field_j.field_xc << 6) + gd.field_j.field_Ub;
           var2.f(var4, -109);
           var2.a(0, -10140, gd.field_j.field_fc, gd.field_j.field_fc.length);
           var2.b((byte) 6, -var3 + var2.field_u);
           return;
         } else {
           var2.f(gd.field_j.field_uc, -116);
-          var4 = (gd.field_j.field_xc << 953354214) + gd.field_j.field_Ub;
+          var4 = (gd.field_j.field_xc << 6) + gd.field_j.field_Ub;
           var2.f(var4, -109);
           var2.a(0, -10140, gd.field_j.field_fc, gd.field_j.field_fc.length);
           var2.b((byte) 6, -var3 + var2.field_u);
@@ -128,69 +131,143 @@ final class ar {
     }
 
     final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {
-        String var3 = null;
-        String var4 = null;
-        if (param2 == 0) {
-          var3 = null;
-          var4 = null;
-          if (null != v.field_b) {
-            if (v.field_b.equals((Object) (Object) param0.getParameter("settings"))) {
-              L0: {
-                if (null == sm.field_Ib) {
-                  break L0;
-                } else {
-                  if (sm.field_Ib.equals((Object) (Object) param0.getParameter("session"))) {
-                    break L0;
-                  } else {
-                    var4 = sm.field_Ib;
-                    break L0;
-                  }
-                }
-              }
-              return vj.a(-1, var4, -116, var3, param1);
-            } else {
+        Object var3 = null;
+        Object var4 = null;
+        Object stackIn_2_0 = null;
+        java.net.URL stackIn_11_0 = null;
+        Object stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        Object stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        Object stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        Object stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        Object stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        Object stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        java.net.URL stackOut_10_0 = null;
+        Object stackOut_1_0 = null;
+        Object stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        Object stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        Object stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        Object stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        Object stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        Object stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        try {
+          L0: {
+            if (param2 == 0) {
               L1: {
-                var3 = v.field_b;
-                var4 = var3;
-                var4 = var3;
-                if (null == sm.field_Ib) {
+                var3 = null;
+                var4 = null;
+                if (null == v.field_b) {
                   break L1;
                 } else {
-                  if (sm.field_Ib.equals((Object) (Object) param0.getParameter("session"))) {
+                  if (!v.field_b.equals((Object) (Object) param0.getParameter("settings"))) {
+                    var3 = (Object) (Object) v.field_b;
+                    var4 = var3;
+                    var4 = var3;
                     break L1;
                   } else {
-                    var4 = sm.field_Ib;
                     break L1;
                   }
                 }
               }
-              return vj.a(-1, var4, -116, var3, param1);
-            }
-          } else {
-            L2: {
-              if (null == sm.field_Ib) {
-                break L2;
-              } else {
-                if (sm.field_Ib.equals((Object) (Object) param0.getParameter("session"))) {
+              L2: {
+                if (null == sm.field_Ib) {
                   break L2;
                 } else {
-                  var4 = sm.field_Ib;
-                  break L2;
+                  if (sm.field_Ib.equals((Object) (Object) param0.getParameter("session"))) {
+                    break L2;
+                  } else {
+                    var4 = (Object) (Object) sm.field_Ib;
+                    break L2;
+                  }
                 }
               }
+              stackOut_10_0 = vj.a(-1, (String) var4, -116, (String) var3, param1);
+              stackIn_11_0 = stackOut_10_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (java.net.URL) (Object) stackIn_2_0;
             }
-            return vj.a(-1, var4, -116, var3, param1);
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = (Object) (Object) decompiledCaughtException;
+            stackOut_12_0 = var3;
+            stackOut_12_1 = new StringBuilder().append("ar.E(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_15_0 = stackIn_15_0;
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L4;
+            } else {
+              stackOut_16_0 = stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L4;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 41);
         }
+        return stackIn_11_0;
     }
 
     public static void c(int param0) {
         field_c = null;
-        if (param0 != 0) {
-            return;
-        }
         field_a = null;
     }
 
@@ -243,7 +320,7 @@ final class ar {
         int var6 = 0;
         var6 = Vertigo2.field_L ? 1 : 0;
         var2 = ((ar) this).field_r;
-        var4 = 44 / ((param0 - -74) / 50);
+        var4 = -44;
         var3 = ((ar) this).field_n;
         if (!((ar) this).a(false)) {
           ((ar) this).field_b = false;

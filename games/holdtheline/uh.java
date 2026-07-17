@@ -16,7 +16,11 @@ final class uh {
     }
 
     final void a(int[] param0, int param1) {
-        this.a(((uh) this).field_b + 1, param0, 1, param0.length, param1);
+        try {
+            this.a(((uh) this).field_b + 1, param0, 1, param0.length, param1);
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "uh.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void b(int param0, byte param1) {
@@ -47,41 +51,29 @@ final class uh {
     }
 
     private final void a(int param0, int param1, byte param2) {
-        if (param0 <= ((uh) this).field_b) {
+        if (param0 > ((uh) this).field_b) {
           L0: {
-            if (((uh) this).field_a.length <= param0) {
-              this.a(0, param0);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (param2 >= -116) {
-            ((uh) this).b(-63, (byte) -29);
-            ((uh) this).field_a[param0] = param1;
-            return;
-          } else {
-            ((uh) this).field_a[param0] = param1;
-            return;
-          }
-        } else {
-          L1: {
             ((uh) this).field_b = param0;
             if (((uh) this).field_a.length <= param0) {
               this.a(0, param0);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          ((uh) this).field_a[param0] = param1;
+          return;
+        } else {
+          L1: {
+            if (((uh) this).field_a.length <= param0) {
+              this.a(0, param0);
               break L1;
             } else {
               break L1;
             }
           }
-          if (param2 < -116) {
-            ((uh) this).field_a[param0] = param1;
-            return;
-          } else {
-            ((uh) this).b(-63, (byte) -29);
-            ((uh) this).field_a[param0] = param1;
-            return;
-          }
+          ((uh) this).field_a[param0] = param1;
+          return;
         }
     }
 
@@ -93,14 +85,14 @@ final class uh {
         var3 = ((uh) this).field_a.length;
         L0: while (true) {
           if (param0 < var3) {
-            var4 = -18 % ((45 - param1) / 53);
+            var4 = 0;
             return var3;
           } else {
             if (!((uh) this).field_d) {
               var3 = var3 + ((uh) this).field_c;
               continue L0;
             } else {
-              if (-1 == (var3 ^ -1)) {
+              if (var3 == 0) {
                 var3 = 1;
                 continue L0;
               } else {
@@ -144,11 +136,15 @@ final class uh {
     }
 
     private final void a(int param0, int[] param1, int param2, int param3, int param4) {
-        if (!(((uh) this).field_b >= param3 + (param0 - param2))) {
-            ((uh) this).field_b = -1 + param3 + param0;
-            this.a(param2 ^ 1, param3 + (param0 - 1));
+        try {
+            if (!(((uh) this).field_b >= param3 + (param0 - param2))) {
+                ((uh) this).field_b = -1 + param3 + param0;
+                this.a(param2 ^ 1, param3 + (param0 - 1));
+            }
+            bc.a(param1, param4, ((uh) this).field_a, param0, param3);
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "uh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
-        bc.a(param1, param4, ((uh) this).field_a, param0, param3);
     }
 
     final int a(byte param0, int param1) {

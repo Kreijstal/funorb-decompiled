@@ -18,45 +18,83 @@ final class ek extends ji {
     }
 
     final void a(byte param0, int param1, ed param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
-        var4 = param1;
-        if (-1 != var4) {
-          if (-2 != var4) {
-            if (2 != var4) {
-              if (param0 != 110) {
-                ((ek) this).field_A = -105;
-                return;
+        try {
+          L0: {
+            L1: {
+              var4_int = param1;
+              if (var4_int != 0) {
+                if (var4_int != 1) {
+                  if (2 != var4_int) {
+                    break L1;
+                  } else {
+                    ((ek) this).field_A = param2.a((byte) -11);
+                    break L1;
+                  }
+                } else {
+                  ((ek) this).field_z = param2.a((byte) -11);
+                  break L1;
+                }
               } else {
-                return;
-              }
-            } else {
-              ((ek) this).field_A = param2.a((byte) -11);
-              if (param0 != 110) {
-                ((ek) this).field_A = -105;
-                return;
-              } else {
-                return;
+                ((ek) this).field_D = param2.a((byte) -11);
+                break L1;
               }
             }
-          } else {
-            ((ek) this).field_z = param2.a((byte) -11);
             if (param0 == 110) {
-              return;
+              break L0;
             } else {
               ((ek) this).field_A = -105;
               return;
             }
           }
-        } else {
-          ((ek) this).field_D = param2.a((byte) -11);
-          if (param0 == 110) {
-            return;
-          } else {
-            ((ek) this).field_A = -105;
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_1 = new StringBuilder().append("ek.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param2 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L2;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L2;
+            }
           }
+          throw wn.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
     }
 
@@ -121,9 +159,9 @@ final class ek extends ji {
                     if (var13 != var14) {
                       break L1;
                     } else {
-                      var8[var11] = ((ek) this).field_D * var12 >> 958971180;
-                      var9[var11] = ((ek) this).field_z * var13 >> -922777748;
-                      var10[var11] = var14 * ((ek) this).field_A >> -666316340;
+                      var8[var11] = ((ek) this).field_D * var12 >> 12;
+                      var9[var11] = ((ek) this).field_z * var13 >> 12;
+                      var10[var11] = var14 * ((ek) this).field_A >> 12;
                       var11++;
                       var11++;
                       var11++;

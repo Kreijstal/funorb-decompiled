@@ -14,9 +14,6 @@ final class fka extends bw {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != -2779) {
-            return;
-        }
         field_h = null;
     }
 

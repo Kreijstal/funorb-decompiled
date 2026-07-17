@@ -23,9 +23,6 @@ final class pl extends ld {
         field_o = null;
         field_m = null;
         field_i = null;
-        if (param0 != 256) {
-            return;
-        }
         field_s = null;
         field_j = null;
         field_l = null;
@@ -46,7 +43,7 @@ final class pl extends ld {
         if (!(null == bk.field_r)) {
             return bk.field_r.c(0);
         }
-        int var1 = -48 % ((param0 - 76) / 47);
+        int var1 = 0;
         return null;
     }
 
@@ -61,7 +58,7 @@ final class pl extends ld {
         field_l = new long[256];
         var2 = 0;
         L0: while (true) {
-          if ((var2 ^ -1) <= -257) {
+          if (var2 >= 256) {
             field_s = new String[]{"Retrieval - Normal", "Retrieval - Hard", "Retribution", "Simulator"};
             field_m = new om(4, 1, 1, 1);
             field_i = "Type your password again to make sure it's correct";
@@ -77,8 +74,8 @@ final class pl extends ld {
                 var2++;
                 continue L0;
               } else {
-                if ((var0 & 1L ^ -1L) == -2L) {
-                  var0 = var0 >>> 541030913 ^ -3932672073523589310L;
+                if ((var0 & 1L) == 1L) {
+                  var0 = var0 >>> 1 ^ -3932672073523589310L;
                   var3++;
                   continue L1;
                 } else {

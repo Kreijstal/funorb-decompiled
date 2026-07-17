@@ -9,10 +9,6 @@ final class tf extends wm {
     static String field_m;
 
     final static cr b(byte param0) {
-        if (param0 <= 90) {
-            field_l = null;
-            return uk.field_v.field_Nb;
-        }
         return uk.field_v.field_Nb;
     }
 
@@ -55,33 +51,27 @@ final class tf extends wm {
     }
 
     final static void a(int param0, String param1, int param2, String param3, int param4, int param5) {
-        mi var6 = null;
-        int var7 = 0;
-        int var8 = 0;
         mi var9 = null;
-        L0: {
-          var9 = uh.field_Wb;
-          var6 = var9;
-          var9.j(param4, 122);
-          var9.field_u = var9.field_u + 1;
-          var7 = var9.field_u;
-          var8 = 33 % ((-45 - param2) / 39);
-          var9.f(param0, 108);
-          if ((param0 ^ -1) == -3) {
-            var9.a((byte) 0, param1);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param3 == null) {
-          var9.d(param5, -1783);
-          var9.b((byte) 100, -var7 + var9.field_u);
-          return;
-        } else {
-          int discarded$2 = nj.a(param3, 7937, (ed) (Object) var9);
-          var9.b((byte) 100, -var7 + var9.field_u);
-          return;
+        int var7 = 0;
+        try {
+            var9 = uh.field_Wb;
+            mi var6 = var9;
+            var9.j(param4, 122);
+            var9.field_u = var9.field_u + 1;
+            var7 = var9.field_u;
+            int var8 = 33 % ((-45 - param2) / 39);
+            var9.f(param0, 108);
+            if (!(param0 != 2)) {
+                var9.a((byte) 0, param1);
+            }
+            if (param3 == null) {
+                var9.d(param5, -1783);
+            } else {
+                int discarded$0 = nj.a(param3, 7937, (ed) (Object) var9);
+            }
+            var9.b((byte) 100, -var7 + var9.field_u);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "tf.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
         }
     }
 

@@ -27,24 +27,48 @@ final class mo {
     boolean field_f;
 
     final int a(boolean param0) {
-        if (!param0) {
+        L0: {
+          if (param0) {
+            break L0;
+          } else {
             ((mo) this).field_q = null;
+            break L0;
+          }
         }
-        if (!((mo) this).field_f) {
-            // if_icmpne L46
-            // if_icmpgt L44
-        } else {
-            return 2;
-        }
-        if (oh.field_H == ((mo) this).field_n) {
-            return 1;
-        }
-        if (th.field_a == 2) {
-            if (jj.a(82, ((mo) this).field_m)) {
-                return 1;
+        L1: {
+          if (((mo) this).field_f) {
+            break L1;
+          } else {
+            L2: {
+              if (2 != ((mo) this).field_b) {
+                break L2;
+              } else {
+                if (((mo) this).field_p > 0) {
+                  break L1;
+                } else {
+                  break L2;
+                }
+              }
             }
+            if (oh.field_H != ((mo) this).field_n) {
+              L3: {
+                if (th.field_a != 2) {
+                  break L3;
+                } else {
+                  if (!jj.a(82, ((mo) this).field_m)) {
+                    break L3;
+                  } else {
+                    return 1;
+                  }
+                }
+              }
+              return 0;
+            } else {
+              return 1;
+            }
+          }
         }
-        return 0;
+        return 2;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
@@ -75,9 +99,6 @@ final class mo {
         field_o = null;
         field_t = null;
         field_i = null;
-        if (param0 != 0) {
-            boolean discarded$0 = mo.a(-123, 18, -64, -107, -63, (byte) 82, 91);
-        }
     }
 
     mo(boolean param0) {
@@ -100,18 +121,22 @@ final class mo {
     }
 
     mo(int param0, String param1, int param2, String param3, String param4) {
-        ((mo) this).field_m = param1;
-        ((mo) this).field_q = param1;
-        ((mo) this).field_f = true;
-        ((mo) this).field_n = 0L;
-        ((mo) this).field_k = param3;
-        ((mo) this).field_v = param2;
-        ((mo) this).field_p = 0;
-        ((mo) this).field_d = null;
-        ((mo) this).field_e = 0;
-        ((mo) this).field_b = param0;
-        ((mo) this).field_h = param4;
-        ((mo) this).field_a = 0;
+        try {
+            ((mo) this).field_m = param1;
+            ((mo) this).field_q = param1;
+            ((mo) this).field_f = true;
+            ((mo) this).field_n = 0L;
+            ((mo) this).field_k = param3;
+            ((mo) this).field_v = param2;
+            ((mo) this).field_p = 0;
+            ((mo) this).field_d = null;
+            ((mo) this).field_e = 0;
+            ((mo) this).field_b = param0;
+            ((mo) this).field_h = param4;
+            ((mo) this).field_a = 0;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "mo.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -7,18 +7,17 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
     volatile boolean field_a;
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
-        ((cq) this).field_a = true;
+        try {
+            ((cq) this).field_a = true;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "cq.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void update(java.awt.Graphics param0) {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            field_c = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
@@ -26,9 +25,6 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static nm a(int param0, int param1, int param2, int param3, byte param4) {
-        if (param4 != -113) {
-            return null;
-        }
         return new nm(param3, param1, param2, param0);
     }
 
@@ -36,7 +32,11 @@ final class cq extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final void a(boolean param0, wi param1) {
-        wj.a(((cq) this).field_b, param1, param0);
+        try {
+            wj.a(((cq) this).field_b, param1, param0);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "cq.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     cq() {

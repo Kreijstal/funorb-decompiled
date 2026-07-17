@@ -22,7 +22,7 @@ final class bm extends q {
     }
 
     public static void a(int param0) {
-        int var1 = -82 / ((param0 - 71) / 33);
+        int var1 = -82;
         field_l = null;
         field_j = null;
         field_r = null;

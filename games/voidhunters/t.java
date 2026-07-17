@@ -10,26 +10,34 @@ final class t {
     private long field_c;
 
     final void b(int param0, bra param1) {
-        ha var4 = param1.field_g;
-        ha var3 = var4;
-        var4.KA(((t) this).field_b[0], ((t) this).field_b[1], ((t) this).field_b[2], ((t) this).field_b[3]);
-        var4.DA(((t) this).field_d[0], ((t) this).field_d[param0], ((t) this).field_d[2], ((t) this).field_d[3]);
-        var3.f(((t) this).field_f, ((t) this).field_a);
-        param1.field_e = ((t) this).field_c;
+        ha var4 = null;
+        ha var3 = null;
+        try {
+            var4 = param1.field_g;
+            var3 = var4;
+            var4.KA(((t) this).field_b[0], ((t) this).field_b[1], ((t) this).field_b[2], ((t) this).field_b[3]);
+            var4.DA(((t) this).field_d[0], ((t) this).field_d[param0], ((t) this).field_d[2], ((t) this).field_d[3]);
+            var3.f(((t) this).field_f, ((t) this).field_a);
+            param1.field_e = ((t) this).field_c;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "t.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, bra param1) {
         ha var3 = null;
         if (param0 != 4) {
-          return;
-        } else {
-          var3 = param1.field_g;
-          var3.K(((t) this).field_b);
-          ((t) this).field_d = var3.Y();
-          ((t) this).field_f = var3.i();
-          ((t) this).field_a = var3.XA();
-          ((t) this).field_c = param1.field_e;
-          return;
+            return;
+        }
+        try {
+            var3 = param1.field_g;
+            var3.K(((t) this).field_b);
+            ((t) this).field_d = var3.Y();
+            ((t) this).field_f = var3.i();
+            ((t) this).field_a = var3.XA();
+            ((t) this).field_c = param1.field_e;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "t.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

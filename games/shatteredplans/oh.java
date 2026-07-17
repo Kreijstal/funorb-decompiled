@@ -35,7 +35,7 @@ class oh {
           return stackIn_8_0;
         } else {
           L1: {
-            if ((param0 ^ -1) > -2049) {
+            if (param0 < 2048) {
               stackOut_3_0 = br.field_o[2048 + -param0];
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -50,7 +50,7 @@ class oh {
     }
 
     final static void b(int param0) {
-        if (param0 != (gm.field_i ^ -1)) {
+        if (param0 != ~gm.field_i) {
           if (dh.a(-12165)) {
             oi.field_f = true;
             return;
@@ -69,12 +69,7 @@ class oh {
     }
 
     final static bg[] c(byte param0) {
-        if (param0 != -90) {
-          oh.a(false);
-          return new bg[]{og.field_b, dm.field_f, mj.field_Rb};
-        } else {
-          return new bg[]{og.field_b, dm.field_f, mj.field_Rb};
-        }
+        return new bg[]{og.field_b, dm.field_f, mj.field_Rb};
     }
 
     final void b(byte param0) {
@@ -115,28 +110,13 @@ class oh {
     }
 
     final static boolean b(boolean param0) {
-        if (param0) {
-          if (wg.field_f != null) {
-            if (!cs.field_j.a(64)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (wg.field_f == null) {
             return false;
-          }
-        } else {
-          field_d = null;
-          if (wg.field_f != null) {
-            if (!cs.field_j.a(64)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (!cs.field_j.a(64)) {
+            return false;
+        }
+        return true;
     }
 
     final boolean c(int param0) {

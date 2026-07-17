@@ -25,11 +25,6 @@ final class hh {
     public static void a(boolean param0) {
         field_c = null;
         field_a = null;
-        if (param0) {
-            hh.a(54, false);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

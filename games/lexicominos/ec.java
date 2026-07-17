@@ -25,17 +25,18 @@ final class ec implements Iterator {
 
     ec(bg param0) {
         ((ec) this).field_f = null;
-        ((ec) this).field_d = param0;
-        ((ec) this).field_f = null;
-        ((ec) this).field_a = ((ec) this).field_d.field_e.field_l;
+        try {
+            ((ec) this).field_d = param0;
+            ((ec) this).field_f = null;
+            ((ec) this).field_a = ((ec) this).field_d.field_e.field_l;
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "ec.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(boolean param0) {
         field_b = null;
         field_e = null;
-        if (!param0) {
-            field_b = null;
-        }
     }
 
     public final void remove() {
@@ -47,9 +48,6 @@ final class ec implements Iterator {
     }
 
     final static int a(int param0) {
-        if (param0 != -28617) {
-            return -26;
-        }
         return tb.field_b;
     }
 

@@ -15,15 +15,27 @@ final class ji extends java.awt.Canvas {
     }
 
     public final void update(java.awt.Graphics param0) {
-        ((ji) this).field_a.update(param0);
+        try {
+            ((ji) this).field_a.update(param0);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "ji.update(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void paint(java.awt.Graphics param0) {
-        ((ji) this).field_a.paint(param0);
+        try {
+            ((ji) this).field_a.paint(param0);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "ji.paint(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     ji(java.awt.Component param0) {
-        ((ji) this).field_a = param0;
+        try {
+            ((ji) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "ji.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

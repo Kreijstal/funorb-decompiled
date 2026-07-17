@@ -30,29 +30,33 @@ final class mg {
     }
 
     final static void a(ha param0, int param1) {
-        bo var2 = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var2 = fa.a(param0, true);
-        var3 = 40 + (vs.b(-112) + 40);
+        bo var2 = fa.a(param0, true);
+        int var3 = 40 + (vs.b(-112) + 40);
         if (param1 != 1150039905) {
-          return;
-        } else {
-          var4 = 40 + un.e(-107);
-          var5 = sh.field_u - var3 >> 290135073;
-          var6 = gp.field_w + -var4 >> 1150039905;
-          param0.d(var4, var3, var6, param1 ^ -1150034421, -65281, var5);
-          var2.a(var3 + var5, var5, var4 + var6, var6, param1 ^ 1150039868);
-          param0.SA(0, var6, vp.field_i, var4, vp.field_j, vp.field_i * var6, vp.field_i);
-          var2.a(true);
-          return;
+            return;
+        }
+        try {
+            var4 = 40 + un.e(-107);
+            var5 = sh.field_u - var3 >> 1;
+            var6 = gp.field_w + -var4 >> 1;
+            param0.d(var4, var3, var6, param1 ^ -1150034421, -65281, var5);
+            var2.a(var3 + var5, var5, var4 + var6, var6, param1 ^ 1150039868);
+            param0.SA(0, var6, vp.field_i, var4, vp.field_j, vp.field_i * var6, vp.field_i);
+            var2.a(true);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "mg.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     mg(ll[] param0) {
-        ((mg) this).field_c = (ll[]) param0;
+        try {
+            ((mg) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "mg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

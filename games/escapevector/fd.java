@@ -28,7 +28,11 @@ final class fd {
     }
 
     fd(ed[] param0) {
-        ((fd) this).field_c = param0;
+        try {
+            ((fd) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "fd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static boolean a(boolean param0, char param1) {

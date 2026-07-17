@@ -23,14 +23,7 @@ final class rc {
         field_g = null;
         field_a = null;
         field_e = null;
-        if (!param0) {
-          String discarded$2 = rc.b(false);
-          field_f = null;
-          return;
-        } else {
-          field_f = null;
-          return;
-        }
+        field_f = null;
     }
 
     static {

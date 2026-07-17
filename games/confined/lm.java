@@ -19,22 +19,19 @@ final class lm implements Iterable {
     }
 
     final void a(jl param0, int param1) {
-        L0: {
-          if (null != param0.field_q) {
+        if (!(null == param0.field_q)) {
             param0.b(true);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         if (param1 != 18425) {
-          return;
-        } else {
-          param0.field_o = ((lm) this).field_b;
-          param0.field_q = ((lm) this).field_b.field_q;
-          param0.field_q.field_o = param0;
-          param0.field_o.field_q = param0;
-          return;
+            return;
+        }
+        try {
+            param0.field_o = ((lm) this).field_b;
+            param0.field_q = ((lm) this).field_b.field_q;
+            param0.field_q.field_o = param0;
+            param0.field_o.field_q = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "lm.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

@@ -16,7 +16,7 @@ final class ca extends ek {
     final static void a(int param0, int param1) {
         ld var2 = sn.field_c;
         var2.d((byte) -112, param0);
-        var2.c(param1, 25564);
+        var2.c(1, 25564);
         var2.c(0, 25564);
     }
 
@@ -55,7 +55,7 @@ final class ca extends ek {
         long var2 = System.nanoTime();
         long var4 = -((ca) this).field_i + var2;
         ((ca) this).field_i = var2;
-        if ((var4 ^ -1L) < 4999999999L) {
+        if (var4 > -5000000000L) {
             if (5000000000L > var4) {
                 ((ca) this).field_d[((ca) this).field_l] = var4;
                 ((ca) this).field_l = (1 + ((ca) this).field_l) % 10;
@@ -64,11 +64,8 @@ final class ca extends ek {
                 }
             }
         }
-        if (param0) {
-            field_k = -30;
-        }
         long var6 = 0L;
-        for (var8 = 1; var8 <= ((ca) this).field_m; var8++) {
+        for (var8 = 1; ~var8 >= ~((ca) this).field_m; var8++) {
             var6 = var6 + ((ca) this).field_d[(10 + (((ca) this).field_l - var8)) % 10];
         }
         return var6 / (long)((ca) this).field_m;
@@ -80,36 +77,7 @@ final class ca extends ek {
     }
 
     final static boolean c(int param0) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 == -2302) {
-            break L0;
-          } else {
-            field_g = 123;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (rj.field_f == 12) {
-              break L2;
-            } else {
-              if (-14 != (rj.field_f ^ -1)) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                break L1;
-              } else {
-                break L2;
-              }
-            }
-          }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
-          break L1;
-        }
-        return stackIn_7_0 != 0;
+        return rj.field_f == 12 || rj.field_f == 13;
     }
 
     ca() {
@@ -135,7 +103,7 @@ final class ca extends ek {
             break L0;
           }
         }
-        if ((((ca) this).field_h ^ -1L) > (((ca) this).field_e ^ -1L)) {
+        if (~((ca) this).field_h > ~((ca) this).field_e) {
           ((ca) this).field_i = ((ca) this).field_i + (((ca) this).field_e - ((ca) this).field_h);
           ((ca) this).field_h = ((ca) this).field_h + (-((ca) this).field_h + ((ca) this).field_e);
           ((ca) this).field_e = ((ca) this).field_e + param1;
@@ -149,7 +117,7 @@ final class ca extends ek {
               if (var4 >= 10) {
                 break L2;
               } else {
-                if ((((ca) this).field_e ^ -1L) > (((ca) this).field_h ^ -1L)) {
+                if (~((ca) this).field_e > ~((ca) this).field_h) {
                   continue L1;
                 } else {
                   break L2;

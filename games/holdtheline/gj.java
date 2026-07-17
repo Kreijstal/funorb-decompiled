@@ -103,11 +103,6 @@ final class gj extends vj {
 
     public static void d(boolean param0) {
         field_v = null;
-        if (param0) {
-            field_s = null;
-            field_s = null;
-            return;
-        }
         field_s = null;
     }
 
@@ -127,7 +122,7 @@ final class gj extends vj {
         int var3 = 0;
         if (param1 < -5) {
           var3 = pf.a((byte) 35, param2);
-          if (-1 == (var3 ^ -1)) {
+          if (var3 == 0) {
             if (param2 == ao.field_b) {
               if (hk.field_d >= param0) {
                 return 0;
@@ -143,7 +138,7 @@ final class gj extends vj {
         } else {
           field_s = null;
           var3 = pf.a((byte) 35, param2);
-          if (-1 == (var3 ^ -1)) {
+          if (var3 == 0) {
             if (param2 == ao.field_b) {
               if (hk.field_d >= param0) {
                 return 0;
@@ -160,13 +155,17 @@ final class gj extends vj {
     }
 
     gj(qm param0, int param1, float param2, float param3, int param4, boolean param5, boolean param6) {
-        ((gj) this).field_q = param6 ? true : false;
-        ((gj) this).field_u = param1;
-        ((gj) this).field_t = param0;
-        ((gj) this).field_r = param2;
-        ((gj) this).field_p = param5 ? true : false;
-        ((gj) this).field_w = param3;
-        ((gj) this).field_k = param4;
+        try {
+            ((gj) this).field_q = param6 ? true : false;
+            ((gj) this).field_u = param1;
+            ((gj) this).field_t = param0;
+            ((gj) this).field_r = param2;
+            ((gj) this).field_p = param5 ? true : false;
+            ((gj) this).field_w = param3;
+            ((gj) this).field_k = param4;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "gj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     final boolean a(float param0, int param1) {

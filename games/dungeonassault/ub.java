@@ -21,7 +21,7 @@ final class ub extends ne {
         field_m = null;
         field_s = null;
         field_i = null;
-        int var1 = 35 / ((param0 - 65) / 36);
+        int var1 = 35;
         field_k = null;
         field_n = null;
         field_l = null;
@@ -44,7 +44,7 @@ final class ub extends ne {
                 stackIn_8_0 = stackOut_7_0;
                 break L0;
               } else {
-                if ((param1 ^ -1) != -3) {
+                if (param1 != 2) {
                   stackOut_6_0 = 9;
                   stackIn_8_0 = stackOut_6_0;
                   break L0;

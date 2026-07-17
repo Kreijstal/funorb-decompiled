@@ -10,18 +10,82 @@ final class owa extends le {
     private int field_m;
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
-        int var5 = VoidHunters.field_G;
-        if (param1 >= -60) {
-            return;
-        }
-        if (!(param0 != 0)) {
-            ((owa) this).field_m = param2.e((byte) -118);
-            ((owa) this).field_n = new int[param2.e((byte) -126)][2];
-            for (var4 = 0; var4 < ((owa) this).field_n.length; var4++) {
-                ((owa) this).field_n[var4][0] = param2.e(1869);
-                ((owa) this).field_n[var4][1] = param2.e(1869);
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        var5 = VoidHunters.field_G;
+        try {
+          L0: {
+            if (param1 < -60) {
+              L1: {
+                if (param0 == 0) {
+                  ((owa) this).field_m = param2.e((byte) -118);
+                  ((owa) this).field_n = new int[param2.e((byte) -126)][2];
+                  var4_int = 0;
+                  L2: while (true) {
+                    if (var4_int >= ((owa) this).field_n.length) {
+                      break L1;
+                    } else {
+                      ((owa) this).field_n[var4_int][0] = param2.e(1869);
+                      ((owa) this).field_n[var4_int][1] = param2.e(1869);
+                      var4_int++;
+                      continue L2;
+                    }
+                  }
+                } else {
+                  break L1;
+                }
+              }
+              break L0;
+            } else {
+              return;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var4;
+            stackOut_9_1 = new StringBuilder().append("owa.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param2 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
     }
 
@@ -53,20 +117,20 @@ final class owa extends le {
         L0: {
           var21 = VoidHunters.field_G;
           var2 = ((owa) this).field_m;
-          if (-3 == (var2 ^ -1)) {
+          if (var2 == 2) {
             var2 = 0;
             L1: while (true) {
-              if (-258 <= var2) {
+              if (var2 >= 257) {
                 break L0;
               } else {
-                var4 = var2 << -1097520924;
+                var4 = var2 << 4;
                 var3 = 1;
                 L2: while (true) {
                   L3: {
                     if (var3 >= -1 + ((owa) this).field_n.length) {
                       break L3;
                     } else {
-                      if (((owa) this).field_n[var3][0] <= var4) {
+                      if (~((owa) this).field_n[var3][0] >= ~var4) {
                         var3++;
                         continue L2;
                       } else {
@@ -81,17 +145,17 @@ final class owa extends le {
                     var8 = var22[1];
                     var9 = var34[1];
                     var10 = this.b(-128, 1 + var3)[1];
-                    var11 = (-var22[0] + var4 << -532228052) / (-var22[0] + var34[0]);
-                    var12 = var11 * var11 >> -581659892;
+                    var11 = (-var22[0] + var4 << 12) / (-var22[0] + var34[0]);
+                    var12 = var11 * var11 >> 12;
                     var13 = var8 + -var9 + var10 + -var7;
                     var14 = -var13 + (var7 + -var8);
                     var15 = -var7 + var9;
                     var16 = var8;
-                    var17 = var12 * (var11 * var13 >> -5711764) >> -1630854932;
-                    var18 = var14 * var12 >> -855898356;
-                    var19 = var15 * var11 >> 1912148716;
+                    var17 = var12 * (var11 * var13 >> 12) >> 12;
+                    var18 = var14 * var12 >> 12;
+                    var19 = var15 * var11 >> 12;
                     var20 = var17 - -var18 - (-var19 + -var16);
-                    if (var20 < 32767) {
+                    if (var20 > -32768) {
                       break L4;
                     } else {
                       var20 = -32767;
@@ -99,7 +163,7 @@ final class owa extends le {
                     }
                   }
                   L5: {
-                    if (-32769 > var20) {
+                    if (var20 < 32768) {
                       break L5;
                     } else {
                       var20 = 32767;
@@ -113,17 +177,17 @@ final class owa extends le {
               }
             }
           } else {
-            if (var2 == -2) {
+            if (var2 == 1) {
               var2 = 0;
               L6: while (true) {
                 if (257 <= var2) {
                   break L0;
                 } else {
-                  var4 = var2 << 1532966788;
+                  var4 = var2 << 4;
                   var3 = 1;
                   L7: while (true) {
                     L8: {
-                      if (((owa) this).field_n.length + -1 <= var3) {
+                      if (~(((owa) this).field_n.length + -1) >= ~var3) {
                         break L8;
                       } else {
                         if (var4 < ((owa) this).field_n[var3][0]) {
@@ -137,10 +201,10 @@ final class owa extends le {
                     L9: {
                       var24 = ((owa) this).field_n[-1 + var3];
                       var35 = ((owa) this).field_n[var3];
-                      var7 = (var4 - var24[0] << -1572169844) / (var35[0] + -var24[0]);
-                      var8 = 4096 - jmb.field_q[(var7 & 8165) >> 1425306245] >> 1894299905;
+                      var7 = (var4 - var24[0] << 12) / (var35[0] + -var24[0]);
+                      var8 = 4096 - jmb.field_q[(var7 & 8165) >> 5] >> 1;
                       var9 = 4096 + -var8;
-                      var10 = var9 * var24[1] - -(var35[1] * var8) >> -635227476;
+                      var10 = var9 * var24[1] - -(var35[1] * var8) >> 12;
                       if (var10 <= -32768) {
                         var10 = -32767;
                         break L9;
@@ -165,14 +229,14 @@ final class owa extends le {
             } else {
               var2 = 0;
               L11: while (true) {
-                if ((var2 ^ -1) <= -258) {
+                if (var2 >= 257) {
                   break L0;
                 } else {
-                  var4 = var2 << 1962773188;
+                  var4 = var2 << 4;
                   var3 = 1;
                   L12: while (true) {
                     L13: {
-                      if (var3 >= -1 + ((owa) this).field_n.length) {
+                      if (~var3 <= ~(-1 + ((owa) this).field_n.length)) {
                         break L13;
                       } else {
                         if (var4 >= ((owa) this).field_n[var3][0]) {
@@ -186,10 +250,10 @@ final class owa extends le {
                     L14: {
                       var26 = ((owa) this).field_n[-1 + var3];
                       var36 = ((owa) this).field_n[var3];
-                      var7 = (-var26[0] + var4 << -1415920980) / (-var26[0] + var36[0]);
+                      var7 = (-var26[0] + var4 << 12) / (-var26[0] + var36[0]);
                       var8 = -var7 + 4096;
-                      var9 = var8 * var26[1] - -(var36[1] * var7) >> -2109984212;
-                      if ((var9 ^ -1) >= 32767) {
+                      var9 = var8 * var26[1] - -(var36[1] * var7) >> 12;
+                      if (var9 <= -32768) {
                         var9 = -32767;
                         break L14;
                       } else {
@@ -233,7 +297,7 @@ final class owa extends le {
         int[] var14 = ((owa) this).field_n[1];
         int[] var4 = ((owa) this).field_n[-2 + ((owa) this).field_n.length];
         int[] var5 = ((owa) this).field_n[-1 + ((owa) this).field_n.length];
-        ((owa) this).field_l = new int[]{var4[0] + -var5[0] + var4[param0], var4[1] - (-var4[1] + var5[1])};
+        ((owa) this).field_l = new int[]{var4[0] + -var5[0] + var4[0], var4[1] - (-var4[1] + var5[1])};
         ((owa) this).field_k = new int[]{var13[0] + (var13[0] - var14[0]), var13[1] - var14[1] + var13[1]};
     }
 
@@ -247,11 +311,11 @@ final class owa extends le {
         if (!(!((owa) this).field_f.field_e)) {
             var5 = ((owa) this).a(0, param0, 255);
             for (var6 = 0; hob.field_d > var6; var6++) {
-                var4 = var5[var6] >> 482296324;
+                var4 = var5[var6] >> 4;
                 if (!(0 <= var4)) {
                     var4 = 0;
                 }
-                if (-257 > (var4 ^ -1)) {
+                if (var4 > 256) {
                     var4 = 256;
                 }
                 var8[var6] = ((owa) this).field_i[var4];
@@ -264,7 +328,7 @@ final class owa extends le {
     }
 
     private final int[] b(int param0, int param1) {
-        if (!(-1 >= (param1 ^ -1))) {
+        if (!(param1 >= 0)) {
             return ((owa) this).field_k;
         }
         int var3 = 67 % ((param0 - -78) / 43);

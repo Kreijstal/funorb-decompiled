@@ -19,13 +19,8 @@ final class hd extends uf {
         field_l = null;
         field_k = null;
         field_q = null;
-        if (param0 <= 79) {
-          return;
-        } else {
-          field_o = null;
-          field_m = null;
-          return;
-        }
+        field_o = null;
+        field_m = null;
     }
 
     hd(int param0) {

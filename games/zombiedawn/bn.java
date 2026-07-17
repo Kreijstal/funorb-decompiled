@@ -7258,11 +7258,11 @@ class bn extends ll {
         field_g = new long[11];
         var0 = 0;
         L0: while (true) {
-          if (-257 >= (var0 ^ -1)) {
+          if (var0 >= 256) {
             field_g[0] = 0L;
             var0 = 1;
             L1: while (true) {
-              if (-11 > (var0 ^ -1)) {
+              if (var0 > 10) {
                 return;
               } else {
                 var1 = var0 * 8 + -8;
@@ -7274,8 +7274,8 @@ class bn extends ll {
           } else {
             L2: {
               var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-              if ((var0 & 1 ^ -1) == -1) {
-                stackOut_5_0 = (long)(var1 >>> -2032988024);
+              if ((var0 & 1) == 0) {
+                stackOut_5_0 = (long)(var1 >>> 8);
                 stackIn_6_0 = stackOut_5_0;
                 break L2;
               } else {
@@ -7286,8 +7286,8 @@ class bn extends ll {
             }
             L3: {
               var2 = stackIn_6_0;
-              var4 = var2 << 111447233;
-              if ((var4 ^ -1L) > -257L) {
+              var4 = var2 << 1;
+              if (var4 < 256L) {
                 break L3;
               } else {
                 var4 = var4 ^ 285L;
@@ -7295,7 +7295,7 @@ class bn extends ll {
               }
             }
             L4: {
-              var6 = var4 << 201059393;
+              var6 = var4 << 1;
               if (var6 >= 256L) {
                 var6 = var6 ^ 285L;
                 break L4;
@@ -7305,7 +7305,7 @@ class bn extends ll {
             }
             L5: {
               var8 = var6 ^ var2;
-              var10 = var6 << 879820289;
+              var10 = var6 << 1;
               if (256L <= var10) {
                 var10 = var10 ^ 285L;
                 break L5;
@@ -7314,14 +7314,14 @@ class bn extends ll {
               }
             }
             var12 = var2 ^ var10;
-            field_h[0][var0] = id.a(var12, id.a(id.a(var8 << -2067629424, id.a(id.a(var2 << 466229664, id.a(id.a(var2 << -1721684560, var2 << -1008098696), var6 << -63141528)), var10 << -1792241960)), var4 << -1477537400));
+            field_h[0][var0] = id.a(var12, id.a(id.a(var8 << 16, id.a(id.a(var2 << 32, id.a(id.a(var2 << 48, var2 << 56), var6 << 40)), var10 << 24)), var4 << 8));
             var14 = 1;
             L6: while (true) {
               if (var14 >= 8) {
                 var0++;
                 continue L0;
               } else {
-                field_h[var14][var0] = id.a(field_h[-1 + var14][var0] << 14381304, field_h[var14 + -1][var0] >>> -1314414456);
+                field_h[var14][var0] = id.a(field_h[-1 + var14][var0] << 56, field_h[var14 + -1][var0] >>> 8);
                 var14++;
                 continue L6;
               }

@@ -16,9 +16,6 @@ final class kc {
         field_b = null;
         field_d = null;
         field_c = null;
-        if (param0) {
-            field_c = null;
-        }
     }
 
     static {

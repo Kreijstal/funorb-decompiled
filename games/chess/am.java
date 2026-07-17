@@ -30,16 +30,16 @@ final class am {
             } else {
               if (!la.a(0, param1)) {
                 L1: {
-                  if ((param1 ^ -1) == -46) {
+                  if (param1 == 45) {
                     break L1;
                   } else {
-                    if ((param1 ^ -1) == -161) {
+                    if (param1 == 160) {
                       break L1;
                     } else {
                       if (param1 == 32) {
                         break L1;
                       } else {
-                        if ((param1 ^ -1) != -96) {
+                        if (param1 != 95) {
                           var2_int = -76 % ((75 - param0) / 40);
                           stackOut_20_0 = 0;
                           stackIn_21_0 = stackOut_20_0;
@@ -101,7 +101,7 @@ final class am {
           try {
             L0: {
               var3_int = param0.j(111);
-              if ((param1 ^ -1) > (var3_int ^ -1)) {
+              if (~param1 > ~var3_int) {
                 var3_int = param1;
                 break L0;
               } else {
@@ -264,8 +264,8 @@ final class am {
         try {
           L0: {
             if (param2 < 0) {
-              var3_int = -1 + param1 & param0 >> -1915138465;
-              stackOut_3_0 = var3_int + ((param0 >>> -1533319873) + param0) % param1;
+              var3_int = -1 + param1 & param0 >> 31;
+              stackOut_3_0 = var3_int + ((param0 >>> 31) + param0) % param1;
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -449,10 +449,10 @@ final class am {
               var6.field_Fb = var4_ref_String;
               return;
             } else {
-              if ((var2 ^ -1) != -2) {
-                if ((var2 ^ -1) != -3) {
+              if (var2 != 1) {
+                if (var2 != 2) {
                   if (var2 != 3) {
-                    if (-5 != (var2 ^ -1)) {
+                    if (var2 != 4) {
                       fg.a((Throwable) null, (byte) -77, "F1: " + tm.b((byte) -128));
                       si.d(65280);
                       break L0;
@@ -466,7 +466,7 @@ final class am {
                     }
                   } else {
                     L9: {
-                      if (-3 == (ld.field_g ^ -1)) {
+                      if (ld.field_g == 2) {
                         ld.field_g = 1;
                         break L9;
                       } else {
@@ -477,7 +477,7 @@ final class am {
                   }
                 } else {
                   L10: {
-                    if (-2 == (ld.field_g ^ -1)) {
+                    if (ld.field_g == 1) {
                       ld.field_g = 2;
                       break L10;
                     } else {

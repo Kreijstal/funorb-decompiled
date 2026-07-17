@@ -18,48 +18,102 @@ final class wb extends w {
 
     final static void a(kc param0, int param1, int param2) {
         uf var3 = null;
-        var3 = we.field_b;
-        var3.f(param1, param2 + -64);
-        if (param2 != 60) {
-          field_Nb = null;
-          var3.a(true, 5);
-          var3.a(true, 0);
-          var3.d(param2 ^ -61, param0.field_n);
-          var3.a(true, param0.field_o);
-          var3.a(true, param0.field_v);
-          return;
-        } else {
-          var3.a(true, 5);
-          var3.a(true, 0);
-          var3.d(param2 ^ -61, param0.field_n);
-          var3.a(true, param0.field_o);
-          var3.a(true, param0.field_v);
-          return;
+        try {
+            var3 = we.field_b;
+            var3.f(param1, param2 + -64);
+            if (param2 != 60) {
+                field_Nb = null;
+            }
+            var3.a(true, 5);
+            var3.a(true, 0);
+            var3.d(param2 ^ -61, param0.field_n);
+            var3.a(true, param0.field_o);
+            var3.a(true, param0.field_v);
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "wb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
-            String var4 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             int var3 = 0;
+            String var4 = null;
             java.net.URL var5 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-                var2 = param0.getDocumentBase().getFile();
-                var4 = var2;
-                var4 = var2;
-                if (param1 != 30307) {
-                    field_Rb = 64;
+              try {
+                L0: {
+                  L1: {
+                    var2 = param0.getDocumentBase().getFile();
+                    var4 = var2;
+                    var4 = var2;
+                    var3 = var2.indexOf('?');
+                    var4 = "reload.ws";
+                    if (0 > var3) {
+                      break L1;
+                    } else {
+                      var4 = var4 + var2.substring(var3);
+                      break L1;
+                    }
+                  }
+                  var5 = new java.net.URL(param0.getCodeBase(), var4);
+                  param0.getAppletContext().showDocument(gn.a(var5, -1, param0), "_self");
+                  break L0;
                 }
-                var3 = var2.indexOf('?');
-                var4 = "reload.ws";
-                if (0 <= var3) {
-                    var4 = var4 + var2.substring(var3);
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
+                return;
+              }
+              return;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L2: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_1 = new StringBuilder().append("wb.C(");
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param0 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L2;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L2;
                 }
-                var5 = new java.net.URL(param0.getCodeBase(), var4);
-                param0.getAppletContext().showDocument(gn.a(var5, -1, param0), "_self");
-            } catch (Exception exception) {
-                exception.printStackTrace();
+              }
+              throw dh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 30307 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -69,191 +123,152 @@ final class wb extends w {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        L0: {
-          var12 = client.field_A ? 1 : 0;
-          if ((hk.field_c ^ -1) >= (param1 ^ -1)) {
-            break L0;
-          } else {
-            param5 = param5 - (-param1 + hk.field_c);
-            param1 = hk.field_c;
-            break L0;
-          }
-        }
-        L1: {
-          if ((param1 + param5 ^ -1) < (hk.field_g ^ -1)) {
-            param5 = hk.field_g + -param1;
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        L2: {
-          if (hk.field_h <= param3) {
-            break L2;
-          } else {
-            param2 = param2 - (-param3 + hk.field_h);
-            param3 = hk.field_h;
-            break L2;
-          }
-        }
-        L3: {
-          if (param3 + param2 <= hk.field_b) {
-            break L3;
-          } else {
-            param2 = -param3 + hk.field_b;
-            break L3;
-          }
-        }
-        if (0 >= param5) {
-          return;
-        } else {
-          if (param2 > 0) {
-            var6 = param3 * hk.field_j + param1;
-            if (param0 == 31) {
-              var7 = -param5 + hk.field_j;
-              param3 = -param2;
-              L4: while (true) {
-                if (-1 >= (param3 ^ -1)) {
-                  return;
-                } else {
-                  param1 = -param5;
-                  L5: while (true) {
-                    if (-1 >= (param1 ^ -1)) {
-                      var6 = var6 + var7;
-                      param3++;
-                      continue L4;
-                    } else {
-                      var8 = hk.field_l[var6];
-                      if ((65280 & var8) >> 1753310408 <= param4) {
-                        var6++;
-                        param1++;
-                        continue L5;
-                      } else {
-                        if ((255 & var8 >> 459642768 ^ -1) < (var8 >> -1566086360 & 255 ^ -1)) {
-                          var6++;
-                          param1++;
-                          continue L5;
-                        } else {
-                          L6: {
-                            var9 = ((16711680 & var8) >> -1904407857) - 60;
-                            if (-256 > (var9 ^ -1)) {
-                              var9 = 255;
-                              break L6;
-                            } else {
-                              break L6;
-                            }
-                          }
-                          var10 = var8 & 65280;
-                          var10 = (var10 >> -14574239) + -(var10 >> -1326998683) & 65280;
-                          var11 = 31 & var8 >> 44010979;
-                          hk.field_l[var6] = de.b(var11, de.b(var9 << -1621456400, var10));
-                          var6++;
-                          param1++;
-                          continue L5;
-                        }
-                      }
-                    }
-                  }
-                }
+        RuntimeException decompiledCaughtException = null;
+        var12 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (~hk.field_c >= ~param1) {
+                break L1;
+              } else {
+                param5 = param5 - (-param1 + hk.field_c);
+                param1 = hk.field_c;
+                break L1;
               }
-            } else {
-              field_Qb = null;
-              var7 = -param5 + hk.field_j;
-              param3 = -param2;
-              L7: while (true) {
-                if (-1 >= (param3 ^ -1)) {
-                  return;
-                } else {
-                  param1 = -param5;
-                  L8: while (true) {
-                    if (-1 >= (param1 ^ -1)) {
-                      var6 = var6 + var7;
-                      param3++;
-                      continue L7;
+            }
+            L2: {
+              if (~(param1 + param5) < ~hk.field_g) {
+                param5 = hk.field_g + -param1;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (hk.field_h <= param3) {
+                break L3;
+              } else {
+                param2 = param2 - (-param3 + hk.field_h);
+                param3 = hk.field_h;
+                break L3;
+              }
+            }
+            L4: {
+              if (param3 + param2 <= hk.field_b) {
+                break L4;
+              } else {
+                param2 = -param3 + hk.field_b;
+                break L4;
+              }
+            }
+            L5: {
+              if (0 >= param5) {
+                break L5;
+              } else {
+                if (param2 > 0) {
+                  L6: {
+                    var6_int = param3 * hk.field_j + param1;
+                    if (param0 == 31) {
+                      break L6;
                     } else {
-                      var8 = hk.field_l[var6];
-                      if ((65280 & var8) >> 1753310408 <= param4) {
-                        var6++;
-                        param1++;
-                        continue L8;
-                      } else {
-                        if ((255 & var8 >> 459642768 ^ -1) < (var8 >> -1566086360 & 255 ^ -1)) {
-                          var6++;
-                          param1++;
-                          continue L8;
+                      field_Qb = null;
+                      break L6;
+                    }
+                  }
+                  var7 = -param5 + hk.field_j;
+                  param3 = -param2;
+                  L7: while (true) {
+                    if (param3 >= 0) {
+                      break L0;
+                    } else {
+                      param1 = -param5;
+                      L8: while (true) {
+                        if (param1 >= 0) {
+                          var6_int = var6_int + var7;
+                          param3++;
+                          continue L7;
                         } else {
-                          L9: {
-                            var9 = ((16711680 & var8) >> -1904407857) - 60;
-                            if (-256 > (var9 ^ -1)) {
-                              var9 = 255;
-                              break L9;
+                          var8 = hk.field_l[var6_int];
+                          if ((65280 & var8) >> 8 <= param4) {
+                            var6_int++;
+                            param1++;
+                            continue L8;
+                          } else {
+                            if (~(255 & var8 >> 16) < ~(var8 >> 8 & 255)) {
+                              var6_int++;
+                              param1++;
+                              continue L8;
                             } else {
-                              break L9;
+                              L9: {
+                                var9 = ((16711680 & var8) >> 15) - 60;
+                                if (var9 > 255) {
+                                  var9 = 255;
+                                  break L9;
+                                } else {
+                                  break L9;
+                                }
+                              }
+                              var10 = var8 & 65280;
+                              var10 = (var10 >> 1) + -(var10 >> 5) & 65280;
+                              var11 = 31 & var8 >> 3;
+                              hk.field_l[var6_int] = de.b(var11, de.b(var9 << 16, var10));
+                              var6_int++;
+                              param1++;
+                              continue L8;
                             }
                           }
-                          var10 = var8 & 65280;
-                          var10 = (var10 >> -14574239) + -(var10 >> -1326998683) & 65280;
-                          var11 = 31 & var8 >> 44010979;
-                          hk.field_l[var6] = de.b(var11, de.b(var9 << -1621456400, var10));
-                          var6++;
-                          param1++;
-                          continue L8;
                         }
                       }
                     }
                   }
+                } else {
+                  break L5;
                 }
               }
             }
-          } else {
             return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw dh.a((Throwable) (Object) var6, "wb.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
     public static void e(int param0) {
-        if (param0 >= -73) {
-          field_Zb = null;
-          field_Qb = null;
-          field_Zb = null;
-          field_Nb = null;
-          field_Ub = null;
-          return;
-        } else {
-          field_Qb = null;
-          field_Zb = null;
-          field_Nb = null;
-          field_Ub = null;
-          return;
-        }
+        field_Qb = null;
+        field_Zb = null;
+        field_Nb = null;
+        field_Ub = null;
     }
 
     final static int b(byte param0, int param1) {
         int var2 = 0;
         Object var3 = null;
-        var2 = param1 >>> -691332351;
-        var2 = var2 | var2 >>> 285134945;
+        var2 = param1 >>> 1;
+        var2 = var2 | var2 >>> 1;
         if (param0 > -77) {
           var3 = null;
           wb.a((kc) null, -48, 106);
-          var2 = var2 | var2 >>> 2037729058;
-          var2 = var2 | var2 >>> -501559868;
-          var2 = var2 | var2 >>> -1143914328;
-          var2 = var2 | var2 >>> -1995022320;
-          return param1 & (var2 ^ -1);
+          var2 = var2 | var2 >>> 2;
+          var2 = var2 | var2 >>> 4;
+          var2 = var2 | var2 >>> 8;
+          var2 = var2 | var2 >>> 16;
+          return param1 & ~var2;
         } else {
-          var2 = var2 | var2 >>> 2037729058;
-          var2 = var2 | var2 >>> -501559868;
-          var2 = var2 | var2 >>> -1143914328;
-          var2 = var2 | var2 >>> -1995022320;
-          return param1 & (var2 ^ -1);
+          var2 = var2 | var2 >>> 2;
+          var2 = var2 | var2 >>> 4;
+          var2 = var2 | var2 >>> 8;
+          var2 = var2 | var2 >>> 16;
+          return param1 & ~var2;
         }
     }
 

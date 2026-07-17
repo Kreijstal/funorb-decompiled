@@ -20,18 +20,19 @@ final class pn extends nr {
 
     pn(wk[] param0, int[] param1, int param2, int param3, boolean param4) {
         super(param0);
-        ((pn) this).field_j = param4 ? true : false;
-        ((pn) this).field_g = param1;
-        ((pn) this).field_l = param3;
-        ((pn) this).field_i = param2;
+        try {
+            ((pn) this).field_j = param4 ? true : false;
+            ((pn) this).field_g = param1;
+            ((pn) this).field_l = param3;
+            ((pn) this).field_i = param2;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "pn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     public static void b(byte param0) {
         field_k = null;
         field_n = null;
-        if (param0 != -90) {
-            field_n = null;
-        }
     }
 
     static {

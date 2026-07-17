@@ -41,29 +41,22 @@ final class tb {
     }
 
     final void a(ll param0, long param1, int param2) {
-        ll var5 = null;
         if (param0.field_l != null) {
             param0.b((byte) -2);
-            var5 = ((tb) this).field_d[(int)(param1 & (long)(((tb) this).field_f - 1))];
-            if (param2 >= -60) {
-                return;
-            }
+        }
+        ll var5 = ((tb) this).field_d[(int)(param1 & (long)(((tb) this).field_f - 1))];
+        if (param2 >= -60) {
+            return;
+        }
+        try {
             param0.field_l = var5.field_l;
             param0.field_n = var5;
             param0.field_l.field_n = param0;
             param0.field_o = param1;
             param0.field_n.field_l = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "tb.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        var5 = ((tb) this).field_d[(int)(param1 & (long)(((tb) this).field_f - 1))];
-        if (param2 >= -60) {
-            return;
-        }
-        param0.field_l = var5.field_l;
-        param0.field_n = var5;
-        param0.field_l.field_n = param0;
-        param0.field_o = param1;
-        param0.field_n.field_l = param0;
     }
 
     final ll c(byte param0) {
@@ -74,7 +67,7 @@ final class tb {
         }
         ll var2 = ((tb) this).field_d[(int)(((tb) this).field_b & (long)(((tb) this).field_f - 1))];
         while (var2 != ((tb) this).field_e) {
-            if (!((((tb) this).field_e.field_o ^ -1L) != (((tb) this).field_b ^ -1L))) {
+            if (!(~((tb) this).field_e.field_o != ~((tb) this).field_b)) {
                 var3 = ((tb) this).field_e;
                 ((tb) this).field_e = ((tb) this).field_e.field_n;
                 return var3;
@@ -91,17 +84,13 @@ final class tb {
     public static void b(byte param0) {
         field_c = null;
         field_h = null;
-        int var1 = 47 % ((param0 - 65) / 57);
+        int var1 = 0;
         field_a = null;
     }
 
     final static void a(boolean param0, int param1) {
         if (!(null == ik.field_e)) {
             ik.field_e.a(param0);
-        }
-        if (param1 != 1) {
-            tb.a((byte) 113);
-            return;
         }
     }
 
@@ -111,8 +100,9 @@ final class tb {
         ((tb) this).field_f = param0;
         ((tb) this).field_d = new ll[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new ll();
-            ((tb) this).field_d[var2] = new ll();
+            ll dupTemp$0 = new ll();
+            var3 = dupTemp$0;
+            ((tb) this).field_d[var2] = dupTemp$0;
             var3.field_l = var3;
             var3.field_n = var3;
         }

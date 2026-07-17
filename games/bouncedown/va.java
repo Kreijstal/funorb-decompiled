@@ -26,55 +26,39 @@ final class va {
     }
 
     final static boolean b(int param0) {
-        if (!(pe.field_d != 0)) {
+        if (!(pe.field_d != -1)) {
             if (!qb.a(1, 3)) {
                 return false;
             }
             pe.field_d = jc.field_g.d((byte) -106);
             jc.field_g.field_h = 0;
         }
-        if (!(param0 != pe.field_d)) {
-            if (qb.a(2, param0 ^ 2)) {
-                pe.field_d = jc.field_g.a(-1640531527);
-                jc.field_g.field_h = 0;
-                return qb.a(pe.field_d, 3);
+        if (!(pe.field_d != -2)) {
+            if (!qb.a(2, 3)) {
+                return false;
             }
-            return false;
+            pe.field_d = jc.field_g.a(-1640531527);
+            jc.field_g.field_h = 0;
         }
         return qb.a(pe.field_d, 3);
     }
 
     final static void a(int param0) {
-        if (10 == mh.field_U) {
-          j.c((byte) 41);
-          mh.field_U = 11;
-          tk.field_a = true;
-          if (param0 == 2) {
+        if (10 != mh.field_U) {
+          if (cg.a(1)) {
+            tk.field_a = true;
             return;
           } else {
-            va.c(50);
-            return;
-          }
-        } else {
-          if (!cg.a(param0 + -1)) {
             j.c((byte) 41);
             mh.field_U = 11;
             tk.field_a = true;
-            if (param0 != 2) {
-              va.c(50);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            tk.field_a = true;
-            if (param0 == 2) {
-              return;
-            } else {
-              va.c(50);
-              return;
-            }
+            return;
           }
+        } else {
+          j.c((byte) 41);
+          mh.field_U = 11;
+          tk.field_a = true;
+          return;
         }
     }
 

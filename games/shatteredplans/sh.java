@@ -43,14 +43,14 @@ final class sh implements fo {
                 var11 = 0;
                 L2: while (true) {
                   L3: {
-                    if ((var11 ^ -1) <= -5) {
+                    if (var11 >= 4) {
                       break L3;
                     } else {
                       var12 = ((sh) this).field_a.j(-75);
                       var9.field_G[var11] = we.a(var12, 15);
                       var11++;
-                      if (-5 < (var11 ^ -1)) {
-                        var9.field_G[var11] = we.a(var12, 240) >> -1896795068;
+                      if (var11 < 4) {
+                        var9.field_G[var11] = we.a(var12, 240) >> 4;
                         var11++;
                         continue L2;
                       } else {
@@ -69,7 +69,7 @@ final class sh implements fo {
                     }
                   }
                   var9.field_B = ((sh) this).field_a.j(-84);
-                  var9.field_L = var9.field_B >>> -217864410;
+                  var9.field_L = var9.field_B >>> 6;
                   var9.field_B = var9.field_B & 63;
                   var8++;
                   continue L0;
@@ -88,70 +88,57 @@ final class sh implements fo {
     }
 
     final static void a(sd param0, int param1) {
-        int[] var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var7 = null;
-        int var8 = 0;
-        int[] var9 = null;
-        int[] var10 = null;
+        int[] var15 = null;
+        int[] var13 = null;
         int[] var11 = null;
+        int[] var9 = null;
+        int[] var7 = null;
+        int[] var16 = null;
+        int[] var14 = null;
         int[] var12 = null;
-        var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        var11 = new int[4];
-        var9 = var11;
-        var7 = var9;
-        var12 = var7;
-        var10 = var12;
-        var2 = var10;
-        sn.a(var11, (byte) -76, param0);
-        var5 = var11[0];
-        var4 = var11[0];
-        var3 = 1;
-        L0: while (true) {
-          if (4 <= var3) {
-            L1: {
-              if (param1 == -5) {
-                break L1;
-              } else {
-                boolean discarded$1 = sh.b(31);
-                break L1;
-              }
+        int[] var10 = null;
+        int[] var2 = null;
+        int var5 = 0;
+        int var4 = 0;
+        int var3 = 0;
+        int var8 = 0;
+        int var6 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+            var15 = new int[4];
+            var13 = var15;
+            var11 = var13;
+            var9 = var11;
+            var7 = var9;
+            var16 = var7;
+            var14 = var16;
+            var12 = var14;
+            var10 = var12;
+            var2 = var10;
+            sn.a(var15, (byte) -76, param0);
+            var5 = var15[0];
+            var4 = var15[0];
+            for (var3 = 1; 4 > var3; var3++) {
+                if (var15[var3] < var4) {
+                    var4 = var15[var3];
+                }
+                if (!(var5 <= var15[var3])) {
+                    var5 = var15[var3];
+                }
+            }
+            if (param1 != -5) {
+                boolean discarded$0 = sh.b(31);
             }
             var8 = 0;
             var3 = var8;
-            L2: while (true) {
-              if (-5 >= (var8 ^ -1)) {
-                param0.field_u = var2;
-                param0.field_r = var4;
-                param0.field_w = mf.a((byte) 74, var12);
-                return;
-              } else {
-                var2[var8] = var12[var8] + -var5;
+            while (var8 < 4) {
+                var2[var8] = var16[var8] + -var5;
                 var8++;
-                continue L2;
-              }
             }
-          } else {
-            L3: {
-              if (var11[var3] >= var4) {
-                break L3;
-              } else {
-                var4 = var11[var3];
-                break L3;
-              }
-            }
-            if (var5 > var11[var3]) {
-              var5 = var11[var3];
-              var3++;
-              continue L0;
-            } else {
-              var3++;
-              continue L0;
-            }
-          }
+            param0.field_u = var2;
+            param0.field_r = var4;
+            param0.field_w = mf.a((byte) 74, var16);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "sh.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -165,7 +152,7 @@ final class sh implements fo {
         var1 = 52 / ((param0 - -16) / 49);
         var2 = pr.a(14274);
         var4 = var2 - tk.field_z;
-        if (-30001L > (var4 ^ -1L)) {
+        if (var4 > 30000L) {
           vj.field_C = 0;
           tk.field_z = var2;
           return true;
@@ -176,7 +163,7 @@ final class sh implements fo {
               var6 = 12000;
               break L0;
             } else {
-              if (-6 >= (vj.field_C ^ -1)) {
+              if (vj.field_C >= 5) {
                 var6 = 9000;
                 break L0;
               } else {
@@ -201,23 +188,24 @@ final class sh implements fo {
 
     final static void a(int param0) {
         bg.field_g = false;
-        ae.field_b = (sa.field_a.j(-99) ^ -1) == param0 ? true : false;
+        ae.field_b = sa.field_a.j(-99) == 0 ? true : false;
     }
 
     public static void b(byte param0) {
-        if (param0 != 87) {
-            nf discarded$0 = sh.a(false, 42, -4, 3);
-        }
         field_c = null;
     }
 
     sh(ob param0, int param1) {
-        ((sh) this).field_d = param1;
-        ((sh) this).field_a = param0;
+        try {
+            ((sh) this).field_d = param1;
+            ((sh) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "sh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final static nf a(boolean param0, int param1, int param2, int param3) {
-        nf var4 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -310,7 +298,7 @@ final class sh implements fo {
                   }
                 }
                 ShatteredPlansClient.field_K = stackIn_41_0 != 0;
-                return var4;
+                return (nf) var4;
               } else {
                 var9_ref_nf = wm.field_d[var8];
                 if (null != var9_ref_nf.field_j) {
@@ -320,7 +308,7 @@ final class sh implements fo {
                     if (0 == var9_ref_nf.field_j.field_rb) {
                       break L8;
                     } else {
-                      var4 = var9_ref_nf;
+                      var4 = (Object) (Object) var9_ref_nf;
                       break L8;
                     }
                   }
@@ -394,10 +382,10 @@ final class sh implements fo {
               var12 = jl.a(var8_ref_nf, (byte) -73);
               var8_ref_nf.field_j = new qr(0L, bh.field_k, var11);
               var8_ref_nf.field_j.field_nb = ho.field_f;
-              var8_ref_nf.field_j.field_jb = -(var12 >> 1320440001 & 8355711) + var12 + (8355711 & bh.field_k.field_jb >> 549633313);
+              var8_ref_nf.field_j.field_jb = -(var12 >> 1 & 8355711) + var12 + (8355711 & bh.field_k.field_jb >> 1);
               var8_ref_nf.field_j.field_x = var12;
               var6 = var6 + param3;
-              var8_ref_nf.field_j.field_qb = -(8355711 & var12 >> -1060851551) + (var12 + (8355711 & bh.field_k.field_qb >> 1568618881));
+              var8_ref_nf.field_j.field_qb = -(8355711 & var12 >> 1) + (var12 + (8355711 & bh.field_k.field_qb >> 1));
               var5++;
               var7--;
               continue L1;

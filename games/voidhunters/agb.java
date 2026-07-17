@@ -8,167 +8,146 @@ final class agb implements dja {
     }
 
     final static long a(CharSequence param0, int param1) {
-        long var2 = 0L;
+        RuntimeException var2 = null;
+        long var2_long = 0L;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         Object var8 = null;
+        long stackIn_22_0 = 0L;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        long stackOut_21_0 = 0L;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
         var7 = VoidHunters.field_G;
-        var2 = 0L;
-        if (param1 == -49) {
-          var4 = param0.length();
-          var5 = 0;
-          L0: while (true) {
-            if (var4 > var5) {
-              L1: {
-                L2: {
-                  var2 = var2 * 37L;
-                  var6 = param0.charAt(var5);
-                  if (65 > var6) {
-                    break L2;
-                  } else {
-                    if (var6 > 90) {
-                      break L2;
-                    } else {
-                      var2 = var2 + (long)(1 - (-var6 - -65));
-                      break L1;
-                    }
-                  }
-                }
-                L3: {
-                  if (97 > var6) {
-                    break L3;
-                  } else {
-                    if (var6 > 122) {
-                      break L3;
-                    } else {
-                      var2 = var2 + (long)(-97 + (1 - -var6));
-                      break L1;
-                    }
-                  }
-                }
-                if (var6 < 48) {
-                  break L1;
-                } else {
-                  if (var6 <= 57) {
-                    var2 = var2 + (long)(27 + var6 + -48);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              if (177917621779460413L > var2) {
-                var5++;
-                continue L0;
+        try {
+          L0: {
+            L1: {
+              var2_long = 0L;
+              if (param1 == -49) {
+                break L1;
               } else {
-                L4: while (true) {
-                  L5: {
-                    if (-1L != (var2 % 37L ^ -1L)) {
-                      break L5;
-                    } else {
-                      if ((var2 ^ -1L) == -1L) {
+                var8 = null;
+                break L1;
+              }
+            }
+            var4 = param0.length();
+            var5 = 0;
+            L2: while (true) {
+              L3: {
+                if (var4 <= var5) {
+                  break L3;
+                } else {
+                  L4: {
+                    L5: {
+                      var2_long = var2_long * 37L;
+                      var6 = param0.charAt(var5);
+                      if (65 > var6) {
                         break L5;
                       } else {
-                        var2 = var2 / 37L;
-                        continue L4;
+                        if (var6 > 90) {
+                          break L5;
+                        } else {
+                          var2_long = var2_long + (long)(1 - (-var6 - -65));
+                          break L4;
+                        }
+                      }
+                    }
+                    L6: {
+                      if (97 > var6) {
+                        break L6;
+                      } else {
+                        if (var6 > 122) {
+                          break L6;
+                        } else {
+                          var2_long = var2_long + (long)(-97 + (1 - -var6));
+                          break L4;
+                        }
+                      }
+                    }
+                    if (var6 < 48) {
+                      break L4;
+                    } else {
+                      if (var6 <= 57) {
+                        var2_long = var2_long + (long)(27 + var6 + -48);
+                        break L4;
+                      } else {
+                        break L4;
                       }
                     }
                   }
-                  return var2;
+                  if (177917621779460413L <= var2_long) {
+                    break L3;
+                  } else {
+                    var5++;
+                    continue L2;
+                  }
                 }
               }
+              L7: while (true) {
+                L8: {
+                  if (var2_long % 37L != 0L) {
+                    break L8;
+                  } else {
+                    if (var2_long == 0L) {
+                      break L8;
+                    } else {
+                      var2_long = var2_long / 37L;
+                      continue L7;
+                    }
+                  }
+                }
+                stackOut_21_0 = var2_long;
+                stackIn_22_0 = stackOut_21_0;
+                break L0;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var2 = decompiledCaughtException;
+            stackOut_23_0 = (RuntimeException) var2;
+            stackOut_23_1 = new StringBuilder().append("agb.C(");
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
+            if (param0 == null) {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L9;
             } else {
-              L6: while (true) {
-                L7: {
-                  if (-1L != (var2 % 37L ^ -1L)) {
-                    break L7;
-                  } else {
-                    if ((var2 ^ -1L) == -1L) {
-                      break L7;
-                    } else {
-                      var2 = var2 / 37L;
-                      continue L6;
-                    }
-                  }
-                }
-                return var2;
-              }
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L9;
             }
           }
-        } else {
-          var8 = null;
-          var4 = param0.length();
-          var5 = 0;
-          L8: while (true) {
-            L9: {
-              if (var4 <= var5) {
-                break L9;
-              } else {
-                L10: {
-                  L11: {
-                    var2 = var2 * 37L;
-                    var6 = param0.charAt(var5);
-                    if (65 > var6) {
-                      break L11;
-                    } else {
-                      if (var6 > 90) {
-                        break L11;
-                      } else {
-                        var2 = var2 + (long)(1 - (-var6 - -65));
-                        break L10;
-                      }
-                    }
-                  }
-                  L12: {
-                    if (97 > var6) {
-                      break L12;
-                    } else {
-                      if (var6 > 122) {
-                        break L12;
-                      } else {
-                        var2 = var2 + (long)(-97 + (1 - -var6));
-                        break L10;
-                      }
-                    }
-                  }
-                  if (var6 < 48) {
-                    break L10;
-                  } else {
-                    if (var6 <= 57) {
-                      var2 = var2 + (long)(27 + var6 + -48);
-                      break L10;
-                    } else {
-                      break L10;
-                    }
-                  }
-                }
-                if (177917621779460413L <= var2) {
-                  break L9;
-                } else {
-                  var5++;
-                  continue L8;
-                }
-              }
-            }
-            L13: while (true) {
-              L14: {
-                if (-1L != (var2 % 37L ^ -1L)) {
-                  break L14;
-                } else {
-                  if ((var2 ^ -1L) == -1L) {
-                    break L14;
-                  } else {
-                    var2 = var2 / 37L;
-                    continue L13;
-                  }
-                }
-              }
-              return var2;
-            }
-          }
+          throw rta.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 41);
         }
+        return stackIn_22_0;
     }
 
     public final tv[] a(int param0, int param1) {

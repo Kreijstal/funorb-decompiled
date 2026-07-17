@@ -11,117 +11,115 @@ final class dn extends hb {
     static String field_j;
 
     final static String a(String param0, boolean param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
+        String stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_4_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = param0.length();
-        var3 = new char[var2];
-        if (!param1) {
-          field_j = null;
-          var4 = 0;
-          L0: while (true) {
-            if (var2 <= var4) {
-              return new String(var3);
-            } else {
-              var3[-var4 + var2 + -1] = param0.charAt(var4);
-              var4++;
-              continue L0;
+        try {
+          L0: {
+            var2_int = param0.length();
+            var3 = new char[var2_int];
+            var4 = 0;
+            L1: while (true) {
+              if (var2_int <= var4) {
+                stackOut_4_0 = new String(var3);
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
+              } else {
+                var3[-var4 + var2_int + -1] = param0.charAt(var4);
+                var4++;
+                continue L1;
+              }
             }
           }
-        } else {
-          var4 = 0;
-          L1: while (true) {
-            if (var2 <= var4) {
-              return new String(var3);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_1 = new StringBuilder().append("dn.C(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
             } else {
-              var3[-var4 + var2 + -1] = param0.charAt(var4);
-              var4++;
-              continue L1;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
             }
           }
+          throw r.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 1 + 41);
         }
+        return stackIn_5_0;
     }
 
     final static void a(int param0, fk param1, byte param2) {
-        sl var3 = null;
+        sl var5 = null;
         int var4 = 0;
-        sl var6 = null;
-        sl var7 = null;
-        if (param2 == 13) {
-          var7 = js.field_f;
-          var3 = var7;
-          var7.h(param0, 255);
-          var7.field_j = var7.field_j + 1;
-          var4 = var7.field_j;
-          var7.c(1, (byte) -60);
-          if (param1.field_n != null) {
-            var7.c(param1.field_n.length, (byte) -66);
-            var7.a(0, param1.field_n.length, param1.field_n, 22186);
-            int discarded$8 = var7.a(var4, param2 ^ -40);
-            var7.field_j = var7.field_j - 4;
-            param1.field_j = var7.a(16711680);
-            var7.b(var7.field_j - var4, (byte) 119);
-            return;
-          } else {
-            var7.c(0, (byte) -76);
-            int discarded$9 = var7.a(var4, param2 ^ -40);
-            var7.field_j = var7.field_j - 4;
-            param1.field_j = var7.a(16711680);
-            var7.b(var7.field_j - var4, (byte) 119);
-            return;
-          }
-        } else {
-          field_f = null;
-          var6 = js.field_f;
-          var3 = var6;
-          var6.h(param0, 255);
-          var6.field_j = var6.field_j + 1;
-          var4 = var6.field_j;
-          var6.c(1, (byte) -60);
-          if (param1.field_n != null) {
-            var6.c(param1.field_n.length, (byte) -66);
-            var6.a(0, param1.field_n.length, param1.field_n, 22186);
-            int discarded$10 = var6.a(var4, param2 ^ -40);
-            var6.field_j = var6.field_j - 4;
-            param1.field_j = var6.a(16711680);
-            var6.b(var6.field_j - var4, (byte) 119);
-            return;
-          } else {
-            var6.c(0, (byte) -76);
-            int discarded$11 = var6.a(var4, param2 ^ -40);
-            var6.field_j = var6.field_j - 4;
-            param1.field_j = var6.a(16711680);
-            var6.b(var6.field_j - var4, (byte) 119);
-            return;
-          }
+        try {
+            var5 = js.field_f;
+            sl var3 = var5;
+            var5.h(param0, 255);
+            var5.field_j = var5.field_j + 1;
+            var4 = var5.field_j;
+            var5.c(1, (byte) -60);
+            if (param1.field_n != null) {
+                var5.c(param1.field_n.length, (byte) -66);
+                var5.a(0, param1.field_n.length, param1.field_n, 22186);
+            } else {
+                var5.c(0, (byte) -76);
+            }
+            int discarded$0 = var5.a(var4, -43);
+            var5.field_j = var5.field_j - 4;
+            param1.field_j = var5.a(16711680);
+            var5.b(var5.field_j - var4, (byte) 119);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "dn.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 13 + 41);
         }
     }
 
     final static gq[] a(int param0) {
-        if (param0 != 4) {
-          return null;
-        } else {
-          return new gq[]{on.field_g, nd.field_c, td.field_O, ss.field_c, cl.field_p, kf.field_c, tf.field_j, na.field_I, ld.field_h, lc.field_b, m.field_A, mc.field_r, ks.field_a, ro.field_c};
-        }
+        return new gq[]{on.field_g, nd.field_c, td.field_O, ss.field_c, cl.field_p, kf.field_c, tf.field_j, na.field_I, ld.field_h, lc.field_b, m.field_A, mc.field_r, ks.field_a, ro.field_c};
     }
 
     public static void d(byte param0) {
         field_f = null;
         field_k = null;
-        if (param0 != -107) {
-          field_h = null;
-          field_j = null;
-          field_g = null;
-          field_h = null;
-          return;
-        } else {
-          field_j = null;
-          field_g = null;
-          field_h = null;
-          return;
-        }
+        field_j = null;
+        field_g = null;
+        field_h = null;
     }
 
     final oh a(boolean param0) {
@@ -148,7 +146,11 @@ final class dn extends hb {
     }
 
     dn(db param0) {
-        ((dn) this).field_i = param0;
+        try {
+            ((dn) this).field_i = param0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "dn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

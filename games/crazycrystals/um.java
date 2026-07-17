@@ -23,12 +23,14 @@ abstract class um extends oh {
     }
 
     final static void a(int param0, String param1, byte param2) {
-        if (param2 < 74) {
-            field_f = 41;
+        try {
+            if (param2 < 74) {
+                field_f = 41;
+            }
             gh.a(param1, 12, qd.field_r, param0);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "um.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        gh.a(param1, 12, qd.field_r, param0);
     }
 
     static {

@@ -6,7 +6,7 @@ final class kv {
     private static String field_z;
 
     public static void a(byte param0) {
-        int var1 = -26 % ((84 - param0) / 38);
+        int var1 = 0;
         field_a = null;
     }
 

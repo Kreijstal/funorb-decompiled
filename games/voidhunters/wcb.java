@@ -18,7 +18,7 @@ final class wcb extends uda {
           } else {
             L1: {
               var2 = ((wcb) this).field_e.field_Mc;
-              if (-1 <= (((wcb) this).field_d.field_j ^ -1)) {
+              if (((wcb) this).field_d.field_j <= 0) {
                 int discarded$4 = var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
                 break L1;
               } else {
@@ -77,7 +77,7 @@ final class wcb extends uda {
               if (!((wcb) this).field_f.c((byte) 60)) {
                 break L1;
               } else {
-                if ((65535 & ((wcb) this).field_e.field_Hc.VertexShaderVersion ^ -1) <= -258) {
+                if ((65535 & ((wcb) this).field_e.field_Hc.VertexShaderVersion) >= 257) {
                   ((wcb) this).field_g = ((wcb) this).field_e.field_Mc.b(param1.a("transparent_water", true, "dx"));
                   break L0;
                 } else {

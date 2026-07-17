@@ -17,16 +17,8 @@ final class wb extends IOException {
         uj.field_c = false;
         ea.field_m = -1;
         ga.field_j = 0;
-        if (param0 <= 77) {
-          wb.a(27);
-          cc.field_j = null;
-          lb.field_b = -1;
-          return;
-        } else {
-          cc.field_j = null;
-          lb.field_b = -1;
-          return;
-        }
+        cc.field_j = null;
+        lb.field_b = -1;
     }
 
     public static void a(int param0) {

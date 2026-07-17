@@ -10,10 +10,7 @@ abstract class we extends wv {
     }
 
     final static boolean b(int param0, int param1, int param2) {
-        if (param2 != 2048) {
-            return false;
-        }
-        return (param0 & 2048 ^ -1) != -1 ? true : false;
+        return (param0 & 2048) != 0;
     }
 
     final void a(byte param0, boolean param1) {

@@ -7,27 +7,20 @@ final class kh {
     static String field_b;
 
     final static void a(boolean param0, String param1) {
-        if (param0) {
-            field_a = null;
+        try {
+            if (param0) {
+                field_a = null;
+            }
             sc.field_a = param1;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "kh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        sc.field_a = param1;
     }
 
     public static void a(int param0) {
-        Object var2 = null;
         field_a = null;
         field_c = null;
-        if (param0 != 21601) {
-          var2 = null;
-          kh.a(false, (String) null);
-          field_b = null;
-          return;
-        } else {
-          field_b = null;
-          return;
-        }
+        field_b = null;
     }
 
     static {

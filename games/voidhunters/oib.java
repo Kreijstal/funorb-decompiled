@@ -9,9 +9,6 @@ abstract class oib {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 <= 119) {
-            return;
-        }
         field_b = null;
     }
 

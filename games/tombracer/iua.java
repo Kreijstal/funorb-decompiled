@@ -977,8 +977,9 @@ final class iua {
           var22 = param4 - param3;
           param2 = param2 + param3;
           L2: while (true) {
+            int incrementValue$1 = var22;
             var22--;
-            if (var22 <= 0) {
+            if (incrementValue$1 <= 0) {
               return;
             } else {
               L3: {
@@ -6179,8 +6180,9 @@ final class iua {
                           param13 = param13 + param14;
                           var22 = param0;
                           var16 = var22;
+                          int incrementValue$18 = param2;
                           param2++;
-                          var17 = param2;
+                          var17 = incrementValue$18;
                           var18 = param3;
                           var19 = var22[var17];
                           var20 = var18 + var19;
@@ -6189,8 +6191,9 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var23 = param0;
                           var16 = var23;
+                          int incrementValue$19 = param2;
                           param2++;
-                          var17 = param2;
+                          var17 = incrementValue$19;
                           var18 = param3;
                           var19 = var23[var17];
                           var20 = var18 + var19;
@@ -6199,8 +6202,9 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var24 = param0;
                           var16 = var24;
+                          int incrementValue$20 = param2;
                           param2++;
-                          var17 = param2;
+                          var17 = incrementValue$20;
                           var18 = param3;
                           var19 = var24[var17];
                           var20 = var18 + var19;
@@ -6209,8 +6213,9 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var25 = param0;
                           var16 = var25;
+                          int incrementValue$21 = param2;
                           param2++;
-                          var17 = param2;
+                          var17 = incrementValue$21;
                           var18 = param3;
                           var19 = var25[var17];
                           var20 = var18 + var19;
@@ -6234,8 +6239,9 @@ final class iua {
                       L69: while (true) {
                         var26 = param0;
                         var16 = var26;
+                        int incrementValue$22 = param2;
                         param2++;
-                        var17 = param2;
+                        var17 = incrementValue$22;
                         var18 = param3;
                         var19 = var26[var17];
                         var20 = var18 + var19;
@@ -6264,17 +6270,21 @@ final class iua {
                           param13 = param13 + param14;
                           param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                           var18 = param0[param2];
+                          int incrementValue$23 = param2;
                           param2++;
-                          param0[param2] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                          param0[incrementValue$23] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
+                          int incrementValue$24 = param2;
                           param2++;
-                          param0[param2] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                          param0[incrementValue$24] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
+                          int incrementValue$25 = param2;
                           param2++;
-                          param0[param2] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                          param0[incrementValue$25] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
+                          int incrementValue$26 = param2;
                           param2++;
-                          param0[param2] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                          param0[incrementValue$26] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           param4--;
                           if (param4 > 0) {
                             continue L71;
@@ -6292,8 +6302,9 @@ final class iua {
                       param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                       L72: while (true) {
                         var18 = param0[param2];
+                        int incrementValue$27 = param2;
                         param2++;
-                        param0[param2] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                        param0[incrementValue$27] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                         param4--;
                         if (param4 > 0) {
                           continue L72;
@@ -6313,14 +6324,18 @@ final class iua {
                         param9 = param9 + param10;
                         param11 = param11 + param12;
                         param13 = param13 + param14;
+                        int incrementValue$28 = param2;
                         param2++;
-                        param0[param2] = param3;
+                        param0[incrementValue$28] = param3;
+                        int incrementValue$29 = param2;
                         param2++;
-                        param0[param2] = param3;
+                        param0[incrementValue$29] = param3;
+                        int incrementValue$30 = param2;
                         param2++;
-                        param0[param2] = param3;
+                        param0[incrementValue$30] = param3;
+                        int incrementValue$31 = param2;
                         param2++;
-                        param0[param2] = param3;
+                        param0[incrementValue$31] = param3;
                         param4--;
                         if (param4 > 0) {
                           continue L74;
@@ -6334,8 +6349,9 @@ final class iua {
                   if (param4 > 0) {
                     param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                     L75: while (true) {
+                      int incrementValue$32 = param2;
                       param2++;
-                      param0[param2] = param3;
+                      param0[incrementValue$32] = param3;
                       param4--;
                       if (param4 > 0) {
                         continue L75;
@@ -6357,8 +6373,9 @@ final class iua {
                     L77: while (true) {
                       var27 = param0;
                       var16 = var27;
+                      int incrementValue$33 = param2;
                       param2++;
-                      var17 = param2;
+                      var17 = incrementValue$33;
                       var18 = (int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255;
                       var19 = var27[var17];
                       var20 = var18 + var19;
@@ -6385,8 +6402,9 @@ final class iua {
                       param13 = param13 + param14;
                       param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                       var18 = param0[param2];
+                      int incrementValue$34 = param2;
                       param2++;
-                      param0[param2] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                      param0[incrementValue$34] = param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                       param4--;
                       if (param4 > 0) {
                         continue L78;
@@ -6397,8 +6415,9 @@ final class iua {
                   }
                 } else {
                   L79: while (true) {
+                    int incrementValue$35 = param2;
                     param2++;
-                    param0[param2] = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
+                    param0[incrementValue$35] = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                     param9 = param9 + param10;
                     param11 = param11 + param12;
                     param13 = param13 + param14;
@@ -8672,8 +8691,9 @@ final class iua {
           var22 = param4 - param3;
           param2 = param2 + param3;
           L2: while (true) {
+            int incrementValue$1 = var22;
             var22--;
-            if (var22 <= 0) {
+            if (incrementValue$1 <= 0) {
               return;
             } else {
               L3: {
@@ -12557,8 +12577,9 @@ final class iua {
                     L67: while (true) {
                       var27 = param0;
                       var16 = var27;
+                      int incrementValue$18 = param2;
                       param2++;
-                      var17 = param2;
+                      var17 = incrementValue$18;
                       var18 = (int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255;
                       var19 = var27[var17];
                       var20 = var18 + var19;
@@ -12585,8 +12606,9 @@ final class iua {
                       param13 = param13 + param14;
                       param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                       var18 = param0[param2];
+                      int incrementValue$19 = param2;
                       param2++;
-                      param0[param2] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                      param0[incrementValue$19] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                       param4--;
                       if (param4 > 0) {
                         continue L68;
@@ -12597,8 +12619,9 @@ final class iua {
                   }
                 } else {
                   L69: while (true) {
+                    int incrementValue$20 = param2;
                     param2++;
-                    param0[param2] = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
+                    param0[incrementValue$20] = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                     param9 = param9 + param10;
                     param11 = param11 + param12;
                     param13 = param13 + param14;
@@ -12631,8 +12654,9 @@ final class iua {
                           param13 = param13 + param14;
                           var22 = param0;
                           var16 = var22;
+                          int incrementValue$21 = param2;
                           param2++;
-                          var17 = param2;
+                          var17 = incrementValue$21;
                           var18 = param3;
                           var19 = var22[var17];
                           var20 = var18 + var19;
@@ -12641,8 +12665,9 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var23 = param0;
                           var16 = var23;
+                          int incrementValue$22 = param2;
                           param2++;
-                          var17 = param2;
+                          var17 = incrementValue$22;
                           var18 = param3;
                           var19 = var23[var17];
                           var20 = var18 + var19;
@@ -12651,8 +12676,9 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var24 = param0;
                           var16 = var24;
+                          int incrementValue$23 = param2;
                           param2++;
-                          var17 = param2;
+                          var17 = incrementValue$23;
                           var18 = param3;
                           var19 = var24[var17];
                           var20 = var18 + var19;
@@ -12661,8 +12687,9 @@ final class iua {
                           var16[var17] = -16777216 | var20 - var19 | var19 - (var19 >>> 8);
                           var25 = param0;
                           var16 = var25;
+                          int incrementValue$24 = param2;
                           param2++;
-                          var17 = param2;
+                          var17 = incrementValue$24;
                           var18 = param3;
                           var19 = var25[var17];
                           var20 = var18 + var19;
@@ -12686,8 +12713,9 @@ final class iua {
                       L73: while (true) {
                         var26 = param0;
                         var16 = var26;
+                        int incrementValue$25 = param2;
                         param2++;
-                        var17 = param2;
+                        var17 = incrementValue$25;
                         var18 = param3;
                         var19 = var26[var17];
                         var20 = var18 + var19;
@@ -12716,17 +12744,21 @@ final class iua {
                           param13 = param13 + param14;
                           param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                           var18 = param0[param2];
+                          int incrementValue$26 = param2;
                           param2++;
-                          param0[param2] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                          param0[incrementValue$26] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
+                          int incrementValue$27 = param2;
                           param2++;
-                          param0[param2] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                          param0[incrementValue$27] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
+                          int incrementValue$28 = param2;
                           param2++;
-                          param0[param2] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                          param0[incrementValue$28] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           var18 = param0[param2];
+                          int incrementValue$29 = param2;
                           param2++;
-                          param0[param2] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                          param0[incrementValue$29] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                           param4--;
                           if (param4 > 0) {
                             continue L75;
@@ -12744,8 +12776,9 @@ final class iua {
                       param3 = ((param3 & 16711935) * var17 >> 8 & 16711935) + ((param3 & 65280) * var17 >> 8 & 65280);
                       L76: while (true) {
                         var18 = param0[param2];
+                        int incrementValue$30 = param2;
                         param2++;
-                        param0[param2] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
+                        param0[incrementValue$30] = (var17 | var18 >> 24) << 24 | param3 + ((var18 & 16711935) * var16_int >> 8 & 16711935) + ((var18 & 65280) * var16_int >> 8 & 65280);
                         param4--;
                         if (param4 > 0) {
                           continue L76;
@@ -12765,14 +12798,18 @@ final class iua {
                         param9 = param9 + param10;
                         param11 = param11 + param12;
                         param13 = param13 + param14;
+                        int incrementValue$31 = param2;
                         param2++;
-                        param0[param2] = param3;
+                        param0[incrementValue$31] = param3;
+                        int incrementValue$32 = param2;
                         param2++;
-                        param0[param2] = param3;
+                        param0[incrementValue$32] = param3;
+                        int incrementValue$33 = param2;
                         param2++;
-                        param0[param2] = param3;
+                        param0[incrementValue$33] = param3;
+                        int incrementValue$34 = param2;
                         param2++;
-                        param0[param2] = param3;
+                        param0[incrementValue$34] = param3;
                         param4--;
                         if (param4 > 0) {
                           continue L78;
@@ -12786,8 +12823,9 @@ final class iua {
                   if (param4 > 0) {
                     param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                     L79: while (true) {
+                      int incrementValue$35 = param2;
                       param2++;
-                      param0[param2] = param3;
+                      param0[incrementValue$35] = param3;
                       param4--;
                       if (param4 > 0) {
                         continue L79;

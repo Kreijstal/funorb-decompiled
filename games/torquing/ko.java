@@ -15,15 +15,7 @@ final class ko extends IOException {
     final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (param1 == 100) {
-          L0: {
-            var4 = 0;
-            if (param3) {
-              var4 += 4;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
+          var4 = 0;
           if (!param0) {
             if (param2) {
               var4++;
@@ -41,16 +33,8 @@ final class ko extends IOException {
             }
           }
         } else {
-          L1: {
-            field_a = null;
-            var4 = 0;
-            if (param3) {
-              var4 += 4;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
+          field_a = null;
+          var4 = 0;
           if (param0) {
             var4 += 2;
             if (!param2) {
@@ -71,9 +55,6 @@ final class ko extends IOException {
     }
 
     public static void a(byte param0) {
-        if (param0 > -97) {
-            return;
-        }
         field_c = null;
         field_a = null;
     }

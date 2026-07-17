@@ -11,34 +11,30 @@ final class qc extends rj implements ag {
     static String field_O;
 
     final void a(kf param0, boolean param1) {
-        Object var4 = null;
-        if (!param1) {
-          var4 = null;
-          ((qc) this).a((we) null, 53, 72, (byte) 12);
-          ((qc) this).field_M = param0;
-          return;
-        } else {
-          ((qc) this).field_M = param0;
-          return;
+        try {
+            if (!param1) {
+                Object var4 = null;
+                ((qc) this).a((we) null, 53, 72, (byte) 12);
+            }
+            ((qc) this).field_M = param0;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "qc.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     final static void a(me param0, byte param1, int param2) {
         hb var3 = null;
-        Object var4 = null;
-        var3 = gf.field_c;
-        if (param1 <= 100) {
-          var4 = null;
-          qc.a((me) null, (byte) 35, -2);
-          var3.b(true, param2);
-          var3.b(param0.field_k, -49152);
-          var3.c(param0.field_m, 71);
-          return;
-        } else {
-          var3.b(true, param2);
-          var3.b(param0.field_k, -49152);
-          var3.c(param0.field_m, 71);
-          return;
+        try {
+            var3 = gf.field_c;
+            if (param1 <= 100) {
+                Object var4 = null;
+                qc.a((me) null, (byte) 35, -2);
+            }
+            var3.b(true, param2);
+            var3.b(param0.field_k, -49152);
+            var3.c(param0.field_m, 71);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "qc.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -64,24 +60,20 @@ final class qc extends rj implements ag {
     public static void q(int param0) {
         field_L = null;
         field_O = null;
-        if (param0 < 92) {
-            return;
-        }
         field_R = null;
         field_P = null;
     }
 
     final void a(we param0, int param1, int param2, byte param3) {
-        Object var6 = null;
-        super.a(param0, param1, param2, (byte) -24);
-        if (param3 > -13) {
-          var6 = null;
-          ((qc) this).a((kf) null, false);
-          ((qc) this).field_Q = -param2 + (ei.field_a + -((qc) this).field_r);
-          return;
-        } else {
-          ((qc) this).field_Q = -param2 + (ei.field_a + -((qc) this).field_r);
-          return;
+        try {
+            super.a(param0, param1, param2, (byte) -24);
+            if (param3 > -13) {
+                Object var6 = null;
+                ((qc) this).a((kf) null, false);
+            }
+            ((qc) this).field_Q = -param2 + (ei.field_a + -((qc) this).field_r);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "qc.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

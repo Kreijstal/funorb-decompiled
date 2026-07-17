@@ -13,7 +13,7 @@ final class sk extends ml {
 
     final static void a(int param0, int param1) {
         fl.field_M = param1 * 100 / 150;
-        fl.field_V = (param1 << -1775937712) / 150;
+        fl.field_V = (param1 << 16) / 150;
         fl.field_u = 400 * param1 / 150;
         if (param0 != 16062) {
             sk.f(79);

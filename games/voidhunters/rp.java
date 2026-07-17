@@ -135,15 +135,17 @@ final class rp extends da {
                               var19_int++;
                               continue L3;
                             } else {
+                              int incrementValue$8 = var18_int;
                               var18_int++;
-                              var21_int = var12_ref_byte__[var18_int];
-                              if (var12_ref_byte__[var18_int] == 0) {
+                              var21_int = var12_ref_byte__[incrementValue$8];
+                              if (var12_ref_byte__[incrementValue$8] == 0) {
                                 var17++;
                                 var20_int++;
                                 continue L4;
                               } else {
+                                int incrementValue$9 = var17;
                                 var17++;
-                                var7_ref_int__[var17] = -16777216 | var10_ref_int__[var21_int & 255];
+                                var7_ref_int__[incrementValue$9] = -16777216 | var10_ref_int__[var21_int & 255];
                                 var20_int++;
                                 continue L4;
                               }
@@ -165,8 +167,9 @@ final class rp extends da {
                               var19_int++;
                               continue L5;
                             } else {
+                              int incrementValue$10 = var17;
                               var17++;
-                              var7_ref_int__[var17] = var47[var18_int] << 24 | var10_ref_int__[var48[var18_int] & 255];
+                              var7_ref_int__[incrementValue$10] = var47[var18_int] << 24 | var10_ref_int__[var48[var18_int] & 255];
                               var18_int++;
                               var20_int++;
                               continue L6;
@@ -234,9 +237,11 @@ final class rp extends da {
                               var17++;
                               continue L10;
                             } else {
+                              int incrementValue$11 = var14;
                               var14++;
+                              int incrementValue$12 = var15;
                               var15++;
-                              var7_ref_byte__[var14] = var16_ref_byte__[var15];
+                              var7_ref_byte__[incrementValue$11] = var16_ref_byte__[incrementValue$12];
                               var18_int++;
                               continue L11;
                             }
@@ -259,15 +264,17 @@ final class rp extends da {
                               continue L12;
                             } else {
                               L14: {
+                                int incrementValue$13 = var14;
                                 var14++;
+                                int incrementValue$14 = var15;
                                 var15++;
                                 stackOut_16_0 = (byte[]) var7_ref_byte__;
-                                stackOut_16_1 = var14;
+                                stackOut_16_1 = incrementValue$13;
                                 stackIn_18_0 = stackOut_16_0;
                                 stackIn_18_1 = stackOut_16_1;
                                 stackIn_17_0 = stackOut_16_0;
                                 stackIn_17_1 = stackOut_16_1;
-                                if (var16_ref_byte__[var15] != 0) {
+                                if (var16_ref_byte__[incrementValue$14] != 0) {
                                   stackOut_18_0 = (byte[]) (Object) stackIn_18_0;
                                   stackOut_18_1 = stackIn_18_1;
                                   stackOut_18_2 = -1;
@@ -302,7 +309,7 @@ final class rp extends da {
             }
             ((rp) this).field_d.a(jd.field_o, -28798);
             ((rp) this).field_e = param0.a(false, 3);
-            boolean discarded$1 = ((rp) this).field_e.a(20, 20480, 96);
+            boolean discarded$15 = ((rp) this).field_e.a(20, 20480, 96);
             var7 = 0;
             L15: while (true) {
               L16: {
@@ -392,6 +399,7 @@ final class rp extends da {
                   }
                 }
               }
+              return;
             }
           } else {
             L18: {

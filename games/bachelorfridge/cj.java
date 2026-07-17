@@ -11,42 +11,7 @@ abstract class cj extends bw {
     abstract void a(lu param0, int param1);
 
     final static boolean b(boolean param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        if (param0) {
-          if (!dma.field_a) {
-            if (bp.e(-29919)) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
-            return stackIn_11_0 != 0;
-          }
-        } else {
-          int discarded$6 = cj.a(47, 23);
-          if (dma.field_a) {
-            return true;
-          } else {
-            L0: {
-              if (!bp.e(-29919)) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L0;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
-          }
-        }
+        return dma.field_a || bp.e(-29919);
     }
 
     abstract at a(int param0, gj param1);
@@ -62,7 +27,7 @@ abstract class cj extends bw {
         nj.field_f = gp.field_x;
         gp.field_x = var2;
         if (51 != param0) {
-          if (-51 == param0) {
+          if (param0 == 50) {
             aka.field_G.field_k = 5;
             aka.field_G.field_e = aka.field_G.field_e + 1;
             if (param1 == 1) {
@@ -74,7 +39,7 @@ abstract class cj extends bw {
                     return 1;
                   }
                 } else {
-                  if (-51 == (param0 ^ -1)) {
+                  if (param0 == 50) {
                     return 5;
                   } else {
                     if (4 > aka.field_G.field_e) {
@@ -85,7 +50,7 @@ abstract class cj extends bw {
                   }
                 }
               } else {
-                if (param0 == -52) {
+                if (param0 == 51) {
                   return 2;
                 } else {
                   if (2 > aka.field_G.field_e) {
@@ -95,7 +60,7 @@ abstract class cj extends bw {
                       return 1;
                     }
                   } else {
-                    if (-51 == param0) {
+                    if (param0 == 50) {
                       return 5;
                     } else {
                       if (4 > aka.field_G.field_e) {
@@ -116,24 +81,26 @@ abstract class cj extends bw {
             if (param1 == 1) {
               if (aka.field_G.field_e < 2) {
                 if (2 > aka.field_G.field_e) {
-                  if (4 <= aka.field_G.field_e) {
-                    return 1;
-                  } else {
+                  if (4 > aka.field_G.field_e) {
                     return -1;
+                  } else {
+                    return 1;
                   }
                 } else {
-                  if (-51 != (param0 ^ -1)) {
+                  if (param0 == 50) {
+                    return 5;
+                  } else {
                     if (4 > aka.field_G.field_e) {
                       return -1;
                     } else {
                       return 1;
                     }
-                  } else {
-                    return 5;
                   }
                 }
               } else {
-                if (param0 != -52) {
+                if (param0 == 51) {
+                  return 2;
+                } else {
                   if (2 > aka.field_G.field_e) {
                     if (4 > aka.field_G.field_e) {
                       return -1;
@@ -141,18 +108,16 @@ abstract class cj extends bw {
                       return 1;
                     }
                   } else {
-                    if (-51 != param0) {
-                      if (4 <= aka.field_G.field_e) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
-                    } else {
+                    if (param0 == 50) {
                       return 5;
+                    } else {
+                      if (4 > aka.field_G.field_e) {
+                        return -1;
+                      } else {
+                        return 1;
+                      }
                     }
                   }
-                } else {
-                  return 2;
                 }
               }
             } else {
@@ -164,43 +129,43 @@ abstract class cj extends bw {
           aka.field_G.field_e = aka.field_G.field_e + 1;
           if (param1 == 1) {
             if (aka.field_G.field_e >= 2) {
-              if ((param0 ^ -1) == -52) {
+              if (param0 == 51) {
                 return 2;
               } else {
                 if (2 <= aka.field_G.field_e) {
-                  if (-51 == param0) {
+                  if (param0 == 50) {
                     return 5;
                   } else {
-                    if (4 <= aka.field_G.field_e) {
-                      return 1;
-                    } else {
+                    if (4 > aka.field_G.field_e) {
                       return -1;
+                    } else {
+                      return 1;
                     }
                   }
                 } else {
-                  if (4 <= aka.field_G.field_e) {
-                    return 1;
-                  } else {
+                  if (4 > aka.field_G.field_e) {
                     return -1;
+                  } else {
+                    return 1;
                   }
                 }
               }
             } else {
               if (2 > aka.field_G.field_e) {
-                if (4 <= aka.field_G.field_e) {
-                  return 1;
-                } else {
+                if (4 > aka.field_G.field_e) {
                   return -1;
+                } else {
+                  return 1;
                 }
               } else {
-                if (-51 != (param0 ^ -1)) {
-                  if (4 <= aka.field_G.field_e) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                } else {
+                if (param0 == 50) {
                   return 5;
+                } else {
+                  if (4 > aka.field_G.field_e) {
+                    return -1;
+                  } else {
+                    return 1;
+                  }
                 }
               }
             }

@@ -6,10 +6,10 @@ final class bq extends qg implements java.awt.event.MouseWheelListener {
 
     final synchronized int b(int param0) {
         int var2 = 0;
-        java.awt.event.MouseWheelEvent var3 = null;
+        Object var3 = null;
         var2 = ((bq) this).field_f;
         if (param0 != 12) {
-          var3 = (java.awt.event.MouseWheelEvent) null;
+          var3 = null;
           ((bq) this).mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
           ((bq) this).field_f = 0;
           return var2;

@@ -109,10 +109,11 @@ final class bj {
           if (var2 >= 10) {
             ((bj) this).field_a = param0.i((byte) 0);
             ((bj) this).field_c = param0.i((byte) 0);
+            return;
           } else {
             var3 = param0.g(-92);
             if (var3 != 0) {
-              ((rb) param0).field_g = ((rb) param0).field_g - 1;
+              param0.field_g = param0.field_g - 1;
               ((bj) this).field_b[var2] = new th();
               ((bj) this).field_b[var2].a(param0);
               var2++;

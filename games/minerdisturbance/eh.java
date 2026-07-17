@@ -1430,8 +1430,8 @@ final class eh {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            eh.g(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            eh.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            eh.g(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            eh.c(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 

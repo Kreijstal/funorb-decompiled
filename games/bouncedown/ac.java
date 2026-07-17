@@ -3,9 +3,6 @@
  */
 final class ac {
     final static Object a(java.applet.Applet param0, String param1, int param2) throws Throwable {
-        if (param2 != -31185) {
-            return null;
-        }
         return netscape.javascript.JSObject.getWindow(param0).call(param1, (Object[]) null);
     }
 

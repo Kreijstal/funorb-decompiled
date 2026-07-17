@@ -61,7 +61,7 @@ final class sd {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((sd) this).field_a[var6] = var3 ^ -1;
+                      ((sd) this).field_a[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -208,7 +208,7 @@ final class sd {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = uk.e(24);
+          int discarded$2 = uk.e(24);
           ((sd) this).field_c = uk.e(16);
           ((sd) this).field_f = uk.e(24);
           ((sd) this).field_b = new int[((sd) this).field_f];
@@ -275,8 +275,9 @@ final class sd {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((sd) this).field_b[var2] = var3_int;
+                    ((sd) this).field_b[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }
@@ -398,6 +399,6 @@ final class sd {
         while (((sd) this).field_a[var1] >= 0) {
             var1 = uk.b() != 0 ? ((sd) this).field_a[var1] : var1 + 1;
         }
-        return ((sd) this).field_a[var1] ^ -1;
+        return ~((sd) this).field_a[var1];
     }
 }

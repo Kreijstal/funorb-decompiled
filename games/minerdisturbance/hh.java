@@ -10,42 +10,89 @@ final class hh {
 
     final pi a(boolean param0, pi param1) {
         pi var3 = null;
-        if (!param0) {
+        RuntimeException var3_ref = null;
+        Object stackIn_7_0 = null;
+        pi stackIn_9_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        pi stackOut_8_0 = null;
+        Object stackOut_6_0 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
           L0: {
-            if (param1 == null) {
-              var3 = ((hh) this).field_e.field_c.field_c;
+            L1: {
+              if (!param0) {
+                break L1;
+              } else {
+                pi discarded$2 = ((hh) this).a(true);
+                break L1;
+              }
+            }
+            L2: {
+              if (param1 == null) {
+                var3 = ((hh) this).field_e.field_c.field_c;
+                break L2;
+              } else {
+                var3 = param1;
+                break L2;
+              }
+            }
+            if (var3 != ((hh) this).field_e.field_c) {
+              ((hh) this).field_b = var3.field_c;
+              stackOut_8_0 = (pi) var3;
+              stackIn_9_0 = stackOut_8_0;
               break L0;
             } else {
-              var3 = param1;
-              break L0;
+              ((hh) this).field_b = null;
+              stackOut_6_0 = null;
+              stackIn_7_0 = stackOut_6_0;
+              return (pi) (Object) stackIn_7_0;
             }
           }
-          if (var3 == ((hh) this).field_e.field_c) {
-            ((hh) this).field_b = null;
-            return null;
-          } else {
-            ((hh) this).field_b = var3.field_c;
-            return var3;
-          }
-        } else {
-          L1: {
-            pi discarded$10 = ((hh) this).a(true);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3_ref = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var3_ref;
+            stackOut_10_1 = new StringBuilder().append("hh.F(").append(param0).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              var3 = ((hh) this).field_e.field_c.field_c;
-              break L1;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
             } else {
-              var3 = param1;
-              break L1;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
             }
           }
-          if (var3 == ((hh) this).field_e.field_c) {
-            ((hh) this).field_b = null;
-            return null;
-          } else {
-            ((hh) this).field_b = var3.field_c;
-            return var3;
-          }
+          throw lj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
+        return stackIn_9_0;
     }
 
     final pi c(int param0) {
@@ -85,11 +132,15 @@ final class hh {
     }
 
     hh(ta param0) {
-        ((hh) this).field_e = param0;
+        try {
+            ((hh) this).field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "hh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void b(int param0) {
-        int var1 = -110 / ((param0 - 8) / 50);
+        int var1 = 55;
         field_a = null;
         field_d = null;
         field_c = null;
@@ -122,19 +173,84 @@ final class hh {
     }
 
     final pi a(pi param0, byte param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
         pi var4 = null;
-        int var3 = -127 / ((param1 - -18) / 40);
-        if (param0 != null) {
-            var4 = param0;
-        } else {
-            var4 = ((hh) this).field_e.field_c.field_f;
+        Object stackIn_6_0 = null;
+        pi stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_5_0 = null;
+        pi stackOut_7_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        try {
+          L0: {
+            L1: {
+              var3_int = -127 / ((param1 - -18) / 40);
+              if (param0 == null) {
+                var4 = ((hh) this).field_e.field_c.field_f;
+                break L1;
+              } else {
+                var4 = param0;
+                break L1;
+              }
+            }
+            if (var4 == ((hh) this).field_e.field_c) {
+              ((hh) this).field_b = null;
+              stackOut_5_0 = null;
+              stackIn_6_0 = stackOut_5_0;
+              return (pi) (Object) stackIn_6_0;
+            } else {
+              ((hh) this).field_b = var4.field_f;
+              stackOut_7_0 = (pi) var4;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_1 = new StringBuilder().append("hh.B(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L2;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L2;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
         }
-        if (!(var4 != ((hh) this).field_e.field_c)) {
-            ((hh) this).field_b = null;
-            return null;
-        }
-        ((hh) this).field_b = var4.field_f;
-        return var4;
+        return stackIn_8_0;
     }
 
     final pi a(boolean param0) {

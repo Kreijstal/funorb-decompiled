@@ -25,10 +25,7 @@ abstract class wk extends ri {
     }
 
     final static void h(byte param0) {
-        oh.a(param0 + 23, 4);
-        if (param0 != -124) {
-            field_G = -55;
-        }
+        oh.a(-101, 4);
     }
 
     void i(byte param0) {
@@ -71,14 +68,14 @@ abstract class wk extends ri {
         var7 = 0;
         var8 = param0;
         L1: while (true) {
-          if ((var7 ^ -1) <= (var4 ^ -1)) {
+          if (~var7 <= ~var4) {
             var5 = 194;
             var4 = 22;
             var6 = 169;
             var7 = 0;
             var8 = param0 - -35;
             L2: while (true) {
-              if ((var7 ^ -1) <= (var4 ^ -1)) {
+              if (~var7 <= ~var4) {
                 fd.field_m.a(((wk) this).field_k + (param2 + -90), 10 + param0);
                 gk.a(param2 - -5, 1, ij.field_c, param0 - -35, -10 + ((wk) this).field_k);
                 gk.a(param2, 1, de.field_d, -22 + (param0 + ((wk) this).field_m), ((wk) this).field_k);
@@ -88,11 +85,11 @@ abstract class wk extends ri {
                 var7 = 0;
                 var8 = param0 - -57;
                 L3: while (true) {
-                  if ((var4 ^ -1) >= (var7 ^ -1)) {
+                  if (~var4 >= ~var7) {
                     return;
                   } else {
                     var9 = (-var5 + var6) * var7 / var4 + var5;
-                    var9 = var9 | (var9 << 55552080 | var9 << 1932263848);
+                    var9 = var9 | (var9 << 16 | var9 << 8);
                     na.a(param2, var8, 6, var9);
                     na.a(((wk) this).field_k + (param2 - 6), var8, 6, var9);
                     var8++;
@@ -102,7 +99,7 @@ abstract class wk extends ri {
                 }
               } else {
                 var9 = var5 + var7 * (var6 + -var5) / var4;
-                var9 = var9 | (var9 << -1340157976 | var9 << -574208848);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 na.a(param2, var8, 6, var9);
                 na.a(-6 + (param2 + ((wk) this).field_k), var8, 6, var9);
                 var7++;
@@ -112,7 +109,7 @@ abstract class wk extends ri {
             }
           } else {
             L4: {
-              if ((var8 ^ -1) > (na.field_i ^ -1)) {
+              if (~var8 > ~na.field_i) {
                 break L4;
               } else {
                 if (var8 < na.field_f) {
@@ -124,7 +121,7 @@ abstract class wk extends ri {
                       break L5;
                     } else {
                       L6: while (true) {
-                        if ((var10 ^ -1) < -21) {
+                        if (var10 > 20) {
                           break L5;
                         } else {
                           L7: {
@@ -134,7 +131,7 @@ abstract class wk extends ri {
                             } else {
                               if (420 <= var12) {
                                 var13 = (-var12 + 462) * var9 / 42;
-                                var13 = var13 | (var13 << -1566923480 | var13 << 19501328);
+                                var13 = var13 | (var13 << 8 | var13 << 16);
                                 na.field_d[var10 + (na.field_e * var8 + param2)] = var13;
                                 break L7;
                               } else {
@@ -161,11 +158,11 @@ abstract class wk extends ri {
                             break L10;
                           } else {
                             var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
-                            if ((var14 ^ -1) >= -463) {
+                            if (var14 <= 462) {
                               L11: {
-                                if (-421 >= (var14 ^ -1)) {
+                                if (var14 >= 420) {
                                   var15 = (462 + -var14) * var9 / 42;
-                                  var15 = var15 | (var15 << 955032712 | var15 << -580817584);
+                                  var15 = var15 | (var15 << 8 | var15 << 16);
                                   na.field_d[param2 + na.field_e * var8 - -var11] = var15;
                                   break L11;
                                 } else {
@@ -186,7 +183,7 @@ abstract class wk extends ri {
                       }
                     }
                   }
-                  var9 = var9 | (var9 << -1057784816 | var9 << -1588613016);
+                  var9 = var9 | (var9 << 16 | var9 << 8);
                   na.a(var10 + param2, var8, -var10 + var11, var9);
                   break L4;
                 } else {
@@ -206,9 +203,6 @@ abstract class wk extends ri {
         int var3 = 0;
         int var5 = 0;
         int var4 = 0;
-        if (param0 != 21) {
-            return true;
-        }
         if (0 < ((wk) this).field_M) {
             var2 = ((wk) this).field_L;
             var3 = ((wk) this).field_F;
@@ -229,9 +223,6 @@ abstract class wk extends ri {
     }
 
     boolean f(byte param0) {
-        if (param0 != -33) {
-            return false;
-        }
         ((wk) this).i((byte) 117);
         return super.f((byte) -33);
     }

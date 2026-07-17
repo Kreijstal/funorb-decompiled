@@ -10,16 +10,17 @@ final class bva extends vmb {
     static boolean field_d;
 
     public static void b(int param0) {
-        if (param0 != 23008) {
-            return;
-        }
         field_b = null;
         field_g = null;
         field_e = null;
     }
 
     bva(qma[] param0) {
-        ((bva) this).field_f = param0;
+        try {
+            ((bva) this).field_f = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "bva.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

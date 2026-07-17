@@ -26,24 +26,20 @@ abstract class rg {
     }
 
     final static void a(String param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
         int var5 = 0;
         uj.field_Wb = true;
         jm.field_h.field_cb = param0;
-        var2 = qa.field_f.field_a;
-        var3 = qa.field_f.field_i;
-        var4 = jm.field_h.field_Db.a(param0, 272, jm.field_h.field_mb);
-        if (param1) {
-          return;
-        } else {
-          var5 = -(var4 / 2) + -110 + var3 / 2 + 7;
-          nc.field_e.a(var5, -(var5 * 2) + (-120 + var3), (-320 + var2) / 2, 256, 320);
-          nc.field_e.field_zb = op.a(8421504, 16, 11579568, nc.field_e.field_nb, 2105376, 3);
-          jm.field_h.a(16, -24 + nc.field_e.field_nb + -20, 24, 256, -24 + (nc.field_e.field_K + -24));
-          hk.field_h.a(-24 + (nc.field_e.field_nb - 20), 24, 120, 256, 80);
-          return;
+        int var2_int = qa.field_f.field_a;
+        int var3 = qa.field_f.field_i;
+        int var4 = jm.field_h.field_Db.a(param0, 272, jm.field_h.field_mb);
+        try {
+            var5 = -(var4 / 2) + -110 + var3 / 2 + 7;
+            nc.field_e.a(var5, -(var5 * 2) + (-120 + var3), (-320 + var2_int) / 2, 256, 320);
+            nc.field_e.field_zb = op.a(8421504, 16, 11579568, nc.field_e.field_nb, 2105376, 3);
+            jm.field_h.a(16, -24 + nc.field_e.field_nb + -20, 24, 256, -24 + (nc.field_e.field_K + -24));
+            hk.field_h.a(-24 + (nc.field_e.field_nb - 20), 24, 120, 256, 80);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "rg.H(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 
@@ -59,6 +55,6 @@ abstract class rg {
         field_a = new String[3];
         field_c = new bb();
         field_b = null;
-        field_d = new byte[]{(byte)3, (byte)3};
+        field_d = new byte[]{(byte) 3, (byte) 3};
     }
 }

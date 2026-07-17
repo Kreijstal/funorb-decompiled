@@ -67,7 +67,7 @@ final class rga {
             for (var6 = 0; 16 > var6; var6++) {
                 var7 = 16384 * var6;
                 var8 = var7;
-                for (var9 = 0; (var9 ^ -1) > -129; var9++) {
+                for (var9 = 0; var9 < 128; var9++) {
                     var10 = 128 * var9 + var8;
                     var11 = var8 + 128 * (var9 + -1 & 127);
                     var12 = 128 * (127 & 1 + var9) + var8;
@@ -75,15 +75,20 @@ final class rga {
                         var14 = (float)((255 & var3[var11 + var13]) + -(255 & var3[var13 + var12]));
                         var15 = (float)((255 & var3[(-1 + var13 & 127) + var10]) + -(var3[(127 & var13 + 1) + var10] & 255));
                         var16 = (float)(128.0 / Math.sqrt((double)(16384.0f + var15 * var15 + var14 * var14)));
+                        int incrementValue$0 = var5;
                         var5++;
-                        var4[var5] = (byte)(int)(127.0f + var15 * var16);
+                        var4[incrementValue$0] = (byte)(int)(127.0f + var15 * var16);
+                        int incrementValue$1 = var5;
                         var5++;
-                        var4[var5] = (byte)(int)(var16 * 128.0f + 127.0f);
+                        var4[incrementValue$1] = (byte)(int)(var16 * 128.0f + 127.0f);
+                        int incrementValue$2 = var5;
                         var5++;
-                        var4[var5] = (byte)(int)(var16 * var14 + 127.0f);
+                        var4[incrementValue$2] = (byte)(int)(var16 * var14 + 127.0f);
+                        int incrementValue$3 = var5;
                         var5++;
+                        int incrementValue$4 = var7;
                         var7++;
-                        var4[var5] = var3[var7];
+                        var4[incrementValue$3] = var3[incrementValue$4];
                     }
                 }
             }
@@ -95,9 +100,6 @@ final class rga {
     public static void a(byte param0) {
         field_f = null;
         field_g = null;
-        if (param0 <= 20) {
-            field_g = null;
-        }
     }
 
     final boolean c(byte param0) {
@@ -135,79 +137,128 @@ final class rga {
     }
 
     rga(pf param0) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         byte[] var15 = null;
         byte[] var16 = null;
         byte[] var17 = null;
         byte[] var18 = null;
-        L0: {
-          ((rga) this).field_e = null;
-          ((rga) this).field_c = null;
-          ((rga) this).field_a = null;
-          ((rga) this).field_d = null;
-          ((rga) this).field_h = param0;
-          ((rga) this).field_b = ((rga) this).field_h.field_uc;
-          if (!((rga) this).field_b) {
-            break L0;
-          } else {
-            if (((rga) this).field_h.a(mj.field_f, wh.field_o, -92)) {
-              break L0;
-            } else {
-              ((rga) this).field_b = false;
-              break L0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        ((rga) this).field_e = null;
+        ((rga) this).field_c = null;
+        ((rga) this).field_a = null;
+        ((rga) this).field_d = null;
+        try {
+          L0: {
+            L1: {
+              ((rga) this).field_h = param0;
+              ((rga) this).field_b = ((rga) this).field_h.field_uc;
+              if (!((rga) this).field_b) {
+                break L1;
+              } else {
+                if (((rga) this).field_h.a(mj.field_f, wh.field_o, -92)) {
+                  break L1;
+                } else {
+                  ((rga) this).field_b = false;
+                  break L1;
+                }
+              }
             }
-          }
-        }
-        L1: {
-          if (((rga) this).field_b) {
-            break L1;
-          } else {
-            if (((rga) this).field_h.a(-10, wh.field_o, mj.field_f)) {
-              break L1;
-            } else {
+            L2: {
+              if (((rga) this).field_b) {
+                break L2;
+              } else {
+                if (!((rga) this).field_h.a(-10, wh.field_o, mj.field_f)) {
+                  return;
+                } else {
+                  break L2;
+                }
+              }
             }
-          }
-        }
-        L2: {
-          mta.c((byte) 111);
-          if (((rga) this).field_b) {
-            var17 = ffb.a(false, dv.field_b, true);
-            ((rga) this).field_d = ((rga) this).field_h.a(128, 16, var17, wh.field_o, 128, -16539);
-            var18 = ffb.a(false, wpa.field_q, true);
-            gf discarded$1 = ((rga) this).field_h.a(128, 16, var18, wh.field_o, 128, -16539);
-            break L2;
-          } else {
-            ((rga) this).field_a = new eb[16];
-            var2 = 0;
-            L3: while (true) {
-              if (-17 >= (var2 ^ -1)) {
-                ((rga) this).field_c = new eb[16];
-                var2 = 0;
+            L3: {
+              mta.c((byte) 111);
+              if (((rga) this).field_b) {
+                var17 = ffb.a(false, dv.field_b, true);
+                ((rga) this).field_d = ((rga) this).field_h.a(128, 16, var17, wh.field_o, 128, -16539);
+                var18 = ffb.a(false, wpa.field_q, true);
+                gf discarded$1 = ((rga) this).field_h.a(128, 16, var18, wh.field_o, 128, -16539);
+                break L3;
+              } else {
+                ((rga) this).field_a = new eb[16];
+                var2_int = 0;
                 L4: while (true) {
-                  if (-17 >= (var2 ^ -1)) {
-                    break L2;
+                  if (var2_int >= 16) {
+                    ((rga) this).field_c = new eb[16];
+                    var2_int = 0;
+                    L5: while (true) {
+                      if (var2_int >= 16) {
+                        break L3;
+                      } else {
+                        var16 = ppb.a(wpa.field_q, 32768 * var2_int, true, 32768);
+                        ((rga) this).field_c[var2_int] = ((rga) this).field_h.a(128, wh.field_o, 0, 128, true, var16);
+                        var2_int++;
+                        continue L5;
+                      }
+                    }
                   } else {
-                    var16 = ppb.a(wpa.field_q, 32768 * var2, true, 32768);
-                    ((rga) this).field_c[var2] = ((rga) this).field_h.a(128, wh.field_o, 0, 128, true, var16);
-                    var2++;
+                    var15 = ppb.a(dv.field_b, var2_int * 32768, true, 32768);
+                    ((rga) this).field_a[var2_int] = ((rga) this).field_h.a(128, wh.field_o, 0, 128, true, var15);
+                    var2_int++;
                     continue L4;
                   }
                 }
-              } else {
-                var15 = ppb.a(dv.field_b, var2 * 32768, true, 32768);
-                ((rga) this).field_a[var2] = ((rga) this).field_h.a(128, wh.field_o, 0, 128, true, var15);
-                var2++;
-                continue L3;
               }
             }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var2 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var2;
+            stackOut_17_1 = new StringBuilder().append("rga.<init>(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param0 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L6;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L6;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
         }
     }
 
     final static void a(boolean param0, boolean param1, boolean param2) {
-        if (param2) {
-            return;
-        }
         Object var4 = null;
         vt.a(param0, -90, param1, (String) null);
     }

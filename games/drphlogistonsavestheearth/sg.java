@@ -10,15 +10,14 @@ final class sg {
     static String[] field_c;
 
     final static void a(int param0, java.applet.Applet param1) {
-        if (param0 != -6988) {
-          sg.a((byte) -81);
-          hg.a(param1, -1, "");
-          bf.a(63, param1);
-          return;
-        } else {
-          hg.a(param1, -1, "");
-          bf.a(63, param1);
-          return;
+        try {
+            if (param0 != -6988) {
+                sg.a((byte) -81);
+            }
+            hg.a(param1, -1, "");
+            bf.a(63, param1);
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "sg.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -18,23 +18,15 @@ class kl {
     private final void c(boolean param0) {
         int var3 = 0;
         rj var4 = null;
-        L0: {
-          var3 = DungeonAssault.field_K;
-          if (!param0) {
-            break L0;
-          } else {
-            ((kl) this).field_a = 126;
-            break L0;
-          }
-        }
+        var3 = DungeonAssault.field_K;
         qe.a(((kl) this).field_g, ((kl) this).field_k, ((kl) this).field_j, ((kl) this).field_a, ((kl) this).field_i);
         ((kl) this).field_g.h(((kl) this).field_k, ((kl) this).field_j);
         var4 = (rj) (Object) ((kl) this).field_f.e(-24172);
-        L1: while (true) {
+        L0: while (true) {
           if (var4 != null) {
             var4.d(0);
             var4 = (rj) (Object) ((kl) this).field_f.a(4);
-            continue L1;
+            continue L0;
           } else {
             return;
           }
@@ -113,11 +105,6 @@ class kl {
         field_c = null;
         field_e = null;
         field_h = null;
-        if (param0 > 42) {
-            return;
-        }
-        Object var2 = null;
-        String discarded$0 = kl.a((CharSequence) null, (byte) 88);
     }
 
     void c(int param0) {
@@ -154,7 +141,7 @@ class kl {
     }
 
     final void a(int param0, int param1, int param2) {
-        ((kl) this).a(-param2 + 480 >> 1577417377, param0, 640 - param0 >> -1060136639, -23241, param2);
+        ((kl) this).a(-param2 + 480 >> 1, param0, 640 - param0 >> 1, -23241, param2);
         if (param1 == 0) {
             return;
         }
@@ -201,19 +188,74 @@ class kl {
     }
 
     final static String a(CharSequence param0, byte param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         String var3 = null;
-        L0: {
-          var2 = -121 % ((param1 - 36) / 62);
-          var3 = uj.a(ci.a(param0, 2), -1);
-          if (var3 != null) {
-            break L0;
-          } else {
-            var3 = "";
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2_int = -121 % ((param1 - 36) / 62);
+              var3 = uj.a(ci.a(param0, 2), -1);
+              if (var3 != null) {
+                break L1;
+              } else {
+                var3 = "";
+                break L1;
+              }
+            }
+            stackOut_2_0 = (String) var3;
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("kl.BA(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw vk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
-        return var3;
+        return stackIn_3_0;
     }
 
     public kl() {

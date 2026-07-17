@@ -23,9 +23,6 @@ final class li {
     }
 
     final static void a(int param0) {
-        if (param0 != -8) {
-            li.a(true);
-        }
         np.a((byte) -123, m.c(true));
     }
 
@@ -44,47 +41,96 @@ final class li {
     }
 
     final static cn[] a(int param0, int param1, nh param2, int param3) {
-        if (!kk.a(param2, param3 + -3, param0, param1)) {
-            return null;
+        RuntimeException var4 = null;
+        Object stackIn_2_0 = null;
+        cn[] stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        cn[] stackOut_4_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            if (kk.a(param2, 1, param0, param1)) {
+              stackOut_4_0 = ib.b(-10718);
+              stackIn_5_0 = stackOut_4_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (cn[]) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("li.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L1;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L1;
+            }
+          }
+          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 4 + 41);
         }
-        if (param3 != 4) {
-            return null;
-        }
-        return ib.b(-10718);
+        return stackIn_5_0;
     }
 
     final static void b(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
-        int var4 = 0;
-        L0: {
-          var4 = DungeonAssault.field_K;
-          jh.c();
-          if (param0 <= -57) {
-            break L0;
-          } else {
-            field_e = null;
-            break L0;
-          }
-        }
-        L1: {
-          if (null == wm.field_c) {
-            bn.field_f = new cn(256, 256);
-            wm.field_c = new cn(316, 316);
-            wm.field_c.field_w = -16;
-            wm.field_c.field_A = -16;
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        bn.field_f.e();
-        gf.a();
-        var1 = 0;
-        var2 = 0;
-        L2: while (true) {
-          if ((var2 ^ -1) <= -8) {
+        int var4 = DungeonAssault.field_K;
+        try {
+            jh.c();
+            if (!(null != wm.field_c)) {
+                bn.field_f = new cn(256, 256);
+                wm.field_c = new cn(316, 316);
+                wm.field_c.field_w = -16;
+                wm.field_c.field_A = -16;
+            }
+            bn.field_f.e();
+            gf.a();
+            var1_int = 0;
+            for (var2 = 0; var2 < 7; var2++) {
+                for (var3 = 0; var3 < 7; var3++) {
+                    if (!(null == qj.field_c[var1_int])) {
+                        gf.b(var3 * 36 + 4, 4 - -(36 * var2), 32, 32, 16777215);
+                    }
+                    var1_int++;
+                }
+            }
             wm.field_c.e();
             gf.a();
             bn.field_f.e(16, 16, 8454143);
@@ -92,27 +138,8 @@ final class li {
             bn.field_f.e(16, 16, 0);
             gf.d(4, 4, 0, 0, wm.field_c.field_y, wm.field_c.field_v);
             jh.b();
-            return;
-          } else {
-            var3 = 0;
-            L3: while (true) {
-              if ((var3 ^ -1) <= -8) {
-                var2++;
-                continue L2;
-              } else {
-                if (null != qj.field_c[var1]) {
-                  gf.b(var3 * 36 + 4, 4 - -(36 * var2), 32, 32, 16777215);
-                  var1++;
-                  var3++;
-                  continue L3;
-                } else {
-                  var1++;
-                  var3++;
-                  continue L3;
-                }
-              }
-            }
-          }
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "li.D(" + -107 + 41);
         }
     }
 

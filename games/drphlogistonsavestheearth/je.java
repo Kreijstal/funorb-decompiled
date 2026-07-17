@@ -14,11 +14,6 @@ final class je extends gi {
 
     public static void a(byte param0) {
         field_k = null;
-        if (param0 <= 9) {
-            boolean discarded$0 = je.a('3', 12);
-            field_i = null;
-            return;
-        }
         field_i = null;
     }
 

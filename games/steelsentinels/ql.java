@@ -17,39 +17,81 @@ final class ql extends gh {
     gh field_Wb;
 
     final static boolean a(int[] param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var3 = SteelSentinels.field_G;
-        if (param1 == 18286) {
-          var2 = 0;
-          L0: while (true) {
-            if (8 > var2) {
-              if (-1 == param0[var2]) {
-                var2++;
-                continue L0;
+        try {
+          L0: {
+            var2_int = 0;
+            L1: while (true) {
+              if (8 <= var2_int) {
+                stackOut_7_0 = 0;
+                stackIn_8_0 = stackOut_7_0;
+                break L0;
               } else {
-                return true;
+                if (param0[var2_int] == 0) {
+                  var2_int++;
+                  continue L1;
+                } else {
+                  stackOut_4_0 = 1;
+                  stackIn_5_0 = stackOut_4_0;
+                  return stackIn_5_0 != 0;
+                }
               }
-            } else {
-              return false;
             }
           }
-        } else {
-          field_ec = null;
-          var2 = 0;
-          L1: while (true) {
-            if (8 > var2) {
-              if (-1 == param0[var2]) {
-                var2++;
-                continue L1;
-              } else {
-                return true;
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var2;
+            stackOut_9_1 = new StringBuilder().append("ql.F(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L2;
             } else {
-              return false;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L2;
             }
           }
+          throw ci.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 18286 + 41);
         }
+        return stackIn_8_0 != 0;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -63,15 +105,19 @@ final class ql extends gh {
 
     ql(long param0, gh param1, gh param2, lb param3, gh param4, String param5, String param6) {
         super(param0, param1);
-        ((ql) this).field_Wb = new gh(0L, (gh) null);
-        ((ql) this).field_Xb = new kg(0L, ((ql) this).field_Wb, param2, param3);
-        ((ql) this).field_bc = new gh(0L, param4);
-        ((ql) this).field_Sb = new gh(0L, param4);
-        ((ql) this).field_bc.field_S = param5;
-        ((ql) this).field_Sb.field_S = param6;
-        ((ql) this).a((gh) (Object) ((ql) this).field_Xb, 127);
-        ((ql) this).a(((ql) this).field_bc, 121);
-        ((ql) this).a(((ql) this).field_Sb, 127);
+        try {
+            ((ql) this).field_Wb = new gh(0L, (gh) null);
+            ((ql) this).field_Xb = new kg(0L, ((ql) this).field_Wb, param2, param3);
+            ((ql) this).field_bc = new gh(0L, param4);
+            ((ql) this).field_Sb = new gh(0L, param4);
+            ((ql) this).field_bc.field_S = param5;
+            ((ql) this).field_Sb.field_S = param6;
+            ((ql) this).a((gh) (Object) ((ql) this).field_Xb, 127);
+            ((ql) this).a(((ql) this).field_bc, 121);
+            ((ql) this).a(((ql) this).field_Sb, 127);
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "ql.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     ql(long param0, ql param1, String param2, String param3) {
@@ -80,9 +126,6 @@ final class ql extends gh {
 
     final static void j(int param0) {
         kc.field_A = false;
-        if (param0 != -29713) {
-            return;
-        }
         de.field_d = false;
         hc.a(-1, 0);
         jn.field_b = mm.field_e;
@@ -94,7 +137,7 @@ final class ql extends gh {
         field_ac = null;
         field_Yb = null;
         field_ec = null;
-        int var1 = 85 / ((param0 - -25) / 56);
+        int var1 = 42;
         field_dc = null;
         field_Zb = null;
         field_Tb = null;
@@ -117,12 +160,6 @@ final class ql extends gh {
 
     final static void b(boolean param0) {
         gi.field_o.a(0, 0, 18, 0, fl.field_c.field_zb - (rm.field_p ? 2 + ua.field_G + 42 : 0));
-        if (!param0) {
-            field_ec = null;
-            uj.field_j.a(0, 0, 18, -2 + (fl.field_c.field_zb + -ua.field_G - 40), 42 + ua.field_G);
-            mj.field_Sb.a(fl.field_c.field_zb, -2048, ua.field_G, -20 + fl.field_c.field_Lb, 2, 0, 20);
-            return;
-        }
         uj.field_j.a(0, 0, 18, -2 + (fl.field_c.field_zb + -ua.field_G - 40), 42 + ua.field_G);
         mj.field_Sb.a(fl.field_c.field_zb, -2048, ua.field_G, -20 + fl.field_c.field_Lb, 2, 0, 20);
     }

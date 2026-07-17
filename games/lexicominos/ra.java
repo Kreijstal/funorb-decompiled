@@ -20,18 +20,18 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
         } else {
           L0: {
             var3 = -135 + param0;
-            var4 = -35 + param2;
+            var4 = 205;
             var5 = 256;
-            if (-76 < mc.field_k) {
-              var5 = (mc.field_k << -1476670264) / 75;
+            if (mc.field_k < 75) {
+              var5 = (mc.field_k << 8) / 75;
               break L0;
             } else {
               break L0;
             }
           }
           L1: {
-            if (-201 < mc.field_k) {
-              var5 = (250 - mc.field_k << -1659086456) / 50;
+            if (mc.field_k > 200) {
+              var5 = (250 - mc.field_k << 8) / 50;
               break L1;
             } else {
               break L1;
@@ -41,53 +41,53 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
           k.b();
           lf.a();
           rg.b(0);
-          if (-257 >= (var5 ^ -1)) {
+          if (var5 >= 256) {
             pd.a(param1 ^ -22835);
             if (param1 <= mc.field_k) {
               nc.field_n.b(var3 + 15, var4 + 10, var5);
               var6 = mc.field_k - 125;
-              if ((var6 ^ -1) < -1) {
-                if (-51 < (var6 ^ -1)) {
-                  if (-21 >= (var6 ^ -1)) {
-                    if (30 <= var6) {
+              if (var6 > 0) {
+                if (var6 < 50) {
+                  if (var6 >= 20) {
+                    if (30 > var6) {
                       L2: {
-                        var7 = 256 * (50 + -var6) / 20;
-                        t.field_a.d(var3, var4, var7);
+                        t.field_a.d(var3, var4, 256);
                         var6 = mc.field_k + -140;
-                        if ((var6 ^ -1) >= -1) {
+                        if (var6 <= 0) {
                           break L2;
                         } else {
                           L3: {
                             var7 = 256;
-                            if ((var6 ^ -1) <= -21) {
+                            if (var6 >= 20) {
                               break L3;
                             } else {
                               var7 = 256 * var6 / 20;
                               break L3;
                             }
                           }
-                          jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> -917014616);
+                          jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> 8);
                           break L2;
                         }
                       }
                       return;
                     } else {
                       L4: {
-                        t.field_a.d(var3, var4, 256);
+                        var7 = 256 * (50 + -var6) / 20;
+                        t.field_a.d(var3, var4, var7);
                         var6 = mc.field_k + -140;
-                        if ((var6 ^ -1) >= -1) {
+                        if (var6 <= 0) {
                           break L4;
                         } else {
                           L5: {
                             var7 = 256;
-                            if ((var6 ^ -1) <= -21) {
+                            if (var6 >= 20) {
                               break L5;
                             } else {
                               var7 = 256 * var6 / 20;
                               break L5;
                             }
                           }
-                          jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> -917014616);
+                          jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> 8);
                           break L4;
                         }
                       }
@@ -98,59 +98,62 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
                       var7 = var6 * 256 / 20;
                       t.field_a.d(var3, var4, var7);
                       var6 = mc.field_k + -140;
-                      if ((var6 ^ -1) >= -1) {
+                      if (var6 <= 0) {
                         break L6;
                       } else {
                         L7: {
                           var7 = 256;
-                          if ((var6 ^ -1) <= -21) {
+                          if (var6 >= 20) {
                             break L7;
                           } else {
                             var7 = 256 * var6 / 20;
                             break L7;
                           }
                         }
-                        jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> -917014616);
+                        jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> 8);
                         break L6;
                       }
                     }
                     return;
                   }
                 } else {
-                  var6 = mc.field_k + -140;
-                  if ((var6 ^ -1) < -1) {
-                    L8: {
-                      var7 = 256;
-                      if ((var6 ^ -1) <= -21) {
-                        break L8;
-                      } else {
-                        var7 = 256 * var6 / 20;
-                        break L8;
+                  L8: {
+                    var6 = mc.field_k + -140;
+                    if (var6 <= 0) {
+                      break L8;
+                    } else {
+                      L9: {
+                        var7 = 256;
+                        if (var6 >= 20) {
+                          break L9;
+                        } else {
+                          var7 = 256 * var6 / 20;
+                          break L9;
+                        }
                       }
+                      jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> 8);
+                      break L8;
                     }
-                    jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> -917014616);
-                    return;
-                  } else {
-                    return;
                   }
+                  return;
                 }
               } else {
-                L9: {
+                L10: {
                   var6 = mc.field_k + -140;
-                  if ((var6 ^ -1) >= -1) {
-                    break L9;
+                  if (var6 <= 0) {
+                    break L10;
                   } else {
-                    L10: {
+                    L11: {
                       var7 = 256;
-                      if ((var6 ^ -1) <= -21) {
-                        break L10;
+                      if (var6 >= 20) {
+                        break L11;
                       } else {
                         var7 = 256 * var6 / 20;
-                        break L10;
+                        break L11;
                       }
                     }
-                    jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> -917014616);
-                    break L9;
+                    jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> 8);
+                    break L10;
                   }
                 }
                 return;
@@ -158,152 +161,164 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
             } else {
               be.field_d.f(var3, var4);
               var6 = mc.field_k - 125;
-              if (var6 >= -1) {
-                L11: {
-                  var6 = mc.field_k + -140;
-                  if ((var6 ^ -1) >= -1) {
-                    break L11;
-                  } else {
-                    L12: {
-                      var7 = 256;
-                      if ((var6 ^ -1) <= -21) {
-                        break L12;
-                      } else {
-                        var7 = 256 * var6 / 20;
-                        break L12;
-                      }
-                    }
-                    jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> -917014616);
-                    break L11;
-                  }
-                }
-                return;
-              } else {
-                L13: {
-                  if (-51 > var6) {
-                    L14: {
-                      if (-21 >= (var6 ^ -1)) {
+              if (var6 > 0) {
+                L12: {
+                  if (var6 < 50) {
+                    L13: {
+                      if (var6 >= 20) {
                         if (30 > var6) {
                           t.field_a.d(var3, var4, 256);
-                          break L14;
+                          break L13;
                         } else {
                           var7 = 256 * (50 + -var6) / 20;
                           t.field_a.d(var3, var4, var7);
-                          break L14;
+                          break L13;
                         }
                       } else {
                         var7 = var6 * 256 / 20;
                         t.field_a.d(var3, var4, var7);
+                        break L13;
+                      }
+                    }
+                    L14: {
+                      var6 = mc.field_k + -140;
+                      if (var6 <= 0) {
+                        break L14;
+                      } else {
+                        L15: {
+                          var7 = 256;
+                          if (var6 >= 20) {
+                            break L15;
+                          } else {
+                            var7 = 256 * var6 / 20;
+                            break L15;
+                          }
+                        }
+                        jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> 8);
                         break L14;
                       }
                     }
-                    var6 = mc.field_k + -140;
-                    if ((var6 ^ -1) >= -1) {
-                      break L13;
-                    } else {
-                      L15: {
-                        var7 = 256;
-                        if ((var6 ^ -1) <= -21) {
-                          break L15;
-                        } else {
-                          var7 = 256 * var6 / 20;
-                          break L15;
-                        }
-                      }
-                      jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> -917014616);
-                      break L13;
-                    }
+                    break L12;
                   } else {
-                    var6 = mc.field_k + -140;
-                    if ((var6 ^ -1) >= -1) {
-                      break L13;
-                    } else {
-                      L16: {
-                        var7 = 256;
-                        if ((var6 ^ -1) <= -21) {
-                          break L16;
-                        } else {
-                          var7 = 256 * var6 / 20;
-                          break L16;
+                    L16: {
+                      var6 = mc.field_k + -140;
+                      if (var6 <= 0) {
+                        break L16;
+                      } else {
+                        L17: {
+                          var7 = 256;
+                          if (var6 >= 20) {
+                            break L17;
+                          } else {
+                            var7 = 256 * var6 / 20;
+                            break L17;
+                          }
                         }
+                        jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> 8);
+                        break L16;
                       }
-                      jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> -917014616);
-                      break L13;
                     }
+                    break L12;
+                  }
+                }
+                return;
+              } else {
+                L18: {
+                  var6 = mc.field_k + -140;
+                  if (var6 <= 0) {
+                    break L18;
+                  } else {
+                    L19: {
+                      var7 = 256;
+                      if (var6 >= 20) {
+                        break L19;
+                      } else {
+                        var7 = 256 * var6 / 20;
+                        break L19;
+                      }
+                    }
+                    jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> 8);
+                    break L18;
                   }
                 }
                 return;
               }
             }
           } else {
-            L17: {
+            L20: {
               lf.c(0, 0, lf.field_f, lf.field_a, 0, -var5 + 256);
               pd.a(param1 ^ -22835);
               if (param1 <= mc.field_k) {
                 nc.field_n.b(var3 + 15, var4 + 10, var5);
-                break L17;
+                break L20;
               } else {
                 be.field_d.f(var3, var4);
-                break L17;
+                break L20;
               }
             }
-            L18: {
-              L19: {
+            L21: {
+              L22: {
                 var6 = mc.field_k - 125;
-                if (var6 >= -1) {
-                  break L19;
+                if (var6 <= 0) {
+                  break L22;
                 } else {
-                  if (-51 > var6) {
-                    if (-21 >= (var6 ^ -1)) {
+                  if (var6 < 50) {
+                    if (var6 >= 20) {
                       if (30 > var6) {
                         t.field_a.d(var3, var4, 256);
-                        break L19;
+                        break L22;
                       } else {
                         var7 = 256 * (50 + -var6) / 20;
                         t.field_a.d(var3, var4, var7);
-                        break L19;
+                        break L22;
                       }
                     } else {
                       var7 = var6 * 256 / 20;
                       t.field_a.d(var3, var4, var7);
-                      break L19;
+                      break L22;
                     }
                   } else {
-                    var6 = mc.field_k + -140;
-                    if ((var6 ^ -1) >= -1) {
-                      break L18;
-                    } else {
-                      L20: {
-                        var7 = 256;
-                        if ((var6 ^ -1) <= -21) {
-                          break L20;
-                        } else {
-                          var7 = 256 * var6 / 20;
-                          break L20;
+                    L23: {
+                      var6 = mc.field_k + -140;
+                      if (var6 <= 0) {
+                        break L23;
+                      } else {
+                        L24: {
+                          var7 = 256;
+                          if (var6 >= 20) {
+                            break L24;
+                          } else {
+                            var7 = 256 * var6 / 20;
+                            break L24;
+                          }
                         }
+                        jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> 8);
+                        break L23;
                       }
-                      jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> -917014616);
-                      break L18;
+                    }
+                    break L21;
+                  }
+                }
+              }
+              L25: {
+                var6 = mc.field_k + -140;
+                if (var6 <= 0) {
+                  break L25;
+                } else {
+                  L26: {
+                    var7 = 256;
+                    if (var6 >= 20) {
+                      break L26;
+                    } else {
+                      var7 = 256 * var6 / 20;
+                      break L26;
                     }
                   }
+                  jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> 8);
+                  break L25;
                 }
               }
-              var6 = mc.field_k + -140;
-              if ((var6 ^ -1) >= -1) {
-                break L18;
-              } else {
-                L21: {
-                  var7 = 256;
-                  if ((var6 ^ -1) <= -21) {
-                    break L21;
-                  } else {
-                    var7 = 256 * var6 / 20;
-                    break L21;
-                  }
-                }
-                jg.field_m.b(var3 + 15, var4 - -10, var5 * var7 >> -917014616);
-                break L18;
-              }
+              break L21;
             }
             return;
           }
@@ -312,18 +327,69 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public static void b(int param0) {
         field_a = null;
-        if (param0 != 20) {
-            boolean discarded$0 = ra.a(0);
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
     final void a(boolean param0, ab param1) {
-        ca.a(param1, 15232, ((ra) this).field_b);
-        if (param0) {
-            ((ra) this).field_b = null;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ca.a(param1, 15232, ((ra) this).field_b);
+              if (!param0) {
+                break L1;
+              } else {
+                ((ra) this).field_b = null;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ra.D(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw ld.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -458,7 +524,11 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
-        ((ra) this).field_d = true;
+        try {
+            ((ra) this).field_d = true;
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "ra.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void paint(java.awt.Graphics param0) {

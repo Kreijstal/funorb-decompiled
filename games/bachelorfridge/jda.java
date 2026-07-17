@@ -15,15 +15,14 @@ final class jda extends iga {
     }
 
     final void a(lu param0, boolean param1) {
-        if (param1) {
-          wba discarded$2 = ((jda) this).a((byte) -118);
-          param0.a(((jda) this).field_f, 70);
-          param0.a(-117, ((jda) this).field_e);
-          return;
-        } else {
-          param0.a(((jda) this).field_f, 70);
-          param0.a(-117, ((jda) this).field_e);
-          return;
+        try {
+            if (param1) {
+                wba discarded$0 = ((jda) this).a((byte) -118);
+            }
+            param0.a(((jda) this).field_f, 70);
+            param0.a(-117, ((jda) this).field_e);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "jda.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -37,8 +36,12 @@ final class jda extends iga {
     }
 
     jda(String param0, String param1) {
-        ((jda) this).field_f = param0;
-        ((jda) this).field_e = param1;
+        try {
+            ((jda) this).field_f = param0;
+            ((jda) this).field_e = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "jda.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

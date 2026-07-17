@@ -95,45 +95,25 @@ final class tb extends r {
     }
 
     final void b(hm param0, int param1) {
-        if (!(param0 instanceof bb)) {
-            throw new IllegalArgumentException();
+        bb var3 = null;
+        try {
+            if (!(param0 instanceof bb)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (bb) (Object) param0;
+            ((tb) this).field_H.a((hg) (Object) var3, 8364);
+            if (param1 < 36) {
+                ((tb) this).a(-45, (byte) -105, -25, -82);
+            }
+            var3.field_G = true;
+            boolean discarded$0 = var3.a(-4659, (hm) this);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "tb.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        bb var3 = (bb) (Object) param0;
-        ((tb) this).field_H.a((hg) (Object) var3, 8364);
-        if (param1 < 36) {
-            ((tb) this).a(-45, (byte) -105, -25, -82);
-        }
-        var3.field_G = true;
-        boolean discarded$0 = var3.a(-4659, (hm) this);
     }
 
     final static boolean a(boolean param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        if (!param0) {
-          L0: {
-            L1: {
-              if (km.field_n == null) {
-                break L1;
-              } else {
-                if (!km.field_n.c(124)) {
-                  break L1;
-                } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  break L0;
-                }
-              }
-            }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            break L0;
-          }
-          return stackIn_6_0 != 0;
-        } else {
-          return false;
-        }
+        return km.field_n != null && km.field_n.c(124);
     }
 
     public static void o(int param0) {

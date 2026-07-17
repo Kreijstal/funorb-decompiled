@@ -16,94 +16,108 @@ final class lc extends fa {
     static String[][] field_l;
 
     public static void a(byte param0) {
-        Object var2 = null;
-        if (param0 != 90) {
-          var2 = null;
-          int discarded$2 = lc.a((aa) null, false);
-          field_t = null;
-          field_l = null;
-          field_q = null;
-          return;
-        } else {
-          field_t = null;
-          field_l = null;
-          field_q = null;
-          return;
-        }
+        field_t = null;
+        field_l = null;
+        field_q = null;
     }
 
     final static int a(aa param0, boolean param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_13_0 = 0;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         var3 = Pixelate.field_H ? 1 : 0;
-        var2 = vp.field_Ib;
-        if (2 == param0.field_j) {
-          if (!param0.field_a) {
-            if (0 == param0.field_d) {
-              if (0 == param0.field_e) {
-                var2 = ib.field_i[param0.field_j];
-                if (param1) {
-                  field_l = null;
-                  return var2;
+        try {
+          L0: {
+            L1: {
+              var2_int = vp.field_Ib;
+              if (2 == param0.field_j) {
+                if (!param0.field_a) {
+                  L2: {
+                    if (0 != param0.field_d) {
+                      break L2;
+                    } else {
+                      if (0 != param0.field_e) {
+                        break L2;
+                      } else {
+                        var2_int = ib.field_i[param0.field_j];
+                        break L1;
+                      }
+                    }
+                  }
+                  var2_int = qp.field_P[param0.field_j];
+                  break L1;
                 } else {
-                  return var2;
+                  var2_int = vp.field_Ib;
+                  break L1;
                 }
               } else {
-                var2 = qp.field_P[param0.field_j];
-                if (param1) {
-                  field_l = null;
-                  return var2;
+                if (param0.field_j == 4) {
+                  var2_int = qp.field_P[param0.field_j];
+                  break L1;
                 } else {
-                  return var2;
+                  if (~param0.field_k == ~hn.field_f) {
+                    var2_int = ib.field_i[param0.field_j];
+                    break L1;
+                  } else {
+                    var2_int = qp.field_P[param0.field_j];
+                    break L1;
+                  }
                 }
               }
-            } else {
-              var2 = qp.field_P[param0.field_j];
-              if (param1) {
-                field_l = null;
-                return var2;
-              } else {
-                return var2;
-              }
             }
-          } else {
-            var2 = vp.field_Ib;
-            if (param1) {
-              field_l = null;
-              return var2;
+            stackOut_13_0 = var2_int;
+            stackIn_14_0 = stackOut_13_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var2;
+            stackOut_15_1 = new StringBuilder().append("lc.A(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param0 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L3;
             } else {
-              return var2;
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L3;
             }
           }
-        } else {
-          if ((param0.field_j ^ -1) == -5) {
-            var2 = qp.field_P[param0.field_j];
-            if (param1) {
-              field_l = null;
-              return var2;
-            } else {
-              return var2;
-            }
-          } else {
-            if ((param0.field_k ^ -1L) == (hn.field_f ^ -1L)) {
-              var2 = ib.field_i[param0.field_j];
-              if (!param1) {
-                return var2;
-              } else {
-                field_l = null;
-                return var2;
-              }
-            } else {
-              var2 = qp.field_P[param0.field_j];
-              if (!param1) {
-                return var2;
-              } else {
-                field_l = null;
-                return var2;
-              }
-            }
-          }
+          throw aa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 0 + 41);
         }
+        return stackIn_14_0;
     }
 
     lc() {

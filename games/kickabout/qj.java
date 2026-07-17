@@ -49,11 +49,11 @@ final class qj {
         var4 = Kickabout.field_G;
         if (param0 == 101) {
           if (((qj) this).field_b != null) {
-            if (-1 != (((qj) this).field_b.length ^ -1)) {
+            if (((qj) this).field_b.length != 0) {
               var3 = 1;
               L0: while (true) {
                 if (((qj) this).field_b.length > var3) {
-                  if (((qj) this).field_b[-1 + var3] - -((qj) this).field_b[var3] >> -1613831583 > param1) {
+                  if (((qj) this).field_b[-1 + var3] - -((qj) this).field_b[var3] >> 1 > param1) {
                     return var3 - 1;
                   } else {
                     var3++;
@@ -72,11 +72,11 @@ final class qj {
         } else {
           field_e = -68;
           if (((qj) this).field_b != null) {
-            if (-1 != (((qj) this).field_b.length ^ -1)) {
+            if (((qj) this).field_b.length != 0) {
               var3 = 1;
               L1: while (true) {
                 if (((qj) this).field_b.length > var3) {
-                  if (((qj) this).field_b[-1 + var3] - -((qj) this).field_b[var3] >> -1613831583 > param1) {
+                  if (((qj) this).field_b[-1 + var3] - -((qj) this).field_b[var3] >> 1 > param1) {
                     return var3 - 1;
                   } else {
                     var3++;

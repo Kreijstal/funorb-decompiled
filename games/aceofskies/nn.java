@@ -3,83 +3,81 @@
  */
 final class nn {
     final static void a(ds param0, int param1, byte param2) {
-        int var4 = 0;
-        dl var5 = null;
-        var5 = q.field_p;
+        dl var5 = q.field_p;
         var5.g(109, param1);
-        ((dl) var5).field_g = ((dl) var5).field_g + 1;
-        var4 = ((dl) var5).field_g;
+        var5.field_g = var5.field_g + 1;
+        int var4 = var5.field_g;
         var5.b(-1336879960, 1);
-        if (((ds) param0).field_f != null) {
-          var5.b(-1336879960, ((ds) param0).field_f.length);
-          var5.a(true, ((ds) param0).field_f.length, 0, ((ds) param0).field_f);
-          int discarded$4 = var5.e(var4, 16);
-          ((dl) var5).field_g = ((dl) var5).field_g - 4;
-          param0.field_g = var5.a((byte) 121);
-          if (param2 < 27) {
-            return;
-          } else {
-            var5.b(-var4 + ((dl) var5).field_g, (byte) 124);
-            return;
-          }
+        if (param0.field_f == null) {
+            var5.b(-1336879960, 0);
         } else {
-          var5.b(-1336879960, 0);
-          int discarded$5 = var5.e(var4, 16);
-          ((dl) var5).field_g = ((dl) var5).field_g - 4;
-          param0.field_g = var5.a((byte) 121);
-          if (param2 < 27) {
-            return;
-          } else {
-            var5.b(-var4 + ((dl) var5).field_g, (byte) 124);
-            return;
-          }
+            var5.b(-1336879960, param0.field_f.length);
+            var5.a(true, param0.field_f.length, 0, param0.field_f);
+        }
+        int discarded$0 = var5.e(var4, 16);
+        var5.field_g = var5.field_g - 4;
+        param0.field_g = var5.a((byte) 121);
+        try {
+            var5.b(-var4 + var5.field_g, (byte) 124);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "nn.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 62 + 41);
         }
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        RuntimeException decompiledCaughtException = null;
         var10 = AceOfSkies.field_G ? 1 : 0;
-        vp.b(param2, param0, param3 + 1, 10000536);
-        vp.b(param2, param4 + param0, param3 + 1, 12105912);
-        var5 = 1;
-        if (param1 != 70) {
-          return;
-        } else {
+        try {
           L0: {
-            var6 = param4;
-            if (var5 + param0 < vp.field_f) {
-              var5 = vp.field_f - param0;
-              break L0;
+            vp.b(param2, param0, param3 + 1, 10000536);
+            vp.b(param2, param4 + param0, param3 + 1, 12105912);
+            var5_int = 1;
+            if (param1 == 70) {
+              L1: {
+                var6 = param4;
+                if (var5_int + param0 < vp.field_f) {
+                  var5_int = vp.field_f - param0;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              L2: {
+                if (var6 + param0 <= vp.field_d) {
+                  break L2;
+                } else {
+                  var6 = -param0 + vp.field_d;
+                  break L2;
+                }
+              }
+              var7 = var5_int;
+              L3: while (true) {
+                if (var6 <= var7) {
+                  break L0;
+                } else {
+                  var8 = 152 - -(var7 * 48 / param4);
+                  var9 = var8 << 8 | var8 << 16 | var8;
+                  vp.field_j[param2 + vp.field_i * (var7 + param0)] = var9;
+                  vp.field_j[param3 + param2 + (param0 - -var7) * vp.field_i] = var9;
+                  var7++;
+                  continue L3;
+                }
+              }
             } else {
-              break L0;
-            }
-          }
-          L1: {
-            if (var6 + param0 <= vp.field_d) {
-              break L1;
-            } else {
-              var6 = -param0 + vp.field_d;
-              break L1;
-            }
-          }
-          var7 = var5;
-          L2: while (true) {
-            if (var6 <= var7) {
               return;
-            } else {
-              var8 = 152 - -(var7 * 48 / param4);
-              var9 = var8 << 783689864 | var8 << 1258760400 | var8;
-              vp.field_j[param2 + vp.field_i * (var7 + param0)] = var9;
-              vp.field_j[param3 + param2 + (param0 - -var7) * vp.field_i] = var9;
-              var7++;
-              continue L2;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw pn.a((Throwable) (Object) var5, "nn.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

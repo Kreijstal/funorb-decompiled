@@ -14,38 +14,50 @@ final class qt {
         field_e = null;
         field_c = null;
         field_b = null;
-        if (param0 <= 89) {
-            int discarded$0 = qt.a(70, 71, (byte) -22);
-        }
     }
 
     final static int a(int param0, int param1, byte param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
-        var3 = 0;
-        L0: while (true) {
-          if ((param1 ^ -1) >= -1) {
-            if (param2 > -49) {
-              field_b = null;
-              return var3;
-            } else {
-              return var3;
+        try {
+          L0: {
+            var3_int = 0;
+            L1: while (true) {
+              if (param1 <= 0) {
+                L2: {
+                  if (param2 <= -49) {
+                    break L2;
+                  } else {
+                    field_b = null;
+                    break L2;
+                  }
+                }
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var3_int = var3_int << 1 | param0 & 1;
+                param1--;
+                param0 = param0 >>> 1;
+                continue L1;
+              }
             }
-          } else {
-            var3 = var3 << -683904767 | param0 & 1;
-            param1--;
-            param0 = param0 >>> 1;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw ig.a((Throwable) (Object) var3, "qt.A(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_7_0;
     }
 
     final static void a(boolean param0) {
         tm.a();
-        if (param0) {
-            return;
-        }
         tm.b(0.75f);
     }
 

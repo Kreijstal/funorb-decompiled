@@ -13,14 +13,7 @@ final class pv extends i {
         field_F = null;
         field_G = null;
         field_J = null;
-        if (param0 >= -92) {
-          field_I = null;
-          field_I = null;
-          return;
-        } else {
-          field_I = null;
-          return;
-        }
+        field_I = null;
     }
 
     final void a(int param0, int param1) {

@@ -292,7 +292,7 @@ final class js extends ni {
                                         if ((((js) this).field_C[var44] & 65535) != ((js) this).field_r[var45]) {
                                           break L17;
                                         } else {
-                                          ((js) this).field_G[var45] = (byte)-1;
+                                          ((js) this).field_G[var45] = (byte) -1;
                                           var45++;
                                           continue L16;
                                         }
@@ -452,13 +452,13 @@ final class js extends ni {
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((js) this).field_G[var38] = (byte)-1;
-                      ((js) this).field_B[var38] = (short)-1;
+                      ((js) this).field_G[var38] = (byte) -1;
+                      ((js) this).field_B[var38] = (short) -1;
                       break L25;
                     } else {
                       ((js) this).field_G[var38] = (byte)(var39 >> 2);
                       ((js) this).field_B[var38] = ((js) this).field_i[var38];
-                      ((js) this).field_i[var38] = (short)127;
+                      ((js) this).field_i[var38] = (short) 127;
                       if (((js) this).field_B[var38] == -1) {
                         break L25;
                       } else {
@@ -667,8 +667,9 @@ final class js extends ni {
                 break L2;
               } else {
                 L4: {
-                  ((js) this).field_t[var28] = var2.a((byte) 107);
-                  var29 = var2.a((byte) 107);
+                  byte dupTemp$1 = var2.a((byte) 107);
+                  ((js) this).field_t[var28] = dupTemp$1;
+                  var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -1154,7 +1155,7 @@ final class js extends ni {
                 }
                 if (((js) this).field_G != null) {
                   if (((js) this).field_B[var53] == -1) {
-                    ((js) this).field_G[var53] = (byte)-1;
+                    ((js) this).field_G[var53] = (byte) -1;
                     var53++;
                     continue L22;
                   } else {
@@ -1306,8 +1307,9 @@ final class js extends ni {
                                           break L6;
                                         }
                                       }
-                                      ((js) this).field_L[var1] = new kg();
-                                      var16 = new kg();
+                                      kg dupTemp$1 = new kg();
+                                      ((js) this).field_L[var1] = dupTemp$1;
+                                      var16 = dupTemp$1;
                                       var16.field_b = var11;
                                       var16.field_a = var12;
                                       var16.field_e = var13;
@@ -1488,14 +1490,24 @@ final class js extends ni {
     }
 
     private js(byte[] param0) {
-        ((js) this).field_v = 0;
-        ((js) this).field_O = 0;
-        ((js) this).field_x = 0;
-        if (param0[param0.length - 1] == -1) {
-            // if_icmpne L47
-            this.a(param0);
-        } else {
-            this.b(param0);
+        L0: {
+          L1: {
+            ((js) this).field_v = 0;
+            ((js) this).field_O = 0;
+            ((js) this).field_x = 0;
+            if (param0[param0.length - 1] != -1) {
+              break L1;
+            } else {
+              if (param0[param0.length - 2] != -1) {
+                break L1;
+              } else {
+                this.a(param0);
+                break L0;
+              }
+            }
+          }
+          this.b(param0);
+          break L0;
         }
     }
 

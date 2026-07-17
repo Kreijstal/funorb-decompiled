@@ -8,18 +8,17 @@ final class jm extends kp {
     static String field_q;
 
     final static void a(String param0, boolean param1, byte param2, boolean param3) {
-        fe.f(-1);
-        le.field_e.k(104);
-        no.field_e = new ri(qh.field_B, (String) null, el.field_b, param3, param1);
-        if (param2 > -50) {
-          field_s = null;
-          ae.field_f = new hk(le.field_e, (vg) (Object) no.field_e);
-          le.field_e.a(true, (vg) (Object) ae.field_f);
-          return;
-        } else {
-          ae.field_f = new hk(le.field_e, (vg) (Object) no.field_e);
-          le.field_e.a(true, (vg) (Object) ae.field_f);
-          return;
+        try {
+            fe.f(-1);
+            le.field_e.k(104);
+            no.field_e = new ri(qh.field_B, (String) null, el.field_b, param3, param1);
+            if (param2 > -50) {
+                field_s = null;
+            }
+            ae.field_f = new hk(le.field_e, (vg) (Object) no.field_e);
+            le.field_e.a(true, (vg) (Object) ae.field_f);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "jm.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -27,9 +26,6 @@ final class jm extends kp {
         field_r = null;
         field_q = null;
         field_s = null;
-        if (param0 != 22595) {
-            field_r = null;
-        }
     }
 
     jm(long param0, String param1) {

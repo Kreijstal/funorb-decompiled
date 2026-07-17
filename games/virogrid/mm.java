@@ -14,16 +14,83 @@ final class mm {
     private int field_h;
 
     final static boolean a(int param0, int param1, eh param2) {
-        if (param0 != 10332) {
-            field_b = null;
+        byte[] var3 = null;
+        RuntimeException var3_ref = null;
+        byte[] var4 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        int stackOut_6_0 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 10332) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
+              }
+            }
+            var4 = param2.b(param1, 27034);
+            var3 = var4;
+            if (var4 == null) {
+              stackOut_4_0 = 0;
+              stackIn_5_0 = stackOut_4_0;
+              return stackIn_5_0 != 0;
+            } else {
+              d.a((byte) -82, var4);
+              stackOut_6_0 = 1;
+              stackIn_7_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_1 = new StringBuilder().append("mm.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        byte[] var4 = param2.b(param1, 27034);
-        byte[] var3 = var4;
-        if (!(var4 != null)) {
-            return false;
-        }
-        d.a((byte) -82, var4);
-        return true;
+        return stackIn_7_0 != 0;
     }
 
     private final void a(byte param0) {
@@ -52,27 +119,27 @@ final class mm {
               var3 = ((mm) this).field_c[var2];
               if (0 != (2 & var2)) {
                 if (0 != (var2 & 1)) {
-                  ((mm) this).field_e = ((mm) this).field_e ^ ((mm) this).field_e >>> -1791008272;
+                  ((mm) this).field_e = ((mm) this).field_e ^ ((mm) this).field_e >>> 16;
                   break L2;
                 } else {
-                  ((mm) this).field_e = ((mm) this).field_e ^ ((mm) this).field_e << -129905982;
+                  ((mm) this).field_e = ((mm) this).field_e ^ ((mm) this).field_e << 2;
                   break L2;
                 }
               } else {
                 if (0 != (var2 & 1)) {
-                  ((mm) this).field_e = ((mm) this).field_e ^ ((mm) this).field_e >>> 854569158;
+                  ((mm) this).field_e = ((mm) this).field_e ^ ((mm) this).field_e >>> 6;
                   break L2;
                 } else {
-                  ((mm) this).field_e = ((mm) this).field_e ^ ((mm) this).field_e << -115185843;
+                  ((mm) this).field_e = ((mm) this).field_e ^ ((mm) this).field_e << 13;
                   break L2;
                 }
               }
             }
             ((mm) this).field_e = ((mm) this).field_e + ((mm) this).field_c[128 + var2 & 255];
-            int dupTemp$6 = ((mm) this).field_e + (((mm) this).field_c[rb.a(255, var3 >> -389921758)] + ((mm) this).field_h);
+            int dupTemp$6 = ((mm) this).field_e + (((mm) this).field_c[rb.a(255, var3 >> 2)] + ((mm) this).field_h);
             var4 = dupTemp$6;
             ((mm) this).field_c[var2] = dupTemp$6;
-            int dupTemp$7 = ((mm) this).field_c[rb.a(var4, 261354) >> 1878912712 >> -2016404862] - -var3;
+            int dupTemp$7 = ((mm) this).field_c[rb.a(var4, 261354) >> 8 >> 2] - -var3;
             ((mm) this).field_h = dupTemp$7;
             ((mm) this).field_g[var2] = dupTemp$7;
             var2++;
@@ -82,7 +149,7 @@ final class mm {
     }
 
     final static void a(int param0, long param1) {
-        if (-1L <= (param1 ^ -1L)) {
+        if (param1 <= 0L) {
             return;
         }
         if (param1 % 10L == 0L) {
@@ -118,7 +185,7 @@ final class mm {
         if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
-        if ((var2 ^ -1) <= -129) {
+        if (var2 >= 128) {
             if (!(160 <= var2)) {
                 var3 = cg.field_f[var2 + -128];
                 if (var3 == 0) {
@@ -141,7 +208,6 @@ final class mm {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
         var11 = Virogrid.field_F ? 1 : 0;
         var7 = -1640531527;
         var9 = -1640531527;
@@ -154,20 +220,11 @@ final class mm {
         var2 = 0;
         L0: while (true) {
           if (var2 >= 4) {
-            L1: {
-              if (param0 >= 7) {
-                break L1;
-              } else {
-                var12 = null;
-                boolean discarded$1 = mm.a(119, -92, (eh) null);
-                break L1;
-              }
-            }
             var2 = 0;
-            L2: while (true) {
-              if ((var2 ^ -1) <= -257) {
+            L1: while (true) {
+              if (var2 >= 256) {
                 var2 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var2 >= 256) {
                     this.a((byte) -9);
                     ((mm) this).field_a = 256;
@@ -181,28 +238,28 @@ final class mm {
                     var6 = var6 + ((mm) this).field_c[3 + var2];
                     var4 = var4 + ((mm) this).field_c[var2 + 1];
                     var3 = var3 + ((mm) this).field_c[var2];
-                    var3 = var3 ^ var4 << 1896791275;
+                    var3 = var3 ^ var4 << 11;
                     var4 = var4 + var5;
                     var6 = var6 + var3;
-                    var4 = var4 ^ var5 >>> 2137309058;
+                    var4 = var4 ^ var5 >>> 2;
                     var7 = var7 + var4;
                     var5 = var5 + var6;
-                    var5 = var5 ^ var6 << 908415784;
+                    var5 = var5 ^ var6 << 8;
                     var6 = var6 + var7;
                     var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> -1577458832;
+                    var6 = var6 ^ var7 >>> 16;
                     var7 = var7 + var8;
                     var9 = var9 + var6;
-                    var7 = var7 ^ var8 << -368693142;
+                    var7 = var7 ^ var8 << 10;
                     var10 = var10 + var7;
                     var8 = var8 + var9;
-                    var8 = var8 ^ var9 >>> -1348176700;
+                    var8 = var8 ^ var9 >>> 4;
                     var9 = var9 + var10;
                     var3 = var3 + var8;
-                    var9 = var9 ^ var10 << 395930504;
+                    var9 = var9 ^ var10 << 8;
                     var4 = var4 + var9;
                     var10 = var10 + var3;
-                    var10 = var10 ^ var3 >>> 1021694697;
+                    var10 = var10 ^ var3 >>> 9;
                     var3 = var3 + var4;
                     var5 = var5 + var10;
                     ((mm) this).field_c[var2] = var3;
@@ -214,7 +271,7 @@ final class mm {
                     ((mm) this).field_c[6 + var2] = var9;
                     ((mm) this).field_c[var2 + 7] = var10;
                     var2 += 8;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -226,28 +283,28 @@ final class mm {
                 var7 = var7 + ((mm) this).field_g[4 + var2];
                 var5 = var5 + ((mm) this).field_g[var2 - -2];
                 var6 = var6 + ((mm) this).field_g[3 + var2];
-                var3 = var3 ^ var4 << 21401547;
+                var3 = var3 ^ var4 << 11;
                 var4 = var4 + var5;
                 var6 = var6 + var3;
-                var4 = var4 ^ var5 >>> -1868507710;
+                var4 = var4 ^ var5 >>> 2;
                 var7 = var7 + var4;
                 var5 = var5 + var6;
-                var5 = var5 ^ var6 << -1489668056;
+                var5 = var5 ^ var6 << 8;
                 var8 = var8 + var5;
                 var6 = var6 + var7;
-                var6 = var6 ^ var7 >>> 171998448;
+                var6 = var6 ^ var7 >>> 16;
                 var9 = var9 + var6;
                 var7 = var7 + var8;
-                var7 = var7 ^ var8 << 2105382762;
+                var7 = var7 ^ var8 << 10;
                 var10 = var10 + var7;
                 var8 = var8 + var9;
-                var8 = var8 ^ var9 >>> -933996412;
+                var8 = var8 ^ var9 >>> 4;
                 var9 = var9 + var10;
                 var3 = var3 + var8;
-                var9 = var9 ^ var10 << -324103352;
+                var9 = var9 ^ var10 << 8;
                 var10 = var10 + var3;
                 var4 = var4 + var9;
-                var10 = var10 ^ var3 >>> -1954600823;
+                var10 = var10 ^ var3 >>> 9;
                 var5 = var5 + var10;
                 var3 = var3 + var4;
                 ((mm) this).field_c[var2] = var3;
@@ -259,32 +316,32 @@ final class mm {
                 ((mm) this).field_c[var2 + 6] = var9;
                 ((mm) this).field_c[7 + var2] = var10;
                 var2 += 8;
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            var3 = var3 ^ var4 << -1708724149;
+            var3 = var3 ^ var4 << 11;
             var6 = var6 + var3;
             var4 = var4 + var5;
-            var4 = var4 ^ var5 >>> -1796922590;
+            var4 = var4 ^ var5 >>> 2;
             var7 = var7 + var4;
             var5 = var5 + var6;
-            var5 = var5 ^ var6 << 1638016520;
+            var5 = var5 ^ var6 << 8;
             var8 = var8 + var5;
             var6 = var6 + var7;
-            var6 = var6 ^ var7 >>> -1899215216;
+            var6 = var6 ^ var7 >>> 16;
             var9 = var9 + var6;
             var7 = var7 + var8;
-            var7 = var7 ^ var8 << 2137465834;
+            var7 = var7 ^ var8 << 10;
             var8 = var8 + var9;
             var10 = var10 + var7;
-            var8 = var8 ^ var9 >>> -453564060;
+            var8 = var8 ^ var9 >>> 4;
             var9 = var9 + var10;
             var3 = var3 + var8;
-            var9 = var9 ^ var10 << 2029527240;
+            var9 = var9 ^ var10 << 8;
             var4 = var4 + var9;
             var10 = var10 + var3;
-            var10 = var10 ^ var3 >>> -974765047;
+            var10 = var10 ^ var3 >>> 9;
             var3 = var3 + var4;
             var5 = var5 + var10;
             var2++;
@@ -303,13 +360,17 @@ final class mm {
     }
 
     mm(int[] param0) {
-        int var2 = 0;
-        ((mm) this).field_g = new int[256];
-        ((mm) this).field_c = new int[256];
-        for (var2 = 0; param0.length > var2; var2++) {
-            ((mm) this).field_g[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((mm) this).field_g = new int[256];
+            ((mm) this).field_c = new int[256];
+            for (var2_int = 0; param0.length > var2_int; var2_int++) {
+                ((mm) this).field_g[var2_int] = param0[var2_int];
+            }
+            this.b(83);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "mm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.b(83);
     }
 
     static {

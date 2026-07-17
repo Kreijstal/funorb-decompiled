@@ -56,10 +56,6 @@ final class gv {
     public static void b(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 > 82) {
-            return;
-        }
-        wk discarded$0 = gv.a(24);
     }
 
     static {

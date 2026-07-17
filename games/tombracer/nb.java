@@ -11,11 +11,6 @@ final class nb {
     public static void a(byte param0) {
         field_b = null;
         field_d = null;
-        if (param0 != -95) {
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

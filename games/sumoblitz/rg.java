@@ -9,34 +9,38 @@ abstract class rg extends sp {
     static int[] field_C;
 
     rg(dg param0, int param1, int param2) {
-        super(lj.field_b - param1 >> 1264137313, cv.field_O + -param2 >> 1258340289, param1, param2, (mh) null);
-        ((rg) this).field_D = false;
-        ((rg) this).field_B = 0;
-        ((rg) this).field_E = param0;
+        super(lj.field_b - param1 >> 1, cv.field_O + -param2 >> 1, param1, param2, (mh) null);
+        try {
+            ((rg) this).field_D = false;
+            ((rg) this).field_B = 0;
+            ((rg) this).field_E = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "rg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     public static void e(byte param0) {
         field_A = null;
-        int var1 = 68 / ((1 - param0) / 63);
+        int var1 = -68;
         field_C = null;
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        if (((rg) this).field_B != -1) {
-          if (-257 > ((rg) this).field_B) {
+        if (((rg) this).field_B != 0) {
+          if (((rg) this).field_B < 256) {
             if (null != uw.field_a) {
-              if (uw.field_a.field_x >= ((rg) this).field_q) {
-                if (((rg) this).field_p <= uw.field_a.field_u) {
+              if (~uw.field_a.field_x <= ~((rg) this).field_q) {
+                if (~((rg) this).field_p >= ~uw.field_a.field_u) {
                   jq.a(7161, uw.field_a);
                   lk.b();
                   ((rg) this).b(113, 0, 0);
-                  if (param2 >= -35) {
-                    pk discarded$4 = ((rg) this).f(-77);
+                  if (param2 < -35) {
                     super.a(-param0 + -((rg) this).field_r, -param1 + -((rg) this).field_v, (byte) -114, param3);
                     su.a((byte) 114);
                     uw.field_a.a(param0 - -((rg) this).field_r, param1 - -((rg) this).field_v, ((rg) this).field_B);
                     return;
                   } else {
+                    pk discarded$4 = ((rg) this).f(-77);
                     super.a(-param0 + -((rg) this).field_r, -param1 + -((rg) this).field_v, (byte) -114, param3);
                     su.a((byte) 114);
                     uw.field_a.a(param0 - -((rg) this).field_r, param1 - -((rg) this).field_v, ((rg) this).field_B);
@@ -47,13 +51,13 @@ abstract class rg extends sp {
                   jq.a(7161, uw.field_a);
                   lk.b();
                   ((rg) this).b(113, 0, 0);
-                  if (param2 >= -35) {
-                    pk discarded$5 = ((rg) this).f(-77);
+                  if (param2 < -35) {
                     super.a(-param0 + -((rg) this).field_r, -param1 + -((rg) this).field_v, (byte) -114, param3);
                     su.a((byte) 114);
                     uw.field_a.a(param0 - -((rg) this).field_r, param1 - -((rg) this).field_v, ((rg) this).field_B);
                     return;
                   } else {
+                    pk discarded$5 = ((rg) this).f(-77);
                     super.a(-param0 + -((rg) this).field_r, -param1 + -((rg) this).field_v, (byte) -114, param3);
                     su.a((byte) 114);
                     uw.field_a.a(param0 - -((rg) this).field_r, param1 - -((rg) this).field_v, ((rg) this).field_B);
@@ -65,13 +69,13 @@ abstract class rg extends sp {
                 jq.a(7161, uw.field_a);
                 lk.b();
                 ((rg) this).b(113, 0, 0);
-                if (param2 >= -35) {
-                  pk discarded$6 = ((rg) this).f(-77);
+                if (param2 < -35) {
                   super.a(-param0 + -((rg) this).field_r, -param1 + -((rg) this).field_v, (byte) -114, param3);
                   su.a((byte) 114);
                   uw.field_a.a(param0 - -((rg) this).field_r, param1 - -((rg) this).field_v, ((rg) this).field_B);
                   return;
                 } else {
+                  pk discarded$6 = ((rg) this).f(-77);
                   super.a(-param0 + -((rg) this).field_r, -param1 + -((rg) this).field_v, (byte) -114, param3);
                   su.a((byte) 114);
                   uw.field_a.a(param0 - -((rg) this).field_r, param1 - -((rg) this).field_v, ((rg) this).field_B);
@@ -83,13 +87,13 @@ abstract class rg extends sp {
               jq.a(7161, uw.field_a);
               lk.b();
               ((rg) this).b(113, 0, 0);
-              if (param2 >= -35) {
-                pk discarded$7 = ((rg) this).f(-77);
+              if (param2 < -35) {
                 super.a(-param0 + -((rg) this).field_r, -param1 + -((rg) this).field_v, (byte) -114, param3);
                 su.a((byte) 114);
                 uw.field_a.a(param0 - -((rg) this).field_r, param1 - -((rg) this).field_v, ((rg) this).field_B);
                 return;
               } else {
+                pk discarded$7 = ((rg) this).f(-77);
                 super.a(-param0 + -((rg) this).field_r, -param1 + -((rg) this).field_v, (byte) -114, param3);
                 su.a((byte) 114);
                 uw.field_a.a(param0 - -((rg) this).field_r, param1 - -((rg) this).field_v, ((rg) this).field_B);
@@ -97,11 +101,11 @@ abstract class rg extends sp {
               }
             }
           } else {
-            if (param3 != 0) {
-              return;
-            } else {
+            if (param3 == 0) {
               ((rg) this).b(117, param0 + ((rg) this).field_r, param1 + ((rg) this).field_v);
               super.a(param0, param1, (byte) -112, param3);
+              return;
+            } else {
               return;
             }
           }
@@ -140,7 +144,7 @@ abstract class rg extends sp {
         if (param0 == -28778) {
           var2 = this.a((byte) -100);
           var3 = var2 + -((rg) this).field_B;
-          if ((var3 ^ -1) >= -1) {
+          if (var3 <= 0) {
             if (var3 < 0) {
               L0: {
                 L1: {
@@ -248,7 +252,7 @@ abstract class rg extends sp {
           ((rg) this).field_E = null;
           var2 = this.a((byte) -100);
           var3 = var2 + -((rg) this).field_B;
-          if ((var3 ^ -1) < -1) {
+          if (var3 > 0) {
             ((rg) this).field_B = ((rg) this).field_B + (7 + var3) / 8;
             if (var3 >= 0) {
               L8: {
@@ -402,10 +406,10 @@ abstract class rg extends sp {
     final void c(int param0, int param1, int param2) {
         if (param2 < 37) {
           field_A = null;
-          ((rg) this).a(106, lj.field_b - param0 >> -1058313983, -param1 + cv.field_O >> -1017172895, param1, param0);
+          ((rg) this).a(106, lj.field_b - param0 >> 1, -param1 + cv.field_O >> 1, param1, param0);
           return;
         } else {
-          ((rg) this).a(106, lj.field_b - param0 >> -1058313983, -param1 + cv.field_O >> -1017172895, param1, param0);
+          ((rg) this).a(106, lj.field_b - param0 >> 1, -param1 + cv.field_O >> 1, param1, param0);
           return;
         }
     }
@@ -429,32 +433,7 @@ abstract class rg extends sp {
     }
 
     private final int a(byte param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 != -100) {
-          return -55;
-        } else {
-          L0: {
-            if (((rg) this).field_D) {
-              if ((Object) (Object) ((rg) this).field_E.e((byte) 54) == this) {
-                stackOut_5_0 = 256;
-                stackIn_6_0 = stackOut_5_0;
-                break L0;
-              } else {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
-                break L0;
-              }
-            } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
-              break L0;
-            }
-          }
-          return stackIn_6_0;
-        }
+        return !((rg) this).field_D ? 0 : (Object) (Object) ((rg) this).field_E.e((byte) 54) != this ? 0 : 256;
     }
 
     static {

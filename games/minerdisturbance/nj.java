@@ -9,7 +9,8 @@ final class nj {
     static ea[] field_c;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9) {
-        int[] var10 = null;
+        RuntimeException var10 = null;
+        int[] var10_array = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -17,31 +18,80 @@ final class nj {
         int var15 = 0;
         int var16 = 0;
         int[] var17 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var16 = MinerDisturbance.field_ab;
-        if (param5 == 255) {
-          param1--;
-          L0: while (true) {
-            if (param1 >= 0) {
-              var17 = param6;
-              var10 = var17;
-              var11 = param3;
-              var12 = param8;
-              var13 = param7;
-              var14 = param0;
-              var15 = var17[var11] >> 571312513 & 8355711;
-              var10[var11] = var15 + (c.a(16711680, var12 >> -1666101471) + (c.a(65280, var13 >> -1371330711) - -c.a(var14 >> -2068372143, 255)));
-              param3++;
-              param0 = param0 + param4;
-              param8 = param8 + param2;
-              param7 = param7 + param9;
+        try {
+          L0: {
+            if (param5 == 255) {
               param1--;
-              continue L0;
+              L1: while (true) {
+                if (param1 < 0) {
+                  break L0;
+                } else {
+                  var17 = param6;
+                  var10_array = var17;
+                  var11 = param3;
+                  var12 = param8;
+                  var13 = param7;
+                  var14 = param0;
+                  var15 = var17[var11] >> 1 & 8355711;
+                  var10_array[var11] = var15 + (c.a(16711680, var12 >> 1) + (c.a(65280, var13 >> 9) - -c.a(var14 >> 17, 255)));
+                  param3++;
+                  param0 = param0 + param4;
+                  param8 = param8 + param2;
+                  param7 = param7 + param9;
+                  param1--;
+                  continue L1;
+                }
+              }
             } else {
               return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var10 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var10;
+            stackOut_8_1 = new StringBuilder().append("nj.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param6 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
         }
     }
 
@@ -112,7 +162,7 @@ final class nj {
                   break L1;
                 } else {
                   L2: {
-                    if (-256 >= (var1 ^ -1)) {
+                    if (var1 >= 255) {
                       var1 = 255;
                       break L2;
                     } else {
@@ -123,7 +173,7 @@ final class nj {
                   break L1;
                 }
               }
-              if ((var1 ^ -1) <= -256) {
+              if (var1 >= 255) {
                 mf.field_c.g(0, 0);
                 return;
               } else {
@@ -135,7 +185,7 @@ final class nj {
                     mf.field_c.f(0, 0, var1);
                     return;
                   } else {
-                    if (-12 > (oj.field_J ^ -1)) {
+                    if (oj.field_J > 11) {
                       mf.field_c.f(0, 0, var1);
                       return;
                     } else {
@@ -151,7 +201,7 @@ final class nj {
                   break L3;
                 } else {
                   L4: {
-                    if (-256 >= (var1 ^ -1)) {
+                    if (var1 >= 255) {
                       var1 = 255;
                       break L4;
                     } else {
@@ -162,7 +212,7 @@ final class nj {
                   break L3;
                 }
               }
-              if ((var1 ^ -1) <= -256) {
+              if (var1 >= 255) {
                 mf.field_c.g(0, 0);
                 return;
               } else {
@@ -174,7 +224,7 @@ final class nj {
                     mf.field_c.f(0, 0, var1);
                     return;
                   } else {
-                    if (-12 > (oj.field_J ^ -1)) {
+                    if (oj.field_J > 11) {
                       mf.field_c.f(0, 0, var1);
                       return;
                     } else {
@@ -191,7 +241,7 @@ final class nj {
                 break L5;
               } else {
                 L6: {
-                  if (-256 >= (var1 ^ -1)) {
+                  if (var1 >= 255) {
                     var1 = 255;
                     break L6;
                   } else {
@@ -202,7 +252,7 @@ final class nj {
                 break L5;
               }
             }
-            if ((var1 ^ -1) <= -256) {
+            if (var1 >= 255) {
               mf.field_c.g(0, 0);
               return;
             } else {
@@ -214,7 +264,7 @@ final class nj {
                   mf.field_c.f(0, 0, var1);
                   return;
                 } else {
-                  if (-12 > (oj.field_J ^ -1)) {
+                  if (oj.field_J > 11) {
                     mf.field_c.f(0, 0, var1);
                     return;
                   } else {
@@ -249,7 +299,7 @@ final class nj {
                   break L8;
                 } else {
                   L9: {
-                    if (-256 >= (var1 ^ -1)) {
+                    if (var1 >= 255) {
                       var1 = 255;
                       break L9;
                     } else {
@@ -260,7 +310,7 @@ final class nj {
                   break L8;
                 }
               }
-              if ((var1 ^ -1) <= -256) {
+              if (var1 >= 255) {
                 mf.field_c.g(0, 0);
                 return;
               } else {
@@ -272,7 +322,7 @@ final class nj {
                     mf.field_c.f(0, 0, var1);
                     return;
                   } else {
-                    if (-12 > (oj.field_J ^ -1)) {
+                    if (oj.field_J > 11) {
                       mf.field_c.f(0, 0, var1);
                       return;
                     } else {
@@ -288,7 +338,7 @@ final class nj {
                   break L10;
                 } else {
                   L11: {
-                    if (-256 >= (var1 ^ -1)) {
+                    if (var1 >= 255) {
                       var1 = 255;
                       break L11;
                     } else {
@@ -300,7 +350,7 @@ final class nj {
                 }
               }
               L12: {
-                if ((var1 ^ -1) <= -256) {
+                if (var1 >= 255) {
                   mf.field_c.g(0, 0);
                   break L12;
                 } else {
@@ -312,7 +362,7 @@ final class nj {
                       mf.field_c.f(0, 0, var1);
                       break L12;
                     } else {
-                      if (-12 > (oj.field_J ^ -1)) {
+                      if (oj.field_J > 11) {
                         mf.field_c.f(0, 0, var1);
                         break L12;
                       } else {
@@ -331,7 +381,7 @@ final class nj {
                 break L13;
               } else {
                 L14: {
-                  if (-256 >= (var1 ^ -1)) {
+                  if (var1 >= 255) {
                     var1 = 255;
                     break L14;
                   } else {
@@ -343,7 +393,7 @@ final class nj {
               }
             }
             L15: {
-              if ((var1 ^ -1) <= -256) {
+              if (var1 >= 255) {
                 mf.field_c.g(0, 0);
                 break L15;
               } else {
@@ -355,7 +405,7 @@ final class nj {
                     mf.field_c.f(0, 0, var1);
                     break L15;
                   } else {
-                    if (-12 > (oj.field_J ^ -1)) {
+                    if (oj.field_J > 11) {
                       mf.field_c.f(0, 0, var1);
                       break L15;
                     } else {
@@ -373,7 +423,7 @@ final class nj {
 
     public static void a(int param0) {
         field_d = null;
-        int var1 = 76 / ((param0 - 63) / 46);
+        int var1 = -25;
         field_c = null;
         field_e = null;
         field_a = null;
@@ -381,42 +431,91 @@ final class nj {
     }
 
     final static boolean a(String param0, byte param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_10_0 = 0;
+        int stackOut_7_0 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var4 = MinerDisturbance.field_ab;
-        if (param1 >= 104) {
-          var2 = param0.charAt(0);
-          var3 = 1;
-          L0: while (true) {
-            if (param0.length() > var3) {
-              if (param0.charAt(var3) != var2) {
-                return false;
+        try {
+          L0: {
+            L1: {
+              if (param1 >= 104) {
+                break L1;
               } else {
-                var3++;
-                continue L0;
+                nj.a((byte) -21);
+                break L1;
               }
-            } else {
-              return true;
+            }
+            var2_int = param0.charAt(0);
+            var3 = 1;
+            L2: while (true) {
+              if (param0.length() <= var3) {
+                stackOut_10_0 = 1;
+                stackIn_11_0 = stackOut_10_0;
+                break L0;
+              } else {
+                if (param0.charAt(var3) != var2_int) {
+                  stackOut_7_0 = 0;
+                  stackIn_8_0 = stackOut_7_0;
+                  return stackIn_8_0 != 0;
+                } else {
+                  var3++;
+                  continue L2;
+                }
+              }
             }
           }
-        } else {
-          nj.a((byte) -21);
-          var2 = param0.charAt(0);
-          var3 = 1;
-          L1: while (true) {
-            if (param0.length() > var3) {
-              if (param0.charAt(var3) != var2) {
-                return false;
-              } else {
-                var3++;
-                continue L1;
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var2;
+            stackOut_12_1 = new StringBuilder().append("nj.D(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
             } else {
-              return true;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
             }
           }
+          throw lj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
         }
+        return stackIn_11_0 != 0;
     }
 
     static {

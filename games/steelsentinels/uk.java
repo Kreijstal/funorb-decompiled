@@ -72,6 +72,7 @@ final class uk extends ck {
 
     final static uk a(cm param0, int param1, int param2) {
         try {
+            uk var4_ref = null;
             if (!uk.a(param0)) {
                 boolean discarded$0 = param0.a((byte) 86, param2, param1);
                 return null;
@@ -80,13 +81,11 @@ final class uk extends ck {
             if (var3 == null) {
                 return null;
             }
-            uk var4 = null;
-            try {
-                var4 = new uk(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new uk(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -112,7 +111,6 @@ final class uk extends ck {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -628,7 +626,7 @@ final class uk extends ck {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((uk) this).field_M) {
                     break L36;
                   } else {
@@ -686,7 +684,7 @@ final class uk extends ck {
               }
             }
             ((uk) this).field_M = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_X[var14.field_a[var17_int]];
             var55 = field_R;
@@ -708,7 +706,7 @@ final class uk extends ck {
         ((uk) this).field_F = var2.i(0);
         ((uk) this).field_V = var2.i(0);
         if (((uk) this).field_V < 0) {
-            ((uk) this).field_V = ((uk) this).field_V ^ -1;
+            ((uk) this).field_V = ~((uk) this).field_V;
             ((uk) this).field_L = true;
         }
         int var3 = var2.i(0);
@@ -740,6 +738,7 @@ final class uk extends ck {
 
     final static uk a(cm param0, String param1, String param2) {
         try {
+            uk var4_ref = null;
             if (!uk.a(param0)) {
                 boolean discarded$0 = param0.a((byte) -89, param2, param1);
                 return null;
@@ -748,13 +747,11 @@ final class uk extends ck {
             if (var3 == null) {
                 return null;
             }
-            uk var4 = null;
-            try {
-                var4 = new uk(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new uk(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1015,12 +1012,13 @@ final class uk extends ck {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -1038,7 +1036,7 @@ final class uk extends ck {
 
     private final static void a(byte[] param0, int param1) {
         field_B = param0;
-        field_o = param1;
+        field_o = 0;
         field_U = 0;
     }
 
@@ -1150,12 +1148,13 @@ final class uk extends ck {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((uk) this).field_u[var3] = (byte)(var6 - 128);
+                    ((uk) this).field_u[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }

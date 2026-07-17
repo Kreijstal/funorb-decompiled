@@ -11,9 +11,9 @@ final class eb {
     static String[] field_d;
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = 0;
-        hl var2_ref = null;
+        hl var2_ref_hl = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -133,7 +133,7 @@ final class eb {
                           break L0;
                         } else {
                           pa.field_I[var7].e();
-                          int discarded$6 = ah.field_d.a(va.field_t[var7], 3, 3, pa.field_I[var7].field_u - 6, pa.field_I[var7].field_v + -6, mc.field_c, -1, 1, 1, ah.field_d.field_p - -ah.field_d.field_q);
+                          int discarded$3 = ah.field_d.a(va.field_t[var7], 3, 3, pa.field_I[var7].field_u - 6, pa.field_I[var7].field_v + -6, mc.field_c, -1, 1, 1, ah.field_d.field_p - -ah.field_d.field_q);
                           hh.a(0, 0, 3, pa.field_I[var7].field_v, false, 1, pa.field_I[var7], pa.field_I[var7].field_u);
                           var7++;
                           continue L1;
@@ -165,7 +165,7 @@ final class eb {
                   var7 -= 3;
                   var8 = ue.field_e - -((td.field_p + -var6) / 2);
                   var6 += 6;
-                  if (-1 < (var7 ^ -1)) {
+                  if (var7 < 0) {
                     var9_int = -var7;
                     w.field_v = w.field_v - var9_int;
                     re.field_l.field_x = re.field_l.field_x + var9_int * 2;
@@ -194,7 +194,7 @@ final class eb {
                   }
                 }
                 L5: {
-                  if (-1 >= (var8 ^ -1)) {
+                  if (var8 >= 0) {
                     break L5;
                   } else {
                     var9_int = -var8;
@@ -224,13 +224,13 @@ final class eb {
                 re.field_l.f();
                 var9 = new hl(re.field_l.field_x, re.field_l.field_q);
                 var9.e();
-                int discarded$7 = gi.field_b.a(var14, cb.field_f, ue.field_e, nd.field_k, td.field_p, 16777215, -1, 1, 1, gi.field_b.field_q + gi.field_b.field_p);
+                int discarded$4 = gi.field_b.a(var14, cb.field_f, ue.field_e, nd.field_k, td.field_p, 16777215, -1, 1, 1, gi.field_b.field_q + gi.field_b.field_p);
                 hh.a(0, 0, 3, var9.field_q, false, 1, var9, var9.field_x);
                 re.field_l.e();
                 var9.e(0, 0);
                 lh.field_N = new hl(640, 480);
                 lh.field_N.e();
-                re.field_l.b((re.field_l.field_x >> 1722382017) - -w.field_v, (re.field_l.field_q >> -358143967) - -gi.field_e, eh.field_h, 4096);
+                re.field_l.b((re.field_l.field_x >> 1) - -w.field_v, (re.field_l.field_q >> 1) - -gi.field_e, eh.field_h, 4096);
                 re.field_l = null;
                 lh.field_N.d();
                 ki.a(var29, var2, var3);
@@ -256,7 +256,7 @@ final class eb {
                 var17 = fb.a(jh.field_f, -115, new String[1]);
                 ik.field_q = null;
                 var16.e();
-                int discarded$8 = ah.field_d.a(var17, 3, 3, var16.field_u - 6, var16.field_v + -6, 16777215, -1, 0, 1, ah.field_d.field_q + ah.field_d.field_p);
+                int discarded$5 = ah.field_d.a(var17, 3, 3, var16.field_u - 6, var16.field_v + -6, 16777215, -1, 0, 1, ah.field_d.field_q + ah.field_d.field_p);
                 hh.a(0, 0, 3, var16.field_v, false, 1, var16, var16.field_u);
                 ba.field_c.e();
                 var16.e(-ba.field_c.field_w + 199, 83 - ba.field_c.field_y);
@@ -297,7 +297,7 @@ final class eb {
             ki.a(wc.field_b);
             ki.a(16, 16, 608, 112, 15, jk.field_l, nh.field_i);
             ki.a(231, 144, 393, 232, 15, jk.field_l, nh.field_i);
-            var1 = -21 % ((param0 - 30) / 35);
+            var1_int = -21 % ((param0 - 30) / 35);
             if (ed.field_k == null) {
               break L9;
             } else {
@@ -329,16 +329,16 @@ final class eb {
               if (null != bg.field_c) {
                 L13: {
                   pc.field_a.e(231, 390);
-                  var2_ref = re.field_f;
+                  var2_ref_hl = re.field_f;
                   if (0 == ea.field_a.field_k) {
-                    var2_ref = jh.field_a;
+                    var2_ref_hl = jh.field_a;
                     break L13;
                   } else {
                     break L13;
                   }
                 }
                 L14: {
-                  var2_ref.e(0, 0);
+                  var2_ref_hl.e(0, 0);
                   stackOut_45_0 = 40;
                   stackOut_45_1 = fk.field_a;
                   stackIn_47_0 = stackOut_45_0;
@@ -364,18 +364,18 @@ final class eb {
                   }
                 }
                 L15: {
-                  var3 = (stackIn_48_0 * ti.b(stackIn_48_1 << stackIn_48_2, 2047) >> 1375649648) + 40;
-                  if ((var3 ^ -1) >= -1) {
+                  var3 = (stackIn_48_0 * ti.b(stackIn_48_1 << stackIn_48_2, 2047) >> 16) + 40;
+                  if (var3 <= 0) {
                     break L15;
                   } else {
                     pc.field_a.f(230, 389, var3);
                     pc.field_a.f(232, 389, var3);
                     pc.field_a.f(232, 391, var3);
                     pc.field_a.f(230, 391, var3);
-                    var2_ref.f(1, 1, var3);
-                    var2_ref.f(-1, 1, var3);
-                    var2_ref.f(1, -1, var3);
-                    var2_ref.f(-1, -1, var3);
+                    var2_ref_hl.f(1, 1, var3);
+                    var2_ref_hl.f(-1, 1, var3);
+                    var2_ref_hl.f(1, -1, var3);
+                    var2_ref_hl.f(-1, -1, var3);
                     break L15;
                   }
                 }
@@ -414,7 +414,7 @@ final class eb {
                 L18: {
                   pc.field_a.e(434, 390);
                   ui.field_z.e(0, 0);
-                  if ((ea.field_a.field_k ^ -1) != -2) {
+                  if (ea.field_a.field_k != 1) {
                     break L18;
                   } else {
                     rh.a(392, -4 + pc.field_a.field_u, 7 * pc.field_a.field_v / 12, 436, 64, true);
@@ -425,7 +425,7 @@ final class eb {
                   stackOut_58_0 = 112;
                   stackIn_60_0 = stackOut_58_0;
                   stackIn_59_0 = stackOut_58_0;
-                  if (-2 != (ea.field_a.field_k ^ -1)) {
+                  if (ea.field_a.field_k != 1) {
                     stackOut_60_0 = stackIn_60_0;
                     stackOut_60_1 = 0;
                     stackIn_61_0 = stackOut_60_0;
@@ -456,7 +456,7 @@ final class eb {
                   if (ge.field_b.field_v + var2 <= la.field_c) {
                     break L21;
                   } else {
-                    var3 = (ti.b(fk.field_a << 753824260, 2047) * 40 >> 1825530160) + 40;
+                    var3 = (ti.b(fk.field_a << 4, 2047) * 40 >> 16) + 40;
                     if (0 >= var3) {
                       break L21;
                     } else {
@@ -464,16 +464,14 @@ final class eb {
                         if (269 - ge.field_b.field_u >= pe.field_d) {
                           break L22;
                         } else {
-                          if (-270 >= (pe.field_d ^ -1)) {
+                          if (pe.field_d >= 269) {
                             break L22;
                           } else {
                             ge.field_b.f(-1 + (-ge.field_b.field_x + 269), var2 + -1, var3);
                             ge.field_b.f(1 + (269 - ge.field_b.field_x), -1 + var2, var3);
                             ge.field_b.f(-ge.field_b.field_x + 268, var2 - -1, var3);
                             ge.field_b.f(269 + -ge.field_b.field_x - -1, var2 + 1, var3);
-                            ab.e(-67);
-                            pa.field_I[ag.field_o].e(269, 340);
-                            break L20;
+                            break L21;
                           }
                         }
                       }
@@ -487,9 +485,7 @@ final class eb {
                           ma.field_b.f(587, var2 + -1, var3);
                           ma.field_b.f(585, var2 + 1, var3);
                           ma.field_b.f(587, 1 + var2, var3);
-                          ab.e(-67);
-                          pa.field_I[ag.field_o].e(269, 340);
-                          break L20;
+                          break L21;
                         }
                       }
                     }
@@ -515,9 +511,6 @@ final class eb {
         field_e = null;
         field_g = null;
         field_b = null;
-        if (!param0) {
-            eb.a(-99);
-        }
         field_d = null;
         field_a = null;
     }

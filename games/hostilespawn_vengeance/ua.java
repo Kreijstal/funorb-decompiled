@@ -17,7 +17,7 @@ final class ua implements Runnable {
         ((ua) this).field_e = true;
         try {
             while (!((ua) this).field_d) {
-                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
+                for (var1_int = 0; var1_int < 2; var1_int++) {
                     var2 = ((ua) this).field_g[var1_int];
                     if (var2 != null) {
                         var2.f();
@@ -38,9 +38,6 @@ final class ua implements Runnable {
     public static void a(byte param0) {
         field_c = null;
         field_a = null;
-        if (param0 != 60) {
-            return;
-        }
         field_f = null;
     }
 
@@ -49,20 +46,36 @@ final class ua implements Runnable {
     }
 
     final static float a(byte param0, float param1, float param2, float param3) {
-        if (param0 > 0) {
+        L0: {
+          if (param0 <= 0) {
+            break L0;
+          } else {
             field_c = null;
+            break L0;
+          }
         }
-        if (param2 < param1) {
-            param2 = param2 + param3;
-            // ifge L56
-            param2 = param1;
-        } else {
-            if (!(param2 <= param1)) {
-                param2 = param2 - param3;
-                if (param2 < param1) {
-                    param2 = param1;
-                }
+        L1: {
+          if (param2 >= param1) {
+            if (param2 > param1) {
+              param2 = param2 - param3;
+              if (param2 >= param1) {
+                break L1;
+              } else {
+                param2 = param1;
+                break L1;
+              }
+            } else {
+              break L1;
             }
+          } else {
+            param2 = param2 + param3;
+            if (param1 >= param2) {
+              break L1;
+            } else {
+              param2 = param1;
+              break L1;
+            }
+          }
         }
         return param2;
     }

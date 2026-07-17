@@ -16,155 +16,63 @@ final class oa {
     }
 
     final static ut a(boolean param0, int param1, byte param2) {
-        int var4 = 0;
-        int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        kg[] var10 = null;
-        kg[] var12 = null;
-        int[] var13 = null;
-        ut var14 = null;
-        kg[] var15 = null;
-        kg[] var16 = null;
-        int[] var17 = null;
-        ut var18 = null;
-        kg[] var19 = null;
-        kg[][] stackIn_2_0 = null;
-        kg[][] stackIn_3_0 = null;
-        kg[][] stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        kg[][] stackIn_9_0 = null;
-        kg[][] stackIn_10_0 = null;
-        kg[][] stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        kg[][] stackOut_8_0 = null;
-        kg[][] stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        kg[][] stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        kg[][] stackOut_1_0 = null;
-        kg[][] stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        kg[][] stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        var9 = Kickabout.field_G;
-        if (param2 <= 94) {
-          L0: {
-            oa.b(-53);
-            stackOut_8_0 = ph.field_e;
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_9_0 = stackOut_8_0;
-            if (param0) {
-              stackOut_10_0 = (kg[][]) (Object) stackIn_10_0;
-              stackOut_10_1 = 1;
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              break L0;
-            } else {
-              stackOut_9_0 = (kg[][]) (Object) stackIn_9_0;
-              stackOut_9_1 = 3;
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              break L0;
-            }
-          }
-          var12 = stackIn_11_0[stackIn_11_1];
-          var10 = var12;
-          var15 = var10;
-          var4 = var12[0].field_a;
-          var13 = new int[]{var12[0].field_i, var12[1].field_i, var12[2].field_i};
-          var14 = new ut(var13[1] * param1 + var13[0] + var13[2], var4);
-          iw.a(-122, var14);
-          var7 = 0;
-          var12[0].a(var7, 0);
-          var7 = var7 + var13[0];
-          var8 = 0;
-          L1: while (true) {
-            if (param1 <= var8) {
-              var15[2].a(var7, 0);
-              ta.e(122);
-              pd.a(var14, 20684);
-              return var14;
-            } else {
-              var12[1].a(var7, 0);
-              var7 = var7 + var13[1];
-              var8++;
-              continue L1;
-            }
-          }
-        } else {
-          L2: {
-            stackOut_1_0 = ph.field_e;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
-            if (param0) {
-              stackOut_3_0 = (kg[][]) (Object) stackIn_3_0;
-              stackOut_3_1 = 1;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              break L2;
-            } else {
-              stackOut_2_0 = (kg[][]) (Object) stackIn_2_0;
-              stackOut_2_1 = 3;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              break L2;
-            }
-          }
-          var16 = stackIn_4_0[stackIn_4_1];
-          var10 = var16;
-          var19 = var10;
-          var4 = var16[0].field_a;
-          var17 = new int[]{var16[0].field_i, var16[1].field_i, var16[2].field_i};
-          var18 = new ut(var17[1] * param1 + var17[0] + var17[2], var4);
-          iw.a(-122, var18);
-          var7 = 0;
-          var16[0].a(var7, 0);
-          var7 = var7 + var17[0];
-          var8 = 0;
-          L3: while (true) {
-            if (param1 <= var8) {
-              var19[2].a(var7, 0);
-              ta.e(122);
-              pd.a(var18, 20684);
-              return var18;
-            } else {
-              var16[1].a(var7, 0);
-              var7 = var7 + var17[1];
-              var8++;
-              continue L3;
-            }
-          }
+        int var9 = Kickabout.field_G;
+        kg[] var10 = ph.field_e[!param0 ? 3 : 1];
+        kg[] var11 = var10;
+        int var4 = var10[0].field_a;
+        int[] var5 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
+        ut var6 = new ut(var5[1] * param1 + var5[0] + var5[2], var4);
+        iw.a(-122, var6);
+        int var7 = 0;
+        var10[0].a(var7, 0);
+        var7 = var7 + var5[0];
+        for (var8 = 0; param1 > var8; var8++) {
+            var10[1].a(var7, 0);
+            var7 = var7 + var5[1];
         }
+        var11[2].a(var7, 0);
+        ta.e(122);
+        pd.a(var6, 20684);
+        return var6;
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, int param4, byte[] param5) {
-        ml var10 = or.field_d;
-        if (param0) {
-            Object var9 = null;
-            oa.a(true, 43, -115, false, -33, (byte[]) null);
+        ml var10 = null;
+        int var7 = 0;
+        int var8 = 0;
+        try {
+            var10 = or.field_d;
+            if (param0) {
+                Object var9 = null;
+                oa.a(true, 43, -115, false, -33, (byte[]) null);
+            }
+            var10.b(param1, (byte) 120);
+            var10.field_n = var10.field_n + 1;
+            var7 = var10.field_n;
+            var10.a(124, 4);
+            var10.a(104, param2);
+            var8 = param4;
+            if (!(!param3)) {
+                var8 += 128;
+            }
+            var10.a(108, var8);
+            var10.a(0, param5.length, 1991220144, param5);
+            var10.c(62, -var7 + var10.field_n);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "oa.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
-        var10.b(param1, (byte) 120);
-        var10.field_n = var10.field_n + 1;
-        int var7 = var10.field_n;
-        var10.a(124, 4);
-        var10.a(104, param2);
-        int var8 = param4;
-        if (!(!param3)) {
-            var8 += 128;
-        }
-        var10.a(108, var8);
-        var10.a(0, param5.length, 1991220144, param5);
-        var10.c(62, -var7 + var10.field_n);
     }
 
     final static void a(boolean param0, hc param1) {
-        if (param0) {
-            field_a = null;
+        try {
+            if (param0) {
+                field_a = null;
+            }
             sn.field_g.insertElementAt((Object) (Object) param1, 0);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "oa.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        sn.field_g.insertElementAt((Object) (Object) param1, 0);
     }
 
     public static void a(int param0) {

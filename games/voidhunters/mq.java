@@ -8,7 +8,11 @@ final class mq extends qq implements vca {
 
     mq(jp param0, mj param1, boolean param2) {
         super(param0, 34963, param2);
-        ((mq) this).field_i = param1;
+        try {
+            ((mq) this).field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "mq.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public final void a(int param0, int param1) {
@@ -28,10 +32,7 @@ final class mq extends qq implements vca {
     }
 
     final static boolean a(int param0, int param1, boolean param2) {
-        if (param2) {
-            return false;
-        }
-        return 0 != (param1 & 2048) ? true : false;
+        return 0 != (param1 & 2048);
     }
 
     public final jaclib.memory.Buffer a(byte param0, boolean param1) {

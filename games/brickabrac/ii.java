@@ -23,10 +23,12 @@ final class ii extends nm {
         ((ii) this).field_p = param3;
         ((ii) this).field_t = param5;
         if (param4 != -161) {
-          return;
-        } else {
-          ((ii) this).field_i = param0;
-          return;
+            return;
+        }
+        try {
+            ((ii) this).field_i = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ii.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -130,18 +132,9 @@ final class ii extends nm {
     }
 
     public static void a(int param0) {
-        if (param0 != 20888) {
-          field_l = null;
-          field_l = null;
-          field_r = null;
-          field_s = null;
-          return;
-        } else {
-          field_l = null;
-          field_r = null;
-          field_s = null;
-          return;
-        }
+        field_l = null;
+        field_r = null;
+        field_s = null;
     }
 
     ii() {

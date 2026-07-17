@@ -328,7 +328,7 @@ final class ve extends op {
           L0: {
             L1: {
               L2: {
-                if (-33 > (ec.field_b ^ -1)) {
+                if (ec.field_b > 32) {
                   break L2;
                 } else {
                   ka.a(true, 0);
@@ -341,7 +341,7 @@ final class ve extends op {
               }
               L3: {
                 var1_int = ec.field_b % 32;
-                if ((var1_int ^ -1) != -1) {
+                if (var1_int != 0) {
                   break L3;
                 } else {
                   var1_int = 32;
@@ -387,7 +387,7 @@ final class ve extends op {
               }
             }
             L3: {
-              if (-1 == (var1.length() ^ -1)) {
+              if (var1.length() == 0) {
                 var1 = rf.a((byte) -119);
                 break L3;
               } else {
@@ -395,7 +395,7 @@ final class ve extends op {
               }
             }
             L4: {
-              if ((var1.length() ^ -1) == -1) {
+              if (var1.length() == 0) {
                 var1 = tf.field_b;
                 break L4;
               } else {
@@ -491,8 +491,8 @@ final class ve extends op {
               ((ve) this).field_i = param0;
               var6_ref = this.a(param0, param2, true, param3);
               var7 = param0.b(param3);
-              var6_ref.field_h[0] = param1 + -(var7 >> -234683519);
-              var6_ref.field_h[param3.length()] = (var7 >> 1501618049) + param1;
+              var6_ref.field_h[0] = param1 + -(var7 >> 1);
+              var6_ref.field_h[param3.length()] = (var7 >> 1) + param1;
               kh.a(param3, var6_ref, 6110, 0, param0);
               break L0;
             }
@@ -602,7 +602,7 @@ final class ve extends op {
                     if (!((ve) this).field_k) {
                       break L1;
                     } else {
-                      if (-3 != (((ve) this).field_s ^ -1)) {
+                      if (((ve) this).field_s != 2) {
                         break L1;
                       } else {
                         if (((ve) this).field_t == null) {
@@ -804,7 +804,7 @@ final class ve extends op {
                   if (((ve) this).field_k) {
                     break L2;
                   } else {
-                    if ((param0 ^ -1) != (((ve) this).field_s ^ -1)) {
+                    if (~param0 != ~((ve) this).field_s) {
                       break L2;
                     } else {
                       if (((ve) this).field_r != param6) {
@@ -816,7 +816,7 @@ final class ve extends op {
                           if (((ve) this).field_u != param3) {
                             break L2;
                           } else {
-                            if ((((ve) this).field_n ^ -1) != (param5 ^ -1)) {
+                            if (~((ve) this).field_n != ~param5) {
                               break L2;
                             } else {
                               if (((ve) this).field_t == null) {
@@ -850,7 +850,7 @@ final class ve extends op {
                 if (3 != ((ve) this).field_r) {
                   break L3;
                 } else {
-                  if ((var10 ^ -1) == -2) {
+                  if (var10 == 1) {
                     ((ve) this).field_r = 1;
                     break L3;
                   } else {
@@ -861,7 +861,7 @@ final class ve extends op {
               L4: {
                 L5: {
                   ((ve) this).field_b = new vj[var10];
-                  if ((((ve) this).field_r ^ -1) != -1) {
+                  if (((ve) this).field_r != 0) {
                     break L5;
                   } else {
                     var11 = param2.field_C;
@@ -873,16 +873,16 @@ final class ve extends op {
                   }
                 }
                 L6: {
-                  if ((((ve) this).field_r ^ -1) == -2) {
+                  if (((ve) this).field_r == 1) {
                     break L6;
                   } else {
                     L7: {
-                      if (-3 == (((ve) this).field_r ^ -1)) {
+                      if (((ve) this).field_r == 2) {
                         break L7;
                       } else {
                         L8: {
                           var12 = (((ve) this).field_u + -(var10 * ((ve) this).field_v)) / (1 + var10);
-                          if (-1 < (var12 ^ -1)) {
+                          if (var12 < 0) {
                             var12 = 0;
                             break L8;
                           } else {
@@ -906,14 +906,14 @@ final class ve extends op {
                     }
                   }
                 }
-                var11 = (((ve) this).field_u + -(((ve) this).field_v * var10) >> 826561569) + param2.field_C;
+                var11 = (((ve) this).field_u + -(((ve) this).field_v * var10) >> 1) + param2.field_C;
                 break L4;
               }
               var12 = 0;
               L9: while (true) {
                 L10: {
                   L11: {
-                    if ((var10 ^ -1) >= (var12 ^ -1)) {
+                    if (~var10 >= ~var12) {
                       break L11;
                     } else {
                       var13 = var9_array[var12];
@@ -982,7 +982,7 @@ final class ve extends op {
                               stackIn_68_0 = stackOut_67_0;
                               stackIn_68_1 = stackOut_67_1;
                               stackIn_68_2 = stackOut_67_2;
-                              if (-4 == (param0 ^ -1)) {
+                              if (param0 == 3) {
                                 stackOut_70_0 = (String) (Object) stackIn_70_0;
                                 stackOut_70_1 = (vj) (Object) stackIn_70_1;
                                 stackOut_70_2 = stackIn_70_2;
@@ -1166,20 +1166,20 @@ final class ve extends op {
             L1: {
               var7_int = 2147483647;
               var8 = -2147483648;
-              var21 = param2[3] >> 2134879330;
-              var22 = param2[4] >> -130093950;
-              var23 = param2[5] >> -110279038;
-              var24 = param2[6] >> -1188415262;
-              var25 = param2[7] >> 1892543618;
-              var26 = param2[8] >> -1026156862;
-              var27 = param2[9] >> -505187422;
-              var28 = param2[10] >> 778263874;
-              var13 = var26 * param5[5] + var24 * param5[3] + param5[4] * var25 >> 444695118;
-              var12 = param5[5] * var23 + (var21 * param5[3] + param5[4] * var22) >> 346934382;
-              var29 = param2[11] >> -987077374;
-              var17 = param5[8] * var29 + var27 * param5[6] - -(param5[7] * var28) >> 895884046;
-              var19 = param5[9] * var24 + param5[10] * var25 + param5[11] * var26 >> -1790345042;
-              var16 = param5[6] * var24 - (-(param5[7] * var25) + -(var26 * param5[8])) >> 1955852110;
+              var21 = param2[3] >> 2;
+              var22 = param2[4] >> 2;
+              var23 = param2[5] >> 2;
+              var24 = param2[6] >> 2;
+              var25 = param2[7] >> 2;
+              var26 = param2[8] >> 2;
+              var27 = param2[9] >> 2;
+              var28 = param2[10] >> 2;
+              var13 = var26 * param5[5] + var24 * param5[3] + param5[4] * var25 >> 14;
+              var12 = param5[5] * var23 + (var21 * param5[3] + param5[4] * var22) >> 14;
+              var29 = param2[11] >> 2;
+              var17 = param5[8] * var29 + var27 * param5[6] - -(param5[7] * var28) >> 14;
+              var19 = param5[9] * var24 + param5[10] * var25 + param5[11] * var26 >> 14;
+              var16 = param5[6] * var24 - (-(param5[7] * var25) + -(var26 * param5[8])) >> 14;
               if (param0 == -3) {
                 break L1;
               } else {
@@ -1187,16 +1187,16 @@ final class ve extends op {
                 break L1;
               }
             }
-            var15 = var23 * param5[8] + (param5[7] * var22 + param5[6] * var21) >> 32830702;
-            var18 = var23 * param5[11] + var21 * param5[9] + param5[10] * var22 >> 707962414;
-            var14 = param5[5] * var29 + var27 * param5[3] - -(param5[4] * var28) >> -714157042;
-            var20 = var29 * param5[11] + (var27 * param5[9] - -(param5[10] * var28)) >> 279567310;
+            var15 = var23 * param5[8] + (param5[7] * var22 + param5[6] * var21) >> 14;
+            var18 = var23 * param5[11] + var21 * param5[9] + param5[10] * var22 >> 14;
+            var14 = param5[5] * var29 + var27 * param5[3] - -(param5[4] * var28) >> 14;
+            var20 = var29 * param5[11] + (var27 * param5[9] - -(param5[10] * var28)) >> 14;
             var21 = param5[0] - param2[0];
             var22 = param5[1] - param2[1];
             var23 = -param2[2] + param5[2];
             var9 = param2[3] * var21 - -(var22 * param2[4]) + param2[5] * var23 >> 16 + -ob.field_i;
             var10 = param2[8] * var23 + var21 * param2[6] + var22 * param2[7] >> 16 - ob.field_i;
-            var11 = var21 * param2[9] - (-(var22 * param2[10]) + -(var23 * param2[11])) >> -604982608;
+            var11 = var21 * param2[9] - (-(var22 * param2[10]) + -(var23 * param2[11])) >> 16;
             var21 = fb.field_q;
             var22 = fb.field_d;
             var23 = 0;
@@ -1230,27 +1230,27 @@ final class ve extends op {
                                   if (null != param6.field_E) {
                                     var23 = 0;
                                     L4: while (true) {
-                                      if ((var23 ^ -1) <= (param6.field_d ^ -1)) {
+                                      if (~var23 <= ~param6.field_d) {
                                         break L3;
                                       } else {
                                         var24 = param6.field_g[var23];
                                         var25 = param6.field_e[var23];
                                         var26 = param6.field_D[var23];
-                                        ap.field_B[var23] = (var25 * var15 + var24 * var12 + var18 * var26 >> -1686093456) + var9;
-                                        ge.field_p[var23] = var10 - -(var16 * var25 + (var24 * var13 - -(var26 * var19)) >> -1140514768);
-                                        dn.field_n[var23] = (var26 * var20 + var17 * var25 + var24 * var14 >> 56117584) + var11;
+                                        ap.field_B[var23] = (var25 * var15 + var24 * var12 + var18 * var26 >> 16) + var9;
+                                        ge.field_p[var23] = var10 - -(var16 * var25 + (var24 * var13 - -(var26 * var19)) >> 16);
+                                        dn.field_n[var23] = (var26 * var20 + var17 * var25 + var24 * var14 >> 16) + var11;
                                         var24 = param6.field_C[var23];
                                         var25 = param6.field_M[var23];
                                         var26 = param6.field_c[var23];
-                                        hp.field_d[var23] = (var18 * var26 + (var24 * var12 - -(var15 * var25)) >> -1009593456) + var9;
-                                        fj.field_g[var23] = (var26 * var19 + (var16 * var25 + var24 * var13) >> -673112816) + var10;
-                                        kn.field_c[var23] = (var24 * var14 + (var25 * var17 + var20 * var26) >> 363905264) + var11;
+                                        hp.field_d[var23] = (var18 * var26 + (var24 * var12 - -(var15 * var25)) >> 16) + var9;
+                                        fj.field_g[var23] = (var26 * var19 + (var16 * var25 + var24 * var13) >> 16) + var10;
+                                        kn.field_c[var23] = (var24 * var14 + (var25 * var17 + var20 * var26) >> 16) + var11;
                                         var24 = param6.field_J[var23];
                                         var25 = param6.field_A[var23];
                                         var26 = param6.field_E[var23];
-                                        sl.field_P[var23] = var9 - -(var18 * var26 + var24 * var12 - -(var25 * var15) >> 745854128);
-                                        oi.field_w[var23] = (var26 * var19 + var25 * var16 + var24 * var13 >> 464949168) + var10;
-                                        mp.field_P[var23] = var11 + (var17 * var25 + var14 * var24 + var26 * var20 >> -2082029648);
+                                        sl.field_P[var23] = var9 - -(var18 * var26 + var24 * var12 - -(var25 * var15) >> 16);
+                                        oi.field_w[var23] = (var26 * var19 + var25 * var16 + var24 * var13 >> 16) + var10;
+                                        mp.field_P[var23] = var11 + (var17 * var25 + var14 * var24 + var26 * var20 >> 16);
                                         var23++;
                                         continue L4;
                                       }
@@ -1282,7 +1282,7 @@ final class ve extends op {
                     var17 = param5[11];
                     var18 = 0;
                     L6: while (true) {
-                      if ((param6.field_o ^ -1) >= (var18 ^ -1)) {
+                      if (~param6.field_o >= ~var18) {
                         break L5;
                       } else {
                         if (oj.field_r.length <= var18) {
@@ -1291,9 +1291,9 @@ final class ve extends op {
                           var19 = param6.field_Q[var18];
                           var20 = param6.field_p[var18];
                           var21 = param6.field_j[var18];
-                          oj.field_r[var18] = var15 * var21 + (var12 * var20 + var19 * var9) >> -1312138960;
-                          wa.field_mb[var18] = var16 * var21 + var20 * var13 + var10 * var19 >> -794223920;
-                          al.field_g[var18] = var21 * var17 + var19 * var11 + var20 * var14 >> 1289253136;
+                          oj.field_r[var18] = var15 * var21 + (var12 * var20 + var19 * var9) >> 16;
+                          wa.field_mb[var18] = var16 * var21 + var20 * var13 + var10 * var19 >> 16;
+                          al.field_g[var18] = var21 * var17 + var19 * var11 + var20 * var14 >> 16;
                           var18++;
                           continue L6;
                         }
@@ -1310,8 +1310,8 @@ final class ve extends op {
                   var26 = param6.field_l[var23];
                   var27 = var9 - -(var18 * var26 + var15 * var25 + var24 * var12 >> -ob.field_i + 16);
                   var28 = (var26 * var19 + (var16 * var25 + var24 * var13) >> -ob.field_i + 16) + var10;
-                  var29 = (var20 * var26 + var24 * var14 + var17 * var25 >> -501311792) + var11;
-                  if ((var29 ^ -1) > -51) {
+                  var29 = (var20 * var26 + var24 * var14 + var17 * var25 >> 16) + var11;
+                  if (var29 < 50) {
                     fe.field_L[var23] = -2147483648;
                     break L7;
                   } else {

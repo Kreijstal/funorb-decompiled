@@ -91,35 +91,35 @@ abstract class vi {
             var7_int = 2147483647;
             var9 = -47 % ((param1 - -36) / 57);
             var8 = -2147483648;
-            var22 = param5[3] >> 539591522;
-            var23 = param5[4] >> -2114498558;
-            var24 = param5[5] >> -44826110;
-            var25 = param5[6] >> -786120286;
-            var26 = param5[7] >> -1705471678;
-            var27 = param5[8] >> 1657819106;
-            var28 = param5[9] >> 1124106402;
-            var29 = param5[10] >> -2094512926;
-            var30 = param5[11] >> -756758110;
-            var14 = var26 * param2[4] + (var25 * param2[3] + var27 * param2[5]) >> -1506084498;
-            var13 = param2[5] * var24 + (param2[4] * var23 + param2[3] * var22) >> 425313262;
-            var17 = var25 * param2[6] - (-(var26 * param2[7]) - param2[8] * var27) >> -1837288786;
-            var19 = var24 * param2[11] + var22 * param2[9] + param2[10] * var23 >> 765085294;
-            var18 = param2[8] * var30 + (var29 * param2[7] + var28 * param2[6]) >> -1902266514;
-            var20 = param2[10] * var26 + (var25 * param2[9] - -(var27 * param2[11])) >> 989826734;
-            var21 = var30 * param2[11] + var28 * param2[9] + param2[10] * var29 >> -2092905106;
-            var16 = param2[8] * var24 + param2[6] * var22 + param2[7] * var23 >> -356083314;
-            var15 = var28 * param2[3] + param2[4] * var29 - -(var30 * param2[5]) >> -181354098;
+            var22 = param5[3] >> 2;
+            var23 = param5[4] >> 2;
+            var24 = param5[5] >> 2;
+            var25 = param5[6] >> 2;
+            var26 = param5[7] >> 2;
+            var27 = param5[8] >> 2;
+            var28 = param5[9] >> 2;
+            var29 = param5[10] >> 2;
+            var30 = param5[11] >> 2;
+            var14 = var26 * param2[4] + (var25 * param2[3] + var27 * param2[5]) >> 14;
+            var13 = param2[5] * var24 + (param2[4] * var23 + param2[3] * var22) >> 14;
+            var17 = var25 * param2[6] - (-(var26 * param2[7]) - param2[8] * var27) >> 14;
+            var19 = var24 * param2[11] + var22 * param2[9] + param2[10] * var23 >> 14;
+            var18 = param2[8] * var30 + (var29 * param2[7] + var28 * param2[6]) >> 14;
+            var20 = param2[10] * var26 + (var25 * param2[9] - -(var27 * param2[11])) >> 14;
+            var21 = var30 * param2[11] + var28 * param2[9] + param2[10] * var29 >> 14;
+            var16 = param2[8] * var24 + param2[6] * var22 + param2[7] * var23 >> 14;
+            var15 = var28 * param2[3] + param2[4] * var29 - -(var30 * param2[5]) >> 14;
             var22 = param2[0] + -param5[0];
             var23 = -param5[1] + param2[1];
             var24 = param2[2] - param5[2];
             var10 = param5[3] * var22 + (param5[4] * var23 - -(param5[5] * var24)) >> 16 + -fc.field_e;
-            var12 = var23 * param5[10] + (param5[9] * var22 + var24 * param5[11]) >> 876940528;
+            var12 = var23 * param5[10] + (param5[9] * var22 + var24 * param5[11]) >> 16;
             var11 = param5[8] * var24 + param5[7] * var23 + param5[6] * var22 >> 16 + -fc.field_e;
             var22 = cc.field_n;
             var23 = cc.field_p;
             var24 = 0;
             L1: while (true) {
-              if ((var24 ^ -1) <= (param0.field_n ^ -1)) {
+              if (~var24 <= ~param0.field_n) {
                 L2: {
                   if (null == param0.field_O) {
                     break L2;
@@ -148,27 +148,27 @@ abstract class vi {
                                   if (null != param0.field_q) {
                                     var24 = 0;
                                     L3: while (true) {
-                                      if ((param0.field_C ^ -1) >= (var24 ^ -1)) {
+                                      if (~param0.field_C >= ~var24) {
                                         break L2;
                                       } else {
                                         var25 = param0.field_O[var24];
                                         var26 = param0.field_B[var24];
                                         var27 = param0.field_w[var24];
-                                        ih.field_e[var24] = (var19 * var27 + var13 * var25 + var16 * var26 >> 1799947344) + var10;
-                                        ma.field_k[var24] = (var27 * var20 + (var17 * var26 + var25 * var14) >> -1742001360) + var11;
-                                        wb.field_g[var24] = (var27 * var21 + (var25 * var15 - -(var26 * var18)) >> -370937680) + var12;
+                                        ih.field_e[var24] = (var19 * var27 + var13 * var25 + var16 * var26 >> 16) + var10;
+                                        ma.field_k[var24] = (var27 * var20 + (var17 * var26 + var25 * var14) >> 16) + var11;
+                                        wb.field_g[var24] = (var27 * var21 + (var25 * var15 - -(var26 * var18)) >> 16) + var12;
                                         var25 = param0.field_A[var24];
                                         var26 = param0.field_y[var24];
                                         var27 = param0.field_j[var24];
-                                        jf.field_k[var24] = (var27 * var19 + var26 * var16 + var25 * var13 >> -727062736) + var10;
-                                        se.field_C[var24] = var11 + (var27 * var20 + var25 * var14 + var26 * var17 >> 2137326576);
-                                        pl.field_S[var24] = var12 - -(var27 * var21 + (var25 * var15 + var26 * var18) >> -133190032);
+                                        jf.field_k[var24] = (var27 * var19 + var26 * var16 + var25 * var13 >> 16) + var10;
+                                        se.field_C[var24] = var11 + (var27 * var20 + var25 * var14 + var26 * var17 >> 16);
+                                        pl.field_S[var24] = var12 - -(var27 * var21 + (var25 * var15 + var26 * var18) >> 16);
                                         var25 = param0.field_o[var24];
                                         var26 = param0.field_J[var24];
                                         var27 = param0.field_q[var24];
-                                        ua.field_e[var24] = (var25 * var13 + var16 * var26 - -(var19 * var27) >> -143099472) + var10;
-                                        nk.field_a[var24] = var11 - -(var20 * var27 + var14 * var25 + var26 * var17 >> -532817264);
-                                        eb.field_b[var24] = var12 + (var25 * var15 - (-(var26 * var18) - var27 * var21) >> 2023649104);
+                                        ua.field_e[var24] = (var25 * var13 + var16 * var26 - -(var19 * var27) >> 16) + var10;
+                                        nk.field_a[var24] = var11 - -(var20 * var27 + var14 * var25 + var26 * var17 >> 16);
+                                        eb.field_b[var24] = var12 + (var25 * var15 - (-(var26 * var18) - var27 * var21) >> 16);
                                         var24++;
                                         continue L3;
                                       }
@@ -201,17 +201,17 @@ abstract class vi {
                       if (var19 >= param0.field_D) {
                         break L4;
                       } else {
-                        stackOut_57_0 = hc.field_f.length ^ -1;
+                        stackOut_57_0 = ~hc.field_f.length;
                         stackIn_59_0 = stackOut_57_0;
-                        if (stackIn_59_0 >= (var19 ^ -1)) {
+                        if (stackIn_59_0 >= ~var19) {
                           break L4;
                         } else {
                           var20 = param0.field_r[var19];
                           var21 = param0.field_e[var19];
                           var22 = param0.field_K[var19];
-                          hc.field_f[var19] = var13 * var21 + var20 * var10 - -(var16 * var22) >> -1189845328;
-                          le.field_m[var19] = var17 * var22 + (var14 * var21 + var20 * var11) >> -1637805040;
-                          fl.field_d[var19] = var20 * var12 - (-(var15 * var21) + -(var18 * var22)) >> -1584475824;
+                          hc.field_f[var19] = var13 * var21 + var20 * var10 - -(var16 * var22) >> 16;
+                          le.field_m[var19] = var17 * var22 + (var14 * var21 + var20 * var11) >> 16;
+                          fl.field_d[var19] = var20 * var12 - (-(var15 * var21) + -(var18 * var22)) >> 16;
                           var19++;
                           continue L5;
                         }
@@ -230,7 +230,7 @@ abstract class vi {
                   var27 = param0.field_a[var24];
                   var28 = (var27 * var19 + var26 * var16 + var25 * var13 >> 16 - fc.field_e) + var10;
                   var29 = var11 + (var27 * var20 + var14 * var25 - -(var17 * var26) >> 16 - fc.field_e);
-                  var30 = (var21 * var27 + var18 * var26 + var25 * var15 >> -1669578480) + var12;
+                  var30 = (var21 * var27 + var18 * var26 + var25 * var15 >> 16) + var12;
                   if (50 <= var30) {
                     L7: {
                       nh.field_d[var24] = var22 - -(var28 / var30);

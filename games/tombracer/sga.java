@@ -31,9 +31,6 @@ final class sga extends hha {
     }
 
     public static void c(byte param0) {
-        if (param0 >= -100) {
-            return;
-        }
         field_n = null;
     }
 

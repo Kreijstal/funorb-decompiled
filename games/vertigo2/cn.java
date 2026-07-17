@@ -50,7 +50,8 @@ final class cn {
     }
 
     final static String a(byte param0, String param1, char param2, String param3) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -60,43 +61,137 @@ final class cn {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        L0: {
-          var12 = Vertigo2.field_L ? 1 : 0;
-          var4 = param3.length();
-          var5 = param1.length();
-          var6 = var4;
-          var8 = 109 / ((param0 - -40) / 53);
-          var7 = -1 + var5;
-          if (var7 != 0) {
-            var9_int = 0;
-            L1: while (true) {
-              var9_int = param3.indexOf((int) param2, var9_int);
-              if (0 <= var9_int) {
-                var9_int++;
-                var6 = var6 + var7;
-                continue L1;
+        String stackIn_11_0 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_10_0 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var12 = Vertigo2.field_L ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var4_int = param3.length();
+              var5 = param1.length();
+              var6 = var4_int;
+              var8 = 109 / ((param0 - -40) / 53);
+              var7 = -1 + var5;
+              if (var7 != 0) {
+                var9_int = 0;
+                L2: while (true) {
+                  var9_int = param3.indexOf((int) param2, var9_int);
+                  if (0 <= var9_int) {
+                    var9_int++;
+                    var6 = var6 + var7;
+                    continue L2;
+                  } else {
+                    break L1;
+                  }
+                }
               } else {
-                break L0;
+                break L1;
               }
             }
-          } else {
-            break L0;
+            var9 = new StringBuilder(var6);
+            var10 = 0;
+            L3: while (true) {
+              var11 = param3.indexOf((int) param2, var10);
+              if (0 > var11) {
+                StringBuilder discarded$3 = var9.append(param3.substring(var10));
+                stackOut_10_0 = var9.toString();
+                stackIn_11_0 = stackOut_10_0;
+                break L0;
+              } else {
+                StringBuilder discarded$4 = var9.append(param3.substring(var10, var11));
+                StringBuilder discarded$5 = var9.append(param1);
+                var10 = var11 + 1;
+                continue L3;
+              }
+            }
           }
-        }
-        var9 = new StringBuilder(var6);
-        var10 = 0;
-        L2: while (true) {
-          var11 = param3.indexOf((int) param2, var10);
-          if (0 > var11) {
-            StringBuilder discarded$3 = var9.append(param3.substring(var10));
-            return var9.toString();
-          } else {
-            StringBuilder discarded$4 = var9.append(param3.substring(var10, var11));
-            StringBuilder discarded$5 = var9.append(param1);
-            var10 = var11 + 1;
-            continue L2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_1 = new StringBuilder().append("cn.D(").append(param0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
+            }
           }
+          L5: {
+            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param2).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param3 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L5;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L5;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
         }
+        return stackIn_11_0;
     }
 
     final int b(int param0) {
@@ -121,14 +216,14 @@ final class cn {
         }
         L1: {
           ((cn) this).field_i = param0;
-          if (-1 != (param0 ^ -1)) {
+          if (param0 != 0) {
             if (1 == param0) {
               ((cn) this).field_d = 214;
               ((cn) this).field_t = 550;
               break L1;
             } else {
               if (param0 != 2) {
-                ((cn) this).field_w = ((cn) this).field_w + (param0 << 1190460033);
+                ((cn) this).field_w = ((cn) this).field_w + (param0 << 1);
                 ((cn) this).field_t = ((cn) this).field_w;
                 break L1;
               } else {
@@ -154,141 +249,114 @@ final class cn {
 
     final static void a(ed param0, int param1) {
         try {
+            RuntimeException runtimeException = null;
             byte[] var2 = null;
             int var3_int = 0;
             Exception var3 = null;
             int var4 = 0;
             int var5 = 0;
             byte[] var6 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var5 = Vertigo2.field_L ? 1 : 0;
-                        var6 = new byte[24];
-                        var2 = var6;
-                        if (param1 >= 113) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        field_r = false;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (null == as.field_d) {
-                            statePc = 13;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        try {
-                            as.field_d.a(-23669, 0L);
-                            as.field_d.a(0, var6);
-                            var3_int = 0;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            if ((var3_int ^ -1) <= -25) {
-                                statePc = 7;
+            RuntimeException stackIn_15_0 = null;
+            StringBuilder stackIn_15_1 = null;
+            RuntimeException stackIn_16_0 = null;
+            StringBuilder stackIn_16_1 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            String stackIn_17_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            String stackOut_16_2 = null;
+            RuntimeException stackOut_15_0 = null;
+            StringBuilder stackOut_15_1 = null;
+            String stackOut_15_2 = null;
+            var5 = Vertigo2.field_L ? 1 : 0;
+            try {
+              L0: {
+                L1: {
+                  var6 = new byte[24];
+                  var2 = var6;
+                  if (null == as.field_d) {
+                    break L1;
+                  } else {
+                    try {
+                      L2: {
+                        as.field_d.a(-23669, 0L);
+                        as.field_d.a(0, var6);
+                        var3_int = 0;
+                        L3: while (true) {
+                          L4: {
+                            if (var3_int >= 24) {
+                              break L4;
                             } else {
-                                statePc = 5;
+                              if (var6[var3_int] != 0) {
+                                break L4;
+                              } else {
+                                var3_int++;
+                                continue L3;
+                              }
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (var6[var3_int] != 0) {
-                                statePc = 7;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            var3_int++;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            if (24 > var3_int) {
-                                statePc = 13;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
+                          }
+                          if (24 > var3_int) {
+                            break L2;
+                          } else {
                             throw new IOException();
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 10;
-                            continue stateLoop;
+                          }
                         }
-                    }
-                    case 10: {
-                        var3 = (Exception) (Object) caughtException;
+                      }
+                    } catch (java.lang.Exception decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        var3 = (Exception) (Object) decompiledCaughtException;
                         var4 = 0;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        if (24 <= var4) {
-                            statePc = 13;
-                        } else {
-                            statePc = 12;
+                        L6: while (true) {
+                          if (24 <= var4) {
+                            break L5;
+                          } else {
+                            var2[var4] = (byte) -1;
+                            var4++;
+                            continue L6;
+                          }
                         }
-                        continue stateLoop;
+                      }
                     }
-                    case 12: {
-                        var2[var4] = (byte)-1;
-                        var4++;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        param0.a(0, -10140, var2, 24);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    break L1;
+                  }
                 }
+                param0.a(0, -10140, var2, 24);
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L7: {
+                runtimeException = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_14_0 = (RuntimeException) runtimeException;
+                stackOut_14_1 = new StringBuilder().append("cn.K(");
+                stackIn_16_0 = stackOut_14_0;
+                stackIn_16_1 = stackOut_14_1;
+                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_1 = stackOut_14_1;
+                if (param0 == null) {
+                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                  stackOut_16_2 = "null";
+                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_1 = stackOut_16_1;
+                  stackIn_17_2 = stackOut_16_2;
+                  break L7;
+                } else {
+                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_2 = "{...}";
+                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_17_1 = stackOut_15_1;
+                  stackIn_17_2 = stackOut_15_2;
+                  break L7;
+                }
+              }
+              throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 117 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -346,22 +414,22 @@ final class cn {
             param2 = -param2 + ((cn) this).field_g;
             param4 = ((cn) this).field_h - param4;
             var9 = wg.a(124, param3 * param3 + param4 * param4 + param2 * param2);
-            param2 = (param2 << -990061872) / var9;
-            param3 = (param3 << -299678800) / var9;
-            param4 = (param4 << -841369488) / var9;
+            param2 = (param2 << 16) / var9;
+            param3 = (param3 << 16) / var9;
+            param4 = (param4 << 16) / var9;
             ((cn) this).field_e[9] = param4;
             ((cn) this).field_e[10] = param3;
             ((cn) this).field_e[11] = param2;
-            var10 = param2 * 16384 >> -2003517170;
+            var10 = param2 * 16384 >> 14;
             var11 = 0;
             var11 = var11 >> 2;
             var10 = var10 >> 2;
-            var12 = -16384 * param4 >> 334474766;
+            var12 = -16384 * param4 >> 14;
             var12 = var12 >> 2;
             var9 = wg.a(92, var10 * var10 - (-(var11 * var11) + -(var12 * var12)));
-            var11 = (var11 << 476767952) / var9;
-            var12 = (var12 << 2044002224) / var9;
-            var10 = (var10 << -1979766896) / var9;
+            var11 = (var11 << 16) / var9;
+            var12 = (var12 << 16) / var9;
+            var10 = (var10 << 16) / var9;
             ((cn) this).field_e[5] = var12;
             ((cn) this).field_e[3] = var10;
             ((cn) this).field_e[4] = var11;
@@ -371,13 +439,13 @@ final class cn {
             param4 = param4 >> 1;
             var10 = var10 >> 1;
             var11 = var11 >> 1;
-            var13 = param3 * var12 - var11 * param2 >> -535230736;
-            var14 = -(var12 * param4) + param2 * var10 >> -2113770192;
-            var15 = param4 * var11 + -(param3 * var10) >> -1608657808;
+            var13 = param3 * var12 - var11 * param2 >> 16;
+            var14 = -(var12 * param4) + param2 * var10 >> 16;
+            var15 = param4 * var11 + -(param3 * var10) >> 16;
             var9 = wg.a(123, var14 * var14 + (var13 * var13 + var15 * var15));
-            var15 = (var15 << -1059464304) / var9;
-            var13 = (var13 << 672870896) / var9;
-            var14 = (var14 << -676993296) / var9;
+            var15 = (var15 << 16) / var9;
+            var13 = (var13 << 16) / var9;
+            var14 = (var14 << 16) / var9;
             ((cn) this).field_e[6] = var13;
             ((cn) this).field_e[8] = var15;
             ((cn) this).field_e[7] = var14;
@@ -391,11 +459,11 @@ final class cn {
               var10 = 0;
               var11 = 0;
               var12 = param5;
-              if (-1 != (param1 ^ -1)) {
+              if (param1 != 0) {
                 var13 = oo.field_j[param1];
                 var14 = oo.field_h[param1];
-                var15 = var14 * var11 - var12 * var13 >> -685694928;
-                var12 = var11 * var13 - -(var14 * var12) >> -1218279824;
+                var15 = var14 * var11 - var12 * var13 >> 16;
+                var12 = var11 * var13 - -(var14 * var12) >> 16;
                 var11 = var15;
                 break L2;
               } else {
@@ -408,8 +476,8 @@ final class cn {
               } else {
                 var13 = oo.field_j[param6];
                 var14 = oo.field_h[param6];
-                var15 = var10 * var14 + var13 * var12 >> -2015608688;
-                var12 = var12 * var14 - var13 * var10 >> 1328051504;
+                var15 = var10 * var14 + var13 * var12 >> 16;
+                var12 = var12 * var14 - var13 * var10 >> 16;
                 var10 = var15;
                 break L3;
               }
@@ -418,10 +486,10 @@ final class cn {
             var17 = oo.field_h[var9];
             var18 = oo.field_j[var8];
             var19 = oo.field_h[var8];
-            var20 = (var16 >> 398675585) * (var18 >> -168559903) >> 1000636974;
-            var21 = (var19 >> 139629409) * (var16 >> 32525473) >> 632240462;
-            var22 = (var17 >> 1827762433) * (var18 >> 273685121) >> -1221954002;
-            var23 = (var17 >> 488344545) * (var19 >> -1582137951) >> -421108274;
+            var20 = (var16 >> 1) * (var18 >> 1) >> 14;
+            var21 = (var19 >> 1) * (var16 >> 1) >> 14;
+            var22 = (var17 >> 1) * (var18 >> 1) >> 14;
+            var23 = (var17 >> 1) * (var19 >> 1) >> 14;
             var24 = -var10 + param4;
             var25 = -var11 + param3;
             var26 = param2 + -var12;
@@ -430,13 +498,13 @@ final class cn {
             ((cn) this).field_e[9] = -var21;
             ((cn) this).field_e[4] = 0;
             ((cn) this).field_e[10] = var18;
-            ((cn) this).field_e[5] = var16 >> -237113215;
-            ((cn) this).field_e[8] = -var22 >> 364405825;
+            ((cn) this).field_e[5] = var16 >> 1;
+            ((cn) this).field_e[8] = -var22 >> 1;
             ((cn) this).field_e[11] = var23;
             ((cn) this).field_e[2] = var26;
-            ((cn) this).field_e[6] = var20 >> -578678175;
-            ((cn) this).field_e[7] = var19 >> 1540448353;
-            ((cn) this).field_e[3] = var17 >> 64937761;
+            ((cn) this).field_e[6] = var20 >> 1;
+            ((cn) this).field_e[7] = var19 >> 1;
+            ((cn) this).field_e[3] = var17 >> 1;
             break L1;
           }
         }
@@ -462,10 +530,7 @@ final class cn {
     }
 
     final static boolean b(boolean param0) {
-        if (param0) {
-            return false;
-        }
-        return gd.field_j.field_hc == ao.field_N ? true : false;
+        return gd.field_j.field_hc == ao.field_N;
     }
 
     final void a(int param0) {
@@ -524,7 +589,7 @@ final class cn {
                   if (((cn) this).field_A <= ((cn) this).field_b) {
                     break L6;
                   } else {
-                    if (-1 > (((cn) this).field_p ^ -1)) {
+                    if (((cn) this).field_p > 0) {
                       break L5;
                     } else {
                       break L6;
@@ -561,7 +626,7 @@ final class cn {
               if (((cn) this).field_A >= ((cn) this).field_f - -((cn) this).field_m) {
                 break L8;
               } else {
-                if (-1 > (((cn) this).field_p ^ -1)) {
+                if (((cn) this).field_p > 0) {
                   var2 = 3;
                   break L8;
                 } else {
@@ -570,14 +635,14 @@ final class cn {
               }
             }
             ((cn) this).field_A = ((cn) this).field_A + ((cn) this).field_p * var2;
-            ((cn) this).field_a = (oo.field_h[((cn) this).field_j % 2048] * 640 / 2 >> 1213050544) - -160;
-            ((cn) this).field_s = (oo.field_j[((cn) this).field_j % 2048] * 640 / 2 >> -618066128) + 160;
+            ((cn) this).field_a = (oo.field_h[((cn) this).field_j % 2048] * 640 / 2 >> 16) - -160;
+            ((cn) this).field_s = (oo.field_j[((cn) this).field_j % 2048] * 640 / 2 >> 16) + 160;
             break L0;
           }
         }
         L9: {
           var2 = ((cn) this).field_w + -((cn) this).field_t;
-          if (-26 < (var2 * var2 ^ -1)) {
+          if (var2 * var2 < 25) {
             ((cn) this).field_w = ((cn) this).field_t;
             break L9;
           } else {
@@ -587,7 +652,7 @@ final class cn {
         L10: {
           var3 = 5;
           var4 = (double)(var2 * var2 / 50000);
-          if (-50001 > (var2 * var2 ^ -1)) {
+          if (var2 * var2 > 50000) {
             var3 = (int)(5.0 * Math.sqrt(var4 * 8.0));
             break L10;
           } else {
@@ -595,7 +660,7 @@ final class cn {
           }
         }
         L11: {
-          if ((((cn) this).field_z % 64 ^ -1) == param0) {
+          if (~(((cn) this).field_z % 64) == param0) {
             ((cn) this).field_l = ((cn) this).field_q;
             break L11;
           } else {
@@ -638,7 +703,7 @@ final class cn {
               if (0 >= var6) {
                 break L16;
               } else {
-                if (-129 < (var6 ^ -1)) {
+                if (var6 < 128) {
                   break L15;
                 } else {
                   break L16;

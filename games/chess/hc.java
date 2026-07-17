@@ -29,9 +29,6 @@ final class hc implements Iterator {
 
     public static void a(boolean param0) {
         field_e = null;
-        if (param0) {
-            return;
-        }
         field_d = null;
         field_b = null;
     }
@@ -47,16 +44,20 @@ final class hc implements Iterator {
     final static void a(int param0, byte param1) {
         nk var2 = qn.field_U;
         var2.f(param0, -95);
-        int var3 = 60 / ((-20 - param1) / 47);
+        int var3 = 30;
         var2.c(1, (byte) 69);
         var2.c(1, (byte) 122);
     }
 
     hc(cn param0) {
         ((hc) this).field_f = null;
-        ((hc) this).field_a = param0;
-        ((hc) this).field_f = null;
-        ((hc) this).field_c = ((hc) this).field_a.field_c.field_p;
+        try {
+            ((hc) this).field_a = param0;
+            ((hc) this).field_f = null;
+            ((hc) this).field_c = ((hc) this).field_a.field_c.field_p;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

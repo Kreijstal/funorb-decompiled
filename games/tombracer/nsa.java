@@ -20,9 +20,6 @@ final class nsa {
     public static void a(boolean param0) {
         field_f = null;
         field_i = null;
-        if (param0) {
-            nsa.a(false);
-        }
     }
 
     final nsa a(int param0) {
@@ -35,13 +32,17 @@ final class nsa {
     }
 
     final void a(nsa param0, byte param1) {
-        ((nsa) this).field_g = param0.field_g;
-        ((nsa) this).field_k = param0.field_k;
-        ((nsa) this).field_m = param0.field_m;
-        int var3 = 44 % ((64 - param1) / 55);
-        ((nsa) this).field_j = param0.field_j;
-        ((nsa) this).field_a = param0.field_a;
-        ((nsa) this).field_b = param0.field_b;
+        try {
+            ((nsa) this).field_g = param0.field_g;
+            ((nsa) this).field_k = param0.field_k;
+            ((nsa) this).field_m = param0.field_m;
+            int var3_int = 44 % ((64 - param1) / 55);
+            ((nsa) this).field_j = param0.field_j;
+            ((nsa) this).field_a = param0.field_a;
+            ((nsa) this).field_b = param0.field_b;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "nsa.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     nsa(int param0) {

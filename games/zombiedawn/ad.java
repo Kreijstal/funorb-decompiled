@@ -313,7 +313,7 @@ final class ad extends vg {
         try {
           L0: {
             var4_int = param3.k(90, param2);
-            if (-1 != (var4_int ^ -1)) {
+            if (var4_int != 0) {
               L1: {
                 L2: {
                   if (param0 == null) {
@@ -342,7 +342,7 @@ final class ad extends vg {
                   L6: {
                     var5 = param3.k(67, 4);
                     var6 = (short)param3.k(13, 16);
-                    if ((var5 ^ -1) >= -1) {
+                    if (var5 <= 0) {
                       break L6;
                     } else {
                       var7 = 0;
@@ -548,8 +548,8 @@ final class ad extends vg {
               ((ad) this).field_p = 1;
               var7 = this.a(param4, false, param3, param2);
               var8 = param4.b(param3);
-              var7.field_e[0] = param0 + -(var8 >> 2144149825);
-              var7.field_e[param3.length()] = param0 + (var8 >> -2049959999);
+              var7.field_e[0] = param0 + -(var8 >> 1);
+              var7.field_e[param3.length()] = param0 + (var8 >> 1);
               ma.a(var7, 0, param3, param4, false);
               break L0;
             }
@@ -719,7 +719,7 @@ final class ad extends vg {
                   if (((ad) this).field_m) {
                     break L2;
                   } else {
-                    if ((((ad) this).field_p ^ -1) != (param6 ^ -1)) {
+                    if (~((ad) this).field_p != ~param6) {
                       break L2;
                     } else {
                       if (param5 != ((ad) this).field_n) {
@@ -783,20 +783,20 @@ final class ad extends vg {
               }
               L5: {
                 L6: {
-                  if ((((ad) this).field_n ^ -1) == -1) {
+                  if (((ad) this).field_n == 0) {
                     break L6;
                   } else {
                     L7: {
-                      if (-2 == (((ad) this).field_n ^ -1)) {
+                      if (((ad) this).field_n == 1) {
                         break L7;
                       } else {
                         L8: {
-                          if ((((ad) this).field_n ^ -1) == -3) {
+                          if (((ad) this).field_n == 2) {
                             break L8;
                           } else {
                             L9: {
                               var12 = (((ad) this).field_i + -(((ad) this).field_j * var10)) / (1 + var10);
-                              if ((var12 ^ -1) <= -1) {
+                              if (var12 >= 0) {
                                 break L9;
                               } else {
                                 var12 = 0;
@@ -820,7 +820,7 @@ final class ad extends vg {
                         }
                       }
                     }
-                    var11 = param3.field_I - -(-(var10 * ((ad) this).field_j) + ((ad) this).field_i >> 399672609);
+                    var11 = param3.field_I - -(-(var10 * ((ad) this).field_j) + ((ad) this).field_i >> 1);
                     if (var15 == 0) {
                       break L5;
                     } else {
@@ -1092,30 +1092,30 @@ final class ad extends vg {
                 break L1;
               }
             }
-            var21 = param6[3] >> 1948409378;
-            var22 = param6[4] >> 274605346;
-            var23 = param6[5] >> 28522626;
-            var24 = param6[6] >> 1957538914;
-            var25 = param6[7] >> 215295106;
-            var26 = param6[8] >> -1957638942;
-            var27 = param6[9] >> -1768749374;
-            var28 = param6[10] >> 9571170;
-            var12 = param1[4] * var22 + (param1[3] * var21 - -(var23 * param1[5])) >> 959748782;
-            var29 = param6[11] >> -959668030;
-            var13 = param1[4] * var25 + (var24 * param1[3] - -(param1[5] * var26)) >> -1365705874;
-            var16 = var25 * param1[7] + (var24 * param1[6] - -(param1[8] * var26)) >> 230704526;
-            var18 = param1[11] * var23 + var22 * param1[10] + param1[9] * var21 >> 866197614;
-            var17 = var28 * param1[7] + (var27 * param1[6] - -(param1[8] * var29)) >> -1942211218;
-            var20 = param1[11] * var29 + (param1[9] * var27 - -(param1[10] * var28)) >> -1819016370;
-            var14 = var29 * param1[5] + var27 * param1[3] - -(var28 * param1[4]) >> 290614222;
-            var15 = var23 * param1[8] + var22 * param1[7] + param1[6] * var21 >> 257579406;
-            var19 = var25 * param1[10] + param1[9] * var24 - -(var26 * param1[11]) >> 1659714062;
+            var21 = param6[3] >> 2;
+            var22 = param6[4] >> 2;
+            var23 = param6[5] >> 2;
+            var24 = param6[6] >> 2;
+            var25 = param6[7] >> 2;
+            var26 = param6[8] >> 2;
+            var27 = param6[9] >> 2;
+            var28 = param6[10] >> 2;
+            var12 = param1[4] * var22 + (param1[3] * var21 - -(var23 * param1[5])) >> 14;
+            var29 = param6[11] >> 2;
+            var13 = param1[4] * var25 + (var24 * param1[3] - -(param1[5] * var26)) >> 14;
+            var16 = var25 * param1[7] + (var24 * param1[6] - -(param1[8] * var26)) >> 14;
+            var18 = param1[11] * var23 + var22 * param1[10] + param1[9] * var21 >> 14;
+            var17 = var28 * param1[7] + (var27 * param1[6] - -(param1[8] * var29)) >> 14;
+            var20 = param1[11] * var29 + (param1[9] * var27 - -(param1[10] * var28)) >> 14;
+            var14 = var29 * param1[5] + var27 * param1[3] - -(var28 * param1[4]) >> 14;
+            var15 = var23 * param1[8] + var22 * param1[7] + param1[6] * var21 >> 14;
+            var19 = var25 * param1[10] + param1[9] * var24 - -(var26 * param1[11]) >> 14;
             var21 = -param6[0] + param1[0];
             var22 = -param6[1] + param1[1];
             var23 = param1[2] + -param6[2];
             var9 = param6[5] * var23 + (var21 * param6[3] + var22 * param6[4]) >> 16 + -f.field_a;
             var10 = var22 * param6[7] + var21 * param6[6] - -(param6[8] * var23) >> -f.field_a + 16;
-            var11 = var22 * param6[10] + param6[9] * var21 - -(param6[11] * var23) >> -1928809104;
+            var11 = var22 * param6[10] + param6[9] * var21 - -(param6[11] * var23) >> 16;
             var21 = en.field_a;
             var22 = en.field_i;
             var23 = 0;
@@ -1131,7 +1131,7 @@ final class ad extends vg {
                       var26 = param2.field_m[var23];
                       var27 = var9 - -(var25 * var15 + (var24 * var12 + var26 * var18) >> -f.field_a + 16);
                       var28 = var10 - -(var19 * var26 + var25 * var16 + var24 * var13 >> -f.field_a + 16);
-                      var29 = var11 - -(var26 * var20 + (var24 * var14 + var25 * var17) >> 356062800);
+                      var29 = var11 - -(var26 * var20 + (var24 * var14 + var25 * var17) >> 16);
                       stackOut_6_0 = var29;
                       stackOut_6_1 = 50;
                       stackIn_67_0 = stackOut_6_0;
@@ -1165,7 +1165,7 @@ final class ad extends vg {
                             }
                           }
                           L9: {
-                            if ((var8 ^ -1) <= (var29 ^ -1)) {
+                            if (~var8 <= ~var29) {
                               break L9;
                             } else {
                               var8 = var29;
@@ -1224,27 +1224,27 @@ final class ad extends vg {
                                     } else {
                                       var23 = 0;
                                       L12: while (true) {
-                                        if ((param2.field_c ^ -1) >= (var23 ^ -1)) {
+                                        if (~param2.field_c >= ~var23) {
                                           break L11;
                                         } else {
                                           var24 = param2.field_e[var23];
                                           var25 = param2.field_j[var23];
                                           var26 = param2.field_A[var23];
-                                          qk.field_Cb[var23] = var9 - -(var26 * var18 + (var24 * var12 - -(var25 * var15)) >> -1111902768);
-                                          kj.field_b[var23] = var10 - -(var19 * var26 + (var13 * var24 - -(var25 * var16)) >> -1721624112);
-                                          po.field_zb[var23] = (var26 * var20 + (var24 * var14 - -(var17 * var25)) >> 1722537168) + var11;
+                                          qk.field_Cb[var23] = var9 - -(var26 * var18 + (var24 * var12 - -(var25 * var15)) >> 16);
+                                          kj.field_b[var23] = var10 - -(var19 * var26 + (var13 * var24 - -(var25 * var16)) >> 16);
+                                          po.field_zb[var23] = (var26 * var20 + (var24 * var14 - -(var17 * var25)) >> 16) + var11;
                                           var24 = param2.field_N[var23];
                                           var25 = param2.field_i[var23];
                                           var26 = param2.field_I[var23];
-                                          rm.field_c[var23] = var9 - -(var18 * var26 + (var25 * var15 + var12 * var24) >> 959848400);
-                                          lb.field_db[var23] = (var13 * var24 + (var16 * var25 - -(var26 * var19)) >> -2133258512) + var10;
-                                          ce.field_v[var23] = var11 - -(var24 * var14 + var17 * var25 - -(var26 * var20) >> -1361914288);
+                                          rm.field_c[var23] = var9 - -(var18 * var26 + (var25 * var15 + var12 * var24) >> 16);
+                                          lb.field_db[var23] = (var13 * var24 + (var16 * var25 - -(var26 * var19)) >> 16) + var10;
+                                          ce.field_v[var23] = var11 - -(var24 * var14 + var17 * var25 - -(var26 * var20) >> 16);
                                           var24 = param2.field_D[var23];
                                           var25 = param2.field_t[var23];
                                           var26 = param2.field_z[var23];
-                                          d.field_d[var23] = (var26 * var18 + var24 * var12 + var25 * var15 >> 785467088) + var9;
-                                          f.field_g[var23] = (var19 * var26 + var25 * var16 + var13 * var24 >> -1128488112) + var10;
-                                          wo.field_zb[var23] = (var24 * var14 - (-(var17 * var25) - var26 * var20) >> -422103632) + var11;
+                                          d.field_d[var23] = (var26 * var18 + var24 * var12 + var25 * var15 >> 16) + var9;
+                                          f.field_g[var23] = (var19 * var26 + var25 * var16 + var13 * var24 >> 16) + var10;
+                                          wo.field_zb[var23] = (var24 * var14 - (-(var17 * var25) - var26 * var20) >> 16) + var11;
                                           var23++;
                                           if (var30 != 0) {
                                             break L3;
@@ -1282,7 +1282,7 @@ final class ad extends vg {
                       var17 = param1[11];
                       var18 = 0;
                       L14: while (true) {
-                        if ((param2.field_f ^ -1) >= (var18 ^ -1)) {
+                        if (~param2.field_f >= ~var18) {
                           break L13;
                         } else {
                           stackOut_61_0 = og.field_y.length;
@@ -1300,9 +1300,9 @@ final class ad extends vg {
                               var19 = param2.field_M[var18];
                               var20 = param2.field_q[var18];
                               var21 = param2.field_y[var18];
-                              og.field_y[var18] = var15 * var21 + var19 * var9 - -(var20 * var12) >> 1162075376;
-                              jl.field_s[var18] = var21 * var16 + var13 * var20 + var19 * var10 >> -1124428720;
-                              qb.field_c[var18] = var11 * var19 - (-(var14 * var20) + -(var21 * var17)) >> -883768432;
+                              og.field_y[var18] = var15 * var21 + var19 * var9 - -(var20 * var12) >> 16;
+                              jl.field_s[var18] = var21 * var16 + var13 * var20 + var19 * var10 >> 16;
+                              qb.field_c[var18] = var11 * var19 - (-(var14 * var20) + -(var21 * var17)) >> 16;
                               var18++;
                               if (var30 == 0) {
                                 continue L14;

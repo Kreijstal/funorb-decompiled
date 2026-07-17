@@ -157,6 +157,7 @@ final class hja {
           }
           ((hja) this).field_c = stackIn_46_1 != 0;
           ((hja) this).field_e = param4;
+          return;
         } else {
           if (7 != ((hja) this).field_h) {
             if (8 == ((hja) this).field_h) {
@@ -181,6 +182,7 @@ final class hja {
               }
               ((hja) this).field_c = stackIn_42_1 != 0;
               ((hja) this).field_e = param4;
+              return;
             } else {
               if (9 != ((hja) this).field_h) {
                 if (((hja) this).field_h != 10) {
@@ -206,8 +208,9 @@ final class hja {
                     }
                     ((hja) this).field_c = stackIn_38_1 != 0;
                     ((hja) this).field_e = param4;
+                    return;
                   } else {
-                    if ((((hja) this).field_h ^ -1) == -13) {
+                    if (((hja) this).field_h == 12) {
                       L4: {
                         ((hja) this).field_f = 7;
                         stackOut_31_0 = this;
@@ -229,6 +232,7 @@ final class hja {
                       }
                       ((hja) this).field_c = stackIn_34_1 != 0;
                       ((hja) this).field_e = param4;
+                      return;
                     } else {
                       if (13 == ((hja) this).field_h) {
                         L5: {
@@ -252,6 +256,7 @@ final class hja {
                         }
                         ((hja) this).field_c = stackIn_30_1 != 0;
                         ((hja) this).field_e = param4;
+                        return;
                       } else {
                         L6: {
                           stackOut_23_0 = this;
@@ -273,6 +278,7 @@ final class hja {
                         }
                         ((hja) this).field_c = stackIn_26_1 != 0;
                         ((hja) this).field_e = param4;
+                        return;
                       }
                     }
                   }
@@ -298,6 +304,7 @@ final class hja {
                   }
                   ((hja) this).field_c = stackIn_19_1 != 0;
                   ((hja) this).field_e = param4;
+                  return;
                 }
               } else {
                 L8: {
@@ -321,6 +328,7 @@ final class hja {
                 }
                 ((hja) this).field_c = stackIn_14_1 != 0;
                 ((hja) this).field_e = param4;
+                return;
               }
             }
           } else {
@@ -345,6 +353,7 @@ final class hja {
             }
             ((hja) this).field_c = stackIn_8_1 != 0;
             ((hja) this).field_e = param4;
+            return;
           }
         }
     }

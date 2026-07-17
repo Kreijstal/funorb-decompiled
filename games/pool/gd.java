@@ -32,15 +32,10 @@ final class gd {
     final static String a(boolean param0) {
         if (wd.field_Lb != ra.field_e) {
           if (ig.field_j.a(98)) {
-            if (pa.field_I != ra.field_e) {
-              if (!param0) {
-                gd.a(-107);
-                return qo.field_x;
-              } else {
-                return qo.field_x;
-              }
-            } else {
+            if (pa.field_I == ra.field_e) {
               return ig.field_j.b(2);
+            } else {
+              return qo.field_x;
             }
           } else {
             return ig.field_j.b(2);

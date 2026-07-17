@@ -22,40 +22,7 @@ abstract class si {
     }
 
     final static boolean a(String param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param1 != -3404) {
-          L0: {
-            field_a = null;
-            if (null == db.a(param0, -87)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (null == db.a(param0, -87)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return null != db.a(param0, -87);
     }
 
     abstract void a(int param0, int param1);
@@ -63,9 +30,6 @@ abstract class si {
     public static void a(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 != 18347) {
-            si.b(-3);
-        }
     }
 
     abstract void a(int param0, int param1, int param2);

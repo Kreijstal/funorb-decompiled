@@ -40,7 +40,11 @@ final class nm {
     }
 
     nm(dd[] param0) {
-        ((nm) this).field_h = param0;
+        try {
+            ((nm) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "nm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

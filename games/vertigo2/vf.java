@@ -130,28 +130,28 @@ final class vf extends ji {
             var19 = ((vf) this).a(0, -1, param0);
             var18 = ((vf) this).a(1, -1, param0);
             var8 = ((vf) this).field_z;
-            if (-2 != (var8 ^ -1)) {
-              if (var8 != -3) {
+            if (var8 != 1) {
+              if (var8 != 2) {
                 if (3 == var8) {
                   var8 = 0;
                   L1: while (true) {
                     if (we.field_M <= var8) {
                       break L0;
                     } else {
-                      var3[var8] = var19[var8] * var18[var8] >> 996669964;
+                      var3[var8] = var19[var8] * var18[var8] >> 12;
                       var8++;
                       continue L1;
                     }
                   }
                 } else {
-                  if (-5 != var8) {
+                  if (var8 != 4) {
                     if (var8 == 5) {
                       var8 = 0;
                       L2: while (true) {
-                        if (var8 >= we.field_M) {
+                        if (~var8 <= ~we.field_M) {
                           break L0;
                         } else {
-                          var3[var8] = 4096 - ((4096 + -var18[var8]) * (-var19[var8] + 4096) >> -245495444);
+                          var3[var8] = 4096 - ((4096 + -var18[var8]) * (-var19[var8] + 4096) >> 12);
                           var8++;
                           continue L2;
                         }
@@ -160,7 +160,7 @@ final class vf extends ji {
                       if (6 == var8) {
                         var8 = 0;
                         L3: while (true) {
-                          if (var8 >= we.field_M) {
+                          if (~var8 <= ~we.field_M) {
                             break L0;
                           } else {
                             L4: {
@@ -174,7 +174,7 @@ final class vf extends ji {
                               if (var5 < 2048) {
                                 stackOut_44_0 = (int[]) (Object) stackIn_44_0;
                                 stackOut_44_1 = stackIn_44_1;
-                                stackOut_44_2 = var5 * var19[var8] >> 971507211;
+                                stackOut_44_2 = var5 * var19[var8] >> 11;
                                 stackIn_45_0 = stackOut_44_0;
                                 stackIn_45_1 = stackOut_44_1;
                                 stackIn_45_2 = stackOut_44_2;
@@ -182,7 +182,7 @@ final class vf extends ji {
                               } else {
                                 stackOut_43_0 = (int[]) (Object) stackIn_43_0;
                                 stackOut_43_1 = stackIn_43_1;
-                                stackOut_43_2 = -((-var19[var8] + 4096) * (4096 + -var5) >> -1004381653) + 4096;
+                                stackOut_43_2 = -((-var19[var8] + 4096) * (4096 + -var5) >> 11) + 4096;
                                 stackIn_45_0 = stackOut_43_0;
                                 stackIn_45_1 = stackOut_43_1;
                                 stackIn_45_2 = stackOut_43_2;
@@ -195,12 +195,12 @@ final class vf extends ji {
                           }
                         }
                       } else {
-                        if (-8 != (var8 ^ -1)) {
+                        if (var8 != 7) {
                           if (8 != var8) {
-                            if ((var8 ^ -1) == -10) {
+                            if (var8 == 9) {
                               var8 = 0;
                               L5: while (true) {
-                                if (we.field_M <= var8) {
+                                if (~we.field_M >= ~var8) {
                                   break L0;
                                 } else {
                                   L6: {
@@ -212,7 +212,7 @@ final class vf extends ji {
                                     stackIn_62_1 = stackOut_60_1;
                                     stackIn_61_0 = stackOut_60_0;
                                     stackIn_61_1 = stackOut_60_1;
-                                    if (var4 >= var5) {
+                                    if (~var4 <= ~var5) {
                                       stackOut_62_0 = (int[]) (Object) stackIn_62_0;
                                       stackOut_62_1 = stackIn_62_1;
                                       stackOut_62_2 = var5;
@@ -236,17 +236,17 @@ final class vf extends ji {
                                 }
                               }
                             } else {
-                              if (var8 != -11) {
-                                if (-12 != var8) {
+                              if (var8 != 10) {
+                                if (var8 != 11) {
                                   if (var8 == 12) {
                                     var8 = 0;
                                     L7: while (true) {
-                                      if (we.field_M <= var8) {
+                                      if (~we.field_M >= ~var8) {
                                         break L0;
                                       } else {
                                         var5 = var18[var8];
                                         var4 = var19[var8];
-                                        var3[var8] = -(var5 * var4 >> 1428768491) + (var4 - -var5);
+                                        var3[var8] = -(var5 * var4 >> 11) + (var4 - -var5);
                                         var8++;
                                         continue L7;
                                       }
@@ -257,7 +257,7 @@ final class vf extends ji {
                                 } else {
                                   var8 = 0;
                                   L8: while (true) {
-                                    if (var8 >= we.field_M) {
+                                    if (~var8 <= ~we.field_M) {
                                       break L0;
                                     } else {
                                       L9: {
@@ -269,7 +269,7 @@ final class vf extends ji {
                                         stackIn_74_1 = stackOut_72_1;
                                         stackIn_73_0 = stackOut_72_0;
                                         stackIn_73_1 = stackOut_72_1;
-                                        if (var4 > var5) {
+                                        if (~var4 < ~var5) {
                                           stackOut_74_0 = (int[]) (Object) stackIn_74_0;
                                           stackOut_74_1 = stackIn_74_1;
                                           stackOut_74_2 = var4 + -var5;
@@ -347,7 +347,7 @@ final class vf extends ji {
                                   stackIn_56_1 = stackOut_54_1;
                                   stackIn_55_0 = stackOut_54_0;
                                   stackIn_55_1 = stackOut_54_1;
-                                  if (-1 == (var4 ^ -1)) {
+                                  if (var4 == 0) {
                                     stackOut_56_0 = (int[]) (Object) stackIn_56_0;
                                     stackOut_56_1 = stackIn_56_1;
                                     stackOut_56_2 = 0;
@@ -358,7 +358,7 @@ final class vf extends ji {
                                   } else {
                                     stackOut_55_0 = (int[]) (Object) stackIn_55_0;
                                     stackOut_55_1 = stackIn_55_1;
-                                    stackOut_55_2 = -((4096 - var18[var8] << -1071351060) / var4) + 4096;
+                                    stackOut_55_2 = -((4096 - var18[var8] << 12) / var4) + 4096;
                                     stackIn_57_0 = stackOut_55_0;
                                     stackIn_57_1 = stackOut_55_1;
                                     stackIn_57_2 = stackOut_55_2;
@@ -374,7 +374,7 @@ final class vf extends ji {
                         } else {
                           var8 = 0;
                           L14: while (true) {
-                            if (we.field_M <= var8) {
+                            if (~we.field_M >= ~var8) {
                               break L0;
                             } else {
                               L15: {
@@ -388,7 +388,7 @@ final class vf extends ji {
                                 if (4096 != var4) {
                                   stackOut_50_0 = (int[]) (Object) stackIn_50_0;
                                   stackOut_50_1 = stackIn_50_1;
-                                  stackOut_50_2 = (var18[var8] << -1295577140) / (4096 - var4);
+                                  stackOut_50_2 = (var18[var8] << 12) / (4096 - var4);
                                   stackIn_51_0 = stackOut_50_0;
                                   stackIn_51_1 = stackOut_50_1;
                                   stackIn_51_2 = stackOut_50_2;
@@ -414,7 +414,7 @@ final class vf extends ji {
                   } else {
                     var8 = 0;
                     L16: while (true) {
-                      if (we.field_M <= var8) {
+                      if (~we.field_M >= ~var8) {
                         break L0;
                       } else {
                         L17: {
@@ -425,10 +425,10 @@ final class vf extends ji {
                           stackIn_35_1 = stackOut_33_1;
                           stackIn_34_0 = stackOut_33_0;
                           stackIn_34_1 = stackOut_33_1;
-                          if (-1 != (var5 ^ -1)) {
+                          if (var5 != 0) {
                             stackOut_35_0 = (int[]) (Object) stackIn_35_0;
                             stackOut_35_1 = stackIn_35_1;
-                            stackOut_35_2 = (var19[var8] << 760137356) / var5;
+                            stackOut_35_2 = (var19[var8] << 12) / var5;
                             stackIn_36_0 = stackOut_35_0;
                             stackIn_36_1 = stackOut_35_1;
                             stackIn_36_2 = stackOut_35_2;
@@ -453,7 +453,7 @@ final class vf extends ji {
               } else {
                 var8 = 0;
                 L18: while (true) {
-                  if (var8 >= we.field_M) {
+                  if (~var8 <= ~we.field_M) {
                     break L0;
                   } else {
                     var3[var8] = var19[var8] - var18[var8];
@@ -466,7 +466,7 @@ final class vf extends ji {
               var11 = var3;
               var8 = 0;
               L19: while (true) {
-                if (we.field_M <= var8) {
+                if (~we.field_M >= ~var8) {
                   break L0;
                 } else {
                   var11[var8] = var18[var8] + var19[var8];
@@ -497,62 +497,109 @@ final class vf extends ji {
     }
 
     final void a(byte param0, int param1, ed param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        Object stackOut_6_0 = null;
+        Object stackIn_10_0 = null;
+        int stackIn_10_1 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_7_0 = null;
+        Object stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
         Object stackOut_8_0 = null;
         int stackOut_8_1 = 0;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
-        if (param0 == 110) {
+        try {
           L0: {
-            var4 = param1;
-            if (var4 == 0) {
-              ((vf) this).field_z = param2.h(param0 ^ -101);
-              break L0;
-            } else {
-              if (1 != var4) {
-                break L0;
-              } else {
-                L1: {
-                  stackOut_6_0 = this;
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_7_0 = stackOut_6_0;
-                  if (param2.h(param0 + -121) != 1) {
-                    stackOut_8_0 = this;
-                    stackOut_8_1 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    stackIn_9_1 = stackOut_8_1;
+            if (param0 == 110) {
+              L1: {
+                var4_int = param1;
+                if (var4_int == 0) {
+                  ((vf) this).field_z = param2.h(param0 ^ -101);
+                  break L1;
+                } else {
+                  if (1 != var4_int) {
                     break L1;
                   } else {
-                    stackOut_7_0 = this;
-                    stackOut_7_1 = 1;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
+                    L2: {
+                      stackOut_7_0 = this;
+                      stackIn_9_0 = stackOut_7_0;
+                      stackIn_8_0 = stackOut_7_0;
+                      if (param2.h(param0 + -121) != 1) {
+                        stackOut_9_0 = this;
+                        stackOut_9_1 = 0;
+                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_1 = stackOut_9_1;
+                        break L2;
+                      } else {
+                        stackOut_8_0 = this;
+                        stackOut_8_1 = 1;
+                        stackIn_10_0 = stackOut_8_0;
+                        stackIn_10_1 = stackOut_8_1;
+                        break L2;
+                      }
+                    }
+                    ((vf) this).field_o = stackIn_10_1 != 0;
                     break L1;
                   }
                 }
-                ((vf) this).field_o = stackIn_9_1 != 0;
-                break L0;
               }
+              break L0;
+            } else {
+              return;
             }
           }
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_1 = new StringBuilder().append("vf.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param2 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
     }
 
     public static void b(byte param0) {
         field_C = null;
-        if (param0 != 36) {
-            field_B = null;
-        }
         field_B = null;
         field_y = null;
     }
@@ -945,7 +992,7 @@ final class vf extends ji {
               } else {
                 if (2 != var21) {
                   if (3 != var21) {
-                    if (-5 == (var21 ^ -1)) {
+                    if (var21 == 4) {
                       var12 = var51[0];
                       var13 = var51[1];
                       var14 = var51[2];
@@ -981,7 +1028,7 @@ final class vf extends ji {
                             } else {
                               stackOut_34_0 = (int[]) (Object) stackIn_34_0;
                               stackOut_34_1 = stackIn_34_1;
-                              stackOut_34_2 = (var54[var21] << 1556283436) / var7;
+                              stackOut_34_2 = (var54[var21] << 12) / var7;
                               stackIn_36_0 = stackOut_34_0;
                               stackIn_36_1 = stackOut_34_1;
                               stackIn_36_2 = stackOut_34_2;
@@ -1007,7 +1054,7 @@ final class vf extends ji {
                             } else {
                               stackOut_37_0 = (int[]) (Object) stackIn_37_0;
                               stackOut_37_1 = stackIn_37_1;
-                              stackOut_37_2 = (var57[var21] << 1627315852) / var8;
+                              stackOut_37_2 = (var57[var21] << 12) / var8;
                               stackIn_39_0 = stackOut_37_0;
                               stackIn_39_1 = stackOut_37_1;
                               stackIn_39_2 = stackOut_37_2;
@@ -1022,10 +1069,10 @@ final class vf extends ji {
                             stackIn_41_1 = stackOut_39_1;
                             stackIn_40_0 = stackOut_39_0;
                             stackIn_40_1 = stackOut_39_1;
-                            if (-1 != (var9 ^ -1)) {
+                            if (var9 != 0) {
                               stackOut_41_0 = (int[]) (Object) stackIn_41_0;
                               stackOut_41_1 = stackIn_41_1;
-                              stackOut_41_2 = (var59[var21] << 462182988) / var9;
+                              stackOut_41_2 = (var59[var21] << 12) / var9;
                               stackIn_42_0 = stackOut_41_0;
                               stackIn_42_1 = stackOut_41_1;
                               stackIn_42_2 = stackOut_41_2;
@@ -1047,7 +1094,7 @@ final class vf extends ji {
                       }
                     } else {
                       if (var21 != 5) {
-                        if (var21 == -7) {
+                        if (var21 == 6) {
                           var12 = var51[0];
                           var13 = var51[1];
                           var14 = var51[2];
@@ -1059,7 +1106,7 @@ final class vf extends ji {
                           var59 = var52[2];
                           var21 = 0;
                           L6: while (true) {
-                            if (var21 >= we.field_M) {
+                            if (~var21 <= ~we.field_M) {
                               break L0;
                             } else {
                               L7: {
@@ -1075,7 +1122,7 @@ final class vf extends ji {
                                 if (var7 >= 2048) {
                                   stackOut_50_0 = (int[]) (Object) stackIn_50_0;
                                   stackOut_50_1 = stackIn_50_1;
-                                  stackOut_50_2 = -((4096 - var54[var21]) * (-var7 + 4096) >> -678950869) + 4096;
+                                  stackOut_50_2 = -((4096 - var54[var21]) * (-var7 + 4096) >> 11) + 4096;
                                   stackIn_51_0 = stackOut_50_0;
                                   stackIn_51_1 = stackOut_50_1;
                                   stackIn_51_2 = stackOut_50_2;
@@ -1083,7 +1130,7 @@ final class vf extends ji {
                                 } else {
                                   stackOut_49_0 = (int[]) (Object) stackIn_49_0;
                                   stackOut_49_1 = stackIn_49_1;
-                                  stackOut_49_2 = var7 * var54[var21] >> 1370638475;
+                                  stackOut_49_2 = var7 * var54[var21] >> 11;
                                   stackIn_51_0 = stackOut_49_0;
                                   stackIn_51_1 = stackOut_49_1;
                                   stackIn_51_2 = stackOut_49_2;
@@ -1101,7 +1148,7 @@ final class vf extends ji {
                                 if (2048 <= var8) {
                                   stackOut_53_0 = (int[]) (Object) stackIn_53_0;
                                   stackOut_53_1 = stackIn_53_1;
-                                  stackOut_53_2 = -((-var8 + 4096) * (-var57[var21] + 4096) >> -263616693) + 4096;
+                                  stackOut_53_2 = -((-var8 + 4096) * (-var57[var21] + 4096) >> 11) + 4096;
                                   stackIn_54_0 = stackOut_53_0;
                                   stackIn_54_1 = stackOut_53_1;
                                   stackIn_54_2 = stackOut_53_2;
@@ -1109,7 +1156,7 @@ final class vf extends ji {
                                 } else {
                                   stackOut_52_0 = (int[]) (Object) stackIn_52_0;
                                   stackOut_52_1 = stackIn_52_1;
-                                  stackOut_52_2 = var57[var21] * var8 >> 814225547;
+                                  stackOut_52_2 = var57[var21] * var8 >> 11;
                                   stackIn_54_0 = stackOut_52_0;
                                   stackIn_54_1 = stackOut_52_1;
                                   stackIn_54_2 = stackOut_52_2;
@@ -1124,10 +1171,10 @@ final class vf extends ji {
                                 stackIn_56_1 = stackOut_54_1;
                                 stackIn_55_0 = stackOut_54_0;
                                 stackIn_55_1 = stackOut_54_1;
-                                if (-2049 < (var9 ^ -1)) {
+                                if (var9 < 2048) {
                                   stackOut_56_0 = (int[]) (Object) stackIn_56_0;
                                   stackOut_56_1 = stackIn_56_1;
-                                  stackOut_56_2 = var59[var21] * var9 >> -95235989;
+                                  stackOut_56_2 = var59[var21] * var9 >> 11;
                                   stackIn_57_0 = stackOut_56_0;
                                   stackIn_57_1 = stackOut_56_1;
                                   stackIn_57_2 = stackOut_56_2;
@@ -1135,7 +1182,7 @@ final class vf extends ji {
                                 } else {
                                   stackOut_55_0 = (int[]) (Object) stackIn_55_0;
                                   stackOut_55_1 = stackIn_55_1;
-                                  stackOut_55_2 = -((-var59[var21] + 4096) * (-var9 + 4096) >> -1032851829) + 4096;
+                                  stackOut_55_2 = -((-var59[var21] + 4096) * (-var9 + 4096) >> 11) + 4096;
                                   stackIn_57_0 = stackOut_55_0;
                                   stackIn_57_1 = stackOut_55_1;
                                   stackIn_57_2 = stackOut_55_2;
@@ -1185,7 +1232,7 @@ final class vf extends ji {
                                     } else {
                                       stackOut_73_0 = (int[]) (Object) stackIn_73_0;
                                       stackOut_73_1 = stackIn_73_1;
-                                      stackOut_73_2 = 4096 - (-var55[var21] + 4096 << 204029580) / var4;
+                                      stackOut_73_2 = 4096 - (-var55[var21] + 4096 << 12) / var4;
                                       stackIn_75_0 = stackOut_73_0;
                                       stackIn_75_1 = stackOut_73_1;
                                       stackIn_75_2 = stackOut_73_2;
@@ -1211,7 +1258,7 @@ final class vf extends ji {
                                     } else {
                                       stackOut_76_0 = (int[]) (Object) stackIn_76_0;
                                       stackOut_76_1 = stackIn_76_1;
-                                      stackOut_76_2 = 4096 - (-var56[var21] + 4096 << 140766508) / var5;
+                                      stackOut_76_2 = 4096 - (-var56[var21] + 4096 << 12) / var5;
                                       stackIn_78_0 = stackOut_76_0;
                                       stackIn_78_1 = stackOut_76_1;
                                       stackIn_78_2 = stackOut_76_2;
@@ -1229,7 +1276,7 @@ final class vf extends ji {
                                     if (0 != var6) {
                                       stackOut_80_0 = (int[]) (Object) stackIn_80_0;
                                       stackOut_80_1 = stackIn_80_1;
-                                      stackOut_80_2 = -((4096 + -var58[var21] << -1482587732) / var6) + 4096;
+                                      stackOut_80_2 = -((4096 + -var58[var21] << 12) / var6) + 4096;
                                       stackIn_81_0 = stackOut_80_0;
                                       stackIn_81_1 = stackOut_80_1;
                                       stackIn_81_2 = stackOut_80_2;
@@ -1250,7 +1297,7 @@ final class vf extends ji {
                                 }
                               }
                             } else {
-                              if (-10 == var21) {
+                              if (var21 == 9) {
                                 var12 = var51[0];
                                 var13 = var51[1];
                                 var14 = var51[2];
@@ -1304,7 +1351,7 @@ final class vf extends ji {
                                       stackIn_89_1 = stackOut_87_1;
                                       stackIn_88_0 = stackOut_87_0;
                                       stackIn_88_1 = stackOut_87_1;
-                                      if (var5 >= var8) {
+                                      if (~var5 <= ~var8) {
                                         stackOut_89_0 = (int[]) (Object) stackIn_89_0;
                                         stackOut_89_1 = stackIn_89_1;
                                         stackOut_89_2 = var8;
@@ -1409,7 +1456,7 @@ final class vf extends ji {
                                           stackIn_113_1 = stackOut_111_1;
                                           stackIn_112_0 = stackOut_111_0;
                                           stackIn_112_1 = stackOut_111_1;
-                                          if (var8 >= var5) {
+                                          if (~var8 <= ~var5) {
                                             stackOut_113_0 = (int[]) (Object) stackIn_113_0;
                                             stackOut_113_1 = stackIn_113_1;
                                             stackOut_113_2 = -var5 + var8;
@@ -1435,7 +1482,7 @@ final class vf extends ji {
                                           stackIn_116_1 = stackOut_114_1;
                                           stackIn_115_0 = stackOut_114_0;
                                           stackIn_115_1 = stackOut_114_1;
-                                          if (var9 < var6) {
+                                          if (~var9 > ~var6) {
                                             stackOut_116_0 = (int[]) (Object) stackIn_116_0;
                                             stackOut_116_1 = stackIn_116_1;
                                             stackOut_116_2 = -var9 + var6;
@@ -1471,7 +1518,7 @@ final class vf extends ji {
                                       var59 = var52[2];
                                       var21 = 0;
                                       L22: while (true) {
-                                        if (var21 >= we.field_M) {
+                                        if (~var21 <= ~we.field_M) {
                                           break L0;
                                         } else {
                                           var9 = var58[var21];
@@ -1480,9 +1527,9 @@ final class vf extends ji {
                                           var6 = var59[var21];
                                           var4 = var54[var21];
                                           var8 = var56[var21];
-                                          var12[var21] = var4 + (var7 + -(var4 * var7 >> -1978414069));
-                                          var13[var21] = var8 + var5 - (var5 * var8 >> -414950773);
-                                          var14[var21] = -(var6 * var9 >> -1181972693) + var6 - -var9;
+                                          var12[var21] = var4 + (var7 + -(var4 * var7 >> 11));
+                                          var13[var21] = var8 + var5 - (var5 * var8 >> 11);
+                                          var14[var21] = -(var6 * var9 >> 11) + var6 - -var9;
                                           var21++;
                                           continue L22;
                                         }
@@ -1519,7 +1566,7 @@ final class vf extends ji {
                                         stackIn_98_1 = stackOut_96_1;
                                         stackIn_97_0 = stackOut_96_0;
                                         stackIn_97_1 = stackOut_96_1;
-                                        if (var4 > var7) {
+                                        if (~var4 < ~var7) {
                                           stackOut_98_0 = (int[]) (Object) stackIn_98_0;
                                           stackOut_98_1 = stackIn_98_1;
                                           stackOut_98_2 = var4;
@@ -1622,10 +1669,10 @@ final class vf extends ji {
                                   stackIn_62_1 = stackOut_60_1;
                                   stackIn_61_0 = stackOut_60_0;
                                   stackIn_61_1 = stackOut_60_1;
-                                  if (-4097 != (var4 ^ -1)) {
+                                  if (var4 != 4096) {
                                     stackOut_62_0 = (int[]) (Object) stackIn_62_0;
                                     stackOut_62_1 = stackIn_62_1;
-                                    stackOut_62_2 = (var55[var21] << -858348148) / (4096 - var4);
+                                    stackOut_62_2 = (var55[var21] << 12) / (4096 - var4);
                                     stackIn_63_0 = stackOut_62_0;
                                     stackIn_63_1 = stackOut_62_1;
                                     stackIn_63_2 = stackOut_62_2;
@@ -1651,7 +1698,7 @@ final class vf extends ji {
                                   if (4096 != var5) {
                                     stackOut_65_0 = (int[]) (Object) stackIn_65_0;
                                     stackOut_65_1 = stackIn_65_1;
-                                    stackOut_65_2 = (var56[var21] << -882967828) / (4096 + -var5);
+                                    stackOut_65_2 = (var56[var21] << 12) / (4096 + -var5);
                                     stackIn_66_0 = stackOut_65_0;
                                     stackIn_66_1 = stackOut_65_1;
                                     stackIn_66_2 = stackOut_65_2;
@@ -1677,7 +1724,7 @@ final class vf extends ji {
                                   if (var6 != 4096) {
                                     stackOut_68_0 = (int[]) (Object) stackIn_68_0;
                                     stackOut_68_1 = stackIn_68_1;
-                                    stackOut_68_2 = (var58[var21] << 1725528012) / (-var6 + 4096);
+                                    stackOut_68_2 = (var58[var21] << 12) / (-var6 + 4096);
                                     stackIn_69_0 = stackOut_68_0;
                                     stackIn_69_1 = stackOut_68_1;
                                     stackIn_69_2 = stackOut_68_2;
@@ -1714,9 +1761,9 @@ final class vf extends ji {
                           if (we.field_M <= var21) {
                             break L0;
                           } else {
-                            var12[var21] = -((-var55[var21] + 4096) * (-var54[var21] + 4096) >> -1376307668) + 4096;
-                            var13[var21] = 4096 + -((-var56[var21] + 4096) * (-var57[var21] + 4096) >> 118700332);
-                            var14[var21] = -((-var58[var21] + 4096) * (4096 + -var59[var21]) >> 885605484) + 4096;
+                            var12[var21] = -((-var55[var21] + 4096) * (-var54[var21] + 4096) >> 12) + 4096;
+                            var13[var21] = 4096 + -((-var56[var21] + 4096) * (-var57[var21] + 4096) >> 12);
+                            var14[var21] = -((-var58[var21] + 4096) * (4096 + -var59[var21]) >> 12) + 4096;
                             var21++;
                             continue L31;
                           }
@@ -1735,12 +1782,12 @@ final class vf extends ji {
                     var59 = var52[2];
                     var21 = 0;
                     L32: while (true) {
-                      if (var21 >= we.field_M) {
+                      if (~var21 <= ~we.field_M) {
                         break L0;
                       } else {
-                        var12[var21] = var54[var21] * var55[var21] >> 965616524;
-                        var13[var21] = var57[var21] * var56[var21] >> -1191665876;
-                        var14[var21] = var59[var21] * var58[var21] >> -2091183412;
+                        var12[var21] = var54[var21] * var55[var21] >> 12;
+                        var13[var21] = var57[var21] * var56[var21] >> 12;
+                        var14[var21] = var59[var21] * var58[var21] >> 12;
                         var21++;
                         continue L32;
                       }

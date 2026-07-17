@@ -20,10 +20,10 @@ final class hi extends tk {
         if (0 <= fb.field_a) {
           L0: {
             var3 = -135 + param0;
-            var4 = param2 + -35;
+            var4 = 205;
             var5 = 256;
             if (75 > fb.field_a) {
-              var5 = (fb.field_a << -1936089752) / 75;
+              var5 = (fb.field_a << 8) / 75;
               break L0;
             } else {
               break L0;
@@ -31,7 +31,7 @@ final class hi extends tk {
           }
           L1: {
             if (fb.field_a > 200) {
-              var5 = (250 - fb.field_a << 658242824) / 50;
+              var5 = (250 - fb.field_a << 8) / 50;
               break L1;
             } else {
               break L1;
@@ -47,14 +47,14 @@ final class hi extends tk {
               ej.field_d.d(var3 - -15, 10 + var4, var5);
               var6 = fb.field_a + -125;
               var7 = 43 / ((param1 - -18) / 54);
-              if ((var6 ^ -1) < -1) {
+              if (var6 > 0) {
                 if (var6 < 50) {
-                  if ((var6 ^ -1) <= -21) {
+                  if (var6 >= 20) {
                     if (30 > var6) {
                       L2: {
                         ha.field_E.a(var3, var4, 256);
                         var6 = fb.field_a + -140;
-                        if ((var6 ^ -1) >= -1) {
+                        if (var6 <= 0) {
                           break L2;
                         } else {
                           L3: {
@@ -66,7 +66,7 @@ final class hi extends tk {
                               break L3;
                             }
                           }
-                          jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                          jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                           break L2;
                         }
                       }
@@ -76,7 +76,7 @@ final class hi extends tk {
                         var8 = (-(256 * var6) + 12800) / 20;
                         ha.field_E.a(var3, var4, var8);
                         var6 = fb.field_a + -140;
-                        if ((var6 ^ -1) >= -1) {
+                        if (var6 <= 0) {
                           break L4;
                         } else {
                           L5: {
@@ -88,7 +88,7 @@ final class hi extends tk {
                               break L5;
                             }
                           }
-                          jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                          jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                           break L4;
                         }
                       }
@@ -99,7 +99,7 @@ final class hi extends tk {
                       var8 = 256 * var6 / 20;
                       ha.field_E.a(var3, var4, var8);
                       var6 = fb.field_a + -140;
-                      if ((var6 ^ -1) >= -1) {
+                      if (var6 <= 0) {
                         break L6;
                       } else {
                         L7: {
@@ -111,7 +111,7 @@ final class hi extends tk {
                             break L7;
                           }
                         }
-                        jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                        jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                         break L6;
                       }
                     }
@@ -120,7 +120,7 @@ final class hi extends tk {
                 } else {
                   L8: {
                     var6 = fb.field_a + -140;
-                    if ((var6 ^ -1) >= -1) {
+                    if (var6 <= 0) {
                       break L8;
                     } else {
                       L9: {
@@ -132,7 +132,7 @@ final class hi extends tk {
                           break L9;
                         }
                       }
-                      jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                      jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                       break L8;
                     }
                   }
@@ -141,7 +141,7 @@ final class hi extends tk {
               } else {
                 L10: {
                   var6 = fb.field_a + -140;
-                  if ((var6 ^ -1) >= -1) {
+                  if (var6 <= 0) {
                     break L10;
                   } else {
                     L11: {
@@ -153,7 +153,7 @@ final class hi extends tk {
                         break L11;
                       }
                     }
-                    jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                    jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                     break L10;
                   }
                 }
@@ -163,14 +163,14 @@ final class hi extends tk {
               kj.field_l.d(var3, var4);
               var6 = fb.field_a + -125;
               var7 = 43 / ((param1 - -18) / 54);
-              if ((var6 ^ -1) < -1) {
+              if (var6 > 0) {
                 if (var6 < 50) {
-                  if ((var6 ^ -1) <= -21) {
+                  if (var6 >= 20) {
                     if (30 > var6) {
                       L12: {
                         ha.field_E.a(var3, var4, 256);
                         var6 = fb.field_a + -140;
-                        if ((var6 ^ -1) >= -1) {
+                        if (var6 <= 0) {
                           break L12;
                         } else {
                           L13: {
@@ -182,7 +182,7 @@ final class hi extends tk {
                               break L13;
                             }
                           }
-                          jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                          jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                           break L12;
                         }
                       }
@@ -192,7 +192,7 @@ final class hi extends tk {
                         var8 = (-(256 * var6) + 12800) / 20;
                         ha.field_E.a(var3, var4, var8);
                         var6 = fb.field_a + -140;
-                        if ((var6 ^ -1) >= -1) {
+                        if (var6 <= 0) {
                           break L14;
                         } else {
                           L15: {
@@ -204,7 +204,7 @@ final class hi extends tk {
                               break L15;
                             }
                           }
-                          jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                          jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                           break L14;
                         }
                       }
@@ -215,7 +215,7 @@ final class hi extends tk {
                       var8 = 256 * var6 / 20;
                       ha.field_E.a(var3, var4, var8);
                       var6 = fb.field_a + -140;
-                      if ((var6 ^ -1) >= -1) {
+                      if (var6 <= 0) {
                         break L16;
                       } else {
                         L17: {
@@ -227,7 +227,7 @@ final class hi extends tk {
                             break L17;
                           }
                         }
-                        jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                        jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                         break L16;
                       }
                     }
@@ -236,7 +236,7 @@ final class hi extends tk {
                 } else {
                   L18: {
                     var6 = fb.field_a + -140;
-                    if ((var6 ^ -1) >= -1) {
+                    if (var6 <= 0) {
                       break L18;
                     } else {
                       L19: {
@@ -248,7 +248,7 @@ final class hi extends tk {
                           break L19;
                         }
                       }
-                      jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                      jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                       break L18;
                     }
                   }
@@ -257,7 +257,7 @@ final class hi extends tk {
               } else {
                 L20: {
                   var6 = fb.field_a + -140;
-                  if ((var6 ^ -1) >= -1) {
+                  if (var6 <= 0) {
                     break L20;
                   } else {
                     L21: {
@@ -269,7 +269,7 @@ final class hi extends tk {
                         break L21;
                       }
                     }
-                    jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                    jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                     break L20;
                   }
                 }
@@ -290,14 +290,14 @@ final class hi extends tk {
             }
             var6 = fb.field_a + -125;
             var7 = 43 / ((param1 - -18) / 54);
-            if ((var6 ^ -1) < -1) {
+            if (var6 > 0) {
               if (var6 < 50) {
-                if ((var6 ^ -1) <= -21) {
+                if (var6 >= 20) {
                   if (30 > var6) {
                     L23: {
                       ha.field_E.a(var3, var4, 256);
                       var6 = fb.field_a + -140;
-                      if ((var6 ^ -1) >= -1) {
+                      if (var6 <= 0) {
                         break L23;
                       } else {
                         L24: {
@@ -309,7 +309,7 @@ final class hi extends tk {
                             break L24;
                           }
                         }
-                        jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                        jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                         break L23;
                       }
                     }
@@ -319,7 +319,7 @@ final class hi extends tk {
                       var8 = (-(256 * var6) + 12800) / 20;
                       ha.field_E.a(var3, var4, var8);
                       var6 = fb.field_a + -140;
-                      if ((var6 ^ -1) >= -1) {
+                      if (var6 <= 0) {
                         break L25;
                       } else {
                         L26: {
@@ -331,7 +331,7 @@ final class hi extends tk {
                             break L26;
                           }
                         }
-                        jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                        jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                         break L25;
                       }
                     }
@@ -342,7 +342,7 @@ final class hi extends tk {
                     var8 = 256 * var6 / 20;
                     ha.field_E.a(var3, var4, var8);
                     var6 = fb.field_a + -140;
-                    if ((var6 ^ -1) >= -1) {
+                    if (var6 <= 0) {
                       break L27;
                     } else {
                       L28: {
@@ -354,7 +354,7 @@ final class hi extends tk {
                           break L28;
                         }
                       }
-                      jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                      jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                       break L27;
                     }
                   }
@@ -363,7 +363,7 @@ final class hi extends tk {
               } else {
                 L29: {
                   var6 = fb.field_a + -140;
-                  if ((var6 ^ -1) >= -1) {
+                  if (var6 <= 0) {
                     break L29;
                   } else {
                     L30: {
@@ -375,7 +375,7 @@ final class hi extends tk {
                         break L30;
                       }
                     }
-                    jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                    jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                     break L29;
                   }
                 }
@@ -384,7 +384,7 @@ final class hi extends tk {
             } else {
               L31: {
                 var6 = fb.field_a + -140;
-                if ((var6 ^ -1) >= -1) {
+                if (var6 <= 0) {
                   break L31;
                 } else {
                   L32: {
@@ -396,7 +396,7 @@ final class hi extends tk {
                       break L32;
                     }
                   }
-                  jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 188606056);
+                  jd.field_g.d(15 + var3, var4 - -10, var8 * var5 >> 8);
                   break L31;
                 }
               }
@@ -410,9 +410,6 @@ final class hi extends tk {
 
     public static void c(byte param0) {
         field_A = null;
-        if (param0 != -81) {
-            field_A = null;
-        }
     }
 
     final int a(byte param0) {

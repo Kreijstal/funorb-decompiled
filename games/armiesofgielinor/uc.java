@@ -11,9 +11,6 @@ final class uc {
         field_c = null;
         field_b = null;
         field_d = null;
-        if (param0 != -39) {
-            field_b = null;
-        }
     }
 
     final static void a(int param0) {
@@ -24,12 +21,11 @@ final class uc {
     }
 
     final static void a(dq param0, int param1) {
-        if (param1 != 4) {
-            field_b = null;
+        try {
             ds.field_c = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "uc.C(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 41);
         }
-        ds.field_c = param0;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {

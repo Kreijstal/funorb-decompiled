@@ -10,9 +10,6 @@ final class ng {
 
     final static void a(int param0) {
         ag.field_c = bj.field_p + " <b>" + ap.field_s + "</b> " + oo.field_S + " <b>" + ki.field_bb + "</b> " + ub.field_j + "<br>" + "<br>" + id.field_L;
-        if (param0 < 74) {
-            field_b = null;
-        }
     }
 
     final static boolean a(byte param0) {
@@ -43,9 +40,6 @@ final class ng {
     public static void b(byte param0) {
         field_b = null;
         field_d = null;
-        if (param0 > -125) {
-            return;
-        }
         field_a = null;
         field_c = null;
     }

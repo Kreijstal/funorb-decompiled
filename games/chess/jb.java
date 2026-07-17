@@ -17,25 +17,11 @@ abstract class jb implements vb {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        if (param0 != -89) {
-          field_c = null;
-          var1 = ug.field_b * ug.field_b;
-          var2 = var1 - da.field_F * da.field_F;
-          var3 = cb.field_a - -(var2 * (-cb.field_a + Chess.field_E) / var1);
-          uh.field_m.a(fl.field_x, 640, -2147483648, 120, var3);
-          ga.a(5, 640, 0, 22478, ri.field_g, -24 + Chess.field_E, qc.field_e);
-          return;
-        } else {
-          var1 = ug.field_b * ug.field_b;
-          var2 = var1 - da.field_F * da.field_F;
-          var3 = cb.field_a - -(var2 * (-cb.field_a + Chess.field_E) / var1);
-          uh.field_m.a(fl.field_x, 640, -2147483648, 120, var3);
-          ga.a(5, 640, 0, 22478, ri.field_g, -24 + Chess.field_E, qc.field_e);
-          return;
-        }
+        int var1 = ug.field_b * ug.field_b;
+        int var2 = var1 - da.field_F * da.field_F;
+        int var3 = cb.field_a - -(var2 * (-cb.field_a + Chess.field_E) / var1);
+        uh.field_m.a(fl.field_x, 640, -2147483648, 120, var3);
+        ga.a(5, 640, 0, 22478, ri.field_g, -24 + Chess.field_E, qc.field_e);
     }
 
     public final String a(boolean param0) {
@@ -75,33 +61,29 @@ abstract class jb implements vb {
     }
 
     public static void c(int param0) {
-        if (param0 != 350) {
-            return;
-        }
         field_d = null;
         field_c = null;
         field_e = null;
     }
 
     final static void a(int param0, String param1, int param2, int param3, int param4, jk param5, int param6, int param7, int param8) {
-        of.field_g = param4;
-        ml.field_h = param1;
-        lg.field_f = param8;
-        ln.field_oc = param6;
-        uj.field_n = param7;
-        tg.field_t = param2;
-        ue.field_e = param3;
-        ol.field_N = param5;
-        qh.field_c = (wm) (Object) new ob();
-        if (param0 != 350) {
-          field_c = null;
-          ba.field_O = new on(param5);
-          ge.field_fb = new hj(qh.field_c, ba.field_O);
-          return;
-        } else {
-          ba.field_O = new on(param5);
-          ge.field_fb = new hj(qh.field_c, ba.field_O);
-          return;
+        try {
+            of.field_g = param4;
+            ml.field_h = param1;
+            lg.field_f = param8;
+            ln.field_oc = param6;
+            uj.field_n = param7;
+            tg.field_t = param2;
+            ue.field_e = param3;
+            ol.field_N = param5;
+            qh.field_c = (wm) (Object) new ob();
+            if (param0 != 350) {
+                field_c = null;
+            }
+            ba.field_O = new on(param5);
+            ge.field_fb = new hj(qh.field_c, ba.field_O);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "jb.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 41);
         }
     }
 
@@ -121,7 +103,7 @@ abstract class jb implements vb {
 
     public final mk a(int param0) {
         if (!((jb) this).b(14496)) {
-          if ((ud.a(2) ^ -1L) > (350L + ((jb) this).field_a ^ -1L)) {
+          if (~ud.a(2) > ~(350L + ((jb) this).field_a)) {
             return in.field_g;
           } else {
             if (param0 != 21314) {

@@ -11,22 +11,14 @@ final class ph {
     static int field_b;
 
     public static void a(int param0) {
-        Object var2 = null;
         field_e = null;
         field_g = null;
-        if (param0 != 0) {
-          var2 = null;
-          String discarded$2 = ph.a((byte) 20, -27, (byte[]) null, 126);
-          field_a = null;
-          return;
-        } else {
-          field_a = null;
-          return;
-        }
+        field_a = null;
     }
 
     final static String a(byte param0, int param1, byte[] param2, int param3) {
         char[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -37,129 +29,119 @@ final class ph {
         char[] var12 = null;
         char[] var13 = null;
         char[] var14 = null;
-        char[] var15 = null;
-        char[] var16 = null;
+        String stackIn_18_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_17_0 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var9 = MinerDisturbance.field_ab;
-        if (param0 > 13) {
-          var15 = new char[param1];
-          var13 = var15;
-          var12 = var13;
-          var11 = var12;
-          var10 = var11;
-          var4 = var10;
-          var5 = 0;
-          var6 = 0;
-          if (param1 > var6) {
-            var7 = param2[var6 + param3] & 255;
-            if (0 != var7) {
-              if (var7 >= 128) {
-                if ((var7 ^ -1) <= -161) {
-                  int incrementValue$6 = var5;
-                  var5++;
-                  var10[incrementValue$6] = (char)var7;
-                  var6++;
-                  var6++;
-                  var6++;
-                  return new String(var15, 0, var5);
-                } else {
-                  L0: {
-                    var8 = tk.field_e[var7 + -128];
-                    if (var8 != 0) {
-                      break L0;
-                    } else {
-                      var8 = 63;
-                      break L0;
-                    }
-                  }
-                  var7 = var8;
-                  int incrementValue$7 = var5;
-                  var5++;
-                  var10[incrementValue$7] = (char)var7;
-                  var6++;
-                  var6++;
-                  var6++;
-                  return new String(var15, 0, var5);
-                }
+        try {
+          L0: {
+            L1: {
+              if (param0 > 13) {
+                break L1;
               } else {
-                int incrementValue$8 = var5;
-                var5++;
-                var10[incrementValue$8] = (char)var7;
-                var6++;
-                var6++;
-                var6++;
-                return new String(var15, 0, var5);
+                field_e = null;
+                break L1;
               }
-            } else {
-              var6++;
-              var6++;
-              var6++;
-              var6++;
-              return new String(var15, 0, var5);
             }
-          } else {
-            return new String(var15, 0, var5);
-          }
-        } else {
-          field_e = null;
-          var16 = new char[param1];
-          var14 = var16;
-          var12 = var14;
-          var11 = var12;
-          var10 = var11;
-          var4 = var10;
-          var5 = 0;
-          var6 = 0;
-          if (param1 > var6) {
-            var7 = param2[var6 + param3] & 255;
-            if (0 != var7) {
-              if (var7 >= 128) {
-                if ((var7 ^ -1) <= -161) {
-                  int incrementValue$9 = var5;
-                  var5++;
-                  var10[incrementValue$9] = (char)var7;
-                  var6++;
-                  var6++;
-                  var6++;
-                  return new String(var16, 0, var5);
-                } else {
-                  L1: {
-                    var8 = tk.field_e[var7 + -128];
-                    if (var8 != 0) {
-                      break L1;
-                    } else {
-                      var8 = 63;
-                      break L1;
-                    }
-                  }
-                  var7 = var8;
-                  int incrementValue$10 = var5;
-                  var5++;
-                  var10[incrementValue$10] = (char)var7;
-                  var6++;
-                  var6++;
-                  var6++;
-                  return new String(var16, 0, var5);
-                }
+            var14 = new char[param1];
+            var13 = var14;
+            var12 = var13;
+            var11 = var12;
+            var10 = var11;
+            var4 = var10;
+            var5 = 0;
+            var6 = 0;
+            L2: while (true) {
+              if (param1 <= var6) {
+                stackOut_17_0 = new String(var14, 0, var5);
+                stackIn_18_0 = stackOut_17_0;
+                break L0;
               } else {
-                int incrementValue$11 = var5;
-                var5++;
-                var10[incrementValue$11] = (char)var7;
+                L3: {
+                  var7 = param2[var6 + param3] & 255;
+                  if (0 == var7) {
+                    var6++;
+                    break L3;
+                  } else {
+                    L4: {
+                      if (var7 < 128) {
+                        break L4;
+                      } else {
+                        if (var7 < 160) {
+                          L5: {
+                            var8 = tk.field_e[var7 + -128];
+                            if (var8 != 0) {
+                              break L5;
+                            } else {
+                              var8 = 63;
+                              break L5;
+                            }
+                          }
+                          var7 = var8;
+                          break L4;
+                        } else {
+                          break L4;
+                        }
+                      }
+                    }
+                    int incrementValue$17 = var5;
+                    var5++;
+                    var10[incrementValue$17] = (char)var7;
+                    var6++;
+                    break L3;
+                  }
+                }
                 var6++;
-                var6++;
-                var6++;
-                return new String(var16, 0, var5);
+                continue L2;
               }
-            } else {
-              var6++;
-              var6++;
-              var6++;
-              var6++;
-              return new String(var16, 0, var5);
             }
-          } else {
-            return new String(var16, 0, var5);
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var4_ref = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var4_ref;
+            stackOut_19_1 = new StringBuilder().append("ph.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param2 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L6;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L6;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param3 + 41);
         }
+        return stackIn_18_0;
     }
 
     static {

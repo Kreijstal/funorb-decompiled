@@ -101,6 +101,7 @@ final class v {
           if (var2 >= 10) {
             ((v) this).field_a = param0.k(0);
             ((v) this).field_b = param0.k(0);
+            return;
           } else {
             var3 = param0.c(true);
             if (var3 != 0) {

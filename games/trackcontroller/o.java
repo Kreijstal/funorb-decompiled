@@ -64,9 +64,6 @@ final class o {
 
     public static void b(byte param0) {
         field_b = null;
-        if (param0 <= 13) {
-            o.a((byte) 109);
-        }
     }
 
     static {

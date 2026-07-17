@@ -7,8 +7,8 @@ final class nba extends ao {
         int var7 = 0;
         int var8 = 0;
         kv var9 = null;
-        kv var10 = null;
-        kv var11 = null;
+        Object var10 = null;
+        Object var11 = null;
         int[] var12 = null;
         kv var13 = null;
         kv var14 = null;
@@ -37,7 +37,7 @@ final class nba extends ao {
               break L0;
             } else {
               var13 = var9.a();
-              var10 = var13;
+              var10 = (Object) (Object) var13;
               var13.b();
               dg.e(0, 0, 5, 0);
               dg.e(0, 1, 3, 0);
@@ -52,7 +52,7 @@ final class nba extends ao {
               break L1;
             } else {
               var14 = var9.a();
-              var11 = var14;
+              var11 = (Object) (Object) var14;
               var14.b();
               dg.e(11, 0, 5, 0);
               dg.e(13, 1, 3, 0);
@@ -63,7 +63,7 @@ final class nba extends ao {
             }
           }
           dg.a(var18, var7, var8);
-          return new kv[]{null, null, null, var10, var9, var11, null, null, null};
+          return new kv[]{null, null, null, (kv) var10, var9, (kv) var11, null, null, null};
         }
     }
 
@@ -77,19 +77,15 @@ final class nba extends ao {
 
     final static gca a(int param0, boolean param1) {
         int var2 = 0;
-        if (!param1) {
-          var2 = param0;
-          if (-33 != (var2 ^ -1)) {
-            if (var2 != 29) {
-              return null;
-            } else {
-              return (gca) (Object) new ria();
-            }
+        var2 = param0;
+        if (var2 != 32) {
+          if (var2 != 29) {
+            return null;
           } else {
-            return (gca) (Object) new c();
+            return (gca) (Object) new ria();
           }
         } else {
-          return null;
+          return (gca) (Object) new c();
         }
     }
 

@@ -13,11 +13,11 @@ final class lw {
     static int[] field_g;
 
     final void a(int param0, int param1, int param2) {
-        ((lw) this).field_e = param2 << -534051952;
+        ((lw) this).field_e = param2 << 16;
         if (param0 >= -98) {
             return;
         }
-        ((lw) this).field_f = param1 << -810200752;
+        ((lw) this).field_f = param1 << 16;
     }
 
     final void c(int param0) {
@@ -108,7 +108,7 @@ final class lw {
                 }
                 ((lw) this).field_f = ((lw) this).field_f + var3;
                 ((lw) this).field_e = ((lw) this).field_e + var2;
-                ((lw) this).field_h = -512 + (tia.a(var3 << -874987736, var2 << -1323877112, -29543) >> -2031702782);
+                ((lw) this).field_h = -512 + (tia.a(var3 << 8, var2 << 8, -29543) >> 2);
                 ((lw) this).field_d.a(param0 ^ param0);
                 return;
               } else {
@@ -128,7 +128,7 @@ final class lw {
                 }
                 ((lw) this).field_f = ((lw) this).field_f + var3;
                 ((lw) this).field_e = ((lw) this).field_e + var2;
-                ((lw) this).field_h = -512 + (tia.a(var3 << -874987736, var2 << -1323877112, -29543) >> -2031702782);
+                ((lw) this).field_h = -512 + (tia.a(var3 << 8, var2 << 8, -29543) >> 2);
                 ((lw) this).field_d.a(param0 ^ param0);
                 return;
               }
@@ -157,7 +157,7 @@ final class lw {
                 }
                 ((lw) this).field_f = ((lw) this).field_f + var3;
                 ((lw) this).field_e = ((lw) this).field_e + var2;
-                ((lw) this).field_h = -512 + (tia.a(var3 << -874987736, var2 << -1323877112, -29543) >> -2031702782);
+                ((lw) this).field_h = -512 + (tia.a(var3 << 8, var2 << 8, -29543) >> 2);
                 ((lw) this).field_d.a(param0 ^ param0);
                 return;
               } else {
@@ -177,7 +177,7 @@ final class lw {
                 }
                 ((lw) this).field_f = ((lw) this).field_f + var3;
                 ((lw) this).field_e = ((lw) this).field_e + var2;
-                ((lw) this).field_h = -512 + (tia.a(var3 << -874987736, var2 << -1323877112, -29543) >> -2031702782);
+                ((lw) this).field_h = -512 + (tia.a(var3 << 8, var2 << 8, -29543) >> 2);
                 ((lw) this).field_d.a(param0 ^ param0);
                 return;
               }
@@ -199,7 +199,7 @@ final class lw {
             }
             ((lw) this).field_f = ((lw) this).field_f + var3;
             ((lw) this).field_e = ((lw) this).field_e + var2;
-            ((lw) this).field_h = -512 + (tia.a(var3 << -874987736, var2 << -1323877112, -29543) >> -2031702782);
+            ((lw) this).field_h = -512 + (tia.a(var3 << 8, var2 << 8, -29543) >> 2);
             ((lw) this).field_d.a(param0 ^ param0);
             return;
           }
@@ -222,7 +222,7 @@ final class lw {
                 }
                 ((lw) this).field_f = ((lw) this).field_f + var3;
                 ((lw) this).field_e = ((lw) this).field_e + var2;
-                ((lw) this).field_h = -512 + (tia.a(var3 << -874987736, var2 << -1323877112, -29543) >> -2031702782);
+                ((lw) this).field_h = -512 + (tia.a(var3 << 8, var2 << 8, -29543) >> 2);
                 ((lw) this).field_d.a(param0 ^ param0);
                 return;
               } else {
@@ -242,7 +242,7 @@ final class lw {
                 }
                 ((lw) this).field_f = ((lw) this).field_f + var3;
                 ((lw) this).field_e = ((lw) this).field_e + var2;
-                ((lw) this).field_h = -512 + (tia.a(var3 << -874987736, var2 << -1323877112, -29543) >> -2031702782);
+                ((lw) this).field_h = -512 + (tia.a(var3 << 8, var2 << 8, -29543) >> 2);
                 ((lw) this).field_d.a(param0 ^ param0);
                 return;
               }
@@ -271,7 +271,7 @@ final class lw {
                 }
                 ((lw) this).field_f = ((lw) this).field_f + var3;
                 ((lw) this).field_e = ((lw) this).field_e + var2;
-                ((lw) this).field_h = -512 + (tia.a(var3 << -874987736, var2 << -1323877112, -29543) >> -2031702782);
+                ((lw) this).field_h = -512 + (tia.a(var3 << 8, var2 << 8, -29543) >> 2);
                 ((lw) this).field_d.a(param0 ^ param0);
                 return;
               } else {
@@ -291,7 +291,7 @@ final class lw {
                 }
                 ((lw) this).field_f = ((lw) this).field_f + var3;
                 ((lw) this).field_e = ((lw) this).field_e + var2;
-                ((lw) this).field_h = -512 + (tia.a(var3 << -874987736, var2 << -1323877112, -29543) >> -2031702782);
+                ((lw) this).field_h = -512 + (tia.a(var3 << 8, var2 << 8, -29543) >> 2);
                 ((lw) this).field_d.a(param0 ^ param0);
                 return;
               }
@@ -337,7 +337,7 @@ final class lw {
             }
             ((lw) this).field_f = ((lw) this).field_f + var3;
             ((lw) this).field_e = ((lw) this).field_e + var2;
-            ((lw) this).field_h = -512 + (tia.a(var3 << -874987736, var2 << -1323877112, -29543) >> -2031702782);
+            ((lw) this).field_h = -512 + (tia.a(var3 << 8, var2 << 8, -29543) >> 2);
             ((lw) this).field_d.a(param0 ^ param0);
             return;
           }
@@ -346,7 +346,7 @@ final class lw {
 
     public static void b(int param0) {
         field_a = null;
-        int var1 = 17 % ((param0 - -37) / 60);
+        int var1 = 0;
         field_i = null;
         field_g = null;
     }
@@ -355,12 +355,12 @@ final class lw {
         if (param0 <= 11) {
           ((lw) this).field_b = false;
           ura.a(-10985);
-          hp.a(2048, ((lw) this).field_h, 1900, ((lw) this).field_d.b((byte) 74), -1918106173, (((lw) this).field_f >> 1553198736) + param1, param2 - -(((lw) this).field_e >> -701028368));
+          hp.a(2048, ((lw) this).field_h, 1900, ((lw) this).field_d.b((byte) 74), -1918106173, (((lw) this).field_f >> 16) + param1, param2 - -(((lw) this).field_e >> 16));
           se.f((byte) -6);
           return;
         } else {
           ura.a(-10985);
-          hp.a(2048, ((lw) this).field_h, 1900, ((lw) this).field_d.b((byte) 74), -1918106173, (((lw) this).field_f >> 1553198736) + param1, param2 - -(((lw) this).field_e >> -701028368));
+          hp.a(2048, ((lw) this).field_h, 1900, ((lw) this).field_d.b((byte) 74), -1918106173, (((lw) this).field_f >> 16) + param1, param2 - -(((lw) this).field_e >> 16));
           se.f((byte) -6);
           return;
         }
@@ -369,16 +369,16 @@ final class lw {
     final int a(int param0) {
         if (param0 < 68) {
             ((lw) this).c(-38);
-            return ((lw) this).field_f >> 1714948976;
+            return ((lw) this).field_f >> 16;
         }
-        return ((lw) this).field_f >> 1714948976;
+        return ((lw) this).field_f >> 16;
     }
 
     final int a(byte param0) {
         if (param0 > -85) {
             return -6;
         }
-        return ((lw) this).field_e >> -1863525776;
+        return ((lw) this).field_e >> 16;
     }
 
     lw() {

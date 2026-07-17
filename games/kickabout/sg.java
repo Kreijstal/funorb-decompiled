@@ -13,9 +13,6 @@ final class sg {
         field_b = null;
         field_d = null;
         field_a = null;
-        if (param0) {
-            sg.a(false);
-        }
     }
 
     static {

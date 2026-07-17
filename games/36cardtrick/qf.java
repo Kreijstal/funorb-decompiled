@@ -18,14 +18,18 @@ abstract class qf extends g {
     }
 
     qf(j param0, int param1, int param2) {
-        super(-param1 + lb.field_g >> -1668665087, kb.field_d + -param2 >> 1301484641, param1, param2, (ci) null);
-        ((qf) this).field_D = param0;
-        ((qf) this).field_E = false;
-        ((qf) this).field_H = 0;
+        super(-param1 + lb.field_g >> 1, kb.field_d + -param2 >> 1, param1, param2, (ci) null);
+        try {
+            ((qf) this).field_D = param0;
+            ((qf) this).field_E = false;
+            ((qf) this).field_H = 0;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "qf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2) {
-        ((qf) this).a(param0, -param0 + kb.field_d >> -711450815, param1, -param1 + lb.field_g >> -1756125151, true);
+        ((qf) this).a(param0, -param0 + kb.field_d >> 1, param1, -param1 + lb.field_g >> 1, true);
         if (param2 != -1) {
             field_J = null;
         }
@@ -93,18 +97,15 @@ abstract class qf extends g {
     }
 
     final lk i(int param0) {
-        lk var2 = null;
-        var2 = super.i(param0 + 0);
-        if (var2 != null) {
-          return var2;
-        } else {
-          if (param0 != -1) {
+        lk var2 = super.i(param0);
+        if (!(var2 == null)) {
+            return var2;
+        }
+        if (param0 != -1) {
             field_F = -107;
             return (lk) this;
-          } else {
-            return (lk) this;
-          }
         }
+        return (lk) this;
     }
 
     boolean a(boolean param0) {
@@ -126,20 +127,20 @@ abstract class qf extends g {
           L0: {
             var2 = this.l(70);
             var3 = var2 - ((qf) this).field_H;
-            if ((var3 ^ -1) < -1) {
+            if (var3 > 0) {
               ((qf) this).field_H = ((qf) this).field_H + (var3 - -7) / 8;
               break L0;
             } else {
               break L0;
             }
           }
-          if (-1 >= (var3 ^ -1)) {
+          if (var3 >= 0) {
             L1: {
               L2: {
                 if (0 != ((qf) this).field_H) {
                   break L2;
                 } else {
-                  if ((var2 ^ -1) != -1) {
+                  if (var2 != 0) {
                     break L2;
                   } else {
                     if (((qf) this).field_E) {
@@ -160,11 +161,11 @@ abstract class qf extends g {
           } else {
             L3: {
               L4: {
-                ((qf) this).field_H = ((qf) this).field_H + (var3 + -16 - -1) / 16;
+                ((qf) this).field_H = ((qf) this).field_H + (var3 - 15) / 16;
                 if (0 != ((qf) this).field_H) {
                   break L4;
                 } else {
-                  if ((var2 ^ -1) != -1) {
+                  if (var2 != 0) {
                     break L4;
                   } else {
                     if (((qf) this).field_E) {
@@ -188,17 +189,17 @@ abstract class qf extends g {
             boolean discarded$1 = ((qf) this).o(-76);
             var2 = this.l(70);
             var3 = var2 - ((qf) this).field_H;
-            if ((var3 ^ -1) < -1) {
+            if (var3 > 0) {
               ((qf) this).field_H = ((qf) this).field_H + (var3 - -7) / 8;
               break L5;
             } else {
               break L5;
             }
           }
-          if (-1 < (var3 ^ -1)) {
-            ((qf) this).field_H = ((qf) this).field_H + (var3 + -16 - -1) / 16;
+          if (var3 < 0) {
+            ((qf) this).field_H = ((qf) this).field_H + (var3 - 15) / 16;
             if (0 == ((qf) this).field_H) {
-              if ((var2 ^ -1) == -1) {
+              if (var2 == 0) {
                 L6: {
                   if (((qf) this).field_E) {
                     stackOut_19_0 = 0;
@@ -219,7 +220,7 @@ abstract class qf extends g {
             }
           } else {
             if (0 == ((qf) this).field_H) {
-              if ((var2 ^ -1) == -1) {
+              if (var2 == 0) {
                 L7: {
                   if (((qf) this).field_E) {
                     stackOut_11_0 = 0;
@@ -270,7 +271,7 @@ abstract class qf extends g {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if ((((qf) this).field_H ^ -1) != param2) {
+        if (~((qf) this).field_H != param2) {
           if (256 <= ((qf) this).field_H) {
             if (param3 != 0) {
               return;

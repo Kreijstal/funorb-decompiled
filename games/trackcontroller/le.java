@@ -10,9 +10,6 @@ final class le {
 
     public static void b(int param0) {
         field_a = null;
-        if (param0 > -90) {
-            rd discarded$0 = le.a(18);
-        }
     }
 
     final static rd a(int param0) {

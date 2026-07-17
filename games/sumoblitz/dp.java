@@ -18,7 +18,7 @@ class dp extends pj {
           var3 = var2 / 1000;
           var4 = var3 / 60;
           var3 = var3 % 60;
-          if ((var4 ^ -1) > -11) {
+          if (var4 < 10) {
             var5 = "0" + var4;
             break L0;
           } else {
@@ -51,23 +51,23 @@ class dp extends pj {
         if (param0 == -26346) {
           var2 = param1;
           if (0 != var2) {
-            if (var2 != -2) {
-              if (-3 != var2) {
-                if (var2 != -4) {
-                  if (-5 != var2) {
-                    if (var2 != 5) {
-                      return 6710886;
-                    } else {
+            if (var2 != 1) {
+              if (var2 == 2) {
+                return 3355596;
+              } else {
+                if (var2 == 3) {
+                  return 13421619;
+                } else {
+                  if (var2 != 4) {
+                    if (var2 == 5) {
                       return 3394764;
+                    } else {
+                      return 6710886;
                     }
                   } else {
                     return 13382604;
                   }
-                } else {
-                  return 13421619;
                 }
-              } else {
-                return 3355596;
               }
             } else {
               return 13382451;
@@ -79,23 +79,23 @@ class dp extends pj {
           int discarded$5 = dp.a(47, 26);
           var2 = param1;
           if (0 != var2) {
-            if (var2 != -2) {
-              if (-3 != var2) {
-                if (var2 != -4) {
-                  if (-5 != var2) {
-                    if (var2 != 5) {
-                      return 6710886;
-                    } else {
+            if (var2 != 1) {
+              if (var2 == 2) {
+                return 3355596;
+              } else {
+                if (var2 == 3) {
+                  return 13421619;
+                } else {
+                  if (var2 != 4) {
+                    if (var2 == 5) {
                       return 3394764;
+                    } else {
+                      return 6710886;
                     }
                   } else {
                     return 13382604;
                   }
-                } else {
-                  return 13421619;
                 }
-              } else {
-                return 3355596;
               }
             } else {
               return 13382451;

@@ -186,21 +186,10 @@ final class qw {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 > -116) {
-            return;
-        }
         field_c = null;
     }
 
     final static void a(byte param0) {
-        if (param0 != 35) {
-            field_b = 62;
-            if (!(so.a((byte) 101))) {
-                return;
-            }
-            ou.a(false, 4, (byte) -24);
-            return;
-        }
         if (!(so.a((byte) 101))) {
             return;
         }
@@ -208,132 +197,131 @@ final class qw {
     }
 
     final static void a(int param0, ah param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         ah var6 = null;
-        ah var8 = null;
-        ah var9 = null;
-        ah var10 = null;
-        ah var11 = null;
-        ah var12 = null;
+        ah var7 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 >= 57) {
-          if (param1.field_Q != 0) {
-            if (jc.b(true) <= 20) {
-              var2 = fi.a(2, he.field_o, (byte) -96);
-              if (1 != var2) {
-                var3 = param1.field_N;
-                var4 = var3;
-                if ((var4 ^ -1) != -5) {
-                  if (0 != var4) {
-                    if ((var4 ^ -1) != -6) {
-                      if ((var4 ^ -1) != -2) {
-                        if (2 == var4) {
-                          L0: {
-                            var3 = 6;
-                            if ((var3 ^ -1) <= -8) {
-                              var3 = 6;
-                              break L0;
-                            } else {
-                              break L0;
-                            }
-                          }
-                          var12 = uj.a(param1.field_Q, 26 - -fi.a(588, ki.field_b, (byte) -96) << 489241544, var3, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 1331489992);
-                          oc.a(var12, false);
-                          return;
-                        } else {
-                          L1: {
-                            if ((var3 ^ -1) <= -8) {
-                              var3 = 6;
-                              break L1;
-                            } else {
-                              break L1;
-                            }
-                          }
-                          var12 = uj.a(param1.field_Q, 26 - -fi.a(588, ki.field_b, (byte) -96) << 489241544, var3, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 1331489992);
-                          oc.a(var12, false);
-                          return;
-                        }
+        try {
+          L0: {
+            if (param0 >= 57) {
+              if (param1.field_Q != 0) {
+                if (jc.b(true) <= 20) {
+                  var2_int = fi.a(2, he.field_o, (byte) -96);
+                  if (1 != var2_int) {
+                    L1: {
+                      var3 = param1.field_N;
+                      var4 = var3;
+                      if (var4 == 4) {
+                        var3 = 0;
+                        break L1;
                       } else {
-                        L2: {
-                          var3 = 2;
-                          if ((var3 ^ -1) <= -8) {
-                            var3 = 6;
-                            break L2;
+                        if (0 == var4) {
+                          var3 = 5;
+                          break L1;
+                        } else {
+                          if (var4 != 5) {
+                            if (var4 == 1) {
+                              var3 = 2;
+                              break L1;
+                            } else {
+                              if (2 != var4) {
+                                break L1;
+                              } else {
+                                var3 = 6;
+                                break L1;
+                              }
+                            }
                           } else {
-                            break L2;
+                            var3 = 1;
+                            break L1;
                           }
                         }
-                        var11 = uj.a(param1.field_Q, 26 - -fi.a(588, ki.field_b, (byte) -96) << 489241544, var3, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 1331489992);
-                        oc.a(var11, false);
-                        return;
                       }
-                    } else {
-                      L3: {
-                        var3 = 1;
-                        if ((var3 ^ -1) <= -8) {
-                          var3 = 6;
-                          break L3;
-                        } else {
-                          break L3;
-                        }
-                      }
-                      var10 = uj.a(param1.field_Q, 26 - -fi.a(588, ki.field_b, (byte) -96) << 489241544, var3, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 1331489992);
-                      oc.a(var10, false);
-                      return;
                     }
-                  } else {
-                    L4: {
-                      var3 = 5;
-                      if ((var3 ^ -1) <= -8) {
+                    L2: {
+                      if (var3 >= 7) {
                         var3 = 6;
-                        break L4;
+                        break L2;
                       } else {
-                        break L4;
+                        break L2;
                       }
                     }
-                    var9 = uj.a(param1.field_Q, 26 - -fi.a(588, ki.field_b, (byte) -96) << 489241544, var3, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 1331489992);
-                    oc.a(var9, false);
+                    var7 = uj.a(param1.field_Q, 26 - -fi.a(588, ki.field_b, (byte) -96) << 8, var3, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 8);
+                    oc.a(var7, false);
+                    break L0;
+                  } else {
+                    L3: {
+                      var3 = param1.field_Q + 1;
+                      if (6 <= var3) {
+                        var3 = 5;
+                        break L3;
+                      } else {
+                        break L3;
+                      }
+                    }
+                    var6 = uj.a(var3, 26 + fi.a(588, ki.field_b, (byte) -96) << 8, param1.field_N, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 8);
+                    oc.a(var6, false);
                     return;
                   }
                 } else {
-                  L5: {
-                    var3 = 0;
-                    if ((var3 ^ -1) <= -8) {
-                      var3 = 6;
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  var8 = uj.a(param1.field_Q, 26 - -fi.a(588, ki.field_b, (byte) -96) << 489241544, var3, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << 1331489992);
-                  oc.a(var8, false);
                   return;
                 }
               } else {
-                L6: {
-                  var3 = param1.field_Q + 1;
-                  if (6 <= var3) {
-                    var3 = 5;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                var6 = uj.a(var3, 26 + fi.a(588, ki.field_b, (byte) -96) << -1794047064, param1.field_N, (byte) 84, 26 + fi.a(428, ki.field_b, (byte) -96) << -840855192);
-                oc.a(var6, false);
                 return;
               }
             } else {
               return;
             }
-          } else {
-            return;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = decompiledCaughtException;
+            stackOut_29_0 = (RuntimeException) var2;
+            stackOut_29_1 = new StringBuilder().append("qw.B(").append(param0).append(44);
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
+            if (param1 == null) {
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L4;
+            } else {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L4;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
         }
     }
 

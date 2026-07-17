@@ -10,14 +10,16 @@ final class to {
         kv[] var6 = null;
         var6 = new kv[9];
         var5 = var6;
-        var5[6] = ik.b(param3, param1, param2 + 25976);
-        var5[3] = ik.b(param3, param1, param2 + 25976);
-        var5[2] = ik.b(param3, param1, param2 + 25976);
-        var5[1] = ik.b(param3, param1, param2 + 25976);
-        var5[0] = ik.b(param3, param1, param2 + 25976);
-        var6[8] = ik.b(param3, param0, 2);
-        var5[7] = ik.b(param3, param0, 2);
-        var5[5] = ik.b(param3, param0, 2);
+        kv dupTemp$4 = ik.b(param3, param1, param2 + 25976);
+        var5[6] = dupTemp$4;
+        var5[3] = dupTemp$4;
+        var5[2] = dupTemp$4;
+        var5[1] = dupTemp$4;
+        var5[0] = dupTemp$4;
+        kv dupTemp$5 = ik.b(param3, param0, 2);
+        var6[8] = dupTemp$5;
+        var5[7] = dupTemp$5;
+        var5[5] = dupTemp$5;
         if (param2 != -25974) {
           L0: {
             field_a = null;
@@ -44,11 +46,6 @@ final class to {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 <= 3) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

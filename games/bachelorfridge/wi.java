@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.Class;
+
 final class wi extends w implements oh {
     static wma field_i;
     static int[] field_o;
@@ -14,11 +16,15 @@ final class wi extends w implements oh {
         super(param1, param0, param2);
         ((wi) this).field_k = false;
         ((wi) this).field_l = 50;
-        ((wi) this).field_l = param3;
-        ((wi) this).field_j = param0;
-        ((wi) this).field_k = param4 ? true : false;
-        ((wi) this).field_m = param2;
-        ((wi) this).field_n = new vi(((wi) this).field_l);
+        try {
+            ((wi) this).field_l = param3;
+            ((wi) this).field_j = param0;
+            ((wi) this).field_k = param4 ? true : false;
+            ((wi) this).field_m = param2;
+            ((wi) this).field_n = new vi(((wi) this).field_l);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "wi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     public final int[] a(boolean param0, int param1, float param2) {
@@ -137,7 +143,7 @@ final class wi extends w implements oh {
               stackIn_8_4 = stackOut_6_4;
               break L0;
             }
-            return ((cg) (Object) stackIn_8_0).a((q) this, (vr) (Object) stackIn_8_2, stackIn_8_3, stackIn_8_4 != 0);
+            return ((cg) (Object) stackIn_8_0).a((q) this, stackIn_8_2, stackIn_8_3, stackIn_8_4 != 0);
           }
         } else {
           return null;
@@ -149,13 +155,16 @@ final class wi extends w implements oh {
         if (param3 != -68) {
             return;
         }
-        dk.field_p = param1;
-        uv.a(false, oc.field_m, param0);
+        try {
+            dk.field_p = param1;
+            uv.a(false, oc.field_m, param0);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "wi.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     private final cg d(byte param0, int param1) {
         cg var3 = null;
-        cg var3_ref = null;
         byte[] var4 = null;
         int var5 = 0;
         var3 = (cg) (Object) ((wi) this).field_n.a(126, (long)param1);
@@ -164,10 +173,10 @@ final class wi extends w implements oh {
           if (var4 == null) {
             return null;
           } else {
-            var3_ref = new cg(new lu(var4));
-            ((wi) this).field_n.a((eo) (Object) var3_ref, (long)param1, 83);
+            var3 = new cg(new lu(var4));
+            ((wi) this).field_n.a((eo) (Object) var3, (long)param1, 83);
             var5 = -80 / ((param0 - -37) / 48);
-            return var3_ref;
+            return var3;
           }
         } else {
           return var3;
@@ -177,9 +186,6 @@ final class wi extends w implements oh {
     public static void b(boolean param0) {
         field_o = null;
         field_i = null;
-        if (!param0) {
-            field_i = null;
-        }
     }
 
     public final int a(int param0, int param1) {
@@ -190,7 +196,7 @@ final class wi extends w implements oh {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if ((gf.field_k ^ -1) != -14) {
+        if (gf.field_k != 13) {
           if (gf.field_k != 102) {
             if (param0 >= 71) {
               if (null != da.field_d) {
@@ -283,41 +289,128 @@ final class wi extends w implements oh {
     }
 
     final static Class a(String param0, int param1) throws ClassNotFoundException {
-        int var2 = 0;
-        if (!param0.equals((Object) (Object) "B")) {
-          if (param0.equals((Object) (Object) "I")) {
-            return Integer.TYPE;
-          } else {
-            if (!param0.equals((Object) (Object) "S")) {
-              if (param0.equals((Object) (Object) "J")) {
-                return Long.TYPE;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        Class stackIn_2_0 = null;
+        Class stackIn_6_0 = null;
+        Class stackIn_9_0 = null;
+        Class stackIn_13_0 = null;
+        Class stackIn_16_0 = null;
+        Class stackIn_20_0 = null;
+        Class stackIn_23_0 = null;
+        Class stackIn_26_0 = null;
+        Class stackIn_28_0 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Class stackOut_5_0 = null;
+        Class stackOut_12_0 = null;
+        Class stackOut_19_0 = null;
+        Class stackOut_27_0 = null;
+        Class stackOut_25_0 = null;
+        Class stackOut_22_0 = null;
+        Class stackOut_15_0 = null;
+        Class stackOut_8_0 = null;
+        Class stackOut_1_0 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        try {
+          L0: {
+            if (!param0.equals((Object) (Object) "B")) {
+              if (param0.equals((Object) (Object) "I")) {
+                stackOut_5_0 = Integer.TYPE;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0;
               } else {
-                if (!param0.equals((Object) (Object) "Z")) {
-                  if (param0.equals((Object) (Object) "F")) {
-                    return Float.TYPE;
+                if (!param0.equals((Object) (Object) "S")) {
+                  if (param0.equals((Object) (Object) "J")) {
+                    stackOut_12_0 = Long.TYPE;
+                    stackIn_13_0 = stackOut_12_0;
+                    return stackIn_13_0;
                   } else {
-                    if (!param0.equals((Object) (Object) "D")) {
-                      if (param0.equals((Object) (Object) "C")) {
-                        return Character.TYPE;
+                    if (!param0.equals((Object) (Object) "Z")) {
+                      if (param0.equals((Object) (Object) "F")) {
+                        stackOut_19_0 = Float.TYPE;
+                        stackIn_20_0 = stackOut_19_0;
+                        return stackIn_20_0;
                       } else {
-                        var2 = -51 / ((35 - param1) / 33);
-                        return Class.forName(param0);
+                        if (!param0.equals((Object) (Object) "D")) {
+                          if (!param0.equals((Object) (Object) "C")) {
+                            var2_int = -51 / ((35 - param1) / 33);
+                            stackOut_27_0 = Class.forName(param0);
+                            stackIn_28_0 = stackOut_27_0;
+                            break L0;
+                          } else {
+                            stackOut_25_0 = Character.TYPE;
+                            stackIn_26_0 = stackOut_25_0;
+                            return stackIn_26_0;
+                          }
+                        } else {
+                          stackOut_22_0 = Double.TYPE;
+                          stackIn_23_0 = stackOut_22_0;
+                          return stackIn_23_0;
+                        }
                       }
                     } else {
-                      return Double.TYPE;
+                      stackOut_15_0 = Boolean.TYPE;
+                      stackIn_16_0 = stackOut_15_0;
+                      return stackIn_16_0;
                     }
                   }
                 } else {
-                  return Boolean.TYPE;
+                  stackOut_8_0 = Short.TYPE;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
                 }
               }
             } else {
-              return Short.TYPE;
+              stackOut_1_0 = Byte.TYPE;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
           }
-        } else {
-          return Byte.TYPE;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_29_0 = (RuntimeException) var2;
+            stackOut_29_1 = new StringBuilder().append("wi.O(");
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
+            if (param0 == null) {
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L1;
+            } else {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L1;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param1 + 41);
         }
+        return stackIn_28_0;
     }
 
     final on d(int param0, int param1) {

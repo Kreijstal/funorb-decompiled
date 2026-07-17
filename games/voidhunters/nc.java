@@ -95,7 +95,7 @@ final class nc {
     }
 
     final static void a(byte param0) {
-        int var1 = -53 % ((-32 - param0) / 53);
+        int var1 = 0;
         hh.field_o = 0;
         if (!(null != ug.field_o)) {
             ug.field_o = new Object[]{};
@@ -186,8 +186,12 @@ final class nc {
     }
 
     nc(Object param0) {
-        ((nc) this).field_b = param0;
-        ((nc) this).field_a = false;
+        try {
+            ((nc) this).field_b = param0;
+            ((nc) this).field_a = false;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "nc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

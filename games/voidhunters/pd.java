@@ -10,7 +10,7 @@ final class pd extends ksa {
     int field_h;
 
     public static void c(byte param0) {
-        int var1 = 2 % ((param0 - 73) / 41);
+        int var1 = 0;
         field_g = null;
     }
 

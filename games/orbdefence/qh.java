@@ -11,613 +11,296 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
         field_d = null;
         field_b = null;
         field_c = null;
-        if (param0 < 9) {
-            field_a = 6;
-        }
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
-        if (!(ad.field_b == null)) {
-            wg.field_p = -1;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            if (ad.field_b != null) {
+              wg.field_p = -1;
+              break L0;
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("qh.focusLost(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw dd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
-        int var2 = 0;
-        if (ad.field_b != null) {
-          ji.field_c = 0;
-          var2 = param0.getKeyCode();
-          if (var2 >= 0) {
-            if (nd.field_a.length > var2) {
-              var2 = nd.field_a[var2] & -129;
-              if ((wg.field_p ^ -1) <= -1) {
-                if (var2 >= 0) {
-                  gl.field_i[wg.field_p] = var2 ^ -1;
-                  wg.field_p = 1 + wg.field_p & 127;
-                  if (al.field_b == wg.field_p) {
-                    wg.field_p = -1;
-                    param0.consume();
-                    return;
-                  } else {
-                    param0.consume();
-                    return;
+        RuntimeException runtimeException = null;
+        int var2_int = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (ad.field_b != null) {
+                L2: {
+                  L3: {
+                    ji.field_c = 0;
+                    var2_int = param0.getKeyCode();
+                    if (var2_int < 0) {
+                      break L3;
+                    } else {
+                      if (nd.field_a.length <= var2_int) {
+                        break L3;
+                      } else {
+                        var2_int = nd.field_a[var2_int] & -129;
+                        break L2;
+                      }
+                    }
                   }
+                  var2_int = -1;
+                  break L2;
+                }
+                if (wg.field_p < 0) {
+                  break L1;
                 } else {
-                  param0.consume();
-                  return;
+                  if (var2_int >= 0) {
+                    gl.field_i[wg.field_p] = ~var2_int;
+                    wg.field_p = 1 + wg.field_p & 127;
+                    if (al.field_b != wg.field_p) {
+                      break L1;
+                    } else {
+                      wg.field_p = -1;
+                      break L1;
+                    }
+                  } else {
+                    break L1;
+                  }
                 }
               } else {
-                param0.consume();
-                return;
-              }
-            } else {
-              var2 = -1;
-              if ((wg.field_p ^ -1) <= -1) {
-                if (var2 >= 0) {
-                  gl.field_i[wg.field_p] = var2 ^ -1;
-                  wg.field_p = 1 + wg.field_p & 127;
-                  if (al.field_b == wg.field_p) {
-                    wg.field_p = -1;
-                    param0.consume();
-                    return;
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                } else {
-                  param0.consume();
-                  return;
-                }
-              } else {
-                param0.consume();
-                return;
+                break L1;
               }
             }
-          } else {
-            var2 = -1;
-            if ((wg.field_p ^ -1) <= -1) {
-              if (var2 >= 0) {
-                gl.field_i[wg.field_p] = var2 ^ -1;
-                wg.field_p = 1 + wg.field_p & 127;
-                if (al.field_b != wg.field_p) {
-                  param0.consume();
-                  return;
-                } else {
-                  wg.field_p = -1;
-                  param0.consume();
-                  return;
-                }
-              } else {
-                param0.consume();
-                return;
-              }
+            param0.consume();
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            runtimeException = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) runtimeException;
+            stackOut_13_1 = new StringBuilder().append("qh.keyReleased(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param0 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
             } else {
-              param0.consume();
-              return;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
             }
           }
-        } else {
-          param0.consume();
-          return;
+          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
     }
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
-        if (null != ad.field_b) {
-          ji.field_c = 0;
-          var2 = param0.getKeyCode();
-          if (0 <= var2) {
-            if (nd.field_a.length > var2) {
-              var2 = nd.field_a[var2];
-              if (-1 != (var2 & 128)) {
-                var2 = -1;
-                if (-1 <= wg.field_p) {
-                  if (-1 <= var2) {
-                    gl.field_i[wg.field_p] = var2;
-                    wg.field_p = wg.field_p - -1 & 127;
-                    if (al.field_b == wg.field_p) {
-                      L0: {
-                        wg.field_p = -1;
-                        if ((var2 ^ -1) > -1) {
-                          break L0;
-                        } else {
-                          var3 = 127 & 1 + uf.field_a;
-                          if (var3 != md.field_g) {
-                            g.field_g[uf.field_a] = var2;
-                            ll.field_b[uf.field_a] = (char)0;
-                            uf.field_a = var3;
-                            break L0;
-                          } else {
-                            var3 = param0.getModifiers();
-                            if ((10 & var3) != -1) {
-                              param0.consume();
-                              return;
-                            } else {
-                              if (-86 == var2) {
-                                param0.consume();
-                                return;
-                              } else {
-                                if (-11 == (var2 ^ -1)) {
-                                  param0.consume();
-                                  return;
-                                } else {
-                                  return;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                      var3 = param0.getModifiers();
-                      if ((10 & var3) != -1) {
-                        param0.consume();
-                        return;
-                      } else {
-                        if (-86 == var2) {
-                          param0.consume();
-                          return;
-                        } else {
-                          if (-11 == (var2 ^ -1)) {
-                            param0.consume();
-                            return;
-                          } else {
-                            return;
-                          }
-                        }
-                      }
-                    } else {
-                      L1: {
-                        if ((var2 ^ -1) > -1) {
-                          break L1;
-                        } else {
-                          var3 = 127 & 1 + uf.field_a;
-                          if (var3 != md.field_g) {
-                            g.field_g[uf.field_a] = var2;
-                            ll.field_b[uf.field_a] = (char)0;
-                            uf.field_a = var3;
-                            break L1;
-                          } else {
-                            break L1;
-                          }
-                        }
-                      }
-                      var3 = param0.getModifiers();
-                      if ((10 & var3) != -1) {
-                        param0.consume();
-                        return;
-                      } else {
-                        if (-86 == var2) {
-                          param0.consume();
-                          return;
-                        } else {
-                          if (-11 == (var2 ^ -1)) {
-                            param0.consume();
-                            return;
-                          } else {
-                            return;
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    L2: {
-                      if ((var2 ^ -1) > -1) {
-                        break L2;
-                      } else {
-                        var3 = 127 & 1 + uf.field_a;
-                        if (var3 != md.field_g) {
-                          g.field_g[uf.field_a] = var2;
-                          ll.field_b[uf.field_a] = (char)0;
-                          uf.field_a = var3;
-                          break L2;
-                        } else {
-                          var3 = param0.getModifiers();
-                          if ((10 & var3) != -1) {
-                            param0.consume();
-                            return;
-                          } else {
-                            if (-86 == var2) {
-                              param0.consume();
-                              return;
-                            } else {
-                              if (-11 == (var2 ^ -1)) {
-                                param0.consume();
-                                return;
-                              } else {
-                                return;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                    var3 = param0.getModifiers();
-                    if ((10 & var3) != -1) {
-                      param0.consume();
-                      return;
-                    } else {
-                      if (-86 == var2) {
-                        param0.consume();
-                        return;
-                      } else {
-                        if (-11 == (var2 ^ -1)) {
-                          param0.consume();
-                          return;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                  }
-                } else {
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (null == ad.field_b) {
+                break L1;
+              } else {
+                L2: {
                   L3: {
-                    if ((var2 ^ -1) > -1) {
+                    ji.field_c = 0;
+                    var2_int = param0.getKeyCode();
+                    if (0 > var2_int) {
                       break L3;
                     } else {
-                      var3 = 127 & 1 + uf.field_a;
-                      if (var3 != md.field_g) {
-                        g.field_g[uf.field_a] = var2;
-                        ll.field_b[uf.field_a] = (char)0;
-                        uf.field_a = var3;
+                      if (~nd.field_a.length >= ~var2_int) {
                         break L3;
                       } else {
-                        var3 = param0.getModifiers();
-                        if ((10 & var3) != -1) {
-                          param0.consume();
-                          return;
+                        var2_int = nd.field_a[var2_int];
+                        if ((var2_int & 128) != 0) {
+                          var2_int = -1;
+                          break L2;
                         } else {
-                          if (-86 == var2) {
-                            param0.consume();
-                            return;
-                          } else {
-                            if (-11 == (var2 ^ -1)) {
-                              param0.consume();
-                              return;
-                            } else {
-                              return;
-                            }
-                          }
+                          break L2;
                         }
                       }
                     }
                   }
-                  var3 = param0.getModifiers();
-                  if ((10 & var3) != -1) {
-                    param0.consume();
-                    return;
+                  var2_int = -1;
+                  break L2;
+                }
+                L4: {
+                  if (wg.field_p < 0) {
+                    break L4;
                   } else {
-                    if (-86 == var2) {
-                      param0.consume();
-                      return;
+                    if (var2_int < 0) {
+                      break L4;
                     } else {
-                      if (-11 == var2) {
-                        param0.consume();
-                        return;
+                      gl.field_i[wg.field_p] = var2_int;
+                      wg.field_p = wg.field_p - -1 & 127;
+                      if (~al.field_b == ~wg.field_p) {
+                        wg.field_p = -1;
+                        break L4;
                       } else {
-                        return;
+                        break L4;
                       }
                     }
                   }
                 }
-              } else {
-                L4: {
-                  if (-1 > wg.field_p) {
-                    break L4;
+                L5: {
+                  if (var2_int < 0) {
+                    break L5;
                   } else {
-                    if (-1 < (var2 ^ -1)) {
-                      break L4;
+                    var3 = 127 & 1 + uf.field_a;
+                    if (~var3 != ~md.field_g) {
+                      g.field_g[uf.field_a] = var2_int;
+                      ll.field_b[uf.field_a] = ' ';
+                      uf.field_a = var3;
+                      break L5;
                     } else {
-                      gl.field_i[wg.field_p] = var2;
-                      wg.field_p = wg.field_p - -1 & 127;
-                      if (al.field_b == wg.field_p) {
-                        wg.field_p = -1;
-                        break L4;
-                      } else {
-                        L5: {
-                          if ((var2 ^ -1) > -1) {
-                            break L5;
-                          } else {
-                            var3 = 127 & 1 + uf.field_a;
-                            if (var3 != md.field_g) {
-                              g.field_g[uf.field_a] = var2;
-                              ll.field_b[uf.field_a] = (char)0;
-                              uf.field_a = var3;
-                              break L5;
-                            } else {
-                              break L5;
-                            }
-                          }
-                        }
-                        var3 = param0.getModifiers();
-                        if ((10 & var3) != -1) {
-                          param0.consume();
-                          return;
-                        } else {
-                          if (-86 == var2) {
-                            param0.consume();
-                            return;
-                          } else {
-                            if (-11 == (var2 ^ -1)) {
-                              param0.consume();
-                              return;
-                            } else {
-                              return;
-                            }
-                          }
-                        }
-                      }
+                      break L5;
                     }
                   }
                 }
                 L6: {
-                  if ((var2 ^ -1) > -1) {
+                  var3 = param0.getModifiers();
+                  if ((10 & var3) != 0) {
                     break L6;
                   } else {
-                    var3 = 127 & 1 + uf.field_a;
-                    if (var3 != md.field_g) {
-                      g.field_g[uf.field_a] = var2;
-                      ll.field_b[uf.field_a] = (char)0;
-                      uf.field_a = var3;
+                    if (var2_int == 85) {
                       break L6;
                     } else {
-                      var3 = param0.getModifiers();
-                      if ((10 & var3) != -1) {
-                        param0.consume();
-                        return;
+                      if (var2_int == 10) {
+                        break L6;
                       } else {
-                        if (-86 == var2) {
-                          param0.consume();
-                          return;
-                        } else {
-                          if (-11 == (var2 ^ -1)) {
-                            param0.consume();
-                            return;
-                          } else {
-                            return;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                var3 = param0.getModifiers();
-                if ((10 & var3) != -1) {
-                  param0.consume();
-                  return;
-                } else {
-                  if (-86 == var2) {
-                    param0.consume();
-                    return;
-                  } else {
-                    if (-11 == var2) {
-                      param0.consume();
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              }
-            } else {
-              L7: {
-                var2 = -1;
-                if (-1 < wg.field_p) {
-                  break L7;
-                } else {
-                  if (-1 > var2) {
-                    break L7;
-                  } else {
-                    gl.field_i[wg.field_p] = var2;
-                    wg.field_p = wg.field_p - -1 & 127;
-                    if (al.field_b == wg.field_p) {
-                      wg.field_p = -1;
-                      break L7;
-                    } else {
-                      L8: {
-                        if ((var2 ^ -1) > -1) {
-                          break L8;
-                        } else {
-                          var3 = 127 & 1 + uf.field_a;
-                          if (var3 != md.field_g) {
-                            g.field_g[uf.field_a] = var2;
-                            ll.field_b[uf.field_a] = (char)0;
-                            uf.field_a = var3;
-                            break L8;
-                          } else {
-                            var3 = param0.getModifiers();
-                            if ((10 & var3) == -1) {
-                              if (-86 != var2) {
-                                if (-11 == (var2 ^ -1)) {
-                                  param0.consume();
-                                  return;
-                                } else {
-                                  return;
-                                }
-                              } else {
-                                param0.consume();
-                                return;
-                              }
-                            } else {
-                              param0.consume();
-                              return;
-                            }
-                          }
-                        }
-                      }
-                      var3 = param0.getModifiers();
-                      if ((10 & var3) == -1) {
-                        if (-86 != var2) {
-                          if (-11 != (var2 ^ -1)) {
-                            return;
-                          } else {
-                            param0.consume();
-                            return;
-                          }
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
-                        param0.consume();
                         return;
                       }
                     }
                   }
                 }
-              }
-              L9: {
-                if ((var2 ^ -1) > -1) {
-                  break L9;
-                } else {
-                  var3 = 127 & 1 + uf.field_a;
-                  if (var3 != md.field_g) {
-                    g.field_g[uf.field_a] = var2;
-                    ll.field_b[uf.field_a] = (char)0;
-                    uf.field_a = var3;
-                    break L9;
-                  } else {
-                    var3 = param0.getModifiers();
-                    if ((10 & var3) != -1) {
-                      param0.consume();
-                      return;
-                    } else {
-                      if (-86 != var2) {
-                        if (-11 == (var2 ^ -1)) {
-                          param0.consume();
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    }
-                  }
-                }
-              }
-              var3 = param0.getModifiers();
-              if ((10 & var3) != -1) {
                 param0.consume();
-                return;
-              } else {
-                if (-86 == var2) {
-                  param0.consume();
-                  return;
-                } else {
-                  if (-11 == (var2 ^ -1)) {
-                    param0.consume();
-                    return;
-                  } else {
-                    return;
-                  }
-                }
+                break L1;
               }
             }
-          } else {
-            L10: {
-              var2 = -1;
-              if (-1 < wg.field_p) {
-                break L10;
-              } else {
-                if (-1 > var2) {
-                  break L10;
-                } else {
-                  gl.field_i[wg.field_p] = var2;
-                  wg.field_p = wg.field_p - -1 & 127;
-                  if (al.field_b == wg.field_p) {
-                    wg.field_p = -1;
-                    break L10;
-                  } else {
-                    L11: {
-                      if ((var2 ^ -1) > -1) {
-                        break L11;
-                      } else {
-                        var3 = 127 & 1 + uf.field_a;
-                        if (var3 != md.field_g) {
-                          g.field_g[uf.field_a] = var2;
-                          ll.field_b[uf.field_a] = (char)0;
-                          uf.field_a = var3;
-                          break L11;
-                        } else {
-                          break L11;
-                        }
-                      }
-                    }
-                    var3 = param0.getModifiers();
-                    if ((10 & var3) == -1) {
-                      if (-86 != var2) {
-                        if (-11 != (var2 ^ -1)) {
-                          return;
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  }
-                }
-              }
-            }
-            L12: {
-              if ((var2 ^ -1) > -1) {
-                break L12;
-              } else {
-                var3 = 127 & 1 + uf.field_a;
-                if (var3 != md.field_g) {
-                  g.field_g[uf.field_a] = var2;
-                  ll.field_b[uf.field_a] = (char)0;
-                  uf.field_a = var3;
-                  break L12;
-                } else {
-                  var3 = param0.getModifiers();
-                  if ((10 & var3) == -1) {
-                    if (-86 != var2) {
-                      if (-11 != (var2 ^ -1)) {
-                        return;
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                }
-              }
-            }
-            var3 = param0.getModifiers();
-            if ((10 & var3) == -1) {
-              if (-86 != var2) {
-                if (-11 != (var2 ^ -1)) {
-                  return;
-                } else {
-                  param0.consume();
-                  return;
-                }
-              } else {
-                param0.consume();
-                return;
-              }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var2 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_1 = new StringBuilder().append("qh.keyPressed(");
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param0 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L7;
             } else {
-              param0.consume();
-              return;
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L7;
             }
           }
-        } else {
-          return;
+          throw dd.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
     }
 
@@ -640,39 +323,27 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final void keyTyped(java.awt.event.KeyEvent param0) {
-        int var2 = 0;
+        int var2_int = 0;
         int var3 = 0;
-        if (ad.field_b != null) {
-          var2 = param0.getKeyChar();
-          if (var2 != 0) {
-            if (var2 != 65535) {
-              if (oc.a((char) var2, 0)) {
-                var3 = 127 & 1 + uf.field_a;
-                if (var3 != md.field_g) {
-                  g.field_g[uf.field_a] = -1;
-                  ll.field_b[uf.field_a] = (char)var2;
-                  uf.field_a = var3;
-                  param0.consume();
-                  return;
-                } else {
-                  param0.consume();
-                  return;
+        try {
+            if (ad.field_b != null) {
+                var2_int = param0.getKeyChar();
+                if (var2_int != 0) {
+                    if (var2_int != 65535) {
+                        if (oc.a((char) var2_int, 0)) {
+                            var3 = 127 & 1 + uf.field_a;
+                            if (var3 != md.field_g) {
+                                g.field_g[uf.field_a] = -1;
+                                ll.field_b[uf.field_a] = (char)var2_int;
+                                uf.field_a = var3;
+                            }
+                        }
+                    }
                 }
-              } else {
-                param0.consume();
-                return;
-              }
-            } else {
-              param0.consume();
-              return;
             }
-          } else {
             param0.consume();
-            return;
-          }
-        } else {
-          param0.consume();
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "qh.keyTyped(" + (param0 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -680,10 +351,6 @@ final class qh implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     final static int[] b(int param0) {
-        if (param0 != 8) {
-            String discarded$0 = qh.a(122);
-            return new int[8];
-        }
         return new int[8];
     }
 

@@ -11,12 +11,14 @@ final class ef implements Iterator {
     static boolean field_e;
 
     final static void a(String param0, byte param1, String param2) {
-        if (param1 != 66) {
-            field_c = null;
+        try {
+            if (param1 != 66) {
+                field_c = null;
+            }
             r.a(param2, (byte) 87, false, param0);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "ef.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        r.a(param2, (byte) 87, false, param0);
     }
 
     public final boolean hasNext() {
@@ -32,74 +34,58 @@ final class ef implements Iterator {
     }
 
     final static void b(byte param0) {
-        float var1 = 0.0f;
-        Object var2 = null;
-        ja var2_ref = null;
+        float var1_float = 0.0f;
+        RuntimeException var1 = null;
+        ja var2 = null;
         int var3 = 0;
-        var2 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.field_C;
-        var1 = el.field_o.field_J;
-        ab.a(param0 + -22, var1);
-        rh.a((byte) 123);
-        if (param0 == -15) {
-          var2_ref = (ja) (Object) bh.field_c.g(0);
-          L0: while (true) {
-            if (var2_ref == null) {
-              if (el.field_o.field_C) {
-                return;
-              } else {
-                lc.a(255);
-                return;
-              }
-            } else {
-              L1: {
-                var2_ref.b(true);
-                if ((var2_ref.field_G ^ -1) > -4) {
-                  break L1;
+        try {
+          L0: {
+            var1_float = el.field_o.field_J;
+            ab.a(-37, var1_float);
+            rh.a((byte) 123);
+            var2 = (ja) (Object) bh.field_c.g(0);
+            L1: while (true) {
+              if (var2 == null) {
+                if (el.field_o.field_C) {
+                  break L0;
                 } else {
-                  var2_ref.field_K = ra.field_a;
-                  var2_ref.field_G = 0;
-                  break L1;
+                  lc.a(255);
+                  return;
                 }
+              } else {
+                L2: {
+                  var2.b(true);
+                  if (var2.field_G < 3) {
+                    break L2;
+                  } else {
+                    var2.field_K = ra.field_a;
+                    var2.field_G = 0;
+                    break L2;
+                  }
+                }
+                var2 = (ja) (Object) bh.field_c.d(1);
+                continue L1;
               }
-              var2_ref = (ja) (Object) bh.field_c.d(1);
-              continue L0;
             }
           }
-        } else {
-          ef.a((byte) -11);
-          var2_ref = (ja) (Object) bh.field_c.g(0);
-          L2: while (true) {
-            if (var2_ref == null) {
-              if (el.field_o.field_C) {
-                return;
-              } else {
-                lc.a(255);
-                return;
-              }
-            } else {
-              L3: {
-                var2_ref.b(true);
-                if ((var2_ref.field_G ^ -1) > -4) {
-                  break L3;
-                } else {
-                  var2_ref.field_K = ra.field_a;
-                  var2_ref.field_G = 0;
-                  break L3;
-                }
-              }
-              var2_ref = (ja) (Object) bh.field_c.d(1);
-              continue L2;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var1, "ef.A(" + -15 + 41);
         }
     }
 
     ef(ra param0) {
         ((ef) this).field_b = null;
-        ((ef) this).field_a = param0;
-        ((ef) this).field_d = ((ef) this).field_a.field_c.field_k;
-        ((ef) this).field_b = null;
+        try {
+            ((ef) this).field_a = param0;
+            ((ef) this).field_d = ((ef) this).field_a.field_c.field_k;
+            ((ef) this).field_b = null;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(byte param0) {

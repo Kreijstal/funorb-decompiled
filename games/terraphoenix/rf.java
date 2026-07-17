@@ -21,24 +21,12 @@ abstract class rf extends vh {
         field_t = null;
         field_s = null;
         field_z = null;
-        if (!param0) {
-          rf.d((byte) -6);
-          field_w = null;
-          field_u = null;
-          field_B = null;
-          field_p = null;
-          field_y = null;
-          field_q = null;
-          return;
-        } else {
-          field_w = null;
-          field_u = null;
-          field_B = null;
-          field_p = null;
-          field_y = null;
-          field_q = null;
-          return;
-        }
+        field_w = null;
+        field_u = null;
+        field_B = null;
+        field_p = null;
+        field_y = null;
+        field_q = null;
     }
 
     abstract byte[] b(boolean param0);
@@ -48,84 +36,31 @@ abstract class rf extends vh {
     final static void d(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (null == a.field_d) {
-                        statePc = 8;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var1 = (Object) (Object) a.field_d;
-                    // monitorenter a.field_d
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        a.field_d = null;
-                        // monitorexit var1
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    if (param0 >= 81) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    field_y = null;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    return;
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    if (param0 < 81) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    return;
-                }
-                case 10: {
-                    field_y = null;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (null == a.field_d) {
+          if (param0 < 81) {
+            field_y = null;
+            return;
+          } else {
+            return;
+          }
+        } else {
+          var1 = (Object) (Object) a.field_d;
+          synchronized (var1) {
+            L0: {
+              a.field_d = null;
+              break L0;
             }
+          }
+          L1: {
+            if (param0 >= 81) {
+              break L1;
+            } else {
+              field_y = null;
+              break L1;
+            }
+          }
+          return;
         }
     }
 

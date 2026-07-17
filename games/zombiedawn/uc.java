@@ -17,7 +17,7 @@ abstract class uc {
     public static void b(int param0) {
         field_a = null;
         field_b = null;
-        int var1 = 38 % ((25 - param0) / 56);
+        int var1 = 0;
     }
 
     static {

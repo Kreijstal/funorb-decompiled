@@ -9,11 +9,6 @@ final class vea {
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 <= 25) {
-            field_b = false;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

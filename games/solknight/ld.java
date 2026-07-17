@@ -66,7 +66,7 @@ abstract class ld extends kf {
     public static void k(int param0) {
         field_O = null;
         field_M = null;
-        int var1 = -31 % ((-28 - param0) / 50);
+        int var1 = -1;
     }
 
     void a(int param0, byte param1, int param2) {
@@ -93,14 +93,14 @@ abstract class ld extends kf {
         var8 = 0;
         var9 = param2;
         L0: while (true) {
-          if ((var8 ^ -1) <= (var4 ^ -1)) {
+          if (~var8 <= ~var4) {
             var5 = 194;
             var4 = 22;
             var7 = 169;
             var8 = 0;
             var9 = param2 + 35;
             L1: while (true) {
-              if ((var4 ^ -1) >= (var8 ^ -1)) {
+              if (~var4 >= ~var8) {
                 fa.field_b.d(param0 - (-((ld) this).field_t - -90), param2 - -10);
                 je.a(fi.field_a, 5 + param0, param2 + 35, ((ld) this).field_t + -10, (byte) 93);
                 je.a(qk.field_l, param0, -22 + (((ld) this).field_x + param2), ((ld) this).field_t, (byte) 114);
@@ -114,7 +114,7 @@ abstract class ld extends kf {
                     return;
                   } else {
                     var10 = var5 + var8 * (-var5 + var7) / var4;
-                    var10 = var10 | (var10 << 1228593160 | var10 << -823846544);
+                    var10 = var10 | (var10 << 8 | var10 << 16);
                     mi.b(param0, var9, 6, var10);
                     mi.b(-6 + (((ld) this).field_t + param0), var9, 6, var10);
                     var8++;
@@ -124,7 +124,7 @@ abstract class ld extends kf {
                 }
               } else {
                 var10 = var5 + (-var5 + var7) * var8 / var4;
-                var10 = var10 | (var10 << -1917465080 | var10 << -1506965200);
+                var10 = var10 | (var10 << 8 | var10 << 16);
                 mi.b(param0, var9, 6, var10);
                 mi.b(-6 + (((ld) this).field_t + param0), var9, 6, var10);
                 var9++;
@@ -134,7 +134,7 @@ abstract class ld extends kf {
             }
           } else {
             L3: {
-              if ((mi.field_l ^ -1) < (var9 ^ -1)) {
+              if (~mi.field_l < ~var9) {
                 break L3;
               } else {
                 if (var9 < mi.field_e) {
@@ -142,21 +142,21 @@ abstract class ld extends kf {
                     var10 = (-var5 + var7) * var8 / var4 + var5;
                     var11 = 0;
                     var12 = ((ld) this).field_t;
-                    if ((var8 ^ -1) >= -21) {
+                    if (var8 <= 20) {
                       L5: while (true) {
                         if (20 < var11) {
                           break L4;
                         } else {
                           L6: {
                             var13 = (20 - var8) * (-var8 + 20) - -((20 - var11) * (20 - var11));
-                            if ((var13 ^ -1) < -463) {
+                            if (var13 > 462) {
                               break L6;
                             } else {
-                              if (-421 < (var13 ^ -1)) {
+                              if (var13 < 420) {
                                 break L4;
                               } else {
                                 var14 = (462 + -var13) * var10 / 42;
-                                var14 = var14 | (var14 << -295194680 | var14 << 53559472);
+                                var14 = var14 | (var14 << 8 | var14 << 16);
                                 mi.field_f[var11 + (param0 + var9 * mi.field_a)] = var14;
                                 break L6;
                               }
@@ -171,13 +171,13 @@ abstract class ld extends kf {
                     }
                   }
                   L7: {
-                    if (-21 <= (var8 ^ -1)) {
+                    if (var8 <= 20) {
                       var13 = var12;
                       var12 -= 21;
                       var14 = 0;
                       L8: while (true) {
                         L9: {
-                          if (-21 > (var14 ^ -1)) {
+                          if (var14 > 20) {
                             break L9;
                           } else {
                             var15 = var14 * var14 + (-var8 + 20) * (20 + -var8);
@@ -187,7 +187,7 @@ abstract class ld extends kf {
                               L10: {
                                 if (var15 >= 420) {
                                   var16 = var10 * (-var15 + 462) / 42;
-                                  var16 = var16 | (var16 << 1073162736 | var16 << 905512680);
+                                  var16 = var16 | (var16 << 16 | var16 << 8);
                                   mi.field_f[var12 + var9 * mi.field_a - -param0] = var16;
                                   break L10;
                                 } else {
@@ -208,7 +208,7 @@ abstract class ld extends kf {
                       break L7;
                     }
                   }
-                  var10 = var10 | (var10 << 1760559280 | var10 << -1621305656);
+                  var10 = var10 | (var10 << 16 | var10 << 8);
                   mi.b(var11 - -param0, var9, -var11 + var12, var10);
                   break L3;
                 } else {
@@ -248,7 +248,7 @@ abstract class ld extends kf {
             }
             ((ld) this).b(var2, -2038584927, var3);
         }
-        return super.h(param0 + 0);
+        return super.h(param0);
     }
 
     final static void c(int param0, int param1, int param2) {
@@ -388,7 +388,7 @@ abstract class ld extends kf {
         if (!param0) {
             lf discarded$0 = ld.j(31);
         }
-        if (-1 <= (((ld) this).field_L ^ -1)) {
+        if (((ld) this).field_L <= 0) {
             return;
         }
         ((ld) this).b(((ld) this).field_R, -2038584927, ((ld) this).field_N);

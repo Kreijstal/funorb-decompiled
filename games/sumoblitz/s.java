@@ -15,18 +15,9 @@ final class s extends ms {
     static String field_k;
 
     public static void a(int param0) {
-        if (param0 != 18232) {
-          field_k = null;
-          field_k = null;
-          field_n = null;
-          field_u = null;
-          return;
-        } else {
-          field_k = null;
-          field_n = null;
-          field_u = null;
-          return;
-        }
+        field_k = null;
+        field_n = null;
+        field_u = null;
     }
 
     s(int param0, int param1, int param2, int param3, int param4) {

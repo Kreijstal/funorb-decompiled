@@ -14,24 +14,15 @@ final class sb {
 
     public static void a(byte param0) {
         field_e = null;
-        if (param0 <= 75) {
-          field_c = null;
-          field_a = null;
-          field_c = null;
-          field_i = null;
-          return;
-        } else {
-          field_a = null;
-          field_c = null;
-          field_i = null;
-          return;
-        }
+        field_a = null;
+        field_c = null;
+        field_i = null;
     }
 
     final static void a(int param0) {
         Object var2 = null;
         mj.a((String) null, field_a, 107);
-        int var1 = -82 % ((44 - param0) / 45);
+        int var1 = 0;
     }
 
     final ah a(boolean param0) {
@@ -44,7 +35,7 @@ final class sb {
             var2 = ((sb) this).field_f[(int)((long)(-1 + ((sb) this).field_d) & ((sb) this).field_h)];
             L0: while (true) {
               if (((sb) this).field_g != var2) {
-                if ((((sb) this).field_g.field_o ^ -1L) == (((sb) this).field_h ^ -1L)) {
+                if (~((sb) this).field_g.field_o == ~((sb) this).field_h) {
                   var3 = ((sb) this).field_g;
                   ((sb) this).field_g = ((sb) this).field_g.field_m;
                   return var3;
@@ -62,7 +53,7 @@ final class sb {
             var2 = ((sb) this).field_f[(int)((long)(-1 + ((sb) this).field_d) & ((sb) this).field_h)];
             L1: while (true) {
               if (((sb) this).field_g != var2) {
-                if ((((sb) this).field_g.field_o ^ -1L) == (((sb) this).field_h ^ -1L)) {
+                if (~((sb) this).field_g.field_o == ~((sb) this).field_h) {
                   var3 = ((sb) this).field_g;
                   ((sb) this).field_g = ((sb) this).field_g.field_m;
                   return var3;
@@ -125,15 +116,20 @@ final class sb {
     }
 
     final void a(ah param0, long param1, int param2) {
-        if (!(null == param0.field_l)) {
-            param0.c((byte) 36);
+        ah var5 = null;
+        try {
+            if (!(null == param0.field_l)) {
+                param0.c((byte) 36);
+            }
+            var5 = ((sb) this).field_f[(int)(param1 & (long)(((sb) this).field_d - param2))];
+            param0.field_m = var5;
+            param0.field_l = var5.field_l;
+            param0.field_l.field_m = param0;
+            param0.field_o = param1;
+            param0.field_m.field_l = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "sb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        ah var5 = ((sb) this).field_f[(int)(param1 & (long)(((sb) this).field_d - param2))];
-        param0.field_m = var5;
-        param0.field_l = var5.field_l;
-        param0.field_l.field_m = param0;
-        param0.field_o = param1;
-        param0.field_m.field_l = param0;
     }
 
     static {

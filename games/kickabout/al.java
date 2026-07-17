@@ -15,13 +15,13 @@ final class al extends hd {
         if (ja.field_O) {
           if (!param0) {
             var2 = 87 % ((-53 - param1) / 43);
-            return (256 + -hw.field_i >> 2073539841) + 70;
+            return (256 + -hw.field_i >> 1) + 70;
           } else {
             return 200;
           }
         } else {
           var2 = 87 % ((-53 - param1) / 43);
-          return (256 + -hw.field_i >> 2073539841) + 70;
+          return (256 + -hw.field_i >> 1) + 70;
         }
     }
 
@@ -46,15 +46,19 @@ final class al extends hd {
 
     al(long param0, hd param1, hd param2, na param3, hd param4, String param5, String param6) {
         super(param0, param1);
-        ((al) this).field_yb = new hd(0L, (hd) null);
-        ((al) this).field_Cb = new np(0L, ((al) this).field_yb, param2, param3);
-        ((al) this).field_Eb = new hd(0L, param4);
-        ((al) this).field_zb = new hd(0L, param4);
-        ((al) this).field_Eb.field_E = param5;
-        ((al) this).field_zb.field_E = param6;
-        ((al) this).a((byte) -110, (hd) (Object) ((al) this).field_Cb);
-        ((al) this).a((byte) -113, ((al) this).field_Eb);
-        ((al) this).a((byte) -109, ((al) this).field_zb);
+        try {
+            ((al) this).field_yb = new hd(0L, (hd) null);
+            ((al) this).field_Cb = new np(0L, ((al) this).field_yb, param2, param3);
+            ((al) this).field_Eb = new hd(0L, param4);
+            ((al) this).field_zb = new hd(0L, param4);
+            ((al) this).field_Eb.field_E = param5;
+            ((al) this).field_zb.field_E = param6;
+            ((al) this).a((byte) -110, (hd) (Object) ((al) this).field_Cb);
+            ((al) this).a((byte) -113, ((al) this).field_Eb);
+            ((al) this).a((byte) -109, ((al) this).field_zb);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "al.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static tc h(byte param0) {

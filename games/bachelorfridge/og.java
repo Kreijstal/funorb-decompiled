@@ -24,7 +24,7 @@ final class og {
         go.a(20, (byte) -127, 5);
         go.a(22, (byte) -128, 6);
         go.a(23, (byte) -127, 7);
-        go.a(param0, (byte) -127, 8);
+        go.a(12, (byte) -127, 8);
         go.a(13, (byte) -127, 9);
         go.a(-1, (byte) -127, 10);
         go.a(-1, (byte) -128, 11);

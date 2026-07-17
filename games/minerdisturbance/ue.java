@@ -171,7 +171,7 @@ final class ue extends com.ms.dll.Callback {
         } else {
           if (32 == param1) {
             var5 = 65535 & param3;
-            if (-2 != (var5 ^ -1)) {
+            if (var5 != 1) {
               if (101024 == param1) {
                 L0: {
                   if (((ue) this).field_c) {
@@ -187,7 +187,7 @@ final class ue extends com.ms.dll.Callback {
                 int discarded$3 = com.ms.win32.User32.SetCursor(stackIn_24_0);
                 return 0;
               } else {
-                if ((param1 ^ -1) == -2) {
+                if (param1 == 1) {
                   ((ue) this).field_d = 0;
                   ((ue) this).field_c = true;
                   return com.ms.win32.User32.CallWindowProc(((ue) this).field_b, param0, param1, param2, param3);
@@ -226,7 +226,7 @@ final class ue extends com.ms.dll.Callback {
               int discarded$5 = com.ms.win32.User32.SetCursor(stackIn_9_0);
               return 0;
             } else {
-              if ((param1 ^ -1) == -2) {
+              if (param1 == 1) {
                 ((ue) this).field_d = 0;
                 ((ue) this).field_c = true;
                 return com.ms.win32.User32.CallWindowProc(((ue) this).field_b, param0, param1, param2, param3);

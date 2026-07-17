@@ -16,13 +16,12 @@ final class vc {
     int field_j;
 
     final static void a(String param0, wk param1, boolean param2) {
-        ij.field_P = param0;
-        if (param2) {
-            field_d = true;
+        try {
+            ij.field_P = param0;
             jf.field_kb = param1;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "vc.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
-        jf.field_kb = param1;
     }
 
     public static void b(int param0) {
@@ -57,15 +56,10 @@ final class vc {
         if (var1 != 0) {
           if (1 != var1) {
             if (var1 != 7) {
-              if (-6 != var1) {
-                if (param0 != 32) {
-                  field_h = null;
-                  return -1;
-                } else {
-                  return -1;
-                }
-              } else {
+              if (-6 == var1) {
                 return 216000;
+              } else {
+                return -1;
               }
             } else {
               return 218000;
@@ -73,12 +67,7 @@ final class vc {
           } else {
             if (10 < qh.field_Yb) {
               if (-13 < qh.field_Yb) {
-                if (param0 == 32) {
-                  return -1;
-                } else {
-                  field_h = null;
-                  return -1;
-                }
+                return -1;
               } else {
                 return 30000;
               }

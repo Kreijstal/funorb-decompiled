@@ -39,9 +39,6 @@ final class tq {
         field_a = null;
         field_b = null;
         field_g = null;
-        if (param0 != 0) {
-            field_a = null;
-        }
     }
 
     private final void c(int param0, int param1) {
@@ -120,33 +117,9 @@ final class tq {
     }
 
     private final void a(int param0, int param1, int param2) {
-        if (((tq) this).field_d >= param0) {
-          if (param2 == -1) {
-            if (((tq) this).field_c.length <= param0) {
-              this.c(param0, param2 ^ 12363);
-              ((tq) this).field_c[param0] = param1;
-              return;
-            } else {
-              ((tq) this).field_c[param0] = param1;
-              return;
-            }
-          } else {
+        if (~((tq) this).field_d > ~param0) {
+            ((tq) this).field_d = param0;
             return;
-          }
-        } else {
-          ((tq) this).field_d = param0;
-          if (param2 == -1) {
-            if (((tq) this).field_c.length > param0) {
-              ((tq) this).field_c[param0] = param1;
-              return;
-            } else {
-              this.c(param0, param2 ^ 12363);
-              ((tq) this).field_c[param0] = param1;
-              return;
-            }
-          } else {
-            return;
-          }
         }
     }
 

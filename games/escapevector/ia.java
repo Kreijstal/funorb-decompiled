@@ -154,17 +154,11 @@ final class ia {
 
     private final void b(byte param0) {
         ((ia) this).field_B = false;
-        if (param0 != 77) {
-            ((ia) this).a((byte) -127);
-        }
     }
 
     public static void a(boolean param0) {
         field_z = null;
         field_y = null;
-        if (!param0) {
-            field_p = null;
-        }
         field_p = null;
     }
 

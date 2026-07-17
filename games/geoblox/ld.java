@@ -8,18 +8,13 @@ final class ld {
 
     public static void a(boolean param0) {
         field_c = null;
-        if (!param0) {
-            field_b = null;
-            field_a = null;
-            field_b = null;
-            return;
-        }
         field_a = null;
         field_b = null;
     }
 
     final static boolean a(int param0) {
-        int var1 = 0;
+        RuntimeException var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -29,86 +24,149 @@ final class ld {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_34_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackIn_41_0 = 0;
+        int stackIn_45_0 = 0;
+        int stackIn_47_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_46_0 = 0;
+        int stackOut_33_0 = 0;
+        int stackOut_40_0 = 0;
+        int stackOut_44_0 = 0;
+        int stackOut_36_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_26_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_6_0 = 0;
         var10 = Geoblox.field_C;
-        var1 = 240 * vb.field_f + 320;
-        var2 = var1;
-        var3 = -(230 * vb.field_f) + var1;
-        var4 = 230 * vb.field_f + var1;
-        var5 = 230;
-        var6 = 0;
-        var7 = 52900;
-        var8 = 64 / ((param0 - 32) / 34);
-        var9 = var7 - var5;
-        if (vb.field_c[-var5 + var1] != 0) {
-          return true;
-        } else {
-          if (0 == vb.field_c[var1 - -var5]) {
-            if (vb.field_c[var3] != -1) {
-              return true;
+        try {
+          L0: {
+            var1_int = 240 * vb.field_f + 320;
+            var2 = var1_int;
+            var3 = -(230 * vb.field_f) + var1_int;
+            var4 = 230 * vb.field_f + var1_int;
+            var5 = 230;
+            var6 = 0;
+            var7 = 52900;
+            var8 = 64 / ((param0 - 32) / 34);
+            var9 = var7 - var5;
+            if (vb.field_c[-var5 + var1_int] != 0) {
+              stackOut_3_0 = 1;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
             } else {
-              if (-1 != vb.field_c[var4]) {
-                return true;
-              } else {
-                L0: while (true) {
-                  L1: {
-                    var6++;
-                    var9 = var9 + (var6 - -var6);
-                    var2 = var2 + vb.field_f;
-                    var1 = var1 - vb.field_f;
-                    if (var7 >= var9) {
-                      break L1;
-                    } else {
-                      var3 = var3 + vb.field_f;
-                      var4 = var4 - vb.field_f;
-                      var5--;
-                      var9 = var9 - (var5 + var5);
-                      break L1;
-                    }
-                  }
-                  if (var6 <= var5) {
-                    if (0 == vb.field_c[-var6 + var3]) {
-                      if (vb.field_c[var3 + var6] == 0) {
-                        if (vb.field_c[-var5 + var1] == 0) {
-                          if (vb.field_c[var5 + var1] == 0) {
-                            if (vb.field_c[var2 - var5] != 0) {
-                              return true;
-                            } else {
-                              if (vb.field_c[var5 + var2] == 0) {
-                                if (vb.field_c[var4 - var6] != 0) {
-                                  return true;
+              if (0 == vb.field_c[var1_int - -var5]) {
+                if (vb.field_c[var3] != -1) {
+                  stackOut_10_0 = 1;
+                  stackIn_11_0 = stackOut_10_0;
+                  return stackIn_11_0 != 0;
+                } else {
+                  if (-1 != vb.field_c[var4]) {
+                    stackOut_14_0 = 1;
+                    stackIn_15_0 = stackOut_14_0;
+                    return stackIn_15_0 != 0;
+                  } else {
+                    L1: while (true) {
+                      L2: {
+                        int incrementValue$1 = var6;
+                        var6++;
+                        var9 = var9 + (incrementValue$1 - -var6);
+                        var2 = var2 + vb.field_f;
+                        var1_int = var1_int - vb.field_f;
+                        if (var7 >= var9) {
+                          break L2;
+                        } else {
+                          var3 = var3 + vb.field_f;
+                          var4 = var4 - vb.field_f;
+                          var5--;
+                          var9 = var9 - (var5 + var5);
+                          break L2;
+                        }
+                      }
+                      if (var6 > var5) {
+                        stackOut_46_0 = 0;
+                        stackIn_47_0 = stackOut_46_0;
+                        break L0;
+                      } else {
+                        if (0 == vb.field_c[-var6 + var3]) {
+                          if (vb.field_c[var3 + var6] == 0) {
+                            if (vb.field_c[-var5 + var1_int] == 0) {
+                              if (vb.field_c[var5 + var1_int] == 0) {
+                                if (vb.field_c[var2 - var5] != 0) {
+                                  stackOut_33_0 = 1;
+                                  stackIn_34_0 = stackOut_33_0;
+                                  return stackIn_34_0 != 0;
                                 } else {
-                                  if (vb.field_c[var4 - -var6] != 0) {
-                                    return true;
+                                  if (vb.field_c[var5 + var2] == 0) {
+                                    if (vb.field_c[var4 - var6] != 0) {
+                                      stackOut_40_0 = 1;
+                                      stackIn_41_0 = stackOut_40_0;
+                                      return stackIn_41_0 != 0;
+                                    } else {
+                                      if (vb.field_c[var4 - -var6] != 0) {
+                                        stackOut_44_0 = 1;
+                                        stackIn_45_0 = stackOut_44_0;
+                                        return stackIn_45_0 != 0;
+                                      } else {
+                                        continue L1;
+                                      }
+                                    }
                                   } else {
-                                    continue L0;
+                                    stackOut_36_0 = 1;
+                                    stackIn_37_0 = stackOut_36_0;
+                                    return stackIn_37_0 != 0;
                                   }
                                 }
                               } else {
-                                return true;
+                                stackOut_29_0 = 1;
+                                stackIn_30_0 = stackOut_29_0;
+                                return stackIn_30_0 != 0;
                               }
+                            } else {
+                              stackOut_26_0 = 1;
+                              stackIn_27_0 = stackOut_26_0;
+                              return stackIn_27_0 != 0;
                             }
                           } else {
-                            return true;
+                            stackOut_23_0 = 1;
+                            stackIn_24_0 = stackOut_23_0;
+                            return stackIn_24_0 != 0;
                           }
                         } else {
-                          return true;
+                          stackOut_20_0 = 1;
+                          stackIn_21_0 = stackOut_20_0;
+                          return stackIn_21_0 != 0;
                         }
-                      } else {
-                        return true;
                       }
-                    } else {
-                      return true;
                     }
-                  } else {
-                    return false;
                   }
                 }
+              } else {
+                stackOut_6_0 = 1;
+                stackIn_7_0 = stackOut_6_0;
+                return stackIn_7_0 != 0;
               }
             }
-          } else {
-            return true;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var1, "ld.B(" + param0 + 41);
         }
+        return stackIn_47_0 != 0;
     }
 
     final static void b(boolean param0) {
@@ -189,10 +247,10 @@ final class ld {
             if (ag.field_k >= 7) {
               if (!param0) {
                 L2: {
-                  if (-1 == (kd.field_f[ji.field_h] & 2 ^ -1)) {
+                  if ((kd.field_f[ji.field_h] & 2) == 0) {
                     break L2;
                   } else {
-                    if ((f.field_qb ^ -1) > -8) {
+                    if (f.field_qb < 7) {
                       f.field_qb = f.field_qb + 1;
                       break L2;
                     } else {
@@ -450,10 +508,10 @@ final class ld {
               } else {
                 L27: {
                   ld.b(true);
-                  if (-1 == (kd.field_f[ji.field_h] & 2 ^ -1)) {
+                  if ((kd.field_f[ji.field_h] & 2) == 0) {
                     break L27;
                   } else {
-                    if ((f.field_qb ^ -1) > -8) {
+                    if (f.field_qb < 7) {
                       f.field_qb = f.field_qb + 1;
                       break L27;
                     } else {
@@ -616,10 +674,10 @@ final class ld {
                 }
               }
               L44: {
-                if (-1 == (kd.field_f[ji.field_h] & 2 ^ -1)) {
+                if ((kd.field_f[ji.field_h] & 2) == 0) {
                   break L44;
                 } else {
-                  if ((f.field_qb ^ -1) > -8) {
+                  if (f.field_qb < 7) {
                     f.field_qb = f.field_qb + 1;
                     break L44;
                   } else {
@@ -675,7 +733,7 @@ final class ld {
           } else {
             if (param0) {
               ld.b(true);
-              if (-1 == (kd.field_f[ji.field_h] & 2 ^ -1)) {
+              if ((kd.field_f[ji.field_h] & 2) == 0) {
                 L50: {
                   if (0 == (kd.field_f[ji.field_h] & 16)) {
                     break L50;
@@ -722,7 +780,7 @@ final class ld {
                 return;
               } else {
                 L55: {
-                  if ((f.field_qb ^ -1) > -8) {
+                  if (f.field_qb < 7) {
                     f.field_qb = f.field_qb + 1;
                     break L55;
                   } else {
@@ -776,10 +834,10 @@ final class ld {
               }
             } else {
               L61: {
-                if (-1 == (kd.field_f[ji.field_h] & 2 ^ -1)) {
+                if ((kd.field_f[ji.field_h] & 2) == 0) {
                   break L61;
                 } else {
-                  if ((f.field_qb ^ -1) > -8) {
+                  if (f.field_qb < 7) {
                     f.field_qb = f.field_qb + 1;
                     break L61;
                   } else {

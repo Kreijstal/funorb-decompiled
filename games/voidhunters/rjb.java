@@ -22,14 +22,15 @@ final class rjb extends kt {
         int var5 = 0;
         var4 = param2 * 2;
         var5 = 255 & param1;
+        int incrementValue$2 = var4;
         var4++;
-        ((rjb) this).field_t[var4] = (byte)(3 * var5 >> -1386410427);
+        ((rjb) this).field_t[incrementValue$2] = (byte)(3 * var5 >> 5);
         if (param0 != 0) {
           field_u = 17;
-          ((rjb) this).field_t[var4] = (byte)(var5 * 3 >> 1315515045);
+          ((rjb) this).field_t[var4] = (byte)(var5 * 3 >> 5);
           return;
         } else {
-          ((rjb) this).field_t[var4] = (byte)(var5 * 3 >> 1315515045);
+          ((rjb) this).field_t[var4] = (byte)(var5 * 3 >> 5);
           return;
         }
     }

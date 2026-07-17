@@ -57,36 +57,42 @@ class oj extends p {
           }
         }
         var2 = ((oj) this).field_i;
-        if (1 != var2) {
+        if (1 == var2) {
+          return wc.field_f[((oj) this).field_w][((oj) this).field_z % wc.field_f[((oj) this).field_w].length];
+        } else {
           if (var2 != 18) {
-            if (19 != var2) {
-              if (-4 != var2) {
+            if (19 == var2) {
+              return lb.field_a[((oj) this).field_w][((oj) this).field_z % lb.field_a[((oj) this).field_w].length];
+            } else {
+              if (var2 == 3) {
+                return bf.field_f[((oj) this).field_w][((oj) this).field_z % bf.field_f[((oj) this).field_w].length];
+              } else {
                 if (4 != var2) {
-                  if (-9 != var2) {
-                    if (26 != var2) {
-                      if (23 != var2) {
-                        if (var2 != 25) {
-                          if (-28 != (var2 ^ -1)) {
-                            if (var2 != -29) {
-                              if (-25 == var2) {
+                  if (var2 != 8) {
+                    if (26 == var2) {
+                      return jh.field_eb[((oj) this).field_w][((oj) this).field_z % jh.field_eb[((oj) this).field_w].length];
+                    } else {
+                      if (23 == var2) {
+                        return ck.field_y[((oj) this).field_w][((oj) this).field_z % ck.field_y[((oj) this).field_w].length];
+                      } else {
+                        if (var2 == 25) {
+                          return vd.field_y[((oj) this).field_w][((oj) this).field_z % vd.field_y[((oj) this).field_w].length];
+                        } else {
+                          if (var2 == 27) {
+                            return pa.field_i[((oj) this).field_w][((oj) this).field_z % pa.field_i[((oj) this).field_w].length];
+                          } else {
+                            if (var2 == 28) {
+                              return of.field_c[((oj) this).field_w][((oj) this).field_z % of.field_c[((oj) this).field_w].length];
+                            } else {
+                              if (var2 == 24) {
                                 return wc.field_f[((oj) this).field_w][((oj) this).field_z % wc.field_f[((oj) this).field_w].length];
                               } else {
                                 return null;
                               }
-                            } else {
-                              return of.field_c[((oj) this).field_w][((oj) this).field_z % of.field_c[((oj) this).field_w].length];
                             }
-                          } else {
-                            return pa.field_i[((oj) this).field_w][((oj) this).field_z % pa.field_i[((oj) this).field_w].length];
                           }
-                        } else {
-                          return vd.field_y[((oj) this).field_w][((oj) this).field_z % vd.field_y[((oj) this).field_w].length];
                         }
-                      } else {
-                        return ck.field_y[((oj) this).field_w][((oj) this).field_z % ck.field_y[((oj) this).field_w].length];
                       }
-                    } else {
-                      return jh.field_eb[((oj) this).field_w][((oj) this).field_z % jh.field_eb[((oj) this).field_w].length];
                     }
                   } else {
                     return re.field_D[((oj) this).field_w][((oj) this).field_z % re.field_D[((oj) this).field_w].length];
@@ -94,17 +100,11 @@ class oj extends p {
                 } else {
                   return ia.field_l[10];
                 }
-              } else {
-                return bf.field_f[((oj) this).field_w][((oj) this).field_z % bf.field_f[((oj) this).field_w].length];
               }
-            } else {
-              return lb.field_a[((oj) this).field_w][((oj) this).field_z % lb.field_a[((oj) this).field_w].length];
             }
           } else {
             return kl.field_b[((oj) this).field_w][((oj) this).field_z % kl.field_b[((oj) this).field_w].length];
           }
-        } else {
-          return wc.field_f[((oj) this).field_w][((oj) this).field_z % wc.field_f[((oj) this).field_w].length];
         }
     }
 
@@ -127,25 +127,25 @@ class oj extends p {
         }
         L1: {
           L2: {
-            if (-1 == ((oj) this).field_i) {
+            if (((oj) this).field_i == 0) {
               break L2;
             } else {
-              if (-2 == ((oj) this).field_i) {
+              if (((oj) this).field_i == 1) {
                 break L2;
               } else {
-                if (((oj) this).field_i == -19) {
+                if (((oj) this).field_i == 18) {
                   break L2;
                 } else {
-                  if (-25 == ((oj) this).field_i) {
+                  if (((oj) this).field_i == 24) {
                     break L2;
                   } else {
-                    if (((oj) this).field_i == -20) {
+                    if (((oj) this).field_i == 19) {
                       break L2;
                     } else {
-                      if (-29 == ((oj) this).field_i) {
+                      if (((oj) this).field_i == 28) {
                         break L2;
                       } else {
-                        if ((((oj) this).field_i ^ -1) == -24) {
+                        if (((oj) this).field_i == 23) {
                           break L2;
                         } else {
                           if (((oj) this).field_i != 27) {
@@ -171,7 +171,7 @@ class oj extends p {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4, oc param5) {
-        int var7 = 0;
+        int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
         bd[] var10 = null;
@@ -188,42 +188,42 @@ class oj extends p {
           ((oj) this).field_G = 0;
           ((oj) this).field_e = 0;
           ((oj) this).field_h = 0;
-          var7 = param3;
-          if (1 == var7) {
+          var7_int = param3;
+          if (1 == var7_int) {
             ((oj) this).field_M = 50;
             break L0;
           } else {
-            if (-24 == (var7 ^ -1)) {
+            if (var7_int == 23) {
               ((oj) this).field_M = 50;
               break L0;
             } else {
-              if (var7 == 24) {
+              if (var7_int == 24) {
                 ((oj) this).field_M = 50;
                 break L0;
               } else {
-                if (var7 != 25) {
-                  if (var7 == -27) {
+                if (var7_int != 25) {
+                  if (var7_int == 26) {
                     ((oj) this).field_M = 50;
                     break L0;
                   } else {
-                    if (var7 == 18) {
+                    if (var7_int == 18) {
                       ((oj) this).field_M = 50;
                       break L0;
                     } else {
-                      if (-20 != var7) {
-                        if (var7 != 28) {
-                          if (var7 != 225) {
-                            if (var7 != 27) {
-                              if (3 == var7) {
+                      if (var7_int != 19) {
+                        if (var7_int != 28) {
+                          if (var7_int != 225) {
+                            if (var7_int != 27) {
+                              if (3 == var7_int) {
                                 ((oj) this).field_M = 25;
                                 break L0;
                               } else {
-                                if (-6 != var7) {
-                                  if (-23 == var7) {
+                                if (var7_int != 5) {
+                                  if (var7_int == 22) {
                                     ((oj) this).field_M = 0;
                                     break L0;
                                   } else {
-                                    if ((var7 ^ -1) == -126) {
+                                    if (var7_int == 125) {
                                       ((oj) this).field_M = 0;
                                       break L0;
                                     } else {
@@ -276,7 +276,7 @@ class oj extends p {
               if (param3 == 23) {
                 break L2;
               } else {
-                if (-25 == (param3 ^ -1)) {
+                if (param3 == 24) {
                   break L2;
                 } else {
                   if (param3 == 25) {
@@ -292,28 +292,28 @@ class oj extends p {
               }
             }
           }
-          var7 = param4;
-          if (var7 == -1) {
+          var7_int = param4;
+          if (var7_int == 0) {
             ((oj) this).field_I = 5;
             break L1;
           } else {
-            if (var7 == 1) {
+            if (var7_int == 1) {
               ((oj) this).field_I = 7;
               break L1;
             } else {
-              if (2 == var7) {
+              if (2 == var7_int) {
                 ((oj) this).field_I = 8;
                 break L1;
               } else {
-                if (-8 == var7) {
+                if (var7_int == 7) {
                   ((oj) this).field_I = 12;
                   break L1;
                 } else {
-                  if (-9 == (var7 ^ -1)) {
+                  if (var7_int == 8) {
                     ((oj) this).field_I = 15;
                     break L1;
                   } else {
-                    if (var7 == 9) {
+                    if (var7_int == 9) {
                       ((oj) this).field_I = 20;
                       break L1;
                     } else {
@@ -327,7 +327,7 @@ class oj extends p {
           }
         }
         L3: {
-          if (-19 != (param3 ^ -1)) {
+          if (param3 != 18) {
             break L3;
           } else {
             if (param4 > 6) {
@@ -358,7 +358,7 @@ class oj extends p {
             if (param3 == 19) {
               break L5;
             } else {
-              if (param3 == -29) {
+              if (param3 == 28) {
                 break L5;
               } else {
                 break L4;
@@ -373,7 +373,7 @@ class oj extends p {
               ((oj) this).field_I = 20;
               break L4;
             } else {
-              if (-10 != param4) {
+              if (param4 != 9) {
                 break L4;
               } else {
                 ((oj) this).field_I = 25;
@@ -383,7 +383,7 @@ class oj extends p {
           }
         }
         L6: {
-          if (-226 == param3) {
+          if (param3 == 225) {
             ((oj) this).field_I = 20;
             break L6;
           } else {
@@ -391,7 +391,7 @@ class oj extends p {
           }
         }
         L7: {
-          if (-28 != param3) {
+          if (param3 != 27) {
             break L7;
           } else {
             ((oj) this).field_I = 200;
@@ -417,7 +417,7 @@ class oj extends p {
           }
         }
         L10: {
-          if (-6 != (param3 ^ -1)) {
+          if (param3 != 5) {
             break L10;
           } else {
             ((oj) this).field_I = 20;
@@ -425,7 +425,7 @@ class oj extends p {
           }
         }
         L11: {
-          if (param3 == -23) {
+          if (param3 == 22) {
             ((oj) this).field_I = 20;
             break L11;
           } else {
@@ -433,7 +433,7 @@ class oj extends p {
           }
         }
         L12: {
-          if (-11 != param3) {
+          if (param3 != 10) {
             break L12;
           } else {
             ((oj) this).field_I = 100;
@@ -442,7 +442,7 @@ class oj extends p {
         }
         if (param2 == 21963) {
           L13: {
-            if ((param3 ^ -1) != -12) {
+            if (param3 != 11) {
               break L13;
             } else {
               ((oj) this).field_I = 100;
@@ -487,15 +487,15 @@ class oj extends p {
           L18: {
             var10 = stackIn_105_0;
             var11 = var10;
-            if (-30 == ((oj) this).field_i) {
+            if (((oj) this).field_i == 29) {
               ((oj) this).field_u = var11[32];
               break L18;
             } else {
-              if (-32 == ((oj) this).field_i) {
+              if (((oj) this).field_i == 31) {
                 ((oj) this).field_u = var11[34];
                 break L18;
               } else {
-                if (((oj) this).field_i == -33) {
+                if (((oj) this).field_i == 32) {
                   ((oj) this).field_u = var11[35];
                   break L18;
                 } else {
@@ -503,26 +503,26 @@ class oj extends p {
                     ((oj) this).field_u = var11[36];
                     break L18;
                   } else {
-                    if (-35 == ((oj) this).field_i) {
+                    if (((oj) this).field_i == 34) {
                       ((oj) this).field_u = var11[37];
                       break L18;
                     } else {
-                      if (-36 != (((oj) this).field_i ^ -1)) {
-                        if (((oj) this).field_i == -37) {
+                      if (((oj) this).field_i != 35) {
+                        if (((oj) this).field_i == 36) {
                           ((oj) this).field_u = var11[39];
                           break L18;
                         } else {
-                          if (-38 != ((oj) this).field_i) {
+                          if (((oj) this).field_i != 37) {
                             if (((oj) this).field_i == 38) {
                               ((oj) this).field_u = var11[41];
                               break L18;
                             } else {
-                              if (-40 != (((oj) this).field_i ^ -1)) {
+                              if (((oj) this).field_i != 39) {
                                 if (((oj) this).field_i != 40) {
                                   if (41 != ((oj) this).field_i) {
-                                    if (-43 != (((oj) this).field_i ^ -1)) {
-                                      if (((oj) this).field_i != -44) {
-                                        if (-45 == ((oj) this).field_i) {
+                                    if (((oj) this).field_i != 42) {
+                                      if (((oj) this).field_i != 43) {
+                                        if (((oj) this).field_i == 44) {
                                           ((oj) this).field_u = var11[47];
                                           break L18;
                                         } else {
@@ -530,32 +530,32 @@ class oj extends p {
                                             ((oj) this).field_u = var11[48];
                                             break L18;
                                           } else {
-                                            if (-47 != ((oj) this).field_i) {
-                                              if (-48 == ((oj) this).field_i) {
+                                            if (((oj) this).field_i != 46) {
+                                              if (((oj) this).field_i == 47) {
                                                 ((oj) this).field_u = var11[50];
                                                 break L18;
                                               } else {
-                                                if ((((oj) this).field_i ^ -1) != -49) {
+                                                if (((oj) this).field_i != 48) {
                                                   if (49 != ((oj) this).field_i) {
-                                                    if ((((oj) this).field_i ^ -1) == -51) {
+                                                    if (((oj) this).field_i == 50) {
                                                       ((oj) this).field_u = var11[53];
                                                       break L18;
                                                     } else {
                                                       if (((oj) this).field_i != 51) {
                                                         if (((oj) this).field_i != 52) {
-                                                          if (-54 != ((oj) this).field_i) {
+                                                          if (((oj) this).field_i != 53) {
                                                             if (((oj) this).field_i == 54) {
                                                               ((oj) this).field_u = var11[57];
                                                               break L18;
                                                             } else {
-                                                              if (-56 != ((oj) this).field_i) {
+                                                              if (((oj) this).field_i != 55) {
                                                                 if (((oj) this).field_i != 56) {
-                                                                  if (-58 != (((oj) this).field_i ^ -1)) {
-                                                                    if (((oj) this).field_i == -59) {
+                                                                  if (((oj) this).field_i != 57) {
+                                                                    if (((oj) this).field_i == 58) {
                                                                       ((oj) this).field_u = var11[61];
                                                                       break L18;
                                                                     } else {
-                                                                      if (-60 == ((oj) this).field_i) {
+                                                                      if (((oj) this).field_i == 59) {
                                                                         ((oj) this).field_u = var11[62];
                                                                         break L18;
                                                                       } else {
@@ -563,12 +563,12 @@ class oj extends p {
                                                                           ((oj) this).field_u = var11[63];
                                                                           break L18;
                                                                         } else {
-                                                                          if (((oj) this).field_i != -62) {
+                                                                          if (((oj) this).field_i != 61) {
                                                                             if (((oj) this).field_i == 62) {
                                                                               ((oj) this).field_u = var11[65];
                                                                               break L18;
                                                                             } else {
-                                                                              if (-64 == ((oj) this).field_i) {
+                                                                              if (((oj) this).field_i == 63) {
                                                                                 ((oj) this).field_u = var11[66];
                                                                                 break L18;
                                                                               } else {
@@ -576,14 +576,14 @@ class oj extends p {
                                                                                   ((oj) this).field_u = var11[67];
                                                                                   break L18;
                                                                                 } else {
-                                                                                  if (-66 != (((oj) this).field_i ^ -1)) {
+                                                                                  if (((oj) this).field_i != 65) {
                                                                                     if (66 != ((oj) this).field_i) {
-                                                                                      if (-68 == (((oj) this).field_i ^ -1)) {
+                                                                                      if (((oj) this).field_i == 67) {
                                                                                         ((oj) this).field_u = var11[70];
                                                                                         break L18;
                                                                                       } else {
-                                                                                        if (((oj) this).field_i != -69) {
-                                                                                          if (-70 == ((oj) this).field_i) {
+                                                                                        if (((oj) this).field_i != 68) {
+                                                                                          if (((oj) this).field_i == 69) {
                                                                                             ((oj) this).field_u = var11[72];
                                                                                             break L18;
                                                                                           } else {
@@ -591,16 +591,16 @@ class oj extends p {
                                                                                               ((oj) this).field_u = var11[73];
                                                                                               break L18;
                                                                                             } else {
-                                                                                              if (-72 == ((oj) this).field_i) {
+                                                                                              if (((oj) this).field_i == 71) {
                                                                                                 ((oj) this).field_u = var11[74];
                                                                                                 break L18;
                                                                                               } else {
                                                                                                 if (((oj) this).field_i != 72) {
-                                                                                                  if (-74 == ((oj) this).field_i) {
+                                                                                                  if (((oj) this).field_i == 73) {
                                                                                                     ((oj) this).field_u = var11[76];
                                                                                                     break L18;
                                                                                                   } else {
-                                                                                                    if (-75 == (((oj) this).field_i ^ -1)) {
+                                                                                                    if (((oj) this).field_i == 74) {
                                                                                                       ((oj) this).field_u = var11[77];
                                                                                                       break L18;
                                                                                                     } else {
@@ -608,25 +608,25 @@ class oj extends p {
                                                                                                         ((oj) this).field_u = var11[78];
                                                                                                         break L18;
                                                                                                       } else {
-                                                                                                        if ((((oj) this).field_i ^ -1) == -77) {
+                                                                                                        if (((oj) this).field_i == 76) {
                                                                                                           ((oj) this).field_u = var11[79];
                                                                                                           break L18;
                                                                                                         } else {
-                                                                                                          if ((((oj) this).field_i ^ -1) != -78) {
+                                                                                                          if (((oj) this).field_i != 77) {
                                                                                                             if (((oj) this).field_i == 78) {
                                                                                                               ((oj) this).field_u = var11[81];
                                                                                                               break L18;
                                                                                                             } else {
-                                                                                                              if ((((oj) this).field_i ^ -1) != -80) {
-                                                                                                                if (((oj) this).field_i != -81) {
-                                                                                                                  if (-82 != ((oj) this).field_i) {
-                                                                                                                    if (-83 != (((oj) this).field_i ^ -1)) {
+                                                                                                              if (((oj) this).field_i != 79) {
+                                                                                                                if (((oj) this).field_i != 80) {
+                                                                                                                  if (((oj) this).field_i != 81) {
+                                                                                                                    if (((oj) this).field_i != 82) {
                                                                                                                       if (((oj) this).field_i != 83) {
-                                                                                                                        if (-85 == ((oj) this).field_i) {
+                                                                                                                        if (((oj) this).field_i == 84) {
                                                                                                                           ((oj) this).field_u = var11[87];
                                                                                                                           break L18;
                                                                                                                         } else {
-                                                                                                                          if (-86 == ((oj) this).field_i) {
+                                                                                                                          if (((oj) this).field_i == 85) {
                                                                                                                             ((oj) this).field_u = var11[88];
                                                                                                                             break L18;
                                                                                                                           } else {
@@ -634,10 +634,10 @@ class oj extends p {
                                                                                                                               ((oj) this).field_u = var11[89];
                                                                                                                               break L18;
                                                                                                                             } else {
-                                                                                                                              if (-88 != (((oj) this).field_i ^ -1)) {
+                                                                                                                              if (((oj) this).field_i != 87) {
                                                                                                                                 if (((oj) this).field_i != 88) {
-                                                                                                                                  if (-90 != ((oj) this).field_i) {
-                                                                                                                                    if (-91 != ((oj) this).field_i) {
+                                                                                                                                  if (((oj) this).field_i != 89) {
+                                                                                                                                    if (((oj) this).field_i != 90) {
                                                                                                                                       if (((oj) this).field_i == 91) {
                                                                                                                                         ((oj) this).field_u = var11[94];
                                                                                                                                         break L18;
@@ -648,13 +648,13 @@ class oj extends p {
                                                                                                                                         } else {
                                                                                                                                           if (93 != ((oj) this).field_i) {
                                                                                                                                             if (94 != ((oj) this).field_i) {
-                                                                                                                                              if (-96 != (((oj) this).field_i ^ -1)) {
-                                                                                                                                                if (((oj) this).field_i != -97) {
-                                                                                                                                                  if (-98 == ((oj) this).field_i) {
+                                                                                                                                              if (((oj) this).field_i != 95) {
+                                                                                                                                                if (((oj) this).field_i != 96) {
+                                                                                                                                                  if (((oj) this).field_i == 97) {
                                                                                                                                                     ((oj) this).field_u = var11[100];
                                                                                                                                                     break L18;
                                                                                                                                                   } else {
-                                                                                                                                                    if ((((oj) this).field_i ^ -1) == -99) {
+                                                                                                                                                    if (((oj) this).field_i == 98) {
                                                                                                                                                       ((oj) this).field_u = var11[101];
                                                                                                                                                       break L18;
                                                                                                                                                     } else {
@@ -662,23 +662,23 @@ class oj extends p {
                                                                                                                                                         ((oj) this).field_u = var11[102];
                                                                                                                                                         break L18;
                                                                                                                                                       } else {
-                                                                                                                                                        if ((((oj) this).field_i ^ -1) != -101) {
-                                                                                                                                                          if (((oj) this).field_i == -102) {
+                                                                                                                                                        if (((oj) this).field_i != 100) {
+                                                                                                                                                          if (((oj) this).field_i == 101) {
                                                                                                                                                             ((oj) this).field_u = var11[104];
                                                                                                                                                             break L18;
                                                                                                                                                           } else {
-                                                                                                                                                            if (-103 != ((oj) this).field_i) {
-                                                                                                                                                              if (-104 != (((oj) this).field_i ^ -1)) {
-                                                                                                                                                                if ((((oj) this).field_i ^ -1) != -105) {
-                                                                                                                                                                  if ((((oj) this).field_i ^ -1) != -106) {
+                                                                                                                                                            if (((oj) this).field_i != 102) {
+                                                                                                                                                              if (((oj) this).field_i != 103) {
+                                                                                                                                                                if (((oj) this).field_i != 104) {
+                                                                                                                                                                  if (((oj) this).field_i != 105) {
                                                                                                                                                                     if (106 != ((oj) this).field_i) {
                                                                                                                                                                       if (107 != ((oj) this).field_i) {
-                                                                                                                                                                        if (-109 != (((oj) this).field_i ^ -1)) {
+                                                                                                                                                                        if (((oj) this).field_i != 108) {
                                                                                                                                                                           if (((oj) this).field_i == 109) {
                                                                                                                                                                             ((oj) this).field_u = var11[112];
                                                                                                                                                                             break L18;
                                                                                                                                                                           } else {
-                                                                                                                                                                            if ((((oj) this).field_i ^ -1) == -111) {
+                                                                                                                                                                            if (((oj) this).field_i == 110) {
                                                                                                                                                                               ((oj) this).field_u = var11[113];
                                                                                                                                                                               break L18;
                                                                                                                                                                             } else {
@@ -688,11 +688,11 @@ class oj extends p {
                                                                                                                                                                                   break L18;
                                                                                                                                                                                 } else {
                                                                                                                                                                                   if (((oj) this).field_i != 113) {
-                                                                                                                                                                                    if (((oj) this).field_i == -115) {
+                                                                                                                                                                                    if (((oj) this).field_i == 114) {
                                                                                                                                                                                       ((oj) this).field_u = var11[117];
                                                                                                                                                                                       break L18;
                                                                                                                                                                                     } else {
-                                                                                                                                                                                      if (-116 == ((oj) this).field_i) {
+                                                                                                                                                                                      if (((oj) this).field_i == 115) {
                                                                                                                                                                                         ((oj) this).field_u = var11[118];
                                                                                                                                                                                         break L18;
                                                                                                                                                                                       } else {
@@ -701,25 +701,25 @@ class oj extends p {
                                                                                                                                                                                           break L18;
                                                                                                                                                                                         } else {
                                                                                                                                                                                           if (((oj) this).field_i != 117) {
-                                                                                                                                                                                            if (-119 != ((oj) this).field_i) {
-                                                                                                                                                                                              if (-120 == ((oj) this).field_i) {
+                                                                                                                                                                                            if (((oj) this).field_i != 118) {
+                                                                                                                                                                                              if (((oj) this).field_i == 119) {
                                                                                                                                                                                                 ((oj) this).field_u = var11[122];
                                                                                                                                                                                                 break L18;
                                                                                                                                                                                               } else {
-                                                                                                                                                                                                if (-121 != (((oj) this).field_i ^ -1)) {
+                                                                                                                                                                                                if (((oj) this).field_i != 120) {
                                                                                                                                                                                                   if (((oj) this).field_i != 121) {
-                                                                                                                                                                                                    if (((oj) this).field_i != -123) {
-                                                                                                                                                                                                      if (-124 == ((oj) this).field_i) {
+                                                                                                                                                                                                    if (((oj) this).field_i != 122) {
+                                                                                                                                                                                                      if (((oj) this).field_i == 123) {
                                                                                                                                                                                                         ((oj) this).field_u = var11[126];
                                                                                                                                                                                                         break L18;
                                                                                                                                                                                                       } else {
                                                                                                                                                                                                         if (124 != ((oj) this).field_i) {
-                                                                                                                                                                                                          if ((((oj) this).field_i ^ -1) != -126) {
+                                                                                                                                                                                                          if (((oj) this).field_i != 125) {
                                                                                                                                                                                                             if (((oj) this).field_i == 126) {
                                                                                                                                                                                                               ((oj) this).field_u = var11[129];
                                                                                                                                                                                                               break L18;
                                                                                                                                                                                                             } else {
-                                                                                                                                                                                                              if ((((oj) this).field_i ^ -1) == -128) {
+                                                                                                                                                                                                              if (((oj) this).field_i == 127) {
                                                                                                                                                                                                                 ((oj) this).field_u = var11[130];
                                                                                                                                                                                                                 break L18;
                                                                                                                                                                                                               } else {
@@ -736,23 +736,23 @@ class oj extends p {
                                                                                                                                                                                                                       break L18;
                                                                                                                                                                                                                     } else {
                                                                                                                                                                                                                       if (137 != ((oj) this).field_i) {
-                                                                                                                                                                                                                        if (((oj) this).field_i != -139) {
-                                                                                                                                                                                                                          if (-140 == ((oj) this).field_i) {
+                                                                                                                                                                                                                        if (((oj) this).field_i != 138) {
+                                                                                                                                                                                                                          if (((oj) this).field_i == 139) {
                                                                                                                                                                                                                             ((oj) this).field_u = var11[136];
                                                                                                                                                                                                                             break L18;
                                                                                                                                                                                                                           } else {
-                                                                                                                                                                                                                            if (-141 == (((oj) this).field_i ^ -1)) {
+                                                                                                                                                                                                                            if (((oj) this).field_i == 140) {
                                                                                                                                                                                                                               ((oj) this).field_u = var11[137];
                                                                                                                                                                                                                               break L18;
                                                                                                                                                                                                                             } else {
                                                                                                                                                                                                                               if (141 != ((oj) this).field_i) {
                                                                                                                                                                                                                                 if (142 != ((oj) this).field_i) {
-                                                                                                                                                                                                                                  if (-144 == (((oj) this).field_i ^ -1)) {
+                                                                                                                                                                                                                                  if (((oj) this).field_i == 143) {
                                                                                                                                                                                                                                     ((oj) this).field_u = var11[140];
                                                                                                                                                                                                                                     break L18;
                                                                                                                                                                                                                                   } else {
                                                                                                                                                                                                                                     if (((oj) this).field_i != 144) {
-                                                                                                                                                                                                                                      if ((((oj) this).field_i ^ -1) == -146) {
+                                                                                                                                                                                                                                      if (((oj) this).field_i == 145) {
                                                                                                                                                                                                                                         ((oj) this).field_u = var11[142];
                                                                                                                                                                                                                                         break L18;
                                                                                                                                                                                                                                       } else {
@@ -764,11 +764,11 @@ class oj extends p {
                                                                                                                                                                                                                                             ((oj) this).field_u = var11[144];
                                                                                                                                                                                                                                             break L18;
                                                                                                                                                                                                                                           } else {
-                                                                                                                                                                                                                                            if ((((oj) this).field_i ^ -1) == -149) {
+                                                                                                                                                                                                                                            if (((oj) this).field_i == 148) {
                                                                                                                                                                                                                                               ((oj) this).field_u = var11[145];
                                                                                                                                                                                                                                               break L18;
                                                                                                                                                                                                                                             } else {
-                                                                                                                                                                                                                                              if ((((oj) this).field_i ^ -1) != -150) {
+                                                                                                                                                                                                                                              if (((oj) this).field_i != 149) {
                                                                                                                                                                                                                                                 if (150 != ((oj) this).field_i) {
                                                                                                                                                                                                                                                   if (151 == ((oj) this).field_i) {
                                                                                                                                                                                                                                                     ((oj) this).field_u = var11[148];
@@ -782,22 +782,22 @@ class oj extends p {
                                                                                                                                                                                                                                                         ((oj) this).field_u = var11[150];
                                                                                                                                                                                                                                                         break L18;
                                                                                                                                                                                                                                                       } else {
-                                                                                                                                                                                                                                                        if (-155 != ((oj) this).field_i) {
+                                                                                                                                                                                                                                                        if (((oj) this).field_i != 154) {
                                                                                                                                                                                                                                                           if (((oj) this).field_i == 155) {
                                                                                                                                                                                                                                                             ((oj) this).field_u = var11[152];
                                                                                                                                                                                                                                                             break L18;
                                                                                                                                                                                                                                                           } else {
-                                                                                                                                                                                                                                                            if (-157 == ((oj) this).field_i) {
+                                                                                                                                                                                                                                                            if (((oj) this).field_i == 156) {
                                                                                                                                                                                                                                                               ((oj) this).field_u = var11[153];
                                                                                                                                                                                                                                                               break L18;
                                                                                                                                                                                                                                                             } else {
-                                                                                                                                                                                                                                                              if (-158 == ((oj) this).field_i) {
+                                                                                                                                                                                                                                                              if (((oj) this).field_i == 157) {
                                                                                                                                                                                                                                                                 ((oj) this).field_u = var11[154];
                                                                                                                                                                                                                                                                 break L18;
                                                                                                                                                                                                                                                               } else {
-                                                                                                                                                                                                                                                                if (-159 != ((oj) this).field_i) {
+                                                                                                                                                                                                                                                                if (((oj) this).field_i != 158) {
                                                                                                                                                                                                                                                                   if (((oj) this).field_i != 159) {
-                                                                                                                                                                                                                                                                    if (-161 == (((oj) this).field_i ^ -1)) {
+                                                                                                                                                                                                                                                                    if (((oj) this).field_i == 160) {
                                                                                                                                                                                                                                                                       ((oj) this).field_u = var11[157];
                                                                                                                                                                                                                                                                       break L18;
                                                                                                                                                                                                                                                                     } else {
@@ -817,35 +817,35 @@ class oj extends p {
                                                                                                                                                                                                                                                                                     ((oj) this).field_u = var11[164];
                                                                                                                                                                                                                                                                                     break L18;
                                                                                                                                                                                                                                                                                   } else {
-                                                                                                                                                                                                                                                                                    if (-169 == (((oj) this).field_i ^ -1)) {
+                                                                                                                                                                                                                                                                                    if (((oj) this).field_i == 168) {
                                                                                                                                                                                                                                                                                       ((oj) this).field_u = var11[165];
                                                                                                                                                                                                                                                                                       break L18;
                                                                                                                                                                                                                                                                                     } else {
-                                                                                                                                                                                                                                                                                      if (((oj) this).field_i == -170) {
+                                                                                                                                                                                                                                                                                      if (((oj) this).field_i == 169) {
                                                                                                                                                                                                                                                                                         ((oj) this).field_u = var11[166];
                                                                                                                                                                                                                                                                                         break L18;
                                                                                                                                                                                                                                                                                       } else {
-                                                                                                                                                                                                                                                                                        if (-171 != ((oj) this).field_i) {
+                                                                                                                                                                                                                                                                                        if (((oj) this).field_i != 170) {
                                                                                                                                                                                                                                                                                           if (171 == ((oj) this).field_i) {
                                                                                                                                                                                                                                                                                             ((oj) this).field_u = var11[168];
                                                                                                                                                                                                                                                                                             break L18;
                                                                                                                                                                                                                                                                                           } else {
-                                                                                                                                                                                                                                                                                            if ((((oj) this).field_i ^ -1) != -173) {
-                                                                                                                                                                                                                                                                                              if ((((oj) this).field_i ^ -1) != -174) {
+                                                                                                                                                                                                                                                                                            if (((oj) this).field_i != 172) {
+                                                                                                                                                                                                                                                                                              if (((oj) this).field_i != 173) {
                                                                                                                                                                                                                                                                                                 if (((oj) this).field_i != 174) {
                                                                                                                                                                                                                                                                                                   if (175 == ((oj) this).field_i) {
                                                                                                                                                                                                                                                                                                     ((oj) this).field_u = var11[172];
                                                                                                                                                                                                                                                                                                     break L18;
                                                                                                                                                                                                                                                                                                   } else {
-                                                                                                                                                                                                                                                                                                    if (((oj) this).field_i == -177) {
+                                                                                                                                                                                                                                                                                                    if (((oj) this).field_i == 176) {
                                                                                                                                                                                                                                                                                                       ((oj) this).field_u = var11[173];
                                                                                                                                                                                                                                                                                                       break L18;
                                                                                                                                                                                                                                                                                                     } else {
-                                                                                                                                                                                                                                                                                                      if (-178 == ((oj) this).field_i) {
+                                                                                                                                                                                                                                                                                                      if (((oj) this).field_i == 177) {
                                                                                                                                                                                                                                                                                                         ((oj) this).field_u = var11[174];
                                                                                                                                                                                                                                                                                                         break L18;
                                                                                                                                                                                                                                                                                                       } else {
-                                                                                                                                                                                                                                                                                                        if (-179 == (((oj) this).field_i ^ -1)) {
+                                                                                                                                                                                                                                                                                                        if (((oj) this).field_i == 178) {
                                                                                                                                                                                                                                                                                                           ((oj) this).field_u = var11[175];
                                                                                                                                                                                                                                                                                                           break L18;
                                                                                                                                                                                                                                                                                                         } else {
@@ -853,22 +853,22 @@ class oj extends p {
                                                                                                                                                                                                                                                                                                             ((oj) this).field_u = var11[176];
                                                                                                                                                                                                                                                                                                             break L18;
                                                                                                                                                                                                                                                                                                           } else {
-                                                                                                                                                                                                                                                                                                            if ((((oj) this).field_i ^ -1) != -181) {
+                                                                                                                                                                                                                                                                                                            if (((oj) this).field_i != 180) {
                                                                                                                                                                                                                                                                                                               if (181 == ((oj) this).field_i) {
                                                                                                                                                                                                                                                                                                                 ((oj) this).field_u = var11[178];
                                                                                                                                                                                                                                                                                                                 break L18;
                                                                                                                                                                                                                                                                                                               } else {
                                                                                                                                                                                                                                                                                                                 if (182 != ((oj) this).field_i) {
-                                                                                                                                                                                                                                                                                                                  if (((oj) this).field_i != -184) {
+                                                                                                                                                                                                                                                                                                                  if (((oj) this).field_i != 183) {
                                                                                                                                                                                                                                                                                                                     if (184 == ((oj) this).field_i) {
                                                                                                                                                                                                                                                                                                                       ((oj) this).field_u = var11[181];
                                                                                                                                                                                                                                                                                                                       break L18;
                                                                                                                                                                                                                                                                                                                     } else {
-                                                                                                                                                                                                                                                                                                                      if (-186 == ((oj) this).field_i) {
+                                                                                                                                                                                                                                                                                                                      if (((oj) this).field_i == 185) {
                                                                                                                                                                                                                                                                                                                         ((oj) this).field_u = var11[182];
                                                                                                                                                                                                                                                                                                                         break L18;
                                                                                                                                                                                                                                                                                                                       } else {
-                                                                                                                                                                                                                                                                                                                        if (-187 != (((oj) this).field_i ^ -1)) {
+                                                                                                                                                                                                                                                                                                                        if (((oj) this).field_i != 186) {
                                                                                                                                                                                                                                                                                                                           if (((oj) this).field_i != 187) {
                                                                                                                                                                                                                                                                                                                             if (188 == ((oj) this).field_i) {
                                                                                                                                                                                                                                                                                                                               ((oj) this).field_u = var11[185];
@@ -879,7 +879,7 @@ class oj extends p {
                                                                                                                                                                                                                                                                                                                                   ((oj) this).field_u = var11[187];
                                                                                                                                                                                                                                                                                                                                   break L18;
                                                                                                                                                                                                                                                                                                                                 } else {
-                                                                                                                                                                                                                                                                                                                                  if (-192 == (((oj) this).field_i ^ -1)) {
+                                                                                                                                                                                                                                                                                                                                  if (((oj) this).field_i == 191) {
                                                                                                                                                                                                                                                                                                                                     ((oj) this).field_u = var11[188];
                                                                                                                                                                                                                                                                                                                                     break L18;
                                                                                                                                                                                                                                                                                                                                   } else {
@@ -900,16 +900,16 @@ class oj extends p {
                                                                                                                                                                                                                                                                                                                                                     ((oj) this).field_u = var11[196];
                                                                                                                                                                                                                                                                                                                                                     break L18;
                                                                                                                                                                                                                                                                                                                                                   } else {
-                                                                                                                                                                                                                                                                                                                                                    if ((((oj) this).field_i ^ -1) == -201) {
+                                                                                                                                                                                                                                                                                                                                                    if (((oj) this).field_i == 200) {
                                                                                                                                                                                                                                                                                                                                                       ((oj) this).field_u = var11[197];
                                                                                                                                                                                                                                                                                                                                                       break L18;
                                                                                                                                                                                                                                                                                                                                                     } else {
-                                                                                                                                                                                                                                                                                                                                                      if ((((oj) this).field_i ^ -1) != -202) {
-                                                                                                                                                                                                                                                                                                                                                        if (((oj) this).field_i == -203) {
+                                                                                                                                                                                                                                                                                                                                                      if (((oj) this).field_i != 201) {
+                                                                                                                                                                                                                                                                                                                                                        if (((oj) this).field_i == 202) {
                                                                                                                                                                                                                                                                                                                                                           ((oj) this).field_u = var11[199];
                                                                                                                                                                                                                                                                                                                                                           break L18;
                                                                                                                                                                                                                                                                                                                                                         } else {
-                                                                                                                                                                                                                                                                                                                                                          if (-204 == ((oj) this).field_i) {
+                                                                                                                                                                                                                                                                                                                                                          if (((oj) this).field_i == 203) {
                                                                                                                                                                                                                                                                                                                                                             ((oj) this).field_u = var11[200];
                                                                                                                                                                                                                                                                                                                                                             break L18;
                                                                                                                                                                                                                                                                                                                                                           } else {
@@ -918,7 +918,7 @@ class oj extends p {
                                                                                                                                                                                                                                                                                                                                                               break L18;
                                                                                                                                                                                                                                                                                                                                                             } else {
                                                                                                                                                                                                                                                                                                                                                               if (205 != ((oj) this).field_i) {
-                                                                                                                                                                                                                                                                                                                                                                if (-207 == (((oj) this).field_i ^ -1)) {
+                                                                                                                                                                                                                                                                                                                                                                if (((oj) this).field_i == 206) {
                                                                                                                                                                                                                                                                                                                                                                   ((oj) this).field_u = var11[203];
                                                                                                                                                                                                                                                                                                                                                                   break L18;
                                                                                                                                                                                                                                                                                                                                                                 } else {
@@ -930,28 +930,28 @@ class oj extends p {
                                                                                                                                                                                                                                                                                                                                                                       ((oj) this).field_u = var11[205];
                                                                                                                                                                                                                                                                                                                                                                       break L18;
                                                                                                                                                                                                                                                                                                                                                                     } else {
-                                                                                                                                                                                                                                                                                                                                                                      if ((((oj) this).field_i ^ -1) == -210) {
+                                                                                                                                                                                                                                                                                                                                                                      if (((oj) this).field_i == 209) {
                                                                                                                                                                                                                                                                                                                                                                         ((oj) this).field_u = var11[206];
                                                                                                                                                                                                                                                                                                                                                                         break L18;
                                                                                                                                                                                                                                                                                                                                                                       } else {
                                                                                                                                                                                                                                                                                                                                                                         if (210 != ((oj) this).field_i) {
-                                                                                                                                                                                                                                                                                                                                                                          if (((oj) this).field_i == -212) {
+                                                                                                                                                                                                                                                                                                                                                                          if (((oj) this).field_i == 211) {
                                                                                                                                                                                                                                                                                                                                                                             ((oj) this).field_u = var11[208];
                                                                                                                                                                                                                                                                                                                                                                             break L18;
                                                                                                                                                                                                                                                                                                                                                                           } else {
-                                                                                                                                                                                                                                                                                                                                                                            if (-213 == ((oj) this).field_i) {
+                                                                                                                                                                                                                                                                                                                                                                            if (((oj) this).field_i == 212) {
                                                                                                                                                                                                                                                                                                                                                                               ((oj) this).field_u = var11[209];
                                                                                                                                                                                                                                                                                                                                                                               break L18;
                                                                                                                                                                                                                                                                                                                                                                             } else {
-                                                                                                                                                                                                                                                                                                                                                                              if (-214 == (((oj) this).field_i ^ -1)) {
+                                                                                                                                                                                                                                                                                                                                                                              if (((oj) this).field_i == 213) {
                                                                                                                                                                                                                                                                                                                                                                                 ((oj) this).field_u = var11[210];
                                                                                                                                                                                                                                                                                                                                                                                 break L18;
                                                                                                                                                                                                                                                                                                                                                                               } else {
-                                                                                                                                                                                                                                                                                                                                                                                if ((((oj) this).field_i ^ -1) == -215) {
+                                                                                                                                                                                                                                                                                                                                                                                if (((oj) this).field_i == 214) {
                                                                                                                                                                                                                                                                                                                                                                                   ((oj) this).field_u = var11[211];
                                                                                                                                                                                                                                                                                                                                                                                   break L18;
                                                                                                                                                                                                                                                                                                                                                                                 } else {
-                                                                                                                                                                                                                                                                                                                                                                                  if ((((oj) this).field_i ^ -1) != -216) {
+                                                                                                                                                                                                                                                                                                                                                                                  if (((oj) this).field_i != 215) {
                                                                                                                                                                                                                                                                                                                                                                                     if (216 == ((oj) this).field_i) {
                                                                                                                                                                                                                                                                                                                                                                                       ((oj) this).field_u = var11[213];
                                                                                                                                                                                                                                                                                                                                                                                       break L18;
@@ -960,19 +960,19 @@ class oj extends p {
                                                                                                                                                                                                                                                                                                                                                                                         ((oj) this).field_u = var11[214];
                                                                                                                                                                                                                                                                                                                                                                                         break L18;
                                                                                                                                                                                                                                                                                                                                                                                       } else {
-                                                                                                                                                                                                                                                                                                                                                                                        if (((oj) this).field_i == -219) {
+                                                                                                                                                                                                                                                                                                                                                                                        if (((oj) this).field_i == 218) {
                                                                                                                                                                                                                                                                                                                                                                                           ((oj) this).field_u = var11[215];
                                                                                                                                                                                                                                                                                                                                                                                           break L18;
                                                                                                                                                                                                                                                                                                                                                                                         } else {
-                                                                                                                                                                                                                                                                                                                                                                                          if (-220 != ((oj) this).field_i) {
+                                                                                                                                                                                                                                                                                                                                                                                          if (((oj) this).field_i != 219) {
                                                                                                                                                                                                                                                                                                                                                                                             if (((oj) this).field_i != 220) {
                                                                                                                                                                                                                                                                                                                                                                                               if (221 == ((oj) this).field_i) {
                                                                                                                                                                                                                                                                                                                                                                                                 ((oj) this).field_u = var11[218];
                                                                                                                                                                                                                                                                                                                                                                                                 break L18;
                                                                                                                                                                                                                                                                                                                                                                                               } else {
-                                                                                                                                                                                                                                                                                                                                                                                                if ((((oj) this).field_i ^ -1) != -223) {
+                                                                                                                                                                                                                                                                                                                                                                                                if (((oj) this).field_i != 222) {
                                                                                                                                                                                                                                                                                                                                                                                                   if (223 != ((oj) this).field_i) {
-                                                                                                                                                                                                                                                                                                                                                                                                    if ((((oj) this).field_i ^ -1) == -225) {
+                                                                                                                                                                                                                                                                                                                                                                                                    if (((oj) this).field_i == 224) {
                                                                                                                                                                                                                                                                                                                                                                                                       ((oj) this).field_u = var11[221];
                                                                                                                                                                                                                                                                                                                                                                                                       break L18;
                                                                                                                                                                                                                                                                                                                                                                                                     } else {
@@ -1445,7 +1445,7 @@ class oj extends p {
                 ((oj) this).field_u = an.field_d;
                 break L19;
               } else {
-                if ((((oj) this).field_i ^ -1) == -131) {
+                if (((oj) this).field_i == 130) {
                   ((oj) this).field_u = ce.field_a;
                   ((oj) this).field_H = jd.field_o;
                   break L19;
@@ -1461,11 +1461,11 @@ class oj extends p {
                       break L19;
                     } else {
                       if (133 != ((oj) this).field_i) {
-                        if (-31 != ((oj) this).field_i) {
+                        if (((oj) this).field_i != 30) {
                           if (((oj) this).field_i < 233) {
                             break L19;
                           } else {
-                            if (-340 > ((oj) this).field_i) {
+                            if (((oj) this).field_i < 339) {
                               if (param0) {
                                 ((oj) this).field_u = vb.field_Kb[-233 + ((oj) this).field_i];
                                 break L19;
@@ -1496,7 +1496,7 @@ class oj extends p {
             ((oj) this).field_x = ((oj) this).field_I;
             ((oj) this).field_b = ni.a(((oj) this).field_i, (byte) -64);
             if (((oj) this).field_i != 19) {
-              if ((((oj) this).field_i ^ -1) != -29) {
+              if (((oj) this).field_i != 28) {
                 break L20;
               } else {
                 ((oj) this).field_E = 240;
@@ -1517,12 +1517,12 @@ class oj extends p {
             ((oj) this).field_o = 2;
             ((oj) this).field_A = 1;
             var8 = ((oj) this).field_i;
-            if (var8 == -19) {
+            if (var8 == 18) {
               ((oj) this).field_A = ((oj) this).field_A * 2;
               ((oj) this).field_o = ((oj) this).field_o * 3;
               break L21;
             } else {
-              if (-25 == var8) {
+              if (var8 == 24) {
                 ((oj) this).field_o = ((oj) this).field_o * 2;
                 ((oj) this).field_A = ((oj) this).field_A * 2;
                 break L21;
@@ -1543,10 +1543,10 @@ class oj extends p {
                 var8 = ((oj) this).field_i;
                 if (var8 != 19) {
                   L24: {
-                    if ((var8 ^ -1) == -226) {
+                    if (var8 == 225) {
                       break L24;
                     } else {
-                      if ((var8 ^ -1) == -2) {
+                      if (var8 == 1) {
                         break L24;
                       } else {
                         if (var8 != 18) {
@@ -1577,7 +1577,7 @@ class oj extends p {
     }
 
     final void a(int param0, double param1, int param2) {
-        super.a(param0 + 0, param1, param2);
+        super.a(param0, param1, param2);
         if (param0 != 225) {
             bd discarded$0 = ((oj) this).g(-95);
         }
@@ -1585,16 +1585,80 @@ class oj extends p {
 
     final boolean[] b(int param0, int param1, id param2) {
         boolean[] var4 = null;
-        if (param0 != -27757) {
-            bd discarded$0 = ((oj) this).g(-55);
+        RuntimeException var4_ref = null;
+        boolean[] stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean[] stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -27757) {
+                break L1;
+              } else {
+                bd discarded$2 = ((oj) this).g(-55);
+                break L1;
+              }
+            }
+            L2: {
+              if (((oj) this).field_b) {
+                var4 = ((oj) this).field_l.a(((oj) this).field_j, ((oj) this).field_c, 1, param1, param2);
+                break L2;
+              } else {
+                var4 = ((oj) this).field_l.a(param1, ((oj) this).field_c, ((oj) this).field_j, false, param2);
+                break L2;
+              }
+            }
+            ((oj) this).b((byte) 117);
+            stackOut_5_0 = (boolean[]) var4;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4_ref = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var4_ref;
+            stackOut_7_1 = new StringBuilder().append("oj.W(").append(param0).append(44).append(param1).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param2 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
-        if (!((oj) this).field_b) {
-            var4 = ((oj) this).field_l.a(param1, ((oj) this).field_c, ((oj) this).field_j, false, param2);
-        } else {
-            var4 = ((oj) this).field_l.a(((oj) this).field_j, ((oj) this).field_c, 1, param1, param2);
-        }
-        ((oj) this).b((byte) 117);
-        return var4;
+        return stackIn_6_0;
     }
 
     final void c(byte param0) {
@@ -1608,7 +1672,7 @@ class oj extends p {
             ((oj) this).field_e = 250;
             ((oj) this).field_b = false;
             ((oj) this).field_i = var2;
-            if (-18 != (var2 ^ -1)) {
+            if (var2 != 17) {
               break L0;
             } else {
               ((oj) this).field_c = ((oj) this).field_c + 128.0;
@@ -1634,21 +1698,88 @@ class oj extends p {
     }
 
     final boolean[] a(id param0, int param1, int param2) {
-        double var4 = ((oj) this).field_c;
-        if (param1 != 128) {
-            oj.g((byte) -21);
-        }
-        if (!((oj) this).field_J) {
-        } else {
-            if (var4 < 128.0) {
-                var4 = var4 + 128.0;
-            } else {
-                var4 = var4 - 128.0;
+        double var4_double = 0.0;
+        RuntimeException var4 = null;
+        boolean[] var6 = null;
+        boolean[] stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean[] stackOut_7_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        try {
+          L0: {
+            L1: {
+              var4_double = ((oj) this).field_c;
+              if (param1 == 128) {
+                break L1;
+              } else {
+                oj.g((byte) -21);
+                break L1;
+              }
             }
+            L2: {
+              if (((oj) this).field_J) {
+                if (var4_double >= 128.0) {
+                  var4_double = var4_double - 128.0;
+                  break L2;
+                } else {
+                  var4_double = var4_double + 128.0;
+                  break L2;
+                }
+              } else {
+                break L2;
+              }
+            }
+            var6 = ((oj) this).field_l.a(((oj) this).field_j, var4_double, 1, param2, param0);
+            ((oj) this).b((byte) 117);
+            stackOut_7_0 = (boolean[]) var6;
+            stackIn_8_0 = stackOut_7_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var4;
+            stackOut_9_1 = new StringBuilder().append("oj.S(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          throw wg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 41);
         }
-        boolean[] var6 = ((oj) this).field_l.a(((oj) this).field_j, var4, 1, param2, param0);
-        ((oj) this).b((byte) 117);
-        return var6;
+        return stackIn_8_0;
     }
 
     final boolean a(int param0, int param1) {
@@ -1680,7 +1811,7 @@ class oj extends p {
               if (rl.field_c == 1) {
                 L1: {
                   L2: {
-                    if (-32 == (param0 ^ -1)) {
+                    if (param0 == 31) {
                       break L2;
                     } else {
                       if (35 != param0) {
@@ -1705,7 +1836,7 @@ class oj extends p {
         }
         if (((oj) this).field_i != 231) {
           L3: {
-            if (-9 != ((oj) this).field_i) {
+            if (((oj) this).field_i != 8) {
               break L3;
             } else {
               if (vi.field_p == null) {
@@ -1734,10 +1865,10 @@ class oj extends p {
             }
           }
           L6: {
-            if (-129 > ((oj) this).field_i) {
+            if (((oj) this).field_i < 128) {
               break L6;
             } else {
-              if ((((oj) this).field_i ^ -1) >= -134) {
+              if (((oj) this).field_i <= 133) {
                 L7: {
                   L8: {
                     if (param0 == 18) {
@@ -1749,13 +1880,13 @@ class oj extends p {
                         if (param0 == 32) {
                           break L8;
                         } else {
-                          if ((param0 ^ -1) == -5) {
+                          if (param0 == 4) {
                             break L8;
                           } else {
-                            if ((param0 ^ -1) == -21) {
+                            if (param0 == 20) {
                               break L8;
                             } else {
-                              if ((param0 ^ -1) == -14) {
+                              if (param0 == 13) {
                                 break L8;
                               } else {
                                 if (param0 == 14) {
@@ -1786,31 +1917,31 @@ class oj extends p {
               }
             }
           }
-          if (((oj) this).field_i == -126) {
+          if (((oj) this).field_i == 125) {
             L9: {
               L10: {
                 if (param0 == 18) {
                   break L10;
                 } else {
-                  if (-1 == param0) {
+                  if (param0 == 0) {
                     break L10;
                   } else {
                     if (32 == param0) {
                       break L10;
                     } else {
-                      if ((param0 ^ -1) == -5) {
+                      if (param0 == 4) {
                         break L10;
                       } else {
                         if (20 == param0) {
                           break L10;
                         } else {
-                          if ((param0 ^ -1) == -14) {
+                          if (param0 == 13) {
                             break L10;
                           } else {
                             if (14 == param0) {
                               break L10;
                             } else {
-                              if ((param0 ^ -1) == -16) {
+                              if (param0 == 15) {
                                 break L10;
                               } else {
                                 stackOut_48_0 = 1;
@@ -1848,10 +1979,10 @@ class oj extends p {
                     break L13;
                   } else {
                     L14: {
-                      if (((oj) this).field_i > -30) {
+                      if (((oj) this).field_i < 29) {
                         break L14;
                       } else {
-                        if (-57 >= ((oj) this).field_i) {
+                        if (((oj) this).field_i <= 56) {
                           break L13;
                         } else {
                           break L14;
@@ -1870,10 +2001,10 @@ class oj extends p {
                       }
                     }
                     L16: {
-                      if (((oj) this).field_i > -78) {
+                      if (((oj) this).field_i < 77) {
                         break L16;
                       } else {
-                        if (-90 >= ((oj) this).field_i) {
+                        if (((oj) this).field_i <= 89) {
                           break L13;
                         } else {
                           break L16;
@@ -1895,14 +2026,14 @@ class oj extends p {
                       if (((oj) this).field_i < 109) {
                         break L18;
                       } else {
-                        if (-125 <= ((oj) this).field_i) {
+                        if (((oj) this).field_i <= 124) {
                           break L13;
                         } else {
                           break L18;
                         }
                       }
                     }
-                    if (-127 == ((oj) this).field_i) {
+                    if (((oj) this).field_i == 126) {
                       break L13;
                     } else {
                       if (127 == ((oj) this).field_i) {
@@ -1962,14 +2093,14 @@ class oj extends p {
           }
         }
         var2 = ((oj) this).field_i;
-        if (-2 != (var2 ^ -1)) {
-          if ((var2 ^ -1) != -19) {
-            if ((var2 ^ -1) != -20) {
-              if ((var2 ^ -1) != -4) {
+        if (var2 != 1) {
+          if (var2 != 18) {
+            if (var2 != 19) {
+              if (var2 != 3) {
                 if (var2 != 8) {
                   if (var2 != 26) {
                     if (var2 != 23) {
-                      if ((var2 ^ -1) != -26) {
+                      if (var2 != 25) {
                         if (var2 != 27) {
                           if (var2 != 28) {
                             if (var2 != 24) {
@@ -2010,50 +2141,195 @@ class oj extends p {
     }
 
     final void e(byte param0) {
-        if ((nl.field_d ^ -1) > -101) {
-            if (((oj) this).field_i != 24) {
-                // if_icmpeq L41
-                // if_icmpeq L41
-            } else {
-                wk.field_h = true;
-                nl.field_d = 100;
+        L0: {
+          if (nl.field_d >= 100) {
+            break L0;
+          } else {
+            L1: {
+              if (((oj) this).field_i == 24) {
+                break L1;
+              } else {
+                if (((oj) this).field_i == 4) {
+                  break L1;
+                } else {
+                  if (((oj) this).field_i == 25) {
+                    break L1;
+                  } else {
+                    break L0;
+                  }
+                }
+              }
             }
+            wk.field_h = true;
+            nl.field_d = 100;
+            break L0;
+          }
         }
-        if (param0 != -49) {
-            boolean discarded$0 = ((oj) this).a(-93, -36);
+        L2: {
+          if (param0 == -49) {
+            break L2;
+          } else {
+            boolean discarded$2 = ((oj) this).a(-93, -36);
+            break L2;
+          }
         }
-        if (!((((oj) this).field_i ^ -1) != -28)) {
+        L3: {
+          if (((oj) this).field_i == 27) {
             ti.a(1337, (byte) -120, 32);
+            break L3;
+          } else {
+            break L3;
+          }
         }
     }
 
     final static void a(oj param0, oc param1, int param2, double param3, int param4, double param5, boolean param6) {
-        int var9 = 0;
-        int var10 = HostileSpawn.field_I ? 1 : 0;
-        param0.field_G = 1;
-        if (!param6) {
-            oj.g((byte) 82);
-        }
-        if (!(param0.field_F != 0)) {
-            param0.field_G = 0;
-        }
-        if ((param0.field_I ^ -1) >= -1) {
-            param0.e((byte) -49);
-            param0.c((byte) -94);
-            if (!(160 <= al.field_Q)) {
-                al.field_Q = al.field_Q + 50;
-                jh.a(uh.field_i * 3 / 2, (byte) 61, 47, jc.field_c, 3);
+        RuntimeException var9 = null;
+        int var9_int = 0;
+        int var10 = 0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        var10 = HostileSpawn.field_I ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              param0.field_G = 1;
+              if (param6) {
+                break L1;
+              } else {
+                oj.g((byte) 82);
+                break L1;
+              }
             }
-            for (var9 = 0; 3 > var9; var9++) {
-                mm.field_m[el.field_j] = new oj(param1, 3, rl.field_c);
-                mm.field_m[el.field_j].field_l.a(0.9, 0.9, 1);
-                el.field_j = el.field_j + 1;
+            L2: {
+              if (param0.field_F == 0) {
+                param0.field_G = 0;
+                break L2;
+              } else {
+                break L2;
+              }
             }
-            ue.a(25, false);
-            if (!(-3 != (ha.field_t ^ -1))) {
-                ha.field_t = -1;
-                kd.a(2, 1);
+            L3: {
+              if (param0.field_I > 0) {
+                break L3;
+              } else {
+                L4: {
+                  param0.e((byte) -49);
+                  param0.c((byte) -94);
+                  if (160 > al.field_Q) {
+                    al.field_Q = al.field_Q + 50;
+                    jh.a(uh.field_i * 3 / 2, (byte) 61, 47, jc.field_c, 3);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                var9_int = 0;
+                L5: while (true) {
+                  if (3 <= var9_int) {
+                    ue.a(25, false);
+                    if (ha.field_t == 2) {
+                      ha.field_t = -1;
+                      kd.a(2, 1);
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  } else {
+                    mm.field_m[el.field_j] = new oj(param1, 3, rl.field_c);
+                    mm.field_m[el.field_j].field_l.a(0.9, 0.9, 1);
+                    el.field_j = el.field_j + 1;
+                    var9_int++;
+                    continue L5;
+                  }
+                }
+              }
             }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var9 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var9;
+            stackOut_17_1 = new StringBuilder().append("oj.R(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param0 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L6;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L6;
+            }
+          }
+          L7: {
+            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param1 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L7;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L7;
+            }
+          }
+          throw wg.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -2089,7 +2365,11 @@ class oj extends p {
         ((oj) this).field_F = 0;
         ((oj) this).field_N = false;
         ((oj) this).field_p = 0;
-        ((oj) this).a(false, 0, 21963, param1, param2, param0);
+        try {
+            ((oj) this).a(false, 0, 21963, param1, param2, param0);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

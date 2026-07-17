@@ -25,12 +25,6 @@ final class ap extends al {
     private int field_v;
 
     public static void a(boolean param0) {
-        if (param0) {
-            field_s = null;
-            field_w = null;
-            field_s = null;
-            return;
-        }
         field_w = null;
         field_s = null;
     }
@@ -423,7 +417,7 @@ final class ap extends al {
                 stackOut_2_0 = this;
                 stackIn_52_0 = stackOut_2_0;
                 stackIn_3_0 = stackOut_2_0;
-                if ((param1 ^ -1) != -8) {
+                if (param1 != 7) {
                   break L1;
                 } else {
                   L2: {
@@ -469,7 +463,7 @@ final class ap extends al {
                           stackOut_8_0 = this;
                           stackIn_11_0 = stackOut_8_0;
                           stackIn_9_0 = stackOut_8_0;
-                          if (-7 == (param1 ^ -1)) {
+                          if (param1 == 6) {
                             break L6;
                           } else {
                             stackOut_9_0 = this;
@@ -589,14 +583,14 @@ final class ap extends al {
                     if (!param6) {
                       break L12;
                     } else {
-                      if ((param1 ^ -1) != -7) {
+                      if (param1 != 6) {
                         break L12;
                       } else {
                         L13: {
                           stackOut_28_0 = this;
                           stackIn_30_0 = stackOut_28_0;
                           stackIn_29_0 = stackOut_28_0;
-                          if (-1 <= (param4 ^ -1)) {
+                          if (param4 <= 0) {
                             stackOut_30_0 = this;
                             stackOut_30_1 = 0;
                             stackIn_31_0 = stackOut_30_0;
@@ -684,7 +678,7 @@ final class ap extends al {
                         ((ap) this).field_h = fe.field_G;
                         break L15;
                       } else {
-                        if ((param1 ^ -1) != -8) {
+                        if (param1 != 7) {
                           break L15;
                         } else {
                           ((ap) this).field_q = 1;
@@ -749,7 +743,7 @@ final class ap extends al {
               stackOut_58_0 = this;
               stackIn_98_0 = stackOut_58_0;
               stackIn_59_0 = stackOut_58_0;
-              if (-7 == (param1 ^ -1)) {
+              if (param1 == 6) {
                 stackOut_98_0 = this;
                 stackOut_98_1 = 1;
                 stackIn_100_0 = stackOut_98_0;
@@ -854,14 +848,14 @@ final class ap extends al {
                     if (!param6) {
                       break L28;
                     } else {
-                      if ((param1 ^ -1) != -7) {
+                      if (param1 != 6) {
                         break L28;
                       } else {
                         L29: {
                           stackOut_75_0 = this;
                           stackIn_77_0 = stackOut_75_0;
                           stackIn_76_0 = stackOut_75_0;
-                          if (-1 <= (param4 ^ -1)) {
+                          if (param4 <= 0) {
                             stackOut_77_0 = this;
                             stackOut_77_1 = 0;
                             stackIn_78_0 = stackOut_77_0;
@@ -949,7 +943,7 @@ final class ap extends al {
                         ((ap) this).field_h = fe.field_G;
                         break L31;
                       } else {
-                        if ((param1 ^ -1) != -8) {
+                        if (param1 != 7) {
                           break L31;
                         } else {
                           ((ap) this).field_q = 1;
@@ -1061,12 +1055,12 @@ final class ap extends al {
         ((ap) this).field_n = stackIn_113_1;
         ((ap) this).field_G = 8;
         if (param6) {
-          if ((param1 ^ -1) == -7) {
+          if (param1 == 6) {
             L40: {
               stackOut_185_0 = this;
               stackIn_187_0 = stackOut_185_0;
               stackIn_186_0 = stackOut_185_0;
-              if (-1 <= (param4 ^ -1)) {
+              if (param4 <= 0) {
                 stackOut_187_0 = this;
                 stackOut_187_1 = 0;
                 stackIn_188_0 = stackOut_187_0;
@@ -1145,7 +1139,7 @@ final class ap extends al {
                     ((ap) this).field_b.a(((ap) this).b(true, ha.field_b, ei.field_K), true, -20258);
                     return;
                   } else {
-                    if ((param1 ^ -1) != -8) {
+                    if (param1 != 7) {
                       break L41;
                     } else {
                       ((ap) this).field_q = 1;
@@ -1221,7 +1215,7 @@ final class ap extends al {
                     ((ap) this).field_b.a(((ap) this).b(true, ha.field_b, ei.field_K), true, -20258);
                     return;
                   } else {
-                    if ((param1 ^ -1) != -8) {
+                    if (param1 != 7) {
                       break L45;
                     } else {
                       ((ap) this).field_q = 1;
@@ -1301,7 +1295,7 @@ final class ap extends al {
                     ((ap) this).field_b.a(((ap) this).b(true, ha.field_b, ei.field_K), true, -20258);
                     return;
                   } else {
-                    if ((param1 ^ -1) != -8) {
+                    if (param1 != 7) {
                       break L49;
                     } else {
                       ((ap) this).field_q = 1;
@@ -1375,7 +1369,7 @@ final class ap extends al {
                     ((ap) this).field_h = fe.field_G;
                     break L53;
                   } else {
-                    if ((param1 ^ -1) != -8) {
+                    if (param1 != 7) {
                       break L53;
                     } else {
                       ((ap) this).field_q = 1;
@@ -1452,7 +1446,7 @@ final class ap extends al {
                   ((ap) this).field_h = fe.field_G;
                   break L57;
                 } else {
-                  if ((param1 ^ -1) != -8) {
+                  if (param1 != 7) {
                     break L57;
                   } else {
                     ((ap) this).field_q = 1;
@@ -1524,7 +1518,7 @@ final class ap extends al {
                   ((ap) this).field_h = fe.field_G;
                   break L61;
                 } else {
-                  if ((param1 ^ -1) != -8) {
+                  if (param1 != 7) {
                     break L61;
                   } else {
                     ((ap) this).field_q = 1;
@@ -1543,7 +1537,7 @@ final class ap extends al {
 
     private final String d(byte param0) {
         int var2 = ((ap) this).field_r / 60;
-        int var3 = 123 % ((param0 - 44) / 37);
+        int var3 = 0;
         int var4 = ((ap) this).field_r % 60;
         return var2 + ":" + (var4 >= 10 ? "" : "0") + var4;
     }
@@ -1561,10 +1555,10 @@ final class ap extends al {
         if (!((ap) this).field_F) {
           if (!((ap) this).field_y) {
             if (1 != ((ap) this).field_x) {
-              if ((((ap) this).field_x ^ -1) != 0) {
+              if (((ap) this).field_x != -1) {
                 L0: {
                   ((ap) this).field_F = true;
-                  if (-1 != (((ap) this).field_b.field_d ^ -1)) {
+                  if (((ap) this).field_b.field_d != 0) {
                     break L0;
                   } else {
                     if (((ap) this).field_h[0] == 39) {
@@ -1596,7 +1590,7 @@ final class ap extends al {
                                 ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_A;
                                 ((ap) this).field_D = ((ap) this).field_D - 1;
                                 ((ap) this).field_B = 500 / ((ap) this).field_z;
-                                if (-3 < (((ap) this).field_B ^ -1)) {
+                                if (((ap) this).field_B < 2) {
                                   ((ap) this).field_B = 2;
                                   break L3;
                                 } else {
@@ -1604,7 +1598,7 @@ final class ap extends al {
                                 }
                               }
                               L4: {
-                                if (-1 == (((ap) this).field_D ^ -1)) {
+                                if (((ap) this).field_D == 0) {
                                   break L4;
                                 } else {
                                   if (!((ap) this).field_y) {
@@ -1633,7 +1627,7 @@ final class ap extends al {
                             }
                           }
                         }
-                        if ((((ap) this).field_r ^ -1) >= -1) {
+                        if (((ap) this).field_r <= 0) {
                           ((ap) this).field_v = 8;
                           return;
                         } else {
@@ -1646,7 +1640,7 @@ final class ap extends al {
                               ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_E;
                               ((ap) this).field_B = 2;
                               ((ap) this).field_r = ((ap) this).field_r - 2;
-                              if ((((ap) this).field_r ^ -1) >= -1) {
+                              if (((ap) this).field_r <= 0) {
                                 ((ap) this).field_r = 0;
                                 tp.a(85, false, w.field_a[6]);
                                 break L5;
@@ -1654,16 +1648,16 @@ final class ap extends al {
                                 break L5;
                               }
                             }
-                            kh.a(57, false).h(3 * ge.field_c >> -927299517);
+                            kh.a(57, false).h(3 * ge.field_c >> 3);
                             return;
                           }
                         }
                       } else {
                         L6: {
-                          if ((((ap) this).field_D ^ -1) > -10000000) {
+                          if (((ap) this).field_D < 9999999) {
                             L7: {
                               ((ap) this).field_D = ((ap) this).field_D + ((ap) this).field_q;
-                              if (-10000000 >= (((ap) this).field_D ^ -1)) {
+                              if (((ap) this).field_D >= 9999999) {
                                 ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_n;
                                 ((ap) this).field_D = 9999999;
                                 break L7;
@@ -1671,7 +1665,7 @@ final class ap extends al {
                                 break L7;
                               }
                             }
-                            ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 2042701252));
+                            ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 4));
                             fn discarded$47 = kh.a(58, false);
                             break L6;
                           } else {
@@ -1691,13 +1685,13 @@ final class ap extends al {
                 L8: {
                   var10 = dj.field_e;
                   var5 = (((ap) this).field_r + 1) / 2 * ((ap) this).field_E - -(((ap) this).field_D * ((ap) this).field_A);
-                  var10.field_eb = var10.field_eb + (var5 << -1827917464);
+                  var10.field_eb = var10.field_eb + (var5 << 8);
                   var10.field_g = var10.field_g - var10.field_K * var5;
                   var10.field_l = var10.field_l + var5;
                   var10.field_G = var10.field_G + var5;
                   var10.h(1);
                   ((ap) this).field_F = true;
-                  if (-1 != (((ap) this).field_b.field_d ^ -1)) {
+                  if (((ap) this).field_b.field_d != 0) {
                     break L8;
                   } else {
                     if (((ap) this).field_h[0] == 39) {
@@ -1729,7 +1723,7 @@ final class ap extends al {
                                 ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_A;
                                 ((ap) this).field_D = ((ap) this).field_D - 1;
                                 ((ap) this).field_B = 500 / ((ap) this).field_z;
-                                if (-3 < (((ap) this).field_B ^ -1)) {
+                                if (((ap) this).field_B < 2) {
                                   ((ap) this).field_B = 2;
                                   break L11;
                                 } else {
@@ -1737,7 +1731,7 @@ final class ap extends al {
                                 }
                               }
                               L12: {
-                                if (-1 == (((ap) this).field_D ^ -1)) {
+                                if (((ap) this).field_D == 0) {
                                   break L12;
                                 } else {
                                   if (!((ap) this).field_y) {
@@ -1766,7 +1760,7 @@ final class ap extends al {
                             }
                           }
                         }
-                        if ((((ap) this).field_r ^ -1) >= -1) {
+                        if (((ap) this).field_r <= 0) {
                           ((ap) this).field_v = 8;
                           return;
                         } else {
@@ -1779,7 +1773,7 @@ final class ap extends al {
                               ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_E;
                               ((ap) this).field_B = 2;
                               ((ap) this).field_r = ((ap) this).field_r - 2;
-                              if ((((ap) this).field_r ^ -1) >= -1) {
+                              if (((ap) this).field_r <= 0) {
                                 ((ap) this).field_r = 0;
                                 tp.a(85, false, w.field_a[6]);
                                 break L13;
@@ -1787,16 +1781,16 @@ final class ap extends al {
                                 break L13;
                               }
                             }
-                            kh.a(57, false).h(3 * ge.field_c >> -927299517);
+                            kh.a(57, false).h(3 * ge.field_c >> 3);
                             return;
                           }
                         }
                       } else {
                         L14: {
-                          if ((((ap) this).field_D ^ -1) > -10000000) {
+                          if (((ap) this).field_D < 9999999) {
                             L15: {
                               ((ap) this).field_D = ((ap) this).field_D + ((ap) this).field_q;
-                              if (-10000000 >= (((ap) this).field_D ^ -1)) {
+                              if (((ap) this).field_D >= 9999999) {
                                 ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_n;
                                 ((ap) this).field_D = 9999999;
                                 break L15;
@@ -1804,7 +1798,7 @@ final class ap extends al {
                                 break L15;
                               }
                             }
-                            ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 2042701252));
+                            ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 4));
                             fn discarded$53 = kh.a(58, false);
                             break L14;
                           } else {
@@ -1825,13 +1819,13 @@ final class ap extends al {
               L16: {
                 var9 = dj.field_e;
                 var5 = (((ap) this).field_r + 1) / 2 * ((ap) this).field_E - -(((ap) this).field_D * ((ap) this).field_A);
-                var9.field_eb = var9.field_eb + (var5 << -1827917464);
+                var9.field_eb = var9.field_eb + (var5 << 8);
                 var9.field_g = var9.field_g - var9.field_K * var5;
                 var9.field_l = var9.field_l + var5;
                 var9.field_G = var9.field_G + var5;
                 var9.h(1);
                 ((ap) this).field_F = true;
-                if (-1 != (((ap) this).field_b.field_d ^ -1)) {
+                if (((ap) this).field_b.field_d != 0) {
                   break L16;
                 } else {
                   if (((ap) this).field_h[0] == 39) {
@@ -1863,7 +1857,7 @@ final class ap extends al {
                               ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_A;
                               ((ap) this).field_D = ((ap) this).field_D - 1;
                               ((ap) this).field_B = 500 / ((ap) this).field_z;
-                              if (-3 < (((ap) this).field_B ^ -1)) {
+                              if (((ap) this).field_B < 2) {
                                 ((ap) this).field_B = 2;
                                 break L19;
                               } else {
@@ -1871,7 +1865,7 @@ final class ap extends al {
                               }
                             }
                             L20: {
-                              if (-1 == (((ap) this).field_D ^ -1)) {
+                              if (((ap) this).field_D == 0) {
                                 break L20;
                               } else {
                                 if (!((ap) this).field_y) {
@@ -1900,7 +1894,7 @@ final class ap extends al {
                           }
                         }
                       }
-                      if ((((ap) this).field_r ^ -1) >= -1) {
+                      if (((ap) this).field_r <= 0) {
                         ((ap) this).field_v = 8;
                         return;
                       } else {
@@ -1913,7 +1907,7 @@ final class ap extends al {
                             ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_E;
                             ((ap) this).field_B = 2;
                             ((ap) this).field_r = ((ap) this).field_r - 2;
-                            if ((((ap) this).field_r ^ -1) >= -1) {
+                            if (((ap) this).field_r <= 0) {
                               ((ap) this).field_r = 0;
                               tp.a(85, false, w.field_a[6]);
                               break L21;
@@ -1921,16 +1915,16 @@ final class ap extends al {
                               break L21;
                             }
                           }
-                          kh.a(57, false).h(3 * ge.field_c >> -927299517);
+                          kh.a(57, false).h(3 * ge.field_c >> 3);
                           return;
                         }
                       }
                     } else {
                       L22: {
-                        if ((((ap) this).field_D ^ -1) > -10000000) {
+                        if (((ap) this).field_D < 9999999) {
                           L23: {
                             ((ap) this).field_D = ((ap) this).field_D + ((ap) this).field_q;
-                            if (-10000000 >= (((ap) this).field_D ^ -1)) {
+                            if (((ap) this).field_D >= 9999999) {
                               ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_n;
                               ((ap) this).field_D = 9999999;
                               break L23;
@@ -1938,7 +1932,7 @@ final class ap extends al {
                               break L23;
                             }
                           }
-                          ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 2042701252));
+                          ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 4));
                           fn discarded$59 = kh.a(58, false);
                           break L22;
                         } else {
@@ -1958,14 +1952,14 @@ final class ap extends al {
           } else {
             var7 = dj.field_e;
             var5 = ((ap) this).field_n;
-            var7.field_eb = var7.field_eb + (var5 << 813403624);
+            var7.field_eb = var7.field_eb + (var5 << 8);
             var7.field_G = var7.field_G + var5;
             var7.field_g = var7.field_g - var5 * var7.field_K;
             var7.field_l = var7.field_l + var5;
             var7.h(1);
             ((ap) this).field_F = true;
             L24: {
-              if (-1 != (((ap) this).field_b.field_d ^ -1)) {
+              if (((ap) this).field_b.field_d != 0) {
                 break L24;
               } else {
                 if (((ap) this).field_h[0] == 39) {
@@ -1981,7 +1975,7 @@ final class ap extends al {
                       if (!((ap) this).field_y) {
                         if (0 < ((ap) this).field_D) {
                           if (((ap) this).field_t) {
-                            if ((((ap) this).field_r ^ -1) >= -1) {
+                            if (((ap) this).field_r <= 0) {
                               ((ap) this).field_v = 8;
                               return;
                             } else {
@@ -1994,7 +1988,7 @@ final class ap extends al {
                                   ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_E;
                                   ((ap) this).field_B = 2;
                                   ((ap) this).field_r = ((ap) this).field_r - 2;
-                                  if ((((ap) this).field_r ^ -1) >= -1) {
+                                  if (((ap) this).field_r <= 0) {
                                     ((ap) this).field_r = 0;
                                     tp.a(85, false, w.field_a[6]);
                                     break L25;
@@ -2002,7 +1996,7 @@ final class ap extends al {
                                     break L25;
                                   }
                                 }
-                                kh.a(57, false).h(3 * ge.field_c >> -927299517);
+                                kh.a(57, false).h(3 * ge.field_c >> 3);
                                 return;
                               }
                             }
@@ -2013,7 +2007,7 @@ final class ap extends al {
                               ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_A;
                               ((ap) this).field_D = ((ap) this).field_D - 1;
                               ((ap) this).field_B = 500 / ((ap) this).field_z;
-                              if (-3 < (((ap) this).field_B ^ -1)) {
+                              if (((ap) this).field_B < 2) {
                                 ((ap) this).field_B = 2;
                                 break L26;
                               } else {
@@ -2021,7 +2015,7 @@ final class ap extends al {
                               }
                             }
                             L27: {
-                              if (-1 == (((ap) this).field_D ^ -1)) {
+                              if (((ap) this).field_D == 0) {
                                 break L27;
                               } else {
                                 if (!((ap) this).field_y) {
@@ -2049,7 +2043,7 @@ final class ap extends al {
                             }
                           }
                         } else {
-                          if ((((ap) this).field_r ^ -1) >= -1) {
+                          if (((ap) this).field_r <= 0) {
                             ((ap) this).field_v = 8;
                             return;
                           } else {
@@ -2062,7 +2056,7 @@ final class ap extends al {
                                 ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_E;
                                 ((ap) this).field_B = 2;
                                 ((ap) this).field_r = ((ap) this).field_r - 2;
-                                if ((((ap) this).field_r ^ -1) >= -1) {
+                                if (((ap) this).field_r <= 0) {
                                   ((ap) this).field_r = 0;
                                   tp.a(85, false, w.field_a[6]);
                                   break L28;
@@ -2070,17 +2064,17 @@ final class ap extends al {
                                   break L28;
                                 }
                               }
-                              kh.a(57, false).h(3 * ge.field_c >> -927299517);
+                              kh.a(57, false).h(3 * ge.field_c >> 3);
                               return;
                             }
                           }
                         }
                       } else {
                         L29: {
-                          if ((((ap) this).field_D ^ -1) > -10000000) {
+                          if (((ap) this).field_D < 9999999) {
                             L30: {
                               ((ap) this).field_D = ((ap) this).field_D + ((ap) this).field_q;
-                              if (-10000000 >= (((ap) this).field_D ^ -1)) {
+                              if (((ap) this).field_D >= 9999999) {
                                 ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_n;
                                 ((ap) this).field_D = 9999999;
                                 break L30;
@@ -2088,7 +2082,7 @@ final class ap extends al {
                                 break L30;
                               }
                             }
-                            ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 2042701252));
+                            ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 4));
                             fn discarded$65 = kh.a(58, false);
                             break L29;
                           } else {
@@ -2125,7 +2119,7 @@ final class ap extends al {
                           ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_A;
                           ((ap) this).field_D = ((ap) this).field_D - 1;
                           ((ap) this).field_B = 500 / ((ap) this).field_z;
-                          if (-3 < (((ap) this).field_B ^ -1)) {
+                          if (((ap) this).field_B < 2) {
                             ((ap) this).field_B = 2;
                             break L32;
                           } else {
@@ -2133,7 +2127,7 @@ final class ap extends al {
                           }
                         }
                         L33: {
-                          if (-1 == (((ap) this).field_D ^ -1)) {
+                          if (((ap) this).field_D == 0) {
                             break L33;
                           } else {
                             if (!((ap) this).field_y) {
@@ -2162,7 +2156,7 @@ final class ap extends al {
                       }
                     }
                   }
-                  if ((((ap) this).field_r ^ -1) >= -1) {
+                  if (((ap) this).field_r <= 0) {
                     ((ap) this).field_v = 8;
                     return;
                   } else {
@@ -2175,7 +2169,7 @@ final class ap extends al {
                         ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_E;
                         ((ap) this).field_B = 2;
                         ((ap) this).field_r = ((ap) this).field_r - 2;
-                        if ((((ap) this).field_r ^ -1) >= -1) {
+                        if (((ap) this).field_r <= 0) {
                           ((ap) this).field_r = 0;
                           tp.a(85, false, w.field_a[6]);
                           break L34;
@@ -2183,16 +2177,16 @@ final class ap extends al {
                           break L34;
                         }
                       }
-                      kh.a(57, false).h(3 * ge.field_c >> -927299517);
+                      kh.a(57, false).h(3 * ge.field_c >> 3);
                       return;
                     }
                   }
                 } else {
                   L35: {
-                    if ((((ap) this).field_D ^ -1) > -10000000) {
+                    if (((ap) this).field_D < 9999999) {
                       L36: {
                         ((ap) this).field_D = ((ap) this).field_D + ((ap) this).field_q;
-                        if (-10000000 >= (((ap) this).field_D ^ -1)) {
+                        if (((ap) this).field_D >= 9999999) {
                           ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_n;
                           ((ap) this).field_D = 9999999;
                           break L36;
@@ -2200,7 +2194,7 @@ final class ap extends al {
                           break L36;
                         }
                       }
-                      ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 2042701252));
+                      ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 4));
                       fn discarded$71 = kh.a(58, false);
                       break L35;
                     } else {
@@ -2217,7 +2211,7 @@ final class ap extends al {
           }
         } else {
           L37: {
-            if (-1 != (((ap) this).field_b.field_d ^ -1)) {
+            if (((ap) this).field_b.field_d != 0) {
               break L37;
             } else {
               if (((ap) this).field_h[0] == 39) {
@@ -2245,7 +2239,7 @@ final class ap extends al {
                                 ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_A;
                                 ((ap) this).field_D = ((ap) this).field_D - 1;
                                 ((ap) this).field_B = 500 / ((ap) this).field_z;
-                                if (-3 < (((ap) this).field_B ^ -1)) {
+                                if (((ap) this).field_B < 2) {
                                   ((ap) this).field_B = 2;
                                   break L40;
                                 } else {
@@ -2253,7 +2247,7 @@ final class ap extends al {
                                 }
                               }
                               L41: {
-                                if (-1 == (((ap) this).field_D ^ -1)) {
+                                if (((ap) this).field_D == 0) {
                                   break L41;
                                 } else {
                                   if (!((ap) this).field_y) {
@@ -2282,7 +2276,7 @@ final class ap extends al {
                             }
                           }
                         }
-                        if ((((ap) this).field_r ^ -1) >= -1) {
+                        if (((ap) this).field_r <= 0) {
                           ((ap) this).field_v = 8;
                           return;
                         } else {
@@ -2295,7 +2289,7 @@ final class ap extends al {
                               ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_E;
                               ((ap) this).field_B = 2;
                               ((ap) this).field_r = ((ap) this).field_r - 2;
-                              if ((((ap) this).field_r ^ -1) >= -1) {
+                              if (((ap) this).field_r <= 0) {
                                 ((ap) this).field_r = 0;
                                 tp.a(85, false, w.field_a[6]);
                                 break L42;
@@ -2303,16 +2297,16 @@ final class ap extends al {
                                 break L42;
                               }
                             }
-                            kh.a(57, false).h(3 * ge.field_c >> -927299517);
+                            kh.a(57, false).h(3 * ge.field_c >> 3);
                             return;
                           }
                         }
                       } else {
                         L43: {
-                          if ((((ap) this).field_D ^ -1) > -10000000) {
+                          if (((ap) this).field_D < 9999999) {
                             L44: {
                               ((ap) this).field_D = ((ap) this).field_D + ((ap) this).field_q;
-                              if (-10000000 >= (((ap) this).field_D ^ -1)) {
+                              if (((ap) this).field_D >= 9999999) {
                                 ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_n;
                                 ((ap) this).field_D = 9999999;
                                 break L44;
@@ -2320,7 +2314,7 @@ final class ap extends al {
                                 break L44;
                               }
                             }
-                            ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 2042701252));
+                            ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 4));
                             fn discarded$77 = kh.a(58, false);
                             break L43;
                           } else {
@@ -2359,7 +2353,7 @@ final class ap extends al {
                         ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_A;
                         ((ap) this).field_D = ((ap) this).field_D - 1;
                         ((ap) this).field_B = 500 / ((ap) this).field_z;
-                        if (-3 < (((ap) this).field_B ^ -1)) {
+                        if (((ap) this).field_B < 2) {
                           ((ap) this).field_B = 2;
                           break L46;
                         } else {
@@ -2367,7 +2361,7 @@ final class ap extends al {
                         }
                       }
                       L47: {
-                        if (-1 == (((ap) this).field_D ^ -1)) {
+                        if (((ap) this).field_D == 0) {
                           break L47;
                         } else {
                           if (!((ap) this).field_y) {
@@ -2396,7 +2390,7 @@ final class ap extends al {
                     }
                   }
                 }
-                if ((((ap) this).field_r ^ -1) >= -1) {
+                if (((ap) this).field_r <= 0) {
                   ((ap) this).field_v = 8;
                   return;
                 } else {
@@ -2409,7 +2403,7 @@ final class ap extends al {
                       ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_E;
                       ((ap) this).field_B = 2;
                       ((ap) this).field_r = ((ap) this).field_r - 2;
-                      if ((((ap) this).field_r ^ -1) >= -1) {
+                      if (((ap) this).field_r <= 0) {
                         ((ap) this).field_r = 0;
                         tp.a(85, false, w.field_a[6]);
                         break L48;
@@ -2417,16 +2411,16 @@ final class ap extends al {
                         break L48;
                       }
                     }
-                    kh.a(57, false).h(3 * ge.field_c >> -927299517);
+                    kh.a(57, false).h(3 * ge.field_c >> 3);
                     return;
                   }
                 }
               } else {
                 L49: {
-                  if ((((ap) this).field_D ^ -1) > -10000000) {
+                  if (((ap) this).field_D < 9999999) {
                     L50: {
                       ((ap) this).field_D = ((ap) this).field_D + ((ap) this).field_q;
-                      if (-10000000 >= (((ap) this).field_D ^ -1)) {
+                      if (((ap) this).field_D >= 9999999) {
                         ((ap) this).field_p = ((ap) this).field_p + ((ap) this).field_n;
                         ((ap) this).field_D = 9999999;
                         break L50;
@@ -2434,7 +2428,7 @@ final class ap extends al {
                         break L50;
                       }
                     }
-                    ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 2042701252));
+                    ((ap) this).field_q = ((ap) this).field_q + (1 - -(((ap) this).field_q >> 4));
                     fn discarded$83 = kh.a(58, false);
                     break L49;
                   } else {
@@ -2471,7 +2465,7 @@ final class ap extends al {
         var5 = id.field_M - -94;
         var6 = null;
         if (((ap) this).field_x != 1) {
-          if ((((ap) this).field_x ^ -1) != -3) {
+          if (((ap) this).field_x != 2) {
             L0: {
               if (0 != ((ap) this).field_x) {
                 break L0;
@@ -2486,7 +2480,7 @@ final class ap extends al {
                     if (param0 >= -35) {
                       L1: {
                         ((ap) this).field_r = -90;
-                        if ((var5 ^ -1) > -206) {
+                        if (var5 < 205) {
                           var5 = 205;
                           break L1;
                         } else {
@@ -2537,7 +2531,7 @@ final class ap extends al {
                       }
                     } else {
                       L4: {
-                        if ((var5 ^ -1) > -206) {
+                        if (var5 < 205) {
                           var5 = 205;
                           break L4;
                         } else {
@@ -2584,7 +2578,7 @@ final class ap extends al {
               var5 = var5 + (var4 * (1 + sg.field_jb.a((String) var6, vh.field_b - -40, var5, 560, 240, var2, var3, 1, 0, 30)) - 5);
               if (param0 < -35) {
                 L7: {
-                  if ((var5 ^ -1) > -206) {
+                  if (var5 < 205) {
                     var5 = 205;
                     break L7;
                   } else {
@@ -2635,7 +2629,7 @@ final class ap extends al {
               } else {
                 L9: {
                   ((ap) this).field_r = -90;
-                  if ((var5 ^ -1) > -206) {
+                  if (var5 < 205) {
                     var5 = 205;
                     break L9;
                   } else {
@@ -2703,7 +2697,7 @@ final class ap extends al {
                 }
               }
               L13: {
-                if ((var5 ^ -1) > -206) {
+                if (var5 < 205) {
                   var5 = 205;
                   break L13;
                 } else {
@@ -2756,7 +2750,7 @@ final class ap extends al {
               }
             }
             L17: {
-              if ((var5 ^ -1) > -206) {
+              if (var5 < 205) {
                 var5 = 205;
                 break L17;
               } else {
@@ -2837,7 +2831,7 @@ final class ap extends al {
         var3 = ZombieDawn.field_J;
         if (param0 >= 105) {
           if (640 == bd.field_e) {
-            if (-481 == (nh.field_P ^ -1)) {
+            if (nh.field_P == 480) {
               if (((ap) this).field_x == 2) {
                 qk.field_Hb[3].e(0, 0);
                 return;
@@ -2893,7 +2887,7 @@ final class ap extends al {
           ((ap) this).a((byte) 101);
           if (640 == bd.field_e) {
             L2: {
-              if (-481 == (nh.field_P ^ -1)) {
+              if (nh.field_P == 480) {
                 if (((ap) this).field_x != 2) {
                   qk.field_Hb[2].e(0, 0);
                   return;

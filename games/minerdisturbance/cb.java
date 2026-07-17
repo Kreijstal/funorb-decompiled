@@ -256,11 +256,11 @@ abstract class cb extends ok implements wg {
             var1_ref = kj.field_a;
             var2 = var1_ref.d((byte) -54);
             if (var2 != 0) {
-              if ((var2 ^ -1) != -2) {
+              if (var2 != 1) {
                 if (2 != var2) {
                   if (3 == var2) {
                     L1: {
-                      if ((ha.field_g ^ -1) != -3) {
+                      if (ha.field_g != 2) {
                         break L1;
                       } else {
                         ha.field_g = 1;
@@ -269,7 +269,7 @@ abstract class cb extends ok implements wg {
                     }
                     return;
                   } else {
-                    if ((var2 ^ -1) != -5) {
+                    if (var2 != 4) {
                       L2: {
                         di.a((Throwable) null, 1, "F1: " + hj.a((byte) 104));
                         si.a(-26);
@@ -673,11 +673,11 @@ abstract class cb extends ok implements wg {
         field_h = new long[8][256];
         var0 = 0;
         L0: while (true) {
-          if (-257 >= (var0 ^ -1)) {
+          if (var0 >= 256) {
             field_f[0] = 0L;
             var0 = 1;
             L1: while (true) {
-              if (-11 > (var0 ^ -1)) {
+              if (var0 > 10) {
                 return;
               } else {
                 var1 = -8 + 8 * var0;
@@ -689,8 +689,8 @@ abstract class cb extends ok implements wg {
           } else {
             L2: {
               var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-              if ((1 & var0 ^ -1) == -1) {
-                stackOut_5_0 = (long)(var1 >>> 1428021992);
+              if ((1 & var0) == 0) {
+                stackOut_5_0 = (long)(var1 >>> 8);
                 stackIn_6_0 = stackOut_5_0;
                 break L2;
               } else {
@@ -701,8 +701,8 @@ abstract class cb extends ok implements wg {
             }
             L3: {
               var2 = stackIn_6_0;
-              var4 = var2 << 1212070145;
-              if (-257L < (var4 ^ -1L)) {
+              var4 = var2 << 1;
+              if (var4 < 256L) {
                 break L3;
               } else {
                 var4 = var4 ^ 285L;
@@ -710,8 +710,8 @@ abstract class cb extends ok implements wg {
               }
             }
             L4: {
-              var6 = var4 << 860973953;
-              if (-257L >= (var6 ^ -1L)) {
+              var6 = var4 << 1;
+              if (var6 >= 256L) {
                 var6 = var6 ^ 285L;
                 break L4;
               } else {
@@ -720,7 +720,7 @@ abstract class cb extends ok implements wg {
             }
             L5: {
               var8 = var2 ^ var6;
-              var10 = var6 << -975374399;
+              var10 = var6 << 1;
               if (var10 < 256L) {
                 break L5;
               } else {
@@ -729,14 +729,14 @@ abstract class cb extends ok implements wg {
               }
             }
             var12 = var10 ^ var2;
-            field_h[0][var0] = pa.a(var12, pa.a(pa.a(pa.a(pa.a(var2 << -1538824736, pa.a(pa.a(var2 << -1501363792, var2 << 1758605944), var6 << 1281394216)), var10 << -1722877672), var8 << 26368016), var4 << 1880436232));
+            field_h[0][var0] = pa.a(var12, pa.a(pa.a(pa.a(pa.a(var2 << 32, pa.a(pa.a(var2 << 48, var2 << 56), var6 << 40)), var10 << 24), var8 << 16), var4 << 8));
             var14 = 1;
             L6: while (true) {
               if (8 <= var14) {
                 var0++;
                 continue L0;
               } else {
-                field_h[var14][var0] = pa.a(field_h[var14 + -1][var0] >>> -1592291768, field_h[var14 - 1][var0] << -1189832072);
+                field_h[var14][var0] = pa.a(field_h[var14 + -1][var0] >>> 8, field_h[var14 - 1][var0] << 56);
                 var14++;
                 continue L6;
               }

@@ -9,9 +9,6 @@ final class qt extends pu {
     public static void b(int param0) {
         field_l = null;
         field_m = null;
-        if (param0 != -29205) {
-            field_l = null;
-        }
     }
 
     static {

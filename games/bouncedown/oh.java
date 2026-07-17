@@ -10,18 +10,8 @@ final class oh {
     private tg[] field_b;
 
     public static void a(byte param0) {
-        Object var2 = null;
-        if (param0 != -59) {
-          var2 = null;
-          oh.a((byte) -47, (String[]) null);
-          field_f = null;
-          field_d = null;
-          return;
-        } else {
-          field_f = null;
-          field_d = null;
-          return;
-        }
+        field_f = null;
+        field_d = null;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -32,45 +22,82 @@ final class oh {
     }
 
     final static void a(byte param0, String[] param1) {
-        if (null == lg.field_b) {
+        RuntimeException var2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
           L0: {
-            if (null != il.field_b) {
-              il.field_b.field_C.a((byte) -112, param1);
+            L1: {
+              if (null == lg.field_b) {
+                break L1;
+              } else {
+                lg.field_b.field_z.a((byte) -124, param1);
+                break L1;
+              }
+            }
+            L2: {
+              if (null != il.field_b) {
+                il.field_b.field_C.a((byte) -112, param1);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            if (param0 == -29) {
               break L0;
             } else {
-              break L0;
+              field_a = 86;
+              return;
             }
           }
-          if (param0 != -29) {
-            field_a = 86;
-            return;
-          } else {
-            return;
-          }
-        } else {
-          L1: {
-            lg.field_b.field_z.a((byte) -124, param1);
-            if (null != il.field_b) {
-              il.field_b.field_C.a((byte) -112, param1);
-              break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_1 = new StringBuilder().append("oh.E(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
             } else {
-              break L1;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
             }
           }
-          if (param0 == -29) {
-            return;
-          } else {
-            field_a = 86;
-            return;
-          }
+          throw ii.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
     final static void a(boolean param0) {
         ck.field_a = 0;
-        if (!param0) {
-            field_e = false;
-        }
     }
 
     final static void a(int param0, int param1) {
@@ -79,14 +106,15 @@ final class oh {
     }
 
     oh(tg[] param0) {
-        ((oh) this).field_b = param0;
+        try {
+            ((oh) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "oh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void b(boolean param0) {
         ed.field_c.a(10768, (lk) (Object) new k());
-        if (!param0) {
-            oh.a(true);
-        }
     }
 
     final static void a(int param0) {
@@ -104,7 +132,7 @@ final class oh {
               L0: {
                 L1: {
                   var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
-                  var2 = -12 % ((param0 - -53) / 62);
+                  var2 = 0;
                   if (var1 == null) {
                     break L1;
                   } else {

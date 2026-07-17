@@ -8,33 +8,15 @@ final class ub {
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         ka.field_q = param3;
-        if (param4 != -127) {
-          field_a = null;
-          sd.field_s = param2;
-          eh.field_d = param1;
-          kb.field_d = param0;
-          return;
-        } else {
-          sd.field_s = param2;
-          eh.field_d = param1;
-          kb.field_d = param0;
-          return;
-        }
+        sd.field_s = param2;
+        eh.field_d = param1;
+        kb.field_d = param0;
     }
 
     public static void a(int param0) {
-        if (param0 != 90) {
-          field_b = null;
-          field_b = null;
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
-          field_b = null;
-          field_c = null;
-          field_a = null;
-          return;
-        }
+        field_b = null;
+        field_c = null;
+        field_a = null;
     }
 
     final boolean a(boolean param0) {

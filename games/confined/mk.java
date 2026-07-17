@@ -13,41 +13,21 @@ final class mk extends ai {
     }
 
     final static void a(String param0, boolean param1, float param2, int param3) {
-        if (ui.field_c != null) {
-          ui.field_c.a(-67, param1, param2, param0);
-          fn.d();
-          if (param3 > -34) {
-            mk.b(41);
+        try {
+            if (ui.field_c == null) {
+                ui.field_c = new jj(vg.field_Z, cb.field_b);
+                vg.field_Z.c((fj) (Object) ui.field_c, 0);
+            }
+            ui.field_c.a(-67, param1, param2, param0);
+            fn.d();
             kh.a((byte) 35, true);
-            return;
-          } else {
-            kh.a((byte) 35, true);
-            return;
-          }
-        } else {
-          ui.field_c = new jj(vg.field_Z, cb.field_b);
-          vg.field_Z.c((fj) (Object) ui.field_c, 0);
-          ui.field_c.a(-67, param1, param2, param0);
-          fn.d();
-          if (param3 <= -34) {
-            kh.a((byte) 35, true);
-            return;
-          } else {
-            mk.b(41);
-            kh.a((byte) 35, true);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "mk.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + -117 + 41);
         }
     }
 
     public static void c(int param0) {
         field_n = null;
-        if (param0 < 71) {
-            field_o = false;
-            field_m = null;
-            field_k = null;
-            return;
-        }
         field_m = null;
         field_k = null;
     }
@@ -59,7 +39,6 @@ final class mk extends ai {
 
     final static void b(int param0) {
         ud var1 = null;
-        ud var1_ref = null;
         if (param0 != 128) {
           L0: {
             field_m = null;
@@ -67,12 +46,12 @@ final class mk extends ai {
             if (var1 != null) {
               break L0;
             } else {
-              var1_ref = new ud();
+              var1 = new ud();
               break L0;
             }
           }
-          var1_ref.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
-          ve.field_b.a((rk) (Object) var1_ref, (byte) 114);
+          var1.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
+          ve.field_b.a((rk) (Object) var1, (byte) 114);
           return;
         } else {
           L1: {
@@ -80,12 +59,12 @@ final class mk extends ai {
             if (var1 != null) {
               break L1;
             } else {
-              var1_ref = new ud();
+              var1 = new ud();
               break L1;
             }
           }
-          var1_ref.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
-          ve.field_b.a((rk) (Object) var1_ref, (byte) 114);
+          var1.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
+          ve.field_b.a((rk) (Object) var1, (byte) 114);
           return;
         }
     }

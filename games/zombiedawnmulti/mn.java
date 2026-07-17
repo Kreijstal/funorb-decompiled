@@ -29,21 +29,24 @@ final class mn extends ic {
     }
 
     final void a(k param0, int param1) {
-        if (param1 != -1) {
-          field_q = null;
-          param0.b(-16171, ((mn) this).field_r);
-          param0.a(param1 ^ -13067, ((mn) this).field_o);
-          return;
-        } else {
-          param0.b(-16171, ((mn) this).field_r);
-          param0.a(param1 ^ -13067, ((mn) this).field_o);
-          return;
+        try {
+            if (param1 != -1) {
+                field_q = null;
+            }
+            param0.b(-16171, ((mn) this).field_r);
+            param0.a(param1 ^ -13067, ((mn) this).field_o);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "mn.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     mn(String param0, String param1) {
-        ((mn) this).field_r = param0;
-        ((mn) this).field_o = param1;
+        try {
+            ((mn) this).field_r = param0;
+            ((mn) this).field_o = param1;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "mn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

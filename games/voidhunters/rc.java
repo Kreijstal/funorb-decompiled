@@ -25,9 +25,6 @@ final class rc implements dja {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 540800) {
-            field_a = null;
-        }
     }
 
     static {

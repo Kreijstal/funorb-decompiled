@@ -13,23 +13,79 @@ final class kf extends bg {
 
     final static tc a(byte[] param0, int param1) {
         tc var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
-        if (param0 == null) {
-          return null;
-        } else {
-          var2 = new tc(param0, fa.field_b, e.field_b, gf.field_g, ge.field_c, wo.field_f);
-          re.b(140);
-          var3 = -91 % ((77 - param1) / 37);
-          return var2;
+        Object stackIn_2_0 = null;
+        tc stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        tc stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 != null) {
+              var2 = new tc(param0, fa.field_b, e.field_b, gf.field_g, ge.field_c, wo.field_f);
+              re.b(140);
+              var3 = -1;
+              stackOut_3_0 = (tc) var2;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (tc) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2_ref;
+            stackOut_5_1 = new StringBuilder().append("kf.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -17 + 41);
         }
+        return stackIn_4_0;
     }
 
     public static void d(int param0) {
         field_o = null;
         field_n = null;
-        if (param0 <= 98) {
-            return;
-        }
         field_p = null;
     }
 
@@ -102,7 +158,7 @@ final class kf extends bg {
         }
         ((kf) this).field_t = ((kf) this).field_t - 1;
         if (((kf) this).field_t < ((kf) this).field_m + -20) {
-          if (0 == ((kf) this).field_t % (((kf) this).field_m >> 1970009026)) {
+          if (0 == ((kf) this).field_t % (((kf) this).field_m >> 2)) {
             ((kf) this).b(255);
             var2 = ((kf) this).field_t * 615 / ((kf) this).field_m;
             if (var2 > ((kf) this).field_r) {

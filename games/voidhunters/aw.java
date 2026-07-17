@@ -21,7 +21,7 @@ final class aw extends llb {
         if (!(((aw) this).field_Ab == -2)) {
             return false;
         }
-        if (-14 == (pma.field_o ^ -1)) {
+        if (pma.field_o == 13) {
             ((aw) this).field_Ab = -1;
         }
         int var2 = 108 % ((-69 - param0) / 48);
@@ -36,7 +36,7 @@ final class aw extends llb {
             return -2;
         }
         for (var3 = 0; var3 < ((aw) this).field_Ib; var3++) {
-            if (-1 != (((aw) this).field_Gb[var3].field_o ^ -1)) {
+            if (((aw) this).field_Gb[var3].field_o != 0) {
                 return ((aw) this).field_Eb[var3];
             }
         }
@@ -48,16 +48,73 @@ final class aw extends llb {
     }
 
     final void a(String param0, byte param1, int param2) {
-        ((aw) this).field_Gb[((aw) this).field_Ib] = new cna(0L, (llb) null, (llb) null, ((aw) this).field_Cb, (phb) null, param0);
-        ((aw) this).field_Gb[((aw) this).field_Ib].field_mb = ((aw) this).field_xb;
-        ((aw) this).field_Gb[((aw) this).field_Ib].field_S = true;
-        ((aw) this).field_Gb[((aw) this).field_Ib].field_B = 1;
-        ((aw) this).b(-561, (llb) (Object) ((aw) this).field_Gb[((aw) this).field_Ib]);
-        ((aw) this).field_Eb[((aw) this).field_Ib] = param2;
-        ((aw) this).field_Ib = ((aw) this).field_Ib + 1;
-        if (param1 != -53) {
-            Object var5 = null;
-            ((aw) this).a((String) null, (byte) -31, -41);
+        RuntimeException runtimeException = null;
+        Object var5 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((aw) this).field_Gb[((aw) this).field_Ib] = new cna(0L, (llb) null, (llb) null, ((aw) this).field_Cb, (phb) null, param0);
+              ((aw) this).field_Gb[((aw) this).field_Ib].field_mb = ((aw) this).field_xb;
+              ((aw) this).field_Gb[((aw) this).field_Ib].field_S = true;
+              ((aw) this).field_Gb[((aw) this).field_Ib].field_B = 1;
+              ((aw) this).b(-561, (llb) (Object) ((aw) this).field_Gb[((aw) this).field_Ib]);
+              ((aw) this).field_Eb[((aw) this).field_Ib] = param2;
+              ((aw) this).field_Ib = ((aw) this).field_Ib + 1;
+              if (param1 == -53) {
+                break L1;
+              } else {
+                var5 = null;
+                ((aw) this).a((String) null, (byte) -31, -41);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("aw.F(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -119,29 +176,33 @@ final class aw extends llb {
     }
 
     final static void a(boolean param0) {
-        rma.field_b = 0;
-        tkb.field_p = 1;
-        bta.field_q = 1;
-        ki.field_o = 1;
-        via.field_b = 1;
-        wkb.field_c = 1;
-        if (param0) {
-            return;
-        }
-        jnb.field_o = 1;
-        if ((jha.field_p ^ -1) != -3) {
-            // if_icmpne L96
-            tkb.field_p = 0;
-            ki.field_o = 0;
-            jnb.field_o = 0;
-            bta.field_q = 0;
-        } else {
+        L0: {
+          rma.field_b = 0;
+          tkb.field_p = 1;
+          bta.field_q = 1;
+          ki.field_o = 1;
+          via.field_b = 1;
+          wkb.field_c = 1;
+          jnb.field_o = 1;
+          if (jha.field_p == 2) {
             ki.field_o = 0;
             bta.field_q = 0;
             jnb.field_o = 0;
             via.field_b = 0;
             wkb.field_c = 0;
             tkb.field_p = 0;
+            break L0;
+          } else {
+            if (1 != jha.field_p) {
+              break L0;
+            } else {
+              tkb.field_p = 0;
+              ki.field_o = 0;
+              jnb.field_o = 0;
+              bta.field_q = 0;
+              break L0;
+            }
+          }
         }
     }
 
@@ -149,21 +210,22 @@ final class aw extends llb {
         if (param0 != -1) {
             return;
         }
-        ((aw) this).field_Gb[((aw) this).field_Ib] = new cna(0L, (llb) null, (llb) null, ((aw) this).field_Cb, param2, param3);
-        ((aw) this).field_Gb[((aw) this).field_Ib].field_mb = ((aw) this).field_xb;
-        ((aw) this).field_Gb[((aw) this).field_Ib].field_S = true;
-        ((aw) this).field_Gb[((aw) this).field_Ib].field_B = 1;
-        ((aw) this).b(param0 ^ 560, (llb) (Object) ((aw) this).field_Gb[((aw) this).field_Ib]);
-        ((aw) this).field_Eb[((aw) this).field_Ib] = param1;
-        ((aw) this).field_Ib = ((aw) this).field_Ib + 1;
+        try {
+            ((aw) this).field_Gb[((aw) this).field_Ib] = new cna(0L, (llb) null, (llb) null, ((aw) this).field_Cb, param2, param3);
+            ((aw) this).field_Gb[((aw) this).field_Ib].field_mb = ((aw) this).field_xb;
+            ((aw) this).field_Gb[((aw) this).field_Ib].field_S = true;
+            ((aw) this).field_Gb[((aw) this).field_Ib].field_B = 1;
+            ((aw) this).b(param0 ^ 560, (llb) (Object) ((aw) this).field_Gb[((aw) this).field_Ib]);
+            ((aw) this).field_Eb[((aw) this).field_Ib] = param1;
+            ((aw) this).field_Ib = ((aw) this).field_Ib + 1;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "aw.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void h(int param0) {
         field_Db = null;
         field_Bb = null;
-        if (param0 != 0) {
-            field_Bb = null;
-        }
     }
 
     aw(aw param0) {
@@ -175,14 +237,18 @@ final class aw extends llb {
         ((aw) this).field_Eb = new int[256];
         ((aw) this).field_Ab = -2;
         ((aw) this).field_Gb = new cna[256];
-        ((aw) this).field_wb = param8;
-        ((aw) this).field_Cb = param3;
-        ((aw) this).field_Fb = param2;
-        ((aw) this).field_xb = param1;
-        ((aw) this).field_zb = param4;
-        ((aw) this).field_vb = param5;
-        ((aw) this).field_Hb = param6;
-        ((aw) this).field_yb = param7;
+        try {
+            ((aw) this).field_wb = param8;
+            ((aw) this).field_Cb = param3;
+            ((aw) this).field_Fb = param2;
+            ((aw) this).field_xb = param1;
+            ((aw) this).field_zb = param4;
+            ((aw) this).field_vb = param5;
+            ((aw) this).field_Hb = param6;
+            ((aw) this).field_yb = param7;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "aw.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+        }
     }
 
     static {

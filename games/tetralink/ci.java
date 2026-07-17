@@ -11,7 +11,7 @@ final class ci extends mf {
     static int field_B;
 
     final static void a(int param0, rb param1, boolean param2, int param3, int param4) {
-        int var5 = 0;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -110,7 +110,7 @@ final class ci extends mf {
         int stackOut_88_3 = 0;
         L0: {
           var31 = TetraLink.field_J;
-          var5 = 0;
+          var5_int = 0;
           var6 = 0;
           var7 = 0;
           var8 = 0;
@@ -138,7 +138,7 @@ final class ci extends mf {
             }
             var9 = 0;
             L2: while (true) {
-              if ((var9 ^ -1) <= (hg.field_k ^ -1)) {
+              if (~var9 <= ~hg.field_k) {
                 break L0;
               } else {
                 L3: {
@@ -150,7 +150,7 @@ final class ci extends mf {
                       if (!ba.field_S[var9][var10_int]) {
                         break L3;
                       } else {
-                        var5 = 1;
+                        var5_int = 1;
                         break L3;
                       }
                     } else {
@@ -173,12 +173,12 @@ final class ci extends mf {
                           if (oa.field_r) {
                             break L5;
                           } else {
-                            var5 = 1;
+                            var5_int = 1;
                             break L5;
                           }
                         }
                       }
-                      if ((var6 ^ -1) > (var11_int ^ -1)) {
+                      if (~var6 > ~var11_int) {
                         var6 = var11_int;
                         break L4;
                       } else {
@@ -196,11 +196,11 @@ final class ci extends mf {
                     } else {
                       L7: {
                         var11_int = bi.field_e[var9][var10_int];
-                        if ((var11_int ^ -1) == -1) {
+                        if (var11_int == 0) {
                           break L7;
                         } else {
                           if (!oa.field_r) {
-                            var5 = 1;
+                            var5_int = 1;
                             break L7;
                           } else {
                             break L7;
@@ -385,8 +385,8 @@ final class ci extends mf {
             }
             L17: {
               var22 = stackIn_53_0;
-              if (-5 < (var12.field_dc ^ -1)) {
-                if (-1 <= (var12.field_dc ^ -1)) {
+              if (var12.field_dc < 4) {
+                if (var12.field_dc <= 0) {
                   break L17;
                 } else {
                   var20 = "<img=" + (-1 + var12.field_dc) + ">" + var33;
@@ -407,7 +407,7 @@ final class ci extends mf {
                     L21: {
                       var23_int = 16764006;
                       var24_int = 16777215;
-                      if (var5 == 0) {
+                      if (var5_int == 0) {
                         break L21;
                       } else {
                         if (!var12.field_Tb) {
@@ -417,13 +417,13 @@ final class ci extends mf {
                         }
                       }
                     }
-                    if ((var12.field_Pb ^ -1) > (var6 ^ -1)) {
+                    if (~var12.field_Pb > ~var6) {
                       break L20;
                     } else {
                       if (var7 > var12.field_Qb) {
                         break L20;
                       } else {
-                        if (((var12.field_Ub ^ -1) & var8 ^ -1) >= -1) {
+                        if ((~var12.field_Ub & var8) <= 0) {
                           break L19;
                         } else {
                           break L20;
@@ -481,7 +481,7 @@ final class ci extends mf {
                     if (!s.b(63)) {
                       break L23;
                     } else {
-                      if ((oj.field_c ^ -1L) == (var12.field_Nb ^ -1L)) {
+                      if (~oj.field_c == ~var12.field_Nb) {
                         break L23;
                       } else {
                         L24: {
@@ -627,8 +627,8 @@ final class ci extends mf {
                 if (var12.d((byte) -1)) {
                   break L31;
                 } else {
-                  if ((var12.field_ac.field_F ^ -1) == -1) {
-                    if (-1 != (var12.field_Vb.field_F ^ -1)) {
+                  if (var12.field_ac.field_F == 0) {
+                    if (var12.field_Vb.field_F != 0) {
                       qe.a(-122, param4, var12.field_Nb);
                       break L31;
                     } else {
@@ -652,7 +652,7 @@ final class ci extends mf {
                     var24 = null;
                     if (var12.field_Nb != oj.field_c) {
                       L34: {
-                        if (var5 == 0) {
+                        if (var5_int == 0) {
                           break L34;
                         } else {
                           if (var12.field_Tb) {
@@ -663,7 +663,7 @@ final class ci extends mf {
                           }
                         }
                       }
-                      if ((var7 ^ -1) < (var12.field_Qb ^ -1)) {
+                      if (~var7 < ~var12.field_Qb) {
                         L35: {
                           var25_int = var7 + -var12.field_Qb;
                           if (var25_int != 1) {
@@ -681,12 +681,12 @@ final class ci extends mf {
                         var25 = var30;
                         break L33;
                       } else {
-                        if ((var6 ^ -1) >= (var12.field_Pb ^ -1)) {
-                          if (((var12.field_Ub ^ -1) & var8 ^ -1) == -1) {
+                        if (~var6 >= ~var12.field_Pb) {
+                          if ((~var12.field_Ub & var8) == 0) {
                             break L33;
                           } else {
                             L36: {
-                              var25_int = fa.a(var8 & (var12.field_Ub ^ -1), -24338);
+                              var25_int = fa.a(var8 & ~var12.field_Ub, -24338);
                               var24 = sk.a(new String[1], o.field_o, param3 + 123);
                               if (0 >= var25_int) {
                                 break L36;
@@ -694,7 +694,7 @@ final class ci extends mf {
                                 if (null == pd.field_t) {
                                   break L36;
                                 } else {
-                                  if ((pd.field_t.length ^ -1) > (var25_int ^ -1)) {
+                                  if (~pd.field_t.length > ~var25_int) {
                                     break L36;
                                   } else {
                                     if (null == pd.field_t[-1 + var25_int]) {
@@ -716,7 +716,7 @@ final class ci extends mf {
                       }
                     } else {
                       L37: {
-                        if (var5 == 0) {
+                        if (var5_int == 0) {
                           break L37;
                         } else {
                           if (!var12.field_Tb) {
@@ -741,17 +741,17 @@ final class ci extends mf {
                         break L33;
                       } else {
                         if (var12.field_Pb >= var6) {
-                          if ((var8 & (var12.field_Ub ^ -1) ^ -1) != -1) {
+                          if ((var8 & ~var12.field_Ub) != 0) {
                             L39: {
-                              var25_int = fa.a((var12.field_Ub ^ -1) & var8, param3 ^ 24337);
+                              var25_int = fa.a(~var12.field_Ub & var8, param3 ^ 24337);
                               var24 = jo.field_b;
-                              if ((var25_int ^ -1) >= -1) {
+                              if (var25_int <= 0) {
                                 break L39;
                               } else {
                                 if (null == pd.field_t) {
                                   break L39;
                                 } else {
-                                  if ((pd.field_t.length ^ -1) > (var25_int ^ -1)) {
+                                  if (~pd.field_t.length > ~var25_int) {
                                     break L39;
                                   } else {
                                     if (null != pd.field_t[-1 + var25_int]) {
@@ -786,7 +786,7 @@ final class ci extends mf {
                     var26 = 0;
                     var27_int = 0;
                     L40: while (true) {
-                      if ((var27_int ^ -1) <= (hg.field_k ^ -1)) {
+                      if (~var27_int <= ~hg.field_k) {
                         L41: {
                           L42: {
                             if (param1 != v.field_x) {
@@ -860,7 +860,7 @@ final class ci extends mf {
                             } else {
                               L46: {
                                 var30_int = a.field_g[var27_int][var28];
-                                if ((var30_int ^ -1) == -1) {
+                                if (var30_int == 0) {
                                   break L46;
                                 } else {
                                   if (oa.field_r) {
@@ -875,7 +875,7 @@ final class ci extends mf {
                                   }
                                 }
                               }
-                              if ((var12.field_Pb ^ -1) > (var30_int ^ -1)) {
+                              if (~var12.field_Pb > ~var30_int) {
                                 var29 = 1;
                                 break L45;
                               } else {
@@ -924,7 +924,7 @@ final class ci extends mf {
                             if (null == ti.field_f[var27_int]) {
                               break L49;
                             } else {
-                              if (-1 != ((var12.field_Ub ^ -1) & ti.field_f[var27_int][var28] ^ -1)) {
+                              if ((~var12.field_Ub & ti.field_f[var27_int][var28]) != 0) {
                                 var29 = 1;
                                 break L49;
                               } else {
@@ -977,8 +977,64 @@ final class ci extends mf {
     }
 
     final static void a(String param0, int param1) {
-        if (param1 != -14710) {
-            field_C = null;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == -14710) {
+                break L1;
+              } else {
+                field_C = null;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ci.B(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
         }
     }
 
@@ -986,7 +1042,7 @@ final class ci extends mf {
         int var2 = 0;
         L0: {
           var2 = TetraLink.field_J;
-          if (-1 != (aa.field_bc.field_a.field_h & 1 << aa.field_bc.field_i ^ -1)) {
+          if ((aa.field_bc.field_a.field_h & 1 << aa.field_bc.field_i) != 0) {
             cd.field_c[10] = mh.field_f;
             break L0;
           } else {
@@ -1010,60 +1066,161 @@ final class ci extends mf {
     }
 
     final static void a(int param0, int param1, int param2, int param3, oh[] param4, int param5) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
-        L0: {
-          var11 = TetraLink.field_J;
-          if (param5 < -115) {
-            break L0;
-          } else {
-            var12 = null;
-            ci.a((String) null, -70);
-            break L0;
-          }
-        }
-        L1: {
-          if (param4 == null) {
-            break L1;
-          } else {
-            if ((param2 ^ -1) < -1) {
-              var6 = param4[0].field_t;
-              var7 = param4[2].field_t;
-              var8 = param4[1].field_t;
-              param4[0].e(param3, param1, param0);
-              param4[2].e(-var7 + param2 + param3, param1, param0);
-              ra.a(lj.field_a);
-              ra.b(param3 - -var6, param1, param3 + param2 - var7, param1 + param4[1].field_F);
-              var9 = param3 + var6;
-              var10 = param3 + (param2 - var7);
-              param3 = var9;
-              L2: while (true) {
-                if (var10 <= param3) {
-                  ra.b(lj.field_a);
-                  return;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var11 = TetraLink.field_J;
+        try {
+          L0: {
+            L1: {
+              if (param4 == null) {
+                break L1;
+              } else {
+                if (param2 > 0) {
+                  var6_int = param4[0].field_t;
+                  var7 = param4[2].field_t;
+                  var8 = param4[1].field_t;
+                  param4[0].e(param3, param1, param0);
+                  param4[2].e(-var7 + param2 + param3, param1, param0);
+                  ra.a(lj.field_a);
+                  ra.b(param3 - -var6_int, param1, param3 + param2 - var7, param1 + param4[1].field_F);
+                  var9 = param3 + var6_int;
+                  var10 = param3 + (param2 - var7);
+                  param3 = var9;
+                  L2: while (true) {
+                    if (var10 <= param3) {
+                      ra.b(lj.field_a);
+                      break L0;
+                    } else {
+                      param4[1].e(param3, param1, param0);
+                      param3 = param3 + var8;
+                      continue L2;
+                    }
+                  }
                 } else {
-                  param4[1].e(param3, param1, param0);
-                  param3 = param3 + var8;
-                  continue L2;
+                  break L1;
                 }
               }
+            }
+            return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var6 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var6;
+            stackOut_10_1 = new StringBuilder().append("ci.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param4 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
             } else {
-              break L1;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
             }
           }
+          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + -119 + 41);
         }
     }
 
     final String c(na param0, int param1) {
-        if (param1 != 4373) {
-            ci.c(-69);
+        RuntimeException var3 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 4373) {
+                break L1;
+              } else {
+                ci.c(-69);
+                break L1;
+              }
+            }
+            stackOut_2_0 = nl.a((byte) 52, '*', param0.field_A.length());
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("ci.C(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
-        return nl.a((byte) 52, '*', param0.field_A.length());
+        return stackIn_3_0;
     }
 
     ci(int param0) {
@@ -1073,9 +1230,6 @@ final class ci extends mf {
     public static void c(boolean param0) {
         field_A = null;
         field_D = null;
-        if (!param0) {
-            field_y = null;
-        }
         field_C = null;
         field_y = null;
     }
@@ -1084,7 +1238,7 @@ final class ci extends mf {
         if (param0 != 80) {
             return;
         }
-        lg.a(param1, param0 + -79, true);
+        lg.a(false, param0 + -79, true);
     }
 
     final static oh[] d(int param0) {
@@ -1113,14 +1267,6 @@ final class ci extends mf {
         var2 = 0;
         L0: while (true) {
           if (var2 >= vj.field_n) {
-            L1: {
-              if (param0 == -1) {
-                break L1;
-              } else {
-                field_x = -33;
-                break L1;
-              }
-            }
             an.b(-128);
             return var1;
           } else {
@@ -1130,7 +1276,7 @@ final class ci extends mf {
               var10 = new int[var3];
               var26 = var10;
               var6 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var3 <= var6) {
                   var1[var2] = new oh(wm.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], je.field_h[var2], sn.field_e[var2], var26);
                   var2++;
@@ -1138,7 +1284,7 @@ final class ci extends mf {
                 } else {
                   var10[var6] = ti.field_c[pl.a((int) var24[var6], 255)];
                   var6++;
-                  continue L2;
+                  continue L1;
                 }
               }
             } else {
@@ -1154,15 +1300,15 @@ final class ci extends mf {
               var13 = var17;
               var6_ref_int__ = var13;
               var7 = 0;
-              L3: while (true) {
+              L2: while (true) {
                 if (var7 >= var3) {
                   var1[var2] = (oh) (Object) new ue(wm.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], je.field_h[var2], sn.field_e[var2], var25);
                   var2++;
                   continue L0;
                 } else {
-                  var6_ref_int__[var7] = mc.a(pl.a(-16777216, var23[var7] << 774392088), ti.field_c[pl.a(255, (int) var24[var7])]);
+                  var6_ref_int__[var7] = mc.a(pl.a(-16777216, var23[var7] << 24), ti.field_c[pl.a(255, (int) var24[var7])]);
                   var7++;
-                  continue L3;
+                  continue L2;
                 }
               }
             }

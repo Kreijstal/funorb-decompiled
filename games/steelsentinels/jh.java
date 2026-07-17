@@ -35,7 +35,7 @@ final class jh {
           return stackIn_8_0;
         } else {
           L1: {
-            if ((param0 ^ -1) > -2049) {
+            if (param0 < 2048) {
               stackOut_3_0 = hk.field_Zb[param0];
               stackIn_4_0 = stackOut_3_0;
               break L1;

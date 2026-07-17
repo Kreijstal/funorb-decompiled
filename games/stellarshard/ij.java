@@ -26,7 +26,7 @@ final class ij extends ib {
                 var2_int = 0;
                 var3 = ((ij) this).field_j + -1;
                 if (!s.field_i) {
-                  if ((of.field_A ^ -1) >= -2) {
+                  if (of.field_A <= 1) {
                     var2_int = 1;
                     break L1;
                   } else {
@@ -34,7 +34,7 @@ final class ij extends ib {
                   }
                 } else {
                   var3 -= 3;
-                  if ((mk.field_k ^ -1) >= -1) {
+                  if (mk.field_k <= 0) {
                     var3--;
                     break L1;
                   } else {
@@ -61,7 +61,7 @@ final class ij extends ib {
                 }
               }
               L4: {
-                if (-3 != (tl.field_c ^ -1)) {
+                if (tl.field_c != 2) {
                   break L4;
                 } else {
                   var2_int = 8;
@@ -70,7 +70,7 @@ final class ij extends ib {
                 }
               }
               L5: {
-                if ((tl.field_c ^ -1) == -4) {
+                if (tl.field_c == 3) {
                   var2_int = 8;
                   var3 = 10;
                   break L5;
@@ -83,7 +83,7 @@ final class ij extends ib {
                   if (param0 != tl.field_c) {
                     break L7;
                   } else {
-                    if (-97 != (gi.field_f ^ -1)) {
+                    if (gi.field_f != 96) {
                       break L7;
                     } else {
                       ((ij) this).field_l = 1;
@@ -91,10 +91,10 @@ final class ij extends ib {
                     }
                   }
                 }
-                if ((tl.field_c ^ -1) != -9) {
+                if (tl.field_c != 8) {
                   break L6;
                 } else {
-                  if ((gi.field_f ^ -1) == -98) {
+                  if (gi.field_f == 97) {
                     ((ij) this).field_l = 0;
                     break L6;
                   } else {
@@ -109,19 +109,19 @@ final class ij extends ib {
                     break L8;
                   } else {
                     L9: {
-                      if (-1 == (tl.field_c ^ -1)) {
+                      if (tl.field_c == 0) {
                         break L9;
                       } else {
-                        if (-5 == (tl.field_c ^ -1)) {
+                        if (tl.field_c == 4) {
                           break L9;
                         } else {
-                          if (-2 == (tl.field_c ^ -1)) {
+                          if (tl.field_c == 1) {
                             break L9;
                           } else {
                             if (2 == tl.field_c) {
                               break L9;
                             } else {
-                              if (-4 != (tl.field_c ^ -1)) {
+                              if (tl.field_c != 3) {
                                 break L8;
                               } else {
                                 break L9;
@@ -157,7 +157,7 @@ final class ij extends ib {
                       }
                     }
                     L12: {
-                      if ((((ij) this).field_l ^ -1) > (var3 ^ -1)) {
+                      if (~((ij) this).field_l > ~var3) {
                         break L12;
                       } else {
                         if (s.field_i) {
@@ -176,7 +176,7 @@ final class ij extends ib {
                         break L13;
                       }
                     }
-                    if ((var3 ^ -1) >= (((ij) this).field_l ^ -1)) {
+                    if (~var3 >= ~((ij) this).field_l) {
                       ((ij) this).field_l = var2_int;
                       break L8;
                     } else {
@@ -185,10 +185,10 @@ final class ij extends ib {
                   }
                 } else {
                   L14: {
-                    if ((tl.field_c ^ -1) == -1) {
+                    if (tl.field_c == 0) {
                       break L14;
                     } else {
-                      if ((tl.field_c ^ -1) == -5) {
+                      if (tl.field_c == 4) {
                         break L14;
                       } else {
                         if (tl.field_c == 1) {
@@ -209,7 +209,7 @@ final class ij extends ib {
                   }
                   L15: {
                     ((ij) this).field_l = ((ij) this).field_l - 1;
-                    if ((((ij) this).field_l ^ -1) != -1) {
+                    if (((ij) this).field_l != 0) {
                       break L15;
                     } else {
                       if (s.field_i) {
@@ -233,7 +233,7 @@ final class ij extends ib {
                     }
                   }
                   L17: {
-                    if ((var2_int ^ -1) >= (((ij) this).field_l ^ -1)) {
+                    if (~var2_int >= ~((ij) this).field_l) {
                       break L17;
                     } else {
                       if (s.field_i) {
@@ -278,10 +278,10 @@ final class ij extends ib {
               if (param2 < ((ij) this).field_e) {
                 break L1;
               } else {
-                if ((param2 ^ -1) <= (((ij) this).field_i ^ -1)) {
+                if (~param2 <= ~((ij) this).field_i) {
                   break L1;
                 } else {
-                  if ((((ij) this).field_b ^ -1) >= (param1 ^ -1)) {
+                  if (~((ij) this).field_b >= ~param1) {
                     L2: {
                       if (param0 == 59) {
                         break L2;
@@ -296,9 +296,9 @@ final class ij extends ib {
                         if (!s.field_i) {
                           break L3;
                         } else {
-                          if ((tl.field_c ^ -1) == -1) {
+                          if (tl.field_c == 0) {
                             L4: {
-                              if ((var4_int ^ -1) > -2) {
+                              if (var4_int < 1) {
                                 break L4;
                               } else {
                                 var4_int++;
@@ -306,7 +306,7 @@ final class ij extends ib {
                               }
                             }
                             L5: {
-                              if ((var4_int ^ -1) >= -5) {
+                              if (var4_int <= 4) {
                                 break L5;
                               } else {
                                 if (mk.field_k <= 0) {
@@ -320,7 +320,7 @@ final class ij extends ib {
                             if (5 >= var4_int) {
                               break L3;
                             } else {
-                              if ((mk.field_k ^ -1) >= -1) {
+                              if (mk.field_k <= 0) {
                                 break L3;
                               } else {
                                 var4_int = 1;
@@ -424,10 +424,10 @@ final class ij extends ib {
             }
             L2: {
               L3: {
-                if (-3 != (tl.field_c ^ -1)) {
+                if (tl.field_c != 2) {
                   break L3;
                 } else {
-                  if ((param3 ^ -1) != -9) {
+                  if (param3 != 8) {
                     break L3;
                   } else {
                     if (!ah.a(-1)) {
@@ -460,13 +460,13 @@ final class ij extends ib {
                     if (s.field_i) {
                       break L4;
                     } else {
-                      if (-2 > (of.field_A ^ -1)) {
+                      if (of.field_A > 1) {
                         L5: {
                           L6: {
                             stackOut_125_0 = this;
                             stackIn_133_0 = stackOut_125_0;
                             stackIn_126_0 = stackOut_125_0;
-                            if (-321 < (param1 ^ -1)) {
+                            if (param1 < 320) {
                               break L6;
                             } else {
                               stackOut_126_0 = this;
@@ -474,7 +474,7 @@ final class ij extends ib {
                               stackOut_128_0 = this;
                               stackIn_133_0 = stackOut_128_0;
                               stackIn_129_0 = stackOut_128_0;
-                              if (-421 >= (param1 ^ -1)) {
+                              if (param1 >= 420) {
                                 break L6;
                               } else {
                                 stackOut_129_0 = this;
@@ -531,13 +531,13 @@ final class ij extends ib {
                     }
                   }
                 }
-                if ((param3 ^ -1) == -4) {
+                if (param3 == 3) {
                   L10: {
                     L11: {
                       stackOut_80_0 = this;
                       stackIn_88_0 = stackOut_80_0;
                       stackIn_81_0 = stackOut_80_0;
-                      if (-321 < (param1 ^ -1)) {
+                      if (param1 < 320) {
                         break L11;
                       } else {
                         stackOut_81_0 = this;
@@ -545,7 +545,7 @@ final class ij extends ib {
                         stackOut_83_0 = this;
                         stackIn_88_0 = stackOut_83_0;
                         stackIn_84_0 = stackOut_83_0;
-                        if ((param1 ^ -1) <= -421) {
+                        if (param1 >= 420) {
                           break L11;
                         } else {
                           stackOut_84_0 = this;
@@ -585,14 +585,14 @@ final class ij extends ib {
                           break L14;
                         }
                       }
-                      if ((pk.field_h ^ -1) < -101) {
+                      if (pk.field_h > 100) {
                         pk.field_h = 100;
                         break L13;
                       } else {
                         break L13;
                       }
                     } else {
-                      if ((param1 ^ -1) > (320 - l.field_f.b(vl.field_h) ^ -1)) {
+                      if (~param1 > ~(320 - l.field_f.b(vl.field_h))) {
                         break L13;
                       } else {
                         if (param1 < 320) {
@@ -644,7 +644,7 @@ final class ij extends ib {
                           stackOut_35_0 = this;
                           stackIn_40_0 = stackOut_35_0;
                           stackIn_36_0 = stackOut_35_0;
-                          if ((param1 ^ -1) <= -421) {
+                          if (param1 >= 420) {
                             break L17;
                           } else {
                             stackOut_36_0 = this;
@@ -674,7 +674,7 @@ final class ij extends ib {
                     }
                     L19: {
                       if (!((ij) this).field_o) {
-                        if ((320 + -l.field_f.b(of.field_D) ^ -1) < (param1 ^ -1)) {
+                        if (~(320 + -l.field_f.b(of.field_D)) < ~param1) {
                           break L19;
                         } else {
                           if (param1 < 320) {
@@ -707,7 +707,7 @@ final class ij extends ib {
                           }
                         }
                         L21: {
-                          if (-101 <= (ai.field_c ^ -1)) {
+                          if (ai.field_c <= 100) {
                             break L21;
                           } else {
                             ai.field_c = 100;
@@ -760,10 +760,10 @@ final class ij extends ib {
                   if (s.field_i) {
                     break L2;
                   } else {
-                    if ((of.field_A ^ -1) >= -2) {
+                    if (of.field_A <= 1) {
                       break L2;
                     } else {
-                      if ((tl.field_c ^ -1) != -1) {
+                      if (tl.field_c != 0) {
                         break L2;
                       } else {
                         qi.field_a = qi.field_a - 1;
@@ -778,11 +778,11 @@ final class ij extends ib {
                   }
                 }
               }
-              if ((param0 ^ -1) != -4) {
+              if (param0 != 3) {
                 if (4 == param0) {
                   L3: {
                     ai.field_c = ai.field_c - 12;
-                    if (-11 >= (ai.field_c ^ -1)) {
+                    if (ai.field_c >= 10) {
                       break L3;
                     } else {
                       ai.field_c = 10;
@@ -900,7 +900,7 @@ final class ij extends ib {
                     break L4;
                   } else {
                     L5: {
-                      if (-1 == (fb.field_n ^ -1)) {
+                      if (fb.field_n == 0) {
                         break L5;
                       } else {
                         if (1 != gh.field_c) {
@@ -911,7 +911,7 @@ final class ij extends ib {
                       }
                     }
                     L6: {
-                      if (-9 != (param1 ^ -1)) {
+                      if (param1 != 8) {
                         break L6;
                       } else {
                         if (!ah.a(param0 ^ -425)) {
@@ -923,7 +923,7 @@ final class ij extends ib {
                       }
                     }
                     L7: {
-                      if (-9 != (param1 ^ -1)) {
+                      if (param1 != 8) {
                         break L7;
                       } else {
                         if (oc.field_d) {
@@ -942,7 +942,7 @@ final class ij extends ib {
                         }
                       }
                     }
-                    if ((param1 ^ -1) == -10) {
+                    if (param1 == 9) {
                       L8: {
                         n.field_L = 255;
                         if (!v.field_e) {
@@ -968,8 +968,8 @@ final class ij extends ib {
                   }
                 }
                 if (2 != tl.field_c) {
-                  if (-2 == (tl.field_c ^ -1)) {
-                    if ((param1 ^ -1) != -10) {
+                  if (tl.field_c == 1) {
+                    if (param1 != 9) {
                       break L3;
                     } else {
                       n.field_L = 255;
@@ -1021,7 +1021,7 @@ final class ij extends ib {
                           var3_int = ((ij) this).field_j;
                           if (s.field_i) {
                             var3_int -= 3;
-                            if (-1 <= (mk.field_k ^ -1)) {
+                            if (mk.field_k <= 0) {
                               var3_int--;
                               break L11;
                             } else {
@@ -1034,14 +1034,14 @@ final class ij extends ib {
                         if (var3_int > param1) {
                           L12: {
                             L13: {
-                              if (-9 != (param1 ^ -1)) {
+                              if (param1 != 8) {
                                 break L13;
                               } else {
                                 L14: {
-                                  if ((fb.field_n ^ -1) == -1) {
+                                  if (fb.field_n == 0) {
                                     break L14;
                                   } else {
-                                    if (-2 == (gh.field_c ^ -1)) {
+                                    if (gh.field_c == 1) {
                                       break L14;
                                     } else {
                                       break L13;
@@ -1070,7 +1070,7 @@ final class ij extends ib {
                                 if (a.field_h[0] == null) {
                                   break L16;
                                 } else {
-                                  if (0 != (a.field_h[0].field_m ^ -1)) {
+                                  if (a.field_h[0].field_m != -1) {
                                     break L16;
                                   } else {
                                     na.field_j = null;
@@ -1080,21 +1080,21 @@ final class ij extends ib {
                               }
                             }
                             L17: {
-                              if ((param1 ^ -1) != -1) {
+                              if (param1 != 0) {
                                 break L17;
                               } else {
                                 L18: {
                                   if (null == a.field_h[0]) {
                                     break L18;
                                   } else {
-                                    if ((a.field_h[0].field_m ^ -1) == 0) {
+                                    if (a.field_h[0].field_m == -1) {
                                       break L17;
                                     } else {
                                       break L18;
                                     }
                                   }
                                 }
-                                if (-2 <= (of.field_A ^ -1)) {
+                                if (of.field_A <= 1) {
                                   break L12;
                                 } else {
                                   L19: {
@@ -1103,7 +1103,7 @@ final class ij extends ib {
                                     na.field_j = null;
                                     stellarshard.field_K = false;
                                     bi.field_u = null;
-                                    if ((qi.field_a ^ -1) >= -1) {
+                                    if (qi.field_a <= 0) {
                                       break L19;
                                     } else {
                                       qi.field_a = qi.field_a - 1;
@@ -1113,7 +1113,7 @@ final class ij extends ib {
                                   nf.field_r = false;
                                   s.field_i = true;
                                   tl.field_a = 0;
-                                  if (-1 != (qi.field_a ^ -1)) {
+                                  if (qi.field_a != 0) {
                                     break L12;
                                   } else {
                                     nf.field_r = true;
@@ -1129,7 +1129,7 @@ final class ij extends ib {
                                 if (a.field_h[0] == null) {
                                   break L20;
                                 } else {
-                                  if ((a.field_h[0].field_m ^ -1) == 0) {
+                                  if (a.field_h[0].field_m == -1) {
                                     nc.field_H = 0;
                                     a.field_h[0].field_g = -150;
                                     na.field_j = null;
@@ -1151,7 +1151,7 @@ final class ij extends ib {
                                   stellarshard.field_K = true;
                                   tl.field_a = 0;
                                   bi.field_u = null;
-                                  if ((qi.field_a ^ -1) < -1) {
+                                  if (qi.field_a > 0) {
                                     qi.field_a = qi.field_a - 1;
                                     break L21;
                                   } else {
@@ -1163,11 +1163,11 @@ final class ij extends ib {
                                 break L12;
                               }
                             } else {
-                              if (-4 != (param1 ^ -1)) {
+                              if (param1 != 3) {
                                 if (4 != param1) {
-                                  if (-3 != (param1 ^ -1)) {
+                                  if (param1 != 2) {
                                     if (param1 != 7) {
-                                      if ((param1 ^ -1) == -7) {
+                                      if (param1 == 6) {
                                         if (!s.field_i) {
                                           L22: {
                                             if (ah.a(-1)) {
@@ -1197,7 +1197,7 @@ final class ij extends ib {
                                           break L12;
                                         }
                                       } else {
-                                        if (-6 != (param1 ^ -1)) {
+                                        if (param1 != 5) {
                                           break L12;
                                         } else {
                                           if (null != s.field_e) {
@@ -1218,7 +1218,7 @@ final class ij extends ib {
                                           break L24;
                                         } else {
                                           L25: {
-                                            if ((tl.field_c ^ -1) != -4) {
+                                            if (tl.field_c != 3) {
                                               n.field_L = 255;
                                               break L25;
                                             } else {
@@ -1296,7 +1296,7 @@ final class ij extends ib {
                         break L3;
                       }
                     } else {
-                      if ((param1 ^ -1) == -9) {
+                      if (param1 == 8) {
                         L29: {
                           if (v.field_e) {
                             ((ij) this).field_l = -1;
@@ -1354,7 +1354,7 @@ final class ij extends ib {
                   }
                 } else {
                   L33: {
-                    if ((param1 ^ -1) != -9) {
+                    if (param1 != 8) {
                       break L33;
                     } else {
                       if (!ah.a(-1)) {
@@ -1365,7 +1365,7 @@ final class ij extends ib {
                       }
                     }
                   }
-                  if ((param1 ^ -1) == -9) {
+                  if (param1 == 8) {
                     si.field_X = si.field_X + 1;
                     if (3 > si.field_X) {
                       break L3;
@@ -1374,7 +1374,7 @@ final class ij extends ib {
                       break L3;
                     }
                   } else {
-                    if ((param1 ^ -1) == -10) {
+                    if (param1 == 9) {
                       L34: {
                         n.field_L = 255;
                         if (v.field_e) {
@@ -1400,8 +1400,8 @@ final class ij extends ib {
                   }
                 }
               } else {
-                if ((param1 ^ -1) != -1) {
-                  if (-2 == (param1 ^ -1)) {
+                if (param1 != 0) {
+                  if (param1 == 1) {
                     break L3;
                   } else {
                     break L3;
@@ -1413,7 +1413,7 @@ final class ij extends ib {
                         stackOut_21_0 = this;
                         stackIn_26_0 = stackOut_21_0;
                         stackIn_22_0 = stackOut_21_0;
-                        if ((of.field_A ^ -1) >= -2) {
+                        if (of.field_A <= 1) {
                           stackOut_26_0 = this;
                           stackOut_26_1 = 1;
                           stackIn_27_0 = stackOut_26_0;
@@ -1485,7 +1485,7 @@ final class ij extends ib {
               if (s.field_i) {
                 break L1;
               } else {
-                if ((of.field_A ^ -1) >= -2) {
+                if (of.field_A <= 1) {
                   ((ij) this).field_l = 1;
                   break L1;
                 } else {
@@ -1556,7 +1556,7 @@ final class ij extends ib {
                   if (0 >= param2) {
                     break L1;
                   } else {
-                    if (-2 == (param2 ^ -1)) {
+                    if (param2 == 1) {
                       param3 = param3 + ((ij) this).field_a * 3;
                       if (0 >= mk.field_k) {
                         break L1;
@@ -1572,14 +1572,14 @@ final class ij extends ib {
                 }
               }
               L2: {
-                if (-1 != (tl.field_c ^ -1)) {
+                if (tl.field_c != 0) {
                   break L2;
                 } else {
                   var5_int = 5883647;
                   if (param2 != 0) {
                     if (1 != param2) {
                       if (3 != param2) {
-                        if ((param2 ^ -1) == -5) {
+                        if (param2 == 4) {
                           if (vf.field_L == null) {
                             ic.a(rc.field_f, param2, -1, false, 320, var5_int, param3);
                             break L2;
@@ -1596,7 +1596,7 @@ final class ij extends ib {
                               if (!s.field_i) {
                                 break L3;
                               } else {
-                                if ((mk.field_k ^ -1) < -1) {
+                                if (mk.field_k > 0) {
                                   break L3;
                                 } else {
                                   break L2;
@@ -1630,8 +1630,8 @@ final class ij extends ib {
                               break L2;
                             }
                           } else {
-                            if (-3 != (param2 ^ -1)) {
-                              if ((param2 ^ -1) == -7) {
+                            if (param2 != 2) {
+                              if (param2 == 6) {
                                 if (s.field_i) {
                                   break L2;
                                 } else {
@@ -1639,7 +1639,7 @@ final class ij extends ib {
                                   break L2;
                                 }
                               } else {
-                                if ((param2 ^ -1) == -8) {
+                                if (param2 == 7) {
                                   if (!s.field_i) {
                                     ic.a(nl.field_b, param2, -1, false, 320, var5_int, param3);
                                     break L2;
@@ -1647,7 +1647,7 @@ final class ij extends ib {
                                     break L2;
                                   }
                                 } else {
-                                  if (-9 == (param2 ^ -1)) {
+                                  if (param2 == 8) {
                                     if (s.field_i) {
                                       break L2;
                                     } else {
@@ -1758,10 +1758,10 @@ final class ij extends ib {
                   if (s.field_i) {
                     break L3;
                   } else {
-                    if ((of.field_A ^ -1) >= -2) {
+                    if (of.field_A <= 1) {
                       break L3;
                     } else {
-                      if ((tl.field_c ^ -1) != -1) {
+                      if (tl.field_c != 0) {
                         break L3;
                       } else {
                         qi.field_a = qi.field_a + 1;
@@ -1776,10 +1776,10 @@ final class ij extends ib {
                   }
                 }
               }
-              if (-4 == (param1 ^ -1)) {
+              if (param1 == 3) {
                 pk.field_h = pk.field_h + 12;
                 fe.field_e = true;
-                if (-101 <= (pk.field_h ^ -1)) {
+                if (pk.field_h <= 100) {
                   break L2;
                 } else {
                   pk.field_h = 100;
@@ -1849,7 +1849,7 @@ final class ij extends ib {
                     if (param0 == 8) {
                       break L4;
                     } else {
-                      if ((tl.field_c ^ -1) != -3) {
+                      if (tl.field_c != 2) {
                         break L4;
                       } else {
                         break L3;
@@ -1874,10 +1874,10 @@ final class ij extends ib {
                   break L6;
                 } else {
                   L7: {
-                    if (-9 == (param0 ^ -1)) {
+                    if (param0 == 8) {
                       break L7;
                     } else {
-                      if ((tl.field_c ^ -1) == -3) {
+                      if (tl.field_c == 2) {
                         break L6;
                       } else {
                         break L7;
@@ -1898,7 +1898,7 @@ final class ij extends ib {
                 }
               }
               L9: {
-                if (-85 == (gi.field_f ^ -1)) {
+                if (gi.field_f == 84) {
                   break L9;
                 } else {
                   if (83 == gi.field_f) {
@@ -1951,20 +1951,20 @@ final class ij extends ib {
               var8_int = l.field_f.b(param5);
               param3 += 4;
               param0 = param0 + var8_int / 2;
-              if ((ni.field_e ^ -1) >= (-4 + -var8_int + param0 ^ -1)) {
+              if (~ni.field_e >= ~(-4 + -var8_int + param0)) {
                 break L1;
               } else {
-                if ((param0 ^ -1) > (ni.field_e ^ -1)) {
+                if (~param0 > ~ni.field_e) {
                   break L1;
                 } else {
                   if (param3 + -l.field_f.field_N >= eb.field_a) {
                     break L1;
                   } else {
-                    if ((eb.field_a ^ -1) < (param3 ^ -1)) {
+                    if (~eb.field_a < ~param3) {
                       break L1;
                     } else {
                       if (param4) {
-                        if ((param6 ^ -1) == -5883648) {
+                        if (param6 == 5883647) {
                           param6 = 16777215;
                           break L1;
                         } else {
@@ -1989,7 +1989,7 @@ final class ij extends ib {
             }
             L3: {
               l.field_f.b(param5, param0 + -2, param1 + param3, param6, -1);
-              if ((param6 ^ -1) != -16777216) {
+              if (param6 != 16777215) {
                 break L3;
               } else {
                 if (0 == fb.field_n) {
@@ -2509,7 +2509,7 @@ final class ij extends ib {
         int stackOut_192_0 = 0;
         L0: {
           var14 = stellarshard.field_B;
-          if ((tl.field_c ^ -1) == -9) {
+          if (tl.field_c == 8) {
             wj.c((byte) 57);
             break L0;
           } else {
@@ -2556,7 +2556,7 @@ final class ij extends ib {
           }
         }
         L3: {
-          if ((tl.field_c ^ -1) == -6) {
+          if (tl.field_c == 5) {
             L4: {
               var2 = qj.field_a;
               var3 = var2.field_N + 200;
@@ -2588,7 +2588,7 @@ final class ij extends ib {
               stackIn_70_1 = stackOut_68_1;
               stackIn_69_0 = stackOut_68_0;
               stackIn_69_1 = stackOut_68_1;
-              if ((tl.field_a ^ -1) == -1) {
+              if (tl.field_a == 0) {
                 stackOut_70_0 = (ub) (Object) stackIn_70_0;
                 stackOut_70_1 = stackIn_70_1;
                 stackOut_70_2 = 0;
@@ -2649,7 +2649,7 @@ final class ij extends ib {
               stackIn_75_0 = stackOut_74_0;
               stackIn_75_1 = stackOut_74_1;
               stackIn_75_2 = stackOut_74_2;
-              if (-1 != (ld.field_F ^ -1)) {
+              if (ld.field_F != 0) {
                 stackOut_76_0 = this;
                 stackOut_76_1 = stackIn_76_1;
                 stackOut_76_2 = stackIn_76_2;
@@ -2739,7 +2739,7 @@ final class ij extends ib {
               stackIn_88_1 = stackOut_87_1;
               stackIn_88_2 = stackOut_87_2;
               stackIn_88_3 = stackOut_87_3;
-              if (-1 == (tl.field_a ^ -1)) {
+              if (tl.field_a == 0) {
                 stackOut_89_0 = (ub) (Object) stackIn_89_0;
                 stackOut_89_1 = stackIn_89_1;
                 stackOut_89_2 = stackIn_89_2;
@@ -2776,7 +2776,7 @@ final class ij extends ib {
               stackIn_91_0 = stackOut_90_0;
               stackIn_91_1 = stackOut_90_1;
               stackIn_91_2 = stackOut_90_2;
-              if (-2 != (ld.field_F ^ -1)) {
+              if (ld.field_F != 1) {
                 stackOut_92_0 = this;
                 stackOut_92_1 = stackIn_92_1;
                 stackOut_92_2 = stackIn_92_2;
@@ -2839,7 +2839,7 @@ final class ij extends ib {
               stackIn_100_1 = stackOut_98_1;
               stackIn_99_0 = stackOut_98_0;
               stackIn_99_1 = stackOut_98_1;
-              if ((tl.field_a ^ -1) == -1) {
+              if (tl.field_a == 0) {
                 stackOut_100_0 = (ub) (Object) stackIn_100_0;
                 stackOut_100_1 = stackIn_100_1;
                 stackOut_100_2 = 0;
@@ -2905,7 +2905,7 @@ final class ij extends ib {
                 var8 = ((ij) this).field_t;
                 var9 = 0;
                 L17: while (true) {
-                  if ((var9 ^ -1) < -51) {
+                  if (var9 > 50) {
                     L18: {
                       var2_int = 5883647;
                       if (0 < tl.field_a) {
@@ -2926,13 +2926,13 @@ final class ij extends ib {
                   } else {
                     L19: {
                       var2_double = 3.141592653589793 * (double)var9 / 25.0;
-                      if (-26 != (var9 ^ -1)) {
+                      if (var9 != 25) {
                         break L19;
                       } else {
                         L20: {
                           var10_ref_pa = new pa(rh.field_b, false, false, false, false);
                           ((ij) this).field_q = ((ij) this).field_q + 1;
-                          if ((((ij) this).field_q ^ -1) < -257) {
+                          if (((ij) this).field_q > 256) {
                             ((ij) this).field_q = ((ij) this).field_q - 256;
                             break L20;
                           } else {
@@ -2965,16 +2965,16 @@ final class ij extends ib {
                               if (mg.field_t > var9) {
                                 break L23;
                               } else {
-                                ti.a(var6 + 320 << 1191221188, 240 + var7 << 484338308, 256, 255 * var9 / var8, ei.field_I);
+                                ti.a(var6 + 320 << 4, 240 + var7 << 4, 256, 255 * var9 / var8, ei.field_I);
                                 break L22;
                               }
                             }
                           }
                           if (var8 != var9) {
-                            ti.a(var6 + 320 << 601263876, var7 + 240 << -1462754268, 128, 64, ei.field_I);
+                            ti.a(var6 + 320 << 4, var7 + 240 << 4, 128, 64, ei.field_I);
                             break L22;
                           } else {
-                            ti.a(320 + var6 << 813411044, 240 + var7 << 698909956, 256, var9 * 255 / var8, ei.field_B);
+                            ti.a(320 + var6 << 4, 240 + var7 << 4, 256, var9 * 255 / var8, ei.field_B);
                             break L22;
                           }
                         }
@@ -2987,14 +2987,14 @@ final class ij extends ib {
                             if (mg.field_t > var9) {
                               break L24;
                             } else {
-                              ti.a(var6 - -320 << 1136674916, 240 + var7 << 1718751332, 192, var9 * 255 / var8, ei.field_I);
+                              ti.a(var6 - -320 << 4, 240 + var7 << 4, 192, var9 * 255 / var8, ei.field_I);
                               break L24;
                             }
                           }
                         }
                         L25: {
                           if (var9 == var8) {
-                            ti.a(320 + var6 << -790631132, var7 + 240 << 1162240548, 192, 255 * var9 / var8, ei.field_B);
+                            ti.a(320 + var6 << 4, var7 + 240 << 4, 192, 255 * var9 / var8, ei.field_B);
                             break L25;
                           } else {
                             break L25;
@@ -3006,19 +3006,19 @@ final class ij extends ib {
                           if (var8 <= var9) {
                             break L26;
                           } else {
-                            if ((var9 ^ -1) > (mg.field_t ^ -1)) {
+                            if (~var9 > ~mg.field_t) {
                               break L26;
                             } else {
-                              ti.a(320 + var6 << -1366632700, 240 + var7 << -476867068, 128, var9 * 255 / var8, ei.field_I);
+                              ti.a(320 + var6 << 4, 240 + var7 << 4, 128, var9 * 255 / var8, ei.field_I);
                               break L26;
                             }
                           }
                         }
                         L27: {
-                          if ((var9 ^ -1) != (var8 ^ -1)) {
+                          if (~var9 != ~var8) {
                             break L27;
                           } else {
-                            ti.a(320 + var6 << 463620868, var7 + 240 << -1211113436, 128, 255 * var9 / var8, ei.field_B);
+                            ti.a(320 + var6 << 4, var7 + 240 << 4, 128, 255 * var9 / var8, ei.field_B);
                             break L27;
                           }
                         }
@@ -3028,16 +3028,16 @@ final class ij extends ib {
                           if (var8 <= var9) {
                             break L28;
                           } else {
-                            if ((mg.field_t ^ -1) < (var9 ^ -1)) {
+                            if (~mg.field_t < ~var9) {
                               break L28;
                             } else {
-                              ti.a(var6 - -320 << 394473636, 240 + var7 << 1950440772, 64, var9 * 255 / var8, ei.field_I);
+                              ti.a(var6 - -320 << 4, 240 + var7 << 4, 64, var9 * 255 / var8, ei.field_I);
                               break L28;
                             }
                           }
                         }
-                        if ((var8 ^ -1) == (var9 ^ -1)) {
-                          ti.a(var6 + 320 << 1638733956, 240 + var7 << 1574692356, 64, 255 * var9 / var8, ei.field_B);
+                        if (~var8 == ~var9) {
+                          ti.a(var6 + 320 << 4, 240 + var7 << 4, 64, 255 * var9 / var8, ei.field_B);
                           break L21;
                         } else {
                           break L21;
@@ -3059,7 +3059,7 @@ final class ij extends ib {
           }
         }
         L29: {
-          if ((tl.field_c ^ -1) != -1) {
+          if (tl.field_c != 0) {
             break L29;
           } else {
             ((ij) this).field_u = -1;
@@ -3071,7 +3071,7 @@ final class ij extends ib {
           }
         }
         L30: {
-          if (-2 != (tl.field_c ^ -1)) {
+          if (tl.field_c != 1) {
             break L30;
           } else {
             hk.field_l[1].e(0, 0);
@@ -3160,7 +3160,7 @@ final class ij extends ib {
           }
         }
         L31: {
-          if (-3 != (tl.field_c ^ -1)) {
+          if (tl.field_c != 2) {
             break L31;
           } else {
             L32: {
@@ -3207,7 +3207,7 @@ final class ij extends ib {
                           stackIn_131_0 = stackOut_130_0;
                           break L36;
                         }
-                        if ((stackIn_131_0 ^ -1) >= (var10 ^ -1)) {
+                        if (~stackIn_131_0 >= ~var10) {
                           L38: {
                             if (var7 != 0) {
                               break L38;
@@ -3246,7 +3246,7 @@ final class ij extends ib {
                                     if (var4_ref_long__[var10] != var8_ref_nf.field_k) {
                                       break L39;
                                     } else {
-                                      if ((var5_ref_int__[var10] ^ -1) == (ue.field_a ^ -1)) {
+                                      if (~var5_ref_int__[var10] == ~ue.field_a) {
                                         var6 = 1;
                                         var2_int = 16777215;
                                         break L39;
@@ -3261,7 +3261,7 @@ final class ij extends ib {
                           }
                           L40: {
                             L41: {
-                              if ((var10 ^ -1) == -11) {
+                              if (var10 == 10) {
                                 break L41;
                               } else {
                                 if (var3_ref_String__[var10] != null) {
@@ -3274,7 +3274,7 @@ final class ij extends ib {
                             L42: {
                               var7 = 1;
                               var11 = 0;
-                              if (-11 < (var10 ^ -1)) {
+                              if (var10 < 10) {
                                 var11 = var5_ref_int__[var10];
                                 break L42;
                               } else {
@@ -3295,7 +3295,7 @@ final class ij extends ib {
                               if (var6 != 0) {
                                 break L44;
                               } else {
-                                if (-11 != (var10 ^ -1)) {
+                                if (var10 != 10) {
                                   break L44;
                                 } else {
                                   if (0 < ue.field_a) {
@@ -3318,8 +3318,8 @@ final class ij extends ib {
                             qj.field_a.a((String) var12, var13, 16 + var9, var2_int, -1);
                             qj.field_a.b("" + var11, 477, var9 + 16, 0, -1);
                             qj.field_a.b("" + var11, 479, 16 + var9, 0, -1);
-                            qj.field_a.b("" + var11, 478, var9 - 1 - -16, 0, -1);
-                            qj.field_a.b("" + var11, 478, var9 + 1 - -16, 0, -1);
+                            qj.field_a.b("" + var11, 478, var9 + 15, 0, -1);
+                            qj.field_a.b("" + var11, 478, var9 + 17, 0, -1);
                             qj.field_a.b("" + var11, 478, var9 - -16, var2_int, -1);
                             break L40;
                           }
@@ -3366,7 +3366,7 @@ final class ij extends ib {
                       stackIn_170_1 = stackOut_169_1;
                       stackIn_170_2 = stackOut_169_2;
                       stackIn_170_3 = stackOut_169_3;
-                      if ((var3 ^ -1) == (si.field_X - 1 ^ -1)) {
+                      if (~var3 == ~(si.field_X - 1)) {
                         stackOut_172_0 = (ub) (Object) stackIn_172_0;
                         stackOut_172_1 = (String) (Object) stackIn_172_1;
                         stackOut_172_2 = stackIn_172_2;
@@ -3428,7 +3428,7 @@ final class ij extends ib {
           }
         }
         L48: {
-          if (-4 != (tl.field_c ^ -1)) {
+          if (tl.field_c != 3) {
             break L48;
           } else {
             L49: {
@@ -3532,19 +3532,19 @@ final class ij extends ib {
                   }
                   L58: {
                     var8 = 0;
-                    if ((var2_int ^ -1) < (ni.field_e ^ -1)) {
+                    if (~var2_int < ~ni.field_e) {
                       break L58;
                     } else {
-                      if ((ni.field_e ^ -1) < (32 + var2_int ^ -1)) {
+                      if (~ni.field_e < ~(32 + var2_int)) {
                         break L58;
                       } else {
-                        if ((eb.field_a ^ -1) > (var3 ^ -1)) {
+                        if (~eb.field_a > ~var3) {
                           break L58;
                         } else {
                           if (var3 - -32 >= eb.field_a) {
                             ((ij) this).field_r = var7;
                             var8 = 2;
-                            if ((((ij) this).field_u ^ -1) != 0) {
+                            if (((ij) this).field_u != -1) {
                               ti.e(var2_int - 2, -2 + var3, 36, 36, 4, 1193544);
                               break L58;
                             } else {
@@ -3558,7 +3558,7 @@ final class ij extends ib {
                     }
                   }
                   L59: {
-                    if ((var7 ^ -1) == (((ij) this).field_u ^ -1)) {
+                    if (~var7 == ~((ij) this).field_u) {
                       var8 = 2;
                       ti.e(-3 + var2_int, var3 - 3, 38, 38, 4, 2387345);
                       break L59;
@@ -3581,7 +3581,7 @@ final class ij extends ib {
                             if (var7 == 8) {
                               break L61;
                             } else {
-                              if ((mk.field_k ^ -1) >= -1) {
+                              if (mk.field_k <= 0) {
                                 ce.field_a.a(var2_int + -var8, -var8 + var3, 32 + var8 * 2, 32 - -(2 * var8));
                                 break L60;
                               } else {
@@ -3597,19 +3597,19 @@ final class ij extends ib {
                   }
                   L62: {
                     L63: {
-                      if ((var7 ^ -1) == (((ij) this).field_u ^ -1)) {
+                      if (~var7 == ~((ij) this).field_u) {
                         break L63;
                       } else {
                         if (((ij) this).field_u != -1) {
                           break L62;
                         } else {
-                          if ((var2_int ^ -1) < (ni.field_e ^ -1)) {
+                          if (~var2_int < ~ni.field_e) {
                             break L62;
                           } else {
-                            if ((32 + var2_int ^ -1) > (ni.field_e ^ -1)) {
+                            if (~(32 + var2_int) > ~ni.field_e) {
                               break L62;
                             } else {
-                              if ((var3 ^ -1) < (eb.field_a ^ -1)) {
+                              if (~var3 < ~eb.field_a) {
                                 break L62;
                               } else {
                                 if (eb.field_a <= var3 + 32) {
@@ -3635,16 +3635,16 @@ final class ij extends ib {
                       }
                     }
                     L65: {
-                      var9 = qj.field_a.field_N * 5 / 2 + 323 - 96;
-                      if (-1 == (1 << var7 & var4 ^ -1)) {
+                      var9 = qj.field_a.field_N * 5 / 2 + 227;
+                      if ((1 << var7 & var4) == 0) {
                         L66: {
-                          if (-7 == (var7 ^ -1)) {
+                          if (var7 == 6) {
                             break L66;
                           } else {
                             if (8 == var7) {
                               break L66;
                             } else {
-                              if ((mk.field_k ^ -1) < -1) {
+                              if (mk.field_k > 0) {
                                 break L66;
                               } else {
                                 ce.field_a.e(132, var9);
@@ -3665,7 +3665,7 @@ final class ij extends ib {
                     var10 = am.field_d[var7];
                     var11 = 0;
                     L67: while (true) {
-                      if ((var10 ^ -1) >= (var11 ^ -1)) {
+                      if (~var10 >= ~var11) {
                         break L62;
                       } else {
                         af.field_n.a(-16 + -(4 * (var10 + -1)) + 8 * var11 + 394, 126 + var9 - (qj.field_a.field_N - -32));

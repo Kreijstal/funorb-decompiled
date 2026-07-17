@@ -9,245 +9,118 @@ final class vk implements os {
     static byte[] field_b;
 
     final static boolean b(int param0) {
-        if (param0 <= 27) {
-            field_b = null;
-            return al.field_j;
-        }
         return al.field_j;
     }
 
     final static int c(int param0) {
-        int var1 = 0;
+        RuntimeException var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
+        int stackIn_29_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_28_0 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
-        var1 = 0;
-        var2 = 0;
-        L0: while (true) {
-          if (!es.a(true)) {
-            if (param0 >= 53) {
-              L1: {
-                sa.field_r.a(wg.a(1541709953, jm.field_m, lba.field_p), 73, wg.a(1541709953, jba.field_j, sta.field_B));
-                if (sa.field_r.a(false)) {
-                  var1 = 1;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              var3 = 0;
-              if (var1 != 0) {
-                if (-1 >= (sa.field_r.field_h ^ -1)) {
-                  var3 = hb.field_w[sa.field_r.field_h];
-                  if (var3 == -3) {
-                    ug.n(-18);
-                    if (var3 == 0) {
-                      if (2 == mq.field_a) {
-                        var4 = bva.b((byte) -107) - ln.field_H;
-                        var6 = (int)((-var4 + 10999L) / 1000L);
-                        if ((var6 ^ -1) < -1) {
-                          return var3;
-                        } else {
-                          var3 = 2;
-                          qna.a(1, true, 5);
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
-                    } else {
-                      return var3;
-                    }
+        try {
+          L0: {
+            var1_int = 0;
+            var2 = 0;
+            L1: while (true) {
+              if (!es.a(true)) {
+                L2: {
+                  sa.field_r.a(wg.a(1541709953, jm.field_m, lba.field_p), 73, wg.a(1541709953, jba.field_j, sta.field_B));
+                  if (sa.field_r.a(false)) {
+                    var1_int = 1;
+                    break L2;
                   } else {
-                    if (-6 != var3) {
-                      L2: {
-                        if (var3 != 0) {
-                          break L2;
-                        } else {
-                          if (2 == mq.field_a) {
-                            var4 = bva.b((byte) -107) - ln.field_H;
-                            var6 = (int)((-var4 + 10999L) / 1000L);
-                            if ((var6 ^ -1) >= -1) {
-                              var3 = 2;
-                              qna.a(1, true, 5);
-                              break L2;
-                            } else {
-                              return var3;
-                            }
-                          } else {
-                            return var3;
-                          }
-                        }
-                      }
-                      return var3;
+                    break L2;
+                  }
+                }
+                L3: {
+                  L4: {
+                    var3 = 0;
+                    if (var1_int == 0) {
+                      break L4;
                     } else {
-                      L3: {
-                        ug.n(-18);
-                        if (var3 != 0) {
+                      if (sa.field_r.field_h < 0) {
+                        break L4;
+                      } else {
+                        var3 = hb.field_w[sa.field_r.field_h];
+                        if (var3 == 2) {
+                          ug.n(-18);
                           break L3;
                         } else {
-                          if (2 == mq.field_a) {
-                            var4 = bva.b((byte) -107) - ln.field_H;
-                            var6 = (int)((-var4 + 10999L) / 1000L);
-                            if ((var6 ^ -1) >= -1) {
-                              var3 = 2;
-                              qna.a(1, true, 5);
-                              break L3;
-                            } else {
-                              return var3;
-                            }
+                          if (var3 != 5) {
+                            break L3;
                           } else {
-                            return var3;
+                            ug.n(-18);
+                            break L3;
                           }
                         }
                       }
-                      return var3;
                     }
                   }
-                } else {
-                  if (var2 != 0) {
-                    if (2 != mq.field_a) {
-                      ug.n(-18);
-                      if (var3 == 0) {
-                        if (2 == mq.field_a) {
-                          var4 = bva.b((byte) -107) - ln.field_H;
-                          var6 = (int)((-var4 + 10999L) / 1000L);
-                          if ((var6 ^ -1) >= -1) {
-                            var3 = 2;
-                            qna.a(1, true, 5);
-                            return var3;
-                          } else {
-                            return var3;
-                          }
-                        } else {
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
-                    } else {
-                      if (var3 == 0) {
-                        if (2 == mq.field_a) {
-                          var4 = bva.b((byte) -107) - ln.field_H;
-                          var6 = (int)((-var4 + 10999L) / 1000L);
-                          if ((var6 ^ -1) >= -1) {
-                            var3 = 2;
-                            qna.a(1, true, 5);
-                            return var3;
-                          } else {
-                            return var3;
-                          }
-                        } else {
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
-                    }
+                  if (var2 == 0) {
+                    break L3;
                   } else {
-                    if (var3 == 0) {
-                      if (2 == mq.field_a) {
-                        var4 = bva.b((byte) -107) - ln.field_H;
-                        var6 = (int)((-var4 + 10999L) / 1000L);
-                        if ((var6 ^ -1) < -1) {
-                          return var3;
-                        } else {
-                          var3 = 2;
-                          qna.a(1, true, 5);
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
+                    if (2 == mq.field_a) {
+                      break L3;
                     } else {
-                      return var3;
+                      ug.n(-18);
+                      break L3;
                     }
                   }
                 }
-              } else {
-                if (var2 != 0) {
-                  if (2 != mq.field_a) {
-                    ug.n(-18);
-                    if (var3 == 0) {
-                      if (2 == mq.field_a) {
-                        var4 = bva.b((byte) -107) - ln.field_H;
-                        var6 = (int)((-var4 + 10999L) / 1000L);
-                        if ((var6 ^ -1) < -1) {
-                          return var3;
-                        } else {
-                          var3 = 2;
-                          qna.a(1, true, 5);
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
-                    } else {
-                      return var3;
-                    }
+                L5: {
+                  if (var3 != 0) {
+                    break L5;
                   } else {
-                    if (var3 == 0) {
-                      if (2 == mq.field_a) {
-                        var4 = bva.b((byte) -107) - ln.field_H;
-                        var6 = (int)((-var4 + 10999L) / 1000L);
-                        if ((var6 ^ -1) < -1) {
-                          return var3;
-                        } else {
-                          var3 = 2;
-                          qna.a(1, true, 5);
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
-                    } else {
-                      return var3;
-                    }
-                  }
-                } else {
-                  if (var3 == 0) {
                     if (2 == mq.field_a) {
                       var4 = bva.b((byte) -107) - ln.field_H;
                       var6 = (int)((-var4 + 10999L) / 1000L);
-                      if ((var6 ^ -1) < -1) {
-                        return var3;
-                      } else {
+                      if (var6 <= 0) {
                         var3 = 2;
                         qna.a(1, true, 5);
-                        return var3;
+                        break L5;
+                      } else {
+                        break L5;
                       }
                     } else {
-                      return var3;
+                      break L5;
                     }
-                  } else {
-                    return var3;
                   }
                 }
-              }
-            } else {
-              return 95;
-            }
-          } else {
-            L4: {
-              sa.field_r.c(102);
-              if (sa.field_r.a(false)) {
-                var1 = 1;
-                break L4;
+                stackOut_28_0 = var3;
+                stackIn_29_0 = stackOut_28_0;
+                break L0;
               } else {
-                break L4;
+                L6: {
+                  sa.field_r.c(102);
+                  if (sa.field_r.a(false)) {
+                    var1_int = 1;
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                }
+                if (fna.field_h != 13) {
+                  continue L1;
+                } else {
+                  var2 = 1;
+                  continue L1;
+                }
               }
-            }
-            if ((fna.field_h ^ -1) != -14) {
-              continue L0;
-            } else {
-              var2 = 1;
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var1, "vk.D(" + 107 + 41);
         }
+        return stackIn_29_0;
     }
 
     public static void a(int param0) {

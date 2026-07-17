@@ -13,7 +13,7 @@ final class r {
         if (param1 == param0) {
             var2 = ng.field_a;
         }
-        if (-2 == (param1 ^ -1)) {
+        if (param1 == 1) {
             var2 = q.field_b;
         }
         if (!(2 != param1)) {
@@ -28,69 +28,37 @@ final class r {
 
     final static void a(boolean param0) {
         fd.h(0);
-        if (null == ic.field_d) {
-          gs.d(98);
-          vp.c(-107);
-          if (!param0) {
-            L0: {
-              field_b = null;
-              ba.b((byte) 44);
-              if (cr.b(0)) {
-                or.field_d.b(1, (byte) -106);
-                c.a(0, false);
-                break L0;
-              } else {
-                break L0;
-              }
+        if (null != ic.field_d) {
+          L0: {
+            hm.a(-120, ic.field_d);
+            gs.d(98);
+            vp.c(-107);
+            ba.b((byte) 44);
+            if (cr.b(0)) {
+              or.field_d.b(1, (byte) -106);
+              c.a(0, false);
+              break L0;
+            } else {
+              break L0;
             }
-            lr.b((byte) -116);
-            return;
-          } else {
-            L1: {
-              ba.b((byte) 44);
-              if (cr.b(0)) {
-                or.field_d.b(1, (byte) -106);
-                c.a(0, false);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            lr.b((byte) -116);
-            return;
           }
+          lr.b((byte) -116);
+          return;
         } else {
-          hm.a(-120, ic.field_d);
-          gs.d(98);
-          vp.c(-107);
-          if (param0) {
-            L2: {
-              ba.b((byte) 44);
-              if (cr.b(0)) {
-                or.field_d.b(1, (byte) -106);
-                c.a(0, false);
-                break L2;
-              } else {
-                break L2;
-              }
+          L1: {
+            gs.d(98);
+            vp.c(-107);
+            ba.b((byte) 44);
+            if (cr.b(0)) {
+              or.field_d.b(1, (byte) -106);
+              c.a(0, false);
+              break L1;
+            } else {
+              break L1;
             }
-            lr.b((byte) -116);
-            return;
-          } else {
-            L3: {
-              field_b = null;
-              ba.b((byte) 44);
-              if (cr.b(0)) {
-                or.field_d.b(1, (byte) -106);
-                c.a(0, false);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            lr.b((byte) -116);
-            return;
           }
+          lr.b((byte) -116);
+          return;
         }
     }
 

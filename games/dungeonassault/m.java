@@ -13,14 +13,14 @@ abstract class m implements dp {
     public final String a(boolean param0) {
         if (!((m) this).a(96)) {
           if (param0) {
-            if ((350L + ((m) this).field_b ^ -1L) < (kd.c(-2456) ^ -1L)) {
+            if (~(350L + ((m) this).field_b) < ~kd.c(-2456)) {
               return null;
             } else {
               return ((m) this).c(63);
             }
           } else {
             ((m) this).field_b = 122L;
-            if ((350L + ((m) this).field_b ^ -1L) < (kd.c(-2456) ^ -1L)) {
+            if (~(350L + ((m) this).field_b) < ~kd.c(-2456)) {
               return null;
             } else {
               return ((m) this).c(63);
@@ -53,7 +53,7 @@ abstract class m implements dp {
 
     public final od a(byte param0) {
         if (!((m) this).a(-51)) {
-          if ((350L + ((m) this).field_b ^ -1L) < (kd.c(-2456) ^ -1L)) {
+          if (~(350L + ((m) this).field_b) < ~kd.c(-2456)) {
             return ub.field_s;
           } else {
             if (param0 > -91) {
@@ -97,25 +97,13 @@ abstract class m implements dp {
 
     final static void b(byte param0) {
         int var1 = 0;
-        if (param0 >= 34) {
-          if (-225 < (oo.field_d ^ -1)) {
-            var1 = oo.field_d % 32;
-            sf.d(-105, -var1 + (32 + oo.field_d));
-            return;
-          } else {
-            sf.d(-93, 256);
-            return;
-          }
+        if (oo.field_d < 224) {
+          var1 = oo.field_d % 32;
+          sf.d(-105, -var1 + (32 + oo.field_d));
+          return;
         } else {
-          field_c = null;
-          if (-225 < (oo.field_d ^ -1)) {
-            var1 = oo.field_d % 32;
-            sf.d(-105, -var1 + (32 + oo.field_d));
-            return;
-          } else {
-            sf.d(-93, 256);
-            return;
-          }
+          sf.d(-93, 256);
+          return;
         }
     }
 

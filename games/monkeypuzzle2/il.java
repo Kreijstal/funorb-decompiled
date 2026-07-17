@@ -98,7 +98,7 @@ final class il extends ug {
                         }
                       }
                     }
-                    if ((((il) this).field_i.field_w ^ -1) != -6) {
+                    if (((il) this).field_i.field_w != 5) {
                       stackOut_67_0 = 1;
                       stackIn_69_0 = stackOut_67_0;
                       break L3;
@@ -271,7 +271,7 @@ final class il extends ug {
                       }
                     }
                   }
-                  if ((((il) this).field_i.field_w ^ -1) != -6) {
+                  if (((il) this).field_i.field_w != 5) {
                     stackOut_19_0 = 1;
                     stackIn_21_0 = stackOut_19_0;
                     break L20;
@@ -595,7 +595,7 @@ final class il extends ug {
               }
             } else {
               L55: {
-                if ((((il) this).field_i.field_w ^ -1) == -6) {
+                if (((il) this).field_i.field_w == 5) {
                   stackOut_216_0 = 0;
                   stackIn_217_0 = stackOut_216_0;
                   break L55;
@@ -708,7 +708,7 @@ final class il extends ug {
             }
           } else {
             L67: {
-              if ((((il) this).field_i.field_w ^ -1) == -6) {
+              if (((il) this).field_i.field_w == 5) {
                 stackOut_181_0 = 0;
                 stackIn_182_0 = stackOut_181_0;
                 break L67;
@@ -838,7 +838,7 @@ final class il extends ug {
                   }
                 }
               }
-              if ((((il) this).field_i.field_w ^ -1) == -6) {
+              if (((il) this).field_i.field_w == 5) {
                 stackOut_146_0 = 0;
                 stackIn_147_0 = stackOut_146_0;
                 break L80;
@@ -953,7 +953,7 @@ final class il extends ug {
             return;
           } else {
             L94: {
-              if ((((il) this).field_i.field_w ^ -1) == -6) {
+              if (((il) this).field_i.field_w == 5) {
                 stackOut_108_0 = 0;
                 stackIn_109_0 = stackOut_108_0;
                 break L94;
@@ -1072,33 +1072,34 @@ final class il extends ug {
 
     final static void a(boolean param0) {
         hl.b(-16);
-        qh.a(4, param0);
+        qh.a(4, true);
     }
 
     final static fg a(int param0) {
-        if (param0 != -20601) {
-            field_g = null;
-            return (fg) (Object) new uf();
-        }
         return (fg) (Object) new uf();
     }
 
     final void a(int param0, ki param1, float param2, ki param3) {
-        ((il) this).field_j = param1;
-        ((il) this).field_i = param3;
-        ((il) this).field_f = param2 * ((float)param0 + param2);
+        try {
+            ((il) this).field_j = param1;
+            ((il) this).field_i = param3;
+            ((il) this).field_f = param2 * ((float)param0 + param2);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "il.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     il(ki param0, ki param1, float param2) {
-        ((il) this).field_j = param0;
-        ((il) this).field_f = (-1.0f + param2) * param2;
-        ((il) this).field_i = param1;
+        try {
+            ((il) this).field_j = param0;
+            ((il) this).field_f = (-1.0f + param2) * param2;
+            ((il) this).field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "il.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public static void b(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_g = null;
     }
 

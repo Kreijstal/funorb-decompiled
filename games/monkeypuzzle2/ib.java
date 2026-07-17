@@ -45,27 +45,57 @@ final class ib {
     }
 
     final static void c(int param0) {
+        RuntimeException runtimeException = null;
+        int var1_int = 0;
         int var2 = 0;
-        int var3 = MonkeyPuzzle2.field_F ? 1 : 0;
-        int var1 = 0;
-        for (var2 = 0; var2 < jk.field_A; var2++) {
-            if (null != jk.field_C[var2]) {
-                // ifeq L43
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = MonkeyPuzzle2.field_F ? 1 : 0;
+        try {
+          L0: {
+            var1_int = 0;
+            var2 = 0;
+            L1: while (true) {
+              L2: {
+                if (var2 >= jk.field_A) {
+                  break L2;
+                } else {
+                  L3: {
+                    if (null == jk.field_C[var2]) {
+                      break L3;
+                    } else {
+                      if (!jk.field_C[var2].h()) {
+                        var2++;
+                        continue L1;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                  var1_int = 1;
+                  break L2;
+                }
+              }
+              if (var1_int == 0) {
+                return;
+              } else {
+                jk.field_C[var2] = li.a(ke.field_h[2], 100, 96);
+                na.a((byte) 38, jk.field_C[var2]);
+                break L0;
+              }
             }
-            var1 = 1;
-            break;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          throw la.a((Throwable) (Object) runtimeException, "ib.B(" + 100 + 41);
         }
-        if (!(var1 != 0)) {
-            return;
-        }
-        jk.field_C[var2] = li.a(ke.field_h[2], param0, 96);
-        na.a((byte) 38, jk.field_C[var2]);
     }
 
     public static void a(int param0) {
         field_b = null;
         field_d = null;
-        int var1 = 1 % ((-67 - param0) / 49);
+        int var1 = 1;
     }
 
     static {

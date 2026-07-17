@@ -10,11 +10,6 @@ final class sq {
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 != 26371) {
-            sq.a((byte) 120);
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

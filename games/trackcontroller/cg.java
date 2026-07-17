@@ -14,11 +14,6 @@ final class cg {
         field_d = null;
         field_f = null;
         field_e = null;
-        if (param0 < 55) {
-            field_e = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

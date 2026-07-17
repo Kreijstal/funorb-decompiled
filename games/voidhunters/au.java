@@ -17,37 +17,97 @@ final class au {
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
-        if (((au) this).field_b >= ((au) this).field_d + (long)param0) {
-          ((au) this).field_a.write(param2, param3, param0);
-          if (param1 != -14394) {
+        if (((au) this).field_b < ((au) this).field_d + (long)param0) {
+            ((au) this).field_a.seek(((au) this).field_b);
+            ((au) this).field_a.write(1);
+            throw new EOFException();
+        }
+        ((au) this).field_a.write(param2, param3, param0);
+        if (param1 != -14394) {
             return;
-          } else {
+        }
+        try {
             ((au) this).field_d = ((au) this).field_d + (long)param0;
-            return;
-          }
-        } else {
-          ((au) this).field_a.seek(((au) this).field_b);
-          ((au) this).field_a.write(1);
-          throw new EOFException();
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "au.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
     final int a(byte param0, int param1, byte[] param2, int param3) throws IOException {
-        int var5 = 0;
-        L0: {
-          var5 = ((au) this).field_a.read(param2, param3, param1);
-          if (-1 > (var5 ^ -1)) {
-            ((au) this).field_d = ((au) this).field_d + (long)var5;
-            break L0;
-          } else {
-            break L0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              var5_int = ((au) this).field_a.read(param2, param3, param1);
+              if (var5_int > 0) {
+                ((au) this).field_d = ((au) this).field_d + (long)var5_int;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            if (param0 == -60) {
+              stackOut_6_0 = var5_int;
+              stackIn_7_0 = stackOut_6_0;
+              break L0;
+            } else {
+              stackOut_4_0 = -39;
+              stackIn_5_0 = stackOut_4_0;
+              return stackIn_5_0;
+            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_1 = new StringBuilder().append("au.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
         }
-        if (param0 != -60) {
-          return -39;
-        } else {
-          return var5;
-        }
+        return stackIn_7_0;
     }
 
     final void a(boolean param0) throws IOException {
@@ -82,25 +142,28 @@ final class au {
     }
 
     au(File param0, String param1, long param2) throws IOException {
-        if ((param2 ^ -1L) == 0L) {
-            param2 = 9223372036854775807L;
-        }
-        if (param0.length() > param2) {
-            boolean discarded$0 = param0.delete();
-        }
-        ((au) this).field_a = new RandomAccessFile(param0, param1);
-        ((au) this).field_b = param2;
-        ((au) this).field_d = 0L;
-        int var5 = ((au) this).field_a.read();
-        if (-1 != var5) {
-            // ifne L108
+        int var5_int = 0;
+        try {
+            if (param2 == -1L) {
+                param2 = 9223372036854775807L;
+            }
+            if (param0.length() > param2) {
+                boolean discarded$0 = param0.delete();
+            }
+            ((au) this).field_a = new RandomAccessFile(param0, param1);
+            ((au) this).field_b = param2;
+            ((au) this).field_d = 0L;
+            var5_int = ((au) this).field_a.read();
+            if (-1 != var5_int) {
+                if (!param1.equals((Object) (Object) "r")) {
+                    ((au) this).field_a.seek(0L);
+                    ((au) this).field_a.write(var5_int);
+                }
+            }
             ((au) this).field_a.seek(0L);
-            ((au) this).field_a.write(var5);
-        } else {
-            ((au) this).field_a.seek(0L);
-            ((au) this).field_a.seek(0L);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "au.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        ((au) this).field_a.seek(0L);
     }
 
     static {

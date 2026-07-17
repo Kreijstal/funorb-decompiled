@@ -32,26 +32,14 @@ final class sa {
 
     final static String a(boolean param0) {
         if (ra.field_e != wd.field_Lb) {
-          if (!param0) {
-            if (pa.field_I == ra.field_e) {
-              return l.field_c;
-            } else {
-              if (!ig.field_j.a(88)) {
-                return l.field_c;
-              } else {
-                return qo.field_x;
-              }
-            }
+          sa.a(38);
+          if (pa.field_I == ra.field_e) {
+            return l.field_c;
           } else {
-            sa.a(38);
-            if (pa.field_I == ra.field_e) {
+            if (!ig.field_j.a(88)) {
               return l.field_c;
             } else {
-              if (!ig.field_j.a(88)) {
-                return l.field_c;
-              } else {
-                return qo.field_x;
-              }
+              return qo.field_x;
             }
           }
         } else {
@@ -80,7 +68,7 @@ final class sa {
               long dupTemp$1 = rl.a((byte) -95);
               nf.field_Q = dupTemp$1;
               ob.field_v = dupTemp$1;
-              if ((ge.field_u.field_f ^ -1) != -2) {
+              if (ge.field_u.field_f != 1) {
                 tl.field_J = vk.field_V;
                 if (param0 != 65) {
                   return false;

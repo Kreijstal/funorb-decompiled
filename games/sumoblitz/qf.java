@@ -77,7 +77,7 @@ final class qf {
           }
         }
         var6 = stackIn_3_0;
-        if ((var5 ^ -1) <= -5) {
+        if (var5 >= 4) {
           if (12 != var5) {
             if (var5 == 14) {
               L1: {

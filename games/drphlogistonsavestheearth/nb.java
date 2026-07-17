@@ -16,9 +16,6 @@ final class nb {
     }
 
     public static void a(byte param0) {
-        if (param0 != 76) {
-            return;
-        }
         field_c = null;
         field_a = null;
         field_b = null;

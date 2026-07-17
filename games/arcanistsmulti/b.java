@@ -17,14 +17,7 @@ final class b {
         field_a = null;
         field_b = null;
         field_f = null;
-        if (param0 <= 53) {
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
-          field_e = null;
-          return;
-        }
+        field_e = null;
     }
 
     final static String a(byte param0, Throwable param1) throws IOException {
@@ -106,9 +99,9 @@ final class b {
               if (var10 == -1) {
                 break L3;
               } else {
-                if ((var11 ^ -1) != 0) {
+                if (var11 != -1) {
                   var13 = var9.indexOf(".java:", var10);
-                  if ((var13 ^ -1) > -1) {
+                  if (var13 < 0) {
                     break L3;
                   } else {
                     var2 = var20 + var9.substring(var13 - -5, var11);

@@ -15,39 +15,26 @@ final class pq extends i {
     static ut field_Q;
 
     final static void a(int param0, String param1, boolean param2) {
-        int var3 = 0;
-        int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        if (!la.a(100)) {
-          if (uv.field_f) {
+        int var3_int = 0;
+        if (la.a(100)) {
             return;
-          } else {
-            L0: {
-              bg.field_r = param1;
-              or.field_d.b(54, (byte) 89);
-              int fieldTemp$2 = or.field_d.field_n + 1;
-              or.field_d.field_n = or.field_d.field_n + 1;
-              var3 = fieldTemp$2;
-              or.field_d.a(param1, (byte) -127);
-              or.field_d.a(102, param0);
-              or.field_d.c(62, -var3 + or.field_d.field_n);
-              ri.field_t = 500;
-              if (!param2) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                break L0;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L0;
-              }
-            }
-            uv.field_f = stackIn_6_0 != 0;
+        }
+        if (uv.field_f) {
             return;
-          }
-        } else {
-          return;
+        }
+        try {
+            bg.field_r = param1;
+            or.field_d.b(54, (byte) 89);
+            int fieldTemp$0 = or.field_d.field_n + 1;
+            or.field_d.field_n = or.field_d.field_n + 1;
+            var3_int = fieldTemp$0;
+            or.field_d.a(param1, (byte) -127);
+            or.field_d.a(102, param0);
+            or.field_d.c(62, -var3_int + or.field_d.field_n);
+            ri.field_t = 500;
+            uv.field_f = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "pq.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -105,11 +92,11 @@ final class pq extends i {
 
     final static int b(int param0, int param1) {
         Object var3 = null;
-        param1 = (1431655765 & param1) + ((-1431655765 & param1) >>> -1075143327);
-        param1 = (858993459 & param1) - -(1932735283 & param1 >>> 352650434);
-        param1 = 252645135 & (param1 >>> 860211492) + param1;
-        param1 = param1 + (param1 >>> 650577256);
-        param1 = param1 + (param1 >>> -359469744);
+        param1 = (1431655765 & param1) + ((-1431655765 & param1) >>> 1);
+        param1 = (858993459 & param1) - -(1932735283 & param1 >>> 2);
+        param1 = 252645135 & (param1 >>> 4) + param1;
+        param1 = param1 + (param1 >>> 8);
+        param1 = param1 + (param1 >>> 16);
         if (param0 != 170) {
           var3 = null;
           pq.a(12, (String) null, false);
@@ -133,7 +120,7 @@ final class pq extends i {
             if (-1 == ((pq) this).field_H.field_Fb) {
               break L0;
             } else {
-              tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]].a(param2 + 35 - -105, 23, param1 - -320);
+              tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]].a(param2 + 140, 23, param1 - -320);
               if (tu.field_E.a((byte) -102, tu.field_E.field_q[((pq) this).field_H.field_Fb])) {
                 pb.field_C.d(iw.field_j, 315 + param1, 245 + param2, 16777215, -1);
                 break L0;
@@ -220,7 +207,7 @@ final class pq extends i {
             if (-1 == ((pq) this).field_H.field_Fb) {
               break L3;
             } else {
-              tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]].a(param2 + 35 - -105, 23, param1 - -320);
+              tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]].a(param2 + 140, 23, param1 - -320);
               if (tu.field_E.a((byte) -102, tu.field_E.field_q[((pq) this).field_H.field_Fb])) {
                 pb.field_C.d(iw.field_j, 315 + param1, 245 + param2, 16777215, -1);
                 break L3;
@@ -303,19 +290,12 @@ final class pq extends i {
     }
 
     final static void g(byte param0) {
-        if (!nb.field_f) {
-          throw new IllegalStateException();
-        } else {
-          aw.field_H = true;
-          hm.a(false, -112);
-          vj.field_c = 0;
-          if (param0 != 66) {
-            field_N = null;
-            return;
-          } else {
-            return;
-          }
+        if (!(nb.field_f)) {
+            throw new IllegalStateException();
         }
+        aw.field_H = true;
+        hm.a(false, -112);
+        vj.field_c = 0;
     }
 
     public static void g(int param0) {
@@ -342,7 +322,7 @@ final class pq extends i {
         if (1 == ((pq) this).field_n) {
           ((pq) this).field_H.b(param0 ^ param0, param1);
           ((pq) this).field_H.a(param0 + 45);
-          if ((((pq) this).field_H.field_Fb ^ -1) != 0) {
+          if (((pq) this).field_H.field_Fb != -1) {
             if (!tu.field_E.a((byte) 90, tu.field_E.field_q[((pq) this).field_H.field_Fb])) {
               if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]], -576054046) != 0) {
                 ((pq) this).field_i[0].field_lb = true;

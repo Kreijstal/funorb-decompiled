@@ -142,7 +142,7 @@ final class rb {
               ((rb) this).field_a = ((rb) this).field_a + ((rb) this).field_c;
               ((rb) this).field_b = ((rb) this).field_b + ((rb) this).field_d;
               var2 = 32;
-              if (-26 == (((rb) this).field_j ^ -1)) {
+              if (((rb) this).field_j == 25) {
                 var2 = 9;
                 break L1;
               } else {
@@ -158,7 +158,7 @@ final class rb {
               }
             }
             L3: {
-              if (-28 == (((rb) this).field_j ^ -1)) {
+              if (((rb) this).field_j == 27) {
                 var2 = 27;
                 break L3;
               } else {
@@ -166,7 +166,7 @@ final class rb {
               }
             }
             L4: {
-              if (-29 != (((rb) this).field_j ^ -1)) {
+              if (((rb) this).field_j != 28) {
                 break L4;
               } else {
                 var2 = 40;
@@ -189,26 +189,26 @@ final class rb {
                 break L6;
               }
             }
-            if (((rb) this).field_a < -(640 - -var2 << -1870610300)) {
+            if (((rb) this).field_a < -(640 - -var2 << 4)) {
               this.a((byte) 62);
               ((rb) this).field_h = true;
               return null;
             } else {
-              if ((var2 + 640 << -1241679836 ^ -1) > (((rb) this).field_a ^ -1)) {
+              if (~(var2 + 640 << 4) > ~((rb) this).field_a) {
                 this.a((byte) 62);
                 ((rb) this).field_h = true;
                 return null;
               } else {
-                if (((rb) this).field_b > var2 + 720 << 501376132) {
+                if (((rb) this).field_b > var2 + 720 << 4) {
                   this.a((byte) 62);
                   ((rb) this).field_h = true;
                   return null;
                 } else {
                   L7: {
-                    if (-(var2 << 1643983140) <= ((rb) this).field_b) {
+                    if (-(var2 << 4) <= ((rb) this).field_b) {
                       break L7;
                     } else {
-                      if (-1 < (((rb) this).field_d ^ -1)) {
+                      if (((rb) this).field_d < 0) {
                         this.a((byte) 62);
                         ((rb) this).field_h = true;
                         return null;
@@ -231,14 +231,14 @@ final class rb {
                     if (var4 == 0) {
                       ((rb) this).field_g = 4;
                       ((rb) this).field_e = ((rb) this).field_e + 1;
-                      if ((kb.field_b ^ -1) == -1) {
+                      if (kb.field_b == 0) {
                         L10: {
-                          if (-51 >= (((rb) this).field_e ^ -1)) {
+                          if (((rb) this).field_e >= 50) {
                             break L10;
                           } else {
                             ((rb) this).field_b = ((rb) this).field_b - ((rb) this).field_d * (-((rb) this).field_e + 50) / 100;
                             ((rb) this).field_a = ((rb) this).field_a - ((rb) this).field_c * (50 + -((rb) this).field_e) / 100;
-                            if (-1 == (((rb) this).field_e % 2 ^ -1)) {
+                            if (((rb) this).field_e % 2 == 0) {
                               pk.a((byte) 32, new rb(12, (rb) this));
                               break L10;
                             } else {
@@ -253,7 +253,7 @@ final class rb {
                         break L9;
                       }
                     } else {
-                      if (-2 != (var4 ^ -1)) {
+                      if (var4 != 1) {
                         if (2 == var4) {
                           L11: {
                             ((rb) this).field_g = 5;
@@ -262,7 +262,7 @@ final class rb {
                               break L11;
                             } else {
                               pk.a((byte) 32, new rb(8, (rb) this));
-                              if (-1 == (((rb) this).field_e % 2 ^ -1)) {
+                              if (((rb) this).field_e % 2 == 0) {
                                 pk.a((byte) 32, new rb(12, (rb) this));
                                 break L11;
                               } else {
@@ -273,11 +273,11 @@ final class rb {
                           ((rb) this).field_g = 32;
                           this.a(13, -19, 0);
                           ((rb) this).field_g = 5;
-                          if ((((rb) this).field_j ^ -1) != -14) {
+                          if (((rb) this).field_j != 13) {
                             break L9;
                           } else {
                             L12: {
-                              if (-3 >= (bi.field_h ^ -1)) {
+                              if (bi.field_h >= 2) {
                                 mb.a(true, 7, 256);
                                 break L12;
                               } else {
@@ -303,7 +303,7 @@ final class rb {
                               var13.field_c = -(((rb) this).field_d / 5) + ((rb) this).field_c / 2;
                               var13.field_d = ((rb) this).field_c / 5 + ((rb) this).field_d / 2;
                               pk.a((byte) 32, var13);
-                              if (-3 == (bi.field_h ^ -1)) {
+                              if (bi.field_h == 2) {
                                 var14 = new rb(0, (rb) this);
                                 var14.field_d = ((rb) this).field_d / 3;
                                 var14.field_c = ((rb) this).field_c / 3;
@@ -334,7 +334,7 @@ final class rb {
                             break L9;
                           }
                         } else {
-                          if (-4 == (var4 ^ -1)) {
+                          if (var4 == 3) {
                             L14: {
                               ((rb) this).field_e = ((rb) this).field_e + 1;
                               ((rb) this).field_g = 6;
@@ -346,9 +346,9 @@ final class rb {
                               }
                             }
                             L15: {
-                              if ((((rb) this).field_e % 2 ^ -1) == -1) {
+                              if (((rb) this).field_e % 2 == 0) {
                                 L16: {
-                                  var4 = 15 & ((rb) this).field_e >> -1101118655;
+                                  var4 = 15 & ((rb) this).field_e >> 1;
                                   if (var4 <= 8) {
                                     break L16;
                                   } else {
@@ -375,7 +375,7 @@ final class rb {
                               }
                             }
                             L18: {
-                              if ((bi.field_h ^ -1) == -3) {
+                              if (bi.field_h == 2) {
                                 this.a(11, -19, 16);
                                 break L18;
                               } else {
@@ -391,7 +391,7 @@ final class rb {
                                 break L19;
                               }
                             }
-                            if ((((rb) this).field_j ^ -1) == -12) {
+                            if (((rb) this).field_j == 11) {
                               ((rb) this).field_g = 192;
                               this.a(11, -19, 75);
                               break L9;
@@ -426,7 +426,7 @@ final class rb {
                                       if (2 != bi.field_h) {
                                         break L20;
                                       } else {
-                                        if (-21 <= (((rb) this).field_e ^ -1)) {
+                                        if (((rb) this).field_e <= 20) {
                                           break L20;
                                         } else {
                                           break L21;
@@ -439,7 +439,7 @@ final class rb {
                                 }
                                 L23: {
                                   L24: {
-                                    if ((bi.field_h ^ -1) == -2) {
+                                    if (bi.field_h == 1) {
                                       break L24;
                                     } else {
                                       if (bi.field_h != 2) {
@@ -468,7 +468,7 @@ final class rb {
                                   ((rb) var3).field_d = ((rb) this).field_d;
                                   ((rb) var3).field_c = ((rb) this).field_c;
                                   pk.a((byte) 32, (rb) var3);
-                                  if (-1 != (bi.field_h ^ -1)) {
+                                  if (bi.field_h != 0) {
                                     break L26;
                                   } else {
                                     this.a(13, -19, 1);
@@ -509,13 +509,13 @@ final class rb {
                                   L29: {
                                     ((rb) this).field_e = ((rb) this).field_e + 1;
                                     ((rb) this).field_g = 6;
-                                    var4 = 320 + (-wd.field_c + (((rb) this).field_a >> 1564375396));
-                                    var5 = (((rb) this).field_b >> -567602620) + -si.field_E;
+                                    var4 = 320 + (-wd.field_c + (((rb) this).field_a >> 4));
+                                    var5 = (((rb) this).field_b >> 4) + -si.field_E;
                                     var6 = -var4 + gb.field_j;
                                     var7 = ad.field_m - var5;
                                     if (ve.field_b >= 0) {
-                                      var6 = -var4 + (sk.field_o >> -664643676) - wd.field_c - -320;
-                                      var7 = -var5 + ((wg.field_e >> -219328956) - si.field_E);
+                                      var6 = -var4 + (sk.field_o >> 4) - wd.field_c - -320;
+                                      var7 = -var5 + ((wg.field_e >> 4) - si.field_E);
                                       break L29;
                                     } else {
                                       break L29;
@@ -529,7 +529,7 @@ final class rb {
                                       ((rb) this).field_c = ((rb) this).field_c + (-((rb) this).field_e + 500) * 8 * var6 / (500 * var8);
                                       ((rb) this).field_d = ((rb) this).field_d + 8 * var7 * (500 + -((rb) this).field_e) / (var8 * 500);
                                       var8 = (int)Math.sqrt((double)(((rb) this).field_d * ((rb) this).field_d + ((rb) this).field_c * ((rb) this).field_c));
-                                      if ((var8 ^ -1) >= -256) {
+                                      if (var8 <= 255) {
                                         break L30;
                                       } else {
                                         ((rb) this).field_d = 255 * ((rb) this).field_d / var8;
@@ -538,7 +538,7 @@ final class rb {
                                       }
                                     }
                                   }
-                                  if (-3 < (bi.field_h ^ -1)) {
+                                  if (bi.field_h < 2) {
                                     this.a(17, -19, 15);
                                     break L9;
                                   } else {
@@ -552,30 +552,30 @@ final class rb {
                                     }
                                   }
                                 } else {
-                                  if (-8 != (var4 ^ -1)) {
+                                  if (var4 != 7) {
                                     if (var4 == 8) {
                                       ((rb) this).field_e = ((rb) this).field_e + 4;
-                                      if ((((rb) this).field_e ^ -1) >= -65) {
+                                      if (((rb) this).field_e <= 64) {
                                         break L9;
                                       } else {
                                         return null;
                                       }
                                     } else {
-                                      if ((var4 ^ -1) == -10) {
+                                      if (var4 == 9) {
                                         ((rb) this).field_e = ((rb) this).field_e + 1;
-                                        if (-65 <= (((rb) this).field_e ^ -1)) {
+                                        if (((rb) this).field_e <= 64) {
                                           break L9;
                                         } else {
                                           return null;
                                         }
                                       } else {
-                                        if (-11 == (var4 ^ -1)) {
+                                        if (var4 == 10) {
                                           L31: {
                                             L32: {
                                               if (!pg.field_e) {
                                                 break L32;
                                               } else {
-                                                if (0 != (kd.field_a ^ -1)) {
+                                                if (kd.field_a != -1) {
                                                   break L32;
                                                 } else {
                                                   break L31;
@@ -598,7 +598,7 @@ final class rb {
                                                 if (!pg.field_e) {
                                                   break L34;
                                                 } else {
-                                                  if (0 == (kd.field_a ^ -1)) {
+                                                  if (kd.field_a == -1) {
                                                     break L33;
                                                   } else {
                                                     break L34;
@@ -616,7 +616,7 @@ final class rb {
                                             }
                                           } else {
                                             L35: {
-                                              if (-13 == (var4 ^ -1)) {
+                                              if (var4 == 12) {
                                                 break L35;
                                               } else {
                                                 if (var4 == 13) {
@@ -628,10 +628,10 @@ final class rb {
                                                         break L36;
                                                       } else {
                                                         if (15 != var4) {
-                                                          if ((var4 ^ -1) != -17) {
+                                                          if (var4 != 16) {
                                                             if (18 == var4) {
                                                               ((rb) this).field_e = ((rb) this).field_e + 1;
-                                                              if ((((rb) this).field_e ^ -1) >= -33) {
+                                                              if (((rb) this).field_e <= 32) {
                                                                 break L9;
                                                               } else {
                                                                 return null;
@@ -651,7 +651,7 @@ final class rb {
                                                                   }
                                                                   L38: {
                                                                     ((rb) this).field_g = 8;
-                                                                    if ((((rb) this).field_m ^ -1) > -37) {
+                                                                    if (((rb) this).field_m < 36) {
                                                                       break L38;
                                                                     } else {
                                                                       ((rb) this).field_m = ((rb) this).field_m - 36;
@@ -663,7 +663,7 @@ final class rb {
                                                                       if (!pg.field_e) {
                                                                         break L40;
                                                                       } else {
-                                                                        if ((kd.field_a ^ -1) != 0) {
+                                                                        if (kd.field_a != -1) {
                                                                           break L40;
                                                                         } else {
                                                                           break L39;
@@ -671,10 +671,10 @@ final class rb {
                                                                       }
                                                                     }
                                                                     L41: {
-                                                                      var4 = ((rb) this).field_a >> 1582992804;
-                                                                      var5 = ea.field_p[kb.field_b] + ((((rb) this).field_b >> 1452039076) - 720);
+                                                                      var4 = ((rb) this).field_a >> 4;
+                                                                      var5 = ea.field_p[kb.field_b] + ((((rb) this).field_b >> 4) - 720);
                                                                       var6 = (int)Math.sqrt((double)(var5 * var5 + var4 * var4));
-                                                                      if ((var6 ^ -1) <= (((rb) this).field_g - -kd.field_b[kb.field_b] ^ -1)) {
+                                                                      if (~var6 <= ~(((rb) this).field_g - -kd.field_b[kb.field_b])) {
                                                                         break L41;
                                                                       } else {
                                                                         L42: {
@@ -690,10 +690,10 @@ final class rb {
                                                                         break L41;
                                                                       }
                                                                     }
-                                                                    if (-1 != (((rb) this).field_m % 8 ^ -1)) {
+                                                                    if (((rb) this).field_m % 8 != 0) {
                                                                       break L39;
                                                                     } else {
-                                                                      if (-101 >= (((rb) this).field_l ^ -1)) {
+                                                                      if (((rb) this).field_l >= 100) {
                                                                         break L39;
                                                                       } else {
                                                                         L43: {
@@ -734,14 +734,14 @@ final class rb {
                                                                       break L44;
                                                                     }
                                                                   }
-                                                                  if ((((rb) this).field_e ^ -1) >= -5) {
+                                                                  if (((rb) this).field_e <= 4) {
                                                                     break L9;
                                                                   } else {
                                                                     vk.field_p = vk.field_p + 1;
                                                                     mb.a(true, 30, 256);
-                                                                    pl.field_a = pl.field_a + vk.field_p * 1;
+                                                                    pl.field_a = pl.field_a + vk.field_p;
                                                                     ud.field_k = ud.field_k + 1;
-                                                                    ic.field_t = ic.field_t + (lc.field_h >>> 709568401);
+                                                                    ic.field_t = ic.field_t + (lc.field_h >>> 17);
                                                                     ((rb) this).field_c = 0;
                                                                     ((rb) this).field_j = ((rb) this).field_j - 5;
                                                                     ob.field_j = vk.field_p;
@@ -755,7 +755,7 @@ final class rb {
                                                                   if (var4 == 26) {
                                                                     L45: {
                                                                       ((rb) this).field_l = ((rb) this).field_l + 40;
-                                                                      if (-151 <= (((rb) this).field_l ^ -1)) {
+                                                                      if (((rb) this).field_l <= 150) {
                                                                         break L45;
                                                                       } else {
                                                                         ((rb) this).field_l = ((rb) this).field_l - 150;
@@ -765,7 +765,7 @@ final class rb {
                                                                     }
                                                                     L46: {
                                                                       ((rb) this).field_g = 12;
-                                                                      if ((((rb) this).field_m ^ -1) > -37) {
+                                                                      if (((rb) this).field_m < 36) {
                                                                         break L46;
                                                                       } else {
                                                                         ((rb) this).field_m = ((rb) this).field_m - 36;
@@ -777,7 +777,7 @@ final class rb {
                                                                         if (!pg.field_e) {
                                                                           break L48;
                                                                         } else {
-                                                                          if (0 != (kd.field_a ^ -1)) {
+                                                                          if (kd.field_a != -1) {
                                                                             break L48;
                                                                           } else {
                                                                             break L47;
@@ -785,8 +785,8 @@ final class rb {
                                                                         }
                                                                       }
                                                                       L49: {
-                                                                        var4 = ((rb) this).field_a >> 1772885476;
-                                                                        var5 = -720 + ((((rb) this).field_b >> -1476439580) + ea.field_p[kb.field_b]);
+                                                                        var4 = ((rb) this).field_a >> 4;
+                                                                        var5 = -720 + ((((rb) this).field_b >> 4) + ea.field_p[kb.field_b]);
                                                                         var6 = (int)Math.sqrt((double)(var5 * var5 + var4 * var4));
                                                                         if (((rb) this).field_g + kd.field_b[kb.field_b] > var6) {
                                                                           L50: {
@@ -804,10 +804,10 @@ final class rb {
                                                                           break L49;
                                                                         }
                                                                       }
-                                                                      if (-1 != (((rb) this).field_m % 8 ^ -1)) {
+                                                                      if (((rb) this).field_m % 8 != 0) {
                                                                         break L47;
                                                                       } else {
-                                                                        if ((((rb) this).field_l ^ -1) <= -81) {
+                                                                        if (((rb) this).field_l >= 80) {
                                                                           break L47;
                                                                         } else {
                                                                           L51: {
@@ -817,7 +817,7 @@ final class rb {
                                                                             stackIn_252_1 = stackOut_250_1;
                                                                             stackIn_251_0 = stackOut_250_0;
                                                                             stackIn_251_1 = stackOut_250_1;
-                                                                            if (-33 >= (var6 ^ -1)) {
+                                                                            if (var6 >= 32) {
                                                                               stackOut_252_0 = stackIn_252_0;
                                                                               stackOut_252_1 = stackIn_252_1;
                                                                               stackOut_252_2 = 8192 / var6;
@@ -841,20 +841,20 @@ final class rb {
                                                                       }
                                                                     }
                                                                     L52: {
-                                                                      if (-1 <= (((rb) this).field_k ^ -1)) {
+                                                                      if (((rb) this).field_k <= 0) {
                                                                         break L52;
                                                                       } else {
                                                                         ((rb) this).field_k = ((rb) this).field_k - 1;
                                                                         break L52;
                                                                       }
                                                                     }
-                                                                    if (-13 <= (((rb) this).field_e ^ -1)) {
+                                                                    if (((rb) this).field_e <= 12) {
                                                                       break L9;
                                                                     } else {
                                                                       vk.field_p = vk.field_p + 1;
                                                                       var4 = 0;
                                                                       L53: while (true) {
-                                                                        if (-9 >= (var4 ^ -1)) {
+                                                                        if (var4 >= 8) {
                                                                           mb.a(true, 29, 256);
                                                                           ((rb) this).field_j = ((rb) this).field_j - 5;
                                                                           ((rb) this).field_c = 0;
@@ -863,7 +863,7 @@ final class rb {
                                                                           cb.field_a = 256;
                                                                           ud.field_k = ud.field_k + 2;
                                                                           bi.field_i = bi.field_i + 2;
-                                                                          ic.field_t = ic.field_t + ((lc.field_h & -125932) >>> 1157229776);
+                                                                          ic.field_t = ic.field_t + ((lc.field_h & -125932) >>> 16);
                                                                           ((rb) this).field_e = 0;
                                                                           ((rb) this).field_d = 0;
                                                                           break L9;
@@ -876,10 +876,10 @@ final class rb {
                                                                       }
                                                                     }
                                                                   } else {
-                                                                    if ((var4 ^ -1) == -28) {
+                                                                    if (var4 == 27) {
                                                                       L54: {
                                                                         ((rb) this).field_l = ((rb) this).field_l + 30;
-                                                                        if ((((rb) this).field_l ^ -1) >= -151) {
+                                                                        if (((rb) this).field_l <= 150) {
                                                                           break L54;
                                                                         } else {
                                                                           ((rb) this).field_m = ((rb) this).field_m + 1;
@@ -909,8 +909,8 @@ final class rb {
                                                                           }
                                                                         }
                                                                         L58: {
-                                                                          var4 = ((rb) this).field_a >> -458679932;
-                                                                          var5 = -720 + (((rb) this).field_b >> -201451132) - -ea.field_p[kb.field_b];
+                                                                          var4 = ((rb) this).field_a >> 4;
+                                                                          var5 = -720 + (((rb) this).field_b >> 4) - -ea.field_p[kb.field_b];
                                                                           var6 = (int)Math.sqrt((double)(var4 * var4 + var5 * var5));
                                                                           if (var6 >= kd.field_b[kb.field_b] + ((rb) this).field_g) {
                                                                             break L58;
@@ -928,10 +928,10 @@ final class rb {
                                                                             break L58;
                                                                           }
                                                                         }
-                                                                        if ((((rb) this).field_m % 8 ^ -1) != -1) {
+                                                                        if (((rb) this).field_m % 8 != 0) {
                                                                           break L56;
                                                                         } else {
-                                                                          if ((((rb) this).field_l ^ -1) > -61) {
+                                                                          if (((rb) this).field_l < 60) {
                                                                             L60: {
                                                                               stackOut_276_0 = 1;
                                                                               stackOut_276_1 = 23;
@@ -939,7 +939,7 @@ final class rb {
                                                                               stackIn_278_1 = stackOut_276_1;
                                                                               stackIn_277_0 = stackOut_276_0;
                                                                               stackIn_277_1 = stackOut_276_1;
-                                                                              if (-33 >= (var6 ^ -1)) {
+                                                                              if (var6 >= 32) {
                                                                                 stackOut_278_0 = stackIn_278_0;
                                                                                 stackOut_278_1 = stackIn_278_1;
                                                                                 stackOut_278_2 = 8192 / var6;
@@ -965,14 +965,14 @@ final class rb {
                                                                         }
                                                                       }
                                                                       L61: {
-                                                                        if (-1 > (((rb) this).field_k ^ -1)) {
+                                                                        if (((rb) this).field_k > 0) {
                                                                           ((rb) this).field_k = ((rb) this).field_k - 1;
                                                                           break L61;
                                                                         } else {
                                                                           break L61;
                                                                         }
                                                                       }
-                                                                      if (-37 <= (((rb) this).field_e ^ -1)) {
+                                                                      if (((rb) this).field_e <= 36) {
                                                                         break L9;
                                                                       } else {
                                                                         vk.field_p = vk.field_p + 1;
@@ -981,7 +981,7 @@ final class rb {
                                                                           if (var4 >= 12) {
                                                                             mb.a(true, 28, 256);
                                                                             ((rb) this).field_d = 0;
-                                                                            ic.field_t = ic.field_t + 3 * (lc.field_h >>> 562160497);
+                                                                            ic.field_t = ic.field_t + 3 * (lc.field_h >>> 17);
                                                                             ud.field_k = ud.field_k + 3;
                                                                             ob.field_j = vk.field_p;
                                                                             bi.field_i = bi.field_i + 3;
@@ -1013,7 +1013,7 @@ final class rb {
                                                                             }
                                                                           }
                                                                           L64: {
-                                                                            if ((((rb) this).field_m ^ -1) <= -37) {
+                                                                            if (((rb) this).field_m >= 36) {
                                                                               ((rb) this).field_m = ((rb) this).field_m - 36;
                                                                               break L64;
                                                                             } else {
@@ -1034,10 +1034,10 @@ final class rb {
                                                                               }
                                                                             }
                                                                             L67: {
-                                                                              var4 = ((rb) this).field_a >> -863563004;
-                                                                              var5 = (((rb) this).field_b >> -1449769372) + -720 - -ea.field_p[kb.field_b];
+                                                                              var4 = ((rb) this).field_a >> 4;
+                                                                              var5 = (((rb) this).field_b >> 4) + -720 - -ea.field_p[kb.field_b];
                                                                               var6 = (int)Math.sqrt((double)(var5 * var5 + var4 * var4));
-                                                                              if ((kd.field_b[kb.field_b] + ((rb) this).field_g ^ -1) >= (var6 ^ -1)) {
+                                                                              if (~(kd.field_b[kb.field_b] + ((rb) this).field_g) >= ~var6) {
                                                                                 break L67;
                                                                               } else {
                                                                                 L68: {
@@ -1053,7 +1053,7 @@ final class rb {
                                                                                 break L67;
                                                                               }
                                                                             }
-                                                                            if (-1 != (((rb) this).field_m % 8 ^ -1)) {
+                                                                            if (((rb) this).field_m % 8 != 0) {
                                                                               break L65;
                                                                             } else {
                                                                               if (20 > ((rb) this).field_l) {
@@ -1064,7 +1064,7 @@ final class rb {
                                                                                   stackIn_335_1 = stackOut_333_1;
                                                                                   stackIn_334_0 = stackOut_333_0;
                                                                                   stackIn_334_1 = stackOut_333_1;
-                                                                                  if (-33 < (var6 ^ -1)) {
+                                                                                  if (var6 < 32) {
                                                                                     stackOut_335_0 = stackIn_335_0;
                                                                                     stackOut_335_1 = stackIn_335_1;
                                                                                     stackOut_335_2 = 256;
@@ -1110,7 +1110,7 @@ final class rb {
                                                                                 ((rb) this).field_c = 0;
                                                                                 bi.field_i = bi.field_i + 5;
                                                                                 ((rb) this).field_j = ((rb) this).field_j - 5;
-                                                                                ic.field_t = ic.field_t + (lc.field_h >>> -546010799) * 5;
+                                                                                ic.field_t = ic.field_t + (lc.field_h >>> 17) * 5;
                                                                                 ((rb) this).field_e = 0;
                                                                                 ob.field_j = vk.field_p;
                                                                                 ((rb) this).field_d = 0;
@@ -1133,12 +1133,12 @@ final class rb {
                                                                                 if (21 == var4) {
                                                                                   break L72;
                                                                                 } else {
-                                                                                  if (-23 == (var4 ^ -1)) {
+                                                                                  if (var4 == 22) {
                                                                                     break L72;
                                                                                   } else {
                                                                                     if (23 != var4) {
                                                                                       if (24 != var4) {
-                                                                                        if ((var4 ^ -1) != -32) {
+                                                                                        if (var4 != 31) {
                                                                                           break L9;
                                                                                         } else {
                                                                                           ((rb) this).field_e = ((rb) this).field_e + 2;
@@ -1160,7 +1160,7 @@ final class rb {
                                                                               }
                                                                             }
                                                                             ((rb) this).field_e = ((rb) this).field_e + 1;
-                                                                            if ((((rb) this).field_g ^ -1) > (((rb) this).field_e ^ -1)) {
+                                                                            if (~((rb) this).field_g > ~((rb) this).field_e) {
                                                                               ((rb) this).field_h = true;
                                                                               return null;
                                                                             } else {
@@ -1169,7 +1169,7 @@ final class rb {
                                                                           } else {
                                                                             L73: {
                                                                               ((rb) this).field_l = ((rb) this).field_l + 10;
-                                                                              if ((((rb) this).field_l ^ -1) >= -151) {
+                                                                              if (((rb) this).field_l <= 150) {
                                                                                 break L73;
                                                                               } else {
                                                                                 ((rb) this).field_l = ((rb) this).field_l - 150;
@@ -1191,7 +1191,7 @@ final class rb {
                                                                                 if (!pg.field_e) {
                                                                                   break L76;
                                                                                 } else {
-                                                                                  if ((kd.field_a ^ -1) != 0) {
+                                                                                  if (kd.field_a != -1) {
                                                                                     break L76;
                                                                                   } else {
                                                                                     break L75;
@@ -1199,8 +1199,8 @@ final class rb {
                                                                                 }
                                                                               }
                                                                               L77: {
-                                                                                var4 = ((rb) this).field_a >> -1637183836;
-                                                                                var5 = (((rb) this).field_b >> 1116271908) - (720 - ea.field_p[kb.field_b]);
+                                                                                var4 = ((rb) this).field_a >> 4;
+                                                                                var5 = (((rb) this).field_b >> 4) - (720 - ea.field_p[kb.field_b]);
                                                                                 var6 = (int)Math.sqrt((double)(var4 * var4 + var5 * var5));
                                                                                 if (kd.field_b[kb.field_b] + ((rb) this).field_g <= var6) {
                                                                                   break L77;
@@ -1221,7 +1221,7 @@ final class rb {
                                                                               if (((rb) this).field_m % 8 != 0) {
                                                                                 break L75;
                                                                               } else {
-                                                                                if ((((rb) this).field_l ^ -1) <= -21) {
+                                                                                if (((rb) this).field_l >= 20) {
                                                                                   break L75;
                                                                                 } else {
                                                                                   L79: {
@@ -1231,7 +1231,7 @@ final class rb {
                                                                                     stackIn_362_1 = stackOut_360_1;
                                                                                     stackIn_361_0 = stackOut_360_0;
                                                                                     stackIn_361_1 = stackOut_360_1;
-                                                                                    if ((var6 ^ -1) <= -33) {
+                                                                                    if (var6 >= 32) {
                                                                                       stackOut_362_0 = stackIn_362_0;
                                                                                       stackOut_362_1 = stackIn_362_1;
                                                                                       stackOut_362_2 = 8192 / var6;
@@ -1262,13 +1262,13 @@ final class rb {
                                                                                 break L80;
                                                                               }
                                                                             }
-                                                                            if ((((rb) this).field_e ^ -1) < -257) {
+                                                                            if (((rb) this).field_e > 256) {
                                                                               vk.field_p = vk.field_p + 1;
                                                                               var4 = 0;
                                                                               L81: while (true) {
                                                                                 if (var4 >= 32) {
                                                                                   mb.a(true, 26, 256);
-                                                                                  ic.field_t = ic.field_t + 6 * (lc.field_h >>> -33709039);
+                                                                                  ic.field_t = ic.field_t + 6 * (lc.field_h >>> 17);
                                                                                   ((rb) this).field_j = ((rb) this).field_j - 6;
                                                                                   ((rb) this).field_c = 0;
                                                                                   cb.field_a = 256;
@@ -1294,7 +1294,7 @@ final class rb {
                                                                       } else {
                                                                         L82: {
                                                                           ((rb) this).field_l = ((rb) this).field_l + 20;
-                                                                          if ((((rb) this).field_l ^ -1) < -151) {
+                                                                          if (((rb) this).field_l > 150) {
                                                                             ((rb) this).field_l = ((rb) this).field_l - 150;
                                                                             ((rb) this).field_m = ((rb) this).field_m + 1;
                                                                             break L82;
@@ -1316,7 +1316,7 @@ final class rb {
                                                                             if (!pg.field_e) {
                                                                               break L85;
                                                                             } else {
-                                                                              if (0 != (kd.field_a ^ -1)) {
+                                                                              if (kd.field_a != -1) {
                                                                                 break L85;
                                                                               } else {
                                                                                 break L84;
@@ -1324,10 +1324,10 @@ final class rb {
                                                                             }
                                                                           }
                                                                           L86: {
-                                                                            var4 = ((rb) this).field_a >> -1459430012;
-                                                                            var5 = ea.field_p[kb.field_b] + ((((rb) this).field_b >> 1931708676) + -720);
+                                                                            var4 = ((rb) this).field_a >> 4;
+                                                                            var5 = ea.field_p[kb.field_b] + ((((rb) this).field_b >> 4) + -720);
                                                                             var6 = (int)Math.sqrt((double)(var4 * var4 + var5 * var5));
-                                                                            if ((var6 ^ -1) <= (kd.field_b[kb.field_b] + ((rb) this).field_g ^ -1)) {
+                                                                            if (~var6 <= ~(kd.field_b[kb.field_b] + ((rb) this).field_g)) {
                                                                               break L86;
                                                                             } else {
                                                                               L87: {
@@ -1346,7 +1346,7 @@ final class rb {
                                                                           if (0 != ((rb) this).field_m % 8) {
                                                                             break L84;
                                                                           } else {
-                                                                            if (-41 >= (((rb) this).field_l ^ -1)) {
+                                                                            if (((rb) this).field_l >= 40) {
                                                                               break L84;
                                                                             } else {
                                                                               L88: {
@@ -1356,7 +1356,7 @@ final class rb {
                                                                                 stackIn_305_1 = stackOut_303_1;
                                                                                 stackIn_304_0 = stackOut_303_0;
                                                                                 stackIn_304_1 = stackOut_303_1;
-                                                                                if ((var6 ^ -1) <= -33) {
+                                                                                if (var6 >= 32) {
                                                                                   stackOut_305_0 = stackIn_305_0;
                                                                                   stackOut_305_1 = stackIn_305_1;
                                                                                   stackOut_305_2 = 8192 / var6;
@@ -1380,7 +1380,7 @@ final class rb {
                                                                           }
                                                                         }
                                                                         L89: {
-                                                                          if ((((rb) this).field_k ^ -1) < -1) {
+                                                                          if (((rb) this).field_k > 0) {
                                                                             ((rb) this).field_k = ((rb) this).field_k - 1;
                                                                             break L89;
                                                                           } else {
@@ -1399,7 +1399,7 @@ final class rb {
                                                                               ud.field_k = ud.field_k + 4;
                                                                               cb.field_a = 256;
                                                                               bi.field_i = bi.field_i + 4;
-                                                                              ic.field_t = ic.field_t + ((-111141 & lc.field_h) >>> 131248687);
+                                                                              ic.field_t = ic.field_t + ((-111141 & lc.field_h) >>> 15);
                                                                               ((rb) this).field_c = 0;
                                                                               ((rb) this).field_d = 0;
                                                                               ((rb) this).field_j = ((rb) this).field_j - 5;
@@ -1440,7 +1440,7 @@ final class rb {
                                                     ((rb) this).field_e = ((rb) this).field_e + 1;
                                                     ((rb) this).field_a = ((rb) this).field_a - ((rb) this).field_c;
                                                     ((rb) this).field_b = ((rb) this).field_b - ((rb) this).field_d;
-                                                    if ((((rb) this).field_e ^ -1) >= -3) {
+                                                    if (((rb) this).field_e <= 2) {
                                                       break L9;
                                                     } else {
                                                       return null;
@@ -1452,7 +1452,7 @@ final class rb {
                                               }
                                             }
                                             ((rb) this).field_e = ((rb) this).field_e + 1;
-                                            if ((((rb) this).field_e ^ -1) >= -17) {
+                                            if (((rb) this).field_e <= 16) {
                                               break L9;
                                             } else {
                                               return null;
@@ -1464,7 +1464,7 @@ final class rb {
                                   } else {
                                     L91: {
                                       ((rb) this).field_g = 8;
-                                      if ((bi.field_h ^ -1) != -2) {
+                                      if (bi.field_h != 1) {
                                         break L91;
                                       } else {
                                         ((rb) this).field_g = 16;
@@ -1472,7 +1472,7 @@ final class rb {
                                       }
                                     }
                                     L92: {
-                                      if (-3 != (bi.field_h ^ -1)) {
+                                      if (bi.field_h != 2) {
                                         break L92;
                                       } else {
                                         ((rb) this).field_g = 32;
@@ -1485,7 +1485,7 @@ final class rb {
                                     var21.field_c = ((rb) this).field_c;
                                     pk.a((byte) 32, var21);
                                     this.a(10, -19, 0);
-                                    if (-11 != (((rb) this).field_j ^ -1)) {
+                                    if (((rb) this).field_j != 10) {
                                       break L9;
                                     } else {
                                       L93: {
@@ -1512,7 +1512,7 @@ final class rb {
                           L95: {
                             ((rb) this).field_g = 4;
                             ((rb) this).field_e = ((rb) this).field_e + 1;
-                            if ((((rb) this).field_e % 10 ^ -1) == -1) {
+                            if (((rb) this).field_e % 10 == 0) {
                               break L95;
                             } else {
                               L96: {
@@ -1522,7 +1522,7 @@ final class rb {
                                   if (bi.field_h != 0) {
                                     break L96;
                                   } else {
-                                    if ((((rb) this).field_e % 3 ^ -1) == -1) {
+                                    if (((rb) this).field_e % 3 == 0) {
                                       break L95;
                                     } else {
                                       break L96;
@@ -1531,10 +1531,10 @@ final class rb {
                                 }
                               }
                               L97: {
-                                if ((((rb) this).field_e ^ -1) <= -101) {
+                                if (((rb) this).field_e >= 100) {
                                   break L97;
                                 } else {
-                                  if ((bi.field_h ^ -1) != -2) {
+                                  if (bi.field_h != 1) {
                                     break L97;
                                   } else {
                                     if (0 == ((rb) this).field_e % 4) {
@@ -1545,10 +1545,10 @@ final class rb {
                                   }
                                 }
                               }
-                              if ((((rb) this).field_e ^ -1) <= -101) {
+                              if (((rb) this).field_e >= 100) {
                                 break L94;
                               } else {
-                                if ((bi.field_h ^ -1) != -3) {
+                                if (bi.field_h != 2) {
                                   break L94;
                                 } else {
                                   if (((rb) this).field_e % 5 == 0) {
@@ -1575,15 +1575,15 @@ final class rb {
                             break L94;
                           }
                         }
-                        if ((((rb) this).field_e ^ -1) > -101) {
+                        if (((rb) this).field_e < 100) {
                           L99: {
-                            var4 = (((rb) this).field_a >> -1496168924) + -wd.field_c - -320;
-                            var5 = (((rb) this).field_b >> 19910308) - si.field_E;
+                            var4 = (((rb) this).field_a >> 4) + -wd.field_c - -320;
+                            var5 = (((rb) this).field_b >> 4) - si.field_E;
                             var6 = -var4 + gb.field_j;
                             var7 = -var5 + ad.field_m;
-                            if (-1 >= (ve.field_b ^ -1)) {
-                              var7 = -si.field_E + (wg.field_e >> 212158404) + -var5;
-                              var6 = -var4 + 320 + (-wd.field_c + (sk.field_o >> 573939300));
+                            if (ve.field_b >= 0) {
+                              var7 = -si.field_E + (wg.field_e >> 4) + -var5;
+                              var6 = -var4 + 320 + (-wd.field_c + (sk.field_o >> 4));
                               break L99;
                             } else {
                               break L99;
@@ -1591,7 +1591,7 @@ final class rb {
                           }
                           L100: {
                             var8 = (int)Math.sqrt((double)(var7 * var7 + var6 * var6));
-                            if (-9 <= (var8 ^ -1)) {
+                            if (var8 <= 8) {
                               break L100;
                             } else {
                               ((rb) this).field_c = ((rb) this).field_c + var6 * 8 / var8;
@@ -1615,7 +1615,7 @@ final class rb {
                       }
                     }
                   }
-                  if ((((rb) this).field_j ^ -1) == -6) {
+                  if (((rb) this).field_j == 5) {
                     continue L0;
                   } else {
                     if (7 == ((rb) this).field_j) {
@@ -1634,14 +1634,11 @@ final class rb {
     }
 
     final static void c(int param0) {
-        if (ad.field_h != -a.field_i + 0) {
+        if (ad.field_h != -a.field_i) {
             if (ad.field_h != 250 + -a.field_i) {
             }
         }
         ad.field_h = ad.field_h + 1;
-        if (param0 != -27347) {
-            boolean discarded$0 = rb.a(78);
-        }
     }
 
     final static boolean a(int param0) {
@@ -1674,7 +1671,7 @@ final class rb {
         }
         var8 = 0;
         L1: while (true) {
-          if ((var8 ^ -1) <= (kf.field_G.length ^ -1)) {
+          if (~var8 <= ~kf.field_G.length) {
             return;
           } else {
             L2: {
@@ -1686,18 +1683,18 @@ final class rb {
                   if (var12.field_h) {
                     break L2;
                   } else {
-                    if (-26 < (var12.field_j ^ -1)) {
+                    if (var12.field_j < 25) {
                       break L2;
                     } else {
-                      if ((var12.field_j ^ -1) >= -31) {
-                        var5 = var12.field_a - ((rb) this).field_a >> 1173828164;
-                        var6 = -((rb) this).field_b + var12.field_b >> -632933532;
+                      if (var12.field_j <= 30) {
+                        var5 = var12.field_a - ((rb) this).field_a >> 4;
+                        var6 = -((rb) this).field_b + var12.field_b >> 4;
                         var7 = (int)Math.sqrt((double)(var5 * var5 + var6 * var6));
-                        if ((((rb) this).field_g + var12.field_g ^ -1) > (var7 ^ -1)) {
+                        if (~(((rb) this).field_g + var12.field_g) > ~var7) {
                           break L2;
                         } else {
                           L3: {
-                            if ((var7 ^ -1) < -1) {
+                            if (var7 > 0) {
                               var12.field_d = var12.field_d + param2 * var6 * 6400 / (var12.field_g * (var7 * var12.field_g * var12.field_g));
                               var12.field_c = var12.field_c + 6400 * (var5 * param2) / (var12.field_g * (var7 * var12.field_g * var12.field_g));
                               break L3;
@@ -1706,7 +1703,7 @@ final class rb {
                             }
                           }
                           L4: {
-                            if ((((rb) this).field_j ^ -1) != (param0 ^ -1)) {
+                            if (~((rb) this).field_j != ~param0) {
                               L5: {
                                 if (9 == param0) {
                                   mb.a(true, 4, 256);
@@ -1749,17 +1746,17 @@ final class rb {
                               }
                               L10: {
                                 L11: {
-                                  if (-11 == (param0 ^ -1)) {
+                                  if (param0 == 10) {
                                     break L11;
                                   } else {
-                                    if (-12 != (param0 ^ -1)) {
+                                    if (param0 != 11) {
                                       break L10;
                                     } else {
                                       break L11;
                                     }
                                   }
                                 }
-                                if (-4 != (((rb) this).field_j ^ -1)) {
+                                if (((rb) this).field_j != 3) {
                                   mb.a(true, 4, 256);
                                   break L10;
                                 } else {
@@ -1780,7 +1777,7 @@ final class rb {
                                   if (9 == ((rb) this).field_j) {
                                     var9 = 0;
                                     L13: while (true) {
-                                      if ((var9 ^ -1) <= -3) {
+                                      if (var9 >= 2) {
                                         break L12;
                                       } else {
                                         var13 = new rb(31, (rb) this);
@@ -1796,10 +1793,10 @@ final class rb {
                                   }
                                 }
                                 L14: {
-                                  if ((((rb) this).field_j ^ -1) == -13) {
+                                  if (((rb) this).field_j == 12) {
                                     var9 = 0;
                                     L15: while (true) {
-                                      if ((var9 ^ -1) <= -2) {
+                                      if (var9 >= 1) {
                                         break L14;
                                       } else {
                                         var14 = new rb(31, (rb) this);
@@ -1815,10 +1812,10 @@ final class rb {
                                   }
                                 }
                                 L16: {
-                                  if (-18 == (((rb) this).field_j ^ -1)) {
+                                  if (((rb) this).field_j == 17) {
                                     var9 = 0;
                                     L17: while (true) {
-                                      if (-3 >= (var9 ^ -1)) {
+                                      if (var9 >= 2) {
                                         break L16;
                                       } else {
                                         var15 = new rb(31, (rb) this);
@@ -1834,7 +1831,7 @@ final class rb {
                                   }
                                 }
                                 L18: {
-                                  if ((((rb) this).field_j ^ -1) != -19) {
+                                  if (((rb) this).field_j != 18) {
                                     break L18;
                                   } else {
                                     var9 = 0;
@@ -1874,10 +1871,10 @@ final class rb {
                           if (param0 == 10) {
                             break L2;
                           } else {
-                            if ((param0 ^ -1) == -12) {
+                            if (param0 == 11) {
                               break L2;
                             } else {
-                              if (-19 == (param0 ^ -1)) {
+                              if (param0 == 18) {
                                 break L2;
                               } else {
                                 return;
@@ -1912,8 +1909,8 @@ final class rb {
         int var11 = 0;
         L0: {
           var11 = SolKnight.field_L ? 1 : 0;
-          var4 = (((rb) this).field_a >> 1631781604) + (-wd.field_c - -320);
-          var5 = -si.field_E + (((rb) this).field_b >> -1425112636);
+          var4 = (((rb) this).field_a >> 4) + (-wd.field_c - -320);
+          var5 = -si.field_E + (((rb) this).field_b >> 4);
           if (param0 > 69) {
             break L0;
           } else {
@@ -1925,10 +1922,10 @@ final class rb {
           var8 = 0;
           var9 = 0;
           var10 = ((rb) this).field_j;
-          if ((var10 ^ -1) == -1) {
+          if (var10 == 0) {
             L2: {
               var6 = (int)(128.0 * Math.atan2((double)(-((rb) this).field_c), (double)(-((rb) this).field_d)) / 3.141592653589793);
-              if (((((rb) this).field_d | ((rb) this).field_c) ^ -1) != -1) {
+              if ((((rb) this).field_d | ((rb) this).field_c) != 0) {
                 var10 = (int)Math.sqrt((double)(((rb) this).field_d * ((rb) this).field_d + ((rb) this).field_c * ((rb) this).field_c));
                 var8 = ((rb) this).field_c * 12 / var10;
                 var9 = ((rb) this).field_d * 12 / var10;
@@ -1946,8 +1943,8 @@ final class rb {
               if (2 != var10) {
                 if (var10 != 3) {
                   if (var10 != 4) {
-                    if ((var10 ^ -1) != -6) {
-                      if (-7 == (var10 ^ -1)) {
+                    if (var10 != 5) {
+                      if (var10 == 6) {
                         mi.e(var4, var5, 4, 65280);
                         mi.e(var4 + -(((rb) this).field_c / 32), -(((rb) this).field_d / 32) + var5, 3, 65280);
                         mi.e(-(((rb) this).field_c / 16) + var4, var5 - ((rb) this).field_d / 16, 2, 65280);
@@ -1956,10 +1953,10 @@ final class rb {
                         break L1;
                       } else {
                         if (var10 != 7) {
-                          if ((var10 ^ -1) != -9) {
+                          if (var10 != 8) {
                             L3: {
-                              if (-10 != (var10 ^ -1)) {
-                                if ((var10 ^ -1) == -11) {
+                              if (var10 != 9) {
+                                if (var10 == 10) {
                                   L4: {
                                     var7 = 256 * ((rb) this).field_e / 256;
                                     if (16 > var7) {
@@ -1970,7 +1967,7 @@ final class rb {
                                     }
                                   }
                                   var7 = 2 + ((rb) this).field_e * 42 / 256;
-                                  if ((var7 ^ -1) > -17) {
+                                  if (var7 < 16) {
                                     L5: {
                                       if (4 > var7) {
                                         var7 = 0;
@@ -1986,7 +1983,7 @@ final class rb {
                                     break L1;
                                   }
                                 } else {
-                                  if (-12 != (var10 ^ -1)) {
+                                  if (var10 != 11) {
                                     if (var10 != 12) {
                                       if (13 != var10) {
                                         if (14 != var10) {
@@ -2004,11 +2001,11 @@ final class rb {
                                                   if (19 != var10) {
                                                     if (25 != var10) {
                                                       if (26 != var10) {
-                                                        if (-28 != (var10 ^ -1)) {
-                                                          if (-29 == (var10 ^ -1)) {
+                                                        if (var10 != 27) {
+                                                          if (var10 == 28) {
                                                             L6: {
                                                               wi.field_i[((rb) this).field_m].a(96, var5, 116, 0, var4);
-                                                              if (-1 > (((rb) this).field_k ^ -1)) {
+                                                              if (((rb) this).field_k > 0) {
                                                                 break L6;
                                                               } else {
                                                                 if (param1 < -((rb) this).field_g + var4) {
@@ -2017,10 +2014,10 @@ final class rb {
                                                                   if (((rb) this).field_g + var4 < param1) {
                                                                     break L3;
                                                                   } else {
-                                                                    if ((-((rb) this).field_g + var5 ^ -1) < (param2 ^ -1)) {
+                                                                    if (~(-((rb) this).field_g + var5) < ~param2) {
                                                                       break L3;
                                                                     } else {
-                                                                      if ((param2 ^ -1) >= (var5 + ((rb) this).field_g ^ -1)) {
+                                                                      if (~param2 >= ~(var5 + ((rb) this).field_g)) {
                                                                         break L6;
                                                                       } else {
                                                                         break L1;
@@ -2030,7 +2027,7 @@ final class rb {
                                                                 }
                                                               }
                                                             }
-                                                            if (0 == (kd.field_a ^ -1)) {
+                                                            if (kd.field_a == -1) {
                                                               mi.b(var4 + -(((rb) this).field_g / 2), var5 + -2, -(((rb) this).field_e * ((rb) this).field_g / 72) + ((rb) this).field_g, 4, 16744576);
                                                               mi.g(-(((rb) this).field_g / 2) + var4, var5 - 2, ((rb) this).field_g, 4, 16711680);
                                                               break L1;
@@ -2038,22 +2035,22 @@ final class rb {
                                                               break L1;
                                                             }
                                                           } else {
-                                                            if ((var10 ^ -1) == -30) {
+                                                            if (var10 == 29) {
                                                               L7: {
                                                                 wi.field_i[((rb) this).field_m].a(128, var5, 92, 0, var4);
                                                                 if (0 < ((rb) this).field_k) {
                                                                   break L7;
                                                                 } else {
-                                                                  if ((var4 + -((rb) this).field_g ^ -1) < (param1 ^ -1)) {
+                                                                  if (~(var4 + -((rb) this).field_g) < ~param1) {
                                                                     break L3;
                                                                   } else {
-                                                                    if ((((rb) this).field_g + var4 ^ -1) > (param1 ^ -1)) {
+                                                                    if (~(((rb) this).field_g + var4) > ~param1) {
                                                                       break L3;
                                                                     } else {
                                                                       if (var5 - ((rb) this).field_g > param2) {
                                                                         break L3;
                                                                       } else {
-                                                                        if ((param2 ^ -1) < (var5 - -((rb) this).field_g ^ -1)) {
+                                                                        if (~param2 < ~(var5 - -((rb) this).field_g)) {
                                                                           break L3;
                                                                         } else {
                                                                           break L7;
@@ -2073,18 +2070,18 @@ final class rb {
                                                             } else {
                                                               if (30 != var10) {
                                                                 L8: {
-                                                                  if ((var10 ^ -1) != -21) {
+                                                                  if (var10 != 20) {
                                                                     if (21 != var10) {
-                                                                      if ((var10 ^ -1) != -23) {
-                                                                        if ((var10 ^ -1) == -24) {
+                                                                      if (var10 != 22) {
+                                                                        if (var10 == 23) {
                                                                           break L8;
                                                                         } else {
                                                                           if (var10 != 24) {
-                                                                            if ((var10 ^ -1) != -32) {
+                                                                            if (var10 != 31) {
                                                                               mi.e(var4, var5, 4, 16777215);
                                                                               break L1;
                                                                             } else {
-                                                                              if ((((rb) this).field_e ^ -1) > -129) {
+                                                                              if (((rb) this).field_e < 128) {
                                                                                 wi.field_i[((rb) this).field_m].a((128 + -((rb) this).field_e) * 16 / 128, var5, 104, 0, var4);
                                                                                 break L1;
                                                                               } else {
@@ -2105,11 +2102,11 @@ final class rb {
                                                                     break L8;
                                                                   }
                                                                 }
-                                                                if (-1 <= (-((rb) this).field_e + ((rb) this).field_g ^ -1)) {
+                                                                if (-((rb) this).field_e + ((rb) this).field_g <= 0) {
                                                                   break L3;
                                                                 } else {
                                                                   var7 = 16 * ((rb) this).field_e / ((rb) this).field_g;
-                                                                  if (-17 < (var7 ^ -1)) {
+                                                                  if (var7 < 16) {
                                                                     ii.field_g[var7].c(((rb) this).field_e + (-((rb) this).field_g + var4), ((rb) this).field_e + -((rb) this).field_g + var5, (-((rb) this).field_e + ((rb) this).field_g) * 2, (((rb) this).field_g - ((rb) this).field_e) * 2, 255 - ((rb) this).field_e * 255 / ((rb) this).field_g);
                                                                     ua.field_F[0].c(var4 + -(((rb) this).field_e * 4), var5 + -(4 * ((rb) this).field_e), ((rb) this).field_e * 8, ((rb) this).field_e * 8, -(128 * ((rb) this).field_e / ((rb) this).field_g) + 128);
                                                                     break L1;
@@ -2120,7 +2117,7 @@ final class rb {
                                                               } else {
                                                                 L9: {
                                                                   wi.field_i[((rb) this).field_m].a(170, var5, 110, 0, var4);
-                                                                  if (-1 > (((rb) this).field_k ^ -1)) {
+                                                                  if (((rb) this).field_k > 0) {
                                                                     break L9;
                                                                   } else {
                                                                     if (param1 < -((rb) this).field_g + var4) {
@@ -2158,10 +2155,10 @@ final class rb {
                                                             if (((rb) this).field_k > 0) {
                                                               break L10;
                                                             } else {
-                                                              if ((var4 + -((rb) this).field_g ^ -1) < (param1 ^ -1)) {
+                                                              if (~(var4 + -((rb) this).field_g) < ~param1) {
                                                                 break L3;
                                                               } else {
-                                                                if ((param1 ^ -1) < (var4 - -((rb) this).field_g ^ -1)) {
+                                                                if (~param1 < ~(var4 - -((rb) this).field_g)) {
                                                                   break L3;
                                                                 } else {
                                                                   if (var5 - ((rb) this).field_g > param2) {
@@ -2194,13 +2191,13 @@ final class rb {
                                                             if (var4 + -((rb) this).field_g > param1) {
                                                               break L3;
                                                             } else {
-                                                              if ((param1 ^ -1) < (((rb) this).field_g + var4 ^ -1)) {
+                                                              if (~param1 < ~(((rb) this).field_g + var4)) {
                                                                 break L3;
                                                               } else {
                                                                 if (var5 - ((rb) this).field_g > param2) {
                                                                   break L3;
                                                                 } else {
-                                                                  if ((param2 ^ -1) < (var5 + ((rb) this).field_g ^ -1)) {
+                                                                  if (~param2 < ~(var5 + ((rb) this).field_g)) {
                                                                     break L3;
                                                                   } else {
                                                                     break L11;
@@ -2210,7 +2207,7 @@ final class rb {
                                                             }
                                                           }
                                                         }
-                                                        if ((kd.field_a ^ -1) != 0) {
+                                                        if (kd.field_a != -1) {
                                                           break L3;
                                                         } else {
                                                           mi.b(var4 - ((rb) this).field_g / 2, -2 + var5, -(((rb) this).field_g * ((rb) this).field_e / 12) + ((rb) this).field_g, 4, 16744576);
@@ -2221,16 +2218,16 @@ final class rb {
                                                     } else {
                                                       L12: {
                                                         wi.field_i[((rb) this).field_m].a(21, var5, 110, 0, var4);
-                                                        if ((((rb) this).field_k ^ -1) < -1) {
+                                                        if (((rb) this).field_k > 0) {
                                                           break L12;
                                                         } else {
-                                                          if ((param1 ^ -1) > (-((rb) this).field_g + var4 ^ -1)) {
+                                                          if (~param1 > ~(-((rb) this).field_g + var4)) {
                                                             break L3;
                                                           } else {
                                                             if (param1 > ((rb) this).field_g + var4) {
                                                               break L3;
                                                             } else {
-                                                              if ((param2 ^ -1) > (var5 + -((rb) this).field_g ^ -1)) {
+                                                              if (~param2 > ~(var5 + -((rb) this).field_g)) {
                                                                 break L3;
                                                               } else {
                                                                 if (param2 <= ((rb) this).field_g + var5) {
@@ -2243,7 +2240,7 @@ final class rb {
                                                           }
                                                         }
                                                       }
-                                                      if ((kd.field_a ^ -1) == 0) {
+                                                      if (kd.field_a == -1) {
                                                         mi.b(var4 - ((rb) this).field_g / 2, -2 + var5, ((rb) this).field_g + -(((rb) this).field_e * ((rb) this).field_g / 4), 4, 16744576);
                                                         mi.g(var4 - ((rb) this).field_g / 2, -2 + var5, ((rb) this).field_g, 4, 16711680);
                                                         break L1;
@@ -2252,7 +2249,7 @@ final class rb {
                                                       }
                                                     }
                                                   } else {
-                                                    mi.a((((rb) this).field_c >> -625165724) + var4, (((rb) this).field_d >> 1225961508) + var5, ((rb) this).field_g - -4, 16711680, 32);
+                                                    mi.a((((rb) this).field_c >> 4) + var4, (((rb) this).field_d >> 4) + var5, ((rb) this).field_g - -4, 16711680, 32);
                                                     mi.e(var4, var5, ((rb) this).field_g, 16777215);
                                                     break L1;
                                                   }
@@ -2265,7 +2262,7 @@ final class rb {
                                                       break L13;
                                                     }
                                                   }
-                                                  if ((((rb) this).field_e * 16 ^ -1) > -256) {
+                                                  if (((rb) this).field_e * 16 < 255) {
                                                     mi.a(var4, var5, ((rb) this).field_e, 16776960, -(((rb) this).field_e * 16) + 255);
                                                     break L1;
                                                   } else {
@@ -2295,7 +2292,7 @@ final class rb {
                                         }
                                       } else {
                                         var7 = 256 * ((rb) this).field_e / 256;
-                                        if ((var7 ^ -1) > -17) {
+                                        if (var7 < 16) {
                                           ii.field_g[var7].c(var4 - 16, -16 + var5, 32, 32, 256 - ((rb) this).field_e * 16);
                                           break L1;
                                         } else {
@@ -2304,7 +2301,7 @@ final class rb {
                                       }
                                     } else {
                                       var7 = 256 * ((rb) this).field_e / 256;
-                                      if ((var7 ^ -1) > -17) {
+                                      if (var7 < 16) {
                                         ii.field_g[var7].c(var4 + -8, -8 + var5, 16, 16, -(16 * ((rb) this).field_e) + 256);
                                         break L1;
                                       } else {
@@ -2314,7 +2311,7 @@ final class rb {
                                   } else {
                                     L14: {
                                       var7 = 256 * ((rb) this).field_e / 256;
-                                      if ((var7 ^ -1) > -17) {
+                                      if (var7 < 16) {
                                         ua.field_F[var7].c(-(4 * ((rb) this).field_e) + var4, var5 + -(((rb) this).field_e * 4), 8 * ((rb) this).field_e, 8 * ((rb) this).field_e, -(((rb) this).field_e * 16) + 256);
                                         break L14;
                                       } else {
@@ -2322,11 +2319,11 @@ final class rb {
                                       }
                                     }
                                     var7 = 28 * ((rb) this).field_e / 256 + 2;
-                                    if (-17 >= (var7 ^ -1)) {
+                                    if (var7 >= 16) {
                                       break L3;
                                     } else {
                                       L15: {
-                                        if (-5 < (var7 ^ -1)) {
+                                        if (var7 < 4) {
                                           var7 = 0;
                                           break L15;
                                         } else {
@@ -2361,7 +2358,7 @@ final class rb {
                             break L1;
                           } else {
                             var7 = ((rb) this).field_e * 64 / 256;
-                            if (-17 < (var7 ^ -1)) {
+                            if (var7 < 16) {
                               eh.field_b[var7].d(-((rb) this).field_e + var4, var5 - ((rb) this).field_e, ((rb) this).field_e * 2, ((rb) this).field_e * 2, (256 - ((rb) this).field_e * 4) / 2);
                               break L1;
                             } else {
@@ -2395,7 +2392,7 @@ final class rb {
                 L17: {
                   var6 = (int)(Math.atan2((double)(-((rb) this).field_c), (double)(-((rb) this).field_d)) * 128.0 / 3.141592653589793);
                   hf.field_c[2].a(128, var5, 121, var6, var4);
-                  if (-1 == ((((rb) this).field_c | ((rb) this).field_d) ^ -1)) {
+                  if ((((rb) this).field_c | ((rb) this).field_d) == 0) {
                     break L17;
                   } else {
                     var10 = (int)Math.sqrt((double)(((rb) this).field_c * ((rb) this).field_c + ((rb) this).field_d * ((rb) this).field_d));
@@ -2430,12 +2427,154 @@ final class rb {
     }
 
     final static o a(String param0, String param1, da param2, byte param3) {
-        int var4 = param2.c(91, param1);
-        int var5 = param2.a(param0, -1, var4);
-        if (param3 >= -108) {
-            field_f = 75;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        o stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        o stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2.c(91, param1);
+              var5 = param2.a(param0, -1, var4_int);
+              if (param3 < -108) {
+                break L1;
+              } else {
+                field_f = 75;
+                break L1;
+              }
+            }
+            stackOut_2_0 = mh.a(true, param2, var4_int, var5);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_1 = new StringBuilder().append("rb.C(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param2 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw fc.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param3 + 41);
         }
-        return mh.a(true, param2, var4, var5);
+        return stackIn_3_0;
     }
 
     private final void a(byte param0) {
@@ -2443,7 +2582,7 @@ final class rb {
             this.a((byte) 96);
         }
         if (!pg.field_e) {
-            if (-26 >= (((rb) this).field_j ^ -1)) {
+            if (((rb) this).field_j >= 25) {
                 if (!(((rb) this).field_j > 30)) {
                     lk.field_f = lk.field_f + (1 - -((rb) this).field_j + -25);
                 }
@@ -2467,31 +2606,87 @@ final class rb {
     }
 
     private rb(int param0, rb param1) {
-        double var3 = 0.0;
+        RuntimeException var3 = null;
+        double var3_double = 0.0;
         double var5 = 0.0;
         int var7 = 0;
         int var8 = 0;
-        ((rb) this).field_c = 0;
-        ((rb) this).field_b = param1.field_b;
-        ((rb) this).field_d = 0;
-        ((rb) this).field_a = param1.field_a;
-        ((rb) this).field_e = 0;
-        if (param0 == 31) {
-            ((rb) this).field_c = param1.field_c;
-            ((rb) this).field_d = param1.field_d;
-            var3 = 3.141592653589793 * Math.random();
-            var5 = Math.random() * (double)param1.field_g * 2.0 - (double)param1.field_g;
-            var7 = (int)(Math.sin(var3) * var5);
-            var8 = (int)(Math.cos(var3) * var5);
-            ((rb) this).field_e = (int)var5;
-            ((rb) this).field_a = ((rb) this).field_a + var7;
-            ((rb) this).field_d = ((rb) this).field_d + var8;
-            ((rb) this).field_c = ((rb) this).field_c + var7;
-            ((rb) this).field_b = ((rb) this).field_b + var8;
-            ((rb) this).field_m = bk.a(36, jb.field_g, (byte) 106);
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((rb) this).field_c = 0;
+              ((rb) this).field_b = param1.field_b;
+              ((rb) this).field_d = 0;
+              ((rb) this).field_a = param1.field_a;
+              ((rb) this).field_e = 0;
+              if (param0 != 31) {
+                break L1;
+              } else {
+                ((rb) this).field_c = param1.field_c;
+                ((rb) this).field_d = param1.field_d;
+                var3_double = 3.141592653589793 * Math.random();
+                var5 = Math.random() * (double)param1.field_g * 2.0 - (double)param1.field_g;
+                var7 = (int)(Math.sin(var3_double) * var5);
+                var8 = (int)(Math.cos(var3_double) * var5);
+                ((rb) this).field_e = (int)var5;
+                ((rb) this).field_a = ((rb) this).field_a + var7;
+                ((rb) this).field_d = ((rb) this).field_d + var8;
+                ((rb) this).field_c = ((rb) this).field_c + var7;
+                ((rb) this).field_b = ((rb) this).field_b + var8;
+                ((rb) this).field_m = bk.a(36, jb.field_g, (byte) 106);
+                break L1;
+              }
+            }
+            ((rb) this).field_j = param0;
+            ((rb) this).field_h = false;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("rb.<init>(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        ((rb) this).field_j = param0;
-        ((rb) this).field_h = false;
     }
 
     static {

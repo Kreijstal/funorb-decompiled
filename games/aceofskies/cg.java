@@ -9,11 +9,11 @@ final class cg extends ua implements tl {
         if (param0 != -60) {
             return false;
         }
-        return this.a(((cg) this).field_a.field_Fc, (byte) -115);
+        return super.a(((cg) this).field_a.field_Fc, (byte) -115);
     }
 
     public final void a(int param0) {
-        this.a(param0 + 0);
+        super.a(param0);
         if (param0 != 4665) {
             boolean discarded$0 = ((cg) this).a((byte) 95);
         }
@@ -21,16 +21,13 @@ final class cg extends ua implements tl {
 
     public static void g(int param0) {
         field_p = null;
-        if (param0 != -33) {
-            field_p = (qr) null;
-        }
     }
 
     public final jaclib.memory.Buffer a(boolean param0, byte param1) {
         if (param1 >= -58) {
-            return (jaclib.memory.Buffer) null;
+            return null;
         }
-        return this.a(((cg) this).field_a.field_Fc, param0, -10386);
+        return super.a(((cg) this).field_a.field_Fc, param0, -10386);
     }
 
     final static boolean a(char param0, byte param1) {
@@ -73,11 +70,11 @@ final class cg extends ua implements tl {
         if (param1 > -112) {
           ((cg) this).field_o = (byte) 15;
           ((cg) this).field_o = (byte)param0;
-          this.a(-12880, param2);
+          super.a(-12880, param2);
           return true;
         } else {
           ((cg) this).field_o = (byte)param0;
-          this.a(-12880, param2);
+          super.a(-12880, param2);
           return true;
         }
     }
@@ -91,12 +88,16 @@ final class cg extends ua implements tl {
     }
 
     final static void a(boolean param0, gk param1, gk param2, boolean param3, gk param4) {
-        gm.field_x = od.a("", 66);
-        gm.field_x.a(param0, false);
-        kg.a(4, param2, param4, param1);
-        nj.d(-8129);
-        nb.field_c = dk.field_h;
-        ht.field_k = dk.field_h;
+        try {
+            gm.field_x = od.a("", 66);
+            gm.field_x.a(param0, false);
+            kg.a(4, param2, param4, param1);
+            nj.d(-8129);
+            nb.field_c = dk.field_h;
+            ht.field_k = dk.field_h;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "cg.R(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

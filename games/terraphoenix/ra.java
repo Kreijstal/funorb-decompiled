@@ -40,17 +40,18 @@ final class ra extends uf {
         field_j = null;
         field_i = null;
         field_h = null;
-        if (param0 != 7876) {
-            return;
-        }
         field_m = null;
         field_l = null;
     }
 
     ra(long param0, int param1, byte[] param2) {
-        ((ra) this).field_o = param0;
-        ((ra) this).field_k = param2;
-        ((ra) this).field_n = param1;
+        try {
+            ((ra) this).field_o = param0;
+            ((ra) this).field_k = param2;
+            ((ra) this).field_n = param1;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "ra.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

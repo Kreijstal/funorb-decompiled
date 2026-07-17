@@ -8,9 +8,9 @@ final class sq extends i {
 
     final static boolean b(int param0, int param1, int param2) {
         int var3 = null != ow.field_b ? 1 : 0;
-        if (-10 == (cc.field_e ^ -1)) {
+        if (cc.field_e == 9) {
             if (!(!cb.a(ol.field_z, mv.field_a, (byte) -64, qs.field_S, nr.field_r))) {
-                if ((ol.field_z ^ -1) != -3) {
+                if (ol.field_z != 2) {
                     if (!(var3 == 0)) {
                         return false;
                     }
@@ -60,11 +60,11 @@ final class sq extends i {
             nk.c((byte) -56);
             jm.a(13, true, -2);
         } else {
-            if ((param1 ^ -1) == -2) {
+            if (param1 == 1) {
                 wb.f(-120);
                 jm.a(13, true, -2);
             } else {
-                if (-3 != (param1 ^ -1)) {
+                if (param1 != 2) {
                 }
             }
         }
@@ -74,9 +74,6 @@ final class sq extends i {
     }
 
     public static void g(int param0) {
-        if (param0 != 13) {
-            field_H = null;
-        }
         field_H = null;
         field_F = null;
     }

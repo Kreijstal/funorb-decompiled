@@ -157,7 +157,7 @@ final class pc {
                     }
                     L11: {
                       L12: {
-                        field_e[var6] = (short)-1;
+                        field_e[var6] = (short) -1;
                         if (var10 == 1) {
                           break L12;
                         } else {

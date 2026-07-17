@@ -28,7 +28,7 @@ final class ac implements hc {
             if (!(qe.field_i == null)) {
                 qe.field_i[iw.field_e[field_c]].g(var2, 28);
             }
-            un.field_d.a(kw.field_c[field_c], var2 - -16 - -32, 49, 16777215, -1);
+            un.field_d.a(kw.field_c[field_c], var2 + 48, 49, 16777215, -1);
         }
         var2 = 1 / ((50 - param0) / 45);
     }
@@ -65,10 +65,10 @@ final class ac implements hc {
           var4 = Kickabout.field_G;
           if (0 != lj.field_f) {
             lj.field_f = lj.field_f - 1;
-            if (-17 >= (lj.field_f ^ -1)) {
+            if (lj.field_f >= 16) {
               if (319 < lj.field_f) {
                 var3 = -319 + lj.field_f;
-                wf.field_A = var3 * ((sh.field_d + 20) * var3) >> -1066163928;
+                wf.field_A = var3 * ((sh.field_d + 20) * var3) >> 8;
                 break L0;
               } else {
                 if (param0 != -25) {
@@ -80,7 +80,7 @@ final class ac implements hc {
               }
             } else {
               var3 = 16 - lj.field_f;
-              wf.field_A = var3 * (sh.field_d + 20) * var3 >> 492901384;
+              wf.field_A = var3 * (sh.field_d + 20) * var3 >> 8;
               if (param0 == -25) {
                 return;
               } else {

@@ -13,7 +13,7 @@ final class tk extends fa {
     private double field_p;
 
     final void e(int param0) {
-        if (-1 > (((tk) this).field_o ^ -1)) {
+        if (((tk) this).field_o > 0) {
             ((tk) this).field_o = ((tk) this).field_o - 1;
             return;
         }
@@ -69,9 +69,6 @@ final class tk extends fa {
     }
 
     public static void a(int param0) {
-        if (param0 != 7) {
-            boolean discarded$0 = tk.a((byte) -48, 5);
-        }
         field_q = null;
     }
 

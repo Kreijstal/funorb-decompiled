@@ -42,7 +42,7 @@ final class io {
               ((qt) (Object) cq.field_h).d((byte) 52);
               break L0;
             } else {
-              if (-1 == (((io) this).field_m ^ -1)) {
+              if (((io) this).field_m == 0) {
                 if (tu.field_E.d((byte) 91)) {
                   if (tu.field_E.field_J[0]) {
                     vr.b((byte) -124);
@@ -56,8 +56,8 @@ final class io {
                   break L0;
                 }
               } else {
-                if (-2 != (((io) this).field_m ^ -1)) {
-                  if (-3 == (((io) this).field_m ^ -1)) {
+                if (((io) this).field_m != 1) {
+                  if (((io) this).field_m == 2) {
                     if (null != um.field_e) {
                       jm.a(-1, param1, param0 + -1);
                       break L0;
@@ -84,22 +84,22 @@ final class io {
                           break L0;
                         } else {
                           if (18 != ((io) this).field_m) {
-                            if ((((io) this).field_m ^ -1) != -24) {
+                            if (((io) this).field_m != 23) {
                               if (45 != ((io) this).field_m) {
                                 if (((io) this).field_m != 48) {
-                                  if ((((io) this).field_m ^ -1) == -47) {
+                                  if (((io) this).field_m == 46) {
                                     jm.a(24, param1, -2);
                                     break L0;
                                   } else {
-                                    if (-29 == (((io) this).field_m ^ -1)) {
+                                    if (((io) this).field_m == 28) {
                                       jm.a(14, param1, -2);
                                       break L0;
                                     } else {
-                                      if ((((io) this).field_m ^ -1) == -26) {
+                                      if (((io) this).field_m == 25) {
                                         jm.a(15, param1, -2);
                                         break L0;
                                       } else {
-                                        if (-27 == (((io) this).field_m ^ -1)) {
+                                        if (((io) this).field_m == 26) {
                                           jm.a(16, param1, -2);
                                           break L0;
                                         } else {
@@ -113,16 +113,16 @@ final class io {
                                                 break L0;
                                               } else {
                                                 if (((io) this).field_m != 22) {
-                                                  if ((((io) this).field_m ^ -1) != -5) {
+                                                  if (((io) this).field_m != 4) {
                                                     if (33 == ((io) this).field_m) {
                                                       jm.a(19, param1, -2);
                                                       break L0;
                                                     } else {
-                                                      if (-35 == (((io) this).field_m ^ -1)) {
+                                                      if (((io) this).field_m == 34) {
                                                         jm.a(20, param1, param0 ^ 1);
                                                         break L0;
                                                       } else {
-                                                        if ((((io) this).field_m ^ -1) == -36) {
+                                                        if (((io) this).field_m == 35) {
                                                           jm.a(22, param1, -2);
                                                           break L0;
                                                         } else {
@@ -130,18 +130,18 @@ final class io {
                                                             jm.a(21, param1, param0 + -1);
                                                             break L0;
                                                           } else {
-                                                            if (-25 != (((io) this).field_m ^ -1)) {
-                                                              if (-8 == (((io) this).field_m ^ -1)) {
+                                                            if (((io) this).field_m != 24) {
+                                                              if (((io) this).field_m == 7) {
                                                                 vj.a(param0 ^ -106, param1);
                                                                 break L0;
                                                               } else {
-                                                                if (-4 == (((io) this).field_m ^ -1)) {
+                                                                if (((io) this).field_m == 3) {
                                                                   jm.a(7, param1, param0 ^ 1);
                                                                   break L0;
                                                                 } else {
-                                                                  if (-6 != (((io) this).field_m ^ -1)) {
-                                                                    if ((((io) this).field_m ^ -1) != -9) {
-                                                                      if (-10 == (((io) this).field_m ^ -1)) {
+                                                                  if (((io) this).field_m != 5) {
+                                                                    if (((io) this).field_m != 8) {
+                                                                      if (((io) this).field_m == 9) {
                                                                         um.field_e.f(-94);
                                                                         jm.a(-1, param1, param0 + -1);
                                                                         break L0;
@@ -152,17 +152,17 @@ final class io {
                                                                               bt.a(param0 + 1);
                                                                               break L0;
                                                                             } else {
-                                                                              if ((((io) this).field_m ^ -1) == -56) {
+                                                                              if (((io) this).field_m == 55) {
                                                                                 vi.c((byte) -59);
                                                                                 break L0;
                                                                               } else {
-                                                                                if ((((io) this).field_m ^ -1) == -14) {
+                                                                                if (((io) this).field_m == 13) {
                                                                                   wv.field_ib = 0;
                                                                                   break L0;
                                                                                 } else {
-                                                                                  if (-15 != (((io) this).field_m ^ -1)) {
+                                                                                  if (((io) this).field_m != 14) {
                                                                                     if (((io) this).field_m != 19) {
-                                                                                      if (-33 != (((io) this).field_m ^ -1)) {
+                                                                                      if (((io) this).field_m != 32) {
                                                                                         if (49 == ((io) this).field_m) {
                                                                                           if (!qo.c((byte) -42)) {
                                                                                             ea.a(39, (byte) 99);
@@ -185,7 +185,7 @@ final class io {
                                                                                         } else {
                                                                                           if (30 == ((io) this).field_m) {
                                                                                             L2: {
-                                                                                              if (-2 != (tb.field_v ^ -1)) {
+                                                                                              if (tb.field_v != 1) {
                                                                                                 stackOut_75_0 = 1;
                                                                                                 stackIn_76_0 = stackOut_75_0;
                                                                                                 break L2;
@@ -198,7 +198,7 @@ final class io {
                                                                                             tb.field_v = stackIn_76_0;
                                                                                             break L0;
                                                                                           } else {
-                                                                                            if (-16 == (((io) this).field_m ^ -1)) {
+                                                                                            if (((io) this).field_m == 15) {
                                                                                               js.a(20338, so.a(101));
                                                                                               break L0;
                                                                                             } else {
@@ -342,10 +342,10 @@ final class io {
             return;
         }
         int var3 = cj.k(256);
-        int var4 = var3 >> -1523057405;
+        int var4 = var3 >> 3;
         int var5 = 17 != ((io) this).field_m ? gn.b((byte) -99) : sk.a((byte) 97);
         var5 = var5 + (param0 ? -var4 : var4);
-        if (!(-1 >= (var5 ^ -1))) {
+        if (!(var5 >= 0)) {
             var5 = 0;
         }
         if (var5 > var3) {
@@ -386,7 +386,7 @@ final class io {
                     if (!(var7 <= var6)) {
                         var7 = var6;
                     }
-                    if (-18 == (((io) this).field_m ^ -1)) {
+                    if (((io) this).field_m == 17) {
                         li.a(var7, (byte) 46);
                     }
                     if (!(16 != ((io) this).field_m)) {
@@ -409,10 +409,14 @@ final class io {
         if (param1 != 0) {
             return;
         }
-        ai.field_G = param4;
-        fp.field_e = 3;
-        i.field_x = param0;
-        cr.field_c = param6;
+        try {
+            ai.field_G = param4;
+            fp.field_e = 3;
+            i.field_x = param0;
+            cr.field_c = param6;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "io.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     public static void a(byte param0) {
@@ -427,6 +431,7 @@ final class io {
     }
 
     final static void a(int param0) {
+        RuntimeException var1 = null;
         ut[] var3 = null;
         ut[] var4 = null;
         int var5 = 0;
@@ -435,61 +440,63 @@ final class io {
         ut[] var8 = null;
         ut var9 = null;
         ut var10 = null;
-        L0: {
-          var6 = Kickabout.field_G;
-          if (ug.field_c == null) {
-            if (bo.field_Cb.a(false, "stadium_icon")) {
-              var7 = se.a(bo.field_Cb, 53, "stadium_icon", "park");
-              var8 = se.a(bo.field_Cb, param0 ^ 20, "stadium_icon", "beach");
-              var3 = se.a(bo.field_Cb, -121, "stadium_icon", "street");
-              var4 = new ut[12];
-              var5 = 0;
-              L1: while (true) {
-                if (var5 >= 4) {
-                  kc.a(true, var4);
-                  break L0;
+        RuntimeException decompiledCaughtException = null;
+        var6 = Kickabout.field_G;
+        try {
+          L0: {
+            L1: {
+              if (ug.field_c == null) {
+                if (bo.field_Cb.a(false, "stadium_icon")) {
+                  var7 = se.a(bo.field_Cb, 53, "stadium_icon", "park");
+                  var8 = se.a(bo.field_Cb, 22, "stadium_icon", "beach");
+                  var3 = se.a(bo.field_Cb, -121, "stadium_icon", "street");
+                  var4 = new ut[12];
+                  var5 = 0;
+                  L2: while (true) {
+                    if (var5 >= 4) {
+                      kc.a(true, var4);
+                      break L1;
+                    } else {
+                      var4[var5] = var7[var5];
+                      var4[4 + var5] = var8[var5];
+                      var4[var5 + 8] = var3[var5];
+                      var5++;
+                      continue L2;
+                    }
+                  }
                 } else {
-                  var4[var5] = var7[var5];
-                  var4[4 + var5] = var8[var5];
-                  var4[var5 + 8] = var3[var5];
-                  var5++;
-                  continue L1;
+                  return;
                 }
+              } else {
+                break L1;
               }
-            } else {
-              return;
             }
-          } else {
+            L3: {
+              if (null == ll.field_g) {
+                if (bo.field_Cb.a(false, "instructions")) {
+                  var9 = bg.a("instructions", bo.field_Cb, (byte) 119, "arrowkey");
+                  var10 = bg.a("instructions", bo.field_Cb, (byte) 43, "key");
+                  ae.field_C = wf.a(3, var9);
+                  kd.field_y = new ut[][]{et.a(0, oo.field_a, var10, var10.field_o), et.a(0, tn.field_c, var10, 62)};
+                  lt.field_d = new ut[]{et.a(0, ip.field_d[0], var10, 50)[1], et.a(0, ip.field_d[1], var10, 50)[1]};
+                  ll.field_g = bg.a("instructions", bo.field_Cb, (byte) 78, "mouse");
+                  jn.field_qb = bg.a("instructions", bo.field_Cb, (byte) 108, "mouse_left");
+                  ki.field_q = bg.a("instructions", bo.field_Cb, (byte) 103, "mouse_right");
+                  ak.field_f = bg.a("instructions", bo.field_Cb, (byte) 106, "mouse_roller");
+                  break L3;
+                } else {
+                  return;
+                }
+              } else {
+                break L3;
+              }
+            }
             break L0;
           }
-        }
-        L2: {
-          if (null == ll.field_g) {
-            if (bo.field_Cb.a(false, "instructions")) {
-              var9 = bg.a("instructions", bo.field_Cb, (byte) 119, "arrowkey");
-              var10 = bg.a("instructions", bo.field_Cb, (byte) 43, "key");
-              ae.field_C = wf.a(3, var9);
-              kd.field_y = new ut[][]{et.a(0, oo.field_a, var10, var10.field_o), et.a(0, tn.field_c, var10, 62)};
-              lt.field_d = new ut[]{et.a(0, ip.field_d[0], var10, 50)[1], et.a(param0 + -2, ip.field_d[1], var10, 50)[1]};
-              ll.field_g = bg.a("instructions", bo.field_Cb, (byte) 78, "mouse");
-              jn.field_qb = bg.a("instructions", bo.field_Cb, (byte) 108, "mouse_left");
-              ki.field_q = bg.a("instructions", bo.field_Cb, (byte) 103, "mouse_right");
-              ak.field_f = bg.a("instructions", bo.field_Cb, (byte) 106, "mouse_roller");
-              break L2;
-            } else {
-              return;
-            }
-          } else {
-            break L2;
-          }
-        }
-        L3: {
-          if (param0 == 2) {
-            break L3;
-          } else {
-            field_l = 67;
-            break L3;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var1, "io.A(" + 2 + 41);
         }
     }
 
@@ -552,16 +559,16 @@ final class io {
           }
         }
         L1: {
-          if (param1 + -(((io) this).field_d >> 242370881) >= wt.field_x) {
+          if (param1 + -(((io) this).field_d >> 1) >= wt.field_x) {
             break L1;
           } else {
-            if (wt.field_x >= param1 - -(((io) this).field_d >> 1505733185)) {
+            if (wt.field_x >= param1 - -(((io) this).field_d >> 1)) {
               break L1;
             } else {
-              if (param0 - (((io) this).field_h >> 2030049825) >= us.field_j) {
+              if (param0 - (((io) this).field_h >> 1) >= us.field_j) {
                 break L1;
               } else {
-                if (us.field_j >= param0 - -(((io) this).field_h >> -429069439)) {
+                if (us.field_j >= param0 - -(((io) this).field_h >> 1)) {
                   break L1;
                 } else {
                   L2: {
@@ -616,10 +623,10 @@ final class io {
           }
         }
         L6: {
-          ((io) this).field_n[var4].c(param1 - (((io) this).field_d >> 2143246913), -(((io) this).field_h >> 233036129) + param0);
-          if ((((io) this).field_m ^ -1) != -33) {
+          ((io) this).field_n[var4].c(param1 - (((io) this).field_d >> 1), -(((io) this).field_h >> 1) + param0);
+          if (((io) this).field_m != 32) {
             L7: {
-              if ((((io) this).field_m ^ -1) != -50) {
+              if (((io) this).field_m != 49) {
                 break L7;
               } else {
                 if (qo.c((byte) -42)) {
@@ -659,12 +666,12 @@ final class io {
               ((io) this).field_p = qv.field_d[tb.field_v].toLowerCase();
               break L6;
             } else {
-              if ((((io) this).field_m ^ -1) == -10) {
+              if (((io) this).field_m == 9) {
                 ((io) this).field_p = fb.field_N.toLowerCase();
                 if (um.field_e == null) {
                   break L6;
                 } else {
-                  if ((um.field_e.field_h ^ -1) > -1) {
+                  if (um.field_e.field_h < 0) {
                     break L6;
                   } else {
                     if (!um.field_e.field_o.field_R[um.field_e.field_h].field_q) {
@@ -714,11 +721,11 @@ final class io {
             break L10;
           } else {
             L11: {
-              var5 = ((io) this).field_k >> 1595776449;
+              var5 = ((io) this).field_k >> 1;
               param1 = param1 + (-20 + (-wo.field_m + aw.field_J) - var5);
               var6 = param1 - (-var5 + -20);
               on.e(var6, param0 + -2, wo.field_m, 4, 65793);
-              if ((((io) this).field_m ^ -1) != -18) {
+              if (((io) this).field_m != 17) {
                 stackOut_45_0 = gn.b((byte) -61);
                 stackIn_46_0 = stackOut_45_0;
                 break L11;
@@ -737,17 +744,17 @@ final class io {
                 break L10;
               } else {
                 L13: {
-                  var10 = (-var9 + var8 + -1 << 1990927176) / var8 >> 1777627521;
+                  var10 = (-var9 + var8 + -1 << 8) / var8 >> 1;
                   if (((io) this).field_m != 17) {
                     break L13;
                   } else {
-                    var10 = var10 << 269714696 | var10 | 16711680;
+                    var10 = var10 << 8 | var10 | 16711680;
                     break L13;
                   }
                 }
                 L14: {
                   if (16 == ((io) this).field_m) {
-                    var10 = var10 << 1469444488 | 255 | var10 << 2017227984;
+                    var10 = var10 << 8 | 255 | var10 << 16;
                     break L14;
                   } else {
                     break L14;
@@ -772,7 +779,7 @@ final class io {
         if (param2 == 13800) {
           L16: {
             ll.field_o.d(((io) this).field_p, param1, 2 + param0, 16777215, -1);
-            if (-2 != (((io) this).field_m ^ -1)) {
+            if (((io) this).field_m != 1) {
               break L16;
             } else {
               L17: {
@@ -787,7 +794,7 @@ final class io {
                 }
               }
               param0 -= 4;
-              on.a(-(((io) this).field_d >> -1025801631) + param1, -(((io) this).field_h >> 712465729) + param0, ((io) this).field_d, ((io) this).field_h, 0, 128);
+              on.a(-(((io) this).field_d >> 1) + param1, -(((io) this).field_h >> 1) + param0, ((io) this).field_d, ((io) this).field_h, 0, 128);
               break L16;
             }
           }
@@ -843,8 +850,8 @@ final class io {
             if (50 != ((io) this).field_m) {
               if (-45 != ((io) this).field_m) {
                 if (((io) this).field_m != 11) {
-                  if ((((io) this).field_m ^ -1) != -13) {
-                    if ((((io) this).field_m ^ -1) != -56) {
+                  if (((io) this).field_m != 12) {
+                    if (((io) this).field_m != 55) {
                       if (((io) this).field_m != -57) {
                         if (-52 != ((io) this).field_m) {
                           if (54 != ((io) this).field_m) {
@@ -852,7 +859,7 @@ final class io {
                               if (((io) this).field_m != 52) {
                                 if (7 != ((io) this).field_m) {
                                   if (42 != ((io) this).field_m) {
-                                    if (-44 != (((io) this).field_m ^ -1)) {
+                                    if (((io) this).field_m != 43) {
                                       if (19 != ((io) this).field_m) {
                                         if (((io) this).field_a != -3) {
                                           stackOut_32_0 = 0;
@@ -970,7 +977,7 @@ final class io {
           }
         }
         L3: {
-          if ((((io) this).field_a ^ -1) != 2) {
+          if (((io) this).field_a != -3) {
             break L3;
           } else {
             var5 = ll.field_m.field_o;
@@ -996,7 +1003,7 @@ final class io {
                   }
                 }
               }
-              if ((((io) this).field_a ^ -1) == 4) {
+              if (((io) this).field_a == -5) {
                 ((io) this).field_n[0] = (ut) (Object) kl.field_m;
                 var6 = kl.field_m.h();
                 ((io) this).field_n[2] = (ut) (Object) kl.field_m;
@@ -1044,7 +1051,7 @@ final class io {
         L7: {
           ((io) this).field_h = ((io) this).field_n[0].field_v;
           ((io) this).field_d = ((io) this).field_n[0].field_o;
-          if (-18 != (((io) this).field_m ^ -1)) {
+          if (((io) this).field_m != 17) {
             break L7;
           } else {
             ((io) this).field_b = new j(0);
@@ -1053,7 +1060,7 @@ final class io {
           }
         }
         L8: {
-          if ((((io) this).field_m ^ -1) != -17) {
+          if (((io) this).field_m != 16) {
             break L8;
           } else {
             ((io) this).field_b = new j(1);

@@ -130,8 +130,9 @@ final class ma extends rk {
                                       var12++;
                                       continue L8;
                                     } else {
+                                      int incrementValue$2 = var11;
                                       var11++;
-                                      ((ma) this).field_t[var11] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
+                                      ((ma) this).field_t[incrementValue$2] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
                                       var13++;
                                       continue L9;
                                     }
@@ -161,8 +162,9 @@ final class ma extends rk {
                                       var12++;
                                       continue L11;
                                     } else {
+                                      int incrementValue$3 = var11;
                                       var11++;
-                                      ((ma) this).field_t[var11] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
+                                      ((ma) this).field_t[incrementValue$3] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
                                       var13++;
                                       continue L12;
                                     }
@@ -299,6 +301,7 @@ final class ma extends rk {
                       int discarded$2 = param0.c(32);
                       int discarded$3 = param0.c(32);
                       ((ma) this).field_t = null;
+                      return;
                     } else {
                       ((ma) this).field_n[var3] = param0.f((byte) 126);
                       var3++;

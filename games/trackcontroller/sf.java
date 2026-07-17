@@ -113,7 +113,7 @@ final class sf extends td implements m {
                   L6: while (true) {
                     L7: {
                       L8: {
-                        if ((var7 ^ -1) <= (var5.field_x.length ^ -1)) {
+                        if (~var7 <= ~var5.field_x.length) {
                           break L8;
                         } else {
                           stackOut_20_0 = 255 & var5.field_x[var7];
@@ -143,7 +143,7 @@ final class sf extends td implements m {
                         }
                       }
                       stackOut_27_0 = -1;
-                      stackOut_27_1 = var6 ^ -1;
+                      stackOut_27_1 = ~var6;
                       stackIn_28_0 = stackOut_27_0;
                       stackIn_28_1 = stackOut_27_1;
                       break L7;
@@ -223,10 +223,10 @@ final class sf extends td implements m {
             }
             L2: {
               L3: {
-                if (-161 == (param0 ^ -1)) {
+                if (param0 == 160) {
                   break L3;
                 } else {
-                  if ((param0 ^ -1) == -33) {
+                  if (param0 == 32) {
                     break L3;
                   } else {
                     if (param0 == 95) {
@@ -7078,10 +7078,10 @@ final class sf extends td implements m {
             ((sf) this).field_C.field_y = (t) (Object) var1_ref;
             var2 = 4;
             var3 = 326;
-            var4 = var3 + -var2 >> 1928701569;
-            ((sf) this).field_E.a(30, -3050, ((sf) this).field_u + -48 + -var2, var4, -var3 + ((sf) this).field_x >> -882341599);
-            ((sf) this).field_C.a(30, -3050, ((sf) this).field_u - 48 - var2, var4, var2 + ((((sf) this).field_x - var3 >> -648123167) + var4));
-            ((sf) this).field_G.a(30, -3050, -(2 * var2) + (-78 + ((sf) this).field_u), var3, -var3 + ((sf) this).field_x >> 1668007073);
+            var4 = var3 + -var2 >> 1;
+            ((sf) this).field_E.a(30, -3050, ((sf) this).field_u + -48 + -var2, var4, -var3 + ((sf) this).field_x >> 1);
+            ((sf) this).field_C.a(30, -3050, ((sf) this).field_u - 48 - var2, var4, var2 + ((((sf) this).field_x - var3 >> 1) + var4));
+            ((sf) this).field_G.a(30, -3050, -(2 * var2) + (-78 + ((sf) this).field_u), var3, -var3 + ((sf) this).field_x >> 1);
             ((sf) this).field_E.field_l = (tg) this;
             ((sf) this).field_G.field_l = (tg) this;
             ((sf) this).field_G.field_n = ic.field_g;
@@ -7145,14 +7145,14 @@ final class sf extends td implements m {
                   if (var5 >= var4) {
                     break L4;
                   } else {
-                    stackOut_6_0 = param0.charAt(var5) ^ -1;
+                    stackOut_6_0 = ~param0.charAt(var5);
                     stackIn_15_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var6 != 0) {
                       break L3;
                     } else {
                       L5: {
-                        if (stackIn_7_0 == (param1 ^ -1)) {
+                        if (stackIn_7_0 == ~param1) {
                           var3_int++;
                           break L5;
                         } else {
@@ -7257,7 +7257,7 @@ final class sf extends td implements m {
             var5_int = param1 + ((sf) this).field_p;
             var6 = ((sf) this).field_m - -param2;
             int discarded$0 = gk.field_c.a(we.field_a, var5_int - -20, 20 + var6, ((sf) this).field_x + -40, -50 + ((sf) this).field_u, 16777215, -1, 1, 0, gk.field_c.field_G);
-            super.a(param0, param1, param2, param3 + 0);
+            super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
             throw sl.a((Throwable) (Object) runtimeException, "sf.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }

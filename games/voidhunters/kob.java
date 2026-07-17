@@ -9,9 +9,9 @@ final class kob extends ksa {
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
-        var5 = 128 + (eu.a(kdb.field_o * 128 % 8192, param0 + 90) * 127 >> -2064326160);
+        var5 = 128 + (eu.a(kdb.field_o * 128 % 8192, param0 + 90) * 127 >> 16);
         var5 = var5 / 4;
-        var6 = 16711680 | var5 << 740697416 | var5;
+        var6 = 16711680 | var5 << 8 | var5;
         if (param0 == 17) {
           if (!li.field_i) {
             uv.a(param0 ^ 102, -2 + param4, 4 + (param2 - param3), param3 + -2, 16711680, param1 - param4 - -4);
@@ -32,29 +32,15 @@ final class kob extends ksa {
 
     public static void a(int param0) {
         field_e = null;
-        if (param0 != 127) {
-            field_e = null;
-        }
     }
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        int var3 = 0;
-        if (param1 != -18262) {
-          return -48;
-        } else {
-          L0: {
-            var2 = 0;
-            if (-1 != (param0 & 7 ^ -1)) {
-              var2 = 8 + -(param0 & 7);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          var3 = param0 + var2;
-          return var3;
+        if (!((param0 & 7) == 0)) {
+            var2 = 8 + -(param0 & 7);
         }
+        int var3 = param0 + var2;
+        return var3;
     }
 
     kob() {

@@ -13,36 +13,43 @@ final class hn extends kl {
 
     hn(String param0, int param1, int param2, int param3) {
         super(300, 174);
-        ((hn) this).field_o = param3;
-        ((hn) this).field_p = param0;
-        ((hn) this).field_n = param1;
-        ((hn) this).field_q = param2;
-        ((hn) this).field_m = tn.a((-jm.field_i.field_y + ((hn) this).field_a >> 414679649) + ((hn) this).field_k, -(2 * jm.field_i.field_v) + (((hn) this).field_i + ((hn) this).field_j) + -24, (se) (Object) ne.field_c, jm.field_i, -39, "Accept");
-        ((hn) this).field_r = tn.a((((hn) this).field_a - jm.field_i.field_y >> 1740701761) + ((hn) this).field_k, -16 + (((hn) this).field_i + (((hn) this).field_j + -jm.field_i.field_v)), (se) (Object) ne.field_c, jm.field_i, -70, "Cancel");
-        ((hn) this).field_f.a((ne) (Object) ((hn) this).field_m, false);
-        ((hn) this).field_f.a((ne) (Object) ((hn) this).field_r, false);
+        try {
+            ((hn) this).field_o = param3;
+            ((hn) this).field_p = param0;
+            ((hn) this).field_n = param1;
+            ((hn) this).field_q = param2;
+            ((hn) this).field_m = tn.a((-jm.field_i.field_y + ((hn) this).field_a >> 1) + ((hn) this).field_k, -(2 * jm.field_i.field_v) + (((hn) this).field_i + ((hn) this).field_j) + -24, (se) (Object) ne.field_c, jm.field_i, -39, "Accept");
+            ((hn) this).field_r = tn.a((((hn) this).field_a - jm.field_i.field_y >> 1) + ((hn) this).field_k, -16 + (((hn) this).field_i + (((hn) this).field_j + -jm.field_i.field_v)), (se) (Object) ne.field_c, jm.field_i, -70, "Cancel");
+            ((hn) this).field_f.a((ne) (Object) ((hn) this).field_m, false);
+            ((hn) this).field_f.a((ne) (Object) ((hn) this).field_r, false);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "hn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     final static void d(byte param0) {
+        cn var1 = null;
+        cn var2 = null;
         int var3 = 0;
         int var4 = DungeonAssault.field_K;
-        cn var1 = new cn(540, 140);
-        lm.a(var1, (byte) 70);
-        re.b();
-        if (param0 != -117) {
-            field_t = -63;
+        try {
+            var1 = new cn(540, 140);
+            lm.a(var1, (byte) 70);
+            re.b();
+            gf.a();
+            nl.field_d = 0;
+            id.a(439027688);
+            var2 = var1.d();
+            for (var3 = 0; var3 < 15; var3++) {
+                var2.e(-2, -2, 16777215);
+                gf.d(4, 4, 0, 0, 540, 140);
+            }
+            ie.field_l.e();
+            var1.a(0, 0);
+            ti.c(true);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "hn.C(" + -117 + 41);
         }
-        gf.a();
-        nl.field_d = 0;
-        id.a(param0 ^ -439027613);
-        cn var2 = var1.d();
-        for (var3 = 0; var3 < 15; var3++) {
-            var2.e(-2, -2, 16777215);
-            gf.d(4, 4, 0, 0, 540, 140);
-        }
-        ie.field_l.e();
-        var1.a(0, 0);
-        ti.c(true);
     }
 
     private final int a(byte param0, int param1, int param2) {
@@ -52,12 +59,12 @@ final class hn extends kl {
         param1 = param1 - var5;
         param2 = param2 - var4;
         int var6 = -47 / ((param0 - -11) / 58);
-        if (9 >= (param2 ^ -1)) {
-            if ((param2 ^ -1) > -15) {
+        if (param2 >= -10) {
+            if (param2 < 14) {
                 if (param1 >= -10) {
                     if (!(param1 >= 10 + (-64 + ((hn) this).field_a))) {
-                        var7 = ((((hn) this).field_a >> 407016801) - (32 - (-2 + ((hn) this).field_n) * param1)) / (-64 + ((hn) this).field_a) + 1;
-                        if ((var7 ^ -1) > -2) {
+                        var7 = ((((hn) this).field_a >> 1) - (32 - (-2 + ((hn) this).field_n) * param1)) / (-64 + ((hn) this).field_a) + 1;
+                        if (var7 < 1) {
                             var7 = 1;
                         }
                         if (!(-1 + ((hn) this).field_n >= var7)) {
@@ -78,9 +85,9 @@ final class hn extends kl {
             ((hn) this).field_s = (Object) (Object) hh.field_s == (Object) (Object) ((hn) this).field_m ? true : false;
             ((hn) this).field_d = true;
         }
-        if (!(-2 != no.field_d)) {
+        if (!(no.field_d != 1)) {
             var2 = this.a((byte) 113, lc.field_c, hm.field_k);
-            if (0 != var2) {
+            if (var2 != -1) {
                 ((hn) this).field_o = var2;
             }
         }
@@ -97,7 +104,7 @@ final class hn extends kl {
         int var9 = 0;
         var9 = DungeonAssault.field_K;
         super.b(117);
-        var2 = (((hn) this).field_a >> -943656159) + ((hn) this).field_k;
+        var2 = (((hn) this).field_a >> 1) + ((hn) this).field_k;
         var3 = 10 + ((hn) this).field_j;
         ne.field_c.c(((hn) this).field_p, var2, var3 - -ne.field_c.field_H, 16777215, -1);
         var3 = var3 + (10 + ne.field_c.field_H);
@@ -120,11 +127,11 @@ final class hn extends kl {
                       if (var7 == -1 + ((hn) this).field_o) {
                         break L3;
                       } else {
-                        if (0 != (var7 ^ -1)) {
+                        if (var7 != -1) {
                           var6 = 32 + (((hn) this).field_k - -((((hn) this).field_a + -64) * (var7 - 1) / (-2 + ((hn) this).field_n)));
                           var8 = 0;
                           L4: while (true) {
-                            if ((var8 ^ -1) <= -9) {
+                            if (var8 >= 8) {
                               break L3;
                             } else {
                               gf.b(-var8 + var6, var4 + (-6 - -var8), 2, 16776960);
@@ -169,7 +176,7 @@ final class hn extends kl {
             var7 = var6 * (((hn) this).field_a - 64) / (((hn) this).field_n + -2) + (32 + ((hn) this).field_k);
             var8 = 0;
             L5: while (true) {
-              if (-5 >= (var8 ^ -1)) {
+              if (var8 >= 4) {
                 var6++;
                 continue L0;
               } else {

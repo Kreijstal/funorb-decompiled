@@ -444,12 +444,6 @@ final class nl {
 
     public static void a(boolean param0) {
         field_a = null;
-        if (param0) {
-            field_c = -99;
-            field_e = null;
-            field_f = null;
-            return;
-        }
         field_e = null;
         field_f = null;
     }

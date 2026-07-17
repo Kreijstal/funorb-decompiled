@@ -20,20 +20,20 @@ abstract class jd extends lg implements sv {
         bg var9 = null;
         int stackIn_3_0 = 0;
         int stackIn_9_0 = 0;
-        int[] stackIn_22_0 = null;
+        int[] stackIn_21_0 = null;
         Throwable decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
-        Object stackOut_21_0 = null;
-        int[] stackOut_20_0 = null;
+        Object stackOut_20_0 = null;
+        int[] stackOut_19_0 = null;
         L0: {
           var7 = Kickabout.field_G;
           var8 = un.field_e;
           var2 = var8;
           var3 = var8.h((byte) -112);
-          if (-1 == (128 & var3 ^ -1)) {
+          if ((128 & var3) == 0) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -48,7 +48,7 @@ abstract class jd extends lg implements sv {
           jn.field_ob = 127 & var3;
           ie.field_F = var8.h((byte) -108);
           i.field_z = var8.i((byte) -124);
-          if (-3 != (jn.field_ob ^ -1)) {
+          if (jn.field_ob != 2) {
             sc.field_E = 0;
             cj.field_G = 0;
             break L1;
@@ -59,7 +59,7 @@ abstract class jd extends lg implements sv {
           }
         }
         L2: {
-          if (-2 != (var8.h((byte) -116) ^ -1)) {
+          if (var8.h((byte) -116) != 1) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
             break L2;
@@ -81,12 +81,12 @@ abstract class jd extends lg implements sv {
           }
         }
         L4: {
-          if ((jn.field_ob ^ -1) == -2) {
+          if (jn.field_ob == 1) {
             oh.field_f = var8.a((byte) 81);
             vp.field_e = var8.a(42);
             break L4;
           } else {
-            if ((jn.field_ob ^ -1) == -5) {
+            if (jn.field_ob == 4) {
               oh.field_f = var8.a((byte) 81);
               vp.field_e = var8.a(42);
               break L4;
@@ -97,54 +97,40 @@ abstract class jd extends lg implements sv {
             }
           }
         }
-        if (!param1) {
-          ee.field_a = gw.a(80, (byte) -96, (iw) (Object) var8);
-          gk.field_b = null;
-          if (param0 > 84) {
-            return new tv(param1);
-          } else {
-            jd.b((byte) 82);
-            return new tv(param1);
-          }
-        } else {
-          var5 = var8.a((byte) 81);
-          try {
-            L5: {
-              L6: {
-                var9 = lm.field_j.a(-39, var5);
-                ee.field_a = var9.g((byte) -98);
-                if (hr.field_f.equals((Object) (Object) ow.field_e)) {
-                  stackOut_21_0 = null;
-                  stackIn_22_0 = (int[]) (Object) stackOut_21_0;
-                  break L6;
-                } else {
-                  stackOut_20_0 = var9.field_n;
-                  stackIn_22_0 = stackOut_20_0;
-                  break L6;
-                }
+        var5 = var8.a((byte) 81);
+        try {
+          L5: {
+            L6: {
+              var9 = lm.field_j.a(-39, var5);
+              ee.field_a = var9.g((byte) -98);
+              if (hr.field_f.equals((Object) (Object) ow.field_e)) {
+                stackOut_20_0 = null;
+                stackIn_21_0 = (int[]) (Object) stackOut_20_0;
+                break L6;
+              } else {
+                stackOut_19_0 = var9.field_n;
+                stackIn_21_0 = stackOut_19_0;
+                break L6;
               }
-              gk.field_b = stackIn_22_0;
-              break L5;
             }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
+            gk.field_b = stackIn_21_0;
+            break L5;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
             var6 = (Exception) (Object) decompiledCaughtException;
             bd.a("CC1", (Throwable) (Object) var6, 1);
             ee.field_a = null;
             gk.field_b = null;
-            if (param0 <= 84) {
-              jd.b((byte) 82);
-              return new tv(param1);
-            } else {
-              return new tv(param1);
-            }
+            break L7;
           }
-          if (param0 <= 84) {
-            jd.b((byte) 82);
-            return new tv(param1);
-          } else {
-            return new tv(param1);
-          }
+        }
+        if (param0 <= 84) {
+          jd.b((byte) 82);
+          return new tv(false);
+        } else {
+          return new tv(false);
         }
     }
 
@@ -199,14 +185,22 @@ abstract class jd extends lg implements sv {
     }
 
     public final void a(int param0, ga param1) {
-        int var3 = -82 % ((param0 - 8) / 47);
+        try {
+            int var3_int = -82 % ((param0 - 8) / 47);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "jd.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void a(byte param0, ga param1) {
         if (param0 < 65) {
             return;
         }
-        ((jd) this).a(116);
+        try {
+            ((jd) this).a(116);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "jd.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
@@ -225,7 +219,11 @@ abstract class jd extends lg implements sv {
     }
 
     jd(ga param0) {
-        ((jd) this).field_f = param0;
+        try {
+            ((jd) this).field_f = param0;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "jd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     abstract String a(byte param0, String param1);
@@ -244,7 +242,7 @@ abstract class jd extends lg implements sv {
         int stackOut_3_0 = 0;
         if (param0 == -1) {
           if (!la.a(100)) {
-            if ((eq.field_d ^ -1) >= -1) {
+            if (eq.field_d <= 0) {
               return true;
             } else {
               return false;

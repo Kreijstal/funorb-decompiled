@@ -9,9 +9,6 @@ final class td {
     public static void a(int param0) {
         field_c = null;
         field_b = null;
-        if (param0 != 128) {
-            return;
-        }
         field_a = null;
     }
 

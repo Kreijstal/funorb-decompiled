@@ -216,7 +216,7 @@ final class di {
         synchronized (var5) {
           L0: {
             field_a.field_q = param2;
-            field_a.field_b = param4;
+            field_a.field_b = 9;
             field_a.field_M = param0;
             field_a.field_k = 0;
             field_a.field_J = param1;
@@ -579,7 +579,7 @@ final class di {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_D[var31] = param0.field_D[var31] - 1;
-                                                                                param0.field_i[param0.field_D[var31]] = param0.field_i[param0.field_D[var31 - 1] + 16 - 1];
+                                                                                param0.field_i[param0.field_D[var31]] = param0.field_i[param0.field_D[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -665,7 +665,7 @@ final class di {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -843,11 +843,11 @@ final class di {
                                                 var1 = di.e(param0);
                                                 if (var1 != 0) {
                                                   var1 = di.e(param0);
-                                                  if (var1 == 0) {
+                                                  if (var1 != 0) {
                                                     var17--;
                                                     continue L39;
                                                   } else {
-                                                    var17--;
+                                                    var17++;
                                                     continue L39;
                                                   }
                                                 } else {

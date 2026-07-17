@@ -20,10 +20,6 @@ abstract class sc {
         int var1 = rc.field_j[0] * hl.field_K[0];
         byte[] var2 = mj.field_a[0];
         int[] var3 = new int[var1];
-        if (param0 != -60) {
-            Object var5 = null;
-            int discarded$0 = sc.a((byte) 50, (Random) null, 37);
-        }
         for (var4_int = 0; var4_int < var1; var4_int++) {
             var3[var4_int] = cm.field_j[cd.a(255, (int) var2[var4_int])];
         }
@@ -34,31 +30,95 @@ abstract class sc {
 
     public static void b(byte param0) {
         field_b = null;
-        if (param0 != 58) {
-            Object var2 = null;
-            int discarded$0 = sc.a((byte) 47, (Random) null, -73);
-        }
     }
 
     final static int a(byte param0, Random param1, int param2) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
-        if (param0 != -75) {
-            return 102;
-        }
-        if (-1 <= (param2 ^ -1)) {
-            throw new IllegalArgumentException();
-        }
-        if (uj.a(true, param2)) {
-            return (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> -1102483296);
-        }
-        int var3 = -(int)(4294967296L % (long)param2) + -2147483648;
-        while (true) {
-            var4 = param1.nextInt();
-            if (var3 > var4) {
-                break;
+        int stackIn_2_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_11_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        try {
+          L0: {
+            if (param0 == -75) {
+              if (param2 > 0) {
+                if (!uj.a(true, param2)) {
+                  var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
+                  L1: while (true) {
+                    var4 = param1.nextInt();
+                    if (var3_int > var4) {
+                      stackOut_11_0 = jc.a(var4, param2, param0 ^ 121);
+                      stackIn_12_0 = stackOut_11_0;
+                      break L0;
+                    } else {
+                      continue L1;
+                    }
+                  }
+                } else {
+                  stackOut_6_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> 32);
+                  stackIn_7_0 = stackOut_6_0;
+                  return stackIn_7_0;
+                }
+              } else {
+                throw new IllegalArgumentException();
+              }
+            } else {
+              stackOut_1_0 = 102;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("sc.J(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L2;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L2;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
         }
-        return jc.a(var4, param2, param0 ^ 121);
+        return stackIn_12_0;
     }
 
     final void a(int param0) {

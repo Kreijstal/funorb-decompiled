@@ -14,57 +14,29 @@ final class hn {
     static String field_d;
 
     private final void a(int param0, int param1, int param2) {
-        if (param1 <= ((hn) this).field_b) {
-          if (param2 > -21) {
-            L0: {
-              this.a(-36, -84, -23);
-              if (((hn) this).field_e.length <= param1) {
-                this.b((byte) 107, param1);
-                break L0;
-              } else {
-                break L0;
-              }
+        if (param1 > ((hn) this).field_b) {
+          L0: {
+            ((hn) this).field_b = param1;
+            if (((hn) this).field_e.length <= param1) {
+              this.b((byte) 107, param1);
+              break L0;
+            } else {
+              break L0;
             }
-            ((hn) this).field_e[param1] = param0;
-            return;
-          } else {
-            L1: {
-              if (((hn) this).field_e.length <= param1) {
-                this.b((byte) 107, param1);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            ((hn) this).field_e[param1] = param0;
-            return;
           }
+          ((hn) this).field_e[param1] = param0;
+          return;
         } else {
-          ((hn) this).field_b = param1;
-          if (param2 <= -21) {
-            L2: {
-              if (((hn) this).field_e.length <= param1) {
-                this.b((byte) 107, param1);
-                break L2;
-              } else {
-                break L2;
-              }
+          L1: {
+            if (((hn) this).field_e.length <= param1) {
+              this.b((byte) 107, param1);
+              break L1;
+            } else {
+              break L1;
             }
-            ((hn) this).field_e[param1] = param0;
-            return;
-          } else {
-            L3: {
-              this.a(-36, -84, -23);
-              if (((hn) this).field_e.length <= param1) {
-                this.b((byte) 107, param1);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            ((hn) this).field_e[param1] = param0;
-            return;
           }
+          ((hn) this).field_e[param1] = param0;
+          return;
         }
     }
 
@@ -105,44 +77,21 @@ final class hn {
         int var3 = 0;
         int var4 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (param1 != 0) {
-          field_j = null;
-          var3 = ((hn) this).field_e.length;
-          L0: while (true) {
-            if (param0 < var3) {
-              return var3;
+        var3 = ((hn) this).field_e.length;
+        L0: while (true) {
+          if (param0 < var3) {
+            return var3;
+          } else {
+            if (!((hn) this).field_h) {
+              var3 = var3 + ((hn) this).field_g;
+              continue L0;
             } else {
-              if (!((hn) this).field_h) {
-                var3 = var3 + ((hn) this).field_g;
+              if (var3 != 0) {
+                var3 = var3 * ((hn) this).field_g;
                 continue L0;
               } else {
-                if (-1 != (var3 ^ -1)) {
-                  var3 = var3 * ((hn) this).field_g;
-                  continue L0;
-                } else {
-                  var3 = 1;
-                  continue L0;
-                }
-              }
-            }
-          }
-        } else {
-          var3 = ((hn) this).field_e.length;
-          L1: while (true) {
-            if (param0 < var3) {
-              return var3;
-            } else {
-              if (!((hn) this).field_h) {
-                var3 = var3 + ((hn) this).field_g;
-                continue L1;
-              } else {
-                if (-1 != (var3 ^ -1)) {
-                  var3 = var3 * ((hn) this).field_g;
-                  continue L1;
-                } else {
-                  var3 = 1;
-                  continue L1;
-                }
+                var3 = 1;
+                continue L0;
               }
             }
           }

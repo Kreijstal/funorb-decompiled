@@ -16,13 +16,10 @@ final class dta {
         field_d = null;
         field_b = null;
         field_g = null;
-        if (param0 != 0) {
-            field_d = null;
-        }
     }
 
     final void a(int param0, int param1, int param2, int param3, qh param4, int param5, int param6) {
-        int var8 = 0;
+        int var8_int = 0;
         ff var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -52,11 +49,8 @@ final class dta {
         int var31 = 0;
         int var32 = 0;
         int var33 = 0;
-        float var33_float = 0.0f;
         la var34 = null;
-        int var34_int = 0;
         fsa[] var35 = null;
-        int var35_int = 0;
         int var36_int = 0;
         da var36 = null;
         int var37 = 0;
@@ -78,7 +72,7 @@ final class dta {
         L0: {
           var38_ref = null;
           var40 = TombRacer.field_G ? 1 : 0;
-          var8 = 10;
+          var8_int = 10;
           if (!param4.f(-12963, param2)) {
             break L0;
           } else {
@@ -115,11 +109,11 @@ final class dta {
                     return;
                   } else {
                     if (var15 < 0) {
-                      ts.a(0, -34, param6 + -26, ik.field_j, param0 - -var8, eda.field_f, 16777215);
+                      ts.a(0, -34, param6 + -26, ik.field_j, param0 - -var8_int, eda.field_f, 16777215);
                       break L2;
                     } else {
-                      ts.a(0, -50, param6 - 13, Integer.toString(1 + var15), param0 - -var8, qr.field_v, wga.field_a[param2]);
-                      ts.a(0, -70, param6 - 12, param4.a(param2, false).toUpperCase(), 25 + (param0 - -var8), eda.field_f, wga.field_a[param2]);
+                      ts.a(0, -50, param6 - 13, Integer.toString(1 + var15), param0 - -var8_int, qr.field_v, wga.field_a[param2]);
+                      ts.a(0, -70, param6 - 12, param4.a(param2, false).toUpperCase(), 25 + (param0 - -var8_int), eda.field_f, wga.field_a[param2]);
                       break L2;
                     }
                   }
@@ -142,14 +136,14 @@ final class dta {
                       if (!var12.C(-1).d(28091)) {
                         break L4;
                       } else {
-                        var21 = (var21 >> -170837823) + 1;
-                        var20 = 1 - -(var20 >> 1869983073);
+                        var21 = (var21 >> 1) + 1;
+                        var20 = 1 - -(var20 >> 1);
                         break L4;
                       }
                     }
                     L5: {
                       oka.a(gl.a((byte) 102, mg.field_k, new String[2]).toUpperCase(), 11903361, eda.field_f, -1, param5 - -var18 - -58, var17 + (param0 + 64), 0);
-                      var18 = -75 + param6 + -var8;
+                      var18 = -75 + param6 + -var8_int;
                       var17 = -10;
                       var22 = var12.K(-163585215);
                       var23 = var12.s(0) ? 1 : 0;
@@ -215,7 +209,7 @@ final class dta {
                             } else {
                               L11: {
                                 var24 = -50 + (var27_int + -var26);
-                                if (-1 < (var24 ^ -1)) {
+                                if (var24 < 0) {
                                   var24 = 0;
                                   break L11;
                                 } else {
@@ -223,7 +217,7 @@ final class dta {
                                 }
                               }
                               L12: {
-                                if ((var24 ^ -1) < -51) {
+                                if (var24 > 50) {
                                   var24 = 50;
                                   break L12;
                                 } else {
@@ -242,7 +236,7 @@ final class dta {
                             lh.field_b.a(-lh.field_b.a() + (param1 - 1) - -var24, var18 - lh.field_b.c() + -po.field_l.c());
                             tga.field_a.KA(param1 - 28 - -var24, 0, var24 + -20 + param1, 10 + var31);
                             if (var28_double < 80.0) {
-                              dn.field_d[(var14 >> -1253396862) % 4 + 3].a(-48 + (param1 + -po.field_l.a()), 36 + (var18 - (po.field_l.c() + vua.field_A.c())));
+                              dn.field_d[(var14 >> 2) % 4 + 3].a(-48 + (param1 + -po.field_l.a()), 36 + (var18 - (po.field_l.c() + vua.field_A.c())));
                               break L13;
                             } else {
                               break L13;
@@ -270,10 +264,10 @@ final class dta {
                     var18 = 0;
                     var17 = var24 + (param1 - 60);
                     var26 = var17;
-                    tv.field_wb.a(26 + (var17 + (-var24 + -(tv.field_wb.a() >> -1658862623))), -42 + param6);
+                    tv.field_wb.a(26 + (var17 + (-var24 + -(tv.field_wb.a() >> 1))), -42 + param6);
                     var27_int = 0;
                     L15: while (true) {
-                      if (-4 >= (var27_int ^ -1)) {
+                      if (var27_int >= 3) {
                         L16: {
                           L17: {
                             var27 = "";
@@ -283,7 +277,7 @@ final class dta {
                             var27 = var41;
                             ua.a(4, var28, var41.toUpperCase(), 34 + (var17 + (10 - var24)), 0, -16 + param6, 11903361);
                             var18 = 0;
-                            var17 = param1 + -var8 + -140;
+                            var17 = param1 + -var8_int + -140;
                             bd.field_i.a(var17, var18);
                             var27 = "";
                             var28 = eda.field_f;
@@ -311,7 +305,7 @@ final class dta {
                         var29 = var18;
                         var30 = 0;
                         L18: while (true) {
-                          if (-4 >= (var30 ^ -1)) {
+                          if (var30 >= 3) {
                             L19: {
                               if (var12.q(119)) {
                                 break L19;
@@ -430,24 +424,15 @@ final class dta {
                                             }
                                           }
                                         }
-                                        if (var35[var36_int].a((byte) -55, false)) {
-                                          if (var37 != 0) {
-                                            if (0 != var35[var36_int].w(17825792)) {
-                                              var31 = 1;
-                                              var36_int++;
-                                              continue L20;
-                                            } else {
-                                              var36_int++;
-                                              continue L20;
-                                            }
+                                        L30: {
+                                          if (!var35[var36_int].a((byte) -55, false)) {
+                                            break L30;
                                           } else {
-                                            var36_int++;
-                                            continue L20;
+                                            break L30;
                                           }
-                                        } else {
-                                          var36_int++;
-                                          continue L20;
                                         }
+                                        var36_int++;
+                                        continue L20;
                                       }
                                     }
                                   }
@@ -459,12 +444,12 @@ final class dta {
                             if (0 < param4.field_r) {
                               var42 = dw.field_j;
                               var31 = (int)(128.0 - Math.sin((double)bva.b((byte) -107) / 512.0) * 128.0);
-                              vv.a(var31, (byte) -73, var31, 1, qr.field_v, var42.toUpperCase(), 40 + (koa.b(0) >> 1396329217) - -(koa.b(0) >> 1926740386), 11903361, param1 + param0 >> 653469761);
+                              vv.a(var31, (byte) -73, var31, 1, qr.field_v, var42.toUpperCase(), 40 + (koa.b(0) >> 1) - -(koa.b(0) >> 2), 11903361, param1 + param0 >> 1);
                               var32 = param4.field_r + -param4.field_k.c((byte) 115, param2);
                               if (var32 < 250) {
                                 var43 = Integer.toString(var32 / 50 - -1);
-                                var31 = 255 + -((var32 % 50 << -889715710) % 255);
-                                vv.a(var31, (byte) -80, var31, 1, qr.field_v, var43.toUpperCase(), koa.b(0) >> -779779327, 11903361, param1 + param0 >> 1808218497);
+                                var31 = 255 + -((var32 % 50 << 2) % 255);
+                                vv.a(var31, (byte) -80, var31, 1, qr.field_v, var43.toUpperCase(), koa.b(0) >> 1, 11903361, param1 + param0 >> 1);
                                 break L3;
                               } else {
                                 break L3;
@@ -473,61 +458,55 @@ final class dta {
                               break L3;
                             }
                           } else {
-                            L30: {
+                            L31: {
                               if (1 != var30) {
-                                if ((var30 ^ -1) == -3) {
+                                if (var30 == 2) {
                                   stackOut_68_0 = 2;
                                   stackIn_69_0 = stackOut_68_0;
-                                  break L30;
+                                  break L31;
                                 } else {
                                   stackOut_67_0 = 0;
                                   stackIn_69_0 = stackOut_67_0;
-                                  break L30;
+                                  break L31;
                                 }
                               } else {
                                 stackOut_65_0 = 3;
                                 stackIn_69_0 = stackOut_65_0;
-                                break L30;
+                                break L31;
                               }
                             }
-                            L31: {
+                            L32: {
                               var31 = -stackIn_69_0 + var29 - -26;
                               var32 = var12.c(196608, var30);
                               ufa.field_r[var30].a(var17, var29);
                               oka.a(Integer.toString(var32), 11903361, qf.field_j, -1, var31, var17 + -19, 1);
                               if (var32 == ((dta) this).field_a[var30]) {
-                                break L31;
+                                break L32;
                               } else {
                                 ((dta) this).field_h[var30] = Integer.toString(-((dta) this).field_a[var30] + var32) + "+";
                                 ((dta) this).field_a[var30] = var32;
                                 ((dta) this).field_f[var30] = 50;
-                                break L31;
+                                break L32;
                               }
                             }
-                            if (((dta) this).field_f[var30] > 0) {
-                              ((dta) this).field_f[var30] = ((dta) this).field_f[var30] - 1;
-                              var33_float = 1.0f + (0.10000000149011612f + 0.20000000298023224f * (float)Math.sin(0.7 * (double)((dta) this).field_f[var30]));
-                              var34_int = (int)((float)ufa.field_r[var30].a() * var33_float);
-                              var35_int = (int)((float)ufa.field_r[var30].c() * var33_float);
-                              ufa.field_r[var30].a(var17 + (-var34_int + ufa.field_r[var30].a()) / 2, (ufa.field_r[var30].c() + -var35_int) / 2 + var29, var34_int, var35_int, 1, -1, 1);
-                              oka.a(((dta) this).field_h[var30], 14142651, qf.field_j, -1, var31, -49 + var17, 1);
-                              var31 += 23;
-                              var29 += 24;
-                              var30++;
-                              continue L18;
-                            } else {
-                              var31 += 23;
-                              var29 += 24;
-                              var30++;
-                              continue L18;
+                            L33: {
+                              if (((dta) this).field_f[var30] <= 0) {
+                                break L33;
+                              } else {
+                                break L33;
+                              }
                             }
+                            var31 += 23;
+                            var29 += 24;
+                            var30++;
+                            continue L18;
                           }
                         }
                       } else {
                         var28_int = -68 + param6;
                         var29 = var12.a(393216, var27_int);
                         var30 = 0;
-                        L32: while (true) {
+                        L34: while (true) {
                           if (var29 <= var30) {
                             var26 -= 20;
                             var27_int++;
@@ -536,7 +515,7 @@ final class dta {
                             ufa.field_r[var27_int].a(var26, var28_int);
                             var28_int -= 5;
                             var30++;
-                            continue L32;
+                            continue L34;
                           }
                         }
                       }
@@ -552,18 +531,18 @@ final class dta {
             }
           }
         }
-        L33: {
+        L35: {
           if (!param4.n(99)) {
             tga.field_a.KA(param0, param5, param1, param6);
             la.field_j.a(0, 0);
             tga.field_a.la();
-            break L33;
+            break L35;
           } else {
-            break L33;
+            break L35;
           }
         }
-        var9_int = (-param0 + param1 >> 1814334913) + param0;
-        var10 = param5 - -(param6 - param5 >> 681187521);
+        var9_int = (-param0 + param1 >> 1) + param0;
+        var10 = param5 - -(param6 - param5 >> 1);
         qa.a(50, 200, (byte) 94, var9_int + -100, aq.field_a, -34 + var10);
         oka.a(hu.field_d, 11903361, eda.field_f, -1, var10, var9_int, 0);
     }

@@ -15,44 +15,42 @@ final class tp {
     public static void a(int param0) {
         field_g = null;
         field_d = null;
-        if (param0 != 0) {
-          field_g = null;
-          field_h = null;
-          field_a = null;
-          field_i = null;
-          field_c = null;
-          field_e = null;
-          field_f = null;
-          return;
-        } else {
-          field_h = null;
-          field_a = null;
-          field_i = null;
-          field_c = null;
-          field_e = null;
-          field_f = null;
-          return;
-        }
+        field_h = null;
+        field_a = null;
+        field_i = null;
+        field_c = null;
+        field_e = null;
+        field_f = null;
     }
 
     final static void a(boolean param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         bj var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
-        var4 = (bj) (Object) tm.field_i.c((byte) 73);
-        L0: while (true) {
-          if (var4 == null) {
-            if (!param0) {
-              field_f = null;
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            var4 = (bj) (Object) tm.field_i.c((byte) 73);
+            L1: while (true) {
+              if (var4 == null) {
+                if (param0) {
+                  break L0;
+                } else {
+                  field_f = null;
+                  return;
+                }
+              } else {
+                un.a(2, var4, (byte) -51);
+                var4 = (bj) (Object) tm.field_i.f((byte) -5);
+                continue L1;
+              }
             }
-          } else {
-            un.a(param1, var4, (byte) -51);
-            var4 = (bj) (Object) tm.field_i.f((byte) -5);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var2, "tp.A(" + param0 + 44 + 2 + 41);
         }
     }
 

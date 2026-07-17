@@ -88,7 +88,7 @@ final class wg extends com.ms.dll.Callback {
           return;
         } else {
           L4: {
-            if (-1 == (((wg) this).field_a ^ -1)) {
+            if (((wg) this).field_a == 0) {
               break L4;
             } else {
               ((wg) this).field_e = true;
@@ -157,9 +157,9 @@ final class wg extends com.ms.dll.Callback {
           var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
           return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
         } else {
-          if ((param1 ^ -1) == -33) {
+          if (param1 == 32) {
             var5 = 65535 & param3;
-            if ((var5 ^ -1) != -2) {
+            if (var5 != 1) {
               if (param1 == 101024) {
                 L0: {
                   if (((wg) this).field_e) {
@@ -176,7 +176,7 @@ final class wg extends com.ms.dll.Callback {
                 return 0;
               } else {
                 L1: {
-                  if (-2 == (param1 ^ -1)) {
+                  if (param1 == 1) {
                     ((wg) this).field_a = 0;
                     ((wg) this).field_e = true;
                     break L1;
@@ -218,7 +218,7 @@ final class wg extends com.ms.dll.Callback {
               return 0;
             } else {
               L4: {
-                if (-2 == (param1 ^ -1)) {
+                if (param1 == 1) {
                   ((wg) this).field_a = 0;
                   ((wg) this).field_e = true;
                   break L4;

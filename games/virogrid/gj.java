@@ -924,7 +924,7 @@ final class gj extends l {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
@@ -958,10 +958,8 @@ final class gj extends l {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new gj(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1067,7 +1065,7 @@ final class gj extends l {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
@@ -1097,7 +1095,7 @@ final class gj extends l {
         ((gj) this).field_C = var2.d((byte) 115);
         ((gj) this).field_o = var2.d((byte) 104);
         if (((gj) this).field_o < 0) {
-            ((gj) this).field_o = ((gj) this).field_o ^ -1;
+            ((gj) this).field_o = ~((gj) this).field_o;
             ((gj) this).field_t = true;
         }
         int var3 = var2.d((byte) 99);
@@ -1131,7 +1129,7 @@ final class gj extends l {
 
     private final static void a(byte[] param0, int param1) {
         field_x = param0;
-        field_u = param1;
+        field_u = 0;
         field_z = 0;
     }
 
@@ -1147,10 +1145,8 @@ final class gj extends l {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new gj(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {

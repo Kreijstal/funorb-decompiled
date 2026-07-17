@@ -116,7 +116,7 @@ final class em {
               L1: {
                 L2: {
                   var5 = 57 / ((param0 - -79) / 38);
-                  if ((param1 ^ -1) <= -32769) {
+                  if (param1 >= 32768) {
                     break L2;
                   } else {
                     var4 = ((em) this).field_d.a(param1, 63, 0);
@@ -140,7 +140,7 @@ final class em {
                 }
               }
               L4: {
-                if (-32769 < (param1 ^ -1)) {
+                if (param1 < 32768) {
                   break L4;
                 } else {
                   var3.c(-1);
@@ -237,7 +237,7 @@ final class em {
             L2: while (true) {
               L3: {
                 L4: {
-                  if ((param0.field_L ^ -1) >= (var8 ^ -1)) {
+                  if (~param0.field_L >= ~var8) {
                     break L4;
                   } else {
                     var9 = param0.field_M[var8];
@@ -273,7 +273,7 @@ final class em {
                         }
                         L7: {
                           var12 = vg.field_G[var9];
-                          if (2147483647 != (var12 ^ -1)) {
+                          if (var12 != -2147483648) {
                             break L7;
                           } else {
                             if (var19 == 0) {
@@ -296,7 +296,7 @@ final class em {
                           }
                         }
                         var14 = vg.field_G[var11];
-                        if ((var14 ^ -1) == 2147483647) {
+                        if (var14 == -2147483648) {
                           break L5;
                         } else {
                           L9: {
@@ -316,11 +316,11 @@ final class em {
                           L10: while (true) {
                             L11: {
                               L12: {
-                                if (-1 == (var17 >> -1153113212 ^ -1)) {
+                                if (var17 >> 4 == 0) {
                                   break L12;
                                 } else {
                                   var16--;
-                                  stackOut_32_0 = var16 ^ -1;
+                                  stackOut_32_0 = ~var16;
                                   stackOut_32_1 = -1;
                                   stackIn_40_0 = stackOut_32_0;
                                   stackIn_40_1 = stackOut_32_1;
@@ -351,7 +351,7 @@ final class em {
                                 }
                               }
                               stackOut_39_0 = var17;
-                              stackOut_39_1 = var16 << -1199770620;
+                              stackOut_39_1 = var16 << 4;
                               stackIn_40_0 = stackOut_39_0;
                               stackIn_40_1 = stackOut_39_1;
                               break L11;
@@ -360,7 +360,7 @@ final class em {
                               var18 = stackIn_40_0 + stackIn_40_1;
                               hb.field_Vb[var18] = var8;
                               a.field_r[var16] = var17 + 1;
-                              if (-1 <= (param0.field_B ^ -1)) {
+                              if (param0.field_B <= 0) {
                                 break L14;
                               } else {
                                 if (param0.field_Q == null) {
@@ -391,14 +391,14 @@ final class em {
               }
               L15: {
                 L16: {
-                  if (stackIn_49_0 <= (param0.field_B ^ -1)) {
+                  if (stackIn_49_0 <= ~param0.field_B) {
                     break L16;
                   } else {
                     if (null != param0.field_Q) {
                       var8 = 0;
                       var9 = 0;
                       L17: while (true) {
-                        if ((nm.field_Nb.length ^ -1) >= (var9 ^ -1)) {
+                        if (~nm.field_Nb.length >= ~var9) {
                           break L16;
                         } else {
                           var10 = nm.field_Nb[var9];
@@ -490,10 +490,10 @@ final class em {
             var4 = ue.a(param1, 92);
             var5 = sk.a(param0, -122);
             var6 = ue.a(param0, -63);
-            var7 = (int)((long)var5 * (long)var3_int >> -70246256);
-            var8 = (int)((long)var6 * (long)var3_int >> 1547803216);
-            var9 = (int)((long)var5 * (long)var4 >> 1673413456);
-            var10 = (int)((long)var6 * (long)var4 >> 1909378640);
+            var7 = (int)((long)var5 * (long)var3_int >> 16);
+            var8 = (int)((long)var6 * (long)var3_int >> 16);
+            var9 = (int)((long)var5 * (long)var4 >> 16);
+            var10 = (int)((long)var6 * (long)var4 >> 16);
             stackOut_3_0 = new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3_int, var10};
             stackIn_4_0 = stackOut_3_0;
             break L0;

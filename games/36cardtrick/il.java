@@ -13,57 +13,19 @@ final class il implements Iterator {
     static char[] field_f;
 
     final static nk a(int param0, boolean param1) {
-        nk var2 = null;
-        nk stackIn_1_0 = null;
-        nk stackIn_2_0 = null;
-        nk stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        nk stackOut_0_0 = null;
-        nk stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        nk stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        L0: {
-          var2 = new nk(true);
-          stackOut_0_0 = (nk) var2;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
-          if (!param1) {
-            stackOut_2_0 = (nk) (Object) stackIn_2_0;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            break L0;
-          } else {
-            stackOut_1_0 = (nk) (Object) stackIn_1_0;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            break L0;
-          }
-        }
-        stackIn_3_0.field_e = stackIn_3_1 != 0;
+        nk var2 = new nk(true);
+        var2.field_e = false;
         if (param0 != -1) {
-          il.b((byte) 34);
-          return var2;
-        } else {
-          return var2;
+            il.b((byte) 34);
+            return var2;
         }
+        return var2;
     }
 
     private final void a(byte param0) {
-        if (param0 != 64) {
-          nk discarded$2 = il.a(-8, false);
-          ((il) this).field_b = 1;
-          ((il) this).field_c = ((il) this).field_g.field_b[0].field_d;
-          ((il) this).field_d = null;
-          return;
-        } else {
-          ((il) this).field_b = 1;
-          ((il) this).field_c = ((il) this).field_g.field_b[0].field_d;
-          ((il) this).field_d = null;
-          return;
-        }
+        ((il) this).field_b = 1;
+        ((il) this).field_c = ((il) this).field_g.field_b[0].field_d;
+        ((il) this).field_d = null;
     }
 
     final static uh a(int param0, int param1, int param2, int param3, int param4) {
@@ -177,8 +139,12 @@ final class il implements Iterator {
 
     il(ed param0) {
         ((il) this).field_d = null;
-        ((il) this).field_g = param0;
-        this.a((byte) 64);
+        try {
+            ((il) this).field_g = param0;
+            this.a((byte) 64);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "il.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {
@@ -187,6 +153,6 @@ final class il implements Iterator {
 
     private static void $cfr$clinit() {
         field_e = new sg();
-        field_f = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
+        field_f = new char[]{'_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
     }
 }

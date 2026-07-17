@@ -23,9 +23,6 @@ final class mm {
         field_d = null;
         field_b = null;
         field_e = null;
-        if (param0 <= 62) {
-            field_h = null;
-        }
     }
 
     static {

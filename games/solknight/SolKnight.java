@@ -185,7 +185,7 @@ public final class SolKnight extends ab {
                   L8: {
                     ta.a((byte) 61, cl.field_n);
                     var2_int = this.b(0, true);
-                    if ((pb.field_c ^ -1) == (var2_int ^ -1)) {
+                    if (~pb.field_c == ~var2_int) {
                       break L8;
                     } else {
                       mh.a(8192);
@@ -193,7 +193,7 @@ public final class SolKnight extends ab {
                     }
                   }
                   L9: {
-                    if ((var2_int ^ -1) != (ng.field_d ^ -1)) {
+                    if (~var2_int != ~ng.field_d) {
                       break L9;
                     } else {
                       na.field_b = true;
@@ -227,10 +227,10 @@ public final class SolKnight extends ab {
                                   break L15;
                                 } else {
                                   L16: {
-                                    if ((var2_int ^ -1) == -4) {
+                                    if (var2_int == 3) {
                                       break L16;
                                     } else {
-                                      if ((var2_int ^ -1) != -5) {
+                                      if (var2_int != 4) {
                                         break L14;
                                       } else {
                                         bb.a((byte) -14, -2, 0);
@@ -301,7 +301,7 @@ public final class SolKnight extends ab {
                   L19: {
                     L20: {
                       var2_int = rk.a(stackIn_80_0 != 0, (byte) 20, (ab) this);
-                      if (-2364825 != (var2_int ^ -1)) {
+                      if (var2_int != 2364824) {
                         break L20;
                       } else {
                         ig.h(-109);
@@ -348,7 +348,7 @@ public final class SolKnight extends ab {
               if (!qa.field_q.field_k) {
                 break L6;
               } else {
-                jl.field_d = jl.field_d & (qa.field_q.field_m ^ -1);
+                jl.field_d = jl.field_d & ~qa.field_q.field_m;
                 ah.field_f = ah.field_f | qa.field_q.field_m;
                 qa.field_q = null;
                 jg.a((byte) 81);
@@ -356,7 +356,7 @@ public final class SolKnight extends ab {
                 if (7 != kd.field_a) {
                   break L6;
                 } else {
-                  if (-1 == (jl.field_d ^ -1)) {
+                  if (jl.field_d == 0) {
                     kd.field_a = 2;
                     gb.a(false, 2, -127);
                     break L6;
@@ -436,7 +436,7 @@ public final class SolKnight extends ab {
                 var2_int = 0;
                 if (qc.a(34)) {
                   var3 = ((SolKnight) this).g(0);
-                  if (-3 == (var3 ^ -1)) {
+                  if (var3 == 2) {
                     var2_int = 1;
                     break L31;
                   } else {
@@ -934,7 +934,7 @@ public final class SolKnight extends ab {
                   L7: while (true) {
                     L8: {
                       L9: {
-                        if ((var4.length ^ -1) >= (var5_int ^ -1)) {
+                        if (~var4.length >= ~var5_int) {
                           break L9;
                         } else {
                           stackOut_56_0 = var4[var5_int];
@@ -1246,7 +1246,7 @@ public final class SolKnight extends ab {
                       }
                     }
                     L10: {
-                      if ((je.field_d ^ -1) != -3) {
+                      if (je.field_d != 2) {
                         break L10;
                       } else {
                         L11: {
@@ -1263,7 +1263,7 @@ public final class SolKnight extends ab {
                             }
                           }
                           L13: {
-                            if ((lk.field_e ^ -1) < -1) {
+                            if (lk.field_e > 0) {
                               ah.b(true);
                               break L13;
                             } else {
@@ -1302,7 +1302,7 @@ public final class SolKnight extends ab {
                   }
                 }
                 L14: {
-                  if ((ve.field_b ^ -1) >= -1) {
+                  if (ve.field_b <= 0) {
                     break L14;
                   } else {
                     ve.field_b = ve.field_b - 1;
@@ -1320,7 +1320,7 @@ public final class SolKnight extends ab {
                   } else {
                     si.field_E = 240 - ve.field_b;
                     wd.field_c = -160;
-                    if ((si.field_E ^ -1) > -1) {
+                    if (si.field_E < 0) {
                       si.field_E = 0;
                       break L15;
                     } else {
@@ -1343,7 +1343,7 @@ public final class SolKnight extends ab {
                       break L18;
                     } else {
                       L19: {
-                        if ((kd.field_a ^ -1) != 0) {
+                        if (kd.field_a != -1) {
                           break L19;
                         } else {
                           hb.a(true);
@@ -1355,7 +1355,7 @@ public final class SolKnight extends ab {
                         }
                       }
                       vd.field_d[kd.field_a].c(0);
-                      if (-1 != (kd.field_a ^ -1)) {
+                      if (kd.field_a != 0) {
                         break L17;
                       } else {
                         hb.a(true);
@@ -1370,7 +1370,7 @@ public final class SolKnight extends ab {
                   ua.field_H = ua.field_H + 1;
                   if (32 == ua.field_H) {
                     L20: {
-                      if (-3 == (kd.field_a ^ -1)) {
+                      if (kd.field_a == 2) {
                         kh.field_c = null;
                         break L20;
                       } else {
@@ -1378,7 +1378,7 @@ public final class SolKnight extends ab {
                       }
                     }
                     L21: {
-                      if (-9 != (kd.field_a ^ -1)) {
+                      if (kd.field_a != 8) {
                         break L21;
                       } else {
                         if (9 != ri.field_f) {
@@ -1407,7 +1407,7 @@ public final class SolKnight extends ab {
                         if (!pg.field_e) {
                           break L23;
                         } else {
-                          if ((kd.field_a ^ -1) == 0) {
+                          if (kd.field_a == -1) {
                             break L23;
                           } else {
                             break L24;
@@ -1417,7 +1417,7 @@ public final class SolKnight extends ab {
                     }
                     var2_int = 1;
                     L25: while (true) {
-                      if ((nf.field_W.length ^ -1) >= (var2_int ^ -1)) {
+                      if (~nf.field_W.length >= ~var2_int) {
                         break L23;
                       } else {
                         nf.field_W[var2_int] = nf.field_W[var2_int] - 1;
@@ -1548,7 +1548,7 @@ public final class SolKnight extends ab {
                     mi.e(-320 - wd.field_c, -si.field_E, 1280, 720, 0, il.field_e[kb.field_b]);
                     kc.field_O = kc.field_O + 1;
                     var3 = 0;
-                    if ((nf.field_W.length ^ -1) <= (kc.field_O ^ -1)) {
+                    if (~nf.field_W.length <= ~kc.field_O) {
                       break L2;
                     } else {
                       kc.field_O = 0;
@@ -1560,11 +1560,11 @@ public final class SolKnight extends ab {
                     L3: while (true) {
                       L4: {
                         L5: {
-                          if ((var4_int ^ -1) <= (nf.field_W.length ^ -1)) {
+                          if (~var4_int <= ~nf.field_W.length) {
                             break L5;
                           } else {
                             var3++;
-                            stackOut_26_0 = var3 ^ -1;
+                            stackOut_26_0 = ~var3;
                             stackOut_26_1 = -6;
                             stackIn_46_0 = stackOut_26_0;
                             stackIn_46_1 = stackOut_26_1;
@@ -1585,7 +1585,7 @@ public final class SolKnight extends ab {
                                 var5 = 320 + (-wd.field_c + nf.field_W[var4_int]);
                                 var6 = -si.field_E + nf.field_W[1 + var4_int];
                                 var7 = var4_int + -kc.field_O;
-                                if ((-nf.field_W.length / 2 ^ -1) >= (var7 ^ -1)) {
+                                if (~(-nf.field_W.length / 2) >= ~var7) {
                                   break L7;
                                 } else {
                                   var7 = var7 + nf.field_W.length;
@@ -1593,7 +1593,7 @@ public final class SolKnight extends ab {
                                 }
                               }
                               L8: {
-                                if ((nf.field_W.length / 2 ^ -1) > (var7 ^ -1)) {
+                                if (~(nf.field_W.length / 2) > ~var7) {
                                   var7 = var7 - nf.field_W.length;
                                   break L8;
                                 } else {
@@ -1609,7 +1609,7 @@ public final class SolKnight extends ab {
                                 }
                               }
                               L10: {
-                                if (-256 > (var7 ^ -1)) {
+                                if (var7 > 255) {
                                   var7 = 255;
                                   break L10;
                                 } else {
@@ -1643,7 +1643,7 @@ public final class SolKnight extends ab {
                               } else {
                                 L14: {
                                   L15: {
-                                    if (0 != (ri.field_f ^ -1)) {
+                                    if (ri.field_f != -1) {
                                       break L15;
                                     } else {
                                       d.a(false, (byte) -48);
@@ -1712,7 +1712,7 @@ public final class SolKnight extends ab {
                           L20: {
                             L21: {
                               var6 = wk.field_e;
-                              if (-71 >= (var6 ^ -1)) {
+                              if (var6 >= 70) {
                                 break L21;
                               } else {
                                 var5 = 480 - var6;
@@ -1757,7 +1757,7 @@ public final class SolKnight extends ab {
                         }
                       }
                       L24: {
-                        if (-1 == (je.field_d ^ -1)) {
+                        if (je.field_d == 0) {
                           break L24;
                         } else {
                           var5 = ua.field_H * 256 / 32;
@@ -2069,8 +2069,8 @@ public final class SolKnight extends ab {
                                   break L12;
                                 } else {
                                   var16_int = var14_array[var15_int];
-                                  stackOut_21_0 = 65535 & var16_int ^ -1;
-                                  stackOut_21_1 = var16_int >> 879831336 & 65535 ^ -1;
+                                  stackOut_21_0 = ~(65535 & var16_int);
+                                  stackOut_21_1 = ~(var16_int >> 879831336 & 65535);
                                   stackIn_17_0 = stackOut_21_0;
                                   stackIn_17_1 = stackOut_21_1;
                                   stackIn_22_0 = stackOut_21_0;
@@ -2091,7 +2091,7 @@ public final class SolKnight extends ab {
                                           }
                                         }
                                       }
-                                      if (-2 == (var16_int ^ -1)) {
+                                      if (var16_int == 1) {
                                         var14_array[var15_int] = 0;
                                         break L13;
                                       } else {

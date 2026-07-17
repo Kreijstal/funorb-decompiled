@@ -19,11 +19,6 @@ abstract class em extends pt {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            field_d = null;
-            field_d = null;
-            return;
-        }
         field_d = null;
     }
 

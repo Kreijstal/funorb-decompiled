@@ -10,14 +10,15 @@ final class mn {
     }
 
     final static void a(int param0, qk param1, int param2, int param3) {
-        int var4 = 6 % ((36 - param3) / 44);
+        try {
+            int var4_int = 0;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "mn.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -8 + 41);
+        }
     }
 
     public static void b(byte param0) {
         field_a = null;
-        if (param0 < 13) {
-            field_a = null;
-        }
     }
 
     final static int a(byte param0) {

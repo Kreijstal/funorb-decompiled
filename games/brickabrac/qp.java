@@ -13,24 +13,15 @@ final class qp {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (param0) {
-          int discarded$2 = qp.a(-100, -97, (byte) -12);
-          field_f = null;
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
-          field_f = null;
-          field_d = null;
-          field_e = null;
-          return;
-        }
+        field_f = null;
+        field_d = null;
+        field_e = null;
     }
 
     final static int a(int param0, int param1, byte param2) {
         if (param2 == -22) {
           if (param0 < 2) {
-            if (-6 >= (param1 ^ -1)) {
+            if (param1 >= 5) {
               return 1;
             } else {
               return 0;

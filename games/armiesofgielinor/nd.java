@@ -74,9 +74,6 @@ final class nd {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 != -114) {
-            return;
-        }
         field_d = null;
         field_b = null;
     }
@@ -112,8 +109,12 @@ final class nd {
     }
 
     nd(Object param0) {
-        ((nd) this).field_c = param0;
-        ((nd) this).field_e = false;
+        try {
+            ((nd) this).field_c = param0;
+            ((nd) this).field_e = false;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "nd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

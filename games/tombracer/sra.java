@@ -62,8 +62,9 @@ final class sra implements eb {
           var6 = oma.field_G;
           var7 = var6;
           var3 = ota.field_b;
-          lba.field_r = new ina(55);
-          var4 = new ina(55);
+          ina dupTemp$1 = new ina(55);
+          lba.field_r = dupTemp$1;
+          var4 = dupTemp$1;
           var4.a(256, ((sra) this).field_k, fv.field_d[0], hca.field_U[0]);
           var4.a(256, ((sra) this).field_l, fv.field_d[1], hca.field_U[1]);
           var4.a(256, ((sra) this).field_o, fv.field_d[2], hca.field_U[2]);
@@ -90,26 +91,99 @@ final class sra implements eb {
     }
 
     final static String[][] a(byte param0, uia param1) {
+        vna var2 = null;
+        RuntimeException var2_ref = null;
+        String[][] var3 = null;
+        int var4 = 0;
         int var5 = 0;
-        int var6 = TombRacer.field_G ? 1 : 0;
-        vna var2 = new vna();
-        while (param1.field_h < param1.field_g.length) {
-            var2.b((byte) -72, (vg) (Object) new gba(pe.a(param1, (byte) 73)));
+        int var6 = 0;
+        String[][] stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String[][] stackOut_7_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        var6 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            var2 = new vna();
+            L1: while (true) {
+              if (param1.field_h >= param1.field_g.length) {
+                var3 = new String[var2.a((byte) -16)][];
+                var4 = -92 / ((param0 - -9) / 51);
+                var5 = 0;
+                L2: while (true) {
+                  if (var3.length <= var5) {
+                    stackOut_7_0 = (String[][]) var3;
+                    stackIn_8_0 = stackOut_7_0;
+                    break L0;
+                  } else {
+                    var3[var5] = ((gba) (Object) var2.c(44)).field_g;
+                    var5++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2.b((byte) -72, (vg) (Object) new gba(pe.a(param1, (byte) 73)));
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var2_ref;
+            stackOut_9_1 = new StringBuilder().append("sra.H(").append(param0).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param1 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
-        String[][] var3 = new String[var2.a((byte) -16)][];
-        int var4 = -92 / ((param0 - -9) / 51);
-        for (var5 = 0; var3.length > var5; var5++) {
-            var3[var5] = ((gba) (Object) var2.c(44)).field_g;
-        }
-        return var3;
+        return stackIn_8_0;
     }
 
     final void a(int param0, byte param1, String param2) {
-        if (param1 != 47) {
-            ((sra) this).field_e = null;
+        try {
+            if (param1 != 47) {
+                ((sra) this).field_e = null;
+            }
+            ima.a((float)param0, param2, -106);
+            ad.field_j.c(0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sra.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        ima.a((float)param0, param2, -106);
-        ad.field_j.c(0);
     }
 
     private final void c(int param0) {
@@ -163,7 +237,7 @@ final class sra implements eb {
                             if (237 <= var3) {
                               var3 = 0;
                               L3: while (true) {
-                                if (-5 >= (var3 ^ -1)) {
+                                if (var3 >= 4) {
                                   ab.field_n.field_y.e(0);
                                   ((sra) this).field_o = null;
                                   ((sra) this).field_k = null;
@@ -251,6 +325,7 @@ final class sra implements eb {
 
     final static String a(String param0, int param1) {
         try {
+            RuntimeException var2 = null;
             int var3 = 0;
             Exception var4 = null;
             int var4_int = 0;
@@ -263,114 +338,124 @@ final class sra implements eb {
             kh var11 = null;
             esa var12 = null;
             byte[] var15 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var8 = TombRacer.field_G ? 1 : 0;
-                        var9 = new kh(128);
-                        var9.field_h = var9.field_h + 2;
-                        var3 = var9.field_h;
-                        var9.i(8);
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var4_int = 0;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 7;
-                            continue stateLoop;
+            String stackIn_9_0 = null;
+            String stackIn_14_0 = null;
+            String stackIn_16_0 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            RuntimeException stackIn_20_0 = null;
+            StringBuilder stackIn_20_1 = null;
+            String stackIn_20_2 = null;
+            Throwable decompiledCaughtException = null;
+            String stackOut_8_0 = null;
+            String stackOut_13_0 = null;
+            String stackOut_15_0 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            RuntimeException stackOut_19_0 = null;
+            StringBuilder stackOut_19_1 = null;
+            String stackOut_19_2 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            String stackOut_18_2 = null;
+            var8 = TombRacer.field_G ? 1 : 0;
+            try {
+              L0: {
+                var9 = new kh(128);
+                var9.field_h = var9.field_h + 2;
+                var3 = var9.field_h;
+                var9.i(8);
+                try {
+                  L1: {
+                    var4_int = 0;
+                    L2: while (true) {
+                      if (param0.length() <= var4_int) {
+                        break L1;
+                      } else {
+                        L3: {
+                          var5_int = param0.charAt(var4_int);
+                          if (Character.isWhitespace((char) var5_int)) {
+                            break L3;
+                          } else {
+                            break L3;
+                          }
                         }
+                        var4_int++;
+                        continue L2;
+                      }
                     }
-                    case 2: {
-                        try {
-                            if (param0.length() <= var4_int) {
-                                statePc = 8;
-                            } else {
-                                statePc = 3;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            var5_int = param0.charAt(var4_int);
-                            if (Character.isWhitespace((char) var5_int)) {
-                                statePc = 4;
-                            } else {
-                                statePc = 4;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            var4_int++;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        var4 = (Exception) (Object) caughtException;
-                        var4.printStackTrace();
-                        return "Unable to pack " + param0;
-                    }
-                    case 8: {
-                        var9.k(-1826190686);
-                        var9.b(-var3 + var9.field_h, (byte) 109);
-                        var9.field_h = 0;
-                        var4 = null;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        try {
-                            var15 = ssa.a((uia) (Object) var9, -26, true);
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        var5 = (Exception) (Object) caughtException;
-                        var5.printStackTrace();
-                        return "funorb profile threw Exception";
-                    }
-                    case 12: {
-                        var11 = new kh(var15);
-                        var12 = new esa();
-                        var7 = -101 % ((-14 - param1) / 49);
-                        var6 = var11.h(255);
-                        dga.a((uia) (Object) var11, 0);
-                        var12.a(var11, var6, (byte) 39);
-                        mq.field_e = var12.a(79);
-                        f.field_e = var12.b((byte) -78);
-                        toa.field_j = true;
-                        return "profile loaded";
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var4 = (Exception) (Object) decompiledCaughtException;
+                  var4.printStackTrace();
+                  stackOut_8_0 = "Unable to pack " + param0;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
                 }
+                var9.k(-1826190686);
+                var9.b(-var3 + var9.field_h, (byte) 109);
+                var9.field_h = 0;
+                var4 = null;
+                try {
+                  L4: {
+                    var15 = ssa.a((uia) (Object) var9, -26, true);
+                    break L4;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter1) {
+                  decompiledCaughtException = decompiledCaughtParameter1;
+                  var5 = (Exception) (Object) decompiledCaughtException;
+                  var5.printStackTrace();
+                  stackOut_13_0 = "funorb profile threw Exception";
+                  stackIn_14_0 = stackOut_13_0;
+                  return stackIn_14_0;
+                }
+                var11 = new kh(var15);
+                var12 = new esa();
+                var7 = -1;
+                var6 = var11.h(255);
+                dga.a((uia) (Object) var11, 0);
+                var12.a(var11, var6, (byte) 39);
+                mq.field_e = var12.a(79);
+                f.field_e = var12.b((byte) -78);
+                toa.field_j = true;
+                stackOut_15_0 = "profile loaded";
+                stackIn_16_0 = stackOut_15_0;
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              L5: {
+                var2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_17_0 = (RuntimeException) var2;
+                stackOut_17_1 = new StringBuilder().append("sra.G(");
+                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_1 = stackOut_17_1;
+                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_1 = stackOut_17_1;
+                if (param0 == null) {
+                  stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+                  stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+                  stackOut_19_2 = "null";
+                  stackIn_20_0 = stackOut_19_0;
+                  stackIn_20_1 = stackOut_19_1;
+                  stackIn_20_2 = stackOut_19_2;
+                  break L5;
+                } else {
+                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_2 = "{...}";
+                  stackIn_20_0 = stackOut_18_0;
+                  stackIn_20_1 = stackOut_18_1;
+                  stackIn_20_2 = stackOut_18_2;
+                  break L5;
+                }
+              }
+              throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 85 + 41);
             }
+            return stackIn_16_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -393,9 +478,6 @@ final class sra implements eb {
     }
 
     public static void c(byte param0) {
-        if (param0 != -35) {
-            field_u = null;
-        }
         field_u = null;
         field_v = null;
         field_i = null;
@@ -428,12 +510,10 @@ final class sra implements eb {
         for (var4 = 0; haa.field_C.length > var4; var4++) {
             var2[var4] = new iu[haa.field_C[var4].length];
             for (var5 = 0; var5 < haa.field_C[var4].length; var5++) {
+                int incrementValue$0 = var3;
                 var3++;
-                var2[var4][var5] = bp.field_m[var3];
+                var2[var4][var5] = bp.field_m[incrementValue$0];
             }
-        }
-        if (param0 != -10242) {
-            ((sra) this).b((byte) 30);
         }
         if (!(dna.field_G)) {
             dea.field_c = false;

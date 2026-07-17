@@ -36,13 +36,13 @@ final class en extends vi {
     }
 
     final void a(int[] param0, int param1) {
-        if (param1 != 8) {
-          ((en) this).c(true);
-          ((en) this).field_r = new gi(param0);
-          return;
-        } else {
-          ((en) this).field_r = new gi(param0);
-          return;
+        try {
+            if (param1 != 8) {
+                ((en) this).c(true);
+            }
+            ((en) this).field_r = new gi(param0);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "en.FB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -52,7 +52,7 @@ final class en extends vi {
         int var5 = 0;
         int var6 = 0;
         var6 = HostileSpawn.field_I ? 1 : 0;
-        var3 = ((en) this).field_x >> -1480227389;
+        var3 = ((en) this).field_x >> 3;
         if (param1) {
           var4 = -(7 & ((en) this).field_x) + 8;
           ((en) this).field_x = ((en) this).field_x + param0;
@@ -70,8 +70,9 @@ final class en extends vi {
               }
               return var5;
             } else {
+              int incrementValue$2 = var3;
               var3++;
-              var5 = var5 + ((((en) this).field_n[var3] & pf.field_j[var4]) << -var4 + param0);
+              var5 = var5 + ((((en) this).field_n[incrementValue$2] & pf.field_j[var4]) << -var4 + param0);
               param0 = param0 - var4;
               var4 = 8;
               continue L0;
@@ -95,8 +96,9 @@ final class en extends vi {
               }
               return var5;
             } else {
+              int incrementValue$3 = var3;
               var3++;
-              var5 = var5 + ((((en) this).field_n[var3] & pf.field_j[var4]) << -var4 + param0);
+              var5 = var5 + ((((en) this).field_n[incrementValue$3] & pf.field_j[var4]) << -var4 + param0);
               param0 = param0 - var4;
               var4 = 8;
               continue L2;
@@ -142,45 +144,92 @@ final class en extends vi {
         if (param0 != 64) {
           return 42;
         } else {
+          int fieldTemp$2 = ((en) this).field_i;
           ((en) this).field_i = ((en) this).field_i + 1;
-          return ((en) this).field_n[((en) this).field_i] + -((en) this).field_r.a(true) & 255;
+          return ((en) this).field_n[fieldTemp$2] + -((en) this).field_r.a(true) & 255;
         }
     }
 
     final void a(int param0, int param1, byte[] param2, byte param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         var6 = HostileSpawn.field_I ? 1 : 0;
-        var5 = 0;
-        if (param3 <= 66) {
-          ((en) this).field_r = null;
-          L0: while (true) {
-            if (param1 > var5) {
-              ((en) this).field_i = ((en) this).field_i + 1;
-              param2[var5 + param0] = (byte)(((en) this).field_n[((en) this).field_i] + -((en) this).field_r.a(true));
-              var5++;
-              continue L0;
-            } else {
-              return;
+        try {
+          L0: {
+            L1: {
+              var5_int = 0;
+              if (param3 > 66) {
+                break L1;
+              } else {
+                ((en) this).field_r = null;
+                break L1;
+              }
+            }
+            L2: while (true) {
+              if (param1 <= var5_int) {
+                break L0;
+              } else {
+                int fieldTemp$5 = ((en) this).field_i;
+                ((en) this).field_i = ((en) this).field_i + 1;
+                param2[var5_int + param0] = (byte)(((en) this).field_n[fieldTemp$5] + -((en) this).field_r.a(true));
+                var5_int++;
+                continue L2;
+              }
             }
           }
-        } else {
-          L1: while (true) {
-            if (param1 > var5) {
-              ((en) this).field_i = ((en) this).field_i + 1;
-              param2[var5 + param0] = (byte)(((en) this).field_n[((en) this).field_i] + -((en) this).field_r.a(true));
-              var5++;
-              continue L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_1 = new StringBuilder().append("en.EB(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
             } else {
-              return;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
             }
           }
+          throw wg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 41);
         }
     }
 
     final void i(int param0, int param1) {
+        int fieldTemp$2 = ((en) this).field_i;
         ((en) this).field_i = ((en) this).field_i + 1;
-        ((en) this).field_n[((en) this).field_i] = (byte)(((en) this).field_r.a(true) + param1);
+        ((en) this).field_n[fieldTemp$2] = (byte)(((en) this).field_r.a(true) + param1);
         if (param0 == 19319) {
           return;
         } else {

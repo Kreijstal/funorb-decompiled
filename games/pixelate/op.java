@@ -20,16 +20,13 @@ final class op extends de {
     }
 
     final static boolean g(int param0) {
-        int var1 = -97 / ((55 - param0) / 62);
+        int var1 = 97;
         return rj.field_F == qo.field_n ? true : false;
     }
 
     final static void b(int param0, int param1, boolean param2) {
         qe.field_u = param1;
         bb.field_b = param0;
-        if (!param2) {
-            field_w = null;
-        }
     }
 
     final void a(int param0, int param1, boolean param2) {
@@ -68,21 +65,21 @@ final class op extends de {
           var6 = var15;
           var7 = t.field_j;
           var8 = t.field_d;
-          var9 = new tf(param5, -(2 * param5) + param3);
+          var9 = new tf(3, -6 + param3);
           var9.c();
-          t.g(0, 0, param5, -(2 * param5) + param3, param2, param0);
-          var10 = new tf(param5, param5);
+          t.g(0, 0, 3, -6 + param3, param2, param0);
+          var10 = new tf(3, 3);
           var10.c();
-          t.d(0, 0, param5, param5, param2);
-          var11 = new tf(param1, param5);
+          t.d(0, 0, 3, 3, param2);
+          var11 = new tf(param1, 3);
           var11.c();
-          t.d(0, 0, 16, param5, param2);
-          var12 = new tf(param5, param5);
+          t.d(0, 0, 16, 3, param2);
+          var12 = new tf(3, 3);
           var12.c();
-          t.d(0, 0, param5, param5, param0);
-          var13 = new tf(16, param5);
+          t.d(0, 0, 3, 3, param0);
+          var13 = new tf(16, 3);
           var13.c();
-          t.d(0, 0, 16, param5, param0);
+          t.d(0, 0, 16, 3, param0);
           var14 = null;
           if (param4 > 0) {
             var16 = new tf(16, 16);
@@ -105,7 +102,7 @@ final class op extends de {
         int var7 = 0;
         L0: {
           var7 = Pixelate.field_H ? 1 : 0;
-          if ((param0 ^ -1) == -1) {
+          if (param0 == 0) {
             if (((op) this).field_g.a(79)) {
               var4 = param2 ? 1 : 0;
               la.a(ti.field_t, 16, var4 != 0, -25528);
@@ -114,11 +111,11 @@ final class op extends de {
               break L0;
             }
           } else {
-            if (-2 == (param0 ^ -1)) {
+            if (param0 == 1) {
               if (!param2) {
                 break L0;
               } else {
-                if (-2 == (ef.field_b ^ -1)) {
+                if (ef.field_b == 1) {
                   ((op) this).field_u = -8;
                   ((op) this).field_r = 3;
                   break L0;
@@ -128,7 +125,7 @@ final class op extends de {
                 }
               }
             } else {
-              if (-3 != (param0 ^ -1)) {
+              if (param0 != 2) {
                 L1: {
                   if (uo.field_j > 0) {
                     break L1;
@@ -136,7 +133,7 @@ final class op extends de {
                     if (!((op) this).field_g.a(74)) {
                       break L1;
                     } else {
-                      if (-3 <= (param0 ^ -1)) {
+                      if (param0 <= 2) {
                         break L1;
                       } else {
                         if (32 != ((op) this).field_k[param0]) {
@@ -212,9 +209,9 @@ final class op extends de {
         if (param1) {
             ((op) this).a(103, -99, false);
         }
-        if ((param0 ^ -1) != -2) {
+        if (param0 != 1) {
             if (2 != param0) {
-                if ((param0 ^ -1) >= -3) {
+                if (param0 <= 2) {
                     return super.a(param0, false);
                 }
                 return 500;
@@ -238,9 +235,6 @@ final class op extends de {
 
     final static void g(byte param0) {
         pm.field_h.field_h = 0;
-        if (param0 != 68) {
-            return;
-        }
         pm.field_h.field_m = 0;
     }
 
@@ -293,10 +287,10 @@ final class op extends de {
         }
         L1: {
           L2: {
-            if ((ke.field_a ^ -1) == -99) {
+            if (ke.field_a == 98) {
               break L2;
             } else {
-              if ((ke.field_a ^ -1) == -100) {
+              if (ke.field_a == 99) {
                 break L2;
               } else {
                 super.b(-72);
@@ -318,13 +312,13 @@ final class op extends de {
           L4: {
             var2 = stackIn_8_0;
             var3 = ((op) this).field_g.field_j;
-            if ((var3 ^ -1) == 0) {
+            if (var3 == -1) {
               break L4;
             } else {
-              if (-2 == (var3 ^ -1)) {
+              if (var3 == 1) {
                 break L4;
               } else {
-                if ((var3 ^ -1) == -3) {
+                if (var3 == 2) {
                   break L4;
                 } else {
                   if (var3 == 0) {
@@ -382,14 +376,14 @@ final class op extends de {
                         } else {
                           L10: {
                             ((op) this).field_g.a(false, var3 + 1);
-                            if ((((op) this).b(69, ((op) this).field_g.field_j) ^ -1) >= (var4 ^ -1)) {
+                            if (~((op) this).b(69, ((op) this).field_g.field_j) >= ~var4) {
                               break L10;
                             } else {
                               ((op) this).field_o = ((op) this).field_o + ip.field_A;
                               break L10;
                             }
                           }
-                          if ((((op) this).field_o ^ -1) >= (bh.field_k ^ -1)) {
+                          if (~((op) this).field_o >= ~bh.field_k) {
                             break L8;
                           } else {
                             ((op) this).field_o = bh.field_k;
@@ -415,7 +409,7 @@ final class op extends de {
         int var3 = 43 % ((-13 - param0) / 37);
         if (1 != param1) {
             if (param1 != 2) {
-                if (-3 <= (param1 ^ -1)) {
+                if (param1 <= 2) {
                     return super.b(120, param1);
                 }
                 return (-3 + param1) * ip.field_A + (-((op) this).field_o + 184);
@@ -437,7 +431,7 @@ final class op extends de {
                 if (param1 < 182) {
                   break L1;
                 } else {
-                  if ((param1 ^ -1) >= -351) {
+                  if (param1 <= 350) {
                     break L0;
                   } else {
                     break L1;
@@ -459,7 +453,7 @@ final class op extends de {
             boolean discarded$0 = this.a(false, 70);
         }
         if (1 != param0) {
-            if ((param0 ^ -1) != -3) {
+            if (param0 != 2) {
                 if (2 >= param0) {
                     return super.a(param0, (byte) 90);
                 }
@@ -492,31 +486,51 @@ final class op extends de {
         }
         ((op) this).field_r = 0;
         super.e((byte) -100);
-        int var2 = -4 < (((op) this).field_g.field_j ^ -1) ? -1 : -3 + ((op) this).field_g.field_j;
+        int var2 = ((op) this).field_g.field_j < 3 ? -1 : -3 + ((op) this).field_g.field_j;
         for (var3 = 0; ud.field_I.length > var3; var3++) {
             ud.field_I[var3].a(var3 == var2 ? true : false, 20);
         }
     }
 
     final static void e(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
-        int var4 = Pixelate.field_H ? 1 : 0;
-        if (param0 != 260) {
-            field_p = null;
-        }
-        ja.a();
-        ai.field_x = 11;
-        nk.field_d = new int[260];
-        for (var1 = 0; var1 < 256; var1++) {
-            var2 = 15.0;
-            nk.field_d[var1] = (int)(Math.pow((double)((float)var1 / 256.0f), var2) * 255.0);
-        }
-        int var5 = 256;
-        var1 = var5;
-        while (var5 < nk.field_d.length) {
-            nk.field_d[var5] = 255;
-            var5++;
+        int var4 = 0;
+        int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Pixelate.field_H ? 1 : 0;
+        try {
+          L0: {
+            ja.a();
+            ai.field_x = 11;
+            nk.field_d = new int[260];
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 256) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (var5 >= nk.field_d.length) {
+                    break L0;
+                  } else {
+                    nk.field_d[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2 = 15.0;
+                nk.field_d[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var1, "op.B(" + 260 + 41);
         }
     }
 
@@ -576,7 +590,7 @@ final class op extends de {
         }
         L1: {
           var4 = ((op) this).field_k[param2];
-          if (-8 != (var4 ^ -1)) {
+          if (var4 != 7) {
             if (var4 == 30) {
               L2: {
                 if (0 == ((op) this).field_o) {
@@ -589,7 +603,7 @@ final class op extends de {
               jm.field_i[((op) this).field_r].b(lo.field_Jb, 150);
               break L1;
             } else {
-              if (-32 != (var4 ^ -1)) {
+              if (var4 != 31) {
                 if (var4 == 32) {
                   L3: {
                     t.f(0, 182, 640, 350);
@@ -597,7 +611,7 @@ final class op extends de {
                     var6 = ki.field_m + 32 + var5;
                     var7 = ((op) this).a(param2, (byte) 90);
                     var8 = ((op) this).a(param2, false);
-                    var9 = var7 - -var8 >> -1911180895;
+                    var9 = var7 - -var8 >> 1;
                     var10 = ((op) this).b(58, param2);
                     if (param1) {
                       fi.a(var9, -2 + var10, 35, oc.field_N);
@@ -699,18 +713,23 @@ final class op extends de {
 
     op(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
+        int[] var9 = null;
         int var8 = 0;
-        int[] var9 = new int[53];
-        int[] var7 = var9;
-        for (var8 = 0; var9.length > var8; var8++) {
-            var9[var8] = 32;
+        try {
+            var9 = new int[53];
+            int[] var7 = var9;
+            for (var8 = 0; var9.length > var8; var8++) {
+                var9[var8] = 32;
+            }
+            var9[2] = 31;
+            var9[1] = 30;
+            var9[0] = 7;
+            ((op) this).a(var9, (byte) -24);
+            ((op) this).field_r = 0;
+            ((op) this).field_v = 0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "op.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
-        var9[2] = 31;
-        var9[1] = 30;
-        var9[0] = 7;
-        ((op) this).a(var9, (byte) -24);
-        ((op) this).field_r = 0;
-        ((op) this).field_v = 0;
     }
 
     static {

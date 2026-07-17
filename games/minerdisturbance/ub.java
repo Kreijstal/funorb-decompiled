@@ -27,77 +27,81 @@ final class ub implements uj {
 
     final static boolean a(int param0) {
         gl var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         gl var4 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_18_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_2_0 = 0;
         var3 = MinerDisturbance.field_ab;
-        var4 = (gl) (Object) on.field_t.b(123);
-        var1 = var4;
-        if (var1 != null) {
+        try {
           L0: {
-            if (param0 == 14921) {
-              break L0;
-            } else {
-              ub.b(20);
-              break L0;
-            }
-          }
-          var2 = 0;
-          if (var1.field_y > var2) {
-            if (var4.field_r[var2] != null) {
-              if (var4.field_r[var2].field_c != 0) {
-                if (null != var4.field_q[var2]) {
-                  if (var4.field_q[var2].field_c == 0) {
-                    return false;
-                  } else {
-                    var2++;
-                    var2++;
-                    var2++;
-                    var2++;
-                    return true;
+            var4 = (gl) (Object) on.field_t.b(123);
+            var1 = var4;
+            if (var1 != null) {
+              var2 = 0;
+              L1: while (true) {
+                if (var1.field_y <= var2) {
+                  stackOut_18_0 = 1;
+                  stackIn_19_0 = stackOut_18_0;
+                  break L0;
+                } else {
+                  L2: {
+                    if (var4.field_r[var2] != null) {
+                      if (var4.field_r[var2].field_c == 0) {
+                        stackOut_10_0 = 0;
+                        stackIn_11_0 = stackOut_10_0;
+                        return stackIn_11_0 != 0;
+                      } else {
+                        break L2;
+                      }
+                    } else {
+                      break L2;
+                    }
                   }
-                } else {
+                  L3: {
+                    if (null == var4.field_q[var2]) {
+                      break L3;
+                    } else {
+                      if (var4.field_q[var2].field_c == 0) {
+                        stackOut_15_0 = 0;
+                        stackIn_16_0 = stackOut_15_0;
+                        return stackIn_16_0 != 0;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
                   var2++;
-                  var2++;
-                  var2++;
-                  var2++;
-                  return true;
+                  continue L1;
                 }
-              } else {
-                return false;
               }
             } else {
-              if (null != var4.field_q[var2]) {
-                if (var4.field_q[var2].field_c == 0) {
-                  return false;
-                } else {
-                  var2++;
-                  var2++;
-                  var2++;
-                  var2++;
-                  return true;
-                }
-              } else {
-                var2++;
-                var2++;
-                var2++;
-                var2++;
-                return true;
-              }
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
-          } else {
-            return true;
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var1_ref, "ub.E(" + 14921 + 41);
         }
+        return stackIn_19_0 != 0;
     }
 
     final static int a(int param0, int param1) {
-        if (-65537L < ((long)param1 ^ -1L)) {
-          if (-257L < ((long)param1 ^ -1L)) {
-            if (-1 >= (param1 ^ -1)) {
-              return kf.field_e[param1] >> -361594260;
+        if ((long)param1 < 65536L) {
+          if ((long)param1 < 256L) {
+            if (param1 >= 0) {
+              return kf.field_e[param1] >> 12;
             } else {
               if (param0 != -1237818874) {
                 return -44;
@@ -108,45 +112,45 @@ final class ub implements uj {
           } else {
             if (4096L <= (long)param1) {
               if ((long)param1 < 16384L) {
-                return kf.field_e[param1 >> 322530438] >> 1292354889;
+                return kf.field_e[param1 >> 6] >> 9;
               } else {
-                return kf.field_e[param1 >> -863587544] >> 981058664;
+                return kf.field_e[param1 >> 8] >> 8;
               }
             } else {
-              if (((long)param1 ^ -1L) > -1025L) {
-                return kf.field_e[param1 >> -206365630] >> -827018549;
+              if ((long)param1 < 1024L) {
+                return kf.field_e[param1 >> 2] >> 11;
               } else {
-                return kf.field_e[param1 >> 2051455268] >> 650198538;
+                return kf.field_e[param1 >> 4] >> 10;
               }
             }
           }
         } else {
-          if (((long)param1 ^ -1L) > -16777217L) {
+          if ((long)param1 < 16777216L) {
             if ((long)param1 < 1048576L) {
               if ((long)param1 >= 262144L) {
-                return kf.field_e[param1 >> 84699372] >> -1237818874;
+                return kf.field_e[param1 >> 12] >> 6;
               } else {
-                return kf.field_e[param1 >> 1195618794] >> -1819869721;
+                return kf.field_e[param1 >> 10] >> 7;
               }
             } else {
               if (4194304L <= (long)param1) {
-                return kf.field_e[param1 >> 1917331472] >> 1243186116;
+                return kf.field_e[param1 >> 16] >> 4;
               } else {
-                return kf.field_e[param1 >> -46653010] >> -409953499;
+                return kf.field_e[param1 >> 14] >> 5;
               }
             }
           } else {
             if (268435456L > (long)param1) {
               if ((long)param1 >= 67108864L) {
-                return kf.field_e[param1 >> -1969152204] >> -1453080126;
+                return kf.field_e[param1 >> 20] >> 2;
               } else {
-                return kf.field_e[param1 >> -958800846] >> -603744541;
+                return kf.field_e[param1 >> 18] >> 3;
               }
             } else {
-              if (-1073741825L < ((long)param1 ^ -1L)) {
-                return kf.field_e[param1 >> 686868886] >> -417431263;
+              if ((long)param1 < 1073741824L) {
+                return kf.field_e[param1 >> 22] >> 1;
               } else {
-                return kf.field_e[param1 >> 474927544];
+                return kf.field_e[param1 >> 24];
               }
             }
           }

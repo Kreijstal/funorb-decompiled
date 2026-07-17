@@ -68,46 +68,13 @@ final class vk {
     }
 
     final static void a(boolean param0) {
-        if (!param0) {
-          L0: {
-            field_d = null;
-            if (ka.field_b != null) {
-              ka.field_b.f((byte) -84);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          L1: {
-            if (null != be.field_l) {
-              be.field_l.i((byte) 33);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          pj.a((byte) -96);
-          return;
-        } else {
-          L2: {
-            if (ka.field_b != null) {
-              ka.field_b.f((byte) -84);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            if (null != be.field_l) {
-              be.field_l.i((byte) 33);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          pj.a((byte) -96);
-          return;
+        if (!(ka.field_b == null)) {
+            ka.field_b.f((byte) -84);
         }
+        if (!(null == be.field_l)) {
+            be.field_l.i((byte) 33);
+        }
+        pj.a((byte) -96);
     }
 
     final boolean b(int param0) {
@@ -140,9 +107,6 @@ final class vk {
     }
 
     public static void a(int param0) {
-        if (param0 != 3) {
-            return;
-        }
         field_i = null;
         field_d = null;
         field_q = null;
@@ -163,22 +127,30 @@ final class vk {
     }
 
     vk(byte[] param0) {
-        ((vk) this).field_s = param0;
-        ((vk) this).field_g = null;
-        ((vk) this).field_r = false;
-        ((vk) this).field_h = null;
-        ((vk) this).field_l = 0;
-        ((vk) this).field_e = new ei();
-        ((vk) this).field_t = new ei();
-        ((vk) this).field_c = new ei();
-        ((vk) this).field_k = new ah();
-        ((vk) this).field_m = new ah();
-        ((vk) this).field_x = new ah();
+        try {
+            ((vk) this).field_s = param0;
+            ((vk) this).field_g = null;
+            ((vk) this).field_r = false;
+            ((vk) this).field_h = null;
+            ((vk) this).field_l = 0;
+            ((vk) this).field_e = new ei();
+            ((vk) this).field_t = new ei();
+            ((vk) this).field_c = new ei();
+            ((vk) this).field_k = new ah();
+            ((vk) this).field_m = new ah();
+            ((vk) this).field_x = new ah();
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "vk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     vk(String param0) {
-        ((vk) this).field_r = true;
-        ((vk) this).field_h = param0;
+        try {
+            ((vk) this).field_r = true;
+            ((vk) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "vk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

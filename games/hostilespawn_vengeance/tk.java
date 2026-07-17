@@ -11,68 +11,84 @@ final class tk {
 
     final static void a(boolean param0, gb param1) {
         qf var2 = null;
-        qf.a(param1.a("", "headers.packvorbis", 0));
-        var2 = qf.a(param1, "jagex logo2.packvorbis", "");
-        if (!param0) {
-          field_a = null;
-          jb discarded$4 = var2.c();
-          return;
-        } else {
-          jb discarded$5 = var2.c();
-          return;
+        try {
+            qf.a(param1.a("", "headers.packvorbis", 0));
+            var2 = qf.a(param1, "jagex logo2.packvorbis", "");
+            if (!param0) {
+                field_a = null;
+            }
+            jb discarded$0 = var2.c();
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "tk.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
         var4 = HostileSpawn.field_I ? 1 : 0;
-        if (param0 > param2) {
-          var3 = param2;
-          param2 = param0;
-          param0 = var3;
-          L0: while (true) {
-            if (param0 == 0) {
-              if (param1 != 44) {
-                field_f = null;
-                return param2;
+        try {
+          L0: {
+            L1: {
+              if (param0 > param2) {
+                var3_int = param2;
+                param2 = param0;
+                param0 = var3_int;
+                L2: while (true) {
+                  if (param0 == 0) {
+                    break L1;
+                  } else {
+                    var3_int = param2 % param0;
+                    param2 = param0;
+                    param0 = var3_int;
+                    continue L2;
+                  }
+                }
               } else {
-                return param2;
+                L3: while (true) {
+                  if (param0 == 0) {
+                    break L1;
+                  } else {
+                    var3_int = param2 % param0;
+                    param2 = param0;
+                    param0 = var3_int;
+                    continue L3;
+                  }
+                }
               }
-            } else {
-              var3 = param2 % param0;
-              param2 = param0;
-              param0 = var3;
-              continue L0;
             }
-          }
-        } else {
-          L1: while (true) {
-            if (param0 == 0) {
-              if (param1 != 44) {
-                field_f = null;
-                return param2;
+            L4: {
+              if (param1 == 44) {
+                break L4;
               } else {
-                return param2;
+                field_f = null;
+                break L4;
               }
-            } else {
-              var3 = param2 % param0;
-              param2 = param0;
-              param0 = var3;
-              continue L1;
             }
+            stackOut_9_0 = param2;
+            stackIn_10_0 = stackOut_9_0;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw wg.a((Throwable) (Object) var3, "tk.A(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_10_0;
     }
 
     final static void a(int param0, jb[] param1, int param2, boolean param3) {
-        if (!param3) {
-          field_d = 29;
-          jh.a(uh.field_i, (byte) 51, param2, param1, param0);
-          return;
-        } else {
-          jh.a(uh.field_i, (byte) 51, param2, param1, param0);
-          return;
+        try {
+            if (!param3) {
+                field_d = 29;
+            }
+            jh.a(uh.field_i, (byte) 51, param2, param1, param0);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "tk.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -80,7 +96,7 @@ final class tk {
         field_c = null;
         field_b = null;
         field_a = null;
-        int var1 = 124 / ((param0 - -61) / 61);
+        int var1 = 62;
         field_f = null;
     }
 

@@ -17,20 +17,77 @@ final class kw extends kj {
 
     final static void a(boolean param0) {
         gk.field_d = 0;
-        lna.field_q = param0 ? true : false;
+        lna.field_q = true;
     }
 
     final static eq a(boolean param0, String[] param1) {
-        eq var2 = new eq(param0);
-        var2.field_a = param1;
-        return var2;
+        eq var2 = null;
+        RuntimeException var2_ref = null;
+        eq stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        eq stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var2 = new eq(param0);
+            var2.field_a = param1;
+            stackOut_0_0 = (eq) var2;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2_ref;
+            stackOut_2_1 = new StringBuilder().append("kw.A(").append(param0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param1 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+        }
+        return stackIn_1_0;
     }
 
     final boolean b(int param0) {
-        if ((((kw) this).field_l ^ -1) != -61) {
+        if (((kw) this).field_l != 60) {
           if (param0 >= 21) {
+            int fieldTemp$6 = ((kw) this).field_l - 1;
             ((kw) this).field_l = ((kw) this).field_l - 1;
-            if ((((kw) this).field_l - 1 ^ -1) > -1) {
+            if (fieldTemp$6 < 0) {
               L0: {
                 if (((kw) this).field_o) {
                   ((kw) this).field_e.field_h.b((byte) -126, 28, ((kw) this).field_d, ((kw) this).field_c);
@@ -45,9 +102,10 @@ final class kw extends kj {
               return false;
             }
           } else {
-            boolean discarded$2 = ((kw) this).b(-88);
+            boolean discarded$7 = ((kw) this).b(-88);
+            int fieldTemp$8 = ((kw) this).field_l - 1;
             ((kw) this).field_l = ((kw) this).field_l - 1;
-            if ((((kw) this).field_l - 1 ^ -1) > -1) {
+            if (fieldTemp$8 < 0) {
               L1: {
                 if (((kw) this).field_o) {
                   ((kw) this).field_e.field_h.b((byte) -126, 28, ((kw) this).field_d, ((kw) this).field_c);
@@ -65,9 +123,10 @@ final class kw extends kj {
         } else {
           jja.a(192, -1, 25);
           if (param0 < 21) {
-            boolean discarded$3 = ((kw) this).b(-88);
+            boolean discarded$9 = ((kw) this).b(-88);
+            int fieldTemp$10 = ((kw) this).field_l - 1;
             ((kw) this).field_l = ((kw) this).field_l - 1;
-            if ((((kw) this).field_l - 1 ^ -1) > -1) {
+            if (fieldTemp$10 < 0) {
               L2: {
                 if (((kw) this).field_o) {
                   ((kw) this).field_e.field_h.b((byte) -126, 28, ((kw) this).field_d, ((kw) this).field_c);
@@ -82,8 +141,9 @@ final class kw extends kj {
               return false;
             }
           } else {
+            int fieldTemp$11 = ((kw) this).field_l - 1;
             ((kw) this).field_l = ((kw) this).field_l - 1;
-            if ((((kw) this).field_l - 1 ^ -1) <= -1) {
+            if (fieldTemp$11 >= 0) {
               return false;
             } else {
               L3: {
@@ -109,28 +169,22 @@ final class kw extends kj {
 
     kw(gj param0, int param1, int param2, int param3, int param4, boolean param5) {
         super(param0, param1, param2);
-        ((kw) this).field_o = param5 ? true : false;
-        ((kw) this).field_l = 80;
-        ((kw) this).field_i = -64 + kla.a(129, m.field_a, -2147483648) + param3;
-        ((kw) this).field_h = kla.a(65, m.field_a, -2147483648) + param4 - 32;
+        try {
+            ((kw) this).field_o = param5 ? true : false;
+            ((kw) this).field_l = 80;
+            ((kw) this).field_i = -64 + kla.a(129, m.field_a, -2147483648) + param3;
+            ((kw) this).field_h = kla.a(65, m.field_a, -2147483648) + param4 - 32;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "kw.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     public static void c(byte param0) {
         field_k = null;
-        if (param0 < 75) {
-          field_m = null;
-          field_g = null;
-          field_j = null;
-          field_n = null;
-          field_m = null;
-          return;
-        } else {
-          field_g = null;
-          field_j = null;
-          field_n = null;
-          field_m = null;
-          return;
-        }
+        field_g = null;
+        field_j = null;
+        field_n = null;
+        field_m = null;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -141,7 +195,7 @@ final class kw extends kj {
         if (param1 != 0) {
           return;
         } else {
-          var4 = ((kw) this).field_l * (((80 + -((kw) this).field_l) * 655360 >> 807673392) + 400) / 80;
+          var4 = ((kw) this).field_l * (((80 + -((kw) this).field_l) * 655360 >> 16) + 400) / 80;
           var5 = kka.field_f;
           var6 = param2 - ((kw) this).field_i * ((kw) this).field_l / 80;
           var7 = param0 - var4 + -(((kw) this).field_l * ((kw) this).field_h / 80);

@@ -99,16 +99,17 @@ abstract class ud extends ch {
     }
 
     ud(kn param0, int param1, int param2) {
-        super(kn.field_O + -param1 >> 1551872321, sl.field_c + -param2 >> -1859045567, param1, param2, (eb) null);
-        ((ud) this).field_M = param0;
-        ((ud) this).field_N = false;
-        ((ud) this).field_J = 0;
+        super(kn.field_O + -param1 >> 1, sl.field_c + -param2 >> 1, param1, param2, (eb) null);
+        try {
+            ((ud) this).field_M = param0;
+            ((ud) this).field_N = false;
+            ((ud) this).field_J = 0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "ud.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     public static void a(int param0) {
-        if (param0 > -11) {
-            return;
-        }
         field_L = null;
         field_O = null;
         field_I = null;
@@ -163,7 +164,7 @@ abstract class ud extends ch {
               return;
             }
           } else {
-            if (-1 != (param1 ^ -1)) {
+            if (param1 != 0) {
               return;
             } else {
               ((ud) this).a(param2 - -((ud) this).field_z, param0 - -((ud) this).field_p, true);
@@ -206,14 +207,14 @@ abstract class ud extends ch {
         if (!param0) {
           var2 = this.d(param0);
           var3 = -((ud) this).field_J + var2;
-          if (-1 <= (var3 ^ -1)) {
+          if (var3 <= 0) {
             if (var3 >= 0) {
               L0: {
                 L1: {
                   if (((ud) this).field_J != 0) {
                     break L1;
                   } else {
-                    if (-1 != (var2 ^ -1)) {
+                    if (var2 != 0) {
                       break L1;
                     } else {
                       if (((ud) this).field_N) {
@@ -238,7 +239,7 @@ abstract class ud extends ch {
                   if (((ud) this).field_J != 0) {
                     break L3;
                   } else {
-                    if (-1 != (var2 ^ -1)) {
+                    if (var2 != 0) {
                       break L3;
                     } else {
                       if (((ud) this).field_N) {
@@ -265,7 +266,7 @@ abstract class ud extends ch {
                   if (((ud) this).field_J != 0) {
                     break L5;
                   } else {
-                    if (-1 != (var2 ^ -1)) {
+                    if (var2 != 0) {
                       break L5;
                     } else {
                       if (((ud) this).field_N) {
@@ -290,7 +291,7 @@ abstract class ud extends ch {
                   if (((ud) this).field_J != 0) {
                     break L7;
                   } else {
-                    if (-1 != (var2 ^ -1)) {
+                    if (var2 != 0) {
                       break L7;
                     } else {
                       if (((ud) this).field_N) {
@@ -314,7 +315,7 @@ abstract class ud extends ch {
           ((ud) this).a(-46, -6, false);
           var2 = this.d(param0);
           var3 = -((ud) this).field_J + var2;
-          if (-1 > (var3 ^ -1)) {
+          if (var3 > 0) {
             ((ud) this).field_J = ((ud) this).field_J + (7 + var3) / 8;
             if (var3 < 0) {
               L8: {
@@ -323,7 +324,7 @@ abstract class ud extends ch {
                   if (((ud) this).field_J != 0) {
                     break L9;
                   } else {
-                    if (-1 != (var2 ^ -1)) {
+                    if (var2 != 0) {
                       break L9;
                     } else {
                       if (((ud) this).field_N) {
@@ -347,7 +348,7 @@ abstract class ud extends ch {
                   if (((ud) this).field_J != 0) {
                     break L11;
                   } else {
-                    if (-1 != (var2 ^ -1)) {
+                    if (var2 != 0) {
                       break L11;
                     } else {
                       if (((ud) this).field_N) {
@@ -373,7 +374,7 @@ abstract class ud extends ch {
                   if (((ud) this).field_J != 0) {
                     break L13;
                   } else {
-                    if (-1 != (var2 ^ -1)) {
+                    if (var2 != 0) {
                       break L13;
                     } else {
                       if (((ud) this).field_N) {
@@ -394,7 +395,7 @@ abstract class ud extends ch {
             } else {
               ((ud) this).field_J = ((ud) this).field_J + (-16 + (var3 + 1)) / 16;
               if (((ud) this).field_J == 0) {
-                if (-1 == (var2 ^ -1)) {
+                if (var2 == 0) {
                   L14: {
                     if (((ud) this).field_N) {
                       stackOut_9_0 = 0;
@@ -419,7 +420,7 @@ abstract class ud extends ch {
     }
 
     final void a(int param0, byte param1, int param2) {
-        ((ud) this).a(param2, (byte) 88, -param0 + sl.field_c >> 1920618209, kn.field_O - param2 >> -1754508159, param0);
+        ((ud) this).a(param2, (byte) 88, -param0 + sl.field_c >> 1, kn.field_O - param2 >> 1, param0);
         if (param1 != -110) {
             field_K = true;
         }

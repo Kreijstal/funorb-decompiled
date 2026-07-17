@@ -19,22 +19,10 @@ final class la {
     static ja field_j;
 
     private final void b(int param0, byte param1) {
-        int[] var3 = null;
-        int[] var4 = null;
-        if (param1 <= 21) {
-          field_l = null;
-          var4 = new int[this.a(param0, (byte) 104)];
-          var3 = var4;
-          d.a(((la) this).field_o, 0, var4, 0, ((la) this).field_o.length);
-          ((la) this).field_o = var4;
-          return;
-        } else {
-          var4 = new int[this.a(param0, (byte) 104)];
-          var3 = var4;
-          d.a(((la) this).field_o, 0, var4, 0, ((la) this).field_o.length);
-          ((la) this).field_o = var4;
-          return;
-        }
+        int[] var4 = new int[this.a(param0, (byte) 104)];
+        int[] var3 = var4;
+        d.a(((la) this).field_o, 0, var4, 0, ((la) this).field_o.length);
+        ((la) this).field_o = var4;
     }
 
     private final int a(int param0, byte param1) {
@@ -133,16 +121,11 @@ final class la {
     public static void a(int param0) {
         field_c = null;
         field_j = null;
-        if (param0 > -4) {
-          return;
-        } else {
-          field_b = null;
-          field_l = null;
-          field_e = null;
-          field_h = null;
-          field_g = null;
-          return;
-        }
+        field_b = null;
+        field_l = null;
+        field_e = null;
+        field_h = null;
+        field_g = null;
     }
 
     final void a(int param0, int param1) {

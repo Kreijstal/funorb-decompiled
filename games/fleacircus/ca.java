@@ -62,7 +62,7 @@ final class ca extends gj implements dc, da, pe {
             ((ca) this).a((qa) (Object) var6, (byte) -85);
             var7 = new je(((nh) (Object) param1).a((byte) 21));
             ((ca) this).a((qa) (Object) var7, (byte) -29);
-            var7.a(3 + var6.field_u + var6.field_y, 15, var6.field_z + (var6.field_j + param0 >> -399902495), 15, 80);
+            var7.a(3 + var6.field_u + var6.field_y, 15, var6.field_z + (var6.field_j + param0 >> 1), 15, 80);
             stackOut_0_0 = var6.field_j;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -567,7 +567,7 @@ final class ca extends gj implements dc, da, pe {
         try {
           L0: {
             if (!super.a(param0, param1, param2, param3)) {
-              if (-99 == (param1 ^ -1)) {
+              if (param1 == 98) {
                 stackOut_6_0 = ((ca) this).b(param2, -28533);
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
@@ -902,7 +902,7 @@ final class ca extends gj implements dc, da, pe {
           L0: {
             L1: {
               L2: {
-                if (-1 != (param0 ^ -1)) {
+                if (param0 != 0) {
                   break L2;
                 } else {
                   lk.a(-15493, "terms.ws");
@@ -917,7 +917,7 @@ final class ca extends gj implements dc, da, pe {
                 if (param0 == 1) {
                   break L3;
                 } else {
-                  if ((param0 ^ -1) != -3) {
+                  if (param0 != 2) {
                     break L1;
                   } else {
                     lk.a(-15493, "conduct.ws");
@@ -1085,7 +1085,7 @@ final class ca extends gj implements dc, da, pe {
               L1: {
                 sk.b((byte) -80);
                 var7 = -10 + var5_int;
-                if ((param2.field_h ^ -1) >= -1) {
+                if (param2.field_h <= 0) {
                   break L1;
                 } else {
                   if (param2.field_J == null) {
@@ -1124,7 +1124,7 @@ final class ca extends gj implements dc, da, pe {
                               var15 = -var12 + kb.field_o[var11];
                               var16 = il.field_c[var10] + -var13;
                               var17 = -var13 + il.field_c[var11];
-                              if ((var14 * var17 - var15 * var16 ^ -1) > -1) {
+                              if (var14 * var17 - var15 * var16 < 0) {
                                 break L6;
                               } else {
                                 if (var19 == 0) {
@@ -1136,7 +1136,7 @@ final class ca extends gj implements dc, da, pe {
                             }
                           }
                           var12 = h.field_c[var9];
-                          if (2147483647 == (var12 ^ -1)) {
+                          if (var12 == -2147483648) {
                             break L5;
                           } else {
                             var13 = h.field_c[var10];
@@ -1149,7 +1149,7 @@ final class ca extends gj implements dc, da, pe {
                               } else {
                                 L7: {
                                   var15 = var14 + var13 + (var12 - var6);
-                                  if ((var7 ^ -1) > -1) {
+                                  if (var7 < 0) {
                                     stackOut_25_0 = var15 << -var7;
                                     stackIn_26_0 = stackOut_25_0;
                                     break L7;
@@ -1164,7 +1164,7 @@ final class ca extends gj implements dc, da, pe {
                                 L8: while (true) {
                                   L9: {
                                     L10: {
-                                      if (var17 >> 1478003972 == 0) {
+                                      if (var17 >> 4 == 0) {
                                         break L10;
                                       } else {
                                         var16--;
@@ -1195,7 +1195,7 @@ final class ca extends gj implements dc, da, pe {
                                         }
                                       }
                                     }
-                                    stackOut_36_0 = var17 + (var16 << 1681965412);
+                                    stackOut_36_0 = var17 + (var16 << 4);
                                     stackIn_37_0 = stackOut_36_0;
                                     break L9;
                                   }
@@ -1236,7 +1236,7 @@ final class ca extends gj implements dc, da, pe {
                 }
                 L13: {
                   L14: {
-                    if (stackIn_47_0 <= (param2.field_h ^ -1)) {
+                    if (stackIn_47_0 <= ~param2.field_h) {
                       break L14;
                     } else {
                       if (null != param2.field_J) {
@@ -1376,7 +1376,7 @@ final class ca extends gj implements dc, da, pe {
             ((ca) this).a((qa) (Object) ((ca) this).field_J, (byte) -83);
             var6 = 4;
             var7 = 200;
-            ((ca) this).field_I.a(-var7 + 496 >> -267677567, var7, var3, 40, 80);
+            ((ca) this).field_I.a(-var7 + 496 >> 1, var7, var3, 40, 80);
             ((ca) this).field_R.a(var6 + 3, 60, var3 - -15, 40, 80);
             ((ca) this).field_R.field_s = (kd) this;
             ((ca) this).field_I.field_s = (kd) this;

@@ -10,63 +10,104 @@ final class mj {
     static int[] field_a;
 
     final static int a(byte param0) {
-        int var1 = 36 / ((param0 - -19) / 45);
+        int var1 = 36;
         return oc.field_a;
     }
 
     final static ib a(String param0, int param1, int param2) {
-        if (param2 != -1) {
-            return null;
+        ea var3 = null;
+        RuntimeException var3_ref = null;
+        ea stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ea stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            var3 = new ea();
+            ((ib) (Object) var3).field_a = param0;
+            ((ib) (Object) var3).field_c = param1;
+            stackOut_2_0 = (ea) var3;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_1 = new StringBuilder().append("mj.D(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + -1 + 41);
         }
-        ea var3 = new ea();
-        ((ib) (Object) var3).field_a = param0;
-        ((ib) (Object) var3).field_c = param1;
-        return (ib) (Object) var3;
+        return (ib) (Object) stackIn_3_0;
     }
 
     final static void a(java.awt.Component param0, byte param1) {
-        param0.removeKeyListener((java.awt.event.KeyListener) (Object) ff.field_H);
-        if (param1 <= 91) {
-          field_c = true;
-          param0.removeFocusListener((java.awt.event.FocusListener) (Object) ff.field_H);
-          wk.field_b = -1;
-          return;
-        } else {
-          param0.removeFocusListener((java.awt.event.FocusListener) (Object) ff.field_H);
-          wk.field_b = -1;
-          return;
+        try {
+            param0.removeKeyListener((java.awt.event.KeyListener) (Object) ff.field_H);
+            if (param1 <= 91) {
+                field_c = true;
+            }
+            param0.removeFocusListener((java.awt.event.FocusListener) (Object) ff.field_H);
+            wk.field_b = -1;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "mj.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     final static String a(Throwable param0, byte param1) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
+        String var5 = null;
         BufferedReader var6 = null;
         String var7 = null;
+        String var8 = null;
         int var9 = 0;
         int var10 = 0;
         String var11 = null;
         int var12 = 0;
         int var13 = 0;
-        Object var14 = null;
-        eb var15 = null;
-        StringWriter var16 = null;
-        String var21 = null;
-        BufferedReader var22 = null;
-        String var23 = null;
-        String var24 = null;
-        String var25 = null;
-        String var26 = null;
-        String var27 = null;
-        String var28 = null;
-        String var29 = null;
-        BufferedReader var30 = null;
-        String var31 = null;
-        String var32 = null;
-        String var33 = null;
-        String var34 = null;
-        String var35 = null;
-        String var36 = null;
+        eb var14 = null;
+        StringWriter var15 = null;
+        String var16 = null;
+        String var17 = null;
+        String var18 = null;
+        String var19 = null;
         L0: {
           var13 = wizardrun.field_H;
           if (!(param0 instanceof eb)) {
@@ -76,160 +117,79 @@ final class mj {
             var11 = var2;
             break L0;
           } else {
-            var15 = (eb) (Object) param0;
-            param0 = var15.field_c;
-            var2 = var15.field_b + " | ";
+            var14 = (eb) (Object) param0;
+            param0 = var14.field_c;
+            var2 = var14.field_b + " | ";
             break L0;
           }
         }
-        var16 = new StringWriter();
-        var4 = new PrintWriter((Writer) (Object) var16);
+        var15 = new StringWriter();
+        var4 = new PrintWriter((Writer) (Object) var15);
         param0.printStackTrace(var4);
         var4.close();
-        if (param1 <= -80) {
-          var21 = var16.toString();
-          var11 = var21;
+        var5 = var15.toString();
+        var11 = var5;
+        var2 = var11;
+        var11 = var5;
+        var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
+        var7 = var6.readLine();
+        var11 = var7;
+        var2 = var11;
+        var11 = var7;
+        L1: while (true) {
+          var8 = var6.readLine();
+          var11 = var8;
           var2 = var11;
-          var11 = var21;
-          var22 = new BufferedReader((Reader) (Object) new StringReader(var21));
-          var28 = var22.readLine();
-          var11 = var28;
-          var2 = var11;
-          var11 = var28;
-          L1: while (true) {
-            var23 = var22.readLine();
-            var11 = var23;
-            var2 = var11;
-            var11 = var23;
-            if (var23 == null) {
-              var2 = var2 + "| " + var28;
-              var11 = var2;
-              var2 = var11;
-              var11 = var2;
-              return var2;
-            } else {
-              L2: {
-                var9 = var23.indexOf('(');
-                var10 = var23.indexOf(')', var9 + 1);
-                if (-1 != var9) {
-                  var11 = var23.substring(0, var9);
-                  var2 = var11;
-                  var2 = var11;
-                  break L2;
-                } else {
-                  var11 = var23;
-                  break L2;
-                }
+          var11 = var8;
+          if (var8 == null) {
+            var2 = var2 + "| " + var7;
+            return var2;
+          } else {
+            L2: {
+              var9 = var8.indexOf('(');
+              var10 = var8.indexOf(')', var9 + 1);
+              if (-1 != var9) {
+                var11 = var8.substring(0, var9);
+                var2 = var11;
+                var2 = var11;
+                break L2;
+              } else {
+                var11 = var8;
+                break L2;
               }
-              L3: {
-                var24 = var11.trim();
-                var2 = var24;
-                var2 = var24;
-                var25 = var24.substring(var24.lastIndexOf(' ') + 1);
-                var2 = var25;
-                var2 = var25;
-                var26 = var25.substring(1 + var25.lastIndexOf('\t'));
-                var2 = var26;
-                var2 = var26;
-                var27 = var2 + var26;
-                var2 = var27;
-                var2 = var27;
-                if (-1 == var9) {
-                  break L3;
-                } else {
-                  if (0 != (var10 ^ -1)) {
-                    var12 = var23.indexOf(".java:", var9);
-                    if (-1 < (var12 ^ -1)) {
-                      break L3;
-                    } else {
-                      var2 = var27 + var23.substring(5 + var12, var10);
-                      break L3;
-                    }
-                  } else {
-                    var2 = var2 + 32;
-                    continue L1;
-                  }
-                }
-              }
-              var2 = var2 + 32;
-              continue L1;
             }
-          }
-        } else {
-          var14 = null;
-          mj.a((java.awt.Component) null, (byte) -41);
-          var29 = var16.toString();
-          var11 = var29;
-          var2 = var11;
-          var11 = var29;
-          var30 = new BufferedReader((Reader) (Object) new StringReader(var29));
-          var6 = var30;
-          var36 = var30.readLine();
-          var11 = var36;
-          var2 = var11;
-          var11 = var36;
-          var7 = var36;
-          var11 = var7;
-          var2 = var11;
-          var11 = var7;
-          L4: while (true) {
-            var31 = var30.readLine();
-            var11 = var31;
-            var2 = var11;
-            var11 = var31;
-            if (var31 == null) {
-              var2 = var2 + "| " + var36;
-              var11 = var2;
-              var2 = var11;
-              var11 = var2;
-              return var2;
-            } else {
-              L5: {
-                var9 = var31.indexOf('(');
-                var10 = var31.indexOf(')', var9 + 1);
-                if (-1 != var9) {
-                  var11 = var31.substring(0, var9);
-                  var2 = var11;
-                  var2 = var11;
-                  break L5;
-                } else {
-                  var11 = var31;
-                  break L5;
-                }
-              }
-              L6: {
-                var32 = var11.trim();
-                var2 = var32;
-                var2 = var32;
-                var33 = var32.substring(var32.lastIndexOf(' ') + 1);
-                var2 = var33;
-                var2 = var33;
-                var34 = var33.substring(1 + var33.lastIndexOf('\t'));
-                var2 = var34;
-                var2 = var34;
-                var35 = var2 + var34;
-                var2 = var35;
-                var2 = var35;
-                if (-1 == var9) {
-                  break L6;
-                } else {
-                  if (0 != (var10 ^ -1)) {
-                    var12 = var31.indexOf(".java:", var9);
-                    if (-1 < (var12 ^ -1)) {
-                      break L6;
-                    } else {
-                      var2 = var35 + var31.substring(5 + var12, var10);
-                      break L6;
-                    }
+            L3: {
+              var16 = var11.trim();
+              var2 = var16;
+              var2 = var16;
+              var17 = var16.substring(var16.lastIndexOf(' ') + 1);
+              var2 = var17;
+              var2 = var17;
+              var18 = var17.substring(1 + var17.lastIndexOf('\t'));
+              var2 = var18;
+              var2 = var18;
+              var19 = var2 + var18;
+              var2 = var19;
+              var2 = var19;
+              if (-1 == var9) {
+                break L3;
+              } else {
+                if (var10 != -1) {
+                  var12 = var8.indexOf(".java:", var9);
+                  if (var12 < 0) {
+                    break L3;
                   } else {
-                    var2 = var2 + 32;
-                    continue L4;
+                    var2 = var19 + var8.substring(5 + var12, var10);
+                    break L3;
                   }
+                } else {
+                  var2 = var2 + 32;
+                  continue L1;
                 }
               }
-              var2 = var2 + 32;
-              continue L4;
             }
+            var2 = var2 + 32;
+            continue L1;
           }
         }
     }
@@ -238,9 +198,6 @@ final class mj {
         field_b = null;
         field_a = null;
         field_d = null;
-        if (param0 != 13214) {
-            field_b = null;
-        }
     }
 
     static {

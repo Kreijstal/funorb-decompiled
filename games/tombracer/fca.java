@@ -10,9 +10,6 @@ final class fca {
     final static void a(boolean param0, int param1) {
         nd.a(-1, param0);
         tc.a(param0, 0);
-        if (param1 != 7) {
-            fca.a(-109);
-        }
     }
 
     protected final void finalize() throws Throwable {
@@ -27,8 +24,12 @@ final class fca {
     }
 
     fca(cka param0, long param1, int param2) {
-        ((fca) this).field_c = param0;
-        ((fca) this).field_a = param1;
+        try {
+            ((fca) this).field_c = param0;
+            ((fca) this).field_a = param1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fca.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

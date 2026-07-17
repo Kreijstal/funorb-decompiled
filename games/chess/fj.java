@@ -20,13 +20,13 @@ final class fj {
           if (((fj) this).field_i == null) {
             return 0;
           } else {
-            if (-1 != (((fj) this).field_i.length ^ -1)) {
+            if (((fj) this).field_i.length != 0) {
               var3 = 1;
               L0: while (true) {
                 if (var3 >= ((fj) this).field_i.length) {
                   return ((fj) this).field_i.length + -1;
                 } else {
-                  if (((fj) this).field_i[var3] + ((fj) this).field_i[-1 + var3] >> -144935775 > param0) {
+                  if (((fj) this).field_i[var3] + ((fj) this).field_i[-1 + var3] >> 1 > param0) {
                     return var3 - 1;
                   } else {
                     var3++;
@@ -44,7 +44,7 @@ final class fj {
     }
 
     public static void a(byte param0) {
-        int var1 = -27 % ((69 - param0) / 39);
+        int var1 = 0;
         field_f = null;
         field_h = null;
         field_b = null;
@@ -59,17 +59,21 @@ final class fj {
     }
 
     final static void a(String param0, int param1, int param2, String param3, int param4) {
-        eg.field_f.field_S = param3;
-        eg.field_f.field_ib = param4;
-        if (param2 != -1) {
-            field_h = null;
+        try {
+            eg.field_f.field_S = param3;
+            eg.field_f.field_ib = param4;
+            if (param2 != -1) {
+                field_h = null;
+            }
+            eg.field_f.field_M = eg.field_f.field_M + uc.field_c.field_M;
+            eg.field_f.field_db = param0;
+            uc.field_c.field_mb = uc.field_c.field_mb + uc.field_c.field_M;
+            uc.field_c.field_M = param1;
+            eg.field_f.field_M = eg.field_f.field_M - uc.field_c.field_M;
+            uc.field_c.field_mb = uc.field_c.field_mb - uc.field_c.field_M;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "fj.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
-        eg.field_f.field_M = eg.field_f.field_M + uc.field_c.field_M;
-        eg.field_f.field_db = param0;
-        uc.field_c.field_mb = uc.field_c.field_mb + uc.field_c.field_M;
-        uc.field_c.field_M = param1;
-        eg.field_f.field_M = eg.field_f.field_M - uc.field_c.field_M;
-        uc.field_c.field_mb = uc.field_c.field_mb - uc.field_c.field_M;
     }
 
     final static void a(int param0) {
@@ -293,8 +297,8 @@ final class fj {
               var8_ref_ld.field_f.field_ib = var12;
               var8_ref_ld.field_f.field_xb = sc.field_a;
               var6 = var6 + param2;
-              var8_ref_ld.field_f.field_P = -(8355711 & var12 >> 141297409) + var12 - -((eh.field_M.field_P & 16711423) >> -736126367);
-              var8_ref_ld.field_f.field_O = var12 + -((16711423 & var12) >> 1220492545) - -((16711422 & eh.field_M.field_O) >> -1039645599);
+              var8_ref_ld.field_f.field_P = -(8355711 & var12 >> 1) + var12 - -((eh.field_M.field_P & 16711423) >> 1);
+              var8_ref_ld.field_f.field_O = var12 + -((16711423 & var12) >> 1) - -((16711422 & eh.field_M.field_O) >> 1);
               var7--;
               continue L1;
             } else {

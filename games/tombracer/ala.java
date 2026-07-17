@@ -841,13 +841,13 @@ final class ala extends dfa {
               ((ala) this).field_g = ((ala) this).field_g + 16;
               break L0;
             } else {
-              if ((((ala) this).field_g ^ -1) < -1) {
+              if (((ala) this).field_g > 0) {
                 var3 = 5;
                 var4 = 428 + var3;
                 var5 = 67;
                 var6 = 309;
-                bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, ((ala) this).field_g >> -25286783);
-                if (-257 == (((ala) this).field_g ^ -1)) {
+                bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, ((ala) this).field_g >> 1);
+                if (((ala) this).field_g == 256) {
                   bea.e(0, 0, var3, 480, 0);
                   bea.e(var4, 0, -var4 + 640, 480, 0);
                   bea.e(var3, 0, var4 - var3, var5, 0);
@@ -859,7 +859,7 @@ final class ala extends dfa {
                   bea.c(var4, 0, -var4 + 640, 480, 0, ((ala) this).field_g);
                   bea.c(var3, 0, var4 - var3, var5, 0, ((ala) this).field_g);
                   bea.c(var3, var6, var4 + -var3, 480 - var6, 0, ((ala) this).field_g);
-                  bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, ((ala) this).field_g >> 520343169);
+                  bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, ((ala) this).field_g >> 1);
                   return;
                 }
               } else {
@@ -876,13 +876,13 @@ final class ala extends dfa {
               ((ala) this).field_g = ((ala) this).field_g - 16;
               break L1;
             } else {
-              if ((((ala) this).field_g ^ -1) < -1) {
+              if (((ala) this).field_g > 0) {
                 var3 = 5;
                 var4 = 428 + var3;
                 var5 = 67;
                 var6 = 309;
-                bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, ((ala) this).field_g >> -25286783);
-                if (-257 == (((ala) this).field_g ^ -1)) {
+                bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, ((ala) this).field_g >> 1);
+                if (((ala) this).field_g == 256) {
                   bea.e(0, 0, var3, 480, 0);
                   bea.e(var4, 0, -var4 + 640, 480, 0);
                   bea.e(var3, 0, var4 - var3, var5, 0);
@@ -894,7 +894,7 @@ final class ala extends dfa {
                   bea.c(var4, 0, -var4 + 640, 480, 0, ((ala) this).field_g);
                   bea.c(var3, 0, var4 - var3, var5, 0, ((ala) this).field_g);
                   bea.c(var3, var6, var4 + -var3, 480 - var6, 0, ((ala) this).field_g);
-                  bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, ((ala) this).field_g >> 520343169);
+                  bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, ((ala) this).field_g >> 1);
                   return;
                 }
               } else {
@@ -903,13 +903,13 @@ final class ala extends dfa {
             }
           }
         }
-        if ((((ala) this).field_g ^ -1) < -1) {
+        if (((ala) this).field_g > 0) {
           var3 = 5;
           var4 = 428 + var3;
           var5 = 67;
           var6 = 309;
-          bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, ((ala) this).field_g >> -25286783);
-          if (-257 == (((ala) this).field_g ^ -1)) {
+          bea.c(var3, var5, var4 + -var3, -var5 + var6, 0, ((ala) this).field_g >> 1);
+          if (((ala) this).field_g == 256) {
             bea.e(0, 0, var3, 480, 0);
             bea.e(var4, 0, -var4 + 640, 480, 0);
             bea.e(var3, 0, var4 - var3, var5, 0);
@@ -921,7 +921,7 @@ final class ala extends dfa {
             bea.c(var4, 0, -var4 + 640, 480, 0, ((ala) this).field_g);
             bea.c(var3, 0, var4 - var3, var5, 0, ((ala) this).field_g);
             bea.c(var3, var6, var4 + -var3, 480 - var6, 0, ((ala) this).field_g);
-            bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, ((ala) this).field_g >> 520343169);
+            bea.c(var3, var5, -var3 + var4, var6 + -var5, 0, ((ala) this).field_g >> 1);
             return;
           }
         } else {
@@ -930,22 +930,19 @@ final class ala extends dfa {
     }
 
     final static void a(byte param0, String param1, boolean param2, float param3) {
-        L0: {
-          if (null == ena.field_p) {
+        if (!(null != ena.field_p)) {
             ena.field_p = new vs(ej.field_a, sea.field_o);
             ej.field_a.c((ae) (Object) ena.field_p, 89);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         ena.field_p.a(param3, param1, param2, (byte) 110);
         bea.a();
         if (param0 != -30) {
-          return;
-        } else {
-          tqa.a(true, (byte) 99);
-          return;
+            return;
+        }
+        try {
+            tqa.a(true, (byte) 99);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ala.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 

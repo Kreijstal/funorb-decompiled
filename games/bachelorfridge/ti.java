@@ -5,7 +5,7 @@ final class ti {
     static byte[] field_a;
 
     final static hh a(int param0) {
-        int var1 = 57 % ((param0 - 33) / 52);
+        int var1 = 0;
         return new hh(tt.e(21240), aj.a((byte) -65));
     }
 
@@ -22,7 +22,7 @@ final class ti {
           var13 = BachelorFridge.field_y;
           var6 = 44;
           var7 = 46;
-          if (-1 != param3) {
+          if (param3 != 0) {
             break L0;
           } else {
             var6 = 46;
@@ -31,7 +31,7 @@ final class ti {
           }
         }
         L1: {
-          if (-3 == param3) {
+          if (param3 == 2) {
             var7 = 160;
             break L1;
           } else {
@@ -41,7 +41,7 @@ final class ti {
         L2: {
           var9 = 0 / ((param0 - 60) / 39);
           var8 = 0;
-          if (-1L < (param2 ^ -1L)) {
+          if (param2 < 0L) {
             param2 = -param2;
             var8 = 1;
             break L2;
@@ -75,24 +75,27 @@ final class ti {
           param2 = param2 / 10L;
           StringBuilder discarded$7 = var10.append((char)(48 + (var12 - 10 * (int)param2)));
           if (0L != param2) {
-            if (!param4) {
-              continue L5;
-            } else {
-              var11++;
-              if (var11 % 3 == 0) {
-                StringBuilder discarded$8 = var10.append(var7);
-                continue L5;
+            L6: {
+              if (!param4) {
+                break L6;
               } else {
-                continue L5;
+                var11++;
+                if (var11 % 3 == 0) {
+                  StringBuilder discarded$8 = var10.append(var7);
+                  break L6;
+                } else {
+                  continue L5;
+                }
               }
             }
+            continue L5;
           } else {
-            L6: {
+            L7: {
               if (var8 != 0) {
                 StringBuilder discarded$9 = var10.append(45);
-                break L6;
+                break L7;
               } else {
-                break L6;
+                break L7;
               }
             }
             return var10.reverse().toString();
@@ -101,9 +104,6 @@ final class ti {
     }
 
     public static void b(int param0) {
-        if (param0 != 3) {
-            return;
-        }
         field_a = null;
     }
 
@@ -118,8 +118,9 @@ final class ti {
         field_a = new byte[32896];
         for (var1 = 0; var1 < 256; var1++) {
             for (var2 = 0; var2 <= var1; var2++) {
+                int incrementValue$0 = var0;
                 var0++;
-                field_a[var0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(65535 + (var2 * var2 + var1 * var1)) / 65535.0f)));
+                field_a[incrementValue$0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(65535 + (var2 * var2 + var1 * var1)) / 65535.0f)));
             }
         }
     }

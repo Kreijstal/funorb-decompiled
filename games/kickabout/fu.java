@@ -36,30 +36,22 @@ final class fu {
     private final int b(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          var4 = Kickabout.field_G;
-          if (param1 == 20151) {
-            break L0;
-          } else {
-            this.a(-85, true);
-            break L0;
-          }
-        }
+        var4 = Kickabout.field_G;
         var3 = ((fu) this).field_d.length;
-        L1: while (true) {
+        L0: while (true) {
           if (param0 < var3) {
             return var3;
           } else {
             if (!((fu) this).field_e) {
               var3 = var3 + ((fu) this).field_i;
-              continue L1;
+              continue L0;
             } else {
-              if (-1 != (var3 ^ -1)) {
+              if (var3 != 0) {
                 var3 = var3 * ((fu) this).field_i;
-                continue L1;
+                continue L0;
               } else {
                 var3 = 1;
-                continue L1;
+                continue L0;
               }
             }
           }
@@ -67,9 +59,6 @@ final class fu {
     }
 
     private final void a(int param0, boolean param1) {
-        if (!param1) {
-            field_f = null;
-        }
         int[] var4 = new int[this.b(param0, 20151)];
         int[] var3 = var4;
         dv.a(((fu) this).field_d, 0, var4, 0, ((fu) this).field_d.length);
@@ -84,103 +73,119 @@ final class fu {
     public static void a(boolean param0) {
         field_a = null;
         field_f = null;
-        if (!param0) {
-            int discarded$0 = fu.a(52, 5, 56);
-        }
         field_b = null;
     }
 
     final static int a(int param0, int param1, int param2) {
+        RuntimeException var3 = null;
         double var4 = 0.0;
         double var6 = 0.0;
         oi var8 = null;
         int var9 = 0;
         int var10 = 0;
         tf var11 = null;
-        L0: {
-          var10 = Kickabout.field_G;
-          var11 = new tf();
-          if (param0 == 5464) {
-            break L0;
-          } else {
-            field_b = null;
-            break L0;
-          }
-        }
-        L1: {
-          var11.a((gn) (Object) new oi(0), 3);
-          if (0 == param1) {
-            var11.a((gn) (Object) new oi(2), 3);
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        L2: {
-          if (param1 != 1) {
-            break L2;
-          } else {
-            var11.a((gn) (Object) new oi(3), 3);
-            break L2;
-          }
-        }
-        L3: {
-          if (2 != param1) {
-            break L3;
-          } else {
-            var11.a((gn) (Object) new oi(4), 3);
-            break L3;
-          }
-        }
-        L4: {
-          L5: {
-            if ((param2 ^ -1) == -2) {
-              break L5;
-            } else {
-              if (param2 != 2) {
+        int stackIn_22_0 = 0;
+        int stackIn_25_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_24_0 = 0;
+        int stackOut_21_0 = 0;
+        var10 = Kickabout.field_G;
+        try {
+          L0: {
+            L1: {
+              var11 = new tf();
+              if (param0 == 5464) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
+              }
+            }
+            L2: {
+              var11.a((gn) (Object) new oi(0), 3);
+              if (0 == param1) {
+                var11.a((gn) (Object) new oi(2), 3);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (param1 != 1) {
+                break L3;
+              } else {
+                var11.a((gn) (Object) new oi(3), 3);
+                break L3;
+              }
+            }
+            L4: {
+              if (2 != param1) {
                 break L4;
               } else {
-                break L5;
+                var11.a((gn) (Object) new oi(4), 3);
+                break L4;
+              }
+            }
+            L5: {
+              L6: {
+                if (param2 == 1) {
+                  break L6;
+                } else {
+                  if (param2 != 2) {
+                    break L5;
+                  } else {
+                    break L6;
+                  }
+                }
+              }
+              var11.a((gn) (Object) new oi(1), param0 + -5461);
+              break L5;
+            }
+            L7: {
+              if (param2 != 2) {
+                break L7;
+              } else {
+                var11.a((gn) (Object) new oi(5), 3);
+                break L7;
+              }
+            }
+            L8: {
+              if (param2 != 3) {
+                break L8;
+              } else {
+                var11.a((gn) (Object) new oi(6), 3);
+                break L8;
+              }
+            }
+            var4 = 100.0 / (double)var11.a(false);
+            var6 = 0.0;
+            var8 = (oi) (Object) var11.g(param0 + 18545);
+            L9: while (true) {
+              if (var8 == null) {
+                stackOut_24_0 = -1;
+                stackIn_25_0 = stackOut_24_0;
+                break L0;
+              } else {
+                var9 = fv.a(var8.field_j, (byte) 19);
+                if (var9 == -1) {
+                  var6 = var6 + var4;
+                  var8 = (oi) (Object) var11.c(33);
+                  continue L9;
+                } else {
+                  var6 = var6 + (double)var9 * var4 / 100.0;
+                  stackOut_21_0 = (int)var6;
+                  stackIn_22_0 = stackOut_21_0;
+                  return stackIn_22_0;
+                }
               }
             }
           }
-          var11.a((gn) (Object) new oi(1), param0 + -5461);
-          break L4;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var3, "fu.H(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
-        L6: {
-          if ((param2 ^ -1) != -3) {
-            break L6;
-          } else {
-            var11.a((gn) (Object) new oi(5), 3);
-            break L6;
-          }
-        }
-        L7: {
-          if ((param2 ^ -1) != -4) {
-            break L7;
-          } else {
-            var11.a((gn) (Object) new oi(6), 3);
-            break L7;
-          }
-        }
-        var4 = 100.0 / (double)var11.a(false);
-        var6 = 0.0;
-        var8 = (oi) (Object) var11.g(param0 + 18545);
-        L8: while (true) {
-          if (var8 == null) {
-            return -1;
-          } else {
-            var9 = fv.a(var8.field_j, (byte) 19);
-            if (0 == (var9 ^ -1)) {
-              var6 = var6 + var4;
-              var8 = (oi) (Object) var11.c(33);
-              continue L8;
-            } else {
-              var6 = var6 + (double)var9 * var4 / 100.0;
-              return (int)var6;
-            }
-          }
-        }
+        return stackIn_25_0;
     }
 
     final int a(int param0) {

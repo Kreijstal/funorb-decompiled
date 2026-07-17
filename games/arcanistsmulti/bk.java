@@ -38,7 +38,7 @@ final class bk extends ag {
           }
         }
         ((bk) this).field_z = stackIn_3_1 != 0;
-        this.a(-121, param1, param2, param3);
+        super.a(-121, param1, param2, param3);
         if (param0 <= -99) {
           return;
         } else {
@@ -49,7 +49,11 @@ final class bk extends ag {
 
     bk(String param0, wc param1, boolean param2) {
         this(param0, param1);
-        ((bk) this).field_z = param2 ? true : false;
+        try {
+            ((bk) this).field_z = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "bk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public static void f(int param0) {
@@ -68,7 +72,7 @@ final class bk extends ag {
     final static int a(int param0, int param1, int param2) {
         if (param1 == 1021) {
           if (2 > param0) {
-            if ((param2 ^ -1) <= -6) {
+            if (param2 >= 5) {
               return 1;
             } else {
               return 0;
@@ -79,7 +83,7 @@ final class bk extends ag {
         } else {
           bk.f(44);
           if (2 > param0) {
-            if ((param2 ^ -1) <= -6) {
+            if (param2 >= 5) {
               return 1;
             } else {
               return 0;
@@ -92,43 +96,42 @@ final class bk extends ag {
 
     private bk(String param0, wc param1) {
         this(param0, io.field_n.field_u, param1);
-        ((bk) this).field_r = io.field_n.field_b;
+        try {
+            ((bk) this).field_r = io.field_n.field_b;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "bk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        var2 = ArcanistsMulti.field_G ? 1 : 0;
+        int var1_int = 0;
+        int var2 = ArcanistsMulti.field_G ? 1 : 0;
         tg.field_e.a(-12619);
-        var1 = 0;
-        L0: while (true) {
-          if (32 <= var1) {
-            var1 = 0;
-            if (param0 == 2) {
-              L1: while (true) {
-                if (32 <= var1) {
-                  e.field_Q = 0;
-                  return;
-                } else {
-                  kn.field_tb[var1] = 0L;
-                  var1++;
-                  continue L1;
-                }
-              }
-            } else {
-              return;
+        for (var1_int = 0; 32 > var1_int; var1_int++) {
+            rl.field_l[var1_int] = 0L;
+        }
+        var1_int = 0;
+        if (param0 != 2) {
+            return;
+        }
+        try {
+            while (32 > var1_int) {
+                kn.field_tb[var1_int] = 0L;
+                var1_int++;
             }
-          } else {
-            rl.field_l[var1] = 0L;
-            var1++;
-            continue L0;
-          }
+            e.field_Q = 0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "bk.C(" + param0 + 41);
         }
     }
 
     private bk(String param0, pf param1, wc param2) {
         super(param0, param1, param2);
-        ((bk) this).field_r = io.field_n.field_b;
+        try {
+            ((bk) this).field_r = io.field_n.field_b;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "bk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

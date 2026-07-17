@@ -9,32 +9,95 @@ final class fj {
 
     final static Object a(boolean param0, boolean param1, byte[] param2) {
         af var3 = null;
-        if (param1) {
-          if (param2 != null) {
-            if (param2.length > 136) {
-              var3 = new af();
-              ((qb) (Object) var3).a(param2, 98);
-              return (Object) (Object) var3;
-            } else {
-              if (!param0) {
-                return (Object) (Object) param2;
+        RuntimeException var3_ref = null;
+        Object stackIn_2_0 = null;
+        af stackIn_9_0 = null;
+        byte[] stackIn_12_0 = null;
+        byte[] stackIn_14_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        af stackOut_8_0 = null;
+        byte[] stackOut_13_0 = null;
+        byte[] stackOut_11_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        try {
+          L0: {
+            if (param1) {
+              if (param2 != null) {
+                if (param2.length > 136) {
+                  var3 = new af();
+                  ((qb) (Object) var3).a(param2, 98);
+                  stackOut_8_0 = (af) var3;
+                  stackIn_9_0 = stackOut_8_0;
+                  return (Object) (Object) stackIn_9_0;
+                } else {
+                  if (param0) {
+                    stackOut_13_0 = sm.a(-128, param2);
+                    stackIn_14_0 = stackOut_13_0;
+                    break L0;
+                  } else {
+                    stackOut_11_0 = (byte[]) param2;
+                    stackIn_12_0 = stackOut_11_0;
+                    return (Object) (Object) stackIn_12_0;
+                  }
+                }
               } else {
-                return (Object) (Object) sm.a(-128, param2);
+                return null;
               }
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
-          } else {
-            return null;
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var3_ref;
+            stackOut_15_1 = new StringBuilder().append("fj.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param2 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L1;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L1;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
         }
+        return (Object) (Object) stackIn_14_0;
     }
 
     final static boolean a(int param0) {
-        if (param0 != 136) {
-            field_d = false;
-            return rd.field_h;
-        }
         return rd.field_h;
     }
 

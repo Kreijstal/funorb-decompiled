@@ -23,29 +23,79 @@ abstract class fk extends l {
 
     final static void a(int param0, int param1, int param2, int[] param3, int param4) {
         int[] var5 = null;
+        RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         var8 = Chess.field_G;
-        L0: while (true) {
-          param1--;
-          if (0 > param1) {
-            if (param0 != 0) {
-              fk.a(true, -123);
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            L1: while (true) {
+              param1--;
+              if (0 > param1) {
+                if (param0 == 0) {
+                  break L0;
+                } else {
+                  fk.a(true, -123);
+                  return;
+                }
+              } else {
+                var9 = param3;
+                var5 = var9;
+                var6 = param4;
+                var7 = param2;
+                var9[var6] = var7 - -(ce.a(var9[var6], 16711422) >> 1);
+                param4++;
+                continue L1;
+              }
             }
-          } else {
-            var9 = param3;
-            var5 = var9;
-            var6 = param4;
-            var7 = param2;
-            var9[var6] = var7 - -(ce.a(var9[var6], 16711422) >> -149183295);
-            param4++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var5_ref;
+            stackOut_6_1 = new StringBuilder().append("fk.AA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param3 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param4 + 41);
         }
     }
 
@@ -58,7 +108,7 @@ abstract class fk extends l {
     }
 
     public static void d(byte param0) {
-        int var1 = 82 % ((param0 - -86) / 36);
+        int var1 = 0;
         field_q = null;
     }
 
@@ -70,10 +120,10 @@ abstract class fk extends l {
     final void a(int param0, int param1, int param2, int param3, byte param4) {
         int var6 = 0;
         int var7 = 0;
-        var6 = ((fk) this).field_v << 1442069827;
-        var7 = ((fk) this).field_u << 42805283;
-        param2 = (15 & var6) + (param2 << 285291012);
-        param0 = (15 & var7) + (param0 << -764708316);
+        var6 = ((fk) this).field_v << 3;
+        var7 = ((fk) this).field_u << 3;
+        param2 = (15 & var6) + (param2 << 4);
+        param0 = (15 & var7) + (param0 << 4);
         if (param4 < 49) {
           ((fk) this).field_w = -35;
           ((fk) this).a(var6, var7, param2, param0, param3, param1);

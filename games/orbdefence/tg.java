@@ -8,46 +8,64 @@ final class tg {
     static va field_c;
 
     final static ti a(String param0, int param1) {
-        String var2 = null;
-        Object var3 = null;
-        ti var3_ref = null;
+        Object var2 = null;
+        ti var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        CharSequence var8 = null;
-        CharSequence var9 = null;
-        var3 = null;
+        Object stackIn_3_0 = null;
+        ti stackIn_15_0 = null;
+        Object stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        Object stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        Object stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ti stackOut_14_0 = null;
+        Object stackOut_2_0 = null;
+        Object stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        Object stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        Object stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var5 = OrbDefence.field_D ? 1 : 0;
-        if (qb.field_a != null) {
-          if (param1 == 256) {
+        try {
+          if (qb.field_a != null) {
             L0: {
-              var8 = (CharSequence) (Object) param0;
-              var2 = ua.a(-21, var8);
+              var6 = (CharSequence) (Object) param0;
+              var2 = (Object) (Object) ua.a(-21, var6);
               if (var2 != null) {
                 break L0;
               } else {
-                var2 = (String) (Object) var3_ref;
+                var2 = (Object) (Object) var6;
                 break L0;
               }
             }
-            var3_ref = (ti) (Object) qb.field_a.a((byte) 109, (long)var2.hashCode());
+            var3 = (ti) (Object) qb.field_a.a((byte) 109, (long)((String) var2).hashCode());
             L1: while (true) {
-              if (var3_ref != null) {
+              if (var3 != null) {
                 L2: {
-                  var9 = (CharSequence) (Object) var3_ref.field_db;
-                  var4 = ua.a(param1 ^ 346, var9);
+                  var7 = (CharSequence) (Object) var3.field_db;
+                  var4 = ua.a(90, var7);
                   if (var4 == null) {
-                    var4 = var3_ref.field_db;
+                    var4 = var3.field_db;
                     break L2;
                   } else {
                     break L2;
                   }
                 }
-                if (var4.equals((Object) (Object) var2)) {
-                  return var3_ref;
+                if (var4.equals(var2)) {
+                  stackOut_14_0 = (ti) var3;
+                  stackIn_15_0 = stackOut_14_0;
+                  return stackIn_15_0;
                 } else {
-                  var3_ref = (ti) (Object) qb.field_a.c((byte) -97);
+                  var3 = (ti) (Object) qb.field_a.c((byte) -97);
                   continue L1;
                 }
               } else {
@@ -55,43 +73,39 @@ final class tg {
               }
             }
           } else {
-            L3: {
-              field_c = null;
-              var6 = (CharSequence) (Object) param0;
-              var2 = ua.a(-21, var6);
-              if (var2 != null) {
-                break L3;
-              } else {
-                var2 = (String) (Object) var6;
-                break L3;
-              }
-            }
-            var3_ref = (ti) (Object) qb.field_a.a((byte) 109, (long)var2.hashCode());
-            L4: while (true) {
-              if (var3_ref != null) {
-                L5: {
-                  var7 = (CharSequence) (Object) var3_ref.field_db;
-                  var4 = ua.a(param1 ^ 346, var7);
-                  if (var4 == null) {
-                    var4 = var3_ref.field_db;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                if (var4.equals((Object) (Object) var2)) {
-                  return var3_ref;
-                } else {
-                  var3_ref = (ti) (Object) qb.field_a.c((byte) -97);
-                  continue L4;
-                }
-              } else {
-                return null;
-              }
+            stackOut_2_0 = null;
+            stackIn_3_0 = stackOut_2_0;
+            return (ti) (Object) stackIn_3_0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = (Object) (Object) decompiledCaughtException;
+            stackOut_18_0 = var2;
+            stackOut_18_1 = new StringBuilder().append("tg.B(");
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param0 == null) {
+              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L3;
+            } else {
+              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L3;
             }
           }
-        } else {
-          return null;
+          throw dd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 256 + 41);
         }
     }
 
@@ -109,18 +123,9 @@ final class tg {
     }
 
     public static void a(int param0) {
-        if (param0 != 2) {
-          field_a = 118L;
-          field_d = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
-          field_d = null;
-          field_c = null;
-          field_b = null;
-          return;
-        }
+        field_d = null;
+        field_c = null;
+        field_b = null;
     }
 
     static {

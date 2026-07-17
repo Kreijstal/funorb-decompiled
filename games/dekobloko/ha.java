@@ -8,9 +8,13 @@ final class ha extends w {
 
     ha(long param0, ck param1, ck param2, int param3, w param4, String param5) {
         this(param0, (w) null, param4, param5);
-        ((ha) this).field_Ob.field_I = param2;
-        ((ha) this).field_Ob.field_sb = param1;
-        ((ha) this).field_Ob.field_W = param3;
+        try {
+            ((ha) this).field_Ob.field_I = param2;
+            ((ha) this).field_Ob.field_sb = param1;
+            ((ha) this).field_Ob.field_W = param3;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "ha.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void f(int param0) {
@@ -22,9 +26,6 @@ final class ha extends w {
 
     final static void e(int param0) {
         da.field_e = new tf();
-        if (param0 != 0) {
-            return;
-        }
         de.field_W.c((ce) (Object) da.field_e, (byte) 62);
     }
 
@@ -50,12 +51,16 @@ final class ha extends w {
 
     private ha(long param0, w param1, w param2, String param3) {
         super(param0, (w) null);
-        ((ha) this).field_Ob = new w(0L, param1);
-        ((ha) this).field_Nb = new w(0L, param2);
-        ((ha) this).field_Nb.field_Y = param3;
-        ((ha) this).a(((ha) this).field_Ob, -16834);
-        ((ha) this).a(((ha) this).field_Nb, -16834);
-        ((ha) this).d(-126);
+        try {
+            ((ha) this).field_Ob = new w(0L, param1);
+            ((ha) this).field_Nb = new w(0L, param2);
+            ((ha) this).field_Nb.field_Y = param3;
+            ((ha) this).a(((ha) this).field_Ob, -16834);
+            ((ha) this).a(((ha) this).field_Nb, -16834);
+            ((ha) this).d(-126);
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "ha.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static int a(int param0, byte param1) {

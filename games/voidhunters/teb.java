@@ -23,9 +23,6 @@ final class teb extends mfb {
     }
 
     public static void l(int param0) {
-        if (param0 != 8192) {
-            return;
-        }
         field_b = null;
     }
 

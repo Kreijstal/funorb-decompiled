@@ -25,14 +25,14 @@ class wj extends kk {
     }
 
     final void a(byte param0, oa param1) {
-        param1.b(1908720528, ((wj) this).field_m);
-        if (param0 > -50) {
-          wj.b(-65);
-          param1.a((byte) 112, ((wj) this).field_n);
-          return;
-        } else {
-          param1.a((byte) 112, ((wj) this).field_n);
-          return;
+        try {
+            param1.b(1908720528, ((wj) this).field_m);
+            if (param0 > -50) {
+                wj.b(-65);
+            }
+            param1.a((byte) 112, ((wj) this).field_n);
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "wj.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -61,8 +61,12 @@ class wj extends kk {
     }
 
     wj(long param0, String param1) {
-        ((wj) this).field_n = param1;
-        ((wj) this).field_m = param0;
+        try {
+            ((wj) this).field_n = param1;
+            ((wj) this).field_m = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "wj.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

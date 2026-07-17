@@ -32,7 +32,7 @@ final class qia {
     public static void b(int param0) {
         field_a = null;
         field_b = null;
-        int var1 = -94 / ((param0 - 69) / 47);
+        int var1 = 23;
     }
 
     static {

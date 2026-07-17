@@ -10,92 +10,88 @@ final class ld extends ai {
     static int[] field_j;
 
     final static void b(byte param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int var4 = 0;
         gf var4_ref_gf = null;
+        int var4 = 0;
         Object var5 = null;
         int var6 = 0;
         bi var8 = null;
         ii var9 = null;
         byte[] var13 = null;
+        RuntimeException decompiledCaughtException = null;
         var6 = Bounce.field_N;
-        var9 = jc.field_g;
-        if (param0 > 36) {
-          var2 = var9.d((byte) -125);
-          if (0 == var2) {
-            var8 = (bi) (Object) kk.field_n.a((byte) -123);
-            if (var8 != null) {
-              L0: {
-                var4 = var9.d((byte) -124);
-                if (0 != var4) {
-                  var13 = new byte[var4];
-                  var9.a((byte) 124, var4, var13, 0);
+        try {
+          L0: {
+            var9 = jc.field_g;
+            var2 = var9.d((byte) -125);
+            if (0 == var2) {
+              var8 = (bi) (Object) kk.field_n.a((byte) -123);
+              if (var8 != null) {
+                L1: {
+                  var4 = var9.d((byte) -124);
+                  if (0 != var4) {
+                    var13 = new byte[var4];
+                    var9.a((byte) 124, var4, var13, 0);
+                    break L1;
+                  } else {
+                    var5 = null;
+                    break L1;
+                  }
+                }
+                var9.field_h = var9.field_h + 4;
+                if (var9.h(-19)) {
+                  var8.c(2);
                   break L0;
                 } else {
-                  var5 = null;
-                  break L0;
+                  kc.a((byte) 18);
+                  return;
                 }
-              }
-              var9.field_h = var9.field_h + 4;
-              if (!var9.h(-19)) {
+              } else {
                 kc.a((byte) 18);
                 return;
-              } else {
-                var8.c(2);
-                return;
               }
             } else {
-              kc.a((byte) 18);
-              return;
-            }
-          } else {
-            if (var2 == 1) {
-              var3 = var9.j(-3);
-              var4_ref_gf = (gf) (Object) ud.field_k.a((byte) -92);
-              L1: while (true) {
-                if (var4_ref_gf != null) {
-                  if (var3 != var4_ref_gf.field_i) {
-                    var4_ref_gf = (gf) (Object) ud.field_k.d((byte) -73);
-                    continue L1;
-                  } else {
+              if (var2 == 1) {
+                var3 = var9.j(-3);
+                var4_ref_gf = (gf) (Object) ud.field_k.a((byte) -92);
+                L2: while (true) {
+                  L3: {
                     if (var4_ref_gf == null) {
-                      kc.a((byte) 18);
-                      return;
+                      break L3;
                     } else {
-                      var4_ref_gf.c(2);
-                      return;
+                      if (var3 == var4_ref_gf.field_i) {
+                        break L3;
+                      } else {
+                        var4_ref_gf = (gf) (Object) ud.field_k.d((byte) -73);
+                        continue L2;
+                      }
                     }
                   }
-                } else {
-                  if (var4_ref_gf == null) {
-                    kc.a((byte) 18);
+                  if (var4_ref_gf != null) {
+                    var4_ref_gf.c(2);
                     return;
                   } else {
-                    var4_ref_gf.c(2);
+                    kc.a((byte) 18);
                     return;
                   }
                 }
+              } else {
+                ti.a((Throwable) null, (byte) 100, "A1: " + la.a(-119));
+                kc.a((byte) 18);
+                return;
               }
-            } else {
-              ti.a((Throwable) null, (byte) 100, "A1: " + la.a(-119));
-              kc.a((byte) 18);
-              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ii.a((Throwable) (Object) var1, "ld.C(" + 120 + 41);
         }
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            ld.a(false);
-            field_j = null;
-            field_h = null;
-            field_l = null;
-            return;
-        }
         field_j = null;
         field_h = null;
         field_l = null;
@@ -114,14 +110,6 @@ final class ld extends ai {
             break L0;
           } else {
             break L0;
-          }
-        }
-        L1: {
-          if (param3) {
-            var4 += 2;
-            break L1;
-          } else {
-            break L1;
           }
         }
         if (!param1) {

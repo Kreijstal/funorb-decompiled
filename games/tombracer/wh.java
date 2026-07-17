@@ -53,7 +53,7 @@ final class wh extends nv implements ut {
     }
 
     final void g(int param0) {
-        super.g(param0 + 0);
+        super.g(param0);
         if (param0 != -2) {
           ((wh) this).field_C = null;
           ((wh) this).field_C.a((byte) 48, ((wh) this).h((byte) 111));
@@ -114,7 +114,7 @@ final class wh extends nv implements ut {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        pc var7_ref = null;
+        pc var7_ref_pc = null;
         int var7 = 0;
         pc var8 = null;
         int var9 = 0;
@@ -330,10 +330,10 @@ final class wh extends nv implements ut {
               }
             }
             L4: {
-              ((wh) this).field_x = ((wh) this).field_g.g(-25787) >> 2092532578;
+              ((wh) this).field_x = ((wh) this).field_g.g(-25787) >> 2;
               ((wh) this).field_E = hua.a((byte) 102, ((wh) this).field_x);
               ((wh) this).field_o = bua.a(0, ((wh) this).field_x);
-              var6 = ((wh) this).field_g.P(0) << 1223058128;
+              var6 = ((wh) this).field_g.P(0) << 16;
               if (!((wh) this).field_D) {
                 L5: {
                   this.q((byte) 92);
@@ -359,14 +359,14 @@ final class wh extends nv implements ut {
                 this.q((byte) 92);
                 boolean discarded$6 = var11.a(1, (gma) (Object) ((wh) this).field_g, -91, ((wh) this).field_u, (gma) (Object) ((wh) this).e(6), ((wh) this).field_z);
                 var11.b(false).a((byte) 119, ((wh) this).field_u, ((wh) this).field_z);
-                var7_ref = ((wh) this).field_u;
+                var7_ref_pc = ((wh) this).field_u;
                 L6: while (true) {
-                  if (var7_ref.field_h == null) {
-                    var11.b(false).a(var7_ref, (gma) (Object) ((wh) this).field_g, (byte) -119);
+                  if (var7_ref_pc.field_h == null) {
+                    var11.b(false).a(var7_ref_pc, (gma) (Object) ((wh) this).field_g, (byte) -119);
                     var5 = this.a(((wh) this).field_u, (byte) -65);
                     break L4;
                   } else {
-                    var7_ref = var7_ref.field_h;
+                    var7_ref_pc = var7_ref_pc.field_h;
                     continue L6;
                   }
                 }
@@ -768,19 +768,119 @@ final class wh extends nv implements ut {
     }
 
     private final int a(pc param0, byte param1) {
-        int var3 = -6 / ((param1 - -5) / 38);
-        return ua.a(param0.field_e - param0.field_d, -106) - (-ua.a(-param0.field_k + param0.field_a, 21) - (param0.field_h != null ? this.a(param0.field_h, (byte) -81) : 0));
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int stackIn_1_0 = 0;
+        int stackIn_1_1 = 0;
+        int stackIn_2_0 = 0;
+        int stackIn_2_1 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_3_1 = 0;
+        int stackIn_3_2 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_0_0 = 0;
+        int stackOut_0_1 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_2_1 = 0;
+        int stackOut_2_2 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_1_1 = 0;
+        int stackOut_1_2 = 0;
+        int stackOut_3_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              var3_int = -6 / ((param1 - -5) / 38);
+              stackOut_0_0 = ua.a(param0.field_e - param0.field_d, -106);
+              stackOut_0_1 = -ua.a(-param0.field_k + param0.field_a, 21);
+              stackIn_2_0 = stackOut_0_0;
+              stackIn_2_1 = stackOut_0_1;
+              stackIn_1_0 = stackOut_0_0;
+              stackIn_1_1 = stackOut_0_1;
+              if (param0.field_h == null) {
+                stackOut_2_0 = stackIn_2_0;
+                stackOut_2_1 = stackIn_2_1;
+                stackOut_2_2 = 0;
+                stackIn_3_0 = stackOut_2_0;
+                stackIn_3_1 = stackOut_2_1;
+                stackIn_3_2 = stackOut_2_2;
+                break L1;
+              } else {
+                stackOut_1_0 = stackIn_1_0;
+                stackOut_1_1 = stackIn_1_1;
+                stackOut_1_2 = this.a(param0.field_h, (byte) -81);
+                stackIn_3_0 = stackOut_1_0;
+                stackIn_3_1 = stackOut_1_1;
+                stackIn_3_2 = stackOut_1_2;
+                break L1;
+              }
+            }
+            stackOut_3_0 = stackIn_3_0 - (stackIn_3_1 - stackIn_3_2);
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("wh.P(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+        }
+        return stackIn_4_0;
     }
 
     wh(la param0, boolean param1) {
         super(param0, param1);
         ((wh) this).field_u = new pc();
         ((wh) this).field_s = 0;
-        ((wh) this).field_C = new jma(15);
-        ((wh) this).field_t = new mg();
-        ((wh) this).field_n = 0;
-        ((wh) this).field_q = 16777216;
-        ((wh) this).field_v = true;
+        try {
+            ((wh) this).field_C = new jma(15);
+            ((wh) this).field_t = new mg();
+            ((wh) this).field_n = 0;
+            ((wh) this).field_q = 16777216;
+            ((wh) this).field_v = true;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void b(int param0, int param1) {
@@ -793,22 +893,28 @@ final class wh extends nv implements ut {
     }
 
     final void a(byte param0, mg param1) {
-        if (param0 != -8) {
-            int discarded$0 = ((wh) this).a(true);
+        try {
+            if (param0 != -8) {
+                int discarded$0 = ((wh) this).a(true);
+            }
             ((wh) this).field_t = param1;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wh.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((wh) this).field_t = param1;
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        ((wh) this).field_C.a(((wh) this).h((byte) 118), (byte) 113, param1);
-        ((wh) this).field_t.a(15637, param1);
-        param1.a((byte) -125, ((wh) this).field_q >> 1323616912, 10);
-        param1.a((byte) -127, !((wh) this).field_v ? 0 : 1, 1);
-        param1.a((byte) 110, !((wh) this).field_D ? 0 : 1, 1);
-        param1.a((byte) -125, ((wh) this).field_n >> 1892052496, 8);
+        try {
+            super.a(param0, param1);
+            ((wh) this).field_C.a(((wh) this).h((byte) 118), (byte) 113, param1);
+            ((wh) this).field_t.a(15637, param1);
+            param1.a((byte) -125, ((wh) this).field_q >> 16, 10);
+            param1.a((byte) -127, !((wh) this).field_v ? 0 : 1, 1);
+            param1.a((byte) 110, !((wh) this).field_D ? 0 : 1, 1);
+            param1.a((byte) -125, ((wh) this).field_n >> 16, 8);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wh.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean p(byte param0) {
@@ -821,10 +927,66 @@ final class wh extends nv implements ut {
     }
 
     final void a(boolean param0, fsa param1) {
-        super.a(param0, param1);
-        ((wh) this).field_p = new mma(0, 16777215, ((wh) this).field_u, param1.P(0));
-        if (!param0) {
-            ((wh) this).field_u = null;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              super.a(param0, param1);
+              ((wh) this).field_p = new mma(0, 16777215, ((wh) this).field_u, param1.P(0));
+              if (param0) {
+                break L1;
+              } else {
+                ((wh) this).field_u = null;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("wh.Q(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -842,39 +1004,32 @@ final class wh extends nv implements ut {
     }
 
     private final void q(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        var2 = ((wh) this).field_g.d(3) - -gqa.a(((wh) this).field_E, (byte) 24, ((wh) this).field_g.c(-31) / 2);
-        var3 = ((wh) this).field_g.e(param0 + 9556) - -gqa.a(((wh) this).field_o, (byte) 24, ((wh) this).field_g.c(-64) / 2);
+        int var2 = ((wh) this).field_g.d(3) - -gqa.a(((wh) this).field_E, (byte) 24, ((wh) this).field_g.c(-31) / 2);
+        int var3 = ((wh) this).field_g.e(9648) - -gqa.a(((wh) this).field_o, (byte) 24, ((wh) this).field_g.c(-64) / 2);
         ((wh) this).field_u.a(var2, var2 + gqa.a(((wh) this).field_E, (byte) 24, ((wh) this).field_s), var3, gqa.a(((wh) this).field_o, (byte) 24, ((wh) this).field_s) + var3, 44);
         ((wh) this).field_u.field_b = ((wh) this).field_s;
-        ((wh) this).field_u.field_i = ((wh) this).field_g.P(param0 ^ 92) << -1398774928;
-        if (param0 != 92) {
-          ((wh) this).field_o = 58;
-          return;
-        } else {
-          return;
-        }
+        ((wh) this).field_u.field_i = ((wh) this).field_g.P(0) << 16;
     }
 
     public static void l(int param0) {
         field_w = null;
         field_y = null;
-        if (param0 >= -116) {
-            field_w = null;
-        }
     }
 
     wh(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
         ((wh) this).field_u = new pc();
         ((wh) this).field_s = 0;
-        ((wh) this).field_C = new jma(15, param0, param1);
-        ((wh) this).field_t = new mg(param0.field_E, param1);
-        ((wh) this).field_q = param1.b((byte) 44, 10) << 1684595792;
-        ((wh) this).field_v = param1.b((byte) 44, 1) == -2 ? true : false;
-        ((wh) this).field_D = -2 == param1.b((byte) 44, 1) ? true : false;
-        ((wh) this).field_n = param1.b((byte) 44, 8) << -697012272;
+        try {
+            ((wh) this).field_C = new jma(15, param0, param1);
+            ((wh) this).field_t = new mg(param0.field_E, param1);
+            ((wh) this).field_q = param1.b((byte) 44, 10) << 16;
+            ((wh) this).field_v = param1.b((byte) 44, 1) == -2 ? true : false;
+            ((wh) this).field_D = -2 == param1.b((byte) 44, 1) ? true : false;
+            ((wh) this).field_n = param1.b((byte) 44, 8) << 16;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

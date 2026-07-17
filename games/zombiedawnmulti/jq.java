@@ -13,9 +13,6 @@ final class jq {
     static ri field_e;
 
     public static void a(int param0) {
-        if (param0 != 8) {
-            return;
-        }
         field_b = null;
         field_e = null;
         field_c = null;
@@ -80,153 +77,124 @@ final class jq {
     final static void a(k param0, int param1) {
         try {
             byte[] var2 = null;
+            RuntimeException var2_ref = null;
             int var3_int = 0;
             Exception var3 = null;
             int var4 = 0;
             int var5 = 0;
             byte[] var6 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var5 = ZombieDawnMulti.field_E ? 1 : 0;
-                        var6 = new byte[24];
-                        var2 = var6;
-                        if (param1 == 13746) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        return;
-                    }
-                    case 2: {
-                        if (null != bg.field_e) {
-                            statePc = 4;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        try {
-                            bg.field_e.a(0L, (byte) -70);
-                            bg.field_e.a(var6, (byte) -50);
-                            var3_int = 0;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            RuntimeException stackIn_20_0 = null;
+            StringBuilder stackIn_20_1 = null;
+            RuntimeException stackIn_21_0 = null;
+            StringBuilder stackIn_21_1 = null;
+            String stackIn_21_2 = null;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            RuntimeException stackOut_20_0 = null;
+            StringBuilder stackOut_20_1 = null;
+            String stackOut_20_2 = null;
+            RuntimeException stackOut_19_0 = null;
+            StringBuilder stackOut_19_1 = null;
+            String stackOut_19_2 = null;
+            var5 = ZombieDawnMulti.field_E ? 1 : 0;
+            try {
+              L0: {
+                var6 = new byte[24];
+                var2 = var6;
+                L1: {
+                  L2: {
+                    if (null != bg.field_e) {
+                      try {
+                        L3: {
+                          bg.field_e.a(0L, (byte) -70);
+                          bg.field_e.a(var6, (byte) -50);
+                          var3_int = 0;
+                          L4: while (true) {
+                            L5: {
+                              if (var3_int >= 24) {
+                                break L5;
+                              } else {
+                                if (0 != var6[var3_int]) {
+                                  break L5;
+                                } else {
+                                  var3_int++;
+                                  continue L4;
+                                }
+                              }
+                            }
                             if (var3_int >= 24) {
-                                statePc = 8;
+                              throw new IOException();
                             } else {
-                                statePc = 6;
+                              param0.a(var2, 24, 0, 120);
+                              decompiledRegionSelector0 = 0;
+                              break L3;
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 12;
-                            continue stateLoop;
+                          }
                         }
-                    }
-                    case 6: {
-                        try {
-                            if (0 != var6[var3_int]) {
-                                statePc = 8;
+                      } catch (java.lang.Exception decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L6: {
+                          var3 = (Exception) (Object) decompiledCaughtException;
+                          var4 = 0;
+                          L7: while (true) {
+                            if (var4 >= 24) {
+                              decompiledRegionSelector0 = 1;
+                              break L6;
                             } else {
-                                statePc = 7;
+                              var2[var4] = (byte) -1;
+                              var4++;
+                              continue L7;
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 12;
-                            continue stateLoop;
+                          }
                         }
+                      }
+                      if (decompiledRegionSelector0 == 0) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
+                    } else {
+                      break L2;
                     }
-                    case 7: {
-                        try {
-                            var3_int++;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            if (var3_int >= 24) {
-                                statePc = 10;
-                            } else {
-                                statePc = 9;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            param0.a(var2, 24, 0, 120);
-                            statePc = 16;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            throw new IOException();
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        var3 = (Exception) (Object) caughtException;
-                        var4 = 0;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        if (var4 >= 24) {
-                            statePc = 15;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        var2[var4] = (byte)-1;
-                        var4++;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        param0.a(var2, 24, 0, 120);
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                  param0.a(var2, 24, 0, 120);
+                  break L1;
                 }
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L8: {
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_18_0 = (RuntimeException) var2_ref;
+                stackOut_18_1 = new StringBuilder().append("jq.D(");
+                stackIn_20_0 = stackOut_18_0;
+                stackIn_20_1 = stackOut_18_1;
+                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_1 = stackOut_18_1;
+                if (param0 == null) {
+                  stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+                  stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+                  stackOut_20_2 = "null";
+                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_1 = stackOut_20_1;
+                  stackIn_21_2 = stackOut_20_2;
+                  break L8;
+                } else {
+                  stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+                  stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+                  stackOut_19_2 = "{...}";
+                  stackIn_21_0 = stackOut_19_0;
+                  stackIn_21_1 = stackOut_19_1;
+                  stackIn_21_2 = stackOut_19_2;
+                  break L8;
+                }
+              }
+              throw fa.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 13746 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

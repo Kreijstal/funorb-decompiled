@@ -15,9 +15,6 @@ final class uh {
         field_d = null;
         field_e = null;
         field_a = null;
-        if (param0 >= -37) {
-            return;
-        }
         field_g = null;
     }
 

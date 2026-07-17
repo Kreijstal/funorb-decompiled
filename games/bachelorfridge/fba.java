@@ -6,9 +6,6 @@ final class fba {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 2) {
-            fba.a(false, (byte) 68);
-        }
     }
 
     final static void a(boolean param0, byte param1) {

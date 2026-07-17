@@ -24,16 +24,13 @@ final class nk {
             ue.field_e.field_l = 6;
             ue.field_e.field_g = de.field_c;
         }
-        int var1 = -61 % ((param0 - 39) / 41);
+        int var1 = 0;
         return ue.field_e;
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_h = null;
-        if (param0 != 52) {
-            field_a = null;
-        }
     }
 
     static {

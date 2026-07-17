@@ -16,8 +16,8 @@ final class gi extends ma {
         int var2 = 0;
         L0: {
           L1: {
-            var2 = param1;
-            if (-1 < (param0 ^ -1)) {
+            var2 = 0;
+            if (param0 < 0) {
               break L1;
             } else {
               if (65536 > param0) {
@@ -50,7 +50,7 @@ final class gi extends ma {
           }
         }
         L4: {
-          if (-5 >= (param0 ^ -1)) {
+          if (param0 >= 4) {
             var2 += 2;
             param0 = param0 >>> 2;
             break L4;
@@ -86,7 +86,11 @@ final class gi extends ma {
     }
 
     final static void a(int param0) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int[] var2 = null;
         int var3 = 0;
+        int var4 = 0;
         oc var4_ref_oc = null;
         int var5 = 0;
         int var6 = 0;
@@ -94,102 +98,249 @@ final class gi extends ma {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
+        double var10 = 0.0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int var14 = 0;
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
         oc var17 = null;
         int var18 = 0;
-        eh.field_p = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-        int var1 = qe.field_S.length;
-        int[] var22 = new int[var1];
-        int[] var21 = var22;
-        int[] var20 = var21;
-        int[] var19 = var20;
-        int[] var2 = var19;
-        for (var3 = 0; var1 > var3; var3++) {
-            var4_ref_oc = qe.field_S[var3];
-            var4_ref_oc.a((byte) 87);
-            qe.b(0, var3);
-            var5 = var4_ref_oc.field_n - -var4_ref_oc.field_q >> 337205185;
-            var6 = var4_ref_oc.field_b + var4_ref_oc.field_N >> -2080439007;
-            var7 = var4_ref_oc.field_f + var4_ref_oc.field_F >> 1740837217;
-            var8 = eh.field_p[9] >> 186407874;
-            var9 = eh.field_p[10] >> 1996404354;
-            var10_int = eh.field_p[11] >> -2113781918;
-            var11 = var10_int * li.field_b[5] + (var8 * li.field_b[3] + var9 * li.field_b[4]) >> -1584759730;
-            var12 = li.field_b[8] * var10_int + li.field_b[6] * var8 - -(var9 * li.field_b[7]) >> -1379719762;
-            var13 = li.field_b[10] * var9 + (li.field_b[9] * var8 + li.field_b[11] * var10_int) >> 19470606;
-            var2[var3] = var7 * var13 + (var11 * var5 + var12 * var6) >> -1509651472;
-        }
-        var3 = eh.field_p[9] >> 806221640;
-        int var4 = eh.field_p[10] >> -1730645656;
-        var5 = eh.field_p[11] >> 2116712104;
-        var6 = im.field_fc << -875367676;
-        var7 = 0;
-        var8 = af.c((byte) -123, var6) >> -428853080;
-        var9 = o.a(var6, (byte) 83) >> 899847720;
-        if ((wn.field_i ^ -1) != 0) {
-            if (0 != (gg.field_f ^ -1)) {
-                var9 = -128;
-                var7 = -320 + wn.field_i;
-                var8 = -gg.field_f + 240;
-            }
-        }
-        double var10 = 256.0 / Math.sqrt((double)(var8 * var8 + (var7 * var7 - -(var9 * var9))));
-        var7 = (int)((double)var7 * var10);
-        var8 = (int)((double)var8 * var10);
-        var9 = (int)((double)var9 * var10);
-        var12 = -var3 + var7;
-        var13 = -var4 + var8;
-        int var14 = -var5 + var9;
-        if (param0 != -21818) {
-            return;
-        }
-        var10 = 256.0 / Math.sqrt((double)(var14 * var14 + var13 * var13 + var12 * var12));
-        var12 = (int)((double)var12 * var10);
-        var14 = (int)((double)var14 * var10);
-        var13 = (int)((double)var13 * var10);
-        for (var15 = 0; qe.field_S.length > var15; var15++) {
-            var16 = 0;
-            for (var17_int = 1; var17_int < qe.field_S.length; var17_int++) {
-                if ((var22[var17_int] ^ -1) < (var22[var16] ^ -1)) {
-                    var16 = var17_int;
+        int[] var19 = null;
+        int[] var20 = null;
+        int[] var21 = null;
+        int[] var22 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            eh.field_p = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+            var1_int = qe.field_S.length;
+            var22 = new int[var1_int];
+            var21 = var22;
+            var20 = var21;
+            var19 = var20;
+            var2 = var19;
+            var3 = 0;
+            L1: while (true) {
+              if (var1_int <= var3) {
+                L2: {
+                  var3 = eh.field_p[9] >> 8;
+                  var4 = eh.field_p[10] >> 8;
+                  var5 = eh.field_p[11] >> 8;
+                  var6 = im.field_fc << 4;
+                  var7 = 0;
+                  var8 = af.c((byte) -123, var6) >> 8;
+                  var9 = o.a(var6, (byte) 83) >> 8;
+                  if (wn.field_i == -1) {
+                    break L2;
+                  } else {
+                    if (gg.field_f == -1) {
+                      break L2;
+                    } else {
+                      var9 = -128;
+                      var7 = -320 + wn.field_i;
+                      var8 = -gg.field_f + 240;
+                      break L2;
+                    }
+                  }
                 }
+                var10 = 256.0 / Math.sqrt((double)(var8 * var8 + (var7 * var7 - -(var9 * var9))));
+                var7 = (int)((double)var7 * var10);
+                var8 = (int)((double)var8 * var10);
+                var9 = (int)((double)var9 * var10);
+                var12 = -var3 + var7;
+                var13 = -var4 + var8;
+                var14 = -var5 + var9;
+                var10 = 256.0 / Math.sqrt((double)(var14 * var14 + var13 * var13 + var12 * var12));
+                var12 = (int)((double)var12 * var10);
+                var14 = (int)((double)var14 * var10);
+                var13 = (int)((double)var13 * var10);
+                var15 = 0;
+                L3: while (true) {
+                  if (qe.field_S.length <= var15) {
+                    break L0;
+                  } else {
+                    var16 = 0;
+                    var17_int = 1;
+                    L4: while (true) {
+                      if (var17_int >= qe.field_S.length) {
+                        var22[var16] = -2147483648;
+                        var17 = qe.field_S[var16];
+                        qe.b(0, var16);
+                        var18 = 0;
+                        L5: while (true) {
+                          if (var18 >= 3) {
+                            ve.a(-3, false, eh.field_p, false, true, li.field_b, var17);
+                            kj.a(var14, 8355711, var17, var8, var13, var9, var12, var7);
+                            var15++;
+                            continue L3;
+                          } else {
+                            li.field_b[var18] = li.field_b[var18] + qp.field_gc[var15][var18];
+                            var18++;
+                            continue L5;
+                          }
+                        }
+                      } else {
+                        L6: {
+                          if (~var22[var17_int] >= ~var22[var16]) {
+                            break L6;
+                          } else {
+                            var16 = var17_int;
+                            break L6;
+                          }
+                        }
+                        var17_int++;
+                        continue L4;
+                      }
+                    }
+                  }
+                }
+              } else {
+                var4_ref_oc = qe.field_S[var3];
+                var4_ref_oc.a((byte) 87);
+                qe.b(0, var3);
+                var5 = var4_ref_oc.field_n - -var4_ref_oc.field_q >> 1;
+                var6 = var4_ref_oc.field_b + var4_ref_oc.field_N >> 1;
+                var7 = var4_ref_oc.field_f + var4_ref_oc.field_F >> 1;
+                var8 = eh.field_p[9] >> 2;
+                var9 = eh.field_p[10] >> 2;
+                var10_int = eh.field_p[11] >> 2;
+                var11 = var10_int * li.field_b[5] + (var8 * li.field_b[3] + var9 * li.field_b[4]) >> 14;
+                var12 = li.field_b[8] * var10_int + li.field_b[6] * var8 - -(var9 * li.field_b[7]) >> 14;
+                var13 = li.field_b[10] * var9 + (li.field_b[9] * var8 + li.field_b[11] * var10_int) >> 14;
+                var2[var3] = var7 * var13 + (var11 * var5 + var12 * var6) >> 16;
+                var3++;
+                continue L1;
+              }
             }
-            var22[var16] = -2147483648;
-            var17 = qe.field_S[var16];
-            qe.b(0, var16);
-            for (var18 = 0; -4 < (var18 ^ -1); var18++) {
-                li.field_b[var18] = li.field_b[var18] + qp.field_gc[var15][var18];
-            }
-            ve.a(param0 + 21815, false, eh.field_p, false, true, li.field_b, var17);
-            kj.a(var14, 8355711, var17, var8, var13, var9, var12, var7);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var1, "gi.A(" + -21818 + 41);
         }
     }
 
     public static void a(boolean param0) {
         field_n = null;
-        if (!param0) {
-            field_o = null;
-        }
         field_o = null;
     }
 
     final static ij a(boolean param0, int param1, String param2, String param3) {
         ij var4 = null;
-        if (!(me.a(-2, param1) != null)) {
-            var4 = new ij(param1);
-            var4.a(param2, (byte) 120, param3);
-            nd.field_i.b((byte) -20, (ma) (Object) var4);
-            return var4;
+        RuntimeException var4_ref = null;
+        ij stackIn_3_0 = null;
+        Object stackIn_7_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ij stackOut_2_0 = null;
+        Object stackOut_6_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
+          L0: {
+            if (me.a(-2, param1) == null) {
+              var4 = new ij(param1);
+              var4.a(param2, (byte) 120, param3);
+              nd.field_i.b((byte) -20, (ma) (Object) var4);
+              stackOut_2_0 = (ij) var4;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
+            } else {
+              if (!param0) {
+                stackOut_6_0 = null;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                return null;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4_ref = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var4_ref;
+            stackOut_9_1 = new StringBuilder().append("gi.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param2 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L1;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param3 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L2;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L2;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
-        if (param0) {
-            return null;
-        }
-        return null;
+        return (ij) (Object) stackIn_7_0;
     }
 
     gi(int param0) {

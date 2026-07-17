@@ -15,17 +15,16 @@ final class pp extends rj {
     private boolean field_G;
 
     final void a(cn param0, cn param1, cn param2, cn param3, int param4) {
-        this.a(-66, param0);
-        ((pp) this).field_C = param1;
-        if (param4 <= 15) {
-          field_E = null;
-          ((pp) this).field_A = param3;
-          ((pp) this).field_z = param2;
-          return;
-        } else {
-          ((pp) this).field_A = param3;
-          ((pp) this).field_z = param2;
-          return;
+        try {
+            this.a(-66, param0);
+            ((pp) this).field_C = param1;
+            if (param4 <= 15) {
+                field_E = null;
+            }
+            ((pp) this).field_A = param3;
+            ((pp) this).field_z = param2;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "pp.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 
@@ -58,7 +57,7 @@ final class pp extends rj {
               }
               L1: {
                 var4 = stackIn_10_0;
-                var5 = var4 - ((pp) this).field_m >> -1531244126;
+                var5 = var4 - ((pp) this).field_m >> 2;
                 if (var5 <= 64) {
                   break L1;
                 } else {
@@ -69,7 +68,7 @@ final class pp extends rj {
               var6 = var5 + (((pp) this).field_p + -mo.field_a);
               if (!((pp) this).field_G) {
                 if (this != (Object) (Object) wi.field_ob) {
-                  if ((var6 ^ -1) < -1) {
+                  if (var6 > 0) {
                     L2: {
                       if ((Object) (Object) wi.field_ob != this) {
                         ((pp) this).field_B.h(((pp) this).field_t - -param0, param2 + ((pp) this).field_i);
@@ -159,11 +158,15 @@ final class pp extends rj {
 
     private pp(cn param0, cn param1, cn param2, cn param3, int param4, int param5, int param6) {
         super(param4, param5, param0.field_y, param0.field_v, param6);
-        ((pp) this).field_D = true;
-        ((pp) this).field_z = param2;
-        ((pp) this).field_A = param1;
-        ((pp) this).field_B = param0;
-        ((pp) this).field_C = param3;
+        try {
+            ((pp) this).field_D = true;
+            ((pp) this).field_z = param2;
+            ((pp) this).field_A = param1;
+            ((pp) this).field_B = param0;
+            ((pp) this).field_C = param3;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "pp.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     final void a(boolean param0, int param1, int param2) {
@@ -179,15 +182,15 @@ final class pp extends rj {
     }
 
     private final void a(int param0, cn param1) {
-        ((pp) this).field_z = param1;
-        ((pp) this).field_B = param1;
-        if (param0 != -66) {
-          ((pp) this).field_D = true;
-          super.a(false, ((pp) this).field_B.field_y, ((pp) this).field_B.field_v);
-          return;
-        } else {
-          super.a(false, ((pp) this).field_B.field_y, ((pp) this).field_B.field_v);
-          return;
+        try {
+            ((pp) this).field_z = param1;
+            ((pp) this).field_B = param1;
+            if (param0 != -66) {
+                ((pp) this).field_D = true;
+            }
+            super.a(false, ((pp) this).field_B.field_y, ((pp) this).field_B.field_v);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "pp.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -195,11 +198,6 @@ final class pp extends rj {
         field_F = null;
         field_E = null;
         field_K = null;
-        if (param0 <= 42) {
-            field_F = null;
-            field_I = null;
-            return;
-        }
         field_I = null;
     }
 

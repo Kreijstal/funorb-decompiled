@@ -18,9 +18,6 @@ final class ba {
         field_c = null;
         field_f = null;
         field_e = null;
-        if (param0 != 3) {
-            return;
-        }
         field_b = null;
         field_g = null;
     }

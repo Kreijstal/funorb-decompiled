@@ -37,23 +37,15 @@ abstract class nf extends fl {
         var1 = (Object) (Object) om.field_b;
         synchronized (var1) {
           L0: {
-            L1: {
-              md.field_G = md.field_G + 1;
-              eb.field_K = vj.field_b;
-              dh.field_d = vb.field_b;
-              bj.field_y = jk.field_b;
-              ah.field_h = ke.field_a;
-              ke.field_a = false;
-              qi.field_N = kb.field_f;
-              sf.field_c = fk.field_b;
-              ng.field_ob = dd.field_c;
-              if (param0 == -3657) {
-                break L1;
-              } else {
-                nf.b(30, 39);
-                break L1;
-              }
-            }
+            md.field_G = md.field_G + 1;
+            eb.field_K = vj.field_b;
+            dh.field_d = vb.field_b;
+            bj.field_y = jk.field_b;
+            ah.field_h = ke.field_a;
+            ke.field_a = false;
+            qi.field_N = kb.field_f;
+            sf.field_c = fk.field_b;
+            ng.field_ob = dd.field_c;
             kb.field_f = 0;
             break L0;
           }
@@ -62,12 +54,6 @@ abstract class nf extends fl {
 
     public static void f(int param0) {
         field_t = null;
-        if (param0 != -363232252) {
-            field_y = null;
-            field_y = null;
-            field_w = null;
-            return;
-        }
         field_y = null;
         field_w = null;
     }
@@ -88,17 +74,17 @@ abstract class nf extends fl {
         int var7 = 0;
         if (param1 != 34) {
           ((nf) this).field_v = 118;
-          var6 = ((nf) this).field_A << 1008705795;
-          var7 = ((nf) this).field_z << -1100444797;
-          param0 = (param0 << -363232252) + (15 & var6);
-          param4 = (param4 << 194412836) - -(15 & var7);
+          var6 = ((nf) this).field_A << 3;
+          var7 = ((nf) this).field_z << 3;
+          param0 = (param0 << 4) + (15 & var6);
+          param4 = (param4 << 4) - -(15 & var7);
           ((nf) this).a(var6, var7, param0, param4, param3, param2);
           return;
         } else {
-          var6 = ((nf) this).field_A << 1008705795;
-          var7 = ((nf) this).field_z << -1100444797;
-          param0 = (param0 << -363232252) + (15 & var6);
-          param4 = (param4 << 194412836) - -(15 & var7);
+          var6 = ((nf) this).field_A << 3;
+          var7 = ((nf) this).field_z << 3;
+          param0 = (param0 << 4) + (15 & var6);
+          param4 = (param4 << 4) - -(15 & var7);
           ((nf) this).a(var6, var7, param0, param4, param3, param2);
           return;
         }

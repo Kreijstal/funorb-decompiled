@@ -11,7 +11,7 @@ final class da {
     static String field_e;
 
     final static void b(int param0, int param1) {
-        lj.field_a = param1 * param0 / 50;
+        lj.field_a = 20 * param0 / 50;
         fj.field_o = param0 * 4 / 50;
     }
 
@@ -20,7 +20,7 @@ final class da {
         int stackIn_4_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
-        if (0 == (param0 ^ -1)) {
+        if (param0 == -1) {
           return true;
         } else {
           L0: {
@@ -41,14 +41,14 @@ final class da {
 
     final static int a(byte param0, int param1) {
         param1--;
-        param1 = param1 | param1 >>> 987210721;
-        param1 = param1 | param1 >>> -1646334462;
+        param1 = param1 | param1 >>> 1;
+        param1 = param1 | param1 >>> 2;
         if (param0 <= 88) {
           return -15;
         } else {
-          param1 = param1 | param1 >>> 635733380;
-          param1 = param1 | param1 >>> 573600264;
-          param1 = param1 | param1 >>> -415367664;
+          param1 = param1 | param1 >>> 4;
+          param1 = param1 | param1 >>> 8;
+          param1 = param1 | param1 >>> 16;
           return param1 - -1;
         }
     }
@@ -65,18 +65,9 @@ final class da {
     public static void a(int param0) {
         field_b = null;
         field_e = null;
-        if (param0 != 50) {
-          field_d = null;
-          field_d = null;
-          field_g = null;
-          field_f = null;
-          return;
-        } else {
-          field_d = null;
-          field_g = null;
-          field_f = null;
-          return;
-        }
+        field_d = null;
+        field_g = null;
+        field_f = null;
     }
 
     static {

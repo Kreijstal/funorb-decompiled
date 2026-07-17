@@ -21,9 +21,6 @@ final class ne extends bw {
     public static void a(int param0) {
         field_m = null;
         field_n = null;
-        if (param0 != 18072) {
-            field_m = null;
-        }
     }
 
     static {

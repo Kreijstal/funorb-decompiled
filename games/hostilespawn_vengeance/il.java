@@ -27,7 +27,7 @@ final class il {
 
     final static boolean a(char param0, byte param1) {
         int var2 = 0;
-        var2 = -24 / ((param1 - -7) / 40);
+        var2 = 12;
         if (param0 < 65) {
           if (param0 >= 97) {
             if (param0 <= 122) {

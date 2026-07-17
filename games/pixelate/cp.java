@@ -19,12 +19,12 @@ final class cp extends com.ms.dll.Callback {
         int stackOut_13_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
-        if ((param0 ^ -1) == (((cp) this).field_b ^ -1)) {
-          if ((param1 ^ -1) == -33) {
+        if (~param0 == ~((cp) this).field_b) {
+          if (param1 == 32) {
             var5 = param3 & 65535;
             if (1 != var5) {
-              if (-101025 != (param1 ^ -1)) {
-                if (-2 != (param1 ^ -1)) {
+              if (param1 != 101024) {
+                if (param1 != 1) {
                   return com.ms.win32.User32.CallWindowProc(((cp) this).field_e, param0, param1, param2, param3);
                 } else {
                   ((cp) this).field_b = 0;
@@ -62,8 +62,8 @@ final class cp extends com.ms.dll.Callback {
               return 0;
             }
           } else {
-            if (-101025 != (param1 ^ -1)) {
-              if (-2 != (param1 ^ -1)) {
+            if (param1 != 101024) {
+              if (param1 != 1) {
                 return com.ms.win32.User32.CallWindowProc(((cp) this).field_e, param0, param1, param2, param3);
               } else {
                 ((cp) this).field_b = 0;
@@ -192,7 +192,7 @@ final class cp extends com.ms.dll.Callback {
             return;
           } else {
             L4: {
-              if (-1 == (((cp) this).field_b ^ -1)) {
+              if (((cp) this).field_b == 0) {
                 break L4;
               } else {
                 ((cp) this).field_a = true;

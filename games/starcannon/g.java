@@ -61,9 +61,6 @@ final class g {
     }
 
     public static void b(int param0) {
-        if (param0 != -12837) {
-            return;
-        }
         field_b = null;
         field_a = null;
     }

@@ -26,10 +26,10 @@ final class re extends ue {
         var3 = CrazyCrystals.field_B;
         if (param0 <= -87) {
           L0: {
-            if (-196 < (((re) this).field_i ^ -1)) {
+            if (((re) this).field_i < 195) {
               var2 = 0;
               L1: while (true) {
-                if ((var2 ^ -1) <= -13) {
+                if (var2 >= 12) {
                   ((re) this).field_i = ((re) this).field_i + 1;
                   break L0;
                 } else {
@@ -106,7 +106,7 @@ final class re extends ue {
         }
         L1: {
           vp.field_i[0][((re) this).field_m].b(-46 + (kf.field_c + 20), var5, 42, 63);
-          vp.field_i[0][((re) this).field_m].b(me.field_b + 20 + 4, var5, 42, 63);
+          vp.field_i[0][((re) this).field_m].b(me.field_b + 24, var5, 42, 63);
           if (!param1) {
             break L1;
           } else {
@@ -131,7 +131,7 @@ final class re extends ue {
             L4: {
               var6 = stackIn_21_0;
               this.a(((re) this).field_d[5], var6, gi.field_m, true);
-              if (-7 == (((re) this).field_b.field_c ^ -1)) {
+              if (((re) this).field_b.field_c == 6) {
                 stackOut_23_0 = 16777215;
                 stackIn_24_0 = stackOut_23_0;
                 break L4;
@@ -144,7 +144,7 @@ final class re extends ue {
             L5: {
               var6 = stackIn_24_0;
               this.a(((re) this).field_d[6], var6, qd.field_r, true);
-              if (-8 == (((re) this).field_b.field_c ^ -1)) {
+              if (((re) this).field_b.field_c == 7) {
                 stackOut_26_0 = 16777215;
                 stackIn_27_0 = stackOut_26_0;
                 break L5;
@@ -156,7 +156,7 @@ final class re extends ue {
             }
             L6: {
               var6 = stackIn_27_0;
-              if ((rb.field_h ^ -1) > -3) {
+              if (rb.field_h < 2) {
                 break L6;
               } else {
                 if ((Object) (Object) a.field_b != this) {
@@ -242,18 +242,18 @@ final class re extends ue {
           }
         }
         L1: {
-          if (-6 != (var2 ^ -1)) {
+          if (var2 != 5) {
             break L1;
           } else {
             if (!((re) this).field_b.d(96)) {
               break L1;
             } else {
-              if (-1 <= (gi.field_m ^ -1)) {
+              if (gi.field_m <= 0) {
                 break L1;
               } else {
                 L2: {
                   gi.field_m = gi.field_m - 8;
-                  if (-1 < (gi.field_m ^ -1)) {
+                  if (gi.field_m < 0) {
                     gi.field_m = 0;
                     break L2;
                   } else {
@@ -267,7 +267,7 @@ final class re extends ue {
           }
         }
         L3: {
-          if (-6 != (var2 ^ -1)) {
+          if (var2 != 5) {
             break L3;
           } else {
             if (!((re) this).field_b.b(108)) {
@@ -308,7 +308,7 @@ final class re extends ue {
           }
         }
         L6: {
-          if ((var2 ^ -1) != -6) {
+          if (var2 != 5) {
             break L6;
           } else {
             if (!((re) this).field_b.e(-19741)) {
@@ -335,10 +335,10 @@ final class re extends ue {
         L8: {
           L9: {
             L10: {
-              if (-6 == (var2 ^ -1)) {
+              if (var2 == 5) {
                 break L10;
               } else {
-                if (-7 != (var2 ^ -1)) {
+                if (var2 != 6) {
                   break L9;
                 } else {
                   break L10;
@@ -361,11 +361,11 @@ final class re extends ue {
                 }
               }
               L12: {
-                if (-6 != (var2 ^ -1)) {
+                if (var2 != 5) {
                   break L12;
                 } else {
                   L13: {
-                    if ((var3 ^ -1) != (gi.field_m ^ -1)) {
+                    if (~var3 != ~gi.field_m) {
                       break L13;
                     } else {
                       if (!((re) this).field_b.a(true)) {
@@ -383,7 +383,7 @@ final class re extends ue {
               if (var2 != 6) {
                 break L8;
               } else {
-                if ((var3 ^ -1) == (qd.field_r ^ -1)) {
+                if (~var3 == ~qd.field_r) {
                   break L8;
                 } else {
                   ia.a(-658435066, var3);
@@ -406,7 +406,7 @@ final class re extends ue {
           }
         }
         L14: {
-          if (-7 != (var2 ^ -1)) {
+          if (var2 != 6) {
             break L14;
           } else {
             if (!((re) this).field_b.d(96)) {
@@ -428,7 +428,7 @@ final class re extends ue {
             if (!((re) this).field_b.b(77)) {
               break L15;
             } else {
-              if (-65 < (qd.field_r ^ -1)) {
+              if (qd.field_r < 64) {
                 ia.a(-658435066, 8 + qd.field_r);
                 break L15;
               } else {
@@ -438,7 +438,7 @@ final class re extends ue {
           }
         }
         L16: {
-          if ((var2 ^ -1) != -7) {
+          if (var2 != 6) {
             break L16;
           } else {
             if (!((re) this).field_b.b(true)) {
@@ -454,7 +454,7 @@ final class re extends ue {
           }
         }
         L17: {
-          if ((var2 ^ -1) != -7) {
+          if (var2 != 6) {
             break L17;
           } else {
             if (!((re) this).field_b.e(-19741)) {
@@ -470,7 +470,7 @@ final class re extends ue {
           }
         }
         L18: {
-          if (-8 != (var2 ^ -1)) {
+          if (var2 != 7) {
             break L18;
           } else {
             if (((re) this).field_b.a(true)) {
@@ -495,7 +495,7 @@ final class re extends ue {
           }
         }
         L20: {
-          if ((var2 ^ -1) != -10) {
+          if (var2 != 9) {
             break L20;
           } else {
             if (((re) this).field_b.a(true)) {
@@ -545,15 +545,15 @@ final class re extends ue {
     private final void a(int param0, byte param1) {
         int var3 = 0;
         int var4 = CrazyCrystals.field_B;
-        if ((param0 ^ -1) <= -1) {
-            if (!((((re) this).field_t[param0] ^ -1) <= -21)) {
+        if (param0 >= 0) {
+            if (!(((re) this).field_t[param0] >= 20)) {
                 ((re) this).field_t[param0] = ((re) this).field_t[param0] + 1;
                 ((re) this).field_d[param0].field_a = ((re) this).field_d[param0].field_a - 14;
             }
         }
         for (var3 = 0; var3 < 12; var3++) {
             if (param0 != var3) {
-                if (-1 > (((re) this).field_t[var3] ^ -1)) {
+                if (((re) this).field_t[var3] > 0) {
                     ((re) this).field_t[var3] = ((re) this).field_t[var3] - 1;
                     ((re) this).field_d[var3].field_a = ((re) this).field_d[var3].field_a + 14;
                 }
@@ -570,7 +570,7 @@ final class re extends ue {
         ((re) this).c(param2, param1, 180);
         ((re) this).field_q = ((re) this).field_q - 10;
         ((re) this).field_g = 0;
-        if (199 < (((re) this).field_q ^ -1)) {
+        if (((re) this).field_q < -200) {
             ((re) this).field_q = -200;
         }
         if (param0 > -113) {
@@ -581,7 +581,7 @@ final class re extends ue {
     final void a(byte param0, int param1) {
         int var3 = 0;
         int var4 = CrazyCrystals.field_B;
-        if (!(-21 >= (((re) this).field_l ^ -1))) {
+        if (!(((re) this).field_l >= 20)) {
             ((re) this).field_l = ((re) this).field_l + 1;
             for (var3 = 0; 12 > var3; var3++) {
                 ((re) this).field_d[var3].field_a = ((re) this).field_d[var3].field_a + 14;
@@ -614,67 +614,86 @@ final class re extends ue {
         if (param0 < 46) {
             ((re) this).b(-112);
         }
-        if (!((((re) this).field_q ^ -1) > -1)) {
+        if (!(((re) this).field_q < 0)) {
             ((re) this).field_q = 0;
             ((re) this).field_g = -((re) this).field_g;
-            ((re) this).field_g = ((re) this).field_g - (((re) this).field_g >> 2011247970);
+            ((re) this).field_g = ((re) this).field_g - (((re) this).field_g >> 2);
         }
     }
 
     private final void a(ik param0, int param1, int param2, boolean param3) {
-        if (!param3) {
-            ((re) this).e(-68);
+        try {
+            ak.a((byte) 61, 9 + (param0.field_a + ((re) this).field_r), param0.field_d, param2, param1);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "re.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + 1 + 41);
         }
-        ak.a((byte) 61, 9 + (param0.field_a + ((re) this).field_r), param0.field_d, param2, param1);
     }
 
     final static boolean a(boolean param0, String param1) {
         String var2 = null;
         Exception var2_ref = null;
+        RuntimeException var2_ref2 = null;
         int var3 = 0;
         int var4 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
+        int stackIn_21_0 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
         int stackOut_7_0 = 0;
         int stackOut_18_0 = 0;
         int stackOut_13_0 = 0;
         int stackOut_2_0 = 0;
+        int stackOut_20_0 = 0;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         var4 = CrazyCrystals.field_B;
         try {
-          L0: {
+          try {
             if (un.field_u.startsWith("win")) {
-              L1: {
+              L0: {
                 if (param1.startsWith("http://")) {
-                  break L1;
+                  break L0;
                 } else {
                   if (!param1.startsWith("https://")) {
                     stackOut_7_0 = 0;
                     stackIn_8_0 = stackOut_7_0;
                     return stackIn_8_0 != 0;
                   } else {
-                    break L1;
+                    break L0;
                   }
                 }
               }
               var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
               var3 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var3 >= param1.length()) {
-                  L3: {
+                  L2: {
                     if (!param0) {
-                      break L3;
+                      break L2;
                     } else {
                       re.d((byte) -80);
-                      break L3;
+                      break L2;
                     }
                   }
                   Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
                   stackOut_18_0 = 1;
                   stackIn_19_0 = stackOut_18_0;
-                  break L0;
+                  return stackIn_19_0 != 0;
                 } else {
                   if (-1 == var2.indexOf((int) param1.charAt(var3))) {
                     stackOut_13_0 = 0;
@@ -682,7 +701,7 @@ final class re extends ue {
                     return stackIn_14_0 != 0;
                   } else {
                     var3++;
-                    continue L2;
+                    continue L1;
                   }
                 }
               }
@@ -691,13 +710,43 @@ final class re extends ue {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2_ref = (Exception) (Object) decompiledCaughtException;
+            stackOut_20_0 = 0;
+            stackIn_21_0 = stackOut_20_0;
+            return stackIn_21_0 != 0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = (Exception) (Object) decompiledCaughtException;
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L3: {
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2_ref2;
+            stackOut_22_1 = new StringBuilder().append("re.K(").append(param0).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param1 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L3;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L3;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
-        return stackIn_19_0 != 0;
     }
 
     public static void d(byte param0) {
@@ -713,10 +762,7 @@ final class re extends ue {
     private final void d(int param0) {
         int var2 = 0;
         int var3 = CrazyCrystals.field_B;
-        if (param0 != 14) {
-            field_n = null;
-        }
-        if ((((re) this).field_l ^ -1) < -1) {
+        if (((re) this).field_l > 0) {
             ((re) this).field_l = ((re) this).field_l - 1;
             for (var2 = 0; 12 > var2; var2++) {
                 ((re) this).field_d[var2].field_a = ((re) this).field_d[var2].field_a - 14;
@@ -734,7 +780,7 @@ final class re extends ue {
         this.d(14);
         if (!(rb.field_h < 2)) {
             if (!(!cp.field_k[12])) {
-                for (var2 = 0; (var2 ^ -1) > -6; var2++) {
+                for (var2 = 0; var2 < 5; var2++) {
                     ke.field_b[var2] = jl.field_c[var2];
                 }
                 ll.field_a = "All levels considered reached - free player restrictions may apply";
@@ -746,7 +792,7 @@ final class re extends ue {
     final void e(int param0) {
         L0: {
           if (0 < ((re) this).field_f) {
-            ge.field_d.e(0, 0, -((((re) this).field_f << -1238743769) / 20) + 256);
+            ge.field_d.e(0, 0, -((((re) this).field_f << 7) / 20) + 256);
             break L0;
           } else {
             ge.field_d.c(0, 0);
@@ -849,7 +895,7 @@ final class re extends ue {
         var2 += 26;
         var1 = 0;
         L1: while (true) {
-          if ((var1 ^ -1) <= -13) {
+          if (var1 >= 12) {
             var1 = 0;
             L2: while (true) {
               if (5 <= var1) {
@@ -877,7 +923,7 @@ final class re extends ue {
     final void c(int param0) {
         if (((re) this).field_f > 0) {
             ((re) this).field_f = ((re) this).field_f - ((re) this).field_u;
-            if ((((re) this).field_f ^ -1) > -1) {
+            if (((re) this).field_f < 0) {
                 ((re) this).field_f = 0;
             }
         }

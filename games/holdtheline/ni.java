@@ -36,7 +36,7 @@ final class ni {
             break L0;
           }
         }
-        if (-3 < (pf.field_d ^ -1)) {
+        if (pf.field_d < 2) {
           return 0;
         } else {
           L1: {

@@ -24,7 +24,7 @@ final class ef implements Runnable {
         ((ef) this).field_d = true;
         try {
             while (!((ef) this).field_a) {
-                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
+                for (var1_int = 0; var1_int < 2; var1_int++) {
                     var2 = ((ef) this).field_f[var1_int];
                     if (var2 == null) {
                     } else {

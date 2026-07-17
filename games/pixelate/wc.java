@@ -31,7 +31,11 @@ final class wc extends jj {
 
     wc(String param0, tf[] param1) {
         super(param0, param1);
-        this.c((byte) 97);
+        try {
+            this.c((byte) 97);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "wc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0) {
@@ -68,9 +72,6 @@ final class wc extends jj {
 
     private final void c(byte param0) {
         ((wc) this).field_o = new qk[2];
-        if (param0 < 91) {
-            ((wc) this).c(-106);
-        }
         ((wc) this).field_o[0] = new qk(0);
         ((wc) this).field_o[1] = new qk(7);
     }

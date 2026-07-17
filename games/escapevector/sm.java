@@ -13,12 +13,12 @@ abstract class sm implements el {
         }
         if (param0 != 17124) {
             sm.a(false, true);
-            if ((td.b(param0 + -16996) ^ -1L) > (((sm) this).field_c + 350L ^ -1L)) {
+            if (~td.b(param0 + -16996) > ~(((sm) this).field_c + 350L)) {
                 return of.field_f;
             }
             return ((sm) this).d(-76);
         }
-        if ((td.b(param0 + -16996) ^ -1L) > (((sm) this).field_c + 350L ^ -1L)) {
+        if (~td.b(param0 + -16996) > ~(((sm) this).field_c + 350L)) {
             return of.field_f;
         }
         return ((sm) this).d(-76);
@@ -29,7 +29,7 @@ abstract class sm implements el {
         if (((sm) this).c(95)) {
             return null;
         }
-        if ((350L + ((sm) this).field_c ^ -1L) < (td.b(128) ^ -1L)) {
+        if (~(350L + ((sm) this).field_c) < ~td.b(128)) {
             return null;
         }
         return ((sm) this).a((byte) 125);
@@ -37,38 +37,101 @@ abstract class sm implements el {
 
     final static int a(int param0, int param1, dk[] param2, int param3) {
         dk[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         dk var7 = null;
         int var8 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_12_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var8 = EscapeVector.field_A;
-        if (param2 != null) {
-          var4 = param2;
-          var6 = -90 % ((param1 - -58) / 32);
-          var5 = 0;
-          L0: while (true) {
-            if (var4.length <= var5) {
-              return -1;
-            } else {
-              var7 = var4[var5];
-              if (var7 != null) {
-                if (!var7.a((byte) 65, param3, param0)) {
-                  var5++;
-                  var5++;
-                  continue L0;
+        try {
+          L0: {
+            if (param2 != null) {
+              var4 = param2;
+              var6 = -90 % ((param1 - -58) / 32);
+              var5 = 0;
+              L1: while (true) {
+                if (var4.length <= var5) {
+                  stackOut_12_0 = -1;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L0;
                 } else {
-                  return var7.field_c;
+                  L2: {
+                    var7 = var4[var5];
+                    if (var7 != null) {
+                      if (!var7.a((byte) 65, param3, param0)) {
+                        break L2;
+                      } else {
+                        stackOut_9_0 = var7.field_c;
+                        stackIn_10_0 = stackOut_9_0;
+                        return stackIn_10_0;
+                      }
+                    } else {
+                      break L2;
+                    }
+                  }
+                  var5++;
+                  continue L1;
                 }
-              } else {
-                var5++;
-                var5++;
-                continue L0;
               }
+            } else {
+              stackOut_2_0 = -1;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
           }
-        } else {
-          return -1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4_ref = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var4_ref;
+            stackOut_14_1 = new StringBuilder().append("sm.R(").append(param0).append(44).append(param1).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param2 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L3;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L3;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param3 + 41);
         }
+        return stackIn_13_0;
     }
 
     public final void a(boolean param0) {
@@ -82,28 +145,29 @@ abstract class sm implements el {
 
     public static void b(boolean param0) {
         field_a = null;
-        if (!param0) {
-            sm.a(false, false);
-            field_d = null;
-            return;
-        }
         field_d = null;
     }
 
     final static void a(qd param0, int param1, boolean param2) {
-        c var3 = om.field_c;
-        var3.a(param1, param2);
-        var3.field_m = var3.field_m + 1;
-        int var4 = var3.field_m;
-        var3.f(1, -123);
-        var3.f(param0.field_m, -123);
-        var3.f(param0.field_h, -123);
-        var3.a((byte) 124, param0.field_k);
-        var3.a((byte) 127, param0.field_i);
-        var3.a((byte) 125, param0.field_j);
-        var3.a((byte) 127, param0.field_g);
-        int discarded$0 = var3.c(var4, -76);
-        var3.e(86, var3.field_m - var4);
+        c var3 = null;
+        int var4 = 0;
+        try {
+            var3 = om.field_c;
+            var3.a(param1, true);
+            var3.field_m = var3.field_m + 1;
+            var4 = var3.field_m;
+            var3.f(1, -123);
+            var3.f(param0.field_m, -123);
+            var3.f(param0.field_h, -123);
+            var3.a((byte) 124, param0.field_k);
+            var3.a((byte) 127, param0.field_i);
+            var3.a((byte) 125, param0.field_j);
+            var3.a((byte) 127, param0.field_g);
+            int discarded$0 = var3.c(var4, -76);
+            var3.e(86, var3.field_m - var4);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "sm.O(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 1 + 41);
+        }
     }
 
     final static void a(boolean param0, boolean param1) {

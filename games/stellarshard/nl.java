@@ -33,10 +33,10 @@ abstract class nl {
         var4 = lc.a(param1, false);
         var5 = hd.a(param2, 116);
         var6 = lc.a(param2, false);
-        var7 = (int)((long)var5 * (long)var3 >> -970259888);
-        var8 = (int)((long)var3 * (long)var6 >> -605484208);
-        var9 = (int)((long)var5 * (long)var4 >> 2118858000);
-        var10 = (int)((long)var6 * (long)var4 >> 561206736);
+        var7 = (int)((long)var5 * (long)var3 >> 16);
+        var8 = (int)((long)var3 * (long)var6 >> 16);
+        var9 = (int)((long)var5 * (long)var4 >> 16);
+        var10 = (int)((long)var6 * (long)var4 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 

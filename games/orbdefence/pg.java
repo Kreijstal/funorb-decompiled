@@ -9,9 +9,6 @@ final class pg {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != -12150) {
-            return;
-        }
         field_a = null;
         field_c = null;
     }

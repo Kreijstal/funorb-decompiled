@@ -10,7 +10,7 @@ final class ms {
     final void b(byte param0) {
         if (((ms) this).field_b == null) {
           if (param0 != 29) {
-            ((ms) this).field_b = (ti) null;
+            ((ms) this).field_b = null;
             return;
           } else {
             return;
@@ -20,7 +20,7 @@ final class ms {
           if (param0 == 29) {
             return;
           } else {
-            ((ms) this).field_b = (ti) null;
+            ((ms) this).field_b = null;
             return;
           }
         }
@@ -28,7 +28,7 @@ final class ms {
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = -69 / ((71 - param0) / 39);
+        int var1 = -34;
         field_a = null;
     }
 

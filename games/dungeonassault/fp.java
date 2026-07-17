@@ -12,9 +12,6 @@ final class fp {
         field_a = null;
         field_d = null;
         field_e = null;
-        if (param0 != -4126) {
-            return;
-        }
         field_c = null;
         field_b = null;
     }

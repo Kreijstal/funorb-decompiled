@@ -208,7 +208,7 @@ final class tq extends cj {
                   break L7;
                 }
               }
-              if ((-(((tq) this).field_Gb.field_mb + ((tq) this).field_Gb.field_Q) ^ -1) > -1) {
+              if (-(((tq) this).field_Gb.field_mb + ((tq) this).field_Gb.field_Q) < 0) {
                 ((tq) this).field_Gb.field_mb = -((tq) this).field_Gb.field_Q;
                 if (param1 != 0) {
                   return;
@@ -316,7 +316,7 @@ final class tq extends cj {
                   break L14;
                 }
               }
-              if ((-(((tq) this).field_Gb.field_mb + ((tq) this).field_Gb.field_Q) ^ -1) > -1) {
+              if (-(((tq) this).field_Gb.field_mb + ((tq) this).field_Gb.field_Q) < 0) {
                 ((tq) this).field_Gb.field_mb = -((tq) this).field_Gb.field_Q;
                 if (param1 != 0) {
                   return;
@@ -395,7 +395,7 @@ final class tq extends cj {
                   break L21;
                 }
               }
-              if ((-(((tq) this).field_Gb.field_mb + ((tq) this).field_Gb.field_Q) ^ -1) > -1) {
+              if (-(((tq) this).field_Gb.field_mb + ((tq) this).field_Gb.field_Q) < 0) {
                 ((tq) this).field_Gb.field_mb = -((tq) this).field_Gb.field_Q;
                 break L19;
               } else {
@@ -427,12 +427,16 @@ final class tq extends cj {
 
     tq(long param0, cj param1, cj param2, hi param3) {
         super(param0, (cj) null);
-        ((tq) this).field_Jb = new cj(0L, param2);
-        ((tq) this).field_Ib = new hi(0L, param3);
-        ((tq) this).a((byte) 50, ((tq) this).field_Jb);
-        ((tq) this).a((byte) 50, (cj) (Object) ((tq) this).field_Ib);
-        ((tq) this).field_Gb = param1;
-        ((tq) this).field_Jb.a((byte) 50, param1);
+        try {
+            ((tq) this).field_Jb = new cj(0L, param2);
+            ((tq) this).field_Ib = new hi(0L, param3);
+            ((tq) this).a((byte) 50, ((tq) this).field_Jb);
+            ((tq) this).a((byte) 50, (cj) (Object) ((tq) this).field_Ib);
+            ((tq) this).field_Gb = param1;
+            ((tq) this).field_Jb.a((byte) 50, param1);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "tq.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

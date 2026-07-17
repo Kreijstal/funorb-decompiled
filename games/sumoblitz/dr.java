@@ -14,20 +14,26 @@ final class dr extends ah {
 
     dr(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3);
-        int var5 = ((dr) this).field_Q;
-        if (var5 != -7) {
-            // if_icmpne L44
+        int var5 = 0;
+        var5 = ((dr) this).field_Q;
+        if (var5 == 6) {
+          ((dr) this).field_T = 0;
+          return;
         } else {
-            ((dr) this).field_T = 0;
+          if (var5 != 7) {
+            ((dr) this).field_T = -1;
+            return;
+          } else {
+            ((dr) this).field_T = 1;
+            return;
+          }
         }
-        ((dr) this).field_T = 1;
-        ((dr) this).field_T = -1;
     }
 
     final void d(int param0) {
         super.d(-104);
         if (-1 != ((dr) this).field_T) {
-          if (-1 == ((((dr) this).field_r - 100) % 250 ^ -1)) {
+          if ((((dr) this).field_r - 100) % 250 == 0) {
             oc.a(uj.a(((dr) this).field_T, ((dr) this).field_C - ((dr) this).field_E, 0, (byte) 84, ((dr) this).field_z + -((dr) this).field_A), false);
             if (param0 >= -55) {
               dr.c(true);

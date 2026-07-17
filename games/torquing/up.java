@@ -19,7 +19,7 @@ final class up {
 
     public static void b(int param0) {
         field_h = null;
-        int var1 = -1 / ((-61 - param0) / 39);
+        int var1 = -1;
         field_e = null;
         field_b = null;
         field_a = null;
@@ -51,7 +51,11 @@ final class up {
     up(String param0) {
         ((up) this).field_f = false;
         ((up) this).field_g = false;
-        ((up) this).field_c = param0;
+        try {
+            ((up) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "up.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

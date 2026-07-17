@@ -37,7 +37,7 @@ final class qs extends ta {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = ((qs) this).field_J.h((byte) -48);
         sr var6 = ((qs) this).field_J.field_zb[((qs) this).field_J.field_Db];
-        ((qs) this).field_I.a((gn) (Object) new oi(param0 | param3 << -736695024), 3);
+        ((qs) this).field_I.a((gn) (Object) new oi(param0 | param3 << 16), 3);
         this.c(true);
         ((qs) this).field_J.a(var6, 94);
         ((qs) this).field_J.a(true, var5);
@@ -140,10 +140,10 @@ final class qs extends ta {
           }
         }
         L3: {
-          if (0 == (((qs) this).field_T.field_Fb ^ -1)) {
+          if (((qs) this).field_T.field_Fb == -1) {
             break L3;
           } else {
-            if ((((qs) this).field_U.field_sb ^ -1) != -2) {
+            if (((qs) this).field_U.field_sb != 1) {
               break L3;
             } else {
               var4 = ic.field_h.field_q[((qs) this).field_T.field_Fb];
@@ -162,7 +162,7 @@ final class qs extends ta {
                 if (((qs) this).field_J.h((byte) -86) >= var3) {
                   break L5;
                 } else {
-                  if (-1 != (((qs) this).field_O ^ -1)) {
+                  if (((qs) this).field_O != 0) {
                     break L5;
                   } else {
                     wh discarded$2 = sp.c(60, -127);
@@ -174,7 +174,7 @@ final class qs extends ta {
                 if (((qs) this).field_J.h((byte) -86) >= var3) {
                   break L5;
                 } else {
-                  if (-1 != (((qs) this).field_O ^ -1)) {
+                  if (((qs) this).field_O != 0) {
                     break L5;
                   } else {
                     wh discarded$3 = sp.c(60, -127);
@@ -205,7 +205,7 @@ final class qs extends ta {
               }
             }
             stackIn_16_0.field_lb = stackIn_16_1 != 0;
-            if (-1 != (((qs) this).field_F[var7].field_Mb.field_sb ^ -1)) {
+            if (((qs) this).field_F[var7].field_Mb.field_sb != 0) {
               if (ic.field_h.c((byte) -86)) {
                 pi.a(6022, ((qs) this).field_F[var7]);
                 var7++;
@@ -231,48 +231,52 @@ final class qs extends ta {
                 ((qs) this).field_G.a((byte) -127, ((qs) this).field_U);
             }
         }
-        if (param0) {
-            this.c(true);
-        }
     }
 
     final static void a(boolean param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         nl var2 = null;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
-        var1 = 0;
-        if (!param0) {
-          L0: while (true) {
-            if ((var1 ^ -1) <= -5) {
-              return;
-            } else {
-              L1: {
-                var2 = sh.field_a.field_P[ae.field_G][1 + var1];
-                if (0 >= var2.field_C) {
-                  break L1;
-                } else {
-                  if (var2.field_u != 4) {
-                    mn.field_b[var1] = 16;
-                    var1++;
-                    continue L0;
+        try {
+          L0: {
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 4) {
+                break L0;
+              } else {
+                L2: {
+                  L3: {
+                    var2 = sh.field_a.field_P[ae.field_G][1 + var1_int];
+                    if (0 >= var2.field_C) {
+                      break L3;
+                    } else {
+                      if (var2.field_u != 4) {
+                        mn.field_b[var1_int] = 16;
+                        break L2;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                  if (0 >= mn.field_b[var1_int]) {
+                    break L2;
                   } else {
-                    break L1;
+                    mn.field_b[var1_int] = mn.field_b[var1_int] - 1;
+                    break L2;
                   }
                 }
-              }
-              if (0 < mn.field_b[var1]) {
-                mn.field_b[var1] = mn.field_b[var1] - 1;
-                var1++;
-                continue L0;
-              } else {
-                var1++;
-                continue L0;
+                var1_int++;
+                continue L1;
               }
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var1, "qs.I(" + 0 + 41);
         }
     }
 
@@ -286,98 +290,94 @@ final class qs extends ta {
         int var8 = 0;
         int var9 = 0;
         tf var10 = null;
-        int stackIn_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_12_0 = 0;
         var9 = Kickabout.field_G;
-        if (param0) {
-          var10 = new tf();
-          var3 = -1;
-          L0: while (true) {
-            L1: {
-              if (6 < var3) {
-                break L1;
-              } else {
-                L2: {
-                  if (cq.e(15137)) {
+        var10 = new tf();
+        var3 = -1;
+        L0: while (true) {
+          L1: {
+            if (6 < var3) {
+              break L1;
+            } else {
+              L2: {
+                if (cq.e(15137)) {
+                  break L2;
+                } else {
+                  if (var3 != -1) {
                     break L2;
                   } else {
-                    if ((var3 ^ -1) != 0) {
-                      break L2;
-                    } else {
-                      var3++;
-                      continue L0;
-                    }
+                    var3++;
+                    continue L0;
                   }
-                }
-                if (ic.field_h.field_t >= var3) {
-                  var4_int = 0;
-                  L3: while (true) {
-                    if (var4_int < 8) {
-                      L4: {
-                        var5 = ha.a(ic.field_h.field_e, var4_int, ic.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
-                        if (bh.field_k != var3) {
-                          stackOut_15_0 = 0;
-                          stackIn_16_0 = stackOut_15_0;
-                          break L4;
-                        } else {
-                          stackOut_14_0 = 1;
-                          stackIn_16_0 = stackOut_14_0;
-                          break L4;
-                        }
-                      }
-                      var6 = stackIn_16_0;
-                      var7 = (oi) (Object) ((qs) this).field_I.g(24009);
-                      L5: while (true) {
-                        if (var7 == null) {
-                          var10.a((gn) (Object) new sp(var5, da.field_x, var3, var4_int, var6 != 0), 3);
-                          var4_int++;
-                          continue L3;
-                        } else {
-                          L6: {
-                            var8 = var7.field_j;
-                            if (var8 >> 569094736 != var3) {
-                              break L6;
-                            } else {
-                              if ((var8 & 65535) == var4_int) {
-                                var6 = 1;
-                                break L6;
-                              } else {
-                                break L6;
-                              }
-                            }
-                          }
-                          var7 = (oi) (Object) ((qs) this).field_I.c(33);
-                          continue L5;
-                        }
-                      }
-                    } else {
-                      var3++;
-                      continue L0;
-                    }
-                  }
-                } else {
-                  break L1;
                 }
               }
-            }
-            ((qs) this).field_F = new sp[var10.a(false)];
-            var3 = 0;
-            var4 = (sp) (Object) var10.g(24009);
-            L7: while (true) {
-              if (var4 == null) {
-                ((qs) this).field_J.a((im[]) (Object) ((qs) this).field_F, 0);
-                return;
+              if (ic.field_h.field_t >= var3) {
+                var4_int = 0;
+                L3: while (true) {
+                  if (var4_int < 8) {
+                    L4: {
+                      var5 = ha.a(ic.field_h.field_e, var4_int, ic.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
+                      if (bh.field_k != var3) {
+                        stackOut_13_0 = 0;
+                        stackIn_14_0 = stackOut_13_0;
+                        break L4;
+                      } else {
+                        stackOut_12_0 = 1;
+                        stackIn_14_0 = stackOut_12_0;
+                        break L4;
+                      }
+                    }
+                    var6 = stackIn_14_0;
+                    var7 = (oi) (Object) ((qs) this).field_I.g(24009);
+                    L5: while (true) {
+                      if (var7 == null) {
+                        var10.a((gn) (Object) new sp(var5, da.field_x, var3, var4_int, var6 != 0), 3);
+                        var4_int++;
+                        continue L3;
+                      } else {
+                        L6: {
+                          var8 = var7.field_j;
+                          if (var8 >> 16 != var3) {
+                            break L6;
+                          } else {
+                            if ((var8 & 65535) == var4_int) {
+                              var6 = 1;
+                              break L6;
+                            } else {
+                              break L6;
+                            }
+                          }
+                        }
+                        var7 = (oi) (Object) ((qs) this).field_I.c(33);
+                        continue L5;
+                      }
+                    }
+                  } else {
+                    var3++;
+                    continue L0;
+                  }
+                }
               } else {
-                ((qs) this).field_F[var3] = var4;
-                var3++;
-                var4 = (sp) (Object) var10.c(33);
-                continue L7;
+                break L1;
               }
             }
           }
-        } else {
-          return;
+          ((qs) this).field_F = new sp[var10.a(false)];
+          var3 = 0;
+          var4 = (sp) (Object) var10.g(24009);
+          L7: while (true) {
+            if (var4 == null) {
+              ((qs) this).field_J.a((im[]) (Object) ((qs) this).field_F, 0);
+              return;
+            } else {
+              ((qs) this).field_F[var3] = var4;
+              var3++;
+              var4 = (sp) (Object) var10.c(33);
+              continue L7;
+            }
+          }
         }
     }
 
@@ -407,7 +407,7 @@ final class qs extends ta {
         ((qs) this).field_L.a((byte) -111, ((qs) this).field_G);
         ((qs) this).field_U = eo.a(ja.field_M, 15147554);
         ((qs) this).field_U.field_J = 56;
-        ((qs) this).field_U.field_s = 66 - (((qs) this).field_U.field_q >> -121707135);
+        ((qs) this).field_U.field_s = 66 - (((qs) this).field_U.field_q >> 1);
     }
 
     final void a(int param0, boolean param1) {

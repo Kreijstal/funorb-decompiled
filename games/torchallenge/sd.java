@@ -12,18 +12,9 @@ final class sd {
     static int field_b;
 
     public static void a(byte param0) {
-        if (param0 > -42) {
-          field_g = null;
-          field_f = null;
-          field_g = null;
-          field_e = null;
-          return;
-        } else {
-          field_f = null;
-          field_g = null;
-          field_e = null;
-          return;
-        }
+        field_f = null;
+        field_g = null;
+        field_e = null;
     }
 
     final static void a(int param0) {
@@ -71,18 +62,16 @@ final class sd {
     }
 
     final static void a(byte param0, java.awt.Component param1) {
-        Object var3 = null;
-        param1.removeKeyListener((java.awt.event.KeyListener) (Object) hl.field_d);
-        if (param0 != 69) {
-          var3 = null;
-          sd.a((byte) 28, (java.awt.Component) null);
-          param1.removeFocusListener((java.awt.event.FocusListener) (Object) hl.field_d);
-          df.field_Q = -1;
-          return;
-        } else {
-          param1.removeFocusListener((java.awt.event.FocusListener) (Object) hl.field_d);
-          df.field_Q = -1;
-          return;
+        try {
+            param1.removeKeyListener((java.awt.event.KeyListener) (Object) hl.field_d);
+            if (param0 != 69) {
+                Object var3 = null;
+                sd.a((byte) 28, (java.awt.Component) null);
+            }
+            param1.removeFocusListener((java.awt.event.FocusListener) (Object) hl.field_d);
+            df.field_Q = -1;
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "sd.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

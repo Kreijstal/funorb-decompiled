@@ -76,64 +76,52 @@ final class ag extends java.awt.Canvas {
     }
 
     public final void update(java.awt.Graphics param0) {
-        ((ag) this).field_k.update(param0);
+        try {
+            ((ag) this).field_k.update(param0);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "ag.update(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
         var4 = Virogrid.field_F ? 1 : 0;
-        fk.a();
-        dm.field_x = new int[260];
-        if (param0 == 255) {
-          gb.field_N = 11;
-          var1 = 0;
-          L0: while (true) {
-            if (256 <= var1) {
-              var5 = 256;
-              var1 = var5;
-              L1: while (true) {
-                if (var5 < dm.field_x.length) {
-                  dm.field_x[var5] = 255;
-                  var5++;
-                  continue L1;
-                } else {
-                  return;
+        try {
+          L0: {
+            fk.a();
+            dm.field_x = new int[260];
+            gb.field_N = 11;
+            var1_int = 0;
+            L1: while (true) {
+              if (256 <= var1_int) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (var5 >= dm.field_x.length) {
+                    break L0;
+                  } else {
+                    dm.field_x[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
                 }
+              } else {
+                var2 = 15.0;
+                dm.field_x[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+                var1_int++;
+                continue L1;
               }
-            } else {
-              var2 = 15.0;
-              dm.field_x[var1] = (int)(Math.pow((double)((float)var1 / 256.0f), var2) * 255.0);
-              var1++;
-              continue L0;
             }
           }
-        } else {
-          int discarded$8 = ag.a(false);
-          gb.field_N = 11;
-          var1 = 0;
-          L2: while (true) {
-            if (256 <= var1) {
-              var5 = 256;
-              var1 = var5;
-              L3: while (true) {
-                if (var5 < dm.field_x.length) {
-                  dm.field_x[var5] = 255;
-                  var5++;
-                  continue L3;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              var2 = 15.0;
-              dm.field_x[var1] = (int)(Math.pow((double)((float)var1 / 256.0f), var2) * 255.0);
-              var1++;
-              continue L2;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw kg.a((Throwable) (Object) var1, "ag.D(" + 255 + 41);
         }
     }
 
@@ -152,7 +140,11 @@ final class ag extends java.awt.Canvas {
     }
 
     public final void paint(java.awt.Graphics param0) {
-        ((ag) this).field_k.paint(param0);
+        try {
+            ((ag) this).field_k.paint(param0);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "ag.paint(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static int a(boolean param0) {
@@ -164,7 +156,11 @@ final class ag extends java.awt.Canvas {
     }
 
     ag(java.awt.Component param0) {
-        ((ag) this).field_k = param0;
+        try {
+            ((ag) this).field_k = param0;
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

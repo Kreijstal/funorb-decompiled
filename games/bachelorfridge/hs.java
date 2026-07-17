@@ -12,7 +12,7 @@ final class hs {
         if (!(lna.field_q)) {
             return false;
         }
-        int var1 = 114 % ((param0 - 0) / 55);
+        int var1 = 114 % (param0 / 55);
         if (gk.field_d == 0) {
             return true;
         }
@@ -94,27 +94,23 @@ final class hs {
         int var3 = 0;
         int var4 = 0;
         var4 = BachelorFridge.field_y;
-        if (param1 == 376) {
-          var3 = 0;
-          L0: while (true) {
-            if (var3 >= ((hs) this).field_a.length) {
-              return 0;
-            } else {
-              if (((hs) this).field_a[var3] != null) {
-                if (((hs) this).field_a[var3].field_a > param0) {
-                  return -1 + var3;
-                } else {
-                  var3++;
-                  continue L0;
-                }
+        var3 = 0;
+        L0: while (true) {
+          if (var3 >= ((hs) this).field_a.length) {
+            return 0;
+          } else {
+            if (((hs) this).field_a[var3] != null) {
+              if (((hs) this).field_a[var3].field_a > param0) {
+                return -1 + var3;
               } else {
                 var3++;
                 continue L0;
               }
+            } else {
+              var3++;
+              continue L0;
             }
           }
-        } else {
-          return 113;
         }
     }
 
@@ -123,9 +119,6 @@ final class hs {
             if (param0 <= 126) {
                 return true;
             }
-        }
-        if (param1 != 376) {
-            return false;
         }
         if (param0 >= 160) {
             if (param0 <= 255) {
@@ -147,32 +140,104 @@ final class hs {
     }
 
     final static boolean a(boolean param0, int[] param1) {
-        int var3 = BachelorFridge.field_y;
-        int var2 = 0;
-        if (param0) {
-            return true;
-        }
-        while (var2 > -9) {
-            if (!(-1 == param1[var2])) {
-                return true;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_10_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        var3 = BachelorFridge.field_y;
+        try {
+          L0: {
+            var2_int = 0;
+            if (!param0) {
+              L1: while (true) {
+                if (var2_int >= 8) {
+                  stackOut_10_0 = 0;
+                  stackIn_11_0 = stackOut_10_0;
+                  break L0;
+                } else {
+                  if (param1[var2_int] != 0) {
+                    stackOut_7_0 = 1;
+                    stackIn_8_0 = stackOut_7_0;
+                    return stackIn_8_0 != 0;
+                  } else {
+                    var2_int++;
+                    continue L1;
+                  }
+                }
+              }
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
-            var2++;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var2;
+            stackOut_12_1 = new StringBuilder().append("hs.G(").append(param0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L2;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
-        return false;
+        return stackIn_11_0 != 0;
     }
 
     hs(int param0, int param1, cda[] param2, int param3) {
-        ((hs) this).field_a = param2;
-        ((hs) this).field_b = param3;
-        ((hs) this).field_d = param1;
-        ((hs) this).field_e = new su(((hs) this).field_a);
+        try {
+            ((hs) this).field_a = param2;
+            ((hs) this).field_b = param3;
+            ((hs) this).field_d = param1;
+            ((hs) this).field_e = new su(((hs) this).field_a);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "hs.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 != -127) {
-            field_c = null;
-        }
     }
 
     static {

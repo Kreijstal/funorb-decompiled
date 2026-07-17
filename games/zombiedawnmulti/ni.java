@@ -25,7 +25,7 @@ final class ni {
         while (((ni) this).field_a[var1] >= 0) {
             var1 = ac.b() != 0 ? ((ni) this).field_a[var1] : var1 + 1;
         }
-        return ((ni) this).field_a[var1] ^ -1;
+        return ~((ni) this).field_a[var1];
     }
 
     private final void b() {
@@ -69,7 +69,7 @@ final class ni {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ni) this).field_a[var6] = var3 ^ -1;
+                      ((ni) this).field_a[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -216,7 +216,7 @@ final class ni {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = ac.a(24);
+          int discarded$2 = ac.a(24);
           ((ni) this).field_e = ac.a(16);
           ((ni) this).field_f = ac.a(24);
           ((ni) this).field_c = new int[((ni) this).field_f];
@@ -283,8 +283,9 @@ final class ni {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((ni) this).field_c[var2] = var3_int;
+                    ((ni) this).field_c[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

@@ -30,9 +30,6 @@ final class rg {
     public static void a(byte param0) {
         field_c = null;
         field_b = null;
-        if (param0 != -20) {
-            return;
-        }
         field_a = null;
         field_d = null;
     }

@@ -15,12 +15,13 @@ abstract class ej extends sg {
         int var3 = 0;
         int var5 = 0;
         int var4 = 0;
-        if (-1 <= (((ej) this).field_G ^ -1)) {
+        if (((ej) this).field_G <= 0) {
         } else {
             var2 = ((ej) this).field_H;
             var3 = ((ej) this).field_L;
+            int fieldTemp$0 = ((ej) this).field_K + 1;
             ((ej) this).field_K = ((ej) this).field_K + 1;
-            if (((ej) this).field_G > ((ej) this).field_K + 1) {
+            if (((ej) this).field_G > fieldTemp$0) {
                 var4 = ((ej) this).field_K * (((ej) this).field_G * 2 + -((ej) this).field_K);
                 var5 = ((ej) this).field_G * ((ej) this).field_G;
                 var3 = var4 * (((ej) this).field_L + -((ej) this).field_M) / var5 + ((ej) this).field_M;
@@ -31,22 +32,16 @@ abstract class ej extends sg {
             }
             ((ej) this).a(var3, (byte) -81, var2);
         }
-        if (param0) {
-            ej.o(121);
-        }
         return super.d(false);
     }
 
     boolean l(int param0) {
         ((ej) this).m(0);
-        if (param0 != 194) {
-            return true;
-        }
-        return super.l(param0 + 0);
+        return super.l(194);
     }
 
     void m(int param0) {
-        if (!((((ej) this).field_G ^ -1) < -1)) {
+        if (!(((ej) this).field_G > 0)) {
             return;
         }
         ((ej) this).a(((ej) this).field_L, (byte) -81, ((ej) this).field_H);
@@ -132,7 +127,7 @@ abstract class ej extends sg {
                     return;
                   } else {
                     var9 = var5 + (-var5 + var6) * var7 / var4;
-                    var9 = var9 | (var9 << -1237452048 | var9 << -2056350616);
+                    var9 = var9 | (var9 << 16 | var9 << 8);
                     ul.d(param0, var8, 6, var9);
                     ul.d(param0 - (-((ej) this).field_m + 6), var8, 6, var9);
                     var8++;
@@ -142,7 +137,7 @@ abstract class ej extends sg {
                 }
               } else {
                 var9 = var5 - -((-var5 + var6) * var7 / var4);
-                var9 = var9 | (var9 << -328650648 | var9 << -1575026096);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 ul.d(param0, var8, 6, var9);
                 ul.d(-6 + param0 - -((ej) this).field_m, var8, 6, var9);
                 var7++;
@@ -157,7 +152,7 @@ abstract class ej extends sg {
                   var9 = var5 + (var6 - var5) * var7 / var4;
                   var10 = 0;
                   var11 = ((ej) this).field_m;
-                  if ((var7 ^ -1) >= -21) {
+                  if (var7 <= 20) {
                     L4: while (true) {
                       if (var10 > 20) {
                         break L3;
@@ -166,7 +161,7 @@ abstract class ej extends sg {
                         if (462 >= var12) {
                           if (420 <= var12) {
                             var13 = (462 - var12) * var9 / 42;
-                            var13 = var13 | (var13 << -1977607824 | var13 << -1136870744);
+                            var13 = var13 | (var13 << 16 | var13 << 8);
                             ul.field_b[ul.field_f * var8 + (param0 + var10)] = var13;
                             var10++;
                             continue L4;
@@ -190,19 +185,19 @@ abstract class ej extends sg {
                     var13 = 0;
                     L6: while (true) {
                       L7: {
-                        if (-21 > (var13 ^ -1)) {
+                        if (var13 > 20) {
                           break L7;
                         } else {
                           var14 = var13 * var13 + (20 + -var7) * (-var7 + 20);
                           if (var14 <= 462) {
-                            if (-421 < (var14 ^ -1)) {
+                            if (var14 < 420) {
                               var12 = var11 - -1;
                               var11++;
                               var13++;
                               continue L6;
                             } else {
                               var15 = var9 * (462 + -var14) / 42;
-                              var15 = var15 | (var15 << 200909128 | var15 << 322289968);
+                              var15 = var15 | (var15 << 8 | var15 << 16);
                               ul.field_b[ul.field_f * var8 + param0 - -var11] = var15;
                               var11++;
                               var13++;
@@ -220,7 +215,7 @@ abstract class ej extends sg {
                     break L5;
                   }
                 }
-                var9 = var9 | (var9 << -1131864792 | var9 << 193723600);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 ul.d(var10 + param0, var8, var11 - var10, var9);
                 var8++;
                 var7++;

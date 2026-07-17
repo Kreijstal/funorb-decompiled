@@ -14,86 +14,36 @@ final class ro {
         if (param5 != -386) {
             return;
         }
-        qi.field_G = param3;
+        try {
+            qi.field_G = param3;
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "ro.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     public static void b(byte param0) {
         field_a = null;
-        if (param0 > -26) {
-            Object var2 = null;
-            ro.a(66, -67, (mf) null, (mf) null, -121, 83);
-        }
     }
 
     final static vn[] a(byte param0) {
-        vn[] var1 = null;
         int var2 = 0;
         int var3 = 0;
+        byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
-        int var7 = 0;
-        int[] var9 = null;
-        int[] var11 = null;
-        byte[] var12 = null;
-        int[] var13 = null;
-        byte[] var14 = null;
-        int[] var15 = null;
-        var7 = ZombieDawn.field_J;
-        var1 = new vn[t.field_h];
-        if (param0 != 110) {
-          field_a = null;
-          var2 = 0;
-          L0: while (true) {
-            if (t.field_h <= var2) {
-              no.f((byte) -111);
-              return var1;
-            } else {
-              var3 = uf.field_n[var2] * bn.field_c[var2];
-              var12 = vj.field_m[var2];
-              var13 = new int[var3];
-              var9 = var13;
-              var5 = var9;
-              var6 = 0;
-              L1: while (true) {
-                if (var3 <= var6) {
-                  var1[var2] = new vn(gl.field_F, kd.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var13);
-                  var2++;
-                  continue L0;
-                } else {
-                  var5[var6] = j.field_a[eg.a((int) var12[var6], 255)];
-                  var6++;
-                  continue L1;
-                }
-              }
+        int var7 = ZombieDawn.field_J;
+        vn[] var1 = new vn[t.field_h];
+        for (var2 = 0; t.field_h > var2; var2++) {
+            var3 = uf.field_n[var2] * bn.field_c[var2];
+            var4 = vj.field_m[var2];
+            var5 = new int[var3];
+            for (var6 = 0; var3 > var6; var6++) {
+                var5[var6] = j.field_a[eg.a((int) var4[var6], 255)];
             }
-          }
-        } else {
-          var2 = 0;
-          L2: while (true) {
-            if (t.field_h <= var2) {
-              no.f((byte) -111);
-              return var1;
-            } else {
-              var3 = uf.field_n[var2] * bn.field_c[var2];
-              var14 = vj.field_m[var2];
-              var15 = new int[var3];
-              var11 = var15;
-              var5 = var11;
-              var6 = 0;
-              L3: while (true) {
-                if (var3 <= var6) {
-                  var1[var2] = new vn(gl.field_F, kd.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var15);
-                  var2++;
-                  continue L2;
-                } else {
-                  var5[var6] = j.field_a[eg.a((int) var14[var6], 255)];
-                  var6++;
-                  continue L3;
-                }
-              }
-            }
-          }
+            var1[var2] = new vn(gl.field_F, kd.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var5);
         }
+        no.f((byte) -111);
+        return var1;
     }
 
     static {

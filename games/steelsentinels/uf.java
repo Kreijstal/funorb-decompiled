@@ -17,28 +17,99 @@ final class uf {
         field_f = null;
         field_g = null;
         field_a = null;
-        if (param0 != 24) {
-            field_b = null;
-        }
     }
 
     final static int a(int param0, int[] param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
-        int var4 = SteelSentinels.field_G;
-        int var2 = 0;
-        if (param0 < 54) {
-            field_b = null;
+        int var4 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var4 = SteelSentinels.field_G;
+        try {
+          L0: {
+            L1: {
+              var2_int = 0;
+              if (param0 >= 54) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
+              }
+            }
+            var3 = 0;
+            L2: while (true) {
+              if (var3 >= param1.length) {
+                stackOut_6_0 = var2_int;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var2_int = var2_int + mm.a((byte) 124, param1[var3]);
+                var3++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_1 = new StringBuilder().append("uf.A(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        for (var3 = 0; var3 < param1.length; var3++) {
-            var2 = var2 + mm.a((byte) 124, param1[var3]);
-        }
-        return var2;
+        return stackIn_7_0;
     }
 
     uf(String param0, gh param1) {
-        String[] var3 = new String[]{param0, ad.field_a, cf.field_A};
-        gh[] var4 = new gh[]{param1, ig.field_m, (gh) (Object) vi.field_W};
-        ((uf) this).field_d = new mj(0L, ka.field_U, var3, be.field_c, var4, 0);
+        String[] var3 = null;
+        gh[] var4 = null;
+        try {
+            var3 = new String[]{param0, ad.field_a, cf.field_A};
+            var4 = new gh[]{param1, ig.field_m, (gh) (Object) vi.field_W};
+            ((uf) this).field_d = new mj(0L, ka.field_U, var3, be.field_c, var4, 0);
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "uf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {

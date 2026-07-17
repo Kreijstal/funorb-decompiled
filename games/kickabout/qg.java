@@ -12,14 +12,18 @@ final class qg extends gn {
     int field_i;
 
     final void a(byte param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7) {
-        ((qg) this).field_j = param5;
-        ((qg) this).field_h = param3;
-        int var9 = -116 % ((param0 - -20) / 50);
-        ((qg) this).field_l = param1;
-        ((qg) this).field_f = param6;
-        ((qg) this).field_g = param4;
-        ((qg) this).field_e = param2;
-        ((qg) this).field_i = param7;
+        try {
+            ((qg) this).field_j = param5;
+            ((qg) this).field_h = param3;
+            int var9_int = -116 % ((param0 - -20) / 50);
+            ((qg) this).field_l = param1;
+            ((qg) this).field_f = param6;
+            ((qg) this).field_g = param4;
+            ((qg) this).field_e = param2;
+            ((qg) this).field_i = param7;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "qg.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+        }
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
@@ -74,8 +78,8 @@ final class qg extends gn {
           }
           L2: {
             var8 = stackIn_36_0;
-            var9 = (param3 >> 342846288) - var12_ref.a(true);
-            var10 = (param1 >> 845550992) + -var12_ref.c(879306160);
+            var9 = (param3 >> 16) - var12_ref.a(true);
+            var10 = (param1 >> 16) + -var12_ref.c(879306160);
             if (param0 == 2235) {
               break L2;
             } else {
@@ -88,8 +92,8 @@ final class qg extends gn {
             L3: {
               L4: {
                 L5: {
-                  var6 = var6 + (param2 * var10 << -1415138256) / var11;
-                  var5 = var5 + (param2 * var9 << 1362325424) / var11;
+                  var6 = var6 + (param2 * var10 << 16) / var11;
+                  var5 = var5 + (param2 * var9 << 16) / var11;
                   if (var8 == 0) {
                     break L5;
                   } else {
@@ -174,8 +178,8 @@ final class qg extends gn {
             }
             L9: {
               var8 = stackIn_9_0;
-              var9 = (param3 >> 342846288) - var12_ref.a(true);
-              var10 = (param1 >> 845550992) + -var12_ref.c(879306160);
+              var9 = (param3 >> 16) - var12_ref.a(true);
+              var10 = (param1 >> 16) + -var12_ref.c(879306160);
               if (param0 == 2235) {
                 break L9;
               } else {
@@ -188,8 +192,8 @@ final class qg extends gn {
               L10: {
                 L11: {
                   L12: {
-                    var6 = var6 + (param2 * var10 << -1415138256) / var11;
-                    var5 = var5 + (param2 * var9 << 1362325424) / var11;
+                    var6 = var6 + (param2 * var10 << 16) / var11;
+                    var5 = var5 + (param2 * var9 << 16) / var11;
                     if (var8 == 0) {
                       break L12;
                     } else {
@@ -256,32 +260,26 @@ final class qg extends gn {
 
     final static void a(int param0) {
         am var1 = null;
-        int var2 = 0;
-        var2 = Kickabout.field_G;
-        ou.field_y = 0;
-        bc.field_d = 0;
-        bh.field_h = null;
-        ne.field_I.b(22997);
-        qn.field_b.b(22997);
-        var1 = kw.field_b.b((byte) 72);
-        L0: while (true) {
-          if (var1 == null) {
-            var1 = ni.field_m.b((byte) 72);
-            L1: while (true) {
-              if (var1 == null) {
-                ts.field_d = param0;
-                return;
-              } else {
-                var1.f(param0 + -106);
-                var1 = ni.field_m.a(0);
-                continue L1;
-              }
+        int var2 = Kickabout.field_G;
+        try {
+            ou.field_y = 0;
+            bc.field_d = 0;
+            bh.field_h = null;
+            ne.field_I.b(22997);
+            qn.field_b.b(22997);
+            var1 = kw.field_b.b((byte) 72);
+            while (var1 != null) {
+                var1.f(-104);
+                var1 = kw.field_b.a(0);
             }
-          } else {
-            var1.f(-104);
-            var1 = kw.field_b.a(0);
-            continue L0;
-          }
+            var1 = ni.field_m.b((byte) 72);
+            while (var1 != null) {
+                var1.f(-106);
+                var1 = ni.field_m.a(0);
+            }
+            ts.field_d = 0;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "qg.A(" + 0 + 41);
         }
     }
 

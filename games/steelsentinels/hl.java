@@ -34,22 +34,13 @@ final class hl extends ck {
 
     public static void e(int param0) {
         field_r = null;
-        if (param0 != 0) {
-          field_o = 50;
-          field_p = null;
-          field_v = null;
-          field_u = null;
-          return;
-        } else {
-          field_p = null;
-          field_v = null;
-          field_u = null;
-          return;
-        }
+        field_p = null;
+        field_v = null;
+        field_u = null;
     }
 
     final static gh a(byte param0) {
-        if (-1 <= (fj.field_f ^ -1)) {
+        if (fj.field_f <= 0) {
           if (bd.field_c <= 0) {
             if (param0 == -66) {
               return null;

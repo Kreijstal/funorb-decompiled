@@ -88,7 +88,7 @@ abstract class ma extends ce implements ra {
         try {
           L0: {
             L1: {
-              if (-1 != (param2 ^ -1)) {
+              if (param2 != 0) {
                 break L1;
               } else {
                 if (((ma) this).field_p != null) {
@@ -737,7 +737,7 @@ abstract class ma extends ce implements ra {
                 var3_int = ((nm) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4 != 0, 2, param1) ? 1 : 0;
                 var4 = k.field_b.field_Sb.field_M;
                 var5 = null;
-                if (-3 == (jj.field_b ^ -1)) {
+                if (jj.field_b == 2) {
                   break L4;
                 } else {
                   L5: {
@@ -1033,7 +1033,7 @@ abstract class ma extends ce implements ra {
                     break L27;
                   }
                 }
-                if ((k.field_b.field_Nb.field_ob ^ -1) != -1) {
+                if (k.field_b.field_Nb.field_ob != 0) {
                   vh.field_h = new hb(k.field_b.field_Nb.field_E, k.field_b.field_Nb.field_pb, k.field_b.field_Nb.field_mb, k.field_b.field_Nb.field_N, fj.field_b, ah.field_h, ua.field_H, ua.field_H);
                   of.field_d = 1;
                   break L3;
@@ -1212,7 +1212,7 @@ abstract class ma extends ce implements ra {
               }
             }
             var5_int = param1;
-            if (-81 == (var5_int ^ -1)) {
+            if (var5_int == 80) {
               L2: {
                 if (bj.field_d[81]) {
                   stackOut_15_0 = this.a(param2, (byte) -112);
@@ -1845,7 +1845,7 @@ abstract class ma extends ce implements ra {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              if ((param0 ^ -1) < -1) {
+              if (param0 > 0) {
                 L1: {
                   var2_int = 1;
                   if (param0 > 65535) {
@@ -1857,7 +1857,7 @@ abstract class ma extends ce implements ra {
                   }
                 }
                 L2: {
-                  if (-256 > (param0 ^ -1)) {
+                  if (param0 > 255) {
                     param0 = param0 >> 8;
                     var2_int += 8;
                     break L2;
@@ -1866,7 +1866,7 @@ abstract class ma extends ce implements ra {
                   }
                 }
                 L3: {
-                  if (-16 > (param0 ^ -1)) {
+                  if (param0 > 15) {
                     param0 = param0 >> 4;
                     var2_int += 4;
                     break L3;
@@ -1875,7 +1875,7 @@ abstract class ma extends ce implements ra {
                   }
                 }
                 L4: {
-                  if ((param0 ^ -1) < -4) {
+                  if (param0 > 3) {
                     var2_int += 2;
                     param0 = param0 >> 2;
                     break L4;
@@ -1899,7 +1899,7 @@ abstract class ma extends ce implements ra {
                 if (param1 >= 46) {
                   L6: {
                     var2_int = 2;
-                    if (65535 >= (param0 ^ -1)) {
+                    if (param0 >= -65536) {
                       break L6;
                     } else {
                       param0 = param0 >> 16;
@@ -1917,7 +1917,7 @@ abstract class ma extends ce implements ra {
                     }
                   }
                   L8: {
-                    if (15 >= (param0 ^ -1)) {
+                    if (param0 >= -16) {
                       break L8;
                     } else {
                       var2_int += 4;
@@ -1926,7 +1926,7 @@ abstract class ma extends ce implements ra {
                     }
                   }
                   L9: {
-                    if ((param0 ^ -1) > 3) {
+                    if (param0 < -4) {
                       var2_int += 2;
                       param0 = param0 >> 2;
                       break L9;
@@ -1935,7 +1935,7 @@ abstract class ma extends ce implements ra {
                     }
                   }
                   L10: {
-                    if (1 >= (param0 ^ -1)) {
+                    if (param0 >= -2) {
                       break L10;
                     } else {
                       param0 = param0 >> 1;

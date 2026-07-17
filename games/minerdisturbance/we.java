@@ -1345,9 +1345,9 @@ abstract class we extends al {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        if (param0.a(param1) > param2) {
+        if (param0.a(param1) > 170) {
           var3 = param0.a("...");
-          var4 = param2 - var3;
+          var4 = 170 - var3;
           var5 = 0;
           var6 = 0;
           L0: while (true) {

@@ -5,23 +5,28 @@ final class ml {
     static ee field_a;
 
     final static void a(lu param0, int param1) {
-        gk.field_b = param0.e((byte) 93) << 1678217189;
-        int var2 = param0.b(param1 + 14647551);
-        fe.field_k = var2 << 1157448146 & 1835008;
-        gk.field_b = gk.field_b + (var2 >> -402321309);
-        fe.field_k = fe.field_k + (param0.e((byte) 117) << -773668830);
-        var2 = param0.b(param1 + 14647551);
-        al.field_a = var2 << 1932485007 & param1;
-        fe.field_k = fe.field_k + (var2 >> -130697146);
-        al.field_a = al.field_a + (param0.b(param1 + 14647551) << 1920555303);
-        var2 = param0.b(16711935);
-        al.field_a = al.field_a + (var2 >> 691042625);
-        kka.field_g = var2 << 1006721904 & 65536;
-        kka.field_g = kka.field_g + param0.e((byte) 65);
+        int var2_int = 0;
+        try {
+            gk.field_b = param0.e((byte) 93) << 5;
+            var2_int = param0.b(16711935);
+            fe.field_k = var2_int << 18 & 1835008;
+            gk.field_b = gk.field_b + (var2_int >> 3);
+            fe.field_k = fe.field_k + (param0.e((byte) 117) << 2);
+            var2_int = param0.b(16711935);
+            al.field_a = var2_int << 15 & 2064384;
+            fe.field_k = fe.field_k + (var2_int >> 6);
+            al.field_a = al.field_a + (param0.b(16711935) << 7);
+            var2_int = param0.b(16711935);
+            al.field_a = al.field_a + (var2_int >> 1);
+            kka.field_g = var2_int << 16 & 65536;
+            kka.field_g = kka.field_g + param0.e((byte) 65);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ml.B(" + (param0 != null ? "{...}" : "null") + 44 + 2064384 + 41);
+        }
     }
 
     public static void a(byte param0) {
-        int var1 = -26 / ((-12 - param0) / 42);
+        int var1 = 26;
         field_a = null;
     }
 

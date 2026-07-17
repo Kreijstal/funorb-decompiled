@@ -18,14 +18,14 @@ final class bib extends uda {
     }
 
     final void a(byte param0, int param1, ura param2) {
-        ((bib) this).field_d.a(param2, -123);
-        if (param0 <= 42) {
-          field_g = null;
-          ((bib) this).field_d.h(54, param1);
-          return;
-        } else {
-          ((bib) this).field_d.h(54, param1);
-          return;
+        try {
+            ((bib) this).field_d.a(param2, -123);
+            if (param0 <= 42) {
+                field_g = null;
+            }
+            ((bib) this).field_d.h(54, param1);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "bib.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

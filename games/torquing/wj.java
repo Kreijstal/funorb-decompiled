@@ -9,24 +9,11 @@ final class wj extends e {
     static sm field_k;
 
     final static void a(int param0) {
-        if (param0 >= 26) {
-          if ((on.field_c ^ -1) <= -141) {
+        if (on.field_c >= 140) {
             bd.a(false, 160);
             return;
-          } else {
-            bd.a(false, 20 + on.field_c);
-            return;
-          }
-        } else {
-          field_j = null;
-          if ((on.field_c ^ -1) <= -141) {
-            bd.a(false, 160);
-            return;
-          } else {
-            bd.a(false, 20 + on.field_c);
-            return;
-          }
         }
+        bd.a(false, 20 + on.field_c);
     }
 
     public static void c(boolean param0) {

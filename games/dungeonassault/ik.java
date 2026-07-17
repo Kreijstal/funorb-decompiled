@@ -13,7 +13,11 @@ final class ik {
         if (param1 < 10) {
             return;
         }
-        fm.field_a = dg.field_H;
+        try {
+            fm.field_a = dg.field_H;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "ik.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     public static void a(int param0) {
@@ -39,7 +43,11 @@ final class ik {
         if (param1 > -85) {
             return;
         }
-        uo.a(256, -1 + param2.length, param2, param0, 0);
+        try {
+            uo.a(256, -1 + param2.length, param2, param0, 0);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "ik.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

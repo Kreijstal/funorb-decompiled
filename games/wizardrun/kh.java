@@ -9,19 +9,18 @@ final class kh extends dj {
     static long field_g;
 
     final void a(byte[] param0, int param1) {
-        ((kh) this).field_i = java.nio.ByteBuffer.allocateDirect(param0.length);
-        java.nio.Buffer discarded$0 = ((kh) this).field_i.position(0);
-        int var3 = -117 % ((param1 - 75) / 38);
-        java.nio.ByteBuffer discarded$1 = ((kh) this).field_i.put(param0);
+        try {
+            ((kh) this).field_i = java.nio.ByteBuffer.allocateDirect(param0.length);
+            java.nio.Buffer discarded$0 = ((kh) this).field_i.position(0);
+            int var3_int = -117 % ((param1 - 75) / 38);
+            java.nio.ByteBuffer discarded$1 = ((kh) this).field_i.put(param0);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "kh.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void c(int param0) {
         field_j = null;
-        if (param0 != 0) {
-            field_j = null;
-            field_f = null;
-            return;
-        }
         field_f = null;
     }
 

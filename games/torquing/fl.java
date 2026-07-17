@@ -17,15 +17,7 @@ final class fl {
     }
 
     private final void a(java.awt.Frame param0, boolean param1) {
-        L0: {
-          ((fl) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
-          if (param1) {
-            break L0;
-          } else {
-            int[] discarded$2 = ((fl) this).listmodes();
-            break L0;
-          }
-        }
+        ((fl) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
@@ -139,12 +131,12 @@ final class fl {
         int var3 = 0;
         java.awt.DisplayMode[] var4 = ((fl) this).field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << -193647230];
+        int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << -1878182142] = var4[var3].getWidth();
-            var2[(var3 << 376201890) - -1] = var4[var3].getHeight();
-            var2[2 + (var3 << 173588866)] = var4[var3].getBitDepth();
-            var2[3 + (var3 << 1043766498)] = var4[var3].getRefreshRate();
+            var2[var3 << 2] = var4[var3].getWidth();
+            var2[(var3 << 2) - -1] = var4[var3].getHeight();
+            var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
+            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
         }
         return var2;
     }

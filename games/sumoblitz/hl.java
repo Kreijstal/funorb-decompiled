@@ -34,31 +34,89 @@ final class hl implements Iterable {
 
     private final pj a(pj param0, int param1) {
         pj var3 = null;
-        if (param1 != -1) {
-            hl.a(-51);
-            if (param0 != null) {
-                var3 = param0;
-            } else {
+        RuntimeException var3_ref = null;
+        Object stackIn_8_0 = null;
+        pj stackIn_10_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_7_0 = null;
+        pj stackOut_9_0 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == -1) {
+                break L1;
+              } else {
+                hl.a(-51);
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 == null) {
                 var3 = ((hl) this).field_c.field_m;
+                break L2;
+              } else {
+                var3 = param0;
+                break L2;
+              }
             }
-            if (!(var3 != ((hl) this).field_c)) {
-                ((hl) this).field_a = null;
-                return null;
+            if (var3 == ((hl) this).field_c) {
+              ((hl) this).field_a = null;
+              stackOut_7_0 = null;
+              stackIn_8_0 = stackOut_7_0;
+              return (pj) (Object) stackIn_8_0;
+            } else {
+              ((hl) this).field_a = var3.field_m;
+              stackOut_9_0 = (pj) var3;
+              stackIn_10_0 = stackOut_9_0;
+              break L0;
             }
-            ((hl) this).field_a = var3.field_m;
-            return var3;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3_ref = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var3_ref;
+            stackOut_11_1 = new StringBuilder().append("hl.A(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
         }
-        if (param0 != null) {
-            var3 = param0;
-        } else {
-            var3 = ((hl) this).field_c.field_m;
-        }
-        if (!(var3 != ((hl) this).field_c)) {
-            ((hl) this).field_a = null;
-            return null;
-        }
-        ((hl) this).field_a = var3.field_m;
-        return var3;
+        return stackIn_10_0;
     }
 
     public final Iterator iterator() {
@@ -76,7 +134,7 @@ final class hl implements Iterable {
         if (param0 != -1) {
             return null;
         }
-        return this.a((pj) null, param0 + 0);
+        return this.a((pj) null, param0);
     }
 
     final pj a(byte param0) {
@@ -102,22 +160,19 @@ final class hl implements Iterable {
     }
 
     final void a(pj param0, byte param1) {
-        L0: {
-          if (param0.field_o != null) {
+        if (!(param0.field_o == null)) {
             param0.c(-5106);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         param0.field_m = ((hl) this).field_c;
         param0.field_o = ((hl) this).field_c.field_o;
         if (param1 >= -103) {
-          return;
-        } else {
-          param0.field_o.field_m = param0;
-          param0.field_m.field_o = param0;
-          return;
+            return;
+        }
+        try {
+            param0.field_o.field_m = param0;
+            param0.field_m.field_o = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "hl.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

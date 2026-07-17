@@ -27,122 +27,141 @@ final class pc implements Runnable {
             Exception var1_ref = null;
             int var1_int = 0;
             int var2 = 0;
-            Object var3 = null;
-            IOException var3_ref = null;
+            IOException var3 = null;
+            Object var3_ref = null;
+            InterruptedException var4 = null;
+            Throwable var5 = null;
             int var6 = 0;
             Object var7 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = Bounce.field_N;
             try {
               L0: {
                 L1: while (true) {
-                  L2: {
-                    var3 = this;
-                    if (((pc) this).field_a == ((pc) this).field_h) {
-                      if (((pc) this).field_l) {
-                        try {
-                          L3: {
-                            L4: {
-                              if (((pc) this).field_m == null) {
+                  var3_ref = this;
+                  synchronized (var3_ref) {
+                    L2: {
+                      L3: {
+                        if (((pc) this).field_a == ((pc) this).field_h) {
+                          if (((pc) this).field_l) {
+                            decompiledRegionSelector0 = 0;
+                            break L2;
+                          } else {
+                            {
+                              L4: {
+                                this.wait();
                                 break L4;
-                              } else {
-                                ((pc) this).field_m.close();
-                                break L4;
-                              }
-                            }
-                            L5: {
-                              if (null != ((pc) this).field_k) {
-                                ((pc) this).field_k.close();
-                                break L5;
-                              } else {
-                                break L5;
-                              }
-                            }
-                            L6: {
-                              if (null != ((pc) this).field_n) {
-                                ((pc) this).field_n.close();
-                                break L6;
-                              } else {
-                                break L6;
                               }
                             }
                             break L3;
                           }
-                        } catch (java.io.IOException decompiledCaughtParameter0) {
-                          decompiledCaughtException = decompiledCaughtParameter0;
-                          L7: {
-                            var1 = (IOException) (Object) decompiledCaughtException;
-                            break L7;
-                          }
+                        } else {
+                          break L3;
                         }
-                        ((pc) this).field_d = null;
-                        break L0;
-                      } else {
-                        this.wait();
-                        break L2;
                       }
-                    } else {
+                      L6: {
+                        if (((pc) this).field_a <= ((pc) this).field_h) {
+                          var1_int = ((pc) this).field_h + -((pc) this).field_a;
+                          break L6;
+                        } else {
+                          var1_int = -((pc) this).field_a + ((pc) this).field_g;
+                          break L6;
+                        }
+                      }
+                      var2 = ((pc) this).field_a;
+                      decompiledRegionSelector0 = 1;
                       break L2;
                     }
                   }
-                  L8: {
-                    if (((pc) this).field_a <= ((pc) this).field_h) {
-                      var1_int = ((pc) this).field_h + -((pc) this).field_a;
-                      break L8;
-                    } else {
-                      var1_int = -((pc) this).field_a + ((pc) this).field_g;
-                      break L8;
-                    }
-                  }
-                  var2 = ((pc) this).field_a;
-                  if (-1 > (var1_int ^ -1)) {
+                  if (decompiledRegionSelector0 == 0) {
                     try {
-                      L9: {
-                        ((pc) this).field_k.write(((pc) this).field_d, var2, var1_int);
-                        break L9;
-                      }
-                    } catch (java.lang.Exception decompiledCaughtParameter1) {
-                      decompiledCaughtException = decompiledCaughtParameter1;
-                      L10: {
-                        var3_ref = (IOException) (Object) decompiledCaughtException;
-                        ((pc) this).field_b = true;
-                        break L10;
-                      }
-                    }
-                    ((pc) this).field_a = (var1_int + ((pc) this).field_a) % ((pc) this).field_g;
-                    try {
-                      L11: {
-                        L12: {
-                          if (((pc) this).field_a != ((pc) this).field_h) {
-                            break L12;
+                      L7: {
+                        L8: {
+                          if (((pc) this).field_m == null) {
+                            break L8;
                           } else {
-                            ((pc) this).field_k.flush();
-                            break L12;
+                            ((pc) this).field_m.close();
+                            break L8;
                           }
                         }
+                        L9: {
+                          if (null != ((pc) this).field_k) {
+                            ((pc) this).field_k.close();
+                            break L9;
+                          } else {
+                            break L9;
+                          }
+                        }
+                        L10: {
+                          if (null != ((pc) this).field_n) {
+                            ((pc) this).field_n.close();
+                            break L10;
+                          } else {
+                            break L10;
+                          }
+                        }
+                        break L7;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter1) {
+                      decompiledCaughtException = decompiledCaughtParameter1;
+                      L11: {
+                        var1 = (IOException) (Object) decompiledCaughtException;
                         break L11;
                       }
-                    } catch (java.lang.Exception decompiledCaughtParameter2) {
-                      decompiledCaughtException = decompiledCaughtParameter2;
-                      L13: {
-                        var3_ref = (IOException) (Object) decompiledCaughtException;
-                        ((pc) this).field_b = true;
-                        break L13;
-                      }
                     }
-                    continue L1;
+                    ((pc) this).field_d = null;
+                    break L0;
                   } else {
-                    continue L1;
+                    if (var1_int > 0) {
+                      try {
+                        L12: {
+                          ((pc) this).field_k.write(((pc) this).field_d, var2, var1_int);
+                          break L12;
+                        }
+                      } catch (java.lang.Exception decompiledCaughtParameter2) {
+                        decompiledCaughtException = decompiledCaughtParameter2;
+                        L13: {
+                          var3 = (IOException) (Object) decompiledCaughtException;
+                          ((pc) this).field_b = true;
+                          break L13;
+                        }
+                      }
+                      ((pc) this).field_a = (var1_int + ((pc) this).field_a) % ((pc) this).field_g;
+                      try {
+                        L14: {
+                          L15: {
+                            if (((pc) this).field_a != ((pc) this).field_h) {
+                              break L15;
+                            } else {
+                              ((pc) this).field_k.flush();
+                              break L15;
+                            }
+                          }
+                          break L14;
+                        }
+                      } catch (java.lang.Exception decompiledCaughtParameter3) {
+                        decompiledCaughtException = decompiledCaughtParameter3;
+                        L16: {
+                          var3 = (IOException) (Object) decompiledCaughtException;
+                          ((pc) this).field_b = true;
+                          break L16;
+                        }
+                      }
+                      continue L1;
+                    } else {
+                      continue L1;
+                    }
                   }
                 }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter3) {
-              decompiledCaughtException = decompiledCaughtParameter3;
-              L14: {
+            } catch (java.lang.Exception decompiledCaughtParameter4) {
+              decompiledCaughtException = decompiledCaughtParameter4;
+              L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
                 var7 = null;
                 ti.a((Throwable) (Object) var1_ref, (byte) 100, (String) null);
-                break L14;
+                break L17;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -154,76 +173,184 @@ final class pc implements Runnable {
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
         Object var5 = null;
+        RuntimeException var5_ref = null;
         int var6 = 0;
         Throwable var7 = null;
         int var8 = 0;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
         Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var8 = Bounce.field_N;
-        if (!((pc) this).field_l) {
-          if (!((pc) this).field_b) {
-            L0: {
-              if (((pc) this).field_d == null) {
-                ((pc) this).field_d = new byte[((pc) this).field_g];
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            var5 = this;
-            synchronized (var5) {
-              L1: {
-                var6 = param3;
-                L2: while (true) {
-                  if (var6 >= param0) {
-                    L3: {
-                      if (null != ((pc) this).field_f) {
-                        break L3;
-                      } else {
-                        ((pc) this).field_f = ((pc) this).field_e.a(3, (byte) -113, (Runnable) this);
-                        break L3;
-                      }
-                    }
-                    this.notifyAll();
+        try {
+          L0: {
+            if (!((pc) this).field_l) {
+              if (!((pc) this).field_b) {
+                L1: {
+                  if (((pc) this).field_d == null) {
+                    ((pc) this).field_d = new byte[((pc) this).field_g];
                     break L1;
                   } else {
-                    ((pc) this).field_d[((pc) this).field_h] = param1[var6 + param2];
-                    ((pc) this).field_h = (1 + ((pc) this).field_h) % ((pc) this).field_g;
-                    if (((pc) this).field_h != (-100 + (((pc) this).field_g + ((pc) this).field_a)) % ((pc) this).field_g) {
-                      var6++;
-                      continue L2;
-                    } else {
-                      throw new IOException();
+                    break L1;
+                  }
+                }
+                var5 = this;
+                synchronized (var5) {
+                  L2: {
+                    var6 = param3;
+                    L3: while (true) {
+                      if (var6 >= param0) {
+                        L4: {
+                          if (null != ((pc) this).field_f) {
+                            break L4;
+                          } else {
+                            ((pc) this).field_f = ((pc) this).field_e.a(3, (byte) -113, (Runnable) this);
+                            break L4;
+                          }
+                        }
+                        this.notifyAll();
+                        break L2;
+                      } else {
+                        ((pc) this).field_d[((pc) this).field_h] = param1[var6 + param2];
+                        ((pc) this).field_h = (1 + ((pc) this).field_h) % ((pc) this).field_g;
+                        if (((pc) this).field_h != (-100 + (((pc) this).field_g + ((pc) this).field_a)) % ((pc) this).field_g) {
+                          var6++;
+                          continue L3;
+                        } else {
+                          throw new IOException();
+                        }
+                      }
                     }
                   }
                 }
+                break L0;
+              } else {
+                ((pc) this).field_b = false;
+                throw new IOException();
               }
+            } else {
+              return;
             }
-            return;
-          } else {
-            ((pc) this).field_b = false;
-            throw new IOException();
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var5_ref;
+            stackOut_21_1 = new StringBuilder().append("pc.I(").append(param0).append(44);
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param1 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L5;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L5;
+            }
+          }
+          throw ii.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
     final void a(byte[] param0, boolean param1, int param2, int param3) throws IOException {
-        int var5 = 0;
-        int var6 = Bounce.field_N;
-        if (!(!((pc) this).field_l)) {
-            return;
-        }
-        if (!param1) {
-            return;
-        }
-        while ((param2 ^ -1) < -1) {
-            var5 = ((pc) this).field_m.read(param0, param3, param2);
-            if (!((var5 ^ -1) < -1)) {
-                throw new EOFException();
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        var6 = Bounce.field_N;
+        try {
+          L0: {
+            if (((pc) this).field_l) {
+              return;
+            } else {
+              if (param1) {
+                L1: while (true) {
+                  if (param2 <= 0) {
+                    break L0;
+                  } else {
+                    var5_int = ((pc) this).field_m.read(param0, param3, param2);
+                    if (var5_int <= 0) {
+                      throw new EOFException();
+                    } else {
+                      param3 = param3 + var5_int;
+                      param2 = param2 - var5_int;
+                      continue L1;
+                    }
+                  }
+                }
+              } else {
+                return;
+              }
             }
-            param3 = param3 + var5;
-            param2 = param2 - var5;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_1 = new StringBuilder().append("pc.H(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L2;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L2;
+            }
+          }
+          throw ii.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -238,7 +365,8 @@ final class pc implements Runnable {
     }
 
     final static boolean a(int param0, boolean param1, CharSequence param2, int param3) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -246,116 +374,176 @@ final class pc implements Runnable {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        L0: {
-          var11 = Bounce.field_N;
-          if (param3 < 2) {
-            break L0;
-          } else {
-            if (-37 <= (param3 ^ -1)) {
-              var4 = 0;
-              var5 = 0;
-              if (param0 == 8272) {
-                var6 = 0;
-                var7 = param2.length();
-                var8 = 0;
-                L1: while (true) {
-                  if (var7 <= var8) {
-                    return var5 != 0;
-                  } else {
-                    L2: {
+        int stackIn_5_0 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackIn_40_0 = 0;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_44_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_39_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_35_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
+        String stackOut_43_2 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        String stackOut_42_2 = null;
+        var11 = Bounce.field_N;
+        try {
+          L0: {
+            var4_int = 0;
+            var5 = 0;
+            if (param0 == 8272) {
+              var6 = 0;
+              var7 = param2.length();
+              var8 = 0;
+              L1: while (true) {
+                if (var7 <= var8) {
+                  stackOut_39_0 = var5;
+                  stackIn_40_0 = stackOut_39_0;
+                  break L0;
+                } else {
+                  L2: {
+                    L3: {
                       var9 = param2.charAt(var8);
-                      if (-1 == (var8 ^ -1)) {
+                      if (var8 == 0) {
                         if (var9 == 45) {
-                          var4 = 1;
-                          var8++;
-                          continue L1;
+                          var4_int = 1;
+                          break L2;
                         } else {
                           if (43 != var9) {
-                            break L2;
+                            break L3;
                           } else {
                             if (!param1) {
-                              break L2;
+                              break L3;
                             } else {
-                              var8++;
-                              continue L1;
+                              break L2;
                             }
                           }
                         }
                       } else {
-                        break L2;
+                        break L3;
                       }
                     }
-                    L3: {
-                      L4: {
+                    L4: {
+                      L5: {
                         if (var9 < 48) {
-                          break L4;
+                          break L5;
                         } else {
                           if (57 >= var9) {
                             var9 -= 48;
-                            break L3;
-                          } else {
                             break L4;
-                          }
-                        }
-                      }
-                      L5: {
-                        if (65 > var9) {
-                          break L5;
-                        } else {
-                          if (90 < var9) {
-                            break L5;
                           } else {
-                            var9 -= 55;
-                            break L3;
+                            break L5;
                           }
                         }
                       }
                       L6: {
-                        if (var9 < 97) {
+                        if (65 > var9) {
                           break L6;
                         } else {
-                          if (var9 > 122) {
+                          if (90 < var9) {
                             break L6;
                           } else {
-                            var9 -= 87;
-                            break L3;
+                            var9 -= 55;
+                            break L4;
                           }
                         }
                       }
-                      return false;
-                    }
-                    if (var9 < param3) {
                       L7: {
-                        if (var4 == 0) {
+                        if (var9 < 97) {
                           break L7;
                         } else {
-                          var9 = -var9;
-                          break L7;
+                          if (var9 > 122) {
+                            break L7;
+                          } else {
+                            var9 -= 87;
+                            break L4;
+                          }
                         }
                       }
-                      var10 = var9 + var6 * param3;
-                      if (var6 != var10 / param3) {
-                        return false;
+                      stackOut_25_0 = 0;
+                      stackIn_26_0 = stackOut_25_0;
+                      return stackIn_26_0 != 0;
+                    }
+                    if (var9 < 10) {
+                      L8: {
+                        if (var4_int == 0) {
+                          break L8;
+                        } else {
+                          var9 = -var9;
+                          break L8;
+                        }
+                      }
+                      var10 = var9 + var6 * 10;
+                      if (var6 != var10 / 10) {
+                        stackOut_35_0 = 0;
+                        stackIn_36_0 = stackOut_35_0;
+                        return stackIn_36_0 != 0;
                       } else {
                         var5 = 1;
                         var6 = var10;
-                        var8++;
-                        continue L1;
+                        break L2;
                       }
                     } else {
-                      return false;
+                      stackOut_29_0 = 0;
+                      stackIn_30_0 = stackOut_29_0;
+                      return stackIn_30_0 != 0;
                     }
                   }
+                  var8++;
+                  continue L1;
                 }
-              } else {
-                return true;
               }
             } else {
-              break L0;
+              stackOut_4_0 = 1;
+              stackIn_5_0 = stackOut_4_0;
+              return stackIn_5_0 != 0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var4 = decompiledCaughtException;
+            stackOut_41_0 = (RuntimeException) var4;
+            stackOut_41_1 = new StringBuilder().append("pc.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_43_0 = stackOut_41_0;
+            stackIn_43_1 = stackOut_41_1;
+            stackIn_42_0 = stackOut_41_0;
+            stackIn_42_1 = stackOut_41_1;
+            if (param2 == null) {
+              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_2 = "null";
+              stackIn_44_0 = stackOut_43_0;
+              stackIn_44_1 = stackOut_43_1;
+              stackIn_44_2 = stackOut_43_2;
+              break L9;
+            } else {
+              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
+              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_2 = "{...}";
+              stackIn_44_0 = stackOut_42_0;
+              stackIn_44_1 = stackOut_42_1;
+              stackIn_44_2 = stackOut_42_2;
+              break L9;
+            }
+          }
+          throw ii.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + 10 + 41);
         }
-        throw new IllegalArgumentException("" + param3);
+        return stackIn_40_0 != 0;
     }
 
     final void a(byte param0) {
@@ -425,11 +613,11 @@ final class pc implements Runnable {
         var8 = Bounce.field_N;
         if (oa.field_a >= 0) {
           L0: {
-            var3 = param2 - 135;
+            var3 = 185;
             var4 = -35 + param0;
             var5 = 256;
-            if (-76 < (oa.field_a ^ -1)) {
-              var5 = (oa.field_a << 943877992) / 75;
+            if (oa.field_a < 75) {
+              var5 = (oa.field_a << 8) / 75;
               break L0;
             } else {
               break L0;
@@ -437,7 +625,7 @@ final class pc implements Runnable {
           }
           L1: {
             if (200 < oa.field_a) {
-              var5 = (-oa.field_a + 250 << 107660840) / 50;
+              var5 = (-oa.field_a + 250 << 8) / 50;
               break L1;
             } else {
               break L1;
@@ -457,7 +645,7 @@ final class pc implements Runnable {
           }
           L3: {
             ve.a(-121);
-            if ((oa.field_a ^ -1) > -151) {
+            if (oa.field_a < 150) {
               bi.field_j.c(var3, var4);
               break L3;
             } else {
@@ -470,10 +658,10 @@ final class pc implements Runnable {
             if (var6 <= 0) {
               break L4;
             } else {
-              if (-51 >= (var6 ^ -1)) {
+              if (var6 >= 50) {
                 break L4;
               } else {
-                if ((var6 ^ -1) <= -21) {
+                if (var6 >= 20) {
                   if (30 <= var6) {
                     var7 = (-(var6 * 256) + 12800) / 20;
                     Bounce.field_G.a(var3, var4, var7);
@@ -512,7 +700,7 @@ final class pc implements Runnable {
                   break L7;
                 }
               }
-              bf.field_o.d(15 + var3, 10 + var4, var5 * var7 >> -237166552);
+              bf.field_o.d(15 + var3, 10 + var4, var5 * var7 >> 8);
               break L6;
             }
           }
@@ -527,9 +715,6 @@ final class pc implements Runnable {
         field_j = null;
         field_p = null;
         field_i = null;
-        if (param0 != -14582) {
-            return;
-        }
         field_o = null;
     }
 
@@ -567,13 +752,17 @@ final class pc implements Runnable {
         ((pc) this).field_l = false;
         ((pc) this).field_a = 0;
         ((pc) this).field_b = false;
-        ((pc) this).field_e = param1;
-        ((pc) this).field_n = param0;
-        ((pc) this).field_n.setSoTimeout(30000);
-        ((pc) this).field_n.setTcpNoDelay(true);
-        ((pc) this).field_m = ((pc) this).field_n.getInputStream();
-        ((pc) this).field_k = ((pc) this).field_n.getOutputStream();
-        ((pc) this).field_g = param2;
+        try {
+            ((pc) this).field_e = param1;
+            ((pc) this).field_n = param0;
+            ((pc) this).field_n.setSoTimeout(30000);
+            ((pc) this).field_n.setTcpNoDelay(true);
+            ((pc) this).field_m = ((pc) this).field_n.getInputStream();
+            ((pc) this).field_k = ((pc) this).field_n.getOutputStream();
+            ((pc) this).field_g = param2;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "pc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

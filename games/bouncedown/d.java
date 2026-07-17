@@ -166,7 +166,7 @@ final class d extends wd {
               L1: {
                 var8_int = -((d) this).field_C + param3 + -param2;
                 var9 = ((d) this).field_k + -(((d) this).field_C * 2);
-                if ((var8_int ^ -1) < (var9 ^ -1)) {
+                if (~var8_int < ~var9) {
                   var8_int = var9;
                   break L1;
                 } else {
@@ -184,17 +184,17 @@ final class d extends wd {
               L3: {
                 L4: {
                   var8_int = var8_int * ((d) this).field_E / var9;
-                  if ((param0 ^ -1) == -2) {
+                  if (param0 == 1) {
                     break L4;
                   } else {
-                    if ((param0 ^ -1) == -3) {
+                    if (param0 == 2) {
                       var10 = 2147483647;
                       var11 = -1;
                       var12 = 0;
                       L5: while (true) {
                         L6: {
                           L7: {
-                            if ((var12 ^ -1) <= (((d) this).field_D.a((byte) -127) ^ -1)) {
+                            if (~var12 <= ~((d) this).field_D.a((byte) -127)) {
                               break L7;
                             } else {
                               var13 = ((d) this).field_D.a((byte) -101, var12) - var8_int;
@@ -431,7 +431,7 @@ final class d extends wd {
                 }
               }
               L2: {
-                if (-2 != (var1_ref.d((byte) -128) ^ -1)) {
+                if (var1_ref.d((byte) -128) != 1) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
                   break L2;
@@ -491,10 +491,10 @@ final class d extends wd {
               var5.field_ob = var4_ref_String;
               return;
             } else {
-              if ((var2 ^ -1) != -2) {
-                if ((var2 ^ -1) == -3) {
+              if (var2 != 1) {
+                if (var2 == 2) {
                   L7: {
-                    if (-2 == (db.field_V ^ -1)) {
+                    if (db.field_V == 1) {
                       db.field_V = 2;
                       break L7;
                     } else {
@@ -503,7 +503,7 @@ final class d extends wd {
                   }
                   return;
                 } else {
-                  if (-4 == (var2 ^ -1)) {
+                  if (var2 == 3) {
                     L8: {
                       if (db.field_V == 2) {
                         db.field_V = 1;
@@ -514,7 +514,7 @@ final class d extends wd {
                     }
                     return;
                   } else {
-                    if ((var2 ^ -1) == -5) {
+                    if (var2 == 4) {
                       db.field_V = 1;
                       var3 = var1_ref.b(true);
                       u.field_d = var3.intern();

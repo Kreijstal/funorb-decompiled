@@ -7,7 +7,11 @@ final class la extends b {
 
     la(Object param0, int param1) {
         super(param1);
-        ((la) this).field_p = param0;
+        try {
+            ((la) this).field_p = param0;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "la.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final boolean b(byte param0) {
@@ -16,15 +20,14 @@ final class la extends b {
     }
 
     final static dd a(Throwable param0, String param1) {
-        dd var2_ref = null;
         dd var2 = null;
         if (param0 instanceof dd) {
             var2 = (dd) (Object) param0;
             var2.field_c = var2.field_c + 32 + param1;
         } else {
-            var2_ref = new dd(param0, param1);
+            var2 = new dd(param0, param1);
         }
-        return var2_ref;
+        return var2;
     }
 
     final Object a(byte param0) {

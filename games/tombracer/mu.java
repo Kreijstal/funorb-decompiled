@@ -20,12 +20,6 @@ final class mu extends jea {
     }
 
     public static void d(byte param0) {
-        if (param0 != 101) {
-            field_Bb = null;
-            field_wb = null;
-            field_Bb = null;
-            return;
-        }
         field_wb = null;
         field_Bb = null;
     }

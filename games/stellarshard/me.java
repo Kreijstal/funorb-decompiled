@@ -25,7 +25,7 @@ final class me extends com.ms.dll.Callback {
         } else {
           if (param1 == 32) {
             var5 = param3 & 65535;
-            if ((var5 ^ -1) != -2) {
+            if (var5 != 1) {
               if (101024 == param1) {
                 L0: {
                   if (((me) this).field_e) {
@@ -42,7 +42,7 @@ final class me extends com.ms.dll.Callback {
                 return 0;
               } else {
                 L1: {
-                  if ((param1 ^ -1) == -2) {
+                  if (param1 == 1) {
                     ((me) this).field_d = 0;
                     ((me) this).field_e = true;
                     break L1;
@@ -84,7 +84,7 @@ final class me extends com.ms.dll.Callback {
               return 0;
             } else {
               L4: {
-                if ((param1 ^ -1) == -2) {
+                if (param1 == 1) {
                   ((me) this).field_d = 0;
                   ((me) this).field_e = true;
                   break L4;

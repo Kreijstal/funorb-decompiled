@@ -10,11 +10,6 @@ final class cg {
     public static void a(byte param0) {
         field_a = null;
         field_c = null;
-        if (param0 != -117) {
-            field_b = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

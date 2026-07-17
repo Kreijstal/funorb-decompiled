@@ -15,7 +15,7 @@ final class wa {
     private int field_d;
 
     final static boolean b(byte param0) {
-        int var1 = -29 % ((param0 - -65) / 52);
+        int var1 = 0;
         return bf.field_b == um.field_F ? true : false;
     }
 
@@ -86,7 +86,7 @@ final class wa {
                   var2++;
                   continue L0;
                 } else {
-                  var7_ref_int__[var8] = om.a(b.a(var24[var8] << 207434488, -16777216), in.field_c[b.a(255, (int) var25[var8])]);
+                  var7_ref_int__[var8] = om.a(b.a(var24[var8] << 24, -16777216), in.field_c[b.a(255, (int) var25[var8])]);
                   var8++;
                   continue L2;
                 }
@@ -110,38 +110,41 @@ final class wa {
             break L0;
           }
         }
+        int fieldTemp$3 = ((wa) this).field_d + 1;
         ((wa) this).field_d = ((wa) this).field_d + 1;
-        ((wa) this).field_c = ((wa) this).field_c + (((wa) this).field_d + 1);
+        ((wa) this).field_c = ((wa) this).field_c + fieldTemp$3;
         var2 = 0;
         L1: while (true) {
-          if ((var2 ^ -1) <= -257) {
+          if (var2 >= 256) {
             return;
           } else {
             L2: {
               var3 = ((wa) this).field_b[var2];
               if ((var2 & 2) != 0) {
                 if ((var2 & 1) == 0) {
-                  ((wa) this).field_k = ((wa) this).field_k ^ ((wa) this).field_k << 1414815522;
+                  ((wa) this).field_k = ((wa) this).field_k ^ ((wa) this).field_k << 2;
                   break L2;
                 } else {
-                  ((wa) this).field_k = ((wa) this).field_k ^ ((wa) this).field_k >>> -879670896;
+                  ((wa) this).field_k = ((wa) this).field_k ^ ((wa) this).field_k >>> 16;
                   break L2;
                 }
               } else {
                 if ((var2 & 1) == 0) {
-                  ((wa) this).field_k = ((wa) this).field_k ^ ((wa) this).field_k << 401665645;
+                  ((wa) this).field_k = ((wa) this).field_k ^ ((wa) this).field_k << 13;
                   break L2;
                 } else {
-                  ((wa) this).field_k = ((wa) this).field_k ^ ((wa) this).field_k >>> -1873308634;
+                  ((wa) this).field_k = ((wa) this).field_k ^ ((wa) this).field_k >>> 6;
                   break L2;
                 }
               }
             }
             ((wa) this).field_k = ((wa) this).field_k + ((wa) this).field_b[128 + var2 & 255];
-            var4 = ((wa) this).field_k + (((wa) this).field_b[b.a(var3 >> -33082046, 255)] + ((wa) this).field_c);
-            ((wa) this).field_b[var2] = ((wa) this).field_k + (((wa) this).field_b[b.a(var3 >> -33082046, 255)] + ((wa) this).field_c);
-            ((wa) this).field_c = var3 + ((wa) this).field_b[b.a(255, var4 >> 34551432 >> -34706814)];
-            ((wa) this).field_a[var2] = var3 + ((wa) this).field_b[b.a(255, var4 >> 34551432 >> -34706814)];
+            int dupTemp$4 = ((wa) this).field_k + (((wa) this).field_b[b.a(var3 >> 2, 255)] + ((wa) this).field_c);
+            var4 = dupTemp$4;
+            ((wa) this).field_b[var2] = dupTemp$4;
+            int dupTemp$5 = var3 + ((wa) this).field_b[b.a(255, var4 >> 8 >> 2)];
+            ((wa) this).field_c = dupTemp$5;
+            ((wa) this).field_a[var2] = dupTemp$5;
             var2++;
             continue L1;
           }
@@ -156,8 +159,9 @@ final class wa {
         if (param0 != 72) {
             return -40;
         }
+        int fieldTemp$0 = ((wa) this).field_j - 1;
         ((wa) this).field_j = ((wa) this).field_j - 1;
-        return ((wa) this).field_a[((wa) this).field_j - 1];
+        return ((wa) this).field_a[fieldTemp$0];
     }
 
     public static void a(int param0) {
@@ -191,15 +195,15 @@ final class wa {
         var10 = -1640531527;
         var4 = -1640531527;
         var2 = 0;
-        var11 = 89 % ((param0 - 55) / 51);
+        var11 = 0;
         L0: while (true) {
           if (4 <= var2) {
             var2 = 0;
             L1: while (true) {
-              if ((var2 ^ -1) <= -257) {
+              if (var2 >= 256) {
                 var2 = 0;
                 L2: while (true) {
-                  if (-257 >= (var2 ^ -1)) {
+                  if (var2 >= 256) {
                     this.b(-86);
                     ((wa) this).field_j = 256;
                     return;
@@ -212,28 +216,28 @@ final class wa {
                     var5 = var5 + ((wa) this).field_b[var2 + 2];
                     var8 = var8 + ((wa) this).field_b[5 + var2];
                     var7 = var7 + ((wa) this).field_b[var2 - -4];
-                    var3 = var3 ^ var4 << 708273931;
+                    var3 = var3 ^ var4 << 11;
                     var6 = var6 + var3;
                     var4 = var4 + var5;
-                    var4 = var4 ^ var5 >>> 2083656098;
+                    var4 = var4 ^ var5 >>> 2;
                     var7 = var7 + var4;
                     var5 = var5 + var6;
-                    var5 = var5 ^ var6 << -1999471768;
+                    var5 = var5 ^ var6 << 8;
                     var6 = var6 + var7;
                     var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> -1022832144;
+                    var6 = var6 ^ var7 >>> 16;
                     var9 = var9 + var6;
                     var7 = var7 + var8;
-                    var7 = var7 ^ var8 << 115449610;
+                    var7 = var7 ^ var8 << 10;
                     var10 = var10 + var7;
                     var8 = var8 + var9;
-                    var8 = var8 ^ var9 >>> -764687164;
+                    var8 = var8 ^ var9 >>> 4;
                     var9 = var9 + var10;
                     var3 = var3 + var8;
-                    var9 = var9 ^ var10 << -206344216;
+                    var9 = var9 ^ var10 << 8;
                     var4 = var4 + var9;
                     var10 = var10 + var3;
-                    var10 = var10 ^ var3 >>> -762682615;
+                    var10 = var10 ^ var3 >>> 9;
                     var5 = var5 + var10;
                     var3 = var3 + var4;
                     ((wa) this).field_b[var2] = var3;
@@ -257,28 +261,28 @@ final class wa {
                 var7 = var7 + ((wa) this).field_a[var2 - -4];
                 var3 = var3 + ((wa) this).field_a[var2];
                 var5 = var5 + ((wa) this).field_a[var2 - -2];
-                var3 = var3 ^ var4 << 1470878091;
+                var3 = var3 ^ var4 << 11;
                 var6 = var6 + var3;
                 var4 = var4 + var5;
-                var4 = var4 ^ var5 >>> -1078281950;
+                var4 = var4 ^ var5 >>> 2;
                 var7 = var7 + var4;
                 var5 = var5 + var6;
-                var5 = var5 ^ var6 << 55775848;
+                var5 = var5 ^ var6 << 8;
                 var6 = var6 + var7;
                 var8 = var8 + var5;
-                var6 = var6 ^ var7 >>> -786633008;
+                var6 = var6 ^ var7 >>> 16;
                 var9 = var9 + var6;
                 var7 = var7 + var8;
-                var7 = var7 ^ var8 << 1218679114;
+                var7 = var7 ^ var8 << 10;
                 var10 = var10 + var7;
                 var8 = var8 + var9;
-                var8 = var8 ^ var9 >>> -1073119900;
+                var8 = var8 ^ var9 >>> 4;
                 var9 = var9 + var10;
                 var3 = var3 + var8;
-                var9 = var9 ^ var10 << -1165932344;
+                var9 = var9 ^ var10 << 8;
                 var4 = var4 + var9;
                 var10 = var10 + var3;
-                var10 = var10 ^ var3 >>> 163161609;
+                var10 = var10 ^ var3 >>> 9;
                 var3 = var3 + var4;
                 var5 = var5 + var10;
                 ((wa) this).field_b[var2] = var3;
@@ -294,28 +298,28 @@ final class wa {
               }
             }
           } else {
-            var3 = var3 ^ var4 << -1030118997;
+            var3 = var3 ^ var4 << 11;
             var6 = var6 + var3;
             var4 = var4 + var5;
-            var4 = var4 ^ var5 >>> 546680642;
+            var4 = var4 ^ var5 >>> 2;
             var7 = var7 + var4;
             var5 = var5 + var6;
-            var5 = var5 ^ var6 << -2126786232;
+            var5 = var5 ^ var6 << 8;
             var8 = var8 + var5;
             var6 = var6 + var7;
-            var6 = var6 ^ var7 >>> -1451343824;
+            var6 = var6 ^ var7 >>> 16;
             var7 = var7 + var8;
             var9 = var9 + var6;
-            var7 = var7 ^ var8 << 1366893546;
+            var7 = var7 ^ var8 << 10;
             var10 = var10 + var7;
             var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> 352355716;
+            var8 = var8 ^ var9 >>> 4;
             var9 = var9 + var10;
             var3 = var3 + var8;
-            var9 = var9 ^ var10 << 825040712;
+            var9 = var9 ^ var10 << 8;
             var4 = var4 + var9;
             var10 = var10 + var3;
-            var10 = var10 ^ var3 >>> -113103927;
+            var10 = var10 ^ var3 >>> 9;
             var5 = var5 + var10;
             var3 = var3 + var4;
             var2++;
@@ -325,13 +329,17 @@ final class wa {
     }
 
     wa(int[] param0) {
-        int var2 = 0;
-        ((wa) this).field_a = new int[256];
-        ((wa) this).field_b = new int[256];
-        for (var2 = 0; param0.length > var2; var2++) {
-            ((wa) this).field_a[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((wa) this).field_a = new int[256];
+            ((wa) this).field_b = new int[256];
+            for (var2_int = 0; param0.length > var2_int; var2_int++) {
+                ((wa) this).field_a[var2_int] = param0[var2_int];
+            }
+            this.d(-28);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "wa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.d(-28);
     }
 
     static {

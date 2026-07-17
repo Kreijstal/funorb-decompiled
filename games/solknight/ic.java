@@ -41,11 +41,6 @@ final class ic extends sk {
     public static void i(int param0) {
         field_u = null;
         field_x = null;
-        if (param0 >= -69) {
-            field_w = 1.4661964452487954;
-            field_z = null;
-            return;
-        }
         field_z = null;
     }
 

@@ -41,7 +41,7 @@ final class mb {
                 stackIn_14_0 = stackOut_13_0;
                 break L0;
               } else {
-                if ((var5.field_o ^ -1) == (param0 ^ -1)) {
+                if (~var5.field_o == ~param0) {
                   stackOut_7_0 = (sd) var5;
                   stackIn_8_0 = stackOut_7_0;
                   return stackIn_8_0;
@@ -62,7 +62,7 @@ final class mb {
 
     final static void a(boolean param0, int param1, int param2) {
         try {
-            ud discarded$14 = ug.a((byte) -76, bf.field_b[param1], qc.field_l[param1] * param2 >> -613042327);
+            ud discarded$14 = ug.a((byte) -76, bf.field_b[param1], qc.field_l[param1] * param2 >> 9);
             if (!param0) {
                 field_b = null;
             }
@@ -152,30 +152,30 @@ final class mb {
           L0: {
             var7_int = 2147483647;
             var8 = -2147483648;
-            var21 = param2[3] >> 2125712226;
-            var22 = param2[4] >> -1704795422;
-            var23 = param2[5] >> 672611586;
-            var24 = param2[6] >> 1916375586;
-            var25 = param2[7] >> 280135106;
-            var26 = param2[8] >> 1204802754;
-            var27 = param2[9] >> 1382796034;
-            var28 = param2[10] >> -1954958462;
-            var12 = var23 * param3[param6] + param3[3] * var21 - -(var22 * param3[4]) >> -694484242;
-            var29 = param2[11] >> -1716993790;
-            var13 = param3[5] * var26 + (param3[4] * var25 + param3[3] * var24) >> 472493806;
-            var17 = var29 * param3[8] + param3[7] * var28 + var27 * param3[6] >> 517022254;
-            var15 = param3[6] * var21 - -(var22 * param3[7]) - -(param3[8] * var23) >> 1512010030;
-            var18 = param3[11] * var23 + param3[10] * var22 + var21 * param3[9] >> 1320737678;
-            var20 = param3[11] * var29 + (var28 * param3[10] + var27 * param3[9]) >> -604474514;
-            var19 = param3[11] * var26 + (var25 * param3[10] + param3[9] * var24) >> 1824446542;
-            var16 = var26 * param3[8] + (var24 * param3[6] + param3[7] * var25) >> -582515794;
-            var14 = param3[5] * var29 + var27 * param3[3] - -(var28 * param3[4]) >> 1223073134;
+            var21 = param2[3] >> 2;
+            var22 = param2[4] >> 2;
+            var23 = param2[5] >> 2;
+            var24 = param2[6] >> 2;
+            var25 = param2[7] >> 2;
+            var26 = param2[8] >> 2;
+            var27 = param2[9] >> 2;
+            var28 = param2[10] >> 2;
+            var12 = var23 * param3[param6] + param3[3] * var21 - -(var22 * param3[4]) >> 14;
+            var29 = param2[11] >> 2;
+            var13 = param3[5] * var26 + (param3[4] * var25 + param3[3] * var24) >> 14;
+            var17 = var29 * param3[8] + param3[7] * var28 + var27 * param3[6] >> 14;
+            var15 = param3[6] * var21 - -(var22 * param3[7]) - -(param3[8] * var23) >> 14;
+            var18 = param3[11] * var23 + param3[10] * var22 + var21 * param3[9] >> 14;
+            var20 = param3[11] * var29 + (var28 * param3[10] + var27 * param3[9]) >> 14;
+            var19 = param3[11] * var26 + (var25 * param3[10] + param3[9] * var24) >> 14;
+            var16 = var26 * param3[8] + (var24 * param3[6] + param3[7] * var25) >> 14;
+            var14 = param3[5] * var29 + var27 * param3[3] - -(var28 * param3[4]) >> 14;
             var21 = param3[0] + -param2[0];
             var22 = param3[1] - param2[1];
             var23 = -param2[2] + param3[2];
             var9 = var22 * param2[4] + (param2[3] * var21 - -(var23 * param2[5])) >> -pj.field_H + 16;
             var10 = var23 * param2[8] + param2[6] * var21 - -(var22 * param2[7]) >> -pj.field_H + 16;
-            var11 = param2[11] * var23 + var22 * param2[10] + var21 * param2[9] >> -373387952;
+            var11 = param2[11] * var23 + var22 * param2[10] + var21 * param2[9] >> 16;
             var21 = hk.field_f;
             var22 = hk.field_e;
             var23 = 0;
@@ -217,21 +217,21 @@ final class mb {
                                         var24 = param0.field_p[var23];
                                         var25 = param0.field_x[var23];
                                         var26 = param0.field_h[var23];
-                                        ng.field_b[var23] = var9 - -(var12 * var24 - -(var15 * var25) - -(var26 * var18) >> 958944272);
-                                        hg.field_B[var23] = (var19 * var26 + (var24 * var13 - -(var16 * var25)) >> -695032752) + var10;
-                                        cd.field_b[var23] = (var25 * var17 + (var24 * var14 + var20 * var26) >> -551299376) + var11;
+                                        ng.field_b[var23] = var9 - -(var12 * var24 - -(var15 * var25) - -(var26 * var18) >> 16);
+                                        hg.field_B[var23] = (var19 * var26 + (var24 * var13 - -(var16 * var25)) >> 16) + var10;
+                                        cd.field_b[var23] = (var25 * var17 + (var24 * var14 + var20 * var26) >> 16) + var11;
                                         var24 = param0.field_i[var23];
                                         var25 = param0.field_O[var23];
                                         var26 = param0.field_I[var23];
-                                        ab.field_A[var23] = var9 + (var26 * var18 + (var15 * var25 + var24 * var12) >> -214451472);
-                                        aj.field_o[var23] = (var13 * var24 + (var25 * var16 - -(var26 * var19)) >> -653712112) + var10;
-                                        pl.field_c[var23] = var11 + (var24 * var14 - (-(var25 * var17) + -(var26 * var20)) >> -1421785616);
+                                        ab.field_A[var23] = var9 + (var26 * var18 + (var15 * var25 + var24 * var12) >> 16);
+                                        aj.field_o[var23] = (var13 * var24 + (var25 * var16 - -(var26 * var19)) >> 16) + var10;
+                                        pl.field_c[var23] = var11 + (var24 * var14 - (-(var25 * var17) + -(var26 * var20)) >> 16);
                                         var24 = param0.field_L[var23];
                                         var25 = param0.field_M[var23];
                                         var26 = param0.field_u[var23];
-                                        fa.field_g[var23] = var9 - -(var25 * var15 + (var24 * var12 + var26 * var18) >> 66425104);
-                                        ci.field_pb[var23] = (var16 * var25 + (var13 * var24 + var19 * var26) >> -1444672816) + var10;
-                                        pb.field_a[var23] = (var24 * var14 + (var25 * var17 + var26 * var20) >> 845614384) + var11;
+                                        fa.field_g[var23] = var9 - -(var25 * var15 + (var24 * var12 + var26 * var18) >> 16);
+                                        ci.field_pb[var23] = (var16 * var25 + (var13 * var24 + var19 * var26) >> 16) + var10;
+                                        pb.field_a[var23] = (var24 * var14 + (var25 * var17 + var26 * var20) >> 16) + var11;
                                         var23++;
                                         continue L3;
                                       }
@@ -262,8 +262,8 @@ final class mb {
                       if (param0.field_b <= var18) {
                         break L4;
                       } else {
-                        stackOut_53_0 = var18 ^ -1;
-                        stackOut_53_1 = mh.field_a.length ^ -1;
+                        stackOut_53_0 = ~var18;
+                        stackOut_53_1 = ~mh.field_a.length;
                         stackIn_55_0 = stackOut_53_0;
                         stackIn_55_1 = stackOut_53_1;
                         if (stackIn_55_0 <= stackIn_55_1) {
@@ -272,9 +272,9 @@ final class mb {
                           var19 = param0.field_B[var18];
                           var20 = param0.field_v[var18];
                           var21 = param0.field_J[var18];
-                          mh.field_a[var18] = var12 * var20 + var9 * var19 + var21 * var15 >> 1729509936;
-                          fa.field_e[var18] = var21 * var16 + var19 * var10 + var20 * var13 >> -29012752;
-                          tk.field_r[var18] = var21 * var17 + var14 * var20 + var19 * var11 >> -557878896;
+                          mh.field_a[var18] = var12 * var20 + var9 * var19 + var21 * var15 >> 16;
+                          fa.field_e[var18] = var21 * var16 + var19 * var10 + var20 * var13 >> 16;
+                          tk.field_r[var18] = var21 * var17 + var14 * var20 + var19 * var11 >> 16;
                           var18++;
                           continue L5;
                         }
@@ -293,15 +293,15 @@ final class mb {
                   var26 = param0.field_z[var23];
                   var27 = var9 + (var24 * var12 - (-(var25 * var15) - var18 * var26) >> -pj.field_H + 16);
                   var28 = var10 + (var24 * var13 - -(var16 * var25) + var19 * var26 >> 16 - pj.field_H);
-                  var29 = var11 - -(var20 * var26 + var25 * var17 + var14 * var24 >> -443971504);
-                  if (-51 < (var29 ^ -1)) {
+                  var29 = var11 - -(var20 * var26 + var25 * var17 + var14 * var24 >> 16);
+                  if (var29 < 50) {
                     hl.field_a[var23] = -2147483648;
                     break L6;
                   } else {
                     L7: {
                       qb.field_ab[var23] = var27 / var29 + var21;
                       a.field_d[var23] = var28 / var29 + var22;
-                      if ((var8 ^ -1) <= (var29 ^ -1)) {
+                      if (~var8 <= ~var29) {
                         break L7;
                       } else {
                         var8 = var29;
@@ -541,7 +541,7 @@ final class mb {
             }
             L2: {
               ((mb) this).field_a = param1;
-              if (-1 == (((mb) this).field_c.length() ^ -1)) {
+              if (((mb) this).field_c.length() == 0) {
                 ((mb) this).field_a = false;
                 break L2;
               } else {

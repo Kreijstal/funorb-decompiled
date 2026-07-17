@@ -18,7 +18,7 @@ final class mb {
         while (((mb) this).field_d[var1] >= 0) {
             var1 = nc.c() != 0 ? ((mb) this).field_d[var1] : var1 + 1;
         }
-        return ((mb) this).field_d[var1] ^ -1;
+        return ~((mb) this).field_d[var1];
     }
 
     private final void c() {
@@ -62,7 +62,7 @@ final class mb {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((mb) this).field_d[var6] = var3 ^ -1;
+                      ((mb) this).field_d[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;

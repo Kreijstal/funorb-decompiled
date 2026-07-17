@@ -8,44 +8,31 @@ final class d {
 
     final static void a(java.applet.Applet param0, byte param1, String param2) {
         try {
-            Throwable throwable = null;
             String var3 = null;
-            String var4 = null;
             String var5 = null;
-            Throwable decompiledCaughtException = null;
+            String var4 = null;
             hm.field_c = param2;
             try {
-              L0: {
-                L1: {
-                  var3 = param0.getParameter("cookieprefix");
-                  var5 = var3;
-                  var5 = var3;
-                  var4 = param0.getParameter("cookiehost");
-                  var5 = var4;
-                  var5 = var4;
-                  var5 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
-                  if (0 != param2.length()) {
-                    break L1;
-                  } else {
+                var3 = param0.getParameter("cookieprefix");
+                var5 = var3;
+                var5 = var3;
+                var4 = param0.getParameter("cookiehost");
+                var5 = var4;
+                var5 = var4;
+                var5 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
+                if (0 == param2.length()) {
                     var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                    break L1;
-                  }
                 }
                 hi.a("document.cookie=\"" + var5 + "\"", param0, (byte) 77);
-                break L0;
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                throwable = decompiledCaughtException;
-                break L2;
-              }
+            } catch (Throwable throwable) {
             }
             if (param1 <= 110) {
-              return;
-            } else {
-              hk.a(1, param0);
-              return;
+                return;
+            }
+            try {
+                hk.a(1, param0);
+            } catch (RuntimeException runtimeException) {
+                throw dn.a((Throwable) (Object) runtimeException, "d.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -63,10 +50,6 @@ final class d {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (param0 != -8130) {
-            Object var2 = null;
-            d.a((java.applet.Applet) null, (byte) -76, (String) null);
-        }
     }
 
     static {

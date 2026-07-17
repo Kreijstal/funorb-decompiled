@@ -32,10 +32,10 @@ final class ef extends ma {
             if (null == ((ef) this).field_L) {
               return;
             } else {
-              if ((((ef) this).field_Q ^ -1) == -1) {
+              if (((ef) this).field_Q == 0) {
                 return;
               } else {
-                if (-257 == (((ef) this).field_Q ^ -1)) {
+                if (((ef) this).field_Q == 256) {
                   ((ef) this).field_L.a(param0 + ((ef) this).field_u, -128, param2, ((ef) this).field_D + param3);
                   return;
                 } else {
@@ -57,10 +57,10 @@ final class ef extends ma {
             if (null == ((ef) this).field_L) {
               return;
             } else {
-              if ((((ef) this).field_Q ^ -1) == -1) {
+              if (((ef) this).field_Q == 0) {
                 return;
               } else {
-                if (-257 == (((ef) this).field_Q ^ -1)) {
+                if (((ef) this).field_Q == 256) {
                   ((ef) this).field_L.a(param0 + ((ef) this).field_u, -128, param2, ((ef) this).field_D + param3);
                   return;
                 } else {
@@ -81,9 +81,13 @@ final class ef extends ma {
 
     ef(ce param0) {
         super(param0.field_u, param0.field_D, param0.field_t, param0.field_y, (gl) null, (kg) null);
-        param0.b(((ef) this).field_y, ((ef) this).field_t, 0, 0, -16555);
-        ((ef) this).field_Q = 256;
-        ((ef) this).field_L = param0;
+        try {
+            param0.b(((ef) this).field_y, ((ef) this).field_t, 0, 0, -16555);
+            ((ef) this).field_Q = 256;
+            ((ef) this).field_L = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public ef() {
@@ -102,7 +106,7 @@ final class ef extends ma {
             }
           }
           L1: {
-            if (-1 > (bl.field_T ^ -1)) {
+            if (bl.field_T > 0) {
               on.b((byte) -100);
               break L1;
             } else {
@@ -127,7 +131,7 @@ final class ef extends ma {
             }
           }
           L3: {
-            if (-1 > (bl.field_T ^ -1)) {
+            if (bl.field_T > 0) {
               on.b((byte) -100);
               break L3;
             } else {

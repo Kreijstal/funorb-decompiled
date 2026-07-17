@@ -20,20 +20,16 @@ final class gj {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != -12359) {
-            field_a = null;
-        }
     }
 
     final static void a(ve param0, int param1, int param2, int param3) {
-        ng.field_D = param1;
-        nm.field_o = param0;
-        if (param3 != -20140) {
-            field_a = null;
+        try {
+            ng.field_D = param1;
+            nm.field_o = param0;
             fl.field_b = param2;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "gj.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + -20140 + 41);
         }
-        fl.field_b = param2;
     }
 
     static {

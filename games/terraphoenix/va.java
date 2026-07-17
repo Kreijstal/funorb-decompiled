@@ -30,10 +30,6 @@ final class va {
     }
 
     final static boolean b(int param0) {
-        if (param0 != 41108) {
-            field_g = null;
-            return ql.a(dg.a(false), -15);
-        }
         return ql.a(dg.a(false), -15);
     }
 
@@ -50,15 +46,17 @@ final class va {
         nl.field_a = param9;
         lm.field_b = param7;
         if (param8) {
-          return;
-        } else {
-          ha.field_p = param10;
-          fi.field_q = param0;
-          ee.field_h = param1;
-          fg.field_a = param5;
-          ad.field_h = param6;
-          p.field_e = param3;
-          return;
+            return;
+        }
+        try {
+            ha.field_p = 1500;
+            fi.field_q = param0;
+            ee.field_h = param1;
+            fg.field_a = param5;
+            ad.field_h = param6;
+            p.field_e = param3;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "va.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + 1500 + 41);
         }
     }
 

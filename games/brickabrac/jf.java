@@ -19,7 +19,7 @@ final class jf {
         L0: {
           var4 = 107 / ((0 - param2) / 63);
           if (99 != param0) {
-            if ((param0 ^ -1) == -99) {
+            if (param0 == 98) {
               ((jf) this).field_i = ((jf) this).field_i - 1;
               ((jf) this).field_b = true;
               break L0;
@@ -49,80 +49,188 @@ final class jf {
     }
 
     final static jp[] a(jp param0, int param1) {
-        int var3 = 48 / ((param1 - 55) / 32);
-        jp[] var4 = new jp[9];
-        jp[] var2 = var4;
-        var4[4] = param0;
-        return var2;
+        jp[] var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
+        jp[] var4 = null;
+        jp[] stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        jp[] stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var3 = 48 / ((param1 - 55) / 32);
+            var4 = new jp[9];
+            var2 = var4;
+            var4[4] = param0;
+            stackOut_0_0 = (jp[]) var2;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2_ref;
+            stackOut_2_1 = new StringBuilder().append("jf.F(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw qb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+        }
+        return stackIn_1_0;
     }
 
     final static void d(int param0) {
-        ii var1_ref = null;
         if (param0 != -99) {
             field_g = null;
         }
         ii var1 = (ii) (Object) fr.field_M.a(127);
         if (!(var1 != null)) {
-            var1_ref = new ii();
+            var1 = new ii();
         }
-        var1_ref.a(lb.field_l, lb.field_i, lb.field_c, lb.field_d, param0 ^ 194, lb.field_f, lb.field_b, lb.field_j);
-        hi.field_v.a((nm) (Object) var1_ref, (byte) 3);
+        var1.a(lb.field_l, lb.field_i, lb.field_c, lb.field_d, param0 ^ 194, lb.field_f, lb.field_b, lb.field_j);
+        hi.field_v.a((nm) (Object) var1, (byte) 3);
     }
 
     final static mp a(int param0, String param1) {
-        String var2 = null;
+        Object var2 = null;
         mp var3 = null;
         String var4 = null;
         int var5 = 0;
         Object var6 = null;
         CharSequence var7 = null;
         CharSequence var8 = null;
+        mp stackIn_16_0 = null;
+        Object stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        Object stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        Object stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        mp stackOut_15_0 = null;
+        Object stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        Object stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        Object stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
-        if (tf.field_d != null) {
-          L0: {
-            var7 = (CharSequence) (Object) param1;
-            var2 = gb.a(var7, 85);
-            if (var2 != null) {
-              break L0;
-            } else {
-              var2 = (String) (Object) var7;
-              break L0;
-            }
-          }
-          L1: {
-            if (param0 == 0) {
-              break L1;
-            } else {
-              var6 = null;
-              mp discarded$2 = jf.a(-82, (String) null);
-              break L1;
-            }
-          }
-          var3 = (mp) (Object) tf.field_d.a((long)var2.hashCode(), -1);
-          L2: while (true) {
-            if (var3 != null) {
-              L3: {
-                var8 = (CharSequence) (Object) var3.field_Rb;
-                var4 = gb.a(var8, param0 + 55);
-                if (var4 == null) {
-                  var4 = var3.field_Rb;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              if (!var4.equals((Object) (Object) var2)) {
-                var3 = (mp) (Object) tf.field_d.a((byte) -43);
-                continue L2;
+        try {
+          if (tf.field_d != null) {
+            L0: {
+              var7 = (CharSequence) (Object) param1;
+              var2 = (Object) (Object) gb.a(var7, 85);
+              if (var2 != null) {
+                break L0;
               } else {
-                return var3;
+                var2 = (Object) (Object) var7;
+                break L0;
               }
+            }
+            L1: {
+              if (param0 == 0) {
+                break L1;
+              } else {
+                var6 = null;
+                mp discarded$2 = jf.a(-82, (String) null);
+                break L1;
+              }
+            }
+            var3 = (mp) (Object) tf.field_d.a((long)((String) var2).hashCode(), -1);
+            L2: while (true) {
+              if (var3 != null) {
+                L3: {
+                  var8 = (CharSequence) (Object) var3.field_Rb;
+                  var4 = gb.a(var8, param0 + 55);
+                  if (var4 == null) {
+                    var4 = var3.field_Rb;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                if (!var4.equals(var2)) {
+                  var3 = (mp) (Object) tf.field_d.a((byte) -43);
+                  continue L2;
+                } else {
+                  stackOut_15_0 = (mp) var3;
+                  stackIn_16_0 = stackOut_15_0;
+                  return stackIn_16_0;
+                }
+              } else {
+                return null;
+              }
+            }
+          } else {
+            return null;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = (Object) (Object) decompiledCaughtException;
+            stackOut_19_0 = var2;
+            stackOut_19_1 = new StringBuilder().append("jf.A(").append(param0).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param1 == null) {
+              stackOut_21_0 = stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L4;
             } else {
-              return null;
+              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L4;
             }
           }
-        } else {
-          return null;
+          throw qb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
         }
     }
 
@@ -147,41 +255,68 @@ final class jf {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        int var6 = 0;
         q var7 = null;
-        int var6 = BrickABrac.field_J ? 1 : 0;
-        if (((jf) this).field_a.field_h.field_j == ((jf) this).field_h) {
-            var7 = ((jf) this).field_a.field_m[((jf) this).field_h];
-            if (((jf) this).field_b) {
-                // if_icmpne L66
-                // if_icmpne L66
-            } else {
-                var3 = var7.field_c;
-                var4 = var7.field_a;
-                for (var5 = 0; ((jf) this).field_f > var5; var5++) {
-                    if (da.field_E[var5].d(var3, var4, pq.field_k, po.field_a)) {
-                        ((jf) this).field_i = var5;
-                        break;
-                    }
-                    var4 = var4 + (da.field_E[var5].field_z + 20);
-                }
-            }
-            ((jf) this).field_e = pq.field_k;
-            ((jf) this).field_j = po.field_a;
-        } else {
+        L0: {
+          var6 = BrickABrac.field_J ? 1 : 0;
+          if (((jf) this).field_a.field_h.field_j != ((jf) this).field_h) {
             ((jf) this).field_e = -1;
             ((jf) this).field_b = false;
             ((jf) this).field_j = -1;
             ((jf) this).field_i = -1;
+            break L0;
+          } else {
+            L1: {
+              L2: {
+                var7 = ((jf) this).field_a.field_m[((jf) this).field_h];
+                if (!((jf) this).field_b) {
+                  break L2;
+                } else {
+                  if (pq.field_k != ((jf) this).field_e) {
+                    break L2;
+                  } else {
+                    if (((jf) this).field_j != po.field_a) {
+                      break L2;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+              }
+              var3 = var7.field_c;
+              var4 = var7.field_a;
+              var5 = 0;
+              L3: while (true) {
+                if (((jf) this).field_f <= var5) {
+                  break L1;
+                } else {
+                  if (!da.field_E[var5].d(var3, var4, pq.field_k, po.field_a)) {
+                    var4 = var4 + (da.field_E[var5].field_z + 20);
+                    var5++;
+                    continue L3;
+                  } else {
+                    ((jf) this).field_i = var5;
+                    break L1;
+                  }
+                }
+              }
+            }
+            ((jf) this).field_e = pq.field_k;
+            ((jf) this).field_j = po.field_a;
+            break L0;
+          }
         }
-        if (param0 <= 84) {
+        L4: {
+          if (param0 > 84) {
+            break L4;
+          } else {
             ((jf) this).field_h = 25;
+            break L4;
+          }
         }
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_d = null;
         field_c = null;
         field_k = null;
@@ -207,9 +342,13 @@ final class jf {
 
     jf(ah param0, int param1, int param2) {
         ((jf) this).field_i = -1;
-        ((jf) this).field_f = param2;
-        ((jf) this).field_h = param1;
-        ((jf) this).field_a = param0;
+        try {
+            ((jf) this).field_f = param2;
+            ((jf) this).field_h = param1;
+            ((jf) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "jf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

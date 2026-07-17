@@ -34,134 +34,69 @@ class rk extends wl {
     }
 
     final static void c(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        Object var4_ref = null;
         ie var4_ref_ie = null;
         int var4 = 0;
         Object var5 = null;
         int var6 = 0;
         tc var8 = null;
         mg var9 = null;
-        byte[] var11 = null;
-        var4_ref = null;
+        byte[] var13 = null;
+        RuntimeException decompiledCaughtException = null;
         var6 = wizardrun.field_H;
-        if (param0 == -2) {
-          var9 = nk.field_N;
-          var2 = var9.f(param0 + 257);
-          if (-1 == (var2 ^ -1)) {
-            var8 = (tc) (Object) df.field_c.b((byte) 107);
-            if (var8 == null) {
-              ql.a(-78);
-              return;
-            } else {
-              L0: {
-                var4 = var9.f(255);
-                if ((var4 ^ -1) != -1) {
-                  var11 = new byte[var4];
-                  var9.a(true, var4, var11, 0);
-                  break L0;
-                } else {
-                  var5 = null;
-                  break L0;
-                }
-              }
-              var9.field_m = var9.field_m + 4;
-              if (!var9.e(-6142)) {
-                ql.a(-97);
+        try {
+          L0: {
+            var9 = nk.field_N;
+            var2 = var9.f(255);
+            if (var2 == 0) {
+              var8 = (tc) (Object) df.field_c.b((byte) 107);
+              if (var8 == null) {
+                ql.a(-78);
                 return;
               } else {
-                var8.a(false);
-                return;
-              }
-            }
-          } else {
-            if (-2 != (var2 ^ -1)) {
-              rg.a((Throwable) null, "A1: " + ni.c(6), -562);
-              ql.a(param0 ^ 117);
-              return;
-            } else {
-              var3 = var9.i(param0 + 257);
-              var4_ref_ie = (ie) (Object) pa.field_e.b((byte) 61);
-              L1: while (true) {
-                if (var4_ref_ie == null) {
-                  if (var4_ref_ie == null) {
-                    ql.a(-85);
-                    return;
+                L1: {
+                  var4 = var9.f(255);
+                  if (var4 != 0) {
+                    var13 = new byte[var4];
+                    var9.a(true, var4, var13, 0);
+                    break L1;
                   } else {
-                    var4_ref_ie.a(false);
-                    return;
-                  }
-                } else {
-                  if ((var3 ^ -1) != (var4_ref_ie.field_k ^ -1)) {
-                    var4_ref_ie = (ie) (Object) pa.field_e.d(8192);
-                    continue L1;
-                  } else {
-                    if (var4_ref_ie == null) {
-                      ql.a(-85);
-                      return;
-                    } else {
-                      var4_ref_ie.a(false);
-                      return;
-                    }
+                    var5 = null;
+                    break L1;
                   }
                 }
-              }
-            }
-          }
-        } else {
-          field_m = null;
-          var9 = nk.field_N;
-          var2 = var9.f(param0 + 257);
-          if (-1 == (var2 ^ -1)) {
-            var8 = (tc) (Object) df.field_c.b((byte) 107);
-            if (var8 == null) {
-              ql.a(-78);
-              return;
-            } else {
-              L2: {
-                var4 = var9.f(255);
-                if ((var4 ^ -1) != -1) {
-                  var11 = new byte[var4];
-                  var9.a(true, var4, var11, 0);
-                  break L2;
+                var9.field_m = var9.field_m + 4;
+                if (!var9.e(-6142)) {
+                  ql.a(-97);
+                  return;
                 } else {
-                  var5 = null;
-                  break L2;
+                  var8.a(false);
+                  break L0;
                 }
               }
-              var9.field_m = var9.field_m + 4;
-              if (!var9.e(-6142)) {
-                ql.a(-97);
+            } else {
+              if (var2 != 1) {
+                rg.a((Throwable) null, "A1: " + ni.c(6), -562);
+                ql.a(-117);
                 return;
               } else {
-                var8.a(false);
-                return;
-              }
-            }
-          } else {
-            if (-2 != (var2 ^ -1)) {
-              rg.a((Throwable) null, "A1: " + ni.c(6), -562);
-              ql.a(param0 ^ 117);
-              return;
-            } else {
-              var3 = var9.i(param0 + 257);
-              var4_ref_ie = (ie) (Object) pa.field_e.b((byte) 61);
-              L3: while (true) {
-                if (var4_ref_ie != null) {
-                  if ((var3 ^ -1) != (var4_ref_ie.field_k ^ -1)) {
-                    var4_ref_ie = (ie) (Object) pa.field_e.d(8192);
-                    continue L3;
-                  } else {
+                var3 = var9.i(255);
+                var4_ref_ie = (ie) (Object) pa.field_e.b((byte) 61);
+                L2: while (true) {
+                  L3: {
                     if (var4_ref_ie == null) {
-                      ql.a(-85);
-                      return;
+                      break L3;
                     } else {
-                      var4_ref_ie.a(false);
-                      return;
+                      if (~var3 != ~var4_ref_ie.field_k) {
+                        var4_ref_ie = (ie) (Object) pa.field_e.d(8192);
+                        continue L2;
+                      } else {
+                        break L3;
+                      }
                     }
                   }
-                } else {
                   if (var4_ref_ie == null) {
                     ql.a(-85);
                     return;
@@ -173,6 +108,10 @@ class rk extends wl {
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw bd.a((Throwable) (Object) var1, "rk.F(" + -2 + 41);
         }
     }
 

@@ -12,40 +12,32 @@ final class vh {
 
     public static void b(boolean param0) {
         field_e = null;
-        if (param0) {
-            vh.b(false);
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
     final void a(rk param0, int param1, long param2) {
         rk var5 = null;
-        if (!(null == param0.field_a)) {
-            param0.a(true);
-        }
-        if (param1 != 11) {
-            vh.b(false);
+        try {
+            if (!(null == param0.field_a)) {
+                param0.a(true);
+            }
+            if (param1 != 11) {
+                vh.b(false);
+            }
             var5 = ((vh) this).field_b[(int)((long)(((vh) this).field_d - 1) & param2)];
             param0.field_h = var5;
             param0.field_a = var5.field_a;
             param0.field_a.field_h = param0;
             param0.field_h.field_a = param0;
             param0.field_i = param2;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "vh.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        var5 = ((vh) this).field_b[(int)((long)(((vh) this).field_d - 1) & param2)];
-        param0.field_h = var5;
-        param0.field_a = var5.field_a;
-        param0.field_a.field_h = param0;
-        param0.field_h.field_a = param0;
-        param0.field_i = param2;
     }
 
     final static void b(int param0) {
         if (param0 == -4749) {
-          if ((rk.field_e ^ -1) == -11) {
+          if (rk.field_e == 10) {
             ec.a((byte) 126);
             rk.field_e = 11;
             mk.field_o = true;
@@ -63,7 +55,7 @@ final class vh {
           }
         } else {
           field_e = null;
-          if ((rk.field_e ^ -1) != -11) {
+          if (rk.field_e != 10) {
             if (!ja.c((byte) -126)) {
               ec.a((byte) 126);
               rk.field_e = 11;
@@ -98,8 +90,9 @@ final class vh {
             } else {
               L0: while (true) {
                 if (((vh) this).field_f < ((vh) this).field_d) {
+                  int fieldTemp$2 = ((vh) this).field_f;
                   ((vh) this).field_f = ((vh) this).field_f + 1;
-                  var4 = ((vh) this).field_b[((vh) this).field_f].field_h;
+                  var4 = ((vh) this).field_b[fieldTemp$2].field_h;
                   var9 = var4;
                   if (var4 != ((vh) this).field_b[-1 + ((vh) this).field_f]) {
                     ((vh) this).field_c = var9.field_h;
@@ -115,8 +108,9 @@ final class vh {
           } else {
             L1: while (true) {
               if (((vh) this).field_f < ((vh) this).field_d) {
+                int fieldTemp$3 = ((vh) this).field_f;
                 ((vh) this).field_f = ((vh) this).field_f + 1;
-                var4 = ((vh) this).field_b[((vh) this).field_f].field_h;
+                var4 = ((vh) this).field_b[fieldTemp$3].field_h;
                 var5 = var4;
                 if (var4 != ((vh) this).field_b[-1 + ((vh) this).field_f]) {
                   ((vh) this).field_c = var5.field_h;
@@ -148,7 +142,7 @@ final class vh {
               ((vh) this).field_g = null;
               return null;
             } else {
-              if ((((vh) this).field_g.field_i ^ -1L) == (param1 ^ -1L)) {
+              if (~((vh) this).field_g.field_i == ~param1) {
                 var5 = ((vh) this).field_g;
                 ((vh) this).field_g = ((vh) this).field_g.field_h;
                 return var5;
@@ -164,7 +158,7 @@ final class vh {
               ((vh) this).field_g = null;
               return null;
             } else {
-              if ((((vh) this).field_g.field_i ^ -1L) == (param1 ^ -1L)) {
+              if (~((vh) this).field_g.field_i == ~param1) {
                 var5 = ((vh) this).field_g;
                 ((vh) this).field_g = ((vh) this).field_g.field_h;
                 return var5;
@@ -190,13 +184,13 @@ final class vh {
         param1 = param1 & 8191;
         if (param0 != 21872) {
             int discarded$4 = vh.a(-94, 118);
-            if (-4097 >= param1) {
-                return -6145 <= param1 ? -vj.field_e[8192 - param1] : -vj.field_e[-4096 + param1];
+            if (param1 >= 4096) {
+                return param1 >= 6144 ? -vj.field_e[8192 - param1] : -vj.field_e[-4096 + param1];
             }
             return 2048 <= param1 ? vj.field_e[4096 - param1] : vj.field_e[param1];
         }
-        if (-4097 >= param1) {
-            return -6145 <= param1 ? -vj.field_e[8192 - param1] : -vj.field_e[-4096 + param1];
+        if (param1 >= 4096) {
+            return param1 >= 6144 ? -vj.field_e[8192 - param1] : -vj.field_e[-4096 + param1];
         }
         return 2048 <= param1 ? vj.field_e[4096 - param1] : vj.field_e[param1];
     }
@@ -210,13 +204,15 @@ final class vh {
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            var3 = new rk();
-            ((vh) this).field_b[var2] = new rk();
+            rk dupTemp$2 = new rk();
+            var3 = dupTemp$2;
+            ((vh) this).field_b[var2] = dupTemp$2;
             var3.field_a = var3;
             var3.field_h = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

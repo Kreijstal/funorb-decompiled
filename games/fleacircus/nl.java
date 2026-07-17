@@ -7,52 +7,25 @@ final class nl {
     static dd[][] field_c;
 
     public static void a(byte param0) {
-        if (param0 != -33) {
-          field_a = null;
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        }
+        field_a = null;
+        field_b = null;
+        field_c = null;
     }
 
     final static void a(int param0, lh param1, lh param2) {
-        if (param0 >= 99) {
-          if (null != param2.field_a) {
-            param2.c(-1);
+        try {
+            if (param0 < 99) {
+                field_b = null;
+            }
+            if (null != param2.field_a) {
+                param2.c(-1);
+            }
             param2.field_h = param1;
             param2.field_a = param1.field_a;
             param2.field_a.field_h = param2;
             param2.field_h.field_a = param2;
-            return;
-          } else {
-            param2.field_h = param1;
-            param2.field_a = param1.field_a;
-            param2.field_a.field_h = param2;
-            param2.field_h.field_a = param2;
-            return;
-          }
-        } else {
-          field_b = null;
-          if (null == param2.field_a) {
-            param2.field_h = param1;
-            param2.field_a = param1.field_a;
-            param2.field_a.field_h = param2;
-            param2.field_h.field_a = param2;
-            return;
-          } else {
-            param2.c(-1);
-            param2.field_h = param1;
-            param2.field_a = param1.field_a;
-            param2.field_a.field_h = param2;
-            param2.field_h.field_a = param2;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "nl.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -69,8 +42,8 @@ final class nl {
     final static boolean a(int param0) {
         int var1 = 0;
         var1 = -65 % ((-26 - param0) / 59);
-        if (-11 >= (bh.field_t ^ -1)) {
-          if ((ib.field_k ^ -1) > -14) {
+        if (bh.field_t >= 10) {
+          if (ib.field_k < 13) {
             return false;
           } else {
             return true;

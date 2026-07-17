@@ -16,116 +16,380 @@ final class wc extends lh {
     static int field_q;
 
     final boolean a(ng param0, byte[] param1, boolean param2, int[] param3) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         Object var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         Object var11 = null;
-        L0: {
-          var10 = fleas.field_A ? 1 : 0;
-          if (!param2) {
-            break L0;
-          } else {
-            var11 = null;
-            boolean discarded$2 = ((wc) this).a((ng) null, (byte[]) null, false, (int[]) null);
-            break L0;
-          }
-        }
-        var5 = 1;
-        var6 = 0;
-        var7 = null;
-        var8 = 0;
-        L1: while (true) {
-          if (var8 >= 128) {
-            return var5 != 0;
-          } else {
-            L2: {
-              if (param1 == null) {
-                break L2;
+        int stackIn_22_0 = 0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_21_0 = 0;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        var10 = fleas.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (!param2) {
+                break L1;
               } else {
-                if (param1[var8] != 0) {
-                  break L2;
-                } else {
-                  var8++;
-                  continue L1;
-                }
+                var11 = null;
+                boolean discarded$1 = ((wc) this).a((ng) null, (byte[]) null, false, (int[]) null);
+                break L1;
               }
             }
-            var9 = ((wc) this).field_i[var8];
-            if (0 != var9) {
-              L3: {
-                if (var6 == var9) {
-                  break L3;
-                } else {
-                  L4: {
-                    var6 = var9;
-                    var9--;
-                    if (-1 == (1 & var9 ^ -1)) {
-                      var7 = (Object) (Object) param0.a(param3, var9 >> 37976642, 29037);
-                      break L4;
+            var5_int = 1;
+            var6 = 0;
+            var7 = null;
+            var8 = 0;
+            L2: while (true) {
+              if (var8 >= 128) {
+                stackOut_21_0 = var5_int;
+                stackIn_22_0 = stackOut_21_0;
+                break L0;
+              } else {
+                if (param1 == null) {
+                  L3: {
+                    var9 = ((wc) this).field_i[var8];
+                    if (0 != var9) {
+                      L4: {
+                        if (var6 == var9) {
+                          break L4;
+                        } else {
+                          L5: {
+                            var6 = var9;
+                            var9--;
+                            if ((1 & var9) == 0) {
+                              var7 = (Object) (Object) param0.a(param3, var9 >> 2, 29037);
+                              break L5;
+                            } else {
+                              var7 = (Object) (Object) param0.a(var9 >> 2, true, param3);
+                              break L5;
+                            }
+                          }
+                          if (var7 != null) {
+                            break L4;
+                          } else {
+                            var5_int = 0;
+                            break L4;
+                          }
+                        }
+                      }
+                      if (var7 != null) {
+                        ((wc) this).field_m[var8] = (sf) var7;
+                        ((wc) this).field_i[var8] = 0;
+                        break L3;
+                      } else {
+                        break L3;
+                      }
                     } else {
-                      var7 = (Object) (Object) param0.a(var9 >> -1883072606, true, param3);
-                      break L4;
+                      break L3;
                     }
                   }
-                  if (var7 != null) {
-                    break L3;
-                  } else {
-                    var5 = 0;
-                    break L3;
+                  var8++;
+                  continue L2;
+                } else {
+                  L6: {
+                    if (param1[var8] == 0) {
+                      break L6;
+                    } else {
+                      break L6;
+                    }
                   }
+                  var8++;
+                  continue L2;
                 }
               }
-              if (var7 != null) {
-                ((wc) this).field_m[var8] = (sf) var7;
-                ((wc) this).field_i[var8] = 0;
-                var8++;
-                continue L1;
-              } else {
-                var8++;
-                continue L1;
-              }
-            } else {
-              var8++;
-              continue L1;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var5 = decompiledCaughtException;
+            stackOut_23_0 = (RuntimeException) var5;
+            stackOut_23_1 = new StringBuilder().append("wc.A(");
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
+            if (param0 == null) {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L7;
+            } else {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44);
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
+            if (param1 == null) {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              break L8;
+            } else {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
+              break L8;
+            }
+          }
+          L9: {
+            stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(param2).append(44);
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
+            if (param3 == null) {
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L9;
+            } else {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L9;
+            }
+          }
+          throw pf.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
         }
+        return stackIn_22_0 != 0;
     }
 
     public static void a(int param0) {
-        if (param0 != -24464) {
-            ke discarded$0 = wc.a((byte) 13);
-        }
         field_p = null;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, ce param4, int param5, String param6, boolean param7, int param8, int param9, int param10, long param11, int param12, int param13) {
         try {
-            ae.field_a = new ih(param12);
-            ud.field_b = new ih(param9);
-            be.field_b = param8;
-            if (param0 != 22986) {
-                field_q = -30;
-            }
-            pc.field_j = param13;
-            j.field_g = param1;
-            bk.field_e = param3 ? true : false;
-            af.field_f = param4;
-            a.field_d = param6;
-            va.field_m = param7 ? true : false;
-            bb.field_E = param2;
-            ab.field_d = param5;
-            c.field_P = param11;
-            cj.field_b = param10;
-            if (null != af.field_f.field_k) {
-                try {
-                    ge.field_d = new k(af.field_f.field_k, 64, 0);
-                } catch (IOException iOException) {
-                    throw new RuntimeException(iOException.toString());
+            IOException var15 = null;
+            RuntimeException var15_ref = null;
+            int stackIn_5_0 = 0;
+            int stackIn_8_0 = 0;
+            RuntimeException stackIn_14_0 = null;
+            StringBuilder stackIn_14_1 = null;
+            RuntimeException stackIn_15_0 = null;
+            StringBuilder stackIn_15_1 = null;
+            RuntimeException stackIn_16_0 = null;
+            StringBuilder stackIn_16_1 = null;
+            String stackIn_16_2 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            String stackIn_19_2 = null;
+            Throwable decompiledCaughtException = null;
+            int stackOut_4_0 = 0;
+            int stackOut_3_0 = 0;
+            int stackOut_7_0 = 0;
+            int stackOut_6_0 = 0;
+            RuntimeException stackOut_13_0 = null;
+            StringBuilder stackOut_13_1 = null;
+            RuntimeException stackOut_15_0 = null;
+            StringBuilder stackOut_15_1 = null;
+            String stackOut_15_2 = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            String stackOut_14_2 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            String stackOut_18_2 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
+            try {
+              L0: {
+                L1: {
+                  ae.field_a = new ih(param12);
+                  ud.field_b = new ih(param9);
+                  be.field_b = param8;
+                  if (param0 == 22986) {
+                    break L1;
+                  } else {
+                    field_q = -30;
+                    break L1;
+                  }
                 }
+                L2: {
+                  pc.field_j = param13;
+                  j.field_g = param1;
+                  if (!param3) {
+                    stackOut_4_0 = 0;
+                    stackIn_5_0 = stackOut_4_0;
+                    break L2;
+                  } else {
+                    stackOut_3_0 = 1;
+                    stackIn_5_0 = stackOut_3_0;
+                    break L2;
+                  }
+                }
+                L3: {
+                  bk.field_e = stackIn_5_0 != 0;
+                  af.field_f = param4;
+                  a.field_d = param6;
+                  if (!param7) {
+                    stackOut_7_0 = 0;
+                    stackIn_8_0 = stackOut_7_0;
+                    break L3;
+                  } else {
+                    stackOut_6_0 = 1;
+                    stackIn_8_0 = stackOut_6_0;
+                    break L3;
+                  }
+                }
+                L4: {
+                  va.field_m = stackIn_8_0 != 0;
+                  bb.field_E = param2;
+                  ab.field_d = param5;
+                  c.field_P = param11;
+                  cj.field_b = param10;
+                  if (null == af.field_f.field_k) {
+                    break L4;
+                  } else {
+                    {
+                      L5: {
+                        ge.field_d = new k(af.field_f.field_k, 64, 0);
+                        break L5;
+                      }
+                    }
+                    break L4;
+                  }
+                }
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L6: {
+                var15_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_13_0 = (RuntimeException) var15_ref;
+                stackOut_13_1 = new StringBuilder().append("wc.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_1 = stackOut_13_1;
+                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_1 = stackOut_13_1;
+                if (param4 == null) {
+                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_2 = "null";
+                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_1 = stackOut_15_1;
+                  stackIn_16_2 = stackOut_15_2;
+                  break L6;
+                } else {
+                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_2 = "{...}";
+                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_1 = stackOut_14_1;
+                  stackIn_16_2 = stackOut_14_2;
+                  break L6;
+                }
+              }
+              L7: {
+                stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param5).append(44);
+                stackIn_18_0 = stackOut_16_0;
+                stackIn_18_1 = stackOut_16_1;
+                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_1 = stackOut_16_1;
+                if (param6 == null) {
+                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_2 = "null";
+                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_1 = stackOut_18_1;
+                  stackIn_19_2 = stackOut_18_2;
+                  break L7;
+                } else {
+                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_2 = "{...}";
+                  stackIn_19_0 = stackOut_17_0;
+                  stackIn_19_1 = stackOut_17_1;
+                  stackIn_19_2 = stackOut_17_2;
+                  break L7;
+                }
+              }
+              throw pf.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 44 + param13 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -236,7 +500,7 @@ final class wc extends lh {
                 var38.field_i = var38.field_i + var3;
                 var6 = 0;
                 L2: while (true) {
-                  if (-1 == (var38.field_k[var6 + var38.field_i] ^ -1)) {
+                  if (var38.field_k[var6 + var38.field_i] == 0) {
                     var66 = new byte[var6];
                     var61 = var66;
                     var56 = var61;
@@ -244,7 +508,7 @@ final class wc extends lh {
                     var7 = var43;
                     var8 = 0;
                     L3: while (true) {
-                      if ((var6 ^ -1) >= (var8 ^ -1)) {
+                      if (~var6 >= ~var8) {
                         var38.field_i = var38.field_i + 1;
                         var6++;
                         var8 = var38.field_i;
@@ -259,7 +523,7 @@ final class wc extends lh {
                             var10 = var44;
                             var11_int = 0;
                             L5: while (true) {
-                              if ((var11_int ^ -1) <= (var9 ^ -1)) {
+                              if (~var11_int <= ~var9) {
                                 L6: {
                                   var38.field_i = var38.field_i + 1;
                                   var9++;
@@ -274,7 +538,7 @@ final class wc extends lh {
                                     var12 = 2;
                                     var14 = 2;
                                     L7: while (true) {
-                                      if ((var14 ^ -1) <= (var9 ^ -1)) {
+                                      if (~var14 <= ~var9) {
                                         break L6;
                                       } else {
                                         L8: {
@@ -310,7 +574,7 @@ final class wc extends lh {
                                 var13 = new de[var12];
                                 var14 = 0;
                                 L10: while (true) {
-                                  if ((var14 ^ -1) <= (var13.length ^ -1)) {
+                                  if (~var14 <= ~var13.length) {
                                     L11: {
                                       var14 = var38.e(false);
                                       if (0 >= var14) {
@@ -341,7 +605,7 @@ final class wc extends lh {
                                     var16 = var47;
                                     var17 = 0;
                                     L13: while (true) {
-                                      if (-1 == (var38.field_k[var38.field_i + var17] ^ -1)) {
+                                      if (var38.field_k[var38.field_i + var17] == 0) {
                                         var64 = new byte[var17];
                                         var59 = var64;
                                         var54 = var59;
@@ -355,17 +619,17 @@ final class wc extends lh {
                                             var19 = 0;
                                             var20 = 0;
                                             L15: while (true) {
-                                              if (-129 >= (var20 ^ -1)) {
+                                              if (var20 >= 128) {
                                                 var19 = 0;
                                                 var20 = 0;
                                                 L16: while (true) {
-                                                  if (-129 >= (var20 ^ -1)) {
+                                                  if (var20 >= 128) {
                                                     var20 = 0;
                                                     var21 = 0;
                                                     var22 = 0;
                                                     var23 = 0;
                                                     L17: while (true) {
-                                                      if ((var23 ^ -1) <= -129) {
+                                                      if (var23 >= 128) {
                                                         var20 = 0;
                                                         var21 = 0;
                                                         var23 = 0;
@@ -377,13 +641,13 @@ final class wc extends lh {
                                                             var24 = 0;
                                                             var25_int = 0;
                                                             L19: while (true) {
-                                                              if (-129 >= (var25_int ^ -1)) {
+                                                              if (var25_int >= 128) {
                                                                 var21 = 0;
                                                                 var20 = 0;
                                                                 var25 = null;
                                                                 var26 = 0;
                                                                 L20: while (true) {
-                                                                  if ((var26 ^ -1) <= -129) {
+                                                                  if (var26 >= 128) {
                                                                     var21 = 0;
                                                                     var20 = 0;
                                                                     var26 = 0;
@@ -416,7 +680,7 @@ final class wc extends lh {
                                                                               } else {
                                                                                 var27 = 1;
                                                                                 L26: while (true) {
-                                                                                  if ((var47.length ^ -1) >= (var27 ^ -1)) {
+                                                                                  if (~var47.length >= ~var27) {
                                                                                     break L25;
                                                                                   } else {
                                                                                     var16[var27] = var38.i(-51);
@@ -428,10 +692,10 @@ final class wc extends lh {
                                                                             }
                                                                             var27 = 0;
                                                                             L27: while (true) {
-                                                                              if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                              if (~var27 <= ~var12) {
                                                                                 var27 = 0;
                                                                                 L28: while (true) {
-                                                                                  if ((var12 ^ -1) >= (var27 ^ -1)) {
+                                                                                  if (~var12 >= ~var27) {
                                                                                     L29: {
                                                                                       if (var15_array == null) {
                                                                                         break L29;
@@ -440,7 +704,7 @@ final class wc extends lh {
                                                                                         var15_array[0] = (byte)var19;
                                                                                         var27 = 2;
                                                                                         L30: while (true) {
-                                                                                          if ((var27 ^ -1) <= (var46.length ^ -1)) {
+                                                                                          if (~var27 <= ~var46.length) {
                                                                                             var27 = var46[0];
                                                                                             var28 = var46[1];
                                                                                             var29 = 0;
@@ -448,14 +712,14 @@ final class wc extends lh {
                                                                                               if (var29 >= var27) {
                                                                                                 var29 = 2;
                                                                                                 L32: while (true) {
-                                                                                                  if ((var29 ^ -1) <= (var46.length ^ -1)) {
+                                                                                                  if (~var29 <= ~var46.length) {
                                                                                                     var30 = var27;
                                                                                                     L33: while (true) {
                                                                                                       if (128 <= var30) {
                                                                                                         var15_array = null;
                                                                                                         break L29;
                                                                                                       } else {
-                                                                                                        ((wc) this).field_o[var30] = (byte)(var28 * ((wc) this).field_o[var30] + 32 >> 1993820390);
+                                                                                                        ((wc) this).field_o[var30] = (byte)(var28 * ((wc) this).field_o[var30] + 32 >> 6);
                                                                                                         var30++;
                                                                                                         continue L33;
                                                                                                       }
@@ -466,14 +730,14 @@ final class wc extends lh {
                                                                                                     var32 = (-var27 + var30) * var28 + (var30 + -var27) / 2;
                                                                                                     var33 = var27;
                                                                                                     L34: while (true) {
-                                                                                                      if ((var30 ^ -1) >= (var33 ^ -1)) {
+                                                                                                      if (~var30 >= ~var33) {
                                                                                                         var28 = var31;
                                                                                                         var27 = var30;
                                                                                                         var29 += 2;
                                                                                                         continue L32;
                                                                                                       } else {
                                                                                                         var34 = re.a(var32, -var27 + var30, false);
-                                                                                                        ((wc) this).field_o[var33] = (byte)(var34 * ((wc) this).field_o[var33] - -32 >> 237303782);
+                                                                                                        ((wc) this).field_o[var33] = (byte)(var34 * ((wc) this).field_o[var33] - -32 >> 6);
                                                                                                         var32 = var32 + (-var28 + var31);
                                                                                                         var33++;
                                                                                                         continue L34;
@@ -482,7 +746,7 @@ final class wc extends lh {
                                                                                                   }
                                                                                                 }
                                                                                               } else {
-                                                                                                ((wc) this).field_o[var29] = (byte)(((wc) this).field_o[var29] * var28 + 32 >> 1600670822);
+                                                                                                ((wc) this).field_o[var29] = (byte)(((wc) this).field_o[var29] * var28 + 32 >> 6);
                                                                                                 var29++;
                                                                                                 continue L31;
                                                                                               }
@@ -504,12 +768,12 @@ final class wc extends lh {
                                                                                         var16[0] = (byte)var19;
                                                                                         var27 = 2;
                                                                                         L36: while (true) {
-                                                                                          if ((var27 ^ -1) <= (var47.length ^ -1)) {
+                                                                                          if (~var27 <= ~var47.length) {
                                                                                             var27 = var47[0];
-                                                                                            var28 = var47[1] << -1528934943;
+                                                                                            var28 = var47[1] << 1;
                                                                                             var29 = 0;
                                                                                             L37: while (true) {
-                                                                                              if ((var29 ^ -1) <= (var27 ^ -1)) {
+                                                                                              if (~var29 <= ~var27) {
                                                                                                 var29 = 2;
                                                                                                 L38: while (true) {
                                                                                                   if (var47.length <= var29) {
@@ -543,12 +807,12 @@ final class wc extends lh {
                                                                                                     }
                                                                                                   } else {
                                                                                                     var30 = var47[var29];
-                                                                                                    var31 = var16[var29 - -1] << 811036641;
+                                                                                                    var31 = var16[var29 - -1] << 1;
                                                                                                     var32 = (var30 + -var27) / 2 + (-var27 + var30) * var28;
                                                                                                     var37 = var27;
                                                                                                     var33 = var37;
                                                                                                     L42: while (true) {
-                                                                                                      if ((var37 ^ -1) <= (var30 ^ -1)) {
+                                                                                                      if (~var37 <= ~var30) {
                                                                                                         var27 = var30;
                                                                                                         var29 += 2;
                                                                                                         var28 = var31;
@@ -614,16 +878,16 @@ final class wc extends lh {
                                                                                     }
                                                                                     var27 = 0;
                                                                                     L47: while (true) {
-                                                                                      if ((var12 ^ -1) >= (var27 ^ -1)) {
+                                                                                      if (~var12 >= ~var27) {
                                                                                         var27 = 0;
                                                                                         L48: while (true) {
                                                                                           if (var27 >= var12) {
                                                                                             var27 = 0;
                                                                                             L49: while (true) {
-                                                                                              if ((var12 ^ -1) >= (var27 ^ -1)) {
+                                                                                              if (~var12 >= ~var27) {
                                                                                                 var27 = 0;
                                                                                                 L50: while (true) {
-                                                                                                  if ((var12 ^ -1) >= (var27 ^ -1)) {
+                                                                                                  if (~var12 >= ~var27) {
                                                                                                     var27 = 0;
                                                                                                     L51: while (true) {
                                                                                                       if (var12 <= var27) {
@@ -631,7 +895,7 @@ final class wc extends lh {
                                                                                                       } else {
                                                                                                         L52: {
                                                                                                           var52 = var13[var27];
-                                                                                                          if (-1 <= (var52.field_f ^ -1)) {
+                                                                                                          if (var52.field_f <= 0) {
                                                                                                             break L52;
                                                                                                           } else {
                                                                                                             var52.field_m = var38.e(false);
@@ -645,7 +909,7 @@ final class wc extends lh {
                                                                                                   } else {
                                                                                                     L53: {
                                                                                                       var51 = var13[var27];
-                                                                                                      if (-1 <= (var51.field_g ^ -1)) {
+                                                                                                      if (var51.field_g <= 0) {
                                                                                                         break L53;
                                                                                                       } else {
                                                                                                         var51.field_f = var38.e(false);
@@ -816,15 +1080,15 @@ final class wc extends lh {
                                                                     }
                                                                   } else {
                                                                     L67: {
-                                                                      if (-1 == (((wc) this).field_i[var26] ^ -1)) {
+                                                                      if (((wc) this).field_i[var26] == 0) {
                                                                         break L67;
                                                                       } else {
                                                                         L68: {
-                                                                          if ((var20 ^ -1) != -1) {
+                                                                          if (var20 != 0) {
                                                                             break L68;
                                                                           } else {
                                                                             var25 = (Object) (Object) var13[var63[var21]];
-                                                                            if ((var67.length ^ -1) < (var21 ^ -1)) {
+                                                                            if (~var67.length < ~var21) {
                                                                               int incrementValue$11 = var21;
                                                                               var21++;
                                                                               var20 = var10[incrementValue$11];
@@ -850,13 +1114,13 @@ final class wc extends lh {
                                                                     break L69;
                                                                   } else {
                                                                     L70: {
-                                                                      if (-1 != (var20 ^ -1)) {
+                                                                      if (var20 != 0) {
                                                                         break L70;
                                                                       } else {
                                                                         int incrementValue$12 = var8;
                                                                         var8++;
-                                                                        var24 = 16 + var38.field_k[incrementValue$12] << -2022321470;
-                                                                        if ((var66.length ^ -1) < (var21 ^ -1)) {
+                                                                        var24 = 16 + var38.field_k[incrementValue$12] << 2;
+                                                                        if (~var66.length < ~var21) {
                                                                           int incrementValue$13 = var21;
                                                                           var21++;
                                                                           var20 = var7[incrementValue$13];
@@ -878,7 +1142,7 @@ final class wc extends lh {
                                                             }
                                                           } else {
                                                             L71: {
-                                                              if (-1 == (((wc) this).field_i[var24] ^ -1)) {
+                                                              if (((wc) this).field_i[var24] == 0) {
                                                                 break L71;
                                                               } else {
                                                                 L72: {
@@ -917,7 +1181,7 @@ final class wc extends lh {
                                                             break L74;
                                                           } else {
                                                             L75: {
-                                                              if ((var21 ^ -1) > (var64.length ^ -1)) {
+                                                              if (~var21 > ~var64.length) {
                                                                 int incrementValue$16 = var21;
                                                                 var21++;
                                                                 var20 = var18[incrementValue$16];
@@ -931,7 +1195,7 @@ final class wc extends lh {
                                                             break L74;
                                                           }
                                                         }
-                                                        ((wc) this).field_l[var23] = (short)(((wc) this).field_l[var23] + sc.a(32768, -1 + var22 << -227044114));
+                                                        ((wc) this).field_l[var23] = (short)(((wc) this).field_l[var23] + sc.a(32768, -1 + var22 << 14));
                                                         ((wc) this).field_i[var23] = var22;
                                                         var20--;
                                                         var23++;
@@ -940,7 +1204,7 @@ final class wc extends lh {
                                                     }
                                                   } else {
                                                     var19 = var19 + var38.e(false);
-                                                    ((wc) this).field_l[var20] = (short)(((wc) this).field_l[var20] + (var19 << 1890858024));
+                                                    ((wc) this).field_l[var20] = (short)(((wc) this).field_l[var20] + (var19 << 8));
                                                     var20++;
                                                     continue L16;
                                                   }
@@ -970,7 +1234,7 @@ final class wc extends lh {
                                       var40 = dupTemp$17;
                                       var15 = var40;
                                       var16_int = var38.e(false);
-                                      if ((var16_int ^ -1) >= -1) {
+                                      if (var16_int <= 0) {
                                         break L76;
                                       } else {
                                         var15.field_p = new byte[2 * var16_int];
@@ -979,11 +1243,11 @@ final class wc extends lh {
                                     }
                                     L77: {
                                       var16_int = var38.e(false);
-                                      if ((var16_int ^ -1) >= -1) {
+                                      if (var16_int <= 0) {
                                         break L77;
                                       } else {
                                         var15.field_i = new byte[2 * var16_int + 2];
-                                        var40.field_i[1] = (byte)64;
+                                        var40.field_i[1] = (byte) 64;
                                         break L77;
                                       }
                                     }

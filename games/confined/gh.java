@@ -17,9 +17,6 @@ final class gh implements Iterable {
     static java.awt.Font field_f;
 
     final static int a(boolean param0) {
-        if (!param0) {
-            return -80;
-        }
         return nh.field_b;
     }
 
@@ -32,7 +29,7 @@ final class gh implements Iterable {
         ((gh) this).field_g = var4.field_h;
         L0: while (true) {
           if (((gh) this).field_g != var4) {
-            if ((param1 ^ -1L) != (((gh) this).field_g.field_i ^ -1L)) {
+            if (~param1 != ~((gh) this).field_g.field_i) {
               ((gh) this).field_g = ((gh) this).field_g.field_h;
               continue L0;
             } else {
@@ -63,15 +60,20 @@ final class gh implements Iterable {
     }
 
     final void a(rk param0, long param1, int param2) {
-        if (!(null == param0.field_a)) {
-            param0.a(true);
+        rk var5 = null;
+        try {
+            if (!(null == param0.field_a)) {
+                param0.a(true);
+            }
+            var5 = ((gh) this).field_j[(int)((long)(((gh) this).field_i + param2) & param1)];
+            param0.field_h = var5;
+            param0.field_a = var5.field_a;
+            param0.field_a.field_h = param0;
+            param0.field_h.field_a = param0;
+            param0.field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "gh.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        rk var5 = ((gh) this).field_j[(int)((long)(((gh) this).field_i + param2) & param1)];
-        param0.field_h = var5;
-        param0.field_a = var5.field_a;
-        param0.field_a.field_h = param0;
-        param0.field_h.field_a = param0;
-        param0.field_i = param1;
     }
 
     public final Iterator iterator() {

@@ -14,16 +14,67 @@ final class bd extends kd {
         field_i = null;
         field_m = null;
         field_l = null;
-        int var1 = 59 % ((-67 - param0) / 55);
+        int var1 = 1;
         field_k = null;
     }
 
     final static boolean a(CharSequence param0, int param1) {
-        if (param1 != 3) {
-            field_i = null;
-            return bh.a(false, param0, -84);
+        RuntimeException var2 = null;
+        boolean stackIn_1_0 = false;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_0_0 = false;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            stackOut_0_0 = bh.a(false, param0, -84);
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("bd.C(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw ld.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 3 + 41);
         }
-        return bh.a(false, param0, -84);
+        return stackIn_1_0;
     }
 
     bd(int param0) {
@@ -32,57 +83,52 @@ final class bd extends kd {
 
     final static void a(int param0, int param1) {
         kd var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         tg var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = Lexicominos.field_L ? 1 : 0;
-        var4 = (tg) (Object) bg.field_c.a(true);
-        L0: while (true) {
-          if (var4 == null) {
-            if (param1 != -4584) {
-              return;
-            } else {
-              var2 = tl.field_h.a(true);
-              L1: while (true) {
-                if (var2 == null) {
-                  return;
+        try {
+          L0: {
+            var4 = (tg) (Object) bg.field_c.a(true);
+            L1: while (true) {
+              if (var4 == null) {
+                if (param1 == -4584) {
+                  var2 = tl.field_h.a(true);
+                  L2: while (true) {
+                    if (var2 == null) {
+                      break L0;
+                    } else {
+                      dd.a(53, param0);
+                      var2 = tl.field_h.f(2);
+                      continue L2;
+                    }
+                  }
                 } else {
-                  dd.a(53, param0);
-                  var2 = tl.field_h.f(2);
-                  continue L1;
+                  return;
                 }
+              } else {
+                p.a(var4, param0, (byte) 24);
+                var4 = (tg) (Object) bg.field_c.f(2);
+                continue L1;
               }
             }
-          } else {
-            p.a(var4, param0, (byte) 24);
-            var4 = (tg) (Object) bg.field_c.f(2);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw ld.a((Throwable) (Object) var2_ref, "bd.A(" + param0 + 44 + param1 + 41);
         }
     }
 
     final static boolean c(boolean param0) {
-        if (!param0) {
-          if (jc.field_b != null) {
-            if (gg.field_b != uf.field_m) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (jc.field_b == null) {
             return false;
-          }
-        } else {
-          bd.a(110, 10);
-          if (jc.field_b != null) {
-            if (gg.field_b != uf.field_m) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (gg.field_b != uf.field_m) {
+            return false;
+        }
+        return true;
     }
 
     static {

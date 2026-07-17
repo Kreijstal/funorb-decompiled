@@ -33,10 +33,14 @@ final class sk implements Iterable {
         if (param1 < 98) {
             return;
         }
-        param0.field_a = var5;
-        param0.field_e.field_a = param0;
-        param0.field_a.field_e = param0;
-        param0.field_d = param2;
+        try {
+            param0.field_a = var5;
+            param0.field_e.field_a = param0;
+            param0.field_a.field_e = param0;
+            param0.field_d = param2;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sk.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final void a(int param0) {
@@ -82,8 +86,9 @@ final class sk implements Iterable {
         ((sk) this).field_e = new vg[param0];
         ((sk) this).field_g = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new vg();
-            ((sk) this).field_e[var2] = new vg();
+            vg dupTemp$0 = new vg();
+            var3 = dupTemp$0;
+            ((sk) this).field_e[var2] = dupTemp$0;
             var3.field_e = var3;
             var3.field_a = var3;
         }
@@ -106,8 +111,9 @@ final class sk implements Iterable {
             if (((sk) this).field_b >= ((sk) this).field_g) {
                 return null;
             }
+            int fieldTemp$1 = ((sk) this).field_b;
             ((sk) this).field_b = ((sk) this).field_b + 1;
-            var2 = ((sk) this).field_e[((sk) this).field_b].field_a;
+            var2 = ((sk) this).field_e[fieldTemp$1].field_a;
         } while (((sk) this).field_e[-1 + ((sk) this).field_b] == var2);
         ((sk) this).field_a = var2.field_a;
         return var2;

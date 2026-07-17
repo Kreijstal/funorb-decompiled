@@ -47,7 +47,7 @@ final class wt extends k {
                   break L2;
                 } else {
                   if (param4 <= ha.field_n) {
-                    if (-2 != (param2 ^ -1)) {
+                    if (param2 != 1) {
                       cma.a(param4, param6, param5, param0, param2, 64, param3);
                       break L1;
                     } else {
@@ -193,7 +193,7 @@ final class wt extends k {
                 if (((wt) this).field_s < 4096) {
                   L6: {
                     stackOut_18_0 = this;
-                    stackOut_18_1 = var7 << 947193004;
+                    stackOut_18_1 = var7 << 12;
                     stackIn_20_0 = stackOut_18_0;
                     stackIn_20_1 = stackOut_18_1;
                     stackIn_19_0 = stackOut_18_0;
@@ -229,9 +229,9 @@ final class wt extends k {
           L7: {
             if (var7 > 0) {
               L8: {
-                var8 = (-param3 + var5 << 1513190188) / var7;
-                var9 = (-param1 + var5 << -1815068692) / var7;
-                var10 = (-param0 + var5 << -817945908) / var7;
+                var8 = (-param3 + var5 << 12) / var7;
+                var9 = (-param1 + var5 << 12) / var7;
+                var10 = (-param0 + var5 << 12) / var7;
                 if (var5 != param3) {
                   if (param1 != var5) {
                     L9: {
@@ -316,42 +316,90 @@ final class wt extends k {
         field_k = null;
         field_m = null;
         field_n = null;
-        if (param0 != 19564) {
-            return;
-        }
         field_q = null;
     }
 
     final void a(byte param0, lu param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        L0: {
-          var5 = BachelorFridge.field_y;
-          var4 = param2;
-          if (var4 != 0) {
-            if (-2 == (var4 ^ -1)) {
-              ((wt) this).field_w = (param1.b(true) << -292594420) / 100;
-              break L0;
-            } else {
-              if (2 != var4) {
-                break L0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        var5 = BachelorFridge.field_y;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2;
+              if (var4_int != 0) {
+                if (var4_int == 1) {
+                  ((wt) this).field_w = (param1.b(true) << 12) / 100;
+                  break L1;
+                } else {
+                  if (2 != var4_int) {
+                    break L1;
+                  } else {
+                    ((wt) this).field_l = (param1.b(true) << 12) / 100;
+                    break L1;
+                  }
+                }
               } else {
-                ((wt) this).field_l = (param1.b(true) << -746073012) / 100;
-                break L0;
+                ((wt) this).field_x = param1.c((byte) -85);
+                break L1;
               }
             }
-          } else {
-            ((wt) this).field_x = param1.c((byte) -85);
+            L2: {
+              if (param0 == -71) {
+                break L2;
+              } else {
+                ((wt) this).field_o = -52;
+                break L2;
+              }
+            }
             break L0;
           }
-        }
-        L1: {
-          if (param0 == -71) {
-            break L1;
-          } else {
-            ((wt) this).field_o = -52;
-            break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_1 = new StringBuilder().append("wt.E(").append(param0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
+            }
           }
+          throw pe.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
         }
     }
 
@@ -371,27 +419,27 @@ final class wt extends k {
         int stackOut_1_0 = 0;
         L0: {
           var14 = BachelorFridge.field_y;
-          if (-2049 > (param1 ^ -1)) {
-            stackOut_2_0 = -(param3 * param1 >> 1922136044) + (param3 + param1);
+          if (param1 > 2048) {
+            stackOut_2_0 = -(param3 * param1 >> 12) + (param3 + param1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           } else {
-            stackOut_1_0 = (4096 + param3) * param1 >> 313689132;
+            stackOut_1_0 = (4096 + param3) * param1 >> 12;
             stackIn_3_0 = stackOut_1_0;
             break L0;
           }
         }
         L1: {
           var5 = stackIn_3_0;
-          if (-1 > (var5 ^ -1)) {
+          if (var5 > 0) {
             param2 = param2 * 6;
             var6 = param1 + (param1 + -var5);
-            var7 = (-var6 + var5 << 1032097644) / var5;
-            var8 = param2 >> -1987751796;
-            var9 = param2 + -(var8 << 2053629996);
+            var7 = (-var6 + var5 << 12) / var5;
+            var8 = param2 >> 12;
+            var9 = param2 + -(var8 << 12);
             var10 = var5;
-            var10 = var7 * var10 >> 552141964;
-            var10 = var9 * var10 >> -2084117524;
+            var10 = var7 * var10 >> 12;
+            var10 = var9 * var10 >> 12;
             var11 = var10 + var6;
             var12 = -var10 + var5;
             var13 = var8;
@@ -401,13 +449,13 @@ final class wt extends k {
               ((wt) this).field_t = var6;
               break L1;
             } else {
-              if ((var13 ^ -1) == -2) {
+              if (var13 == 1) {
                 ((wt) this).field_p = var12;
                 ((wt) this).field_r = var5;
                 ((wt) this).field_t = var6;
                 break L1;
               } else {
-                if (var13 != -3) {
+                if (var13 != 2) {
                   if (var13 != 3) {
                     if (var13 == 4) {
                       ((wt) this).field_p = var11;
@@ -415,7 +463,7 @@ final class wt extends k {
                       ((wt) this).field_t = var5;
                       break L1;
                     } else {
-                      if (-6 != var13) {
+                      if (var13 != 5) {
                         break L1;
                       } else {
                         ((wt) this).field_t = var12;
@@ -509,7 +557,7 @@ final class wt extends k {
             var10 = var30[2];
             var11 = 0;
             L2: while (true) {
-              if (var11 >= hh.field_d) {
+              if (~var11 <= ~hh.field_d) {
                 break L1;
               } else {
                 this.a(var31[var11], var32[var11], (byte) 127, var33[var11]);
@@ -519,9 +567,9 @@ final class wt extends k {
                 L3: while (true) {
                   if (((wt) this).field_o >= 0) {
                     L4: while (true) {
-                      if ((((wt) this).field_o ^ -1) >= -4097) {
+                      if (((wt) this).field_o <= 4096) {
                         L5: {
-                          if (((wt) this).field_v > -1) {
+                          if (((wt) this).field_v < 0) {
                             ((wt) this).field_v = 0;
                             break L5;
                           } else {
@@ -537,7 +585,7 @@ final class wt extends k {
                           }
                         }
                         L7: {
-                          if (-4097 >= ((wt) this).field_v) {
+                          if (((wt) this).field_v <= 4096) {
                             break L7;
                           } else {
                             ((wt) this).field_v = 4096;

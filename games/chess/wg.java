@@ -79,18 +79,18 @@ final class wg extends pk {
 
     final static void a(String param0, byte param1, long param2) {
         CharSequence var5 = null;
-        ij.field_c = param0;
-        vk.field_g = 2;
-        var5 = (CharSequence) (Object) param0;
-        ec.field_f = ad.a(var5, -2);
-        re.field_p = param2;
-        if (param1 > -74) {
-          wg.b(88);
-          kn.field_L = true;
-          return;
-        } else {
-          kn.field_L = true;
-          return;
+        try {
+            ij.field_c = param0;
+            vk.field_g = 2;
+            var5 = (CharSequence) (Object) param0;
+            ec.field_f = ad.a(var5, -2);
+            re.field_p = param2;
+            if (param1 > -74) {
+                wg.b(88);
+            }
+            kn.field_L = true;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "wg.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -309,7 +309,7 @@ final class wg extends pk {
                 var3 = -((wg) this).field_i + hn.field_k;
                 if (((wg) this).field_z) {
                   L4: {
-                    var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1303210433);
+                    var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1);
                     ((wg) this).field_x = ((wg) this).field_s - -((((wg) this).field_y + -((wg) this).field_s) * var3 / ((wg) this).field_u);
                     ((wg) this).field_z = true;
                     ((wg) this).field_d = true;
@@ -329,10 +329,10 @@ final class wg extends pk {
                     return;
                   }
                 } else {
-                  if (-1 >= (var3 ^ -1)) {
+                  if (var3 >= 0) {
                     if (((wg) this).field_u >= var3) {
                       L5: {
-                        var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1303210433);
+                        var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1);
                         ((wg) this).field_x = ((wg) this).field_s - -((((wg) this).field_y + -((wg) this).field_s) * var3 / ((wg) this).field_u);
                         ((wg) this).field_z = true;
                         ((wg) this).field_d = true;
@@ -382,13 +382,13 @@ final class wg extends pk {
                 } else {
                   var3 = -((wg) this).field_i + hn.field_k;
                   if (!((wg) this).field_z) {
-                    if (-1 >= (var3 ^ -1)) {
+                    if (var3 >= 0) {
                       if (((wg) this).field_u < var3) {
                         ((wg) this).field_d = false;
                         return;
                       } else {
                         L7: {
-                          var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1303210433);
+                          var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1);
                           ((wg) this).field_x = ((wg) this).field_s - -((((wg) this).field_y + -((wg) this).field_s) * var3 / ((wg) this).field_u);
                           ((wg) this).field_z = true;
                           ((wg) this).field_d = true;
@@ -416,7 +416,7 @@ final class wg extends pk {
                     }
                   } else {
                     L9: {
-                      var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1303210433);
+                      var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1);
                       ((wg) this).field_x = ((wg) this).field_s - -((((wg) this).field_y + -((wg) this).field_s) * var3 / ((wg) this).field_u);
                       ((wg) this).field_z = true;
                       ((wg) this).field_d = true;
@@ -502,13 +502,13 @@ final class wg extends pk {
             }
             var3 = -((wg) this).field_i + hn.field_k;
             if (!((wg) this).field_z) {
-              if (-1 >= (var3 ^ -1)) {
+              if (var3 >= 0) {
                 if (((wg) this).field_u < var3) {
                   ((wg) this).field_d = false;
                   return;
                 } else {
                   L17: {
-                    var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1303210433);
+                    var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1);
                     ((wg) this).field_x = ((wg) this).field_s - -((((wg) this).field_y + -((wg) this).field_s) * var3 / ((wg) this).field_u);
                     ((wg) this).field_z = true;
                     ((wg) this).field_d = true;
@@ -536,7 +536,7 @@ final class wg extends pk {
               }
             } else {
               L19: {
-                var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1303210433);
+                var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1);
                 ((wg) this).field_x = ((wg) this).field_s - -((((wg) this).field_y + -((wg) this).field_s) * var3 / ((wg) this).field_u);
                 ((wg) this).field_z = true;
                 ((wg) this).field_d = true;
@@ -651,10 +651,10 @@ final class wg extends pk {
           }
           var3 = -((wg) this).field_i + hn.field_k;
           if (!((wg) this).field_z) {
-            if (-1 >= (var3 ^ -1)) {
+            if (var3 >= 0) {
               if (((wg) this).field_u >= var3) {
                 L30: {
-                  var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1303210433);
+                  var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1);
                   ((wg) this).field_x = ((wg) this).field_s - -((((wg) this).field_y + -((wg) this).field_s) * var3 / ((wg) this).field_u);
                   ((wg) this).field_z = true;
                   ((wg) this).field_d = true;
@@ -685,7 +685,7 @@ final class wg extends pk {
             }
           } else {
             L32: {
-              var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1303210433);
+              var3 = var3 + (((wg) this).field_u / (-((wg) this).field_s + ((wg) this).field_y) >> 1);
               ((wg) this).field_x = ((wg) this).field_s - -((((wg) this).field_y + -((wg) this).field_s) * var3 / ((wg) this).field_u);
               ((wg) this).field_z = true;
               ((wg) this).field_d = true;
@@ -725,14 +725,18 @@ final class wg extends pk {
         ((wg) this).field_z = false;
         ((wg) this).field_y = 100;
         ((wg) this).field_x = 50;
-        ((wg) this).field_o = param6;
-        ((wg) this).field_i = param1;
-        ((wg) this).field_t = param7;
-        ((wg) this).field_A = param4;
-        ((wg) this).field_m = param5;
-        ((wg) this).field_k = param0;
-        ((wg) this).field_n = param3;
-        ((wg) this).field_u = param2;
+        try {
+            ((wg) this).field_o = param6;
+            ((wg) this).field_i = param1;
+            ((wg) this).field_t = param7;
+            ((wg) this).field_A = param4;
+            ((wg) this).field_m = param5;
+            ((wg) this).field_k = param0;
+            ((wg) this).field_n = param3;
+            ((wg) this).field_u = param2;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "wg.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

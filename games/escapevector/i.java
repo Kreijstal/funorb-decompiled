@@ -39,7 +39,7 @@ final class i {
         synchronized (var5) {
           L0: {
             field_a.field_z = param2;
-            field_a.field_e = param4;
+            field_a.field_e = 9;
             field_a.field_D = param0;
             field_a.field_C = 0;
             field_a.field_J = param1;
@@ -579,7 +579,7 @@ final class i {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_r[var31] = param0.field_r[var31] - 1;
-                                                                                param0.field_o[param0.field_r[var31]] = param0.field_o[param0.field_r[var31 - 1] + 16 - 1];
+                                                                                param0.field_o[param0.field_r[var31]] = param0.field_o[param0.field_r[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -665,7 +665,7 @@ final class i {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -843,11 +843,11 @@ final class i {
                                                 var1 = i.c(param0);
                                                 if (var1 != 0) {
                                                   var1 = i.c(param0);
-                                                  if (var1 == 0) {
+                                                  if (var1 != 0) {
                                                     var17--;
                                                     continue L39;
                                                   } else {
-                                                    var17--;
+                                                    var17++;
                                                     continue L39;
                                                   }
                                                 } else {

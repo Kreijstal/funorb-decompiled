@@ -19,7 +19,11 @@ abstract class aa {
         if (param1 != -93) {
             return;
         }
-        sf.b(false);
+        try {
+            sf.b(false);
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "aa.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 44 + (param9 != null ? "{...}" : "null") + 44 + (param10 != null ? "{...}" : "null") + 44 + param11 + 44 + param12 + 44 + 240 + 41);
+        }
     }
 
     static {

@@ -125,12 +125,13 @@ final class fd extends oh {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((fd) this).field_N[var3] = (byte)(var6 - 128);
+                    ((fd) this).field_N[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -171,7 +172,6 @@ final class fd extends oh {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -687,7 +687,7 @@ final class fd extends oh {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((fd) this).field_A) {
                     break L36;
                   } else {
@@ -745,7 +745,7 @@ final class fd extends oh {
               }
             }
             ((fd) this).field_A = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_o[var14.field_a[var17_int]];
             var55 = field_k;
@@ -1001,6 +1001,7 @@ final class fd extends oh {
 
     final static fd a(bc param0, String param1, String param2) {
         try {
+            fd var4_ref = null;
             if (!fd.a(param0)) {
                 boolean discarded$0 = param0.a(param1, (byte) 5, param2);
                 return null;
@@ -1009,13 +1010,11 @@ final class fd extends oh {
             if (var3 == null) {
                 return null;
             }
-            fd var4 = null;
-            try {
-                var4 = new fd(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new fd(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1034,7 +1033,7 @@ final class fd extends oh {
         ((fd) this).field_H = var2.a(16711680);
         ((fd) this).field_G = var2.a(16711680);
         if (((fd) this).field_G < 0) {
-            ((fd) this).field_G = ((fd) this).field_G ^ -1;
+            ((fd) this).field_G = ~((fd) this).field_G;
             ((fd) this).field_I = true;
         }
         int var3 = var2.a(16711680);
@@ -1091,12 +1090,13 @@ final class fd extends oh {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -1126,7 +1126,7 @@ final class fd extends oh {
 
     private final static void a(byte[] param0, int param1) {
         field_w = param0;
-        field_p = param1;
+        field_p = 0;
         field_K = 0;
     }
 
@@ -1154,6 +1154,7 @@ final class fd extends oh {
 
     final static fd a(bc param0, int param1, int param2) {
         try {
+            fd var4_ref = null;
             if (!fd.a(param0)) {
                 boolean discarded$0 = param0.a((byte) 125, param2, param1);
                 return null;
@@ -1162,13 +1163,11 @@ final class fd extends oh {
             if (var3 == null) {
                 return null;
             }
-            fd var4 = null;
-            try {
-                var4 = new fd(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new fd(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -120,7 +120,7 @@ final class bk extends ma {
             }
             L2: {
               ((bk) this).field_y = op.field_f;
-              if ((((bk) this).field_p.indexOf("<img=") ^ -1) != 0) {
+              if (((bk) this).field_p.indexOf("<img=") != -1) {
                 break L2;
               } else {
                 ((bk) this).field_y = sa.field_h.field_G;
@@ -196,7 +196,7 @@ final class bk extends ma {
                 break L8;
               } else {
                 if (2 != var3_int) {
-                  if ((var3_int ^ -1) != -2) {
+                  if (var3_int != 1) {
                     break L8;
                   } else {
                     param0.field_a.a(false, (byte) -127);
@@ -449,14 +449,14 @@ final class bk extends ma {
               ((bk) this).field_p = param0;
               ((bk) this).field_l = param1;
               ((bk) this).field_u = 0;
-              if (0 == (param2 ^ -1)) {
+              if (param2 == -1) {
                 break L1;
               } else {
                 ((bk) this).field_s = 1 << param2;
                 break L1;
               }
             }
-            ((bk) this).field_o = ((bk) this).field_s ^ -1;
+            ((bk) this).field_o = ~((bk) this).field_s;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -516,7 +516,7 @@ final class bk extends ma {
             L1: {
               ((bk) this).field_o = param3;
               ((bk) this).field_p = param0;
-              if ((param2 ^ -1) != 0) {
+              if (param2 != -1) {
                 ((bk) this).field_s = 1 << param2;
                 break L1;
               } else {
@@ -603,7 +603,7 @@ final class bk extends ma {
             L1: {
               ((bk) this).field_u = 0;
               ((bk) this).field_l = param1;
-              if (0 == (param2 ^ -1)) {
+              if (param2 == -1) {
                 break L1;
               } else {
                 ((bk) this).field_s = 1 << param2;
@@ -611,7 +611,7 @@ final class bk extends ma {
               }
             }
             ((bk) this).field_p = param0;
-            ((bk) this).field_o = ((bk) this).field_s ^ -1;
+            ((bk) this).field_o = ~((bk) this).field_s;
             var5 = new aa(param3);
             var6 = (bk) (Object) var5.b((byte) -92);
             L2: while (true) {
@@ -620,7 +620,7 @@ final class bk extends ma {
                   if (null == var6) {
                     break L4;
                   } else {
-                    ((bk) this).field_o = ((bk) this).field_o & (var6.field_s ^ -1);
+                    ((bk) this).field_o = ((bk) this).field_o & ~var6.field_s;
                     var6 = (bk) (Object) var5.b(-114);
                     if (var7 != 0) {
                       break L3;

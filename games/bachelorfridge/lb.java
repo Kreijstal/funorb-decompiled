@@ -7,13 +7,14 @@ final class lb extends ana {
     private wga field_x;
 
     private final void e(byte param0) {
-        int var2 = 120 / ((param0 - -3) / 44);
+        int var2 = -120;
     }
 
     final boolean c(byte param0) {
         int var2 = 44 % ((71 - param0) / 47);
+        int fieldTemp$0 = ((lb) this).field_l - 1;
         ((lb) this).field_l = ((lb) this).field_l - 1;
-        if (!(-1 < (((lb) this).field_l - 1 ^ -1))) {
+        if (!(fieldTemp$0 < 0)) {
             if (25 != ((lb) this).field_l) {
                 return false;
             }
@@ -26,56 +27,20 @@ final class lb extends ana {
     }
 
     private final void d(int param0) {
-        Object var3 = null;
-        iv var3_ref = null;
-        int var5 = 0;
-        aga var6 = null;
-        ad var7 = null;
-        aga var8 = null;
-        ad var9 = null;
-        var3 = null;
-        var5 = BachelorFridge.field_y;
-        if (param0 == 15084) {
-          var8 = ((lb) this).field_x.field_l.a(79, ((lb) this).field_q.field_h);
-          if (var8.i(-82)) {
+        ad var4 = null;
+        int var5 = BachelorFridge.field_y;
+        aga var2 = ((lb) this).field_x.field_l.a(79, ((lb) this).field_q.field_h);
+        if (!(!var2.i(-82))) {
             return;
-          } else {
-            var3_ref = (iv) (Object) ((lb) this).field_x.field_o.b((byte) 90);
-            oha discarded$3 = al.a(param0 + -14993, ((lb) this).field_x.field_k);
-            L0: while (true) {
-              if (var3_ref == null) {
-                return;
-              } else {
-                var3_ref.a(var8, ((lb) this).field_q.field_h, 12);
-                var9 = var3_ref.field_h.a(-27449, ((lb) this).field_q);
-                var9.b(-1, 6);
-                var9.a(24831, 101, kna.field_g[33]);
-                var3_ref = (iv) (Object) ((lb) this).field_x.field_o.c(0);
-                continue L0;
-              }
-            }
-          }
-        } else {
-          boolean discarded$4 = lb.g((byte) -55);
-          var6 = ((lb) this).field_x.field_l.a(79, ((lb) this).field_q.field_h);
-          if (var6.i(-82)) {
-            return;
-          } else {
-            var3_ref = (iv) (Object) ((lb) this).field_x.field_o.b((byte) 90);
-            oha discarded$5 = al.a(param0 + -14993, ((lb) this).field_x.field_k);
-            L1: while (true) {
-              if (var3_ref == null) {
-                return;
-              } else {
-                var3_ref.a(var6, ((lb) this).field_q.field_h, 12);
-                var7 = var3_ref.field_h.a(-27449, ((lb) this).field_q);
-                var7.b(-1, 6);
-                var7.a(24831, 101, kna.field_g[33]);
-                var3_ref = (iv) (Object) ((lb) this).field_x.field_o.c(0);
-                continue L1;
-              }
-            }
-          }
+        }
+        iv var3 = (iv) (Object) ((lb) this).field_x.field_o.b((byte) 90);
+        oha discarded$6 = al.a(91, ((lb) this).field_x.field_k);
+        while (var3 != null) {
+            var3.a(var2, ((lb) this).field_q.field_h, 12);
+            var4 = var3.field_h.a(-27449, ((lb) this).field_q);
+            var4.b(-1, 6);
+            var4.a(24831, 101, kna.field_g[33]);
+            var3 = (iv) (Object) ((lb) this).field_x.field_o.c(0);
         }
     }
 
@@ -107,14 +72,15 @@ final class lb extends ana {
 
     lb(gj param0, wga param1) {
         super(param0, (bca) (Object) param1);
-        ((lb) this).field_x = param1;
+        try {
+            ((lb) this).field_x = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "lb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void f(byte param0) {
         field_w = null;
-        if (param0 != 39) {
-            field_w = null;
-        }
     }
 
     static {

@@ -12,8 +12,12 @@ final class lb extends eg implements dm {
     static String field_U;
 
     final void a(na param0, int param1, int param2, boolean param3) {
-        super.a(param0, param1, param2, param3);
-        ((lb) this).field_T.field_K = ((lb) this).field_W.a(-104).c(-68) == pf.field_a ? true : false;
+        try {
+            super.a(param0, param1, param2, param3);
+            ((lb) this).field_T.field_K = ((lb) this).field_W.a(-104).c(-68) == pf.field_a ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "lb.MA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     lb(int param0, int param1, int param2, int param3) {
@@ -31,43 +35,35 @@ final class lb extends eg implements dm {
         if (param0 > -109) {
           field_P = null;
           var2 = 250;
-          ((lb) this).field_W.a(25, -25 + (((lb) this).field_u + 20) >> -1384589791, -125, -var2 + ((lb) this).field_F >> -849760735, 140);
-          ((lb) this).field_T.a(30, (((lb) this).field_u - 10 >> 573509761) - -2, -124, 10 + ((-var2 + ((lb) this).field_F >> -970469375) - -140), 100);
+          ((lb) this).field_W.a(25, -25 + (((lb) this).field_u + 20) >> 1, -125, -var2 + ((lb) this).field_F >> 1, 140);
+          ((lb) this).field_T.a(30, (((lb) this).field_u - 10 >> 1) - -2, -124, 10 + ((-var2 + ((lb) this).field_F >> 1) - -140), 100);
           return;
         } else {
           var2 = 250;
-          ((lb) this).field_W.a(25, -25 + (((lb) this).field_u + 20) >> -1384589791, -125, -var2 + ((lb) this).field_F >> -849760735, 140);
-          ((lb) this).field_T.a(30, (((lb) this).field_u - 10 >> 573509761) - -2, -124, 10 + ((-var2 + ((lb) this).field_F >> -970469375) - -140), 100);
+          ((lb) this).field_W.a(25, -25 + (((lb) this).field_u + 20) >> 1, -125, -var2 + ((lb) this).field_F >> 1, 140);
+          ((lb) this).field_T.a(30, (((lb) this).field_u - 10 >> 1) - -2, -124, 10 + ((-var2 + ((lb) this).field_F >> 1) - -140), 100);
           return;
         }
     }
 
     final static void a(bh param0, boolean param1) {
-        int var2 = 0;
-        Object var3 = null;
-        tl.field_X = param0.e(127) << 755866149;
-        var2 = param0.d((byte) -99);
-        l.field_j = (7 & var2) << -1785448910;
-        tl.field_X = tl.field_X + (var2 >> -144765597);
-        l.field_j = l.field_j + (param0.e(127) << 416081154);
-        var2 = param0.d((byte) -99);
-        fd.field_F = var2 << -862214065 & 2064384;
-        l.field_j = l.field_j + (var2 >> 1196540134);
-        fd.field_F = fd.field_F + (param0.d((byte) -99) << -1463169945);
-        if (param1) {
-          var3 = null;
-          bf discarded$1 = lb.a((wf) null, 38);
-          var2 = param0.d((byte) -99);
-          om.field_Nb = (var2 & 1) << 1037637808;
-          fd.field_F = fd.field_F + (var2 >> -1557831615);
-          om.field_Nb = om.field_Nb + param0.e(127);
-          return;
-        } else {
-          var2 = param0.d((byte) -99);
-          om.field_Nb = (var2 & 1) << 1037637808;
-          fd.field_F = fd.field_F + (var2 >> -1557831615);
-          om.field_Nb = om.field_Nb + param0.e(127);
-          return;
+        int var2_int = 0;
+        try {
+            tl.field_X = param0.e(127) << 5;
+            var2_int = param0.d((byte) -99);
+            l.field_j = (7 & var2_int) << 18;
+            tl.field_X = tl.field_X + (var2_int >> 3);
+            l.field_j = l.field_j + (param0.e(127) << 2);
+            var2_int = param0.d((byte) -99);
+            fd.field_F = var2_int << 15 & 2064384;
+            l.field_j = l.field_j + (var2_int >> 6);
+            fd.field_F = fd.field_F + (param0.d((byte) -99) << 7);
+            var2_int = param0.d((byte) -99);
+            om.field_Nb = (var2_int & 1) << 16;
+            fd.field_F = fd.field_F + (var2_int >> 1);
+            om.field_Nb = om.field_Nb + param0.e(127);
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "lb.D(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 
@@ -99,16 +95,78 @@ final class lb extends eg implements dm {
         if (!(((lb) this).field_W.a(-109).c(-77) == pf.field_a)) {
             return;
         }
-        qe.a(((lb) this).field_W.a(false), 0, ((lb) this).field_W.f((byte) 90), ((lb) this).field_W.g((byte) 12));
+        try {
+            qe.a(((lb) this).field_W.a(false), 0, ((lb) this).field_W.f((byte) 90), ((lb) this).field_W.g((byte) 12));
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "lb.M(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     final static bf a(wf param0, int param1) {
-        if (param1 != 573509761) {
-          field_U = null;
-          return we.a(-11040, ee.a(param0, 100, 96));
-        } else {
-          return we.a(-11040, ee.a(param0, 100, 96));
+        RuntimeException var2 = null;
+        bf stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        bf stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 573509761) {
+                break L1;
+              } else {
+                field_U = null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = we.a(-11040, ee.a(param0, 100, 96));
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("lb.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
+        return stackIn_3_0;
     }
 
     static {

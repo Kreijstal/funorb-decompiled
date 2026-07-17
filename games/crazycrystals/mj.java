@@ -66,7 +66,7 @@ final class mj {
           }
         }
         if (param0 == 13214) {
-          if (((var4 | -((mj) this).field_e) ^ -1) <= -1) {
+          if ((var4 | -((mj) this).field_e) >= 0) {
             if ((var3 | -((mj) this).field_g) >= 0) {
               var5 = ai.field_b;
               ((mj) this).field_g = var3;
@@ -79,7 +79,7 @@ final class mj {
               return var5;
             }
           } else {
-            if (((-((mj) this).field_g | var3) ^ -1) > -1) {
+            if ((-((mj) this).field_g | var3) < 0) {
               var5 = en.field_M;
               ((mj) this).field_g = var3;
               ((mj) this).field_e = var4;
@@ -93,7 +93,7 @@ final class mj {
           }
         } else {
           field_f = null;
-          if (((var4 | -((mj) this).field_e) ^ -1) <= -1) {
+          if ((var4 | -((mj) this).field_e) >= 0) {
             if ((var3 | -((mj) this).field_g) >= 0) {
               var5 = ai.field_b;
               ((mj) this).field_g = var3;
@@ -106,7 +106,7 @@ final class mj {
               return var5;
             }
           } else {
-            if (((-((mj) this).field_g | var3) ^ -1) > -1) {
+            if ((-((mj) this).field_g | var3) < 0) {
               var5 = en.field_M;
               ((mj) this).field_g = var3;
               ((mj) this).field_e = var4;

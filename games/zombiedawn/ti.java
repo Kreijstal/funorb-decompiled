@@ -13,7 +13,7 @@ final class ti {
     static int field_b;
 
     final static void a(int param0, int param1, boolean param2) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -88,18 +88,18 @@ final class ti {
           var9 = ZombieDawn.field_J;
           pg.field_p = param0;
           ic.field_U = true;
-          if (-1 == (pg.field_p ^ -1)) {
-            var3 = ja.a((byte) 16, jc.field_p, mf.field_a, di.field_O, ZombieDawn.field_K);
-            var4 = 3 + var3;
+          if (pg.field_p == 0) {
+            var3_int = ja.a((byte) 16, jc.field_p, mf.field_a, di.field_O, ZombieDawn.field_K);
+            var4 = 3 + var3_int;
             cj.field_h = new String[var4];
             hd.field_s = new int[var4];
             var5 = 0;
             L1: while (true) {
-              if ((var5 ^ -1) <= (var4 ^ -1)) {
+              if (~var5 <= ~var4) {
                 qk.field_Kb = new int[2];
                 var5 = 0;
                 L2: while (true) {
-                  if (var3 <= var5) {
+                  if (var3_int <= var5) {
                     cj.field_h[-3 + var4] = "";
                     cj.field_h[var4 - 2] = wd.field_w;
                     hd.field_s[var4 + -2] = 0;
@@ -122,13 +122,13 @@ final class ti {
             }
           } else {
             if (pg.field_p != 1) {
-              if (-3 == (pg.field_p ^ -1)) {
-                var3 = ja.a((byte) 16, jc.field_p, s.a(1938762664, pm.field_e, new String[1]), di.field_O, ZombieDawn.field_K);
+              if (pg.field_p == 2) {
+                var3_int = ja.a((byte) 16, jc.field_p, s.a(1938762664, pm.field_e, new String[1]), di.field_O, ZombieDawn.field_K);
                 var4 = -1;
                 var5 = 0;
                 L3: while (true) {
                   L4: {
-                    if (var5 >= var3) {
+                    if (var5 >= var3_int) {
                       break L4;
                     } else {
                       if (!"<%0>".equals((Object) (Object) jc.field_p[var5])) {
@@ -143,14 +143,14 @@ final class ti {
                   if (var4 != -1) {
                     pn.field_R = new String[var4];
                     gp.a((Object[]) (Object) jc.field_p, 0, (Object[]) (Object) pn.field_R, 0, var4);
-                    hl.field_b = new String[-1 + -var4 + var3];
-                    gp.a((Object[]) (Object) jc.field_p, 1 + var4, (Object[]) (Object) hl.field_b, 0, var3 + -var4 - 1);
+                    hl.field_b = new String[-1 + -var4 + var3_int];
+                    gp.a((Object[]) (Object) jc.field_p, 1 + var4, (Object[]) (Object) hl.field_b, 0, var3_int + -var4 - 1);
                     var4 = -1;
-                    var3 = ja.a((byte) 16, jc.field_p, s.a(1938762664, ma.field_q, new String[1]), di.field_O, ZombieDawn.field_K);
+                    var3_int = ja.a((byte) 16, jc.field_p, s.a(1938762664, ma.field_q, new String[1]), di.field_O, ZombieDawn.field_K);
                     var5 = 0;
                     L5: while (true) {
                       L6: {
-                        if (var3 <= var5) {
+                        if (var3_int <= var5) {
                           break L6;
                         } else {
                           if (!"<%0>".equals((Object) (Object) jc.field_p[var5])) {
@@ -168,8 +168,8 @@ final class ti {
                         L7: {
                           dl.field_h = new String[var4];
                           gp.a((Object[]) (Object) jc.field_p, 0, (Object[]) (Object) dl.field_h, 0, var4);
-                          bp.field_a = new String[-1 + -var4 + var3];
-                          gp.a((Object[]) (Object) jc.field_p, var4 - -1, (Object[]) (Object) bp.field_a, 0, var3 - (var4 + 1));
+                          bp.field_a = new String[-1 + -var4 + var3_int];
+                          gp.a((Object[]) (Object) jc.field_p, var4 - -1, (Object[]) (Object) bp.field_a, 0, var3_int - (var4 + 1));
                           if (dl.field_h.length <= pn.field_R.length) {
                             stackOut_55_0 = pn.field_R.length;
                             stackIn_56_0 = stackOut_55_0;
@@ -182,7 +182,7 @@ final class ti {
                         }
                         L8: {
                           var5 = stackIn_56_0;
-                          if ((hl.field_b.length ^ -1) > (bp.field_a.length ^ -1)) {
+                          if (~hl.field_b.length > ~bp.field_a.length) {
                             stackOut_58_0 = bp.field_a.length;
                             stackIn_59_0 = stackOut_58_0;
                             break L8;
@@ -198,7 +198,7 @@ final class ti {
                         cj.field_h = new String[var7];
                         var8 = 0;
                         L9: while (true) {
-                          if ((var8 ^ -1) <= (var7 ^ -1)) {
+                          if (~var8 <= ~var7) {
                             hd.field_s[1] = 0;
                             cj.field_h[1] = ap.field_s;
                             qk.field_Kb = new int[2];
@@ -212,12 +212,12 @@ final class ti {
                             cj.field_h[5] = "";
                             var8 = 0;
                             L10: while (true) {
-                              if ((var5 ^ -1) >= (var8 ^ -1)) {
+                              if (~var5 >= ~var8) {
                                 cj.field_h[var5 + 6] = null;
                                 hd.field_s[6 - -var5] = -2;
                                 var8 = 0;
                                 L11: while (true) {
-                                  if ((var6 ^ -1) >= (var8 ^ -1)) {
+                                  if (~var6 >= ~var8) {
                                     ge.field_f = pd.a(-22826);
                                     break L0;
                                   } else {
@@ -259,7 +259,7 @@ final class ti {
                                   stackIn_66_1 = stackOut_64_1;
                                   stackIn_65_0 = stackOut_64_0;
                                   stackIn_65_1 = stackOut_64_1;
-                                  if ((var8 - -dl.field_h.length - var5 ^ -1) > -1) {
+                                  if (var8 - -dl.field_h.length - var5 < 0) {
                                     stackOut_66_0 = (String[]) (Object) stackIn_66_0;
                                     stackOut_66_1 = stackIn_66_1;
                                     stackOut_66_2 = "";
@@ -295,19 +295,19 @@ final class ti {
                   }
                 }
               } else {
-                if (-4 != (pg.field_p ^ -1)) {
+                if (pg.field_p != 3) {
                   if (pg.field_p == 4) {
-                    var3 = ja.a((byte) 16, jc.field_p, d.field_a, di.field_O, ZombieDawn.field_K);
-                    var4 = var3 + 2;
+                    var3_int = ja.a((byte) 16, jc.field_p, d.field_a, di.field_O, ZombieDawn.field_K);
+                    var4 = var3_int + 2;
                     cj.field_h = new String[var4];
                     hd.field_s = new int[var4];
                     var5 = 0;
                     L14: while (true) {
-                      if ((var4 ^ -1) >= (var5 ^ -1)) {
+                      if (~var4 >= ~var5) {
                         qk.field_Kb = new int[1];
                         var5 = 0;
                         L15: while (true) {
-                          if (var3 <= var5) {
+                          if (var3_int <= var5) {
                             cj.field_h[var4 + -2] = "";
                             cj.field_h[var4 + -1] = re.field_c;
                             hd.field_s[-1 + var4] = 0;
@@ -329,17 +329,17 @@ final class ti {
                     if (pg.field_p != 5) {
                       throw new IllegalArgumentException();
                     } else {
-                      var3 = ja.a((byte) 16, jc.field_p, hc.field_c, di.field_O, ZombieDawn.field_K);
-                      var4 = 3 + var3;
+                      var3_int = ja.a((byte) 16, jc.field_p, hc.field_c, di.field_O, ZombieDawn.field_K);
+                      var4 = 3 + var3_int;
                       hd.field_s = new int[var4];
                       cj.field_h = new String[var4];
                       var5 = 0;
                       L16: while (true) {
-                        if ((var4 ^ -1) >= (var5 ^ -1)) {
+                        if (~var4 >= ~var5) {
                           qk.field_Kb = new int[2];
                           var5 = 0;
                           L17: while (true) {
-                            if ((var3 ^ -1) >= (var5 ^ -1)) {
+                            if (~var3_int >= ~var5) {
                               cj.field_h[var4 + -3] = "";
                               cj.field_h[-2 + var4] = ja.field_c;
                               hd.field_s[-2 + var4] = 0;
@@ -365,14 +365,14 @@ final class ti {
                 } else {
                   L18: {
                     if (vh.field_a.field_t) {
-                      var3 = ja.a((byte) 16, jc.field_p, me.field_Cb, di.field_O, ZombieDawn.field_K);
+                      var3_int = ja.a((byte) 16, jc.field_p, me.field_Cb, di.field_O, ZombieDawn.field_K);
                       break L18;
                     } else {
-                      var3 = ja.a((byte) 16, jc.field_p, lo.field_n, di.field_O, ZombieDawn.field_K);
+                      var3_int = ja.a((byte) 16, jc.field_p, lo.field_n, di.field_O, ZombieDawn.field_K);
                       break L18;
                     }
                   }
-                  var4 = var3 + 2;
+                  var4 = var3_int + 2;
                   cj.field_h = new String[var4];
                   hd.field_s = new int[var4];
                   var5 = 0;
@@ -381,7 +381,7 @@ final class ti {
                       qk.field_Kb = new int[1];
                       var5 = 0;
                       L20: while (true) {
-                        if ((var3 ^ -1) >= (var5 ^ -1)) {
+                        if (~var3_int >= ~var5) {
                           cj.field_h[-2 + var4] = "";
                           cj.field_h[-1 + var4] = re.field_c;
                           hd.field_s[-1 + var4] = 0;
@@ -402,17 +402,17 @@ final class ti {
                 }
               }
             } else {
-              var3 = ja.a((byte) 16, jc.field_p, mf.field_a, di.field_O, ZombieDawn.field_K);
-              var4 = 2 - -var3;
+              var3_int = ja.a((byte) 16, jc.field_p, mf.field_a, di.field_O, ZombieDawn.field_K);
+              var4 = 2 - -var3_int;
               cj.field_h = new String[var4];
               hd.field_s = new int[var4];
               var5 = 0;
               L21: while (true) {
-                if ((var5 ^ -1) <= (var4 ^ -1)) {
+                if (~var5 <= ~var4) {
                   qk.field_Kb = new int[1];
                   var5 = 0;
                   L22: while (true) {
-                    if (var5 >= var3) {
+                    if (var5 >= var3_int) {
                       cj.field_h[var4 + -2] = "";
                       cj.field_h[var4 + -1] = re.field_c;
                       hd.field_s[-1 + var4] = 0;
@@ -434,12 +434,12 @@ final class ti {
           }
         }
         i.field_W.field_h = qk.field_Kb.length;
-        var3 = 0;
+        var3_int = 0;
         var4 = 0;
         L23: while (true) {
           if (var4 >= cj.field_h.length) {
             L24: {
-              if (-3 == (pg.field_p ^ -1)) {
+              if (pg.field_p == 2) {
                 var10 = pn.field_R;
                 var5 = 0;
                 L25: while (true) {
@@ -447,14 +447,14 @@ final class ti {
                     var11 = hl.field_b;
                     var5 = 0;
                     L26: while (true) {
-                      if ((var11.length ^ -1) >= (var5 ^ -1)) {
+                      if (~var11.length >= ~var5) {
                         break L24;
                       } else {
                         L27: {
                           var13 = var11[var5];
                           var7 = tk.a(var13, true, false);
-                          if (var3 < var7) {
-                            var3 = var7;
+                          if (var3_int < var7) {
+                            var3_int = var7;
                             break L27;
                           } else {
                             break L27;
@@ -468,8 +468,8 @@ final class ti {
                     L28: {
                       var12 = var10[var5];
                       var7 = tk.a(var12, true, false);
-                      if (var7 > var3) {
-                        var3 = var7;
+                      if (var7 > var3_int) {
+                        var3_int = var7;
                         break L28;
                       } else {
                         break L28;
@@ -484,7 +484,7 @@ final class ti {
               }
             }
             L29: {
-              p.field_d = i.field_W.field_h * (fe.field_H + cn.field_h << -318826975);
+              p.field_d = i.field_W.field_h * (fe.field_H + cn.field_h << 1);
               if (param1 >= 49) {
                 break L29;
               } else {
@@ -492,17 +492,17 @@ final class ti {
                 break L29;
               }
             }
-            rg.field_E = -(var3 >> 415603265) + mo.field_b - -var3;
-            wh.field_c = mo.field_b - (var3 >> -66696607);
+            rg.field_E = -(var3_int >> 1) + mo.field_b - -var3_int;
+            wh.field_c = mo.field_b - (var3_int >> 1);
             var4 = 0;
             L30: while (true) {
-              if ((cj.field_h.length ^ -1) >= (var4 ^ -1)) {
-                wm.field_d = -(p.field_d >> -505719679) + ff.field_a;
+              if (~cj.field_h.length >= ~var4) {
+                wm.field_d = -(p.field_d >> 1) + ff.field_a;
                 hm.field_F = new int[cj.field_h.length][];
                 var4 = 0;
                 var5 = wm.field_d;
                 L31: while (true) {
-                  if ((cj.field_h.length ^ -1) >= (var4 ^ -1)) {
+                  if (~cj.field_h.length >= ~var4) {
                     L32: {
                       if (2 != pg.field_p) {
                         i.field_W.a(param2, (byte) -70, r.b(6199969, ha.field_b, ei.field_K), 0);
@@ -516,16 +516,16 @@ final class ti {
                   } else {
                     L33: {
                       var6 = hd.field_s[var4];
-                      if (-1 >= (var6 ^ -1)) {
+                      if (var6 >= 0) {
                         var7 = tk.a(cj.field_h[var4], true, true);
                         var5 = var5 + fe.field_H;
-                        var8 = mo.field_b - (var7 >> -51409631);
+                        var8 = mo.field_b - (var7 >> 1);
                         hm.field_F[var4] = new int[4];
                         hm.field_F[var4][0] = var8 + -lk.field_f;
                         hm.field_F[var4][1] = var5;
-                        hm.field_F[var4][2] = (lk.field_f << -851703551) + var7;
-                        hm.field_F[var4][3] = qh.field_f + (cn.field_h << 1345894785);
-                        var5 = var5 + ((cn.field_h << 613816609) - -fe.field_H + qh.field_f);
+                        hm.field_F[var4][2] = (lk.field_f << 1) + var7;
+                        hm.field_F[var4][3] = qh.field_f + (cn.field_h << 1);
+                        var5 = var5 + ((cn.field_h << 1) - -fe.field_H + qh.field_f);
                         break L33;
                       } else {
                         var5 = var5 + vl.field_r;
@@ -541,7 +541,7 @@ final class ti {
                   stackOut_109_0 = p.field_d;
                   stackIn_111_0 = stackOut_109_0;
                   stackIn_110_0 = stackOut_109_0;
-                  if ((hd.field_s[var4] ^ -1) > -1) {
+                  if (hd.field_s[var4] < 0) {
                     stackOut_111_0 = stackIn_111_0;
                     stackOut_111_1 = vl.field_r;
                     stackIn_112_0 = stackOut_111_0;
@@ -588,8 +588,8 @@ final class ti {
             }
             L36: {
               var5 = tk.a(stackIn_87_0, stackIn_87_1 != 0, stackIn_87_2 != 0);
-              if ((var5 ^ -1) < (var3 ^ -1)) {
-                var3 = var5;
+              if (~var5 < ~var3_int) {
+                var3_int = var5;
                 break L36;
               } else {
                 break L36;
@@ -613,14 +613,18 @@ final class ti {
     }
 
     final static void a(String param0, boolean param1, boolean param2) {
-        pk.field_J = param1 ? true : false;
-        ce.field_q = true;
-        kk.field_i = new sg(e.field_S, rk.field_b, param0, nm.field_c, pk.field_J);
-        if (param2) {
-            Object var4 = null;
-            ti.a((String) null, false, true);
+        try {
+            pk.field_J = param1;
+            ce.field_q = true;
+            kk.field_i = new sg(e.field_S, rk.field_b, param0, nm.field_c, pk.field_J);
+            if (param2) {
+                Object var4 = null;
+                ti.a((String) null, false, true);
+            }
+            e.field_S.a((ga) (Object) kk.field_i, !param2 ? true : false);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "ti.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        e.field_S.a((ga) (Object) kk.field_i, !param2 ? true : false);
     }
 
     static {

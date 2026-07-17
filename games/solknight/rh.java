@@ -14,15 +14,9 @@ final class rh {
 
     public static void b(int param0) {
         field_g = null;
-        if (param0 != 0) {
-            field_e = -90;
-        }
     }
 
     final static e a(int param0) {
-        if (param0 != 0) {
-            return null;
-        }
         return ti.field_f;
     }
 

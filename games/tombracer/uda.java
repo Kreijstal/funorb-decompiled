@@ -54,7 +54,7 @@ final class uda extends qra {
                 if (84 == param2) {
                   break L2;
                 } else {
-                  if ((param2 ^ -1) != -84) {
+                  if (param2 != 83) {
                     return false;
                   } else {
                     break L2;
@@ -144,7 +144,7 @@ final class uda extends qra {
                     ((uda) this).field_t[var11].a(var8, 1400, var9 - -55, (byte) 73);
                     break L5;
                   } else {
-                    bsa.field_i.a(-(bsa.field_i.a() >> -1700657663) + var8, -(bsa.field_i.c() >> -4698335) + var9, 0, 1627389951, 1);
+                    bsa.field_i.a(-(bsa.field_i.a() >> 1) + var8, -(bsa.field_i.c() >> 1) + var9, 0, 1627389951, 1);
                     break L5;
                   }
                 }
@@ -274,35 +274,169 @@ final class uda extends qra {
 
     uda(qh param0, v param1) {
         super(param0, param1);
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         ad var8 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_6_1 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_5_1 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_4_1 = 0;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         ((uda) this).field_p = 0;
         ((uda) this).field_v = 0;
         ((uda) this).field_u = -1;
-        ((uda) this).field_m = new daa(((uda) this).field_c);
-        ((uda) this).field_m.field_b = new w();
-        ((uda) this).field_n = new vna();
-        for (var3 = 0; (var3 ^ -1) > -14; var3++) {
-            var4 = aaa.a(false);
-            var5 = koa.b(0);
-            var6 = var3 % 7 * (0 + (-90 + var4) / 7) + 45;
-            var7 = -90 + (-8 < var3 ? (var5 >> 764891265) + -84 : (var5 >> -1653651743) + 20);
-            if (-8 <= var3) {
-                var6 += 32;
+        try {
+          L0: {
+            ((uda) this).field_m = new daa(((uda) this).field_c);
+            ((uda) this).field_m.field_b = new w();
+            ((uda) this).field_n = new vna();
+            var3_int = 0;
+            L1: while (true) {
+              if (var3_int >= 13) {
+                var3_int = param0.field_k.field_H.length;
+                ((uda) this).field_t = new rp[var3_int];
+                ((uda) this).field_y = false;
+                break L0;
+              } else {
+                L2: {
+                  var4 = aaa.a(false);
+                  var5 = koa.b(0);
+                  var6 = var3_int % 7 * ((-90 + var4) / 7) + 45;
+                  stackOut_3_0 = -90;
+                  stackIn_5_0 = stackOut_3_0;
+                  stackIn_4_0 = stackOut_3_0;
+                  if (var3_int >= 7) {
+                    stackOut_5_0 = stackIn_5_0;
+                    stackOut_5_1 = (var5 >> 1) + 20;
+                    stackIn_6_0 = stackOut_5_0;
+                    stackIn_6_1 = stackOut_5_1;
+                    break L2;
+                  } else {
+                    stackOut_4_0 = stackIn_4_0;
+                    stackOut_4_1 = (var5 >> 1) + -84;
+                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_1 = stackOut_4_1;
+                    break L2;
+                  }
+                }
+                L3: {
+                  var7 = stackIn_6_0 + stackIn_6_1;
+                  if (var3_int < 7) {
+                    break L3;
+                  } else {
+                    var6 += 32;
+                    break L3;
+                  }
+                }
+                L4: {
+                  var8 = new ad(var6, var7);
+                  if (!this.a(var3_int, (byte) -35)) {
+                    break L4;
+                  } else {
+                    var8 = new ad(var3_int, var6, var7);
+                    break L4;
+                  }
+                }
+                ((uda) this).field_n.b((byte) -104, (vg) (Object) var8);
+                var3_int++;
+                continue L1;
+              }
             }
-            var8 = new ad(var6, var7);
-            if (this.a(var3, (byte) -35)) {
-                var8 = new ad(var3, var6, var7);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("uda.<init>(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param0 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
             }
-            ((uda) this).field_n.b((byte) -104, (vg) (Object) var8);
+          }
+          L6: {
+            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param1 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L6;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L6;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
         }
-        var3 = param0.field_k.field_H.length;
-        ((uda) this).field_t = new rp[var3];
-        ((uda) this).field_y = false;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -385,7 +519,7 @@ final class uda extends qra {
               if (!this.f(0)) {
                 break L0;
               } else {
-                if (-2 == (hf.field_b ^ -1)) {
+                if (hf.field_b == 1) {
                   this.a(true, ((uda) this).field_v);
                   break L0;
                 } else {
@@ -411,7 +545,7 @@ final class uda extends qra {
             }
           }
           L3: {
-            if (!((uda) this).field_h.g(param0 ^ param0, 0)) {
+            if (!((uda) this).field_h.g(0, 0)) {
               break L3;
             } else {
               ((uda) this).field_v = ((uda) this).field_v - 1;
@@ -490,7 +624,7 @@ final class uda extends qra {
               }
               L10: {
                 ((uda) this).field_v = stackIn_28_1 + stackIn_28_2;
-                if ((((uda) this).field_v ^ -1) <= -14) {
+                if (((uda) this).field_v >= 13) {
                   ((uda) this).field_v = ((uda) this).field_v + -13;
                   break L10;
                 } else {
@@ -535,7 +669,7 @@ final class uda extends qra {
                         if (di.field_f[param0]) {
                           break L5;
                         } else {
-                          if (-1 <= (wla.field_ub ^ -1)) {
+                          if (wla.field_ub <= 0) {
                             break L4;
                           } else {
                             break L5;

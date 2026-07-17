@@ -57,10 +57,6 @@ final class v {
     }
 
     final static kc b(byte param0) {
-        if (param0 <= 112) {
-            eg discarded$0 = v.a((byte) -59, true, false, -83, -46);
-            return uc.b(115);
-        }
         return uc.b(115);
     }
 
@@ -196,7 +192,7 @@ final class v {
                           }
                         }
                         L4: {
-                          if ((((v) this).field_d ^ -1) < -1) {
+                          if (((v) this).field_d > 0) {
                             ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                             break L4;
                           } else {
@@ -234,7 +230,7 @@ final class v {
                             }
                           }
                           L7: {
-                            if ((((v) this).field_d ^ -1) < -1) {
+                            if (((v) this).field_d > 0) {
                               ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                               break L7;
                             } else {
@@ -259,7 +255,7 @@ final class v {
                           }
                         }
                         L9: {
-                          if ((((v) this).field_d ^ -1) < -1) {
+                          if (((v) this).field_d > 0) {
                             ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                             break L9;
                           } else {
@@ -273,7 +269,7 @@ final class v {
                   if (o.field_r == var2) {
                     if (co.field_c == var3) {
                       L10: {
-                        if ((((v) this).field_d ^ -1) < -1) {
+                        if (((v) this).field_d > 0) {
                           ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                           break L10;
                         } else {
@@ -284,7 +280,7 @@ final class v {
                     } else {
                       L11: {
                         ((v) this).field_a.a(var2, var3, 121);
-                        if ((((v) this).field_d ^ -1) < -1) {
+                        if (((v) this).field_d > 0) {
                           ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                           break L11;
                         } else {
@@ -296,7 +292,7 @@ final class v {
                   } else {
                     L12: {
                       ((v) this).field_a.a(var2, var3, 121);
-                      if ((((v) this).field_d ^ -1) < -1) {
+                      if (((v) this).field_d > 0) {
                         ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                         break L12;
                       } else {
@@ -346,7 +342,7 @@ final class v {
                     }
                   }
                   L16: {
-                    if ((((v) this).field_d ^ -1) < -1) {
+                    if (((v) this).field_d > 0) {
                       ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                       break L16;
                     } else {
@@ -373,7 +369,7 @@ final class v {
                     if (o.field_r == var2) {
                       if (co.field_c == var3) {
                         L18: {
-                          if ((((v) this).field_d ^ -1) < -1) {
+                          if (((v) this).field_d > 0) {
                             ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                             break L18;
                           } else {
@@ -384,7 +380,7 @@ final class v {
                       } else {
                         L19: {
                           ((v) this).field_a.a(var2, var3, 121);
-                          if ((((v) this).field_d ^ -1) < -1) {
+                          if (((v) this).field_d > 0) {
                             ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                             break L19;
                           } else {
@@ -396,7 +392,7 @@ final class v {
                     } else {
                       L20: {
                         ((v) this).field_a.a(var2, var3, 121);
-                        if ((((v) this).field_d ^ -1) < -1) {
+                        if (((v) this).field_d > 0) {
                           ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                           break L20;
                         } else {
@@ -411,7 +407,7 @@ final class v {
                   if (o.field_r == var2) {
                     if (co.field_c == var3) {
                       L21: {
-                        if ((((v) this).field_d ^ -1) < -1) {
+                        if (((v) this).field_d > 0) {
                           ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                           break L21;
                         } else {
@@ -422,7 +418,7 @@ final class v {
                     } else {
                       L22: {
                         ((v) this).field_a.a(var2, var3, 121);
-                        if ((((v) this).field_d ^ -1) < -1) {
+                        if (((v) this).field_d > 0) {
                           ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                           break L22;
                         } else {
@@ -434,7 +430,7 @@ final class v {
                   } else {
                     L23: {
                       ((v) this).field_a.a(var2, var3, 121);
-                      if ((((v) this).field_d ^ -1) < -1) {
+                      if (((v) this).field_d > 0) {
                         ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                         break L23;
                       } else {
@@ -450,7 +446,7 @@ final class v {
               if (co.field_c != var3) {
                 L24: {
                   ((v) this).field_a.a(var2, var3, 121);
-                  if ((((v) this).field_d ^ -1) < -1) {
+                  if (((v) this).field_d > 0) {
                     ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                     break L24;
                   } else {
@@ -460,7 +456,7 @@ final class v {
                 return;
               } else {
                 L25: {
-                  if ((((v) this).field_d ^ -1) < -1) {
+                  if (((v) this).field_d > 0) {
                     ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                     break L25;
                   } else {
@@ -472,7 +468,7 @@ final class v {
             } else {
               L26: {
                 ((v) this).field_a.a(var2, var3, 121);
-                if ((((v) this).field_d ^ -1) < -1) {
+                if (((v) this).field_d > 0) {
                   ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                   break L26;
                 } else {
@@ -539,7 +535,7 @@ final class v {
                     }
                   }
                   L31: {
-                    if ((((v) this).field_d ^ -1) < -1) {
+                    if (((v) this).field_d > 0) {
                       ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                       break L31;
                     } else {
@@ -577,7 +573,7 @@ final class v {
                       }
                     }
                     L34: {
-                      if ((((v) this).field_d ^ -1) < -1) {
+                      if (((v) this).field_d > 0) {
                         ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                         break L34;
                       } else {
@@ -602,7 +598,7 @@ final class v {
                     }
                   }
                   L36: {
-                    if ((((v) this).field_d ^ -1) < -1) {
+                    if (((v) this).field_d > 0) {
                       ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                       break L36;
                     } else {
@@ -616,7 +612,7 @@ final class v {
             if (o.field_r == var2) {
               if (co.field_c == var3) {
                 L37: {
-                  if ((((v) this).field_d ^ -1) < -1) {
+                  if (((v) this).field_d > 0) {
                     ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                     break L37;
                   } else {
@@ -627,7 +623,7 @@ final class v {
               } else {
                 L38: {
                   ((v) this).field_a.a(var2, var3, 121);
-                  if ((((v) this).field_d ^ -1) < -1) {
+                  if (((v) this).field_d > 0) {
                     ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                     break L38;
                   } else {
@@ -639,7 +635,7 @@ final class v {
             } else {
               L39: {
                 ((v) this).field_a.a(var2, var3, 121);
-                if ((((v) this).field_d ^ -1) < -1) {
+                if (((v) this).field_d > 0) {
                   ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                   break L39;
                 } else {
@@ -693,7 +689,7 @@ final class v {
 
     final boolean b(boolean param0) {
         if (!param0) {
-          if ((ah.field_c ^ -1) < -1) {
+          if (ah.field_c > 0) {
             if (wl.field_K >= ((v) this).field_q) {
               return false;
             } else {
@@ -704,7 +700,7 @@ final class v {
           }
         } else {
           ((v) this).a(-12, -65, (byte) -64);
-          if ((ah.field_c ^ -1) < -1) {
+          if (ah.field_c > 0) {
             if (wl.field_K >= ((v) this).field_q) {
               return false;
             } else {
@@ -744,7 +740,7 @@ final class v {
         if (param0 == 93) {
           if (ka.field_m == null) {
             L0: {
-              if (-1 <= (ah.field_c ^ -1)) {
+              if (ah.field_c <= 0) {
                 ((v) this).field_l = false;
                 break L0;
               } else {
@@ -752,8 +748,9 @@ final class v {
               }
             }
             if (((v) this).field_l) {
+              int fieldTemp$2 = ((v) this).field_s - 1;
               ((v) this).field_s = ((v) this).field_s - 1;
-              if (((v) this).field_s - 1 <= 0) {
+              if (fieldTemp$2 <= 0) {
                 ((v) this).field_s = ((v) this).field_i;
                 if (((v) this).field_q > wl.field_K) {
                   ((v) this).field_l = false;
@@ -780,7 +777,7 @@ final class v {
                   return;
                 }
               } else {
-                if ((((v) this).field_d ^ -1) >= -1) {
+                if (((v) this).field_d <= 0) {
                   if (((v) this).field_o == o.field_r) {
                     if (((v) this).field_e != co.field_c) {
                       ((v) this).field_a.a(((v) this).field_o, ((v) this).field_e, param0 ^ -4);
@@ -815,7 +812,7 @@ final class v {
           v.b(1);
           if (ka.field_m == null) {
             L1: {
-              if (-1 <= (ah.field_c ^ -1)) {
+              if (ah.field_c <= 0) {
                 ((v) this).field_l = false;
                 break L1;
               } else {
@@ -823,8 +820,9 @@ final class v {
               }
             }
             if (((v) this).field_l) {
+              int fieldTemp$3 = ((v) this).field_s - 1;
               ((v) this).field_s = ((v) this).field_s - 1;
-              if (((v) this).field_s - 1 <= 0) {
+              if (fieldTemp$3 <= 0) {
                 ((v) this).field_s = ((v) this).field_i;
                 if (((v) this).field_q > wl.field_K) {
                   ((v) this).field_l = false;
@@ -842,7 +840,7 @@ final class v {
                   ta.field_e = (-o.field_r + ((v) this).field_d) / 2;
                   break L2;
                 } else {
-                  if ((((v) this).field_d ^ -1) < -1) {
+                  if (((v) this).field_d > 0) {
                     ta.field_e = 0;
                     break L2;
                   } else {
@@ -907,19 +905,23 @@ final class v {
     }
 
     private v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, qi param8) {
-        ((v) this).field_c = 480;
-        ((v) this).field_h = param3;
-        ((v) this).field_v = param1;
-        ((v) this).field_l = false;
-        ((v) this).field_m = 640;
-        ((v) this).field_q = param6;
-        ((v) this).field_f = param0;
-        ((v) this).field_e = param5;
-        ((v) this).field_b = 0.0f;
-        ((v) this).field_o = param4;
-        ((v) this).field_a = param8;
-        ((v) this).field_k = param2;
-        ((v) this).field_i = param7;
+        try {
+            ((v) this).field_c = 480;
+            ((v) this).field_h = param3;
+            ((v) this).field_v = param1;
+            ((v) this).field_l = false;
+            ((v) this).field_m = 640;
+            ((v) this).field_q = param6;
+            ((v) this).field_f = param0;
+            ((v) this).field_e = param5;
+            ((v) this).field_b = 0.0f;
+            ((v) this).field_o = param4;
+            ((v) this).field_a = param8;
+            ((v) this).field_k = param2;
+            ((v) this).field_i = param7;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "v.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

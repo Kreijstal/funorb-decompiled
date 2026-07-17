@@ -12,12 +12,11 @@ final class di {
 
     final og a(byte param0, int param1) {
         og var3 = null;
-        og var3_ref = null;
         int var4 = 0;
         byte[] var5 = null;
         var3 = (og) ((di) this).field_f.a((byte) 106, (long)param1);
         if (var3 != null) {
-          return var3_ref;
+          return var3;
         } else {
           L0: {
             var4 = 3 % ((param0 - 57) / 42);
@@ -30,9 +29,9 @@ final class di {
             }
           }
           L1: {
-            var3_ref = new og();
+            var3 = new og();
             if (var5 != null) {
-              var3_ref.a(0, new qc(var5));
+              var3.a(0, new qc(var5));
               break L1;
             } else {
               break L1;
@@ -40,46 +39,56 @@ final class di {
           }
           L2: {
             if (param1 >= 32768) {
-              var3_ref.f((byte) 119);
+              var3.f((byte) 119);
               break L2;
             } else {
               break L2;
             }
           }
-          ((di) this).field_f.a(-126, (long)param1, (Object) (Object) var3_ref);
-          return var3_ref;
+          ((di) this).field_f.a(-126, (long)param1, (Object) (Object) var3);
+          return var3;
         }
     }
 
     public static void a(byte param0) {
-        int var1 = 52 / ((25 - param0) / 54);
+        int var1 = -52;
         field_e = null;
         field_c = null;
     }
 
     final static void a(int param0, int param1) {
         hf var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         wc var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = Geoblox.field_C;
-        var4 = (wc) (Object) l.field_g.g(param1 ^ param1);
-        L0: while (true) {
-          if (var4 == null) {
-            var2 = qa.field_e.g(0);
+        try {
+          L0: {
+            var4 = (wc) (Object) l.field_g.g(param1 ^ param1);
             L1: while (true) {
-              if (var2 != null) {
-                gf.a(param0, 125);
-                var2 = qa.field_e.d(1);
-                continue L1;
+              if (var4 == null) {
+                var2 = qa.field_e.g(0);
+                L2: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    gf.a(param0, 125);
+                    var2 = qa.field_e.d(1);
+                    continue L2;
+                  }
+                }
               } else {
-                return;
+                o.a(param0, var4, param1 + -21718);
+                var4 = (wc) (Object) l.field_g.d(1);
+                continue L1;
               }
             }
-          } else {
-            o.a(param0, var4, param1 + -21718);
-            var4 = (wc) (Object) l.field_g.d(1);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var2_ref, "di.B(" + param0 + 44 + param1 + 41);
         }
     }
 

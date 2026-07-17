@@ -65,7 +65,7 @@ final class lq {
               if (var3 >= ((lq) this).field_c.length) {
                 return ((lq) this).field_c.length + -1;
               } else {
-                if (((lq) this).field_c[var3] + ((lq) this).field_c[var3 + -1] >> 501033697 <= param0) {
+                if (((lq) this).field_c[var3] + ((lq) this).field_c[var3 + -1] >> 1 <= param0) {
                   var3++;
                   continue L1;
                 } else {
@@ -83,10 +83,6 @@ final class lq {
         field_b = null;
         field_e = null;
         field_a = null;
-        if (param0) {
-            Object var2 = null;
-            lq.a((er) null, (byte) -50);
-        }
     }
 
     lq(int param0, int param1, int param2) {
@@ -99,8 +95,12 @@ final class lq {
         if (param1 != -94) {
             return;
         }
-        tg.a((byte) -110);
-        bi.a(param0.field_F, param0.field_x, param0.field_B);
+        try {
+            tg.a((byte) -110);
+            bi.a(param0.field_F, param0.field_x, param0.field_B);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "lq.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

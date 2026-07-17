@@ -6,40 +6,27 @@ final class wj {
     static String field_b;
 
     final static void a(cga param0, int param1, int param2) {
+        kh var5 = null;
         int var4 = 0;
-        kh var6 = null;
-        kh var7 = null;
-        if (param2 > -116) {
-          wj.a((byte) 1);
-          var6 = ql.field_k;
-          var6.k(param1, -2988);
-          var6.field_h = var6.field_h + 1;
-          var4 = var6.field_h;
-          var6.i(1, 0);
-          var6.i(param0.field_j, 0);
-          var6.i(param0.field_o, 0);
-          var6.a(param0.field_k, (byte) -42);
-          var6.a(param0.field_h, (byte) -20);
-          var6.a(param0.field_m, (byte) -123);
-          var6.a(param0.field_n, (byte) 92);
-          int discarded$2 = var6.g(var4, 64);
-          var6.d(var6.field_h - var4, (byte) 16);
-          return;
-        } else {
-          var7 = ql.field_k;
-          var7.k(param1, -2988);
-          var7.field_h = var7.field_h + 1;
-          var4 = var7.field_h;
-          var7.i(1, 0);
-          var7.i(param0.field_j, 0);
-          var7.i(param0.field_o, 0);
-          var7.a(param0.field_k, (byte) -42);
-          var7.a(param0.field_h, (byte) -20);
-          var7.a(param0.field_m, (byte) -123);
-          var7.a(param0.field_n, (byte) 92);
-          int discarded$3 = var7.g(var4, 64);
-          var7.d(var7.field_h - var4, (byte) 16);
-          return;
+        try {
+            if (param2 > -116) {
+                wj.a((byte) 1);
+            }
+            var5 = ql.field_k;
+            var5.k(param1, -2988);
+            var5.field_h = var5.field_h + 1;
+            var4 = var5.field_h;
+            var5.i(1, 0);
+            var5.i(param0.field_j, 0);
+            var5.i(param0.field_o, 0);
+            var5.a(param0.field_k, (byte) -42);
+            var5.a(param0.field_h, (byte) -20);
+            var5.a(param0.field_m, (byte) -123);
+            var5.a(param0.field_n, (byte) 92);
+            int discarded$0 = var5.g(var4, 64);
+            var5.d(var5.field_h - var4, (byte) 16);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wj.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 

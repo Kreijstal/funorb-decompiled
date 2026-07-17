@@ -36,7 +36,7 @@ final class ca {
             L2: while (true) {
               L3: {
                 L4: {
-                  if ((var2_int ^ -1) <= -33) {
+                  if (var2_int >= 32) {
                     break L4;
                   } else {
                     ((ca) this).field_l[var2_int] = (byte) 0;
@@ -191,7 +191,7 @@ final class ca {
                             var15 = -var12 + jp.field_a[var11];
                             var16 = -var13 + al.field_m[var10];
                             var17 = al.field_m[var11] + -var13;
-                            if (-1 < (var17 * var14 + -(var15 * var16) ^ -1)) {
+                            if (var17 * var14 + -(var15 * var16) < 0) {
                               break L7;
                             } else {
                               if (var19 == 0) {
@@ -206,7 +206,7 @@ final class ca {
                         }
                         L8: {
                           var12 = qe.field_v[var9];
-                          if ((var12 ^ -1) != 2147483647) {
+                          if (var12 != -2147483648) {
                             break L8;
                           } else {
                             if (var19 == 0) {
@@ -222,7 +222,7 @@ final class ca {
                         } else {
                           L9: {
                             var14 = qe.field_v[var11];
-                            if (2147483647 != (var14 ^ -1)) {
+                            if (var14 != -2147483648) {
                               break L9;
                             } else {
                               if (var19 == 0) {
@@ -249,11 +249,11 @@ final class ca {
                           L11: while (true) {
                             L12: {
                               L13: {
-                                if ((var17 >> -558220764 ^ -1) == -1) {
+                                if (var17 >> 4 == 0) {
                                   break L13;
                                 } else {
                                   var16--;
-                                  stackOut_36_0 = var16 ^ -1;
+                                  stackOut_36_0 = ~var16;
                                   stackOut_36_1 = -1;
                                   stackIn_45_0 = stackOut_36_0;
                                   stackIn_45_1 = stackOut_36_1;
@@ -284,7 +284,7 @@ final class ca {
                                 }
                               }
                               stackOut_44_0 = var17;
-                              stackOut_44_1 = var16 << 120367940;
+                              stackOut_44_1 = var16 << 4;
                               stackIn_45_0 = stackOut_44_0;
                               stackIn_45_1 = stackOut_44_1;
                               break L12;
@@ -293,7 +293,7 @@ final class ca {
                               var18 = stackIn_45_0 + stackIn_45_1;
                               nd.field_c[var18] = var8;
                               kb.field_N[var16] = var17 - -1;
-                              if ((param1.field_B ^ -1) >= -1) {
+                              if (param1.field_B <= 0) {
                                 break L15;
                               } else {
                                 if (null == param1.field_n) {
@@ -324,7 +324,7 @@ final class ca {
               }
               L16: {
                 L17: {
-                  if (stackIn_54_0 <= (param1.field_B ^ -1)) {
+                  if (stackIn_54_0 <= ~param1.field_B) {
                     break L17;
                   } else {
                     if (param1.field_n == null) {
@@ -333,7 +333,7 @@ final class ca {
                       var8 = 0;
                       var9 = 0;
                       L18: while (true) {
-                        if ((sc.field_i.length ^ -1) >= (var9 ^ -1)) {
+                        if (~sc.field_i.length >= ~var9) {
                           break L17;
                         } else {
                           var10 = sc.field_i[var9];
@@ -421,10 +421,10 @@ final class ca {
             L1: while (true) {
               L2: {
                 L3: {
-                  if ((var2_int ^ -1) <= -9) {
+                  if (var2_int >= 8) {
                     break L3;
                   } else {
-                    ((ca) this).field_c[var2_int] = fp.a(fp.a(mk.a(65280L, (long)((ca) this).field_j[var3 - -6] << -1034788856), fp.a(fp.a(mk.a((long)((ca) this).field_j[4 + var3], 255L) << 1457721944, fp.a(fp.a(fp.a(mk.a((long)((ca) this).field_j[1 + var3], 255L) << 709804016, (long)((ca) this).field_j[var3] << 371262584), mk.a(280375465082880L, (long)((ca) this).field_j[2 + var3] << -254312152)), mk.a((long)((ca) this).field_j[3 + var3], 255L) << 309214816)), mk.a((long)((ca) this).field_j[var3 + 5] << 2062310672, 16711680L))), mk.a((long)((ca) this).field_j[7 + var3], 255L));
+                    ((ca) this).field_c[var2_int] = fp.a(fp.a(mk.a(65280L, (long)((ca) this).field_j[var3 - -6] << 8), fp.a(fp.a(mk.a((long)((ca) this).field_j[4 + var3], 255L) << 24, fp.a(fp.a(fp.a(mk.a((long)((ca) this).field_j[1 + var3], 255L) << 48, (long)((ca) this).field_j[var3] << 56), mk.a(280375465082880L, (long)((ca) this).field_j[2 + var3] << 40)), mk.a((long)((ca) this).field_j[3 + var3], 255L) << 32)), mk.a((long)((ca) this).field_j[var3 + 5] << 16, 16711680L))), mk.a((long)((ca) this).field_j[7 + var3], 255L));
                     var2_int++;
                     var3 += 8;
                     if (var6 != 0) {
@@ -467,7 +467,7 @@ final class ca {
                 L7: while (true) {
                   L8: {
                     L9: {
-                      if (-11 > (var2_int ^ -1)) {
+                      if (var2_int > 10) {
                         break L9;
                       } else {
                         stackOut_17_0 = 0;
@@ -534,7 +534,7 @@ final class ca {
                             L16: while (true) {
                               L17: {
                                 L18: {
-                                  if (-9 >= (var3 ^ -1)) {
+                                  if (var3 >= 8) {
                                     break L18;
                                   } else {
                                     ((ca) this).field_d[var3] = ((ca) this).field_b[var3];
@@ -557,7 +557,7 @@ final class ca {
                               L19: while (true) {
                                 L20: {
                                   L21: {
-                                    if ((var3 ^ -1) <= -9) {
+                                    if (var3 >= 8) {
                                       break L21;
                                     } else {
                                       ((ca) this).field_b[var3] = ((ca) this).field_d[var3];
@@ -773,7 +773,7 @@ final class ca {
               L2: {
                 L3: {
                   L4: {
-                    if ((var11 ^ -1) > -1) {
+                    if (var11 < 0) {
                       break L4;
                     } else {
                       var12 = var12 + ((255 & ((ca) this).field_l[var11]) - -((int)var9 & 255));
@@ -793,7 +793,7 @@ final class ca {
                     }
                   }
                   L5: while (true) {
-                    if ((param1 ^ -1L) >= -9L) {
+                    if (param1 <= 8L) {
                       break L3;
                     } else {
                       var8 = 255 & param0[var5_int] << var6 | (255 & param0[var5_int - -1]) >>> 8 - var6;
@@ -814,7 +814,7 @@ final class ca {
                                 ((ca) this).field_j[((ca) this).field_i] = (byte)bq.a((int) ((ca) this).field_j[((ca) this).field_i], var8 >>> var7);
                                 ((ca) this).field_h = ((ca) this).field_h + (8 + -var7);
                                 ((ca) this).field_i = ((ca) this).field_i + 1;
-                                if ((((ca) this).field_h ^ -1) == -513) {
+                                if (((ca) this).field_h == 512) {
                                   this.b((byte) 41);
                                   ((ca) this).field_i = 0;
                                   ((ca) this).field_h = 0;
@@ -864,7 +864,7 @@ final class ca {
               L10: {
                 L11: {
                   var11 = -86 % ((param2 - 39) / 48);
-                  if (-9L >= ((long)var7 + param1 ^ -1L)) {
+                  if ((long)var7 + param1 >= 8L) {
                     break L11;
                   } else {
                     ((ca) this).field_h = (int)((long)((ca) this).field_h + param1);
@@ -879,7 +879,7 @@ final class ca {
                   param1 = param1 - (long)(8 - var7);
                   ((ca) this).field_i = ((ca) this).field_i + 1;
                   ((ca) this).field_h = ((ca) this).field_h + (-var7 + 8);
-                  if ((((ca) this).field_h ^ -1) == -513) {
+                  if (((ca) this).field_h == 512) {
                     this.b((byte) 41);
                     ((ca) this).field_h = 0;
                     ((ca) this).field_i = 0;
@@ -955,7 +955,7 @@ final class ca {
             L1: {
               ((ca) this).field_j[((ca) this).field_i] = (byte)bq.a((int) ((ca) this).field_j[((ca) this).field_i], 128 >>> cm.a(((ca) this).field_h, 7));
               ((ca) this).field_i = ((ca) this).field_i + 1;
-              if (-33 <= (((ca) this).field_i ^ -1)) {
+              if (((ca) this).field_i <= 32) {
                 break L1;
               } else {
                 L2: while (true) {
@@ -1019,17 +1019,17 @@ final class ca {
               L8: while (true) {
                 L9: {
                   L10: {
-                    if ((var4_int ^ -1) <= -9) {
+                    if (var4_int >= 8) {
                       break L10;
                     } else {
                       var6 = ((ca) this).field_g[var4_int];
-                      param1[var5] = (byte)(int)(var6 >>> -2108129288);
-                      param1[var5 - -1] = (byte)(int)(var6 >>> 760747760);
-                      param1[var5 - -2] = (byte)(int)(var6 >>> 680189352);
-                      param1[var5 - -3] = (byte)(int)(var6 >>> -2036045728);
-                      param1[4 + var5] = (byte)(int)(var6 >>> -373204968);
-                      param1[var5 + 5] = (byte)(int)(var6 >>> -323347376);
-                      param1[var5 + 6] = (byte)(int)(var6 >>> 1610654920);
+                      param1[var5] = (byte)(int)(var6 >>> 56);
+                      param1[var5 - -1] = (byte)(int)(var6 >>> 48);
+                      param1[var5 - -2] = (byte)(int)(var6 >>> 40);
+                      param1[var5 - -3] = (byte)(int)(var6 >>> 32);
+                      param1[4 + var5] = (byte)(int)(var6 >>> 24);
+                      param1[var5 + 5] = (byte)(int)(var6 >>> 16);
+                      param1[var5 + 6] = (byte)(int)(var6 >>> 8);
                       param1[var5 + 7] = (byte)(int)var6;
                       var5 += 8;
                       var4_int++;

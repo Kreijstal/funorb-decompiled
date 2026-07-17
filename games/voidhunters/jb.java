@@ -8,9 +8,6 @@ final class jb {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 12472) {
-            field_b = null;
-        }
     }
 
     static {

@@ -18,9 +18,6 @@ final class eoa implements dja {
     }
 
     public static void a(int param0) {
-        if (param0 != -18593) {
-            return;
-        }
         field_a = null;
     }
 

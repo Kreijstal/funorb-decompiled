@@ -38,10 +38,7 @@ final class to extends za {
     }
 
     final static void b(int param0) {
-        if (param0 != 11) {
-            return;
-        }
-        qga.c(param0 ^ -10787);
+        qga.c(-10794);
     }
 
     to(int param0) {
@@ -62,7 +59,7 @@ final class to extends za {
         field_m = new boolean[98];
         var0 = 0;
         L0: while (true) {
-          if ((var0 ^ -1) <= -99) {
+          if (var0 >= 98) {
             field_k[94] = true;
             field_m[1] = true;
             field_k[93] = true;
@@ -295,6 +292,7 @@ final class to extends za {
             field_j[55] = 125;
             field_j[27] = 94;
             field_j[95] = 232;
+            return;
           } else {
             field_k[var0] = false;
             field_n[var0] = 96;

@@ -16,41 +16,32 @@ abstract class ef {
         qa var1 = null;
         ii var2 = null;
         var1 = (qa) (Object) md.field_t.a((byte) -71);
-        if (var1 != null) {
-          var2 = jc.field_g;
-          int discarded$48 = var2.j(-3);
-          int discarded$49 = var2.j(-3);
-          int discarded$50 = var2.j(-3);
-          int discarded$51 = var2.j(-3);
-          var1.c(2);
-          if (param0 < 99) {
-            ef.b(-125);
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (var1 == null) {
           kc.a((byte) 18);
+          return;
+        } else {
+          var2 = jc.field_g;
+          int discarded$8 = var2.j(-3);
+          int discarded$9 = var2.j(-3);
+          int discarded$10 = var2.j(-3);
+          int discarded$11 = var2.j(-3);
+          var1.c(2);
           return;
         }
     }
 
     final static ve a(int param0) {
         String var1 = null;
-        if (param0 == 30923) {
-          var1 = uf.a((byte) -115);
-          if (var1 != null) {
-            if (-1 < (var1.indexOf('@') ^ -1)) {
-              return new ve(uf.a((byte) -115), lh.a(255));
-            } else {
-              var1 = "";
-              return new ve(uf.a((byte) -115), lh.a(255));
-            }
+        var1 = uf.a((byte) -115);
+        if (var1 != null) {
+          if (var1.indexOf('@') < 0) {
+            return new ve(uf.a((byte) -115), lh.a(255));
           } else {
+            var1 = "";
             return new ve(uf.a((byte) -115), lh.a(255));
           }
         } else {
-          return null;
+          return new ve(uf.a((byte) -115), lh.a(255));
         }
     }
 

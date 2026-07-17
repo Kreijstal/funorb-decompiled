@@ -24,10 +24,7 @@ final class mna extends mfb {
         otb.field_q = si.field_p;
         ao.field_o = 0;
         nna.field_z = new ae(2);
-        nna.field_z.a(param0, param1 + -91, -1, pmb.a(param1 + -91, uia.field_b, kc.field_b));
-        if (param1 != 90) {
-            mna.i((byte) 38);
-        }
+        nna.field_z.a(param0, -1, -1, pmb.a(-1, uia.field_b, kc.field_b));
     }
 
     final int f(byte param0) {

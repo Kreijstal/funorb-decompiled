@@ -271,62 +271,20 @@ final class el {
 
     final static int a(int param0, byte param1) {
         int var2 = 0;
-        L0: {
-          var2 = 0;
-          var2 = var2 | 1;
-          if (0 != ok.a(tg.field_f, -105, 2)) {
-            break L0;
-          } else {
+        var2 = var2 | 1;
+        if (0 == ok.a(tg.field_f, -105, 2)) {
             var2 = var2 | 2;
-            break L0;
-          }
         }
-        L1: {
-          if (-1 == (ok.a(tg.field_f, -124, 2) ^ -1)) {
+        if (!(ok.a(tg.field_f, -124, 2) != 0)) {
             var2 = var2 | 8;
-            break L1;
-          } else {
-            break L1;
-          }
         }
-        if (param1 != -24) {
-          L2: {
-            el.a(-13);
-            if (ok.a(tg.field_f, param1 ^ 110, 2) != -1) {
-              break L2;
-            } else {
-              var2 = var2 | 4;
-              break L2;
-            }
-          }
-          L3: {
-            if (-1 == ok.a(tg.field_f, -116, 2)) {
-              var2 = var2 | 16;
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          return var2;
-        } else {
-          L4: {
-            if (ok.a(tg.field_f, param1 ^ 110, 2) != -1) {
-              break L4;
-            } else {
-              var2 = var2 | 4;
-              break L4;
-            }
-          }
-          L5: {
-            if (-1 == ok.a(tg.field_f, -116, 2)) {
-              var2 = var2 | 16;
-              break L5;
-            } else {
-              break L5;
-            }
-          }
-          return var2;
+        if (ok.a(tg.field_f, -122, 2) == -1) {
+            var2 = var2 | 4;
         }
+        if (!(-1 != ok.a(tg.field_f, -116, 2))) {
+            var2 = var2 | 16;
+        }
+        return var2;
     }
 
     public static void a(int param0) {

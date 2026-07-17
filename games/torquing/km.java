@@ -23,24 +23,47 @@ final class km {
     }
 
     final static void a(byte param0, int param1) {
-        int var4 = Torquing.field_u;
-        qk var5 = (qk) (Object) kc.field_z.b(0);
-        while (var5 != null) {
-            ii.a(32, param1, var5);
-            var5 = (qk) (Object) kc.field_z.f(-24059);
-        }
-        int var3 = -31 % ((-90 - param0) / 35);
-        h var6 = (h) (Object) to.field_s.b(0);
-        while (var6 != null) {
-            va.a(var6, (byte) 125, param1);
-            var6 = (h) (Object) to.field_s.f(-24059);
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        qk var5 = null;
+        h var6 = null;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Torquing.field_u;
+        try {
+          L0: {
+            var5 = (qk) (Object) kc.field_z.b(0);
+            L1: while (true) {
+              if (var5 == null) {
+                var3 = -31 % ((-90 - param0) / 35);
+                var6 = (h) (Object) to.field_s.b(0);
+                L2: while (true) {
+                  if (var6 == null) {
+                    break L0;
+                  } else {
+                    va.a(var6, (byte) 125, 5);
+                    var6 = (h) (Object) to.field_s.f(-24059);
+                    continue L2;
+                  }
+                }
+              } else {
+                ii.a(32, 5, var5);
+                var5 = (qk) (Object) kc.field_z.f(-24059);
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw rb.a((Throwable) (Object) var2, "km.A(" + param0 + 44 + 5 + 41);
         }
     }
 
     final synchronized static long b(int param0) {
         long var1 = 0L;
         var1 = System.currentTimeMillis();
-        if ((var1 ^ -1L) <= (j.field_p ^ -1L)) {
+        if (~var1 <= ~j.field_p) {
           if (param0 != -1) {
             return -53L;
           } else {
@@ -59,7 +82,7 @@ final class km {
     }
 
     public static void a(byte param0) {
-        int var1 = 104 % ((param0 - -46) / 40);
+        int var1 = 0;
         field_a = null;
     }
 

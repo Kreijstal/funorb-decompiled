@@ -61,9 +61,6 @@ final class na implements Iterator {
 
     public static void b(int param0) {
         field_b = null;
-        if (param0 <= 93) {
-            return;
-        }
         field_c = null;
     }
 
@@ -108,8 +105,12 @@ final class na implements Iterator {
 
     na(li param0) {
         ((na) this).field_e = null;
-        ((na) this).field_g = param0;
-        this.a(-1);
+        try {
+            ((na) this).field_g = param0;
+            this.a(-1);
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "na.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

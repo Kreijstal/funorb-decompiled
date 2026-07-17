@@ -21,19 +21,12 @@ final class fb {
     final static Boolean a(byte param0) {
         Boolean var1 = fj.field_e;
         fj.field_e = null;
-        if (param0 != 92) {
-            mb discarded$0 = fb.b((byte) 42);
-            return var1;
-        }
         return var1;
     }
 
     public static void a(int param0) {
         field_a = null;
         field_f = null;
-        if (param0 < 19) {
-            return;
-        }
         field_d = null;
         field_b = null;
         field_g = null;

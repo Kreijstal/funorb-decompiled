@@ -12,9 +12,6 @@ final class ue {
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
-        if (param0 != -114) {
-            return;
-        }
         field_f = null;
     }
 

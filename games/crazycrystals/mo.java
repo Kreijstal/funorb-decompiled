@@ -14,9 +14,6 @@ final class mo extends jb {
     final static void a(byte param0) {
         Object var2 = null;
         da.a(dg.field_a, 114, (String) null);
-        if (param0 >= -53) {
-            field_l = 108;
-        }
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
@@ -24,22 +21,23 @@ final class mo extends jb {
         kb.field_h = param1;
         io.field_O = param0;
         sc.field_g = param2;
-        if (param4 != -16) {
-            field_l = -54;
-        }
     }
 
     public static void a(int param0) {
         field_m = null;
         field_h = null;
-        int var1 = -12 % ((param0 - 45) / 52);
+        int var1 = 0;
         field_i = null;
     }
 
     mo(long param0, int param1, byte[] param2) {
-        ((mo) this).field_j = param1;
-        ((mo) this).field_k = param0;
-        ((mo) this).field_g = param2;
+        try {
+            ((mo) this).field_j = param1;
+            ((mo) this).field_k = param0;
+            ((mo) this).field_g = param2;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "mo.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

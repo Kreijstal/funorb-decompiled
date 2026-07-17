@@ -318,8 +318,9 @@ final class gj {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((gj) this).field_d[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_h[var5] = var13 >= 0 ? tk.field_B[var13].c() : 0;
+                field_h[incrementValue$0] = var13 >= 0 ? tk.field_B[var13].c() : 0;
             }
         }
         return true;
@@ -428,6 +429,7 @@ final class gj {
                             field_a = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((gj) this).field_e[var6];
                           var8 = 0;
@@ -436,8 +438,9 @@ final class gj {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((gj) this).field_c[var5] = tk.d(var4);
+                              ((gj) this).field_c[incrementValue$2] = tk.d(var4);
                               var8++;
                               continue L6;
                             }
@@ -453,8 +456,9 @@ final class gj {
                 } else {
                   L7: {
                     ((gj) this).field_g[var4] = tk.d(3) + 1;
-                    ((gj) this).field_k[var4] = tk.d(2);
-                    var5 = tk.d(2);
+                    int dupTemp$3 = tk.d(2);
+                    ((gj) this).field_k[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {

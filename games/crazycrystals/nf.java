@@ -55,11 +55,6 @@ abstract class nf extends oh {
     }
 
     public static void c(byte param0) {
-        if (param0 != 39) {
-            field_f = true;
-            field_g = null;
-            return;
-        }
         field_g = null;
     }
 

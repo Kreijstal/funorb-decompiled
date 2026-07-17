@@ -15,17 +15,17 @@ final class rg extends IOException {
 
     final static int a(int param0, int param1, int param2) {
         int var3 = 0;
-        var3 = param1 >> 2028909343 & -1 + param2;
+        var3 = param1 >> 31 & -1 + param2;
         if (param0 < 32) {
           field_a = true;
-          return var3 + (param1 - -(param1 >>> 19910335)) % param2;
+          return var3 + (param1 - -(param1 >>> 31)) % param2;
         } else {
-          return var3 + (param1 - -(param1 >>> 19910335)) % param2;
+          return var3 + (param1 - -(param1 >>> 31)) % param2;
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ql.field_L.a(88, param0, param3, param2, param6);
+        ql.field_L.a(88, param0, param3, param2, 5);
         if (param4 != -4803) {
           return;
         } else {
@@ -103,7 +103,7 @@ final class rg extends IOException {
         field_g = null;
         field_h = null;
         field_e = null;
-        int var1 = 80 / ((-45 - param0) / 57);
+        int var1 = -26;
     }
 
     static {

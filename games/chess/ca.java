@@ -372,7 +372,7 @@ final class ca {
                             stackOut_43_0 = var7.field_Mb;
                             stackIn_46_0 = stackOut_43_0;
                             stackIn_44_0 = stackOut_43_0;
-                            if (-1 > (var14 ^ -1)) {
+                            if (var14 > 0) {
                               stackOut_46_0 = (ci) (Object) stackIn_46_0;
                               stackOut_46_1 = lh.a(var7.field_Mb.field_xb, var7.field_Fb, var14);
                               stackIn_47_0 = stackOut_46_0;
@@ -451,7 +451,7 @@ final class ca {
                                 }
                               }
                               L25: {
-                                if ((var7.field_L ^ -1) == -1) {
+                                if (var7.field_L == 0) {
                                   break L25;
                                 } else {
                                   L26: {

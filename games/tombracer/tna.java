@@ -10,80 +10,135 @@ final class tna extends loa {
 
     public static void a(boolean param0) {
         field_b = null;
-        if (!param0) {
-            return;
-        }
         field_d = null;
         field_e = null;
         field_c = null;
     }
 
     final static void a(int param0, gqa param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         var5 = TombRacer.field_G ? 1 : 0;
-        var2 = 0;
-        L0: while (true) {
-          if ((var2 ^ -1) <= -4) {
-            var2 = 0;
+        try {
+          L0: {
+            var2_int = 0;
             L1: while (true) {
-              if (var2 >= ara.field_xb) {
-                L2: {
-                  if (param0 == 16599) {
-                    break L2;
-                  } else {
-                    field_b = null;
-                    break L2;
-                  }
-                }
-                baa.field_b[param1.a(false)] = baa.field_b[param1.a(false)] + 1;
-                var2 = 0;
-                var3 = 0;
-                L3: while (true) {
-                  if (var3 >= ara.field_xb) {
-                    ara.field_xb = var2;
-                    ara.field_xb = ara.field_xb + 1;
-                    wea.field_d[ara.field_xb] = param1;
-                    return;
-                  } else {
-                    L4: {
-                      if (param1.field_d == wea.field_d[var3].field_d) {
-                        var4 = wea.field_d[var3].a(false);
-                        if (sd.field_K >= baa.field_b[var4]) {
-                          break L4;
-                        } else {
-                          baa.field_b[var4] = baa.field_b[var4] - 1;
-                          var3++;
-                          continue L3;
-                        }
+              if (var2_int >= 3) {
+                var2_int = 0;
+                L2: while (true) {
+                  if (var2_int >= ara.field_xb) {
+                    L3: {
+                      if (param0 == 16599) {
+                        break L3;
                       } else {
-                        break L4;
+                        field_b = null;
+                        break L3;
                       }
                     }
-                    var2++;
-                    wea.field_d[var2] = wea.field_d[var3];
-                    var3++;
-                    continue L3;
+                    int dupTemp$4 = param1.a(false);
+                    baa.field_b[dupTemp$4] = baa.field_b[dupTemp$4] + 1;
+                    var2_int = 0;
+                    var3 = 0;
+                    L4: while (true) {
+                      if (var3 >= ara.field_xb) {
+                        ara.field_xb = var2_int;
+                        int fieldTemp$5 = ara.field_xb;
+                        ara.field_xb = ara.field_xb + 1;
+                        wea.field_d[fieldTemp$5] = param1;
+                        break L0;
+                      } else {
+                        L5: {
+                          L6: {
+                            if (param1.field_d == wea.field_d[var3].field_d) {
+                              var4 = wea.field_d[var3].a(false);
+                              if (sd.field_K >= baa.field_b[var4]) {
+                                break L6;
+                              } else {
+                                baa.field_b[var4] = baa.field_b[var4] - 1;
+                                break L5;
+                              }
+                            } else {
+                              break L6;
+                            }
+                          }
+                          int incrementValue$6 = var2_int;
+                          var2_int++;
+                          wea.field_d[incrementValue$6] = wea.field_d[var3];
+                          break L5;
+                        }
+                        var3++;
+                        continue L4;
+                      }
+                    }
+                  } else {
+                    L7: {
+                      if (wea.field_d[var2_int].field_d == param1.field_d) {
+                        int dupTemp$7 = wea.field_d[var2_int].a(false);
+                        baa.field_b[dupTemp$7] = baa.field_b[dupTemp$7] + 1;
+                        break L7;
+                      } else {
+                        break L7;
+                      }
+                    }
+                    var2_int++;
+                    continue L2;
                   }
                 }
               } else {
-                if (wea.field_d[var2].field_d == param1.field_d) {
-                  baa.field_b[wea.field_d[var2].a(false)] = baa.field_b[wea.field_d[var2].a(false)] + 1;
-                  var2++;
-                  continue L1;
-                } else {
-                  var2++;
-                  continue L1;
-                }
+                baa.field_b[var2_int] = 0;
+                var2_int++;
+                continue L1;
               }
             }
-          } else {
-            baa.field_b[var2] = 0;
-            var2++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var2 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_1 = new StringBuilder().append("tna.A(").append(param0).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param1 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L8;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L8;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
     }
 
@@ -92,92 +147,149 @@ final class tna extends loa {
     }
 
     final void a(int param0, int param1, hj param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
-        if (param1 < 73) {
-            Object var8 = null;
-            ((tna) this).a(-107, 127, (hj) null, -114);
-        }
-        for (var5 = 1; param2.field_f + -1 > var5; var5++) {
-            for (var6 = 1; var6 < param2.field_a - 1; var6++) {
-                param2.a(var6, 0, 0, var5);
+        try {
+            if (param1 < 73) {
+                Object var8 = null;
+                ((tna) this).a(-107, 127, (hj) null, -114);
             }
+            for (var5_int = 1; param2.field_f + -1 > var5_int; var5_int++) {
+                for (var6 = 1; var6 < param2.field_a - 1; var6++) {
+                    param2.a(var6, 0, 0, var5_int);
+                }
+            }
+            this.a(0, param2.field_f, 0, param2, param2.field_a, 1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tna.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
-        this.a(0, param2.field_f, 0, param2, param2.field_a, 1);
     }
 
     private final void a(int param0, int param1, int param2, hj param3, int param4, int param5) {
-        int var7 = 0;
+        RuntimeException var7 = null;
+        int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
         var10 = TombRacer.field_G ? 1 : 0;
-        if (-6 < (param1 ^ -1)) {
-          return;
-        } else {
-          if (5 > param4) {
-            return;
-          } else {
-            var7 = (((tna) this).field_a.a(param1 / 2 + -1, 0) + param5) * 2 + param2;
-            var8 = param0 - (-(2 * ((tna) this).field_a.a(-1 + param4 / 2, 0)) + -2);
-            var9 = param2 - -1;
-            L0: while (true) {
-              if (var9 >= param1 + param2 + -1) {
-                var9 = param0 - -1;
-                L1: while (true) {
-                  if (-1 + param4 + param0 <= var9) {
-                    L2: {
-                      var9 = ((tna) this).field_a.a(4, param5 ^ 1);
-                      if (var9 == 0) {
-                        break L2;
-                      } else {
-                        param3.a(param0 + 2 * (((tna) this).field_a.a(var8 + -param0, 0) / 2) - -1, 0, 0, var7);
-                        break L2;
+        try {
+          L0: {
+            L1: {
+              if (param1 < 5) {
+                break L1;
+              } else {
+                if (5 > param4) {
+                  break L1;
+                } else {
+                  var7_int = (((tna) this).field_a.a(param1 / 2 + -1, 0) + param5) * 2 + param2;
+                  var8 = param0 - (-(2 * ((tna) this).field_a.a(-1 + param4 / 2, 0)) + -2);
+                  var9 = param2 - -1;
+                  L2: while (true) {
+                    if (var9 >= param1 + param2 + -1) {
+                      var9 = param0 - -1;
+                      L3: while (true) {
+                        if (-1 + param4 + param0 <= var9) {
+                          L4: {
+                            var9 = ((tna) this).field_a.a(4, param5 ^ 1);
+                            if (var9 == 0) {
+                              break L4;
+                            } else {
+                              param3.a(param0 + 2 * (((tna) this).field_a.a(var8 + -param0, 0) / 2) - -1, 0, 0, var7_int);
+                              break L4;
+                            }
+                          }
+                          L5: {
+                            if (1 == var9) {
+                              break L5;
+                            } else {
+                              param3.a(var8, 0, 0, param2 + (((tna) this).field_a.a(-param2 + var7_int, param5 ^ 1) / 2 * 2 + 1));
+                              break L5;
+                            }
+                          }
+                          L6: {
+                            if (2 != var9) {
+                              param3.a(2 * (((tna) this).field_a.a(-1 + (param0 - -param4 + -var8), 0) / 2) + var8 + 1, 0, 0, var7_int);
+                              break L6;
+                            } else {
+                              break L6;
+                            }
+                          }
+                          L7: {
+                            if (var9 != 3) {
+                              param3.a(var8, 0, 0, 1 + ((tna) this).field_a.a(-1 + param2 + (param1 - var7_int), 0) / 2 * 2 + var7_int);
+                              break L7;
+                            } else {
+                              break L7;
+                            }
+                          }
+                          this.a(param0, -param2 + (var7_int + 1), param2, param3, var8 + 1 + -param0, 1);
+                          this.a(param0, param2 - -param1 + -var7_int, var7_int, param3, var8 + (1 + -param0), 1);
+                          this.a(var8, -param2 + (var7_int + 1), param2, param3, param0 + (param4 - var8), param5);
+                          this.a(var8, param2 - (-param1 + var7_int), var7_int, param3, -var8 + (param0 - -param4), param5);
+                          break L0;
+                        } else {
+                          param3.a(var9, 1, param5 ^ 1, var7_int);
+                          var9++;
+                          continue L3;
+                        }
                       }
+                    } else {
+                      param3.a(var8, 1, param5 ^ 1, var9);
+                      var9++;
+                      continue L2;
                     }
-                    L3: {
-                      if (1 == var9) {
-                        break L3;
-                      } else {
-                        param3.a(var8, 0, 0, param2 + (((tna) this).field_a.a(-param2 + var7, param5 ^ 1) / 2 * 2 + 1));
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      if (2 != var9) {
-                        param3.a(2 * (((tna) this).field_a.a(-1 + (param0 - -param4 + -var8), 0) / 2) + var8 + 1, 0, 0, var7);
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      if (-4 != (var9 ^ -1)) {
-                        param3.a(var8, 0, 0, 1 + ((tna) this).field_a.a(-1 + param2 + (param1 - var7), 0) / 2 * 2 + var7);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                    this.a(param0, -param2 + (var7 + 1), param2, param3, var8 + 1 + -param0, 1);
-                    this.a(param0, param2 - -param1 + -var7, var7, param3, var8 + (1 + -param0), 1);
-                    this.a(var8, -param2 + (var7 + 1), param2, param3, param0 + (param4 - var8), param5 + 0);
-                    this.a(var8, param2 - (-param1 + var7), var7, param3, -var8 + (param0 - -param4), param5 ^ 0);
-                    return;
-                  } else {
-                    param3.a(var9, 1, param5 ^ 1, var7);
-                    var9++;
-                    continue L1;
                   }
                 }
-              } else {
-                param3.a(var8, 1, param5 ^ 1, var9);
-                var9++;
-                continue L0;
               }
             }
+            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var7 = decompiledCaughtException;
+            stackOut_23_0 = (RuntimeException) var7;
+            stackOut_23_1 = new StringBuilder().append("tna.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
+            if (param3 == null) {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L8;
+            } else {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L8;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

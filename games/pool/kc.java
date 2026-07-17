@@ -12,26 +12,73 @@ final class kc {
     static vh field_b;
 
     final static void a(java.awt.Canvas param0, int param1) {
+        RuntimeException var2 = null;
         Object var3 = null;
-        jc.a(0, (java.awt.Component) (Object) param0);
-        if (param1 == 2) {
-          hi.a((java.awt.Component) (Object) param0, param1 ^ -14764);
-          if (null != oa.field_a) {
-            oa.field_a.a((byte) 104, (java.awt.Component) (Object) param0);
-            return;
-          } else {
-            return;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              jc.a(0, (java.awt.Component) (Object) param0);
+              if (param1 == 2) {
+                break L1;
+              } else {
+                var3 = null;
+                kc.a((java.awt.Canvas) null, -76);
+                break L1;
+              }
+            }
+            hi.a((java.awt.Component) (Object) param0, param1 ^ -14764);
+            if (null == oa.field_a) {
+              break L0;
+            } else {
+              oa.field_a.a((byte) 104, (java.awt.Component) (Object) param0);
+              return;
+            }
           }
-        } else {
-          var3 = null;
-          kc.a((java.awt.Canvas) null, -76);
-          hi.a((java.awt.Component) (Object) param0, param1 ^ -14764);
-          if (null == oa.field_a) {
-            return;
-          } else {
-            oa.field_a.a((byte) 104, (java.awt.Component) (Object) param0);
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("kc.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
           }
+          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
     }
 
@@ -41,13 +88,8 @@ final class kc {
         field_b = null;
         field_f = null;
         field_h = null;
-        if (param0 != 123) {
-          return;
-        } else {
-          field_a = null;
-          field_d = null;
-          return;
-        }
+        field_a = null;
+        field_d = null;
     }
 
     static {

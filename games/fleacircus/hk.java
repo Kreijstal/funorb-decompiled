@@ -267,10 +267,8 @@ final class hk extends lh {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new hk(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -292,10 +290,8 @@ final class hk extends lh {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new hk(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -327,7 +323,7 @@ final class hk extends lh {
 
     private final static void a(byte[] param0, int param1) {
         field_n = param0;
-        field_l = param1;
+        field_l = 0;
         field_O = 0;
     }
 
@@ -417,7 +413,7 @@ final class hk extends lh {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
@@ -447,7 +443,7 @@ final class hk extends lh {
         ((hk) this).field_i = var2.c((byte) -90);
         ((hk) this).field_K = var2.c((byte) -82);
         if (((hk) this).field_K < 0) {
-            ((hk) this).field_K = ((hk) this).field_K ^ -1;
+            ((hk) this).field_K = ~((hk) this).field_K;
             ((hk) this).field_k = true;
         }
         int var3 = var2.c((byte) 125);
@@ -504,7 +500,7 @@ final class hk extends lh {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }

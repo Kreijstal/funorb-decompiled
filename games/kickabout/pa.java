@@ -12,20 +12,21 @@ final class pa extends dg {
         field_j = null;
         field_g = null;
         field_i = null;
-        if (param0 <= 100) {
-            field_i = null;
-        }
     }
 
     final static void a(gn param0, gn param1, byte param2) {
-        if (!(param0.field_b == null)) {
-            param0.c((byte) -109);
+        try {
+            if (!(param0.field_b == null)) {
+                param0.c((byte) -109);
+            }
+            param0.field_d = param1.field_d;
+            param0.field_b = param1;
+            param0.field_b.field_d = param0;
+            param0.field_d.field_b = param0;
+            int var3_int = -56 % ((84 - param2) / 35);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "pa.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        param0.field_d = param1.field_d;
-        param0.field_b = param1;
-        param0.field_b.field_d = param0;
-        param0.field_d.field_b = param0;
-        int var3 = -56 % ((84 - param2) / 35);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {

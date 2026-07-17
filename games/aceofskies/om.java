@@ -15,17 +15,12 @@ final class om extends bn implements fq {
     public static void b(int param0) {
         field_c = null;
         if (param0 != -21649) {
-            field_c = (wq) null;
+            field_c = null;
         }
     }
 
     final static String a(int param0, int param1, byte param2) {
-        if (param2 != 66) {
-          om.b(-71);
-          return param1 + "/" + param0;
-        } else {
-          return param1 + "/" + param0;
-        }
+        return param1 + "/" + param0;
     }
 
     final static void c(int param0) {

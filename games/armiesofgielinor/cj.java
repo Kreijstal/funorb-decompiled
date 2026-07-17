@@ -16,32 +16,22 @@ final class cj extends mg {
         field_o = null;
         field_n = null;
         field_j = null;
-        if (param0 != 1) {
-          field_l = null;
-          field_i = null;
-          field_m = null;
-          field_l = null;
-          field_k = null;
-          return;
-        } else {
-          field_i = null;
-          field_m = null;
-          field_l = null;
-          field_k = null;
-          return;
-        }
+        field_i = null;
+        field_m = null;
+        field_l = null;
+        field_k = null;
     }
 
     final void a(byte param0, byte[] param1) {
-        ((cj) this).field_p = java.nio.ByteBuffer.allocateDirect(param1.length);
-        java.nio.Buffer discarded$11 = ((cj) this).field_p.position(0);
-        if (param0 != 126) {
-          field_o = null;
-          java.nio.ByteBuffer discarded$12 = ((cj) this).field_p.put(param1);
-          return;
-        } else {
-          java.nio.ByteBuffer discarded$13 = ((cj) this).field_p.put(param1);
-          return;
+        try {
+            ((cj) this).field_p = java.nio.ByteBuffer.allocateDirect(param1.length);
+            java.nio.Buffer discarded$6 = ((cj) this).field_p.position(0);
+            if (param0 != 126) {
+                field_o = null;
+            }
+            java.nio.ByteBuffer discarded$7 = ((cj) this).field_p.put(param1);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "cj.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -63,15 +53,15 @@ final class cj extends mg {
         int[] var14 = new int[256];
         int[] var3 = var14;
         int var5 = 34 % ((76 - param2) / 50);
-        int var4 = 255 & param1 >> -988415408;
-        int var6 = 255 & param1 >> -2002122968;
+        int var4 = 255 & param1 >> 16;
+        int var6 = 255 & param1 >> 8;
         int var7 = param1 & 255;
-        int var8 = (16746397 & param0) >> -1706762512;
-        int var9 = 255 & param0 >> 153093480;
+        int var8 = (16746397 & param0) >> 16;
+        int var9 = 255 & param0 >> 8;
         int var10 = 255 & param0;
-        for (var11 = 0; -257 < (var11 ^ -1); var11++) {
+        for (var11 = 0; var11 < 256; var11++) {
             var12 = 256 + -var11;
-            var14[var11] = ((var8 * var12 >> 1270670376) + (var4 * var11 >> 2011327240) << 2122095280) + (((var11 * var6 >> -1109512888) - -(var12 * var9 >> -287065144) << 1277368488) + (var12 * var10 >> 849994888)) + (var11 * var7 >> 1393334088);
+            var14[var11] = ((var8 * var12 >> 8) + (var4 * var11 >> 8) << 16) + (((var11 * var6 >> 8) - -(var12 * var9 >> 8) << 8) + (var12 * var10 >> 8)) + (var11 * var7 >> 8);
         }
         return var3;
     }

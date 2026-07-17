@@ -47,40 +47,45 @@ class uf {
 
     final static void a(int param0, int param1) {
         uf var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         eg var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = Terraphoenix.field_V;
-        var4 = (eg) (Object) ic.field_s.d(param0 + -11568);
-        L0: while (true) {
-          if (var4 == null) {
-            var2 = vc.field_g.d(param0 ^ 30032);
-            if (param0 != 20840) {
-              field_f = null;
-              L1: while (true) {
-                if (var2 != null) {
-                  eb.a(param1, (byte) 125);
-                  var2 = vc.field_g.e((byte) -119);
-                  continue L1;
-                } else {
-                  return;
+        try {
+          L0: {
+            var4 = (eg) (Object) ic.field_s.d(param0 + -11568);
+            L1: while (true) {
+              if (var4 == null) {
+                L2: {
+                  var2 = vc.field_g.d(param0 ^ 30032);
+                  if (param0 == 20840) {
+                    break L2;
+                  } else {
+                    field_f = null;
+                    break L2;
+                  }
                 }
-              }
-            } else {
-              L2: while (true) {
-                if (var2 != null) {
-                  eb.a(param1, (byte) 125);
-                  var2 = vc.field_g.e((byte) -119);
-                  continue L2;
-                } else {
-                  return;
+                L3: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    eb.a(param1, (byte) 125);
+                    var2 = vc.field_g.e((byte) -119);
+                    continue L3;
+                  }
                 }
+              } else {
+                qc.a(param1, var4, (byte) -110);
+                var4 = (eg) (Object) ic.field_s.e((byte) -119);
+                continue L1;
               }
             }
-          } else {
-            qc.a(param1, var4, (byte) -110);
-            var4 = (eg) (Object) ic.field_s.e((byte) -119);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var2_ref, "uf.JB(" + param0 + 44 + param1 + 41);
         }
     }
 

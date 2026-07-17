@@ -194,7 +194,7 @@ final class atb {
                   stackIn_55_1 = stackOut_54_1;
                   stackIn_55_2 = stackOut_54_2;
                   stackIn_55_3 = stackOut_54_3;
-                  if (-1 == (var5.field_j ^ -1)) {
+                  if (var5.field_j == 0) {
                     stackOut_56_0 = (pf) (Object) stackIn_56_0;
                     stackOut_56_1 = stackIn_56_1;
                     stackOut_56_2 = stackIn_56_2;
@@ -220,7 +220,7 @@ final class atb {
                     break L1;
                   }
                 }
-                var22 = ((pf) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_57_4 != 0, param0 + 0, qua.field_d);
+                var22 = ((pf) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_57_4 != 0, param0, qua.field_d);
                 if (param0 != -1) {
                   eb discarded$7 = ((atb) this).a(100, 49);
                   var22.a(var5.field_k, (byte) -98, var5.field_s);
@@ -232,7 +232,7 @@ final class atb {
                   return var22;
                 }
               } else {
-                if (-3 == (var5.field_q ^ -1)) {
+                if (var5.field_q == 2) {
                   L2: {
                     var26 = ((atb) this).field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
                     stackOut_35_0 = ((atb) this).field_a;
@@ -241,7 +241,7 @@ final class atb {
                     stackIn_37_1 = stackOut_35_1;
                     stackIn_36_0 = stackOut_35_0;
                     stackIn_36_1 = stackOut_35_1;
-                    if (-1 == (var5.field_j ^ -1)) {
+                    if (var5.field_j == 0) {
                       stackOut_37_0 = (pf) (Object) stackIn_37_0;
                       stackOut_37_1 = stackIn_37_1;
                       stackOut_37_2 = 0;
@@ -281,7 +281,7 @@ final class atb {
                       stackIn_49_1 = stackOut_47_1;
                       stackIn_48_0 = stackOut_47_0;
                       stackIn_48_1 = stackOut_47_1;
-                      if (-1 == (var5.field_j ^ -1)) {
+                      if (var5.field_j == 0) {
                         stackOut_49_0 = (pf) (Object) stackIn_49_0;
                         stackOut_49_1 = stackIn_49_1;
                         stackOut_49_2 = 0;
@@ -319,7 +319,7 @@ final class atb {
                       stackIn_43_1 = stackOut_41_1;
                       stackIn_42_0 = stackOut_41_0;
                       stackIn_42_1 = stackOut_41_1;
-                      if (-1 == (var5.field_j ^ -1)) {
+                      if (var5.field_j == 0) {
                         stackOut_43_0 = (pf) (Object) stackIn_43_0;
                         stackOut_43_1 = stackIn_43_1;
                         stackOut_43_2 = 0;
@@ -353,7 +353,7 @@ final class atb {
                 }
               }
             } else {
-              if (-3 == (var5.field_q ^ -1)) {
+              if (var5.field_q == 2) {
                 L7: {
                   var23 = ((atb) this).field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
                   stackOut_12_0 = ((atb) this).field_a;
@@ -362,7 +362,7 @@ final class atb {
                   stackIn_14_1 = stackOut_12_1;
                   stackIn_13_0 = stackOut_12_0;
                   stackIn_13_1 = stackOut_12_1;
-                  if (-1 == (var5.field_j ^ -1)) {
+                  if (var5.field_j == 0) {
                     stackOut_14_0 = (pf) (Object) stackIn_14_0;
                     stackOut_14_1 = stackIn_14_1;
                     stackOut_14_2 = 0;
@@ -402,7 +402,7 @@ final class atb {
                     stackIn_26_1 = stackOut_24_1;
                     stackIn_25_0 = stackOut_24_0;
                     stackIn_25_1 = stackOut_24_1;
-                    if (-1 == (var5.field_j ^ -1)) {
+                    if (var5.field_j == 0) {
                       stackOut_26_0 = (pf) (Object) stackIn_26_0;
                       stackOut_26_1 = stackIn_26_1;
                       stackOut_26_2 = 0;
@@ -441,7 +441,7 @@ final class atb {
                     stackIn_20_1 = stackOut_18_1;
                     stackIn_19_0 = stackOut_18_0;
                     stackIn_19_1 = stackOut_18_1;
-                    if (-1 == (var5.field_j ^ -1)) {
+                    if (var5.field_j == 0) {
                       stackOut_20_0 = (pf) (Object) stackIn_20_0;
                       stackOut_20_1 = stackIn_20_1;
                       stackOut_20_2 = 0;
@@ -493,8 +493,12 @@ final class atb {
 
     atb(pf param0, d param1) {
         ((atb) this).field_c = new pfb(256);
-        ((atb) this).field_e = param1;
-        ((atb) this).field_a = param0;
+        try {
+            ((atb) this).field_e = param1;
+            ((atb) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "atb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

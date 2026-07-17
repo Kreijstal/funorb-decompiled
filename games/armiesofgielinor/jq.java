@@ -9,11 +9,70 @@ final class jq extends dr {
     static int[] field_H;
 
     final nd a(int param0, nd[] param1) {
-        if (param0 != -24872) {
-          return null;
-        } else {
-          return new nd((Object) (Object) im.a(param0 + 24994, (String) param1[0].field_c));
+        RuntimeException var3 = null;
+        Object stackIn_2_0 = null;
+        nd stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nd stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 == -24872) {
+              stackOut_3_0 = new nd((Object) (Object) im.a(param0 + 24994, (String) param1[0].field_c));
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (nd) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("jq.C(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
+        return stackIn_4_0;
     }
 
     final static wk[] a(boolean param0, int param1, int param2, int param3, boolean param4, int param5) {
@@ -21,8 +80,8 @@ final class jq extends dr {
         int var7 = 0;
         int var8 = 0;
         wk var9 = null;
-        wk var10 = null;
-        wk var11 = null;
+        Object var10 = null;
+        Object var11 = null;
         int[] var12 = null;
         wk var13 = null;
         wk var14 = null;
@@ -46,7 +105,7 @@ final class jq extends dr {
           var11 = null;
           if (param0) {
             var13 = var9.g();
-            var10 = var13;
+            var10 = (Object) (Object) var13;
             var13.b();
             qn.e(0, 0, 5, 0);
             qn.e(0, 1, 3, 0);
@@ -61,7 +120,7 @@ final class jq extends dr {
         L1: {
           if (param4) {
             var14 = var9.g();
-            var11 = var14;
+            var11 = (Object) (Object) var14;
             var14.b();
             qn.e(11, 0, 5, 0);
             qn.e(13, 1, 3, 0);
@@ -76,10 +135,10 @@ final class jq extends dr {
         if (param2 != -20600) {
           field_I = null;
           qn.a(var18, var7, var8);
-          return new wk[]{null, null, null, var10, var9, var11, null, null, null};
+          return new wk[]{null, null, null, (wk) var10, var9, (wk) var11, null, null, null};
         } else {
           qn.a(var18, var7, var8);
-          return new wk[]{null, null, null, var10, var9, var11, null, null, null};
+          return new wk[]{null, null, null, (wk) var10, var9, (wk) var11, null, null, null};
         }
     }
 
@@ -97,20 +156,10 @@ final class jq extends dr {
     }
 
     public static void g(int param0) {
-        if (param0 >= -2) {
-          field_I = null;
-          field_E = null;
-          field_G = null;
-          field_H = null;
-          field_I = null;
-          return;
-        } else {
-          field_E = null;
-          field_G = null;
-          field_H = null;
-          field_I = null;
-          return;
-        }
+        field_E = null;
+        field_G = null;
+        field_H = null;
+        field_I = null;
     }
 
     static {

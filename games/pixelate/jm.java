@@ -92,7 +92,7 @@ final class jm {
               } else {
                 var7 = var1 + 32;
                 var3 = 255 & vi.field_o.field_k[var2];
-                var4 = var3 >> -1773592156;
+                var4 = var3 >> 4;
                 var10 = var4;
                 var9 = 10;
                 if (var5 != 0) {
@@ -122,7 +122,7 @@ final class jm {
                   L4: {
                     L5: {
                       var3 = var3 & 15;
-                      if (-11 < (var3 ^ -1)) {
+                      if (var3 < 10) {
                         break L5;
                       } else {
                         var3 += 55;

@@ -67,11 +67,6 @@ class fh extends ksa {
         field_f = null;
         field_g = null;
         field_j = null;
-        if (param0 != -31049) {
-            field_j = null;
-            field_h = null;
-            return;
-        }
         field_h = null;
     }
 

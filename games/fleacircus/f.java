@@ -10,15 +10,27 @@ final class f extends dk {
 
     final static void d(byte param0) {
         try {
-            if (ge.field_d != null) {
+            Exception var1 = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (ge.field_d == null) {
+                break L0;
+              } else {
                 try {
+                  L1: {
                     ge.field_d.a(-107, 0L);
                     ge.field_d.a(ae.field_a.field_i, ae.field_a.field_k, 24, (byte) -23);
-                } catch (Exception exception) {
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var1 = (Exception) (Object) decompiledCaughtException;
+                    break L2;
+                  }
                 }
-            }
-            if (param0 >= -9) {
-                return;
+                break L0;
+              }
             }
             ae.field_a.field_i = ae.field_a.field_i + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -102,16 +114,21 @@ final class f extends dk {
     }
 
     final void b(qa param0, byte param1) {
-        if (!(param0 instanceof db)) {
-            throw new IllegalArgumentException();
+        db var3 = null;
+        try {
+            if (!(param0 instanceof db)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (db) (Object) param0;
+            ((f) this).field_I.b(true, (lh) (Object) var3);
+            if (param1 != -35) {
+                field_G = null;
+            }
+            var3.field_G = true;
+            boolean discarded$0 = var3.a((qa) this, -53);
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "f.NA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        db var3 = (db) (Object) param0;
-        ((f) this).field_I.b(true, (lh) (Object) var3);
-        if (param1 != -35) {
-            field_G = null;
-        }
-        var3.field_G = true;
-        boolean discarded$0 = var3.a((qa) this, -53);
     }
 
     public static void j(int param0) {

@@ -14,12 +14,6 @@ final class bt {
     }
 
     public static void a(int param0) {
-        if (param0 != -4509) {
-            field_b = null;
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_b = null;
         field_a = null;
     }
@@ -36,7 +30,11 @@ final class bt {
     }
 
     bt(qfa param0, int param1) {
-        ((bt) this).field_c = jaggl.OpenGL.glGenLists(param1);
+        try {
+            ((bt) this).field_c = jaggl.OpenGL.glGenLists(param1);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "bt.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void a(int param0, int param1) {

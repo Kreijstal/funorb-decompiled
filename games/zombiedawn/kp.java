@@ -13,28 +13,20 @@ final class kp extends rf {
     }
 
     public static void b(byte param0) {
-        if (param0 > -45) {
-            kp.a(-104, (byte) -43);
-            field_f = null;
-            return;
-        }
         field_f = null;
     }
 
     final void a(int param0, byte[] param1) {
-        Object var4 = null;
-        if (param0 != 4) {
-          var4 = null;
-          ((kp) this).a(-113, (byte[]) null);
-          ((kp) this).field_e = java.nio.ByteBuffer.allocateDirect(param1.length);
-          java.nio.Buffer discarded$8 = ((kp) this).field_e.position(0);
-          java.nio.ByteBuffer discarded$9 = ((kp) this).field_e.put(param1);
-          return;
-        } else {
-          ((kp) this).field_e = java.nio.ByteBuffer.allocateDirect(param1.length);
-          java.nio.Buffer discarded$10 = ((kp) this).field_e.position(0);
-          java.nio.ByteBuffer discarded$11 = ((kp) this).field_e.put(param1);
-          return;
+        try {
+            if (param0 != 4) {
+                Object var4 = null;
+                ((kp) this).a(-113, (byte[]) null);
+            }
+            ((kp) this).field_e = java.nio.ByteBuffer.allocateDirect(param1.length);
+            java.nio.Buffer discarded$0 = ((kp) this).field_e.position(0);
+            java.nio.ByteBuffer discarded$1 = ((kp) this).field_e.put(param1);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "kp.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -24,18 +24,10 @@ final class gg {
     private int field_a;
 
     private final double a(int param0) {
-        if (param0 != 1769212228) {
-            Object var3 = null;
-            gg.a(38, (nh[]) null);
-        }
-        return (double)hi.a(1000, param0 ^ 1769212224, ((gg) this).field_r) / 1000.0;
+        return (double)hi.a(1000, 4, ((gg) this).field_r) / 1000.0;
     }
 
     public static void b(int param0) {
-        if (param0 != -339514552) {
-            Object var2 = null;
-            gg.a(-70, (nh[]) null);
-        }
         field_i = null;
         field_f = null;
         field_d = null;
@@ -43,14 +35,72 @@ final class gg {
     }
 
     final static void a(int param0, nh[] param1) {
-        if (param0 != 1000) {
-            return;
-        }
-        gl.field_e = param1;
-        if (null != gl.field_e) {
-            if (!(param1.length >= 3)) {
-                throw new IllegalArgumentException("");
+        RuntimeException var2 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            if (param0 == 1000) {
+              L1: {
+                gl.field_e = param1;
+                if (null == gl.field_e) {
+                  break L1;
+                } else {
+                  if (param1.length < 3) {
+                    throw new IllegalArgumentException("");
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              break L0;
+            } else {
+              return;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_1 = new StringBuilder().append("gg.D(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw ie.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
     }
 
@@ -66,7 +116,7 @@ final class gg {
           if (param5 > 5) {
             break L0;
           } else {
-            if (-2 < (param7 ^ -1)) {
+            if (param7 < 1) {
               break L0;
             } else {
               L1: {
@@ -83,8 +133,8 @@ final class gg {
                 var13 = hi.a((int)(2.0 * ((gg) this).field_k), 4, ((gg) this).field_r);
                 var14 = 126 * param7 / ((gg) this).field_c + 60;
                 if (param2) {
-                  wj.a(var11 << -134859068, var12 << -1744854236, param7 << -53005020, var14, ((gg) this).field_q);
-                  wj.a(var11 << -674055772, var12 << 1428501476, param7 << -457140957, var14 / 2, ((gg) this).field_q);
+                  wj.a(var11 << 4, var12 << 4, param7 << 4, var14, ((gg) this).field_q);
+                  wj.a(var11 << 4, var12 << 4, param7 << 3, var14 / 2, ((gg) this).field_q);
                   break L2;
                 } else {
                   break L2;
@@ -118,15 +168,15 @@ final class gg {
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param0 == -1093327740) {
           ((gg) this).field_r.setSeed((long)((gg) this).field_o);
-          var6 = 255 & param3 >> 579456712;
-          var5 = param3 >> -849301040;
+          var6 = 255 & param3 >> 8;
+          var5 = param3 >> 16;
           var7 = 255 & param3;
           var8 = 0;
           L0: while (true) {
             if (var8 >= 255) {
               L1: {
                 if (param2) {
-                  wj.a(((gg) this).field_a << -1093327740, ((gg) this).field_j << -1442300220, 2 * ((gg) this).field_c << 1764868324, 254, ((gg) this).field_q);
+                  wj.a(((gg) this).field_a << 4, ((gg) this).field_j << 4, 2 * ((gg) this).field_c << 4, 254, ((gg) this).field_q);
                   break L1;
                 } else {
                   break L1;
@@ -141,7 +191,7 @@ final class gg {
                     if (!param2) {
                       break L3;
                     } else {
-                      wj.a(((gg) this).field_a << -1506698492, ((gg) this).field_j << -228446140, var8 * ((gg) this).field_c << 1769212228, 254 / (1 - -var8), ((gg) this).field_q);
+                      wj.a(((gg) this).field_a << 4, ((gg) this).field_j << 4, var8 * ((gg) this).field_c << 4, 254 / (1 - -var8), ((gg) this).field_q);
                       break L3;
                     }
                   }
@@ -149,7 +199,7 @@ final class gg {
                     if (!param2) {
                       break L4;
                     } else {
-                      wj.a(((gg) this).field_a << -1365633052, ((gg) this).field_j << 809833828, var8 * ((gg) this).field_c << 1329221092, 196 / (1 - -var8), ((gg) this).field_q);
+                      wj.a(((gg) this).field_a << 4, ((gg) this).field_j << 4, var8 * ((gg) this).field_c << 4, 196 / (1 - -var8), ((gg) this).field_q);
                       break L4;
                     }
                   }
@@ -160,7 +210,7 @@ final class gg {
               }
             } else {
               var9 = (int)(Math.pow((double)var8, 1.5) / 16.0);
-              ((gg) this).field_q[var8] = li.a(li.a(var9 * var6 >> 1096251080 << 1898885576, var5 * var9 >> -339514552 << -340031760), var9 * var7 >> 439917576);
+              ((gg) this).field_q[var8] = li.a(li.a(var9 * var6 >> 8 << 8, var5 * var9 >> 8 << 16), var9 * var7 >> 8);
               var8++;
               continue L0;
             }
@@ -200,6 +250,7 @@ final class gg {
         var1 = 0;
         L0: while (true) {
           if (var1 >= 256) {
+            return;
           } else {
             var0 = var1;
             var2 = 0;
@@ -209,12 +260,12 @@ final class gg {
                 var1++;
                 continue L0;
               } else {
-                if ((var0 & 1 ^ -1) != -2) {
+                if ((var0 & 1) != 1) {
                   var0 = var0 >>> 1;
                   var2++;
                   continue L1;
                 } else {
-                  var0 = var0 >>> -1946992639 ^ -306674912;
+                  var0 = var0 >>> 1 ^ -306674912;
                   var2++;
                   continue L1;
                 }

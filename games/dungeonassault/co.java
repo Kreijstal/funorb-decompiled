@@ -51,7 +51,7 @@ final class co extends vf {
     }
 
     public static void e(int param0) {
-        int var1 = 99 / ((param0 - 6) / 54);
+        int var1 = 99;
         field_I = null;
         field_J = null;
         field_G = null;

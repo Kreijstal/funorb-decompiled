@@ -43,9 +43,6 @@ final class vc extends rf {
 
     final static void a(int param0, int param1, int param2) {
         a.field_e = param1;
-        if (param2 != 1) {
-            return;
-        }
         dg.field_n = param0;
     }
 

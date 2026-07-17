@@ -40,7 +40,7 @@ final class qa {
           field_r = param2;
           field_n = param9;
           field_g = param10;
-          field_b = param11;
+          field_b = 128;
           var12 = cc.field_n;
           var13 = cc.field_p;
           var14 = 0;

@@ -7,26 +7,54 @@ final class fk extends hs {
     static int[] field_k;
 
     final static int b(int param0, int param1, int param2) {
-        int var4 = Kickabout.field_G;
-        int var3 = 1;
-        while (param2 > 1) {
-            if ((1 & param2) != 0) {
-                var3 = var3 * param0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_10_0 = 0;
+        var4 = Kickabout.field_G;
+        try {
+          L0: {
+            var3_int = 1;
+            L1: while (true) {
+              if (param2 <= 1) {
+                L2: {
+                  if (param1 == -11934) {
+                    break L2;
+                  } else {
+                    fk.f(-39);
+                    break L2;
+                  }
+                }
+                if (param2 == 1) {
+                  stackOut_10_0 = var3_int * param0;
+                  stackIn_11_0 = stackOut_10_0;
+                  break L0;
+                } else {
+                  return var3_int;
+                }
+              } else {
+                L3: {
+                  if ((1 & param2) == 0) {
+                    break L3;
+                  } else {
+                    var3_int = var3_int * param0;
+                    break L3;
+                  }
+                }
+                param0 = param0 * param0;
+                param2 = param2 >> 1;
+                continue L1;
+              }
             }
-            param0 = param0 * param0;
-            param2 = param2 >> 1;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var3, "fk.C(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
-        if (param1 != -11934) {
-            fk.f(-39);
-            if (!(-2 != (param2 ^ -1))) {
-                return var3 * param0;
-            }
-            return var3;
-        }
-        if (!(-2 != (param2 ^ -1))) {
-            return var3 * param0;
-        }
-        return var3;
+        return stackIn_11_0;
     }
 
     final void f(int param0, int param1) {

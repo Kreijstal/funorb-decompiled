@@ -13,46 +13,92 @@ final class dj {
     static String field_d;
 
     public static void a(byte param0) {
-        if (param0 != 38) {
-            return;
-        }
         field_g = null;
         field_d = null;
         field_c = null;
     }
 
     final static String a(int param0, String param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
+        String stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_6_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var5 = TetraLink.field_J;
-        var2 = param1.length();
-        var3 = new char[var2];
-        if (param0 <= 53) {
-          field_d = null;
-          var4 = 0;
-          L0: while (true) {
-            if (var2 <= var4) {
-              return new String(var3);
-            } else {
-              var3[-var4 + (var2 + -1)] = param1.charAt(var4);
-              var4++;
-              continue L0;
+        try {
+          L0: {
+            L1: {
+              var2_int = param1.length();
+              var3 = new char[var2_int];
+              if (param0 > 53) {
+                break L1;
+              } else {
+                field_d = null;
+                break L1;
+              }
+            }
+            var4 = 0;
+            L2: while (true) {
+              if (var2_int <= var4) {
+                stackOut_6_0 = new String(var3);
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var3[-var4 + (var2_int + -1)] = param1.charAt(var4);
+                var4++;
+                continue L2;
+              }
             }
           }
-        } else {
-          var4 = 0;
-          L1: while (true) {
-            if (var2 <= var4) {
-              return new String(var3);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_1 = new StringBuilder().append("dj.A(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
             } else {
-              var3[-var4 + (var2 + -1)] = param1.charAt(var4);
-              var4++;
-              continue L1;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
             }
           }
+          throw oi.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
+        return stackIn_7_0;
     }
 
     final mc a(long param0, byte param1) {
@@ -71,7 +117,7 @@ final class dj {
               return null;
             }
           } else {
-            if ((param0 ^ -1L) == (((dj) this).field_a.field_c ^ -1L)) {
+            if (~param0 == ~((dj) this).field_a.field_c) {
               var5 = ((dj) this).field_a;
               ((dj) this).field_a = ((dj) this).field_a.field_j;
               return var5;
@@ -93,30 +139,21 @@ final class dj {
 
     final void a(long param0, int param1, mc param2) {
         mc var5 = null;
-        L0: {
-          if (param2.field_e != null) {
-            param2.b(false);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        var5 = ((dj) this).field_e[(int)((long)(((dj) this).field_f + -1) & param0)];
-        if (param1 > -48) {
-          ((dj) this).field_e = null;
-          param2.field_j = var5;
-          param2.field_e = var5.field_e;
-          param2.field_e.field_j = param2;
-          param2.field_c = param0;
-          param2.field_j.field_e = param2;
-          return;
-        } else {
-          param2.field_j = var5;
-          param2.field_e = var5.field_e;
-          param2.field_e.field_j = param2;
-          param2.field_c = param0;
-          param2.field_j.field_e = param2;
-          return;
+        try {
+            if (!(param2.field_e == null)) {
+                param2.b(false);
+            }
+            var5 = ((dj) this).field_e[(int)((long)(((dj) this).field_f + -1) & param0)];
+            if (param1 > -48) {
+                ((dj) this).field_e = null;
+            }
+            param2.field_j = var5;
+            param2.field_e = var5.field_e;
+            param2.field_e.field_j = param2;
+            param2.field_c = param0;
+            param2.field_j.field_e = param2;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "dj.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -220,8 +257,12 @@ final class dj {
     }
 
     final static void a(byte param0, f param1) {
-        int var2 = 29 / ((-63 - param0) / 49);
-        im.field_c = param1;
+        try {
+            int var2_int = 29 / ((-63 - param0) / 49);
+            im.field_c = param1;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "dj.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

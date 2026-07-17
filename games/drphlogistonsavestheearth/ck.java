@@ -35,48 +35,66 @@ final class ck {
 
     final static boolean b(int param0) {
         lc var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         lc var4 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_14_0 = 0;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var4 = (lc) (Object) g.field_t.h(-11151);
-        var1 = var4;
-        if (var1 == null) {
-          return false;
-        } else {
-          var2 = 0;
-          L0: while (true) {
-            if (var2 >= var1.field_r) {
-              if (param0 >= 4) {
+        try {
+          var4 = (lc) (Object) g.field_t.h(-11151);
+          var1 = var4;
+          if (var1 == null) {
+            stackOut_3_0 = 0;
+            stackIn_4_0 = stackOut_3_0;
+            return stackIn_4_0 != 0;
+          } else {
+            var2 = 0;
+            L0: while (true) {
+              if (var2 >= var1.field_r) {
                 return true;
               } else {
-                return true;
-              }
-            } else {
-              L1: {
-                if (var4.field_n[var2] == null) {
-                  break L1;
-                } else {
-                  if (var4.field_n[var2].field_b != 0) {
+                L1: {
+                  if (var4.field_n[var2] == null) {
                     break L1;
                   } else {
-                    return false;
+                    if (var4.field_n[var2].field_b != 0) {
+                      break L1;
+                    } else {
+                      stackOut_9_0 = 0;
+                      stackIn_10_0 = stackOut_9_0;
+                      return stackIn_10_0 != 0;
+                    }
                   }
                 }
-              }
-              if (var4.field_o[var2] != null) {
-                if (-1 == (var4.field_o[var2].field_b ^ -1)) {
-                  return false;
-                } else {
-                  var2++;
-                  continue L0;
+                L2: {
+                  if (var4.field_o[var2] == null) {
+                    break L2;
+                  } else {
+                    if (var4.field_o[var2].field_b == 0) {
+                      stackOut_14_0 = 0;
+                      stackIn_15_0 = stackOut_14_0;
+                      return stackIn_15_0 != 0;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
-              } else {
                 var2++;
                 continue L0;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ie.a((Throwable) (Object) var1_ref, "ck.D(" + 99 + 41);
         }
     }
 
@@ -117,9 +135,6 @@ final class ck {
         var4.field_h = param0;
         var4.field_j = new int[param2];
         eg.field_c.a((gi) (Object) var4, 255);
-        if (!param3) {
-            return null;
-        }
         bj.a(param1, -59, var4);
         return var4;
     }
@@ -130,9 +145,6 @@ final class ck {
         field_k = null;
         field_f = null;
         field_j = null;
-        if (param0 != 7268) {
-            field_f = null;
-        }
         field_d = null;
     }
 
@@ -153,7 +165,7 @@ final class ck {
         }
         var2 = 0;
         L1: while (true) {
-          if ((var2 ^ -1) <= -11) {
+          if (var2 >= 10) {
             return;
           } else {
             var4 = ((ck) this).field_i[var2];
@@ -162,13 +174,13 @@ final class ck {
               if (var3 >= 1) {
                 if (((ck) this).field_h[var2] >= 0.0) {
                   var5 = ((ck) this).field_a[var2];
-                  if (-1 == (var5 ^ -1)) {
+                  if (var5 == 0) {
                     wj.c((int)((ck) this).field_m[var2], (int)((ck) this).field_g[var2], (int)((ck) this).field_h[var2], ((ck) this).field_i[var2], 128);
                     var2++;
                     continue L1;
                   } else {
                     if (var5 == 1) {
-                      wj.a((int)((ck) this).field_m[var2] << -1062025276, (int)((ck) this).field_g[var2] << -2048688188, (int)((ck) this).field_h[var2] << -791901692, 0, vd.field_b);
+                      wj.a((int)((ck) this).field_m[var2] << 4, (int)((ck) this).field_g[var2] << 4, (int)((ck) this).field_h[var2] << 4, 0, vd.field_b);
                       var2++;
                       continue L1;
                     } else {

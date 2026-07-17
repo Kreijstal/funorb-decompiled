@@ -107,19 +107,19 @@ final class ig extends da {
                     break L1;
                   } else {
                     var29 = param2[var8];
-                    var10_ref_int__ = ((vd) var29).field_f;
-                    var47 = ((vd) var29).field_e;
+                    var10_ref_int__ = var29.field_f;
+                    var47 = var29.field_e;
                     var42 = var47;
                     var37 = var42;
                     var30 = var37;
                     var11_ref_byte__ = var30;
-                    var48 = ((vd) var29).field_d;
+                    var48 = var29.field_d;
                     var43 = var48;
                     var38 = var43;
                     var31 = var38;
                     var12_ref_byte__ = var31;
-                    var13_int = ((vd) var29).field_c;
-                    var14 = ((vd) var29).field_h;
+                    var13_int = var29.field_c;
+                    var14 = var29.field_h;
                     var15 = var8 % 16 * var5;
                     var16 = var8 / 16 * var5;
                     var17 = var16 * var6 + var15;
@@ -135,15 +135,17 @@ final class ig extends da {
                               var19_int++;
                               continue L3;
                             } else {
+                              int incrementValue$8 = var18_int;
                               var18_int++;
-                              var21_int = var12_ref_byte__[var18_int];
-                              if (var12_ref_byte__[var18_int] == 0) {
+                              var21_int = var12_ref_byte__[incrementValue$8];
+                              if (var12_ref_byte__[incrementValue$8] == 0) {
                                 var17++;
                                 var20_int++;
                                 continue L4;
                               } else {
+                                int incrementValue$9 = var17;
                                 var17++;
-                                var7_ref_int__[var17] = -16777216 | var10_ref_int__[var21_int & 255];
+                                var7_ref_int__[incrementValue$9] = -16777216 | var10_ref_int__[var21_int & 255];
                                 var20_int++;
                                 continue L4;
                               }
@@ -165,8 +167,9 @@ final class ig extends da {
                               var19_int++;
                               continue L5;
                             } else {
+                              int incrementValue$10 = var17;
                               var17++;
-                              var7_ref_int__[var17] = var47[var18_int] << 24 | var10_ref_int__[var48[var18_int] & 255];
+                              var7_ref_int__[incrementValue$10] = var47[var18_int] << 24 | var10_ref_int__[var48[var18_int] & 255];
                               var18_int++;
                               var20_int++;
                               continue L6;
@@ -216,14 +219,14 @@ final class ig extends da {
                     break L1;
                   } else {
                     var26 = param2[var8];
-                    var10_int = ((vd) var26).field_c;
-                    var11_int = ((vd) var26).field_h;
+                    var10_int = var26.field_c;
+                    var11_int = var26.field_h;
                     var12 = var8 % 16 * var5;
                     var13_int = var8 / 16 * var5;
                     var14 = var13_int * var6 + var12;
                     var15 = 0;
-                    if (((vd) var26).field_e != null) {
-                      var16_ref_byte__ = ((vd) var26).field_e;
+                    if (var26.field_e != null) {
+                      var16_ref_byte__ = var26.field_e;
                       var17 = 0;
                       L10: while (true) {
                         if (var17 < var10_int) {
@@ -234,9 +237,11 @@ final class ig extends da {
                               var17++;
                               continue L10;
                             } else {
+                              int incrementValue$11 = var14;
                               var14++;
+                              int incrementValue$12 = var15;
                               var15++;
-                              var7_ref_byte__[var14] = var16_ref_byte__[var15];
+                              var7_ref_byte__[incrementValue$11] = var16_ref_byte__[incrementValue$12];
                               var18_int++;
                               continue L11;
                             }
@@ -247,7 +252,7 @@ final class ig extends da {
                         }
                       }
                     } else {
-                      var16_ref_byte__ = ((vd) var26).field_d;
+                      var16_ref_byte__ = var26.field_d;
                       var17 = 0;
                       L12: while (true) {
                         if (var17 < var10_int) {
@@ -259,15 +264,17 @@ final class ig extends da {
                               continue L12;
                             } else {
                               L14: {
+                                int incrementValue$13 = var14;
                                 var14++;
+                                int incrementValue$14 = var15;
                                 var15++;
                                 stackOut_16_0 = (byte[]) var7_ref_byte__;
-                                stackOut_16_1 = var14;
+                                stackOut_16_1 = incrementValue$13;
                                 stackIn_18_0 = stackOut_16_0;
                                 stackIn_18_1 = stackOut_16_1;
                                 stackIn_17_0 = stackOut_16_0;
                                 stackIn_17_1 = stackOut_16_1;
-                                if (var16_ref_byte__[var15] != 0) {
+                                if (var16_ref_byte__[incrementValue$14] != 0) {
                                   stackOut_18_0 = (byte[]) (Object) stackIn_18_0;
                                   stackOut_18_1 = stackIn_18_1;
                                   stackOut_18_2 = -1;
@@ -302,7 +309,7 @@ final class ig extends da {
             }
             ((ig) this).field_e.a(jp.field_a, -31662);
             ((ig) this).field_h = param0.a(false, (byte) 126);
-            boolean discarded$1 = ((ig) this).field_h.a(20, -121, 20480);
+            boolean discarded$15 = ((ig) this).field_h.a(20, -121, 20480);
             var7 = 0;
             L15: while (true) {
               L16: {
@@ -327,10 +334,10 @@ final class ig extends da {
                         }
                       } else {
                         var13 = param2[var24];
-                        var14 = ((vd) var13).field_c;
-                        var15 = ((vd) var13).field_h;
-                        var16 = ((vd) var13).field_i;
-                        var17 = ((vd) var13).field_a;
+                        var14 = var13.field_c;
+                        var15 = var13.field_h;
+                        var16 = var13.field_i;
+                        var17 = var13.field_a;
                         var18 = (float)(var24 % 16 * var5);
                         var19 = (float)(var24 / 16 * var5);
                         var20 = var18 * var10;
@@ -392,19 +399,20 @@ final class ig extends da {
                   }
                 }
               }
+              return;
             }
           } else {
             L18: {
               var25 = param2[var6];
-              if (((vd) var25).field_c <= var5) {
+              if (var25.field_c <= var5) {
                 break L18;
               } else {
-                var5 = ((vd) var25).field_c;
+                var5 = var25.field_c;
                 break L18;
               }
             }
-            if (((vd) var25).field_h > var5) {
-              var5 = ((vd) var25).field_h;
+            if (var25.field_h > var5) {
+              var5 = var25.field_h;
               var6++;
               continue L0;
             } else {

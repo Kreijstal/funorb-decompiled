@@ -166,9 +166,9 @@ final class in extends com.ms.dll.Callback {
         if (((in) this).field_c == param0) {
           if (param1 == 32) {
             var5 = 65535 & param3;
-            if ((var5 ^ -1) != -2) {
+            if (var5 != 1) {
               if (param1 != 101024) {
-                if ((param1 ^ -1) == -2) {
+                if (param1 == 1) {
                   ((in) this).field_c = 0;
                   ((in) this).field_a = true;
                   return com.ms.win32.User32.CallWindowProc(((in) this).field_e, param0, param1, param2, param3);
@@ -207,7 +207,7 @@ final class in extends com.ms.dll.Callback {
             }
           } else {
             if (param1 != 101024) {
-              if ((param1 ^ -1) == -2) {
+              if (param1 == 1) {
                 ((in) this).field_c = 0;
                 ((in) this).field_a = true;
                 return com.ms.win32.User32.CallWindowProc(((in) this).field_e, param0, param1, param2, param3);

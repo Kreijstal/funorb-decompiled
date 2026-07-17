@@ -19,93 +19,116 @@ final class wf {
         field_f = null;
         field_e = null;
         field_c = null;
-        if (param0 != -116) {
-          return;
-        } else {
-          field_g = null;
-          field_d = null;
-          field_h = null;
-          return;
-        }
+        field_g = null;
+        field_d = null;
+        field_h = null;
     }
 
     final static qk a(byte param0, String param1) {
-        String var2 = null;
+        Object var2 = null;
         qk var3 = null;
         String var4 = null;
         int var5 = 0;
         Object var6 = null;
-        CharSequence var11 = null;
-        CharSequence var12 = null;
-        CharSequence var13 = null;
-        Object var16 = null;
-        Object var17 = null;
-        var16 = null;
-        var17 = null;
+        CharSequence var7 = null;
+        CharSequence var8 = null;
+        qk stackIn_15_0 = null;
+        Object stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        Object stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        Object stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        qk stackOut_14_0 = null;
+        Object stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        Object stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        Object stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var5 = TorChallenge.field_F ? 1 : 0;
-        if (null != mh.field_e) {
-          L0: {
-            var11 = (CharSequence) (Object) param1;
-            var2 = il.a(var11, (byte) 21);
-            if (var2 != null) {
-              break L0;
-            } else {
-              var2 = (String) (Object) var11;
-              break L0;
+        try {
+          if (null != mh.field_e) {
+            L0: {
+              var7 = (CharSequence) (Object) param1;
+              var2 = (Object) (Object) il.a(var7, (byte) 21);
+              if (var2 != null) {
+                break L0;
+              } else {
+                var2 = (Object) (Object) var7;
+                break L0;
+              }
             }
-          }
-          var3 = (qk) (Object) mh.field_e.a(true, (long)var2.hashCode());
-          if (param0 != -123) {
-            var6 = null;
-            qk discarded$1 = wf.a((byte) -81, (String) null);
-            L1: while (true) {
+            L1: {
+              var3 = (qk) (Object) mh.field_e.a(true, (long)((String) var2).hashCode());
+              if (param0 == -123) {
+                break L1;
+              } else {
+                var6 = null;
+                qk discarded$2 = wf.a((byte) -81, (String) null);
+                break L1;
+              }
+            }
+            L2: while (true) {
               if (var3 != null) {
-                L2: {
-                  var13 = (CharSequence) (Object) var3.field_F;
-                  var4 = il.a(var13, (byte) 21);
+                L3: {
+                  var8 = (CharSequence) (Object) var3.field_F;
+                  var4 = il.a(var8, (byte) 21);
                   if (var4 != null) {
-                    break L2;
+                    break L3;
                   } else {
                     var4 = var3.field_F;
-                    break L2;
+                    break L3;
                   }
                 }
-                if (var4.equals((Object) (Object) var2)) {
-                  return var3;
+                if (var4.equals(var2)) {
+                  stackOut_14_0 = (qk) var3;
+                  stackIn_15_0 = stackOut_14_0;
+                  return stackIn_15_0;
                 } else {
                   var3 = (qk) (Object) mh.field_e.a((byte) 126);
-                  continue L1;
+                  continue L2;
                 }
               } else {
                 return null;
               }
             }
           } else {
-            L3: while (true) {
-              if (var3 != null) {
-                L4: {
-                  var12 = (CharSequence) (Object) var3.field_F;
-                  var4 = il.a(var12, (byte) 21);
-                  if (var4 != null) {
-                    break L4;
-                  } else {
-                    var4 = var3.field_F;
-                    break L4;
-                  }
-                }
-                if (var4.equals((Object) (Object) var2)) {
-                  return var3;
-                } else {
-                  var3 = (qk) (Object) mh.field_e.a((byte) 126);
-                  continue L3;
-                }
-              } else {
-                return null;
-              }
+            return null;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = (Object) (Object) decompiledCaughtException;
+            stackOut_18_0 = var2;
+            stackOut_18_1 = new StringBuilder().append("wf.C(").append(param0).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param1 == null) {
+              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L4;
+            } else {
+              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L4;
             }
           }
-        } else {
-          return null;
+          throw oj.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
     }
 

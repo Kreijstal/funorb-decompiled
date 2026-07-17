@@ -51,7 +51,7 @@ final class fi extends ki {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         var5 = 22 % ((param0 - -28) / 43);
-        if ((param1 ^ -1) >= 0) {
+        if (param1 <= -1) {
           lb.g(param2, param3, 153, 240, 16777215, 11184810);
           if (!((fi) this).b((byte) -107)) {
             return;
@@ -113,16 +113,17 @@ final class fi extends ki {
 
     fi(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
-        ga.field_k = new jp[2];
-        ao.field_o = new jp[2][];
-        ja.field_a = new jp[2][];
+        try {
+            ga.field_k = new jp[2];
+            ao.field_o = new jp[2][];
+            ja.field_a = new jp[2][];
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "fi.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     public static void d(byte param0) {
         field_v = null;
-        if (param0 != -31) {
-            return;
-        }
         field_u = null;
         field_r = null;
         field_s = null;

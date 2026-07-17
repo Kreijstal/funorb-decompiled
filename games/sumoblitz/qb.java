@@ -6,9 +6,10 @@ final class qb extends ff {
 
     final void a(int param0, byte param1, int param2) {
         int var4 = 2 * param0;
-        param1 = (byte)(param2 + ((255 & param1) >> 53365249));
+        param1 = (byte)(param2 + ((255 & param1) >> 1));
+        int incrementValue$0 = var4;
         var4++;
-        ((qb) this).field_s[var4] = (byte)param1;
+        ((qb) this).field_s[incrementValue$0] = (byte)param1;
         ((qb) this).field_s[var4] = (byte)param1;
     }
 
@@ -39,7 +40,7 @@ final class qb extends ff {
         pd.field_p = un.field_a[0];
         in.field_z = 0;
         jt.field_u = 0;
-        gn.a(param0, true);
+        gn.a(10, true);
         ag.a(0, 1 + oh.field_e % 5);
     }
 

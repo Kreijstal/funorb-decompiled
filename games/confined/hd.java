@@ -20,7 +20,7 @@ final class hd {
         StringBuilder var13 = null;
         var11 = Confined.field_J ? 1 : 0;
         if (param0 > 0L) {
-          if (-6582952005840035282L < (param0 ^ -1L)) {
+          if (param0 < 6582952005840035281L) {
             if (0L != param0 % 37L) {
               var3 = 0;
               var4 = param0;
@@ -106,11 +106,6 @@ final class hd {
     public static void a(boolean param0) {
         field_a = null;
         field_c = null;
-        if (!param0) {
-            String discarded$0 = hd.a(10L, (byte) 3);
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 

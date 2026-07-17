@@ -14,14 +14,27 @@ final class od extends lm {
 
     od(int param0, int param1, int param2) {
         super(param0, param1, param2, 100352);
-        ((od) this).field_yb = false;
-        if (-3 != (((od) this).field_D ^ -1)) {
-            if ((((od) this).field_D ^ -1) != -5) {
-                // if_icmpne L59
+        L0: {
+          L1: {
+            ((od) this).field_yb = false;
+            if (((od) this).field_D == 2) {
+              break L1;
+            } else {
+              if (((od) this).field_D == 4) {
+                break L1;
+              } else {
+                if (((od) this).field_D != 6) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
+          }
+          ((od) this).field_lb = 17;
+          ((od) this).field_cb = 71680;
+          break L0;
         }
-        ((od) this).field_lb = 17;
-        ((od) this).field_cb = 71680;
     }
 
     final void l(byte param0) {
@@ -59,8 +72,8 @@ final class od extends lm {
                   if (var4 * var4 - -(var5 * var5) > 125000) {
                     break L1;
                   } else {
-                    if (0 == (((od) this).field_A.field_b.a(((od) this).g(param0 ^ 1829947583), ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600), false, false) ^ -1)) {
-                      if (0 == (((od) this).field_A.field_b.a(((od) this).g(1829947600) + -48, ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600) + -48, false, false) ^ -1)) {
+                    if (((od) this).field_A.field_b.a(((od) this).g(param0 ^ 1829947583), ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600), false, false) == -1) {
+                      if (((od) this).field_A.field_b.a(((od) this).g(1829947600) + -48, ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600) + -48, false, false) == -1) {
                         break L1;
                       } else {
                         boolean discarded$6 = ((od) this).a(false, (pa) (Object) ((od) this).field_nb);
@@ -108,7 +121,7 @@ final class od extends lm {
                       return;
                     }
                   } else {
-                    if (-4 != (((od) this).field_Q ^ -1)) {
+                    if (((od) this).field_Q != 3) {
                       ((od) this).a(3, (byte) -89);
                       ((od) this).field_S = true;
                       if (param0 == 111) {
@@ -174,11 +187,11 @@ final class od extends lm {
                     if (var4 * var4 - -(var5 * var5) > 125000) {
                       break L3;
                     } else {
-                      if (0 != (((od) this).field_A.field_b.a(((od) this).g(param0 ^ 1829947583), ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600), false, false) ^ -1)) {
+                      if (((od) this).field_A.field_b.a(((od) this).g(param0 ^ 1829947583), ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600), false, false) != -1) {
                         boolean discarded$8 = ((od) this).a(false, (pa) (Object) ((od) this).field_nb);
                         break L2;
                       } else {
-                        if (0 != (((od) this).field_A.field_b.a(((od) this).g(1829947600) + -48, ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600) + -48, false, false) ^ -1)) {
+                        if (((od) this).field_A.field_b.a(((od) this).g(1829947600) + -48, ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600) + -48, false, false) != -1) {
                           boolean discarded$9 = ((od) this).a(false, (pa) (Object) ((od) this).field_nb);
                           break L2;
                         } else {
@@ -216,7 +229,7 @@ final class od extends lm {
                     }
                   } else {
                     if (!((od) this).field_yb) {
-                      if (-4 == (((od) this).field_Q ^ -1)) {
+                      if (((od) this).field_Q == 3) {
                         if (param0 == 111) {
                           return;
                         } else {
@@ -294,11 +307,11 @@ final class od extends lm {
                   if (var4 * var4 - -(var5 * var5) > 125000) {
                     break L9;
                   } else {
-                    if (0 != (((od) this).field_A.field_b.a(((od) this).g(param0 ^ 1829947583), ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600), false, false) ^ -1)) {
+                    if (((od) this).field_A.field_b.a(((od) this).g(param0 ^ 1829947583), ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600), false, false) != -1) {
                       boolean discarded$10 = ((od) this).a(false, (pa) (Object) ((od) this).field_nb);
                       break L8;
                     } else {
-                      if (0 != (((od) this).field_A.field_b.a(((od) this).g(1829947600) + -48, ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600) + -48, false, false) ^ -1)) {
+                      if (((od) this).field_A.field_b.a(((od) this).g(1829947600) + -48, ((od) this).e((byte) -112), -17201, ((od) this).field_nb.e((byte) -112), ((od) this).field_nb.g(1829947600) + -48, false, false) != -1) {
                         boolean discarded$11 = ((od) this).a(false, (pa) (Object) ((od) this).field_nb);
                         break L8;
                       } else {
@@ -336,7 +349,7 @@ final class od extends lm {
                   }
                 } else {
                   if (!((od) this).field_yb) {
-                    if (-4 == (((od) this).field_Q ^ -1)) {
+                    if (((od) this).field_Q == 3) {
                       L12: {
                         if (param0 == 111) {
                           break L12;
@@ -415,13 +428,8 @@ final class od extends lm {
         field_Gb = null;
         field_Bb = null;
         field_zb = null;
-        if (param0 > -5) {
-          return;
-        } else {
-          field_Ab = null;
-          field_Fb = null;
-          return;
-        }
+        field_Ab = null;
+        field_Fb = null;
     }
 
     static {

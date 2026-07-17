@@ -55,12 +55,16 @@ abstract class za extends wf {
     }
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, byte param6) {
-        ua.field_l[param4] = param1;
-        dt.field_a[param4] = param3;
-        int var7 = -99 % ((24 - param6) / 63);
-        ak.field_f[param4] = param5;
-        bk.field_e[param4] = param2;
-        oo.field_Y[param4] = param0;
+        try {
+            ua.field_l[param4] = param1;
+            dt.field_a[param4] = param3;
+            int var7_int = -99 % ((24 - param6) / 63);
+            ak.field_f[param4] = param5;
+            bk.field_e[param4] = param2;
+            oo.field_Y[param4] = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "za.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     static {

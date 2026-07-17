@@ -8,17 +8,12 @@ final class ho {
 
     final synchronized static void a(int param0) {
         field_c = field_c - 1;
-        if (!((field_c ^ -1) != param0)) {
+        if (!(~field_c != param0)) {
             ho.a(true);
         }
     }
 
     final synchronized static void b(boolean param0) {
-        if (param0) {
-            ho.a(76);
-            field_c = field_c + 1;
-            return;
-        }
         field_c = field_c + 1;
     }
 
@@ -28,7 +23,7 @@ final class ho {
           return;
         } else {
           L0: {
-            if (param0 > (field_c ^ -1)) {
+            if (param0 > ~field_c) {
               var2 = new rw();
               var2.field_f = param1;
               field_a.b((byte) -118, (vg) (Object) var2);
@@ -47,12 +42,7 @@ final class ho {
         L0: while (true) {
           var1 = (rw) (Object) field_a.c(-113);
           if (var1 == null) {
-            if (!param0) {
-              ho.a(-115);
-              return;
-            } else {
-              return;
-            }
+            return;
           } else {
             var1.field_f.w(true);
             var1.p(120);

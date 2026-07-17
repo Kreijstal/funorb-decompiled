@@ -34,34 +34,82 @@ final class tj {
     }
 
     final static le[] a(int param0, ad param1, int param2, byte param3) {
-        if (!wg.a(param2, param0, param1, -3)) {
-            return null;
+        RuntimeException var4 = null;
+        Object stackIn_5_0 = null;
+        le[] stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        le[] stackOut_6_0 = null;
+        Object stackOut_4_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            if (wg.a(param2, param0, param1, -3)) {
+              if (param3 < -14) {
+                stackOut_6_0 = cf.c((byte) 16);
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                stackOut_4_0 = null;
+                stackIn_5_0 = stackOut_4_0;
+                return (le[]) (Object) stackIn_5_0;
+              }
+            } else {
+              return null;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("tj.D(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L1;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L1;
+            }
+          }
+          throw la.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + param3 + 41);
         }
-        if (param3 >= -14) {
-            return null;
-        }
-        return cf.c((byte) 16);
+        return stackIn_7_0;
     }
 
     public static void a(int param0) {
-        Object var2 = null;
-        if (param0 < 55) {
-          var2 = null;
-          le[] discarded$2 = tj.a(-25, (ad) null, 77, (byte) 85);
-          field_b = null;
-          field_a = null;
-          field_e = null;
-          field_c = null;
-          field_d = null;
-          return;
-        } else {
-          field_b = null;
-          field_a = null;
-          field_e = null;
-          field_c = null;
-          field_d = null;
-          return;
-        }
+        field_b = null;
+        field_a = null;
+        field_e = null;
+        field_c = null;
+        field_d = null;
     }
 
     final static void a(byte param0) {

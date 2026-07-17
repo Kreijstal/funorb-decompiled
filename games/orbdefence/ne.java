@@ -8,11 +8,6 @@ final class ne {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != -1459) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

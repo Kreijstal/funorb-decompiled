@@ -1050,7 +1050,7 @@ final class ob extends fc {
                               }
                             }
                             if (var9 > 64) {
-                              var10 = field_H[var8] - 64 - 1;
+                              var10 = field_H[var8] - 65;
                               var48 = field_f[var10];
                               var12 = 0;
                               L10: while (true) {
@@ -1130,7 +1130,7 @@ final class ob extends fc {
                           }
                         }
                         if (var9 > 64) {
-                          var10 = field_H[var8] - 64 - 1;
+                          var10 = field_H[var8] - 65;
                           var46 = field_f[var10];
                           var12 = 0;
                           L15: while (true) {
@@ -2957,7 +2957,7 @@ final class ob extends fc {
                     }
                   }
                 }
-                ((ob) this).field_r[var9] = (short)-1;
+                ((ob) this).field_r[var9] = (short) -1;
                 var9++;
                 continue L1;
               }
@@ -2997,14 +2997,14 @@ final class ob extends fc {
                               break L3;
                             } else {
                               if (param0.field_q[var11] == -1) {
-                                ((ob) this).field_u[var11] = (byte)-1;
+                                ((ob) this).field_u[var11] = (byte) -1;
                                 var11++;
                                 continue L7;
                               } else {
                                 ((ob) this).field_u[var11] = (byte)var9_ref_int__[param0.field_q[var11] & 255];
                                 if (((ob) this).field_u[var11] == -1) {
                                   if (((ob) this).field_r != null) {
-                                    ((ob) this).field_r[var11] = (short)-1;
+                                    ((ob) this).field_r[var11] = (short) -1;
                                     var11++;
                                     continue L7;
                                   } else {
@@ -3570,7 +3570,7 @@ final class ob extends fc {
                           break L20;
                         } else {
                           if (var14.field_r == null) {
-                            ((ob) this).field_r[((ob) this).field_ob] = (short)-1;
+                            ((ob) this).field_r[((ob) this).field_ob] = (short) -1;
                             break L20;
                           } else {
                             ((ob) this).field_r[((ob) this).field_ob] = var11.field_r[var9_int];

@@ -32,95 +32,14 @@ final class bf {
         int var6 = 0;
         int var7 = 0;
         var1 = 256;
-        uh.field_t[0] = (var1 >> -1787850847) - ml.field_l[0];
+        uh.field_t[0] = (var1 >> 1) - ml.field_l[0];
         uh.field_t[1] = -ml.field_l[1];
         uh.field_t[2] = -ml.field_l[2] + var1;
-        var2 = uh.field_t[1] * ml.field_l[4] + ml.field_l[3] * uh.field_t[0] - -(ml.field_l[5] * uh.field_t[2]) >> 1879067847;
-        var3 = uh.field_t[2] * ml.field_l[8] + (ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6]) >> -1426670841;
-        uh.field_t[2] = ml.field_l[10] * uh.field_t[1] + uh.field_t[0] * ml.field_l[9] + ml.field_l[11] * uh.field_t[2] >> -945182032;
+        var2 = uh.field_t[1] * ml.field_l[4] + ml.field_l[3] * uh.field_t[0] - -(ml.field_l[5] * uh.field_t[2]) >> 7;
+        var3 = uh.field_t[2] * ml.field_l[8] + (ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6]) >> 7;
+        uh.field_t[2] = ml.field_l[10] * uh.field_t[1] + uh.field_t[0] * ml.field_l[9] + ml.field_l[11] * uh.field_t[2] >> 16;
         if (uh.field_t[2] != 0) {
           uh.field_t[1] = var3 / uh.field_t[2] + 240;
-          if (param0 >= 75) {
-            uh.field_t[0] = var2 / uh.field_t[2] + 320;
-            if (0 >= uh.field_t[2]) {
-              return;
-            } else {
-              var4 = uh.field_t[0];
-              uh.field_t[0] = -ml.field_l[0];
-              var5 = uh.field_t[1];
-              uh.field_t[2] = var1 + -ml.field_l[2];
-              uh.field_t[1] = -ml.field_l[1];
-              var6 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> -299591705;
-              var7 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> -629509593;
-              uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] - -(uh.field_t[1] * ml.field_l[10])) >> -478222608;
-              if (-1 != (uh.field_t[2] ^ -1)) {
-                uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
-                uh.field_t[1] = var7 / uh.field_t[2] + 240;
-                if (uh.field_t[2] <= 0) {
-                  return;
-                } else {
-                  qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
-                  return;
-                }
-              } else {
-                uh.field_t[2] = -1;
-                uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
-                uh.field_t[1] = var7 / uh.field_t[2] + 240;
-                if (uh.field_t[2] <= 0) {
-                  return;
-                } else {
-                  qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
-                  return;
-                }
-              }
-            }
-          } else {
-            field_c = null;
-            uh.field_t[0] = var2 / uh.field_t[2] + 320;
-            if (0 >= uh.field_t[2]) {
-              return;
-            } else {
-              var4 = uh.field_t[0];
-              uh.field_t[0] = -ml.field_l[0];
-              var5 = uh.field_t[1];
-              uh.field_t[2] = var1 + -ml.field_l[2];
-              uh.field_t[1] = -ml.field_l[1];
-              var6 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> -299591705;
-              var7 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> -629509593;
-              uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] - -(uh.field_t[1] * ml.field_l[10])) >> -478222608;
-              if (-1 == (uh.field_t[2] ^ -1)) {
-                uh.field_t[2] = -1;
-                uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
-                uh.field_t[1] = var7 / uh.field_t[2] + 240;
-                if (uh.field_t[2] <= 0) {
-                  return;
-                } else {
-                  qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
-                  return;
-                }
-              } else {
-                uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
-                uh.field_t[1] = var7 / uh.field_t[2] + 240;
-                if (uh.field_t[2] <= 0) {
-                  return;
-                } else {
-                  qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
-                  return;
-                }
-              }
-            }
-          }
-        } else {
-          L0: {
-            uh.field_t[2] = -1;
-            uh.field_t[1] = var3 / uh.field_t[2] + 240;
-            if (param0 >= 75) {
-              break L0;
-            } else {
-              field_c = null;
-              break L0;
-            }
-          }
           uh.field_t[0] = var2 / uh.field_t[2] + 320;
           if (0 >= uh.field_t[2]) {
             return;
@@ -130,17 +49,53 @@ final class bf {
             var5 = uh.field_t[1];
             uh.field_t[2] = var1 + -ml.field_l[2];
             uh.field_t[1] = -ml.field_l[1];
-            var6 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> -299591705;
-            var7 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> -629509593;
-            uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] - -(uh.field_t[1] * ml.field_l[10])) >> -478222608;
-            if (-1 == (uh.field_t[2] ^ -1)) {
+            var6 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> 7;
+            var7 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> 7;
+            uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] - -(uh.field_t[1] * ml.field_l[10])) >> 16;
+            if (uh.field_t[2] != 0) {
+              uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
+              uh.field_t[1] = var7 / uh.field_t[2] + 240;
+              if (uh.field_t[2] <= 0) {
+                return;
+              } else {
+                qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 3;
+                return;
+              }
+            } else {
               uh.field_t[2] = -1;
               uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
               uh.field_t[1] = var7 / uh.field_t[2] + 240;
               if (uh.field_t[2] <= 0) {
                 return;
               } else {
-                qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
+                qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 3;
+                return;
+              }
+            }
+          }
+        } else {
+          uh.field_t[2] = -1;
+          uh.field_t[1] = var3 / uh.field_t[2] + 240;
+          uh.field_t[0] = var2 / uh.field_t[2] + 320;
+          if (0 >= uh.field_t[2]) {
+            return;
+          } else {
+            var4 = uh.field_t[0];
+            uh.field_t[0] = -ml.field_l[0];
+            var5 = uh.field_t[1];
+            uh.field_t[2] = var1 + -ml.field_l[2];
+            uh.field_t[1] = -ml.field_l[1];
+            var6 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> 7;
+            var7 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> 7;
+            uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] - -(uh.field_t[1] * ml.field_l[10])) >> 16;
+            if (uh.field_t[2] == 0) {
+              uh.field_t[2] = -1;
+              uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
+              uh.field_t[1] = var7 / uh.field_t[2] + 240;
+              if (uh.field_t[2] <= 0) {
+                return;
+              } else {
+                qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 3;
                 return;
               }
             } else {
@@ -149,7 +104,7 @@ final class bf {
               if (uh.field_t[2] <= 0) {
                 return;
               } else {
-                qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
+                qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 3;
                 return;
               }
             }

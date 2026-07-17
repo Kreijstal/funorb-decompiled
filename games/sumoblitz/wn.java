@@ -7,9 +7,6 @@ final class wn {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 0) {
-            boolean discarded$0 = wn.a(71, -52, 50);
-        }
     }
 
     final static boolean a(int param0, int param1, int param2) {
@@ -21,8 +18,8 @@ final class wn {
         if (!(ms.field_a)) {
             throw new IllegalStateException();
         }
-        pu.field_m = param0;
-        jv.a(false, !param0 ? true : false);
+        pu.field_m = true;
+        jv.a(false, false);
         jv.field_a = 0;
     }
 
@@ -53,7 +50,7 @@ final class wn {
         if (param1 <= 0) {
             return false;
         }
-        if (!(-1 != ((param4 | param0) ^ -1))) {
+        if (!((param4 | param0) != 0)) {
             return true;
         }
         return param4 * param4 - -(param0 * param0) <= param1 * param1 ? true : false;

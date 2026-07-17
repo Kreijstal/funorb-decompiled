@@ -29,7 +29,7 @@ final class fj {
             break L0;
           } else {
             L1: {
-              if (-3 != (((fj) this).field_i ^ -1)) {
+              if (((fj) this).field_i != 2) {
                 break L1;
               } else {
                 if (0 < ((fj) this).field_k) {
@@ -49,7 +49,7 @@ final class fj {
                 }
               }
               L3: {
-                if ((ji.field_Tb ^ -1) != -3) {
+                if (ji.field_Tb != 2) {
                   break L3;
                 } else {
                   if (!oj.a(1, ((fj) this).field_n)) {
@@ -98,18 +98,22 @@ final class fj {
     }
 
     fj(int param0, String param1, int param2, String param3, String param4) {
-        ((fj) this).field_j = param2;
-        ((fj) this).field_r = 0L;
-        ((fj) this).field_l = true;
-        ((fj) this).field_n = param1;
-        ((fj) this).field_a = null;
-        ((fj) this).field_k = 0;
-        ((fj) this).field_s = 0;
-        ((fj) this).field_g = 0;
-        ((fj) this).field_e = param1;
-        ((fj) this).field_c = param3;
-        ((fj) this).field_i = param0;
-        ((fj) this).field_h = param4;
+        try {
+            ((fj) this).field_j = param2;
+            ((fj) this).field_r = 0L;
+            ((fj) this).field_l = true;
+            ((fj) this).field_n = param1;
+            ((fj) this).field_a = null;
+            ((fj) this).field_k = 0;
+            ((fj) this).field_s = 0;
+            ((fj) this).field_g = 0;
+            ((fj) this).field_e = param1;
+            ((fj) this).field_c = param3;
+            ((fj) this).field_i = param0;
+            ((fj) this).field_h = param4;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "fj.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -30,7 +30,7 @@ final class dd implements Runnable {
                   } else {
                     var1_int = 0;
                     L3: while (true) {
-                      if ((var1_int ^ -1) <= -3) {
+                      if (var1_int >= 2) {
                         wh.a(10L, 19406);
                         pg.a((byte) -86, (Object) null, ((dd) this).field_d);
                         continue L2;

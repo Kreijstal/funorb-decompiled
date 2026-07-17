@@ -13,88 +13,38 @@ final class ec extends dm {
     static String field_g;
 
     final static String e(byte param0) {
-        String var1 = null;
-        if (param0 > -42) {
-          L0: {
-            ec.d((byte) 58);
-            var1 = "";
-            if (null != um.field_b) {
-              var1 = um.field_b.i((byte) 52);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          L1: {
-            if (var1.length() != 0) {
-              break L1;
-            } else {
-              var1 = am.b((byte) -84);
-              break L1;
-            }
-          }
-          L2: {
-            if (var1.length() == 0) {
-              var1 = ql.field_e;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          return var1;
-        } else {
-          L3: {
-            var1 = "";
-            if (null != um.field_b) {
-              var1 = um.field_b.i((byte) 52);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            if (var1.length() != 0) {
-              break L4;
-            } else {
-              var1 = am.b((byte) -84);
-              break L4;
-            }
-          }
-          L5: {
-            if (var1.length() == 0) {
-              var1 = ql.field_e;
-              break L5;
-            } else {
-              break L5;
-            }
-          }
-          return var1;
+        String var1 = "";
+        if (!(null == um.field_b)) {
+            var1 = um.field_b.i((byte) 52);
         }
+        if (var1.length() == 0) {
+            var1 = am.b((byte) -84);
+        }
+        if (!(var1.length() != 0)) {
+            var1 = ql.field_e;
+        }
+        return var1;
     }
 
     final static int c(byte param0) {
         un var1 = null;
         int var2 = 0;
-        int stackIn_5_0 = 0;
-        int stackOut_3_0 = 0;
-        var1 = uh.i(param0 ^ -23115);
-        if (param0 == -63) {
-          if (var1 != null) {
-            if (!var1.field_b) {
-              var2 = 0;
-              return var2;
-            } else {
-              var2 = -(480 + -uh.field_m.field_wb) / 2;
-              return var2;
-            }
+        int stackIn_3_0 = 0;
+        int stackOut_1_0 = 0;
+        var1 = uh.i(23156);
+        if (var1 != null) {
+          if (!var1.field_b) {
+            var2 = 0;
+            return var2;
           } else {
-            stackOut_3_0 = 0;
-            stackIn_5_0 = stackOut_3_0;
-            var2 = stackIn_5_0;
+            var2 = -(480 + -uh.field_m.field_wb) / 2;
             return var2;
           }
         } else {
-          return -28;
+          stackOut_1_0 = 0;
+          stackIn_3_0 = stackOut_1_0;
+          var2 = stackIn_3_0;
+          return var2;
         }
     }
 
@@ -202,16 +152,76 @@ final class ec extends dm {
     }
 
     final void a(p param0, byte param1) {
-        param0.a(true, ((ec) this).field_k);
-        param0.a(((ec) this).field_h, false);
-        if (param1 != 123) {
-            ((ec) this).field_k = null;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              param0.a(true, ((ec) this).field_k);
+              param0.a(((ec) this).field_h, false);
+              if (param1 == 123) {
+                break L1;
+              } else {
+                ((ec) this).field_k = null;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ec.D(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
         }
     }
 
     ec(String param0, String param1) {
-        ((ec) this).field_h = param1;
-        ((ec) this).field_k = param0;
+        try {
+            ((ec) this).field_h = param1;
+            ((ec) this).field_k = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ec.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final ug b(byte param0) {

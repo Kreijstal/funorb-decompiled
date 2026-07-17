@@ -22,9 +22,6 @@ final class bf {
         field_f = null;
         field_g = null;
         field_l = null;
-        if (param0 != -14471) {
-            bf.a(-119, 98, (byte) 12);
-        }
         field_o = null;
         field_d = null;
         field_c = null;
@@ -34,29 +31,45 @@ final class bf {
         if (param1 <= 30) {
             return null;
         }
-        return e.a(3, param2, 1, 1065, 1, param4, param3, param0, 1);
+        return e.a(3, param2, 1, 1065, 1, 0, param3, param0, 1);
     }
 
     final int a(byte param0) {
-        if (!((bf) this).field_i) {
-            // if_icmpne L31
-            // if_icmplt L29
-        } else {
-            return 2;
-        }
-        if (!(jl.field_h != ((bf) this).field_e)) {
-            return 1;
-        }
-        if (param0 != -116) {
-            return -107;
-        }
-        if (2 == oj.field_f) {
-            if (!ta.a(-93, ((bf) this).field_a)) {
-                return 0;
+        L0: {
+          if (((bf) this).field_i) {
+            break L0;
+          } else {
+            L1: {
+              if (((bf) this).field_b != 2) {
+                break L1;
+              } else {
+                if (0 < ((bf) this).field_h) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
-            return 1;
+            if (jl.field_h == ((bf) this).field_e) {
+              return 1;
+            } else {
+              if (param0 == -116) {
+                if (2 != oj.field_f) {
+                  return 0;
+                } else {
+                  if (ta.a(-93, ((bf) this).field_a)) {
+                    return 1;
+                  } else {
+                    return 0;
+                  }
+                }
+              } else {
+                return -107;
+              }
+            }
+          }
         }
-        return 0;
+        return 2;
     }
 
     final static void a(int param0, int param1, byte param2) {
@@ -82,21 +95,21 @@ final class bf {
           }
         }
         L1: {
-          if (var3 > param0 >> -159820605) {
+          if (var3 > param0 >> 3) {
             L2: {
-              var5 = var3 % (param0 >> -1008216381);
+              var5 = var3 % (param0 >> 3);
               if (0 != var5) {
                 break L2;
               } else {
-                var5 = param0 >> 2039392611;
+                var5 = param0 >> 3;
                 break L2;
               }
             }
             L3: {
               var6 = var3 - var5;
-              var7 = param0 + -(param0 >> -272691421 << -366370717);
+              var7 = param0 + -(param0 >> 3 << 3);
               if (var7 >= param0 + -var6) {
-                var6 = (7 * param0 >> -540830685) + -var5;
+                var6 = (7 * param0 >> 3) + -var5;
                 break L3;
               } else {
                 break L3;
@@ -106,7 +119,7 @@ final class bf {
               vk.a(var6, (byte) 74);
               break L1;
             } else {
-              if (-2 == (param1 ^ -1)) {
+              if (param1 == 1) {
                 nb.b(var6, -1);
                 break L1;
               } else {
@@ -115,7 +128,7 @@ final class bf {
             }
           } else {
             if (param1 != 0) {
-              if ((param1 ^ -1) == -2) {
+              if (param1 == 1) {
                 nb.b(0, -1);
                 break L1;
               } else {

@@ -58,14 +58,19 @@ final class i extends si {
     }
 
     final void b(rc param0, int param1) {
-        if (!(param0 instanceof kf)) {
-            throw new IllegalArgumentException();
+        kf var4 = null;
+        try {
+            if (!(param0 instanceof kf)) {
+                throw new IllegalArgumentException();
+            }
+            int var3_int = 63 % ((18 - param1) / 59);
+            var4 = (kf) (Object) param0;
+            ((i) this).field_L.a(-3024, (gg) (Object) var4);
+            var4.field_J = true;
+            boolean discarded$0 = var4.a(-1463, (rc) this);
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "i.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        int var3 = 63 % ((18 - param1) / 59);
-        kf var4 = (kf) (Object) param0;
-        ((i) this).field_L.a(-3024, (gg) (Object) var4);
-        var4.field_J = true;
-        boolean discarded$0 = var4.a(-1463, (rc) this);
     }
 
     final void j(int param0) {
@@ -93,7 +98,7 @@ final class i extends si {
         ck var5 = new ck(((i) this).field_L);
         rc var6 = (rc) (Object) var5.a(param3 ^ -25119);
         while (var6 != null) {
-            var6.a(param0 - -((i) this).field_j, param1, ((i) this).field_m + param2, param3 ^ 0);
+            var6.a(param0 - -((i) this).field_j, param1, ((i) this).field_m + param2, param3);
             var6 = (rc) (Object) var5.b(640);
         }
     }

@@ -14,11 +14,6 @@ final class cl implements wa {
     public static void a(byte param0) {
         field_c = null;
         field_b = null;
-        if (param0 < 80) {
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

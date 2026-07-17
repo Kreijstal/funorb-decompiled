@@ -40,14 +40,14 @@ final class ln {
         int stackOut_2_2 = 0;
         if (param0 <= 16) {
           L0: {
-            field_a = (String) null;
+            field_a = null;
             stackOut_5_0 = ga.a(0, param2, param1);
             stackOut_5_1 = gl.a(param1, 544, param2);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
             stackIn_6_1 = stackOut_5_1;
-            if (-1 == (param1 & 8192 ^ -1)) {
+            if ((param1 & 8192) == 0) {
               stackOut_7_0 = stackIn_7_0;
               stackOut_7_1 = stackIn_7_1;
               stackOut_7_2 = 0;
@@ -74,7 +74,7 @@ final class ln {
             stackIn_3_1 = stackOut_1_1;
             stackIn_2_0 = stackOut_1_0;
             stackIn_2_1 = stackOut_1_1;
-            if (-1 == (param1 & 8192 ^ -1)) {
+            if ((param1 & 8192) == 0) {
               stackOut_3_0 = stackIn_3_0;
               stackOut_3_1 = stackIn_3_1;
               stackOut_3_2 = 0;

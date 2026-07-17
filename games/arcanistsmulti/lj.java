@@ -20,14 +20,70 @@ final class lj extends hg {
     static String field_p;
 
     final static void a(int param0, ec param1, int param2, int param3) {
-        if (param3 < 60) {
-            boolean discarded$0 = lj.b(false);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param3 >= 60) {
+                break L1;
+              } else {
+                boolean discarded$2 = lj.b(false);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("lj.Q(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
     final long a(byte param0) {
         ((lj) this).field_f = ((lj) this).field_f + this.c((byte) 10);
-        if (!((((lj) this).field_i ^ -1L) >= (((lj) this).field_f ^ -1L))) {
+        if (!(~((lj) this).field_i >= ~((lj) this).field_f)) {
             return (-((lj) this).field_f + ((lj) this).field_i) / 1000000L;
         }
         int var2 = -7 / ((-43 - param0) / 58);
@@ -67,10 +123,10 @@ final class lj extends hg {
               L1: {
                 ((lj) this).field_i = ((lj) this).field_i + param0;
                 var4++;
-                if (-11 >= (var4 ^ -1)) {
+                if (var4 >= 10) {
                   break L1;
                 } else {
-                  if ((((lj) this).field_i ^ -1L) > (((lj) this).field_f ^ -1L)) {
+                  if (~((lj) this).field_i > ~((lj) this).field_f) {
                     continue L0;
                   } else {
                     break L1;
@@ -78,7 +134,7 @@ final class lj extends hg {
                 }
               }
               L2: {
-                if ((((lj) this).field_f ^ -1L) < (((lj) this).field_i ^ -1L)) {
+                if (~((lj) this).field_f < ~((lj) this).field_i) {
                   ((lj) this).field_i = ((lj) this).field_f;
                   break L2;
                 } else {
@@ -119,16 +175,16 @@ final class lj extends hg {
           if (5 == param1) {
             break L0;
           } else {
-            if (param1 == -4) {
+            if (param1 == 3) {
               break L0;
             } else {
-              if (-3 == param1) {
+              if (param1 == 2) {
                 break L0;
               } else {
                 if (4 == param1) {
                   break L0;
                 } else {
-                  if (-2 == (param1 ^ -1)) {
+                  if (param1 == 1) {
                     break L0;
                   } else {
                     L1: {
@@ -155,7 +211,7 @@ final class lj extends hg {
           }
         }
         L2: {
-          if (-1 == (param1 ^ -1)) {
+          if (param1 == 0) {
             var8 = new qb(640, 480);
             var9 = var8;
             var9.a();
@@ -267,7 +323,7 @@ final class lj extends hg {
           }
         }
         L9: {
-          if ((param1 ^ -1) != -10) {
+          if (param1 != 9) {
             break L9;
           } else {
             var12 = new qb(640, 480);
@@ -294,7 +350,7 @@ final class lj extends hg {
           }
         }
         L11: {
-          if ((param1 ^ -1) != -9) {
+          if (param1 != 8) {
             break L11;
           } else {
             var14 = new qb(640, 480);
@@ -317,7 +373,7 @@ final class lj extends hg {
           }
         }
         L12: {
-          if ((param1 ^ -1) == -12) {
+          if (param1 == 11) {
             var16 = new qb(640, 480);
             var16.a();
             gd.field_mb.c(320 - gd.field_mb.field_n / 2 + -72, 10);
@@ -377,13 +433,13 @@ final class lj extends hg {
             if (!(var4 >= 5000000000L)) {
                 ((lj) this).field_h[((lj) this).field_r] = var4;
                 ((lj) this).field_r = (((lj) this).field_r + 1) % 10;
-                if (!((((lj) this).field_l ^ -1) <= -2)) {
+                if (!(((lj) this).field_l >= 1)) {
                     ((lj) this).field_l = ((lj) this).field_l + 1;
                 }
             }
         }
         long var6 = 0L;
-        int var8 = 82 % ((51 - param0) / 35);
+        int var8 = 0;
         for (var9 = 1; ((lj) this).field_l >= var9; var9++) {
             var6 = var6 + ((lj) this).field_h[(-var9 + ((lj) this).field_r - -10) % 10];
         }

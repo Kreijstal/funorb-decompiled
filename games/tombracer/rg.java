@@ -9,16 +9,17 @@ final class rg extends qr {
 
     rg(ae param0) {
         super(param0.field_i, param0.field_n, param0.field_m, param0.field_p, (isa) null, (qc) null);
-        param0.a((byte) -31, ((rg) this).field_m, ((rg) this).field_p, 0, 0);
-        ((rg) this).field_x = param0;
-        ((rg) this).field_y = 256;
+        try {
+            param0.a((byte) -31, ((rg) this).field_m, ((rg) this).field_p, 0, 0);
+            ((rg) this).field_x = param0;
+            ((rg) this).field_y = 256;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "rg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void h(byte param0) {
         field_A = null;
-        if (param0 > -125) {
-            field_A = null;
-        }
     }
 
     final static void a(byte param0) {
@@ -127,112 +128,56 @@ final class rg extends qr {
         gn.field_w[10] = "piles";
         gn.field_w[0] = "henryj";
         gn.field_w[9] = "johnsson";
-        if (param0 == -2339) {
-          tk.field_a = new String[17][];
-          gn.field_w[7] = "hans";
-          gn.field_w[4] = "borees";
-          gn.field_w[6] = "feng";
-          gn.field_w[1] = "ace";
-          gn.field_w[11] = "scarlett";
-          gn.field_w[3] = "baroness";
-          gn.field_w[8] = "jamille";
-          gn.field_w[12] = "wilbur";
-          gn.field_w[2] = "angelio";
-          gn.field_w[5] = "bruce";
-          tk.field_a[16] = fe.field_A;
-          tk.field_a[8] = gca.field_j;
-          tk.field_a[14] = vk.field_c;
-          tk.field_a[10] = hg.field_c;
-          tk.field_a[3] = nta.field_b;
-          tk.field_a[11] = jr.field_j;
-          tk.field_a[2] = dta.field_d;
-          tk.field_a[0] = kla.field_a;
-          tk.field_a[9] = vua.field_D;
-          tk.field_a[6] = up.field_d;
-          tk.field_a[1] = si.field_F;
-          tk.field_a[12] = fqa.field_F;
-          tk.field_a[5] = tia.field_c;
-          tk.field_a[13] = id.field_g;
-          tk.field_a[15] = qr.field_u;
-          tk.field_a[7] = fpa.field_b;
-          tk.field_a[4] = or.field_m;
-          vna.field_d[0] = new String[7];
-          up.field_h[0] = new String[6];
-          vna.field_d[1] = new String[3];
-          up.field_h[1] = new String[3];
-          vna.field_d[2] = new String[3];
-          up.field_h[2] = new String[3];
-          vna.field_d[3] = new String[3];
-          vna.field_d[4] = new String[3];
-          up.field_h[3] = new String[3];
-          up.field_h[4] = new String[3];
-          vna.field_d[5] = new String[3];
-          up.field_h[5] = new String[3];
-          vna.field_d[6] = new String[3];
-          up.field_h[6] = new String[3];
-          vna.field_d[7] = new String[2];
-          vna.field_d[8] = new String[3];
-          up.field_h[7] = new String[2];
-          vna.field_d[9] = new String[3];
-          up.field_h[8] = new String[3];
-          up.field_h[9] = new String[3];
-          vna.field_d[10] = new String[3];
-          up.field_h[10] = new String[3];
-          return;
-        } else {
-          field_A = null;
-          tk.field_a = new String[17][];
-          gn.field_w[7] = "hans";
-          gn.field_w[4] = "borees";
-          gn.field_w[6] = "feng";
-          gn.field_w[1] = "ace";
-          gn.field_w[11] = "scarlett";
-          gn.field_w[3] = "baroness";
-          gn.field_w[8] = "jamille";
-          gn.field_w[12] = "wilbur";
-          gn.field_w[2] = "angelio";
-          gn.field_w[5] = "bruce";
-          tk.field_a[16] = fe.field_A;
-          tk.field_a[8] = gca.field_j;
-          tk.field_a[14] = vk.field_c;
-          tk.field_a[10] = hg.field_c;
-          tk.field_a[3] = nta.field_b;
-          tk.field_a[11] = jr.field_j;
-          tk.field_a[2] = dta.field_d;
-          tk.field_a[0] = kla.field_a;
-          tk.field_a[9] = vua.field_D;
-          tk.field_a[6] = up.field_d;
-          tk.field_a[1] = si.field_F;
-          tk.field_a[12] = fqa.field_F;
-          tk.field_a[5] = tia.field_c;
-          tk.field_a[13] = id.field_g;
-          tk.field_a[15] = qr.field_u;
-          tk.field_a[7] = fpa.field_b;
-          tk.field_a[4] = or.field_m;
-          vna.field_d[0] = new String[7];
-          up.field_h[0] = new String[6];
-          vna.field_d[1] = new String[3];
-          up.field_h[1] = new String[3];
-          vna.field_d[2] = new String[3];
-          up.field_h[2] = new String[3];
-          vna.field_d[3] = new String[3];
-          vna.field_d[4] = new String[3];
-          up.field_h[3] = new String[3];
-          up.field_h[4] = new String[3];
-          vna.field_d[5] = new String[3];
-          up.field_h[5] = new String[3];
-          vna.field_d[6] = new String[3];
-          up.field_h[6] = new String[3];
-          vna.field_d[7] = new String[2];
-          vna.field_d[8] = new String[3];
-          up.field_h[7] = new String[2];
-          vna.field_d[9] = new String[3];
-          up.field_h[8] = new String[3];
-          up.field_h[9] = new String[3];
-          vna.field_d[10] = new String[3];
-          up.field_h[10] = new String[3];
-          return;
-        }
+        tk.field_a = new String[17][];
+        gn.field_w[7] = "hans";
+        gn.field_w[4] = "borees";
+        gn.field_w[6] = "feng";
+        gn.field_w[1] = "ace";
+        gn.field_w[11] = "scarlett";
+        gn.field_w[3] = "baroness";
+        gn.field_w[8] = "jamille";
+        gn.field_w[12] = "wilbur";
+        gn.field_w[2] = "angelio";
+        gn.field_w[5] = "bruce";
+        tk.field_a[16] = fe.field_A;
+        tk.field_a[8] = gca.field_j;
+        tk.field_a[14] = vk.field_c;
+        tk.field_a[10] = hg.field_c;
+        tk.field_a[3] = nta.field_b;
+        tk.field_a[11] = jr.field_j;
+        tk.field_a[2] = dta.field_d;
+        tk.field_a[0] = kla.field_a;
+        tk.field_a[9] = vua.field_D;
+        tk.field_a[6] = up.field_d;
+        tk.field_a[1] = si.field_F;
+        tk.field_a[12] = fqa.field_F;
+        tk.field_a[5] = tia.field_c;
+        tk.field_a[13] = id.field_g;
+        tk.field_a[15] = qr.field_u;
+        tk.field_a[7] = fpa.field_b;
+        tk.field_a[4] = or.field_m;
+        vna.field_d[0] = new String[7];
+        up.field_h[0] = new String[6];
+        vna.field_d[1] = new String[3];
+        up.field_h[1] = new String[3];
+        vna.field_d[2] = new String[3];
+        up.field_h[2] = new String[3];
+        vna.field_d[3] = new String[3];
+        vna.field_d[4] = new String[3];
+        up.field_h[3] = new String[3];
+        up.field_h[4] = new String[3];
+        vna.field_d[5] = new String[3];
+        up.field_h[5] = new String[3];
+        vna.field_d[6] = new String[3];
+        up.field_h[6] = new String[3];
+        vna.field_d[7] = new String[2];
+        vna.field_d[8] = new String[3];
+        up.field_h[7] = new String[2];
+        vna.field_d[9] = new String[3];
+        up.field_h[8] = new String[3];
+        up.field_h[9] = new String[3];
+        vna.field_d[10] = new String[3];
+        up.field_h[10] = new String[3];
     }
 
     public rg() {
@@ -242,14 +187,14 @@ final class rg extends qr {
 
     final void a(int param0, int param1, int param2, int param3) {
         iu var6 = null;
-        if (-1 != (param3 ^ -1)) {
+        if (param3 != 0) {
           return;
         } else {
           if (((rg) this).field_x == null) {
             return;
           } else {
             if (0 != ((rg) this).field_y) {
-              if ((((rg) this).field_y ^ -1) == -257) {
+              if (((rg) this).field_y == 256) {
                 ((rg) this).field_x.a(param0 - -((rg) this).field_i, ((rg) this).field_n + param1, 0, param3);
                 return;
               } else {
@@ -312,10 +257,6 @@ final class rg extends qr {
     }
 
     final static int g(byte param0) {
-        if (param0 < 66) {
-            boolean discarded$0 = rg.f(79);
-            return cda.field_p;
-        }
         return cda.field_p;
     }
 

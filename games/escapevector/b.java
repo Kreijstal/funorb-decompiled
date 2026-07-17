@@ -7,43 +7,48 @@ final class b {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 != 118) {
-            return;
-        }
         field_a = null;
     }
 
     final static void a(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = EscapeVector.field_A;
-        if (hg.b(12)) {
-          boolean discarded$2 = pn.field_pb.a(true, (byte) -33, on.field_a, sm.field_b);
-          pn.field_pb.m(0);
-          L0: while (true) {
-            if (!pn.p(-104)) {
-              if (param0 >= -31) {
-                field_a = null;
-                return;
-              } else {
-                return;
+        try {
+          L0: {
+            if (hg.b(12)) {
+              boolean discarded$12 = pn.field_pb.a(true, (byte) -33, on.field_a, sm.field_b);
+              pn.field_pb.m(0);
+              L1: while (true) {
+                if (!pn.p(-104)) {
+                  break L0;
+                } else {
+                  boolean discarded$13 = pn.field_pb.a(jc.field_c, nk.field_n, (byte) -121);
+                  continue L1;
+                }
               }
             } else {
-              boolean discarded$3 = pn.field_pb.a(jc.field_c, nk.field_n, (byte) -121);
-              continue L0;
+              L2: {
+                if (null == df.field_d) {
+                  break L2;
+                } else {
+                  if (!df.field_d.field_c) {
+                    break L2;
+                  } else {
+                    ri.a(-25123);
+                    pn.field_pb.b((hm) (Object) new tm(pn.field_pb, ck.field_A), 69);
+                    break L2;
+                  }
+                }
+              }
+              return;
             }
           }
-        } else {
-          if (null != df.field_d) {
-            if (!df.field_d.field_c) {
-              return;
-            } else {
-              ri.a(-25123);
-              pn.field_pb.b((hm) (Object) new tm(pn.field_pb, ck.field_A), 69);
-              return;
-            }
-          } else {
-            return;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var1, "b.B(" + -103 + 41);
         }
     }
 

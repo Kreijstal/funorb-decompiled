@@ -13,63 +13,96 @@ final class wa {
     int field_f;
 
     final void a(int param0, int param1, int param2, int param3, wa param4, int param5, byte param6) {
-        if (param6 == -34) {
-          ((wa) this).field_h = param5;
-          ((wa) this).field_g = param1;
-          ((wa) this).field_c = param4;
-          ((wa) this).field_f = param3;
-          ((wa) this).field_e = param0;
-          ((wa) this).field_a = param2;
-          if (-1 < ((wa) this).field_h) {
-            throw new RuntimeException();
-          } else {
-            if (-1 == ((wa) this).field_f) {
-              if (0 == ((wa) this).field_a) {
-                if (((wa) this).field_e != 0) {
-                  if (((wa) this).field_h != 1) {
-                    throw new RuntimeException();
-                  } else {
-                    return;
-                  }
-                } else {
-                  throw new RuntimeException();
-                }
+        RuntimeException var8 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param6 == -34) {
+                break L1;
               } else {
-                return;
+                wa.a((byte) -86, false, true);
+                break L1;
               }
+            }
+            ((wa) this).field_h = param5;
+            ((wa) this).field_g = param1;
+            ((wa) this).field_c = param4;
+            ((wa) this).field_f = param3;
+            ((wa) this).field_e = param0;
+            ((wa) this).field_a = param2;
+            if (-1 < ((wa) this).field_h) {
+              throw new RuntimeException();
             } else {
-              return;
+              L2: {
+                if (-1 != ((wa) this).field_f) {
+                  break L2;
+                } else {
+                  if (0 != ((wa) this).field_a) {
+                    break L2;
+                  } else {
+                    L3: {
+                      if (((wa) this).field_e == 0) {
+                        break L3;
+                      } else {
+                        if (((wa) this).field_h == 1) {
+                          break L2;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
+                    throw new RuntimeException();
+                  }
+                }
+              }
+              break L0;
             }
           }
-        } else {
-          wa.a((byte) -86, false, true);
-          ((wa) this).field_h = param5;
-          ((wa) this).field_g = param1;
-          ((wa) this).field_c = param4;
-          ((wa) this).field_f = param3;
-          ((wa) this).field_e = param0;
-          ((wa) this).field_a = param2;
-          if (-1 < ((wa) this).field_h) {
-            throw new RuntimeException();
-          } else {
-            if (-1 == ((wa) this).field_f) {
-              if (0 == ((wa) this).field_a) {
-                if (((wa) this).field_e != 0) {
-                  if (((wa) this).field_h != 1) {
-                    throw new RuntimeException();
-                  } else {
-                    return;
-                  }
-                } else {
-                  throw new RuntimeException();
-                }
-              } else {
-                return;
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var8 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var8;
+            stackOut_12_1 = new StringBuilder().append("wa.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param4 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
             } else {
-              return;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
             }
           }
+          throw r.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

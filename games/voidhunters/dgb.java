@@ -8,9 +8,6 @@ final class dgb {
 
     public static void a(boolean param0) {
         field_b = null;
-        if (param0) {
-            return;
-        }
         field_a = null;
     }
 

@@ -111,7 +111,7 @@ final class rh {
             L3: while (true) {
               L4: {
                 L5: {
-                  if ((var8 ^ -1) <= (param1.field_C ^ -1)) {
+                  if (~var8 <= ~param1.field_C) {
                     break L5;
                   } else {
                     var9 = param1.field_l[var8];
@@ -134,7 +134,7 @@ final class rh {
                             var15 = nh.field_d[var11] + -var12;
                             var16 = -var13 + od.field_s[var10];
                             var17 = -var13 + od.field_s[var11];
-                            if (-1 < (var17 * var14 - var16 * var15 ^ -1)) {
+                            if (var17 * var14 - var16 * var15 < 0) {
                               break L7;
                             } else {
                               if (var19 == 0) {
@@ -158,7 +158,7 @@ final class rh {
                           }
                         }
                         var13 = wl.field_P[var10];
-                        if ((var13 ^ -1) == 2147483647) {
+                        if (var13 == -2147483648) {
                           break L6;
                         } else {
                           L9: {
@@ -204,12 +204,12 @@ final class rh {
                           L11: while (true) {
                             L12: {
                               L13: {
-                                if ((var17 >> 682782468 ^ -1) == -1) {
+                                if (var17 >> 4 == 0) {
                                   break L13;
                                 } else {
                                   var16--;
                                   stackOut_35_0 = -1;
-                                  stackOut_35_1 = var16 ^ -1;
+                                  stackOut_35_1 = ~var16;
                                   stackIn_43_0 = stackOut_35_0;
                                   stackIn_43_1 = stackOut_35_1;
                                   stackIn_36_0 = stackOut_35_0;
@@ -238,7 +238,7 @@ final class rh {
                                   }
                                 }
                               }
-                              stackOut_42_0 = var16 << -1914425980;
+                              stackOut_42_0 = var16 << 4;
                               stackOut_42_1 = var17;
                               stackIn_43_0 = stackOut_42_0;
                               stackIn_43_1 = stackOut_42_1;

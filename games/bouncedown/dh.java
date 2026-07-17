@@ -24,56 +24,63 @@ final class dh implements Iterator {
     private final void a(int param0) {
         ((dh) this).field_h = ((dh) this).field_c.field_b[0].field_c;
         ((dh) this).field_f = 1;
-        if (param0 != -1) {
-            return;
-        }
         ((dh) this).field_g = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        L0: {
-          var10 = Bounce.field_N;
-          na.a(param3, param0, param2 - -1, 10000536);
-          na.a(param3, param0 - -param4, param2 - -1, 12105912);
-          var5 = 1;
-          var6 = param4;
-          if (var5 + param0 < na.field_i) {
-            var5 = na.field_i - param0;
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        L1: {
-          if (param0 + var6 > na.field_f) {
-            var6 = -param0 + na.field_f;
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        if (param1 == 1232050056) {
-          var7 = var5;
-          L2: while (true) {
-            if (var7 < var6) {
-              var8 = 48 * var7 / param4 + 152;
-              var9 = var8 | (var8 << -608757616 | var8 << 1232050056);
-              na.field_d[param3 + na.field_e * (var7 + param0)] = var9;
-              na.field_d[param3 + (param0 + var7) * na.field_e - -param2] = var9;
-              var7++;
-              continue L2;
+        RuntimeException decompiledCaughtException = null;
+        var10 = Bounce.field_N;
+        try {
+          L0: {
+            L1: {
+              na.a(param3, param0, param2 - -1, 10000536);
+              na.a(param3, param0 - -param4, param2 - -1, 12105912);
+              var5_int = 1;
+              var6 = param4;
+              if (var5_int + param0 < na.field_i) {
+                var5_int = na.field_i - param0;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 + var6 > na.field_f) {
+                var6 = -param0 + na.field_f;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            if (param1 == 1232050056) {
+              var7 = var5_int;
+              L3: while (true) {
+                if (var7 >= var6) {
+                  break L0;
+                } else {
+                  var8 = 48 * var7 / param4 + 152;
+                  var9 = var8 | (var8 << 16 | var8 << 8);
+                  na.field_d[param3 + na.field_e * (var7 + param0)] = var9;
+                  na.field_d[param3 + (param0 + var7) * na.field_e - -param2] = var9;
+                  var7++;
+                  continue L3;
+                }
+              }
             } else {
               return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw ii.a((Throwable) (Object) var5, "dh.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -124,8 +131,7 @@ final class dh implements Iterator {
     }
 
     final static void a(boolean param0, String param1, float param2, int param3) {
-        if (param3 != -608757616) {
-            field_a = null;
+        try {
             if (!(q.field_A != null)) {
                 q.field_A = new db(q.field_N, ej.field_c);
                 q.field_N.b((lk) (Object) q.field_A, false);
@@ -133,31 +139,26 @@ final class dh implements Iterator {
             q.field_A.a(param0, param2, param1, 65536);
             na.a();
             pj.a(true, 1);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "dh.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -608757616 + 41);
         }
-        if (!(q.field_A != null)) {
-            q.field_A = new db(q.field_N, ej.field_c);
-            q.field_N.b((lk) (Object) q.field_A, false);
-        }
-        q.field_A.a(param0, param2, param1, 65536);
-        na.a();
-        pj.a(true, 1);
     }
 
     public static void b(int param0) {
         field_d = null;
         field_b = null;
-        if (param0 != 8832) {
-            return;
-        }
         field_e = null;
         field_a = null;
     }
 
     dh(m param0) {
         ((dh) this).field_g = null;
-        ((dh) this).field_c = param0;
-        this.a(-1);
+        try {
+            ((dh) this).field_c = param0;
+            this.a(-1);
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "dh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -164,7 +164,7 @@ final class le {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -230,12 +230,12 @@ final class le {
           if (oc.field_d != 0) {
             if (oc.field_d != 1) {
               if (2 == oc.field_d) {
-                var3 = bl.a((byte) 39, field_j, pe.field_z, kc.field_I, di.a(new String[1], (byte) 108, gk.field_e));
+                var3_int = bl.a((byte) 39, field_j, pe.field_z, kc.field_I, di.a(new String[1], (byte) 108, gk.field_e));
                 var4 = -1;
                 var5 = 0;
                 L1: while (true) {
                   L2: {
-                    if (var5 >= var3) {
+                    if (var5 >= var3_int) {
                       break L2;
                     } else {
                       if ("<%0>".equals((Object) (Object) pe.field_z[var5])) {
@@ -247,19 +247,19 @@ final class le {
                       }
                     }
                   }
-                  if (0 == (var4 ^ -1)) {
+                  if (var4 == -1) {
                     throw new IllegalStateException();
                   } else {
                     ke.field_t = new String[var4];
                     g.a((Object[]) (Object) pe.field_z, 0, (Object[]) (Object) ke.field_t, 0, var4);
-                    ec.field_a = new String[-var4 + (var3 - 1)];
-                    g.a((Object[]) (Object) pe.field_z, 1 + var4, (Object[]) (Object) ec.field_a, 0, -var4 + var3 + -1);
-                    var3 = bl.a((byte) -112, field_j, pe.field_z, kc.field_I, di.a(new String[1], (byte) 43, ge.field_k));
+                    ec.field_a = new String[-var4 + (var3_int - 1)];
+                    g.a((Object[]) (Object) pe.field_z, 1 + var4, (Object[]) (Object) ec.field_a, 0, -var4 + var3_int + -1);
+                    var3_int = bl.a((byte) -112, field_j, pe.field_z, kc.field_I, di.a(new String[1], (byte) 43, ge.field_k));
                     var4 = -1;
                     var5 = 0;
                     L3: while (true) {
                       L4: {
-                        if ((var5 ^ -1) <= (var3 ^ -1)) {
+                        if (~var5 <= ~var3_int) {
                           break L4;
                         } else {
                           if (!"<%0>".equals((Object) (Object) pe.field_z[var5])) {
@@ -277,8 +277,8 @@ final class le {
                         L5: {
                           lb.field_f = new String[var4];
                           g.a((Object[]) (Object) pe.field_z, 0, (Object[]) (Object) lb.field_f, 0, var4);
-                          f.field_b = new String[-1 + (var3 - var4)];
-                          g.a((Object[]) (Object) pe.field_z, var4 + 1, (Object[]) (Object) f.field_b, 0, var3 - var4 - 1);
+                          f.field_b = new String[-1 + (var3_int - var4)];
+                          g.a((Object[]) (Object) pe.field_z, var4 + 1, (Object[]) (Object) f.field_b, 0, var3_int - var4 - 1);
                           if (lb.field_f.length <= ke.field_t.length) {
                             stackOut_64_0 = ke.field_t.length;
                             stackIn_65_0 = stackOut_64_0;
@@ -326,7 +326,7 @@ final class le {
                                 ec.field_g[var5 + 6] = -2;
                                 var8 = 0;
                                 L9: while (true) {
-                                  if ((var8 ^ -1) <= (var6 ^ -1)) {
+                                  if (~var8 <= ~var6) {
                                     kh.field_g = d.a((byte) 41);
                                     break L0;
                                   } else {
@@ -337,7 +337,7 @@ final class le {
                                       stackIn_81_1 = stackOut_79_1;
                                       stackIn_80_0 = stackOut_79_0;
                                       stackIn_80_1 = stackOut_79_1;
-                                      if ((f.field_b.length ^ -1) >= (var8 ^ -1)) {
+                                      if (~f.field_b.length >= ~var8) {
                                         stackOut_81_0 = (String[]) (Object) stackIn_81_0;
                                         stackOut_81_1 = stackIn_81_1;
                                         stackOut_81_2 = "";
@@ -402,17 +402,17 @@ final class le {
                   }
                 }
               } else {
-                if ((oc.field_d ^ -1) == -4) {
+                if (oc.field_d == 3) {
                   L12: {
                     if (!ld.field_g.field_s) {
-                      var3 = bl.a((byte) -125, field_j, pe.field_z, kc.field_I, qi.field_b);
+                      var3_int = bl.a((byte) -125, field_j, pe.field_z, kc.field_I, qi.field_b);
                       break L12;
                     } else {
-                      var3 = bl.a((byte) 72, field_j, pe.field_z, kc.field_I, e.field_c);
+                      var3_int = bl.a((byte) 72, field_j, pe.field_z, kc.field_I, e.field_c);
                       break L12;
                     }
                   }
-                  var4 = 2 - -var3;
+                  var4 = 2 - -var3_int;
                   ec.field_g = new int[var4];
                   a.field_b = new String[var4];
                   var5 = 0;
@@ -421,7 +421,7 @@ final class le {
                       h.field_s = new int[1];
                       var5 = 0;
                       L14: while (true) {
-                        if (var3 <= var5) {
+                        if (var3_int <= var5) {
                           a.field_b[-2 + var4] = "";
                           a.field_b[var4 + -1] = wizardrun.field_F;
                           ec.field_g[-1 + var4] = 0;
@@ -441,8 +441,8 @@ final class le {
                   }
                 } else {
                   if (oc.field_d == 4) {
-                    var3 = bl.a((byte) 125, field_j, pe.field_z, kc.field_I, ib.field_b);
-                    var4 = var3 + 2;
+                    var3_int = bl.a((byte) 125, field_j, pe.field_z, kc.field_I, ib.field_b);
+                    var4 = var3_int + 2;
                     ec.field_g = new int[var4];
                     a.field_b = new String[var4];
                     var5 = 0;
@@ -451,7 +451,7 @@ final class le {
                         h.field_s = new int[1];
                         var5 = 0;
                         L16: while (true) {
-                          if (var5 >= var3) {
+                          if (var5 >= var3_int) {
                             a.field_b[-2 + var4] = "";
                             a.field_b[var4 + -1] = wizardrun.field_F;
                             ec.field_g[var4 + -1] = 0;
@@ -470,9 +470,9 @@ final class le {
                       }
                     }
                   } else {
-                    if (-6 == (oc.field_d ^ -1)) {
-                      var3 = bl.a((byte) -100, field_j, pe.field_z, kc.field_I, wi.field_G);
-                      var4 = var3 + 3;
+                    if (oc.field_d == 5) {
+                      var3_int = bl.a((byte) -100, field_j, pe.field_z, kc.field_I, wi.field_G);
+                      var4 = var3_int + 3;
                       a.field_b = new String[var4];
                       ec.field_g = new int[var4];
                       var5 = 0;
@@ -481,7 +481,7 @@ final class le {
                           h.field_s = new int[2];
                           var5 = 0;
                           L18: while (true) {
-                            if (var5 >= var3) {
+                            if (var5 >= var3_int) {
                               a.field_b[-3 + var4] = "";
                               a.field_b[var4 + -2] = tc.field_n;
                               ec.field_g[-2 + var4] = 0;
@@ -509,8 +509,8 @@ final class le {
                 }
               }
             } else {
-              var3 = bl.a((byte) 41, field_j, pe.field_z, kc.field_I, qb.field_s);
-              var4 = 2 + var3;
+              var3_int = bl.a((byte) 41, field_j, pe.field_z, kc.field_I, qb.field_s);
+              var4 = 2 + var3_int;
               a.field_b = new String[var4];
               ec.field_g = new int[var4];
               var5 = 0;
@@ -519,7 +519,7 @@ final class le {
                   h.field_s = new int[1];
                   var5 = 0;
                   L20: while (true) {
-                    if ((var3 ^ -1) >= (var5 ^ -1)) {
+                    if (~var3_int >= ~var5) {
                       a.field_b[-2 + var4] = "";
                       a.field_b[-1 + var4] = wizardrun.field_F;
                       ec.field_g[-1 + var4] = 0;
@@ -539,17 +539,17 @@ final class le {
               }
             }
           } else {
-            var3 = bl.a((byte) 59, field_j, pe.field_z, kc.field_I, qb.field_s);
-            var4 = 3 + var3;
+            var3_int = bl.a((byte) 59, field_j, pe.field_z, kc.field_I, qb.field_s);
+            var4 = 3 + var3_int;
             ec.field_g = new int[var4];
             a.field_b = new String[var4];
             var5 = 0;
             L21: while (true) {
-              if ((var5 ^ -1) <= (var4 ^ -1)) {
+              if (~var5 <= ~var4) {
                 h.field_s = new int[2];
                 var5 = 0;
                 L22: while (true) {
-                  if ((var3 ^ -1) >= (var5 ^ -1)) {
+                  if (~var3_int >= ~var5) {
                     a.field_b[-3 + var4] = "";
                     a.field_b[-2 + var4] = ta.field_e;
                     ec.field_g[-2 + var4] = 0;
@@ -573,12 +573,12 @@ final class le {
           }
         }
         ga.field_d.field_c = h.field_s.length;
-        var3 = 0;
+        var3_int = 0;
         var4 = 0;
         L23: while (true) {
           if (var4 >= a.field_b.length) {
             L24: {
-              if ((oc.field_d ^ -1) == -3) {
+              if (oc.field_d == 2) {
                 var10 = ke.field_t;
                 var5 = 0;
                 L25: while (true) {
@@ -592,10 +592,10 @@ final class le {
                         L27: {
                           var13 = var11[var5];
                           var7 = sf.a(false, 110, var13);
-                          if ((var7 ^ -1) >= (var3 ^ -1)) {
+                          if (~var7 >= ~var3_int) {
                             break L27;
                           } else {
-                            var3 = var7;
+                            var3_int = var7;
                             break L27;
                           }
                         }
@@ -607,10 +607,10 @@ final class le {
                     L28: {
                       var12 = var10[var5];
                       var7 = sf.a(false, 110, var12);
-                      if (var7 <= var3) {
+                      if (var7 <= var3_int) {
                         break L28;
                       } else {
-                        var3 = var7;
+                        var3_int = var7;
                         break L28;
                       }
                     }
@@ -622,20 +622,20 @@ final class le {
                 break L24;
               }
             }
-            fe.field_l = id.field_c + -(var3 >> -954093503);
-            sj.field_n = var3 + id.field_c + -(var3 >> -960939231);
-            fh.field_f = (e.field_d + na.field_e << -1658345407) * ga.field_d.field_c;
+            fe.field_l = id.field_c + -(var3_int >> 1);
+            sj.field_n = var3_int + id.field_c + -(var3_int >> 1);
+            fh.field_f = (e.field_d + na.field_e << 1) * ga.field_d.field_c;
             var4 = 0;
             L29: while (true) {
-              if ((a.field_b.length ^ -1) >= (var4 ^ -1)) {
-                pf.field_f = ii.field_a - (fh.field_f >> -836209343);
+              if (~a.field_b.length >= ~var4) {
+                pf.field_f = ii.field_a - (fh.field_f >> 1);
                 wh.field_m = new int[a.field_b.length][];
                 var4 = 0;
                 var5 = pf.field_f;
                 L30: while (true) {
-                  if ((var4 ^ -1) <= (a.field_b.length ^ -1)) {
+                  if (~var4 <= ~a.field_b.length) {
                     L31: {
-                      if ((oc.field_d ^ -1) == -3) {
+                      if (oc.field_d == 2) {
                         ga.field_d.a(-12785, -1, param0, -1);
                         break L31;
                       } else {
@@ -643,32 +643,24 @@ final class le {
                         break L31;
                       }
                     }
-                    L32: {
-                      if (param2 == 15991) {
-                        break L32;
-                      } else {
-                        le.c(20);
-                        break L32;
-                      }
-                    }
                     return;
                   } else {
-                    L33: {
+                    L32: {
                       var6 = ec.field_g[var4];
-                      if (-1 >= (var6 ^ -1)) {
+                      if (var6 >= 0) {
                         var7 = sf.a(true, 110, a.field_b[var4]);
-                        var8 = -(var7 >> -1868104031) + id.field_c;
+                        var8 = -(var7 >> 1) + id.field_c;
                         var5 = var5 + na.field_e;
                         wh.field_m[var4] = new int[4];
                         wh.field_m[var4][0] = var8 + -vl.field_h;
                         wh.field_m[var4][1] = var5;
-                        wh.field_m[var4][2] = (vl.field_h << 487918497) + var7;
-                        wh.field_m[var4][3] = ec.field_c + (e.field_d << -427133343);
-                        var5 = var5 + (na.field_e + (e.field_d << -377589215) - -ec.field_c);
-                        break L33;
+                        wh.field_m[var4][2] = (vl.field_h << 1) + var7;
+                        wh.field_m[var4][3] = ec.field_c + (e.field_d << 1);
+                        var5 = var5 + (na.field_e + (e.field_d << 1) - -ec.field_c);
+                        break L32;
                       } else {
                         var5 = var5 + si.field_f;
-                        break L33;
+                        break L32;
                       }
                     }
                     var4++;
@@ -676,7 +668,7 @@ final class le {
                   }
                 }
               } else {
-                L34: {
+                L33: {
                   stackOut_107_0 = fh.field_f;
                   stackIn_109_0 = stackOut_107_0;
                   stackIn_108_0 = stackOut_107_0;
@@ -685,13 +677,13 @@ final class le {
                     stackOut_109_1 = si.field_f;
                     stackIn_110_0 = stackOut_109_0;
                     stackIn_110_1 = stackOut_109_1;
-                    break L34;
+                    break L33;
                   } else {
                     stackOut_108_0 = stackIn_108_0;
                     stackOut_108_1 = ec.field_c;
                     stackIn_110_0 = stackOut_108_0;
                     stackIn_110_1 = stackOut_108_1;
-                    break L34;
+                    break L33;
                   }
                 }
                 fh.field_f = stackIn_110_0 + stackIn_110_1;
@@ -700,24 +692,24 @@ final class le {
               }
             }
           } else {
-            L35: {
-              if ((ec.field_g[var4] ^ -1) > -1) {
+            L34: {
+              if (ec.field_g[var4] < 0) {
                 stackOut_88_0 = 0;
                 stackIn_89_0 = stackOut_88_0;
-                break L35;
+                break L34;
               } else {
                 stackOut_87_0 = 1;
                 stackIn_89_0 = stackOut_87_0;
-                break L35;
+                break L34;
               }
             }
-            L36: {
+            L35: {
               var5 = sf.a(stackIn_89_0 != 0, 110, a.field_b[var4]);
-              if (var3 < var5) {
-                var3 = var5;
-                break L36;
+              if (var3_int < var5) {
+                var3_int = var5;
+                break L35;
               } else {
-                break L36;
+                break L35;
               }
             }
             var4++;
@@ -793,20 +785,20 @@ final class le {
           } else {
             L2: {
               var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-              if (-1 != (1 & var0 ^ -1)) {
+              if ((1 & var0) != 0) {
                 stackOut_4_0 = (long)(255 & var1);
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
               } else {
-                stackOut_3_0 = (long)(var1 >>> -619791192);
+                stackOut_3_0 = (long)(var1 >>> 8);
                 stackIn_5_0 = stackOut_3_0;
                 break L2;
               }
             }
             L3: {
               var2 = stackIn_5_0;
-              var4 = var2 << -713659775;
-              if ((var4 ^ -1L) > -257L) {
+              var4 = var2 << 1;
+              if (var4 < 256L) {
                 break L3;
               } else {
                 var4 = var4 ^ 285L;
@@ -814,7 +806,7 @@ final class le {
               }
             }
             L4: {
-              var6 = var4 << -1461812479;
+              var6 = var4 << 1;
               if (256L <= var6) {
                 var6 = var6 ^ 285L;
                 break L4;
@@ -824,8 +816,8 @@ final class le {
             }
             L5: {
               var8 = var2 ^ var6;
-              var10 = var6 << 1777635073;
-              if ((var10 ^ -1L) > -257L) {
+              var10 = var6 << 1;
+              if (var10 < 256L) {
                 break L5;
               } else {
                 var10 = var10 ^ 285L;
@@ -833,14 +825,14 @@ final class le {
               }
             }
             var12 = var2 ^ var10;
-            field_A[0][var0] = ae.a(ae.a(ae.a(var8 << 403603408, ae.a(var10 << 886129240, ae.a(ae.a(var6 << 1656893288, ae.a(var2 << -337749256, var2 << -317153168)), var2 << -145789344))), var4 << -1102601336), var12);
+            field_A[0][var0] = ae.a(ae.a(ae.a(var8 << 16, ae.a(var10 << 24, ae.a(ae.a(var6 << 40, ae.a(var2 << 56, var2 << 48)), var2 << 32))), var4 << 8), var12);
             var14 = 1;
             L6: while (true) {
               if (var14 >= 8) {
                 var0++;
                 continue L0;
               } else {
-                field_A[var14][var0] = ae.a(field_A[-1 + var14][var0] >>> -1599513528, field_A[-1 + var14][var0] << -1873801928);
+                field_A[var14][var0] = ae.a(field_A[-1 + var14][var0] >>> 8, field_A[-1 + var14][var0] << 56);
                 var14++;
                 continue L6;
               }

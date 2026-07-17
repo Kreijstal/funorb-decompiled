@@ -49,70 +49,33 @@ final class vg {
     int field_N;
 
     final static void a(byte param0) {
-        int var1 = 0;
-        if (!td.e(true)) {
-          return;
-        } else {
-          L0: {
-            if (-72 != (vn.field_d ^ -1)) {
-              if (vn.field_d != -73) {
-                break L0;
-              } else {
-                if (-8 <= mj.field_p) {
-                  break L0;
-                } else {
-                  df.a((byte) -125, mj.field_p + 1);
-                  break L0;
-                }
-              }
-            } else {
-              if (vn.field_d != -73) {
-                break L0;
-              } else {
-                if (-8 <= mj.field_p) {
-                  break L0;
-                } else {
-                  df.a((byte) -125, mj.field_p + 1);
-                  break L0;
-                }
-              }
-            }
-          }
-          L1: {
-            if (-34 != vn.field_d) {
-              break L1;
-            } else {
-              if (0 < ed.field_Cb) {
-                ed.field_Cb = ed.field_Cb - 1;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-          }
-          L2: {
-            if (vn.field_d != 34) {
-              break L2;
-            } else {
-              if (-9 > ed.field_Cb) {
-                ed.field_Cb = ed.field_Cb + 1;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-          }
-          L3: {
-            if (vn.field_d == 35) {
-              ed.field_Cb = 6;
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          var1 = 36 / ((21 - param0) / 50);
-          return;
+        if (!(td.e(true))) {
+            return;
         }
+        if (vn.field_d == 71) {
+            if (!(mj.field_p <= 0)) {
+                df.a((byte) 65, mj.field_p - 1);
+            }
+        }
+        if (vn.field_d == 72) {
+            if (mj.field_p < 7) {
+                df.a((byte) -125, mj.field_p + 1);
+            }
+        }
+        if (vn.field_d == 33) {
+            if (!(0 >= ed.field_Cb)) {
+                ed.field_Cb = ed.field_Cb - 1;
+            }
+        }
+        if (vn.field_d == 34) {
+            if (!(ed.field_Cb >= 8)) {
+                ed.field_Cb = ed.field_Cb + 1;
+            }
+        }
+        if (!(vn.field_d != 35)) {
+            ed.field_Cb = 6;
+        }
+        int var1 = -36;
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
@@ -128,9 +91,6 @@ final class vg {
     }
 
     public static void a(int param0) {
-        if (param0 != 40) {
-            return;
-        }
         field_M = null;
         field_t = null;
         field_c = null;
@@ -143,7 +103,7 @@ final class vg {
     }
 
     private final void a(boolean param0) {
-        ((vg) this).field_m = param0 ? true : false;
+        ((vg) this).field_m = false;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {

@@ -18,14 +18,14 @@ final class wl {
         int var3 = 0;
         int var4 = Pixelate.field_H ? 1 : 0;
         int var2 = ((wl) this).field_a * 240 / 255;
-        t.a((int)((wl) this).field_h[0] << 52088420, (int)((wl) this).field_e[0] << -1312132796, 64, ((wl) this).field_a, ((wl) this).field_g);
+        t.a((int)((wl) this).field_h[0] << 4, (int)((wl) this).field_e[0] << 4, 64, ((wl) this).field_a, ((wl) this).field_g);
         if (param0 >= -91) {
             field_f = null;
         }
-        for (var3 = 1; (var3 ^ -1) > -21; var3++) {
+        for (var3 = 1; var3 < 20; var3++) {
             var2 = ((wl) this).field_a * (-var3 + 20) * 12 / 255;
-            t.a((int)((wl) this).field_h[var3] << -1364007868, (int)((wl) this).field_e[var3] << 1565739332, 32, var2, ((wl) this).field_g);
-            t.a((int)(((wl) this).field_h[var3] + ((wl) this).field_h[-1 + var3]) << 995623267, (int)(((wl) this).field_e[var3 + -1] + ((wl) this).field_e[var3]) << 323580483, 32, var2, ((wl) this).field_g);
+            t.a((int)((wl) this).field_h[var3] << 4, (int)((wl) this).field_e[var3] << 4, 32, var2, ((wl) this).field_g);
+            t.a((int)(((wl) this).field_h[var3] + ((wl) this).field_h[-1 + var3]) << 3, (int)(((wl) this).field_e[var3 + -1] + ((wl) this).field_e[var3]) << 3, 32, var2, ((wl) this).field_g);
         }
     }
 
@@ -65,13 +65,13 @@ final class wl {
         var2 = 1;
         var3 = -1 + ((wl) this).field_h.length;
         L1: while (true) {
-          if (-1 < (var3 ^ -1)) {
+          if (var3 < 0) {
             L2: {
               L3: {
                 if (var2 != 0) {
                   break L3;
                 } else {
-                  if ((((wl) this).field_a ^ -1) < -1) {
+                  if (((wl) this).field_a > 0) {
                     stackOut_15_0 = 0;
                     stackIn_16_0 = stackOut_15_0;
                     break L2;
@@ -147,9 +147,6 @@ final class wl {
 
     public static void a(boolean param0) {
         field_f = null;
-        if (param0) {
-            wl.a(false);
-        }
     }
 
     final void a(int param0, int param1) {
@@ -169,21 +166,26 @@ final class wl {
         int var5_int = 0;
         double[] var6 = null;
         int var7 = 0;
+        double var5_double = 0.0;
         ((wl) this).field_e = new double[20];
         ((wl) this).field_h = new double[20];
         ((wl) this).field_a = 249;
-        ((wl) this).field_h[0] = (double)param0;
-        ((wl) this).field_g = param3;
-        ((wl) this).field_e[0] = (double)param1;
-        for (var5_int = 1; (var5_int ^ -1) > -21; var5_int++) {
-            var6 = ((wl) this).field_h;
-            var7 = var5_int;
-            ((wl) this).field_e[var5_int] = -1000.0;
-            var6[var7] = -1000.0;
+        try {
+            ((wl) this).field_h[0] = (double)param0;
+            ((wl) this).field_g = param3;
+            ((wl) this).field_e[0] = (double)param1;
+            for (var5_int = 1; var5_int < 20; var5_int++) {
+                var6 = ((wl) this).field_h;
+                var7 = var5_int;
+                ((wl) this).field_e[var5_int] = -1000.0;
+                var6[var7] = -1000.0;
+            }
+            var5_double = (double)(ok.a(ea.field_b, -124, 10) + 15) / 10.0;
+            ((wl) this).field_d = var5_double * si.a(3.141592653589793 * (double)param2 / 512.0, false);
+            ((wl) this).field_c = var5_double * jn.a((double)param2 * 3.141592653589793 / 512.0, 6802);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "wl.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
-        double var5 = (double)(ok.a(ea.field_b, -124, 10) + 15) / 10.0;
-        ((wl) this).field_d = var5 * si.a(3.141592653589793 * (double)param2 / 512.0, false);
-        ((wl) this).field_c = var5 * jn.a((double)param2 * 3.141592653589793 / 512.0, 6802);
     }
 
     static {

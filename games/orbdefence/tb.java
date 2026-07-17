@@ -50,18 +50,18 @@ final class tb {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var3 = param2 >> -714080944;
+        var3 = param2 >> 16;
         if (param1 != 723204176) {
           java.awt.Canvas discarded$1 = tb.a((byte) -5);
           var4 = 65535 & param2;
-          var5 = param0 >> 723204176;
+          var5 = param0 >> 16;
           var6 = 65535 & param0;
-          return param0 * var3 + (var5 * var4 + (var4 * var6 >> 1908624688));
+          return param0 * var3 + (var5 * var4 + (var4 * var6 >> 16));
         } else {
           var4 = 65535 & param2;
-          var5 = param0 >> 723204176;
+          var5 = param0 >> 16;
           var6 = 65535 & param0;
-          return param0 * var3 + (var5 * var4 + (var4 * var6 >> 1908624688));
+          return param0 * var3 + (var5 * var4 + (var4 * var6 >> 16));
         }
     }
 
@@ -69,9 +69,6 @@ final class tb {
         field_a = null;
         field_c = null;
         field_b = null;
-        if (param0 != -9698) {
-            field_b = null;
-        }
     }
 
     static {

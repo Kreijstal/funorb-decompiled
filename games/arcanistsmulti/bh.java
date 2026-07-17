@@ -11,16 +11,8 @@ final class bh {
     public static void a(int param0) {
         field_d = null;
         field_a = null;
-        if (param0 >= -91) {
-          field_b = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
-          field_c = null;
-          field_b = null;
-          return;
-        }
+        field_c = null;
+        field_b = null;
     }
 
     static {

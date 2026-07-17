@@ -9,21 +9,78 @@ final class fn extends ji {
 
     final static ch a(int param0, boolean param1, String param2) {
         ch var3 = null;
-        var3 = new ch(false);
-        var3.field_j = param2;
-        if (!param1) {
-          fn.g(-82);
-          var3.field_h = param0;
-          return var3;
-        } else {
-          var3.field_h = param0;
-          return var3;
+        RuntimeException var3_ref = null;
+        ch stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ch stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var3 = new ch(false);
+              var3.field_j = param2;
+              if (param1) {
+                break L1;
+              } else {
+                fn.g(-82);
+                break L1;
+              }
+            }
+            var3.field_h = param0;
+            stackOut_2_0 = (ch) var3;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_1 = new StringBuilder().append("fn.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param2 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     final static void a(byte param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9, int param10, boolean param11) {
         Object var13 = null;
-        ok.a(param6, param10, param1, param5, param11, param7, 16777215, 12423, param2, param3, param9, param8, param4, 16777215);
+        ok.a(param6, param10, param1, param5, false, param7, 16777215, 12423, param2, param3, param9, param8, param4, 16777215);
         if (param0 > 84) {
           return;
         } else {
@@ -52,10 +109,10 @@ final class fn extends ji {
         var4 = 57 * param2 + param0;
         if (param1 != 2147483647) {
           fn.a(42, 102, 48, -125, -26, (byte) 110, 39, -15);
-          var4 = var4 << 1592357409 ^ var4;
+          var4 = var4 << 1 ^ var4;
           return -(((15731 * (var4 * var4) + 789221) * var4 - -1376312589 & 2147483647) / 262144) + 4096;
         } else {
-          var4 = var4 << 1592357409 ^ var4;
+          var4 = var4 << 1 ^ var4;
           return -(((15731 * (var4 * var4) + 789221) * var4 - -1376312589 & 2147483647) / 262144) + 4096;
         }
     }
@@ -91,52 +148,62 @@ final class fn extends ji {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
-        int var8 = 0;
+        RuntimeException var8 = null;
+        int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var14 = 0;
-        int[] var19 = null;
+        int[] var18 = null;
+        RuntimeException decompiledCaughtException = null;
         var14 = Vertigo2.field_L ? 1 : 0;
-        if (param5 == -11) {
-          var9 = param3 - param4;
-          var8 = param2 - -param4;
-          var12 = param2;
-          L0: while (true) {
-            if (var8 <= var12) {
-              var11 = param0 + -param4;
-              var10 = param1 - -param4;
-              var12 = param3;
+        try {
+          L0: {
+            if (param5 == -11) {
+              var9 = param3 - param4;
+              var8_int = param2 - -param4;
+              var12 = param2;
               L1: while (true) {
-                if (var12 <= var9) {
-                  var12 = var8;
+                if (var8_int <= var12) {
+                  var11 = param0 + -param4;
+                  var10 = param1 - -param4;
+                  var12 = param3;
                   L2: while (true) {
-                    if (var9 >= var12) {
-                      var19 = vl.field_e[var12];
-                      ki.a(-87, param1, var19, var10, param7);
-                      ki.a(-90, var10, var19, var11, param6);
-                      ki.a(-83, var11, var19, param0, param7);
-                      var12++;
-                      continue L2;
+                    if (var12 <= var9) {
+                      var12 = var8_int;
+                      L3: while (true) {
+                        if (var9 < var12) {
+                          break L0;
+                        } else {
+                          var18 = vl.field_e[var12];
+                          ki.a(-87, param1, var18, var10, param7);
+                          ki.a(-90, var10, var18, var11, param6);
+                          ki.a(-83, var11, var18, param0, param7);
+                          var12++;
+                          continue L3;
+                        }
+                      }
                     } else {
-                      return;
+                      ki.a(-83, param1, vl.field_e[var12], param0, param7);
+                      var12--;
+                      continue L2;
                     }
                   }
                 } else {
-                  ki.a(-83, param1, vl.field_e[var12], param0, param7);
-                  var12--;
+                  ki.a(-75, param1, vl.field_e[var12], param0, param7);
+                  var12++;
                   continue L1;
                 }
               }
             } else {
-              ki.a(-75, param1, vl.field_e[var12], param0, param7);
-              var12++;
-              continue L0;
+              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var8, "fn.F(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 

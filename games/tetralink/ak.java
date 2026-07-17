@@ -14,28 +14,86 @@ final class ak {
     }
 
     final static byte[] a(int param0, byte[] param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         byte[] var3 = null;
-        var2 = param1.length;
-        if (param0 != -14074) {
-          return null;
-        } else {
-          var3 = new byte[var2];
-          rd.a(param1, 0, var3, 0, var2);
-          return var3;
+        Object stackIn_2_0 = null;
+        byte[] stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            var2_int = param1.length;
+            if (param0 == -14074) {
+              var3 = new byte[var2_int];
+              rd.a(param1, 0, var3, 0, var2_int);
+              stackOut_3_0 = (byte[]) var3;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (byte[]) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("ak.E(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
+        return stackIn_4_0;
     }
 
     final static void a(byte param0, int param1) {
         try {
-            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (null == wa.field_e) {
                 break L0;
               } else {
                 L1: {
-                  if (-1 < (param1 ^ -1)) {
+                  if (param1 < 0) {
                     break L1;
                   } else {
                     if (qi.field_p != li.field_a) {
@@ -57,7 +115,7 @@ final class ak {
                   if (0 != nd.field_Lb.field_t) {
                     break L3;
                   } else {
-                    if ((rj.field_n + 10000L ^ -1L) > (k.a(0) ^ -1L)) {
+                    if (~(rj.field_n + 10000L) > ~k.a(0)) {
                       nd.field_Lb.f(param1, (byte) -92);
                       break L3;
                     } else {
@@ -67,18 +125,11 @@ final class ak {
                 }
                 L4: {
                   if (nd.field_Lb.field_t > 0) {
-                    try {
+                    {
                       L5: {
                         wa.field_e.a(true, nd.field_Lb.field_t, nd.field_Lb.field_u, 0);
                         rj.field_n = k.a(0);
                         break L5;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        mk.a(false);
-                        break L6;
                       }
                     }
                     nd.field_Lb.field_t = 0;
@@ -99,14 +150,15 @@ final class ak {
     }
 
     final static void a(int param0, String param1, float param2) {
-        if (param0 != 0) {
-            field_b = null;
+        try {
+            if (param0 != 0) {
+                field_b = null;
+            }
             bn.field_a = param1;
             md.field_v = param2;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "ak.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        bn.field_a = param1;
-        md.field_v = param2;
     }
 
     final static boolean a(int param0) {

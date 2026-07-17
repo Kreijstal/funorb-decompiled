@@ -35,7 +35,8 @@ final class ma extends le {
     }
 
     final boolean a(boolean param0, int[] param1, ka param2, byte[] param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         Object var7 = null;
         int var8 = 0;
@@ -48,6 +49,30 @@ final class ma extends le {
         ka stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
+        int stackIn_23_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        String stackIn_33_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_22_0 = 0;
         ka stackOut_11_0 = null;
         int stackOut_11_1 = 0;
         ka stackOut_13_0 = null;
@@ -56,156 +81,389 @@ final class ma extends le {
         ka stackOut_12_0 = null;
         int stackOut_12_1 = 0;
         int stackOut_12_2 = 0;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
         var10 = ZombieDawn.field_J;
-        var5 = param0 ? 1 : 0;
-        var6 = 0;
-        var7 = null;
-        var8 = 0;
-        L0: while (true) {
-          if (-129 >= (var8 ^ -1)) {
-            return var5 != 0;
-          } else {
-            L1: {
-              if (param3 == null) {
-                break L1;
+        try {
+          L0: {
+            var5_int = param0 ? 1 : 0;
+            var6 = 0;
+            var7 = null;
+            var8 = 0;
+            L1: while (true) {
+              if (var8 >= 128) {
+                stackOut_22_0 = var5_int;
+                stackIn_23_0 = stackOut_22_0;
+                break L0;
               } else {
-                if (param3[var8] != 0) {
-                  break L1;
-                } else {
-                  var8++;
-                  continue L0;
-                }
-              }
-            }
-            var9 = ((ma) this).field_l[var8];
-            if (0 != var9) {
-              L2: {
-                if (var9 != var6) {
+                L2: {
                   L3: {
-                    var6 = var9;
-                    var9--;
-                    if ((1 & var9) != 0) {
-                      var7 = (Object) (Object) param2.a(1856253636, param1, var9 >> 1375166882);
+                    if (param3 == null) {
                       break L3;
                     } else {
-                      L4: {
-                        stackOut_11_0 = (ka) param2;
-                        stackOut_11_1 = var9 >> 1106370594;
-                        stackIn_13_0 = stackOut_11_0;
-                        stackIn_13_1 = stackOut_11_1;
-                        stackIn_12_0 = stackOut_11_0;
-                        stackIn_12_1 = stackOut_11_1;
-                        if (param0) {
-                          stackOut_13_0 = (ka) (Object) stackIn_13_0;
-                          stackOut_13_1 = stackIn_13_1;
-                          stackOut_13_2 = 0;
-                          stackIn_14_0 = stackOut_13_0;
-                          stackIn_14_1 = stackOut_13_1;
-                          stackIn_14_2 = stackOut_13_2;
-                          break L4;
-                        } else {
-                          stackOut_12_0 = (ka) (Object) stackIn_12_0;
-                          stackOut_12_1 = stackIn_12_1;
-                          stackOut_12_2 = 1;
-                          stackIn_14_0 = stackOut_12_0;
-                          stackIn_14_1 = stackOut_12_1;
-                          stackIn_14_2 = stackOut_12_2;
-                          break L4;
-                        }
+                      if (param3[var8] == 0) {
+                        break L2;
+                      } else {
+                        break L3;
                       }
-                      var7 = (Object) (Object) ((ka) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2 != 0, param1);
-                      break L3;
                     }
                   }
-                  if (var7 == null) {
-                    var5 = 0;
-                    break L2;
+                  var9 = ((ma) this).field_l[var8];
+                  if (0 != var9) {
+                    L4: {
+                      if (var9 != var6) {
+                        L5: {
+                          var6 = var9;
+                          var9--;
+                          if ((1 & var9) != 0) {
+                            var7 = (Object) (Object) param2.a(1856253636, param1, var9 >> 2);
+                            break L5;
+                          } else {
+                            L6: {
+                              stackOut_11_0 = (ka) param2;
+                              stackOut_11_1 = var9 >> 2;
+                              stackIn_13_0 = stackOut_11_0;
+                              stackIn_13_1 = stackOut_11_1;
+                              stackIn_12_0 = stackOut_11_0;
+                              stackIn_12_1 = stackOut_11_1;
+                              if (param0) {
+                                stackOut_13_0 = (ka) (Object) stackIn_13_0;
+                                stackOut_13_1 = stackIn_13_1;
+                                stackOut_13_2 = 0;
+                                stackIn_14_0 = stackOut_13_0;
+                                stackIn_14_1 = stackOut_13_1;
+                                stackIn_14_2 = stackOut_13_2;
+                                break L6;
+                              } else {
+                                stackOut_12_0 = (ka) (Object) stackIn_12_0;
+                                stackOut_12_1 = stackIn_12_1;
+                                stackOut_12_2 = 1;
+                                stackIn_14_0 = stackOut_12_0;
+                                stackIn_14_1 = stackOut_12_1;
+                                stackIn_14_2 = stackOut_12_2;
+                                break L6;
+                              }
+                            }
+                            var7 = (Object) (Object) ((ka) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2 != 0, param1);
+                            break L5;
+                          }
+                        }
+                        if (var7 == null) {
+                          var5_int = 0;
+                          break L4;
+                        } else {
+                          break L4;
+                        }
+                      } else {
+                        break L4;
+                      }
+                    }
+                    if (var7 == null) {
+                      break L2;
+                    } else {
+                      ((ma) this).field_o[var8] = (gi) var7;
+                      ((ma) this).field_l[var8] = 0;
+                      break L2;
+                    }
                   } else {
                     break L2;
                   }
-                } else {
-                  break L2;
                 }
-              }
-              if (var7 != null) {
-                ((ma) this).field_o[var8] = (gi) var7;
-                ((ma) this).field_l[var8] = 0;
                 var8++;
-                continue L0;
-              } else {
-                var8++;
-                continue L0;
+                continue L1;
               }
-            } else {
-              var8++;
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var5 = decompiledCaughtException;
+            stackOut_24_0 = (RuntimeException) var5;
+            stackOut_24_1 = new StringBuilder().append("ma.D(").append(param0).append(44);
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
+            if (param1 == null) {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L7;
+            } else {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44);
+            stackIn_29_0 = stackOut_27_0;
+            stackIn_29_1 = stackOut_27_1;
+            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_1 = stackOut_27_1;
+            if (param2 == null) {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
+              break L8;
+            } else {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "{...}";
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
+              break L8;
+            }
+          }
+          L9: {
+            stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(44);
+            stackIn_32_0 = stackOut_30_0;
+            stackIn_32_1 = stackOut_30_1;
+            stackIn_31_0 = stackOut_30_0;
+            stackIn_31_1 = stackOut_30_1;
+            if (param3 == null) {
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "null";
+              stackIn_33_0 = stackOut_32_0;
+              stackIn_33_1 = stackOut_32_1;
+              stackIn_33_2 = stackOut_32_2;
+              break L9;
+            } else {
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "{...}";
+              stackIn_33_0 = stackOut_31_0;
+              stackIn_33_1 = stackOut_31_1;
+              stackIn_33_2 = stackOut_31_2;
+              break L9;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
         }
+        return stackIn_23_0 != 0;
     }
 
     final static void a(oe param0, int param1, String param2, rb param3, boolean param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        L0: {
-          var9 = ZombieDawn.field_J;
-          var5 = 0;
-          var6 = -1;
-          if (!param4) {
-            break L0;
-          } else {
-            int discarded$2 = ma.d((byte) 75);
-            break L0;
-          }
-        }
-        var7 = 1;
-        L1: while (true) {
-          if (param2.length() <= var7) {
-            return;
-          } else {
-            L2: {
-              var8 = param2.charAt(var7);
-              if (var8 == 60) {
-                var6 = param0.field_e[0] + ((var5 >> 1997582664) - -param3.b(param2.substring(0, var7)));
-                break L2;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        var9 = ZombieDawn.field_J;
+        try {
+          L0: {
+            var5_int = 0;
+            var6 = -1;
+            var7 = 1;
+            L1: while (true) {
+              if (param2.length() <= var7) {
+                break L0;
               } else {
-                break L2;
-              }
-            }
-            L3: {
-              if (-1 != var6) {
-                param0.field_e[var7] = var6;
-                break L3;
-              } else {
-                L4: {
-                  if (var8 == 32) {
-                    var5 = var5 + param1;
-                    break L4;
+                L2: {
+                  var8 = param2.charAt(var7);
+                  if (var8 == 60) {
+                    var6 = param0.field_e[0] + ((var5_int >> 8) - -param3.b(param2.substring(0, var7)));
+                    break L2;
                   } else {
-                    break L4;
+                    break L2;
                   }
                 }
-                param0.field_e[var7] = (var5 >> -597594264) - -param0.field_e[0] + param3.b(param2.substring(0, 1 + var7)) - param3.a((char) var8);
-                break L3;
+                L3: {
+                  if (-1 != var6) {
+                    param0.field_e[var7] = var6;
+                    break L3;
+                  } else {
+                    L4: {
+                      if (var8 == 32) {
+                        var5_int = var5_int + param1;
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                    param0.field_e[var7] = (var5_int >> 8) - -param0.field_e[0] + param3.b(param2.substring(0, 1 + var7)) - param3.a((char) var8);
+                    break L3;
+                  }
+                }
+                L5: {
+                  if (62 != var8) {
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                var7++;
+                continue L1;
               }
             }
-            if (62 == var8) {
-              var6 = -1;
-              var7++;
-              continue L1;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var5 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var5;
+            stackOut_16_1 = new StringBuilder().append("ma.B(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param0 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L6;
             } else {
-              var7++;
-              continue L1;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L6;
             }
           }
+          L7: {
+            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param1).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param2 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L7;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param3 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L8;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L8;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 0 + 41);
         }
     }
 
     public static void c(byte param0) {
-        int var1 = 47 % ((param0 - -23) / 32);
+        int var1 = 0;
         field_n = null;
         field_i = null;
         field_q = null;
@@ -304,7 +562,7 @@ final class ma extends le {
         var38 = new de(param0);
         var3 = 0;
         L0: while (true) {
-          if ((var38.field_h[var38.field_j - -var3] ^ -1) == -1) {
+          if (var38.field_h[var38.field_j - -var3] == 0) {
             var69 = new byte[var3];
             var62 = var69;
             var55 = var62;
@@ -312,7 +570,7 @@ final class ma extends le {
             var4 = var42;
             var5 = 0;
             L1: while (true) {
-              if ((var5 ^ -1) <= (var3 ^ -1)) {
+              if (~var5 <= ~var3) {
                 var3++;
                 var38.field_j = var38.field_j + 1;
                 var5 = var38.field_j;
@@ -351,7 +609,7 @@ final class ma extends le {
                                   var53 = var60;
                                   var39 = var53;
                                   var11 = var39;
-                                  if ((var9 ^ -1) < -2) {
+                                  if (var9 > 1) {
                                     var67[1] = (byte) 1;
                                     var13_int = 1;
                                     var12 = 2;
@@ -393,7 +651,7 @@ final class ma extends le {
                                 var13 = new nf[var12];
                                 var14 = 0;
                                 L10: while (true) {
-                                  if ((var14 ^ -1) <= (var13.length ^ -1)) {
+                                  if (~var14 <= ~var13.length) {
                                     L11: {
                                       var14 = var38.d((byte) -117);
                                       if (0 < var14) {
@@ -413,7 +671,7 @@ final class ma extends le {
                                       var46 = var58;
                                       var15_array = var46;
                                       var14 = var38.d((byte) -124);
-                                      if (-1 > (var14 ^ -1)) {
+                                      if (var14 > 0) {
                                         stackOut_40_0 = new byte[2 * var14];
                                         stackIn_41_0 = stackOut_40_0;
                                         break L12;
@@ -438,17 +696,17 @@ final class ma extends le {
                                         var18 = var41;
                                         var19 = 0;
                                         L14: while (true) {
-                                          if ((var17 ^ -1) >= (var19 ^ -1)) {
+                                          if (~var17 >= ~var19) {
                                             var17++;
                                             var38.field_j = var38.field_j + 1;
                                             var19 = 0;
                                             var20 = 0;
                                             L15: while (true) {
-                                              if ((var20 ^ -1) <= -129) {
+                                              if (var20 >= 128) {
                                                 var19 = 0;
                                                 var20 = 0;
                                                 L16: while (true) {
-                                                  if (-129 >= (var20 ^ -1)) {
+                                                  if (var20 >= 128) {
                                                     var20 = 0;
                                                     var21 = 0;
                                                     var22 = 0;
@@ -466,7 +724,7 @@ final class ma extends le {
                                                             var24 = 0;
                                                             var25_int = 0;
                                                             L19: while (true) {
-                                                              if ((var25_int ^ -1) <= -129) {
+                                                              if (var25_int >= 128) {
                                                                 var21 = 0;
                                                                 var20 = 0;
                                                                 var25 = null;
@@ -478,7 +736,7 @@ final class ma extends le {
                                                                     var26 = 0;
                                                                     var27 = 0;
                                                                     L21: while (true) {
-                                                                      if ((var27 ^ -1) <= -129) {
+                                                                      if (var27 >= 128) {
                                                                         ((ma) this).field_u = 1 + var38.d((byte) -123);
                                                                         var27 = 0;
                                                                         L22: while (true) {
@@ -505,7 +763,7 @@ final class ma extends le {
                                                                               } else {
                                                                                 var27 = 1;
                                                                                 L26: while (true) {
-                                                                                  if ((var73.length ^ -1) >= (var27 ^ -1)) {
+                                                                                  if (~var73.length >= ~var27) {
                                                                                     break L25;
                                                                                   } else {
                                                                                     var16[var27] = var38.e((byte) 116);
@@ -517,10 +775,10 @@ final class ma extends le {
                                                                             }
                                                                             var27 = 0;
                                                                             L27: while (true) {
-                                                                              if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                              if (~var27 <= ~var12) {
                                                                                 var27 = 0;
                                                                                 L28: while (true) {
-                                                                                  if ((var12 ^ -1) >= (var27 ^ -1)) {
+                                                                                  if (~var12 >= ~var27) {
                                                                                     L29: {
                                                                                       if (var15_array == null) {
                                                                                         break L29;
@@ -537,14 +795,14 @@ final class ma extends le {
                                                                                               if (var29 >= var27) {
                                                                                                 var29 = 2;
                                                                                                 L32: while (true) {
-                                                                                                  if ((var29 ^ -1) <= (var72.length ^ -1)) {
+                                                                                                  if (~var29 <= ~var72.length) {
                                                                                                     var30 = var27;
                                                                                                     L33: while (true) {
-                                                                                                      if ((var30 ^ -1) <= -129) {
+                                                                                                      if (var30 >= 128) {
                                                                                                         var15_array = null;
                                                                                                         break L29;
                                                                                                       } else {
-                                                                                                        ((ma) this).field_m[var30] = (byte)(var28 * ((ma) this).field_m[var30] + 32 >> -1338554714);
+                                                                                                        ((ma) this).field_m[var30] = (byte)(var28 * ((ma) this).field_m[var30] + 32 >> 6);
                                                                                                         var30++;
                                                                                                         continue L33;
                                                                                                       }
@@ -562,7 +820,7 @@ final class ma extends le {
                                                                                                         continue L32;
                                                                                                       } else {
                                                                                                         var34 = rm.a(-var27 + var30, var32, false);
-                                                                                                        ((ma) this).field_m[var33] = (byte)(var34 * ((ma) this).field_m[var33] - -32 >> -1590497562);
+                                                                                                        ((ma) this).field_m[var33] = (byte)(var34 * ((ma) this).field_m[var33] - -32 >> 6);
                                                                                                         var32 = var32 + (var31 + -var28);
                                                                                                         var33++;
                                                                                                         continue L34;
@@ -571,7 +829,7 @@ final class ma extends le {
                                                                                                   }
                                                                                                 }
                                                                                               } else {
-                                                                                                ((ma) this).field_m[var29] = (byte)(32 + var28 * ((ma) this).field_m[var29] >> -1868340218);
+                                                                                                ((ma) this).field_m[var29] = (byte)(32 + var28 * ((ma) this).field_m[var29] >> 6);
                                                                                                 var29++;
                                                                                                 continue L31;
                                                                                               }
@@ -593,19 +851,19 @@ final class ma extends le {
                                                                                         var16[0] = (byte)var19;
                                                                                         var27 = 2;
                                                                                         L36: while (true) {
-                                                                                          if ((var73.length ^ -1) >= (var27 ^ -1)) {
+                                                                                          if (~var73.length >= ~var27) {
                                                                                             var27 = var73[0];
-                                                                                            var28 = var73[1] << -1563631135;
+                                                                                            var28 = var73[1] << 1;
                                                                                             var29 = 0;
                                                                                             L37: while (true) {
-                                                                                              if ((var29 ^ -1) <= (var27 ^ -1)) {
+                                                                                              if (~var29 <= ~var27) {
                                                                                                 var29 = 2;
                                                                                                 L38: while (true) {
                                                                                                   if (var73.length <= var29) {
                                                                                                     var16 = null;
                                                                                                     var30 = var27;
                                                                                                     L39: while (true) {
-                                                                                                      if (-129 >= (var30 ^ -1)) {
+                                                                                                      if (var30 >= 128) {
                                                                                                         break L35;
                                                                                                       } else {
                                                                                                         L40: {
@@ -618,7 +876,7 @@ final class ma extends le {
                                                                                                           }
                                                                                                         }
                                                                                                         L41: {
-                                                                                                          if (-129 <= (var31 ^ -1)) {
+                                                                                                          if (var31 <= 128) {
                                                                                                             break L41;
                                                                                                           } else {
                                                                                                             var31 = 128;
@@ -632,12 +890,12 @@ final class ma extends le {
                                                                                                     }
                                                                                                   } else {
                                                                                                     var30 = var73[var29];
-                                                                                                    var31 = var16[var29 + 1] << 480242657;
+                                                                                                    var31 = var16[var29 + 1] << 1;
                                                                                                     var32 = (-var27 + var30) / 2 + (var30 + -var27) * var28;
                                                                                                     var37 = var27;
                                                                                                     var33 = var37;
                                                                                                     L42: while (true) {
-                                                                                                      if ((var30 ^ -1) >= (var37 ^ -1)) {
+                                                                                                      if (~var30 >= ~var37) {
                                                                                                         var29 += 2;
                                                                                                         var28 = var31;
                                                                                                         var27 = var30;
@@ -654,7 +912,7 @@ final class ma extends le {
                                                                                                           }
                                                                                                         }
                                                                                                         L44: {
-                                                                                                          if (-129 <= (var35 ^ -1)) {
+                                                                                                          if (var35 <= 128) {
                                                                                                             break L44;
                                                                                                           } else {
                                                                                                             var35 = 128;
@@ -672,7 +930,7 @@ final class ma extends le {
                                                                                               } else {
                                                                                                 L45: {
                                                                                                   var30 = (255 & ((ma) this).field_h[var29]) + var28;
-                                                                                                  if ((var30 ^ -1) <= -1) {
+                                                                                                  if (var30 >= 0) {
                                                                                                     break L45;
                                                                                                   } else {
                                                                                                     var30 = 0;
@@ -706,7 +964,7 @@ final class ma extends le {
                                                                                       if (var12 <= var27) {
                                                                                         var27 = 0;
                                                                                         L48: while (true) {
-                                                                                          if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                                          if (~var27 <= ~var12) {
                                                                                             var27 = 0;
                                                                                             L49: while (true) {
                                                                                               if (var27 >= var12) {
@@ -715,7 +973,7 @@ final class ma extends le {
                                                                                                   if (var12 <= var27) {
                                                                                                     var27 = 0;
                                                                                                     L51: while (true) {
-                                                                                                      if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                                                      if (~var27 <= ~var12) {
                                                                                                         return;
                                                                                                       } else {
                                                                                                         L52: {
@@ -820,7 +1078,7 @@ final class ma extends le {
                                                                                     var19 = 0;
                                                                                     var29 = 2;
                                                                                     L60: while (true) {
-                                                                                      if ((var29 ^ -1) <= (var48.field_b.length ^ -1)) {
+                                                                                      if (~var29 <= ~var48.field_b.length) {
                                                                                         break L59;
                                                                                       } else {
                                                                                         var19 = 1 + (var19 + var38.d((byte) -125));
@@ -843,7 +1101,7 @@ final class ma extends le {
                                                                               } else {
                                                                                 var29 = 1;
                                                                                 L62: while (true) {
-                                                                                  if ((var45.field_h.length ^ -1) >= (var29 ^ -1)) {
+                                                                                  if (~var45.field_h.length >= ~var29) {
                                                                                     break L61;
                                                                                   } else {
                                                                                     var45.field_h[var29] = var38.e((byte) 116);
@@ -859,7 +1117,7 @@ final class ma extends le {
                                                                               } else {
                                                                                 var29 = 3;
                                                                                 L64: while (true) {
-                                                                                  if ((var45.field_b.length - 2 ^ -1) >= (var29 ^ -1)) {
+                                                                                  if (~(var45.field_b.length - 2) >= ~var29) {
                                                                                     break L63;
                                                                                   } else {
                                                                                     var45.field_b[var29] = var38.e((byte) 116);
@@ -939,12 +1197,12 @@ final class ma extends le {
                                                                     break L69;
                                                                   } else {
                                                                     L70: {
-                                                                      if ((var20 ^ -1) != -1) {
+                                                                      if (var20 != 0) {
                                                                         break L70;
                                                                       } else {
                                                                         int incrementValue$12 = var8;
                                                                         var8++;
-                                                                        var24 = 16 + var38.field_h[incrementValue$12] << 596389762;
+                                                                        var24 = 16 + var38.field_h[incrementValue$12] << 2;
                                                                         if (var21 < var70.length) {
                                                                           int incrementValue$13 = var21;
                                                                           var21++;
@@ -975,7 +1233,7 @@ final class ma extends le {
                                                                     break L72;
                                                                   } else {
                                                                     L73: {
-                                                                      if ((var69.length ^ -1) >= (var21 ^ -1)) {
+                                                                      if (~var69.length >= ~var21) {
                                                                         var20 = -1;
                                                                         break L73;
                                                                       } else {
@@ -1002,11 +1260,11 @@ final class ma extends le {
                                                         }
                                                       } else {
                                                         L74: {
-                                                          if ((var20 ^ -1) != -1) {
+                                                          if (var20 != 0) {
                                                             break L74;
                                                           } else {
                                                             L75: {
-                                                              if ((var21 ^ -1) <= (var68.length ^ -1)) {
+                                                              if (~var21 <= ~var68.length) {
                                                                 var20 = -1;
                                                                 break L75;
                                                               } else {
@@ -1020,7 +1278,7 @@ final class ma extends le {
                                                             break L74;
                                                           }
                                                         }
-                                                        ((ma) this).field_j[var23] = (short)(((ma) this).field_j[var23] + (eg.a(2, var22 + -1) << -996372562));
+                                                        ((ma) this).field_j[var23] = (short)(((ma) this).field_j[var23] + (eg.a(2, var22 + -1) << 14));
                                                         ((ma) this).field_l[var23] = var22;
                                                         var20--;
                                                         var23++;
@@ -1029,7 +1287,7 @@ final class ma extends le {
                                                     }
                                                   } else {
                                                     var19 = var19 + var38.d((byte) -123);
-                                                    ((ma) this).field_j[var20] = (short)(((ma) this).field_j[var20] + (var19 << -366464344));
+                                                    ((ma) this).field_j[var20] = (short)(((ma) this).field_j[var20] + (var19 << 8));
                                                     var20++;
                                                     continue L16;
                                                   }
@@ -1059,7 +1317,7 @@ final class ma extends le {
                                       var40 = dupTemp$17;
                                       var15 = var40;
                                       var16_int = var38.d((byte) -125);
-                                      if (-1 <= (var16_int ^ -1)) {
+                                      if (var16_int <= 0) {
                                         break L76;
                                       } else {
                                         var15.field_h = new byte[2 * var16_int];
@@ -1068,11 +1326,11 @@ final class ma extends le {
                                     }
                                     L77: {
                                       var16_int = var38.d((byte) -123);
-                                      if ((var16_int ^ -1) >= -1) {
+                                      if (var16_int <= 0) {
                                         break L77;
                                       } else {
                                         var15.field_b = new byte[2 + var16_int * 2];
-                                        var40.field_b[1] = (byte)64;
+                                        var40.field_b[1] = (byte) 64;
                                         break L77;
                                       }
                                     }

@@ -60,7 +60,7 @@ final class rb extends hl {
                 break L4;
               }
             }
-            if ((-(((rb) this).field_Pb.field_yb - -((rb) this).field_Pb.field_Db) ^ -1) <= -1) {
+            if (-(((rb) this).field_Pb.field_yb - -((rb) this).field_Pb.field_Db) >= 0) {
               if (((rb) this).field_Qb.e(param0)) {
                 ((rb) this).field_Pb.field_yb = -((rb) this).field_Qb.a(((rb) this).field_Pb.field_R, param2, 0, ((rb) this).field_Ob.field_R);
                 ((rb) this).field_Pb.field_Db = 0;
@@ -83,7 +83,7 @@ final class rb extends hl {
               }
             }
           } else {
-            if ((-(((rb) this).field_Pb.field_Db + ((rb) this).field_Pb.field_yb) ^ -1) <= -1) {
+            if (-(((rb) this).field_Pb.field_Db + ((rb) this).field_Pb.field_yb) >= 0) {
               if (-(((rb) this).field_Pb.field_yb - -((rb) this).field_Pb.field_Db) > ((rb) this).field_Pb.field_R - (-((rb) this).field_Pb.field_mb + ((rb) this).field_Ob.field_R)) {
                 ((rb) this).field_Pb.field_Db = -((rb) this).field_Pb.field_yb + -(-((rb) this).field_Ob.field_R + (((rb) this).field_Pb.field_mb + ((rb) this).field_Pb.field_R));
                 if (((rb) this).field_Qb.e(param0)) {
@@ -163,7 +163,7 @@ final class rb extends hl {
                   break L10;
                 }
               }
-              if ((-(((rb) this).field_Pb.field_yb - -((rb) this).field_Pb.field_Db) ^ -1) <= -1) {
+              if (-(((rb) this).field_Pb.field_yb - -((rb) this).field_Pb.field_Db) >= 0) {
                 break L9;
               } else {
                 ((rb) this).field_Pb.field_Db = -((rb) this).field_Pb.field_yb;
@@ -171,7 +171,7 @@ final class rb extends hl {
               }
             } else {
               L11: {
-                if ((-(((rb) this).field_Pb.field_Db + ((rb) this).field_Pb.field_yb) ^ -1) <= -1) {
+                if (-(((rb) this).field_Pb.field_Db + ((rb) this).field_Pb.field_yb) >= 0) {
                   break L11;
                 } else {
                   ((rb) this).field_Pb.field_Db = -((rb) this).field_Pb.field_yb;
@@ -228,72 +228,50 @@ final class rb extends hl {
 
     private final boolean a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         int var8 = 0;
-        if (param1) {
-          var8 = 1;
-          ((rb) this).field_Pb.a(-23983, param4, var8 != 0, ((rb) this).field_Ob.field_R);
-          this.a(true, param3, false, param5, param2);
-          if (param6 <= 45) {
-            field_Kb = null;
-            return var8 != 0;
-          } else {
-            return var8 != 0;
-          }
-        } else {
+        if (!param1) {
           if (((rb) this).field_Y) {
-            if (!param0) {
-              var8 = 1;
-              ((rb) this).field_Pb.a(-23983, param4, var8 != 0, ((rb) this).field_Ob.field_R);
-              this.a(true, param3, false, param5, param2);
-              if (param6 <= 45) {
-                field_Kb = null;
-                return var8 != 0;
-              } else {
-                return var8 != 0;
-              }
-            } else {
+            if (param0) {
               var8 = 0;
               ((rb) this).field_Pb.a(-23983, param4, var8 != 0, ((rb) this).field_Ob.field_R);
               this.a(true, param3, false, param5, param2);
-              if (param6 <= 45) {
-                field_Kb = null;
-                return var8 != 0;
-              } else {
-                return var8 != 0;
-              }
+              return var8 != 0;
+            } else {
+              var8 = 1;
+              ((rb) this).field_Pb.a(-23983, param4, var8 != 0, ((rb) this).field_Ob.field_R);
+              this.a(true, param3, false, param5, param2);
+              return var8 != 0;
             }
           } else {
             var8 = 0;
             ((rb) this).field_Pb.a(-23983, param4, var8 != 0, ((rb) this).field_Ob.field_R);
             this.a(true, param3, false, param5, param2);
-            if (param6 <= 45) {
-              field_Kb = null;
-              return var8 != 0;
-            } else {
-              return var8 != 0;
-            }
+            return var8 != 0;
           }
+        } else {
+          var8 = 1;
+          ((rb) this).field_Pb.a(-23983, param4, var8 != 0, ((rb) this).field_Ob.field_R);
+          this.a(true, param3, false, param5, param2);
+          return var8 != 0;
         }
     }
 
     rb(long param0, hl param1, hl param2, bl param3) {
         super(param0, (hl) null);
-        ((rb) this).field_Ob = new hl(0L, param2);
-        ((rb) this).field_Qb = new bl(0L, param3);
-        ((rb) this).a((byte) 27, ((rb) this).field_Ob);
-        ((rb) this).a((byte) -101, (hl) (Object) ((rb) this).field_Qb);
-        ((rb) this).field_Pb = param1;
-        ((rb) this).field_Ob.a((byte) -125, param1);
+        try {
+            ((rb) this).field_Ob = new hl(0L, param2);
+            ((rb) this).field_Qb = new bl(0L, param3);
+            ((rb) this).a((byte) 27, ((rb) this).field_Ob);
+            ((rb) this).a((byte) -101, (hl) (Object) ((rb) this).field_Qb);
+            ((rb) this).field_Pb = param1;
+            ((rb) this).field_Ob.a((byte) -125, param1);
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "rb.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void d(byte param0) {
         field_Nb = null;
         field_Mb = null;
-        if (param0 >= -104) {
-            boolean discarded$0 = rb.c(true);
-            field_Lb = null;
-            field_Kb = null;
-            return;
-        }
         field_Lb = null;
         field_Kb = null;
     }

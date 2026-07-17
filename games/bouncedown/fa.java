@@ -23,13 +23,7 @@ final class fa {
     }
 
     final static Boolean b(int param0) {
-        Boolean var1 = null;
-        if (param0 != 1) {
-            var1 = lk.field_p;
-            lk.field_p = null;
-            return var1;
-        }
-        var1 = lk.field_p;
+        Boolean var1 = lk.field_p;
         lk.field_p = null;
         return var1;
     }

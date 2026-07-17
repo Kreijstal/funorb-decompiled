@@ -9,11 +9,7 @@ final class tob extends fh {
     private qfa field_k;
 
     final static boolean g(int param0) {
-        if (param0 != 0) {
-            field_l = null;
-            return lsa.field_e != null ? true : false;
-        }
-        return lsa.field_e != null ? true : false;
+        return lsa.field_e != null;
     }
 
     protected final void finalize() throws Throwable {
@@ -24,11 +20,11 @@ final class tob extends fh {
     public static void a(int param0) {
         field_o = null;
         field_l = null;
-        int var1 = 112 / ((param0 - 32) / 56);
+        int var1 = 112;
     }
 
     private final void e(int param0) {
-        if (!(((tob) this).field_n <= (long)param0)) {
+        if (!(((tob) this).field_n <= 0L)) {
             ((tob) this).field_k.field_c.releasePbuffer(((tob) this).field_n);
             ((tob) this).field_n = 0L;
         }
@@ -43,9 +39,13 @@ final class tob extends fh {
     }
 
     tob(qfa param0, int param1, int param2) {
-        ((tob) this).field_m = param1 * param2;
-        ((tob) this).field_k = param0;
-        ((tob) this).field_n = ((tob) this).field_k.field_c.createPbuffer(param1, param2);
+        try {
+            ((tob) this).field_m = param1 * param2;
+            ((tob) this).field_k = param0;
+            ((tob) this).field_n = ((tob) this).field_k.field_c.createPbuffer(param1, param2);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "tob.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

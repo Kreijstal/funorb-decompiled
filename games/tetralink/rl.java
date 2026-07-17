@@ -38,9 +38,6 @@ final class rl {
         field_g = null;
         field_f = null;
         field_c = null;
-        if (param0 != 14236) {
-            rl.b(109);
-        }
     }
 
     static {

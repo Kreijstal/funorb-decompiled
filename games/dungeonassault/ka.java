@@ -8,9 +8,6 @@ final class ka {
     static String[] field_d;
 
     final static void a(int param0) {
-        if (param0 != 1) {
-            ka.a((byte) 39);
-        }
         nf.field_y = -1;
         of.field_k = true;
         ed var4 = eh.field_o;
@@ -48,16 +45,17 @@ final class ka {
         field_a = new int[98304];
         var0 = 92682;
         L0: while (true) {
-          if ((var0 ^ -1) > -46342) {
+          if (var0 < 46341) {
             field_d = new String[]{null, "When a raider encounters a trap, one of several things may happen. The raider may be able to <%highlight>disarm</col> the trap without triggering it - (if your raider's <%sneak> roll beats that of the room's <%detect>).<br><br>If they are unable to <%highlight>disarm</col> it, the trap will be triggered, but an agile <%raider> (that wins a <%dodge> roll against the <%trap>'s <%snare>) may be able to avoid injury. Otherwise, it will be subject to the effects of the trap.<br><br><%command>Click the shield icon (at the bottom-right) to attempt to disarm this trap.</command>"};
             field_c = 0;
             field_b = new String[]{"6M Crew Member", "Victorius Ultima", "Crystal Monarch", "Starship Commando", "Relentless 2", "Mega Champion", "Insane Pilot", "Master of Magic", "Arch Mage", "Stench of Corruption"};
+            return;
           } else {
             L1: {
-              var6 = (long)(1 + (var0 << -501722623));
-              var4 = (long)((var0 << 1498911361) + -1);
-              var2 = (int)(-32768L + (var4 * var4 >> 755703698));
-              var3 = (int)(-32768L + (var6 * var6 >> 1653578194));
+              var6 = (long)(1 + (var0 << 1));
+              var4 = (long)((var0 << 1) + -1);
+              var2 = (int)(-32768L + (var4 * var4 >> 18));
+              var3 = (int)(-32768L + (var6 * var6 >> 18));
               if (var3 < field_a.length) {
                 break L1;
               } else {
@@ -66,7 +64,7 @@ final class ka {
               }
             }
             L2: {
-              if ((var2 ^ -1) <= -1) {
+              if (var2 >= 0) {
                 stackOut_6_0 = var2;
                 stackIn_7_0 = stackOut_6_0;
                 break L2;

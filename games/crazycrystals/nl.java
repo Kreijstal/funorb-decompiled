@@ -27,7 +27,7 @@ final class nl extends fb {
         L0: {
           var16 = CrazyCrystals.field_B;
           if (24 <= ((nl) this).field_i) {
-            if ((((nl) this).field_i ^ -1) > -49) {
+            if (((nl) this).field_i < 48) {
               L1: {
                 if (24 != param1) {
                   break L1;
@@ -107,7 +107,7 @@ final class nl extends fb {
               if (param1 != 24) {
                 break L6;
               } else {
-                if (-25 != (param2 ^ -1)) {
+                if (param2 != 24) {
                   break L6;
                 } else {
                   vj.field_a[4 - -((nl) this).field_j][0].c(param5, param6 - param2, ek.field_f[((nl) this).field_a.field_u]);
@@ -139,13 +139,13 @@ final class nl extends fb {
 
     final fb a(int param0) {
         ((nl) this).field_i = ((nl) this).field_i + 1;
-        if (!(-25 != (((nl) this).field_i ^ -1))) {
+        if (!(((nl) this).field_i != 24)) {
             be.field_d.a(96, 12 * ((nl) this).field_a.field_A, ((nl) this).field_a.field_t * 12, 0, (byte) -111);
         }
         if (((nl) this).field_i == 48) {
             ((nl) this).field_h.field_j = (ea) (Object) ((nl) this).field_a;
         }
-        if (!((((nl) this).field_i ^ -1) <= -73)) {
+        if (!(((nl) this).field_i >= 72)) {
             return (fb) this;
         }
         int var2 = 116 / ((param0 - 36) / 62);
@@ -155,22 +155,29 @@ final class nl extends fb {
 
     nl(fq param0, f[][] param1) {
         super(param0);
+        f var3 = null;
         ((nl) this).field_i = 0;
-        f var3 = param0.field_l;
-        while (!(var3 instanceof de)) {
-            var3 = ((pn) (Object) var3).field_l;
+        try {
+            var3 = param0.field_l;
+            while (!(var3 instanceof de)) {
+                var3 = ((pn) (Object) var3).field_l;
+            }
+            ((nl) this).field_j = param0.field_w & 3;
+            ((nl) this).field_h = (de) (Object) var3;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "nl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((nl) this).field_j = param0.field_w & 3;
-        ((nl) this).field_h = (de) (Object) var3;
     }
 
     final static void a(db param0, int param1) {
-        bl.b(param0.a(7693, "", "headers.packvorbis"));
-        if (param1 != 640) {
-            nl.b(100);
+        bl var2 = null;
+        try {
+            bl.b(param0.a(7693, "", "headers.packvorbis"));
+            var2 = bl.a(param0, "jagex logo2.packvorbis", "");
+            ko discarded$0 = var2.a();
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "nl.A(" + (param0 != null ? "{...}" : "null") + 44 + 640 + 41);
         }
-        bl var2 = bl.a(param0, "jagex logo2.packvorbis", "");
-        ko discarded$0 = var2.a();
     }
 
     static {

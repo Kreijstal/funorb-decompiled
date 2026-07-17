@@ -25,30 +25,13 @@ final class qg {
     }
 
     final static void b(int param0) {
-        if (param0 == 9313) {
-          if (!fh.c(-114)) {
-            if (vk.field_b != null) {
-              return;
-            } else {
-              vk.field_b = cf.a(4, 94);
-              return;
-            }
-          } else {
+        if (fh.c(-114)) {
             return;
-          }
-        } else {
-          qg.a(116);
-          if (!fh.c(-114)) {
-            if (vk.field_b != null) {
-              return;
-            } else {
-              vk.field_b = cf.a(4, 94);
-              return;
-            }
-          } else {
-            return;
-          }
         }
+        if (vk.field_b != null) {
+            return;
+        }
+        vk.field_b = cf.a(4, 94);
     }
 
     static {

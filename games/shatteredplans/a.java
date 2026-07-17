@@ -26,10 +26,6 @@ abstract class a extends oh {
     }
 
     final static qr a(int param0) {
-        if (param0 != 20605) {
-            a.a((byte) -50);
-            return qs.field_y.field_xb;
-        }
         return qs.field_y.field_xb;
     }
 
@@ -83,7 +79,7 @@ abstract class a extends oh {
     final static int a(int param0, int param1) {
         int var2 = 0;
         if (0 != param0) {
-          if (-1 > param0) {
+          if (param0 > 0) {
             L0: {
               var2 = 1;
               if (param0 <= 65535) {
@@ -95,7 +91,7 @@ abstract class a extends oh {
               }
             }
             L1: {
-              if (-256 < param0) {
+              if (param0 > 255) {
                 param0 = param0 >> 8;
                 var2 += 8;
                 break L1;
@@ -132,11 +128,10 @@ abstract class a extends oh {
             }
             return var2;
           } else {
-            if (param1 != 1) {
+            if (param1 == 1) {
               L5: {
-                field_j = 112;
                 var2 = 2;
-                if (65535 >= (param0 ^ -1)) {
+                if (param0 >= -65536) {
                   break L5;
                 } else {
                   var2 += 16;
@@ -183,8 +178,9 @@ abstract class a extends oh {
               return var2;
             } else {
               L10: {
+                field_j = 112;
                 var2 = 2;
-                if (65535 >= (param0 ^ -1)) {
+                if (param0 >= -65536) {
                   break L10;
                 } else {
                   var2 += 16;

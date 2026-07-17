@@ -8,20 +8,21 @@ final class uj {
     static int field_d;
 
     final static void a(int param0, int param1, byte param2, de param3, int param4) {
-        param3.i(12, 55);
-        if (param2 != -114) {
-            field_c = null;
+        try {
+            param3.i(12, 55);
+            if (param2 != -114) {
+                field_c = null;
+            }
+            param3.a(17, (byte) 105);
+            param3.a(param4, (byte) 105);
+            param3.a(param0, (byte) 105);
+            param3.i(param1, param2 + 218);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "uj.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
-        param3.a(17, (byte) 105);
-        param3.a(param4, (byte) 105);
-        param3.a(param0, (byte) 105);
-        param3.i(param1, param2 + 218);
     }
 
     public static void a(int param0) {
-        if (param0 != 256) {
-            return;
-        }
         field_b = null;
         field_a = null;
         field_c = null;
@@ -40,23 +41,23 @@ final class uj {
         field_c = new long[256];
         var2 = 0;
         L0: while (true) {
-          if (-257 >= (var2 ^ -1)) {
+          if (var2 >= 256) {
             return;
           } else {
             var0 = (long)var2;
             var3 = 0;
             L1: while (true) {
-              if ((var3 ^ -1) <= -9) {
+              if (var3 >= 8) {
                 field_c[var2] = var0;
                 var2++;
                 continue L0;
               } else {
-                if ((1L & var0 ^ -1L) != -2L) {
+                if ((1L & var0) != 1L) {
                   var0 = var0 >>> 1;
                   var3++;
                   continue L1;
                 } else {
-                  var0 = -3932672073523589310L ^ var0 >>> -1050490239;
+                  var0 = -3932672073523589310L ^ var0 >>> 1;
                   var3++;
                   continue L1;
                 }

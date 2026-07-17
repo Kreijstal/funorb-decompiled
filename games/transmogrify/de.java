@@ -24,78 +24,22 @@ final class de {
     }
 
     final static void a(oi param0, int param1, int param2) {
-        hj var3 = ff.field_D;
-        var3.a(false, param1);
-        var3.f(6389, param2);
-        var3.f(6389, 0);
-        var3.f(param2 + 6387, param0.field_h);
+        hj var3 = null;
+        try {
+            var3 = ff.field_D;
+            var3.a(false, param1);
+            var3.f(6389, 2);
+            var3.f(6389, 0);
+            var3.f(6389, param0.field_h);
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "de.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 2 + 41);
+        }
     }
 
     final static uj a(boolean param0, byte param1) {
-        uj var2 = null;
-        uj stackIn_2_0 = null;
-        uj stackIn_3_0 = null;
-        uj stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        uj stackIn_6_0 = null;
-        uj stackIn_7_0 = null;
-        uj stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        uj stackOut_5_0 = null;
-        uj stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        uj stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        uj stackOut_1_0 = null;
-        uj stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        uj stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        var2 = new uj(true);
-        if (param1 != -116) {
-          L0: {
-            field_b = null;
-            stackOut_5_0 = (uj) var2;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
-            if (!param0) {
-              stackOut_7_0 = (uj) (Object) stackIn_7_0;
-              stackOut_7_1 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              break L0;
-            } else {
-              stackOut_6_0 = (uj) (Object) stackIn_6_0;
-              stackOut_6_1 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              break L0;
-            }
-          }
-          stackIn_8_0.field_a = stackIn_8_1 != 0;
-          return var2;
-        } else {
-          L1: {
-            stackOut_1_0 = (uj) var2;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
-            if (!param0) {
-              stackOut_3_0 = (uj) (Object) stackIn_3_0;
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              break L1;
-            } else {
-              stackOut_2_0 = (uj) (Object) stackIn_2_0;
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              break L1;
-            }
-          }
-          stackIn_4_0.field_a = stackIn_4_1 != 0;
-          return var2;
-        }
+        uj var2 = new uj(true);
+        var2.field_a = param0 ? true : false;
+        return var2;
     }
 
     final static byte a(int param0, char param1) {

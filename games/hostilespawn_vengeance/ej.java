@@ -26,7 +26,7 @@ abstract class ej {
         lm var8 = null;
         if (param3 != -18986) {
             boolean discarded$0 = ej.d((byte) -61);
-            var6 = (long)param2 + ((long)param1 << -295689312);
+            var6 = (long)param2 + ((long)param1 << 32);
             var8 = new lm();
             var8.field_h = var6;
             var8.field_w = param4 ? true : false;
@@ -44,7 +44,7 @@ abstract class ej {
             }
             return var8;
         }
-        var6 = (long)param2 + ((long)param1 << -295689312);
+        var6 = (long)param2 + ((long)param1 << 32);
         var8 = new lm();
         var8.field_h = var6;
         var8.field_w = param4 ? true : false;
@@ -113,25 +113,96 @@ abstract class ej {
 
     final static Object a(boolean param0, byte[] param1, int param2) {
         md var3 = null;
-        if (param1 != null) {
-          if (param1.length <= 136) {
-            if (param2 > 104) {
-              if (!param0) {
-                return (Object) (Object) param1;
+        RuntimeException var3_ref = null;
+        Object stackIn_2_0 = null;
+        md stackIn_5_0 = null;
+        Object stackIn_8_0 = null;
+        byte[] stackIn_11_0 = null;
+        byte[] stackIn_13_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_12_0 = null;
+        byte[] stackOut_10_0 = null;
+        Object stackOut_7_0 = null;
+        md stackOut_4_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            if (param1 != null) {
+              if (param1.length <= 136) {
+                if (param2 > 104) {
+                  if (param0) {
+                    stackOut_12_0 = dc.a(109, param1);
+                    stackIn_13_0 = stackOut_12_0;
+                    break L0;
+                  } else {
+                    stackOut_10_0 = (byte[]) param1;
+                    stackIn_11_0 = stackOut_10_0;
+                    return (Object) (Object) stackIn_11_0;
+                  }
+                } else {
+                  stackOut_7_0 = null;
+                  stackIn_8_0 = stackOut_7_0;
+                  return stackIn_8_0;
+                }
               } else {
-                return (Object) (Object) dc.a(109, param1);
+                var3 = new md();
+                ((nj) (Object) var3).a(24, param1);
+                stackOut_4_0 = (md) var3;
+                stackIn_5_0 = stackOut_4_0;
+                return (Object) (Object) stackIn_5_0;
               }
             } else {
-              return null;
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
-          } else {
-            var3 = new md();
-            ((nj) (Object) var3).a(24, param1);
-            return (Object) (Object) var3;
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var3_ref;
+            stackOut_14_1 = new StringBuilder().append("ej.L(").append(param0).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param1 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L1;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L1;
+            }
+          }
+          throw wg.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 41);
         }
+        return (Object) (Object) stackIn_13_0;
     }
 
     abstract void a(byte param0);
@@ -142,14 +213,11 @@ abstract class ej {
         field_n = null;
         field_q = null;
         field_h = null;
-        if (param0 != -21742) {
-            return;
-        }
         field_d = null;
     }
 
     final static boolean d(byte param0) {
-        if (-21 >= (qh.field_u ^ -1)) {
+        if (qh.field_u >= 20) {
           return false;
         } else {
           qh.field_u = qh.field_u + ((int)(5.0 * Math.random()) + 20);

@@ -6,14 +6,11 @@ final class la {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 16777215) {
-            la.b(122);
-        }
     }
 
     final static void b(int param0) {
-        dl var1_ref_dl = null;
-        int var1 = 0;
+        dl var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -141,7 +138,7 @@ final class la {
                       var12.a(-uh.field_q.field_v + 18, -uh.field_q.field_t + 241);
                       var7 = 0;
                       L1: while (true) {
-                        if ((var7 ^ -1) <= (hf.field_c.length ^ -1)) {
+                        if (~var7 <= ~hf.field_c.length) {
                           hf.field_c = null;
                           kp.field_n = ga.field_E.d();
                           kp.field_n.a();
@@ -156,7 +153,7 @@ final class la {
                           break L0;
                         } else {
                           ld.field_v[var7].a();
-                          int discarded$6 = rn.field_k.a(hf.field_c[var7], 3, 3, ld.field_v[var7].field_l + -6, -6 + ld.field_v[var7].field_u, qm.field_n, -1, 1, 1, rn.field_k.field_u + rn.field_k.field_o);
+                          int discarded$3 = rn.field_k.a(hf.field_c[var7], 3, 3, ld.field_v[var7].field_l + -6, -6 + ld.field_v[var7].field_u, qm.field_n, -1, 1, 1, rn.field_k.field_u + rn.field_k.field_o);
                           hb.a(3, ld.field_v[var7].field_u, 0, ld.field_v[var7].field_l, ld.field_v[var7], -76, 1, 0);
                           var7++;
                           continue L1;
@@ -223,7 +220,7 @@ final class la {
                   }
                 }
                 L5: {
-                  if (-1 >= (var8 ^ -1)) {
+                  if (var8 >= 0) {
                     break L5;
                   } else {
                     var9_int = -var8;
@@ -253,13 +250,13 @@ final class la {
                 a.field_c.e();
                 var9 = new dl(a.field_c.field_n, a.field_c.field_o);
                 var9.a();
-                int discarded$7 = ra.field_c.a(var14, km.field_e, fk.field_u, wn.field_c, sc.field_h, 16777215, -1, 1, 1, ra.field_c.field_u + ra.field_c.field_o);
+                int discarded$4 = ra.field_c.a(var14, km.field_e, fk.field_u, wn.field_c, sc.field_h, 16777215, -1, 1, 1, ra.field_c.field_u + ra.field_c.field_o);
                 hb.a(3, var9.field_o, 0, var9.field_n, var9, -42, 1, 0);
                 a.field_c.a();
                 var9.a(0, 0);
                 em.field_m = new dl(640, 480);
                 em.field_m.a();
-                a.field_c.a((a.field_c.field_n >> -2040896863) + sj.field_f, (a.field_c.field_o >> -978277023) + kl.field_U, o.field_f, 4096);
+                a.field_c.a((a.field_c.field_n >> 1) + sj.field_f, (a.field_c.field_o >> 1) + kl.field_U, o.field_f, 4096);
                 a.field_c = null;
                 em.field_m.b();
                 kh.a(var29, var2, var3);
@@ -283,7 +280,7 @@ final class la {
                 var17 = ci.a(new String[1], nk.field_l, 3);
                 gh.field_A = null;
                 var16.a();
-                int discarded$8 = rn.field_k.a(var17, 3, 3, var16.field_l + -6, var16.field_u - 6, 16777215, -1, 0, 1, rn.field_k.field_o + rn.field_k.field_u);
+                int discarded$5 = rn.field_k.a(var17, 3, 3, var16.field_l + -6, var16.field_u - 6, 16777215, -1, 0, 1, rn.field_k.field_o + rn.field_k.field_u);
                 hb.a(3, var16.field_u, 0, var16.field_l, var16, -38, 1, 0);
                 wl.field_o.a();
                 var16.a(-wl.field_o.field_v + 199, -wl.field_o.field_t + 83);
@@ -363,16 +360,16 @@ final class la {
               if (fl.field_a != null) {
                 L14: {
                   ad.field_h.a(231, 390);
-                  var1_ref_dl = ga.field_E;
+                  var1 = ga.field_E;
                   if (bc.field_f.field_c != 0) {
                     break L14;
                   } else {
-                    var1_ref_dl = kp.field_n;
+                    var1 = kp.field_n;
                     break L14;
                   }
                 }
                 L15: {
-                  var1_ref_dl.a(0, 0);
+                  var1.a(0, 0);
                   stackOut_48_0 = 40;
                   stackOut_48_1 = 40;
                   stackOut_48_2 = 2047;
@@ -385,7 +382,7 @@ final class la {
                   stackIn_49_1 = stackOut_48_1;
                   stackIn_49_2 = stackOut_48_2;
                   stackIn_49_3 = stackOut_48_3;
-                  if ((bc.field_f.field_c ^ -1) != -1) {
+                  if (bc.field_f.field_c != 0) {
                     stackOut_50_0 = stackIn_50_0;
                     stackOut_50_1 = stackIn_50_1;
                     stackOut_50_2 = stackIn_50_2;
@@ -412,18 +409,18 @@ final class la {
                   }
                 }
                 L16: {
-                  var2 = stackIn_51_0 - -(stackIn_51_1 * va.a(stackIn_51_2, stackIn_51_3 << stackIn_51_4) >> 1054662000);
-                  if (-1 <= (var2 ^ -1)) {
+                  var2 = stackIn_51_0 - -(stackIn_51_1 * va.a(stackIn_51_2, stackIn_51_3 << stackIn_51_4) >> 16);
+                  if (var2 <= 0) {
                     break L16;
                   } else {
                     ad.field_h.d(230, 389, var2);
                     ad.field_h.d(232, 389, var2);
                     ad.field_h.d(232, 391, var2);
                     ad.field_h.d(230, 391, var2);
-                    var1_ref_dl.d(1, 1, var2);
-                    var1_ref_dl.d(-1, 1, var2);
-                    var1_ref_dl.d(1, -1, var2);
-                    var1_ref_dl.d(-1, -1, var2);
+                    var1.d(1, 1, var2);
+                    var1.d(-1, 1, var2);
+                    var1.d(1, -1, var2);
+                    var1.d(-1, -1, var2);
                     break L16;
                   }
                 }
@@ -434,7 +431,7 @@ final class la {
                   stackIn_55_1 = stackOut_53_1;
                   stackIn_54_0 = stackOut_53_0;
                   stackIn_54_1 = stackOut_53_1;
-                  if ((bc.field_f.field_c ^ -1) != -1) {
+                  if (bc.field_f.field_c != 0) {
                     stackOut_55_0 = stackIn_55_0;
                     stackOut_55_1 = stackIn_55_1;
                     stackOut_55_2 = 0;
@@ -511,26 +508,26 @@ final class la {
               if (null == qk.field_H) {
                 break L22;
               } else {
-                var1 = 357 - qk.field_H.field_o / 2;
-                qk.field_H.a(-qk.field_H.field_n + 269, var1);
-                bf.field_a.a(586, var1);
-                if ((var1 ^ -1) <= (bm.field_h ^ -1)) {
+                var1_int = 357 - qk.field_H.field_o / 2;
+                qk.field_H.a(-qk.field_H.field_n + 269, var1_int);
+                bf.field_a.a(586, var1_int);
+                if (~var1_int <= ~bm.field_h) {
                   break L22;
                 } else {
-                  if ((qk.field_H.field_u + var1 ^ -1) < (bm.field_h ^ -1)) {
-                    var2 = 40 + (40 * va.a(2047, hl.field_g << 1584725028) >> -1821849008);
+                  if (~(qk.field_H.field_u + var1_int) < ~bm.field_h) {
+                    var2 = 40 + (40 * va.a(2047, hl.field_g << 4) >> 16);
                     if (var2 > 0) {
                       L23: {
                         if (qh.field_i <= 269 + -qk.field_H.field_l) {
                           break L23;
                         } else {
-                          if (-270 >= (qh.field_i ^ -1)) {
+                          if (qh.field_i >= 269) {
                             break L23;
                           } else {
-                            qk.field_H.d(269 - (qk.field_H.field_n + 1), var1 - 1, var2);
-                            qk.field_H.d(-qk.field_H.field_n + 270, var1 + -1, var2);
-                            qk.field_H.d(-1 + (269 + -qk.field_H.field_n), var1 + 1, var2);
-                            qk.field_H.d(-qk.field_H.field_n + 269 - -1, 1 + var1, var2);
+                            qk.field_H.d(269 - (qk.field_H.field_n + 1), var1_int - 1, var2);
+                            qk.field_H.d(-qk.field_H.field_n + 270, var1_int + -1, var2);
+                            qk.field_H.d(-1 + (269 + -qk.field_H.field_n), var1_int + 1, var2);
+                            qk.field_H.d(-qk.field_H.field_n + 270, 1 + var1_int, var2);
                             break L22;
                           }
                         }
@@ -541,10 +538,10 @@ final class la {
                         if (qk.field_H.field_l + 586 <= qh.field_i) {
                           break L22;
                         } else {
-                          bf.field_a.d(585, -1 + var1, var2);
-                          bf.field_a.d(587, -1 + var1, var2);
-                          bf.field_a.d(585, 1 + var1, var2);
-                          bf.field_a.d(587, 1 + var1, var2);
+                          bf.field_a.d(585, -1 + var1_int, var2);
+                          bf.field_a.d(587, -1 + var1_int, var2);
+                          bf.field_a.d(585, 1 + var1_int, var2);
+                          bf.field_a.d(587, 1 + var1_int, var2);
                           break L22;
                         }
                       }

@@ -14,26 +14,13 @@ final class bb extends br {
     byte[] field_f;
 
     public static void a(int param0) {
-        if (param0 != -18535) {
-          String discarded$2 = bb.c(-69);
-          field_h = null;
-          field_g = null;
-          field_n = null;
-          field_m = null;
-          field_o = null;
-          field_i = null;
-          field_k = null;
-          return;
-        } else {
-          field_h = null;
-          field_g = null;
-          field_n = null;
-          field_m = null;
-          field_o = null;
-          field_i = null;
-          field_k = null;
-          return;
-        }
+        field_h = null;
+        field_g = null;
+        field_n = null;
+        field_m = null;
+        field_o = null;
+        field_i = null;
+        field_k = null;
     }
 
     final static String c(int param0) {
@@ -47,9 +34,13 @@ final class bb extends br {
     }
 
     bb(long param0, int param1, byte[] param2) {
-        ((bb) this).field_j = param0;
-        ((bb) this).field_f = param2;
-        ((bb) this).field_l = param1;
+        try {
+            ((bb) this).field_j = param0;
+            ((bb) this).field_f = param2;
+            ((bb) this).field_l = param1;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "bb.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

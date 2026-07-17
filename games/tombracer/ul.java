@@ -136,7 +136,8 @@ final class ul extends nqa implements na {
         var11 = var10;
         var6 = 0;
         L3: while (true) {
-          if ((var6 ^ -1) <= -7) {
+          if (var6 >= 6) {
+            return;
           } else {
             var7 = ((ul) this).field_g.LockRect(var6, 0, 0, 0, ((ul) this).field_f, ((ul) this).field_f, 0, var11);
             if (jagdx.ah.a(var7, (byte) 112)) {

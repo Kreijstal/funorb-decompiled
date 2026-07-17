@@ -9,50 +9,87 @@ class wo extends ah {
     static ln field_yb;
 
     void a(wk param0, int param1) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         var6 = ZombieDawn.field_J;
-        bi.d(param0.a(((wo) this).a(true), (byte) -74), param0.a(((wo) this).f(param1 ^ 237235572), 0), ((wo) this).field_pb, 16711680);
-        if (param1 != 5060) {
-          field_xb = null;
-          var3 = 0;
-          L0: while (true) {
-            if (((wo) this).field_ub <= var3) {
-              return;
-            } else {
-              var4 = param0.a(((wo) this).field_jb[var3], (byte) -59);
-              var5 = param0.a(((wo) this).field_gb[var3], 0);
-              bi.b(-1 + var4, var5 - 1, 3, 3, 0);
-              bi.a(var4, var5, 65280);
-              var3++;
-              continue L0;
+        try {
+          L0: {
+            L1: {
+              bi.d(param0.a(((wo) this).a(true), (byte) -74), param0.a(((wo) this).f(param1 ^ 237235572), 0), ((wo) this).field_pb, 16711680);
+              if (param1 == 5060) {
+                break L1;
+              } else {
+                field_xb = null;
+                break L1;
+              }
+            }
+            var3_int = 0;
+            L2: while (true) {
+              if (((wo) this).field_ub <= var3_int) {
+                break L0;
+              } else {
+                var4 = param0.a(((wo) this).field_jb[var3_int], (byte) -59);
+                var5 = param0.a(((wo) this).field_gb[var3_int], 0);
+                bi.b(-1 + var4, var5 - 1, 3, 3, 0);
+                bi.a(var4, var5, 65280);
+                var3_int++;
+                continue L2;
+              }
             }
           }
-        } else {
-          var3 = 0;
-          L1: while (true) {
-            if (((wo) this).field_ub <= var3) {
-              return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("wo.L(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
             } else {
-              var4 = param0.a(((wo) this).field_jb[var3], (byte) -59);
-              var5 = param0.a(((wo) this).field_gb[var3], 0);
-              bi.b(-1 + var4, var5 - 1, 3, 3, 0);
-              bi.a(var4, var5, 65280);
-              var3++;
-              continue L1;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
+          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
     }
 
     final static em v(int param0) {
-        if (param0 != 6130) {
-          return null;
-        } else {
-          return new em(0, 0, se.field_j.field_p, 0, (io) null, se.field_j.field_s, se.field_j.field_m, se.field_j.field_p, se.field_j.field_p, se.field_j.field_o, se.field_j.field_f, false, true, 32768, 0);
-        }
+        return new em(0, 0, se.field_j.field_p, 0, (io) null, se.field_j.field_s, se.field_j.field_m, se.field_j.field_p, se.field_j.field_p, se.field_j.field_o, se.field_j.field_f, false, true, 32768, 0);
     }
 
     void l(byte param0) {
@@ -105,7 +142,7 @@ class wo extends ah {
               } else {
                 if (!((wo) this).p(-125)) {
                   if (!((wo) this).field_Ab) {
-                    if (-4 != (((wo) this).field_F ^ -1)) {
+                    if (((wo) this).field_F != 3) {
                       ((wo) this).e(3, -6904);
                       return;
                     } else {
@@ -139,7 +176,7 @@ class wo extends ah {
               } else {
                 if (!((wo) this).p(-125)) {
                   if (!((wo) this).field_Ab) {
-                    if (-4 == (((wo) this).field_F ^ -1)) {
+                    if (((wo) this).field_F == 3) {
                       return;
                     } else {
                       ((wo) this).e(3, -6904);
@@ -174,7 +211,7 @@ class wo extends ah {
             } else {
               if (!((wo) this).p(-125)) {
                 if (!((wo) this).field_Ab) {
-                  if (-4 == (((wo) this).field_F ^ -1)) {
+                  if (((wo) this).field_F == 3) {
                     return;
                   } else {
                     ((wo) this).e(3, -6904);
@@ -214,7 +251,7 @@ class wo extends ah {
               } else {
                 if (!((wo) this).p(-125)) {
                   if (!((wo) this).field_Ab) {
-                    if (-4 == (((wo) this).field_F ^ -1)) {
+                    if (((wo) this).field_F == 3) {
                       return;
                     } else {
                       ((wo) this).e(3, -6904);
@@ -252,7 +289,7 @@ class wo extends ah {
                       ((wo) this).field_Ab = false;
                       break L1;
                     } else {
-                      if (-4 != (((wo) this).field_F ^ -1)) {
+                      if (((wo) this).field_F != 3) {
                         ((wo) this).e(3, -6904);
                         break L1;
                       } else {
@@ -290,7 +327,7 @@ class wo extends ah {
                     ((wo) this).field_Ab = false;
                     break L2;
                   } else {
-                    if (-4 != (((wo) this).field_F ^ -1)) {
+                    if (((wo) this).field_F != 3) {
                       ((wo) this).e(3, -6904);
                       break L2;
                     } else {
@@ -325,7 +362,7 @@ class wo extends ah {
               if (4 == ((wo) this).field_t) {
                 break L1;
               } else {
-                if ((((wo) this).field_t ^ -1) != -7) {
+                if (((wo) this).field_t != 6) {
                   break L0;
                 } else {
                   break L1;
@@ -343,9 +380,6 @@ class wo extends ah {
         field_yb = null;
         field_zb = null;
         field_xb = null;
-        if (param0 <= 34) {
-            field_zb = null;
-        }
     }
 
     static {

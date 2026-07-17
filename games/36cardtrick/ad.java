@@ -18,9 +18,6 @@ final class ad extends qb {
     int field_l;
 
     final static void a(int param0) {
-        if (param0 < 40) {
-            ad.d(90);
-        }
     }
 
     public static void d(int param0) {
@@ -39,16 +36,20 @@ final class ad extends qb {
     }
 
     ad(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((ad) this).field_n = param4;
-        ((ad) this).field_l = param3;
-        ((ad) this).field_m = param1;
-        ((ad) this).field_s = param5;
-        ((ad) this).field_r = param0;
-        ((ad) this).field_o = param6;
-        ((ad) this).field_k = param2;
-        int fieldTemp$0 = bj.field_h;
-        bj.field_h = bj.field_h + 1;
-        ((ad) this).field_p = 65535 & fieldTemp$0;
+        try {
+            ((ad) this).field_n = param4;
+            ((ad) this).field_l = param3;
+            ((ad) this).field_m = param1;
+            ((ad) this).field_s = param5;
+            ((ad) this).field_r = param0;
+            ((ad) this).field_o = param6;
+            ((ad) this).field_k = param2;
+            int fieldTemp$0 = bj.field_h;
+            bj.field_h = bj.field_h + 1;
+            ((ad) this).field_p = 65535 & fieldTemp$0;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "ad.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

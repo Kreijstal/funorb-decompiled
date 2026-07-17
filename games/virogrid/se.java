@@ -13,9 +13,6 @@ final class se {
     public static void a(byte param0) {
         field_e = null;
         field_b = null;
-        if (param0 <= 40) {
-            return;
-        }
         field_f = null;
         field_a = null;
         field_c = null;

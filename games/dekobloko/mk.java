@@ -13,29 +13,22 @@ abstract class mk {
         field_d = null;
         field_a = null;
         field_b = null;
-        if (param0) {
-            field_a = null;
-        }
     }
 
     abstract byte[] a(int param0);
 
     final static void a(int param0, int param1, byte param2, cc param3, int param4, cc param5) {
-        if (param2 >= 0) {
-          mk.a((byte) 1);
-          le.field_t = param0;
-          je.field_c = param1;
-          ql.field_b = param5;
-          ba.field_d = param4;
-          gf.field_b = param3;
-          return;
-        } else {
-          le.field_t = param0;
-          je.field_c = param1;
-          ql.field_b = param5;
-          ba.field_d = param4;
-          gf.field_b = param3;
-          return;
+        try {
+            if (param2 >= 0) {
+                mk.a((byte) 1);
+            }
+            le.field_t = param0;
+            je.field_c = param1;
+            ql.field_b = param5;
+            ba.field_d = param4;
+            gf.field_b = param3;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "mk.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 

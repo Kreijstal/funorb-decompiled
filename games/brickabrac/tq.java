@@ -94,7 +94,11 @@ final class tq {
     }
 
     final static void a(int param0, boolean param1, ie param2, tg param3, int param4, java.awt.Component param5) {
-        il.a(param2, param3, param0, param4, param0, param4 ^ 2024, param5, param1);
+        try {
+            il.a(param2, param3, param0, param4, param0, param4 ^ 2024, param5, param1);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "tq.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

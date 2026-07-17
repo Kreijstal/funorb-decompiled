@@ -30,7 +30,7 @@ final class ce extends dj {
           if (qh.field_o.isEmpty()) {
             var3 = 0;
             L1: while (true) {
-              if ((var3 ^ -1) <= -4) {
+              if (var3 >= 3) {
                 if (0 != var1) {
                   break L0;
                 } else {
@@ -86,7 +86,7 @@ final class ce extends dj {
             var8 = (double)(var3 - -var4) * 0.5;
             var10 = 0.5 * (double)(var5 + var6);
             var12 = 24.0;
-            if (-481 <= (var7 ^ -1)) {
+            if (var7 <= 480) {
               break L4;
             } else {
               var12 = 480.0 * var12 / (double)var7;
@@ -103,9 +103,6 @@ final class ce extends dj {
 
     public static void b(boolean param0) {
         field_eb = null;
-        if (param0) {
-            return;
-        }
         field_bb = null;
     }
 

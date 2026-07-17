@@ -14,9 +14,6 @@ final class o extends mc {
 
     public static void a(int param0) {
         field_p = null;
-        if (param0 != -11961) {
-            return;
-        }
         field_r = null;
         field_o = null;
         field_n = null;
@@ -24,25 +21,13 @@ final class o extends mc {
 
     final static void b(byte param0) {
         int var1 = 0;
-        if (param0 <= 0) {
-          om.field_Rb = mk.field_b.b(cd.field_c[14]);
-          var1 = mk.field_b.b(cd.field_c[15]);
-          if (om.field_Rb < var1) {
-            om.field_Rb = var1;
-            return;
-          } else {
-            return;
-          }
+        om.field_Rb = mk.field_b.b(cd.field_c[14]);
+        var1 = mk.field_b.b(cd.field_c[15]);
+        if (om.field_Rb < var1) {
+          om.field_Rb = var1;
+          return;
         } else {
-          field_p = null;
-          om.field_Rb = mk.field_b.b(cd.field_c[14]);
-          var1 = mk.field_b.b(cd.field_c[15]);
-          if (om.field_Rb >= var1) {
-            return;
-          } else {
-            om.field_Rb = var1;
-            return;
-          }
+          return;
         }
     }
 

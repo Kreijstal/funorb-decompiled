@@ -194,9 +194,6 @@ abstract class ld {
     abstract void a(int param0, int param1);
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            return;
-        }
         field_d = null;
         field_j = null;
         field_b = null;

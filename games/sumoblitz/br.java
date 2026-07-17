@@ -14,54 +14,34 @@ final class br {
     String field_e;
 
     final static void a(long param0, byte param1) {
-        InterruptedException var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        Thread.sleep(param0);
-                        if (param1 == -21) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
+        try {
+            InterruptedException var3 = null;
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                Thread.sleep(param0);
+                if (param1 == -21) {
+                  break L0;
+                } else {
+                  br.a(-109L, (byte) 47);
+                  return;
                 }
-                case 1: {
-                    try {
-                        br.a(-109L, (byte) 47);
-                        return;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    var3 = (InterruptedException) (Object) caughtException;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var3 = (InterruptedException) (Object) decompiledCaughtException;
+                break L1;
+              }
             }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static int b(int param0) {
-        if (param0 > -3) {
-            br.a(101);
-            return 1;
-        }
         return 1;
     }
 
@@ -72,7 +52,7 @@ final class br {
               if (((br) this).field_j == qj.field_d) {
                 return 1;
               } else {
-                if (-3 == (wh.field_s ^ -1)) {
+                if (wh.field_s == 2) {
                   if (!lc.a(false, ((br) this).field_d)) {
                     return 0;
                   } else {
@@ -86,12 +66,12 @@ final class br {
               return -19;
             }
           } else {
-            if ((((br) this).field_a ^ -1) >= -1) {
+            if (((br) this).field_a <= 0) {
               if (param0 < -79) {
                 if (((br) this).field_j == qj.field_d) {
                   return 1;
                 } else {
-                  if (-3 == (wh.field_s ^ -1)) {
+                  if (wh.field_s == 2) {
                     if (!lc.a(false, ((br) this).field_d)) {
                       return 0;
                     } else {

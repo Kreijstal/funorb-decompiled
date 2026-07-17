@@ -92,55 +92,21 @@ final class j extends ai {
 
     public static void b(byte param0) {
         field_j = null;
-        if (param0 > -50) {
-            field_j = null;
-        }
     }
 
     final static boolean a(char param0, byte param1) {
-        if (param1 == 56) {
-          if (param0 < 65) {
-            if (param0 >= 97) {
-              if (param0 > 122) {
-                return false;
-              } else {
-                return true;
-              }
+        if (param0 < 65) {
+          if (param0 >= 97) {
+            if (param0 <= 122) {
+              return true;
             } else {
               return false;
             }
           } else {
-            if (param0 > 90) {
-              if (param0 >= 97) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
+            return false;
           }
         } else {
-          j.c((byte) -68);
-          if (param0 >= 65) {
-            if (param0 > 90) {
-              if (param0 >= 97) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (param0 > 90) {
             if (param0 >= 97) {
               if (param0 > 122) {
                 return false;
@@ -150,6 +116,8 @@ final class j extends ai {
             } else {
               return false;
             }
+          } else {
+            return true;
           }
         }
     }
@@ -164,9 +132,13 @@ final class j extends ai {
     }
 
     j(long param0, int param1, byte[] param2) {
-        ((j) this).field_h = param0;
-        ((j) this).field_g = param1;
-        ((j) this).field_i = param2;
+        try {
+            ((j) this).field_h = param0;
+            ((j) this).field_g = param1;
+            ((j) this).field_i = param2;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "j.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

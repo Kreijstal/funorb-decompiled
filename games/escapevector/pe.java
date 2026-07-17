@@ -6,9 +6,6 @@ final class pe {
     int field_a;
 
     final static eo a(int param0) {
-        if (param0 != 18863) {
-            return null;
-        }
         return (eo) (Object) new qf();
     }
 

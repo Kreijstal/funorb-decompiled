@@ -23,7 +23,6 @@ final class ak extends jb {
 
     final static void a(int param0, byte param1) {
         try {
-            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (null == oi.field_c) {
@@ -44,7 +43,7 @@ final class ak extends jb {
                   if (tp.field_f.field_f != 0) {
                     break L2;
                   } else {
-                    if ((10000L + mp.field_p ^ -1L) > (lo.a((byte) -118) ^ -1L)) {
+                    if (~(10000L + mp.field_p) > ~lo.a((byte) -118)) {
                       tp.field_f.d(8, param0);
                       break L2;
                     } else {
@@ -53,33 +52,21 @@ final class ak extends jb {
                   }
                 }
                 L3: {
-                  if ((tp.field_f.field_f ^ -1) >= -1) {
+                  if (tp.field_f.field_f <= 0) {
                     break L3;
                   } else {
-                    try {
+                    {
                       L4: {
-                        oi.field_c.a(0, param1 ^ -116, tp.field_f.field_h, tp.field_f.field_f);
+                        oi.field_c.a(0, 92, tp.field_f.field_h, tp.field_f.field_f);
                         mp.field_p = lo.a((byte) 90);
                         break L4;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        jj.a(4);
-                        break L5;
                       }
                     }
                     tp.field_f.field_f = 0;
                     break L3;
                   }
                 }
-                if (param1 != -48) {
-                  ak.a((byte) -60, 78, 70, 24, -99);
-                  return;
-                } else {
-                  return;
-                }
+                return;
               }
             }
             tp.field_f.field_f = 0;

@@ -10,9 +10,6 @@ final class gd {
     public static void a(int param0) {
         field_b = null;
         field_d = null;
-        if (param0 != -1) {
-            return;
-        }
         field_c = null;
     }
 

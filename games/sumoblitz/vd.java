@@ -8,7 +8,7 @@ final class vd {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = 62 / ((param0 - -37) / 46);
+        int var1 = -62;
         field_b = null;
     }
 

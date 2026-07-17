@@ -13,9 +13,6 @@ final class hh extends o {
         field_k = null;
         field_j = null;
         field_m = null;
-        if (param0 <= 95) {
-            field_m = null;
-        }
     }
 
     final static boolean d(byte param0) {
@@ -57,85 +54,70 @@ final class hh extends o {
 
     final static ve a(int param0, String param1) {
         Object var2 = null;
-        Object var3 = null;
-        ve var3_ref = null;
+        ve var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        CharSequence var8 = null;
-        CharSequence var9 = null;
-        var3 = null;
+        ve stackIn_15_0 = null;
+        Object stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        Object stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        Object stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ve stackOut_14_0 = null;
+        Object stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        Object stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        Object stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var5 = Chess.field_G;
-        if (param0 == -15024) {
-          if (null != r.field_Ib) {
-            L0: {
-              var8 = (CharSequence) (Object) param1;
-              var2 = (Object) (Object) ad.a(var8, -2);
-              if (var2 != null) {
-                break L0;
-              } else {
-                var2 = (Object) (Object) var8;
-                break L0;
-              }
+        try {
+          L0: {
+            if (param0 == -15024) {
+              break L0;
+            } else {
+              boolean discarded$2 = hh.d((byte) -52);
+              break L0;
             }
-            var3_ref = (ve) (Object) r.field_Ib.a((long)((String) var2).hashCode(), 3000);
-            L1: while (true) {
-              if (var3_ref != null) {
-                L2: {
-                  var9 = (CharSequence) (Object) var3_ref.field_Fb;
-                  var4 = ad.a(var9, -2);
-                  if (var4 != null) {
-                    break L2;
-                  } else {
-                    var4 = var3_ref.field_Fb;
-                    break L2;
-                  }
-                }
-                if (!var4.equals(var2)) {
-                  var3_ref = (ve) (Object) r.field_Ib.b(true);
-                  continue L1;
-                } else {
-                  return var3_ref;
-                }
-              } else {
-                return null;
-              }
-            }
-          } else {
-            return null;
           }
-        } else {
-          boolean discarded$17 = hh.d((byte) -52);
           if (null != r.field_Ib) {
-            L3: {
+            L1: {
               var6 = (CharSequence) (Object) param1;
               var2 = (Object) (Object) ad.a(var6, -2);
               if (var2 != null) {
-                break L3;
+                break L1;
               } else {
                 var2 = (Object) (Object) var6;
-                break L3;
+                break L1;
               }
             }
-            var3_ref = (ve) (Object) r.field_Ib.a((long)((String) var2).hashCode(), 3000);
-            L4: while (true) {
-              if (var3_ref != null) {
-                L5: {
-                  var7 = (CharSequence) (Object) var3_ref.field_Fb;
+            var3 = (ve) (Object) r.field_Ib.a((long)((String) var2).hashCode(), 3000);
+            L2: while (true) {
+              if (var3 != null) {
+                L3: {
+                  var7 = (CharSequence) (Object) var3.field_Fb;
                   var4 = ad.a(var7, -2);
                   if (var4 != null) {
-                    break L5;
+                    break L3;
                   } else {
-                    var4 = var3_ref.field_Fb;
-                    break L5;
+                    var4 = var3.field_Fb;
+                    break L3;
                   }
                 }
                 if (!var4.equals(var2)) {
-                  var3_ref = (ve) (Object) r.field_Ib.b(true);
-                  continue L4;
+                  var3 = (ve) (Object) r.field_Ib.b(true);
+                  continue L2;
                 } else {
-                  return var3_ref;
+                  stackOut_14_0 = (ve) var3;
+                  stackIn_15_0 = stackOut_14_0;
+                  return stackIn_15_0;
                 }
               } else {
                 return null;
@@ -144,6 +126,35 @@ final class hh extends o {
           } else {
             return null;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = (Object) (Object) decompiledCaughtException;
+            stackOut_18_0 = var2;
+            stackOut_18_1 = new StringBuilder().append("hh.C(").append(param0).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param1 == null) {
+              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L4;
+            } else {
+              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L4;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
     }
 

@@ -25,7 +25,7 @@ final class bk {
               var3 = 1;
               L0: while (true) {
                 if (((bk) this).field_j.length > var3) {
-                  if (param1 < ((bk) this).field_j[-1 + var3] - -((bk) this).field_j[var3] >> -655791103) {
+                  if (param1 < ((bk) this).field_j[-1 + var3] - -((bk) this).field_j[var3] >> 1) {
                     return var3 + -1;
                   } else {
                     var3++;
@@ -40,7 +40,7 @@ final class bk {
               var3 = 1;
               L1: while (true) {
                 if (((bk) this).field_j.length > var3) {
-                  if (param1 < ((bk) this).field_j[-1 + var3] - -((bk) this).field_j[var3] >> -655791103) {
+                  if (param1 < ((bk) this).field_j[-1 + var3] - -((bk) this).field_j[var3] >> 1) {
                     return var3 + -1;
                   } else {
                     var3++;
@@ -83,34 +83,30 @@ final class bk {
         int var2 = 0;
         var2 = TetraLink.field_J;
         s.field_f = false;
-        if (param0 == 1) {
-          wg.field_b = null;
-          if (!qa.field_v) {
-            var1 = pg.field_a;
-            if (-1 > (var1 ^ -1)) {
-              if (var1 == 1) {
-                wg.field_b = pl.field_g;
-                wg.field_b = kj.a((byte) 109, new CharSequence[3]);
-                fl.field_u.r(param0 + -126);
-                of.b(true);
-                return;
-              } else {
-                wg.field_b = sk.a(new String[1], ll.field_z, 121);
-                wg.field_b = kj.a((byte) 109, new CharSequence[3]);
-                fl.field_u.r(param0 + -126);
-                of.b(true);
-                return;
-              }
+        wg.field_b = null;
+        if (!qa.field_v) {
+          var1 = pg.field_a;
+          if (var1 > 0) {
+            if (var1 == 1) {
+              wg.field_b = pl.field_g;
+              wg.field_b = kj.a((byte) 109, new CharSequence[3]);
+              fl.field_u.r(-125);
+              of.b(true);
+              return;
             } else {
-              fl.field_u.r(param0 + -126);
+              wg.field_b = sk.a(new String[1], ll.field_z, 121);
+              wg.field_b = kj.a((byte) 109, new CharSequence[3]);
+              fl.field_u.r(-125);
               of.b(true);
               return;
             }
           } else {
-            fl.field_u.p(param0 ^ 129);
+            fl.field_u.r(-125);
+            of.b(true);
             return;
           }
         } else {
+          fl.field_u.p(128);
           return;
         }
     }

@@ -158,14 +158,14 @@ final class ub extends se {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              if (-7 == (param1 ^ -1)) {
+              if (param1 == 6) {
                 stackOut_8_0 = ql.field_a;
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
                 if (param1 != 7) {
-                  if ((param1 ^ -1) != -9) {
-                    if ((param1 ^ -1) == -10) {
+                  if (param1 != 8) {
+                    if (param1 == 9) {
                       stackOut_19_0 = up.field_K;
                       stackIn_20_0 = stackOut_19_0;
                       return stackIn_20_0;
@@ -181,7 +181,7 @@ final class ub extends se {
                             stackIn_33_0 = stackOut_32_0;
                             return stackIn_33_0;
                           } else {
-                            if (-15 != (param1 ^ -1)) {
+                            if (param1 != 14) {
                               stackOut_37_0 = null;
                               stackIn_38_0 = stackOut_37_0;
                               break L0;
@@ -427,7 +427,7 @@ final class ub extends se {
                     break L3;
                   } else {
                     var5 = bm.field_c[var3_int];
-                    stackOut_3_0 = var5 ^ -1;
+                    stackOut_3_0 = ~var5;
                     stackIn_16_0 = stackOut_3_0;
                     stackIn_4_0 = stackOut_3_0;
                     if (var8 != 0) {
@@ -447,14 +447,14 @@ final class ub extends se {
                           }
                         }
                         var6 = ch.a(dq.field_j[var3_int], true, false);
-                        var7 = nn.field_c - (var6 >> 1749315841);
+                        var7 = nn.field_c - (var6 >> 1);
                         var4 = var4 + qi.field_e;
-                        if (tj.a(param0, -23, (fj.field_h << 199016065) + ch.field_I, param1, (rm.field_b << 527264609) + var6, var4, var7 + -rm.field_b)) {
+                        if (tj.a(param0, -23, (fj.field_h << 1) + ch.field_I, param1, (rm.field_b << 1) + var6, var4, var7 + -rm.field_b)) {
                           stackOut_11_0 = var5;
                           stackIn_12_0 = stackOut_11_0;
                           return stackIn_12_0;
                         } else {
-                          var4 = var4 + ((fj.field_h << -489175647) - -qi.field_e - -ch.field_I);
+                          var4 = var4 + ((fj.field_h << 1) - -qi.field_e - -ch.field_I);
                           break L4;
                         }
                       }
@@ -706,11 +706,11 @@ final class ub extends se {
             L1: while (true) {
               L2: {
                 L3: {
-                  if ((var18 ^ -1) <= -6) {
+                  if (var18 >= 5) {
                     break L3;
                   } else {
                     stackOut_3_0 = -1;
-                    stackOut_3_1 = var18 ^ -1;
+                    stackOut_3_1 = ~var18;
                     stackIn_35_0 = stackOut_3_0;
                     stackIn_35_1 = stackOut_3_1;
                     stackIn_4_0 = stackOut_3_0;
@@ -759,7 +759,7 @@ final class ub extends se {
                               }
                             }
                           }
-                          if (-3 != (var18 ^ -1)) {
+                          if (var18 != 2) {
                             break L4;
                           } else {
                             var19 = vk.field_P;

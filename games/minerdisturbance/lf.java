@@ -33,7 +33,7 @@ final class lf implements Runnable {
                     break L1;
                   } else {
                     var1_int = ((lf) this).field_a.read(((lf) this).field_g.field_u, ((lf) this).field_g.field_o, ((lf) this).field_g.field_u.length + -((lf) this).field_g.field_o);
-                    if ((var1_int ^ -1) > -1) {
+                    if (var1_int < 0) {
                       break L1;
                     } else {
                       ((lf) this).field_g.field_o = ((lf) this).field_g.field_o + var1_int;
@@ -278,24 +278,27 @@ final class lf implements Runnable {
     public static void a(boolean param0) {
         field_i = null;
         field_b = null;
-        if (param0) {
-            lf.a(false);
-        }
     }
 
     final static void a(int param0, we param1) {
-        if (param0 != -673) {
-            field_b = null;
+        try {
+            if (param0 != -673) {
+                field_b = null;
+            }
             wi.field_A = param1;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "lf.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        wi.field_A = param1;
     }
 
     lf(vf param0, java.net.URL param1, int param2) {
-        ((lf) this).field_h = param1;
-        ((lf) this).field_f = param0;
-        ((lf) this).field_g = new sb(param2);
+        try {
+            ((lf) this).field_h = param1;
+            ((lf) this).field_f = param0;
+            ((lf) this).field_g = new sb(param2);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "lf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

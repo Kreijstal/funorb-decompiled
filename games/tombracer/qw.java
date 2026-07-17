@@ -63,8 +63,12 @@ final class qw extends vg {
     }
 
     qw(hca param0, la param1, int param2, int param3, int param4) {
-        ((qw) this).field_i = param3;
-        ((qw) this).field_h = param0;
+        try {
+            ((qw) this).field_i = param3;
+            ((qw) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qw.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     final static void a(byte param0, int param1) {

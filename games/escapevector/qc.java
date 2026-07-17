@@ -2930,7 +2930,7 @@ final class qc extends pn implements qb {
                     break L3;
                   } else {
                     var4_ref = param1.field_f;
-                    if (-249 != (param1.field_g ^ -1)) {
+                    if (param1.field_g != 248) {
                       break L1;
                     } else {
                       L4: {
@@ -3008,10 +3008,10 @@ final class qc extends pn implements qb {
                   break L7;
                 }
                 L10: {
-                  if (-4 == (param1.field_g ^ -1)) {
+                  if (param1.field_g == 3) {
                     break L10;
                   } else {
-                    if (-7 != (param1.field_g ^ -1)) {
+                    if (param1.field_g != 6) {
                       break L5;
                     } else {
                       var5.a(false, ej.field_c, 9);

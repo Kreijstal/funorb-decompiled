@@ -10,29 +10,24 @@ final class mk extends kd {
     static cd field_h;
 
     final static void a(int param0) {
-        if (!qg.field_d) {
-          throw new IllegalStateException();
-        } else {
-          if (param0 != 14891) {
-            return;
-          } else {
-            u.field_tb = true;
-            q.a((byte) -69, true);
-            ta.field_g = 0;
-            return;
-          }
+        if (!(qg.field_d)) {
+            throw new IllegalStateException();
         }
     }
 
     public static void a(byte param0) {
-        int var1 = 110 % ((40 - param0) / 55);
+        int var1 = 0;
         field_l = null;
         field_h = null;
     }
 
     mk(int param0, ij param1) {
-        ((mk) this).field_i = param0;
-        ((mk) this).field_k = param1;
+        try {
+            ((mk) this).field_i = param0;
+            ((mk) this).field_k = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "mk.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

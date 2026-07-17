@@ -331,8 +331,8 @@ final class ph {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            ph.f(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            ph.b(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            ph.f(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            ph.b(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 
@@ -485,8 +485,8 @@ final class ph {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ph.a(field_e, 0, param2 + param3 * field_j, param0, param2, param4, field_j - param4, param5);
-        ph.a(field_e, 0, param2 + param3 * field_j, param1, param3, param5, field_j - param4, param2, param4);
+        ph.a(field_e, 0, param2 + param3 * field_j, param0, param2, param4, field_j - param4, 140);
+        ph.a(field_e, 0, param2 + param3 * field_j, param1, param3, 140, field_j - param4, param2, param4);
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {

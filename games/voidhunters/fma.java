@@ -74,33 +74,23 @@ final class fma extends mfb {
 
     final static void l(int param0) {
         lw.field_i = new llb(0L, (llb) null);
-        if (!ll.field_o) {
-          lw.field_i.b(param0 ^ -9108, fh.field_f);
-          lc.field_b = new bs(bib.field_e, lw.field_i);
-          tb.field_a = new llb(0L, (llb) null);
-          tb.field_a.b(param0 ^ -9108, (llb) (Object) lc.field_b.field_a);
-          tb.field_a.b(-561, gmb.field_c);
-          bp.a(5);
-          if (param0 != 8611) {
-            fma.i((byte) -29);
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (ll.field_o) {
           lw.field_i.b(-561, nna.field_v);
-          lw.field_i.b(param0 ^ -9108, fh.field_f);
+          lw.field_i.b(-561, fh.field_f);
           lc.field_b = new bs(bib.field_e, lw.field_i);
           tb.field_a = new llb(0L, (llb) null);
-          tb.field_a.b(param0 ^ -9108, (llb) (Object) lc.field_b.field_a);
+          tb.field_a.b(-561, (llb) (Object) lc.field_b.field_a);
           tb.field_a.b(-561, gmb.field_c);
           bp.a(5);
-          if (param0 == 8611) {
-            return;
-          } else {
-            fma.i((byte) -29);
-            return;
-          }
+          return;
+        } else {
+          lw.field_i.b(-561, fh.field_f);
+          lc.field_b = new bs(bib.field_e, lw.field_i);
+          tb.field_a = new llb(0L, (llb) null);
+          tb.field_a.b(-561, (llb) (Object) lc.field_b.field_a);
+          tb.field_a.b(-561, gmb.field_c);
+          bp.a(5);
+          return;
         }
     }
 

@@ -20,11 +20,6 @@ final class rm implements Iterable {
         field_h = null;
         field_g = null;
         field_i = null;
-        if (param0 != -1215) {
-            rm.b(57);
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
@@ -44,11 +39,70 @@ final class rm implements Iterable {
     }
 
     final static String a(byte[] param0, int param1) {
-        if (param1 != 17746) {
-            field_a = null;
-            return qi.a(param0, param0.length, 0, param1 + -17864);
+        RuntimeException var2 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 17746) {
+                break L1;
+              } else {
+                field_a = null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = qi.a(param0, param0.length, 0, param1 + -17864);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("rm.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
-        return qi.a(param0, param0.length, 0, param1 + -17864);
+        return stackIn_3_0;
     }
 
     final oh a(int param0, long param1) {
@@ -67,7 +121,7 @@ final class rm implements Iterable {
               ((rm) this).field_j = null;
               return null;
             } else {
-              if ((((rm) this).field_j.field_b ^ -1L) != (param1 ^ -1L)) {
+              if (~((rm) this).field_j.field_b != ~param1) {
                 ((rm) this).field_j = ((rm) this).field_j.field_f;
                 continue L0;
               } else {
@@ -87,7 +141,7 @@ final class rm implements Iterable {
               ((rm) this).field_j = null;
               return null;
             } else {
-              if ((((rm) this).field_j.field_b ^ -1L) != (param1 ^ -1L)) {
+              if (~((rm) this).field_j.field_b != ~param1) {
                 ((rm) this).field_j = ((rm) this).field_j.field_f;
                 continue L1;
               } else {
@@ -102,25 +156,22 @@ final class rm implements Iterable {
 
     final void a(oh param0, boolean param1, long param2) {
         oh var5 = null;
-        if (!(param0.field_e == null)) {
-            param0.b((byte) -58);
-        }
-        if (!param1) {
-            ((rm) this).field_f = null;
+        try {
+            if (!(param0.field_e == null)) {
+                param0.b((byte) -58);
+            }
+            if (!param1) {
+                ((rm) this).field_f = null;
+            }
             var5 = ((rm) this).field_f[(int)((long)(-1 + ((rm) this).field_d) & param2)];
             param0.field_f = var5;
             param0.field_e = var5.field_e;
             param0.field_e.field_f = param0;
             param0.field_f.field_e = param0;
             param0.field_b = param2;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "rm.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        var5 = ((rm) this).field_f[(int)((long)(-1 + ((rm) this).field_d) & param2)];
-        param0.field_f = var5;
-        param0.field_e = var5.field_e;
-        param0.field_e.field_f = param0;
-        param0.field_f.field_e = param0;
-        param0.field_b = param2;
     }
 
     rm(int param0) {
@@ -129,8 +180,9 @@ final class rm implements Iterable {
         ((rm) this).field_d = param0;
         ((rm) this).field_f = new oh[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new oh();
-            ((rm) this).field_f[var2] = new oh();
+            oh dupTemp$0 = new oh();
+            var3 = dupTemp$0;
+            ((rm) this).field_f[var2] = dupTemp$0;
             var3.field_f = var3;
             var3.field_e = var3;
         }
@@ -139,9 +191,9 @@ final class rm implements Iterable {
     final static bc a(int param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         if (!param3) {
             field_c = null;
-            return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
+            return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, false);
         }
-        return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
+        return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, false);
     }
 
     static {

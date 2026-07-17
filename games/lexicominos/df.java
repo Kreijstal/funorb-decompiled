@@ -39,7 +39,7 @@ final class df {
                   break L2;
                 }
               }
-              if ((vl.field_b ^ -1) != -3) {
+              if (vl.field_b != 2) {
                 return 0;
               } else {
                 if (dj.a((byte) 79, ((df) this).field_j)) {
@@ -72,18 +72,10 @@ final class df {
         int[] var22 = null;
         byte[] var23 = null;
         int[] var24 = null;
-        L0: {
-          var8 = Lexicominos.field_L ? 1 : 0;
-          if (param0 == 91) {
-            break L0;
-          } else {
-            field_d = null;
-            break L0;
-          }
-        }
+        var8 = Lexicominos.field_L ? 1 : 0;
         var1 = new db[th.field_t];
         var2 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var2 >= th.field_t) {
             gk.a(12428);
             return var1;
@@ -98,30 +90,30 @@ final class df {
               var13 = var16;
               var6 = var13;
               var7 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var3 <= var7) {
                   var1[var2] = (db) (Object) new pi(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var24);
                   var2++;
-                  continue L1;
+                  continue L0;
                 } else {
-                  var6[var7] = tb.a(vg.a(255, (int) var23[var7]) << 774833816, ci.field_b[vg.a(255, (int) var21[var7])]);
+                  var6[var7] = tb.a(vg.a(255, (int) var23[var7]) << 24, ci.field_b[vg.a(255, (int) var21[var7])]);
                   var7++;
-                  continue L2;
+                  continue L1;
                 }
               }
             } else {
               var9 = new int[var3];
               var22 = var9;
               var6_int = 0;
-              L3: while (true) {
+              L2: while (true) {
                 if (var6_int >= var3) {
                   var1[var2] = new db(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var22);
                   var2++;
-                  continue L1;
+                  continue L0;
                 } else {
                   var9[var6_int] = ci.field_b[vg.a(255, (int) var21[var6_int])];
                   var6_int++;
-                  continue L3;
+                  continue L2;
                 }
               }
             }
@@ -130,19 +122,158 @@ final class df {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            field_a = 12;
-        }
         field_d = null;
     }
 
     final static db a(String param0, String param1, sh param2, byte param3) {
-        int var4 = param2.c(param0, (byte) -89);
-        if (param3 > -36) {
-            df.a(true);
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        db stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        db stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2.c(param0, (byte) -89);
+              if (param3 <= -36) {
+                break L1;
+              } else {
+                df.a(true);
+                break L1;
+              }
+            }
+            var5 = param2.a(param1, -27964, var4_int);
+            stackOut_2_0 = uh.a(param2, var4_int, (byte) -108, var5);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_1 = new StringBuilder().append("df.D(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param2 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw ld.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param3 + 41);
         }
-        int var5 = param2.a(param1, -27964, var4);
-        return uh.a(param2, var4, (byte) -108, var5);
+        return stackIn_3_0;
     }
 
     df(boolean param0) {

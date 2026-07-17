@@ -185,8 +185,7 @@ final class ul extends nk {
           }
         }
         L4: {
-          new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
-          ((ul) this).field_y = stackIn_13_1;
+          ((ul) this).field_y = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
           stackOut_13_0 = this;
           stackOut_13_1 = 256;
           stackIn_15_0 = stackOut_13_0;
@@ -216,19 +215,12 @@ final class ul extends nk {
 
     final void b(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((ul) this).field_y, param0 << (field_r ? 2 : 1));
             ((ul) this).field_x = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((ul) this).field_x.open();
             ((ul) this).field_x.start();
             ((ul) this).field_v = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (hj.a(true, param0) != 1) {
-                ((ul) this).b(vd.b(param0, 17603));
-                return;
-            }
-            ((ul) this).field_x = null;
-            throw lineUnavailableException;
         }
     }
 

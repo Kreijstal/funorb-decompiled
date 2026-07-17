@@ -13,14 +13,11 @@ final class bw {
         if (param1 != 249299984) {
             ak discarded$0 = bw.a(32, -61, false, -3, 30, true);
         }
-        return (int)((param2 << 249299984) / param0);
+        return (int)((param2 << 16) / param0);
     }
 
     public static void a(boolean param0) {
         field_f = null;
-        if (param0) {
-            bw.a(false);
-        }
         field_c = null;
         field_d = null;
         field_e = null;
@@ -42,7 +39,7 @@ final class bw {
         for (var7 = 0; var7 < param1; var7++) {
             var6.field_e.d();
         }
-        var6.field_g = -(var6.field_e.field_v >> -1507173503) + param3;
+        var6.field_g = -(var6.field_e.field_v >> 1) + param3;
         var6.field_k = param0;
         return var6;
     }

@@ -561,7 +561,7 @@ final class gd extends kd {
     }
 
     private final synchronized void d(int param0) {
-        this.e(param0, this.h());
+        this.e(0, this.h());
     }
 
     private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, gd param11, int param12, int param13) {

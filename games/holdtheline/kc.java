@@ -10,20 +10,10 @@ final class kc {
 
     public static void a(boolean param0) {
         field_a = null;
-        if (!param0) {
-          kc.a(true);
-          field_c = null;
-          field_d = null;
-          field_b = null;
-          field_e = null;
-          return;
-        } else {
-          field_c = null;
-          field_d = null;
-          field_b = null;
-          field_e = null;
-          return;
-        }
+        field_c = null;
+        field_d = null;
+        field_b = null;
+        field_e = null;
     }
 
     static int a(int param0, int param1) {

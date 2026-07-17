@@ -83,19 +83,19 @@ final class qi {
                       }
                     }
                     if (var9 == 8364) {
-                      param0[var7 + param2] = (byte)-128;
+                      param0[var7 + param2] = (byte) -128;
                       break L2;
                     } else {
                       if (var9 == 8218) {
-                        param0[var7 + param2] = (byte)-126;
+                        param0[var7 + param2] = (byte) -126;
                         break L2;
                       } else {
                         if (var9 == 402) {
-                          param0[param2 - -var7] = (byte)-125;
+                          param0[param2 - -var7] = (byte) -125;
                           break L2;
                         } else {
                           if (var9 == 8222) {
-                            param0[param2 + var7] = (byte)-124;
+                            param0[param2 + var7] = (byte) -124;
                             break L2;
                           } else {
                             if (8230 != var9) {
@@ -103,74 +103,74 @@ final class qi {
                                 if (8225 != var9) {
                                   if (710 != var9) {
                                     if (8240 == var9) {
-                                      param0[var7 + param2] = (byte)-119;
+                                      param0[var7 + param2] = (byte) -119;
                                       break L2;
                                     } else {
                                       if (var9 != 352) {
                                         if (8249 != var9) {
                                           if (var9 == 338) {
-                                            param0[var7 + param2] = (byte)-116;
+                                            param0[var7 + param2] = (byte) -116;
                                             break L2;
                                           } else {
                                             if (var9 != 381) {
                                               if (8216 != var9) {
                                                 if (8217 != var9) {
                                                   if (var9 == 8220) {
-                                                    param0[var7 + param2] = (byte)-109;
+                                                    param0[var7 + param2] = (byte) -109;
                                                     break L2;
                                                   } else {
                                                     if (var9 == 8221) {
-                                                      param0[var7 + param2] = (byte)-108;
+                                                      param0[var7 + param2] = (byte) -108;
                                                       break L2;
                                                     } else {
                                                       if (var9 == 8226) {
-                                                        param0[var7 + param2] = (byte)-107;
+                                                        param0[var7 + param2] = (byte) -107;
                                                         break L2;
                                                       } else {
                                                         if (var9 == 8211) {
-                                                          param0[param2 + var7] = (byte)-106;
+                                                          param0[param2 + var7] = (byte) -106;
                                                           break L2;
                                                         } else {
                                                           if (var9 != 8212) {
                                                             if (var9 != 732) {
                                                               if (8482 != var9) {
                                                                 if (var9 == 353) {
-                                                                  param0[var7 + param2] = (byte)-102;
+                                                                  param0[var7 + param2] = (byte) -102;
                                                                   break L2;
                                                                 } else {
                                                                   if (var9 == 8250) {
-                                                                    param0[var7 + param2] = (byte)-101;
+                                                                    param0[var7 + param2] = (byte) -101;
                                                                     break L2;
                                                                   } else {
                                                                     if (var9 != 339) {
                                                                       if (var9 == 382) {
-                                                                        param0[var7 + param2] = (byte)-98;
+                                                                        param0[var7 + param2] = (byte) -98;
                                                                         break L2;
                                                                       } else {
                                                                         if (var9 == 376) {
-                                                                          param0[param2 - -var7] = (byte)-97;
+                                                                          param0[param2 - -var7] = (byte) -97;
                                                                           break L2;
                                                                         } else {
-                                                                          param0[var7 + param2] = (byte)63;
+                                                                          param0[var7 + param2] = (byte) 63;
                                                                           break L2;
                                                                         }
                                                                       }
                                                                     } else {
-                                                                      param0[param2 - -var7] = (byte)-100;
+                                                                      param0[param2 - -var7] = (byte) -100;
                                                                       break L2;
                                                                     }
                                                                   }
                                                                 }
                                                               } else {
-                                                                param0[param2 - -var7] = (byte)-103;
+                                                                param0[param2 - -var7] = (byte) -103;
                                                                 break L2;
                                                               }
                                                             } else {
-                                                              param0[var7 + param2] = (byte)-104;
+                                                              param0[var7 + param2] = (byte) -104;
                                                               break L2;
                                                             }
                                                           } else {
-                                                            param0[param2 + var7] = (byte)-105;
+                                                            param0[param2 + var7] = (byte) -105;
                                                             break L2;
                                                           }
                                                         }
@@ -178,41 +178,41 @@ final class qi {
                                                     }
                                                   }
                                                 } else {
-                                                  param0[var7 + param2] = (byte)-110;
+                                                  param0[var7 + param2] = (byte) -110;
                                                   break L2;
                                                 }
                                               } else {
-                                                param0[var7 + param2] = (byte)-111;
+                                                param0[var7 + param2] = (byte) -111;
                                                 break L2;
                                               }
                                             } else {
-                                              param0[var7 + param2] = (byte)-114;
+                                              param0[var7 + param2] = (byte) -114;
                                               break L2;
                                             }
                                           }
                                         } else {
-                                          param0[param2 - -var7] = (byte)-117;
+                                          param0[param2 - -var7] = (byte) -117;
                                           break L2;
                                         }
                                       } else {
-                                        param0[param2 + var7] = (byte)-118;
+                                        param0[param2 + var7] = (byte) -118;
                                         break L2;
                                       }
                                     }
                                   } else {
-                                    param0[var7 + param2] = (byte)-120;
+                                    param0[var7 + param2] = (byte) -120;
                                     break L2;
                                   }
                                 } else {
-                                  param0[param2 + var7] = (byte)-121;
+                                  param0[param2 + var7] = (byte) -121;
                                   break L2;
                                 }
                               } else {
-                                param0[param2 + var7] = (byte)-122;
+                                param0[param2 + var7] = (byte) -122;
                                 break L2;
                               }
                             } else {
-                              param0[param2 - -var7] = (byte)-123;
+                              param0[param2 - -var7] = (byte) -123;
                               break L2;
                             }
                           }

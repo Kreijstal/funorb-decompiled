@@ -13,28 +13,46 @@ public final class Torquing extends tg {
     final static String a(int param0, int param1, fj param2) {
         int var3_int = 0;
         Exception var3 = null;
+        RuntimeException var3_ref = null;
         byte[] var4 = null;
         String var5 = null;
         String stackIn_5_0 = null;
+        String stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
         Throwable decompiledCaughtException = null;
         String stackOut_4_0 = null;
+        String stackOut_6_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         try {
-          L0: {
-            L1: {
+          try {
+            L0: {
               var3_int = param2.a((byte) -114);
-              if ((var3_int ^ -1) >= (param1 ^ -1)) {
-                break L1;
+              if (~var3_int >= ~param1) {
+                break L0;
               } else {
                 var3_int = param1;
-                break L1;
+                break L0;
               }
             }
-            L2: {
+            L1: {
               if (param0 == 26657) {
-                break L2;
+                break L1;
               } else {
                 Torquing.a(9, false);
-                break L2;
+                break L1;
               }
             }
             var4 = new byte[var3_int];
@@ -42,14 +60,44 @@ public final class Torquing extends tg {
             var5 = hk.a(var3_int, true, 0, var4);
             stackOut_4_0 = (String) var5;
             stackIn_5_0 = stackOut_4_0;
-            break L0;
+            return stackIn_5_0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            stackOut_6_0 = "Cabbage";
+            stackIn_7_0 = stackOut_6_0;
+            return stackIn_7_0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (Exception) (Object) decompiledCaughtException;
-          return "Cabbage";
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L2: {
+            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_1 = new StringBuilder().append("Torquing.OA(").append(param0).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        return stackIn_5_0;
     }
 
     final static void a(int param0, boolean param1) {
@@ -67,7 +115,7 @@ public final class Torquing extends tg {
           }
         }
         L1: {
-          if ((wp.field_w ^ -1) < -1) {
+          if (wp.field_w > 0) {
             L2: {
               if (ki.field_D == null) {
                 dg.field_i = je.a(640, 480, nk.field_u, 0, 0, -62);
@@ -430,9 +478,6 @@ public final class Torquing extends tg {
 
     private final void c(boolean param0) {
         int var3 = field_u;
-        if (!param0) {
-            return;
-        }
         qp var4 = (qp) (Object) jh.field_y.b(0);
         while (var4 != null) {
             wc.a(var4, (byte) 99, 4);
@@ -445,7 +490,7 @@ public final class Torquing extends tg {
         }
         kg.field_c = ip.a(4, -127);
         kb.field_f = tl.a(5, 0, 1, 0);
-        if (-1 > (wp.field_w ^ -1)) {
+        if (wp.field_w > 0) {
             ee.field_s = false;
             lp.field_f = false;
         }
@@ -552,52 +597,51 @@ public final class Torquing extends tg {
         int var25 = 0;
         int var26 = 0;
         int var27 = 0;
-        Object var28 = null;
-        int[] var30 = null;
+        int[] var29 = null;
+        int var30 = 0;
         int var31 = 0;
-        int var32 = 0;
-        rm var33 = null;
-        short[] var34 = null;
+        rm var32 = null;
+        short[] var33 = null;
+        t var34 = null;
         t var35 = null;
-        t var36 = null;
-        sm[] var37 = null;
-        sm var38 = null;
+        sm[] var36 = null;
+        sm var37 = null;
+        t var38 = null;
         t var39 = null;
-        t var40 = null;
-        t[] var42 = null;
-        t var43 = null;
-        sm[] var44 = null;
+        t[] var41 = null;
+        t var42 = null;
+        sm[] var43 = null;
+        sm var44 = null;
         sm var45 = null;
         sm var46 = null;
-        sm var47 = null;
-        t var48 = null;
-        int[] var49 = null;
-        t[] var50 = null;
-        t var51 = null;
-        gg var52 = null;
-        byte[] var53 = null;
-        fj var54 = null;
-        String var55 = null;
-        StringBuilder var56 = null;
-        hc var57 = null;
-        byte[] var58 = null;
-        fj var59 = null;
-        String var60 = null;
-        hc var61 = null;
-        short[] var62 = null;
-        int[] var64 = null;
+        t var47 = null;
+        int[] var48 = null;
+        t[] var49 = null;
+        t var50 = null;
+        gg var51 = null;
+        byte[] var52 = null;
+        fj var53 = null;
+        String var54 = null;
+        StringBuilder var55 = null;
+        hc var56 = null;
+        byte[] var57 = null;
+        fj var58 = null;
+        String var59 = null;
+        hc var60 = null;
+        short[] var61 = null;
+        int[] var63 = null;
+        byte[] var64 = null;
         byte[] var65 = null;
-        byte[] var66 = null;
-        short[] var67 = null;
-        int[] var70 = null;
+        short[] var66 = null;
+        int[] var69 = null;
+        byte[] var70 = null;
         byte[] var71 = null;
-        byte[] var72 = null;
-        short[] var73 = null;
+        short[] var72 = null;
+        int[] var73 = null;
         int[] var74 = null;
         int[] var75 = null;
-        int[] var76 = null;
+        byte[] var76 = null;
         byte[] var77 = null;
-        byte[] var78 = null;
         var27 = field_u;
         nn.a(-98);
         if (rl.field_a != null) {
@@ -622,7 +666,7 @@ public final class Torquing extends tg {
                             break L1;
                           } else {
                             L2: {
-                              if (!rl.field_a.a(param1 + -12647)) {
+                              if (!rl.field_a.a(-12749)) {
                                 break L2;
                               } else {
                                 if (rl.field_a.c(-19375)) {
@@ -652,33 +696,33 @@ public final class Torquing extends tg {
                                                             if (!bp.field_c.a(-12749)) {
                                                               break L7;
                                                             } else {
-                                                              if (!bp.field_c.c(param1 ^ 19403)) {
+                                                              if (!bp.field_c.c(-19375)) {
                                                                 break L7;
                                                               } else {
                                                                 L8: {
                                                                   if (!vd.field_e.a(-12749)) {
                                                                     break L8;
                                                                   } else {
-                                                                    if (vd.field_e.c(param1 + -19273)) {
+                                                                    if (vd.field_e.c(-19375)) {
                                                                       L9: {
                                                                         if (!th.field_C.a(-12749)) {
                                                                           break L9;
                                                                         } else {
-                                                                          if (th.field_C.c(param1 ^ 19403)) {
+                                                                          if (th.field_C.c(-19375)) {
                                                                             L10: {
                                                                               if (!he.field_b.a(-12749)) {
                                                                                 break L10;
                                                                               } else {
                                                                                 if (he.field_b.c(-19375)) {
                                                                                   L11: {
-                                                                                    if (-1 <= (wp.field_w ^ -1)) {
+                                                                                    if (wp.field_w <= 0) {
                                                                                       break L11;
                                                                                     } else {
                                                                                       L12: {
                                                                                         if (!eg.field_t.a(-12749)) {
                                                                                           break L12;
                                                                                         } else {
-                                                                                          if (eg.field_t.c(param1 + -19273)) {
+                                                                                          if (eg.field_t.c(-19375)) {
                                                                                             break L11;
                                                                                           } else {
                                                                                             break L12;
@@ -690,11 +734,11 @@ public final class Torquing extends tg {
                                                                                     }
                                                                                   }
                                                                                   pm.a((byte) 80);
-                                                                                  df.a(30.0f, param1 + 116, jn.field_d);
+                                                                                  df.a(30.0f, 14, jn.field_d);
                                                                                   ((Torquing) this).b((byte) 73);
                                                                                   if (param0) {
                                                                                     tp.field_a = je.a(rl.field_a, "", "sphere", (byte) -124);
-                                                                                    cf.a(param1 ^ -6539);
+                                                                                    cf.a(6639);
                                                                                     return false;
                                                                                   } else {
                                                                                     return false;
@@ -718,19 +762,19 @@ public final class Torquing extends tg {
                                                                     }
                                                                   }
                                                                 }
-                                                                df.a(26.0f, param1 ^ 59, c.a(17, fn.field_a, "", hn.field_A, vd.field_e));
+                                                                df.a(26.0f, -95, c.a(17, fn.field_a, "", hn.field_A, vd.field_e));
                                                                 return false;
                                                               }
                                                             }
                                                           }
-                                                          df.a(23.0f, param1 ^ 41, c.a(17, fn.field_a, "", hn.field_A, bp.field_c));
+                                                          df.a(23.0f, -77, c.a(17, fn.field_a, "", hn.field_A, bp.field_c));
                                                           return false;
                                                         } else {
                                                           break L6;
                                                         }
                                                       }
                                                     }
-                                                    df.a(20.0f, param1 + 110, il.a(pg.field_a, n.field_q, mb.field_c, (byte) 33));
+                                                    df.a(20.0f, 8, il.a(pg.field_a, n.field_q, mb.field_c, (byte) 33));
                                                     return false;
                                                   } else {
                                                     break L5;
@@ -742,7 +786,7 @@ public final class Torquing extends tg {
                                             }
                                           }
                                         }
-                                        df.a(19.0f, 28, c.a(param1 + 119, ol.field_e, "", l.field_c, uf.field_l));
+                                        df.a(19.0f, 28, c.a(17, ol.field_e, "", l.field_c, uf.field_l));
                                         return false;
                                       } else {
                                         break L3;
@@ -765,7 +809,7 @@ public final class Torquing extends tg {
                       return false;
                     }
                   } else {
-                    df.a(1.0f, -93, c.a(param1 ^ -117, bo.field_i, "basic", db.field_d, rp.field_d));
+                    df.a(1.0f, -93, c.a(17, bo.field_i, "basic", db.field_d, rp.field_d));
                     return false;
                   }
                 }
@@ -782,7 +826,7 @@ public final class Torquing extends tg {
                   vc.field_c[13] = je.a(rl.field_a, "", "powerups/letter_u", (byte) -122);
                   vc.field_c[14] = je.a(rl.field_a, "", "powerups/letter_i", (byte) -123);
                   vc.field_c[15] = je.a(rl.field_a, "", "powerups/letter_n", (byte) -126);
-                  cf.a(param1 ^ -6539);
+                  cf.a(6639);
                   return false;
                 } else {
                   if (vc.field_c[16] == null) {
@@ -812,16 +856,16 @@ public final class Torquing extends tg {
                         if (!ia.a(-22426, 0)) {
                           break L13;
                         } else {
-                          var33 = rm.a(rl.field_a, "", "sphere_halloween");
-                          gi.a(var33, (byte) 13, 31);
-                          vc.field_c[17] = new kh(var33);
-                          vc.field_c[18] = new kh(var33);
-                          vc.field_c[19] = new kh(var33);
-                          vc.field_c[20] = new kh(var33);
-                          vc.field_c[21] = new kh(var33);
-                          vc.field_c[22] = new kh(var33);
-                          vc.field_c[23] = new kh(var33);
-                          vc.field_c[24] = new kh(var33);
+                          var32 = rm.a(rl.field_a, "", "sphere_halloween");
+                          gi.a(var32, (byte) 13, 31);
+                          vc.field_c[17] = new kh(var32);
+                          vc.field_c[18] = new kh(var32);
+                          vc.field_c[19] = new kh(var32);
+                          vc.field_c[20] = new kh(var32);
+                          vc.field_c[21] = new kh(var32);
+                          vc.field_c[22] = new kh(var32);
+                          vc.field_c[23] = new kh(var32);
+                          vc.field_c[24] = new kh(var32);
                           ji.a(vc.field_c[24].field_l, -1);
                           break L13;
                         }
@@ -864,7 +908,7 @@ public final class Torquing extends tg {
                               }
                             } else {
                               L16: {
-                                if ((vc.field_c[var4_int].field_l.field_m.length ^ -1) < (var3_ref_short__.length ^ -1)) {
+                                if (~vc.field_c[var4_int].field_l.field_m.length < ~var3_ref_short__.length) {
                                   var3_ref_short__ = vc.field_c[var4_int].field_l.field_m;
                                   break L16;
                                 } else {
@@ -883,20 +927,20 @@ public final class Torquing extends tg {
                         vc.field_c[27] = je.a(rl.field_a, "", "obstacles/pinetree_round", (byte) -123);
                         vc.field_c[28] = je.a(rl.field_a, "", "obstacles/pinetree_square", (byte) -122);
                         vc.field_c[29] = je.a(rl.field_a, "", "obstacles/statue", (byte) -126);
-                        var73 = vc.field_c[29].field_l.field_m;
-                        var67 = var73;
-                        var62 = var67;
-                        var34 = var62;
-                        var3_ref_short__ = var34;
+                        var72 = vc.field_c[29].field_l.field_m;
+                        var66 = var72;
+                        var61 = var66;
+                        var33 = var61;
+                        var3_ref_short__ = var33;
                         var4_int = 0;
                         L17: while (true) {
-                          if (var4_int >= var73.length) {
+                          if (var4_int >= var72.length) {
                             vc.field_c[30] = je.a(rl.field_a, "", "obstacles/traffic_cone", (byte) -123);
                             vc.field_c[31] = je.a(rl.field_a, "", "obstacles/traffic_lights_tall", (byte) -121);
                             cf.a(6639);
                             return false;
                           } else {
-                            var5 = var73[var4_int];
+                            var5 = var72[var4_int];
                             var3_ref_short__[var4_int] = (short)(ie.a(127, var5) + 8704);
                             var4_int++;
                             continue L17;
@@ -932,7 +976,7 @@ public final class Torquing extends tg {
               df.a(32.0f, -66, k.field_h);
               ((Torquing) this).b((byte) 73);
               kk.field_o = mn.a(rp.field_d, "basic", "unachieved", 112);
-              pe.field_J = mn.a(rp.field_d, "basic", "locked", param1 + 207);
+              pe.field_J = mn.a(rp.field_d, "basic", "locked", 105);
               mo.a(kk.field_o, 4);
               dd.field_i = mn.a(rp.field_d, "basic", "orbcoin", 124);
               this.q(8);
@@ -940,11 +984,11 @@ public final class Torquing extends tg {
                 break L18;
               } else {
                 m.a(16750848, (java.applet.Applet) this, 0, dh.field_a, 0, 16777215);
-                var35 = new t(640, 480);
-                rj.a(-65, cp.field_i, var35);
+                var34 = new t(640, 480);
+                rj.a(-65, cp.field_i, var34);
                 vc.a(mn.a(rg.field_v, "", "mb_logo", 96), false);
-                var36 = mn.a(rg.field_v, "", "mb_price_bg", 97);
-                kp.a(var36, 10, 24, 96, 118, 37, 6, false, -2000);
+                var35 = mn.a(rg.field_v, "", "mb_price_bg", 97);
+                kp.a(var35, 10, 24, 96, 118, 37, 6, false, -2000);
                 mk.field_b.a(-101);
                 break L18;
               }
@@ -959,39 +1003,39 @@ public final class Torquing extends tg {
               kh.field_r.e();
               dd.field_i.c(0, 0, var3, var3);
               dd.field_i = null;
-              mk.field_b.a(param1 + 4);
+              mk.field_b.a(-98);
               s.field_t = pb.a("frame", -1, "", rg.field_v);
-              lb.a(16777215, pb.a("frame2col", -1, "", rg.field_v), pb.a("frame2alpha", -1, "", rg.field_v), param1 ^ -98);
-              var37 = ip.a(rg.field_v, -123, "", "intro_components");
-              var44 = ip.a(rg.field_v, -109, "", "intro_components_shadows");
-              var45 = var37[1];
-              var7_ref_sm = var37[3];
+              lb.a(16777215, pb.a("frame2col", -1, "", rg.field_v), pb.a("frame2alpha", -1, "", rg.field_v), 4);
+              var36 = ip.a(rg.field_v, -123, "", "intro_components");
+              var43 = ip.a(rg.field_v, -109, "", "intro_components_shadows");
+              var44 = var36[1];
+              var7_ref_sm = var36[3];
               var8_ref_ia = new ia(18, 142, 404, 320);
               qc.field_cb = var8_ref_ia;
               pa.field_e = ip.a(rg.field_v, -115, "", "world_text");
               ml.field_a = ip.a(rg.field_v, -109, "", "world_img");
-              mh.field_d = ip.a(rg.field_v, param1 + -17, "", "world_img_shadow");
+              mh.field_d = ip.a(rg.field_v, -119, "", "world_img_shadow");
               rp.field_b = new t[32];
               var9_ref_int__ = new int[]{16777215, 14211288, 15000804, 10526880};
               var10 = 0;
               L19: while (true) {
                 if (var10 >= 8) {
-                  mk.field_b.a(param1 ^ 11);
+                  mk.field_b.a(-111);
                   pm.field_m = ip.a(rg.field_v, -114, "", "world_title");
-                  wh.field_t = ip.a(rg.field_v, param1 ^ 23, "", "world_title_shadows");
+                  wh.field_t = ip.a(rg.field_v, -115, "", "world_title_shadows");
                   wj.field_k = md.a("getready", 31094, rg.field_v, "");
-                  sg.field_e = pb.a("sprite_textures", param1 ^ 101, "", rg.field_v);
+                  sg.field_e = pb.a("sprite_textures", -1, "", rg.field_v);
                   sg.field_a = pb.a("auras", -1, "", rg.field_v);
-                  var42 = sg.field_a;
+                  var41 = sg.field_a;
                   var11_int = 0;
                   L20: while (true) {
-                    if (var42.length <= var11_int) {
-                      hj.field_c = var45;
-                      of.field_l = var37[2].a();
-                      fq.field_F = new dg(var44[2], 0, 0, 76);
-                      cq.field_w = var37[4].a();
-                      la.field_j = var37[0].a();
-                      jh.field_B = new dg(var44[0], 0, 0, 76);
+                    if (var41.length <= var11_int) {
+                      hj.field_c = var44;
+                      of.field_l = var36[2].a();
+                      fq.field_F = new dg(var43[2], 0, 0, 76);
+                      cq.field_w = var36[4].a();
+                      la.field_j = var36[0].a();
+                      jh.field_B = new dg(var43[0], 0, 0, 76);
                       jb.field_b = var8_ref_ia;
                       nh.field_l = var7_ref_sm;
                       bd.field_w = mn.a(rg.field_v, "", "dashboard", 106);
@@ -1003,19 +1047,19 @@ public final class Torquing extends tg {
                       var10 = 0;
                       L21: while (true) {
                         if (8 <= var10) {
-                          ue.field_c = pb.a("skins", param1 + 101, "", rg.field_v);
+                          ue.field_c = pb.a("skins", -1, "", rg.field_v);
                           bl.field_d = 7;
                           qo.field_t = 2;
                           var10 = 0;
                           L22: while (true) {
                             if (var10 >= 8) {
                               nn.field_a = new af[12][];
-                              var10_ref = (Object) (Object) bi.a(var45, 81);
+                              var10_ref = (Object) (Object) bi.a(var44, 81);
                               var11 = new dg(vg.a(new sm[3], 52), 0, 0, 76);
-                              var46 = vg.a(new sm[3], 122);
-                              var13 = bi.a(var46, param1 + -7);
+                              var45 = vg.a(new sm[3], 122);
+                              var13 = bi.a(var45, -109);
                               nn.field_a[0] = new af[6];
-                              var47 = md.a("pause_title", param1 ^ -30996, rg.field_v, "");
+                              var46 = md.a("pause_title", 31094, rg.field_v, "");
                               nn.field_a[1] = new af[6];
                               nn.field_a[3] = new af[2];
                               nn.field_a[4] = new af[3];
@@ -1030,56 +1074,56 @@ public final class Torquing extends tg {
                               nn.field_a[10] = new af[5];
                               nn.field_a[11] = new af[3];
                               dj.field_a = pb.a("menu_items_recol", -1, "", rg.field_v);
-                              bj.field_L = ip.a(rg.field_v, param1 ^ 31, "", "death_text");
+                              bj.field_L = ip.a(rg.field_v, -123, "", "death_text");
                               qd.field_c = new sm[3];
                               qd.field_c[1] = md.a("death_time", 31094, rg.field_v, "");
-                              qd.field_c[0] = vo.a(-173, i.c((int) param1, 101), ml.field_a[2], 43);
+                              qd.field_c[0] = vo.a(-173, i.c(-102, 101), ml.field_a[2], 43);
                               qd.field_c[2] = vo.a(-194, -1, ml.field_a[6], -34);
-                              kl.field_p = mn.a(rg.field_v, "", "scrolled_instructions_keys", param1 + 186);
+                              kl.field_p = mn.a(rg.field_v, "", "scrolled_instructions_keys", 84);
                               gd.field_a = ip.a(rg.field_v, -116, "", "mb_screenshots");
                               be.a((ec) (Object) new op(vp.field_D, n.field_q, rg.field_v, 6, false));
-                              tj.field_n = pb.a("achievements_lrg", param1 + 101, "", rg.field_v);
-                              var48 = mn.a(rg.field_v, "", "glass", 89);
-                              var48.a();
-                              var75 = var48.field_y;
+                              tj.field_n = pb.a("achievements_lrg", -1, "", rg.field_v);
+                              var47 = mn.a(rg.field_v, "", "glass", 89);
+                              var47.a();
+                              var74 = var47.field_y;
                               tj.field_n[11].a();
-                              var76 = tj.field_n[11].field_y;
-                              var70 = var76;
-                              var64 = var70;
-                              var49 = var64;
-                              var30 = var49;
-                              var19 = var30;
+                              var75 = tj.field_n[11].field_y;
+                              var69 = var75;
+                              var63 = var69;
+                              var48 = var63;
+                              var29 = var48;
+                              var19 = var29;
                               var20 = 0;
                               L23: while (true) {
-                                if (-16385 >= (var20 ^ -1)) {
+                                if (var20 >= 16384) {
                                   tj.field_n[11].d();
-                                  var50 = tj.field_n;
+                                  var49 = tj.field_n;
                                   var18 = 0;
                                   L24: while (true) {
-                                    if ((var18 ^ -1) <= (var50.length ^ -1)) {
+                                    if (~var18 <= ~var49.length) {
                                       rg.field_v = null;
                                       vp.field_D = null;
                                       cf.a(6639);
                                       return false;
                                     } else {
-                                      var51 = var50[var18];
-                                      mo.a(var51, 4);
+                                      var50 = var49[var18];
+                                      mo.a(var50, 4);
                                       var18++;
                                       continue L24;
                                     }
                                   }
                                 } else {
                                   L25: {
-                                    var21 = var75[var20];
+                                    var21 = var74[var20];
                                     if (0 == var21) {
                                       break L25;
                                     } else {
-                                      var22 = var21 >> -1523280954 & 1020 | (var21 & 255) >> -404047933;
+                                      var22 = var21 >> 6 & 1020 | (var21 & 255) >> 3;
                                       var23 = -var22 + 256;
-                                      var24 = var76[var20];
+                                      var24 = var75[var20];
                                       var25 = var24 & 16711935;
                                       var26 = var24 & 65280;
-                                      var19[var20] = gm.a(ie.a(65280 * var22 + var26 * var23, 16711865) >> -128003768, ie.a(16711935, var25 * var23 + var22 * 16711935 >> 1962371368));
+                                      var19[var20] = gm.a(ie.a(65280 * var22 + var26 * var23, 16711865) >> 8, ie.a(16711935, var25 * var23 + var22 * 16711935 >> 8));
                                       break L25;
                                     }
                                   }
@@ -1088,7 +1132,7 @@ public final class Torquing extends tg {
                                 }
                               }
                             } else {
-                              ln.a((byte) 120, var10 * 640 >> 1975801795);
+                              ln.a((byte) 120, var10 * 640 >> 3);
                               var10++;
                               continue L22;
                             }
@@ -1108,24 +1152,24 @@ public final class Torquing extends tg {
                         }
                       }
                     } else {
-                      var43 = var42[var11_int];
-                      var43.a();
+                      var42 = var41[var11_int];
+                      var42.a();
                       var11_int++;
                       continue L20;
                     }
                   }
                 } else {
                   L27: {
-                    var38 = ml.field_a[var10];
-                    var39 = new t(var38.field_c, var38.field_d);
-                    var39.e();
-                    var38.a(-var38.field_a, -var38.field_g);
-                    if (var38.field_d < var38.field_c) {
-                      var14_int = 48 * var38.field_d / var38.field_c;
+                    var37 = ml.field_a[var10];
+                    var38 = new t(var37.field_c, var37.field_d);
+                    var38.e();
+                    var37.a(-var37.field_a, -var37.field_g);
+                    if (var37.field_d < var37.field_c) {
+                      var14_int = 48 * var37.field_d / var37.field_c;
                       var13_int = 48;
                       break L27;
                     } else {
-                      var13_int = var38.field_c * 48 / var38.field_d;
+                      var13_int = var37.field_c * 48 / var37.field_d;
                       var14_int = 48;
                       break L27;
                     }
@@ -1137,16 +1181,16 @@ public final class Torquing extends tg {
                       continue L19;
                     } else {
                       L29: {
-                        t dupTemp$16 = new t(var13_int, var14_int);
-                        rp.field_b[var15 * 8 + var10] = dupTemp$16;
-                        var40 = dupTemp$16;
-                        var16_ref_t = var40;
+                        t dupTemp$14 = new t(var13_int, var14_int);
+                        rp.field_b[var15 * 8 + var10] = dupTemp$14;
+                        var39 = dupTemp$14;
+                        var16_ref_t = var39;
                         var16_ref_t.field_u = 48;
-                        var16_ref_t.field_r = -var40.field_t + var40.field_u >> -1906538815;
-                        var40.e();
+                        var16_ref_t.field_r = -var39.field_t + var39.field_u >> 1;
+                        var39.e();
                         var17 = var9_ref_int__[var15];
                         ph.d(0, 0, ph.field_j, ph.field_d, var17);
-                        var39.d(0, 0, var13_int, var14_int);
+                        var38.d(0, 0, var13_int, var14_int);
                         if (16777215 == var17) {
                           ph.e(0, 0, ph.field_j, ph.field_d);
                           break L29;
@@ -1154,19 +1198,19 @@ public final class Torquing extends tg {
                           break L29;
                         }
                       }
-                      var74 = var40.field_y;
+                      var73 = var39.field_y;
                       var19_int = 0;
                       L30: while (true) {
-                        if ((var74.length ^ -1) >= (var19_int ^ -1)) {
-                          var40.d();
+                        if (~var73.length >= ~var19_int) {
+                          var39.d();
                           var15++;
                           continue L28;
                         } else {
                           L31: {
-                            if ((var74[var19_int] ^ -1) != (var17 ^ -1)) {
+                            if (~var73[var19_int] != ~var17) {
                               break L31;
                             } else {
-                              var74[var19_int] = 0;
+                              var73[var19_int] = 0;
                               break L31;
                             }
                           }
@@ -1184,22 +1228,22 @@ public final class Torquing extends tg {
                   if (th.field_C == null) {
                     if (null != he.field_b) {
                       df.a(40.0f, 34, kf.field_D + " - 0%");
-                      var54 = new fj(he.field_b.a(param1 + -18, "levels.tql", ""));
-                      var55 = var54.h((byte) 126);
+                      var53 = new fj(he.field_b.a(-120, "levels.tql", ""));
+                      var54 = var53.h((byte) 126);
                       var5 = 0;
                       var6 = 1;
                       var7 = 0;
                       L32: while (true) {
-                        if (var7 >= var55.length()) {
+                        if (var7 >= var54.length()) {
                           qc.field_ab = new int[var6];
                           mh.field_k = new int[var6];
-                          var56 = new StringBuilder(8192);
+                          var55 = new StringBuilder(8192);
                           var8 = 0;
                           var9 = 0;
                           var10_ref = null;
                           var11_int = 0;
                           L33: while (true) {
-                            if (var11_int >= var55.length()) {
+                            if (var11_int >= var54.length()) {
                               wi.field_a = new int[var9];
                               hg.field_d = new int[var9];
                               mk.field_c = new int[qc.field_ab.length];
@@ -1212,18 +1256,18 @@ public final class Torquing extends tg {
                                   return false;
                                 } else {
                                   mk.field_c[var8] = var11_int;
-                                  var31 = 0;
-                                  var12_int = var31;
+                                  var30 = 0;
+                                  var12_int = var30;
                                   L35: while (true) {
-                                    if ((var31 ^ -1) <= (qc.field_ab[var8] ^ -1)) {
+                                    if (~var30 <= ~qc.field_ab[var8]) {
                                       var8++;
                                       continue L34;
                                     } else {
-                                      hg.field_d[var11_int] = var31;
-                                      int incrementValue$17 = var11_int;
+                                      hg.field_d[var11_int] = var30;
+                                      int incrementValue$15 = var11_int;
                                       var11_int++;
-                                      wi.field_a[incrementValue$17] = var8;
-                                      var31++;
+                                      wi.field_a[incrementValue$15] = var8;
+                                      var30++;
                                       continue L35;
                                     }
                                   }
@@ -1231,20 +1275,20 @@ public final class Torquing extends tg {
                               }
                             } else {
                               L36: {
-                                var12_int = var55.charAt(var11_int);
+                                var12_int = var54.charAt(var11_int);
                                 if (var12_int == 10) {
-                                  if (var56.length() != 0) {
-                                    var57 = new hc(var8, var56.toString());
-                                    var56.setLength(0);
+                                  if (var55.length() != 0) {
+                                    var56 = new hc(var8, var55.toString());
+                                    var55.setLength(0);
                                     qc.field_ab[var8] = qc.field_ab[var8] + 1;
                                     var9++;
                                     if (var10_ref != null) {
-                                      ((hc) var10_ref).field_m = var57;
-                                      var10_ref = (Object) (Object) var57;
+                                      ((hc) var10_ref).field_m = var56;
+                                      var10_ref = (Object) (Object) var56;
                                       break L36;
                                     } else {
-                                      jm.field_d = var57;
-                                      var10_ref = (Object) (Object) var57;
+                                      jm.field_d = var56;
+                                      var10_ref = (Object) (Object) var56;
                                       break L36;
                                     }
                                   } else {
@@ -1252,7 +1296,7 @@ public final class Torquing extends tg {
                                     break L36;
                                   }
                                 } else {
-                                  StringBuilder discarded$18 = var56.append(var12_int);
+                                  StringBuilder discarded$16 = var55.append(var12_int);
                                   break L36;
                                 }
                               }
@@ -1262,7 +1306,7 @@ public final class Torquing extends tg {
                           }
                         } else {
                           L37: {
-                            var8 = var55.charAt(var7);
+                            var8 = var54.charAt(var7);
                             if (var8 == 10) {
                               L38: {
                                 if (var5 == 0) {
@@ -1285,7 +1329,7 @@ public final class Torquing extends tg {
                       }
                     } else {
                       L39: {
-                        if (-1 <= (wp.field_w ^ -1)) {
+                        if (wp.field_w <= 0) {
                           break L39;
                         } else {
                           if (eg.field_t == null) {
@@ -1302,21 +1346,21 @@ public final class Torquing extends tg {
                             }
                             var3_ref_int__ = cc.field_d.field_j;
                             if (var3_ref_int__ != null) {
-                              var78 = eg.field_t.a(var3_ref_int__, (byte) -97, "", "levels.tql");
-                              var72 = var78;
-                              var66 = var72;
-                              var58 = var66;
-                              var4 = var58;
+                              var77 = eg.field_t.a(var3_ref_int__, (byte) -97, "", "levels.tql");
+                              var71 = var77;
+                              var65 = var71;
+                              var57 = var65;
+                              var4 = var57;
                               if (var4 == null) {
                                 return false;
                               } else {
-                                var59 = new fj(var78);
-                                var60 = var59.h((byte) 118);
+                                var58 = new fj(var77);
+                                var59 = var58.h((byte) 118);
                                 var7 = 0;
                                 var8 = qc.field_ab.length + 1;
                                 var9 = 0;
                                 L41: while (true) {
-                                  if ((var60.length() ^ -1) >= (var9 ^ -1)) {
+                                  if (~var59.length() >= ~var9) {
                                     var9 = qc.field_ab.length;
                                     var10 = 1;
                                     var11_array = new int[var8];
@@ -1331,7 +1375,7 @@ public final class Torquing extends tg {
                                       if (var14.field_m == null) {
                                         var15 = 0;
                                         L43: while (true) {
-                                          if (var15 >= var60.length()) {
+                                          if (var15 >= var59.length()) {
                                             hg.field_d = new int[var10];
                                             wi.field_a = new int[var10];
                                             mk.field_c = new int[qc.field_ab.length];
@@ -1345,18 +1389,18 @@ public final class Torquing extends tg {
                                                 return false;
                                               } else {
                                                 mk.field_c[var9] = var15;
-                                                var32 = 0;
-                                                var16 = var32;
+                                                var31 = 0;
+                                                var16 = var31;
                                                 L45: while (true) {
-                                                  if ((var32 ^ -1) <= (qc.field_ab[var9] ^ -1)) {
+                                                  if (~var31 <= ~qc.field_ab[var9]) {
                                                     var9++;
                                                     continue L44;
                                                   } else {
-                                                    hg.field_d[var15] = var32;
-                                                    int incrementValue$19 = var15;
+                                                    hg.field_d[var15] = var31;
+                                                    int incrementValue$17 = var15;
                                                     var15++;
-                                                    wi.field_a[incrementValue$19] = var9;
-                                                    var32++;
+                                                    wi.field_a[incrementValue$17] = var9;
+                                                    var31++;
                                                     continue L45;
                                                   }
                                                 }
@@ -1364,22 +1408,22 @@ public final class Torquing extends tg {
                                             }
                                           } else {
                                             L46: {
-                                              var16 = var60.charAt(var15);
+                                              var16 = var59.charAt(var15);
                                               if (var16 == 10) {
-                                                if (-1 != (var13_ref.length() ^ -1)) {
-                                                  var61 = new hc(var9, var13_ref.toString());
+                                                if (var13_ref.length() != 0) {
+                                                  var60 = new hc(var9, var13_ref.toString());
                                                   var13_ref = new StringBuilder(8192);
                                                   qc.field_ab[var9] = qc.field_ab[var9] + 1;
                                                   var10++;
-                                                  var14.field_m = var61;
-                                                  var14 = var61;
+                                                  var14.field_m = var60;
+                                                  var14 = var60;
                                                   break L46;
                                                 } else {
                                                   var9++;
                                                   break L46;
                                                 }
                                               } else {
-                                                StringBuilder discarded$20 = var13_ref.append(var16);
+                                                StringBuilder discarded$18 = var13_ref.append(var16);
                                                 break L46;
                                               }
                                             }
@@ -1395,7 +1439,7 @@ public final class Torquing extends tg {
                                     }
                                   } else {
                                     L47: {
-                                      var10 = var60.charAt(var9);
+                                      var10 = var59.charAt(var9);
                                       if (10 != var10) {
                                         var7 = 0;
                                         break L47;
@@ -1443,12 +1487,12 @@ public final class Torquing extends tg {
                                   }
                                 }
                                 lp.field_f = true;
-                                cf.a(param1 ^ -6539);
+                                cf.a(6639);
                                 return false;
                               } else {
-                                int incrementValue$21 = var3;
+                                int incrementValue$19 = var3;
                                 var3++;
-                                ol.field_f[incrementValue$21] = var4_ref;
+                                ol.field_f[incrementValue$19] = var4_ref;
                                 var4_ref = var4_ref.field_m;
                                 continue L50;
                               }
@@ -1458,7 +1502,7 @@ public final class Torquing extends tg {
                               if (!var4_ref.e(0)) {
                                 break L52;
                               } else {
-                                if (!var4_ref.b(param1 ^ -15)) {
+                                if (!var4_ref.b(107)) {
                                   break L52;
                                 } else {
                                   if (!var4_ref.g(1)) {
@@ -1481,16 +1525,10 @@ public final class Torquing extends tg {
                           cf.a(6639);
                           return false;
                         } else {
-                          if (ig.field_q.e(param1 ^ -102)) {
+                          if (ig.field_q.e(0)) {
                             if (null != hg.field_b) {
                               if (vo.field_f != null) {
-                                if (param1 == -102) {
-                                  return true;
-                                } else {
-                                  var28 = null;
-                                  String discarded$22 = Torquing.a(-38, -61, (fj) null);
-                                  return true;
-                                }
+                                return true;
                               } else {
                                 vo.field_f = new mh[12];
                                 fn.field_c = 0;
@@ -1508,9 +1546,9 @@ public final class Torquing extends tg {
                                 }
                               }
                             } else {
-                              lc.d(param1 ^ 1339942777);
+                              lc.d(-1339942685);
                               kl.field_p = null;
-                              cf.a(param1 + 6741);
+                              cf.a(6639);
                               return false;
                             }
                           } else {
@@ -1523,7 +1561,7 @@ public final class Torquing extends tg {
                   } else {
                     df.a(39.0f, -87, pb.field_c);
                     ((Torquing) this).b((byte) 73);
-                    la.field_k[0] = new wl(ih.a(i.c((int) param1, -7922), "", id.field_a, th.field_C, "music/Torquing_Titlescreen"));
+                    la.field_k[0] = new wl(ih.a(i.c(-102, -7922), "", id.field_a, th.field_C, "music/Torquing_Titlescreen"));
                     la.field_k[1] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_nursery_slopes"));
                     la.field_k[2] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_squared_away"));
                     la.field_k[3] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_next_steps"));
@@ -1561,7 +1599,7 @@ public final class Torquing extends tg {
                   return false;
                 }
               } else {
-                df.a(35.0f, param1 ^ -29, jo.field_a);
+                df.a(35.0f, 121, jo.field_a);
                 ((Torquing) this).b((byte) 73);
                 id.field_a = new fi(bp.field_c, vd.field_e);
                 th.field_F[26] = cg.a(bp.field_c, "", "torq_bounce").b();
@@ -1582,14 +1620,14 @@ public final class Torquing extends tg {
                 th.field_F[20] = cg.a(bp.field_c, "", "torq_tick").b();
                 th.field_F[28] = cg.a(bp.field_c, "", "torq_jump2").b();
                 var3 = bp.field_c.a(-1, "");
-                var52 = id.field_a.a(bp.field_c.a("torq_whistle", -107, var3), var3, (byte) -84);
-                var77 = new byte[var52.field_n.length];
-                var71 = var77;
-                var65 = var71;
-                var53 = var65;
-                var5_ref_byte__ = var53;
-                dk.a(var52.field_n, 0, var5_ref_byte__, 0, var77.length);
-                th.field_F[5] = new gg(var52.field_m, var77, var52.field_k, var52.field_o, var52.field_l);
+                var51 = id.field_a.a(bp.field_c.a("torq_whistle", -107, var3), var3, (byte) -84);
+                var76 = new byte[var51.field_n.length];
+                var70 = var76;
+                var64 = var70;
+                var52 = var64;
+                var5_ref_byte__ = var52;
+                dk.a(var51.field_n, 0, var5_ref_byte__, 0, var76.length);
+                th.field_F[5] = new gg(var51.field_m, var76, var51.field_k, var51.field_o, var51.field_l);
                 bp.field_c = null;
                 cf.a(6639);
                 return false;
@@ -1664,12 +1702,12 @@ public final class Torquing extends tg {
             }
             L4: {
               var11 = bn.field_h;
-              if ((var11 ^ -1) != -1) {
-                if (-3 == (var11 ^ -1)) {
+              if (var11 != 0) {
+                if (var11 == 2) {
                   L5: {
                     if (1 == oo.field_b) {
                       L6: {
-                        if ((tm.field_c ^ -1) == -12) {
+                        if (tm.field_c == 11) {
                           pl.a((byte) -120, true);
                           break L6;
                         } else {
@@ -1686,10 +1724,10 @@ public final class Torquing extends tg {
                       break L5;
                     }
                   }
-                  if ((oo.field_b >> 1640893537 ^ -1) != (tm.field_b ^ -1)) {
+                  if (~(oo.field_b >> 1) != ~tm.field_b) {
                     break L4;
                   } else {
-                    ie.field_b.field_e.a(param0 + 108);
+                    ie.field_b.field_e.a(0);
                     bn.field_h = -1;
                     fn.field_c = tm.field_c;
                     vo.field_f[fn.field_c].field_i = 0;
@@ -1705,7 +1743,7 @@ public final class Torquing extends tg {
                             break L4;
                           } else {
                             L7: {
-                              if ((oo.field_b ^ -1) >= (2 * tm.field_b ^ -1)) {
+                              if (~oo.field_b >= ~(2 * tm.field_b)) {
                                 break L7;
                               } else {
                                 if (var5 == 0) {
@@ -1716,7 +1754,7 @@ public final class Torquing extends tg {
                                 }
                               }
                             }
-                            if ((2 * tm.field_b ^ -1) <= (oo.field_b ^ -1)) {
+                            if (~(2 * tm.field_b) <= ~oo.field_b) {
                               break L4;
                             } else {
                               if (var4 != 0) {
@@ -1731,7 +1769,7 @@ public final class Torquing extends tg {
                           if (var11 == 4) {
                             L8: {
                               var11 = 0;
-                              if ((ie.field_b.field_L ^ -1) != (tm.field_c ^ -1)) {
+                              if (~ie.field_b.field_L != ~tm.field_c) {
                                 var12 = ie.field_b.field_d.field_m;
                                 break L8;
                               } else {
@@ -1770,9 +1808,9 @@ public final class Torquing extends tg {
                           } else {
                             if (6 != var11) {
                               if (var11 != 11) {
-                                if (-13 != (var11 ^ -1)) {
+                                if (var11 != 12) {
                                   if (var11 == 5) {
-                                    if ((tm.field_b ^ -1) >= (oo.field_b / 2 ^ -1)) {
+                                    if (~tm.field_b >= ~(oo.field_b / 2)) {
                                       bn.field_h = -1;
                                       jh.a(la.field_k[ie.field_b.field_q], 0);
                                       break L4;
@@ -1797,10 +1835,10 @@ public final class Torquing extends tg {
                                         L12: {
                                           var7 = stackIn_135_0;
                                           var10 = 0;
-                                          if ((wp.field_w ^ -1) < -1) {
+                                          if (wp.field_w > 0) {
                                             break L12;
                                           } else {
-                                            if ((tm.field_c ^ -1) != -2) {
+                                            if (tm.field_c != 1) {
                                               break L12;
                                             } else {
                                               stackOut_137_0 = 1;
@@ -1829,7 +1867,7 @@ public final class Torquing extends tg {
                                               }
                                             }
                                           }
-                                          if ((oo.field_b ^ -1) >= (2 * tm.field_b ^ -1)) {
+                                          if (~oo.field_b >= ~(2 * tm.field_b)) {
                                             break L13;
                                           } else {
                                             if (var4 != 0) {
@@ -1877,13 +1915,13 @@ public final class Torquing extends tg {
                                         break L4;
                                       } else {
                                         if (oo.field_b == 2 * tm.field_b) {
-                                          ie.field_b.d(param0 + 109);
+                                          ie.field_b.d(1);
                                           cf.a(6639);
                                           break L4;
                                         } else {
                                           if (250 > oo.field_b) {
                                             L15: {
-                                              if ((tm.field_b * 2 ^ -1) <= (oo.field_b ^ -1)) {
+                                              if (~(tm.field_b * 2) <= ~oo.field_b) {
                                                 break L15;
                                               } else {
                                                 if (var5 != 0) {
@@ -1894,7 +1932,7 @@ public final class Torquing extends tg {
                                                 }
                                               }
                                             }
-                                            if ((2 * tm.field_b ^ -1) <= (oo.field_b ^ -1)) {
+                                            if (~(2 * tm.field_b) <= ~oo.field_b) {
                                               break L4;
                                             } else {
                                               if (var4 == 0) {
@@ -1918,7 +1956,7 @@ public final class Torquing extends tg {
                                       break L16;
                                     } else {
                                       L17: {
-                                        if (-12 == (tm.field_c ^ -1)) {
+                                        if (tm.field_c == 11) {
                                           pl.a((byte) -97, true);
                                           break L17;
                                         } else {
@@ -1933,7 +1971,7 @@ public final class Torquing extends tg {
                                       }
                                     }
                                   }
-                                  if (oo.field_b >> 1452251169 != tm.field_b) {
+                                  if (oo.field_b >> 1 != tm.field_b) {
                                     break L4;
                                   } else {
                                     fn.field_c = tm.field_c;
@@ -1954,7 +1992,7 @@ public final class Torquing extends tg {
                             } else {
                               L18: {
                                 var11 = 0;
-                                if ((tm.field_c ^ -1) == (ie.field_b.field_L ^ -1)) {
+                                if (~tm.field_c == ~ie.field_b.field_L) {
                                   var12 = ie.field_b.field_d;
                                   break L18;
                                 } else {
@@ -1971,12 +2009,12 @@ public final class Torquing extends tg {
                                 }
                               }
                               if (tm.field_b * 2 != oo.field_b) {
-                                if ((2 * tm.field_b ^ -1) > (oo.field_b ^ -1)) {
+                                if (~(2 * tm.field_b) > ~oo.field_b) {
                                   L20: {
                                     if (la.field_k[11].e(17)) {
                                       break L20;
                                     } else {
-                                      if ((var11 ^ -1) >= (oo.field_b ^ -1)) {
+                                      if (~var11 >= ~oo.field_b) {
                                         ((Torquing) this).a(true, tm.field_c, 5, var6 != 0);
                                         break L4;
                                       } else {
@@ -2007,7 +2045,7 @@ public final class Torquing extends tg {
                           }
                         }
                       } else {
-                        if ((oo.field_b ^ -1) > -251) {
+                        if (oo.field_b < 250) {
                           L21: {
                             if (tm.field_b * 2 >= oo.field_b) {
                               break L21;
@@ -2021,7 +2059,7 @@ public final class Torquing extends tg {
                               }
                             }
                           }
-                          if ((2 * tm.field_b ^ -1) <= (oo.field_b ^ -1)) {
+                          if (~(2 * tm.field_b) <= ~oo.field_b) {
                             break L4;
                           } else {
                             if (var4 == 0) {
@@ -2039,9 +2077,9 @@ public final class Torquing extends tg {
                         }
                       }
                     } else {
-                      if (tm.field_b == oo.field_b >> -723760959) {
+                      if (tm.field_b == oo.field_b >> 1) {
                         L22: {
-                          if (-4 != (fn.field_c ^ -1)) {
+                          if (fn.field_c != 3) {
                             break L22;
                           } else {
                             gn.field_l = null;
@@ -2057,7 +2095,7 @@ public final class Torquing extends tg {
                     }
                   } else {
                     L23: {
-                      if ((oo.field_b ^ -1) != -2) {
+                      if (oo.field_b != 1) {
                         break L23;
                       } else {
                         L24: {
@@ -2076,7 +2114,7 @@ public final class Torquing extends tg {
                         }
                       }
                     }
-                    if (oo.field_b >> 47432129 == tm.field_b) {
+                    if (oo.field_b >> 1 == tm.field_b) {
                       L25: {
                         if (3 != fn.field_c) {
                           break L25;
@@ -2097,7 +2135,7 @@ public final class Torquing extends tg {
                             nh.field_k = 0;
                             fa.field_b = 0;
                             ao.field_f = 0;
-                            bo.field_l.a(param0 ^ -108);
+                            bo.field_l.a(0);
                             break L26;
                           }
                         }
@@ -2122,36 +2160,28 @@ public final class Torquing extends tg {
               }
             }
             L27: {
-              if (param0 == -108) {
-                break L27;
-              } else {
-                this.b(-99, 74);
-                break L27;
-              }
-            }
-            L28: {
               if (bn.field_h == 0) {
-                break L28;
+                break L27;
               } else {
-                if (-3L < (-var2 + km.b(param0 ^ 107) ^ -1L)) {
-                  cf.a(param0 + 6747);
-                  break L28;
+                if (-var2 + km.b(-1) < 2L) {
+                  cf.a(6639);
+                  break L27;
                 } else {
-                  break L28;
+                  break L27;
                 }
               }
             }
             return;
           } else {
-            L29: {
-              if ((e.field_f ^ -1) == -14) {
-                break L29;
+            L28: {
+              if (e.field_f == 13) {
+                break L28;
               } else {
-                if (-85 == (e.field_f ^ -1)) {
-                  break L29;
+                if (e.field_f == 84) {
+                  break L28;
                 } else {
                   if (83 == e.field_f) {
-                    break L29;
+                    break L28;
                   } else {
                     continue L0;
                   }
@@ -2167,13 +2197,13 @@ public final class Torquing extends tg {
     final void a(boolean param0, int param1, int param2, boolean param3) {
         L0: {
           L1: {
-            if (-2 == (param2 ^ -1)) {
+            if (param2 == 1) {
               break L1;
             } else {
               if (2 == param2) {
                 break L1;
               } else {
-                if (-13 != (param2 ^ -1)) {
+                if (param2 != 12) {
                   break L0;
                 } else {
                   break L1;
@@ -2181,7 +2211,7 @@ public final class Torquing extends tg {
               }
             }
           }
-          if ((param1 ^ -1) != 0) {
+          if (param1 != -1) {
             L2: {
               L3: {
                 if (param1 == 0) {
@@ -2226,11 +2256,8 @@ public final class Torquing extends tg {
         jh.a(la.field_k[0], 0);
         int var2 = tm.field_b;
         ul.field_b = new int[var2];
-        for (var3 = 1; (var3 ^ -1) > (var2 ^ -1); var3++) {
+        for (var3 = 1; ~var3 > ~var2; var3++) {
             ul.field_b[var3] = i.c(65535, vi.field_a[-var3 + var2]);
-        }
-        if (param0 <= 69) {
-            ((Torquing) this).field_t = null;
         }
         ok.a((byte) -124);
     }
@@ -2303,8 +2330,8 @@ public final class Torquing extends tg {
                       } else {
                         L4: {
                           var5 = ie.field_b.field_n;
-                          if (-81 >= (var5 ^ -1)) {
-                            if ((var5 ^ -1) > -231) {
+                          if (var5 >= 80) {
+                            if (var5 < 230) {
                               var4 = 8;
                               break L4;
                             } else {
@@ -2337,7 +2364,7 @@ public final class Torquing extends tg {
                     }
                     L6: {
                       if (pb.field_e != -1) {
-                        var3 = oo.field_b << 2032996227;
+                        var3 = oo.field_b << 3;
                         if (var3 > 0) {
                           ph.b(0, 0, ph.field_j, ph.field_d, 0, var3);
                           break L6;
@@ -2452,7 +2479,7 @@ public final class Torquing extends tg {
         }
         L1: {
           ml.field_a[var3].a(0, 0);
-          if ((ie.field_b.field_L ^ -1) != (param0 ^ -1)) {
+          if (~ie.field_b.field_L != ~param0) {
             var4 = ie.field_b.field_d.field_m;
             break L1;
           } else {
@@ -2586,12 +2613,12 @@ public final class Torquing extends tg {
               if (null == kg.field_c) {
                 if (kb.field_f == null) {
                   if (on.b(160)) {
-                    if (0 == (pb.field_e ^ -1)) {
+                    if (pb.field_e == -1) {
                       L4: {
                         var3 = ua.a(false);
-                        if ((var3 ^ -1) != -4) {
-                          if (-3 != (var3 ^ -1)) {
-                            if ((var3 ^ -1) == -5) {
+                        if (var3 != 3) {
+                          if (var3 != 2) {
+                            if (var3 == 4) {
                               pb.field_e = 4;
                               oo.field_b = 0;
                               break L4;
@@ -2643,10 +2670,10 @@ public final class Torquing extends tg {
                       L6: {
                         L7: {
                           var3 = ((Torquing) this).b(stackIn_43_1 != 0, -92);
-                          if ((var3 ^ -1) == -2) {
+                          if (var3 == 1) {
                             break L7;
                           } else {
-                            if (-3 != (var3 ^ -1)) {
+                            if (var3 != 2) {
                               break L6;
                             } else {
                               break L7;
@@ -2661,7 +2688,7 @@ public final class Torquing extends tg {
                             break L8;
                           }
                         }
-                        if (-3 != (var3 ^ -1)) {
+                        if (var3 != 2) {
                           break L6;
                         } else {
                           to.a(ip.a(param0 + 39), -97);
@@ -2682,10 +2709,10 @@ public final class Torquing extends tg {
                       }
                     }
                     L10: {
-                      if (-1 > (wp.field_w ^ -1)) {
+                      if (wp.field_w > 0) {
                         break L10;
                       } else {
-                        if ((qc.field_ab[1] + qc.field_ab[0] ^ -1) < (nh.field_k ^ -1)) {
+                        if (~(qc.field_ab[1] + qc.field_ab[0]) < ~nh.field_k) {
                           break L10;
                         } else {
                           nh.field_k = -1 + qc.field_ab[0] + qc.field_ab[1];
@@ -2702,14 +2729,14 @@ public final class Torquing extends tg {
               } else {
                 if (kg.field_c.field_n) {
                   L11: {
-                    ao.field_f = ao.field_f & (kg.field_c.field_m ^ -1);
+                    ao.field_f = ao.field_f & ~kg.field_c.field_m;
                     fa.field_b = fa.field_b | kg.field_c.field_m;
                     kg.field_c = null;
                     pm.a((byte) 102);
                     if (fn.field_c != 8) {
                       break L11;
                     } else {
-                      if (-1 == (ao.field_f ^ -1)) {
+                      if (ao.field_f == 0) {
                         fn.field_c = 2;
                         break L11;
                       } else {
@@ -2763,13 +2790,13 @@ public final class Torquing extends tg {
             if (var2 == 0) {
               break L15;
             } else {
-              if ((pb.field_e ^ -1) == 0) {
+              if (pb.field_e == -1) {
                 sg.field_o = sg.field_o + 1;
                 if (-1 != bn.field_h) {
                   this.f((byte) -108);
                   break L15;
                 } else {
-                  if ((fn.field_c ^ -1) == 0) {
+                  if (fn.field_c == -1) {
                     ie.field_b.i(40);
                     break L15;
                   } else {
@@ -2778,7 +2805,7 @@ public final class Torquing extends tg {
                       stackOut_106_0 = vo.field_f[fn.field_c];
                       stackIn_108_0 = stackOut_106_0;
                       stackIn_107_0 = stackOut_106_0;
-                      if (0 != (bn.field_h ^ -1)) {
+                      if (bn.field_h != -1) {
                         stackOut_108_0 = (mh) (Object) stackIn_108_0;
                         stackOut_108_1 = 0;
                         stackIn_109_0 = stackOut_108_0;
@@ -2820,7 +2847,7 @@ public final class Torquing extends tg {
                   int fieldTemp$9 = oo.field_b;
                   oo.field_b = oo.field_b - 1;
                   if (32 != fieldTemp$9) {
-                    if ((oo.field_b ^ -1) == -1) {
+                    if (oo.field_b == 0) {
                       pb.field_e = -1;
                       break L15;
                     } else {
@@ -2832,7 +2859,7 @@ public final class Torquing extends tg {
                       if (je.a((byte) 67)) {
                         break L18;
                       } else {
-                        if (-1 != (var3 ^ -1)) {
+                        if (var3 != 0) {
                           if (1 == var3) {
                             fn.field_c = 2;
                             break L18;
@@ -2843,7 +2870,7 @@ public final class Torquing extends tg {
                                 break L18;
                               } else {
                                 L19: {
-                                  if ((var3 ^ -1) != -5) {
+                                  if (var3 != 4) {
                                     break L19;
                                   } else {
                                     hm.a(true, um.field_m.field_x, (t[]) null, 0, (uc) (Object) i.field_Q, 0, (t[]) null, 3, 320, 0, 3 * um.field_m.field_x / 2, 240);
@@ -2861,7 +2888,7 @@ public final class Torquing extends tg {
                                       } else {
                                         int fieldTemp$10 = ie.field_b.field_n + 1;
                                         ie.field_b.field_n = ie.field_b.field_n + 1;
-                                        if ((fieldTemp$10 ^ -1) != -336) {
+                                        if (fieldTemp$10 != 335) {
                                           break L20;
                                         } else {
                                           ie.field_b.field_n = 0;
@@ -2899,7 +2926,7 @@ public final class Torquing extends tg {
                       }
                     }
                     L23: {
-                      if ((var3 ^ -1) != -5) {
+                      if (var3 != 4) {
                         break L23;
                       } else {
                         hm.a(true, um.field_m.field_x, (t[]) null, 0, (uc) (Object) i.field_Q, 0, (t[]) null, 3, 320, 0, 3 * um.field_m.field_x / 2, 240);
@@ -2923,7 +2950,7 @@ public final class Torquing extends tg {
                 } else {
                   int fieldTemp$12 = ie.field_b.field_n + 1;
                   ie.field_b.field_n = ie.field_b.field_n + 1;
-                  if ((fieldTemp$12 ^ -1) != -336) {
+                  if (fieldTemp$12 != 335) {
                     break L24;
                   } else {
                     ie.field_b.field_n = 0;
@@ -2951,14 +2978,14 @@ public final class Torquing extends tg {
           } else {
             L28: {
               var3 = ((Torquing) this).g(118);
-              if ((var3 ^ -1) != -3) {
+              if (var3 != 2) {
                 break L28;
               } else {
                 L29: {
                   if (bn.field_h != -1) {
                     break L29;
                   } else {
-                    if (0 == (fn.field_c ^ -1)) {
+                    if (fn.field_c == -1) {
                       break L28;
                     } else {
                       break L29;
@@ -2993,176 +3020,168 @@ public final class Torquing extends tg {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          var4 = field_u;
-          if (param0 == 3) {
-            break L0;
-          } else {
-            field_x = 119;
-            break L0;
-          }
-        }
+        var4 = field_u;
         if (0 != bn.field_h) {
-          L1: {
-            var2 = oo.field_b >> 865380609;
-            if ((tm.field_b ^ -1) >= (var2 ^ -1)) {
-              break L1;
+          L0: {
+            var2 = oo.field_b >> 1;
+            if (~tm.field_b >= ~var2) {
+              break L0;
             } else {
-              L2: {
-                L3: {
+              L1: {
+                L2: {
                   var3 = bn.field_h;
                   if (1 != var3) {
-                    if ((var3 ^ -1) != -11) {
+                    if (var3 != 10) {
                       if (var3 != 3) {
-                        if ((var3 ^ -1) == -8) {
-                          break L3;
+                        if (var3 == 7) {
+                          break L2;
                         } else {
-                          L4: {
+                          L3: {
                             if (var3 == 2) {
-                              break L4;
+                              break L3;
                             } else {
                               if (6 != var3) {
                                 if (8 != var3) {
-                                  if ((var3 ^ -1) != -5) {
+                                  if (var3 != 4) {
                                     if (var3 == 5) {
-                                      this.a(tm.field_c, param0 + 22514);
-                                      break L2;
+                                      this.a(tm.field_c, 22517);
+                                      break L1;
                                     } else {
                                       if (var3 == 9) {
                                         this.b(90, tm.field_c - 1);
-                                        break L2;
+                                        break L1;
                                       } else {
-                                        if (-12 != (var3 ^ -1)) {
-                                          if (-13 == (var3 ^ -1)) {
+                                        if (var3 != 11) {
+                                          if (var3 == 12) {
                                             this.b(96, 1);
-                                            break L2;
+                                            break L1;
                                           } else {
-                                            break L2;
+                                            break L1;
                                           }
                                         } else {
-                                          this.b(param0 + 98, tm.field_c);
-                                          break L2;
+                                          this.b(101, tm.field_c);
+                                          break L1;
                                         }
                                       }
                                     }
                                   } else {
                                     this.c(false, wi.field_a[tm.field_c]);
-                                    break L2;
+                                    break L1;
                                   }
                                 } else {
-                                  break L4;
+                                  break L3;
                                 }
                               } else {
-                                break L4;
+                                break L3;
                               }
                             }
                           }
                           ie.field_b.a(false);
-                          break L2;
+                          break L1;
                         }
                       } else {
                         vo.field_f[fn.field_c].c(93);
-                        break L2;
+                        break L1;
                       }
                     } else {
-                      break L3;
+                      break L2;
                     }
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
                 vo.field_f[fn.field_c].c(93);
-                break L2;
-              }
-              if ((var2 ^ -1) >= -1) {
                 break L1;
+              }
+              if (var2 <= 0) {
+                break L0;
               } else {
                 gd.field_b.e();
                 ph.b();
-                break L1;
+                break L0;
               }
             }
           }
-          L5: {
-            if (-1 > (var2 ^ -1)) {
-              L6: {
-                L7: {
+          L4: {
+            if (var2 > 0) {
+              L5: {
+                L6: {
                   var3 = bn.field_h;
                   if (var3 != 10) {
-                    if (-6 != (var3 ^ -1)) {
-                      if (-12 != (var3 ^ -1)) {
-                        L8: {
+                    if (var3 != 5) {
+                      if (var3 != 11) {
+                        L7: {
                           if (var3 == 2) {
-                            break L8;
+                            break L7;
                           } else {
-                            if (-2 != (var3 ^ -1)) {
+                            if (var3 != 1) {
                               if (var3 == 12) {
-                                break L8;
+                                break L7;
                               } else {
-                                L9: {
-                                  if ((var3 ^ -1) == -4) {
-                                    break L9;
+                                L8: {
+                                  if (var3 == 3) {
+                                    break L8;
                                   } else {
-                                    if (-10 != (var3 ^ -1)) {
-                                      L10: {
+                                    if (var3 != 9) {
+                                      L9: {
                                         if (7 == var3) {
-                                          break L10;
+                                          break L9;
                                         } else {
-                                          if ((var3 ^ -1) == -7) {
-                                            break L10;
+                                          if (var3 == 6) {
+                                            break L9;
                                           } else {
                                             if (4 == var3) {
-                                              break L10;
+                                              break L9;
                                             } else {
-                                              if (-9 == (var3 ^ -1)) {
+                                              if (var3 == 8) {
                                                 this.b(42, tm.field_c);
-                                                break L6;
+                                                break L5;
                                               } else {
-                                                break L6;
+                                                break L5;
                                               }
                                             }
                                           }
                                         }
                                       }
                                       this.a(tm.field_c, 22517);
-                                      break L6;
+                                      break L5;
                                     } else {
-                                      break L9;
+                                      break L8;
                                     }
                                   }
                                 }
                                 this.c(false, tm.field_c);
-                                break L6;
+                                break L5;
                               }
                             } else {
-                              break L8;
+                              break L7;
                             }
                           }
                         }
                         vo.field_f[tm.field_c].c(93);
-                        break L6;
+                        break L5;
                       } else {
-                        break L7;
+                        break L6;
                       }
                     } else {
-                      break L7;
+                      break L6;
                     }
                   } else {
-                    break L7;
+                    break L6;
                   }
                 }
                 ie.field_b.a(false);
-                break L6;
+                break L5;
               }
               if (tm.field_b <= var2) {
-                break L5;
+                break L4;
               } else {
                 mk.field_b.a(-86);
                 vi.a(var2, gd.field_b, 0, 0, vi.field_a);
-                break L5;
+                break L4;
               }
             } else {
-              break L5;
+              break L4;
             }
           }
           return;
@@ -3197,6 +3216,7 @@ public final class Torquing extends tg {
     }
 
     final void a(int param0, hc param1, uf param2) {
+        RuntimeException var4 = null;
         String[] var5_ref_String__ = null;
         int var5 = 0;
         int var6_int = 0;
@@ -3205,38 +3225,127 @@ public final class Torquing extends tg {
         int var8 = 0;
         String[] var9 = null;
         String[] var10 = null;
-        L0: {
-          var8 = field_u;
-          var9 = kc.a('~', param1.field_l, param0);
-          var10 = var9;
-          if (1 != var9.length) {
-            boolean discarded$16 = param2.a((t) null, var9[0], param0 ^ 250);
-            break L0;
-          } else {
-            var5_ref_String__ = kc.a('/', var9[0], 0);
-            var6_int = 0;
-            L1: while (true) {
-              if ((var6_int ^ -1) <= (var5_ref_String__.length ^ -1)) {
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var8 = field_u;
+        try {
+          L0: {
+            L1: {
+              var9 = kc.a('~', param1.field_l, param0);
+              var10 = var9;
+              if (1 != var9.length) {
+                boolean discarded$16 = param2.a((t) null, var9[0], param0 ^ 250);
+                break L1;
+              } else {
+                var5_ref_String__ = kc.a('/', var9[0], 0);
+                var6_int = 0;
+                L2: while (true) {
+                  if (~var6_int <= ~var5_ref_String__.length) {
+                    break L1;
+                  } else {
+                    var7 = var5_ref_String__[var6_int];
+                    boolean discarded$17 = param2.a(false, var7);
+                    var6_int++;
+                    continue L2;
+                  }
+                }
+              }
+            }
+            var5 = 1;
+            L3: while (true) {
+              if (var5 >= var10.length) {
                 break L0;
               } else {
-                var7 = var5_ref_String__[var6_int];
-                boolean discarded$17 = param2.a(false, var7);
-                var6_int++;
-                continue L1;
+                var6 = var10[var5];
+                boolean discarded$18 = param2.a(hh.field_e[var6.charAt(0) - 48], var6.substring(1), param0 ^ 250);
+                var5++;
+                continue L3;
               }
             }
           }
-        }
-        var5 = 1;
-        L2: while (true) {
-          if (var5 >= var10.length) {
-            return;
-          } else {
-            var6 = var10[var5];
-            boolean discarded$18 = param2.a(hh.field_e[var6.charAt(0) - 48], var6.substring(1), param0 ^ 250);
-            var5++;
-            continue L2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var4;
+            stackOut_10_1 = new StringBuilder().append("Torquing.AB(").append(param0).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param1 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
           }
+          L5: {
+            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param2 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
     }
 
@@ -3259,11 +3368,11 @@ public final class Torquing extends tg {
         int[] var15 = var19;
         int[] var11 = var15;
         int[] var4 = var11;
-        if (!((i.field_Q.field_O.length ^ -1) <= -12)) {
+        if (!(i.field_Q.field_O.length >= 11)) {
             i.field_Q.field_O = new int[11][];
         }
         i.field_Q.field_O[0] = var23;
-        for (var5_int = 1; -12 < (var5_int ^ -1); var5_int++) {
+        for (var5_int = 1; var5_int < 11; var5_int++) {
             i.field_Q.field_O[var5_int] = new int[var23.length];
             dk.a(var4, 0, i.field_Q.field_O[var5_int], 0, var23.length);
         }
@@ -3296,7 +3405,7 @@ public final class Torquing extends tg {
         int[] var17 = var21;
         int[] var13 = var17;
         var4 = var13;
-        if (!(-4 >= (qh.field_c.field_O.length ^ -1))) {
+        if (!(qh.field_c.field_O.length >= 3)) {
             qh.field_c.field_O = new int[3][];
         }
         qh.field_c.field_O[0] = var25;
@@ -3310,20 +3419,17 @@ public final class Torquing extends tg {
     }
 
     private final void s(int param0) {
-        if (param0 != 26418) {
-            return;
-        }
         if (null != rd.field_z) {
             hg.a((byte) -77, rd.field_z);
             rd.field_z = null;
             cf.a(6639);
         }
-        rl.field_a = vg.a(param0 ^ -3280, 1);
+        rl.field_a = vg.a(-27646, 1);
         rg.field_v = vg.a(-27646, 2);
         vp.field_D = vg.a(-27646, 3);
         th.field_C = vg.a(-27646, 4);
         vd.field_e = vg.a(-27646, 5);
-        bp.field_c = vg.a(param0 + -54064, 6);
+        bp.field_c = vg.a(-27646, 6);
         uf.field_l = vg.a(-27646, 8);
         he.field_b = vg.a(-27646, 12);
         eg.field_t = vg.a(-27646, 13);

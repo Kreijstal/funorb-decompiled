@@ -55,9 +55,6 @@ abstract class ija extends vg {
     }
 
     public static void a(byte param0) {
-        if (param0 <= 2) {
-            return;
-        }
         field_i = null;
     }
 

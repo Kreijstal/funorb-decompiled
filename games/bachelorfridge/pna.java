@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class pna extends sna {
     private int field_vb;
     private int[] field_Hb;
@@ -17,20 +19,21 @@ final class pna extends sna {
     private int field_xb;
 
     public static void f(int param0) {
-        if (param0 != 1) {
-            return;
-        }
         field_zb = null;
     }
 
     final void a(String param0, boolean param1, int param2) {
-        ((pna) this).field_Gb[((pna) this).field_yb] = new gna(0L, (sna) null, (sna) null, ((pna) this).field_Cb, (kv) null, param0);
-        ((pna) this).field_Gb[((pna) this).field_yb].field_A = ((pna) this).field_Db;
-        ((pna) this).field_Gb[((pna) this).field_yb].field_qb = param1 ? true : false;
-        ((pna) this).field_Gb[((pna) this).field_yb].field_Y = 1;
-        ((pna) this).a(-1, (sna) (Object) ((pna) this).field_Gb[((pna) this).field_yb]);
-        ((pna) this).field_Hb[((pna) this).field_yb] = param2;
-        ((pna) this).field_yb = ((pna) this).field_yb + 1;
+        try {
+            ((pna) this).field_Gb[((pna) this).field_yb] = new gna(0L, (sna) null, (sna) null, ((pna) this).field_Cb, (kv) null, param0);
+            ((pna) this).field_Gb[((pna) this).field_yb].field_A = ((pna) this).field_Db;
+            ((pna) this).field_Gb[((pna) this).field_yb].field_qb = param1 ? true : false;
+            ((pna) this).field_Gb[((pna) this).field_yb].field_Y = 1;
+            ((pna) this).a(-1, (sna) (Object) ((pna) this).field_Gb[((pna) this).field_yb]);
+            ((pna) this).field_Hb[((pna) this).field_yb] = param2;
+            ((pna) this).field_yb = ((pna) this).field_yb + 1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "pna.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -47,13 +50,13 @@ final class pna extends sna {
         if (param2 == 0) {
           var6 = param3 - param4;
           var7 = -param5 + param0;
-          if (var6 != -1) {
-            if (-1 != var7) {
+          if (var6 != 0) {
+            if (var7 != 0) {
               L0: {
-                var12 = (var7 << 1895167660) / var6;
-                var13 = -(param4 * var12 >> 664868780) + param5;
-                if (param4 < eo.field_l) {
-                  var10 = (var12 * eo.field_l >> -294752180) + var13;
+                var12 = (var7 << 12) / var6;
+                var13 = -(param4 * var12 >> 12) + param5;
+                if (~param4 > ~eo.field_l) {
+                  var10 = (var12 * eo.field_l >> 12) + var13;
                   var8 = eo.field_l;
                   break L0;
                 } else {
@@ -63,16 +66,16 @@ final class pna extends sna {
                     break L0;
                   } else {
                     var8 = pw.field_x;
-                    var10 = (pw.field_x * var12 >> -30028340) + var13;
+                    var10 = (pw.field_x * var12 >> 12) + var13;
                     break L0;
                   }
                 }
               }
               L1: {
-                if (param3 >= eo.field_l) {
+                if (~param3 <= ~eo.field_l) {
                   if (param3 > pw.field_x) {
                     var9 = pw.field_x;
-                    var11 = var13 + (var12 * pw.field_x >> 829614508);
+                    var11 = var13 + (var12 * pw.field_x >> 12);
                     break L1;
                   } else {
                     var9 = param3;
@@ -80,7 +83,7 @@ final class pna extends sna {
                     break L1;
                   }
                 } else {
-                  var11 = var13 + (var12 * eo.field_l >> 695207052);
+                  var11 = var13 + (var12 * eo.field_l >> 12);
                   var9 = eo.field_l;
                   break L1;
                 }
@@ -88,13 +91,13 @@ final class pna extends sna {
               L2: {
                 if (an.field_q > var10) {
                   var10 = an.field_q;
-                  var8 = (an.field_q - var13 << 772804972) / var12;
+                  var8 = (an.field_q - var13 << 12) / var12;
                   break L2;
                 } else {
                   if (ha.field_n >= var10) {
                     break L2;
                   } else {
-                    var8 = (ha.field_n - var13 << 1518952396) / var12;
+                    var8 = (ha.field_n - var13 << 12) / var12;
                     var10 = ha.field_n;
                     break L2;
                   }
@@ -103,11 +106,11 @@ final class pna extends sna {
               L3: {
                 if (var11 < an.field_q) {
                   var11 = an.field_q;
-                  var9 = (an.field_q + -var13 << 1022124524) / var12;
+                  var9 = (an.field_q + -var13 << 12) / var12;
                   break L3;
                 } else {
                   if (var11 > ha.field_n) {
-                    var9 = (ha.field_n - var13 << -2051888084) / var12;
+                    var9 = (ha.field_n - var13 << 12) / var12;
                     var11 = ha.field_n;
                     break L3;
                   } else {
@@ -143,10 +146,8 @@ final class pna extends sna {
         sna var17 = null;
         int var18 = 0;
         Object var19_ref = null;
-        kv var19_ref_kv = null;
         int var19 = 0;
         Object var20 = null;
-        String var20_ref = null;
         int var21 = 0;
         sna var23 = null;
         sna var24 = null;
@@ -274,8 +275,7 @@ final class pna extends sna {
             }
           }
           L2: {
-            new sna(stackIn_8_2, (sna) (Object) stackIn_8_3, ((String) (Object) stackIn_8_4).toUpperCase());
-            vh.field_y = (sna) (Object) stackIn_8_0;
+            vh.field_y = new sna(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_8_4).toUpperCase());
             ui.field_r = new sna(0L, (sna) null);
             ui.field_r.a(-1, wia.field_f);
             ui.field_r.a(-1, nea.field_yb);
@@ -340,264 +340,209 @@ final class pna extends sna {
           gd.field_n[0] = new gna[6];
           var17_int = 0;
           L5: while (true) {
-            L6: {
-              if (var17_int >= 5) {
-                break L6;
-              } else {
-                gd.field_n[0][var17_int + 1] = new gna(0L, uj.field_r, (sna) null, dla.field_k, ut.field_r[var17_int], cc.field_d[var17_int]);
-                var17_int++;
-                if (0 == 0) {
-                  continue L5;
+            if (var17_int >= 5) {
+              L6: {
+                if (qha.field_c.length >= 2) {
+                  pka.field_b[1] = new sna(0L, ina.field_n, gb.field_j);
+                  gd.field_n[1] = new gna[qha.field_c.length + 1];
+                  gd.field_n[1][0] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) null, ur.field_j);
+                  var17_int = 0;
+                  L7: while (true) {
+                    if (qha.field_c.length <= var17_int) {
+                      break L6;
+                    } else {
+                      gd.field_n[1][1 + var17_int] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) null, Integer.toString(qha.field_c[var17_int]));
+                      var17_int++;
+                      continue L7;
+                    }
+                  }
                 } else {
                   break L6;
                 }
               }
-            }
-            L7: {
-              if (qha.field_c.length >= 2) {
-                pka.field_b[1] = new sna(0L, ina.field_n, gb.field_j);
-                gd.field_n[1] = new gna[qha.field_c.length + 1];
-                gd.field_n[1][0] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) null, ur.field_j);
-                var17_int = 0;
-                L8: while (true) {
-                  if (qha.field_c.length <= var17_int) {
-                    break L7;
-                  } else {
-                    gd.field_n[1][1 + var17_int] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) null, Integer.toString(qha.field_c[var17_int]));
-                    var17_int++;
-                    if (0 == 0) {
-                      continue L8;
-                    } else {
-                      break L7;
-                    }
-                  }
-                }
-              } else {
-                break L7;
-              }
-            }
-            L9: {
-              pka.field_b[2] = new sna(0L, ina.field_n, ud.field_q);
-              gd.field_n[2] = new gna[3];
-              if (bma.field_u <= 1) {
-                break L9;
-              } else {
-                pka.field_b[3] = new sna(0L, ina.field_n, uk.field_w);
-                gd.field_n[3] = new gna[1 + bma.field_u];
-                gd.field_n[3][0] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) null, ur.field_j);
-                var17_int = 0;
-                L10: while (true) {
-                  if (var17_int >= bma.field_u) {
-                    break L9;
-                  } else {
-                    gd.field_n[3][var17_int - -1] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) null, cia.field_f[var17_int]);
-                    var17_int++;
-                    if (0 == 0) {
-                      continue L10;
-                    } else {
-                      break L9;
-                    }
-                  }
-                }
-              }
-            }
-            var17_int = 0;
-            L11: while (true) {
-              L12: {
-                if (var17_int >= param3) {
-                  break L12;
+              L8: {
+                pka.field_b[2] = new sna(0L, ina.field_n, ud.field_q);
+                gd.field_n[2] = new gna[3];
+                if (bma.field_u <= 1) {
+                  break L8;
                 } else {
-                  pka.field_b[4 - -var17_int] = new sna(0L, ina.field_n, kka.field_k[var17_int]);
-                  gd.field_n[var17_int + 4] = new gna[1 + dda.a(255, (int) dw.field_g[var17_int])];
-                  gd.field_n[4 - -var17_int][0] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) null, ur.field_j);
-                  var18 = 0;
-                  L13: while (true) {
-                    L14: {
-                      if (var18 >= (dw.field_g[var17_int] & 255)) {
-                        break L14;
-                      } else {
-                        L15: {
-                          if (rha.field_e == null) {
-                            var19_ref = null;
-                            break L15;
-                          } else {
-                            if (rha.field_e[var17_int] == null) {
-                              var19_ref = null;
-                              break L15;
-                            } else {
-                              var19_ref_kv = rha.field_e[var17_int][var18];
-                              break L15;
-                            }
-                          }
-                        }
-                        L16: {
-                          if (null == co.field_a) {
-                            var20 = null;
-                            break L16;
-                          } else {
-                            if (co.field_a[var17_int] == null) {
-                              var20 = null;
-                              break L16;
-                            } else {
-                              var20_ref = co.field_a[var17_int][var18];
-                              break L16;
-                            }
-                          }
-                        }
-                        gd.field_n[var17_int + 4][var18 + 1] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) var19_ref, (String) var20);
-                        var18++;
-                        if (0 == 0) {
-                          continue L13;
-                        } else {
-                          break L14;
-                        }
-                      }
-                    }
-                    var17_int++;
-                    if (0 == 0) {
-                      continue L11;
+                  pka.field_b[3] = new sna(0L, ina.field_n, uk.field_w);
+                  gd.field_n[3] = new gna[1 + bma.field_u];
+                  gd.field_n[3][0] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) null, ur.field_j);
+                  var17_int = 0;
+                  L9: while (true) {
+                    if (~var17_int <= ~bma.field_u) {
+                      break L8;
                     } else {
-                      break L12;
+                      gd.field_n[3][var17_int - -1] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) null, cia.field_f[var17_int]);
+                      var17_int++;
+                      continue L9;
                     }
                   }
                 }
               }
               var17_int = 0;
-              L17: while (true) {
-                L18: {
-                  if (var17_int >= param3 + 4) {
-                    break L18;
-                  } else {
-                    L19: {
-                      if (pka.field_b[var17_int] == null) {
-                        break L19;
-                      } else {
-                        pka.field_b[var17_int].field_B = 11;
-                        break L19;
-                      }
-                    }
-                    L20: {
-                      if (gd.field_n[var17_int] == null) {
-                        break L20;
-                      } else {
-                        var18 = 0;
-                        L21: while (true) {
-                          if (gd.field_n[var17_int].length <= var18) {
-                            break L20;
-                          } else {
-                            L22: {
-                              if (null == gd.field_n[var17_int][var18]) {
-                                break L22;
+              L10: while (true) {
+                if (~var17_int <= ~param3) {
+                  var17_int = 0;
+                  L11: while (true) {
+                    if (var17_int >= param3 + 4) {
+                      ik.field_i = new sna(0L, vo.field_b);
+                      cn.field_j = new sna(0L, vo.field_b);
+                      cw.field_yb = new sna(0L, rea.field_g);
+                      cw.field_yb.a(qs.field_m, 16);
+                      var17 = cw.field_yb;
+                      cw.field_yb.field_Y = 1;
+                      var17.field_N = 1;
+                      ho.field_g = new sna(0L, (sna) null);
+                      ho.field_g.a(-1, vaa.field_a);
+                      ho.field_g.a(-1, vm.field_i);
+                      vm.field_i.a(-1, mh.field_j);
+                      var18 = 0;
+                      L12: while (true) {
+                        if (~var18 <= ~(4 + param3)) {
+                          ho.field_g.a(-1, ik.field_i);
+                          ho.field_g.a(-1, cn.field_j);
+                          ho.field_g.a(-1, cw.field_yb);
+                          saa.field_f = new sna(0L, mda.field_c, pe.field_l.toUpperCase());
+                          vca.field_h = new sna(0L, sn.field_l, fk.field_t.toUpperCase());
+                          return;
+                        } else {
+                          L13: {
+                            L14: {
+                              if (var18 != 1) {
+                                break L14;
                               } else {
-                                if (null != gd.field_n[var17_int][var18].field_vb) {
-                                  gd.field_n[var17_int][var18].field_vb.field_B = 11;
-                                  break L22;
+                                if (qha.field_c.length < 2) {
+                                  break L13;
                                 } else {
-                                  break L22;
+                                  break L14;
                                 }
                               }
                             }
-                            var18++;
-                            if (0 == 0) {
-                              continue L21;
+                            L15: {
+                              if (var18 != 3) {
+                                break L15;
+                              } else {
+                                if (bma.field_u > 1) {
+                                  break L15;
+                                } else {
+                                  break L13;
+                                }
+                              }
+                            }
+                            vm.field_i.a(-1, pka.field_b[var18]);
+                            var19 = 0;
+                            L16: while (true) {
+                              if (gd.field_n[var18].length <= var19) {
+                                break L13;
+                              } else {
+                                L17: {
+                                  if (null != gd.field_n[var18][var19]) {
+                                    vm.field_i.a(-1, (sna) (Object) gd.field_n[var18][var19]);
+                                    break L17;
+                                  } else {
+                                    break L17;
+                                  }
+                                }
+                                var19++;
+                                continue L16;
+                              }
+                            }
+                          }
+                          var18++;
+                          continue L12;
+                        }
+                      }
+                    } else {
+                      L18: {
+                        if (pka.field_b[var17_int] == null) {
+                          break L18;
+                        } else {
+                          pka.field_b[var17_int].field_B = 11;
+                          break L18;
+                        }
+                      }
+                      L19: {
+                        if (gd.field_n[var17_int] == null) {
+                          break L19;
+                        } else {
+                          var18 = 0;
+                          L20: while (true) {
+                            if (gd.field_n[var17_int].length <= var18) {
+                              break L19;
                             } else {
-                              break L20;
+                              L21: {
+                                if (null == gd.field_n[var17_int][var18]) {
+                                  break L21;
+                                } else {
+                                  if (null != gd.field_n[var17_int][var18].field_vb) {
+                                    gd.field_n[var17_int][var18].field_vb.field_B = 11;
+                                    break L21;
+                                  } else {
+                                    break L21;
+                                  }
+                                }
+                              }
+                              var18++;
+                              continue L20;
                             }
                           }
                         }
                       }
-                    }
-                    var17_int++;
-                    if (0 == 0) {
-                      continue L17;
-                    } else {
-                      break L18;
+                      var17_int++;
+                      continue L11;
                     }
                   }
-                }
-                ik.field_i = new sna(0L, vo.field_b);
-                cn.field_j = new sna(0L, vo.field_b);
-                cw.field_yb = new sna(0L, rea.field_g);
-                cw.field_yb.a(qs.field_m, 16);
-                var17 = cw.field_yb;
-                cw.field_yb.field_Y = 1;
-                var17.field_N = 1;
-                ho.field_g = new sna(0L, (sna) null);
-                ho.field_g.a(-1, vaa.field_a);
-                ho.field_g.a(-1, vm.field_i);
-                vm.field_i.a(-1, mh.field_j);
-                var18 = 0;
-                L23: while (true) {
-                  L24: {
-                    if (var18 >= 4 + param3) {
-                      break L24;
+                } else {
+                  pka.field_b[4 - -var17_int] = new sna(0L, ina.field_n, kka.field_k[var17_int]);
+                  gd.field_n[var17_int + 4] = new gna[1 + dda.a(255, (int) dw.field_g[var17_int])];
+                  gd.field_n[4 - -var17_int][0] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) null, ur.field_j);
+                  var18 = 0;
+                  L22: while (true) {
+                    if (var18 >= (dw.field_g[var17_int] & 255)) {
+                      var17_int++;
+                      continue L10;
                     } else {
-                      L25: {
-                        L26: {
-                          if (var18 != 1) {
-                            break L26;
+                      L23: {
+                        if (rha.field_e == null) {
+                          var19_ref = null;
+                          break L23;
+                        } else {
+                          if (rha.field_e[var17_int] == null) {
+                            var19_ref = null;
+                            break L23;
                           } else {
-                            if (qha.field_c.length < 2) {
-                              break L25;
-                            } else {
-                              break L26;
-                            }
-                          }
-                        }
-                        L27: {
-                          if (var18 != 3) {
-                            break L27;
-                          } else {
-                            if (bma.field_u > 1) {
-                              break L27;
-                            } else {
-                              if (0 == 0) {
-                                break L25;
-                              } else {
-                                break L27;
-                              }
-                            }
-                          }
-                        }
-                        vm.field_i.a(-1, pka.field_b[var18]);
-                        var19 = 0;
-                        L28: while (true) {
-                          if (gd.field_n[var18].length <= var19) {
-                            break L25;
-                          } else {
-                            L29: {
-                              if (null != gd.field_n[var18][var19]) {
-                                vm.field_i.a(-1, (sna) (Object) gd.field_n[var18][var19]);
-                                break L29;
-                              } else {
-                                break L29;
-                              }
-                            }
-                            var19++;
-                            if (0 == 0) {
-                              continue L28;
-                            } else {
-                              break L25;
-                            }
+                            var19_ref = (Object) (Object) rha.field_e[var17_int][var18];
+                            break L23;
                           }
                         }
                       }
+                      L24: {
+                        if (null == co.field_a) {
+                          var20 = null;
+                          break L24;
+                        } else {
+                          if (co.field_a[var17_int] == null) {
+                            var20 = null;
+                            break L24;
+                          } else {
+                            var20 = (Object) (Object) co.field_a[var17_int][var18];
+                            break L24;
+                          }
+                        }
+                      }
+                      gd.field_n[var17_int + 4][var18 + 1] = new gna(0L, uj.field_r, (sna) null, dla.field_k, (kv) var19_ref, (String) var20);
                       var18++;
-                      if (0 == 0) {
-                        continue L23;
-                      } else {
-                        break L24;
-                      }
+                      continue L22;
                     }
                   }
-                  ho.field_g.a(-1, ik.field_i);
-                  ho.field_g.a(-1, cn.field_j);
-                  ho.field_g.a(-1, cw.field_yb);
-                  saa.field_f = new sna(0L, mda.field_c, pe.field_l.toUpperCase());
-                  vca.field_h = new sna(0L, sn.field_l, fk.field_t.toUpperCase());
-                  return;
                 }
               }
+            } else {
+              gd.field_n[0][var17_int + 1] = new gna(0L, uj.field_r, (sna) null, dla.field_k, ut.field_r[var17_int], cc.field_d[var17_int]);
+              var17_int++;
+              continue L5;
             }
           }
         } else {
@@ -614,14 +559,18 @@ final class pna extends sna {
         ((pna) this).field_Hb = new int[256];
         ((pna) this).field_Ab = -2;
         ((pna) this).field_Gb = new gna[256];
-        ((pna) this).field_Fb = param2;
-        ((pna) this).field_Eb = param4;
-        ((pna) this).field_Db = param1;
-        ((pna) this).field_Cb = param3;
-        ((pna) this).field_Bb = param7;
-        ((pna) this).field_xb = param5;
-        ((pna) this).field_wb = param8;
-        ((pna) this).field_vb = param6;
+        try {
+            ((pna) this).field_Fb = param2;
+            ((pna) this).field_Eb = param4;
+            ((pna) this).field_Db = param1;
+            ((pna) this).field_Cb = param3;
+            ((pna) this).field_Bb = param7;
+            ((pna) this).field_xb = param5;
+            ((pna) this).field_wb = param8;
+            ((pna) this).field_vb = param6;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "pna.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+        }
     }
 
     final void a(int param0, boolean param1, int param2, int param3, int param4) {
@@ -707,20 +656,24 @@ final class pna extends sna {
     }
 
     final void a(byte param0, String param1, kv param2, int param3) {
-        ((pna) this).field_Gb[((pna) this).field_yb] = new gna(0L, (sna) null, (sna) null, ((pna) this).field_Cb, param2, param1);
-        ((pna) this).field_Gb[((pna) this).field_yb].field_A = ((pna) this).field_Db;
-        if (param0 < 8) {
-            ((pna) this).a(63, false, -121, 19, -117);
+        try {
+            ((pna) this).field_Gb[((pna) this).field_yb] = new gna(0L, (sna) null, (sna) null, ((pna) this).field_Cb, param2, param1);
+            ((pna) this).field_Gb[((pna) this).field_yb].field_A = ((pna) this).field_Db;
+            if (param0 < 8) {
+                ((pna) this).a(63, false, -121, 19, -117);
+            }
+            ((pna) this).field_Gb[((pna) this).field_yb].field_qb = true;
+            ((pna) this).field_Gb[((pna) this).field_yb].field_Y = 1;
+            ((pna) this).a(-1, (sna) (Object) ((pna) this).field_Gb[((pna) this).field_yb]);
+            ((pna) this).field_Hb[((pna) this).field_yb] = param3;
+            ((pna) this).field_yb = ((pna) this).field_yb + 1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "pna.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
-        ((pna) this).field_Gb[((pna) this).field_yb].field_qb = true;
-        ((pna) this).field_Gb[((pna) this).field_yb].field_Y = 1;
-        ((pna) this).a(-1, (sna) (Object) ((pna) this).field_Gb[((pna) this).field_yb]);
-        ((pna) this).field_Hb[((pna) this).field_yb] = param3;
-        ((pna) this).field_yb = ((pna) this).field_yb + 1;
     }
 
     final boolean g(int param0) {
-        if ((((pna) this).field_Ab ^ -1) != 1) {
+        if (((pna) this).field_Ab != -2) {
             return false;
         }
         if (!(13 != gf.field_k)) {

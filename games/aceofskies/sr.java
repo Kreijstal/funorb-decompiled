@@ -30,26 +30,34 @@ final class sr extends rt {
         super(param0, 32879, param1, param3 * param2 * param4, false);
         ((sr) this).field_o = -1;
         ((sr) this).field_k = -1;
-        ((sr) this).field_l = param2;
-        ((sr) this).field_n = param4;
-        ((sr) this).field_m = param3;
-        ((sr) this).field_j.a((rt) this, 1);
-        jaggl.OpenGL.glPixelStorei(3317, 1);
-        jaggl.OpenGL.glTexImage3Dub(((sr) this).field_f, 0, ((sr) this).field_b, ((sr) this).field_l, ((sr) this).field_m, ((sr) this).field_n, 0, param6, 5121, param5, 0);
-        jaggl.OpenGL.glPixelStorei(3317, 4);
-        ((sr) this).a(true, -128);
+        try {
+            ((sr) this).field_l = param2;
+            ((sr) this).field_n = param4;
+            ((sr) this).field_m = param3;
+            ((sr) this).field_j.a((rt) this, 1);
+            jaggl.OpenGL.glPixelStorei(3317, 1);
+            jaggl.OpenGL.glTexImage3Dub(((sr) this).field_f, 0, ((sr) this).field_b, ((sr) this).field_l, ((sr) this).field_m, ((sr) this).field_n, 0, param6, 5121, param5, 0);
+            jaggl.OpenGL.glPixelStorei(3317, 4);
+            ((sr) this).a(true, -128);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "sr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 41);
+        }
     }
 
     sr(wl param0, int param1, int param2, int param3, int param4) {
         super(param0, 32879, param1, param3 * param2 * param4, false);
         ((sr) this).field_o = -1;
         ((sr) this).field_k = -1;
-        ((sr) this).field_l = param2;
-        ((sr) this).field_m = param3;
-        ((sr) this).field_n = param4;
-        ((sr) this).field_j.a((rt) this, 1);
-        jaggl.OpenGL.glTexImage3Dub(((sr) this).field_f, 0, ((sr) this).field_b, ((sr) this).field_l, ((sr) this).field_m, ((sr) this).field_n, 0, ia.a(((sr) this).field_b, -16445), 5121, (byte[]) null, 0);
-        ((sr) this).a(true, -128);
+        try {
+            ((sr) this).field_l = param2;
+            ((sr) this).field_m = param3;
+            ((sr) this).field_n = param4;
+            ((sr) this).field_j.a((rt) this, 1);
+            jaggl.OpenGL.glTexImage3Dub(((sr) this).field_f, 0, ((sr) this).field_b, ((sr) this).field_l, ((sr) this).field_m, ((sr) this).field_n, 0, ia.a(((sr) this).field_b, -16445), 5121, (byte[]) null, 0);
+            ((sr) this).a(true, -128);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "sr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     static {

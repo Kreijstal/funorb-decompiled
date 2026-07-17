@@ -20,9 +20,6 @@ final class db {
 
     public static void a(byte param0) {
         field_d = null;
-        if (param0 <= 55) {
-            return;
-        }
         field_e = null;
         field_f = null;
         field_g = null;

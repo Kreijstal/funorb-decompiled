@@ -25,43 +25,21 @@ final class aj {
         int var4 = 0;
         var4 = Bounce.field_N;
         var3 = ((aj) this).field_d.length;
-        if (param1 >= 66) {
-          L0: while (true) {
-            if (param0 < var3) {
-              return var3;
-            } else {
-              if (((aj) this).field_c) {
-                if (var3 == 0) {
-                  var3 = 1;
-                  continue L0;
-                } else {
-                  var3 = var3 * ((aj) this).field_a;
-                  continue L0;
-                }
+        L0: while (true) {
+          if (param0 < var3) {
+            return var3;
+          } else {
+            if (((aj) this).field_c) {
+              if (var3 == 0) {
+                var3 = 1;
+                continue L0;
               } else {
-                var3 = var3 + ((aj) this).field_a;
+                var3 = var3 * ((aj) this).field_a;
                 continue L0;
               }
-            }
-          }
-        } else {
-          ((aj) this).field_b = -94;
-          L1: while (true) {
-            if (param0 < var3) {
-              return var3;
             } else {
-              if (((aj) this).field_c) {
-                if (var3 == 0) {
-                  var3 = 1;
-                  continue L1;
-                } else {
-                  var3 = var3 * ((aj) this).field_a;
-                  continue L1;
-                }
-              } else {
-                var3 = var3 + ((aj) this).field_a;
-                continue L1;
-              }
+              var3 = var3 + ((aj) this).field_a;
+              continue L0;
             }
           }
         }
@@ -122,21 +100,14 @@ final class aj {
     }
 
     private final void b(int param0, boolean param1) {
-        int[] var3 = null;
-        int[] var4 = null;
-        if (!param1) {
-          return;
-        } else {
-          var4 = new int[this.a(param0, 88)];
-          var3 = var4;
-          cb.a(((aj) this).field_d, 0, var4, 0, ((aj) this).field_d.length);
-          ((aj) this).field_d = var4;
-          return;
-        }
+        int[] var4 = new int[this.a(param0, 88)];
+        int[] var3 = var4;
+        cb.a(((aj) this).field_d, 0, var4, 0, ((aj) this).field_d.length);
+        ((aj) this).field_d = var4;
     }
 
     final void a(int param0, boolean param1) {
-        if ((param0 ^ -1) <= -1) {
+        if (param0 >= 0) {
           if (param0 <= ((aj) this).field_b) {
             if (param0 == ((aj) this).field_b) {
               ((aj) this).field_b = ((aj) this).field_b - 1;

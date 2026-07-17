@@ -919,8 +919,8 @@ final class on {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            on.c(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            on.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            on.c(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            on.f(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 
@@ -1315,8 +1315,8 @@ final class on {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        on.a(field_a, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, param5);
-        on.a(field_a, 0, param2 + param3 * field_g, param1, param3, param5, field_g - param4, param2, param4);
+        on.a(field_a, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, 140);
+        on.a(field_a, 0, param2 + param3 * field_g, param1, param3, 140, field_g - param4, param2, param4);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {

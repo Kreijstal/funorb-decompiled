@@ -101,6 +101,7 @@ final class dr {
           if (var2 >= 10) {
             ((dr) this).field_c = param0.i(65280);
             ((dr) this).field_a = param0.i(65280);
+            return;
           } else {
             var3 = param0.l(255);
             if (var3 != 0) {

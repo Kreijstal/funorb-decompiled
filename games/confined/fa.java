@@ -11,7 +11,11 @@ final class fa extends rg {
 
     private fa(String param0, fe param1, uk param2) {
         super(param0, param1, param2);
-        ((fa) this).field_n = bg.field_d.field_j;
+        try {
+            ((fa) this).field_n = bg.field_d.field_j;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "fa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void f(int param0) {
@@ -24,7 +28,7 @@ final class fa extends rg {
     }
 
     final static void g(int param0) {
-        if (param0 - mg.field_g != tg.field_H) {
+        if (0 - mg.field_g != tg.field_H) {
             if (tg.field_H != 250 + -mg.field_g) {
             }
         }
@@ -33,7 +37,11 @@ final class fa extends rg {
 
     fa(String param0, uk param1, boolean param2) {
         this(param0, param1);
-        ((fa) this).field_O = param2 ? true : false;
+        try {
+            ((fa) this).field_O = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "fa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final static nf[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
@@ -71,7 +79,7 @@ final class fa extends rg {
                       if (param0 <= var11) {
                         var11 = 0;
                         L5: while (true) {
-                          if (var11 >= param0 >> 1004130145) {
+                          if (var11 >= param0 >> 1) {
                             return var10;
                           } else {
                             var12 = 0;
@@ -165,31 +173,145 @@ final class fa extends rg {
 
     private fa(String param0, uk param1) {
         this(param0, bg.field_d.field_h, param1);
-        ((fa) this).field_n = bg.field_d.field_j;
+        try {
+            ((fa) this).field_n = bg.field_d.field_j;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "fa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(java.awt.Canvas param0, int param1) {
-        int var2 = -20 / ((-7 - param1) / 57);
-        dl.a((java.awt.Component) (Object) param0, (byte) -112);
-        ak.a(0, (java.awt.Component) (Object) param0);
-        if (!(null == jc.field_c)) {
-            jc.field_c.a((java.awt.Component) (Object) param0, (byte) -30);
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2_int = -20 / ((-7 - param1) / 57);
+              dl.a((java.awt.Component) (Object) param0, (byte) -112);
+              ak.a(0, (java.awt.Component) (Object) param0);
+              if (null != jc.field_c) {
+                jc.field_c.a((java.awt.Component) (Object) param0, (byte) -30);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("fa.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
     }
 
     final static boolean a(byte param0) {
-        if (param0 > -29) {
-            field_Q = null;
-        }
-        return !fb.field_a.c(17237) ? true : false;
+        return !fb.field_a.c(17237);
     }
 
     final static void a(boolean param0, java.awt.Component param1) {
-        param1.addMouseListener((java.awt.event.MouseListener) (Object) tf.field_a);
-        param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) tf.field_a);
-        param1.addFocusListener((java.awt.event.FocusListener) (Object) tf.field_a);
-        if (param0) {
-            field_U = null;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              param1.addMouseListener((java.awt.event.MouseListener) (Object) tf.field_a);
+              param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) tf.field_a);
+              param1.addFocusListener((java.awt.event.FocusListener) (Object) tf.field_a);
+              if (!param0) {
+                break L1;
+              } else {
+                field_U = null;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("fa.B(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw sd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -198,7 +320,7 @@ final class fa extends rg {
         if (param0 != 25124) {
             fa.f(-89);
         }
-        super.a(param0 ^ 0, param1, param2, param3);
+        super.a(param0, param1, param2, param3);
     }
 
     static {

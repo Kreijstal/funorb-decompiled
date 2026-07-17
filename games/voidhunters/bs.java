@@ -8,9 +8,15 @@ final class bs {
     static int field_c;
 
     bs(String param0, llb param1) {
-        String[] var3 = new String[]{param0, pp.field_q, dpa.field_o};
-        llb[] var4 = new llb[]{param1, ci.field_c, (llb) (Object) vra.field_b};
-        ((bs) this).field_a = new ooa(0L, vhb.field_c, var3, gfb.field_a, var4, 0);
+        String[] var3 = null;
+        llb[] var4 = null;
+        try {
+            var3 = new String[]{param0, pp.field_q, dpa.field_o};
+            var4 = new llb[]{param1, ci.field_c, (llb) (Object) vra.field_b};
+            ((bs) this).field_a = new ooa(0L, vhb.field_c, var3, gfb.field_a, var4, 0);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "bs.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(byte param0) {

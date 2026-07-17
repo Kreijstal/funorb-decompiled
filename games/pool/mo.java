@@ -15,9 +15,6 @@ final class mo {
     }
 
     final static void a(String param0, java.applet.Applet param1, byte param2) throws Throwable {
-        if (param2 != 35) {
-            return;
-        }
         Object discarded$0 = netscape.javascript.JSObject.getWindow(param1).eval(param0);
     }
 }

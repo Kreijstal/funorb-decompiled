@@ -32,7 +32,7 @@ abstract class tb extends ui {
         var7 = 0;
         var8 = param1;
         L0: while (true) {
-          if ((var4 ^ -1) >= (var7 ^ -1)) {
+          if (~var4 >= ~var7) {
             if (param0 == 1) {
               var4 = 22;
               var6 = 169;
@@ -54,7 +54,7 @@ abstract class tb extends ui {
                       return;
                     } else {
                       var9 = var5 + (-var5 + var6) * var7 / var4;
-                      var9 = var9 | (var9 << -253570488 | var9 << -1673360912);
+                      var9 = var9 | (var9 << 8 | var9 << 16);
                       ti.g(param2, var8, 6, var9);
                       ti.g(((tb) this).field_p + param2 - 6, var8, 6, var9);
                       var7++;
@@ -64,7 +64,7 @@ abstract class tb extends ui {
                   }
                 } else {
                   var9 = (-var5 + var6) * var7 / var4 + var5;
-                  var9 = var9 | (var9 << 818232040 | var9 << -1562946864);
+                  var9 = var9 | (var9 << 8 | var9 << 16);
                   ti.g(param2, var8, 6, var9);
                   ti.g(-6 + (param2 + ((tb) this).field_p), var8, 6, var9);
                   var7++;
@@ -94,7 +94,7 @@ abstract class tb extends ui {
                       return;
                     } else {
                       var9 = var5 + (-var5 + var6) * var7 / var4;
-                      var9 = var9 | (var9 << -253570488 | var9 << -1673360912);
+                      var9 = var9 | (var9 << 8 | var9 << 16);
                       ti.g(param2, var8, 6, var9);
                       ti.g(((tb) this).field_p + param2 - 6, var8, 6, var9);
                       var7++;
@@ -104,7 +104,7 @@ abstract class tb extends ui {
                   }
                 } else {
                   var9 = (-var5 + var6) * var7 / var4 + var5;
-                  var9 = var9 | (var9 << 818232040 | var9 << -1562946864);
+                  var9 = var9 | (var9 << 8 | var9 << 16);
                   ti.g(param2, var8, 6, var9);
                   ti.g(-6 + (param2 + ((tb) this).field_p), var8, 6, var9);
                   var7++;
@@ -119,24 +119,24 @@ abstract class tb extends ui {
               var8++;
               continue L0;
             } else {
-              if ((var8 ^ -1) > (ti.field_l ^ -1)) {
+              if (~var8 > ~ti.field_l) {
                 L5: {
                   var9 = var7 * (var6 + -var5) / var4 + var5;
                   var10 = 0;
                   var11 = ((tb) this).field_p;
                   if (var7 <= 20) {
                     L6: while (true) {
-                      if (-21 > (var10 ^ -1)) {
+                      if (var10 > 20) {
                         break L5;
                       } else {
                         L7: {
                           var12 = (20 + -var10) * (-var10 + 20) + (20 - var7) * (-var7 + 20);
-                          if (-463 <= (var12 ^ -1)) {
+                          if (var12 <= 462) {
                             if (var12 < 420) {
                               break L5;
                             } else {
                               var13 = var9 * (462 - var12) / 42;
-                              var13 = var13 | (var13 << 939507240 | var13 << -1623490992);
+                              var13 = var13 | (var13 << 8 | var13 << 16);
                               ti.field_a[var10 + param2 + ti.field_i * var8] = var13;
                               break L7;
                             }
@@ -153,22 +153,22 @@ abstract class tb extends ui {
                   }
                 }
                 L8: {
-                  if ((var7 ^ -1) >= -21) {
+                  if (var7 <= 20) {
                     var12 = var11;
                     var11 -= 21;
                     var13 = 0;
                     L9: while (true) {
                       L10: {
-                        if (-21 > (var13 ^ -1)) {
+                        if (var13 > 20) {
                           break L10;
                         } else {
                           var14 = (-var7 + 20) * (-var7 + 20) - -(var13 * var13);
-                          if (-463 > (var14 ^ -1)) {
+                          if (var14 > 462) {
                             break L10;
                           } else {
-                            if ((var14 ^ -1) <= -421) {
+                            if (var14 >= 420) {
                               var15 = (-var14 + 462) * var9 / 42;
-                              var15 = var15 | (var15 << 489443784 | var15 << 1030394128);
+                              var15 = var15 | (var15 << 8 | var15 << 16);
                               ti.field_a[var8 * ti.field_i - -param2 - -var11] = var15;
                               var13++;
                               var11++;
@@ -189,7 +189,7 @@ abstract class tb extends ui {
                     break L8;
                   }
                 }
-                var9 = var9 | (var9 << 1097432520 | var9 << -1458085328);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 ti.g(var10 + param2, var8, -var10 + var11, var9);
                 var7++;
                 var8++;
@@ -251,9 +251,6 @@ abstract class tb extends ui {
     }
 
     boolean h(int param0) {
-        if (param0 <= 98) {
-            return false;
-        }
         ((tb) this).i(3642);
         return super.h(105);
     }
@@ -264,7 +261,7 @@ abstract class tb extends ui {
         int var4 = 0;
         int var5 = 0;
         L0: {
-          if (-1 <= (((tb) this).field_L ^ -1)) {
+          if (((tb) this).field_L <= 0) {
             break L0;
           } else {
             L1: {

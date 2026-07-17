@@ -45,16 +45,8 @@ final class ro {
         field_r = null;
         field_x = null;
         field_v = null;
-        if (param0 > -95) {
-          field_v = null;
-          field_H = null;
-          field_m = null;
-          return;
-        } else {
-          field_H = null;
-          field_m = null;
-          return;
-        }
+        field_H = null;
+        field_m = null;
     }
 
     ro() {

@@ -14,7 +14,7 @@ abstract class bi extends mk {
     private int field_G;
 
     void p(int param0) {
-        if (!(-1 > (((bi) this).field_G ^ -1))) {
+        if (!(((bi) this).field_G > 0)) {
             return;
         }
         ((bi) this).a(((bi) this).field_H, ((bi) this).field_N, false);
@@ -30,12 +30,13 @@ abstract class bi extends mk {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        if (param0 >= ((bi) this).field_G) {
+        if (0 >= ((bi) this).field_G) {
         } else {
             var2 = ((bi) this).field_H;
             var3 = ((bi) this).field_N;
+            int fieldTemp$0 = ((bi) this).field_F + 1;
             ((bi) this).field_F = ((bi) this).field_F + 1;
-            if (((bi) this).field_F + 1 >= ((bi) this).field_G) {
+            if (fieldTemp$0 >= ((bi) this).field_G) {
                 ((bi) this).field_G = 0;
                 ((bi) this).d((byte) -2);
             } else {
@@ -113,7 +114,7 @@ abstract class bi extends mk {
                     return;
                   } else {
                     var9 = var5 + (var6 - var5) * var7 / var4;
-                    var9 = var9 | (var9 << 1556442024 | var9 << 1666535120);
+                    var9 = var9 | (var9 << 8 | var9 << 16);
                     sb.d(param2, var8, 6, var9);
                     sb.d(-6 + ((bi) this).field_l + param2, var8, 6, var9);
                     var8++;
@@ -123,7 +124,7 @@ abstract class bi extends mk {
                 }
               } else {
                 var9 = var7 * (-var5 + var6) / var4 + var5;
-                var9 = var9 | (var9 << 1785724232 | var9 << -986326480);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 sb.d(param2, var8, 6, var9);
                 sb.d(((bi) this).field_l + (param2 - 6), var8, 6, var9);
                 var8++;
@@ -151,7 +152,7 @@ abstract class bi extends mk {
                             break L4;
                           } else {
                             var13 = var9 * (-var12 + 462) / 42;
-                            var13 = var13 | (var13 << 2145939208 | var13 << -2105867760);
+                            var13 = var13 | (var13 << 8 | var13 << 16);
                             sb.field_h[var8 * sb.field_c - -param2 - -var10] = var13;
                             var10++;
                             continue L5;
@@ -165,7 +166,7 @@ abstract class bi extends mk {
                   }
                 }
                 L6: {
-                  if (-21 <= (var7 ^ -1)) {
+                  if (var7 <= 20) {
                     var12 = var11;
                     var11 -= 21;
                     var13 = 0;
@@ -176,9 +177,9 @@ abstract class bi extends mk {
                         } else {
                           var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
                           if (462 >= var14) {
-                            if ((var14 ^ -1) <= -421) {
+                            if (var14 >= 420) {
                               var15 = (462 - var14) * var9 / 42;
-                              var15 = var15 | (var15 << -960466776 | var15 << 1073714256);
+                              var15 = var15 | (var15 << 8 | var15 << 16);
                               sb.field_h[var11 + sb.field_c * var8 + param2] = var15;
                               var11++;
                               var13++;
@@ -201,7 +202,7 @@ abstract class bi extends mk {
                     break L6;
                   }
                 }
-                var9 = var9 | (var9 << 753738320 | var9 << -411919416);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 sb.d(var10 - -param2, var8, -var10 + var11, var9);
                 var8++;
                 var7++;
@@ -234,9 +235,6 @@ abstract class bi extends mk {
 
     boolean a(byte param0) {
         ((bi) this).p(27830);
-        if (param0 != -97) {
-            ((bi) this).field_G = 107;
-        }
         return super.a((byte) -97);
     }
 

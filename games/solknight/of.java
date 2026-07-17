@@ -13,18 +13,9 @@ final class of {
     static o field_f;
 
     public static void a(int param0) {
-        if (param0 != 1) {
-          field_g = 47;
-          field_f = null;
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
-          field_f = null;
-          field_b = null;
-          field_d = null;
-          return;
-        }
+        field_f = null;
+        field_b = null;
+        field_d = null;
     }
 
     final void c(int param0, int param1) {
@@ -37,32 +28,28 @@ final class of {
         int var4 = 0;
         var4 = SolKnight.field_L ? 1 : 0;
         var3 = ((of) this).field_a.length;
-        if (param1 < -98) {
-          L0: while (true) {
-            if (var3 > param0) {
-              return var3;
+        L0: while (true) {
+          if (var3 > param0) {
+            return var3;
+          } else {
+            if (!((of) this).field_i) {
+              var3 = var3 + ((of) this).field_c;
+              continue L0;
             } else {
-              if (!((of) this).field_i) {
-                var3 = var3 + ((of) this).field_c;
+              if (var3 != 0) {
+                var3 = var3 * ((of) this).field_c;
                 continue L0;
               } else {
-                if (var3 != 0) {
-                  var3 = var3 * ((of) this).field_c;
-                  continue L0;
-                } else {
-                  var3 = 1;
-                  continue L0;
-                }
+                var3 = 1;
+                continue L0;
               }
             }
           }
-        } else {
-          return -103;
         }
     }
 
     final void a(boolean param0, int param1) {
-        if ((param1 ^ -1) <= -1) {
+        if (param1 >= 0) {
           if (param1 <= ((of) this).field_h) {
             L0: {
               if (((of) this).field_h != param1) {
@@ -125,7 +112,7 @@ final class of {
     private final void b(int param0, int param1) {
         int[] var4 = new int[this.a(param0, -113)];
         int[] var3 = var4;
-        fk.a(((of) this).field_a, param1, var4, 0, ((of) this).field_a.length);
+        fk.a(((of) this).field_a, 0, var4, 0, ((of) this).field_a.length);
         ((of) this).field_a = var4;
     }
 

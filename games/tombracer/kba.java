@@ -15,18 +15,12 @@ final class kba extends od implements wia {
     int field_n;
 
     public static void a(byte param0) {
-        if (param0 != -48) {
-            int discarded$0 = kba.f(-96);
-            field_u = null;
-            field_k = null;
-            return;
-        }
         field_u = null;
         field_k = null;
     }
 
     final void g(int param0) {
-        if (!((((kba) this).field_m ^ -1) >= -1)) {
+        if (!(((kba) this).field_m <= 0)) {
             ((kba) this).field_p.c(2, ((kba) this).field_o, ((kba) this).field_m);
             ((kba) this).field_m = 0;
         }
@@ -41,7 +35,7 @@ final class kba extends od implements wia {
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
         if (0 <= param1) {
-          if ((param1 ^ -1) > -1583) {
+          if (param1 < 1582) {
             L0: {
               if (param1 % 4 != 0) {
                 stackOut_9_0 = 0;
@@ -55,7 +49,7 @@ final class kba extends od implements wia {
             }
             return stackIn_10_0 != 0;
           } else {
-            if ((param1 % 4 ^ -1) == param0) {
+            if (~(param1 % 4) == param0) {
               if (param1 % 100 == 0) {
                 if (param1 % 400 != 0) {
                   return false;
@@ -71,7 +65,7 @@ final class kba extends od implements wia {
           }
         } else {
           L1: {
-            if (-1 != ((param1 + 1) % 4 ^ -1)) {
+            if ((param1 + 1) % 4 != 0) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -122,29 +116,37 @@ final class kba extends od implements wia {
     kba(cka param0, int param1, int param2, int param3) {
         ((kba) this).field_q = -1;
         ((kba) this).field_r = -1;
-        ((kba) this).field_l = param3;
-        ((kba) this).field_t = param1;
-        ((kba) this).field_p = param0;
-        ((kba) this).field_n = param2;
-        jaggl.OpenGL.glGenRenderbuffersEXT(1, mg.field_h, 0);
-        ((kba) this).field_m = mg.field_h[0];
-        jaggl.OpenGL.glBindRenderbufferEXT(36161, ((kba) this).field_m);
-        jaggl.OpenGL.glRenderbufferStorageEXT(36161, ((kba) this).field_t, ((kba) this).field_n, ((kba) this).field_l);
-        ((kba) this).field_o = ((kba) this).field_n * (((kba) this).field_l * ((kba) this).field_p.a(((kba) this).field_t, (byte) -86));
+        try {
+            ((kba) this).field_l = param3;
+            ((kba) this).field_t = param1;
+            ((kba) this).field_p = param0;
+            ((kba) this).field_n = param2;
+            jaggl.OpenGL.glGenRenderbuffersEXT(1, mg.field_h, 0);
+            ((kba) this).field_m = mg.field_h[0];
+            jaggl.OpenGL.glBindRenderbufferEXT(36161, ((kba) this).field_m);
+            jaggl.OpenGL.glRenderbufferStorageEXT(36161, ((kba) this).field_t, ((kba) this).field_n, ((kba) this).field_l);
+            ((kba) this).field_o = ((kba) this).field_n * (((kba) this).field_l * ((kba) this).field_p.a(((kba) this).field_t, (byte) -86));
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "kba.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     kba(cka param0, int param1, int param2, int param3, int param4) {
         ((kba) this).field_q = -1;
         ((kba) this).field_r = -1;
-        ((kba) this).field_n = param2;
-        ((kba) this).field_p = param0;
-        ((kba) this).field_t = param1;
-        ((kba) this).field_l = param3;
-        jaggl.OpenGL.glGenRenderbuffersEXT(1, mg.field_h, 0);
-        ((kba) this).field_m = mg.field_h[0];
-        jaggl.OpenGL.glBindRenderbufferEXT(36161, ((kba) this).field_m);
-        jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, ((kba) this).field_t, ((kba) this).field_n, ((kba) this).field_l);
-        ((kba) this).field_o = ((kba) this).field_n * ((kba) this).field_l * ((kba) this).field_p.a(((kba) this).field_t, (byte) -64);
+        try {
+            ((kba) this).field_n = param2;
+            ((kba) this).field_p = param0;
+            ((kba) this).field_t = param1;
+            ((kba) this).field_l = param3;
+            jaggl.OpenGL.glGenRenderbuffersEXT(1, mg.field_h, 0);
+            ((kba) this).field_m = mg.field_h[0];
+            jaggl.OpenGL.glBindRenderbufferEXT(36161, ((kba) this).field_m);
+            jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, ((kba) this).field_t, ((kba) this).field_n, ((kba) this).field_l);
+            ((kba) this).field_o = ((kba) this).field_n * ((kba) this).field_l * ((kba) this).field_p.a(((kba) this).field_t, (byte) -64);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "kba.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     static {

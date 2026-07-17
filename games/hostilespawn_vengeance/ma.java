@@ -42,8 +42,9 @@ final class ma {
 
     final int a(int param0) {
         if (((ma) this).field_e >= ((ma) this).field_g) {
+            int fieldTemp$0 = ((ma) this).field_j;
             ((ma) this).field_j = ((ma) this).field_j + 1;
-            ((ma) this).field_h = ((ma) this).field_a[((ma) this).field_j] << 15;
+            ((ma) this).field_h = ((ma) this).field_a[fieldTemp$0] << 15;
             if (((ma) this).field_j >= ((ma) this).field_k) {
                 ((ma) this).field_j = ((ma) this).field_k - 1;
             }

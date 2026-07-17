@@ -11,13 +11,10 @@ final class ns {
         field_c = null;
         field_b = null;
         field_d = null;
-        int var1 = -49 / ((-36 - param0) / 59);
+        int var1 = 49;
     }
 
     final static void a(int param0) {
-        if (param0 != 3585) {
-            return;
-        }
         hq.field_d = -21 + (480 - om.field_Bb);
     }
 

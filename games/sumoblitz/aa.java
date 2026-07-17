@@ -25,7 +25,11 @@ abstract class aa {
         if (param3 > -104) {
             return;
         }
-        hw.a(param5, param4, param4, (byte) 123, param1, param2, param0, 1024);
+        try {
+            hw.a(param5, param4, param4, (byte) 123, param1, param2, param0, 1024);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "aa.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

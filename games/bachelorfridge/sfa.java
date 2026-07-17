@@ -26,24 +26,21 @@ abstract class sfa extends bw {
     }
 
     sfa(int param0, int param1, nq param2) {
-        ((sfa) this).field_h = param2;
-        ((sfa) this).field_f = param0;
-        ((sfa) this).field_g = param1;
+        try {
+            ((sfa) this).field_h = param2;
+            ((sfa) this).field_f = param0;
+            ((sfa) this).field_g = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "sfa.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        pf var3 = null;
-        var3 = sja.field_fb;
+        pf var3 = sja.field_fb;
         var3.c(param0, (byte) 119);
         var3.d(3, 0);
         var3.d(10, 0);
         var3.b(param1, -125);
-        if (param2) {
-          sfa.a(-72, -127, false);
-          return;
-        } else {
-          return;
-        }
     }
 
     public final String toString() {
@@ -55,7 +52,11 @@ abstract class sfa extends bw {
     }
 
     void a(int param0, lu param1) {
-        int var3 = 34 % ((param0 - 61) / 53);
+        try {
+            int var3_int = 34 % ((param0 - 61) / 53);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "sfa.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

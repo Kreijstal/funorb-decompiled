@@ -11,21 +11,19 @@ final class kb extends mc {
     static int field_t;
 
     final static void a(boolean param0, le param1) {
-        if (param1 == null) {
-          return;
-        } else {
-          gl.field_o = param1;
-          ck.field_bb.field_fb.b(1);
-          if (param0) {
-            field_t = -13;
+        if (!(param1 != null)) {
+            return;
+        }
+        try {
+            gl.field_o = param1;
+            ck.field_bb.field_fb.b(1);
+            if (param0) {
+                field_t = -13;
+            }
             ck.field_bb.a((byte) 112, (hl) (Object) gl.field_o);
             hi.field_a = true;
-            return;
-          } else {
-            ck.field_bb.a((byte) 112, (hl) (Object) gl.field_o);
-            hi.field_a = true;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "kb.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -33,9 +31,6 @@ final class kb extends mc {
         bm.field_n = param0;
         uj.field_w = param2;
         wa.field_d = param1;
-        if (param3 != -118) {
-            kb.a(13);
-        }
     }
 
     public static void a(int param0) {
@@ -61,61 +56,61 @@ final class kb extends mc {
         int var3 = 0;
         int var4 = 0;
         var4 = TetraLink.field_J;
-        var2 = 88 % ((65 - param1) / 58);
+        var2 = 1;
         var3 = param0;
         if (var3 != 32) {
-          if (-161 != (var3 ^ -1)) {
-            if ((var3 ^ -1) != -96) {
-              if (-46 != (var3 ^ -1)) {
+          if (var3 != 160) {
+            if (var3 != 95) {
+              if (var3 != 45) {
                 if (var3 != 91) {
                   if (93 != var3) {
-                    if ((var3 ^ -1) != -36) {
+                    if (var3 != 35) {
                       if (var3 != 224) {
                         if (225 != var3) {
-                          if ((var3 ^ -1) != -227) {
+                          if (var3 != 226) {
                             if (var3 != 228) {
                               if (227 != var3) {
                                 if (192 != var3) {
                                   if (193 != var3) {
-                                    if (-195 != (var3 ^ -1)) {
-                                      if ((var3 ^ -1) != -197) {
-                                        if (-196 == (var3 ^ -1)) {
+                                    if (var3 != 194) {
+                                      if (var3 != 196) {
+                                        if (var3 == 195) {
                                           return 'a';
                                         } else {
                                           if (232 != var3) {
-                                            if ((var3 ^ -1) != -234) {
+                                            if (var3 != 233) {
                                               if (var3 != 234) {
-                                                if ((var3 ^ -1) != -236) {
+                                                if (var3 != 235) {
                                                   if (200 != var3) {
                                                     if (201 != var3) {
-                                                      if ((var3 ^ -1) != -203) {
+                                                      if (var3 != 202) {
                                                         if (203 == var3) {
                                                           return 'e';
                                                         } else {
                                                           if (var3 != 237) {
-                                                            if (-239 != (var3 ^ -1)) {
+                                                            if (var3 != 238) {
                                                               if (239 != var3) {
                                                                 if (205 != var3) {
                                                                   if (var3 != 206) {
                                                                     if (207 != var3) {
-                                                                      if (-243 != (var3 ^ -1)) {
-                                                                        if (-244 != (var3 ^ -1)) {
-                                                                          if (-245 != (var3 ^ -1)) {
+                                                                      if (var3 != 242) {
+                                                                        if (var3 != 243) {
+                                                                          if (var3 != 244) {
                                                                             if (var3 != 246) {
                                                                               if (245 != var3) {
                                                                                 if (210 != var3) {
                                                                                   if (var3 != 211) {
                                                                                     if (var3 != 212) {
-                                                                                      if (-215 != (var3 ^ -1)) {
+                                                                                      if (var3 != 214) {
                                                                                         if (213 != var3) {
                                                                                           if (249 != var3) {
-                                                                                            if ((var3 ^ -1) != -251) {
-                                                                                              if (-252 != (var3 ^ -1)) {
-                                                                                                if (-253 != (var3 ^ -1)) {
+                                                                                            if (var3 != 250) {
+                                                                                              if (var3 != 251) {
+                                                                                                if (var3 != 252) {
                                                                                                   if (var3 != 217) {
-                                                                                                    if (-219 != (var3 ^ -1)) {
+                                                                                                    if (var3 != 218) {
                                                                                                       L0: {
-                                                                                                        if (-220 == (var3 ^ -1)) {
+                                                                                                        if (var3 == 219) {
                                                                                                           break L0;
                                                                                                         } else {
                                                                                                           if (var3 == 220) {
@@ -128,9 +123,9 @@ final class kb extends mc {
                                                                                                                 if (255 == var3) {
                                                                                                                   return 'y';
                                                                                                                 } else {
-                                                                                                                  if ((var3 ^ -1) != -377) {
+                                                                                                                  if (var3 != 376) {
                                                                                                                     if (var3 != 241) {
-                                                                                                                      if (-210 == (var3 ^ -1)) {
+                                                                                                                      if (var3 == 209) {
                                                                                                                         return 'n';
                                                                                                                       } else {
                                                                                                                         if (var3 == 223) {

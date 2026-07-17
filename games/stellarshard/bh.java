@@ -48,7 +48,7 @@ final class bh {
         var5 = stellarshard.field_B;
         var1 = "(" + ld.field_E + " " + t.field_e + " " + ig.field_y + ") " + ja.field_t;
         if (param0 < -94) {
-          if (-1 > (ue.field_b ^ -1)) {
+          if (ue.field_b > 0) {
             var1 = var1 + ":";
             var2 = 0;
             L0: while (true) {
@@ -64,9 +64,9 @@ final class bh {
                       L3: {
                         var1 = stackIn_26_0;
                         var3 = ae.field_N.field_r[var2] & 255;
-                        var4 = var3 >> -769738108;
+                        var4 = var3 >> 4;
                         var3 = var3 & 15;
-                        if (-11 >= (var4 ^ -1)) {
+                        if (var4 >= 10) {
                           break L3;
                         } else {
                           var4 += 48;
@@ -118,7 +118,7 @@ final class bh {
           }
         } else {
           boolean discarded$1 = bh.a(68, '￑');
-          if (-1 > (ue.field_b ^ -1)) {
+          if (ue.field_b > 0) {
             var1 = var1 + ":";
             var2 = 0;
             L6: while (true) {
@@ -134,9 +134,9 @@ final class bh {
                       L9: {
                         var1 = stackIn_9_0;
                         var3 = ae.field_N.field_r[var2] & 255;
-                        var4 = var3 >> -769738108;
+                        var4 = var3 >> 4;
                         var3 = var3 & 15;
-                        if (-11 >= (var4 ^ -1)) {
+                        if (var4 >= 10) {
                           break L9;
                         } else {
                           var4 += 48;
@@ -194,8 +194,64 @@ final class bh {
     }
 
     final boolean a(int param0, String param1) {
-        int var3 = 5 / ((-61 - param0) / 44);
-        return ((bh) this).field_b.equals((Object) (Object) param1);
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        boolean stackIn_1_0 = false;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_0_0 = false;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var3_int = 5 / ((-61 - param0) / 44);
+            stackOut_0_0 = ((bh) this).field_b.equals((Object) (Object) param1);
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("bh.C(").append(param0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param1 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+        }
+        return stackIn_1_0;
     }
 
     public static void a(byte param0) {
@@ -204,18 +260,22 @@ final class bh {
     }
 
     final void a(java.applet.Applet param0, byte param1) {
-        if (param1 != 73) {
-          field_a = null;
-          b.a(((bh) this).field_b, (byte) 38, 31536000L, "jagex-last-login-method", param0);
-          return;
-        } else {
-          b.a(((bh) this).field_b, (byte) 38, 31536000L, "jagex-last-login-method", param0);
-          return;
+        try {
+            if (param1 != 73) {
+                field_a = null;
+            }
+            b.a(((bh) this).field_b, (byte) 38, 31536000L, "jagex-last-login-method", param0);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "bh.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     bh(String param0) {
-        ((bh) this).field_b = param0;
+        try {
+            ((bh) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

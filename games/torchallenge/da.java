@@ -32,12 +32,16 @@ class da {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ia.field_p[param5] = param6;
-        ne.field_b[param5] = param0;
-        bd.field_m[param5] = param1;
-        il.field_q[param5] = param4;
-        int var7 = -98 / ((9 - param3) / 48);
-        ea.field_d[param5] = param2;
+        try {
+            ia.field_p[param5] = param6;
+            ne.field_b[param5] = param0;
+            bd.field_m[param5] = param1;
+            il.field_q[param5] = param4;
+            int var7_int = -98 / ((9 - param3) / 48);
+            ea.field_d[param5] = param2;
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "da.SB(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean b(int param0) {
@@ -71,11 +75,6 @@ class da {
         field_a = null;
         field_g = null;
         field_b = null;
-        if (param0 > -87) {
-            field_b = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

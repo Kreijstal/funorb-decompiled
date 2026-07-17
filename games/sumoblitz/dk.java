@@ -14,36 +14,32 @@ final class dk {
         if (param1 >= -57) {
             return true;
         }
-        return (540800 & param0 ^ -1) != -1 ? true : false;
+        return (540800 & param0) != 0 ? true : false;
     }
 
     final static ns a(byte param0) {
         try {
             Throwable var1 = null;
-            ns stackIn_3_0 = null;
+            ns stackIn_1_0 = null;
             Throwable decompiledCaughtException = null;
-            ns stackOut_2_0 = null;
+            ns stackOut_0_0 = null;
             try {
               L0: {
-                if (param0 <= -125) {
-                  break L0;
-                } else {
-                  field_c = -74;
-                  break L0;
-                }
+                stackOut_0_0 = (ns) Class.forName("gp").newInstance();
+                stackIn_1_0 = stackOut_0_0;
+                break L0;
               }
-              stackOut_2_0 = (ns) Class.forName("gp").newInstance();
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_1_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     public static void a(int param0) {

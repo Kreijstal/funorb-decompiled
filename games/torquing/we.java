@@ -46,17 +46,17 @@ final class we extends kj {
         int var7 = 0;
         if (param0 <= 7) {
           ((we) this).field_j = 39;
-          var4 = param2 * ((we) this).field_g >> -1757895124;
-          var5 = ((we) this).field_k * param2 >> -922082804;
-          var6 = ((we) this).field_i * param1 >> -1535747764;
-          var7 = ((we) this).field_j * param1 >> 399673868;
+          var4 = param2 * ((we) this).field_g >> 12;
+          var5 = ((we) this).field_k * param2 >> 12;
+          var6 = ((we) this).field_i * param1 >> 12;
+          var7 = ((we) this).field_j * param1 >> 12;
           wo.a(120, var4, var7, var6, var5, ((we) this).field_a);
           return;
         } else {
-          var4 = param2 * ((we) this).field_g >> -1757895124;
-          var5 = ((we) this).field_k * param2 >> -922082804;
-          var6 = ((we) this).field_i * param1 >> -1535747764;
-          var7 = ((we) this).field_j * param1 >> 399673868;
+          var4 = param2 * ((we) this).field_g >> 12;
+          var5 = ((we) this).field_k * param2 >> 12;
+          var6 = ((we) this).field_i * param1 >> 12;
+          var7 = ((we) this).field_j * param1 >> 12;
           wo.a(120, var4, var7, var6, var5, ((we) this).field_a);
           return;
         }
@@ -75,17 +75,17 @@ final class we extends kj {
         int var7 = 0;
         if (param2 >= -101) {
           we.a(98, 26, 121, -55, -62);
-          var4 = param0 * ((we) this).field_g >> 1002896172;
-          var5 = ((we) this).field_k * param0 >> -1150108628;
-          var6 = param1 * ((we) this).field_i >> -1627969780;
-          var7 = param1 * ((we) this).field_j >> -1462841268;
+          var4 = param0 * ((we) this).field_g >> 12;
+          var5 = ((we) this).field_k * param0 >> 12;
+          var6 = param1 * ((we) this).field_i >> 12;
+          var7 = param1 * ((we) this).field_j >> 12;
           wd.a(((we) this).field_c, ((we) this).field_e, var4, var7, true, var5, ((we) this).field_a, var6);
           return;
         } else {
-          var4 = param0 * ((we) this).field_g >> 1002896172;
-          var5 = ((we) this).field_k * param0 >> -1150108628;
-          var6 = param1 * ((we) this).field_i >> -1627969780;
-          var7 = param1 * ((we) this).field_j >> -1462841268;
+          var4 = param0 * ((we) this).field_g >> 12;
+          var5 = ((we) this).field_k * param0 >> 12;
+          var6 = param1 * ((we) this).field_i >> 12;
+          var7 = param1 * ((we) this).field_j >> 12;
           wd.a(((we) this).field_c, ((we) this).field_e, var4, var7, true, var5, ((we) this).field_a, var6);
           return;
         }

@@ -54,7 +54,7 @@ final class to extends de {
     public static void f(byte param0) {
         field_p = null;
         field_r = null;
-        int var1 = 127 % ((-44 - param0) / 39);
+        int var1 = 0;
         field_o = null;
         field_q = null;
         field_t = null;
